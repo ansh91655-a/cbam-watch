@@ -53,9 +53,28 @@ a.m-topic:hover { text-decoration: underline; }
 .card-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 16px; margin-top: auto; padding-top: 4px; font-size: var(--fs-s); color: var(--ink-3); }
 .card-foot a { display: inline-flex; align-items: center; gap: 4px; font-weight: 700; text-decoration: none; }
 .card-foot a:hover { text-decoration: underline; }
+/* 카드의 미리보기 그림: 원문 화면을 줄인 것(thumb-shot)은 주제 색 바탕에 종이처럼 얹고, 없으면 주제 아이콘으로 그린다(thumb-art) */
+.thumb { position: relative; display: grid; place-items: center; flex: none; width: 184px; aspect-ratio: 16 / 10; overflow: hidden; border: 1px solid color-mix(in srgb, var(--t, var(--brand-bright)) 18%, var(--line-2)); border-radius: 14px; color: var(--t, var(--brand-bright)); text-decoration: none;
+  background:
+    radial-gradient(circle at 1.2px 1.2px, color-mix(in srgb, var(--t, var(--brand-bright)) 24%, transparent) 1.1px, transparent 1.7px) 0 0 / 11px 11px,
+    linear-gradient(135deg, color-mix(in srgb, var(--t, var(--brand-bright)) 19%, var(--surface)), color-mix(in srgb, var(--t, var(--brand-bright)) 6%, var(--surface))); }
+.thumb-art svg { width: 38px; height: 38px; margin-bottom: 12px; padding: 9px; box-sizing: content-box; border-radius: 16px; background: color-mix(in srgb, var(--surface) 78%, transparent); box-shadow: 0 6px 16px -8px color-mix(in srgb, var(--t, var(--brand-bright)) 55%, transparent); }
+.thumb-src { position: absolute; left: 12px; right: 12px; bottom: 9px; overflow: hidden; font-size: 0.7rem; font-weight: 700; letter-spacing: -0.01em; text-align: center; white-space: nowrap; text-overflow: ellipsis; color: color-mix(in srgb, var(--t, var(--brand-bright)) 62%, var(--ink)); }
+.thumb-shot img { position: absolute; left: 13px; top: 13px; width: calc(100% - 26px); height: auto; border-radius: 6px 6px 0 0; background: #fff; box-shadow: 0 10px 24px -10px rgb(10 20 60 / 0.45), 0 0 0 1px rgb(10 20 60 / 0.08); transition: transform 0.25s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.card:hover .thumb-shot img { transform: translateY(-3px); }
+.cards-2 .thumb { width: 132px; border-radius: 12px; }
+.cards-2 .thumb-art svg { width: 30px; height: 30px; padding: 7px; margin-bottom: 10px; }
+.cards-2 .thumb-shot img { left: 10px; top: 10px; width: calc(100% - 20px); }
 @media (max-width: 560px) {
-  .card { grid-template-columns: minmax(0, 1fr); padding: 18px; }
-  .card > .chipicon { display: none; }
+  /* 좁은 화면: 그림은 날짜·제목 옆에 작게 두고, 요약부터는 카드 너비를 다 쓴다 */
+  .card, .cards-2 .card { grid-template-columns: 76px minmax(0, 1fr); gap: 8px 14px; padding: 18px; }
+  .card-body { display: contents; }
+  .card .thumb, .cards-2 .thumb { grid-column: 1; grid-row: 1 / span 2; align-self: start; width: 76px; aspect-ratio: 1; border-radius: 12px; }
+  .card .thumb-art svg, .cards-2 .thumb-art svg { width: 28px; height: 28px; padding: 7px; margin-bottom: 0; }
+  .card .thumb-src { display: none; }
+  .card .thumb-shot img, .cards-2 .thumb-shot img { left: 8px; top: 8px; width: 150%; }
+  .card-meta, .card-title { grid-column: 2; }
+  .card-body > :not(.card-meta):not(.card-title) { grid-column: 1 / -1; }
 }
 
 /* 첫 화면에서는 두 줄로 놓고 줄여서 보여 준다 */

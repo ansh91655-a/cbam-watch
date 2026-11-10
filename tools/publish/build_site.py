@@ -8,7 +8,7 @@ import shutil
 import sys
 
 from tools.common.jsonio import read_json, write_json
-from tools.publish import derive, regulations
+from tools.publish import derive, regulations, thumbs
 
 DATA_FILES = ["items", "events", "digests", "terms", "topics", "prices"]
 LIST_KEY = {"items": "items", "events": "events", "digests": "digests", "terms": "terms", "topics": "topics", "prices": "prices"}
@@ -45,6 +45,8 @@ def main(argv):
     # 일정에는 가격표에 적힌 게시일과 규제의 다음 일정을 더한다(가격표나 규제 자료가 바뀌면 일정도 따라 바뀐다)
     bodies["events"] = {**bodies["events"], "events": derive.events(bodies["events"]["events"], bodies["prices"], rules)}
     counts["events"] = len(bodies["events"]["events"])
+    # 미리보기 그림이 있는 소식에는 그림의 주소를 붙인다
+    bodies["items"] = {**bodies["items"], "items": thumbs.attach(bodies["items"]["items"])}
     for name, body in bodies.items():
         write_json(data_out / f"{name}.json", body)
 

@@ -5,6 +5,7 @@ import { band } from "../ui/band.js";
 import { empty, fill, h, pill, safeLink } from "../ui/dom.js";
 import { bytes, count } from "../ui/format.js";
 import { icon } from "../ui/icons.js";
+import { libraryTabs } from "../ui/tabs.js";
 
 const LABEL = { added: "더해짐", removed: "빠짐", changed: "바뀜" };
 
@@ -65,7 +66,7 @@ function row(doc) {
 
 export async function render(main) {
   const [documents, pageOf, unreachable] = await Promise.all([data.documents(), data.documentPages(), data.unreachableDocuments()]);
-  const head = band("원문 대장", "EU 집행위원회가 올린 CBAM 문서입니다. 문서 이름을 누르면 파일을 내려받습니다. 문서가 바뀌면 바뀐 곳을 함께 보여 줍니다.");
+  const head = band("원문 대장", "EU 집행위원회가 올린 CBAM 문서입니다. 문서 이름을 누르면 파일을 내려받습니다. 문서가 바뀌면 바뀐 곳을 함께 보여 줍니다.", libraryTabs("docs"));
   if (!documents.length) {
     fill(main, head, empty("문서 목록을 준비하고 있습니다."));
     return;

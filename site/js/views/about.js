@@ -2,6 +2,7 @@
 import { band } from "../ui/band.js";
 import { fill, h } from "../ui/dom.js";
 import { icon } from "../ui/icons.js";
+import { libraryTabs } from "../ui/tabs.js";
 
 // 화면마다 무엇을 볼 수 있는지: [아이콘, 이름, 설명, 주소]
 const SCREENS = [
@@ -24,6 +25,7 @@ const SECTIONS = [
   ]],
   ["reuse", "자료의 출처와 재이용", [
     "EU 기관의 공식 자료는 출처를 밝히고 재이용합니다. 민간·협회 자료는 제목과 링크만 싣습니다.",
+    "소식 카드의 미리보기 그림 가운데 원문 화면이나 문서 첫 장을 줄여 실은 것은 EU 기관, 영국 정부(Open Government Licence v3.0), 미국 연방관보의 자료입니다. 그 밖의 소식에는 이 사이트가 직접 그린 그림을 씁니다.",
     "원문의 저작권과 재이용 조건은 각 출처를 따릅니다.",
   ]],
 ];
@@ -48,7 +50,7 @@ function section([key, title, paragraphs]) {
 
 export async function render(main) {
   fill(main,
-    band("안내", "이 사이트에서 볼 수 있는 것과 이용할 때 알아 둘 점입니다."),
+    band("안내", "이 사이트에서 볼 수 있는 것과 이용할 때 알아 둘 점입니다.", libraryTabs("about")),
     screens(),
     h("div", { class: "about-grid" }, SECTIONS.map(section)),
   );

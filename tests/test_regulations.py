@@ -158,3 +158,54 @@ class RulesHealthTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ThumbsTest(unittest.TestCase):
+    def test_only_reusable_official_sources_are_planned_once_each(self):
+        from tools.publish import thumbs
+        from tools.thumbs import plan
+        items = [{"link": "https://taxation-customs.ec.europa.eu/news/a_en"}, {"link": "https://taxation-customs.ec.europa.eu/news/a_en"},
+                 {"link": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2083"}, {"link": "https://www.gov.uk/guidance/x"},
+                 {"link": "https://www.keco.or.kr/web/x"}, {"link": "https://www.consilium.europa.eu/en/press/x"}, {"link": "http://www.gov.uk/y"},
+                 {"link": "https://www.federalregister.gov/d/1", "withdrawn": True}, {"link": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0419(COD)"}]
+        jobs = plan.todo(items, {}, lambda name: False, 10)
+        self.assertEqual([job["kind"] for job in jobs], ["page", "pdf", "page", "page"])
+        self.assertEqual(jobs[1]["celex"], "32025R2083")
+        tried = {thumbs.name_of("https://www.gov.uk/guidance/x"): {"tries": 3}}
+        self.assertEqual(len(plan.todo(items, tried, lambda name: name == jobs[0]["name"], 10)), 2)
+
+    def test_items_get_a_thumb_only_when_the_file_exists(self):
+        import pathlib
+        import tempfile
+        from tools.publish import thumbs
+        with tempfile.TemporaryDirectory() as folder:
+            keep = thumbs.FOLDER
+            thumbs.FOLDER = pathlib.Path(folder)
+            try:
+                (thumbs.FOLDER / f"{thumbs.name_of('https://a.example/x')}.webp").write_bytes(b"x")
+                rows = thumbs.attach([{"id": "1", "link": "https://a.example/x"}, {"id": "2", "link": "https://a.example/y"}, {"id": "3", "link": "https://a.example/x", "withdrawn": True}])
+            finally:
+                thumbs.FOLDER = keep
+        self.assertTrue(rows[0]["thumb"].startswith("assets/thumbs/") and rows[0]["thumb"].endswith(".webp"))
+        self.assertNotIn("thumb", rows[1])
+        self.assertNotIn("thumb", rows[2])
+
+    def test_finish_crops_below_the_letterhead_and_rejects_blank_pictures(self):
+        import pathlib
+        import tempfile
+        from PIL import Image
+        from tools.thumbs import finish
+        with tempfile.TemporaryDirectory() as folder:
+            page = Image.new("RGB", (900, 1273), "white")
+            page.paste((200, 30, 30), (0, 0, 900, 150))      # 머리 띠(잘려 나가야 한다)
+            page.paste((20, 40, 120), (100, 300, 800, 420))   # 제목 자리
+            source = pathlib.Path(folder) / "a.png"
+            page.save(source)
+            target = pathlib.Path(folder) / "out" / "a.webp"
+            self.assertEqual(finish.make(source, "pdf", target), "")
+            made = Image.open(target).convert("RGB")
+            self.assertEqual(made.size, finish.SIZE)
+            self.assertGreater(min(made.getpixel((240, 4))), 200)   # 맨 위는 흰 바탕(머리 띠가 없다)
+            self.assertLess(made.getpixel((240, 110))[0], 90)      # 제목 자리의 색이 보인다
+            Image.new("RGB", (960, 600), "white").save(source)
+            self.assertEqual(finish.make(source, "page", target), "빈 그림")

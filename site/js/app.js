@@ -47,6 +47,13 @@ async function fillChrome() {
   stamp();
   document.getElementById("notice").textContent = site.notice || "";
   document.getElementById("independent").textContent = site.independent || "";
+  // 만든 사람의 연락처. 주소는 설정 파일에 둘로 나눠 두고 여기에서 잇는다(자동 수집 프로그램에 덜 걸리도록).
+  const maker = document.getElementById("maker");
+  if (site.maker && site.maker.user && site.maker.host) {
+    const address = `${site.maker.user}@${site.maker.host}`;
+    maker.replaceChildren(h("span", { text: "만든 사람 " }), h("a", { href: `mailto:${address}`, text: address }));
+    maker.hidden = false;
+  }
   const operator = document.getElementById("operator");
   if (site.operator) {
     operator.textContent = `운영 ${site.operator}`;

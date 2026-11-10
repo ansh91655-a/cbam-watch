@@ -9,7 +9,7 @@ on:
       - "tools/publish/**"
       - ".github/workflows/pages.yml"
   workflow_run:
-    workflows: ["출처 수집과 원문 판 점검"]
+    workflows: ["출처 수집과 원문 판 점검", "썸네일 만들기"]
     types: [completed]
   workflow_dispatch:
 

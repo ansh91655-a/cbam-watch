@@ -19,6 +19,11 @@
   .site-nav { width: 100%; }
   .site-nav a { padding: 12px 12px 14px; }
 }
+@media (max-width: 480px) {
+  /* 좁은 화면에서 메뉴 여섯 개가 한 줄에 다 보이게 한다 */
+  .site-nav a { padding: 12px 9px 14px; }
+  .site-nav a[aria-current="page"]::after { left: 9px; right: 9px; }
+}
 
 /* 본문 */
 main { display: grid; gap: var(--gap-6); padding-block: 0 var(--gap-7); min-height: 60vh; align-content: start; }
@@ -94,6 +99,11 @@ main:has(> .showcase:last-child) { padding-bottom: 0; }
 .band-map .map { display: block; width: 100%; height: 100%; overflow: visible; }
 .band-map .map-arcs, .band-map .map-port, .band-map .map-home, .band-map .map-home-ring { display: none; }
 @media (max-width: 900px) { .band-map { display: none; } .band-inner { padding-block: 30px 28px; } }
+/* 주 메뉴 하나에 묶인 화면들을 고르는 탭(머리 띠 안) */
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.tabs a { display: inline-flex; align-items: center; gap: 7px; padding: 7px 16px 7px 13px; border: 1px solid color-mix(in srgb, var(--on-deep) 24%, transparent); border-radius: 999px; background: color-mix(in srgb, var(--on-deep) 7%, transparent); color: var(--on-deep-2); font-size: 0.92rem; font-weight: 600; text-decoration: none; transition: background 0.15s, border-color 0.15s, color 0.15s; }
+.tabs a:hover { border-color: color-mix(in srgb, var(--on-deep) 50%, transparent); color: var(--on-deep); }
+.tabs a[aria-current="page"] { border-color: var(--accent); background: var(--accent); color: var(--on-accent); font-weight: 700; }
 .view-head h1 { font-size: clamp(1.7rem, 3.4vw, 2.3rem); letter-spacing: -0.03em; }
 .view-head .lead { max-width: 58ch; color: var(--on-deep-2); }
 .view-head .fresh { font-size: 0.8rem; color: var(--on-deep-3); font-variant-numeric: tabular-nums; }
@@ -127,6 +137,9 @@ main:has(> .showcase:last-child) { padding-bottom: 0; }
 .site-foot a { color: var(--on-deep-2); text-decoration: none; }
 .site-foot a:hover { color: var(--on-deep); text-decoration: underline; }
 .foot-meta { display: grid; gap: 8px; align-content: start; }
+.foot-base { max-width: var(--maxw); margin-inline: auto; padding: 0 20px 28px; }
+.foot-base p { padding-top: 18px; border-top: 1px solid color-mix(in srgb, var(--on-deep-3) 28%, transparent); color: var(--on-deep-3); }
+.foot-base a { font-weight: 600; }
 .freshness { font-variant-numeric: tabular-nums; }
 .freshness[data-state="stale"], .freshness[data-state="bad"] { color: var(--accent); }
 

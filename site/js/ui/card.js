@@ -1,7 +1,8 @@
-// 소식 카드. 어느 화면에서나 같은 짜임으로 쓴다. 왼쪽에 주제 아이콘, 오른쪽에 본문.
+// 소식 카드. 어느 화면에서나 같은 짜임으로 쓴다. 왼쪽에 미리보기 그림, 오른쪽에 본문.
 import { h, safeLink } from "./dom.js";
 import { day } from "./format.js";
 import { icon } from "./icons.js";
+import { thumb } from "./thumb.js";
 import { topicName, topicOf } from "./topics.js";
 
 // 원문 발췌. 요약의 근거가 된 원문 대목을 그대로 보여 준다(EU 공식 자료만).
@@ -28,7 +29,7 @@ export function card(item) {
   const source = safeLink(item.link, "원문 보기");
   if (source) source.append(icon("out", 15));
   return h("article", { class: "card", "data-importance": item.importance || null, "data-topic": topic, id: item.id ? `item-${item.id}` : null }, [
-    h("span", { class: "chipicon" }, icon(topic, 22)),
+    thumb(item, topic),
     h("div", { class: "card-body" }, [
       meta,
       h("h3", { class: "card-title" }, title),

@@ -3,12 +3,14 @@
 import { h } from "./dom.js";
 import { heroMap } from "./heromap.js";
 
-export function band(title, lead) {
+// extra에는 머리 띠 안에 함께 둘 것(묶인 화면을 고르는 탭)을 넘긴다.
+export function band(title, lead, extra) {
   const art = heroMap();
   art.className = "band-map";
   art.setAttribute("aria-hidden", "true");
   return h("div", { class: "view-head bleed" }, h("div", { class: "band-inner" }, [
     art,
+    extra || null,
     h("h1", { text: title }),
     lead ? h("p", { class: "lead", text: lead }) : null,
     h("p", { class: "fresh", "data-fresh": "" }),
