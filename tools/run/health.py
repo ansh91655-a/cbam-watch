@@ -95,7 +95,8 @@ def report():
         "siteDeployedToday": deployed_today,
         "prices": len(prices.get("prices", [])),
         "publishedItems": len(items),
-        "listedToday": sum(1 for item in items if item.get("listed") == day),
+        # 지난 소식을 한꺼번에 채운 항목(backfill)은 그날의 새 소식으로 세지 않는다
+        "listedToday": sum(1 for item in items if item.get("listed") == day and not item.get("backfill")),
         "withdrawn": sum(1 for item in items if item.get("withdrawn")),
     }
 
