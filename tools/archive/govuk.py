@@ -87,12 +87,12 @@ def _line(entry):
     return f"{entry['date']} | {entry['title']} | {entry['note']}{period} | {entry['url']}"
 
 
-def _save(entries, report):
+def _save(entries, report, incomplete=None):
     kept = sorted((entry for entry in entries if entry["date"] >= SINCE), key=lambda entry: (entry["date"], entry["url"]), reverse=True)
     path = save_text("uk-govuk/changes.txt", ["[주소] https://www.gov.uk" + COLLECTION, ""] + [_line(entry) for entry in kept])
     for entry in kept:
         entry["textPath"] = path
-    save_index("uk-govuk", kept, report)
+    save_index("uk-govuk", kept, report, incomplete)
     return kept
 
 
@@ -142,5 +142,6 @@ def recent():
     fresh += _documents(due["collection"], "collection", failures) + _documents(due["search"], "search", failures)
     reread = {entry["url"] for entry in fresh}
     report = {**stored.get("report", {}), "recent": {"reread": len(reread), "failures": failures}}
-    kept = _save([entry for entry in known if entry["url"] not in reread] + fresh, report)
+    # 가진 목록에 새로 읽은 것만 갈아 끼우므로(읽지 못한 문서의 기록은 그대로 남는다) 목록을 따로 지킬 필요가 없다
+    kept = _save([entry for entry in known if entry["url"] not in reread] + fresh, report, incomplete=False)
     return {"reread": len(reread), "kept": len(kept), "failures": len(failures)}

@@ -1,5 +1,5 @@
 {
- "ranAt": "2026-11-11T03:02:24+09:00",
+ "ranAt": "2026-11-11T02:13:53+09:00",
  "since": "2025-01-01",
  "result": {
   "links": {
@@ -7,14 +7,11 @@
    "32025R2083": 15
   },
   "titles": {
-   "'carbon border adjustment'": 0,
-   "CBAM": 0,
+   "'carbon border adjustment'": 10,
+   "CBAM": 12,
    "'Temporary Decarbonisation Fund'": 5
   },
-  "failures": [
-   "제목 ''carbon border adjustment'': 503 HTTP Error 503: Service Temporarily Unavailable <html>\n    <head>\n\t<title>Web Site Under Maintenance</title>\n\t<META HTTP-EQUIV=\"CACHE-CONTROL\" CONTENT=\"NO-CACHE\">\n\t<MET",
-   "제목 'CBAM': 206  \n{ \"head\": { \"link\": [], \"vars\": [\"celex\", \"date\", \"title\"] },\n  \"results\": { \"distinct\": false, \"ordered\": true, \"bindi"
-  ],
+  "failures": [],
   "cases": {
    "62023CJ0512": "없음",
    "62023CC0512": "없음",
@@ -24,6 +21,6 @@
    "62024CC0519": "2025-10-09",
    "62024CO0519": "없음"
   },
-  "works": 102
+  "works": 106
  }
 }

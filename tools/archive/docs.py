@@ -98,9 +98,9 @@ def crawl(deadline=None):
             entries.append({**known, "relations": target.get("relations", known.get("relations", []))})
             report["kept"] += 1
             continue
-        if deadline and time.monotonic() > deadline:
-            report["stoppedAt"] = target["celex"]
-            break
+        if deadline and time.monotonic() > deadline:  # 시간이 다 되면 새 문서는 다음에 받는다. 이미 받은 문서는 뒤에 있어도 목록에 남긴다
+            report.setdefault("stoppedAt", target["celex"])
+            continue
         celex = target["celex"]
         source = CELLAR.format(celex=celex)
         lines, reason = lines_of(celex, report["notes"])

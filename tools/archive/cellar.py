@@ -8,7 +8,8 @@ import json
 import time
 import urllib.parse
 
-from tools.archive.store import save_index
+from tools.archive.store import ROOT, save_index
+from tools.common.jsonio import read_json
 from tools.common.net import fetch
 
 ENDPOINT = "https://publications.europa.eu/webapi/rdf/sparql"
@@ -60,7 +61,31 @@ def ask(query):
     return [{name: cell.get("value", "") for name, cell in row.items()} for row in rows], ""
 
 
+def restore(found, previous):
+    """실패한 물음이 있을 때 쓴다: 앞에 모아 둔 목록의 문서와 관계 가운데 이번 결과에 없는 것을 되살린다.
+
+    데이터베이스가 점검 중이거나 답이 끊기면 그 물음의 결과가 통째로 비는데, 그것을 '문서가 없어졌다'로 보면
+    규제 연혁의 근거가 사라진 것처럼 보이고 받아 둔 문서의 목록도 줄어든다(2026-11-11 03:02에 실제로 그랬다).
+    되살린 문서의 수를 돌려준다.
+    """
+    kept = 0
+    for old in previous:
+        celex = old.get("celex", "")
+        if not celex:
+            continue
+        entry = found.get(celex)
+        if entry is None:
+            found[celex] = {"celex": celex, "date": old.get("date", ""), "title": old.get("title", ""), "relations": list(old.get("relations", []))}
+            kept += 1
+            continue
+        entry["date"] = entry["date"] or old.get("date", "")
+        entry["title"] = entry["title"] or old.get("title", "")
+        entry["relations"] += [label for label in old.get("relations", []) if label not in entry["relations"]]
+    return kept
+
+
 def crawl():
+    before = read_json(ROOT / "eur-lex-related.json", {})
     found, report = {}, {"links": {}, "titles": {}, "failures": []}
     for base in BASES:
         rows, error = ask(LINKS.format(celex=base, eng=ENG))
@@ -88,9 +113,13 @@ def crawl():
     if error:
         report["failures"].append(f"법원 사건: {error}")
     report["cases"] = {celex: next((row.get("date", "")[:10] or "날짜 없음" for row in rows if row.get("celex") == celex), "없음") for celex in CASES}
+    if report["failures"]:  # 답을 받지 못한 물음이 있으면 앞의 목록에서 빠진 것을 되살린다. 줄어든 목록을 쓰지 않는다
+        report["keptFromBefore"] = restore(found, before.get("entries", []))
+        if error and before.get("report", {}).get("cases"):
+            report["cases"] = before["report"]["cases"]
     entries = sorted(found.values(), key=lambda entry: (entry["date"], entry["celex"]), reverse=True)
     for entry in entries:
         entry["url"] = f"https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:{entry['celex']}"
     report["works"] = len(entries)
-    save_index("eur-lex-related", entries, report)
+    save_index("eur-lex-related", entries, report, incomplete=False)  # 빠진 것은 위에서 스스로 되살렸다(관계까지 합쳐서)
     return report

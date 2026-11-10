@@ -70,13 +70,18 @@ def events_of(lines, rows, reference):
 
 
 def crawl():
-    entries, report = [], {"procedures": {}}
+    before = read_json(ROOT / "ep-oeil.json", {})
+    entries, report = [], {"procedures": {}, "failures": []}
     for reference in procedures():
         url = PAGE.format(reference=reference)
         status, headers, body, error = fetch(url)
         time.sleep(1.5)
         if status != 200 or not body:
-            report["procedures"][reference] = f"읽지 못함({status} {error[:60]})"
+            # 읽지 못한 절차는 앞에 모아 둔 기록과 상태를 그대로 둔다(기록이 없어진 것으로 보지 않는다)
+            report["failures"].append(f"{reference}: 읽지 못함({status} {error[:60]})")
+            known = before.get("report", {}).get("procedures", {}).get(reference)
+            report["procedures"][reference] = known if isinstance(known, dict) else f"읽지 못함({status} {error[:60]})"
+            entries += [entry for entry in before.get("entries", []) if entry.get("procedure") == reference]
             continue
         _, lines, rows = parse(decode(body, header(headers, "Content-Type")), url)
         title, found = events_of(lines, rows, reference)

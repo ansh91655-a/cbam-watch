@@ -2,7 +2,7 @@
 import pathlib
 import re
 
-from tools.common.jsonio import stamp, write_json
+from tools.common.jsonio import read_json, stamp, write_json
 
 ROOT = pathlib.Path("collected/archive")
 SINCE = "2025-01-01"  # 이 날부터의 소식을 모은다
@@ -36,8 +36,34 @@ def slug(text, limit=90):
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")[:limit]
 
 
-def save_index(code, entries, report):
-    """출처 하나의 목록을 쓴다. report에는 몇 쪽을 읽었는지, 어디에서 멈췄는지 같은 확인용 값을 적는다."""
+# 같은 기록인지 가리는 데 쓰는 값들(출처마다 있는 것만 쓴다)
+IDENTITY = ("celex", "procedure", "reference", "number", "url", "date", "event", "title", "note")
+
+
+def _identity(entry):
+    return tuple(str(entry.get(key, "")) for key in IDENTITY)
+
+
+def carry_over(entries, previous):
+    """앞의 목록에 있던 기록 가운데 이번 목록에 없는 것을 뒤에 붙인다. (합친 목록, 붙인 수)를 돌려준다."""
+    have = {_identity(entry) for entry in entries}
+    carried = [entry for entry in previous if _identity(entry) not in have]
+    return list(entries) + carried, len(carried)
+
+
+def save_index(code, entries, report, incomplete=None):
+    """출처 하나의 목록을 쓴다. report에는 몇 쪽을 읽었는지, 어디에서 멈췄는지 같은 확인용 값을 적는다.
+
+    읽지 못한 것이 있는 실행(incomplete)은 목록을 줄이지 않는다: 앞의 목록에 있던 기록 가운데 이번에 빠진 것을 그대로 남긴다.
+    사이트가 점검 중이거나 답이 끊긴 날에 모아 둔 공식 기록이 사라지면, 규제 연혁의 근거가 없어진 것처럼 보이기 때문이다.
+    incomplete를 주지 않으면 report의 error와 failures로 판단한다. 스스로 앞의 목록과 합치는 출처는 False를 준다.
+    """
+    if incomplete is None:
+        incomplete = bool(report.get("error")) or bool(report.get("failures"))
+    if incomplete:
+        entries, carried = carry_over(entries, read_json(ROOT / f"{code}.json", {}).get("entries", []))
+        if carried:
+            report = {**report, "keptFromBefore": report.get("keptFromBefore", 0) + carried}
     write_json(ROOT / f"{code}.json", {"source": code, "fetchedAt": stamp(), "since": SINCE, "report": report, "entries": entries})
 
 

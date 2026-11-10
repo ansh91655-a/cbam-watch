@@ -259,5 +259,94 @@ class FourColumnTest(unittest.TestCase):
         self.assertTrue(fourcolumn.struck(word, [{"x0": 274, "x1": 294, "top": 105.5, "height": 0.6}]))
 
 
+class DatabaseOutageTest(unittest.TestCase):
+    """EU 법령 데이터베이스가 답하지 않는 날에도 모아 둔 목록이 줄어들지 않는지."""
+
+    def setUp(self):
+        import os
+        import tempfile
+        self.folder = tempfile.TemporaryDirectory()
+        self.previous = os.getcwd()
+        os.chdir(self.folder.name)
+
+    def tearDown(self):
+        import os
+        os.chdir(self.previous)
+        self.folder.cleanup()
+
+    def test_missing_documents_and_relations_come_back_from_the_stored_list(self):
+        from tools.archive import cellar
+        found = {"32025R2546": {"celex": "32025R2546", "date": "2025-12-10", "title": "", "relations": ["resource_legal_based_on_resource_legal:32023R0956"]}}
+        before = [
+            {"celex": "32025R2546", "date": "2025-12-10", "title": "Implementing Regulation", "relations": ["resource_legal_based_on_resource_legal:32023R0956", "title-match"], "url": "x"},
+            {"celex": "32026D2256", "date": "2026-09-24", "title": "Council Decision", "relations": ["title-match"], "url": "y"},
+        ]
+        self.assertEqual(cellar.restore(found, before), 1)
+        self.assertEqual(found["32025R2546"]["relations"], ["resource_legal_based_on_resource_legal:32023R0956", "title-match"])
+        self.assertEqual((found["32025R2546"]["title"], found["32026D2256"]["date"]), ("Implementing Regulation", "2026-09-24"))
+
+    def test_a_day_without_answers_keeps_the_stored_list(self):
+        from unittest import mock
+        from tools.archive import cellar
+        from tools.common.jsonio import read_json, write_json
+        entries = [{"celex": "32026D2256", "date": "2026-09-24", "title": "Council Decision", "relations": ["title-match"], "url": "y"}]
+        write_json(cellar.ROOT / "eur-lex-related.json", {"report": {"cases": {"62023CJ0512": "2025-05-08"}}, "entries": entries})
+        with mock.patch.object(cellar, "ask", return_value=([], "503 Service Temporarily Unavailable")):
+            report = cellar.crawl()
+        stored = read_json(cellar.ROOT / "eur-lex-related.json", {})
+        self.assertEqual([entry["celex"] for entry in stored["entries"]], ["32026D2256"])
+        self.assertEqual((report["keptFromBefore"], report["works"], report["cases"]), (1, 1, {"62023CJ0512": "2025-05-08"}))
+        self.assertTrue(report["failures"])
+
+    def test_an_incomplete_run_never_shrinks_a_stored_list(self):
+        from tools.archive import store
+        from tools.common.jsonio import read_json
+        first = {"number": "2026 No. 802", "title": "행정 규정", "url": "https://uk.example/802"}
+        second = {"number": "2026 No. 809", "title": "요율 규정", "url": "https://uk.example/809"}
+        store.save_index("uk-legislation", [first, second], {"found": 2, "failures": []})
+        store.save_index("uk-legislation", [], {"error": "503"})  # 목록을 읽지 못한 날
+        stored = read_json(store.ROOT / "uk-legislation.json", {})
+        self.assertEqual(([entry["number"] for entry in stored["entries"]], stored["report"]["keptFromBefore"]), (["2026 No. 802", "2026 No. 809"], 2))
+        store.save_index("uk-legislation", [second], {"found": 2, "failures": ["행정 규정 (timeout)"]})  # 하나를 읽지 못한 날
+        self.assertEqual(len(read_json(store.ROOT / "uk-legislation.json", {})["entries"]), 2)
+        store.save_index("uk-legislation", [second], {"found": 1, "failures": []})  # 다 읽은 날은 그날의 목록 그대로
+        self.assertEqual([entry["number"] for entry in read_json(store.ROOT / "uk-legislation.json", {})["entries"]], ["2026 No. 809"])
+
+    def test_a_procedure_page_that_fails_keeps_its_stored_events(self):
+        from unittest import mock
+        from tools.archive import oeil
+        from tools.common.jsonio import read_json, write_json
+        reference = "2025/0419(COD)"
+        event = {"date": "2026-09-15", "event": "Decision by Parliament, 1st reading", "reference": "T10-0276/2026", "procedure": reference, "procedureTitle": "CBAM"}
+        info = {"title": "CBAM", "events": 1, "status": "Awaiting Council's 1st reading position", "forecasts": [], "url": "https://oeil.example/x"}
+        write_json(oeil.ROOT / "ep-oeil.json", {"report": {"procedures": {reference: info}}, "entries": [event]})
+        with mock.patch.object(oeil, "procedures", return_value=[reference]), mock.patch.object(oeil.time, "sleep"), \
+                mock.patch.object(oeil, "fetch", return_value=(503, {}, b"", "Service Unavailable")):
+            report = oeil.crawl()
+        stored = read_json(oeil.ROOT / "ep-oeil.json", {})
+        self.assertEqual(stored["entries"], [event])
+        self.assertEqual((report["procedures"][reference], len(report["failures"])), (info, 1))
+
+    def test_documents_already_stored_stay_listed_when_time_runs_out(self):
+        import time
+        from unittest import mock
+        from tools.archive import docs
+        from tools.common.jsonio import read_json, write_json
+        linked = ["resource_legal_based_on_resource_legal:32023R0956"]
+        write_json(docs.ROOT / "eur-lex-related.json", {"entries": [
+            {"celex": "52026PC0001", "date": "2026-03-01", "title": "new one", "relations": linked},
+            {"celex": "52025PC0989", "date": "2025-12-17", "title": "stored one", "relations": linked},
+        ]})
+        text = docs.ROOT / "pages" / "eur-lex-docs" / "52025PC0989.txt"
+        text.parent.mkdir(parents=True)
+        text.write_text("stored", encoding="utf-8")
+        write_json(docs.ROOT / "eur-lex-docs.json", {"entries": [{"celex": "52025PC0989", "date": "2025-12-17", "title": "stored one", "textPath": str(text)}]})
+        with mock.patch.object(docs, "lines_of") as fetching:
+            report = docs.crawl(deadline=time.monotonic() - 1)
+        fetching.assert_not_called()
+        self.assertEqual([entry["celex"] for entry in read_json(docs.ROOT / "eur-lex-docs.json", {})["entries"]], ["52025PC0989"])
+        self.assertEqual((report["kept"], report["stoppedAt"]), (1, "52026PC0001"))
+
+
 if __name__ == "__main__":
     unittest.main()
