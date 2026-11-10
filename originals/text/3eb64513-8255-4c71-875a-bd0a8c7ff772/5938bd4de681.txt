@@ -1,0 +1,4845 @@
+EUROPEAN COMMISSION
+DIRECTORATE-GENERAL
+TAXATION AND CUSTOMS UNION
+Indirect Taxation and Tax Administration
+CBAM, Energy and Green Taxation
+
+Brussels, 14 August 2026
+
+GUIDANCE DOCUMENT 5D: SECTOR-SPECIFIC GUIDANCE
+DOCUMENT ON IRON AND STEEL
+
+Disclaimer: This guidance document is not legally binding and it is of an explanatory nature.
+Legal provisions of Union law take precedence over the contents of this document and should
+always be consulted. The authentic texts of the EU legal instruments are those published in the
+Official Journal of the European Union. This guidance was prepared by Commission services
+and does not represent an official position of the Commission. Only the Court of Justice of the
+European Union is competent to authoritatively interpret Union law.
+
+Commission européenne/Europese Commissie, 1049 Bruxelles/Brussel, BELGIQUE/BELGIË – Tel. +32 22991111
+
+VERSION HISTORY
+Date
+
+Version notes
+
+14.08.2026
+
+First Publication of this document for the definitive period.
+
+2
+
+CONTENTS
+1
+
+PREFACE
+
+4
+
+1.1
+
+Structure and content of the guidance documents
+
+4
+
+1.2
+
+Reference regulations and legal acts
+
+5
+
+2
+2.1
+
+CBAM GOODS AND PRODUCTION ROUTES
+
+7
+
+Foreword to sector-specific sections
+
+7
+
+2.2
+Iron and Steel sector goods and production routes
+2.2.1
+Unit of production and embedded emissions
+2.2.2
+Definition and explanation of sector CBAM goods covered
+2.2.3
+Definition and explanation of relevant production processes and
+emissions covered
+
+8
+8
+10
+
+3
+
+32
+
+IRON AND STEEL SECTOR - SPECIFIC REQUIREMENTS
+
+14
+
+3.1
+Sector-specific requirements for monitoring and reporting
+3.1.1
+Emissions monitoring
+3.1.2
+Additional rules
+3.1.3
+Additional reporting parameters
+
+32
+32
+33
+34
+
+4
+
+34
+
+WORKED EXAMPLES FOR THE IRON AND STEEL SECTORS
+
+4.1
+
+Example 1 – integrated steel works and conversion to iron or steel products.
+34
+
+4.2
+
+Example 2 – EAF and conversion to iron or steel products
+
+44
+
+4.3
+
+Example 3 – production of screws and nuts from purchased steel rods
+
+51
+
+ANNEX A
+
+LIST OF DEFINITIONS
+
+55
+
+ANNEX B
+
+LIST OF ABBREVIATIONS
+
+64
+
+3
+
+1
+
+PREFACE
+
+1.1
+
+Structure and content of the guidance documents
+
+This series of documents has been written to support stakeholders by explaining the
+requirements of the CBAM Regulation in a non-legislative language. This series of
+guidance documents should benefit a variety of stakeholders. A specific focus has been put
+on clarifying the requirements for operators of installations producing CBAM goods
+outside of the EU for the definitive period.
+•
+
+Guidance 1 provides an overview of the main changes to the CBAM methodology
+between the definitive period and the concluded transitional period. It also
+introduces the CBAM and an overview of the compliance cycle, roles and
+responsibilities, as well as milestones and deadlines for operators of installations
+outside the EU during the definitive period and explains the general exemptions
+from the CBAM.
+
+•
+
+Guidance 2 provides a quick guidance for the intended reader of this document,
+the operator of an installation producing CBAM goods. It provides a roadmap of
+the most important concepts of CBAM emissions monitoring and where to find
+more information in this series of documents.
+
+•
+
+Guidance 3 sets out the monitoring and reporting obligations and
+recommendations which are potentially applicable to any affected producer of
+CBAM goods.
+
+•
+
+Guidance 4 provides an overview of how the adjustment for free allocation is to
+be determined and what information is needed.
+
+•
+
+Guidance documents 5a, 5b, 5c, 5d, 5e and 5f present an overview per sector of
+the production processes and value chains for goods that are included in the scope
+of the CBAM, as well as sector-specific monitoring and reporting considerations
+for each CBAM good where this is relevant. These sections are supplemented by
+examples for each sector.
+
+The series of guidance documents is accompanied by an electronic template for
+information that should be used by installation operators to communicate information to
+the authorised CBAM declarants and CBAM Registry.
+
+Presentation of numbers in EU documents
+To align with EU legal documents, this guidance document uses the following
+convention when presenting numbers.
+The decimal separator used to separate the integral part of a number from its fractional
+part is a comma, e.g.: 0,890
+Thousands, and powers of 103n thereafter, are separated by a space, e.g.:
+•
+
+fifteen thousand is written as 15 000
+
+•
+
+fifteen million is written as 15 000 000
+4
+
+1.2
+
+Reference regulations and legal acts
+
+Several regulations and legal acts are referred to throughout this series of guidance
+documents. For ease of reading and to avoid ambiguity, simplified references are used
+when citing these acts.
+•
+
+CBAM Regulation: Regulation (EU) 2023/956 and Regulation (EU) 2025/2083
+amending Regulation (EU) 2023/956. Notably, where article numbers are given
+in this document without further specification, they always refer to the CBAM
+Regulation.
+It can be accessed at the following link (consolidated version):
+http://data.europa.eu/eli/reg/2023/956/2025-10-20
+
+•
+
+Methodology Act: Commission Implementing Regulation (EU) 2025/2547, in
+legal texts referred to as “Implementing act pursuant to Article 7(7) of the CBAM
+Regulation”.
+It can be accessed at the following link:
+http://data.europa.eu/eli/reg_impl/2025/2547/oj
+
+•
+
+Default Values Act: Commission Implementing Regulation (EU) 2025/2621, in
+legal texts referred to as “Implementing act pursuant to Article 7(7) of the CBAM
+Regulation”, also referred to as “default values determined in accordance with
+Annex IV to the CBAM Regulation”.
+It can be accessed at the following
+link: http://data.europa.eu/eli/reg_impl/2025/2621/oj
+
+•
+
+Verification Principles Act: Commission Implementing Regulation (EU)
+2025/2546, in legal texts referred to as “Implementing act pursuant to Article 8(3)
+of the CBAM Regulation”.
+It can be accessed at the following link:
+http://data.europa.eu/eli/reg_impl/2025/2546/oj
+
+•
+
+Accreditation & Verification Requirements Act: Commission Delegated
+Regulation (EU) 2025/2551, in legal texts referred to as “Delegated act pursuant
+to Article 18(3) of the CBAM Regulation”.
+It can be accessed at the following
+link: http://data.europa.eu/eli/reg_del/2025/2551/oj
+
+•
+
+Free Allocation Adjustment Act: Commission Implementing Regulation (EU)
+2025/2620, in legal texts referred to as “Implementing act pursuant to Article
+31(2) of the CBAM Regulation”.
+It can be accessed at the following link:
+http://data.europa.eu/eli/reg_impl/2025/2620/oj
+
+For acronyms and definitions used in this document, please see Annex B and Annex A.
+5
+
+A series of icons are used throughout to help guide the reader:
+Icon
+
+Description of use
+Points to information of particular importance for operators of
+installations producing CBAM goods.
+
+Simplified!
+
+Highlights simplified approaches of the general requirements of
+the CBAM.
+Used where recommended improvements are presented.
+Used where other documents, templates or electronic tools are
+available from other sources.
+Points to examples given for the topics discussed in the
+surrounding text.
+
+6
+
+2
+
+CBAM GOODS AND PRODUCTION ROUTES
+
+This section provides guidance on industry-sector-specific rules that apply for the
+definitive period (from 2026 onwards), for iron and steel sector. It deals with the
+specification of products covered by the CBAM and the relevant production routes.
+2.1
+
+Foreword to sector-specific sections
+
+The following sections provide an overview of the different production routes for the goods
+under the iron and steel sector in CBAM and provide sector specific guidance. Where
+goods to which the same functional unit applies are produced in one installation via
+different production routes, the embedded emissions shall be determined in accordance
+with the averaging rules applicable in the definitive period.
+Additional information on the production processes of the goods can also be found in the
+BREF1 documents for best available techniques (BAT).
+Diagrams used in the following sections.
+For the system boundary graphics presented in the sections below, the following
+conventions are applied:
+⚫
+Production processes (for which monitoring of the direct emissions would take
+place) are shown as rectangles with white background.
+⚫
+Optional processes (e.g. CCS/CCU) are shown in blue boxes. In particular,
+CCS/CCU would not be taken into account for developing default values, but
+where you (as an operator) use them, the related emissions or emission savings
+should be taken into account for determining actual embedded emissions in line
+with the CBAM Regulation and the Methodology Act.
+⚫
+Materials which are considered to have no embedded emissions are shown in
+pink boxes, materials with embedded emissions (precursor materials and final
+products, i.e. goods under the CBAM) in green boxes. Simple goods are shown
+in normal font, complex goods in bold font. Materials which are optional are
+shown in boxes with a blue dashed outline and must be included where actually
+used at the installation.
+⚫
+Input materials are presented without trying to be complete. This means that the
+focus is on materials which are relevant for demonstrating the differences
+between different production routes. As a consequence, less important input
+materials and in particular fuels are usually omitted in order to keep graphs
+simple.
+⚫
+Electricity as input is shown only in cases where it is the main “precursor” of
+the process (i.e. in particular for electric arc furnaces and electrolysis processes).
+Electricity is shown in light grey boxes.
+
+1
+
+BAT Reference document (BREF), BAT being “Best Available Techniques” as defined by the IED
+(Industrial Emissions Directive). Relevant BREF documents are those for: the production of cement; for
+iron and steel production; large volume inorganic chemicals (which includes fertilisers); for Chlor-alkali;
+and for non-ferrous metals (which includes both aluminium and ferro-alloys). All BREFs can be found
+at the European IPPC Bureau, under https://eippcb.jrc.ec.europa.eu/reference.
+7
+
+2.2
+
+Iron and Steel sector goods and production routes
+
+The textbox below signposts sector-specific sections in the Methodology Act, relevant for
+the CBAM definitive period (2026 onwards).
+Methodology Act references:
+
+•
+
+Annex I (“Mapping of CN codes to aggregated goods categories”) to the Methodology Act
+
+•
+
+Annex I, points 3.11 (Sintered ore), 3.12 (Ferro-manganese, Ferro-chromium, Ferro-nickel), 3.13
+(Pig iron), 3.14 (DRI), 3.15 (Crude steel) and 3.16 (Iron or steel products), which define the
+functional unt, system boundaries and possible precursors for iron and steel sector goods.
+
+2.2.1
+
+Unit of production and embedded emissions
+
+The quantity of declared iron and steel sector goods imported into the EU must be
+expressed in metric tonnes. As an operator, you must record the quantity of CBAM goods
+produced by your installation in each production process, for the purposes of reporting.
+For the purposes of determining embedded emissions on the basis of actual values, the
+‘reporting period’ corresponds to the calendar year during which the good was produced.
+By default, the reporting period for goods imported into the EU is the calendar year of
+import (with the possibility to rebut this presumption where there is sufficient evidence of
+the actual time of production).
+Industrial sector
+
+Iron and steel
+
+Production unit of goods
+
+Tonnes (metric), reported separately for each type of
+sector goods, by installation or production process in
+the country of origin
+
+Associated activities
+
+Producing, melting or refining iron or steel or
+ferrous alloys; manufacture of semi-finished and
+basic steel products.
+
+Relevant greenhouse gas
+
+Carbon dioxide (CO2)
+
+Direct Emissions
+
+Tonnes (metric) of CO2e
+
+Indirect Emissions
+
+Quantity of electricity consumed (MWh), source
+and emissions factor used to calculate the indirect
+emissions in tonnes (metric) of CO2 or CO2e where
+relevant (i.e. for goods not listed in Annex II to the
+CBAM Regulation and/or for precursors whose
+embedded emissions include indirect emissions).
+
+8
+
+During the transitional period, indirect emissions
+from electricity consumption were monitored and
+reported separately. In the definitive period, for iron
+and steel CBAM goods listed in Annex II (“Goods
+for which only direct emissions are taken into
+account”) to the CBAM Regulation, only direct
+emissions are taken into account in their embedded
+emissions; indirect emissions of electricity are not
+included. For sintered ore (CN 2601 12 00) – not
+listed in Annex II to the CBAM Regulation, indirect
+emissions are to be included.
+Unit for embedded
+emissions
+
+Tonnes CO2e emissions per tonne of goods, reported
+separately for each type of goods, by installation in
+the country of origin
+
+During the transitional period, the iron and steel sector reported both direct and indirect
+emissions, with indirect emissions reported separately. In the definitive period, in line with
+Article 7(1) and Annex II (“List of goods for which only direct emissions are to be taken
+into account”) to the CBAM Regulation and Article 3(2) of the Methodology Act, only
+direct emissions are taken into account when determining the embedded emissions of iron
+and steel CBAM goods (except for sintered ore). Where iron and steel goods listed in
+Annex II are used as precursors in the production of other CBAM goods, their indirect
+emissions are likewise not included in the embedded emissions of those complex goods,
+in accordance with the cross-sectoral rules in the Methodology Act.
+Where iron and steel CBAM goods are complex goods produced using precursors (such as
+sintered ore, pig iron, DRI or ferro-alloys), the embedded emissions of the iron and steel
+goods must include the full embedded emissions of those precursors, including any indirect
+emissions of electricity associated with the precursors where relevant (i.e. where the
+precursor is not listed in Annex II to the CBAM Regulation), for example, hydrogen where
+used as a precursor. Where actual data are used for precursors produced outside the
+installation, such actual data may be used only where they are taken from a verification
+report. The verification report must be issued by a verifier having an accreditation valid at
+the time of issuing the verification report and for the sectoral scope required for the
+aggregated goods category of the precursor under consideration. The verification report
+must cover the reporting period during which the precursor was produced, otherwise, the
+relevant default values shall be used.
+The following sections set out how the system boundaries of iron and steel sector goods
+should be defined and identify elements of the production process that must be included
+for the purposes of monitoring and reporting. Operators shall design and implement a
+monitoring plan and submit it in English. Records supporting monitoring and reporting
+shall be retained for at least 6 years. Where a claim is made that applying a specific
+determination methodology incurs unreasonable costs, the justification shall be set out in
+the monitoring plan and assessed against the reference price of EUR 80 per tonne of CO2e
+and the accumulated limit of EUR 4 000 per year.
+
+9
+
+2.2.2
+
+Definition and explanation of sector CBAM goods covered
+
+The following Table 2-1 lists the relevant goods in scope for the CBAM definitive period
+in the iron and steel industry sector. The CN codes in the central column are the starting
+point for which ‘production processes’ are to be defined for the purpose of monitoring in
+line with Annex I to the CBAM Regulation and Annex I (“Mapping of CN codes to
+aggregated goods categories”) to the Methodology Act. Where goods with different CN
+codes to which the same functional unit applies are produced using different production
+routes within an installation, a single production process shall be used encompassing all
+production routes.
+Table 2-1: CBAM goods in the iron and steel sector2
+
+Aggregated
+goods
+category
+
+Product CN
+Code3
+
+Description
+
+Sintered Ore4
+
+2601 12 00
+
+Agglomerated iron ores and concentrates, other than
+roasted iron pyrites
+
+Pig iron
+
+7201
+
+Pig iron and spiegeleisen5 in pigs, blocks or other
+primary forms
+
+72056
+
+Some products under 7205 (Granules and powders,
+of pig iron, spiegeleisen, iron, or steel) may be
+covered here
+
+Ferro-alloy:
+FeMn
+
+7202 1
+
+Ferro-manganese (FeMn)
+
+Ferro-alloy:
+FeCr
+
+7202 4
+
+Ferro-chromium (FeCr)
+
+Ferro-alloy:
+FeNi
+
+7202 6
+
+Ferro-nickel (FeNi)
+
+DRI
+
+7203
+
+Ferrous products obtained by direct reduction of iron
+ore and other spongy ferrous products
+
+Crude steel
+
+7206, 7207,
+7218 and
+7224
+
+7206 – Iron and non-alloy steel in ingots or other
+primary forms (excluding iron of heading 7203)
+7207 – Semi-finished products of iron or non-alloy
+steel
+
+2
+
+Source: Annex I to the CBAM Regulation; Annex I (“Mapping of CN codes to aggregated goods
+categories”) to the Methodology Act.
+
+3
+
+Where the CN codes indicated in this table consist of 4, 5 or 6 digits, all 8-digit CN codes sharing the
+same initial digits shall be considered included, unless otherwise specified.
+
+4
+
+This aggregated goods category includes all kinds of iron ore pellet production (for sale of pellets as
+well as for direct use in the same installation) and sinter production.
+
+5
+
+Pig iron containing alloy ferro-manganese.
+
+6
+
+Only some products of this CN code will qualify as “pig iron”, while other goods of this code are
+classified as “iron or steel products”.
+10
+
+Aggregated
+goods
+category
+
+Product CN
+Code3
+
+Description
+
+7218 – Stainless steel in ingots or other primary
+forms; semi-finished products of stainless steel
+7224 – Other alloy steel in ingots or other primary
+forms; semi-finished products of other alloy steel
+Iron or steel
+products7
+
+Includes:
+7205, 72087217, 72197223, 72257229, 73017311, 7318
+and 7326
+
+7205 – Granules and powders, of pig iron,
+spiegeleisen, iron or steel (if not covered under
+category pig iron)
+7208 – Flat-rolled products of iron or non-alloy
+steel, of a width of 600 mm or more, hot-rolled, not
+clad, plated or coated
+7209 – Flat-rolled products of iron or non-alloy
+steel, of a width of 600 mm or more, cold-rolled
+(cold-reduced), not clad, plated or coated
+7210 – Flat-rolled products of iron or non-alloy
+steel, of a width of 600 mm or more, clad, plated or
+coated
+7211 – Flat-rolled products of iron or non-alloy
+steel, of a width of less than 600 mm, not clad,
+plated or coated
+7212 – Flat-rolled products of iron or non-alloy
+steel, of a width of less than 600 mm, clad, plated or
+coated
+7213 – Bars and rods, hot-rolled, in irregularly
+wound coils, of iron or non-alloy steel
+7214 – Other bars and rods of iron or non-alloy
+steel, not further worked than forged, hot-rolled,
+hot-drawn or hot-extruded, but including those
+twisted after rolling
+7215 – Other bars and rods of iron or non-alloy steel
+7216 – Angles, shapes and sections of iron or nonalloy steel
+7217 – Wire of iron or non-alloy steel
+7219 – Flat-rolled products of stainless steel, of a
+width of 600 mm or more
+7220 – Flat-rolled products of stainless steel, of a
+width of less than 600 mm
+7221 – Bars and rods, hot-rolled, in irregularly
+wound coils, of stainless steel
+7222 – Other bars and rods of stainless steel; angles,
+shapes and sections of stainless steel
+
+7
+
+This aggregated goods category includes semi-finished and finished products.
+11
+
+Aggregated
+goods
+category
+
+Product CN
+Code3
+
+Description
+
+7223 – Wire of stainless steel
+7225 – Flat-rolled products of other alloy steel, of a
+width of 600 mm or more
+7226 – Flat-rolled products of other alloy steel, of a
+width of less than 600 mm
+7227 – Bars and rods, hot-rolled, in irregularly
+wound coils, of other alloy steel
+7228 – Other bars and rods of other alloy steel;
+angles, shapes and sections, of other alloy steel;
+hollow drill bars and rods, of alloy or non-alloy steel
+7229 – Wire of other alloy steel
+7301 – Sheet piling of iron or steel, whether or not
+drilled, punched or made from assembled elements;
+welded angles, shapes and sections, of iron or steel
+7302 – Railway or tramway track construction
+material of iron or steel, the following: rails, checkrails and rack rails, switch blades, crossing frogs,
+point rods and other crossing pieces, sleepers (crossties), fish- plates, chairs, chair wedges, sole plates
+(base plates), rail clips, bedplates, ties and other
+material specialised for jointing or fixing rails
+7303 – Tubes, pipes and hollow profiles, of cast iron
+7304 – Tubes, pipes and hollow profiles, seamless,
+of iron (other than cast iron) or steel
+7305 – Other tubes and pipes (for example, welded,
+riveted or similarly closed), having circular crosssections, the external diameter of which exceeds
+406,4 mm of iron or steel
+7306 – Other tubes, pipes and hollow profiles (for
+example, open seam or welded, riveted or similarly
+closed), of iron or steel
+7307 – Tube or pipe fittings (for example,
+couplings, elbows, sleeves), of iron or steel
+7308 – Structures (excluding prefabricated buildings
+of heading 9406) and parts of structures (for
+example, bridges and bridge-sections, lock- gates,
+towers, lattice masts, roofs, roofing frameworks,
+doors and windows and their frames and thresholds
+for doors, shutters, balustrades, pillars and
+columns), of iron or steel; plates, rods, angles,
+shapes, sections, tubes and the like, prepared for use
+in structures, of iron or steel
+
+12
+
+Aggregated
+goods
+category
+
+Product CN
+Code3
+
+Description
+
+7309 – Reservoirs, tanks, vats and similar containers
+for any material (other than compressed or liquefied
+gas), of iron or steel, of a capacity exceeding 300 l,
+whether or not lined or heat-insulated, but not fitted
+with mechanical or thermal equipment
+7310 – Tanks, casks, drums, cans, boxes and similar
+containers, for any material (other than compressed
+or liquefied gas), of iron or steel, of a capacity not
+exceeding 300 l, whether or not lined or heatinsulated, but not fitted with mechanical or thermal
+equipment
+7311 – Containers for compressed or liquefied gas,
+of iron or steel
+7318 – Screws, bolts, nuts, coach screws, screw
+hooks, rivets, cotters, cotter pins, washers (including
+spring washers) and similar articles, of iron or steel
+7326 – Other articles of iron or steel
+The aggregated goods categories listed in Table 2-1 include both finished goods and
+precursor goods (intermediate products) that are consumed in the production of iron or
+steel products. The system boundaries specified in the Methodology Act do not mention
+explicitly which precursors are relevant for the production process. Therefore, Table 2-2
+should help to identify the possible precursors by aggregated goods category and
+production route.
+Table 2-2: Aggregated goods categories, their production routes and possible precursors
+
+Aggregated Goods Category
+
+Precursors
+
+Production route
+Sintered Ore
+
+None
+
+Ferro alloys (FeMn, FeCr, FeNi)
+
+Sintered ore, if used in the process.
+
+Pig iron
+
+Hydrogen, sintered ore, ferro alloys, pig iron/DRI
+(the latter if obtained from other installations or
+production processes and used in the process).
+
+Blast furnace route
+Smelting reduction
+Direct Reduced Iron (DRI)
+
+Hydrogen, sintered ore, ferro alloys, pig iron/DRI
+(the latter if obtained from other installations or
+production processes and used in the process).
+
+Crude steel
+
+Ferro alloys, pig iron, DRI, crude steel (the latter if
+obtained from other installations or production
+processes and used in the process).
+
+Basic oxygen
+steelmaking
+
+13
+
+Aggregated Goods Category
+
+Precursors
+
+Production route
+Electric arc furnace
+Iron or steel products
+
+Ferro alloys, pig iron, DRI, crude steel, iron or steel
+products (if used in the process).
+
+Not all precursors will apply in every case. For example, hydrogen may only become
+relevant in the future.
+Note in particular that in some cases an aggregated goods category may be precursor for
+its own category. This is best explained by an example:
+Example: If an installation produces screws and nuts from steel rods, then the rods are
+the precursor, but both rods and screws and nuts are included in the same aggregated
+goods category (iron or steel products).
+The embedded emissions of the screws and nuts (whose CN codes share the first four
+digits, 7318) will be composed of the emissions of the production process (heat applied
+for making the rods workable, and for annealing of the final product) plus the embedded
+emissions of the steel rods. Note that this is important because the mass of the precursor
+rods and the mass of the final product screws and nuts will not be the same – if e.g. 20%
+of the original mass are cut away (and disposed of as scrap), 100 t precursor are required
+for 80 t of final product.
+
+Some types of iron or steel product have been excluded from the scope of the CBAM. In
+particular, these include certain other types of ferro alloys under CN 7202 8 and CN 7204
+– ferrous waste and scrap.
+The production of iron and steel sector goods is by a number of different production
+processes and routes, outlined below.
+
+2.2.3
+
+Definition and explanation of relevant production processes and emissions
+covered
+
+The system boundaries of precursors and basic iron and steel finished goods are distinct
+and may, under certain conditions, be added together to include all processes directly or
+indirectly linked to the production processes for these goods, including input activities to
+the process, and output activities from the process in line with the definitions of functional
+units, system boundaries and precursors for the iron and steel aggregated goods categories
+in Annex I, points 3.11 to 3.16, and the rules on attributing emissions to goods in Annex
+III of the Methodology Act. For the goods under the aggregated goods categories crude
+steel and iron or steel products, where different functional units that only differ in size or
+shape are produced with the same precursors in types, quantities and proportions, a single
+8
+
+Other ferro-alloys not covered by CBAM include ferro-silicon, ferro-silico-manganese, ferro-silicochromium, ferro-molybdenum, ferro-tungsten and ferro-silico-tungsten etc.
+14
+
+multifunctional production process shall be defined for that group of goods and the relevant
+attribution rules shall apply.
+Where iron and steel CBAM goods are complex goods and precursors are received (i)
+under a given CN code produced during different reporting periods and/or (ii) from
+multiple installations, embedded emissions shall, by default, be determined using the
+weighted-average rules, with deviation from the default allowed only where sufficient
+evidence supports more granular attribution to a specific installation or subset of
+installations.
+In addition (where indirect emissions are relevant to precursors or other non-Annex II
+goods produced at the installation), where electricity is received from multiple sources,
+indirect emissions shall be determined, by default, using a weighted average of the
+emission factors of each electricity source (with a limited possibility to determine indirect
+emissions for a production process based only on one source or a subset of sources, where
+sufficient evidence is provided).
+
+Figure 2-1: System boundaries and value chain for the production of iron or steel products.
+
+Notes to figure:
+•
+In this figure, the green boxes with a blue dashed outline (e.g. Hydrogen (if used as separately produced
+precursor)) represent optional precursors or process steps that are only included where they are actually
+used at the installation.
+•
+Functional unit for iron and steel goods: tonnes of goods under the same CN code.
+•
+Electricity (shown as a system-boundary input only in some cases in this figure): Electricity may be
+consumed in several production steps (e.g. EAF-based routes). Indirect emissions from electricity are not
+included in embedded emissions for iron and steel goods listed in Annex II to the CBAM Regulation (direct
+emissions only).
+•
+Averaging across routes: Where goods with the same functional unit are produced via more than one
+production route within an installation, specific embedded emissions shall be determined using a weighted
+average across those routes.
+•
+Precursors: Where iron and steel goods are complex goods, embedded emissions include the embedded
+emissions of precursors; where indirect emissions are relevant to a precursor (e.g., sintered ore), those
+indirect emissions are included in the final goods’ embedded emissions even if the final iron/steel good is
+direct-only.
+
+15
+
+Where actual embedded emissions are calculated, the operator shall prepare an operator’s
+emissions report and a summary thereof, and, where embedded emissions of electricity are
+calculated based on actual emissions, a declarant-specific addendum. The operator’s
+emissions report shall be submitted in English.
+The following Figure 2-1 provides an overview of the different production processes and
+process routes by which iron or steel CBAM goods are produced.
+The production of precursor and finished goods is by a number of different process routes,
+outlined in the following sections. The relevant emissions that must be monitored for the
+iron and steel sector are detailed in section 3.1.1 of this document.
+2.2.3.1
+
+Sintered ore production process
+
+This aggregated goods category includes all kinds of iron ore pellet production (for sale of
+pellets as well as for direct use in the same installation) and sinter production. Pelletisation
+and sintering are complementary process routes for preparing and agglomerating iron
+oxide raw materials for use in iron and steel making. In pelletisation, iron oxide raw
+materials are ground and combined with additives to form pellets, which are then thermally
+treated. In sintered ore production, iron oxide raw materials are mixed with coke breeze
+and other additives before the mixture is sintered together in a kiln, forming a porous
+material similar to clinker, called ‘sinter’. Sinter is typically produced and used at the
+steelworks. Pellets may be produced at the steelworks or at a distance at mine sites.
+Note that to the extent covered by CN code 2601 12 00, iron ores used as precursors for
+ferro-chromium (FeCr), ferro-manganese (FeMn) or ferro-nickel (FeNi) may also be
+covered by this aggregated goods category.
+The Methodology Act (Annex I, point 3.11.2)) defines the system boundaries for direct
+emissions monitoring for the sintered ore production route, as encompassing:
+“ – All processes emitting CO2 from process materials such as limestone and other
+carbonates or carbonate ores.
+– All processes emitting CO2 from all fuels including coke, waste gases such as
+coke oven gas, blast furnace gas or converter gas; directly or indirectly linked to
+the production process, and materials used for flue gas cleaning.”
+There are no other CBAM goods commonly used as precursors for this production process.
+Note that the system boundaries for sintered ore includes indirect emissions that result
+from electricity consumed by the production process for this good.
+In line with the above definition of systems boundaries, the following production steps
+may be regarded as being within the system boundaries of iron ore pellet and sinter
+production:
+•
+
+Raw material handling and pre-treatment – drying and grinding of iron ore raw
+materials.
+
+•
+
+Blending and mixing of raw materials – preparation of raw mixture for pellets and
+for sinter. Storage of raw mix in bunkers or hoppers at the start of the process.
+
+•
+
+Iron ore pellets only – forming into pellets and thermal treatment, screening.
+16
+
+•
+
+Sintered ore only – raw material preparation, sintering in a furnace, followed by
+crushing, screening, conveying and cooling.
+
+•
+
+Emissions control – in particular waste gas treatment.
+
+The following Figure 2-2 shows the system boundaries of the sinter (or iron ore pellets)
+production process.
+Figure 2-2: System boundaries: embedded emissions of sintered ore (sinter and pellets)
+Sintered ore production process
+
+Notes to figure:
+•
+
+Electricity consumed by the production process is included in embedded emissions for this good .
+
+2.2.3.2
+
+Ferro-alloy FeMn, FeCr, and FeNi production processes
+
+This process covers the production of the alloys ferro-manganese (FeMn), ferro-chromium
+(FeCr), ferro-nickel (FeNi), identified under CN codes 7202 1, 7202 4 and 7202 6. Other
+iron materials with significant alloy content such as spiegeleisen are not covered here.
+However, nickel pig iron (NPI) is included if the nickel content is greater than 10%; if
+nickel content is less than 10% then NPI is covered by the pig iron – blast furnace
+production route.
+The different ferro-alloys are produced by reductive smelting with the addition of a
+reducing agent such as coke to the EAF, along with other additives. Different types of EAF
+may be used, depending on the ferro-alloy production process; Ferro-nickel has an
+additional calcination and pre-reduction production step prior to smelting. Following EAF
+smelting, liquid metal alloy is tapped and cast in moulds and the solidified metal is then
+crushed or granulated, depending on customer requirements.
+The Methodology Act (Annex I, point 3.12.2) defines the system boundaries for direct
+emissions monitoring for ferro-alloys FeMn, FeCr and FeNi production processes, as
+encompassing:
+“ – All processes directly or indirectly linked to the production processes emitting
+CO2 emissions caused by fuel inputs, irrespective of whether they are used for
+energetic or non-energetic use.
+17
+
+– All processes directly or indirectly linked to the production processes emitting
+CO2 emissions from process inputs such as limestone and from flue gas cleaning.
+– All processes directly or indirectly linked to the production processes emitting
+CO2 emissions from the consumption of electrodes or electrode pastes.
+– Carbon remaining in the product or in slags or wastes is taken into account by
+using a mass balance method in accordance with point B.3.2 of Annex II to the
+Methodology Act.”
+No precursors are specified for this production process in Annex I, point 3.12 of the
+Methodology Act adopted under Article 7(7) of the CBAM Regulation.
+Indirect emissions that result from electricity consumed by the production process were
+required to be monitored and reported during the transitional period. In the definitive
+period, indirect emissions are not taken into account in the embedded emissions of ferroalloys for CBAM purposes, as indirect emissions are taken into account only for goods not
+listed in Annex II to the CBAM Regulation (Article 3(2) of the Methodology Act).
+Electricity may still be consumed in the production process and recorded for
+operational/energy balance purposes but is not included in embedded emissions for these
+goods where only direct emissions apply.
+In line with the above definition of systems boundaries, the following production steps
+may be regarded as being within the system boundaries of ferro-alloy installations:
+•
+
+Raw material handling and pre-treatment – pellets and sinter for FeMn and FeCr,
+calcination and pre-reduction in a rotary kiln for FeNi.
+
+•
+
+EAF process – all steps for the EAF process, including charging, melting, primary
+refining and tapping of the primary furnace.
+
+•
+
+Decarburisation and secondary metallurgy – if required to produce ferro-alloys
+with different carbon contents.
+
+•
+
+Casting plant – including casting and cutting, casting ingots pre-heating stands.
+
+•
+
+Crushing and granulation.
+
+•
+
+Emissions control – for treating releases to air, water or ground, including
+dedusting units, post-combustion unit, slag handling.
+
+The following Figure 2-3 shows the system boundaries of the relevant ferro-alloy
+production processes.
+The mass balance method is to be used to give a complete balance of the amount of carbon
+entering or leaving the EAF production process (carbon remaining in the ferro-alloy
+product, in wastes or in slag) in line with point B.3.2 of Annex II to the Methodology Act.
+For ferro-alloy CBAM goods listed in Annex II to the CBAM Regulation, only direct
+emissions are included in embedded emissions; indirect emissions from electricity
+consumption are not included.
+
+18
+
+Figure 2-3: System boundaries of Ferro-alloy production processes.
+Ferro-alloy production process – EAF reductive smelting
+
+Notes to figure:
+
+•
+
+CO₂/CO in waste gases: Where waste gases contain CO and are emitted without abatement, the CO
+component is treated as the molar equivalent of CO₂ for the purpose of determining direct emissions (i.e.
+counted as CO₂e on a molar basis), in line with the Methodology Act’s rules for fuel/waste-gas streams.
+
+•
+
+Indirect emissions/electricity: Ferro-alloy goods are treated as “direct emissions only” goods for CBAM
+purposes (Annex II to the CBAM Regulation). Accordingly, electricity may be consumed by the process,
+but indirect emissions from electricity are not included in embedded emissions for these goods; any
+electricity references in the figure should be read as operational inputs rather than system-boundary
+components for embedded emissions.
+
+•
+
+Optional inputs: Inputs shown with blue dashed outlines are illustrative/optional (used only where they are
+actually applied in the installation’s process route) and do not introduce any standalone “threshold” rule for
+inclusion. Materials in green boxes have embedded emissions (precursor materials and final products, i.e.
+goods under the CBAM). Materials which are considered to have no embedded emissions are shown in pink
+boxes.
+
+•
+
+System-boundary reminder: Direct-emissions system boundaries include (as applicable) fuel inputs
+(energetic and non-energetic use), process inputs such as limestone/carbonates and flue-gas cleaning
+materials, and emissions from consumption of electrodes/electrode pastes, with carbon retained in
+products/slag/wastes accounted for via mass balance where required.
+
+2.2.3.3
+
+Pig iron – Blast furnace production route
+
+The blast furnace production route produces liquid pig iron (“hot metal”) that may be
+alloyed (e.g. spiegeleisen and nickel pig iron or NPI9) or non-alloyed. The main production
+unit for this production process is the blast furnace. Inputs into the blast furnace include
+iron ore pellets or sintered ore, fuels and other raw materials including those used as
+reducing agents. Inside the blast furnace iron oxide is reduced to iron metal. The hot metal
+produced is then tapped and is either cast or is directly converted to crude steel in a
+sequential step by the basic oxygen converter. This step is covered under a different
+production process, the crude steel – basic oxygen steelmaking production route.
+The Methodology Act (Annex II, point 3.13.2.1, in conjunction with points B.3.2 and B.3.3
+of Annex III) defines the system boundaries for direct emissions monitoring for the pig
+iron – Blast furnace production route, as encompassing:
+
+9
+
+NPI is covered by this production process if the nickel content is lower than 10%, otherwise if more than
+10% it is covered under the ferro-alloy production process.
+19
+
+“ – All processes directly or indirectly linked to the production processes emitting
+CO2 from fuels and reducing agents such as coke, coke dust, coal, fuel oils, plastic
+wastes, natural gas, wood wastes, charcoal, as well as from waste gases such as
+coke oven gas, blast furnace gas or converter gas.
+– Where biomass is used, the provisions of Section B.3.3 of Annex II shall be taken
+into account.
+– All processes directly or indirectly linked to the production processes emitting
+CO2 from process materials such as limestone, magnesite, and other carbonates,
+carbonate ores; materials for flue gas cleaning.
+– Carbon remaining in the product or in slags or wastes is taken into account by
+using a mass balance method in accordance with Section B.3.2 of Annex II.”
+Precursors (if used in the process) are: sintered ore; pig iron or DRI from other installations
+or production processes; ferro-alloys FeMn, FeCr, FeNi; and hydrogen, if used. Indirect
+emissions that result from electricity consumed by the production process were monitored
+and reported separately during the transitional period but are not taken into account in the
+embedded emissions of pig iron under the definitive-period CBAM rules.
+In line with the above definition of systems boundaries, the following production steps
+may be regarded as being within the system boundaries of blast furnace installations:
+•
+
+Raw material handling and pre-treatment.
+
+•
+
+Fuel storage and preparation – e.g. coal drying and preparation for pulverized coal
+injection (PCI), vessels preheating stands.
+
+•
+
+Hot metal production – all steps for the blast furnace process resulting in liquid pig
+iron, the main unit being the Blast furnace, along with hot metal treatment units,
+blast furnace blowers, blast furnace hot stoves, compressed air production, steam
+injection in the blast furnace unit, steam generation plant, etc.
+
+•
+
+Emissions control – for treating releases to air, water or ground, including slag
+treatment, waste gas treatment, dedusting units, dust briquetting.
+
+•
+
+Miscellaneous not covered above.
+
+The following Figure 2-4 shows the system boundary for the blast furnace production
+route.
+If all the liquid pig iron from the blast furnace is used by the oxygen steelmaking process
+to produce crude steel, the Methodology Act (Annex I, point 3.13.1) allows the operator
+to define a joint production process including crude steel, subject to the rules of Article 4,
+rather than monitoring pig iron production as a separate production process.
+The mass balance method is to be used to give a complete balance of the amount of carbon
+entering or leaving the production process (carbon remaining in the product, or in wastes
+or slags). This method is defined in point B.3.2 of Annex II to the Methodology Act.
+
+20
+
+Figure 2-4: System boundaries of the Pig iron – Blast furnace production route.
+
+Note to figure:
+•
+Hydrogen is shown as an optional input where hydrogen is used as a reducing agent and is treated as a
+precursor in line with Annex I, point 3.13.2.1 of the Methodology Act.
+•
+Indirect emissions from electricity are not included in embedded emissions for pig iron (direct emissions
+only), as pig iron is listed in Annex II to the CBAM Regulation; electricity may nevertheless be consumed
+and recorded for operational/energy balance purposes.
+• Where blast furnace gas or other waste gases are used as fuels, the associated CO₂ emissions fall within the
+system boundaries as fuel-related emissions.
+
+2.2.3.4
+
+Pig iron – Smelting reduction production route
+
+Smelting reduction produces pig iron from precursor sintered ore, iron ore pellets, or
+ironmaking residues, using different fuels and reducing agents. The process comprises two
+steps, the reduction of iron ore followed by melting to produce liquid pig iron / hot metal.
+The Methodology Act (Annex I, point 3.13.2.2 (“Smelting reduction”) to the Methodology
+Act) defines the system boundaries for direct emissions monitoring for the pig iron –
+smelting reduction production route, as encompassing:
+“ – All processes directly or indirectly linked to the production processes emitting
+CO2 from fuels and reducing agents such as coke, coke dust, coal, fuel oils, plastic
+wastes, natural gas, wood wastes, charcoal, waste gases from the process or
+converter gas.
+– Where biomass is used, the provisions of point B.3.3 of Annex II shall be taken
+into account.
+– All processes directly or indirectly linked to the production processes emitting
+CO2 from process materials such as limestone, magnesite, and other carbonates,
+carbonate ores; materials for flue gas cleaning.
+– Carbon remaining in the product or in slags or wastes is taken into account by
+using a mass balance method in accordance with point B.3.2 of Annex II.”
+Precursors (if used in the process) are: sintered ore; pig iron or DRI from other installations
+or production processes; ferro-alloys FeMn, FeCr, FeNi; and hydrogen, if used. During the
+transitional period, indirect emissions that result from electricity consumed by the
+21
+
+production process also had to be monitored and reported. In the definitive period, indirect
+emissions are not taken into account for the calculation of embedded emissions of iron and
+steel CBAM goods listed in Annex II (“List of goods for which only direct emissions are
+to be taken into account”) to the CBAM Regulation.
+The mass balance method referred to above is used to give a complete balance of the
+amount of carbon entering or leaving the production process (including carbon remaining
+in the product, or in wastes or slags), in accordance with point B.3.2 of Annex III to the
+Methodology Act.
+In line with the above definition of systems boundaries, the following production steps
+may be regarded as being within the system boundaries of smelting reduction installations:
+•
+
+Raw material handling and pre-treatment.
+
+•
+
+Fuel storage and preparation.
+
+•
+
+Smelting reduction process – all steps for the smelting process, resulting in hot
+metal.
+
+•
+
+Casting plant.
+
+•
+
+Emissions control – in particular flue gas cleaning.
+
+The following Figure 2-5 shows the system boundaries of the smelting reduction process
+for producing pig iron.
+The mass balance method is to be used to give a complete balance of the amount of carbon
+entering or leaving the production process (as carbon remaining in the product, or in wastes
+or slags) in accordance with point B.3.2 of Annex II to the Methodology Act.
+
+22
+
+Figure 2-5: System boundaries of the Pig iron – smelting reduction production route.
+
+Note to figure:
+•
+In this figure, the boxes with a blue dashed outline (e.g. Hydrogen (if used as separately produced precursor)
+and Optional: other materials and fuels) represent optional inputs that are included only where they are
+actually used at the installation.
+•
+Functional unit for iron and steel goods: tonnes of goods under the same CN code.
+•
+Electricity: Electricity may be consumed in smelting reduction operations (e.g. for auxiliaries) and may be
+recorded for energy balance; indirect emissions from electricity are not included in the embedded emissions
+for iron and steel goods listed in Annex II to the CBAM Regulation (direct emissions only).
+•
+Precursors: Where pig iron is produced as a complex good using precursors, embedded emissions include the
+embedded emissions of those precursors in accordance with the rules on precursors in the Methodology Act;
+where indirect emissions are relevant to a precursor, those indirect emissions are included in the precursor’s
+embedded emissions even if pig iron is direct-only.
+
+2.2.3.5
+
+Direct Reduced Iron (DRI) production process
+
+Direct reduction involves the production of solid primary iron from high grade iron ores
+(pellets, sinter or concentrates). There are different technologies that may use different
+qualities of ores (which may require pelletisation or sintering) and different fuels and
+reducing agents (natural gas, diverse fossil fuels or biomass, hydrogen). The solid product
+is called direct reduced iron (DRI). Different types of DRI are produced, for example ‘iron
+sponge’ and hot briquetted iron (HBI). Some DRI is used directly as a feedstock in EAFs
+or for other downstream processes. It is expected that production routes using hydrogen
+will play a major role in decarbonising the steel industry in coming years.
+The Methodology Act (Annex I, point 3.14 (“DRI (Direct Reduced Iron)”) defines the
+system boundaries for direct emissions monitoring for the DRI production route, as
+encompassing:
+“ – All processes directly or indirectly linked to the production processes emitting
+CO2 from fuels and reducing agents such as natural gas, fuel oils, waste gases from
+the process or converter gas, etc.
+– Where biogas or other forms of biomass are used, the provisions of point B.3.3
+of Annex II shall be taken into account.
+
+23
+
+– All processes directly or indirectly linked to the production processes emitting
+CO2 from process materials such as limestone, magnesite, and other carbonates,
+carbonate ores; materials for flue gas cleaning.
+– Carbon remaining in the product or in slags or wastes is taken into account by
+using a mass balance method in accordance with point B.3.2 of Annex II.”
+Precursors (if used in the process) are: sintered ore; hydrogen; pig iron or DRI from other
+installations or production processes; and ferro-alloys FeMn, FeCr, FeNi, if used. During
+the transitional period, indirect emissions that result from electricity consumed by the
+production process also had to be monitored and reported. In the definitive period, indirect
+emissions are not taken into account for the calculation of embedded emissions of iron and
+steel CBAM goods listed in Annex II to the CBAM Regulation.
+In line with the above definition of systems boundaries, the following production steps
+may be regarded as being within the system boundaries of DRI installations:
+•
+
+Raw material handling and pre-treatment.
+
+•
+
+Fuel storage and preparation – coal, natural gas or hydrogen etc.
+
+•
+
+Direct reduction process for iron production – all steps for the DRI process, forming
+into hot briquetted iron (HBI) if applicable.
+
+•
+
+Emissions control – in particular flue gas cleaning.
+
+The following Figure 2-6 shows the system boundaries of the relevant processes for DRI
+production. Although there are several different processes used in practice, the high-level
+system boundaries are very similar and can therefore be represented on a single diagram.
+Note that where an installation does not sell or transfer DRI produced to other installations,
+a common production process including steelmaking may be defined, in line with Annex
+I, point 3.14.1 of the Methodology Act, so that emissions are monitored at the level of the
+joint production process rather than for DRI separately.
+The mass balance method is to be used to give a complete balance of the amount of carbon
+entering or leaving the production process (as carbon remaining in the product, or in wastes
+or slags).
+
+24
+
+Figure 2-6: System boundaries of the DRI production process
+
+Note to figure:
+•
+Boxes with a blue dashed outline represent optional inputs that are only included where they are actually
+used at the installation (e.g. hydrogen where it is used as a reducing agent/precursor).
+•
+Electricity may be consumed in the process (recorded for energy balance); indirect emissions from
+electricity are not included in embedded emissions for iron and steel goods listed in Annex II to the
+CBAM Regulation (direct emissions only).
+
+2.2.3.6
+
+Crude steel – Basic oxygen steelmaking production route
+
+If the basic oxygen steelmaking production route starts with hot metal (liquid pig iron); the
+hot metal is directly converted to crude steel by the basic oxygen converter or furnace
+(BOF) as part of a continuous process. Following the converter, a steel decarburisation
+process by argon oxygen decarburisation (AOD) or vacuum oxygen decarburisation
+(VOD) may be performed, followed by various secondary metallurgical processes such as
+vacuum degassing to remove dissolved gases. Crude steel is then cast into its primary
+forms by continuous casting or ingot casting, which may be followed by hot-rolling or
+forging to obtain the semi-finished crude steel products (under CN codes 7207, 7218 and
+7224).
+The Methodology Act (Annex I, point 3.15.2.1) defines the system boundaries for direct
+emissions monitoring for the Crude steel – basic oxygen production route, as
+encompassing:
+“ – All processes directly or indirectly linked to the production processes emitting
+CO2 from fuels such as coal, natural gas, fuel oils, waste gases such as blast
+furnace gas, coke oven gas or converter gas.
+– All processes directly or indirectly linked to the production processes emitting
+CO2 from process materials such as limestone, magnesite, and other carbonates,
+carbonate ores; materials for flue gas cleaning.”
+– Carbon entering the process in scrap, alloys, graphite etc. and carbon remaining
+in the product or in slags or wastes is taken into account by using a mass balance
+method in accordance with point B.3.2 of Annex II to the Methodology Act.”
+
+25
+
+Precursors (if used in the process) are: pig iron, DRI; ferro-alloys FeMn, FeCr, FeNi; and
+crude steel from other installations or production processes, if used. During the transitional
+period, indirect emissions that result from electricity consumed by the production process
+also had to be monitored and reported. In the definitive period, indirect emissions are not
+taken into account for the calculation of embedded emissions of iron and steel CBAM
+goods listed in Annex II to the CBAM Regulation.
+In line with the above definition of systems boundaries, the following production steps
+may be regarded as being within the system boundaries of basic oxygen steelmaking
+installations:
+•
+
+Basic oxygen converter or furnace (BOF).
+
+•
+
+Decarburisation – AOD or VOD processes, where relevant.
+
+•
+
+Secondary metallurgy and vacuum degassing.
+
+•
+
+Casting plant – continuous casting or ingot casting, preheating equipment.
+
+•
+
+Hot rolling or forging – where relevant, only primary hot-rolling and rough shaping
+by forging to obtain the semi-finished products.
+
+•
+
+All necessary auxiliary activities – such as transfers, re-heating.
+
+•
+
+Emissions control – in particular flue gas cleaning, dedusting units, slag handling.
+
+Note that only primary hot-rolling and rough shaping by forging to obtain the semi-finished
+products under CN codes 7207, 7218 and 7224 are included in this aggregated goods
+category. All other rolling and forging processes are included in the aggregated goods
+category “iron or steel products”.
+Where goods with the same functional unit are produced via more than one production
+route within an installation, specific embedded emissions shall be determined using a
+weighted average across those routes, in accordance with Article 4(6) of the Methodology
+Act.
+In integrated steel plants, liquid pig iron that is directly charged to the oxygen converter is
+the product which separates the production process for pig iron (bottom left in Figure 2-7
+above) from the production process of crude steel (bottom right, above).
+The integrated blast furnace / basic oxygen furnace (BF/BOF) steelmaking process is by
+far the most complex steel making process and is characterised by networks of
+interdependent material and energy flows between the various production units. Note that
+coke (top left) is treated as a raw material with no embedded emissions as a CBAM
+precursor (as coke is not a CBAM good) under the CBAM methodology; however, its use
+contributes to the installation’s direct CO2 emissions within the system boundaries.
+When all the liquid pig iron from the blast furnace is used by the oxygen steelmaking
+process to produce crude steel, the Methodology Act allows the operator to define a joint
+production process for crude steel making, rather than monitoring the blast furnace
+production route as a separate production process, provided that the requirements of Article
+4 and Annex III of the Methodology Act are met (see also Annex I, point 3.13.1, as
+applicable).
+
+26
+
+Figure 2-7: System boundaries of basic oxygen steelmaking and related processes.
+Crude steel – Basic oxygen steelmaking alongside other related activities
+
+Notes to the figure:
+•
+
+For iron and steel CBAM goods listed in Annex II to the CBAM Regulation, embedded emissions are
+direct emissions only; indirect emissions from electricity are not included in embedded emissions for
+these goods. Electricity may be consumed operationally (e.g. for plant operation and energy balance) but
+is not part of the embedded emissions boundary where the good is direct-only.
+
+•
+
+Optional inputs / steps (blue dashed outline): Boxes with a blue dashed outline represent optional inputs
+or process elements that are included only where they are actually used at the installation.
+
+•
+
+Hydrogen as an optional precursor (where shown): Where “Hydrogen” is shown, it indicates that
+hydrogen, if used as a reducing agent/input in the relevant route at the installation, must be treated as a
+precursor for embedded-emissions accounting in line with the applicable sector-specific system boundary
+provisions in Annex I to the Methodology Act.
+
+•
+
+Waste gases: Streams such as blast furnace gas and converter gas are shown as process waste gases.
+Where such gases are used as fuels, they fall within the fuel input boundary for direct emissions
+monitoring for the relevant production process.
+
+•
+
+Functional unit: Functional unit for iron and steel goods is tonnes of goods under the same CN code.
+
+•
+
+*BOF (mass balance): BOF indicates that, for the basic oxygen furnace route, carbon entering and leaving
+the process (including carbon in scrap and alloying/carbon-bearing additions, and carbon remaining in
+product, slags or wastes) is accounted for using a mass balance method as required by the applicable
+monitoring rules for the route.
+
+27
+
+•
+
+Averaging across routes within an installation: Where goods with the same functional unit are produced
+via more than one production route within an installation, specific embedded emissions are determined
+using a weighted average across those routes (to avoid selective reporting).
+
+•
+
+Precursors and embedded emissions: Where iron and steel goods are complex goods, embedded emissions
+include the embedded emissions of precursors used. Where a precursor’s embedded emissions include
+indirect emissions (only where indirect emissions are applicable to that precursor under the CBAM rules),
+those are included at the precursor level even if the final iron/steel good itself is direct-only.
+
+The mass balance method is to be used to give a complete balance of the amount of carbon
+entering or leaving the production process (carbon remaining in steel product, or in wastes
+and slags). This method is defined in point B.3.2 of Annex III to that Methodology Act.
+
+2.2.3.7
+
+Crude steel – Electric Arc Furnace steelmaking production route
+
+The direct smelting of materials which contain iron is usually performed in an electric arc
+furnace (EAF). Feedstocks for EAF routes are metallic iron; in particular ferrous scrap10
+and/or Direct Reduced Iron (DRI). Where significant amounts of DRI are used, one of the
+various EAF-DRI routes applies. Following EAF smelting, a steel decarburisation process
+by argon oxygen decarburisation (AOD) or vacuum oxygen decarburisation (VOD) may
+be performed, followed by various secondary metallurgical processes such as
+desulphurisation and vacuum degassing to remove dissolved gases. Electricity is the main
+energy input to the EAF.
+The Methodology Act (Annex I, point 3.15.2.2 “Electric arc furnace”) defines the system
+boundaries for direct emissions monitoring for the Crude steel – EAF production route, as
+encompassing:
+“ – All processes directly or indirectly linked to the production processes emitting
+CO2 from fuels such as coal, natural gas, fuel oils, as well as from waste gases
+such as blast furnace gas, coke oven gas or converter gas.
+– All processes directly or indirectly linked to the production processes emitting
+CO2 from the consumption of electrodes and electrode pastes.
+– All processes directly or indirectly linked to the production processes emitting
+CO2 from process materials such as limestone, magnesite, and other carbonates,
+carbonate ores; materials for flue gas cleaning.
+– Carbon entering the process, e.g. in the form of scrap, alloys and graphite, and
+carbon remaining in the product or in slags or wastes is taken into account by
+using a mass balance method in accordance with Section B.3.2 of Annex II.”
+Precursors (if used in the process) are: pig iron, DRI; ferro-alloys FeMn, FeCr, FeNi; and
+crude steel from other installations or production processes, if used. Indirect emissions
+resulting from electricity consumption may be monitored for operational/energy-balance
+purposes in line with the Methodology Act (see in particular Annex II, point D), but for
+iron and steel goods listed in Annex II to the CBAM Regulation they are not taken into
+account when determining embedded emissions for CBAM purposes in the definitive
+period. Where crude steel goods listed in Annex II to the CBAM Regulation include
+10
+
+Where only post-consumer scrap is used, it is assumed to have zero embedded emissions.
+28
+
+precursors that are not listed in Annex II to that Regulation, the indirect emissions of those
+precursors are included in the embedded emissions of the crude steel good, in accordance
+with the cross-sectoral rules (Annex I, point 3.1) and the applicable precursor accounting
+rules. Where a precursor originates in the Union or in exempted countries/territories, its
+specific embedded emissions (direct and, where applicable, indirect) shall be counted as
+zero for the complex good calculation, in accordance with Annex III, Section B.
+In line with the above definition of systems boundaries, the following production steps
+may be regarded as being within the system boundaries of EAF steelmaking installations
+– all relevant activities and production units, such as:
+•
+
+Raw material handling and pre-treatment– scrap drying and pre-heating of raw
+materials.
+
+•
+
+EAF process – all steps for the EAF process, including charging, melting, primary
+refining and steel and slag tapping of the primary furnace.
+
+•
+
+Decarburisation – AOD or VOD processes, where relevant.
+
+•
+
+Secondary metallurgy and vacuum degassing.
+
+•
+
+Casting plant – continuous casting or ingot casting, preheating equipment.
+
+•
+
+Hot rolling or forging – where relevant, only primary hot-rolling and rough shaping
+by forging to obtain the semi-finished products.
+
+•
+
+All necessary auxiliary activities – such as transfers, heating of equipment, reheating.
+
+•
+
+Emissions control – in particular flue gas cleaning, dedusting units, slag handling.
+
+Note that only primary hot-rolling and rough shaping by forging to obtain the semi-finished
+products under CN codes 7207, 7218 and 7224 are included in this aggregated goods
+category. All other rolling and forging processes are included in the aggregated goods
+category “iron or steel products”.
+There are several different EAF production routes, for crude steel and crude alloy steel,
+which are broadly similar and are shown jointly in Figure 2-8.
+The mass balance method is to be used to give a complete balance of the amount of carbon
+entering or leaving the EAF production process (carbon remaining in steel, in wastes and
+in slag). This method is defined in point B.3.2 of Annex III to the Commission
+Methodology Act.
+
+29
+
+Figure 2-8: System boundaries: embedded direct emissions of crude steel (EAF route).
+Crude steel – EAF alloy and non-alloy steel production route
+
+Footnote to figure:
+•
+Boxes with a blue dashed outline represent optional inputs that are only included where they are actually used at
+the installation. For iron and steel CBAM goods listed in Annex II to the CBAM Regulation, embedded emissions
+cover direct emissions only.
+
+2.2.3.8
+
+Iron or steel products production process
+
+Iron or steel products are produced from the further processing of crude steel, semi-finished
+products, as well as other final steel products by all kinds of forming and finishing steps,
+including: re-heating, re-melting, casting, hot rolling, cold rolling, forging, pickling,
+annealing, coating, galvanizing, wire drawing, plating, cutting, welding and finishing.
+The Methodology Act (Annex I, point 3.16 “Iron or steel products”) defines the system
+boundaries for direct emissions monitoring for the iron or steel products production route,
+as encompassing:
+“ – All processes directly or indirectly linked to the production processes emitting
+CO2 emissions from combustion of fuels and process emissions from flue gas
+treatment, including re-heating, re-melting, casting, hot rolling, cold rolling,
+forging, annealing, coating, galvanizing, wire drawing, pickling and excluding the
+30
+
+following processes: plating, cutting, welding and finishing of iron or steel
+products.”
+Purchase and maintenance of infrastructure and equipment are not included within the
+system boundaries.
+Figure 2-9: System boundaries of the iron or steel products production process (direct
+emissions)
+Iron or steel products
+
+Note to figure: Boxes with a blue dashed outline represent optional inputs that are only included where they are
+actually used at the installation. Electricity may be consumed operationally in the production steps shown; for iron and
+steel goods listed in Annex II to the CBAM Regulation, indirect emissions from electricity are not included in
+embedded emissions (direct emissions only). The footnote marker on “Production of iron or steel products” indicates
+that purchase and maintenance of infrastructure and equipment are excluded from the system boundaries
+
+Precursors (if used in the process) are: crude steel; pig iron, DRI; ferro-alloys FeMn, FeCr,
+FeNi; and other iron or steel products. Indirect emissions resulting from electricity
+consumption may be monitored in line with the Methodology Act (see in particular Annex
+II, point D), but for iron and steel goods listed in Annex II to the CBAM Regulation they
+are not taken into account when determining embedded emissions for CBAM purposes in
+the definitive period. Where iron or steel products are complex goods produced using
+precursors, the embedded emissions of the iron or steel products include the embedded
+emissions of those precursors, including any indirect emissions of electricity associated
+with the precursors where relevant (i.e. where the precursor is not listed in Annex II to the
+CBAM Regulation), in line with the cross-sectoral rules.
+In line with the above definition of systems boundaries, the following production steps
+may be regarded as being within the system boundaries of iron or steel products:
+•
+
+Raw material preparation – including pre-heating, re-melting and alloying.
+
+•
+
+Forming processes for iron or steel products – all forming process steps, including
+casting, hot and cold rolling, shaping by forging, wire drawing.
+
+•
+
+Pickling, annealing, coating, galvanizing.
+
+•
+
+Emissions control – for treating releases to air, water or ground.
+
+Figure 2-9 shows the system boundaries from crude steel to basic steel products.
+31
+
+3
+
+IRON AND STEEL SECTOR - SPECIFIC REQUIREMENTS
+
+The textbox below signposts sector-specific sections in the Methodology Act, relevant for
+the CBAM definitive period.
+Methodology Act references:
+•
+
+Annex I, point 3 – Functional unit and system boundaries. Sub-sections 3.11 to 3.16 (iron and steel
+sector aggregated goods categories)
+
+•
+
+Annex II, section G – Standard factors used in the monitoring of direct emissions at installation level,
+including: Table 1: fuel emission factors related to NCV and net calorific values per mass of fuel, Table
+3: stoichiometric emission factor for process emissions from carbonate decomposition, Table 5: Emission
+factors for process emissions from other process materials (production of iron or steel, and processing of
+ferrous metals).
+
+•
+
+Annex IV, point 2 – Sector-specific parameters to be included in the operator’s emissions report.
+
+3.1
+
+Sector-specific requirements for monitoring and reporting
+
+Direct and indirect embedded emissions should be monitored in line with the methodology
+set out in the Methodology Act.
+3.1.1 Emissions monitoring
+Relevant emissions that must be monitored and reported for the iron and steel sector are:
+•
+
+Carbon dioxide emissions (direct) from the fuel combustion process including
+waste or off-gases such as blast furnace gas (BFG), from stationary units only
+(excludes emissions from any mobile machinery such as vehicles).
+
+•
+
+Carbon dioxide emissions (direct) from the process, resulting from the reduction of
+iron and steel by reducing agents such as coke or natural gas, from the thermal
+decomposition of carbonate raw materials11, from the carbon content of scrap or
+alloys, graphite12 or other carbon containing materials entering the process.
+
+•
+
+Carbon dioxide emissions (direct) resulting from the production of measurable
+heating (e.g. steam) and cooling that is consumed within the system boundaries of
+the production process, regardless of the location of the production of the heat (i.e.
+from on-site generation or from imports from off-site).
+
+•
+
+Carbon dioxide emissions (direct) resulting from emissions control (e.g. from
+carbonate raw materials such as soda ash used for acidic flue gas cleaning). This is
+included for any good where this is applicable.
+
+Direct emissions from the different source streams above are not reported separately but
+are added together to result in the total direct emissions for the installation or production
+process.
+
+11
+
+Such as limestone, dolomite and carbonatic iron ores, including FeCO 3.
+
+12
+
+Such as graphite blocks used inside the blast furnace, or electrodes or electrode pastes.
+32
+
+In deriving total direct emissions, carbon remaining in aggregated iron and steel goods
+such as pig iron, DRI, crude steel or iron alloys, or in slags or wastes, is also taken into
+account by using a mass balance method.
+Indirect emissions from electricity consumed must be reported separately from direct
+emissions. Note that for the iron and steel sector indirect emissions must be reported only
+for the aggregated good category ‘sintered ore’, but these have to be included in the
+embedded emissions of the complex goods for which the sintered ore is used as precursor.
+Installations that only carry out excluded processes for iron or steel products
+Where the installation only carries out processes excluded from the system boundaries (see
+section 3.16 of Annex I to the Methodology Act), verification obligations still apply if
+operators want to use actual values. Notably, the verification process will have to establish
+the following:
+•
+
+That the installation only operates within the list of excluded processes
+
+•
+
+Whether the production process carried out on the installation changed the specific
+embedded emissions of the goods:
+o
+
+•
+
+for instance, in an installation where only cutting occurs, to compute
+embedded emissions of precursors, operators shall use the mass of
+precursors as entering the production process (before cutting), even if
+emissions from cutting activities will not be accounted for in embedded
+emissions of the complex good (see point B of Annex III to the
+Methodology Act). This means that SEE will increase, even if no emissions
+need to be reported for CBAM purposes.
+
+That embedded emissions of precursors, whether based on default values or actual
+values, are correctly calculated. For instance, the origin of precursors needs to be
+verified (to establish zero-rating if produced in the EU or exempted territories; to
+justify the use of the appropriate country-specific default values where relevant; to
+check that verification reports exist for precursors where relevant).
+
+As the installation needs to be verified, the operator will have to establish a monitoring
+plan. In this case, the monitoring plan might be very concise given the absence of process
+emissions, combustion emissions, and indirect emissions. Emissions from excluded
+process steps do not have to be included in the monitoring plan as a source stream and do
+not have to be reported in the operator’s emissions report.
+
+3.1.2 Additional rules
+Attribution of emissions
+Given the complexity of production processes in the iron and steel sector, during the
+definitive period installations producing two or more goods from the groups sintered ore, Simplified!
+pig iron, FeMn, FeCr, FeNi, DRI, crude steel, iron or steel products, may monitor and
+report embedded emissions defining one joint production process, or ‘bubble’, for all
+the products from these groups covered, if none of the precursors produced within the
+installation are sold separately.
+33
+
+3.1.3 Additional reporting parameters
+The following Table 3-1 lists out the additional information that needs to be provided by
+you as an operator to importers, in your emissions data communication to them.
+Table 3-1: Additional iron and steel sector parameters requested in the CBAM declaration
+
+Aggregated good
+category
+
+Reporting requirement
+
+Sintered Ore
+
+– N.a. (not applicable)
+
+Pig Iron
+
+– The main reducing agent used.
+– Mass % of Mn, Cr, Ni, total of other alloy elements.
+
+FeMn Ferro-Manganese – Mass % of Mn and carbon.
+FeCr – FerroChromium
+
+– Mass % of Cr and carbon.
+
+FeNi – Ferro-Nickel
+
+– Mass % of Ni and carbon.
+
+DRI (Direct Reduced
+Iron)
+
+– The main reducing agent used.
+
+Crude steel
+
+– The main reducing agent of the precursor, if known.
+
+– Mass % of Mn, Cr, Ni, total of other alloy elements.
+– Mass % of Mn, Cr, Ni, total of other alloy elements.
+– Tonnes scrap used for producing 1 t crude steel.
+– % of scrap that is pre-consumer scrap.
+
+Iron or steel products
+
+– The main reducing agent used in precursor production, if
+known.
+– Mass % of Mn, Cr, Ni, total of other alloy elements.
+– Tonnes scrap used for producing 1 t of the product.
+– % of scrap that is pre-consumer scrap.
+
+You need to ensure that you collect all the parameters necessary for your CBAM goods
+and communicate them to the importers of your goods. The importer will need to report
+the additional parameters in their annual CBAM declaration for the relevant reporting
+period.
+
+4
+
+WORKED EXAMPLES FOR THE IRON AND STEEL SECTORS
+
+4.1
+
+Example 1 – integrated steel works and conversion to iron or steel products.
+
+The following worked example shows how specific embedded emissions are derived for
+iron and steel sector goods, produced by the blast furnace/basic oxygen furnace (BOF)
+34
+
+route. The resulting embedded emissions of imports into the EU are then calculated at the
+end of the example for reporting by the importer in their annual CBAM declaration for the
+relevant reporting period.
+In this example for integrated steel making, the installation produces five products, each
+of which is treated as a separate production process, as each is a separate category of
+CBAM aggregated good. It is assumed that only CN codes related to carbon steel are
+produced, which allows limiting the number of production.
+The diagram below gives an outline view of the installation and shows the system
+boundaries as a red (and blue) hatched line for each production process. The physical units
+carrying out each production process have been grouped under ‘Sinter plant’, ‘Blast
+furnace’, ‘LD converter’, and under forming as ‘Cold rolling, Hot rolling, Rail mill’ and
+‘Power plant’; relevant inputs and outputs have been identified for each production
+process.
+Figure 4-1: Example for carbon steel production, blast furnace route – Overview
+
+The five relevant production processes defined above, and elaborated further in the
+diagrams below are:
+•
+
+13
+
+Production process 1 – sinter13 (aggregated goods category ‘sintered ore’) produced
+in a sinter plant. The system boundaries of this production process have been
+defined as including inputs of raw materials (iron ore), fuels (coke fines) and
+electrical energy. The sintered ore output from the process is a precursor for
+production process 2.
+
+CN 26011200 – Agglomerated iron ores and concentrates (excl. roasted iron pyrites)
+35
+
+•
+
+Production process 2 – pig iron14 (hot metal) produced by a blast furnace. The
+system boundaries of this production process have been defined as including inputs
+of raw materials lime, coke (which is not a CBAM good, and therefore no
+precursor, and is treated as having zero embedded emissions for the purposes of
+this calculation), precursor sintered ore (which has embedded emissions),
+fuels/reducing agents including coke and plastics waste from households (i.e. a
+mixed waste fraction containing some biomass). Because indirect emissions are not
+relevant for pig iron, electrical energy is included only for completeness purposes
+(its monitoring helps establishing the complete energy balance and is included as
+‘recommended improvement’). The pig iron output from the process is a precursor
+for production process 3.
+
+•
+
+Production process 3 – crude steel produced by the LD (basic oxygen) converter
+steelmaking route. The system boundaries of this production process have been
+defined as including inputs of raw materials lime and steel scrap (which is no
+CBAM good and therefore treated as having zero embedded emissions for the
+purposes of this calculation), precursor pig iron (which has embedded emissions),
+fuels (natural gas), and (like in process 2, only for completeness reasons) electrical
+energy. The crude steel output from the process is a precursor for production
+process 4.
+
+•
+
+Production process 4 – iron or steel products produced by different forming
+processes (hot rolling, cold rolling and rail mill)15 to give basic products such as
+bars, rods, rails and other rolled products. The system boundaries of this production
+process have been defined as including inputs of crude steel (which has embedded
+emissions), fuels (natural gas), and (for completeness purposes only) electrical
+energy. Outputs from the production process are all within the same aggregated
+goods category ‘iron or steel products’ (complex goods produced from the different
+precursors produced) that are sold.
+
+•
+
+Production process 5 – electricity produced from waste gas from blast furnace
+(production process 2). Blast furnace gas is transferred from production process 2
+to production process 5 and energy is recovered through the generation of
+electricity, used for processes 1 to 4, contributing to the indirect emissions of those
+processes, where relevant.
+
+The second diagram (Figure 4-2) identifies the different source streams as inputs into the
+production processes, giving rise to direct emissions.
+
+14
+
+CN 7201nnnn (no further distinction seems necessary for the example)
+
+15
+
+Some of the possible CN codes are given in the graphs. Only carbon steel is produced.
+36
+
+Figure 4-2: Example for carbon steel production, blast furnace route – Direct emissions and
+related source streams
+Production process 4
+
+Production process 1
+
+CO2
+
+Iron ore
+
+Coke fines
+
+CO2 Iron and
+
+Sinter plant
+
+Steel
+products:
+
+Cold rolling
+Production
+process 2
+
+Sintered
+Ore
+
+Coke
+Plastics waste
+
+Blast
+furnace
+
+CO2
+Pig iron
+
+Production process 3
+LD converter
+(Steel
+making)
+
+•
+
+CO2
+
+CO2
+Crude Steel
+
+•
+
+Hot rolling
+
+•
+
+•
+•
+
+Lime
+
+CO2 •
+
+Steel scrap
+
+Rail mill
+
+Natural gas
+
+•
+•
+
+7208 nn nn
+Hot rolled…
+7212 nn nn
+flat rolled,
+plated…
+7213 nn nn
+Bars and
+rods hotrolled
+…
+…
+7302 10 nn
+Rails
+…
+…
+
+Waste gas
+
+CO2
+
+Power plant
+
+Electricity
+
+Production process 5
+
+Direct emissions arise from the combustion of fuels (coke fines, plastic wastes, natural gas)
+and from the waste gas (blast furnace gas) used for power generation, and from process
+emissions from coke16 as reducing agent and the thermal decomposition of carbonatecontaining materials (such as lime) and from releases of carbon contained within the
+different iron and steel materials.
+The third diagram (Figure 4-3) below shows by the blue line which electricity flows need
+to be monitored for indirect emissions, resulting from the consumption of electricity
+produced in the installation and purchased from the grid, consumed by production process
+1. The additional electricity monitoring “for completeness only” as outlined above is
+shown by dashed blue lines.
+
+16
+
+Coke can also be treated as fuel, although it is primarily used as reducing agent. However, reporting it
+like a fuel, i.e. including its NCV, has the advantage that it can be included in an energy balance for
+consistency checking.
+37
+
+Figure 4-3: Example for carbon steel production, blast furnace route – Indirect emissions
+monitoring (electricity flows) The light blue dashed lines are only monitored for completeness
+(recommended improvement). The solid blue line represents the essential monitoring requirement
+for indirect emissions.
+Production process 4
+
+Production process 1
+
+Sinter plant
+Cold rolling
+Sintered
+Ore
+
+Blast
+furnace
+
+Production
+process 2
+Pig iron
+
+Production process 3
+LD converter
+(Steel
+making)
+
+Crude Steel
+
+Iron and
+Steel
+products:
+•
+•
+
+Hot rolling
+
+•
+
+•
+•
+•
+
+Rail mill
+
+•
+•
+
+7208 nn nn
+Hot rolled…
+7212 nn nn
+flat rolled,
+plated…
+7213 nn nn
+Bars and
+rods hotrolled
+…
+…
+7302 10 nn
+Rails
+…
+…
+
+Waste gas
+
+Power plant
+Purchased
+electricity
+
+Electricity
+
+Production process 5
+
+Some of the waste gas (blast furnace gas) that is produced by production process 2 is
+recovered as a fuel for generating electricity through production process 5. This electricity
+is used within the installation, thereby reducing the amount of imported grid electricity that
+is required. The assumption in this example is that the produced electricity is 100%
+consumed within the installation, but does not cover the complete electricity demand of
+the installation. Therefore, for indirect emissions calculation, a weighted average from the
+emission factor of the self-produced electricity and the grid electricity has to be calculated.
+As the indirect emissions have to be monitored only for the production process ‘sintered
+ore’, that process could theoretically consume exclusively electricity from own production.
+However, the operator would have to provide specific evidence to the verifier that this is
+the case (Article 9 of the Methodology Act). For the example we assume the more realistic
+case, i.e. the average electricity mix is used evenly across all production processes.
+Given the complexity of production processes in the iron and steel sector, installations
+producing complex goods using precursors from their own installation’s production (in
+this example: sintered ore, pig iron, DRI, crude steel and iron or steel products) are
+permitted to monitor and report embedded emissions by defining one joint production
+process or ‘bubble’, for all the iron and steel aggregated goods categories covered,
+provided that the precursors produced are wholly used to make the finished iron or steel
+products.
+
+38
+
+Figure 4-4: Example for carbon steel production, blast furnace route – complete monitoring
+approach. All parameters in red font need to be monitored.
+Production process (“bubble approach”)
+Iron ore
+Coke fines
+
+Sinter plant
+Cold rolling
+
+Iron and
+Steel
+products:
+•
+•
+
+Coke
+Plastics waste
+
+LD converter
+(Steel
+making)
+
+Blast
+furnace
+
+Hot rolling
+
+•
+
+•
+•
+•
+
+Lime
+Steel scrap
+
+Rail mill
+
+Natural gas
+
+•
+•
+
+7208 nn nn
+Hot rolled…
+7212 nn nn
+flat rolled,
+plated…
+7213 nn nn
+Bars and
+rods hotrolled
+…
+…
+7302 10 nn
+Rails
+…
+…
+
+Waste gas
+
+Power plant
+Purchased
+electricity
+
+Electricity
+
+Everything in red needs to be monitored
+(quantity and quality)
+
+Production process 2
+
+Figure 4-4 provides a complete monitoring approach for all source streams, for the example
+installation. In this figure a single bubbled system boundary has been drawn around
+production processes 1 to 4, for iron or steel products. Within the bubble, direct emissions
+for this production route result from:
+•
+
+Fuel combustion – direct emissions from the combustion of fossil fuels and waste
+gases.
+
+•
+
+Process emissions – direct emissions resulting from the thermal decomposition of
+carbonates, reductants (coke) and from the carbon content of iron and steel
+materials, including scrap.
+
+•
+
+Indirect emissions from the electrical energy consumed by the joint production
+process is monitored, but the amount of electricity for the sinter plant has to be
+singled out, as it is the only product for which indirect emissions are relevant in
+this example.
+
+The inputs and outputs highlighted in red text are the parameters that would need to be
+monitored by the operator in order to attribute emissions and determine direct specific
+embedded emissions for the bubbled process.
+For both direct and indirect emissions, monitoring encompasses both aspects, quantitative
+(activity data) and qualitative (calculation factors). The activity levels for the different
+goods produced would also need to be monitored. However, applying the bubble approach,
+interim products (precursors), in this example sintered ore, pig iron and crude steel, do not
+have to be monitored. Furthermore, quantities fuels used in more than one of the production
+processes, do not have to be split by use levels in the production process. The only
+exception is the monitoring of electricity used in the production of sintered ore.
+Given the complexity of the installation with its different source streams and material
+flows, the mass balance method is used to give a complete balance of the amount of carbon
+39
+
+entering and leaving the installation. In applying this method, the CO2 quantities relevant
+for each source stream are calculated based on the carbon content (CC) in each material,
+without distinguishing fuels and process materials. Non-emitted carbon leaving the
+installation in products and residues instead of being emitted is also taken into account, by
+defining output source streams, which have negative activity data, highlighted in red text
+in Table 4-1.
+Table 4-1: Example calculation for carbon steel production, blast furnace route – Mass balance
+for the installation's direct emissions. AD = Activity data, CC = carbon content.
+Consumption levels
+
+AD (t)
+
+CC
+
+Bio
+fraction
+
+Coke fines
+
+50 000
+
+88,0%
+
+161 216,0
+
+Iron ores
+
+5 600 000
+
+0,023%
+
+4 719,2
+
+Coke
+
+2 200 000
+
+88,0%
+
+7 093 504,0
+
+Plastic wastes
+
+70 000
+
+68,4%
+
+Scrap (external)
+
+800 000
+
+0,210%
+
+6 155,5
+
+Scrap (internal)
+
+200 000
+
+0,180%
+
+1 319,0
+
+Lime calcined
+
+280 000
+
+0,273%
+
+2 800,0
+
+Natural gas
+
+170 000
+
+75,0%
+
+467 160,0
+
+Other inputs
+
+40 000
+
+10,0%
+
+14 656,0
+
+16%
+
+Sum
+Carbon in outputs
+
+Emissions
+(t CO2)17
+
+147 270,8
+
+Comments
+
+Biomass fraction18 =
+28 052 t CO2 (zero-rated)
+
+7 898 800,6
+AD (t)
+
+CC
+
+“Emissions”
+(negative) (t CO2)
+
+Steel
+
+-4 800 000
+
+0,180%
+
+-31 657,0
+
+Slags
+
+-1 000 000
+
+0,030%
+
+-1 099,0
+
+Sum
+
+-32 756,2
+
+Total direct emissions of the installation
+
+7 866 044,4
+
+In Table 4-1 above, the carbon content (CC) of the different input and output source
+streams is converted into its CO2 equivalent, including for scrap from different sources.
+Emissions from biomass in the mixed plastic waste (assuming this is derived from MSW)
+is zero-rated for emissions. Total direct emissions, net of carbon in outputs, is then
+calculated.
+Total indirect emissions must then be calculated, along with a correction for waste gas
+from direct emissions that has been used to generate electricity. The following assumptions
+have been made for the purposes of this example.
+
+17
+
+Factor 3,664 t CO2 / t C
+
+18
+
+Calculated above as 70 000 x 68,4% x 16% x 3,664 t CO2 / t carbon = 28 052 t CO2
+40
+
+Table 4-2: Carbon steel, blast furnace route – Calculation of the installation's indirect emissions
+Installation’s Indirect Emissions
+Assumptions:
+−
+
+All electricity in the total plant uses the same average fuel mix consisting of the grid
+factor (assumption: installation is situated in South Korea) and self-generated
+electricity from blast furnace waste gas.
+
+−
+
+40% of produced waste gas used for electricity production (35% efficiency).
+
+−
+
+This covers 75% of electricity consumption, the rest comes from the grid.
+
+−
+
+Emission factor for waste gas is based on equivalent natural gas, but lower efficiency
+than in other natural gas power plants (EF = 0,576 t CO2 /MWh).
+
+−
+
+Grid emission factor = 0,475 t CO2 / MWh (looked up in the Default Values Act,
+Annex II for Korea).
+
+Weighted emissions factor of consumed electricity at installation: 0,551 t CO2 / MWh.
+Total electricity consumption of installation: 1 658 844 MWh / year.
+Total indirect emissions of the installation: 977 059 t CO2 / year.
+However, indirect emissions are relevant only for the sinter plant: the electricity
+consumption for its production is determined to be 241 111 MWh, which translates into
+indirect emissions of 132 797 t CO2 / year, or 0,0237 t CO2 / t sinter.
+
+Indirect emissions are calculated by multiplying the activity data by the relevant emission
+factor. As a general principle, the relevant emission factor is the default value for the
+country where the installation is located, as provided by the Commission. Where the
+electricity consumed for the production of a specific production process (here: sintered
+ore) is partially self-generated and partially purchased from the grid, a weighted emission
+factor shall be calculated based on the sources of electricity. The example above follows
+this logic, where 75% of the electricity consumed comes from own generation using waste
+gas, while the remaining 25% is purchased from the grid. Only if the operator can provide
+evidence to the verifier that all the electricity consumed for a specific the production (like
+sintered ore) is generated from a selected electricity source (e.g. the power plant using
+waste gases), the emission factor for that power plant may be used. However, in the
+example above, the more likely case is applied where the same electricity mix applies to
+the whole installation.
+To avoid double counting of emissions from waste gas used to generate electricity, it is
+necessary to make a deduction from direct emissions. The activity data for waste gas is
+calculated from electricity generated, using the information on fuel input and generation
+efficiency given above, as follows:
+•
+
+Electricity generated from waste gas: 1 244 133 MWh (measured)
+
+•
+
+Total waste gas fuel input: 1 244 133 / 0,35 efficiency = 3 554 666 MWh
+
+•
+
+Converted to TJ: 3 544 666 * 0,0036 = 12 800 TJ
+
+The amount to deduct from direct emissions for waste gas used to generate electricity is
+calculated in Table 4-3 below.
+
+41
+
+Table 4-3: Example calculation, carbon steel, blast furnace route – installations’ total direct
+emissions corrected for waste gas deduction
+t CO2 / year
+Total direct emissions of the
+installation
+
+Deduction for
+Waste gases
+
+AD (TJ)
+
+EF (Nat. Gas)
+t CO2 / GJ
+
+Corr. factor
+
+-12 800
+
+56,1
+
+0,667
+
+Total direct emissions of the production process
+for crude steel products
+
+Comment
+
+7 866 044
+
+From Table 4-1 above
+
+– 478 959
+
+Deduction for waste gas used
+to generate electricity
+
+7 387 085
+
+Revised total direct
+emissions
+
+Next, Table 4-4 gives example activity level data for goods produced in the example
+installation during the reporting period.
+Table 4-4: Example activity levels for goods produced in the reporting period
+Products
+
+Activity Level (AL)
+
+Units
+
+Precursors
+Sintered ore
+
+5 600 000
+
+t / year (19)
+
+Pig Iron
+
+4 000 000
+
+t / year
+
+Crude steel
+
+5 000 000
+
+t / year
+
+Sheets
+
+3 500 000
+
+t / year
+
+Bars
+
+800 000
+
+t / year
+
+Rails
+
+500 000
+
+t / year
+
+4 800 000
+
+t / year
+
+200 000
+
+t / year
+
+Iron or steel products
+
+Total goods produced
+Internal scrap
+
+Using the total direct and indirect emissions data from Table 4-2 and Table 4-3, and
+production data from Table 4-4, direct and indirect specific embedded emissions are then
+calculated for iron or steel products, as follows (Table 4-5).
+Table 4-5: Example calculation, specific embedded emissions SEE under the simplified / "bubble"
+approach for iron or steel products
+Total amount of goods produced (steel products)
+
+4 800 000
+
+t / year
+
+Total direct emissions of the production process for steel products
+
+7 387 085
+
+t CO2 / year
+
+132 797
+
+t CO2 / year
+
+Total indirect emissions of the ‘sintered ore’ process
+Specific direct embedded emissions
+
+1,539
+
+t CO2 / steel product
+
+Specific indirect embedded emissions
+
+0,028
+
+t CO2 / t steel product
+
+Specific total embedded emissions
+
+1,567
+
+t CO2 / t steel product
+
+19
+
+For a simplified calculation in the example, it is assumed that 1 t ore is used for 1 t of sinter. In reality,
+additives (lime, etc.) and returned fines from other process of the installation would result in a different
+value.
+42
+
+Note: The whole ‘bubble’ production process is formally a ‘multifunctional process’, with
+the goods under the different CN codes being ‘co-products’ (i.e. simultaneously produced
+in the same process). This means that formally, a ‘per mass’ attribution approach to the
+different goods (with functional units being tonnes of each separate good) would have to
+be carried out at the end of the calculation. However, as all tonnes of good per CN code
+are weighted with the same factor (the physical unit ‘tonne’), there is nothing more to
+calculate.
+
+Calculation of free allocation adjustments
+Table 4-6 presents the step-by-step calculation of the (year-independent preliminary)
+SEFA values. For this purpose, for each of the complex goods, Mi are determined for each
+precursor using the production data determined in the course of the monitoring of
+embedded emissions, as given in the example above. Secondly, the CBAM benchmark
+(BM) values applicable for each production process have to be determined in Column A
+in section 5 of the Annex to the Free Allocation Adjustment Act. The ‘remarks’ column in
+Table 4-6 clarifies which corresponding CN code was used for the look-up. The SEFA
+values printed in bold font are the results of the calculation. Only for comparison, the
+CBAM BM value from column B in the Free Allocation Adjustment Act is given. It is the
+default value that would have to be used by the authorised CBAM declarant if the operator
+did not report actual data.
+Table 4-6: Calculation of the specific free allocation of each product of the example installation
+(carbon steel, blast furnace route). “BM Col.A” means the value from column A in section 5 of the
+Annex to the Free Allocation Adjustment Act.
+Product / precursor
+
+BM col. A
+t CO2 / t
+
+Mi
+t/t
+
+SEFA
+t CO2 / t
+
+BM Col. B
+t CO2 / t
+
+Remarks
+
+Sinter
+
+0,086
+
+CN 2601 12 00
+
+Pig Iron
+
+1,089
+
+CN 7201 10 19
+
+Sinter
+
+0,086
+
+1,400
+
+Pig Iron
+
+1,209
+
+Crude steel
+
+0,188
+
+Pig iron
+
+1,209
+
+CN 7207 11 11
+0,800
+
+Crude steel
+
+1,156
+
+Sheets
+
+0,044
+
+Crude steel
+
+1,156
+
+Crude steel
+
+1,156
+
+Crude steel
+
+1,156
+
+Rails
+
+(C)
+
+1,042
+1,242
+
+0,057
+
+1,370
+
+CN 7213 nn nn
+
+Bars
+Rails
+
+(C) = blast furnace route
+
+1,042
+1,248
+
+0,038
+
+1,364
+
+CN 7208 nn nn
+
+Sheets
+Bars
+
+1,210
+
+1,364
+
+(C)
+CN 7302 10 nn
+
+1,042
+1,261
+
+43
+
+1,383
+
+(C)
+
+Note: The SEFA values still need adjustment for the reporting. For the example, it is
+assumed that the import takes place in year 2027 (CBAM factor = 95,0%, CSCF = 1).
+Therefore, the calculation gives. E.g. for the rails:
+𝑆𝐸𝐹𝐴𝑔,2027 = 𝐶𝐵𝐴𝑀𝑦 ∙ 𝐶𝑆𝐶𝐹𝑦 ∙ 𝑆𝐸𝐹𝐴𝑔 = 0,95 × 1,00 × 1,261 = 1,198 t CO2 / t
+
+As a last step, the CBAM reporting obligation for these iron or steel products into the
+EU can then be determined. For example, for the import of 10 000 tonnes of iron or steel
+products e.g. rails, taking place in 2027:
+•
+
+Definitive period:
+o Direct embedded emissions = 10 000 t × 1,539 t CO2 / t = 15 390 t CO2
+o Indirect embedded emissions = 10 000 t × 0,028 t CO2 / t = 280 t CO2
+Total: 15 670 t CO2
+Minus Free Allocation adjustment: = 10 000 t × 1,198 t CO2 / t = 11 980 t CO2
+(Further deduction could be made if a carbon price was paid in the country of
+production – outside the scope of this guidance).
+Total CBAM obligation to be covered by the authorised declarant with CBAM
+certificates: 15 670 – 11 980 = 3 690 certificates
+
+4.2
+
+Example 2 – EAF and conversion to iron or steel products
+
+The following example shows how specific embedded emissions are derived for crude
+steel and iron or steel products, produced by the EAF route. The resulting embedded
+emissions of imports into the EU are then calculated at the end of the example for reporting
+by the importer in their annual CBAM declaration for the relevant reporting period.
+In this example for the EAF steel making route, the installation produces products falling
+under two aggregated goods categories, each of which is treated as a separate production
+process. It is assumed that only stainless steel of Nickel content >2,5% is produced,
+although some variation of alloy grades is observed. Nevertheless, all CN codes within
+each of steel type may be aggregated into joint production processes.
+Figure 4-5 gives an outline view of the installation and shows the system boundaries as a
+red hatched line for each production process. The physical units carrying out each
+production process have been grouped under ‘Steel making EAF & AOD’, and under
+forming as ‘Cutting and welding’, ‘hot rolling to sheets, to bars and annealing’; and
+relevant inputs and outputs have been identified for each production process.
+
+44
+
+Figure 4-5: Example installation producing stainless steel from EAF route – Overview
+Production process 1
+
+Production process 2
+
+Crude steel
+FeMn, FeCr, FeNi
+
+Iron and
+Steel
+products:
+
+Cutting &
+welding
+
+Steel scrap
+
+Steel
+making
+EAF & AOD
+
+Hot rolling
+to sheets
+
+Crude Steel
+(Slabs)
+
+•
+
+•
+•
+
+Annealing
+
+•
+•
+
+Hot rolling
+to bars
+
+•
+
+7304 11 00
+Tubes of
+stainless
+steel
+…
+7219 nn nn
+and 7220 nn
+nn - Flat
+rolled
+stainless
+products
+…
+7221 00 10
+Bars and
+rods, >2.5%
+Ni
+…
+
+Within one CN code, goods can have different alloy grades, e.g.:
+
+Crude Steel
+7218 99 11
+Stainless steel
+in primary
+forms
+
+EN steel grade
+X5CrNi18-10
+X2CrNi19-11
+etc.
+
+US grade
+304
+304L
+
+%C
+0,05
+0,02
+
+% Cr
+18
+19
+
+% Ni
+10
+11
+
+The two relevant production processes defined above, and elaborated further in the
+diagrams below are:
+•
+
+Production process 1 – crude steel produced by the EAF/AOD steel making route
+as slabs, of different alloy grades. The system boundaries of this production process
+have been defined as including inputs of steel scrap from production process 2
+(steel that is cut off during the production of pipes), precursors crude steel and
+alloys, fuels (natural gas), graphite electrodes and other additives. The crude steel
+output from the process is both sold and is a precursor for production process 2.
+Due to the sale of precursor, the bubble approach is not allowed for this example
+installation.
+
+•
+
+Production process 2 – iron or steel products, of different alloy grades, produced
+by different forming processes giving basic products such as tubes (cutting, rolling
+and welding), bars and rods (hot rolling and annealing) and sheets. The system
+boundaries of this production process have been defined as including inputs of
+crude steel (which has embedded emissions) and fuels (natural gas)20. Outputs from
+the production process are finished iron or steel products that are sold.
+
+The second diagram (Figure 4-6) identifies the different source streams as inputs into the
+production processes, giving rise to direct emissions. There is no need to monitor
+electricity consumption / indirect emissions. However, if any precursors have been
+produced using sintered ore, the respective indirect emissions are carried over into the final
+products (this is not displayed in the example here separately, as default values are used
+
+20
+
+In line with point 3.16 of Annex I to the Methodology Act, “plating, cutting, welding and finishing of
+iron or steel products” are excluded regarding their emissions. However, as such steps may be part of
+the actual way of making the listed steel goods, they are first to be included in the consideration of
+system boundaries, and only the respective emissions to be omitted.
+45
+
+for the purchased precursors, and only “total” embedded emissions are used as default
+values).
+Direct emissions arise from the combustion of fuels (natural gas) and from process
+emissions from graphite electrodes, other additives and from releases of carbon contained
+within the different iron and steel materials.
+Figure 4-6: Example installation producing stainless steel from EAF route – source streams
+relevant for direct emissions monitoring with a calculation-based approach
+
+teel scrap
+rude steel
+o
+stainless
+steel
+
+e n e r e i
+lectrodes
+dditi es
+
+and
+nn
+
+( labs)
+
+nn nn
+nn
+
+stainless
+products
+
+i
+
+atural as
+
+tainless steel
+in pri ar
+or s
+
+Figure 4-7: Example installation producing stainless steel via the EAF route – complete
+monitoring approach. All information in red font needs monitoring.
+Production process 1
+
+Steel scrap
+
+Embedded emissions (from
+producer or default)
+
+Crude steel
+FeMn, FeCr, FeNi
+Electrodes
+Additives
+
+Production process 2
+Iron and
+Steel
+products:
+
+Cutting &
+welding
+
+Embedded emissions
+(from producer or default)
+
+•
+
+Mi (mass used
+per steel product)
+
+Steel
+making
+EAF & AOD
+
+Hot rolling
+to sheets
+
+Crude Steel
+(Slabs)
+
+•
+•
+
+Hot rolling
+to bars
+
+Natural gas
+
+Everything in red needs to be
+monitored (quantity and quality)
+
+•
+•
+
+Annealing
+
+•
+
+7304 11 00
+Tubes of
+stainless
+steel
+…
+7219 nn nn
+and 7220 nn
+nn - Flat
+rolled
+stainless
+products
+…
+7221 00 10
+Bars and
+rods, >2.5%
+Ni
+…
+
+Within one CN code, goods can have different alloy grades, e.g.:
+
+Crude Steel
+7218 99 11
+Stainless steel
+in primary
+forms
+
+EN steel grade US grade
+X5CrNi18-10
+304
+X2CrNi19-11
+304L
+etc.
+
+%C
+0,05
+0,02
+
+% Cr
+18
+19
+
+% Ni
+10
+11
+
+The third diagram (Figure 4-7), provides a complete monitoring approach for all source
+streams, for the example installation.
+46
+
+In the first example for iron and steel, a ‘bubble’ approach was used, as all precursors
+produced by the installation are wholly used in the production of the finished iron and steel
+goods. However, this approach is not available to the operator in this example, as some of
+the crude stainless steel precursor produced by production process 1 is diverted and is sold
+before it reaches production process 2. Therefore, specific embedded emissions have to be
+separately derived for each production process at this installation.
+The inputs and outputs highlighted in red text in Table 4-7 are the parameters that should
+be monitored by the operator in order to attribute emissions and determine direct specific
+embedded emissions for both processes. Monitoring encompasses both aspects,
+quantitative (activity data) and qualitative (calculation factors). In case of purchased
+precursors it includes the specific embedded emissions.
+Like in example 1, given the complexity of the installation and different source streams
+and material flows, the mass balance method is used to give a complete balance of the
+amount of carbon entering and leaving the installation. In applying this method, the CO2
+quantities relevant for each source stream are calculated based on the carbon content (CC)
+in each material, without distinguishing fuels and process materials. Non-emitted carbon
+leaving the installation in products instead of being emitted is also taken into account by
+defining output source streams, which have negative activity data, highlighted in red text
+in Table 4-7.
+Table 4-7: EAF installation, example consumption levels – mass balance method
+Consumption
+levels
+Steel scrap (market)
+Natural gas
+
+AD (t)
+
+CC
+
+1 345 000
+
+0,08%
+
+163 806
+
+EF
+
+56,1
+81,9%
+
+NCV
+(GJ/t)
+
+48
+
+Emissions (t
+CO2) 21
+3 942,5
+
+Converted to CO2
+
+441 096.9
+
+IPCC values; EF as t
+CO2 / TJ
+
+13 407,6
+
+IPCC values
+
+40 212,0
+
+Limestone, others
+omitted; EF [t CO2/t]
+
+Graphite electrodes
+
+4 468
+
+Various additives
+
+89 360
+
+Crude steel
+(purchased)
+
+80 540
+
+0,15%
+
+442,6
+
+FeNi (28% Ni)
+
+346 773
+
+1,5%
+
+19 058,6
+
+FeCr (52% Cr)
+
+331 213
+
+5,2%
+
+63 105,4
+
+FeMn (65% Mn)
+
+60 595
+
+2,8%
+
+6 216,6
+
+0,45
+
+Sum
+Carbon in outputs
+
+Assumptions /
+comments
+
+587 482,3
+AD
+
+CC
+
+Emissions
+(negative)
+
+Steel
+
+-2 140 000
+
+0,180%
+
+-14 114
+
+Slags
+
+-107 232
+
+0,030%
+
+-118
+
+Sum
+
+-14 232
+
+Total direct emissions of the installation
+
+573 251
+
+21
+
+Factor 3,664 t CO2 / t carbon
+
+22
+
+i.e. after deduction of scrap amounts
+47
+
+Steel AL is net of
+scrap22
+
+t CO2 / year
+
+In Table 4-7, the carbon content (CC) of different input and output source streams is
+converted to the CO2 equivalent and total direct emissions, net of carbon contained in the
+outputs (steel and slag from the process) is calculated.
+The next Table 4-8 summarises firstly the activity levels of the two production processes.
+Secondly, it shows how natural gas and emissions are attributed to process 2. Energy and
+emissions data are calculated using the specific energy consumption (SEC) values for bars,
+sheets and pipes. The balance of direct emissions is then attributed to production process 1,
+in the lower part of the table.
+Table 4-8: EAF installation, example calculation of embedded emissions by production process
+and product (Note: SEC = Specific energy consumption)
+Production levels
+
+Tonnes
+
+EAF/AOD and
+(Hot) rolling energy
+consumption
+Natural gas GJ / t
+
+Slabs
+
+2 234 000
+
+0,31
+
+Process 1 – tonnes produced, EAF
+
+Slabs to market
+
+1 007 000
+
+Bars to market
+
+456 000
+
+5,4
+
+Process 2 – SEC values used to
+attribute energy and emissions.
+
+Sheets
+
+771 000
+
+4,45
+
+Process 2 – SEC values used to
+attribute energy and emissions.
+
+Sheets to market
+
+221 000
+
+Sheets to pipes
+
+550 000
+
+Pipes
+
+456 000
+
+2,8
+
+Process 2 – SEC values used to
+attribute energy and emissions.
+
+Scrap (internal recycling)
+
+94 000
+
+Split of emissions
+
+Comment
+
+Scrap from sheet to pipe conversion
+(cut-off steel).
+Direct Emissions
+(t CO2)
+
+Process 1 (EAF / AOD)
+
+171 005
+
+Process 2 (rolling etc.)
+
+402 245
+
+Total
+
+573 251
+
+No embedded emissions are attributed to steel scrap from production process 2, which is
+used internally to process 1.
+Using the data on the allocation of attributed emissions between the two production
+processes, in Table 4-8, specific embedded emissions are then calculated for each CBAM
+product in the following two tables, for direct emissions. At this stage, the embedded
+emissions of precursors (purchased steel and alloys in process 1, crude steel in process 2)
+have to be added.
+Table 4-9 calculates direct specific embedded emissions for crude steel slabs. At this point,
+embedded emissions of precursors are required. In the example it is assumed that the
+installation is situated in the United States (USA), and the production takes place in the
+year 2027. All precursors are assumed to be received from US installations, but no verified
+emissions reports are available. Consequently, the default values listed in Annex I to the
+Default Values Act with the mark-up for the year 2027 need to be looked up. Data used in
+these calculations are:
+48
+
+•
+
+Emissions at the installation for process 1 – determined above.
+
+•
+
+Embedded emissions of precursors consumed by process 1 – calculated below, for
+precursors crude steel and alloys purchased.
+
+•
+
+The Activity Level for crude steel slabs in the reporting period. The activity level
+is the sum of sold slabs and slabs used in process 2.
+
+Table 4-9: EAF installation, example calculation of total embedded emission – Process 1 (Crude
+steel / slabs)
+Precursors
+
+SEE (t CO2/t)
+
+Consumption (t)
+
+direct em. (t CO2)
+
+Crude steel23
+
+3,864
+
+80 540
+
+311 207
+
+FeNi (28% Ni)24
+
+4,176
+
+346 773
+
+1 448 124
+
+FeCr (52% Cr)25
+
+2,280
+
+331 213
+
+934 021
+
+FeMn (65% Mn)26
+
+2,028
+
+60 595
+
+122 887
+
+Calculation of Total Embedded Emissions of Slabs (process 1)
+Activity Level for process 1 (slabs)
+
+2 234 000
+
+Emissions at installation
+
+171 005
+
+Embedded emissions of precursors consumed (from totals
+above)
+
+2 816 238
+
+Total embedded emissions
+
+2 987 243
+
+Specific embedded emissions (t CO2 / t slab)
+
+1,337
+
+The calculation for process 2 could be done in a similar way as for process 1. However,
+for the sake of guidance, Table 4-10 presents the calculation of specific embedded
+emissions for complex goods (iron or steel products) by way of using only specific
+embedded emissions and specific attributed emissions of the 2nd process, i.e. by omitting
+the activity level and total emissions of the 2nd production process.
+
+Table 4-10: EAF installation, example calculation of embedded emissions of complex goods.
+Process 2 – steel products
+Total tonnes produced:
+Bars to market
+
+456 000
+
+t
+
+Sheets to market
+
+221 000
+
+t
+
+Pipes
+
+456 000
+
+t
+
+23
+
+CN 72189110 – Semi-finished products of stainless steel, of rectangular "other than square" crosssection, containing by weight >= 2,5% nickel
+
+24
+
+CN 720260 – Ferro-nickel
+
+25
+
+CN 72024110 – Ferro-chromium, containing by weight > 4% but <= 6% carbon
+
+26
+
+CN 72021120 – Ferro-manganese, containing by weight > 2% carbon, with a granulometry <= 5 mm
+and a manganese content by weight > 65%
+49
+
+Total steel products
+
+1 133 000
+
+t
+
+Consumption precursor (slabs)
+
+1 227 000
+
+t
+
+Mass slabs (crude steel) consumed per t:
+
+1,083
+
+t/t
+Direct (t CO2)
+
+Mass ratio (Mi) precursor
+
+1,083
+
+SEEi of precursor
+
+1,337
+
+Emissions per tonne product process 2
+
+0,355
+
+Specific embedded emissions SEE
+(t CO2 / t steel product)
+
+1,783
+
+When calculating the total embedded emissions of final steel products in process 2 above,
+the mass ratio (Mi) of the precursor is taken account. This is the mass of crude steel slabs
+consumed per tonne of steel products produced, and is calculated as:
+•
+
+Mass slabs / mass steel products: 1 227 000 / 1 133 000 = 1,083 (as above). The
+SEEi values of the precursor are then adjusted by this ratio i.e.:
+
+•
+
+For SEEi (precursor): 1,337 x 1,083 = 1,448.
+
+Total direct specific embedded emissions of the complex steel product are then calculated,
+as presented in the table above.
+
+Calculation of free allocation adjustments
+Table 4-11 presents the step-by-step calculation of the (year-independent preliminary)
+SEFA values. For this purpose, for each of the complex goods, Mi are determined for each
+precursor using the production data determined in the curse of the monitoring of embedded
+emissions, as given in the example above. Secondly, the CBAM benchmark (BM) values
+applicable for each production process have to be determined in Column A in section 5 of
+the Annex to the Free Allocation Adjustment Act. For purchased precursors for which the
+producer does not provide actual data (as is the case in this example), values have to be
+taken from column B of that Annex in order to ensure that the precursors’ precursors are
+correctly accounted for. In line with the example of calculating embedded emissions, the
+assumption is that the production takes place in the year 2027. Therefore, if there is a
+choice between values with note “(1)” or “(2)”, the look-up must take the value for “(1)”,
+which refers to the period 2026-27. For later years, the value with “(2)” would have to be
+chosen.
+The remark column in Table 4-11 clarifies which corresponding CN code was used for the
+look-up. The SEFA values printed in bold font are the results of the calculation. Only for
+comparison, the CBAM BM value from column B in the Free Allocation Adjustment Act
+is given. It is the default value that would have to be used by the authorised CBAM
+declarant if the operator did not report actual data.
+
+50
+
+Table 4-11: Calculation of the specific free allocation of each product of the example installation
+(stainless steel, EAF/scrap route). “BM Col.A” means the value from column A in section 5 of the
+Annex to the Free Allocation Adjustment Act.
+Product / precursor
+
+BM col. A
+t CO2 / t
+
+Production process
+
+0,128
+
+Mi
+t/t
+
+SEFA
+t CO2 / t
+
+BM Col. B
+t CO2 / t
+
+Remarks
+CN 72189110
+
+Precursors:
+Crude steel purchased
+
+1,189
+
+0,036
+
+CN 72189110
+
+FeNi (28% Ni)
+
+2,390
+
+0,155
+
+CN 72026000
+
+FeCr (52% Cr)
+
+1,142
+
+0,148
+
+CN 72024110
+
+FeMn (65% Mn)
+
+1,361
+
+0,027
+
+CN 72021120
+
+Crude steel slabs to market
+production process
+
+0,748
+
+1,189
+
+0,057
+
+CN 72189110
+CN 7304 11 00
+
+Precursor:
+Crude steel slabs
+
+0,748
+
+1,083
+
+Steel products (e.g. pipes)
+
+0,867
+
+1,173
+
+CN 7304 11 00
+
+Note: The SEFA values still need adjustment for the reporting period For the example, it
+is assumed that the import takes place in year 2027 (CBAM factor = 95,0%, CSCF = 1).
+Therefore, the calculation gives. E.g. for the stainless pipes:
+𝑆𝐸𝐹𝐴𝑔,2027 = 𝐶𝐵𝐴𝑀𝑦 ∙ 𝐶𝑆𝐶𝐹𝑦 ∙ 𝑆𝐸𝐹𝐴𝑔 = 0,95 × 1,00 × 0,867 = 0,824 t CO2 / t
+
+Using the above approach, the CBAM reporting obligation for the import of crude steel
+slabs and other steel products into the EU during the definitive period may then be
+determined; for example, for the import of 100 tonnes of product e.g. steel pipe:
+•
+
+Definitive period:
+o Direct embedded emissions = 100 × 1,783 = 178,3 t CO2
+Minus Free Allocation adjustment: = 100 t × 0,824 t CO2 / t = 82,4 t CO2
+(Further deduction could be made if a carbon price was paid in the country
+of production – outside the scope of this guidance)
+o Total CBAM obligation to be covered by the authorised declarant with
+CBAM certificates: 178,3 – 82,4 = 95,9 certificates
+
+4.3
+
+Example 3 – production of screws and nuts from purchased steel rods
+
+This is an example typical for many non-integrated manufacturing of steel products, which
+may be similarly applicable in other sectors such as aluminium production. In this example,
+the installation purchases precursors that contribute the majority of the embedded
+emissions, while its own process contributes little to the total embedded emissions.
+51
+
+For the example it is assumed that the installation purchases steel rods of two qualities
+(both covered by the CBAM themselves):
+•
+
+Carbon steel rods with the embedded emissions as determined in Example 1; and
+
+•
+
+Stainless steel rods with embedded emissions as determined in Example 2.
+
+The production process involves:
+•
+
+Hot rolling of the rods to wires of different diameters;
+
+•
+
+Cutting and forging of the wires to screws;
+
+•
+
+Cutting and forging of wires following by drilling / machining to nuts.
+
+These processes consume natural gas and electricity, although the latter does not need to
+be monitored and reported in the definitive period of CBAM. Therefore, the installation
+itself has only direct emissions. However, the majority of the embedded emissions stem
+from the precursors. As the process involves cutting and machining, significant amounts
+of scrap are produced. In line with the rules of the Methodology Act, the scrap is attributed
+zero embedded emissions. Because of the production of scrap, the weight of the precursor
+used exceeds the weight of the final products. The factor mi is > 1.
+In the example installation, only one aggregated goods category is produced (screws and
+nuts of different alloy grades), but due to the different steel grades, the products fall under
+different CN codes and, therefore, have to be reported separately. The following two
+groups of products can be addressed in separate production processes:
+Process
+
+CN code
+
+Descriptions
+
+1
+
+73181290
+
+Wood screws of iron or steel other than stainless (excl. coach screws)
+
+73181491
+
+Spaced-thread screws of iron or steel other than stainless
+
+73181499
+
+Self-tapping screws of iron or steel other than stainless (excl. spaced-thread screws
+and wood screws)
+
+73181558
+
+Screws and bolts, of iron or steel other than stainless "whether or not with their nuts
+and washers", with slotted or cross-recessed heads (excl. wood screws and selftapping screws)
+
+73181568
+
+Hexagonal-socket head screws and bolts, of iron or steel other than stainless "whether
+or not with their nuts and washers" (excl. wood screws, self-tapping screws and screws
+and bolts for fixing railway track construction material)
+
+73181210
+
+Wood screws of stainless steel (excl. coach screws)
+
+73181410
+
+Self-tapping screws, of stainless steel (excl. wood screws)
+
+73181552
+
+Screws and bolts, of stainless steel "whether or not with their nuts and washers", with
+slotted or cross-recessed heads (excl. wood screws and self-tapping screws)
+
+73181562
+
+Hexagonal-socket head screws and bolts, of stainless steel "whether or not with their
+nuts and washers" (excl. wood screws, self-tapping screws and screws and bolts for
+fixing railway track construction material)
+
+2
+
+Therefore, the operator must determine two separate average values for annual direct
+emissions (i.e. for each of the two production processes). This is aligned with the fact that
+the percentages of scrap are different for the two main product groups, and because the
+quantities produced are different.
+
+52
+
+Table 4-12 shows the data that the operator has to monitor (input and output quantities,
+energy consumption (excluding electricity), consumption of precursors, specific embedded
+emissions of the precursors obtained from their producers).
+Table 4-13 presents the calculation of specific embedded emissions of the two product
+groups, where the installation’s own specific emissions are added to the embedded
+emissions of the precursors. To calculate the specific embedded emissions, Equation 62 is
+used. Therefore, the emissions embedded in precursor carbon steel (1,567 t CO₂/t in the
+example) are multiplied by the specific mass consumption of precursor carbon steel,
+mᵢ (1,176 in the example, as calculated in Table 4-12). The same approach is used for
+precursor high-alloy steel.
+Table 4-12: Example installation No.3, main inputs and outputs
+Precursors:
+
+SEE direct
+(t CO2 / t)
+
+Carbon Steel (see Example 1)
+
+1,567
+
+High alloy steel (see Example 2)
+
+1,783
+
+Products:
+
+Activity level
+(t product / yr)
+
+consumed quantity
+(t steel / yr)
+
+scrap produced
+(t / yr)
+
+mi (t precursor /
+t product)
+
+Carbon steel screws and nuts
+
+17 000,00
+
+20 000,00
+
+3 000,00
+
+1,176
+
+High alloy steel screws and nuts
+
+8 200,00
+
+10 000,00
+
+1 800,00
+
+1,220
+
+Energy consumed (average for both products)
+Natural gas (heating, forging,…)
+
+Emission factor
+3,5
+
+GJ / t product
+
+56,1
+
+t CO2 / TJ
+
+Table 4-13: Example installation No.3, Calculation of specific embedded emissions (SEE)
+Direct specific emissions
+
+SEE (t CO2 / t)
+
+mi (t/t)
+
+SEE (t CO2 / t product)
+
+1,567
+
+1,176
+
+1,843
+
+Precursor: carbon steel
+Direct emissions (natural gas)
+
+0,196
+
+total SEE (carbon steel screws and nuts)
+
+2,039
+
+Precursor: High alloy steel
+
+1,783
+
+1,220
+
+2,175
+
+Direct emissions (natural gas)
+
+0,196
+
+total SEE (high alloy steel screws and nuts)
+
+2,371
+
+Finally, the specific free allocation levels are calculated like in the previous examples.
+Note, however, that the SEFA values of the precursors are taken here to be “actual data”,
+i.e. taken from the operators of examples 1 and 2 above (same approach as used for the
+specific embedded emissions). Only the CBAM benchmark for the installation’s own
+production process needs to be taken from Column A in section 5 of the Annex to the Free
+Allocation Adjustment Act. The Mi values are taken from the monitoring of embedded
+emissions. The results are presented in Table 4-14, using the same presentation method as
+explained in the previous examples.
+Table 4-14: Calculation of the specific free allocation of each product of the example installation
+(screws and nuts from precursors received from installations in examples 1 and 2). “BMg* Col.A”
+means the value from column A in section 5 of the Annex to the Free Allocation Adjustment Act.
+53
+
+Product / precursor
+
+BMg* col. A
+t CO2 / t
+
+Production process
+
+0,038
+
+Precursor: carbon steel
+
+1,242
+
+Mi
+t/t
+
+SEFA
+t CO2 / t
+
+1,176
+
+SEFA calculated in
+Example 1 (bars and rods)
+1,499
+
+0,038
+
+Precursor: stainless steel bars & rods
+
+0,919
+
+Remarks
+CN 73181290
+
+Carbon steel screws and nuts
+Production process
+
+BMg Col. B
+t CO2 / t
+
+1,364
+
+(C) = carbon steel
+CN 73181210
+
+1,220
+
+Stainless steel screws and nuts
+
+SEFA calculated in
+Example 2 (bars and rods)
+1,159
+
+54
+
+1,154
+
+stainless steel (1)
+
+Annex A
+
+List of definitions
+
+Term
+
+Definition
+
+‘Accuracy’
+
+means the closeness of the agreement between the result of
+a measurement and the true value of the particular quantity
+or a reference value determined empirically using
+internationally accepted and traceable calibration materials
+and standard methods, taking into account both random
+and systematic factors
+
+‘Activity data’
+
+means the amount of fuels or materials consumed or
+produced by a process relevant for the calculation-based
+methodology, expressed in terajoules (TJ), mass in tonnes
+or (for gases) volume in normal cubic metres, as
+appropriate
+
+‘Actual emissions’
+
+means the emissions calculated based on primary data from
+the production processes of goods and from the production
+of electricity consumed during those processes as
+determined in accordance with the methods set out in
+Annex IV [to the Methodology Act]
+
+‘Activity level’
+
+means the quantity of goods to which the same functional
+unit applies that are produced within the system boundaries
+of a production process during a reporting period
+
+‘Aggregated goods
+categories’
+
+means aggregated goods categories pursuant to Table 1 of
+point 2 of Annex I. A group of CBAM goods with their CN
+codes, used for the purpose of defining system boundaries
+of production processes.
+
+‘Agricultural,
+aquaculture, fisheries
+and forestry residues’
+
+means residues that are directly generated by agriculture,
+aquaculture, fisheries and forestry and that do not include
+residues from related industries or processing
+
+‘Authorised CBAM
+declarant’
+
+means a person authorised by the competent authority in
+accordance with Article 17 [of the CBAM Regulation].
+The ‘authorised CBAM declarant’ [which replaces the
+term ‘reporting declarant’ from the transitional period]
+may be importers of CBAM goods, or their indirect
+customs representatives, who have applied for and been
+granted the status of authorised CBAM declarant.
+
+‘Batch’
+
+means an amount of fuel or material representatively
+sampled and characterised, and transferred as one shipment
+or continuously over a specific period of time
+
+‘Biomass’
+
+means biomass as defined in Article 2, point (24) of the
+Renewable Energy Directive (RED II)27; it includes
+bioliquids and biofuels as defined in Article 2, point (32)
+and (33), biomass fuels as defined in Article 2, point (27)
+and biogas as defined in Article 2 point (28) of the RED II;
+
+27
+
+Directive (EU) 2018/2001
+55
+
+Term
+
+Definition
+
+‘Biomass fraction’
+
+means the ratio of carbon stemming from biomass to the
+total carbon content of a fuel or material, expressed as a
+fraction
+
+‘Calculation factors’
+
+means net calorific value, emission factor, preliminary
+emission factor, oxidation factor, conversion factor, carbon
+content or biomass fraction
+
+‘Calibration’
+
+means the set of operations, which establishes, under
+specified conditions, the relations between values indicated
+by a measuring instrument or measuring system, or values
+represented by a material measure or a reference material
+and the corresponding values of a quantity realised by a
+reference standard
+
+‘Carbon price’
+
+means the monetary amount paid in a third country, under a
+carbon emissions reduction scheme, in the form of a tax,
+levy or fee or in the form of emission allowances under a
+greenhouse gas emissions trading system, calculated on
+greenhouse gases covered by such a measure, and released
+during the production of goods
+
+‘CBAM certificate’
+
+means a certificate in electronic format corresponding to
+one tonne of CO2e of embedded emissions in goods
+
+‘CO2 emission factor’
+
+means the weighted average of the CO2 intensity of
+electricity produced from fossil fuels within a geographic
+area. The CO2 emission factor is the result of the division of
+the CO2 emission data of the electricity sector by the gross
+electricity generation based on fossil fuels in the relevant
+geographic area. It is expressed in tonnes of CO2 per
+megawatt-hour
+
+‘Combined
+nomenclature’ (CN)
+
+means the classification of goods, designed to meet the
+needs of: i) the Common customs tariff, setting import
+duties for products imported into the European Union (EU),
+as well as the Integrated tariff of the European
+Communities (Taric), incorporating all EU and trade
+measures applied to goods imported into and exported out
+of the EU; ii) the international trade statistics of the EU.
+The CN provides the means of collecting, exchanging and
+publishing data on EU international trade statistics. It is
+also used for the collection and publication of international
+trade statistics in intra-EU trade.28
+
+‘Combustion
+emissions’
+
+means greenhouse gas emissions occurring during the
+exothermic reaction of a fuel with oxygen
+
+‘Competent
+authority’
+
+means the authority designated by each Member State in
+accordance with Article 11 [of the CBAM Regulation]
+
+28
+
+For definition see:
+https://ec.europa.eu/eurostat/statisticsexplained/index.php?title=Glossary:Combined_nomenclature_(CN)
+56
+
+Term
+
+Definition
+
+‘Continuous emission
+measurement’ (CEM)
+
+means a set of operations having the objective of
+determining the value of a quantity by means of periodic
+measurements, applying either measurements in the stack
+or extractive procedures with a measuring instrument
+located close to the stack, whilst excluding measurement
+methodologies based on the collection of individual
+samples from the stack
+
+‘Control system’
+
+means the operator’s risk assessment and entire set of
+control activities, including the continuous management
+thereof, that an operator has established, documented,
+implemented and maintained pursuant to point A.2. of
+Annex II
+
+‘Complex goods’
+
+means goods other than simple goods
+
+‘Conservative’
+
+means that a set of assumptions is defined in order to
+ensure that no under-estimation of reported emissions or
+over-estimation of production of heat, electricity or goods
+occurs
+
+‘Conversion factor’
+
+means the ratio of carbon emitted as CO2 to the total carbon
+contained in the source stream before the emitting process
+takes place, expressed as a fraction, considering CO emitted
+to the atmosphere as the molar equivalent amount of CO2
+
+‘Co-product’
+
+means any of two or more products resulting from the same
+production process
+
+‘Customs declarant’
+
+means a declarant as defined in Article 5, point (15) of
+Regulation (EU) No 952/2013 lodging a customs
+declaration for release for free circulation of goods in its
+own name or the person in whose name such a declaration
+is lodged
+
+‘CCUS system’
+
+means a group of economic operators with technically
+connected installations and transport equipment for CO2
+capture, transport, use in production of goods, or geological
+storage
+
+‘Data flow activities’
+
+mean activities related to the acquisition, processing and
+handling of data that are needed to draft an emissions
+report from primary source data
+
+‘Data set’
+
+means one type of data, either at installation level or
+production process level as relevant in the circumstances,
+as any of the following:
+(a)
+the amount of fuels or materials consumed or
+produced by a production process as relevant for the
+calculation-based methodology, expressed in terajoules,
+mass in tonnes, or for gases as volume in normal cubic
+metres, as appropriate, including for waste gases;
+(b)
+
+a calculation factor;
+
+57
+
+Term
+
+Definition
+(c)
+net quantity of measurable heat, and the relevant
+parameters required for determining this quantity, in
+particular: i) mass flow of heat transfer medium; and ii)
+enthalpy of transmitted and returned heat transfer medium,
+as specified by composition, temperature, pressure and
+saturation;
+(d)
+quantities of non-measurable heat, specified by the
+relevant quantities of fuels used for producing the heat, and
+the net calorific value (NCV) of the fuel mix;
+(e)
+
+quantities of electricity;
+
+(f)
+
+quantities of CO2 transferred between installations;
+
+(g)
+quantities of precursors received from outside the
+production process, and their relevant parameters, such as
+country of origin, used production route, specific direct
+and indirect emissions;
+‘Default value’
+
+means a value, which is calculated or drawn from
+secondary data, which represents the embedded emissions
+in goods
+
+‘Direct emissions’
+
+means emissions from the production processes of goods
+including emissions from the production of heating and
+cooling that is consumed during the production processes,
+irrespective of the location of the production of the heating
+or cooling
+
+‘Embedded emissions’
+
+means direct emissions released during the production of
+goods and indirect emissions from the production of
+electricity that is consumed during the production
+processes, calculated in accordance with the methods set
+out in Annex IV and further specified in the implementing
+acts adopted pursuant to Article 7(7)
+
+‘Emissions’
+
+mean the release of greenhouse gases into the atmosphere
+from the production of goods
+
+‘Emission factor’
+
+means the average emission rate of a greenhouse gas
+relative to the activity data of a source stream assuming
+complete oxidation for combustion and complete
+conversion for all other chemical reactions
+
+‘Emission factor’ for
+electricity
+
+means the default value, expressed in CO2e, representing
+the emission intensity of electricity consumed in production
+of goods.
+
+‘Emission source’
+
+means a separately identifiable part of an installation or a
+process within an installation, from which relevant
+greenhouse gases are emitted
+
+EU ETS
+
+means the system for greenhouse gas emissions allowance
+trading within the Union in respect of activities listed in
+Annex I to Directive 2003/87/EC other than aviation
+activities
+58
+
+Term
+
+Definition
+
+‘EU ETS allowance’
+
+means an allowance as defined in Article 3, point (a), of
+Directive 2003/87/EC in respect of activities listed in
+Annex I to that Directive other than aviation activities
+
+‘Fossil carbon’
+
+means inorganic and organic carbon that is not biomass
+
+‘Fossil fraction’
+
+means the ratio of fossil carbon to the total carbon content
+of a fuel or material, expressed as a fraction
+
+‘Fugitive emissions’
+
+means irregular or unintended emissions from sources that
+are not localised, or too diverse or too small to be
+monitored individually
+
+‘Functional unit’
+
+means the reference unit used for the calculation of
+embedded emissions in goods
+
+‘Goods’
+
+means goods listed in Annex I [to the CBAM the CBAM
+Regulation]
+
+‘Greenhouse gases’
+
+mean greenhouse gases as specified in Annex I [to the
+CBAM the CBAM Regulation] in relation to each of the
+goods listed in that Annex
+
+‘Heat meter’
+
+means a thermal energy meter or any other device to
+measure and record the amount of thermal energy produced
+based upon flow volumes and temperatures
+
+‘Importer’
+
+means either the person lodging a customs declaration for
+release for free circulation of goods or a bill of discharge in
+accordance with Article 175(5) of Delegated Regulation
+(EU) 2015/2446 in its own name and on its own behalf or,
+where the customs declaration is lodged by an indirect
+customs representative in accordance with Article 18 of
+Regulation (EU) No 952/2013, the person on whose behalf
+such a declaration is lodged
+
+‘Importation’
+
+means release for free circulation as provided for in Article
+201 of Regulation (EU) No 952/2013
+
+‘Indirect customs
+
+A customs representative appointed by an importer
+established in a Member State. If the importer appoints an
+indirect customs representative and they agree, they can act
+as an authorised CBAM declarant and submit the
+application for an authorisation on behalf of the importer.
+The indirect customs representative is liable for all
+operations made for the importers it represents
+
+Representative’
+
+‘Indirect emissions’
+
+means emissions from the production of electricity which is
+consumed during the production processes of goods,
+irrespective of the location of the production of the
+consumed electricity
+
+‘Inherent CO2’
+
+means CO2 which is part of a source stream.
+
+‘Installation’
+
+means a stationary technical unit where a production
+process is carried out
+
+59
+
+Term
+
+Definition
+
+‘Legal metrological
+control’
+
+means the control exercised by a public authority or
+regulator of the measurement tasks intended for the field of
+application of a measuring instrument, for reasons of public
+interest, public health, public safety, public order,
+protection of the environment, the levying of taxes and
+duties, the protection of consumers and fair trading
+
+‘Measurable heat’
+
+means a net heat flow transported through identifiable
+pipelines or ducts using a heat transfer medium, such as, in
+particular, steam, hot air, water, oil, liquid metals and salts,
+for which a heat meter is or could be installed
+
+‘Measurement point’
+
+means the emission source for which continuous emission
+measurement systems (CEMS) are used for emission
+measurement, or the cross-section of a pipeline system for
+which the CO2 flow is determined using continuous
+measurement systems
+
+‘Measurement
+system’
+
+means a complete set of measuring instruments and other
+equipment used to determine variables for the monitoring
+and calculation of emissions
+
+‘Minimum
+requirements’
+
+means monitoring methods using the minimum efforts
+allowed for determining data in order to result in emission
+data acceptable for the purpose of the CBAM Regulation.
+
+‘Mixed fuel’
+
+means a fuel which contains both biomass and fossil carbon
+
+‘Mixed material’
+
+means a material which contains both biomass and fossil
+carbon
+
+‘Multifunctional
+process’
+
+means a process that delivers multiple outputs or whose
+outputs feed into several production processes
+
+‘Net calorific value’
+(NCV)
+
+means the specific amount of energy released as heat when
+a fuel or material undergoes complete combustion with
+oxygen under standard conditions, less the heat of
+vaporisation of any water formed
+
+‘Non-CBAM good’
+
+means any good produced in the installation that is not
+included in Annex I to the CBAM Regulation
+
+‘Non-measurable
+heat’
+
+means all heat other than measurable heat
+
+‘Operator’
+
+means any person who operates or controls an installation
+in a third country, including a parent company that controls
+an installation in a third country
+
+‘Oxidation factor’
+
+means the ratio of carbon oxidised to CO2 as a consequence
+of combustion to the total carbon contained in the fuel,
+expressed as a fraction, considering carbon monoxide (CO)
+emitted to the atmosphere as the molar equivalent amount
+of carbon dioxide (CO2)
+
+‘Power purchase
+agreement’
+
+means a contract under which a person agrees to purchase
+electricity directly from an electricity producer
+60
+
+Term
+
+Definition
+
+‘Precursor’
+
+means any input material into a production process
+included in the list of goods set out in Annex I to the
+CBAM Regulation;
+
+‘Preliminary
+emission factor’
+
+means the assumed total emission factor of a fuel or
+material based on the carbon content of its biomass fraction
+and its fossil fraction before multiplying it by the fossil
+fraction to produce the emission factor
+
+‘Production process’
+
+means the chemical and physical processes carried out to
+produce goods in an installation
+
+‘Production route’ 29
+
+means a specific technology used in a production process
+to produce goods
+
+‘Process emissions’
+
+means greenhouse gas emissions other than combustion
+emissions occurring as a result of intentional and
+unintentional reactions between substances or their
+transformation, for a primary purpose other than the
+generation of heat, including from the following processes:
+(a) the chemical, electrolytic or pyrometallurgical
+reduction of metal compounds in ores, concentrates and
+secondary materials; (b) the removal of impurities from
+metals and metal compounds; (c) the decomposition of
+carbonates, including those used for flue gas cleaning; (d)
+chemical syntheses of products and intermediate products
+where the carbon bearing material participates in the
+reaction; (e) the use of carbon containing additives or raw
+materials; (f) the chemical or electrolytic reduction of
+metalloid oxides or non-metal oxides such as silicon
+oxides and phosphates.
+
+‘Proxy data’
+
+means annual values which are empirically substantiated or
+derived from accepted sources and which an operator uses
+to substitute a data set30 for the purpose of ensuring
+complete reporting
+
+‘Rebate’
+
+means any amount that reduces the amount due or paid by a
+person liable for the payment of a carbon price, before its
+payment or after, in a monetary form or in any other form.
+
+‘Recommended
+improvements’
+
+means monitoring methods which are proven means to
+ensure that data are more accurate or less prone to mistakes
+than by mere application of minimum requirements
+
+‘Related emissions’
+
+means: – the direct emissions caused by the source stream
+or emission source concerned; – emissions attributed to a
+quantity of measurable heat; – the indirect emissions related
+to the quantity of electricity concerned; – embedded
+emissions of a material produced or of a precursor
+consumed.
+
+29
+
+Note that different production routes can fall within the same production process.
+
+30
+
+Refers to the activity data or the calculation factors.
+61
+
+Term
+
+Definition
+
+‘Reporting period’
+
+means the period corresponding to the calendar year during
+which the good was produced and used by the authorised
+CBAM declarant as reference for the determination of
+embedded emissions
+
+‘Residue’
+
+means a substance that is not the end product that a
+production process directly seeks to produce; it is not a
+primary aim of the production process and the process has
+not been deliberately modified to produce it
+
+‘Simple goods’
+
+means goods produced in a production process requiring
+exclusively input materials (precursors) and fuels having
+zero embedded emissions
+
+‘Source stream’
+
+means either of the following: (a) a specific fuel type, raw
+material or product giving rise to emissions of relevant
+greenhouse gases at one or more emission sources as a
+result of its consumption or production; (b) a specific fuel
+type, raw material or product containing carbon and
+included in the calculation of greenhouse gas emissions
+using a mass-balance method
+
+‘Specific embedded
+emissions’
+
+means the embedded emissions of one tonne of goods,
+expressed as tonnes of CO2e emissions per tonne of goods
+
+‘Standard conditions’
+
+means temperature of 273,15 K and pressure conditions of
+101 325 Pa defining normal cubic metres (Nm3)
+
+‘System boundary’
+
+means the group of chemical or physical processes included
+in the calculation of embedded emissions of goods under
+the same aggregated goods category.
+The system boundaries shall cover direct emissions,
+indirect emissions for goods not listed in Annex II to the
+CBAM Regulation, and the embedded emissions of any
+precursor.
+
+31
+
+‘Third country’
+
+means a country or territory outside the customs territory of
+the [European] Union
+
+‘Tonne of CO2(e)’
+
+means one metric tonne of carbon dioxide (‘CO2’), or an
+amount of any other greenhouse gas listed in Annex I [to
+the CBAM Regulation] with an equivalent global warming
+potential [‘CO2e‘]
+
+‘Transmission system
+operator’
+
+means an operator as defined in Article 2, point (35) of
+Directive (EU) 2019/944 of the European Parliament and of
+the Council (31).
+
+Directive (EU) 2019/944 of the European Parliament and of the Council of 5 June 2019 on common
+rules for the internal market for electricity and amending Directive 2012/27/EU (OJ L 158, 14.6.2019,
+p. 125).
+62
+
+Term
+
+Definition
+
+‘Uncertainty’
+
+means a parameter, associated with the result of the
+determination of a quantity, that characterises the
+dispersion of the values that could reasonably be attributed
+to the particular quantity, including the effects of
+systematic as well as of random factors, expressed in
+percent, and describes a confidence interval around the
+mean value comprising 95% of inferred values taking into
+account any asymmetry of the distribution of values
+
+‘Waste’
+
+means any substance or object which the holder discards or
+intends or is required to discard, excluding substances that
+have been intentionally modified or contaminated in order
+to meet this definition
+
+‘Waste gas’
+
+means a gas containing incompletely oxidised carbon in a
+gaseous state under standard conditions which is a result of
+any of the processes listed under ‘process emissions’
+
+63
+
+Annex B
+
+List of abbreviations
+
+Abbreviation
+
+Full term
+
+AD
+
+Activity Data
+
+AEM
+
+Anode Effect Minutes
+
+AEO
+
+Anode Effect Overvoltage
+
+AL
+
+Activity Level
+
+AOD
+
+Argon Oxygen Decarburisation.
+
+BAT
+
+Best Available Techniques
+
+BF
+
+Biomass Fraction
+
+BFG
+
+Blast Furnace Gas
+
+BM
+
+Benchmark
+
+BOF
+
+Basic Oxygen Furnace
+
+BOFG
+
+Basic Oxygen Furnace Gas
+
+BREFs
+
+Best Available Techniques Reference documents
+
+CA
+
+Competent Authority
+
+CBAM
+
+Carbon Border Adjustment Mechanism, the
+
+CCR
+
+Clinker to Cement Ratio
+
+CCS
+
+Carbon Capture and Storage
+
+CCU(S)
+
+Carbon Capture and Utilisation (and Storage)
+
+CEMS
+
+Continuous Emission Measurement Systems
+
+CF
+
+Conversion Factor
+
+CFP
+
+Carbon footprint of products
+
+CHP
+
+Combined Heat and Power
+
+CKD
+
+Cement Kiln Dust
+
+CN
+
+Combined nomenclature
+
+COG
+
+Coke Oven Gas
+
+DRI
+
+Direct Reduced Iron
+
+EAF
+
+Electric Arc Furnace
+
+EEA
+
+European Economic Area (EU-27, Iceland, Norway, Liechtenstein)
+
+EF
+
+Emission Factor
+
+EFTA
+
+European Free Trade Area
+
+EORI
+
+Economic Operator Registration and Identification
+
+ETS
+
+Emissions Trading System
+
+EU ETS
+
+EU Emissions Trading System
+
+EUA
+
+EU Allowances (used in the EU ETS)
+
+EUR
+
+Euro (currency)
+64
+
+Abbreviation
+
+Full term
+
+FAR
+
+Free Allocation Rules (Regulation 2019/331)32
+
+FIFO
+
+First-In-First-Out principle
+
+GHG
+
+Greenhouse Gas
+
+GWP
+
+Global Warming Potential
+
+HBI
+
+Hot Briquetted Iron
+
+HS
+
+Harmonised System (for international trade)
+
+IEA
+
+International Energy Agency
+
+ISO
+
+International Organization for Standardization
+
+LULUCF
+
+Land-use, land change and forestry (criteria)
+
+MP
+
+Monitoring Plan
+
+MRR
+
+Monitoring and Reporting Regulation (Regulation 2018/2066)33
+
+MRV
+
+Monitoring, Reporting and Verification
+
+MS
+
+Member State(s)
+
+MWh
+
+Megawatt-hour
+
+NCV
+
+Net Calorific Value
+
+NPI
+
+Nickel pig iron
+
+OF
+
+Oxidation Factor
+
+PCI
+
+Pulverised Coal Injection
+
+PEMS
+
+Predictive Emission Monitoring System
+
+PFC
+
+Perfluoro-carbon
+
+PoS
+
+Proofs of Sustainability
+
+RED II
+
+Renewable Energy Directive, re-cast
+
+SEE
+
+Specific embedded emissions
+
+SEFA
+
+Specific embedded free allocation
+
+TARIC
+
+Integrated Tariff of the European Union database
+
+TJ
+
+Terajoules
+
+TSO
+
+Transmission System Operator
+
+UCC
+
+Union Custom Code
+
+UN/LOCODE
+
+United Nations Code for Trade and Transport Location
+
+32
+
+Free Allocation Rules (Commission Delegated Regulation (EU) 2019/331 of 19 December 2018
+determining transitional Union-wide rules for harmonised free allocation of emission allowances
+pursuant to Article 10a of Directive 2003/87/EC of the European Parliament and of the Council)
+
+33
+
+Monitoring and Reporting Regulation (Commission Implementing Regulation (EU) 2018/2066 of 19
+December 2018 on the monitoring and reporting of greenhouse gas emissions pursuant to Directive
+2003/87/EC of the European Parliament and of the Council and amending Commission Regulation (EU)
+No 601/2012
+65
+
+

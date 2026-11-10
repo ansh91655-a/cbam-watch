@@ -1,0 +1,2145 @@
+EUROPEAN COMMISSION
+DIRECTORATE-GENERAL
+TAXATION AND CUSTOMS UNION
+Indirect Taxation and Tax Administration
+CBAM, Energy and Green Taxation
+
+Brussels, 14 August 2026
+
+GUIDANCE DOCUMENT 5F: SECTOR-SPECIFIC GUIDANCE
+DOCUMENT ON ELECTRICITY AS A GOOD
+
+Disclaimer: This guidance document is not legally binding and it is of an explanatory nature.
+Legal provisions of Union law take precedence over the contents of this document and should
+always be consulted. The authentic texts of the EU legal instruments are those published in the
+Official Journal of the European Union. This guidance was prepared by Commission services
+and does not represent an official position of the Commission. Only the Court of Justice of the
+European Union is competent to authoritatively interpret Union law.
+
+Commission européenne/Europese Commissie, 1049 Bruxelles/Brussel, BELGIQUE/BELGIË – Tel. +32 22991111
+
+VERSION HISTORY
+Date
+
+Version notes
+
+14.08.2026
+
+First Publication of this document for the definitive period.
+
+2
+
+CONTENTS
+1
+
+PREFACE
+
+4
+
+1.1
+
+Structure and content of the guidance documents
+
+4
+
+1.2
+
+Reference regulations and legal acts
+
+5
+
+2
+2.1
+
+ELECTRICITY “AS A GOOD” (I.E. IMPORTED INTO THE EU)
+CO2 emission factor based on alternative reliable data
+
+7
+8
+
+2.2
+Elements of evidence for using actual embedded emissions for electricity
+imported into the Union.
+
+8
+
+3
+
+10
+
+WORKED EXAMPLE FOR ELECTRICITY
+
+ANNEX A HARMONISED EFFICIENCY REFERENCE VALUES FOR
+SEPARATE PRODUCTION OF ELECTRICITY AND HEAT
+
+13
+
+ANNEX B
+
+LIST OF DEFINITIONS
+
+16
+
+ANNEX C
+
+LIST OF ABBREVIATIONS
+
+25
+
+3
+
+1
+
+PREFACE
+
+1.1
+
+Structure and content of the guidance documents
+
+This series of documents has been written to support stakeholders by explaining the
+requirements of the CBAM Regulation in a non-legislative language. This series of
+guidance documents should benefit a variety of stakeholders. A specific focus has been put
+on clarifying the requirements for operators of installations producing CBAM goods
+outside of the EU for the definitive period.
+•
+
+Guidance 1 provides an overview of the main changes to the CBAM methodology
+between the definitive period and the concluded transitional period. It also
+introduces the CBAM and an overview of the compliance cycle, roles and
+responsibilities, as well as milestones and deadlines for operators of installations
+outside the EU during the definitive period and explains the general exemptions
+from the CBAM.
+
+•
+
+Guidance 2 provides a quick guidance for the intended reader of this document,
+the operator of an installation producing CBAM goods. It provides a roadmap of
+the most important concepts of CBAM emissions monitoring and where to find
+more information in this series of documents.
+
+•
+
+Guidance 3 sets out the monitoring and reporting obligations and
+recommendations which are potentially applicable to any affected producer of
+CBAM goods.
+
+•
+
+Guidance 4 provides an overview of how the adjustment for free allocation is to
+be determined and what information is needed.
+
+•
+
+Guidance documents 5a, 5b, 5c, 5d, 5e and 5f present an overview per sector of
+the production processes and value chains for goods that are included in the scope
+of the CBAM, as well as sector-specific monitoring and reporting considerations
+for each CBAM good where this is relevant. These sections are supplemented by
+examples for each sector.
+
+The series of guidance documents is accompanied by an electronic template for
+information that should be used by installation operators to communicate information to
+the authorised CBAM declarants and CBAM Registry.
+
+Presentation of numbers in EU documents
+To align with EU legal documents, this guidance document uses the following
+convention when presenting numbers.
+The decimal separator used to separate the integral part of a number from its fractional
+part is a comma, e.g.: 0,890
+Thousands, and powers of 103n thereafter, are separated by a space, e.g.:
+•
+
+fifteen thousand is written as 15 000
+
+•
+
+fifteen million is written as 15 000 000
+4
+
+1.2
+
+Reference regulations and legal acts
+
+Several regulations and legal acts are referred to throughout this series of guidance
+documents. For ease of reading and to avoid ambiguity, simplified references are used
+when citing these acts.
+•
+
+CBAM Regulation: Regulation (EU) 2023/956 and Regulation (EU) 2025/2083
+amending Regulation (EU) 2023/956. Notably, where article numbers are given
+in this document without further specification, they always refer to the CBAM
+Regulation.
+It can be accessed at the following link (consolidated version):
+http://data.europa.eu/eli/reg/2023/956/2025-10-20
+
+•
+
+Methodology Act: Commission Implementing Regulation (EU) 2025/2547, in
+legal texts referred to as “Implementing act pursuant to Article 7(7) of the CBAM
+Regulation”.
+It can be accessed at the following link:
+http://data.europa.eu/eli/reg_impl/2025/2547/oj
+
+•
+
+Default Values Act: Commission Implementing Regulation (EU) 2025/2621, in
+legal texts referred to as “Implementing act pursuant to Article 7(7) of the CBAM
+Regulation”, also referred to as “default values determined in accordance with
+Annex IV to the CBAM Regulation”.
+It can be accessed at the following
+link: http://data.europa.eu/eli/reg_impl/2025/2621/oj
+
+•
+
+Verification Principles Act: Commission Implementing Regulation (EU)
+2025/2546, in legal texts referred to as “Implementing act pursuant to Article 8(3)
+of the CBAM Regulation”.
+It can be accessed at the following link:
+http://data.europa.eu/eli/reg_impl/2025/2546/oj
+
+•
+
+Accreditation & Verification Requirements Act: Commission Delegated
+Regulation (EU) 2025/2551, in legal texts referred to as “Delegated act pursuant
+to Article 18(3) of the CBAM Regulation”.
+It can be accessed at the following
+link: http://data.europa.eu/eli/reg_del/2025/2551/oj
+
+•
+
+Free Allocation Adjustment Act: Commission Implementing Regulation (EU)
+2025/2620, in legal texts referred to as “Implementing act pursuant to Article
+31(2) of the CBAM Regulation”.
+It can be accessed at the following link:
+http://data.europa.eu/eli/reg_impl/2025/2620/oj
+
+For acronyms and definitions used in this document, please see Annex C and Annex B.
+5
+
+A series of icons are used throughout to help guide the reader:
+Icon
+
+Description of use
+Points to information of particular importance for operators of
+installations producing CBAM goods.
+
+Simplified!
+
+Highlights simplified approaches of the general requirements of
+the CBAM.
+Used where recommended improvements are presented.
+Used where other documents, templates or electronic tools are
+available from other sources.
+Points to examples given for the topics discussed in the
+surrounding text.
+
+6
+
+2
+
+ELECTRICITY “AS A GOOD” (I.E. IMPORTED INTO THE EU)
+
+Note: The Commission’s proposal1 of 17 December 2025 to amend the CBAM Regulation
+includes proposed changes on the rules for electricity as CBAM good. However, at the
+time of writing this guidance document, the legislative discussion process is still ongoing.
+Therefore, this proposal is not reflected in this guidance document.
+The textbox below signposts sector-specific sections in the Methodology Act, relevant for
+the CBAM definitive period.
+Methodology Act references:
+•
+Annex I, point 3 – Functional unit and system boundaries Sub-section 3.19 (Electricity)
+•
+
+Annex II, Section D –Electricity, sub-sections D.1 to D.2
+
+Where electricity is imported into the EU as a good on its own, i.e. is not considered in the
+context of the indirect emissions of a (tangible) good, specific rules apply. Firstly,
+electricity is listed in Annex II to the CBAM Regulation and therefore only direct
+emissions are taken into account. Secondly, it is the exception from the rule that actual
+emissions are monitored instead of using a default value for the embedded emissions. For
+calculating those emissions, the following formula is used:
+𝐸𝑚𝑒𝑙 = 𝐸𝑒𝑙 ∙ 𝐸𝐹𝑒𝑙
+
+(Equation 35)
+
+Where:
+𝐸𝑚𝑒𝑙 are the emissions related to electricity, expressed in t CO2 ;
+𝐸𝑒𝑙 is the electricity produced, expressed in MWh; and
+𝐸𝐹𝑒𝑙 is the emission factor for electricity applied, expressed in t CO2/MWh.
+For the emission factor of electricity, the rules given in section D.2 of Annex II to the
+Methodology Act have to be applied, which are explained below.
+The following options for determining the emission factor of electricity apply:
+(a) As the default case, the specific default value for a third country, group of third
+countries or region within a third country shall be used. That value is determined
+by the Commission based on the best data available to them. These CO2 emission
+factors are based on data from the International Energy Agency (IEA) and are
+provided in Annex III to the Default Values Act.
+(b) Where no specific default value is available pursuant to point (a), the CO2 emission
+factor in the EU as set out in section D.2.2 of Annex II to the Methodology Act
+shall be used. It is also based on IEA data and provided in Annex III to the Default
+Values Act.
+(c) Where a country, or group of third countries, submits sufficient evidence to
+demonstrate that the CO2 emission factor in the third country, group of countries
+1
+
+Proposal for a Regulation of the European Parliament and of the Council amending Regulation (EU)
+2023/956 as regards the extension of its scope to downstream goods and anti-circumvention measures,
+COM/2025/989 final, https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A52025PC0989
+7
+
+or region within the third country from where the electricity is imported is lower
+than the values outlined in points (a) and (b), and where conditions provided in
+section D.2.3 of Annex II to the Methodology Act are met, the alternative default
+value will be used. However, as such an alternative value will be published by way
+of amendment of the Default Values Act, in practice there is no difference in
+approach for the authorised CBAM declarant.
+(d) An authorised CBAM declarant may apply actual embedded emissions instead of
+default values, if it can be demonstrated that specific requirements provided in
+section 2.2 are met, and the calculation is based on data determined according to
+points D.4.1 or D.4.2 of Annex II to the Methodology Act.
+
+2.1
+
+CO2 emission factor based on alternative reliable data
+
+For the purpose of point (c) mentioned above, the third country, or group of third countries
+may propose the use of alternative default values for a given year if they provide, by 30
+June of that year, the datasets from reliable alternative official sources, including national
+statistics, demonstrating that the CO2 emission factor calculated as per equations 36 and
+37 are lower than the default values laid down in the Default Values Act. If the
+Commission considers the alternative official sources to be reliable, it shall, where feasible,
+update the relevant default values by 30 June of the subsequent year. The Methodology
+Act contains the relevant calculation formulae (equations 36 and 37), building a five-year
+weighted average of all fossil electricity producers. The updated default values shall apply
+to electricity imports for the year in which the data from those sources were provided.
+
+2.2
+
+Elements of evidence for using actual embedded emissions for electricity
+imported into the Union.
+
+Pursuant to point 5 of Annex IV to the CBAM Regulation, for allowing an authorised
+CBAM declarant to use actual emissions data of a specific electricity producing
+installation, all of the criteria (a) to (e) provided in section 5 of Annex IV to the CBAM
+Regulation have to be fulfilled, which are:
+(a) The amount of electricity for which the use of actual embedded emissions is
+claimed is covered by a power purchase agreement (PPA) between the authorised
+CBAM declarant and a producer of electricity located in a third country;
+(b) The installation producing electricity is either directly connected to the Union
+transmission system or it can be demonstrated that at the time of export there was
+no physical network congestion at any point in the network between the
+installation and the Union transmission system;
+(c) The installation producing electricity does not emit more than 550 grammes of
+CO2 of fossil fuel origin per kWh of electricity;
+(d) The amount of electricity for which the use of actual embedded emissions is
+claimed has been firmly nominated to the allocated interconnection capacity by
+all responsible transmission system operators in the country of origin, the country
+of destination and, if relevant, each country of transit, and the nominated capacity
+and the production of electricity by the installation refer to the same period of time,
+which shall not be longer than one hour.
+8
+
+(e) The fulfilment of the above criteria is certified by an accredited verifier, who shall
+receive at least monthly interim reports demonstrating how those criteria are
+fulfilled.
+Furthermore, the said installation must determine the emission factor of electricity in line
+with Annex II to the Methodology
+As clarified in section D.2.4 of Annex II to the Methodology Act, the following elements
+of evidence shall be provided to justify the use of actual emissions.
+-
+
+For criterion (a):
+i.
+
+-
+
+-
+
+For criterion (b), one of the following:
+i.
+
+A single line diagram demonstrating the existence of a direct connection
+between the installation producing electricity and the Union
+transmission system;
+
+ii.
+
+Written documentation, either from the transmission system operator or
+from another entity with access to relevant information, attesting that at
+the time of export, determined on an hourly basis, there was no physical
+network congestion at any point in the network between the installation
+and the Union transmission system.
+
+For criterion (c):
+i.
+
+-
+
+-
+
+There must be contractual evidence demonstrating the existence of a
+power purchase agreement (PPA) concluded directly between the
+authorised CBAM declarant and a producer of electricity located in a
+third country for the physical delivery of electricity. The PPA shall be
+applicable at the time of electricity import for which actual emissions
+are claimed and shall cover at least the amount of electricity for which
+actual emissions are claimed. Where the PPA was concluded through
+an intermediary, the contractual evidence shall demonstrate that only
+one single contract was concluded between the three contracting parties.
+
+Data showing that the installation producing electricity does not emit
+more than 550 grammes of CO2 of fossil fuel origin per kilowatt-hour
+of electricity.
+
+For criterion (d):
+i.
+
+Written documentation, either from the person who nominated the
+relevant capacity at the interconnector or from the relevant transmission
+system operator, demonstrating that a given quantity of electricity has
+been nominated in the country of origin, the country of destination and,
+if relevant, each country of transit, and demonstrating the period of time
+to which the nomination of capacity refers; and
+
+ii.
+
+Data from a smart metering system demonstrating that the production
+of a corresponding amount of electricity by the installation occurred
+within the same measurement period as the nomination of the capacity.
+This period shall not exceed one hour.
+
+For criterion (e):
+9
+
+i.
+
+Monthly interim reports containing the elements of evidence laid down
+in this point demonstrating how criteria (a) to (d) as laid down in point
+5 of Annex IV to the CBAM Regulation are fulfilled.
+
+The evidence for these criteria is to be provided to the verifier of the installation producing
+the electricity for which actual data are to be used. For making the evidence (or the
+verification thereof) accessible to the declarants importing electricity, the installation’s
+emission report must be supplemented by “Declarant-specific addendums” as specified in
+section 1.1.1 of Annex IV to the Methodology Act, which have to contain:
+1. The EORI number of the authorised CBAM declarant to whom the declarant-specific
+addendum refers;
+2. An indication that the criteria for the use of actual values laid down in point 5, first
+subparagraph, points (a) and (d) of Annex IV to Regulation (EU) 2023/956, as well as,
+where relevant, laid down in point 5 first subparagraph, point (b) of Annex IV to that
+Regulation in relation to the lack of physical network congestion, are met, and a
+confirmation that the related elements of evidence laid down in point D.2.4 of Annex
+II were submitted to the verifier;
+3. The quantity of electricity imported by that authorised CBAM declarant from the
+relevant installation for which the criteria laid down in point 5 of Annex IV to
+Regulation (EU) 2023/956 are met.
+
+3
+
+WORKED EXAMPLE FOR ELECTRICITY
+
+The following example demonstrates how an installation that exports electricity to the EU
+can determine the electricity emissions factor. The example installation consists of two
+blocks: Block 1 is a relatively old coal-fired baseload power plant, which produces only
+electricity. It is assumed that after 2016 a modern gas-fired cogeneration (CHP) plant was
+added as Block 2. As Block 2 can react more easily to market demand for heat (district
+heating) and electricity, it runs for a smaller number of full-load hours, but still for a
+significant part of the year. Both blocks are monitored separately, but for CBAM purposes,
+the weighted average of the electricity emission factor is determined. The emissions then
+need to be verified and provided to the authorised CBAM declarant who imports the
+electricity into the EU.
+For simplicity, standard values are used for the properties of fuels and emissions from flue
+gas cleaning are omitted in this example. Below, the separate calculations for each block,
+and thereafter for the whole installation are demonstrated.
+1. Coal-fired baseload power plant
+Capacity:
+
+500
+
+Electrical Efficiency:
+
+35%
+
+Full-load operating hours:
+Coal:
+
+MW thermal input
+
+7 800
+
+h/year
+
+Emission factor =
+
+96,1
+
+t CO2 / TJ
+
+NCV =
+
+25,8
+
+GJ/t
+
+Coal input:
+
+544 186
+
+t coal / year
+
+Energy input from fuels:
+
+14 040
+
+TJ / year
+
+10
+
+Emissions:
+
+1 349 244
+
+t CO2 / year
+
+Electricity production:
+
+1 365 000
+
+MWh
+
+EF electricity Block 1:
+
+0,988
+
+t CO2 / MWh
+
+2. Natural-gas-fired Cogeneration plant
+Capacity:
+
+850
+
+Full load hours:
+
+6 000
+
+MW thermal input
+h/year
+
+Actual efficiency electricity:
+
+49%
+
+Actual efficiency heat:
+
+31%
+
+Natural gas
+
+EF =
+
+56,1
+
+t CO2 / TJ
+
+NCV =
+
+48,0
+
+GJ/t
+
+Natural gas input:
+
+382 500
+
+t / year
+
+Energy input from fuels:
+
+18 360
+
+TJ / year
+
+Emissions:
+
+1 029 996
+
+t CO2 / year
+
+Electricity production:
+
+2 499 000
+
+MWh
+
+For applying the CHP-related calculations (point A.2.2 of Annex III to the Methodology
+Act), the operator needs to determine the applicable reference efficiencies for separate heat
+and electricity production. Those are given in section C of Annex III to the Methodology
+Act, and in Annex A of this document. It is assumed that this CHP was built after 2015.
+Therefore, the following values for natural gas are determined:
+Reference efficiency electricity
+
+53%
+
+Reference efficiency heat (hot water)
+
+92%
+
+The following calculation is required:
+𝐹𝐶𝐻𝑃,𝐸𝑙 = ɳ
+
+ɳ𝑒𝑙 ⁄ɳ𝑟𝑒𝑓,𝑒𝑙
+
+0,49/0,53
+
+ℎ𝑒𝑎𝑡 ⁄ɳ𝑟𝑒𝑓,ℎ𝑒𝑎𝑡 +ɳ𝑒𝑙 ⁄ɳ𝑟𝑒𝑓,𝑒𝑙
+
+= 0,31/0,92+0,49/0,53 = 73,3%
+
+EFCHP,El = EmCHP · FCHP,El / EEl,prod = 1 029 996 t CO2 × 0,733 / 2 499 000 MWh =
+= 0,3021 t CO2 / MWh
+3. Calculation of the weighted average
+The specific embedded (direct) emissions of electricity, which is the emission factor of
+electricity, of the whole installation is calculated as the weighted average of the emission
+factors of the two power plant blocks, as follows:
+Electricity produced (MWh)
+
+Emission factor (EF) [t CO2 / MWh]
+
+Block 1
+
+1 365 000
+
+0,988
+
+Block 2
+
+2 499 000
+
+0,302
+
+Total installation:
+
+3 864 000
+
+0,545
+
+11
+
+Therefore, the emission factor to be used by an authorised declarant for electricity from
+this specific installation will be 0,545 t CO2 / MWh. Note that this at the same time
+provided evidence for meeting criterion (c) of point 5 of Annex IV to the CBAM
+Regulation (see section 2.2).
+
+12
+
+Annex A
+
+Harmonised efficiency reference values for
+separate production of electricity and heat
+
+Methodology Act: Annex III.
+In the tables below the harmonised efficiency reference values for separate production of
+electricity and heat are based on net calorific value and standard atmospheric ISO
+conditions (15 °C ambient temperature, 1,013 bar, 60 % relative humidity).
+Table 3-1: Reference efficiency factors for electricity production
+Category
+
+Solids
+
+Liquids
+
+Gaseous
+
+Other
+
+Type of fuel
+
+Year of construction
+Before
+2012
+
+20122015
+
+From
+2016
+
+S1 Hard coal including anthracite, bituminous coal, sub-bituminous
+coal, coke, semi-coke, pet coke
+
+44,2
+
+44,2
+
+44,2
+
+S2 Lignite, lignite briquettes, shale oil
+
+41,8
+
+41,8
+
+41,8
+
+S3 Peat, peat briquettes
+
+39,0
+
+39,0
+
+39,0
+
+S4 Dry biomass including wood and other solid biomass including
+wood pellets and briquettes, dried woodchips, clean and dry waste
+wood, nut shells and olive and other stones
+
+33,0
+
+33,0
+
+37,0
+
+S5 Other solid biomass including all wood not included under S4 and
+black and brown liquor
+
+25,0
+
+25,0
+
+30,0
+
+S6 Municipal and industrial waste (non-renewable) and
+renewable/bio-degradable waste
+
+25,0
+
+25,0
+
+25,0
+
+L7 Heavy fuel oil, gas/diesel oil, other oil products
+
+44,2
+
+44,2
+
+44,2
+
+L8 Bio-liquids including bio-methanol, bioethanol, bio-butanol,
+biodiesel, and other bio-liquids
+
+44,2
+
+44,2
+
+44,2
+
+L9 Waste liquids including biodegradable and non-renewable waste
+(including tallow, fat and spent grain)
+
+25,0
+
+25,0
+
+29,0
+
+G10 Natural gas, LPG, LNG and biomethane
+
+52,5
+
+52,5
+
+53,0
+
+G11 Refinery gases hydrogen and synthesis gas
+
+44,2
+
+44,2
+
+44,2
+
+G12 Biogas produced from anaerobic digestion, landfill, and sewage
+treatment
+
+42,0
+
+42,0
+
+42,0
+
+G13 Coke oven gas, blast furnace gas, mining gas, and other recovered
+gases (excluding refinery gas)
+
+35,0
+
+35,0
+
+35,0
+
+O14 Waste heat (including high temperature process exhaust gases,
+product from exothermic chemical reactions)
+
+13
+
+30,0
+
+Table 3-2: Reference efficiency factors for heat production
+Category
+
+Type of fuel
+
+Year of construction
+Before 2016
+
+Solids
+
+Liquids
+
+From 2016
+
+Hot
+water
+
+Steam (2)
+
+Direct
+use of
+exhaust
+gases (3)
+
+Hot
+water
+
+Steam (2)
+
+Direct
+use of
+exhaust
+gases (3)
+
+S1
+
+Hard coal
+including
+anthracite,
+bituminous
+coal, subbituminous
+coal, coke,
+semi-coke, pet
+coke
+
+88
+
+83
+
+80
+
+88
+
+83
+
+80
+
+S2
+
+Lignite, lignite
+briquettes, shale
+oil
+
+86
+
+81
+
+78
+
+86
+
+81
+
+78
+
+S3
+
+Peat, peat
+briquettes
+
+86
+
+81
+
+78
+
+86
+
+81
+
+78
+
+S4
+
+Dry biomass
+including wood
+and other solid
+biomass
+including wood
+pellets and
+briquettes, dried
+woodchips,
+clean and dry
+waste wood, nut
+shells and olive
+and other stones
+
+86
+
+81
+
+78
+
+86
+
+81
+
+78
+
+S5
+
+Other solid
+biomass
+including all
+wood not
+included under
+S4 and black
+and brown
+liquor
+
+80
+
+75
+
+72
+
+80
+
+75
+
+72
+
+S6
+
+Municipal and
+industrial waste
+(non-renewable)
+and
+renewable/biodegradable
+waste
+
+80
+
+75
+
+72
+
+80
+
+75
+
+72
+
+L7
+
+Heavy fuel oil,
+gas/diesel oil,
+other oil
+products
+
+89
+
+84
+
+81
+
+85
+
+80
+
+77
+
+(2) If steam plants do not account for the condensate return in their calculation of CHP (combined
+
+heat and power) heat efficiencies, the steam efficiencies shown in the table above shall be
+increased by 5 percentage points.
+(3) Values for direct use of exhaust gases shall be used if the temperature is 250 °C or higher.
+14
+
+Category
+
+Type of fuel
+
+Year of construction
+Before 2016
+
+Gaseous
+
+Other
+
+From 2016
+
+Hot
+water
+
+Steam (2)
+
+Direct
+use of
+exhaust
+gases (3)
+
+Hot
+water
+
+Steam (2)
+
+Direct
+use of
+exhaust
+gases (3)
+
+L8
+
+Bio-liquids
+including biomethanol,
+bioethanol, biobutanol,
+biodiesel, and
+other bioliquids
+
+89
+
+84
+
+81
+
+85
+
+80
+
+77
+
+L9
+
+Waste liquids
+including
+biodegradable
+and nonrenewable
+waste
+(including
+tallow, fat and
+spent grain)
+
+80
+
+75
+
+72
+
+75
+
+70
+
+67
+
+G10 Natural gas,
+LPG, LNG and
+biomethane
+
+90
+
+85
+
+82
+
+92
+
+87
+
+84
+
+G11 Refinery gases
+hydrogen and
+synthesis gas
+
+89
+
+84
+
+81
+
+90
+
+85
+
+82
+
+G12 Biogas
+produced from
+anaerobic
+digestion,
+landfill, and
+sewage
+treatment
+
+70
+
+65
+
+62
+
+80
+
+75
+
+72
+
+G13 Coke oven gas,
+blast furnace
+gas, mining gas,
+and other
+recovered gases
+(excluding
+refinery gas)
+
+80
+
+75
+
+72
+
+80
+
+75
+
+72
+
+O14 Waste heat
+(including high
+temperature
+process exhaust
+gases, product
+from
+exothermic
+chemical
+reactions)
+
+—
+
+—
+
+—
+
+92
+
+87
+
+—
+
+15
+
+Annex B
+
+List of definitions
+
+Term
+
+Definition
+
+‘Accuracy’
+
+means the closeness of the agreement between the result of
+a measurement and the true value of the particular quantity
+or a reference value determined empirically using
+internationally accepted and traceable calibration materials
+and standard methods, taking into account both random
+and systematic factors
+
+‘Activity data’
+
+means the amount of fuels or materials consumed or
+produced by a process relevant for the calculation-based
+methodology, expressed in terajoules (TJ), mass in tonnes
+or (for gases) volume in normal cubic metres, as
+appropriate
+
+‘Actual emissions’
+
+means the emissions calculated based on primary data from
+the production processes of goods and from the production
+of electricity consumed during those processes as
+determined in accordance with the methods set out in
+Annex IV [to the Methodology Act]
+
+‘Activity level’
+
+means the quantity of goods to which the same functional
+unit applies that are produced within the system boundaries
+of a production process during a reporting period
+
+‘Aggregated goods
+categories’
+
+means aggregated goods categories pursuant to Table 1 of
+point 2 of Annex I. A group of CBAM goods with their CN
+codes, used for the purpose of defining system boundaries
+of production processes.
+
+‘Agricultural,
+aquaculture, fisheries
+and forestry residues’
+
+means residues that are directly generated by agriculture,
+aquaculture, fisheries and forestry and that do not include
+residues from related industries or processing
+
+‘Authorised CBAM
+declarant’
+
+means a person authorised by the competent authority in
+accordance with Article 17 [of the CBAM Regulation].
+The ‘authorised CBAM declarant’ [which replaces the
+term ‘reporting declarant’ from the transitional period]
+may be importers of CBAM goods, or their indirect
+customs representatives, who have applied for and been
+granted the status of authorised CBAM declarant.
+
+4
+
+‘Batch’
+
+means an amount of fuel or material representatively
+sampled and characterised, and transferred as one shipment
+or continuously over a specific period of time
+
+‘Biomass’
+
+means biomass as defined in Article 2, point (24) of the
+Renewable Energy Directive (RED II)4; it includes
+bioliquids and biofuels as defined in Article 2, point (32)
+and (33), biomass fuels as defined in Article 2, point (27)
+and biogas as defined in Article 2 point (28) of the RED II;
+
+Directive (EU) 2018/2001
+16
+
+Term
+
+Definition
+
+‘Biomass fraction’
+
+means the ratio of carbon stemming from biomass to the
+total carbon content of a fuel or material, expressed as a
+fraction
+
+‘Calculation factors’
+
+means net calorific value, emission factor, preliminary
+emission factor, oxidation factor, conversion factor, carbon
+content or biomass fraction
+
+‘Calibration’
+
+means the set of operations, which establishes, under
+specified conditions, the relations between values indicated
+by a measuring instrument or measuring system, or values
+represented by a material measure or a reference material
+and the corresponding values of a quantity realised by a
+reference standard
+
+‘Carbon price’
+
+means the monetary amount paid in a third country, under a
+carbon emissions reduction scheme, in the form of a tax,
+levy or fee or in the form of emission allowances under a
+greenhouse gas emissions trading system, calculated on
+greenhouse gases covered by such a measure, and released
+during the production of goods
+
+‘CBAM certificate’
+
+means a certificate in electronic format corresponding to
+one tonne of CO2e of embedded emissions in goods
+
+‘CO2 emission factor’
+
+means the weighted average of the CO2 intensity of
+electricity produced from fossil fuels within a geographic
+area. The CO2 emission factor is the result of the division of
+the CO2 emission data of the electricity sector by the gross
+electricity generation based on fossil fuels in the relevant
+geographic area. It is expressed in tonnes of CO2 per
+megawatt-hour
+
+‘Combined
+nomenclature’ (CN)
+
+means the classification of goods, designed to meet the
+needs of: i) the Common customs tariff, setting import
+duties for products imported into the European Union (EU),
+as well as the Integrated tariff of the European
+Communities (Taric), incorporating all EU and trade
+measures applied to goods imported into and exported out
+of the EU; ii) the international trade statistics of the EU.
+The CN provides the means of collecting, exchanging and
+publishing data on EU international trade statistics. It is
+also used for the collection and publication of international
+trade statistics in intra-EU trade.5
+
+5
+
+‘Combustion
+emissions’
+
+means greenhouse gas emissions occurring during the
+exothermic reaction of a fuel with oxygen
+
+‘Competent
+authority’
+
+means the authority designated by each Member State in
+accordance with Article 11 [of the CBAM Regulation]
+
+For definition see:
+https://ec.europa.eu/eurostat/statisticsexplained/index.php?title=Glossary:Combined_nomenclature_(CN)
+17
+
+Term
+
+Definition
+
+‘Continuous emission
+measurement’ (CEM)
+
+means a set of operations having the objective of
+determining the value of a quantity by means of periodic
+measurements, applying either measurements in the stack
+or extractive procedures with a measuring instrument
+located close to the stack, whilst excluding measurement
+methodologies based on the collection of individual
+samples from the stack
+
+‘Control system’
+
+means the operator’s risk assessment and entire set of
+control activities, including the continuous management
+thereof, that an operator has established, documented,
+implemented and maintained pursuant to point A.2. of
+Annex II
+
+‘Complex goods’
+
+means goods other than simple goods
+
+‘Conservative’
+
+means that a set of assumptions is defined in order to
+ensure that no under-estimation of reported emissions or
+over-estimation of production of heat, electricity or goods
+occurs
+
+‘Conversion factor’
+
+means the ratio of carbon emitted as CO2 to the total carbon
+contained in the source stream before the emitting process
+takes place, expressed as a fraction, considering CO emitted
+to the atmosphere as the molar equivalent amount of CO2
+
+‘Co-product’
+
+means any of two or more products resulting from the same
+production process
+
+‘Customs declarant’
+
+means a declarant as defined in Article 5, point (15) of
+Regulation (EU) No 952/2013 lodging a customs
+declaration for release for free circulation of goods in its
+own name or the person in whose name such a declaration
+is lodged
+
+‘CCUS system’
+
+means a group of economic operators with technically
+connected installations and transport equipment for CO2
+capture, transport, use in production of goods, or geological
+storage
+
+‘Data flow activities’
+
+mean activities related to the acquisition, processing and
+handling of data that are needed to draft an emissions
+report from primary source data
+
+‘Data set’
+
+means one type of data, either at installation level or
+production process level as relevant in the circumstances,
+as any of the following:
+(a)
+the amount of fuels or materials consumed or
+produced by a production process as relevant for the
+calculation-based methodology, expressed in terajoules,
+mass in tonnes, or for gases as volume in normal cubic
+metres, as appropriate, including for waste gases;
+(b)
+
+a calculation factor;
+
+18
+
+Term
+
+Definition
+(c)
+net quantity of measurable heat, and the relevant
+parameters required for determining this quantity, in
+particular: i) mass flow of heat transfer medium; and ii)
+enthalpy of transmitted and returned heat transfer medium,
+as specified by composition, temperature, pressure and
+saturation;
+(d)
+quantities of non-measurable heat, specified by the
+relevant quantities of fuels used for producing the heat, and
+the net calorific value (NCV) of the fuel mix;
+(e)
+
+quantities of electricity;
+
+(f)
+
+quantities of CO2 transferred between installations;
+
+(g)
+quantities of precursors received from outside the
+production process, and their relevant parameters, such as
+country of origin, used production route, specific direct
+and indirect emissions;
+‘Default value’
+
+means a value, which is calculated or drawn from
+secondary data, which represents the embedded emissions
+in goods
+
+‘Direct emissions’
+
+means emissions from the production processes of goods
+including emissions from the production of heating and
+cooling that is consumed during the production processes,
+irrespective of the location of the production of the heating
+or cooling
+
+‘Embedded emissions’
+
+means direct emissions released during the production of
+goods and indirect emissions from the production of
+electricity that is consumed during the production
+processes, calculated in accordance with the methods set
+out in Annex IV and further specified in the implementing
+acts adopted pursuant to Article 7(7)
+
+‘Emissions’
+
+mean the release of greenhouse gases into the atmosphere
+from the production of goods
+
+‘Emission factor’
+
+means the average emission rate of a greenhouse gas
+relative to the activity data of a source stream assuming
+complete oxidation for combustion and complete
+conversion for all other chemical reactions
+
+‘Emission factor’ for
+electricity
+
+means the default value, expressed in CO2e, representing
+the emission intensity of electricity consumed in production
+of goods.
+
+‘Emission source’
+
+means a separately identifiable part of an installation or a
+process within an installation, from which relevant
+greenhouse gases are emitted
+
+EU ETS
+
+means the system for greenhouse gas emissions allowance
+trading within the Union in respect of activities listed in
+Annex I to Directive 2003/87/EC other than aviation
+activities
+19
+
+Term
+
+Definition
+
+‘EU ETS allowance’
+
+means an allowance as defined in Article 3, point (a), of
+Directive 2003/87/EC in respect of activities listed in
+Annex I to that Directive other than aviation activities
+
+‘Fossil carbon’
+
+means inorganic and organic carbon that is not biomass
+
+‘Fossil fraction’
+
+means the ratio of fossil carbon to the total carbon content
+of a fuel or material, expressed as a fraction
+
+‘Fugitive emissions’
+
+means irregular or unintended emissions from sources that
+are not localised, or too diverse or too small to be
+monitored individually
+
+‘Functional unit’
+
+means the reference unit used for the calculation of
+embedded emissions in goods
+
+‘Goods’
+
+means goods listed in Annex I [to the CBAM the CBAM
+Regulation]
+
+‘Greenhouse gases’
+
+mean greenhouse gases as specified in Annex I [to the
+CBAM the CBAM Regulation] in relation to each of the
+goods listed in that Annex
+
+‘Heat meter’
+
+means a thermal energy meter or any other device to
+measure and record the amount of thermal energy produced
+based upon flow volumes and temperatures
+
+‘Importer’
+
+means either the person lodging a customs declaration for
+release for free circulation of goods or a bill of discharge in
+accordance with Article 175(5) of Delegated Regulation
+(EU) 2015/2446 in its own name and on its own behalf or,
+where the customs declaration is lodged by an indirect
+customs representative in accordance with Article 18 of
+Regulation (EU) No 952/2013, the person on whose behalf
+such a declaration is lodged
+
+‘Importation’
+
+means release for free circulation as provided for in Article
+201 of Regulation (EU) No 952/2013
+
+‘Indirect customs
+
+A customs representative appointed by an importer
+established in a Member State. If the importer appoints an
+indirect customs representative and they agree, they can act
+as an authorised CBAM declarant and submit the
+application for an authorisation on behalf of the importer.
+The indirect customs representative is liable for all
+operations made for the importers it represents
+
+Representative’
+
+‘Indirect emissions’
+
+means emissions from the production of electricity which is
+consumed during the production processes of goods,
+irrespective of the location of the production of the
+consumed electricity
+
+‘Inherent CO2’
+
+means CO2 which is part of a source stream.
+
+‘Installation’
+
+means a stationary technical unit where a production
+process is carried out
+
+20
+
+Term
+
+Definition
+
+‘Legal metrological
+control’
+
+means the control exercised by a public authority or
+regulator of the measurement tasks intended for the field of
+application of a measuring instrument, for reasons of public
+interest, public health, public safety, public order,
+protection of the environment, the levying of taxes and
+duties, the protection of consumers and fair trading
+
+‘Measurable heat’
+
+means a net heat flow transported through identifiable
+pipelines or ducts using a heat transfer medium, such as, in
+particular, steam, hot air, water, oil, liquid metals and salts,
+for which a heat meter is or could be installed
+
+‘Measurement point’
+
+means the emission source for which continuous emission
+measurement systems (CEMS) are used for emission
+measurement, or the cross-section of a pipeline system for
+which the CO2 flow is determined using continuous
+measurement systems
+
+‘Measurement
+system’
+
+means a complete set of measuring instruments and other
+equipment used to determine variables for the monitoring
+and calculation of emissions
+
+‘Minimum
+requirements’
+
+means monitoring methods using the minimum efforts
+allowed for determining data in order to result in emission
+data acceptable for the purpose of the CBAM Regulation.
+
+‘Mixed fuel’
+
+means a fuel which contains both biomass and fossil carbon
+
+‘Mixed material’
+
+means a material which contains both biomass and fossil
+carbon
+
+‘Multifunctional
+process’
+
+means a process that delivers multiple outputs or whose
+outputs feed into several production processes
+
+‘Net calorific value’
+(NCV)
+
+means the specific amount of energy released as heat when
+a fuel or material undergoes complete combustion with
+oxygen under standard conditions, less the heat of
+vaporisation of any water formed
+
+‘Non-CBAM good’
+
+means any good produced in the installation that is not
+included in Annex I to the CBAM Regulation
+
+‘Non-measurable
+heat’
+
+means all heat other than measurable heat
+
+‘Operator’
+
+means any person who operates or controls an installation
+in a third country, including a parent company that controls
+an installation in a third country
+
+‘Oxidation factor’
+
+means the ratio of carbon oxidised to CO2 as a consequence
+of combustion to the total carbon contained in the fuel,
+expressed as a fraction, considering carbon monoxide (CO)
+emitted to the atmosphere as the molar equivalent amount
+of carbon dioxide (CO2)
+
+‘Power purchase
+agreement’
+
+means a contract under which a person agrees to purchase
+electricity directly from an electricity producer
+21
+
+Term
+
+Definition
+
+‘Precursor’
+
+means any input material into a production process
+included in the list of goods set out in Annex I to the
+CBAM Regulation;
+
+‘Preliminary
+emission factor’
+
+means the assumed total emission factor of a fuel or
+material based on the carbon content of its biomass fraction
+and its fossil fraction before multiplying it by the fossil
+fraction to produce the emission factor
+
+‘Production process’
+
+means the chemical and physical processes carried out to
+produce goods in an installation
+
+‘Production route’ 6
+
+means a specific technology used in a production process
+to produce goods
+
+‘Process emissions’
+
+means greenhouse gas emissions other than combustion
+emissions occurring as a result of intentional and
+unintentional reactions between substances or their
+transformation, for a primary purpose other than the
+generation of heat, including from the following processes:
+(a) the chemical, electrolytic or pyrometallurgical
+reduction of metal compounds in ores, concentrates and
+secondary materials; (b) the removal of impurities from
+metals and metal compounds; (c) the decomposition of
+carbonates, including those used for flue gas cleaning; (d)
+chemical syntheses of products and intermediate products
+where the carbon bearing material participates in the
+reaction; (e) the use of carbon containing additives or raw
+materials; (f) the chemical or electrolytic reduction of
+metalloid oxides or non-metal oxides such as silicon
+oxides and phosphates.
+
+‘Proxy data’
+
+means annual values which are empirically substantiated or
+derived from accepted sources and which an operator uses
+to substitute a data set7 for the purpose of ensuring
+complete reporting
+
+‘Rebate’
+
+means any amount that reduces the amount due or paid by a
+person liable for the payment of a carbon price, before its
+payment or after, in a monetary form or in any other form.
+
+‘Recommended
+improvements’
+
+means monitoring methods which are proven means to
+ensure that data are more accurate or less prone to mistakes
+than by mere application of minimum requirements
+
+‘Related emissions’
+
+means: – the direct emissions caused by the source stream
+or emission source concerned; – emissions attributed to a
+quantity of measurable heat; – the indirect emissions related
+to the quantity of electricity concerned; – embedded
+emissions of a material produced or of a precursor
+consumed.
+
+6
+
+Note that different production routes can fall within the same production process.
+
+7
+
+Refers to the activity data or the calculation factors.
+22
+
+Term
+
+Definition
+
+‘Reporting period’
+
+means the period corresponding to the calendar year during
+which the good was produced and used by the authorised
+CBAM declarant as reference for the determination of
+embedded emissions
+
+‘Residue’
+
+means a substance that is not the end product that a
+production process directly seeks to produce; it is not a
+primary aim of the production process and the process has
+not been deliberately modified to produce it
+
+‘Simple goods’
+
+means goods produced in a production process requiring
+exclusively input materials (precursors) and fuels having
+zero embedded emissions
+
+‘Source stream’
+
+means either of the following: (a) a specific fuel type, raw
+material or product giving rise to emissions of relevant
+greenhouse gases at one or more emission sources as a
+result of its consumption or production; (b) a specific fuel
+type, raw material or product containing carbon and
+included in the calculation of greenhouse gas emissions
+using a mass-balance method
+
+‘Specific embedded
+emissions’
+
+means the embedded emissions of one tonne of goods,
+expressed as tonnes of CO2e emissions per tonne of goods
+
+‘Standard conditions’
+
+means temperature of 273,15 K and pressure conditions of
+101 325 Pa defining normal cubic metres (Nm3)
+
+‘System boundary’
+
+means the group of chemical or physical processes included
+in the calculation of embedded emissions of goods under
+the same aggregated goods category.
+The system boundaries shall cover direct emissions,
+indirect emissions for goods not listed in Annex II to the
+CBAM Regulation, and the embedded emissions of any
+precursor.
+
+8
+
+‘Third country’
+
+means a country or territory outside the customs territory of
+the [European] Union
+
+‘Tonne of CO2(e)’
+
+means one metric tonne of carbon dioxide (‘CO2’), or an
+amount of any other greenhouse gas listed in Annex I [to
+the CBAM Regulation] with an equivalent global warming
+potential [‘CO2e‘]
+
+‘Transmission system
+operator’
+
+means an operator as defined in Article 2, point (35) of
+Directive (EU) 2019/944 of the European Parliament and of
+the Council (8).
+
+Directive (EU) 2019/944 of the European Parliament and of the Council of 5 June 2019 on common
+rules for the internal market for electricity and amending Directive 2012/27/EU (OJ L 158, 14.6.2019,
+p. 125).
+23
+
+Term
+
+Definition
+
+‘Uncertainty’
+
+means a parameter, associated with the result of the
+determination of a quantity, that characterises the
+dispersion of the values that could reasonably be attributed
+to the particular quantity, including the effects of
+systematic as well as of random factors, expressed in
+percent, and describes a confidence interval around the
+mean value comprising 95% of inferred values taking into
+account any asymmetry of the distribution of values
+
+‘Waste’
+
+means any substance or object which the holder discards or
+intends or is required to discard, excluding substances that
+have been intentionally modified or contaminated in order
+to meet this definition
+
+‘Waste gas’
+
+means a gas containing incompletely oxidised carbon in a
+gaseous state under standard conditions which is a result of
+any of the processes listed under ‘process emissions’
+
+24
+
+Annex C
+
+List of abbreviations
+
+Abbreviation
+
+Full term
+
+AD
+
+Activity Data
+
+AEM
+
+Anode Effect Minutes
+
+AEO
+
+Anode Effect Overvoltage
+
+AL
+
+Activity Level
+
+AOD
+
+Argon Oxygen Decarburisation.
+
+BAT
+
+Best Available Techniques
+
+BF
+
+Biomass Fraction
+
+BFG
+
+Blast Furnace Gas
+
+BM
+
+Benchmark
+
+BOF
+
+Basic Oxygen Furnace
+
+BOFG
+
+Basic Oxygen Furnace Gas
+
+BREFs
+
+Best Available Techniques Reference documents
+
+CA
+
+Competent Authority
+
+CBAM
+
+Carbon Border Adjustment Mechanism, the
+
+CCR
+
+Clinker to Cement Ratio
+
+CCS
+
+Carbon Capture and Storage
+
+CCU(S)
+
+Carbon Capture and Utilisation (and Storage)
+
+CEMS
+
+Continuous Emission Measurement Systems
+
+CF
+
+Conversion Factor
+
+CFP
+
+Carbon footprint of products
+
+CHP
+
+Combined Heat and Power
+
+CKD
+
+Cement Kiln Dust
+
+CN
+
+Combined nomenclature
+
+COG
+
+Coke Oven Gas
+
+DRI
+
+Direct Reduced Iron
+
+EAF
+
+Electric Arc Furnace
+
+EEA
+
+European Economic Area (EU-27, Iceland, Norway, Liechtenstein)
+
+EF
+
+Emission Factor
+
+EFTA
+
+European Free Trade Area
+
+EORI
+
+Economic Operator Registration and Identification
+
+ETS
+
+Emissions Trading System
+
+EU ETS
+
+EU Emissions Trading System
+
+EUA
+
+EU Allowances (used in the EU ETS)
+
+EUR
+
+Euro (currency)
+25
+
+Abbreviation
+
+Full term
+
+FAR
+
+Free Allocation Rules (Regulation 2019/331)9
+
+FIFO
+
+First-In-First-Out principle
+
+GHG
+
+Greenhouse Gas
+
+GWP
+
+Global Warming Potential
+
+HBI
+
+Hot Briquetted Iron
+
+HS
+
+Harmonised System (for international trade)
+
+IEA
+
+International Energy Agency
+
+ISO
+
+International Organization for Standardization
+
+LULUCF
+
+Land-use, land change and forestry (criteria)
+
+MP
+
+Monitoring Plan
+
+MRR
+
+Monitoring and Reporting Regulation (Regulation 2018/2066)10
+
+MRV
+
+Monitoring, Reporting and Verification
+
+MS
+
+Member State(s)
+
+MWh
+
+Megawatt-hour
+
+NCV
+
+Net Calorific Value
+
+NPI
+
+Nickel pig iron
+
+OF
+
+Oxidation Factor
+
+PCI
+
+Pulverised Coal Injection
+
+PEMS
+
+Predictive Emission Monitoring System
+
+PFC
+
+Perfluoro-carbon
+
+PoS
+
+Proofs of Sustainability
+
+RED II
+
+Renewable Energy Directive, re-cast
+
+SEE
+
+Specific embedded emissions
+
+SEFA
+
+Specific embedded free allocation
+
+TARIC
+
+Integrated Tariff of the European Union database
+
+TJ
+
+Terajoules
+
+TSO
+
+Transmission System Operator
+
+UCC
+
+Union Custom Code
+
+UN/LOCODE
+
+United Nations Code for Trade and Transport Location
+
+9
+
+Free Allocation Rules (Commission Delegated Regulation (EU) 2019/331 of 19 December 2018
+determining transitional Union-wide rules for harmonised free allocation of emission allowances
+pursuant to Article 10a of Directive 2003/87/EC of the European Parliament and of the Council)
+
+10
+
+Monitoring and Reporting Regulation (Commission Implementing Regulation (EU) 2018/2066 of 19
+December 2018 on the monitoring and reporting of greenhouse gas emissions pursuant to Directive
+2003/87/EC of the European Parliament and of the Council and amending Commission Regulation (EU)
+No 601/2012
+26
+
+

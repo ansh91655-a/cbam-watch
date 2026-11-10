@@ -1,0 +1,2257 @@
+EUROPEAN COMMISSION
+DIRECTORATE-GENERAL
+TAXATION AND CUSTOMS UNION
+Indirect Taxation and Tax Administration
+CBAM, Energy and Green Taxation
+
+Brussels, 14 August 2026
+
+GUIDANCE DOCUMENT NO. 1: INTRODUCTION TO CBAM
+CONCEPTS
+
+Disclaimer: This guidance document is not legally binding and it is of an explanatory nature.
+Legal provisions of Union law take precedence over the contents of this document and should
+always be consulted. The authentic texts of the EU legal instruments are those published in the
+Official Journal of the European Union. This guidance was prepared by Commission services
+and does not represent an official position of the Commission. Only the Court of Justice of the
+European Union is competent to authoritatively interpret Union law.
+
+Commission européenne/Europese Commissie, 1049 Bruxelles/Brussel, BELGIQUE/BELGIË – Tel. +32 22991111
+
+VERSION HISTORY
+Date
+
+Version notes
+
+14.08.2026
+
+First Publication of this document for the definitive period.
+
+2
+
+CONTENTS
+1.
+
+PREFACE
+
+4
+
+1.1.
+
+Structure and content of the guidance documents
+
+4
+
+1.2.
+
+Reference regulations and legal acts
+
+5
+
+2.
+
+CBAM GENERAL CONCEPTS
+
+6
+
+2.1.
+
+Introduction to the CBAM: policy objectives and phases of implementation 6
+
+2.2.
+
+Definitions and scope of emissions covered in the CBAM
+
+7
+
+2.3.
+
+Transitional period (concluded): key elements
+
+9
+
+2.4. Definitive period
+2.4.1.
+Key reporting roles and responsibilities
+2.4.2.
+How is the CBAM obligation calculated?
+2.4.3.
+What needs to be monitored by operators
+2.4.4.
+Third-party verification
+2.4.5.
+Reporting periods for operators and importers
+2.4.6.
+Governance of the CBAM
+2.4.7.
+Inward processing
+
+10
+12
+13
+15
+17
+18
+20
+22
+
+2.5.
+
+23
+
+Exemptions from the CBAM
+
+ANNEX A
+
+LIST OF DEFINITIONS
+
+25
+
+ANNEX B
+
+LIST OF ABBREVIATIONS
+
+34
+
+3
+
+1. PREFACE
+1.1. Structure and content of the guidance documents
+This series of documents has been written to support stakeholders by explaining the
+requirements of the CBAM Regulation in a non-legislative language. This series of
+guidance documents should benefit a variety of stakeholders. A specific focus has been put
+on clarifying the requirements for operators of installations producing CBAM goods
+outside of the EU for the definitive period.
+•
+
+Guidance 1 provides an overview of the main changes to the CBAM methodology
+between the definitive period and the concluded transitional period. It also
+introduces the CBAM and an overview of the compliance cycle, roles and
+responsibilities, as well as milestones and deadlines for operators of installations
+outside the EU during the definitive period and explains the general exemptions
+from the CBAM.
+
+•
+
+Guidance 2 provides a quick guidance for the intended reader of this document,
+the operator of an installation producing CBAM goods. It provides a roadmap of
+the most important concepts of CBAM emissions monitoring and where to find
+more information in this series of documents.
+
+•
+
+Guidance 3 sets out the monitoring and reporting obligations and
+recommendations which are potentially applicable to any affected producer of
+CBAM goods.
+
+•
+
+Guidance 4 provides an overview of how the adjustment for free allocation is to
+be determined and what information is needed.
+
+•
+
+Guidance documents 5a, 5b, 5c, 5d, 5e and 5f present an overview per sector of
+the production processes and value chains for goods that are included in the scope
+of the CBAM, as well as sector-specific monitoring and reporting considerations
+for each CBAM good where this is relevant. These sections are supplemented by
+examples for each sector.
+
+The series of guidance documents is accompanied by an electronic template for
+information that should be used by installation operators to communicate information to
+the authorised CBAM declarants and CBAM Registry.
+
+Presentation of numbers in EU documents
+To align with EU legal documents, this guidance document uses the following
+convention when presenting numbers.
+The decimal separator used to separate the integral part of a number from its fractional
+part is a comma, e.g.: 0,890
+Thousands, and powers of 103n thereafter, are separated by a space, e.g.:
+•
+
+fifteen thousand is written as 15 000
+
+•
+
+fifteen million is written as 15 000 000
+4
+
+1.2. Reference regulations and legal acts
+Several regulations and legal acts are referred to throughout this series of guidance
+documents. For ease of reading and to avoid ambiguity, simplified references are used
+when citing these acts.
+•
+
+CBAM Regulation: Regulation (EU) 2023/956 and Regulation (EU) 2025/2083
+amending Regulation (EU) 2023/956. Notably, where article numbers are given
+in this document without further specification, they always refer to the CBAM
+Regulation.
+It can be accessed at the following link (consolidated version):
+http://data.europa.eu/eli/reg/2023/956/2025-10-20
+
+•
+
+Methodology Act: Commission Implementing Regulation (EU) 2025/2547, in
+legal texts referred to as “Implementing act pursuant to Article 7(7) of the CBAM
+Regulation”.
+It can be accessed at the following link:
+http://data.europa.eu/eli/reg_impl/2025/2547/oj
+
+•
+
+Default Values Act: Commission Implementing Regulation (EU) 2025/2621, in
+legal texts referred to as “Implementing act pursuant to Article 7(7) of the CBAM
+Regulation”, also referred to as “default values determined in accordance with
+Annex IV to the CBAM Regulation”.
+It can be accessed at the following
+link: http://data.europa.eu/eli/reg_impl/2025/2621/oj
+
+•
+
+Verification Principles Act: Commission Implementing Regulation (EU)
+2025/2546, in legal texts referred to as “Implementing act pursuant to Article 8(3)
+of the CBAM Regulation”.
+It can be accessed at the following link:
+http://data.europa.eu/eli/reg_impl/2025/2546/oj
+
+•
+
+Accreditation & Verification Requirements Act: Commission Delegated
+Regulation (EU) 2025/2551, in legal texts referred to as “Delegated act pursuant
+to Article 18(3) of the CBAM Regulation”.
+It can be accessed at the following
+link: http://data.europa.eu/eli/reg_del/2025/2551/oj
+
+•
+
+Free Allocation Adjustment Act: Commission Implementing Regulation (EU)
+2025/2620, in legal texts referred to as “Implementing act pursuant to Article
+31(2) of the CBAM Regulation”.
+It can be accessed at the following link:
+http://data.europa.eu/eli/reg_impl/2025/2620/oj
+
+For acronyms and definitions used in this document, please see Annex B and Annex A.
+
+5
+
+2. CBAM GENERAL CONCEPTS
+2.1. Introduction to
+implementation
+
+the
+
+CBAM:
+
+policy
+
+objectives
+
+and
+
+phases
+
+of
+
+The Carbon Border Adjustment Mechanism (CBAM) is an environmental policy
+instrument designed to support the EU climate ambitions of achieving a net reduction of
+greenhouse gas (GHG) emissions of at least 55% by 2030 and of reaching climate
+neutrality by 2050 at the latest.
+The CBAM complements the EU Emission Trading System (EU ETS). Under the EU ETS,
+operators of installations producing emission-intensive goods surrender emission
+allowances for each tonne of CO2e emissions released. Since an (increasing) amount of
+these allowances are purchased in auctions or on the secondary market, these operators are
+subject to a ‘carbon price’1 on their GHG emissions. However, most operators in non-EU
+countries do not have such an obligation, and this competitive advantage puts European
+production at risk of carbon leakage i.e. relocation outside the EU.
+The CBAM seeks to address the risk of carbon leakage by ensuring that products,
+irrespective of whether they are imported or produced in the Union, are subject to an
+equivalent carbon price. Prior to the introduction of the CBAM, the relevant industry
+sectors have been receiving a part of their allowances free of charge (“free allocation”)
+under the EU ETS. With the introduction of the CBAM, free allocation is gradually being
+phased out as the CBAM is gradually phased in. Instead of alleviating the carbon costs for
+EU operators, the CBAM ensures that importers of goods from non-EU countries bear
+similar carbon costs for the “embedded emissions” of the imported goods.
+The CBAM does not target countries but the embedded greenhouse gas emissions of
+products imported into the EU for specific sectors – those that are the most at risk of carbon
+leakage – that are within the scope of the EU ETS. These sectors consist in: cement, iron
+and steel, aluminium, fertilisers, hydrogen and electricity. The CBAM also includes some
+precursors and some downstream products of the aforementioned sectors (hereinafter
+referred to as “CBAM goods”). The complete list of CBAM goods is provided in Annex I
+to the CBAM Regulation.2
+The CBAM has been introduced in two phases as follows:
+•
+
+Transitional period (1 October 2023 to 31 December 2025):
+This period was designed as a “learning phase”, during which CBAM importers
+were required to report a set of data, including emissions embedded in their
+imported goods, without paying a financial adjustment for the embedded
+emissions. Verification of data was optional. However, penalties could be imposed,
+for example, for failing to submit the required quarterly CBAM reports. This period
+has now concluded.
+
+•
+
+Definitive period (starting on 1 January 2026):
+o Embedded emissions are to be reported on the basis of either default values
+or actual verified emissions, by way of an annual CBAM declaration –
+
+1
+
+More precisely, a price for the CO2 or other equivalent greenhouse gas emissions.
+
+2
+
+A detailed overview per sector is given in Guidance documents 5a, 5b, 5c, 5d and 5e respectively.
+6
+
+except where they are imported in such little amounts that they fall below
+the annual single-mass based threshold of 50 tonnes.
+o From 2026 to 2033, the embedded emissions for imported CBAM goods
+will gradually be covered by the CBAM obligation, as free allocation under
+the EU ETS is gradually phased out.
+o From 2034, 100% of emissions embedded in the CBAM goods will be
+covered by CBAM certificates and no free allocation will be given under
+the EU ETS for these goods.
+The CBAM in the definitive period is designed to mirror the emission cost under the EU
+ETS:
+•
+
+EU operators will pay the carbon price of their emissions and surrender allowances
+(EUAs) under the EU ETS; whereas
+
+•
+
+EU importers of CBAM goods will purchase and surrender CBAM certificates that
+closely reflect the situation of the EU ETS, both in terms of MRV rules and of the
+price of the certificates.
+
+The CBAM is designed in compliance with World Trade Organization (WTO) rules and
+other international obligations of the EU and is applied equally to imports from all
+countries outside the EU.3
+This document only deals with the requirements of the CBAM definitive period (from
+1 January 2026 onwards), building on the experience of the transitional period.
+The transitional phase was meant for learning and for setting up the relevant MRV
+approaches outside the EU, and the institutions and information technology systems within
+the EU. It provided the basis for the definitive-period arrangements described in this
+guidance.
+2.2. Definitions and scope of emissions covered in the CBAM
+The textbox below signposts the key sections in the Methodology Act defining terms used
+for the CBAM.
+Legislative references:
+The CBAM Regulation, Article 3 Definitions and Annex IV Definitions
+Methodology Act Article 1 (Definitions) and Annex I, Section 1 Definitions.
+A list of definitions and abbreviations used are also provided in Annex B and Annex A
+respectively in the back of this guidance document.
+
+3
+
+The only exception are goods from countries that either apply the EU ETS (currently Iceland, Norway
+and Liechtenstein) or have an ETS fully linked with the EU ETS (currently Switzerland). Producers in
+these countries therefore face the same carbon price as in the EU.
+7
+
+The following terms are frequently used in this guidance document:
+•
+
+‘tonne of CO2e’ means one metric tonne of carbon dioxide (‘CO2’), or an amount
+of any other greenhouse gas listed in Annex I to the CBAM Regulation adjusted
+to the equivalent global warming potential of CO2.
+
+•
+
+‘Direct emissions’ means emissions from the production processes of goods,
+including emissions from the production of heating and cooling consumed during
+the production processes, regardless of the location of the production of the
+heating and cooling.
+
+•
+
+‘Indirect emissions’ means emissions from the production of electricity, which is
+consumed during the production processes of goods, regardless of the location of
+the production of the consumed electricity.
+
+•
+
+‘Embedded emissions’ means emissions released during the production of
+goods, including the embedded emissions of precursor materials consumed in the
+production process.
+
+•
+
+‘Precursor’ means any input material into a production process included in the
+list of goods set out in Annex I to the CBAM Regulation. I.e. precursors are
+materials (simple or complex goods) which themselves have embedded emissions
+not equal to zero and which are identified for monitoring purposes as being
+within the system boundaries for the calculation of embedded emissions of a
+complex good.
+
+•
+
+‘Simple goods’ means goods produced in a production process requiring
+exclusively input materials and fuels having zero embedded emissions.
+
+•
+
+‘Complex goods’ means goods other than simple goods.
+
+•
+
+‘Specific embedded emissions’ means the embedded emissions of one tonne of
+goods, expressed as tonnes of CO2e emissions per tonne of goods.
+
+•
+
+‘Production process’ means the parts of an installation in which chemical or
+physical processes are carried out to produce goods under an aggregated goods
+category defined in Table 1 of section 2 of Annex I to the Methodology Act, and
+its specified system boundaries regarding inputs, outputs and corresponding
+emissions.
+
+•
+
+‘Aggregated goods category’ is implicitly defined in the Methodology Act by
+listing the relevant aggregated goods categories and all the goods identified by their
+CN codes in Table 1 of section 2 of Annex I to the Methodology.
+
+•
+
+‘Production route’ means a specific technology used in a production process to
+produce goods under an aggregated goods category. One production process
+usually relates to one group of CBAM goods produced (the ‘aggregated goods
+categories’). However, in some case more than one production route exists for
+producing these goods.
+
+•
+
+‘Verifier’ means a legal person [i.e. a company] carrying out verification activities
+and who is accredited by a national [EU] accreditation body for the purpose of the
+CBAM Regulation.
+
+•
+
+‘Functional unit’ means the reference unit [usually tonnes, but not always] used
+for the calculation of embedded emissions in goods.
+
+8
+
+•
+
+‘System boundary’ means the group of chemical or physical processes included
+in the calculation of [direct and where relevant indirect] embedded emissions of
+goods [including the embedded emissions of any precursor goods consumed] under
+the same aggregated goods category.
+
+2.3. Transitional period (concluded): key elements
+A summary of key elements of the transitional period, which has concluded, is presented
+in Table 2-1.
+Table 2-1: Transitional period (concluded) – key points
+
+Duration
+
+1 October 2023 to 31 December 2025.
+
+MRV rules
+
+Implementing Regulation (EU) 2023/1773.
+
+Reporting of
+indirect emissions
+
+Was required for all CBAM goods.
+
+Default values for
+reporting of
+embedded
+emissions
+
+Global values
+(except electricity).
+Were able to be used for precursors of complex goods
+contributing up to 20% of the total for the complex good
+during the transitional period.
+Were used for imports of electricity and for indirect emissions
+during the transitional period, unless certain criteria were met.
+
+Flexibility
+regarding MRV
+rules
+
+The use of rules from other (non-EU) carbon pricing or
+monitoring, reporting and verification schemes were only
+allowed for operators of installations until the end of 2024,
+providing they covered the same emissions and provided
+similar accuracy.
+Importers were allowed to use other (estimation) methods until
+31 July 2024.
+
+Frequency of
+reporting
+
+Quarterly (for importers) during the transitional period.
+
+Verification of
+reported data
+
+Was not required in the transitional period.
+Operators and importers reported as accurately and completely
+as possible.
+If verification was undertaken this was noted in the
+submission.
+
+Surrender of
+CBAM certificates
+
+Was not required in the transitional period.
+
+These transitional-period rules and experiences provided the basis for the definitive-period
+arrangements described in the following sections of this guidance.
+
+9
+
+2.4. Definitive period
+A summary of key elements of the definitive period is presented in Table 2-2.
+Table 2-2: Definitive period – key points
+
+Duration
+
+From 1 January 2026 onwards.
+Between 2026 and 2033 the CBAM obligation is phased in
+in parallel with the phase-out of free allocation under the
+EU ETS. From 2034, embedded emissions of CBAM
+goods are fully covered by CBAM certificates, with no
+free allocation for those goods.
+
+MRV rules
+
+The CBAM Regulation, together with the Methodology
+Act, which lays down detailed methods for the calculation
+of embedded emissions and the use of default values for
+the definitive period, and other CBAM implementing and
+delegated acts that specify further MRV requirements.
+Operators shall design and implement a monitoring plan
+and submit it in English. Monitoring records and
+supporting documentation shall be kept for at least six
+years after the reporting period. The reporting period
+corresponds to the calendar year during which the good
+was produced; for imported goods the reporting period is
+by default the calendar year of import unless sufficient
+evidence identifies the actual time of production.
+
+Reporting of indirect
+emissions
+
+Indirect emissions are taken into account in the CBAM
+declaration only for those CBAM goods and, where
+applicable, precursors for which indirect emissions are in
+scope under the CBAM Regulation and its implementing
+acts (i.e. goods listed in Annex I to the CBAM Regulation
+and not listed in Annex II to that Regulation). For other
+CBAM goods, only direct emissions are covered.
+
+Default values for
+reporting of
+embedded emissions
+
+Default values for embedded emissions of certain goods
+and for electricity/indirect emissions are laid down in
+accordance with Annex IV to the CBAM Regulation, as
+further specified in implementing acts adopted under the
+CBAM Regulation for the definitive period.
+
+Flexibility regarding
+MRV rules
+
+In the definitive period, operators must apply the
+monitoring, calculation and attribution rules laid down in
+the CBAM Regulation and in the related implementing and
+delegated acts.
+Where it is technically feasible to apply more accurate
+monitoring methods without incurring unreasonable costs,
+such methods must be applied; the benefit of
+improvements is determined using a reference price of
+EUR 80 per tonne of CO2e and measures are not deemed
+to incur unreasonable costs up to an accumulated amount
+of EUR 4 000 per year.
+10
+
+Data originating from other (non-EU) carbon pricing or
+emissions-monitoring schemes may only be used where
+they are consistent with CBAM system boundaries and
+quality requirements and are integrated into a CBAMcompliant monitoring methodology.
+Frequency of
+reporting
+
+Authorised CBAM declarants submit an annual CBAM
+declaration for the preceding calendar year, in accordance
+with the CBAM Regulation, covering quantities of
+imported CBAM goods, their embedded emissions and any
+eligible carbon price effectively paid in third countries .
+
+Verification of
+reported data
+
+Verification requirements for embedded emissions used in
+the CBAM declaration are laid down in the CBAM
+Regulation and in the delegated and implementing acts on
+accreditation and verification. In the definitive period,
+embedded emissions must be verified in accordance with
+these rules before being used in the CBAM declaration.
+
+Further reporting
+requirements
+
+Not only embedded emissions, but also the corresponding
+adjustment for free allocation under the EU ETS (“specific
+embedded free allocation”) needs to be reported. These
+data are included in the verification mentioned above.
+Where an operator already pays a carbon price in its own
+jurisdiction, this can further reduce the number of CBAM
+certificates that need to be surrendered by importers. For
+this purpose, relevant data on the carbon price paid in that
+third country needs to be compiled, too. This “carbon price
+report” has to be certified by an independent person, which
+may be the above-mentioned verifier.
+
+Surrender of CBAM
+certificates
+
+Authorised CBAM declarants must purchase CBAM
+certificates, at a price linked to the EU ETS allowance
+price, and surrender them annually for the embedded
+emissions of their imported CBAM goods, in accordance
+with the CBAM Regulation. The number of certificates to
+be surrendered takes account of the applicable phase-in of
+the CBAM, the phase-out of free allocation under the EU
+ETS, and any eligible carbon price effectively paid in third
+countries where the goods (or precursors) were produced.
+
+11
+
+2.4.1. Key reporting roles and responsibilities
+The “authorised CBAM declarant”4 is the entity responsible for the reporting of
+embedded emissions of imported goods as part of the annual CBAM declaration and for
+fulfilling the related CBAM obligations in the definitive period, notably on the purchase
+and surrendering of CBAM certificates. The authorised CBAM declarant is the person
+lodging the customs declaration, which is usually the “Importer” or in some cases the
+indirect customs representative. Where different actors are involved in the importation
+process, it is important to remember that every tonne of imported good is the responsibility
+of exactly one authorised CBAM declarant, i.e. that it is neither reported twice nor omitted
+from reporting.
+Starting in 2027 for the emissions embedded in goods imported in 2026, the authorised
+CBAM declarant must submit an annual ‘CBAM declaration’5, via the CBAM Registry,
+by 30 September of each year (starting in 2027), and covering the emissions embedded in
+goods imported in during the previous calendar year (starting in 2026). This declaration
+covers the information required under Articles 6, 7, 8 and 9 of the CBAM Regulation and
+the relevant implementing acts for the goods imported into the EU during that year. This
+includes information on the quantity of imported goods and their origin, their embedded
+emissions, any accompanying verification reports, the deduction of the free allocation
+adjustment, and any carbon price effectively paid in the third-country. Note the specific
+requirements, including on the date of importation, in case of the so-called “inward
+processing” customs procedure. The CBAM declaration may be subject to a review from
+the Commission and/or the National Competent Authority (NCA).
+The operator of an installation producing CBAM goods outside the EU is another
+important actor. Operators established outside the EU are not obliged to carry out any
+activities under the CBAM. Importers may continue importing CBAM goods from
+operators that are not interested to monitor, calculate and verify embedded emissions in
+line with the CBAM Regulation. If authorised CBAM declarants do not receive actual
+verified data on the embedded emissions of the imported goods from the operators
+producing the goods, they always have the possibility to use default values provided by the
+European Commission for the calculation of the embedded emissions and the submission
+of the CBAM declaration.
+Installation operators are the persons who have direct access to information on the
+emissions of their installations. They are therefore responsible for monitoring and
+reporting the embedded emissions of CBAM goods which they have produced and for
+communicating this information to the authorised CBAM declarant. This means that
+operators are required to design and implement a monitoring plan, prepare an operator’s
+emissions report, and, where the embedded emissions of electricity are calculated based
+on actual emissions, also a declarant-specific addendum. Operators shall keep monitoring
+records and supporting documentation for at least six years.
+Third-party verifiers also play an important role. Where embedded emissions are
+determined on the basis of actual emissions, verification by an accredited verifier is
+required before those values can be used in the CBAM declaration, in line with Articles 8
+4
+
+The CBAM Regulation uses the term “authorised CBAM declarant” to cover situations where the
+importer or, where applicable, an indirect customs representative is responsible for CBAM obligations
+(see in particular Articles 5, 6 and 14 of the CBAM Regulation).
+
+5
+
+Article 6 of the CBAM Regulation, as amended.
+12
+
+and 18 of the CBAM Regulation and the accompanying accreditation and verification rules
+adopted pursuant to that Regulation. Where actual data is provided for precursors produced
+outside the installation that is producing the complex good, that actual data must be taken
+from a verification report issued by an accredited verifier covering the reporting period
+during which the precursor was produced. Another important task of the verifier is to assess
+the operator’s monitoring plan for compliance with the Methodology Regulation’s
+requirements.
+Carbon price certifiers (“Independent persons”6): Third-country installations producing
+CBAM goods may be subject to a mandatory carbon pricing mechanism in their local
+jurisdiction. In such case, the operator may calculate and report the carbon price effectively
+paid (i.e. after the deduction of rebates and other forms of compensation) per tonne of
+CBAM good. Such carbon price must be certified by an independent person in accordance
+with Article 9 of the CBAM Regulation and the accompanying implementing act adopted
+pursuant to that Regulation. The authorised CBAM declarant will then be able to use this
+information to claim a corresponding reduction of the number of CBAM certificates to be
+surrendered. A separate guidance document is available for details on this certification.
+Furthermore, the competent authority in the EU Member State where the authorised
+CBAM declarant is established plays an important role. It is responsible for enforcing
+certain provisions of the CBAM Regulation, such as reviewing the CBAM declarations to
+ensure that authorised CBAM declarants submit, complete, and correct CBAM
+declarations and comply with other CBAM obligations, and to impose penalties in line
+with the CBAM Regulation if necessary.
+The European Commission (in this document also “the Commission”) is responsible for
+the review of CBAM declarations alongside NCAs, as well as for managing the CBAM
+Registry7, assessing the overall implementation of the CBAM and further developing the
+CBAM legislation where appropriate. Furthermore, the European Commission provides a
+dedicated website for the CBAM8, with further guidance documents, templates for
+reporting, training material, and the portal to the CBAM Registry.
+
+2.4.2. How is the CBAM obligation calculated?
+In order to make the costs for GHG emissions embedded in goods comparable in the
+CBAM to those faced by an EU ETS installation, the ‘CBAM obligation’, i.e. the number
+of CBAM certificates to be surrendered by the authorised declarant, is calculated using
+three elements:
+•
+
+The embedded emissions of the imported goods, expressed in tonnes of CO₂ equivalent
+(t CO₂e) per tonne of product (per MWh in case of imported electricity);
+
+•
+
+Reduced by an adjustment reflecting the free allocation that would be granted if the
+good had been produced by an installation covered by the EU ETS (except for
+electricity which is not covered by free allocation). This adjustment is based on the
+relevant CBAM benchmark and a time-dependent CBAM factor. It decreases over time
+
+6
+
+The draft implementing act uses the term “independent person”, defined as “the person referred to in
+Article 9(2) of Regulation (EU) 2023/956 that is certifying the carbon price report”.
+
+7
+
+Article 14 of the CBAM Regulation
+
+8
+
+Carbon Border Adjustment Mechanism - Taxation and Customs Union.
+13
+
+to reflect the gradual phase-out of free allocation and expected improvements in
+emissions performance; and
+•
+
+If applicable, further reduced by the effective carbon price paid in the third country
+of production. This correction reflects the carbon cost borne abroad, expressed relative
+to the embedded emissions and the price of CBAM certificates. Being an effective
+carbon price, it is reduced by any rebate or other compensation received in that third
+country.
+
+If this calculation gives a negative number, the CBAM obligation is zero. In practice, this
+means that where the embedded emissions are lower than the applicable free allocation
+adjustment or where the carbon price effectively paid in third countries is equal to or higher
+than the CBAM price, or where both effects jointly are higher than the embedded
+emissions, no CBAM certificates need to be surrendered.
+The consequence of this calculation is that operators have to provide the relevant input
+data not only for the embedded emissions, but also for the free allocation adjustment, and,
+if applicable, for the carbon price already paid in their jurisdiction (as explained in a
+separate guidance document).
+For verifiers, it means that they need to fully understand all the rules relating to the
+monitoring and reporting methodology of the CBAM, including rules for determining the
+free allocation adjustment, i.e. they need to know the content of the guidance document
+for operators in addition to this current guidance document. Independent person certifying
+the carbon price effectively paid (including verifiers, if they carry out this activity), need
+to know the rules for the deduction of this carbon price, including the content of the
+separate guidance on carbon price paid, and the rules of the carbon pricing mechanism
+applicable in the installation’s jurisdiction.
+Figure 2-1: Illustration of the calculation formula for the CBAM obligation (for a simple good
+using actual data).
+
+As illustrated by Figure 2-1, for calculating the total number of CBAM certificates to be
+surrendered by the authorised declarant for each imported good g in line with point (c) of
+Article 6(2) of the CBAM Regulation, the following formula can be used, combining the
+elements of Articles 7, 9 and 31 of the CBAM Regulation:
+𝐶𝐵𝐴𝑀 𝑂𝑏𝑙𝑖𝑔𝑎𝑡𝑖𝑜𝑛𝑔 = max [0 ; (𝑆𝐸𝐸𝑔 − 𝑆𝐸𝐹𝐴𝑔 −
+
+14
+
+𝑆𝐸𝐶𝑃𝑃𝑔
+)] × 𝑀𝑔
+𝑅𝑃𝐶𝐵𝐴𝑀
+
+Where:
+-
+
+SEEg is the specific embedded emissions of good g determined in line with
+Article 7 of the CBAM Regulation,
+
+-
+
+SEFAg is the specific embedded free allocation (Article 31 of the CBAM
+Regulation),
+
+-
+
+SECPPg is the specific embedded carbon price paid for good g (Article 9 of
+the CBAM Regulation 9, which contains elements “emissions covered” and
+“carbon price per tonne CO2e” as well as “rebate or compensation
+subtracted”),
+
+-
+
+RPCBAM is the reference price of a CBAM certificate, determined by the
+Commission as the yearly average of the prices determined pursuant to
+Article 21 of the CBAM Regulation10, and
+
+-
+
+Mg is the mass11 of the imported good.
+
+The term “Max(0; …)” ensures that any result of the formula which is below zero would
+become zero.
+In this calculation, SEEg values must be expressed per tonne (or per MWh if electricity is
+imported), while the value per functional unit (where different from tonnes of good) is to
+be transformed in value per tonne of good applying the formulas for specific compositions
+in Annex III of the Methodology Act.
+
+2.4.3.
+
+What needs to be monitored by operators
+
+The first element is the monitoring of direct emissions of the installation. However,
+monitoring of an installation’s emissions is only the initial part of determining embedded
+emissions of a product. Whenever an installation produces several different products, the
+emissions must also be appropriately attributed to the individual products in
+accordance with the applicable functional unit and the attribution rules laid down in the
+Methodology Act, including, where applicable, averaging across production routes used
+within the installation for goods to which the same functional unit applies. Due to the
+specific rules for attributing emissions to goods, there is also a need to determine certain
+flows of heat (steam, hot water, etc.) to and from the installation, and between relevant
+production processes. The same applies to so-called “waste gases” (e.g. blast furnace gas
+in the steel industry). Both heat and waste gases contribute to the direct emissions.
+You must also monitor and report to the authorised CBAM declarant(s) the quantities of
+specific input materials which themselves have embedded emissions (the so-called
+“precursor materials”, which are themselves CBAM goods) used in the manufacturing
+process, and determine the embedded emissions of these precursor materials. Where
+you purchase precursors to produce other CBAM goods, you need to obtain data on the
+embedded emissions from the supplier of these precursors and, where applicable, apply
+the default weighted-average rules across suppliers and reporting periods for the same
+9
+
+A draft of the implementing act is available here: https://ec.europa.eu/info/law/better-regulation/haveyour-say/initiatives/14830-Carbon-border-adjustment-mechanism-CBAM-carbon-price-paid-in-athird-country_en
+
+10
+
+Further specified in Implementing Regulation (EU) 2025/2548
+The only exception is imported electricity, where the quantity imported is to be given in MWh.
+
+11
+
+15
+
+precursor CN code, unless you can provide sufficient evidence for more granular
+attribution.
+Indirect emissions released from the generation of the electricity consumed during the
+production of CBAM goods must be monitored for the purposes of the CBAM where
+indirect emissions are in scope for those goods under the CBAM Regulation12. These
+indirect emissions are attributed to the goods produced in line with the CBAM calculation
+rules. Again, emissions embedded in precursors must be included where required by the
+CBAM rules (including, for iron and steel goods, where the embedded indirect emissions
+of precursors are required to be included). Where actual data is provided for precursors
+produced outside the installation producing the complex good, that actual data must be
+taken from a verification report issued by an accredited verifier covering the reporting
+period during which the precursor was produced.
+Note that only direct emissions are relevant for electricity imported into the EU as a good
+in its own right.
+As a new element in the definitive period of the CBAM, you as an operator must also
+determine the level of free allocation which you would receive for your production
+process, if your installation were situated in the EU. This level of free allocation is
+deducted from the embedded emissions to determine the amount of CBAM certificates
+which the authorised declarant has to surrender upon the import of your goods (“the CBAM
+obligation”). This is necessary to make the CBAM obligation comparable to the carbon
+costs faced by EU ETS operators. The rules to determine the “embedded free allocation”
+of CBAM goods are significantly simpler than those used in the EU ETS and well aligned
+with the monitoring needs you already have for the embedded emissions. Like for
+embedded emissions, either default values (“default CBAM benchmarks”) can be used or
+values that take into account actual data from your installation. Because the free allocation
+in the EU ETS is phased out while the CBAM is gradually introduced, the production year
+of the goods produced and of the precursors used are important parameters.
+Finally, you must communicate to the authorised CBAM declarant(s) the carbon price paid
+in the production of the good within its own jurisdiction, if any. This includes the carbon
+price per tonne CO2e and the amount of free allocation or any other financial support,
+compensation or rebate received per tonne of the product relevant for the CBAM in line
+with Article 9 (“Carbon price paid in a third country”) of the CBAM Regulation, as
+amended. Notably, in the case of complex goods, the carbon costs due by the producers of
+precursor materials must also be taken into account where those precursors and their
+embedded emissions are within the scope of the CBAM and have not already been subject
+to the EU ETS or to a carbon pricing system that is fully linked with the EU ETS.
+
+12
+
+During the transitional period, indirect emissions of all CBAM goods were to be monitored and reported,
+including the embedded indirect emissions of precursors. However, in the definitive period, indirect
+emissions are taken into account only for those CBAM goods for which indirect emissions are in scope
+under the CBAM Regulation, that is CBAM goods listed in Annex I to Regulation (EU) 2023/956 other
+than those listed in Annex II (“Goods for which only direct emissions are taken into account).
+16
+
+2.4.4.
+
+Third-party verification
+
+If you provide your emissions data and free allocation data to the authorised declarant for
+use in the CBAM declaration, or to other operators who use your products as precursors
+for other CBAM goods, these “actual data” are eligible to be used instead of default values
+only if they are verified by an accredited verifier. For this purpose, you as operator of the
+installation must contract a verifier.
+The verifier must have an accreditation from a national accreditation body located in the
+EU and valid at the time it issues the final verification report. The accreditation must cover
+the industrial sector of your installation.
+National accreditation bodies are processing applications for accreditation on a rolling
+basis. To ensure that the verifier that you have contracted is duly accredited for CBAM,
+you should check the verifier’s accreditation certificate, awarded by an EU Member State’s
+national accreditation body. The European cooperation for Accreditation (EA) maintains
+a list of accreditation bodies that provide accreditation services for CBAM13, and each
+national accreditation body must publish the accreditation certificates on their website. To
+help you find a verifier, it will be possible to search for a verifier directly in the CBAM
+registry. In addition, DG TAXUD will publish and regularly update a list of accredited
+CBAM verifiers on their webpage.
+In order to avoid bottlenecks in the verifier’s capacity near the end of the reporting period,
+you should find and contract a verifier early during the reporting period. This helps because
+many verification activities can be performed already throughout the reporting period, e.g.
+assessment of the monitoring plan. The verifier will guide you through the process. This
+usually means that the verifier will request all documents and data from you which are
+relevant to verification, will schedule at least one site visit, etc.
+After the end of the reporting period, you as the operator of the installation must compile
+all the emissions data of the installation, broken down by production process and for each
+good (each 8-digit CN code) in an “operator’s emissions report”. When you use the
+Commission’s Excel template, this will also automatically generate the “summary
+emissions report” required. That report will also contain the data on free allocation
+adjustment. The report must be uploaded in the CBAM Registry for this purpose. When
+this report is ready, the last phase of the verification starts.
+The verifier will follow a verification plan that it has set up during the first phases of the
+verification (called “strategic analysis” and “risk analysis”). This plan includes the details
+of what needs to be checked on-site, questions to the operator’s staff dealing with the
+monitoring and reporting processes. It will also contain a plan for selecting samples of data
+for detailed checking, commensurate with identified risks. For this purpose, the verifier
+takes into account the operator’s control system. The operator can reduce the risk of errors
+and thereby reduce the verifier’s efforts (and its’ costs) by establishing an effective control
+system.
+When the verifier detects “misstatements” (i.e. mistakes) in the data or “non-conformities”
+in the monitoring methodology, the verifier will ask you, the operator, to make corrections
+as appropriate, and to take corrective action to avoid similar problems in the future.
+However, detecting misstatements in the data may also require the verifier to review the
+13
+
+https://european-accreditation.org/national-accreditation-bodies-that-intend-to-offer-accreditation-ofverifiers-for-eu-cbam/
+17
+
+original risk analysis, to intensify the verification activities (e.g. increase the size of the
+samples taken for intensive checks). This is the reason why international standards do not
+allow the verifier to accept lump sum contracts for a verification: When more work is
+required, it must also be remunerated. Otherwise, there would be the risk of a breach of the
+impartiality and independence of the verifier, which is against accreditation rules.
+After all identified misstatements (if applicable) have been corrected by the operator, the
+verifier prepares a verification report. The key message therein is called the “verification
+statement”. A positive verification statement is required so that your data may be used by
+other actors in the CBAM. The report may also include more detailed findings (e.g. “nonmaterial misstatements”) and recommendations for improvement. You should take those
+into account for improving your monitoring methodology in the future. Note that the
+verifier is not allowed to give detailed instructions on how you should make those
+improvements, as performing consulting work would jeopardize the verifier’s impartiality
+and independence, which can lead to losing its accreditation.
+The verifier must create the verification report in the CBAM Registry. This will guarantee
+the authenticity of the verification report and prevent the use of verification reports that
+were not originally issued in the CBAM Registry. If you as an operator are registered in
+the CBAM Registry, you can directly allow declarants to access and use actual verified
+emissions via the CBAM Registry. A downloaded version thereof will also be provided,
+so you can provide it to other operators who use your goods as precursors for other CBAM
+goods. If you are not registered in the CBAM Registry, you will need to ask the verifier
+to provide you with a downloadable PDF version of the verification report and share this
+document, along with your full emissions report– to be prepared outside the CBAM
+Registry using the Commission’s Excel template – to authorised CBAM declarants. The
+authorised CBAM declarant will then need to manually upload the documents in the
+CBAM Registry when preparing the CBAM declaration. Therefore, if you as an operator
+are not registered in the CBAM Registry, you will have to disclose the complete emissions
+report data to the authorised CBAM declarant.
+More detailed guidance on accreditation and verification can be found in a dedicated
+guidance document provided by the Commission.
+
+2.4.5.
+
+Reporting periods for operators and importers
+
+The reporting period is the reference period for determining embedded emissions. In the
+definitive period, the reporting period corresponds to the calendar year during which the
+good was produced. Specific rules apply for identifying the reporting period for goods and
+precursors under the CBAM Regulation and the Methodology Act.
+Installation operators
+For you (as an operator), the CBAM reporting period corresponds to the calendar year of
+the production of your goods, to allow you to collect representative data that reflects an
+installation’s annual operations and to align with the definition of “reporting period” in
+Article 1(5) and the rules in Articles 7 and 13 of the Methodology Act. For precursors, the
+default reporting period is also the year of production of the complex goods, unless there
+is sufficient evidence to identify the actual time of production of the precursor.
+
+18
+
+A full calendar year is considered representative as this reflects seasonal variations in an
+installation’s operations, as well as any periods of disruption to the process resulting from
+planned annual shutdowns (e.g. for maintenance) and start-ups. A full year also helps to
+mitigate any data gaps e.g. by using meter reads taken on either side of any missing
+periodic data points.
+In all the above cases, the direct and indirect embedded emissions of goods must be
+calculated as the average of the reporting period applicable under the CBAM rules.
+In the definitive period, you should ensure that embedded emissions for each calendar year
+are determined and compiled in time to be communicated to authorised CBAM declarants
+so that they can prepare and submit their annual CBAM declarations by the deadline laid
+down in Article 6(1) of the CBAM Regulation, as amended.
+Importers
+In the definitive period, by 30 September, each authorised CBAM declarant must submit
+an annual CBAM declaration covering the goods imported during the preceding calendar
+year, in accordance with Article 6(1) of the CBAM Regulation, as amended by Regulation
+(EU) 2025/2083.
+The annual CBAM declaration summarises the total embedded emissions in goods
+imported during the preceding calendar year, splitting out direct and indirect emissions
+where these are in scope for the CBAM goods concerned, the level of free allocation to be
+used for reducing the CBAM obligation, as well as any carbon price paid outside the EU
+in accordance with Articles 6, 7, 9 and 31 of the CBAM Regulation. For determining the
+reporting period for an imported good, the date of release for free circulation in the customs
+territory of the Union is relevant. By default, the reporting period is the calendar year
+during which the good was imported; however, if there is sufficient evidence to identify
+the actual time of production, the reporting period is the period during which the good was
+produced. By way of derogation, for electricity imported into the customs territory of the
+Union, the reporting period is the year of import. This is important in particular for goods
+put under the “inward processing” procedure.
+In practice, authorised CBAM declarants have an incentive to use the latest available
+embedded emissions data communicated by installation operators for the relevant
+reporting period when preparing their annual CBAM declarations.
+Under the definitive CBAM regime, any corrections to CBAM declarations that authorised
+CBAM declarants may want to make are governed by the CBAM Regulation and the
+implementing acts adopted under Article 6(6) of that Regulation, which specify the format
+and submission arrangements for the CBAM declaration.
+
+19
+
+2.4.6.
+
+Governance of the CBAM
+
+Figure 2-2: Overview of the roles and data flows in the definitive period of the CBAM. For
+explanation of the figure numbers (relating to the workflow), please see main text below.
+
+As shown schematically in Figure 2-2, the governance system and workflows of the
+CBAM follow the steps below (paragraph numbering follows the red numbers in the
+figure):
+1. The authorised CBAM declarant receives CBAM goods from various installations,
+possibly from different countries outside the EU. There are two situations: Either
+the installation is known and provides actual verified data to the declarant, or the
+declarant will have to use default values.
+2. For each import, the customs declaration includes the CBAM account number of
+the authorised CBAM declarant and respective TARIC document code(s). The
+customs authority of the relevant EU Member State checks and clears the import,
+as usual. The customs authority (or the IT system used) shares the information of
+this import with the European Commission. This information is ultimately gathered
+in the CBAM Registry, where it is used to check the completeness and accuracy of
+the annual CBAM declaration and related CBAM obligations.
+3. The operator may request registration in the CBAM Registry. Such registration is
+recommended, as it strongly facilitates the communication between operators and
+declarants, and helps safeguard confidential data. The documentation of the
+verification process takes place in any case inside the Registry.
+4. Where the operator intends to provide actual data on the installation’s CBAM
+goods to the authorised CBAM declarant, verification of those data is required. For
+this purpose, the operator has to contract a CBAM accredited verifier. The CBAM
+Registry will help operators to select a verifier competent for the required
+verification scope, and the verifier will provide the verification report by means of
+the Registry.
+
+20
+
+5. The authorised CBAM declarant requests the relevant data on specific embedded
+emissions of the imported CBAM goods from the operators (in practice, this may
+involve intermediary traders, who would have to forward the request to the operator
+of the installation which produced the CBAM goods). The operators can provide
+their data to the authorised CBAM declarants by sending the requested data (dashed
+arrow in the figure), i.e. the operator’s emissions report and verification report, and
+a summary thereof (and, where the embedded emissions of electricity are
+calculated based on actual emissions, a declarant-specific addendum). If the
+operator has registered in the Registry, it is simpler to ‘disclose’ the relevant data
+(non-confidential part only) to the declarant directly in the CBAM Registry (solid
+arrow). Where actual emissions are used, the embedded emissions must be
+determined and verified in accordance with the CBAM Regulation and the
+applicable accreditation and verification rules before being used in the CBAM
+declaration. Where actual data is provided for precursors produced outside the
+installation producing the complex good, that actual data must be taken from a
+verification report issued by an accredited verifier covering the reporting period
+during which the precursor was produced.
+However, where no actual data is provided, the authorised CBAM declarant has to
+use default values from the relevant legislation (indicated by the ‘Default Values
+Act’ in the figure).
+6. The authorised CBAM declarant is then able to compile and submit the annual
+CBAM declaration via the CBAM Registry and to surrender the corresponding
+CBAM certificates, in accordance with the CBAM Regulation and the
+implementing acts adopted under it. The CBAM declaration is submitted for
+imports of the preceding calendar year and reflects the reporting period rules
+applicable to imported goods (by default, the year of import unless sufficient
+evidence identifies the actual time of production).
+7. The Commission and national competent authorities may perform reviews
+regarding the correctness of CBAM declarations. An information exchange
+between the Commission and the competent authorities in the EU Member States,
+as well as with national accreditation bodies, takes place. The Commission is
+informed (based on the customs data) about which authorised CBAM declarants
+are expected to submit CBAM declarations and to surrender CBAM certificates.
+Furthermore, the Commission can perform spot checks of actual CBAM
+declarations and check their completeness with regards to the customs data. Where
+irregularities are identified, the Commission informs the competent authority of
+this. The competent authority will then follow up with the authorised CBAM
+declarant and it can ultimately impose a (financial) penalty in line with Article 26
+of the CBAM Regulation and the applicable national provisions.
+8. (Not shown in the figure and not required by legislation, but in the own interest of
+the authorised CBAM declarant): To avoid similar problems in the future, the
+importer who received a penalty should inform the operator of the problem(s)
+identified by the Commission or the competent authority in order to address the
+issue(s) for future submissions. The Commission or the competent authority may
+also inform the operator.
+9. (Not shown in the figure, but important for verifiers): National competent
+authorities regularly exchange information with national accreditation bodies and
+vice-versa. If issues in verification reports are identified as part of the review of the
+CBAM declaration, national competent authorities can request the accreditation
+body to follow up on the issue with verifiers, e.g. during their surveillance activities
+21
+
+on verifiers. Similarly, national accreditation bodies will inform the national
+competent authorities of any issue which they have identified during their
+surveillance activities regarding a verifier.
+
+2.4.7.
+
+Inward processing
+
+The Union Customs Code defines several special procedures. “Inward processing”14 means
+that a good is imported into the EU for processing with suspension of import duties and
+VAT. After the processing operations, the processed products or the original imported
+goods can then be re-exported or released for free circulation in the EU. The latter would
+imply the obligation to pay import duty and taxes, as well as the application of commercial
+policy measures.
+This principle is extended to the CBAM, i.e. the CBAM applies only where goods (or
+processed products from those goods) are released for free circulation or otherwise brought
+into the customs territory of the Union in accordance with Article 2(1) and (2) of the
+CBAM Regulation. In the case of re-export, no CBAM obligation arises for goods placed
+under inward processing. However, if a CBAM good placed under inward processing
+leaves that procedure to be released for free circulation in the EU, either as the original
+good or as a processed product, a CBAM obligation arises. This also applies even if the
+processed products are not CBAM goods.
+For CBAM goods, or processed products obtained therefrom, released for free circulation
+after having been placed under inward processing, the calendar year for which they must
+be included in the CBAM declaration is determined by the date of release for free
+circulation within the EU. By default, the reporting period for such goods is the calendar
+year during which they are released for free circulation, unless there is sufficient evidence
+to identify the actual time of production. This means that goods placed under inward
+processing before the start of the definitive period may still need to be included in a CBAM
+declaration when they are eventually released for free circulation.
+The CBAM Regulation, in particular Article 2(1) and (2) on the scope of the CBAM and
+Article 6 on the CBAM declaration, sets out the rules applicable to goods released for free
+circulation after inward processing. In line with those provisions, and for the purposes of
+this guidance, the following principles apply:
+
+14
+
+•
+
+If the good was not processed during the inward processing, the quantities of the
+CBAM good released and the embedded emissions of those quantities are to be
+reported; the values are the same as for the good placed under inward processing.
+The CBAM declaration shall also include the country of origin and the installations
+where the goods were produced, if those are known;
+
+•
+
+If the good was processed, and the product of the inward processing no longer
+qualifies as a CBAM good, then the quantities of the original good and embedded
+emissions of those original quantities are still to be reported. The report shall also
+include the country of origin and the installations where the goods were produced,
+if those are known;
+
+See: https://taxation-customs.ec.europa.eu/customs-4/customs-procedures-import-and-export-0/whatimportation/inward-processing_en
+22
+
+•
+
+If the good was processed, and the product of the inward processing is a CBAM
+good, then the quantities and the embedded emissions of the original good are to
+be reported. The CBAM declaration shall also include the country of origin and the
+installations where the goods were produced, if those are known;
+
+•
+
+Where the origin of the good used for inward processing cannot be defined, the
+embedded emissions shall be calculated on the basis of the weighted average
+embedded emissions of the totality of the goods placed under the inward processing
+procedure for the same aggregated good category in a manner consistent with the
+CBAM Regulation and the applicable CBAM calculation rules.
+
+2.5.Exemptions from the CBAM
+During the definitive period certain general exemptions apply, which are listed below.
+The CBAM Regulation references:
+•
+
+The CBAM Regulation, Section I, Article 2a De minimis exemption. Annex VII, The single mass-based
+threshold.
+
+•
+
+The CBAM Regulation, Section I, Article 2 Scope, paragraphs 3, 4 and 7; Annex III Third countries and
+territories outside the scope of this Regulation for the purpose of Article 2.
+
+De minimis exemption
+Importers, including any importer with the status of an authorised CBAM declarant, are
+exempt from CBAM obligations if the net mass of imported goods in a given calendar year
+does not cumulatively exceed the single mass-based threshold laid down in point 1 of
+Annex VII to the CBAM Regulation. The current threshold is set at 50 tonnes of net mass.
+The threshold applies to the aggregate net mass of all goods, across all CN codes, imported
+by the same importer within the same calendar year. Where this exemption applies, the
+importer (including an authorised CBAM declarant) must indicate the exemption in the
+relevant customs declaration.
+If, during a calendar year, the importer exceeds the single mass-based threshold, the
+importer or the authorised CBAM declarant becomes subject to all CBAM obligations for
+that calendar year, covering the emissions embedded in all goods imported during that
+year, including those imported before the threshold was exceeded.
+The Commission assesses import data on a yearly basis to ensure that the single massbased threshold ensures that the exemption applies to no more than 1% of the emissions
+embedded in the imported goods and processed products. Where this condition is not
+satisfied, the commission will amend the single mass-based threshold.
+The “de minimis exemption” does not apply to imports of electricity or hydrogen.
+
+23
+
+Military use exemption15
+An exemption applies to any goods imported to be used by the military authorities of
+Member States, or under agreement with those of a non-EU country, under the EU’s
+Common Security and Defence Policy, or under NATO.
+Electricity and hydrogen exemption
+The CBAM Regulation does not apply to electricity generated on the continental shelf or
+within the exclusive economic zone of a Member State, or of a country or territory listed
+in points 1 and 2 of Annex III of the CBAM Regulation. It also does not apply to hydrogen
+originating on the continental shelf or within the exclusive economic zone of a Member
+State, or of a country or territory listed in point 1 of Annex III of the CBAM Regulation.
+EFTA exemption
+Goods originating in countries which apply the EU ETS (Norway, Iceland, Liechtenstein),
+or which have an ETS fully linked to the EU ETS (Switzerland), are exempted from the
+CBAM (see section 1 of Annex III to the CBAM Regulation).
+Limited exemption for electricity imports
+Imports of electricity from non-EU countries are covered by the CBAM, unless the nonEU country’s electricity market is integrated with the EU internal market through market
+coupling, and there is no technical solution for the application of the CBAM to the
+importation of electricity into the customs territory of the Union from that third country or
+territory. This exemption only applies if all the conditions outlined in Article 2 paragraph
+7 of the CBAM Regulation have been fulfilled. Third countries that qualify for this
+exemption are listed in Annex III point 2 of the CBAM Regulation. No third country
+qualifies for this exemption at the time of completion of this guidance.
+
+15
+
+Commission Delegated Regulation (EU) 2015/2446 of 28 July 2015 supplementing Regulation (EU) No
+952/2013 of the European Parliament and of the Council as regards detailed rules concerning certain
+provisions of the Union Customs Code.
+24
+
+Annex A
+
+List of definitions
+
+Term
+
+Definition
+
+‘Accuracy’
+
+means the closeness of the agreement between the result of
+a measurement and the true value of the particular quantity
+or a reference value determined empirically using
+internationally accepted and traceable calibration materials
+and standard methods, taking into account both random
+and systematic factors
+
+‘Activity data’
+
+means the amount of fuels or materials consumed or
+produced by a process relevant for the calculation-based
+methodology, expressed in terajoules (TJ), mass in tonnes
+or (for gases) volume in normal cubic metres, as
+appropriate
+
+‘Actual emissions’
+
+means the emissions calculated based on primary data from
+the production processes of goods and from the production
+of electricity consumed during those processes as
+determined in accordance with the methods set out in
+Annex IV [to the Methodology Act]
+
+‘Activity level’
+
+means the quantity of goods to which the same functional
+unit applies that are produced within the system boundaries
+of a production process during a reporting period
+
+‘Aggregated goods
+categories’
+
+means aggregated goods categories pursuant to Table 1 of
+point 2 of Annex I. A group of CBAM goods with their CN
+codes, used for the purpose of defining system boundaries
+of production processes.
+
+‘Agricultural,
+aquaculture, fisheries
+and forestry residues’
+
+means residues that are directly generated by agriculture,
+aquaculture, fisheries and forestry and that do not include
+residues from related industries or processing
+
+‘Authorised CBAM
+declarant’
+
+means a person authorised by the competent authority in
+accordance with Article 17 [of the CBAM Regulation].
+The ‘authorised CBAM declarant’ [which replaces the
+term ‘reporting declarant’ from the transitional period]
+may be importers of CBAM goods, or their indirect
+customs representatives, who have applied for and been
+granted the status of authorised CBAM declarant.
+
+‘Batch’
+
+means an amount of fuel or material representatively
+sampled and characterised, and transferred as one shipment
+or continuously over a specific period of time
+
+‘Biomass’
+
+means biomass as defined in Article 2, point (24) of the
+Renewable Energy Directive (RED II)16; it includes
+bioliquids and biofuels as defined in Article 2, point (32)
+and (33), biomass fuels as defined in Article 2, point (27)
+and biogas as defined in Article 2 point (28) of the RED II;
+
+16
+
+Directive (EU) 2018/2001
+25
+
+Term
+
+Definition
+
+‘Biomass fraction’
+
+means the ratio of carbon stemming from biomass to the
+total carbon content of a fuel or material, expressed as a
+fraction
+
+‘Calculation factors’
+
+means net calorific value, emission factor, preliminary
+emission factor, oxidation factor, conversion factor, carbon
+content or biomass fraction
+
+‘Calibration’
+
+means the set of operations, which establishes, under
+specified conditions, the relations between values indicated
+by a measuring instrument or measuring system, or values
+represented by a material measure or a reference material
+and the corresponding values of a quantity realised by a
+reference standard
+
+‘Carbon price’
+
+means the monetary amount paid in a third country, under a
+carbon emissions reduction scheme, in the form of a tax,
+levy or fee or in the form of emission allowances under a
+greenhouse gas emissions trading system, calculated on
+greenhouse gases covered by such a measure, and released
+during the production of goods
+
+‘CBAM certificate’
+
+means a certificate in electronic format corresponding to
+one tonne of CO2e of embedded emissions in goods
+
+‘CO2 emission factor’
+
+means the weighted average of the CO2 intensity of
+electricity produced from fossil fuels within a geographic
+area. The CO2 emission factor is the result of the division of
+the CO2 emission data of the electricity sector by the gross
+electricity generation based on fossil fuels in the relevant
+geographic area. It is expressed in tonnes of CO2 per
+megawatt-hour
+
+‘Combined
+nomenclature’ (CN)
+
+means the classification of goods, designed to meet the
+needs of: i) the Common customs tariff, setting import
+duties for products imported into the European Union (EU),
+as well as the Integrated tariff of the European
+Communities (Taric), incorporating all EU and trade
+measures applied to goods imported into and exported out
+of the EU; ii) the international trade statistics of the EU.
+The CN provides the means of collecting, exchanging and
+publishing data on EU international trade statistics. It is
+also used for the collection and publication of international
+trade statistics in intra-EU trade.17
+
+‘Combustion
+emissions’
+
+means greenhouse gas emissions occurring during the
+exothermic reaction of a fuel with oxygen
+
+‘Competent
+authority’
+
+means the authority designated by each Member State in
+accordance with Article 11 [of the CBAM Regulation]
+
+17
+
+For definition see:
+https://ec.europa.eu/eurostat/statisticsexplained/index.php?title=Glossary:Combined_nomenclature_(CN)
+26
+
+Term
+
+Definition
+
+‘Continuous emission
+measurement’ (CEM)
+
+means a set of operations having the objective of
+determining the value of a quantity by means of periodic
+measurements, applying either measurements in the stack
+or extractive procedures with a measuring instrument
+located close to the stack, whilst excluding measurement
+methodologies based on the collection of individual
+samples from the stack
+
+‘Control system’
+
+means the operator’s risk assessment and entire set of
+control activities, including the continuous management
+thereof, that an operator has established, documented,
+implemented and maintained pursuant to point A.2. of
+Annex II
+
+‘Complex goods’
+
+means goods other than simple goods
+
+‘Conservative’
+
+means that a set of assumptions is defined in order to
+ensure that no under-estimation of reported emissions or
+over-estimation of production of heat, electricity or goods
+occurs
+
+‘Conversion factor’
+
+means the ratio of carbon emitted as CO2 to the total carbon
+contained in the source stream before the emitting process
+takes place, expressed as a fraction, considering CO emitted
+to the atmosphere as the molar equivalent amount of CO2
+
+‘Co-product’
+
+means any of two or more products resulting from the same
+production process
+
+‘Customs declarant’
+
+means a declarant as defined in Article 5, point (15) of
+Regulation (EU) No 952/2013 lodging a customs
+declaration for release for free circulation of goods in its
+own name or the person in whose name such a declaration
+is lodged
+
+‘CCUS system’
+
+means a group of economic operators with technically
+connected installations and transport equipment for CO2
+capture, transport, use in production of goods, or geological
+storage
+
+‘Data flow activities’
+
+mean activities related to the acquisition, processing and
+handling of data that are needed to draft an emissions
+report from primary source data
+
+‘Data set’
+
+means one type of data, either at installation level or
+production process level as relevant in the circumstances,
+as any of the following:
+(a)
+the amount of fuels or materials consumed or
+produced by a production process as relevant for the
+calculation-based methodology, expressed in terajoules,
+mass in tonnes, or for gases as volume in normal cubic
+metres, as appropriate, including for waste gases;
+(b)
+
+a calculation factor;
+
+27
+
+Term
+
+Definition
+(c)
+net quantity of measurable heat, and the relevant
+parameters required for determining this quantity, in
+particular: i) mass flow of heat transfer medium; and ii)
+enthalpy of transmitted and returned heat transfer medium,
+as specified by composition, temperature, pressure and
+saturation;
+(d)
+quantities of non-measurable heat, specified by the
+relevant quantities of fuels used for producing the heat, and
+the net calorific value (NCV) of the fuel mix;
+(e)
+
+quantities of electricity;
+
+(f)
+
+quantities of CO2 transferred between installations;
+
+(g)
+quantities of precursors received from outside the
+production process, and their relevant parameters, such as
+country of origin, used production route, specific direct
+and indirect emissions;
+‘Default value’
+
+means a value, which is calculated or drawn from
+secondary data, which represents the embedded emissions
+in goods
+
+‘Direct emissions’
+
+means emissions from the production processes of goods
+including emissions from the production of heating and
+cooling that is consumed during the production processes,
+irrespective of the location of the production of the heating
+or cooling
+
+‘Embedded emissions’
+
+means direct emissions released during the production of
+goods and indirect emissions from the production of
+electricity that is consumed during the production
+processes, calculated in accordance with the methods set
+out in Annex IV and further specified in the implementing
+acts adopted pursuant to Article 7(7)
+
+‘Emissions’
+
+mean the release of greenhouse gases into the atmosphere
+from the production of goods
+
+‘Emission factor’
+
+means the average emission rate of a greenhouse gas
+relative to the activity data of a source stream assuming
+complete oxidation for combustion and complete
+conversion for all other chemical reactions
+
+‘Emission factor’ for
+electricity
+
+means the default value, expressed in CO2e, representing
+the emission intensity of electricity consumed in production
+of goods.
+
+‘Emission source’
+
+means a separately identifiable part of an installation or a
+process within an installation, from which relevant
+greenhouse gases are emitted
+
+EU ETS
+
+means the system for greenhouse gas emissions allowance
+trading within the Union in respect of activities listed in
+Annex I to Directive 2003/87/EC other than aviation
+activities
+28
+
+Term
+
+Definition
+
+‘EU ETS allowance’
+
+means an allowance as defined in Article 3, point (a), of
+Directive 2003/87/EC in respect of activities listed in
+Annex I to that Directive other than aviation activities
+
+‘Fossil carbon’
+
+means inorganic and organic carbon that is not biomass
+
+‘Fossil fraction’
+
+means the ratio of fossil carbon to the total carbon content
+of a fuel or material, expressed as a fraction
+
+‘Fugitive emissions’
+
+means irregular or unintended emissions from sources that
+are not localised, or too diverse or too small to be
+monitored individually
+
+‘Functional unit’
+
+means the reference unit used for the calculation of
+embedded emissions in goods
+
+‘Goods’
+
+means goods listed in Annex I [to the CBAM the CBAM
+Regulation]
+
+‘Greenhouse gases’
+
+mean greenhouse gases as specified in Annex I [to the
+CBAM the CBAM Regulation] in relation to each of the
+goods listed in that Annex
+
+‘Heat meter’
+
+means a thermal energy meter or any other device to
+measure and record the amount of thermal energy produced
+based upon flow volumes and temperatures
+
+‘Importer’
+
+means either the person lodging a customs declaration for
+release for free circulation of goods or a bill of discharge in
+accordance with Article 175(5) of Delegated Regulation
+(EU) 2015/2446 in its own name and on its own behalf or,
+where the customs declaration is lodged by an indirect
+customs representative in accordance with Article 18 of
+Regulation (EU) No 952/2013, the person on whose behalf
+such a declaration is lodged
+
+‘Importation’
+
+means release for free circulation as provided for in Article
+201 of Regulation (EU) No 952/2013
+
+‘Indirect customs
+
+A customs representative appointed by an importer
+established in a Member State. If the importer appoints an
+indirect customs representative and they agree, they can act
+as an authorised CBAM declarant and submit the
+application for an authorisation on behalf of the importer.
+The indirect customs representative is liable for all
+operations made for the importers it represents
+
+Representative’
+
+‘Indirect emissions’
+
+means emissions from the production of electricity which is
+consumed during the production processes of goods,
+irrespective of the location of the production of the
+consumed electricity
+
+‘Inherent CO2’
+
+means CO2 which is part of a source stream.
+
+‘Installation’
+
+means a stationary technical unit where a production
+process is carried out
+
+29
+
+Term
+
+Definition
+
+‘Legal metrological
+control’
+
+means the control exercised by a public authority or
+regulator of the measurement tasks intended for the field of
+application of a measuring instrument, for reasons of public
+interest, public health, public safety, public order,
+protection of the environment, the levying of taxes and
+duties, the protection of consumers and fair trading
+
+‘Measurable heat’
+
+means a net heat flow transported through identifiable
+pipelines or ducts using a heat transfer medium, such as, in
+particular, steam, hot air, water, oil, liquid metals and salts,
+for which a heat meter is or could be installed
+
+‘Measurement point’
+
+means the emission source for which continuous emission
+measurement systems (CEMS) are used for emission
+measurement, or the cross-section of a pipeline system for
+which the CO2 flow is determined using continuous
+measurement systems
+
+‘Measurement
+system’
+
+means a complete set of measuring instruments and other
+equipment used to determine variables for the monitoring
+and calculation of emissions
+
+‘Minimum
+requirements’
+
+means monitoring methods using the minimum efforts
+allowed for determining data in order to result in emission
+data acceptable for the purpose of the CBAM Regulation.
+
+‘Mixed fuel’
+
+means a fuel which contains both biomass and fossil carbon
+
+‘Mixed material’
+
+means a material which contains both biomass and fossil
+carbon
+
+‘Multifunctional
+process’
+
+means a process that delivers multiple outputs or whose
+outputs feed into several production processes
+
+‘Net calorific value’
+(NCV)
+
+means the specific amount of energy released as heat when
+a fuel or material undergoes complete combustion with
+oxygen under standard conditions, less the heat of
+vaporisation of any water formed
+
+‘Non-CBAM good’
+
+means any good produced in the installation that is not
+included in Annex I to the CBAM Regulation
+
+‘Non-measurable
+heat’
+
+means all heat other than measurable heat
+
+‘Operator’
+
+means any person who operates or controls an installation
+in a third country, including a parent company that controls
+an installation in a third country
+
+‘Oxidation factor’
+
+means the ratio of carbon oxidised to CO2 as a consequence
+of combustion to the total carbon contained in the fuel,
+expressed as a fraction, considering carbon monoxide (CO)
+emitted to the atmosphere as the molar equivalent amount
+of carbon dioxide (CO2)
+
+‘Power purchase
+agreement’
+
+means a contract under which a person agrees to purchase
+electricity directly from an electricity producer
+30
+
+Term
+
+Definition
+
+‘Precursor’
+
+means any input material into a production process
+included in the list of goods set out in Annex I to the
+CBAM Regulation;
+
+‘Preliminary
+emission factor’
+
+means the assumed total emission factor of a fuel or
+material based on the carbon content of its biomass fraction
+and its fossil fraction before multiplying it by the fossil
+fraction to produce the emission factor
+
+‘Production process’
+
+means the chemical and physical processes carried out to
+produce goods in an installation
+
+‘Production route’ 18
+
+means a specific technology used in a production process
+to produce goods
+
+‘Process emissions’
+
+means greenhouse gas emissions other than combustion
+emissions occurring as a result of intentional and
+unintentional reactions between substances or their
+transformation, for a primary purpose other than the
+generation of heat, including from the following processes:
+(a) the chemical, electrolytic or pyrometallurgical
+reduction of metal compounds in ores, concentrates and
+secondary materials; (b) the removal of impurities from
+metals and metal compounds; (c) the decomposition of
+carbonates, including those used for flue gas cleaning; (d)
+chemical syntheses of products and intermediate products
+where the carbon bearing material participates in the
+reaction; (e) the use of carbon containing additives or raw
+materials; (f) the chemical or electrolytic reduction of
+metalloid oxides or non-metal oxides such as silicon
+oxides and phosphates.
+
+‘Proxy data’
+
+means annual values which are empirically substantiated or
+derived from accepted sources and which an operator uses
+to substitute a data set19 for the purpose of ensuring
+complete reporting
+
+‘Rebate’
+
+means any amount that reduces the amount due or paid by a
+person liable for the payment of a carbon price, before its
+payment or after, in a monetary form or in any other form.
+
+‘Recommended
+improvements’
+
+means monitoring methods which are proven means to
+ensure that data are more accurate or less prone to mistakes
+than by mere application of minimum requirements
+
+‘Related emissions’
+
+means: – the direct emissions caused by the source stream
+or emission source concerned; – emissions attributed to a
+quantity of measurable heat; – the indirect emissions related
+to the quantity of electricity concerned; – embedded
+emissions of a material produced or of a precursor
+consumed.
+
+18
+
+Note that different production routes can fall within the same production process.
+
+19
+
+Refers to the activity data or the calculation factors.
+31
+
+Term
+
+Definition
+
+‘Reporting period’
+
+means the period corresponding to the calendar year during
+which the good was produced and used by the authorised
+CBAM declarant as reference for the determination of
+embedded emissions
+
+‘Residue’
+
+means a substance that is not the end product that a
+production process directly seeks to produce; it is not a
+primary aim of the production process and the process has
+not been deliberately modified to produce it
+
+‘Simple goods’
+
+means goods produced in a production process requiring
+exclusively input materials (precursors) and fuels having
+zero embedded emissions
+
+‘Source stream’
+
+means either of the following: (a) a specific fuel type, raw
+material or product giving rise to emissions of relevant
+greenhouse gases at one or more emission sources as a
+result of its consumption or production; (b) a specific fuel
+type, raw material or product containing carbon and
+included in the calculation of greenhouse gas emissions
+using a mass-balance method
+
+‘Specific embedded
+emissions’
+
+means the embedded emissions of one tonne of goods,
+expressed as tonnes of CO2e emissions per tonne of goods
+
+‘Standard conditions’
+
+means temperature of 273,15 K and pressure conditions of
+101 325 Pa defining normal cubic metres (Nm3)
+
+‘System boundary’
+
+means the group of chemical or physical processes included
+in the calculation of embedded emissions of goods under
+the same aggregated goods category.
+The system boundaries shall cover direct emissions,
+indirect emissions for goods not listed in Annex II to the
+CBAM Regulation, and the embedded emissions of any
+precursor.
+
+20
+
+‘Third country’
+
+means a country or territory outside the customs territory of
+the [European] Union
+
+‘Tonne of CO2(e)’
+
+means one metric tonne of carbon dioxide (‘CO2’), or an
+amount of any other greenhouse gas listed in Annex I [to
+the CBAM Regulation] with an equivalent global warming
+potential [‘CO2e‘]
+
+‘Transmission system
+operator’
+
+means an operator as defined in Article 2, point (35) of
+Directive (EU) 2019/944 of the European Parliament and of
+the Council (20).
+
+Directive (EU) 2019/944 of the European Parliament and of the Council of 5 June 2019 on common
+rules for the internal market for electricity and amending Directive 2012/27/EU (OJ L 158, 14.6.2019,
+p. 125).
+32
+
+Term
+
+Definition
+
+‘Uncertainty’
+
+means a parameter, associated with the result of the
+determination of a quantity, that characterises the
+dispersion of the values that could reasonably be attributed
+to the particular quantity, including the effects of
+systematic as well as of random factors, expressed in
+percent, and describes a confidence interval around the
+mean value comprising 95% of inferred values taking into
+account any asymmetry of the distribution of values
+
+‘Waste’
+
+means any substance or object which the holder discards or
+intends or is required to discard, excluding substances that
+have been intentionally modified or contaminated in order
+to meet this definition
+
+‘Waste gas’
+
+means a gas containing incompletely oxidised carbon in a
+gaseous state under standard conditions which is a result of
+any of the processes listed under ‘process emissions’
+
+33
+
+Annex B
+
+List of abbreviations
+
+Abbreviation
+
+Full term
+
+AD
+
+Activity Data
+
+AEM
+
+Anode Effect Minutes
+
+AEO
+
+Anode Effect Overvoltage
+
+AL
+
+Activity Level
+
+AOD
+
+Argon Oxygen Decarburisation.
+
+BAT
+
+Best Available Techniques
+
+BF
+
+Biomass Fraction
+
+BFG
+
+Blast Furnace Gas
+
+BM
+
+Benchmark
+
+BOF
+
+Basic Oxygen Furnace
+
+BOFG
+
+Basic Oxygen Furnace Gas
+
+BREFs
+
+Best Available Techniques Reference documents
+
+CA
+
+Competent Authority
+
+CBAM
+
+Carbon Border Adjustment Mechanism, the
+
+CCR
+
+Clinker to Cement Ratio
+
+CCS
+
+Carbon Capture and Storage
+
+CCU(S)
+
+Carbon Capture and Utilisation (and Storage)
+
+CEMS
+
+Continuous Emission Measurement Systems
+
+CF
+
+Conversion Factor
+
+CFP
+
+Carbon footprint of products
+
+CHP
+
+Combined Heat and Power
+
+CKD
+
+Cement Kiln Dust
+
+CN
+
+Combined nomenclature
+
+COG
+
+Coke Oven Gas
+
+DRI
+
+Direct Reduced Iron
+
+EAF
+
+Electric Arc Furnace
+
+EEA
+
+European Economic Area (EU-27, Iceland, Norway, Liechtenstein)
+
+EF
+
+Emission Factor
+
+EFTA
+
+European Free Trade Area
+
+EORI
+
+Economic Operator Registration and Identification
+
+ETS
+
+Emissions Trading System
+
+EU ETS
+
+EU Emissions Trading System
+
+EUA
+
+EU Allowances (used in the EU ETS)
+
+EUR
+
+Euro (currency)
+34
+
+Abbreviation
+
+Full term
+
+FAR
+
+Free Allocation Rules (Regulation 2019/331)21
+
+FIFO
+
+First-In-First-Out principle
+
+GHG
+
+Greenhouse Gas
+
+GWP
+
+Global Warming Potential
+
+HBI
+
+Hot Briquetted Iron
+
+HS
+
+Harmonised System (for international trade)
+
+IEA
+
+International Energy Agency
+
+ISO
+
+International Organization for Standardization
+
+LULUCF
+
+Land-use, land change and forestry (criteria)
+
+MP
+
+Monitoring Plan
+
+MRR
+
+Monitoring and Reporting Regulation (Regulation 2018/2066)22
+
+MRV
+
+Monitoring, Reporting and Verification
+
+MS
+
+Member State(s)
+
+MWh
+
+Megawatt-hour
+
+NCV
+
+Net Calorific Value
+
+NPI
+
+Nickel pig iron
+
+OF
+
+Oxidation Factor
+
+PCI
+
+Pulverised Coal Injection
+
+PEMS
+
+Predictive Emission Monitoring System
+
+PFC
+
+Perfluoro-carbon
+
+PoS
+
+Proofs of Sustainability
+
+RED II
+
+Renewable Energy Directive, re-cast
+
+SEE
+
+Specific embedded emissions
+
+SEFA
+
+Specific embedded free allocation
+
+TARIC
+
+Integrated Tariff of the European Union database
+
+TJ
+
+Terajoules
+
+TSO
+
+Transmission System Operator
+
+UCC
+
+Union Custom Code
+
+UN/LOCODE
+
+United Nations Code for Trade and Transport Location
+
+21
+
+Free Allocation Rules (Commission Delegated Regulation (EU) 2019/331 of 19 December 2018
+determining transitional Union-wide rules for harmonised free allocation of emission allowances
+pursuant to Article 10a of Directive 2003/87/EC of the European Parliament and of the Council)
+
+22
+
+Monitoring and Reporting Regulation (Commission Implementing Regulation (EU) 2018/2066 of 19
+December 2018 on the monitoring and reporting of greenhouse gas emissions pursuant to Directive
+2003/87/EC of the European Parliament and of the Council and amending Commission Regulation (EU)
+No 601/2012
+35
+
+

@@ -1,0 +1,2755 @@
+EUROPEAN COMMISSION
+DIRECTORATE-GENERAL
+TAXATION AND CUSTOMS UNION
+Indirect Taxation and Tax Administration
+CBAM, Energy and Green Taxation
+
+Brussels, 14 August 2026
+
+GUIDANCE DOCUMENT 5A: SECTOR-SPECIFIC GUIDANCE
+DOCUMENT ON CEMENT
+
+Disclaimer: This guidance document is not legally binding and it is of an explanatory nature.
+Legal provisions of Union law take precedence over the contents of this document and should
+always be consulted. The authentic texts of the EU legal instruments are those published in the
+Official Journal of the European Union. This guidance was prepared by Commission services
+and does not represent an official position of the Commission. Only the Court of Justice of the
+European Union is competent to authoritatively interpret Union law.
+
+Commission européenne/Europese Commissie, 1049 Bruxelles/Brussel, BELGIQUE/BELGIË – Tel. +32 22991111
+
+VERSION HISTORY
+Date
+
+Version notes
+
+14.08.2026
+
+First Publication of this document for the definitive period.
+
+2
+
+CONTENTS
+1
+
+PREFACE
+
+4
+
+1.1
+
+Structure and content of the guidance documents
+
+4
+
+1.2
+
+Reference regulations and legal acts
+
+5
+
+2
+2.1
+
+CBAM GOODS AND PRODUCTION ROUTES
+Foreword to sector-specific sections
+
+7
+7
+
+2.2
+Cement sector goods and production routes
+8
+2.2.1
+Unit of production and embedded emissions for industry sector
+8
+2.2.2
+Definition and explanation of goods covered
+9
+2.2.3
+Definition and explanation of relevant production processes and routes
+11
+3
+
+CEMENT SECTOR-SPECIFIC REQUIREMENTS
+
+15
+
+3.1
+Sector-specific requirements for monitoring and reporting
+3.1.1
+Emissions covered
+3.1.2
+Additional rules
+3.1.3
+Additional reporting parameters
+
+16
+16
+17
+19
+
+3.2
+Example for splitting a cement installation into separate production
+processes
+
+20
+
+4
+
+23
+
+WORKED EXAMPLE FOR THE CEMENT SECTOR
+
+4.1
+
+Calculation using separate processes
+
+26
+
+4.2
+
+Calculation using bubble approach
+
+27
+
+4.3
+
+Calculation of free allocation adjustment and CBAM obligation
+
+28
+
+ANNEX A
+
+LIST OF DEFINITIONS
+
+30
+
+ANNEX B
+
+LIST OF ABBREVIATIONS
+
+39
+
+3
+
+1
+
+PREFACE
+
+1.1
+
+Structure and content of the guidance documents
+
+This series of documents has been written to support stakeholders by explaining the
+requirements of the CBAM Regulation in a non-legislative language. This series of
+guidance documents should benefit a variety of stakeholders. A specific focus has been put
+on clarifying the requirements for operators of installations producing CBAM goods
+outside of the EU for the definitive period.
+•
+
+Guidance 1 provides an overview of the main changes to the CBAM methodology
+between the definitive period and the concluded transitional period. It also
+introduces the CBAM and an overview of the compliance cycle, roles and
+responsibilities, as well as milestones and deadlines for operators of installations
+outside the EU during the definitive period and explains the general exemptions
+from the CBAM.
+
+•
+
+Guidance 2 provides a quick guidance for the intended reader of this document,
+the operator of an installation producing CBAM goods. It provides a roadmap of
+the most important concepts of CBAM emissions monitoring and where to find
+more information in this series of documents.
+
+•
+
+Guidance 3 sets out the monitoring and reporting obligations and
+recommendations which are potentially applicable to any affected producer of
+CBAM goods.
+
+•
+
+Guidance 4 provides an overview of how the adjustment for free allocation is to
+be determined and what information is needed.
+
+•
+
+Guidance documents 5a, 5b, 5c, 5d, 5e and 5f present an overview per sector of
+the production processes and value chains for goods that are included in the scope
+of the CBAM, as well as sector-specific monitoring and reporting considerations
+for each CBAM good where this is relevant. These sections are supplemented by
+examples for each sector.
+
+The series of guidance documents is accompanied by an electronic template for
+information that should be used by installation operators to communicate information to
+the authorised CBAM declarants and CBAM Registry.
+
+Presentation of numbers in EU documents
+To align with EU legal documents, this guidance document uses the following
+convention when presenting numbers.
+The decimal separator used to separate the integral part of a number from its fractional
+part is a comma, e.g.: 0,890
+Thousands, and powers of 103n thereafter, are separated by a space, e.g.:
+•
+
+fifteen thousand is written as 15 000
+
+•
+
+fifteen million is written as 15 000 000
+4
+
+1.2
+
+Reference regulations and legal acts
+
+Several regulations and legal acts are referred to throughout this series of guidance
+documents. For ease of reading and to avoid ambiguity, simplified references are used
+when citing these acts.
+•
+
+CBAM Regulation: Regulation (EU) 2023/956 and Regulation (EU) 2025/2083
+amending Regulation (EU) 2023/956. Notably, where article numbers are given
+in this document without further specification, they always refer to the CBAM
+Regulation.
+It can be accessed at the following link (consolidated version):
+http://data.europa.eu/eli/reg/2023/956/2025-10-20
+
+•
+
+Methodology Act: Commission Implementing Regulation (EU) 2025/2547, in
+legal texts referred to as “Implementing act pursuant to Article 7(7) of the CBAM
+Regulation”.
+It can be accessed at the following link:
+http://data.europa.eu/eli/reg_impl/2025/2547/oj
+
+•
+
+Default Values Act: Commission Implementing Regulation (EU) 2025/2621, in
+legal texts referred to as “Implementing act pursuant to Article 7(7) of the CBAM
+Regulation”, also referred to as “default values determined in accordance with
+Annex IV to the CBAM Regulation”.
+It can be accessed at the following
+link: http://data.europa.eu/eli/reg_impl/2025/2621/oj
+
+•
+
+Verification Principles Act: Commission Implementing Regulation (EU)
+2025/2546, in legal texts referred to as “Implementing act pursuant to Article 8(3)
+of the CBAM Regulation”.
+It can be accessed at the following link:
+http://data.europa.eu/eli/reg_impl/2025/2546/oj
+
+•
+
+Accreditation & Verification Requirements Act: Commission Delegated
+Regulation (EU) 2025/2551, in legal texts referred to as “Delegated act pursuant
+to Article 18(3) of the CBAM Regulation”.
+It can be accessed at the following
+link: http://data.europa.eu/eli/reg_del/2025/2551/oj
+
+•
+
+Free Allocation Adjustment Act: Commission Implementing Regulation (EU)
+2025/2620, in legal texts referred to as “Implementing act pursuant to Article
+31(2) of the CBAM Regulation”.
+It can be accessed at the following link:
+http://data.europa.eu/eli/reg_impl/2025/2620/oj
+
+For acronyms and definitions used in this document, please see Annex B and Annex A.
+5
+
+A series of icons are used throughout to help guide the reader:
+Icon
+
+Description of use
+Points to information of particular importance for operators of
+installations producing CBAM goods.
+
+Simplified!
+
+Highlights simplified approaches of the general requirements of
+the CBAM.
+Used where recommended improvements are presented.
+Used where other documents, templates or electronic tools are
+available from other sources.
+Points to examples given for the topics discussed in the
+surrounding text.
+
+6
+
+2
+
+CBAM GOODS AND PRODUCTION ROUTES
+
+This section provides guidance on industry-sector-specific rules that apply for the
+definitive period (from 2026 onwards), for the cement sector. It deals with the specification
+of products covered by the CBAM and the relevant production routes.
+2.1
+
+Foreword to sector-specific sections
+
+The following sections provide an overview of the different production routes for the goods
+under cement sector in CBAM and provide sector specific guidance. Where goods to which
+the same functional unit applies are produced in one installation via different production
+routes, the embedded emissions shall be determined in accordance with the averaging rules
+applicable in the definitive period.
+Additional information on the production processes of the goods can also be found in the
+BREF1 documents for best available techniques (BAT).
+Diagrams used in the following sections.
+For the system boundary graphics presented in the sections below, the following
+conventions are applied:
+⚫
+Production processes (for which monitoring of the direct emissions would take
+place) are shown as rectangles with white background.
+⚫
+Optional processes (e.g. CCS/CCU) are shown in blue boxes. In particular,
+CCS/CCU would not be taken into account for developing default values, but
+where you (as an operator) use them, the related emissions or emission savings
+should be taken into account for determining actual embedded emissions in line
+with the CBAM Regulation and the Methodology Act.
+⚫
+Materials which are considered to have no embedded emissions are shown in
+pink boxes, materials with embedded emissions (precursor materials and final
+products, i.e. goods under the CBAM) in green boxes. Simple goods are shown
+in normal font, complex goods in bold font. Materials which are optional are
+shown in boxes with a blue dashed outline and must be included where actually
+used at the installation.
+⚫
+Input materials are presented without trying to be complete. This means that the
+focus is on materials which are relevant for demonstrating the differences
+between different production routes. As a consequence, less important input
+materials and in particular fuels are usually omitted in order to keep graphs
+simple.
+⚫
+Electricity as input is shown only in cases where it is the main “precursor” of
+the process (i.e. in particular for electric arc furnaces and electrolysis processes).
+Electricity is shown in light grey boxes.
+
+1
+
+BAT Reference document (BREF), BAT being “Best Available Techniques” as defined by the IED
+(Industrial Emissions Directive). Relevant BREF documents are those for: the production of cement; for
+iron and steel production; large volume inorganic chemicals (which includes fertilisers); for Chlor-alkali;
+and for non-ferrous metals (which includes both aluminium and ferro-alloys). All BREFs can be found
+at the European IPPC Bureau, under https://eippcb.jrc.ec.europa.eu/reference.
+7
+
+2.2
+
+Cement sector goods and production routes
+•
+
+The textbox below signposts sector-specific sections in the Methodology Act,
+relevant for the CBAM definitive period.
+
+Methodology Act references:
+•
+
+Annex I, Table 1 “Mapping of CN codes to aggregated goods categories” of the Methodology Act.
+
+•
+
+Annex I, points 3.2 – Calcined clay, 3.3 – Cement clinker, 3.4 – Cement and 3.5 – Aluminous
+cement, which define the functional unit, system boundaries and possible precursors for cementsector goods.
+
+•
+
+Annex II, point B.9.2 “Additional rules for emissions from cement clinker production”, providing
+sector-specific rules for monitoring and calculation of emissions for cement clinker.
+
+2.2.1
+
+Unit of production and embedded emissions for industry sector
+
+The quantity of declared cement goods imported into the EU must be expressed in the
+production unit applicable to each cement-sector CBAM good in line with Article 4(5) of
+the Methodology Act. You must record the quantity of CBAM good(s) produced by the
+installation or production process(s), for the purposes of reporting.
+Industrial sector
+
+Cement
+
+Production unit of goods
+
+Tonnes (metric), reported separately for each type
+of CBAM good produced, by the installation or
+production process in the country of origin.
+Tonnes (metric) for calcined clay, cement clinker
+and aluminous cement, and tonnes of clinker
+content for cement goods (i.e., CN codes 2523 10
+00, 2523 21 00, 2523 29 00 and 2523 90 00),
+reported separately for each type of CBAM good
+produced, by the installation or production process
+in the country of origin, in line with Annex I,
+points 3.2 to 3.5 of the Methodology Act.
+
+Associated activities
+
+Producing cement clinkers and calcined clays,
+grinding and blending cement clinker to produce
+cement.
+
+Relevant greenhouse gas
+emissions
+
+Carbon dioxide (CO2)
+
+Direct Emissions
+
+Tonnes (metric) of CO2e
+
+Indirect Emissions
+
+Quantity of electricity consumed (MWh), source
+and emissions factor used to calculate the indirect
+emissions in tonnes (metric) of CO2 or CO2e.
+Indirect emissions resulting from electricity
+consumption in the relevant production process
+shall be monitored and taken into account in the
+embedded emissions of cement CBAM goods, in
+accordance with Article 3(2) and Annex IV to the
+CBAM Regulation and with the Methodology Act
+8
+
+Industrial sector
+
+Cement
+
+Unit for embedded emissions
+
+Tonnes CO2e emissions per tonne of good,
+reported separately for each type of CBAM good,
+by the installation or production process in the
+country of origin.
+Tonnes CO2e emissions per tonne of calcined clay,
+cement clinker or aluminous cement, and tonnes
+CO2e emissions per tonne of clinker content for
+cement (excl. aluminous cement), reported
+separately for each type of CBAM good, by the
+installation or production process in the country of
+origin.
+
+The cement sector has to account for both direct emissions and indirect emissions, in the
+definitive period, since cement goods are not listed in Annex II (“Goods for which only
+direct emissions are taken into account”) to the CBAM Regulation and are therefore
+subject to the general rule in Article 3(2) of that Regulation on the inclusion of indirect
+emissions. Both direct and indirect emissions must therefore be taken into account in the
+embedded emissions of cement-sector CBAM goods, with direct and indirect components
+determined separately in line with the Methodology Act.
+For cement (excl. aluminous cement), embedded emissions are determined per tonne of
+clinker content, and where cement is produced and placed on the market with different
+clinker contents, emissions shall be calculated and averaged in line with the compositionbased rules set out in Annex III to the Methodology Act.
+Emissions must be reported in metric tonnes of CO2 equivalent (t CO2e) emissions, per
+tonne of good output. This figure must be calculated for the specific installation or
+production process in your country of origin.
+The following sections set out how the system boundaries of cement sector goods should
+be defined and identify elements of the production processes that must be included for the
+purposes of monitoring and reporting.
+
+2.2.2
+
+Definition and explanation of goods covered
+
+The following Table 2-1 lists the relevant goods in scope for the CBAM definitive period
+in the cement industry sector. The CN/TARIC codes in the central column are the starting
+point for which a ‘production process’ is to be identified for the purpose of monitoring
+emissions, encompassing all production routes used within the installation in line with
+Annex I to the Methodology Act.
+
+9
+
+Table 2-1: CBAM goods in the cement sector2
+
+Aggregated goods
+category
+
+CN/TARIC
+Code
+
+Description
+
+Calcined clay
+
+2507 00 80 803
+
+Other kaolinic clays, calcined
+
+Cement clinker
+
+2523 10 004
+
+Cement clinkers
+
+Cement
+
+2523 21 00
+
+White Portland cement, whether or
+not artificially coloured
+
+2523 29 00
+
+Other Portland cement
+
+2523 90 005
+
+Other hydraulic cements
+
+2523 30 00
+
+Aluminous cement6
+
+Aluminous cement
+
+The aggregated goods categories listed in Table 2-1 include both finished cement goods
+and precursor goods (intermediate products) that are consumed in the production of
+cement.
+The system boundaries specified in the Methodology Act do not mention explicitly which
+precursors are relevant for the production process. Therefore, Table 2-2 should help to
+identify the possible precursors by aggregated goods category and production route.
+Table 2-2: Aggregated goods categories, their production routes and possible precursors
+
+Aggregated Goods Category
+
+Precursors
+
+Production route
+Calcined clay
+
+None
+
+Cement clinker
+
+None
+
+Cement
+
+Cement clinker; calcined clay (if used in the
+process).
+
+Aluminous cement
+None
+Precursor goods relevant to the system boundary are ‘cement clinker7’ (CN code 2523 10
+00), which includes both white clinker (used to make white cement) and grey clinker, and
+‘calcined clay’ (TARIC code 2507 00 80 80), which is a clinker substitute and may be used
+to modify the properties of the cement produced.
+
+2
+
+Source: Annex I to the CBAM Regulation and Annex I (“Mapping of CN codes to aggregated goods
+categories”) to the Methodology Act.
+
+3
+
+Non-calcined clays are found under CN code 2507 00 80, but they are excluded from the CBAM scope.
+
+4
+
+TARIC codes 2523 10 00 10 (White cement clinker) and 2523 10 00 90 (Other cement clinkers
+including grey clinker) apply.
+
+5
+
+TARIC codes 2523 90 00 10 (White hydraulic cement) and 2523 90 00 90 (Other hydraulic cements
+including grey hydraulic cement) apply.
+
+6
+
+Also referred to as ‘Calcium Aluminate Cement’.
+
+7
+
+Distinction is made between grey and white clinker through the TARIC codes to be applied.
+10
+
+These precursors are defined as simple goods, as they cannot be produced out of other
+CBAM goods.
+The finished cement goods listed in Table 2-1 comprise both white Portland cement, grey
+Portland cement, other hydraulic cements and aluminous cement. These goods are defined
+as complex goods (with the exception of aluminous cement) as they include the embedded
+emissions from precursor goods in accordance with the definitions of simple and complex
+goods in the CBAM Regulation and the definition of precursors in Article 1 of the
+Methodology Act.
+Other constituents used in cement manufacture, in particular granulated blast furnace slag,
+fly ash and natural pozzolana that are used in the manufacture of other hydraulic cement
+goods (including blended or ‘composite’ cements) are not CBAM goods and therefore are
+not in scope for the CBAM as precursors. Their use and the associated emissions are taken
+into account through the direct and indirect emissions of the cement production process,
+but no additional embedded emissions of these constituents are added as separate
+precursors under the CBAM rules.
+Cement sector goods are produced by a number of different production process and routes,
+outlined below.
+2.2.3
+
+Definition and explanation of relevant production processes and routes
+
+The system boundaries of precursors and cement goods are distinct and may, under certain
+conditions, be added together to include all processes directly or indirectly linked to the
+production processes for these goods, including input activities to the process and output
+activities from the process.
+2.2.3.1
+
+Calcined clay production process
+
+Calcined clay may be used as a clinker substitute. Kaolinic clay that is calcined
+(metakaolin) can be added to cement in place of clinker in varying proportions in order to
+modify the properties of the cement mixture.
+The Methodology Act, in particular Annex I, point 3.2 (“Calcined clay”), sets out the
+functional unit and system boundaries for the calcined clay production route. For the
+purposes of this guidance, the system boundaries for direct emissions monitoring can be
+described as encompassing the following:
+“ – All processes directly or indirectly linked to the production processes, such as
+raw material preparation, mixing, drying, and calcining, and flue gas cleaning.
+– CO2 emissions from the combustion of fuels as well as from raw materials, where
+relevant.”
+There are no precursors for this production process. Indirect emissions that result from
+electricity consumed by the production process shall also be determined and taken into
+account in the embedded emissions of calcined clay, in accordance with Article 3(2) of the
+CBAM Regulation and the rules on indirect emissions and system boundaries in the
+Methodology Act.
+Note that CN code 2507 00 80 includes both calcined and non-calcined kaolinic clays. As Simplified
+a result of simplification, only calcined kaolinic clays (TARIC code 2507 00 80 80) are
+!
+included in the scope of CBAM in the definitive phase.
+11
+
+2.2.3.2
+
+Cement clinker production process
+
+Cement clinker is produced in clinker plants (kilns) by the thermal decomposition of
+calcium carbonate to form calcium oxide, followed by the clinkering process in which the
+calcium oxide reacts at high temperatures with silica, alumina and ferrous oxide to form a
+clinker. Grey and white clinkers may be produced depending on the temperature of the
+process and purity of raw materials.
+The Methodology Act, in particular Annex I, point 3.3 and Annex II, point B.9.2, sets out
+the functional unit, system boundaries and specific rules for monitoring emissions from
+cement clinker production. For the purposes of this guidance, the system boundaries for
+direct emissions monitoring can be described as encompassing:
+“ – Calcination of limestone and other carbonates in the raw materials,
+conventional fossil kiln fuels, alternative fossil-based kiln fuels and raw materials,
+biomass kiln fuels (such as waste-derived fuels), non-kiln fuels, non-carbonate
+carbon content in raw materials, or alternative raw materials such as fly ash used
+in the raw meal in the kiln and raw materials used for flue gas scrubbing.”
+Typical raw materials include limestones and shales. Direct emissions of the cement
+clinker production process result from the combustion of both kiln and non-kiln fuels and
+from raw materials used in the process such as limestone. In line with the Methodology
+Act (in particular Annex I, point 3.3 and Annex II, point B.9.2), direct emissions include
+both process emissions from the calcination of carbonates in the raw materials and
+combustion emissions from all relevant fuels used in the kiln system and for drying of raw
+materials and fuels.
+Indirect emissions that result from electricity consumed by the production process shall
+also be determined and taken into account in the embedded emissions of cement clinker,
+in accordance with Article 3(2) of the CBAM Regulation and the rules on indirect
+emissions and system boundaries in the Methodology Act.
+In line with the above definition of system boundaries, the following production steps may
+be regarded as being within the system boundaries of cement clinker installations:
+•
+
+Raw material preparation – grinding, milling, homogenisation.
+
+•
+
+Fuel storage and preparation – for conventional and waste derived fuels.
+
+•
+
+Clinker production (‘clinker burning’) – all steps for the integrated kiln system
+including preheating, kiln processing and clinker cooling.
+
+•
+
+Intermediate storage – storage of cement clinker under cover before export off site
+or cement grinding.
+
+•
+
+Emissions control – for treating releases to air, water or ground.
+
+A variation on the clinker production process may be with permanent geological storage
+i.e. carbon capture and sequestration (CCS). Where CO₂ is captured and permanently
+stored or used in accordance with the CBAM rules, this should be reflected in the
+determination of embedded emissions in line with the Methodology Act; however,
+CCS/CCUS is not taken into account when establishing default values.
+
+12
+
+Note that distinction is made between white clinker and other clinker (incl. grey) used in
+the production of cement.
+2.2.3.3
+
+Cement production process
+
+Cement (apart from aluminous cement) is defined as a complex good as it is produced from
+precursors cement clinker and possibly calcined clay.
+Cement is produced in a grinding plant (cement mill), which may be located at the same
+installation that produced the cement clinker, or at a separate standalone plant. Cement
+clinker is ground and blended with certain other constituents to produce the finished
+cement product. Depending on the mix of different constituents this may be Portland
+cement, blended cement (containing a mix of Portland cement and other hydraulic
+constituents) or other hydraulic cements.
+The Methodology Act, in particular Annex I, point 3.4, sets out the functional unit and
+system boundaries for cement production. For the purposes of this guidance, the system
+boundaries for direct emissions monitoring can be described as encompassing:
+“ – All processes directly or indirectly linked to the production processes, where
+relevant for drying of materials.”
+Precursors are cement clinker and calcined clay (if used in the process). Indirect emissions
+that result from electricity consumed by the cement production process shall also be
+determined and taken into account in the embedded emissions of cement, in accordance
+with Article 3(2) of the CBAM Regulation and the rules on indirect emissions and system
+boundaries in the Methodology Act.
+In line with the above definition of system boundaries, the following production steps may
+be regarded as being within the system boundaries of cement installations:
+•
+
+Material preparation – materials (cement clinker, calcined clay and mineral
+additives) handling and pre-treatment e.g. preheating and drying mineral additives.
+
+•
+
+Cement production – all steps, including crushing, grinding, further milling and
+separation by particle size.
+
+•
+
+Cement storage, packaging and dispatch.
+
+•
+
+Emissions control – for treating releases to air, water or ground.
+
+Figure 2-1 following shows how the cement clinker and cement production processes
+relate to each other.
+
+13
+
+Figure 2-1: System boundaries of cement clinker and cement production processes.
+Cement production process
+
+Notes to figure: In this figure, the green or blue boxes with a blue dashed outline (e.g. calcined clays) represent
+optional precursors or process steps that are only included where they are actually used at the installation. Note that
+embedded emissions (and therefore SEEs) need to be reported separately for white hydraulic cements and for other
+hydraulic cements (incl. grey).
+
+For hydraulic cements, note that embedded emissions (and therefore SEEs) need to be
+reported separately for white hydraulic cements and for other hydraulic cements (incl.
+grey).
+2.2.3.4
+
+Aluminous cement production process
+
+Aluminous cement is regarded as a simple good as it is produced directly from aluminous
+clinker by a continuous production process and is ground without the addition of further
+additives in line with the definition of simple goods and the aggregated goods category
+“Aluminous cement” in Annex I to the Methodology Act.
+The Methodology Act, in particular Annex I, point 3.5, sets out the functional unit and
+system boundaries for the aluminous cement production route. For the purposes of this
+guidance, the system boundaries for direct emissions monitoring can be described as
+encompassing:
+“ – All processes directly or indirectly linked to the production process where fuel
+is combusted.
+14
+
+– Process emissions from carbonates in raw materials, if applicable, and flue gas
+cleaning.”
+There are no precursors for this production process. Indirect emissions that result from
+electricity consumed by the production process shall be determined and taken into account
+in the embedded emissions of cement-sector CBAM goods, in accordance with Article 3(2)
+of the CBAM Regulation and the rules on indirect emissions in the Methodology Act.
+In line with the above definition of systems boundaries, the integrated production of
+aluminous cement includes both clinkering and cement grinding production steps, from
+raw material preparation through to emissions control.
+Figure 2-2: System boundaries of the aluminous cement production process
+Aluminous cement production process
+
+Note that alumina (produced from bauxite) is treated as a raw material for the purposes of
+the aluminous cement aggregated goods category and is not a precursor under Annex I to
+the Methodology Act. Its contribution to embedded emissions is taken into account through
+the direct and indirect emissions of the aluminous cement production process, and no
+separate embedded emissions of alumina are added as a precursor.
+
+3
+
+CEMENT SECTOR-SPECIFIC REQUIREMENTS
+
+The textbox below signposts sector-specific sections in the Methodology Act, relevant for
+the CBAM definitive period.
+Methodology Act references:
+•
+
+Annex I, point 3 – Functional unit and system boundaries. Sub-sections 3.2 to 3.5 (cement sector
+aggregated goods categories).
+
+15
+
+•
+
+Annex II, Section B – Monitoring of direct emissions at installation level, sub-section B.9.2. Sector
+specific requirements, additional rules for process emissions from the cement sector, covering:
+B.9.2.1 additional rule for Method A (input based); B.9.2.2 additional rule for Method B (output
+based); B.9.2.3 additional rule for emissions related to discarded cement kiln dust/bypass dust.
+
+•
+
+Annex IV, point 2 – Sector-specific parameters to be included in the operator’s emissions report.
+
+3.1
+
+Sector-specific requirements for monitoring and reporting
+
+Direct and indirect embedded emissions should be monitored in line with the methodology
+set out in the Methodology Act and outlined above.
+3.1.1 Emissions covered
+Relevant direct emissions that must be monitored and reported for the cement sector are:
+•
+
+Carbon dioxide emissions (direct) from the fuel combustion process 8 from
+stationary plant only (excludes emissions from any mobile plant such as vehicles).
+
+•
+
+Carbon dioxide emissions (direct) from the process, resulting from:
+o Thermal decomposition of carbonate containing raw materials (such as
+limestone, dolomite etc);
+o Non-carbonate carbon content in the raw materials (such as carbonaceous
+clay, limestone, shale);
+o Alternative raw material (such as fly ash used in the raw meal), or from any
+fossil/biomass additives used.
+o Discarded cement kiln dust (CKD) or bypass dust.
+
+•
+
+Carbon dioxide emissions (direct) resulting from the production of measurable
+heating (e.g. steam) and cooling that is consumed within the system boundaries of
+the production process, regardless of the location of the production of the heat (i.e.
+from on-site generation or from imports from off-site).
+
+•
+
+Carbon dioxide emissions (direct) resulting from emissions control (e.g. from
+carbonate raw materials such as soda ash used for acidic flue gas cleaning). This is
+included for any good where this is applicable.
+
+Direct emissions from the different source streams above are not reported separately but
+are added together to result in the total direct emissions for the installation or production
+process.
+Indirect emissions from electricity consumed must be reported separately from direct
+emissions.
+
+8
+
+For both kiln and non-kiln fuels. Cement kiln fuels include conventional fossil fuels such as natural gas
+and coal, alternative fossil-based fuels such as petroleum coke or waste chipped vehicle tyres, and
+biomass fuels (biomass wastes). Non-kiln fuels refers to fuels used outside of kilns e.g. to calcine clays
+in flash calciners, and where cement materials are dried.
+16
+
+3.1.2 Additional rules
+Determining process emissions
+For determining direct emissions from cement clinker production, additional rules also
+apply for the monitoring of process emissions from raw meal components depending on
+whether the activity data refers to:
+•
+
+Process input material (e.g. limestone) based on:
+o the carbonate content of the process input (calculation Method A); and
+o an adjustment is made for cement kiln dust (CKD) or bypass dust that leaves
+the kiln system.
+
+•
+
+Process output material e.g. the amount of clinker produced (calculation Method
+B).
+
+Note that both methods are considered equivalent, i.e. you, as the operator, should choose
+the method which leads to the more reliable data, which is more applicable for your
+equipment, and that avoids unreasonable costs.
+Calculation of emissions related to discarded CKD or bypass dust
+As the operator, you shall add CO2 process emissions, from bypass dust or cement kiln
+dust (CKD) leaving the kiln system, corrected for a partial calcination ratio of CKD.
+•
+
+Minimum requirements: An emission factor of 0,525 t CO2/t dust is applied.
+
+Recommended improvement: The emission factor (EF) is determined at least once
+annually in line with the provisions of Methodology Act Annex II, point B.5.4. requirements
+for laboratory analyses and using the following formula:
+𝐸𝐹
+
+𝐸𝐹
+
+𝐸𝐹𝐶𝐾𝐷 = (1+𝐸𝐹𝐶𝑙𝑖 ∙ 𝑑) / (1 − 1+𝐸𝐹𝐶𝑙𝑖 ∙ 𝑑) (Equation 28)
+𝐶𝑙𝑖
+
+𝐶𝑙𝑖
+
+Where:
+EFCKD … Emission factor of partially calcined cement kiln dust [t CO2/t CKD];
+EFCli … Installation-specific emission factor of clinker [t CO2/t clinker];
+d … Degree of CKD calcination (released CO2 as percentage of total carbonate
+CO2 in the raw mix).
+
+Method B - clinker output based
+For this method, a sector-specific rule is given in the Methodology Act:
+Activity data ADj for clinker production [t] over the reporting period may be determined
+by either:
+o Direct weighing of clinker (if technically feasible); or
+o Based on cement deliveries, by material balance using the following stock
+adjustment calculation:
+17
+
+𝐶𝑙𝑖𝑝𝑟𝑜𝑑 = (𝐶𝑒𝑚𝑑𝑒𝑙𝑖𝑣 − 𝐶𝑒𝑚𝑆𝑉 ) ∙ 𝐶𝐶𝑅 − 𝐶𝑙𝑖𝑠 + 𝐶𝑙𝑖𝑑 − 𝐶𝑙𝑖𝑆𝑉 (Equation 27)
+Where
+Cliprod is the amount of clinker produced expressed in tonnes,
+Cemdeliv the amount of cement deliveries expressed in tonnes,
+CemSV the cement stock variations expressed in tonnes,
+CCR the clinker to cement ratio (tonnes clinker per tonne cement),
+Clis the amount of clinker supplied expressed in tonnes,
+Clid the amount of clinker dispatched, and
+CliSV the amount of clinker stock variations expressed in tonnes.
+As a minimum requirement to determine the emission factor, a standard value of 0,525 t
+CO2/t clinker shall be applied. Recommended improvement would be to perform analyses
+of the clinker to determine the EF.
+For the conversion factor CFj (see Methodology Act Annex II, point B.3.1.2). It is
+allowed to always use the conservative assumption that CFj = 1 in order to reduce
+monitoring efforts.
+
+Clinker to cement ratio (CCR)
+In calculating the embedded emissions in cement goods, the majority of emissions result
+from cement clinker. Therefore, the CCR, which is the mass ratio of tonnes cement clinker
+consumed per tonne of cement produced (also known as the ‘clinker factor’), must be taken
+into account. For CN codes 2523 10 00, 2523 21 00, 2523 29 00 and 2523 90 00, the
+functional unit is the tonnes of clinker contained in the goods. For the other CN codes, the
+default functional unit is the tonnes of product.
+The CCR should be derived either:
+o Separately for each of the different cement products, based on laboratory analyses
+in line with the provisions of Annex II point B.5.4; or
+o By calculation, as ratio from the difference of cement deliveries and stock changes
+and all materials used as additives to the cement including by-pass dust and cement
+kiln dust.
+The CCR is expressed as a percentage (%) value, which typically ranges from 80 up to
+95 % for Portland cement. The CCR is particularly relevant for the calculation of relevant
+embedded emissions for blended or composite cements that are produced, where the
+clinker content can range widely for different types of composite cement9 with the balance
+
+9
+
+European standard EN 197-1 defines five main common cement types CEM I (Portland cement) to V
+(Composite cement) and 27 different product types, where the clinker content in blended and composite
+cements (CEM II to V) may range from 95% down to as low as 5-20%.
+18
+
+being made up of other constituents such as mineral additives,10 with zero embedded
+emissions.
+For cement goods sold in different ranges of composition, you as the operator will need to
+calculate the specific embedded emissions of the goods according to the tonnes of clinker
+contained in the goods, using the following equation.
+(Equation 64)
+
+𝑆𝐸𝐸𝑔(𝑐𝑘𝑖) = 𝑆𝐸𝐸𝑔 ∙ 𝐶𝐾𝑖
+Where:
+
+SEEg(cki) is the specific embedded emissions of the good with clinker content CKi expressed
+as t CO2e per tonne of cement;
+SEEg is the specific embedded emissions calculated in Equation 59 or 62 (i.e. expressed as
+t CO2e per tonne of clinker), and
+CKi is the average clinker content of the goods of a given composition in tonnes of clinker
+per tonnes of goods.
+Note that for cement goods that are sold in custom-made compositions at the request of the
+client, you as the operator are required to issue a declaration of clinker content for each
+consignment of the good; and in substituting into equation 64, CKi will be the specific
+clinker content of the consignment.
+White clinker vs. other clinkers (incl. grey)
+For cement clinker, TARIC codes 2523 10 00 10 (White cement clinker) and
+2523 10 00 90 (Other cement clinkers including grey clinker) apply. In practice, embedded
+emissions (and therefore SEEs) for clinker goods need to be calculated separately for white
+cement clinker and for other cement clinkers. This also applies to hydraulic cements, for
+which TARIC codes 2523 90 00 10 (White hydraulic cement) and 2523 90 00 90 (Other
+hydraulic cements including grey hydraulic cement) apply.
+3.1.3 Additional reporting parameters
+The following Table 3-1 lists out the additional information that needs to be provided by
+you as an operator to importers, in your verified operator’s emissions report and a summary
+thereof to them, as set out in Methodology Act Annex IV, Part 2 (Sector-specific
+parameters to be included in the emissions report).
+Table 3-1: Additional cement sector parameters requested in the CBAM declaration
+
+Aggregated goods
+category
+
+Reporting parameter
+
+Calcined clay11
+
+– N.a. (not applicable)
+
+Cement clinker
+
+– N.a. (not applicable)
+
+10
+
+Mineral additives (mainly gypsum) along with secondary mineral additives (blast furnace slag and fly
+ash) are not treated as precursors for the purposes of calculating embedded emissions for cement goods
+and are therefore treated as having zero embedded emissions in that calculation.
+
+11
+
+Note that CN code 2507 00 80 includes non-calcined kaolinic clays. Only calcined clays under TARIC
+code 2507 00 80 80 are to be reported.
+19
+
+Cement
+
+– Clinker content of cement. This is the:
+– Mass ratio of tonnes cement clinker consumed per produced
+tonne of cement (clinker to cement ratio expressed in per
+cent);
+
+Aluminous cement
+
+– N.a. (not applicable)
+
+You need to ensure that you collect all the parameters necessary for your CBAM goods
+and communicate them to the importers of your goods. The importer will need to report
+the additional parameters in their annual CBAM declaration for the relevant reporting
+period.
+3.2
+
+Example for splitting a cement installation into separate production processes
+
+In defining the system boundary for a production process, you as an operator will need to
+decide what physical production units belong to the production process(es) and what
+inputs, outputs, and emissions are relevant. An example of this is given as shown in the
+Table 3-2 below for the cement sector.
+For a notional cement plant that both produces and exports cement clinker (CN 2523 10
+00) and cement (CN 2523 29 00), the operator would need to go through the following
+steps to split the cement plant into separate production processes under the CBAM:
+Step 1: List all goods, physical units, inputs, outputs and emissions to/from the installation.
+In this first step, the operator uses the existing information available on their installation,
+such as lists of industrial equipment and plans, to identify the:
+•
+
+Physical units carrying out the production processes at their installation, such as
+kilns, boilers, dryers, flue gas cleaning, ball mills, bagging plant.
+
+•
+
+Process inputs required for making the goods e.g. raw materials, fuel, electricity.
+
+•
+
+Outputs from the process e.g. goods produced, by-products, heat, waste gases.
+
+•
+
+Emissions from the process.
+
+These are then listed out in Table 3-2 below. Note that emissions caused by the “purchase
+and maintenance of infrastructure and equipment” are to be excluded from this listing
+exercise.
+Table 3-2: Checklist for inputs, physical units, outputs and emissions for an example cement
+installation.
+
+20
+
+Inputs
+
+Physical units
+
+Outputs
+
+Relevant CBAM
+Emissions
+
+Kiln – fossil fuels12
+e.g. coal, HFO13
+
+Kiln system and associated
+equipment e.g. for raw meal
+preparation
+
+Kiln – cement
+clinker16
+
+Kiln – direct
+emissions from
+combustion of
+fuels
+
+Kiln – alternative and
+waste fuels (to
+cement clinker kiln)
+e.g. high CV fraction
+of MSW14
+
+Mill – grinding equipment
+(including dryer) and
+associated plant e.g. for
+bagging cement
+
+Kiln – electricity
+consumed by clinker
+kiln and associated
+equipment
+
+Other industrial equipment
+unrelated to cement
+production (to be excluded
+from system boundaries).
+
+Mill – fossil fuels to
+cement dryer
+
+Heat exchanger for district
+heating
+
+Mill – electricity
+consumed by cement
+grinding plant and
+associated equipment
+
+Flue gas cleaning equipment
+(for treating gaseous and
+dust emissions)
+
+Kiln – raw
+materials15:
+Limestone, clays
+
+Mill – cement
+goods, by type17
+Kiln – other
+outputs18: e.g.
+cement kiln dust
+District heating,
+(or cooling or
+electricity)19
+
+Kiln – direct
+emissions from
+alternative and
+waste fuels
+Kiln – indirect
+emissions from
+electricity
+consumed.
+Kiln – direct
+process emissions
+from carbonates
+Mill – indirect
+emissions from
+electricity
+consumed.
+
+Kiln – alternative raw
+materials: e.g. fly ash
+Mill – cement clinker
+from kiln
+Mill – additives used
+in cement
+manufacture
+
+12
+
+Fuels combusted to generate heat for the use in the process under consideration or elsewhere. Both the
+fuel quantity (and in particular its carbon content / emission factor) as well its energy content are relevant
+for attributing it to different production processes.
+
+13
+
+Heavy Fuel Oil.
+
+14
+
+High calorific value fraction of municipal solid waste.
+
+15
+
+Raw materials are materials which participate in other chemical reactions or which are physically
+modified in the process for generating the product.
+
+16
+
+Precursor or intermediate good or product: where the production process also includes a ‘finished’ good.
+The precursor product may also be an output from the installation; for example, if the operator exported
+both cement clinker and cement from the installation.
+
+17
+
+Cement finished good – physical product output of the installation/production process monitored.
+
+18
+
+Other products (by-products) and waste: only need to be monitored if relevant in terms of carbon content
+for the determination of the production process’s emissions, and energy content for corroboration
+purposes.
+
+19
+
+Measurable heat (or cooling or electricity, if fuels are used in their generation) exported from a CBAM
+installation or production process should be treated like a second product, i.e. a certain amount of
+emissions must be subtracted from the emissions of that production process.
+21
+
+Step 2: Identify relevant production processes and production routes.
+In this step, the operator identifies that the installation produces cement clinker and cement,
+each of which is an aggregated goods category listed in Annex I, Table 1 (“Mapping of
+CN codes to aggregated goods categories”) of the Methodology Act.
+Each aggregated goods category defines system boundaries to be considered when defining
+which CN codes or groups of CN codes define a ‘production process’ for the purpose of
+monitoring, covering goods to which the same functional unit applies and, where relevant,
+encompassing all production routes used within the installation. The operator uses the
+Table 3-2 as a checklist for assigning the relevant inputs, outputs and emissions to each
+production processes. This is relatively simple in most cases, for example:
+•
+
+Cement clinker (CN 2523 10 00) production process:
+o Physical units: Cement kiln, including preheaters, pre-calciner, clinker
+cooler, and associated auxiliary equipment such as flue gas cleaning.
+o Inputs / sources streams: Fuels, electricity, raw materials and alternative
+raw materials for the process.
+o Outputs (goods): Cement clinker, kiln dust (re-introduced it into the clinker
+production process).
+o Other outputs: measurable heat exported to district heating network.
+o Emission sources: direct (combustion and process) and indirect emissions
+(electricity consumed) related to the kiln system.
+
+•
+
+Cement (CN 2523 29 00 and 2523 90 00)20 production process:
+o Physical units: Grinding plant, direct fired dryer and associated auxiliary
+equipment e.g. cement bagging plant.
+o Inputs / source streams: Cement clinker, electricity, fuels for the dryer,
+additive materials used in making cement such as gypsum.
+o Outputs (goods): Cement.
+o Emission sources: direct (from cement dryer, if applicable) and indirect
+emissions (from electricity consumed) related to the grinding process.
+
+Using a schematic helps to visualise the respective system boundaries of each production
+process and production route, and to assign inputs, outputs and emissions accordingly.
+
+20
+
+For this example it is assumed that grey Portland cement and other hydraulic cements are produced.
+22
+
+Figure 3-1: Schematic used to define the system boundaries of an example cement clinker and
+cement production processes
+Installation boundaries
+
+Process “Clinker”
+Material
+inputs
+
+Hard coal
+
+HFO
+
+District
+Heating
+
+Measurable
+Heat (Export)
+
+Raw meal
+
+Cement
+clinker kiln
+
+Process “cement”
+Clinker
+
+Cement
+grinding
+
+Cement
+(report clinker content / CCR)
+
+Energy
+inputs
+Municipal waste
+
+Electricity
+
+Clinker (sales)
+
+CKD / bypass dust (discarded)
+
+(clinker kiln)
+
+CKD / bypass dust
+(returned to process)
+
+Natural gas
+Energy
+inputs
+
+(to dryer)
+
+Electricity
+(cement grinding)
+
+Note: Exclude purchase and maintenance of infrastructure and equipment from system boundaries
+
+In the case of the above cement installation, both the kiln system and cement grinding plant
+are relatively self-contained parts of the installation, without shared equipment, and there
+is no doubt about the system boundaries of each production process. The only element that
+is not widely found in this industry is the heat recovery from the clinker kiln for the purpose
+of district heating. In practice it would not be a separate production process, but in
+calculating the attributed emissions of the clinker production process, the heat would be
+taken into account.
+The following worked example for the cement sector shows how, for the production
+processes defined, relevant emissions are calculated and assigned to production processes,
+and specific embedded emissions are calculated. For simplification, the district heating is
+omitted in that example, as are the additional direct emissions from the dryer before the
+cement grinding.
+
+4
+
+WORKED EXAMPLE FOR THE CEMENT SECTOR
+
+The following worked example shows how specific embedded emissions are derived for
+cement sector goods. The resulting embedded emissions of imports into the EU are then
+calculated at the end of the example for reporting by the importer in their annual CBAM
+declaration for the relevant reporting period.
+23
+
+In this example the installation produces two products, cement clinker and cement, each
+of which is treated as a separate production process, as these goods refer to separate CN
+codes and each is a separate category of CBAM aggregated good. The example refers to
+clinker and cement in general without specifying whether the goods are grey or white
+clinker/cement. The example is thus illustrative of both cases.
+Figure 4-1 gives an outline view of the installation and shows the system boundaries as a
+hatched line for each production process. The physical units carrying out each production
+process have been grouped under ‘Clinker production’ and ‘Cement mill’ and the different
+inputs and outputs and sources of emissions have been identified for each production
+process. Note that for the cement sector, indirect emissions are to be included, and
+therefore electricity is included in the calculation for this example.
+Figure 4-1: Cement example – Overview
+
+The two relevant production processes defined above are:
+•
+
+Production process 1 – cement clinker produced in a cement kiln. The system
+boundaries of this production process have been defined as including inputs of raw
+materials (limestone and other minerals), fuels (coal, heavy fuel oil (HFO) and
+fractions of household waste) and electrical energy. Output from the process is
+cement clinker that is a precursor for production process 2.
+
+•
+
+Production process 2 – cement produced in a cement mill. The system boundaries
+of this production process have been defined as including the inputs gypsum (which
+as a raw material is not a precursor (not included in Annex I to the CBAM
+Regulation), and therefore treated as having zero embedded emissions for the
+purposes of this calculation), precursor cement clinker (which has embedded
+emissions) and electrical energy. Output from the process is cement (with a need
+to report clinker content / CCR).
+
+In this case, where all the output from production process 1 of precursor cement clinker
+goes directly into production process 2, it is possible to define a joint production process,
+or ‘bubble’, whereby the system boundaries of the production processes are combined, as
+shown in Figure 4-2.
+24
+
+Figure 4-2: Cement example – joint production process (‘bubble approach’) and complete
+monitoring approach – red elements indicate inputs/outputs/activity data to be monitored within
+the combined system boundary.
+
+The system boundary has been redrawn to encompass both production processes
+previously defined for each CBAM aggregated good.
+The inputs and outputs highlighted in red text above are the parameters that would need to
+be monitored by the operator in order to attribute emissions and determine direct and
+indirect specific embedded emissions within the joint production process (‘bubble’).
+The direct and indirect emissions that are monitored in this example result from:
+•
+
+Direct emissions from fuel combustion – fossil fuels (coal and HFO) and from a
+mixed fossil/biomass fuel derived from household waste (an alternative fuel).
+
+•
+
+Direct emissions from the process – resulting from the thermal decomposition of
+carbonates in the raw meal input (produced from limestone and other minerals) to
+the cement kiln system.
+
+•
+
+Indirect emissions from the electrical energy consumed by the joint production
+process.
+
+The activity level of cement also needs to be monitored in terms of the tonnes of clinker
+contained in the cement goods. It appears that the monitoring becomes simpler with this
+‘bubble approach”. However, as the clinker amount is the functional unit for the cement
+produced, its quantity (as well as the quantity of other inputs used such as gypsum) need
+to be monitored for each type of cement produced. The associated embedded emissions of
+clinker do not have to be monitored separately but are the result of the overall bubble
+approach, divided by the total amount of clinker produced. Similarly, there is no need to
+split quantities of electrical energy consumed according to the two processes.
+The following tables summarise the fuel, electrical energy and raw material inputs
+monitored for determining specific embedded emissions (SEE). The calculation of the SEE
+values is carried out in two steps:
+•
+
+Step 1 – derives SEE values for the functional unit cement clinker; and
+25
+
+•
+
+Step 2 – derives SEE values for cement, taking into account i) embedded emissions
+of the bubble production process, and ii) the clinker to cement ratio (CCR) of each
+type of cement produced, to determine the tonnes of clinker contained in the cement
+goods.
+
+Note that if any cement clinker produced by the installation were to be diverted and
+separately sold, the embedded emissions calculated under step 1 would have to be
+determined separately (without indirect emissions of the cement grinding plant) and would
+also need to be communicated by the operator to the purchaser of the cement clinker goods.
+In that case the ‘bubble approach’ would not be allowed.
+In the following, we demonstrate both approaches, calculation with bubble approach and
+without, i.e. using two separate production processes.
+
+4.1
+
+Calculation using separate processes
+
+Table 4-1: Calculation of direct and indirect emissions, and SEE values for cement clinker
+Direct emissions
+
+AD (t)
+
+NCV (GJ/t)
+
+EF (t CO2/t
+or
+t CO2/TJ)
+
+Biomass
+%
+
+Emissions
+fossil (t
+CO2)
+
+Emissions
+biomass21
+(t CO2)
+
+Process emissions
+Cement clinker
+(standard factor)22
+
+1 255 000
+
+0,525
+
+658 875
+
+209 000
+
+0
+
+35 275
+
+6 225
+
+134 160
+
+0
+
+Combustion emissions
+Coal
+
+88 000
+
+25
+
+95
+
+High NCV household
+waste23
+
+25 000
+
+20
+
+83
+
+HFO
+
+43 000
+
+40
+
+78
+
+15%
+
+Total direct emissions
+Indirect emissions
+Electricity consumed
+Clinker
+(tonnes)
+
+production
+
+1 037 310
+AD (MWh)
+
+EF (t CO2 /
+MWh)
+
+Emissions
+(t CO2)
+
+81 575
+
+0,626
+
+51 066
+
+1 255 000
+
+Step 1: Specific embedded emission (SEE) values are derived using direct and indirect emissions and activity
+data for cement clinker.
+Cement clinker
+
+Direct
+
+Indirect
+
+SEE
+
+0,82654
+
+0,04069
+
+t CO2 / t
+
+21
+
+Zero-rated biomass, i.e. compliant with the RED II criteria, where applicable.
+
+22
+
+Standard emission factor for cement clinker given in Implementing Regulation Annex II Section
+B.9.2.2., which states that as a minimum requirement to determine the emission factor, a standard value
+of 0,525 t CO2/t cement clinker is applied.
+
+23
+
+Biomass being the biodegradable fraction in municipal waste. If the emission factor and/or NCV for
+municipal waste is not known, the standard values in Implementing Regulation Annex II, Section G,
+Table 2 should be used, which are 11,6 GJ/t and 100 t CO2/TJ.
+26
+
+In the Table 4-1 above, step 1 is to calculate and attribute direct and indirect emissions
+associated with the production of cement clinker in the reporting period and derive SEE
+values for the amount of clinker produced.
+Note that the emission factor used for raw meal above is a standard emission factor given
+in section B.9.2.2 of Annex II to the Methodology Act, which states that, as a minimum
+requirement to determine the emission factor, a standard value of 0,525 t CO2/t cement
+clinker is applied. For using more accurate values, chemical analyses of the raw meal
+would have to be performed.
+Note also that the direct emissions associated with the biomass content of the household
+waste is calculated separately and is deducted from the total direct emissions. This is
+because the biodegradable fraction of municipal waste (given as 15% above) is treated as
+biomass and is effectively zero-rated for total emissions, as the RED II sustainability
+criteria do not apply to household / municipal waste.
+The emission factor used for electricity consumed is the default value for indirect
+emissions of goods, as provided in Annex II to the Default Values Act. In the example
+above, the emission factor applied to electricity consumed in the production of cement
+clinker is the value provided for Lebanon. As an operator, you shall select the emission
+factor relevant for country where the installation is located.
+Table 4-2: Calculation of total direct and indirect SEE values for cement final product (Step 2)
+Portland cement production
+tonnes clinker / tonne cement
+ratio
+
+Comment
+0,95
+MWh/t
+cement
+
+Additional electricity
+consumption
+
+0,085
+
+This is the CCR for Portland cement. The CCR is
+specific to the cement product produced.
+t CO2/t
+0,05321 For the cement grinding production process.
+Calculated as MWh/t x EF for electricity.
+
+Step 2: SEE values are derived for final cement product including the embedded emissions from the precursor
+cement clinker
+Cement
+
+Contribution of precursor
+(clinker)
+
+SEE Direct SEE Indirect
+t CO2 / t
+cement
+
+t CO2 / t
+cement
+
+0,7852
+
+0,0387 Calculated using the CCR, for example for SEE
+direct as 0,8265 t CO2 / t x 0,95 = 0,7852 t CO2 / t
+
+Production process
+
+0,05321 As above
+
+Total specific embedded
+emissions
+
+0,7852
+
+Total (direct + indirect) SEE
+
+0,8771
+
+4.2
+
+0,0919 Sum of SEEs
+Value for which CBAM certificates need to be
+surrendered, before subtraction of free allocation
+adjustment (and carbon price paid in third country)
+
+Calculation using bubble approach
+
+Here, we only outline the different path of the calculation. The explanation for the values
+chosen can be found in section 4.1.
+27
+
+Table 4-3: Calculation of total direct and indirect SEE values for cement using the bubble
+approach
+Activity level
+Total production of clinker:
+
+1 255 000
+
+Clinker to cement ratio (CCR)
+
+t clinker / yr
+
+0,950
+
+Total production of cement:
+expressed as functional unit:
+Emissions / Cement:
+
+1 321 053
+
+t cement / yr
+
+1 255 000
+
+t clinker / yr
+
+direct
+
+indirect
+
+total bubble's emissions:
+
+1 037 310
+
+121 359
+
+t CO2 / yr
+
+SEE per functional unit
+
+0,8265
+
+0,0967
+
+t CO2 / t clinker
+
+SEE per tonne of cement:
+
+0,7852
+
+0,0919
+
+t CO2 / t cement
+
+4.3
+
+Calculation of free allocation adjustment and CBAM obligation
+
+As the operator is monitoring and reporting actual data for the cement produced in its
+installation, also the free allocation adjustment can be composed. The calculation is
+outlined below:
+•
+
+CBAM BM for cement = 0 (Column A of the Table in the Annex to the Free Allocation
+Adjustment Act)24,25
+•
+
+CBAM BM for grey clinker = 0,666 (column A)
+
+•
+
+Mi (clinker) = 0,95 (in line with the operator’s monitoring)
+
+•
+
+SEFAcement = 0 + 0,95 × 0,666 = 0,6327 t CO2 / t cement
+
+•
+
+Assumption: Year = 2026.:
+o CSCF = 1,00
+o CBAM = 97,5%
+
+•
+
+Specific embedded free allocation (SEFA) = 0,6327 × 0,975 × 1,00 =
+= 0,617 t CO2 / t cement
+
+The total embedded emissions to be reported by the authorised declarant (EU importer) for
+the import of Portland cement into the EU during the definitive period may then be
+determined, for example, for the import of 100 tonnes of Portland cement:
+
+24
+
+The Free Allocation Adjustment Act provides values for products based on grey cement clinker with
+indicator “(A)” and white clinker with indicator “(B)”. The operator here knows that the product is grey
+clinker and selects the values accordingly.
+
+25
+
+In most installations, no direct emissions occur when producing cement using cement clinker. Therefore,
+the benchmark of the cement production process is zero, while the benchmark of the total process is
+significantly higher, as it reflects the clinker production’s benchmark.
+28
+
+•
+
+Definitive period:
+o Direct embedded emissions = 100 t × 0,7852 t CO2 / t = 78,52 t CO2
+o Indirect embedded emissions = 100 t × 0,0919 t CO2 / t = 9,19 t CO2
+Total embedded emissions:
+
+87,71 t CO2
+
+Minus Free Allocation adjustment:
+
+61,7 t CO2
+
+(Further deduction could be made if a carbon price was paid in the country of
+production – outside the scope of this guidance)
+Total CBAM obligation to be covered by the authorised declarant with CBAM
+certificates: 87,7 – 61,7 = 26 certificates
+
+29
+
+Annex A
+
+List of definitions
+
+Term
+
+Definition
+
+‘Accuracy’
+
+means the closeness of the agreement between the result of
+a measurement and the true value of the particular quantity
+or a reference value determined empirically using
+internationally accepted and traceable calibration materials
+and standard methods, taking into account both random
+and systematic factors
+
+‘Activity data’
+
+means the amount of fuels or materials consumed or
+produced by a process relevant for the calculation-based
+methodology, expressed in terajoules (TJ), mass in tonnes
+or (for gases) volume in normal cubic metres, as
+appropriate
+
+‘Actual emissions’
+
+means the emissions calculated based on primary data from
+the production processes of goods and from the production
+of electricity consumed during those processes as
+determined in accordance with the methods set out in
+Annex IV [to the Methodology Act]
+
+‘Activity level’
+
+means the quantity of goods to which the same functional
+unit applies that are produced within the system boundaries
+of a production process during a reporting period
+
+‘Aggregated goods
+categories’
+
+means aggregated goods categories pursuant to Table 1 of
+point 2 of Annex I. A group of CBAM goods with their CN
+codes, used for the purpose of defining system boundaries
+of production processes.
+
+‘Agricultural,
+aquaculture, fisheries
+and forestry residues’
+
+means residues that are directly generated by agriculture,
+aquaculture, fisheries and forestry and that do not include
+residues from related industries or processing
+
+‘Authorised CBAM
+declarant’
+
+means a person authorised by the competent authority in
+accordance with Article 17 [of the CBAM Regulation].
+The ‘authorised CBAM declarant’ [which replaces the
+term ‘reporting declarant’ from the transitional period]
+may be importers of CBAM goods, or their indirect
+customs representatives, who have applied for and been
+granted the status of authorised CBAM declarant.
+
+‘Batch’
+
+means an amount of fuel or material representatively
+sampled and characterised, and transferred as one shipment
+or continuously over a specific period of time
+
+‘Biomass’
+
+means biomass as defined in Article 2, point (24) of the
+Renewable Energy Directive (RED II)26; it includes
+bioliquids and biofuels as defined in Article 2, point (32)
+and (33), biomass fuels as defined in Article 2, point (27)
+and biogas as defined in Article 2 point (28) of the RED II;
+
+26
+
+Directive (EU) 2018/2001
+30
+
+Term
+
+Definition
+
+‘Biomass fraction’
+
+means the ratio of carbon stemming from biomass to the
+total carbon content of a fuel or material, expressed as a
+fraction
+
+‘Calculation factors’
+
+means net calorific value, emission factor, preliminary
+emission factor, oxidation factor, conversion factor, carbon
+content or biomass fraction
+
+‘Calibration’
+
+means the set of operations, which establishes, under
+specified conditions, the relations between values indicated
+by a measuring instrument or measuring system, or values
+represented by a material measure or a reference material
+and the corresponding values of a quantity realised by a
+reference standard
+
+‘Carbon price’
+
+means the monetary amount paid in a third country, under a
+carbon emissions reduction scheme, in the form of a tax,
+levy or fee or in the form of emission allowances under a
+greenhouse gas emissions trading system, calculated on
+greenhouse gases covered by such a measure, and released
+during the production of goods
+
+‘CBAM certificate’
+
+means a certificate in electronic format corresponding to
+one tonne of CO2e of embedded emissions in goods
+
+‘CO2 emission factor’
+
+means the weighted average of the CO2 intensity of
+electricity produced from fossil fuels within a geographic
+area. The CO2 emission factor is the result of the division of
+the CO2 emission data of the electricity sector by the gross
+electricity generation based on fossil fuels in the relevant
+geographic area. It is expressed in tonnes of CO2 per
+megawatt-hour
+
+‘Combined
+nomenclature’ (CN)
+
+means the classification of goods, designed to meet the
+needs of: i) the Common customs tariff, setting import
+duties for products imported into the European Union (EU),
+as well as the Integrated tariff of the European
+Communities (Taric), incorporating all EU and trade
+measures applied to goods imported into and exported out
+of the EU; ii) the international trade statistics of the EU.
+The CN provides the means of collecting, exchanging and
+publishing data on EU international trade statistics. It is
+also used for the collection and publication of international
+trade statistics in intra-EU trade.27
+
+‘Combustion
+emissions’
+
+means greenhouse gas emissions occurring during the
+exothermic reaction of a fuel with oxygen
+
+‘Competent
+authority’
+
+means the authority designated by each Member State in
+accordance with Article 11 [of the CBAM Regulation]
+
+27
+
+For definition see:
+https://ec.europa.eu/eurostat/statisticsexplained/index.php?title=Glossary:Combined_nomenclature_(CN)
+31
+
+Term
+
+Definition
+
+‘Continuous emission
+measurement’ (CEM)
+
+means a set of operations having the objective of
+determining the value of a quantity by means of periodic
+measurements, applying either measurements in the stack
+or extractive procedures with a measuring instrument
+located close to the stack, whilst excluding measurement
+methodologies based on the collection of individual
+samples from the stack
+
+‘Control system’
+
+means the operator’s risk assessment and entire set of
+control activities, including the continuous management
+thereof, that an operator has established, documented,
+implemented and maintained pursuant to point A.2. of
+Annex II
+
+‘Complex goods’
+
+means goods other than simple goods
+
+‘Conservative’
+
+means that a set of assumptions is defined in order to
+ensure that no under-estimation of reported emissions or
+over-estimation of production of heat, electricity or goods
+occurs
+
+‘Conversion factor’
+
+means the ratio of carbon emitted as CO2 to the total carbon
+contained in the source stream before the emitting process
+takes place, expressed as a fraction, considering CO emitted
+to the atmosphere as the molar equivalent amount of CO2
+
+‘Co-product’
+
+means any of two or more products resulting from the same
+production process
+
+‘Customs declarant’
+
+means a declarant as defined in Article 5, point (15) of
+Regulation (EU) No 952/2013 lodging a customs
+declaration for release for free circulation of goods in its
+own name or the person in whose name such a declaration
+is lodged
+
+‘CCUS system’
+
+means a group of economic operators with technically
+connected installations and transport equipment for CO2
+capture, transport, use in production of goods, or geological
+storage
+
+‘Data flow activities’
+
+mean activities related to the acquisition, processing and
+handling of data that are needed to draft an emissions
+report from primary source data
+
+‘Data set’
+
+means one type of data, either at installation level or
+production process level as relevant in the circumstances,
+as any of the following:
+(a)
+the amount of fuels or materials consumed or
+produced by a production process as relevant for the
+calculation-based methodology, expressed in terajoules,
+mass in tonnes, or for gases as volume in normal cubic
+metres, as appropriate, including for waste gases;
+(b)
+
+a calculation factor;
+
+32
+
+Term
+
+Definition
+(c)
+net quantity of measurable heat, and the relevant
+parameters required for determining this quantity, in
+particular: i) mass flow of heat transfer medium; and ii)
+enthalpy of transmitted and returned heat transfer medium,
+as specified by composition, temperature, pressure and
+saturation;
+(d)
+quantities of non-measurable heat, specified by the
+relevant quantities of fuels used for producing the heat, and
+the net calorific value (NCV) of the fuel mix;
+(e)
+
+quantities of electricity;
+
+(f)
+
+quantities of CO2 transferred between installations;
+
+(g)
+quantities of precursors received from outside the
+production process, and their relevant parameters, such as
+country of origin, used production route, specific direct
+and indirect emissions;
+‘Default value’
+
+means a value, which is calculated or drawn from
+secondary data, which represents the embedded emissions
+in goods
+
+‘Direct emissions’
+
+means emissions from the production processes of goods
+including emissions from the production of heating and
+cooling that is consumed during the production processes,
+irrespective of the location of the production of the heating
+or cooling
+
+‘Embedded emissions’
+
+means direct emissions released during the production of
+goods and indirect emissions from the production of
+electricity that is consumed during the production
+processes, calculated in accordance with the methods set
+out in Annex IV and further specified in the implementing
+acts adopted pursuant to Article 7(7)
+
+‘Emissions’
+
+mean the release of greenhouse gases into the atmosphere
+from the production of goods
+
+‘Emission factor’
+
+means the average emission rate of a greenhouse gas
+relative to the activity data of a source stream assuming
+complete oxidation for combustion and complete
+conversion for all other chemical reactions
+
+‘Emission factor’ for
+electricity
+
+means the default value, expressed in CO2e, representing
+the emission intensity of electricity consumed in production
+of goods.
+
+‘Emission source’
+
+means a separately identifiable part of an installation or a
+process within an installation, from which relevant
+greenhouse gases are emitted
+
+EU ETS
+
+means the system for greenhouse gas emissions allowance
+trading within the Union in respect of activities listed in
+Annex I to Directive 2003/87/EC other than aviation
+activities
+33
+
+Term
+
+Definition
+
+‘EU ETS allowance’
+
+means an allowance as defined in Article 3, point (a), of
+Directive 2003/87/EC in respect of activities listed in
+Annex I to that Directive other than aviation activities
+
+‘Fossil carbon’
+
+means inorganic and organic carbon that is not biomass
+
+‘Fossil fraction’
+
+means the ratio of fossil carbon to the total carbon content
+of a fuel or material, expressed as a fraction
+
+‘Fugitive emissions’
+
+means irregular or unintended emissions from sources that
+are not localised, or too diverse or too small to be
+monitored individually
+
+‘Functional unit’
+
+means the reference unit used for the calculation of
+embedded emissions in goods
+
+‘Goods’
+
+means goods listed in Annex I [to the CBAM the CBAM
+Regulation]
+
+‘Greenhouse gases’
+
+mean greenhouse gases as specified in Annex I [to the
+CBAM the CBAM Regulation] in relation to each of the
+goods listed in that Annex
+
+‘Heat meter’
+
+means a thermal energy meter or any other device to
+measure and record the amount of thermal energy produced
+based upon flow volumes and temperatures
+
+‘Importer’
+
+means either the person lodging a customs declaration for
+release for free circulation of goods or a bill of discharge in
+accordance with Article 175(5) of Delegated Regulation
+(EU) 2015/2446 in its own name and on its own behalf or,
+where the customs declaration is lodged by an indirect
+customs representative in accordance with Article 18 of
+Regulation (EU) No 952/2013, the person on whose behalf
+such a declaration is lodged
+
+‘Importation’
+
+means release for free circulation as provided for in Article
+201 of Regulation (EU) No 952/2013
+
+‘Indirect customs
+
+A customs representative appointed by an importer
+established in a Member State. If the importer appoints an
+indirect customs representative and they agree, they can act
+as an authorised CBAM declarant and submit the
+application for an authorisation on behalf of the importer.
+The indirect customs representative is liable for all
+operations made for the importers it represents
+
+Representative’
+
+‘Indirect emissions’
+
+means emissions from the production of electricity which is
+consumed during the production processes of goods,
+irrespective of the location of the production of the
+consumed electricity
+
+‘Inherent CO2’
+
+means CO2 which is part of a source stream.
+
+‘Installation’
+
+means a stationary technical unit where a production
+process is carried out
+
+34
+
+Term
+
+Definition
+
+‘Legal metrological
+control’
+
+means the control exercised by a public authority or
+regulator of the measurement tasks intended for the field of
+application of a measuring instrument, for reasons of public
+interest, public health, public safety, public order,
+protection of the environment, the levying of taxes and
+duties, the protection of consumers and fair trading
+
+‘Measurable heat’
+
+means a net heat flow transported through identifiable
+pipelines or ducts using a heat transfer medium, such as, in
+particular, steam, hot air, water, oil, liquid metals and salts,
+for which a heat meter is or could be installed
+
+‘Measurement point’
+
+means the emission source for which continuous emission
+measurement systems (CEMS) are used for emission
+measurement, or the cross-section of a pipeline system for
+which the CO2 flow is determined using continuous
+measurement systems
+
+‘Measurement
+system’
+
+means a complete set of measuring instruments and other
+equipment used to determine variables for the monitoring
+and calculation of emissions
+
+‘Minimum
+requirements’
+
+means monitoring methods using the minimum efforts
+allowed for determining data in order to result in emission
+data acceptable for the purpose of the CBAM Regulation.
+
+‘Mixed fuel’
+
+means a fuel which contains both biomass and fossil carbon
+
+‘Mixed material’
+
+means a material which contains both biomass and fossil
+carbon
+
+‘Multifunctional
+process’
+
+means a process that delivers multiple outputs or whose
+outputs feed into several production processes
+
+‘Net calorific value’
+(NCV)
+
+means the specific amount of energy released as heat when
+a fuel or material undergoes complete combustion with
+oxygen under standard conditions, less the heat of
+vaporisation of any water formed
+
+‘Non-CBAM good’
+
+means any good produced in the installation that is not
+included in Annex I to the CBAM Regulation
+
+‘Non-measurable
+heat’
+
+means all heat other than measurable heat
+
+‘Operator’
+
+means any person who operates or controls an installation
+in a third country, including a parent company that controls
+an installation in a third country
+
+‘Oxidation factor’
+
+means the ratio of carbon oxidised to CO2 as a consequence
+of combustion to the total carbon contained in the fuel,
+expressed as a fraction, considering carbon monoxide (CO)
+emitted to the atmosphere as the molar equivalent amount
+of carbon dioxide (CO2)
+
+‘Power purchase
+agreement’
+
+means a contract under which a person agrees to purchase
+electricity directly from an electricity producer
+35
+
+Term
+
+Definition
+
+‘Precursor’
+
+means any input material into a production process
+included in the list of goods set out in Annex I to the
+CBAM Regulation;
+
+‘Preliminary
+emission factor’
+
+means the assumed total emission factor of a fuel or
+material based on the carbon content of its biomass fraction
+and its fossil fraction before multiplying it by the fossil
+fraction to produce the emission factor
+
+‘Production process’
+
+means the chemical and physical processes carried out to
+produce goods in an installation
+
+‘Production route’ 28
+
+means a specific technology used in a production process
+to produce goods
+
+‘Process emissions’
+
+means greenhouse gas emissions other than combustion
+emissions occurring as a result of intentional and
+unintentional reactions between substances or their
+transformation, for a primary purpose other than the
+generation of heat, including from the following processes:
+(a) the chemical, electrolytic or pyrometallurgical
+reduction of metal compounds in ores, concentrates and
+secondary materials; (b) the removal of impurities from
+metals and metal compounds; (c) the decomposition of
+carbonates, including those used for flue gas cleaning; (d)
+chemical syntheses of products and intermediate products
+where the carbon bearing material participates in the
+reaction; (e) the use of carbon containing additives or raw
+materials; (f) the chemical or electrolytic reduction of
+metalloid oxides or non-metal oxides such as silicon
+oxides and phosphates.
+
+‘Proxy data’
+
+means annual values which are empirically substantiated or
+derived from accepted sources and which an operator uses
+to substitute a data set29 for the purpose of ensuring
+complete reporting
+
+‘Rebate’
+
+means any amount that reduces the amount due or paid by a
+person liable for the payment of a carbon price, before its
+payment or after, in a monetary form or in any other form.
+
+‘Recommended
+improvements’
+
+means monitoring methods which are proven means to
+ensure that data are more accurate or less prone to mistakes
+than by mere application of minimum requirements
+
+‘Related emissions’
+
+means: – the direct emissions caused by the source stream
+or emission source concerned; – emissions attributed to a
+quantity of measurable heat; – the indirect emissions related
+to the quantity of electricity concerned; – embedded
+emissions of a material produced or of a precursor
+consumed.
+
+28
+
+Note that different production routes can fall within the same production process.
+
+29
+
+Refers to the activity data or the calculation factors.
+36
+
+Term
+
+Definition
+
+‘Reporting period’
+
+means the period corresponding to the calendar year during
+which the good was produced and used by the authorised
+CBAM declarant as reference for the determination of
+embedded emissions
+
+‘Residue’
+
+means a substance that is not the end product that a
+production process directly seeks to produce; it is not a
+primary aim of the production process and the process has
+not been deliberately modified to produce it
+
+‘Simple goods’
+
+means goods produced in a production process requiring
+exclusively input materials (precursors) and fuels having
+zero embedded emissions
+
+‘Source stream’
+
+means either of the following: (a) a specific fuel type, raw
+material or product giving rise to emissions of relevant
+greenhouse gases at one or more emission sources as a
+result of its consumption or production; (b) a specific fuel
+type, raw material or product containing carbon and
+included in the calculation of greenhouse gas emissions
+using a mass-balance method
+
+‘Specific embedded
+emissions’
+
+means the embedded emissions of one tonne of goods,
+expressed as tonnes of CO2e emissions per tonne of goods
+
+‘Standard conditions’
+
+means temperature of 273,15 K and pressure conditions of
+101 325 Pa defining normal cubic metres (Nm3)
+
+‘System boundary’
+
+means the group of chemical or physical processes included
+in the calculation of embedded emissions of goods under
+the same aggregated goods category.
+The system boundaries shall cover direct emissions,
+indirect emissions for goods not listed in Annex II to the
+CBAM Regulation, and the embedded emissions of any
+precursor.
+
+30
+
+‘Third country’
+
+means a country or territory outside the customs territory of
+the [European] Union
+
+‘Tonne of CO2(e)’
+
+means one metric tonne of carbon dioxide (‘CO2’), or an
+amount of any other greenhouse gas listed in Annex I [to
+the CBAM Regulation] with an equivalent global warming
+potential [‘CO2e‘]
+
+‘Transmission system
+operator’
+
+means an operator as defined in Article 2, point (35) of
+Directive (EU) 2019/944 of the European Parliament and of
+the Council (30).
+
+Directive (EU) 2019/944 of the European Parliament and of the Council of 5 June 2019 on common
+rules for the internal market for electricity and amending Directive 2012/27/EU (OJ L 158, 14.6.2019,
+p. 125).
+37
+
+Term
+
+Definition
+
+‘Uncertainty’
+
+means a parameter, associated with the result of the
+determination of a quantity, that characterises the
+dispersion of the values that could reasonably be attributed
+to the particular quantity, including the effects of
+systematic as well as of random factors, expressed in
+percent, and describes a confidence interval around the
+mean value comprising 95% of inferred values taking into
+account any asymmetry of the distribution of values
+
+‘Waste’
+
+means any substance or object which the holder discards or
+intends or is required to discard, excluding substances that
+have been intentionally modified or contaminated in order
+to meet this definition
+
+‘Waste gas’
+
+means a gas containing incompletely oxidised carbon in a
+gaseous state under standard conditions which is a result of
+any of the processes listed under ‘process emissions’
+
+38
+
+Annex B
+
+List of abbreviations
+
+Abbreviation
+
+Full term
+
+AD
+
+Activity Data
+
+AEM
+
+Anode Effect Minutes
+
+AEO
+
+Anode Effect Overvoltage
+
+AL
+
+Activity Level
+
+AOD
+
+Argon Oxygen Decarburisation.
+
+BAT
+
+Best Available Techniques
+
+BF
+
+Biomass Fraction
+
+BFG
+
+Blast Furnace Gas
+
+BM
+
+Benchmark
+
+BOF
+
+Basic Oxygen Furnace
+
+BOFG
+
+Basic Oxygen Furnace Gas
+
+BREFs
+
+Best Available Techniques Reference documents
+
+CA
+
+Competent Authority
+
+CBAM
+
+Carbon Border Adjustment Mechanism, the
+
+CCR
+
+Clinker to Cement Ratio
+
+CCS
+
+Carbon Capture and Storage
+
+CCU(S)
+
+Carbon Capture and Utilisation (and Storage)
+
+CEMS
+
+Continuous Emission Measurement Systems
+
+CF
+
+Conversion Factor
+
+CFP
+
+Carbon footprint of products
+
+CHP
+
+Combined Heat and Power
+
+CKD
+
+Cement Kiln Dust
+
+CN
+
+Combined nomenclature
+
+COG
+
+Coke Oven Gas
+
+DRI
+
+Direct Reduced Iron
+
+EAF
+
+Electric Arc Furnace
+
+EEA
+
+European Economic Area (EU-27, Iceland, Norway, Liechtenstein)
+
+EF
+
+Emission Factor
+
+EFTA
+
+European Free Trade Area
+
+EORI
+
+Economic Operator Registration and Identification
+
+ETS
+
+Emissions Trading System
+
+EU ETS
+
+EU Emissions Trading System
+
+EUA
+
+EU Allowances (used in the EU ETS)
+
+EUR
+
+Euro (currency)
+39
+
+Abbreviation
+
+Full term
+
+FAR
+
+Free Allocation Rules (Regulation 2019/331)31
+
+FIFO
+
+First-In-First-Out principle
+
+GHG
+
+Greenhouse Gas
+
+GWP
+
+Global Warming Potential
+
+HBI
+
+Hot Briquetted Iron
+
+HS
+
+Harmonised System (for international trade)
+
+IEA
+
+International Energy Agency
+
+ISO
+
+International Organization for Standardization
+
+LULUCF
+
+Land-use, land change and forestry (criteria)
+
+MP
+
+Monitoring Plan
+
+MRR
+
+Monitoring and Reporting Regulation (Regulation 2018/2066)32
+
+MRV
+
+Monitoring, Reporting and Verification
+
+MS
+
+Member State(s)
+
+MWh
+
+Megawatt-hour
+
+NCV
+
+Net Calorific Value
+
+NPI
+
+Nickel pig iron
+
+OF
+
+Oxidation Factor
+
+PCI
+
+Pulverised Coal Injection
+
+PEMS
+
+Predictive Emission Monitoring System
+
+PFC
+
+Perfluoro-carbon
+
+PoS
+
+Proofs of Sustainability
+
+RED II
+
+Renewable Energy Directive, re-cast
+
+SEE
+
+Specific embedded emissions
+
+SEFA
+
+Specific embedded free allocation
+
+TARIC
+
+Integrated Tariff of the European Union database
+
+TJ
+
+Terajoules
+
+TSO
+
+Transmission System Operator
+
+UCC
+
+Union Custom Code
+
+UN/LOCODE
+
+United Nations Code for Trade and Transport Location
+
+31
+
+Free Allocation Rules (Commission Delegated Regulation (EU) 2019/331 of 19 December 2018
+determining transitional Union-wide rules for harmonised free allocation of emission allowances
+pursuant to Article 10a of Directive 2003/87/EC of the European Parliament and of the Council)
+
+32
+
+Monitoring and Reporting Regulation (Commission Implementing Regulation (EU) 2018/2066 of 19
+December 2018 on the monitoring and reporting of greenhouse gas emissions pursuant to Directive
+2003/87/EC of the European Parliament and of the Council and amending Commission Regulation (EU)
+No 601/2012
+40
+
+

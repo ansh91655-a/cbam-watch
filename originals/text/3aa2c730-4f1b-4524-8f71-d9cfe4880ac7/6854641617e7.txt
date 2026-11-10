@@ -1,0 +1,2988 @@
+EUROPEAN COMMISSION
+DIRECTORATE-GENERAL
+TAXATION AND CUSTOMS UNION
+Indirect Taxation and Tax Administration
+CBAM, Energy and Green Taxation
+
+Brussels, 14 August 2026
+
+GUIDANCE DOCUMENT 4: CBAM CALCULATION OF THE FREE
+ALLOCATION ADJUSTMENT TO THE NUMBER OF CBAM
+CERTIFICATES TO BE SURRENDERED
+
+Disclaimer: This guidance document is not legally binding and it is of an explanatory nature.
+Legal provisions of Union law take precedence over the contents of this document and should
+always be consulted. The authentic texts of the EU legal instruments are those published in the
+Official Journal of the European Union. This guidance was prepared by Commission services
+and does not represent an official position of the Commission. Only the Court of Justice of the
+European Union is competent to authoritatively interpret Union law.
+
+Commission européenne/Europese Commissie, 1049 Bruxelles/Brussel, BELGIQUE/BELGIË – Tel. +32 22991111
+
+VERSION HISTORY
+Date
+
+Version notes
+
+14.08.2026
+
+First Publication of this document for the definitive period.
+
+2
+
+CONTENTS
+1
+
+PREFACE
+
+4
+
+1.1
+
+Structure and content of the guidance documents
+
+4
+
+1.2
+
+Reference regulations and legal acts
+
+5
+
+2
+
+DETERMINATION OF THE ADJUSTMENT FOR FREE ALLOCATION
+
+6
+
+2.1
+Understanding the need to adjust the CBAM obligation for free allocation 6
+2.1.1
+Free allocation under the EU ETS
+6
+2.1.2
+From EU ETS benchmarks to CBAM benchmarks
+8
+2.2
+How to determine the free allocation adjustment
+2.2.1
+Calculation approach for the free allocation adjustment
+2.2.2
+Monitoring requirements for the free allocation adjustment
+
+9
+10
+26
+
+ANNEX A
+
+LIST OF DEFINITIONS
+
+28
+
+ANNEX B
+
+LIST OF ABBREVIATIONS
+
+37
+
+3
+
+1
+
+PREFACE
+
+1.1
+
+Structure and content of the guidance documents
+
+This series of documents has been written to support stakeholders by explaining the
+requirements of the CBAM Regulation in a non-legislative language. This series of
+guidance documents should benefit a variety of stakeholders. A specific focus has been put
+on clarifying the requirements for operators of installations producing CBAM goods
+outside of the EU for the definitive period.
+•
+
+Guidance 1 provides an overview of the main changes to the CBAM methodology
+between the definitive period and the concluded transitional period. It also
+introduces the CBAM and an overview of the compliance cycle, roles and
+responsibilities, as well as milestones and deadlines for operators of installations
+outside the EU during the definitive period and explains the general exemptions
+from the CBAM.
+
+•
+
+Guidance 2 provides a quick guidance for the intended reader of this document,
+the operator of an installation producing CBAM goods. It provides a roadmap of
+the most important concepts of CBAM emissions monitoring and where to find
+more information in this series of documents.
+
+•
+
+Guidance 3 sets out the monitoring and reporting obligations and
+recommendations which are potentially applicable to any affected producer of
+CBAM goods.
+
+•
+
+Guidance 4 provides an overview of how the adjustment for free allocation is to
+be determined and what information is needed.
+
+•
+
+Guidance documents 5a, 5b, 5c, 5d, 5e and 5f present an overview per sector of
+the production processes and value chains for goods that are included in the scope
+of the CBAM, as well as sector-specific monitoring and reporting considerations
+for each CBAM good where this is relevant. These sections are supplemented by
+examples for each sector.
+
+The series of guidance documents is accompanied by an electronic template for
+information that should be used by installation operators to communicate information to
+the authorised CBAM declarants and CBAM Registry.
+
+Presentation of numbers in EU documents
+To align with EU legal documents, this guidance document uses the following
+convention when presenting numbers.
+The decimal separator used to separate the integral part of a number from its fractional
+part is a comma, e.g.: 0,890
+Thousands, and powers of 103n thereafter, are separated by a space, e.g.:
+•
+
+fifteen thousand is written as 15 000
+
+•
+
+fifteen million is written as 15 000 000
+4
+
+1.2
+
+Reference regulations and legal acts
+
+Several regulations and legal acts are referred to throughout this series of guidance
+documents. For ease of reading and to avoid ambiguity, simplified references are used
+when citing these acts.
+•
+
+CBAM Regulation: Regulation (EU) 2023/956 and Regulation (EU) 2025/2083
+amending Regulation (EU) 2023/956. Notably, where article numbers are given
+in this document without further specification, they always refer to the CBAM
+Regulation.
+It can be accessed at the following link (consolidated version):
+http://data.europa.eu/eli/reg/2023/956/2025-10-20
+
+•
+
+Methodology Act: Commission Implementing Regulation (EU) 2025/2547, in
+legal texts referred to as “Implementing act pursuant to Article 7(7) of the CBAM
+Regulation”.
+It can be accessed at the following link:
+http://data.europa.eu/eli/reg_impl/2025/2547/oj
+
+•
+
+Default Values Act: Commission Implementing Regulation (EU) 2025/2621, in
+legal texts referred to as “Implementing act pursuant to Article 7(7) of the CBAM
+Regulation”, also referred to as “default values determined in accordance with
+Annex IV to the CBAM Regulation”.
+It can be accessed at the following
+link: http://data.europa.eu/eli/reg_impl/2025/2621/oj
+
+•
+
+Verification Principles Act: Commission Implementing Regulation (EU)
+2025/2546, in legal texts referred to as “Implementing act pursuant to Article 8(3)
+of the CBAM Regulation”.
+It can be accessed at the following link:
+http://data.europa.eu/eli/reg_impl/2025/2546/oj
+
+•
+
+Accreditation & Verification Requirements Act: Commission Delegated
+Regulation (EU) 2025/2551, in legal texts referred to as “Delegated act pursuant
+to Article 18(3) of the CBAM Regulation”.
+It can be accessed at the following
+link: http://data.europa.eu/eli/reg_del/2025/2551/oj
+
+•
+
+Free Allocation Adjustment Act: Commission Implementing Regulation (EU)
+2025/2620, in legal texts referred to as “Implementing act pursuant to Article
+31(2) of the CBAM Regulation”.
+It can be accessed at the following link:
+http://data.europa.eu/eli/reg_impl/2025/2620/oj
+
+For acronyms and definitions used in this document, please see Annex B and Annex A.
+5
+
+2
+
+DETERMINATION OF THE ADJUSTMENT FOR FREE ALLOCATION
+
+This section outlines the operator’s monitoring requirements and the calculation rules for
+determining the free allocation adjustment which authorised CBAM declarants can deduct
+from the embedded emissions to determine the “CBAM obligation”, i.e. the number of
+CBAM certificates to be surrendered for the imported CBAM goods.
+The numbering of equations in this chapter corresponds to that used in the Free
+Allocation Adjustment Act.
+
+2.1
+
+Understanding the need to adjust the CBAM obligation for free allocation
+
+The EU ETS industry sectors exposed to a significant risk of carbon leakage are entitled
+to receive a part of their emission allowances free of charge. While the CBAM is being
+phased in, free allocation in the EU ETS will be phased out accordingly for sectors covered
+by the CBAM. During that phase-out period, the CBAM obligation is adjusted to mirror
+the free allocation received under the EU ETS and to ensure an equivalent carbon price.
+2.1.1
+
+Free allocation under the EU ETS
+
+The basis for free allocation under the EU ETS is performance benchmarks which are
+determined using an average emissions intensity per unit of production of the 10% most
+efficient installations in the EU ETS in each sector. There are 54 benchmarks in total – 52
+product benchmarks1 and 2 so-called “fallback approaches”2 based on heat or fuel
+consumption, respectively. These were developed in extensive technical work and
+consultations with various stakeholders. The following EU ETS benchmarks are relevant
+for the free allocation adjustment under the CBAM and were the basis for the development
+of CBAM benchmarks:
+Product benchmarks:
+•
+
+Agglomerated iron ore;
+
+•
+
+Hot metal3;
+
+•
+
+EAF (electric arc furnace) – carbon steel;
+
+•
+
+EAF (electric arc furnace) – high alloy steel;
+
+•
+
+Iron casting;
+
+•
+
+Primary aluminium;
+
+•
+
+Grey cement clinker;
+
+•
+
+White cement clinker;
+
+1
+
+System boundaries of product benchmarks in the EU ETS are found in Annex I to the “FAR” (Free
+Allocation Rules pursuant to Article 10a(1) of the EU ETS Directive), Commission Delegated
+Regulation (EU) 2019/331. http://data.europa.eu/eli/reg_del/2019/331/2024-01-01
+
+2
+
+A third “fallback” approach is used for process emissions, which is not based on a benchmark.
+
+3
+
+Pig iron or other forms of iron before steel making
+6
+
+•
+
+Nitric acid;
+
+•
+
+Ammonia;
+
+•
+
+Hydrogen.
+
+Fallback Benchmarks:
+•
+
+Heat benchmark;
+
+•
+
+Fuel benchmark.
+
+The calculation of free allocation under the EU ETS can be summarised as follows:
+•
+
+Each installation covered by the EU ETS is divided into one or more “subinstallations”, the system boundaries of which are defined in accordance with the
+relevant benchmarks (an example is provided in Figure 2-2). This concept is similar
+to splitting an installation into production processes in the CBAM methodology.
+
+•
+
+The free allocation of each sub-installation is calculated by multiplying the relevant
+benchmark by the corresponding historical activity level4 (usually the production
+level in tonnes for product benchmarks, and heat or fuel consumption in TJ for
+fallback benchmarks).
+
+•
+
+In case of sub-installations in sectors covered by the CBAM, this preliminary free
+allocation is reduced by applying the “CBAM factor”, reflecting the phasing-out of
+free allocation in the EU ETS to mirror the phasing-in of the CBAM.
+
+•
+
+Thereafter, the free allocation for all the installation’s sub-installations is added up
+to give the total (preliminary) free allocation to the installation.
+
+•
+
+The European Commission then adds up the preliminary free allocation of all
+installations to determine whether it exceeds the total amount available for free
+allocation at EU level. If the total amount is exceeded, the allocation per installation
+must be reduced by applying a cross-sectoral correction factor (CSCF)5 published
+by the Commission.
+
+As will be shown in subsequent sections, the concept of benchmarks, the CSCF and
+the CBAM factor are also relevant for the free allocation adjustment of the CBAM
+obligation, as is evident in particular from Equations 2 and 6. The values of the CBAM
+factor and (preliminary) CSCF are listed in Table 2-1 on page 13. The effect of this
+CBAM factor is illustrated in Figure 2-1.
+
+4
+
+This is based typically on a 5-year period ahead of the five-year “allocation period”. In case of significant
+activity level changes, an adjustment of this ex-ante calculated allocation can be granted, but such
+detailed rules are not relevant for the CBAM.
+
+5
+
+The CSCF is defined as “available allocation in the EU ETS divided by the total preliminary free
+allocation of all EU ETS installations”. Because the total available amount declines annually, the CSCF
+is year-dependent.
+7
+
+Figure 2-1: Correlation between the free allocation in the EU ETS and the CBAM obligation using
+the “CBAM factor”. It is assumed that the actual emissions are 1,5 t CO2/t of good, and the
+benchmark is 1,1 t CO2/t. Note that from the start of the definitive phase of the CBAM in 2026, the
+carbon costs in the EU ETS (emissions minus EU ETS free allocation) and CBAM (CBAM
+obligation) are the same.
+1,6
+
+1,4
+
+t CO2 / t good
+
+1,2
+1,0
+0,8
+0,6
+0,4
+0,2
+0,0
+2024
+
+2026
+
+2028
+
+2030
+
+2032
+
+2034
+
+2036
+
+2038
+
+Year
+
+2.1.2
+
+Emissions
+
+EU ETS benchmark
+
+EU ETS Allocation
+
+CBAM obligation
+
+Diff. Em.-BM
+
+From EU ETS benchmarks to CBAM benchmarks
+
+While carbon pricing under the EU ETS is based on installation-level emissions, the carbon
+pricing mechanism of the CBAM is based on the embedded emissions of a good at the
+point of entry into the EU. A similar difference applies to free allocation: since there is not
+always a clear relationship between CN code and EU ETS benchmark, the definition of
+dedicated CBAM benchmarks6 was necessary for two reasons: (a) the CBAM approach
+should be as simple as possible. Therefore, the Methodology Act avoids the use of fallback
+approaches and the Free Allocation Adjustment Act follows this approach, and (b) the
+effect of precursors on embedded emissions as well as on the free allocation adjustment
+needs to be taken into account. An illustrative example is given in Figure 2-2, which shows
+the EU ETS benchmarks relevant for an integrated steel production such as in the first
+worked example of iron and steel products. As shown in Figure 2-2,
+•
+
+6
+
+the production of sintered ore is covered in the EU ETS by the agglomerated iron
+ore benchmark,
+
+See section 5 of the Annex to the Free Allocation Adjustment Act
+8
+
+•
+
+the production of pig iron and crude steel is covered in the EU ETS by the hot metal
+benchmark,
+
+•
+
+and the final production steps (such as rolling) are covered by the fuel benchmark,
+but in rare cases also the heat benchmark may be relevant.
+
+If all production steps are performed in an integrated steel plant, actual data may be
+available for each production step. If, however, steel is bought on the market and only the
+final production step is performed within the installation, no data on previous production
+steps may be available. Therefore, CBAM benchmarks are defined for:
+•
+
+every simple or complex CBAM good (both, intermediate and final products) and
+
+•
+
+single production processes7 and whole production chains8.
+
+This facilitates the use of the best available data. Note that the calculation methodology
+for the free allocation adjustment is strongly aligned with the methodology for determining
+embedded emissions, thereby limiting the administrative burden on operators.
+Figure 2-2: Comparing the CBAM production processes to the system boundaries of EU ETS
+benchmarks..
+
+2.2
+
+How to determine the free allocation adjustment
+
+The embedded emissions, free allocation adjustment and carbon price already paid are
+factored into the calculation of the CBAM obligation. This chapter elaborates on the free
+allocation adjustment. First, in section 2.2.1 the calculation rules are explained. Thereafter
+section 2.2.2 summarises the monitoring requirements for being able to perform this
+calculation.
+
+7
+
+Column A of section 5 of the Annex to the Free Allocation Adjustment Act
+
+8
+
+Column B of section 5 of the Annex to the Free Allocation Adjustment Act
+9
+
+2.2.1
+
+Calculation approach for the free allocation adjustment
+
+No calculation is needed for determining the free allocation adjustment (FAA) for
+electrical energy (CN code 2716 00 00), as it is zero according to Article 1 of the Free
+Allocation Adjustment Act (electricity producers do not get free allocation in the EU ETS).
+For calculating the free allocation adjustment of all other goods, the following equation is
+given in point 2 of the Annex to the Free Allocation Adjustment Act:
+𝐹𝐴𝐴𝑔 = 𝑆𝐸𝐹𝐴𝑔,𝑦 ⋅ 𝑀𝑔
+
+Equation (1)
+
+The parameters have the following meaning:
+FAAg
+
+is the free allocation adjustment of the imported good g;
+
+SEFAg,y
+
+is the specific embedded free allocation of good g in year y expressed as
+t CO2e / tonne of good g;
+
+Mg
+
+is the mass of good g imported during the year to which the CBAM
+declaration applies;
+
+y
+
+is the reporting period identified in accordance with Article 7 of the
+Methodology Act:
+• The default reporting period is the year during which the good was
+imported;
+• If there is sufficient evidence to identify the actual time of
+production, the reporting period is the period during which the good
+was produced;
+• If the good is imported during the year 2026, the reporting period is
+2026, independently of the actual time of production of the good.
+
+The calculation of FAAg is only relevant for the CBAM declaration, i.e. responsibility of
+the authorised CBAM declarant. The declarant has two options to perform this calculation:
+• If the authorised declarant uses default values for the specific embedded emissions,
+then SEFA must also be determined based on default values (see section 2.2.1.2);
+• If the authorised declarant has sufficient evidence for the use of actual data, i.e. if
+you as the operator of the installation producing the imported good have provided
+a verified emissions report for year y and made this available to the declarant. This
+emission report also contains all necessary information on SEFAg,y.
+To determine SEFA by you, the operator of an installation, different calculation steps are
+necessary, depending on:
+•
+
+whether SEFA are calculated for a simple or a complex good, and
+
+•
+
+whether actual values or default values are used for precursors.
+
+The necessary calculations are described in section 2.2.1.1 below.
+
+10
+
+2.2.1.1
+
+Calculation of specific embedded free allocation (SEFA) of a good using
+actual data
+
+The methodology to determine the specific embedded free allocation follows the same
+logic as for specific embedded emissions: both take into account the value chain and the
+way how installations are split into production processes. However, the determination of
+actual emissions data requires more effort than the determination of specific free
+allocation. In case of the latter, major elements of the calculation are themselves based on
+benchmarks, i.e. values determined for all installations in similar situations.
+
+Figure 2-3 shows a decision tree outlining the relevant steps for calculating the SEFA. As
+shown in the figure, determining the SEFA of a simple good is the simplest case: the
+process ends above the dotted box. This is because no precursors are relevant and therefore,
+the specific embedded free allocation equals the specific free allocation (SFA) of the
+production process of the simple good.
+Production process
+For a single production process, you as the operator must calculate the process-level
+specific free allocation using the following equation:
+𝑆𝐹𝐴𝑃𝑟𝑜𝑐 𝑔,𝑦 = 𝐶𝐵𝐴𝑀𝑦 ∙ 𝐶𝑆𝐶𝐹𝑦 ∙ 𝐵𝑀𝑔∗
+
+Equation (2)
+
+Where:
+SFAProc g,y
+
+is the process-level specific free allocation in year y calculated for the
+production process which yields good g, expressed as t CO2e / tonne of
+good g;
+
+y
+
+is the reporting period related to the production of good g (i.e. the calendar
+year during which the good is produced);
+
+CBAMy
+
+is the CBAM factor referred to in Article 10a(1a) of the EU ETS Directive
+for the year y (dimensionless) – see Table 2-1;
+
+CSCFy
+
+is the cross-sectoral correction factor for year y in accordance with Article
+10a(5) of the EU ETS Directive (dimensionless) – see Table 2-1;
+
+BMg*
+
+is the process-related CBAM benchmark for the production process which
+yields good g, expressed as t CO2e / tonne of g produced, as set out in point
+5, Column A, of the Annex to the Free Allocation Adjustment Act.
+
+11
+
+Figure 2-3: Process description (decision tree) for determining SEFA by an operator. The subprocess “Determine SEFAi,y” is described in section 2.2.1.2.
+(*) Production year and production route (or
+more general: sector-specific parameters) are
+relevant only for certain benchmarks.
+
+Start
+determination
+of
+
+(**) Column A of the table in point 5 of the
+Annex to the Free Allocation Adjustment Act.
+
+Determine
+based
+on the production year y
+and the installation’s
+production route (*) of
+good g in Column A (**)
+
+(***) If any of the precursor‘s precursors are
+produced outside the own installation,
+SEFAj,yj’ needs to be determined by executing
+the steps outlined in the red dotted
+rectangle.
+
+Determine
+and
+based on the
+production year of
+good g and Table 8-1
+
+Calculate
+Align with
+monitoring for
+embedded
+emissions
+
+Are precursors
+relevant?
+
+Determine quantity mi
+of each precursor i
+used in the production
+process
+
+Is precursor
+produced by own
+installation?
+
+Yes
+
+Calculate
+of precursors
+under own control (see
+steps above the dotted
+rectangle)
+
+No
+
+No
+
+Is producing
+installation
+known?
+Yes
+
+Determine
+default
+value
+(see Figure 8-4)
+
+No
+
+Is
+verification report
+available?
+Yes
+
+Is precursor’s
+production year
+known?
+
+No
+
+Yes
+
+Use default
+value
+
+Result:
+
+Yes
+
+Repeat for each precursor i
+(and recursively for each
+precursor’s precursor j until
+no more precursors are
+relevant)
+
+Repeat for each precursor i
+NOT produced in own
+installation
+
+No
+
+Use actual
+from verification
+report of actual
+production year
+
+Calculate
+
+Result:
+
+12
+
+Use actual
+from verification
+report of default year
+(i.e. production year of
+good g)
+
+Calculate
+(***)
+
+The value BMg* has been determined by the Commission based on the EU ETS
+benchmarks, adjusted for the system boundaries of the relevant processes in the CBAM.
+Unlike default values for embedded emissions, BMg* values apply equally for all countries.
+However, benchmarks in the EU ETS in a few cases require adjustment for the production
+route or other parameters which are not deductible from the CN code of the good.
+Furthermore, a dependency on the production year follows from a change of the factor for
+reducing the allocation to process emissions in the EU ETS9. As a consequence, in some
+cases, there are several BMg* values listed in the Annex to the Free Allocation Adjustment
+Act for a single CN code (for details see Table 2-2).
+
+Table 2-1: CBAM factor and (partly preliminary) CSCF values10 – Note: At the time of writing this
+guidance document, the CSCF values have not yet been calculated by the Commission. Therefore,
+the given values have to be considered preliminary and are provided for information only.
+Year
+
+CBAM factor
+
+CSCF
+(preliminary)
+
+2025
+
+100,0%
+
+1,0
+
+2026
+
+97,5%
+
+1,0
+
+2027
+
+95,0%
+
+1,0
+
+2028
+
+90,0%
+
+1,0
+
+2029
+
+77,5%
+
+1,0
+
+2030
+
+51,5%
+
+1,0
+
+2031
+
+39,0%
+
+1,0
+
+2032
+
+26,5%
+
+1,0
+
+2033
+
+14,0%
+
+1,0
+
+2034
+
+0,0%
+
+1,0
+
+For interpretation of Table 2-2, the Free Allocation Adjustment Act provides the following
+definitions and rules:
+•
+
+‘White cement clinker’ means cement clinker for use as main binding component in
+the formulation of materials such as joint fillers, ceramic tile adhesives, insulation, and
+anchorage mortars, industrial floor mortars, ready mixed plaster, repair mortars, and
+water-tight coatings with maximum average contents of 0,4 mass-% Fe2O3, 0,003
+mass-% Cr2O3 and 0,03 mass-% Mn2O3.
+
+•
+
+‘Grey cement clinker’ means other cement clinker than white cement clinker.
+
+9
+
+The factor determining the free allocation for process emissions sub-installations under the EU ETS is
+0,97 until 31 December 2027 and 0,91 for the years 2028 and onwards, as defined in Article 16(e) of
+Commission Delegated Regulation (EU) 2019/331.
+
+10
+
+CSCF values for the period 2026 to 2030 have been published in Commission Implementing Decision
+(EU) 2026/1862 (http://data.europa.eu/eli/dec_impl/2026/1862/oj). The values applying from 2031 are
+expected to be published by the Commission in late 2030. Therefore, the table must be interpreted as
+containing only preliminary data for years from 2031.
+13
+
+•
+
+In the case of other hydraulic cements (CN 2523 90 00) containing a mixture of white
+clinker and of grey clinker and/or calcined clay, the CBAM benchmark shall be
+calculated as a weighted average that reflects the composition.
+
+•
+
+‘Stainless steel’ means alloy steels containing, by weight, 1,2 % or less of carbon and
+10,5 % or more of chromium, with or without other elements.
+
+•
+
+‘High alloy steel’ means steel other than stainless steel, containing 8 % or more
+metallic alloying elements or steel where high surface quality and processability is
+required.
+
+•
+
+‘Low alloy steel’ means alloy steel other than high-alloy steel.
+
+•
+
+‘Carbon steel’ means steel other than stainless steel, high alloy or low alloy steel.
+
+Table 2-2: Overview of special parameters relevant for selecting a CBAM benchmark value where
+more than one value is given for a single CN code in the Annex to the Free Allocation Adjustment
+Act.
+Code
+
+Condition to apply the value
+
+(1)
+
+Value is to be used for production years 2026-27
+
+(2)
+
+Value is to be used for production years 2028-30
+
+(A)
+
+Grey clinker / cement
+
+(B)
+
+White clinker / cement
+
+(C)
+
+Carbon Steel based on BF/BOF (production route: Blast Furnace / Basic Oxygen Furnace)
+
+(D)
+
+Carbon Steel based on DRI/EAF (production route: Direct Reduced Iron / Electric Arc Furnace)
+
+(E)
+
+Carbon Steel based on Scrap/EAF (production route: Electric Arc Furnace, with scrap as main input
+material)
+
+(F)
+
+Low alloy Steel based on BF/BOF (production route: Blast Furnace / Basic Oxygen Furnace)
+
+(G)
+
+Low alloy Steel based on DRI/EAF (production route: Direct Reduced Iron / Electric Arc Furnace)
+
+(H)
+
+Low alloy Steel based on scrap/EAF (production route: Electric Arc Furnace, with scrap as main input
+material)
+
+(J)
+
+High alloy Steel (based on EAF) (Electric Arc Furnace, with scrap as main input material)
+
+(K)
+
+Primary Aluminium (i.e. aluminium produced by electrolysis from alumina)
+
+(L)
+
+Secondary Aluminium (i.e. aluminium produced by remelting of aluminium scrap as main input)
+
+SEFA of a simple good
+As explained above and shown in
+Figure 2-3, the SEFA value of a simple good g equals the SFA of the production process
+of good g:
+𝑆𝐸𝐹𝐴𝑔,𝑦 = 𝑆𝐹𝐴𝑃𝑟𝑜𝑐 𝑔,𝑦
+Where:
+SFAProc g,y
+
+is the direct result of Equation (2).
+
+14
+
+Equation (3)
+
+SEFA of a complex good
+For a complex good, the calculation of the SEFA is more complicated, as the SEFAi of each
+precursor needs to be considered in addition to the SFA of the production process.
+In determining the SEFA of complex goods, only precursors falling themselves under the
+CBAM are to be considered. This means that the specific free allocation of any precursor
+originating in the customs territory of the European Union shall be zero. The same applies
+to precursors originating from third countries or territories that are exempted pursuant to
+point 1 of Annex III to CBAM Regulation11. The quantity of the precursor used, however,
+must be included in the operator’s emissions report.
+It is important to note that the CBAM benchmarks used for calculating SEFA are based on
+EU ETS benchmarks, and specific rules for system boundaries apply. For how to select
+appropriate benchmarks, please see section 2.2.1.4.
+The following equation is given in point 3.3 of the Annex to the Free Allocation
+Adjustment Act for calculating the SEFA of a complex good:
+𝑛
+
+𝑆𝐸𝐹𝐴𝑔,𝑦 = 𝑆𝐹𝐴𝑃𝑟𝑜𝑐𝑔,𝑦 + ∑ 𝑚𝑖,𝑦 · 𝑆𝐸𝐹𝐴𝑖,𝑦𝑖 ′
+
+Equation (4)
+
+𝑖=1
+
+Parameter explanations are as follows:
+SEFAg,y
+
+is the specific embedded free allocation for the complex good g in year y,
+expressed as t CO2e / tonne of good g
+
+SFAProc g,y
+
+is the process-related specific free allocation in year y calculated for the
+production process which yields good g in accordance with Equation (2)
+expressed as t CO2e / tonne of good g
+
+mi,y
+
+is the specific mass of precursor i consumed for the production of one
+tonne of good g during reporting period y, as determined in accordance
+with the rules set out in Methodology Act, expressed as t/t
+
+SEFAi,y’
+
+is the specific embedded free allocation of precursor i in year yi’,
+expressed as t CO2e / tonne of precursor i
+
+y
+
+is the reporting period identified in accordance with Article 7 of the
+Methodology Act:
+• The default reporting period is the year during which the good was
+imported;
+• If there is sufficient evidence to identify the actual time of
+production, the reporting period is the period during which the good
+was produced; From the perspective of you as the operator of the
+installation, y is always known to be the actual production year.
+
+11
+
+The countries currently listed in point 1 of Annex III to the CBAM Regulation are: Iceland,
+Liechtenstein, Norway and Switzerland; the listed territories are: Büsingen, Heligoland, Livigno, Ceuta,
+Melilla.
+15
+
+• If the good is imported during the year 2026, the reporting period is
+2026, independently of the actual time of production of the good.
+This rule means that no earlier reporting year than 2026 may be
+applied.
+yi’
+
+Is the production year of the precursor i, defined as the reporting period
+used in the calculation of SEFAi for precursor i as identified in accordance
+with Article 13 of the Methodology Act:
+• The default reporting period of a precursor is the year of production
+of the complex good;
+• Where operators provide the verifier with sufficient evidence to
+identify the actual time of production, the reporting period is the
+period during which the precursor was produced, but not earlier than
+2026.
+
+The specific mass mi,y of each precursor used shall be determined using the following
+equation:
+𝑚𝑖,𝑦 =
+
+𝑀𝑖,𝑦
+𝐴𝐿𝑔,𝑦
+
+Equation (5)
+
+Where:
+Mi,y
+
+is the total mass of the precursor i expressed in tonnes consumed during
+reporting period y for the production process to which good g belongs.
+Mi,y is determined in accordance with the Methodology Act;
+
+ALg,y
+
+is the activity level, meaning the quantity of goods produced within the
+system boundaries of the production process producing good g, in year y
+expressed in tonnes. ALg,y is determined in accordance with the
+Methodology Act12;
+
+y
+
+is the reporting period identified in accordance with Article 7 of the
+Methodology Act:
+• The default reporting period is the year during which the good was
+imported;
+• If there is sufficient evidence to identify the actual time of
+production, the reporting period is the period during which the good
+was produced;
+• If the good is imported during the year 2026, the reporting period is
+2026, independently of the actual time of production of the good.
+
+Where precursors are themselves complex goods, the calculation of SEFAi,y’ shall be
+repeated recursively using Equations (2), (3), (4) and (5), as appropriate, until no more
+precursors are relevant. This means that the equations are applied along the value chain
+12
+
+ALg is to be determined in accordance with point F of Annex II to the Methodology Act. For purposes
+of the embedded emissions, ALg is always expressed in functional units. However, for purposes of SEFA,
+ALg must be converted to values per tonne of good. This is described in sectoral Guidance document 5a
+(for cement) and 5c (for fertilisers) respectively.
+16
+
+until the first precursor is reached (i.e. a precursor that itself has no further precursors). In
+other words: until the precursor is a simple good for which SEFA equals SFA – see
+Equation 3). If either all precursors are produced within the operator’s own installation or
+verification reports are available for all externally sourced precursors, the actual values for
+SEFAi,y’ of precursors shall be used. If, however, no verification reports are available for
+externally sourced precursors, the SEFAi,y’ values of these precursors need to be
+determined using default values (see section 2.2.1.2). This means that (as required by the
+Free Allocation Adjustment Act), the SEFAi,y’ for each precursor shall be determined using
+one of the following methods:
+•
+
+where the value for the precursor i is provided by the producer and verified in
+accordance with Article 8 of the CBAM Regulation, the default reporting period of
+the precursor (i.e. the production year of good g) is used unless there is sufficient
+evidence to identify the actual year of production.
+
+•
+
+where the value for the precursor i is not provided by the producer, the default
+reporting period of the precursor is used (i.e. the same year as the production of the
+complex good) and is determined by selecting the appropriate value from point 5,
+Column B, of the Annex to the Free Allocation Adjustment Act (see section
+2.2.1.2).
+
+2.2.1.2
+
+Calculation of specific embedded free allocation (SEFA) of a good using
+default values
+
+Where default values are used for the specific embedded emissions of a final good
+imported, no difference is made between simple and complex goods. The following
+equation for calculating SEFA is given in point 4 of the Annex to the Free Allocation
+Adjustment Act:
+𝑆𝐸𝐹𝐴𝑔,𝑦 = 𝐶𝐵𝐴𝑀𝑦 ∙ 𝐶𝑆𝐶𝐹𝑦 ∙ 𝐵𝑀𝑔
+
+Equation (6)
+
+Where:
+CBAMy
+
+is the CBAM factor referred to in Article 10a(1a) of the EU ETS Directive
+for the year y (dimensionless) – see Table 2-1;
+
+CSCFy
+
+is the cross-sectoral correction factor for the reporting period y determined
+by the Commission pursuant to Article 10a(5) of the EU ETS Directive
+(dimensionless) – Table 2-1;
+
+BMg
+
+is the default CBAM benchmark set out in Column B of the Annex to the
+Free Allocation Adjustment Act. Where relevant, this value includes the
+embedded free allocation for all precursors.
+
+y
+
+is the reporting period as identified in accordance with Article 7 of the
+Methodology Act:
+• The default reporting period is the year during which the good was
+imported;
+• If there is sufficient evidence to identify the actual time of production,
+the reporting period is the period during which the good was
+produced;
+
+17
+
+• If the good is imported during the year 2026, the reporting period is
+2026, independently of the actual time of production of the good.
+For the purpose of selecting the appropriate value for BMg the following parameters shall
+be taken into account:
+•
+
+the country of origin of good g;
+
+•
+
+the CN code for good g;
+
+•
+
+if applicable, further parameters defining the good g, as specified in Annex I of the
+Default Values Act (such as grey / white cement clinker), as presented in Table 2-2
+above;
+
+•
+
+if applicable, the production route specified for the country of origin in Annex I to
+the Default Values Act (such as the blast furnace / electric arc furnace route).
+
+By way of derogation from the approach when using actual data, for precursors included
+in the default CBAM benchmark, the year y is always the same year in which the final
+complex good is produced. This rule has already been applied when determining the
+CBAM benchmarks BMg and do not require any action by users of those values.
+If the operator uses the calculation above for a purchased precursor instead to a final
+product, the only difference is in the determination of the precursor’s production year, to
+which the usual rule for precursors applies (parameter yi’ explained above for Equation 4).
+A common process for selecting the correct CBAM benchmark is described in the next
+section.
+
+2.2.1.3
+
+Determining the applicable CBAM benchmark
+
+As shown in the previous sections, a distinction must be made between the process-related
+CBAM benchmark (BMg*) and the default CBAM benchmark (BMg) which takes into
+account precursors. Table 2-3 presents an excerpt from Section 5 of the Annex to the Free
+Allocation Adjustment Act for selected iron and steel products. Column A contains CBAM
+benchmarks for individual process steps and is relevant when actual data are used to
+determine SEFA. CBAM benchmarks provided in column B cover the entire production
+chain of the respective good (i.e. precursors are already taken into account) and are relevant
+for determining the SEFA where default values are used for the specific embedded
+emissions. Accordingly, for simple goods, column A and column B contain the same
+values, as no precursors are relevant (see e.g. agglomerated iron ore CN 2601 12 00 in
+Table 2-3).
+
+18
+
+Table 2-3: Example view of the Table in Section 5 of the Annex to the Free Allocation Adjustment
+Act
+CN code
+
+CN description
+
+Column A
+
+Column B
+
+BMg*
+[tCO2e/t]
+
+BMg
+[tCO2e/t]
+
+Iron & Steel
+2601 12 00
+
+Agglomerated iron ores and concentrates (excl. roasted iron pyrites)
+
+0,086
+
+0,086
+
+7201 10 19
+
+Non-alloy pig iron in pigs, blocks or other primary forms, containing
+by weight ≤ 0,5 % phosphorus, ≥ 0,4 % manganese and > 1 % silicon
+
+1,089
+
+1,210
+
+7207 11 11
+
+Semi-finished products, of non-alloy free-cutting steel, containing by
+weight < 0,25 % carbon, of square or rectangular cross-section, the
+width < twice the thickness, rolled or obtained by continuous casting
+
+0,188 (C)
+
+1,364 (C)
+
+0,065 (D)
+
+0,475 (D)
+
+0,065 (E)
+
+0,066 (E)
+
+1,361 (1)
+
+1,361 (1)
+
+1,277 (2)
+
+1,277 (2)
+
+0,038
+
+1,364 (C)
+
+7202 11 20
+
+7318 15 20
+
+Ferro-manganese, containing by weight > 2 % carbon, with a
+granulometry ≤ 5 mm and a manganese content by weight > 65 %
+Screws and bolts, of iron or steel "whether or not with their nuts and
+washers", for fixing railway track construction material (excl. coach
+screws)
+
+0,475 (D)
+0,066 (E)
+
+7318 15 35
+
+Screws and bolts, of stainless steel "whether or not with their nuts and
+washers", without heads (excl. screws and bolts for fixing railway
+track construction material)
+
+0,038
+
+1,154 (1)
+1,116 (2)
+
+In the example of crude steel (CN 7207 11 11), the CBAM benchmark depends on the
+production route which may be one of the following:
+•
+
+(C) Carbon Steel based on BF/BOF (Blast Furnace/Basic Oxygen Furnace);
+
+•
+
+(D) Carbon Steel based on DRI/EAF (Direct Reduced Iron/Electric Arc Furnace);
+
+•
+
+(E) Carbon Steel based on Scrap/EAF.
+
+Ferro-manganese (CN 7202 11 20) illustrates a good for which the CBAM benchmark is
+year-dependent:
+•
+
+(1) Value is to be used for production years 2026-27;
+
+•
+
+(2) Value is to be used for production years 2028-30.13
+
+The complete list of parameters used in the Annex of the Free Allocation Adjustment Act
+has been given above in Table 2-2.
+
+Rules when working with actual data
+For selecting the appropriate year for the benchmark, the rules laid out above (e.g. under
+Equation 4 in section 2.2.1.1) have to be applied. You as the operator know the year of
+
+13
+
+This year-dependency stems from the factor determining the free allocation for process emissions subinstallations under the EU ETS, which is 0,97 for the years until 31 December 2027 and 0,91 for the
+years 2028 and onwards, as defined in Article 16(e) of Commission Delegated Regulation (EU)
+2019/331.
+19
+
+production of the goods in your installation for this purpose. Furthermore, you also know
+the applicable production route for your products14.
+
+Rules when using default values
+Where the specific embedded emissions are based on default values, the relevant CBAM
+benchmarks are also determined fully using default CBAM benchmarks, i.e. those values
+provided in column B of section 5 of the Annex of the Free Allocation Adjustment Act, as
+illustrated in Table 2-3. However, in this case, the authorised declarant importing a final
+CBAM good will not know the production route or other parameters needed to select the
+appropriate value from that table. You as operator of an installation using a precursor may
+be in the same situation for that precursor.
+To determine the appropriate CBAM benchmark in this situation, an interim step must be
+made before looking up the CBAM benchmark: to determine the parameter in question,
+the list of default values for specific embedded emissions needs to be consulted as
+follows15:
+•
+
+If the country of origin of the good or precursor is known, the applicable production
+route shall be identified in the last column of the table set out in Annex I to the
+Default Values Act for the respective country and CN code.
+
+•
+
+If the country of origin of the good or precursor is unknown, the applicable
+production route shall be identified in the last column of the table set out for “Other
+countries and Territories” in Annex I to the Default Values Act for a good, or in
+Annex IV for a precursor, for the applicable CN code.
+
+To illustrate this process, an excerpt from Annex I to the Default Values Act is presented
+in Table 2-4 for screws and bolts (CN 7318 15) from Algeria. This product illustrates a
+case where CBAM benchmarks are provided at 8-digit CN code level (see Table 2-3),
+while the SEE default value is provided at the 6-digit level.
+To determine the CBAM benchmark of screws and nuts under CN 7318 15 20 the
+production route specified in Annex I to the Default Values Act shall be used – (C) Carbon
+Steel based on BF/BOF in this case. On the other hand, for the CN 7318 15 35, the CBAM
+benchmark is independent of the production route and instead depends on the year of
+production, as shown in Table 2-3. This illustrates a case where a a production route is
+indicated for a group of CN codes at HS code level (i.e. with 4 or 6 digits) and the CBAM
+benchmark for one or more of the CN codes at 8-digit-level in that group has no production
+route, the CBAM benchmark (BM) for the concerned CN code being independent of the
+production route. The year to be used for determining the applicable CBAM benchmark is
+determined in line with the rules laid out above (e.g. under Equation 4 in section 2.2.1.1).
+The whole process of selecting the correct CBAM BM value is summarised below in
+Figure 2-4.
+
+14
+
+In some cases, you will have to determine SEFA values at a more granular level than SEE.
+
+15
+
+This is no additional process, since this look-up of the default SEE value has to be performed anyway.
+20
+
+Table 2-4: Exemplary excerpt of Annex I to the Default Values Act
+Algeria
+Product CN
+Code
+
+Description
+
+Default
+Value
+
+Default
+Value
+
+Default
+Value
+
+2028 and Underlying
+onwards production
+Default
+Default
+route
+(direct
+(indirect
+(total
+Value
+Value
+Default
+determinemissions) emissions) emissions)
+Value
+ing
+(including (including
+mark-up) mark-up) (including CBAM BM
+mark-up)
+
+Iron and
+steel
+7318 15
+
+2026
+
+2027
+
+10 % mark- 20 % mark- 30 % markup
+up
+up
+Threaded screws and
+bolts, of iron or steel,
+whether or not with
+their nuts and
+washers (excl. coach
+screws and other
+wood screws, […])
+
+3,000
+
+N/A
+
+3,000
+
+3,300
+
+3,600
+
+3,900
+
+Figure 2-4: Process description for determination of SEFA using only default values
+
+Start
+determination
+of default
+
+Determine the good’s
+(or precursor’s)
+CN code (*)
+
+Yes
+
+No
+
+Is good’s country
+of origin known?
+
+Determine production
+route using the CN
+code and Annex I
+(table “Other countries
+and territories”) for
+goods and Annex IV for
+precursors (**)
+
+Determine production
+route using the CN
+code, the actual
+country of origin and
+Annex I to the Default
+Values Act (**)
+
+Determine
+based
+on the production year
+of good g, the CN code,
+the production route
+and Column B (***)
+
+Determine
+and
+based on the
+production year of
+good g and Table 8-1
+
+Calculate
+
+(*) For cement clinker, in addition to
+the CN code, the distinction between
+grey and white clinker is relevant for
+determining the appropriate
+production route.
+
+(**) Where the production route is
+not relevant for determining the
+CBAM BM, the table in the Default
+Values Act shows blank entries.
+(***) Column B of the table in point 5
+of the Annex to the Free Allocation
+Adjustment Act.
+
+Result:
+
+21
+
+(C)
+
+2.2.1.4
+
+Composing the correct value chains
+
+Some more granularity is required because of the EU ETS-consistent differentiation of
+CBAM benchmarks by production route or precursor selection, i.e. because of the subcategories (A) to (L) listed in Table 2-2 (page 14). This selection may be necessary either
+at the point of the production process (when selecting the value in column A in Section 5
+of the Annex to the Free Allocation Adjustment Act), or for a final CBAM good (Column
+B of that Annex). This is illustrated below in examples.
+Special cases:
+•
+
+Pig iron / crude steel: In the EU ETS, the “hot metal” product benchmark covers
+jointly the CBAM production processes for the aggregated goods categories “pig
+iron” and “crude steel” (only for the blast furnace production route). However, in
+the CBAM, separate benchmarks for these two aggregated goods categories (or
+rather for the relevant CN codes within each category) are provided in the Free
+Allocation Adjustment Act. For the EAF production routes, system boundaries are
+like in the EU ETS.
+
+•
+
+Calcined clay (CN 2507 00 80) receives free allocation using the grey cement
+clinker benchmark in the EU ETS, because they are competing materials. This is
+reflected also in the CBAM benchmarks.
+
+•
+
+Ammonia production: In the CBAM, hydrogen may have to be considered as
+separate precursor for the calculation of embedded emissions if it is produced in a
+clearly separate production process or separate installation. However, for the
+calculation of the free allocation adjustment, hydrogen production is already
+included in the system boundary of the CBAM benchmark (mirroring the ammonia
+EU ETS benchmark). Therefore, no separate free allocation for any hydrogen
+production within ammonia production should be taken into account16, even when
+hydrogen comes from a separate production process.
+
+Examples: Different cement types
+As illustrated in Figure 2-5, it is a relatively simple situation in this sector: Where grey
+cement is produced, there is also a benchmark for grey cement clinker as the main
+precursor, and the same applies to white clinker/cement. The example also shows the
+optional use of calcined clays, for which no differentiation of the default values exists.
+However, there may also be cements consisting of mixtures of grey and white clinkers. In
+this latter case, the following applies:
+•
+
+An authorised CBAM declarant importing this cement, has two options:
+•
+
+16
+
+If it is clear whether the cement is a white or grey cement, the declarant will select
+the appropriate default value for both the SEE (specific embedded emissions) and
+SEFA. Default values are independent of the clinker content (i.e. functional unit),
+hence the values are automatically consistent with each other. If the mixed nature
+of the cement does not allow a decision regarding grey or white clinker, the
+
+This is different from the approach for specific embedded emissions, where precursors must always be
+taken into account if coming from a separate production process.
+22
+
+conservative approach is to select the higher default value (white cement, as in
+Figure 2-5).
+•
+
+•
+
+•
+
+If the authorised declarant has received verified values from the operator of the
+producing installation, these have been determined as described in the next bullet
+point, and the declarant can use them as provided.
+
+The operator producing this mixed cement who determines actual data, has to apply
+the provision given in section 5.2.1 of the Annex to the Free Allocation Adjustment
+Act: “In the case of other hydraulic cements (CN 2523 90 00) containing a mixture of
+white clinker and of grey clinker and/or calcined clay, the CBAM benchmark shall be
+calculated as a weighted average that reflects the composition.”. Consequently, the
+operator will apply the value chain description given on the right side of Figure 2-5
+starting at the bottom:
+•
+
+The benchmark for the production process (the cement grinding) BMg* is taken
+from column A of the Free Allocation Adjustment Act.
+
+•
+
+The weighted average (using the monitored values of mi for each of the precursors,
+i.e. clinkers / calcined clays) of the contribution of the precursors is determined:
+•
+
+If for example the operator produces the white clinker in its own installation,
+the operator applies the BMg* given under the index “(B)” for white clinker in
+column A of the Annex to the Free Allocation Adjustment Act.
+
+•
+
+Assuming that in the example the operator uses purchased grey clinker without
+having a verification report, the operator uses the default value BMg for finished
+grey clinker, as taken from Column B of that Annex, and given with the index
+“(A)” for grey clinker.
+
+Should the operator also use calcined clay, there is no distinction between subcategories applicable, and the applicable value can easily be taken from the Annex of
+the Free Allocation Adjustment Act.
+
+Figure 2-5: Examples for selecting default CBAM benchmarks, cement sector.
+Grey cement
+
+White cement
+
+Mixed cement
+
+Raw materials
+
+Raw materials
+
+Raw materials
+
+Raw materials
+
+Raw materials
+
+Raw materials
+
+Raw materials
+
+Clinker
+production
+BMg* (A)
+
+Calcined clays
+production
+BMg*
+
+Clinker
+production
+BMg* (B)
+
+Calcined clays
+production
+BMg*
+
+Clinker
+production
+BMg* (A)
+
+Clinker
+production
+BMg* (B)
+
+Calcined clays
+production
+BMg*
+
+Grey clinker
+BMg (A)
+
+Calcined clays
+
+White clinker
+BMg (B)
+
+Calcined clays
+
+Grey clinker
+BMg (A)
+
+White clinker
+BMg (B)
+
+Calcined clays
+
+Cement
+production
+BMg* (A)
+
+Cement
+production
+BMg* (B)
+
+Cement
+production
+BMg* (B)
+
+Grey cement
+BMg (A)
+
+White cement
+BMg (B)
+
+Mixed cement
+BMg (B)
+
+23
+
+Examples: Steel products
+For steel, Figure 2-6 illustrates a simple (left side) and a complex (right side) example.
+The simple example, steel from an integrated steel plant using the blast furnace route,
+demonstrates that the index “(C)” as indicator for carbon steel/blast furnace route can apply
+throughout the value chain to each subsequent product after the blast furnace. For each of
+the relevant processes (sintering of the ore, pig iron production, crude steel production,
+final production of steel products), there is a separate CBAM benchmark found in the Table
+of Section 5 of the Free Allocation Adjustment Act. Note that unlike in the EU ETS, there
+is a differentiation of the production steps for pig iron and crude steel, while in the EU ETS
+both steps are covered in one go by the “hot metal” benchmark.
+Note: If you as the operator use the “bubble approach”, you must take into account the
+additional monitoring requirements explained in the box in section 2.2.2. Without this
+additional monitoring you would have insufficient data to correctly calculate the SEFA for
+your goods.
+Figure 2-6: Examples for selecting default CBAM benchmarks, steel sector.
+
+Carbon Steel (Blast Furnace
+Route)
+
+High Alloy Steel (complex example)
+
+Raw materials
+
+Raw materials
+
+Raw materials
+
+Sinter process
+BMg*
+
+Sinter process
+BMg*
+
+Sinter process
+BMg*
+
+Agglomerated
+Iron Ore – BMg
+
+Agglomerated
+Iron Ore – BMg
+
+Raw materials
+
+Agglomerated
+Iron Ore – BMg
+
+Blast Furnace
+process
+BMg*
+
+Blast Furnace
+process
+BMg*
+
+Direct Iron
+production
+BMg*
+
+Ferro-Alloy
+production
+(e.g. FeCr) –
+BMg*
+
+Pig Iron
+BMg
+
+DRI
+BMg
+
+Pig Iron
+BMg
+
+Scrap
+
+Scrap
+
+BOF process
+BMg* (C)
+
+EAF process
+BMg* (J)
+
+Crude Steel
+BMg (C)
+
+Crude Steel
+BMg (J)
+
+Forming
+processes
+BMg* (C)
+
+Forming
+processes
+BMg* (J)
+
+Steel product
+BMg (C)
+
+Steel product
+BMg (J)
+
+FeCr
+BMg
+
+The complex example shows the production of a high-alloy steel product using the main
+route “(J)”, i.e. high-alloy (but not stainless) steel produced by the EAF (electric arc
+furnace) route, where the main input is (high alloy) scrap. However, the example assumes
+that for achieving the appropriate alloy grade of the final product, the operator uses also
+24
+
+some virgin materials (FeCr, pig iron from a blast furnace and Direct reduced iron (DRI)).
+It is assumed that all those precursors are received from other installations.
+The calculation of SEFA should, as usual, start from the bottom of the picture, i.e. from the
+final product:
+•
+
+In the role of an authorised declarant, there is no need to know about the production
+route. If the declarant imports a good without verification report, only the final BMg
+relevant for the specific CN code and country of origin have to be looked up using the
+process described in section 2.2.1.3, Figure 2-4.
+
+•
+
+In the role of the operator producing this high-alloy steel product, you start by selecting
+the BMg* value for the final production process, with the indicator “(J)”.
+
+•
+
+As precursor of this last process, you use the SEFA value you have determined for the
+crude steel, using the BMg* for the crude steel according to its CN code and the
+appropriate indicator “(J)”. To this value you need to add SEFA values of the following
+precursors, using their applicable mi values which you have determined from your
+monitoring:
+
+17
+
+•
+
+The main input is scrap, which is not a CBAM good. Therefore, it has zero
+embedded emissions, and for consistency also no specific embedded free
+allocation.
+
+•
+
+For the ferrochromium (FeCr) the operator can, as usual, take its applicable SEFA
+value from the verification report of the producing installation (in which case the
+value would be composed of the applicable BMg* values of the alloy production
+plus, if applicable, the SEFA of the used sintered iron ore), or calculate it using the
+BMg value from the Free Allocation Adjustment Act.
+As there is no differentiation for different production processes or material
+compositions, the process described in section 2.2.1.3 does not have to be followed
+in full. However, as the BM values are inclusive of process emissions, a
+differentiation by production year does apply.
+
+•
+
+The same applies to the DRI used: Either take the value from a verification report
+or from the annex to the Free Allocation Adjustment Act. Note that in this example
+it is assumed that the producer of the DRI has used iron ore that does not require
+an additional sintering step. The default BMg value, however, is different from the
+BMg* value for CN 7203nnnn, because a contribution of sintered ore is assumed
+(in line with assumptions for default SEE values). If the operator using this DRI
+wants to benefit from this more efficient production and omit the contribution of
+agglomerated iron ore, this is only possible if the producer of DRI provides verified
+actual data17.
+
+•
+
+The example also assumes that some pig iron is added to the electric arc furnace
+process for adjusting the alloy grade. Again, the operator can either use a value
+obtained from the verification report of the pig iron producing installation, which
+would then take into account the components of the above value chain, or the
+default value for the pig iron.
+
+These actual data would then show provide evidence that no agglomerated iron ore was used, and
+consequently both SEE and SEFA values would be lower than the default ones, accordingly.
+25
+
+2.2.2
+
+Monitoring requirements for the free allocation adjustment
+
+In principle, the calculation methodology of the free allocation adjustment is similar to the
+methodology for the determination of embedded emissions. As can be concluded from the
+equations in the previous sections, crucial data to be monitored are:
+•
+
+For the authorised declarant, only the mass of the imported good (Mg) and the value
+SEFAg;
+
+•
+
+For the operator, the specific mass of each precursor used (mi), if applicable, and
+the appropriate BMg and BMg* values.
+
+Table 2-5: Analogy between embedded emissions and embedded free allocation calculation
+methodologies
+Specific Embedded Emissions (SEE)
+
+Specific Embedded Free Allocation (SEFA)
+𝑛
+
+𝒏
+
+𝑺𝑬𝑬𝒅𝒊𝒓 = 𝑨𝒕𝒕𝒓𝑬𝒎𝑷𝒓𝒐𝒄,𝒅𝒊𝒓 + ∑ 𝒎𝒊 · 𝑺𝑬𝑬𝒊,𝒅𝒊𝒓
+
+𝑆𝐸𝐹𝐴𝑔,𝑦 = 𝑆𝐹𝐴𝑃𝑟𝑜𝑐𝑔,𝑦 + ∑ 𝒎𝒊,𝒚 · 𝑆𝐸𝐹𝐴𝑖,𝑦𝑖′
+
+𝒊=𝟏
+
+𝑖=1
+
+𝑺𝑬𝑬𝒅𝒊𝒓 are the direct embedded emissions of the
+production process for the complex good
+
+𝑆𝐸𝐹𝐴𝑔,𝑦 is the embedded free allocation for the complex
+good g in year y
+
+𝑨𝒕𝒕𝒓𝑬𝒎𝑷𝒓𝒐𝒄,𝒅𝒊𝒓 are the attributed emissions of the
+production process
+
+S𝐹𝐴𝑃𝑟𝑜𝑐g,y is the free allocation calculated for the
+production process
+
+𝒎𝒊 is the mass of precursor i used in the process per
+tonne of complex good
+
+𝑚𝑖,𝑦 is the mass of precursor i used in the process in year
+y
+
+𝑺𝑬𝑬𝒊,𝒅𝒊𝒓 is the reported value of specific direct
+embedded emissions of precursor i
+
+𝑆𝐸𝐹𝐴𝑖,𝑦𝑖′ is the reported value of specific embedded free
+allocation of precursor i in year yi‘
+y is the reporting period during which good g was
+produced
+yi’ is the reporting period during which precursor i was
+produced, and used in the calculation of 𝑆𝐸𝐹𝐴𝑖,𝑦𝑖′
+
+Except for the mass parameters, all other data can be looked up from tables or taken from
+other operators’ verification reports. However, the mi values are monitored by operators
+already for the purpose of determining SEE (the specific embedded emissions of the goods
+produced). As demonstrated in Table 2-5, the calculation methods for SEE and SEFA are
+fully aligned, as mi are the same.
+Some specific features of the EU ETS benchmarks (e.g. differentiation by production
+routes and steel grades for steel, or grey/white cement clinker for cement – see section
+2.1.1), may require the following additional information to identify the appropriate CBAM
+benchmark:
+•
+
+the country of origin of the good (and precursors if applicable),
+
+•
+
+the CN code for the good (and precursors if applicable),
+
+26
+
+•
+
+if applicable, further sector-specific parameters defining the good (e.g. grey / white
+cement clinker), as specified in Annex I18 of the Default Values Act (and defining
+precursors, if applicable),
+
+•
+
+if applicable, the production route of the good or the default production route
+specified for the country of origin of the good (e.g. blast furnace route or electric
+arc furnace).
+
+Further factors needed for the calculation of the free allocation adjustment are the CBAM
+factor and the Cross-Sectoral Correction Factor (CSCF), which are year-dependent.
+Therefore, a further monitoring requirement is:
+•
+
+the reporting period related to the production of the good (and precursors, if
+applicable).
+
+Note on additional monitoring requirements, if the bubble approach is used
+While CN codes and mi values of intermediate products are not relevant for determining
+specific embedded emissions using the bubble approach, they are crucial for calculating
+the specific embedded free allocation. This can be illustrated using the example of an
+integrated steel plant (see Figure 2-2 above). Given that different CBAM benchmarks
+apply to the production of sintered ore, pig iron, crude steel and final products, the
+following additional data (beyond those required for the calculation of SEE) are
+necessary to calculate SEFA:
+• The CN code of each intermediate product listed below;
+• The mass of sintered ore consumed for the production of one tonne of pig iron;
+• The mass of pig iron consumed for the production of one tonne of crude steel;
+• The mass of crude steel consumed for the production of one tonne of final product.
+These additional mi values are the only element that needs to be added to the
+monitoring methodology only for the purpose of the free allocation adjustment.
+
+18
+
+If the country of origin is unknown, Annex IV of the Default Values Act is to be used instead.
+27
+
+Annex A
+
+List of definitions
+
+Term
+
+Definition
+
+‘Accuracy’
+
+means the closeness of the agreement between the result of
+a measurement and the true value of the particular quantity
+or a reference value determined empirically using
+internationally accepted and traceable calibration materials
+and standard methods, taking into account both random
+and systematic factors
+
+‘Activity data’
+
+means the amount of fuels or materials consumed or
+produced by a process relevant for the calculation-based
+methodology, expressed in terajoules (TJ), mass in tonnes
+or (for gases) volume in normal cubic metres, as
+appropriate
+
+‘Actual emissions’
+
+means the emissions calculated based on primary data from
+the production processes of goods and from the production
+of electricity consumed during those processes as
+determined in accordance with the methods set out in
+Annex IV [to the Methodology Act]
+
+‘Activity level’
+
+means the quantity of goods to which the same functional
+unit applies that are produced within the system boundaries
+of a production process during a reporting period
+
+‘Aggregated goods
+categories’
+
+means aggregated goods categories pursuant to Table 1 of
+point 2 of Annex I. A group of CBAM goods with their CN
+codes, used for the purpose of defining system boundaries
+of production processes.
+
+‘Agricultural,
+aquaculture, fisheries
+and forestry residues’
+
+means residues that are directly generated by agriculture,
+aquaculture, fisheries and forestry and that do not include
+residues from related industries or processing
+
+‘Authorised CBAM
+declarant’
+
+means a person authorised by the competent authority in
+accordance with Article 17 [of the CBAM Regulation].
+The ‘authorised CBAM declarant’ [which replaces the
+term ‘reporting declarant’ from the transitional period]
+may be importers of CBAM goods, or their indirect
+customs representatives, who have applied for and been
+granted the status of authorised CBAM declarant.
+
+‘Batch’
+
+means an amount of fuel or material representatively
+sampled and characterised, and transferred as one shipment
+or continuously over a specific period of time
+
+‘Biomass’
+
+means biomass as defined in Article 2, point (24) of the
+Renewable Energy Directive (RED II)19; it includes
+bioliquids and biofuels as defined in Article 2, point (32)
+and (33), biomass fuels as defined in Article 2, point (27)
+and biogas as defined in Article 2 point (28) of the RED II;
+
+19
+
+Directive (EU) 2018/2001
+28
+
+Term
+
+Definition
+
+‘Biomass fraction’
+
+means the ratio of carbon stemming from biomass to the
+total carbon content of a fuel or material, expressed as a
+fraction
+
+‘Calculation factors’
+
+means net calorific value, emission factor, preliminary
+emission factor, oxidation factor, conversion factor, carbon
+content or biomass fraction
+
+‘Calibration’
+
+means the set of operations, which establishes, under
+specified conditions, the relations between values indicated
+by a measuring instrument or measuring system, or values
+represented by a material measure or a reference material
+and the corresponding values of a quantity realised by a
+reference standard
+
+‘Carbon price’
+
+means the monetary amount paid in a third country, under a
+carbon emissions reduction scheme, in the form of a tax,
+levy or fee or in the form of emission allowances under a
+greenhouse gas emissions trading system, calculated on
+greenhouse gases covered by such a measure, and released
+during the production of goods
+
+‘CBAM certificate’
+
+means a certificate in electronic format corresponding to
+one tonne of CO2e of embedded emissions in goods
+
+‘CO2 emission factor’
+
+means the weighted average of the CO2 intensity of
+electricity produced from fossil fuels within a geographic
+area. The CO2 emission factor is the result of the division of
+the CO2 emission data of the electricity sector by the gross
+electricity generation based on fossil fuels in the relevant
+geographic area. It is expressed in tonnes of CO2 per
+megawatt-hour
+
+‘Combined
+nomenclature’ (CN)
+
+means the classification of goods, designed to meet the
+needs of: i) the Common customs tariff, setting import
+duties for products imported into the European Union (EU),
+as well as the Integrated tariff of the European
+Communities (Taric), incorporating all EU and trade
+measures applied to goods imported into and exported out
+of the EU; ii) the international trade statistics of the EU.
+The CN provides the means of collecting, exchanging and
+publishing data on EU international trade statistics. It is
+also used for the collection and publication of international
+trade statistics in intra-EU trade.20
+
+‘Combustion
+emissions’
+
+means greenhouse gas emissions occurring during the
+exothermic reaction of a fuel with oxygen
+
+‘Competent
+authority’
+
+means the authority designated by each Member State in
+accordance with Article 11 [of the CBAM Regulation]
+
+20
+
+For definition see:
+https://ec.europa.eu/eurostat/statisticsexplained/index.php?title=Glossary:Combined_nomenclature_(CN)
+29
+
+Term
+
+Definition
+
+‘Continuous emission
+measurement’ (CEM)
+
+means a set of operations having the objective of
+determining the value of a quantity by means of periodic
+measurements, applying either measurements in the stack
+or extractive procedures with a measuring instrument
+located close to the stack, whilst excluding measurement
+methodologies based on the collection of individual
+samples from the stack
+
+‘Control system’
+
+means the operator’s risk assessment and entire set of
+control activities, including the continuous management
+thereof, that an operator has established, documented,
+implemented and maintained pursuant to point A.2. of
+Annex II
+
+‘Complex goods’
+
+means goods other than simple goods
+
+‘Conservative’
+
+means that a set of assumptions is defined in order to
+ensure that no under-estimation of reported emissions or
+over-estimation of production of heat, electricity or goods
+occurs
+
+‘Conversion factor’
+
+means the ratio of carbon emitted as CO2 to the total carbon
+contained in the source stream before the emitting process
+takes place, expressed as a fraction, considering CO emitted
+to the atmosphere as the molar equivalent amount of CO2
+
+‘Co-product’
+
+means any of two or more products resulting from the same
+production process
+
+‘Customs declarant’
+
+means a declarant as defined in Article 5, point (15) of
+Regulation (EU) No 952/2013 lodging a customs
+declaration for release for free circulation of goods in its
+own name or the person in whose name such a declaration
+is lodged
+
+‘CCUS system’
+
+means a group of economic operators with technically
+connected installations and transport equipment for CO2
+capture, transport, use in production of goods, or geological
+storage
+
+‘Data flow activities’
+
+mean activities related to the acquisition, processing and
+handling of data that are needed to draft an emissions
+report from primary source data
+
+‘Data set’
+
+means one type of data, either at installation level or
+production process level as relevant in the circumstances,
+as any of the following:
+(a)
+the amount of fuels or materials consumed or
+produced by a production process as relevant for the
+calculation-based methodology, expressed in terajoules,
+mass in tonnes, or for gases as volume in normal cubic
+metres, as appropriate, including for waste gases;
+(b)
+
+a calculation factor;
+
+30
+
+Term
+
+Definition
+(c)
+net quantity of measurable heat, and the relevant
+parameters required for determining this quantity, in
+particular: i) mass flow of heat transfer medium; and ii)
+enthalpy of transmitted and returned heat transfer medium,
+as specified by composition, temperature, pressure and
+saturation;
+(d)
+quantities of non-measurable heat, specified by the
+relevant quantities of fuels used for producing the heat, and
+the net calorific value (NCV) of the fuel mix;
+(e)
+
+quantities of electricity;
+
+(f)
+
+quantities of CO2 transferred between installations;
+
+(g)
+quantities of precursors received from outside the
+production process, and their relevant parameters, such as
+country of origin, used production route, specific direct
+and indirect emissions;
+‘Default value’
+
+means a value, which is calculated or drawn from
+secondary data, which represents the embedded emissions
+in goods
+
+‘Direct emissions’
+
+means emissions from the production processes of goods
+including emissions from the production of heating and
+cooling that is consumed during the production processes,
+irrespective of the location of the production of the heating
+or cooling
+
+‘Embedded emissions’
+
+means direct emissions released during the production of
+goods and indirect emissions from the production of
+electricity that is consumed during the production
+processes, calculated in accordance with the methods set
+out in Annex IV and further specified in the implementing
+acts adopted pursuant to Article 7(7)
+
+‘Emissions’
+
+mean the release of greenhouse gases into the atmosphere
+from the production of goods
+
+‘Emission factor’
+
+means the average emission rate of a greenhouse gas
+relative to the activity data of a source stream assuming
+complete oxidation for combustion and complete
+conversion for all other chemical reactions
+
+‘Emission factor’ for
+electricity
+
+means the default value, expressed in CO2e, representing
+the emission intensity of electricity consumed in production
+of goods.
+
+‘Emission source’
+
+means a separately identifiable part of an installation or a
+process within an installation, from which relevant
+greenhouse gases are emitted
+
+EU ETS
+
+means the system for greenhouse gas emissions allowance
+trading within the Union in respect of activities listed in
+Annex I to Directive 2003/87/EC other than aviation
+activities
+31
+
+Term
+
+Definition
+
+‘EU ETS allowance’
+
+means an allowance as defined in Article 3, point (a), of
+Directive 2003/87/EC in respect of activities listed in
+Annex I to that Directive other than aviation activities
+
+‘Fossil carbon’
+
+means inorganic and organic carbon that is not biomass
+
+‘Fossil fraction’
+
+means the ratio of fossil carbon to the total carbon content
+of a fuel or material, expressed as a fraction
+
+‘Fugitive emissions’
+
+means irregular or unintended emissions from sources that
+are not localised, or too diverse or too small to be
+monitored individually
+
+‘Functional unit’
+
+means the reference unit used for the calculation of
+embedded emissions in goods
+
+‘Goods’
+
+means goods listed in Annex I [to the CBAM the CBAM
+Regulation]
+
+‘Greenhouse gases’
+
+mean greenhouse gases as specified in Annex I [to the
+CBAM the CBAM Regulation] in relation to each of the
+goods listed in that Annex
+
+‘Heat meter’
+
+means a thermal energy meter or any other device to
+measure and record the amount of thermal energy produced
+based upon flow volumes and temperatures
+
+‘Importer’
+
+means either the person lodging a customs declaration for
+release for free circulation of goods or a bill of discharge in
+accordance with Article 175(5) of Delegated Regulation
+(EU) 2015/2446 in its own name and on its own behalf or,
+where the customs declaration is lodged by an indirect
+customs representative in accordance with Article 18 of
+Regulation (EU) No 952/2013, the person on whose behalf
+such a declaration is lodged
+
+‘Importation’
+
+means release for free circulation as provided for in Article
+201 of Regulation (EU) No 952/2013
+
+‘Indirect customs
+
+A customs representative appointed by an importer
+established in a Member State. If the importer appoints an
+indirect customs representative and they agree, they can act
+as an authorised CBAM declarant and submit the
+application for an authorisation on behalf of the importer.
+The indirect customs representative is liable for all
+operations made for the importers it represents
+
+Representative’
+
+‘Indirect emissions’
+
+means emissions from the production of electricity which is
+consumed during the production processes of goods,
+irrespective of the location of the production of the
+consumed electricity
+
+‘Inherent CO2’
+
+means CO2 which is part of a source stream.
+
+‘Installation’
+
+means a stationary technical unit where a production
+process is carried out
+
+32
+
+Term
+
+Definition
+
+‘Legal metrological
+control’
+
+means the control exercised by a public authority or
+regulator of the measurement tasks intended for the field of
+application of a measuring instrument, for reasons of public
+interest, public health, public safety, public order,
+protection of the environment, the levying of taxes and
+duties, the protection of consumers and fair trading
+
+‘Measurable heat’
+
+means a net heat flow transported through identifiable
+pipelines or ducts using a heat transfer medium, such as, in
+particular, steam, hot air, water, oil, liquid metals and salts,
+for which a heat meter is or could be installed
+
+‘Measurement point’
+
+means the emission source for which continuous emission
+measurement systems (CEMS) are used for emission
+measurement, or the cross-section of a pipeline system for
+which the CO2 flow is determined using continuous
+measurement systems
+
+‘Measurement
+system’
+
+means a complete set of measuring instruments and other
+equipment used to determine variables for the monitoring
+and calculation of emissions
+
+‘Minimum
+requirements’
+
+means monitoring methods using the minimum efforts
+allowed for determining data in order to result in emission
+data acceptable for the purpose of the CBAM Regulation.
+
+‘Mixed fuel’
+
+means a fuel which contains both biomass and fossil carbon
+
+‘Mixed material’
+
+means a material which contains both biomass and fossil
+carbon
+
+‘Multifunctional
+process’
+
+means a process that delivers multiple outputs or whose
+outputs feed into several production processes
+
+‘Net calorific value’
+(NCV)
+
+means the specific amount of energy released as heat when
+a fuel or material undergoes complete combustion with
+oxygen under standard conditions, less the heat of
+vaporisation of any water formed
+
+‘Non-CBAM good’
+
+means any good produced in the installation that is not
+included in Annex I to the CBAM Regulation
+
+‘Non-measurable
+heat’
+
+means all heat other than measurable heat
+
+‘Operator’
+
+means any person who operates or controls an installation
+in a third country, including a parent company that controls
+an installation in a third country
+
+‘Oxidation factor’
+
+means the ratio of carbon oxidised to CO2 as a consequence
+of combustion to the total carbon contained in the fuel,
+expressed as a fraction, considering carbon monoxide (CO)
+emitted to the atmosphere as the molar equivalent amount
+of carbon dioxide (CO2)
+
+‘Power purchase
+agreement’
+
+means a contract under which a person agrees to purchase
+electricity directly from an electricity producer
+33
+
+Term
+
+Definition
+
+‘Precursor’
+
+means any input material into a production process
+included in the list of goods set out in Annex I to the
+CBAM Regulation;
+
+‘Preliminary
+emission factor’
+
+means the assumed total emission factor of a fuel or
+material based on the carbon content of its biomass fraction
+and its fossil fraction before multiplying it by the fossil
+fraction to produce the emission factor
+
+‘Production process’
+
+means the chemical and physical processes carried out to
+produce goods in an installation
+
+‘Production route’ 21
+
+means a specific technology used in a production process
+to produce goods
+
+‘Process emissions’
+
+means greenhouse gas emissions other than combustion
+emissions occurring as a result of intentional and
+unintentional reactions between substances or their
+transformation, for a primary purpose other than the
+generation of heat, including from the following processes:
+(a) the chemical, electrolytic or pyrometallurgical
+reduction of metal compounds in ores, concentrates and
+secondary materials; (b) the removal of impurities from
+metals and metal compounds; (c) the decomposition of
+carbonates, including those used for flue gas cleaning; (d)
+chemical syntheses of products and intermediate products
+where the carbon bearing material participates in the
+reaction; (e) the use of carbon containing additives or raw
+materials; (f) the chemical or electrolytic reduction of
+metalloid oxides or non-metal oxides such as silicon
+oxides and phosphates.
+
+‘Proxy data’
+
+means annual values which are empirically substantiated or
+derived from accepted sources and which an operator uses
+to substitute a data set22 for the purpose of ensuring
+complete reporting
+
+‘Rebate’
+
+means any amount that reduces the amount due or paid by a
+person liable for the payment of a carbon price, before its
+payment or after, in a monetary form or in any other form.
+
+‘Recommended
+improvements’
+
+means monitoring methods which are proven means to
+ensure that data are more accurate or less prone to mistakes
+than by mere application of minimum requirements
+
+‘Related emissions’
+
+means: – the direct emissions caused by the source stream
+or emission source concerned; – emissions attributed to a
+quantity of measurable heat; – the indirect emissions related
+to the quantity of electricity concerned; – embedded
+emissions of a material produced or of a precursor
+consumed.
+
+21
+
+Note that different production routes can fall within the same production process.
+
+22
+
+Refers to the activity data or the calculation factors.
+34
+
+Term
+
+Definition
+
+‘Reporting period’
+
+means the period corresponding to the calendar year during
+which the good was produced and used by the authorised
+CBAM declarant as reference for the determination of
+embedded emissions
+
+‘Residue’
+
+means a substance that is not the end product that a
+production process directly seeks to produce; it is not a
+primary aim of the production process and the process has
+not been deliberately modified to produce it
+
+‘Simple goods’
+
+means goods produced in a production process requiring
+exclusively input materials (precursors) and fuels having
+zero embedded emissions
+
+‘Source stream’
+
+means either of the following: (a) a specific fuel type, raw
+material or product giving rise to emissions of relevant
+greenhouse gases at one or more emission sources as a
+result of its consumption or production; (b) a specific fuel
+type, raw material or product containing carbon and
+included in the calculation of greenhouse gas emissions
+using a mass-balance method
+
+‘Specific embedded
+emissions’
+
+means the embedded emissions of one tonne of goods,
+expressed as tonnes of CO2e emissions per tonne of goods
+
+‘Standard conditions’
+
+means temperature of 273,15 K and pressure conditions of
+101 325 Pa defining normal cubic metres (Nm3)
+
+‘System boundary’
+
+means the group of chemical or physical processes included
+in the calculation of embedded emissions of goods under
+the same aggregated goods category.
+The system boundaries shall cover direct emissions,
+indirect emissions for goods not listed in Annex II to the
+CBAM Regulation, and the embedded emissions of any
+precursor.
+
+23
+
+‘Third country’
+
+means a country or territory outside the customs territory of
+the [European] Union
+
+‘Tonne of CO2(e)’
+
+means one metric tonne of carbon dioxide (‘CO2’), or an
+amount of any other greenhouse gas listed in Annex I [to
+the CBAM Regulation] with an equivalent global warming
+potential [‘CO2e‘]
+
+‘Transmission system
+operator’
+
+means an operator as defined in Article 2, point (35) of
+Directive (EU) 2019/944 of the European Parliament and of
+the Council (23).
+
+Directive (EU) 2019/944 of the European Parliament and of the Council of 5 June 2019 on common
+rules for the internal market for electricity and amending Directive 2012/27/EU (OJ L 158, 14.6.2019,
+p. 125).
+35
+
+Term
+
+Definition
+
+‘Uncertainty’
+
+means a parameter, associated with the result of the
+determination of a quantity, that characterises the
+dispersion of the values that could reasonably be attributed
+to the particular quantity, including the effects of
+systematic as well as of random factors, expressed in
+percent, and describes a confidence interval around the
+mean value comprising 95% of inferred values taking into
+account any asymmetry of the distribution of values
+
+‘Waste’
+
+means any substance or object which the holder discards or
+intends or is required to discard, excluding substances that
+have been intentionally modified or contaminated in order
+to meet this definition
+
+‘Waste gas’
+
+means a gas containing incompletely oxidised carbon in a
+gaseous state under standard conditions which is a result of
+any of the processes listed under ‘process emissions’
+
+36
+
+Annex B
+
+List of abbreviations
+
+Abbreviation
+
+Full term
+
+AD
+
+Activity Data
+
+AEM
+
+Anode Effect Minutes
+
+AEO
+
+Anode Effect Overvoltage
+
+AL
+
+Activity Level
+
+AOD
+
+Argon Oxygen Decarburisation.
+
+BAT
+
+Best Available Techniques
+
+BF
+
+Biomass Fraction
+
+BFG
+
+Blast Furnace Gas
+
+BM
+
+Benchmark
+
+BOF
+
+Basic Oxygen Furnace
+
+BOFG
+
+Basic Oxygen Furnace Gas
+
+BREFs
+
+Best Available Techniques Reference documents
+
+CA
+
+Competent Authority
+
+CBAM
+
+Carbon Border Adjustment Mechanism, the
+
+CCR
+
+Clinker to Cement Ratio
+
+CCS
+
+Carbon Capture and Storage
+
+CCU(S)
+
+Carbon Capture and Utilisation (and Storage)
+
+CEMS
+
+Continuous Emission Measurement Systems
+
+CF
+
+Conversion Factor
+
+CFP
+
+Carbon footprint of products
+
+CHP
+
+Combined Heat and Power
+
+CKD
+
+Cement Kiln Dust
+
+CN
+
+Combined nomenclature
+
+COG
+
+Coke Oven Gas
+
+DRI
+
+Direct Reduced Iron
+
+EAF
+
+Electric Arc Furnace
+
+EEA
+
+European Economic Area (EU-27, Iceland, Norway, Liechtenstein)
+
+EF
+
+Emission Factor
+
+EFTA
+
+European Free Trade Area
+
+EORI
+
+Economic Operator Registration and Identification
+
+ETS
+
+Emissions Trading System
+
+EU ETS
+
+EU Emissions Trading System
+
+EUA
+
+EU Allowances (used in the EU ETS)
+
+EUR
+
+Euro (currency)
+37
+
+Abbreviation
+
+Full term
+
+FAR
+
+Free Allocation Rules (Regulation 2019/331)24
+
+FIFO
+
+First-In-First-Out principle
+
+GHG
+
+Greenhouse Gas
+
+GWP
+
+Global Warming Potential
+
+HBI
+
+Hot Briquetted Iron
+
+HS
+
+Harmonised System (for international trade)
+
+IEA
+
+International Energy Agency
+
+ISO
+
+International Organization for Standardization
+
+LULUCF
+
+Land-use, land change and forestry (criteria)
+
+MP
+
+Monitoring Plan
+
+MRR
+
+Monitoring and Reporting Regulation (Regulation 2018/2066)25
+
+MRV
+
+Monitoring, Reporting and Verification
+
+MS
+
+Member State(s)
+
+MWh
+
+Megawatt-hour
+
+NCV
+
+Net Calorific Value
+
+NPI
+
+Nickel pig iron
+
+OF
+
+Oxidation Factor
+
+PCI
+
+Pulverised Coal Injection
+
+PEMS
+
+Predictive Emission Monitoring System
+
+PFC
+
+Perfluoro-carbon
+
+PoS
+
+Proofs of Sustainability
+
+RED II
+
+Renewable Energy Directive, re-cast
+
+SEE
+
+Specific embedded emissions
+
+SEFA
+
+Specific embedded free allocation
+
+TARIC
+
+Integrated Tariff of the European Union database
+
+TJ
+
+Terajoules
+
+TSO
+
+Transmission System Operator
+
+UCC
+
+Union Custom Code
+
+UN/LOCODE
+
+United Nations Code for Trade and Transport Location
+
+24
+
+Free Allocation Rules (Commission Delegated Regulation (EU) 2019/331 of 19 December 2018
+determining transitional Union-wide rules for harmonised free allocation of emission allowances
+pursuant to Article 10a of Directive 2003/87/EC of the European Parliament and of the Council)
+
+25
+
+Monitoring and Reporting Regulation (Commission Implementing Regulation (EU) 2018/2066 of 19
+December 2018 on the monitoring and reporting of greenhouse gas emissions pursuant to Directive
+2003/87/EC of the European Parliament and of the Council and amending Commission Regulation (EU)
+No 601/2012
+38
+
+

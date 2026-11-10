@@ -1,0 +1,2022 @@
+EUROPEAN COMMISSION
+DIRECTORATE-GENERAL
+TAXATION AND CUSTOMS UNION
+Indirect Taxation and Tax Administration
+CBAM, Energy and Green Taxation
+
+Brussels, 14 August 2026
+
+GUIDANCE DOCUMENT 5B: SECTOR-SPECIFIC GUIDANCE
+DOCUMENT ON CHEMICAL SECTOR - HYDROGEN
+
+Disclaimer: This guidance document is not legally binding and it is of an explanatory nature.
+Legal provisions of Union law take precedence over the contents of this document and should
+always be consulted. The authentic texts of the EU legal instruments are those published in the
+Official Journal of the European Union. This guidance was prepared by Commission services
+and does not represent an official position of the Commission. Only the Court of Justice of the
+European Union is competent to authoritatively interpret Union law.
+
+Commission européenne/Europese Commissie, 1049 Bruxelles/Brussel, BELGIQUE/BELGIË – Tel. +32 22991111
+
+VERSION HISTORY
+Date
+
+Version notes
+
+14.08.2026
+
+First Publication of this document for the definitive period.
+
+2
+
+CONTENTS
+1
+
+PREFACE
+
+4
+
+1.1
+
+Structure and content of the guidance documents
+
+4
+
+1.2
+
+Reference regulations and legal acts
+
+5
+
+2
+
+CBAM GOODS AND PRODUCTION ROUTES
+
+7
+
+2.1
+
+Foreword to sector-specific sections
+
+7
+
+2.2
+
+Identifying CBAM goods
+
+8
+
+2.3
+Chemicals sector – Hydrogen
+8
+2.3.1
+Unit of production and embedded emissions
+8
+2.3.2
+Definition and explanation of sector CBAM goods covered
+9
+2.3.3
+Definition and explanation of relevant production processes and routes
+10
+3 CHEMICALS – HYDROGEN SECTOR-SPECIFIC REQUIREMENTS FOR
+MONITORING AND REPORTING
+14
+3.1
+Sector-specific requirements for monitoring and reporting
+3.1.1
+Emissions monitoring
+3.1.2
+Additional rules
+3.1.3
+Processes that have only indirect emissions
+3.1.4
+Additional reporting requirements
+
+14
+15
+15
+16
+17
+
+4
+
+17
+
+WORKED EXAMPLE FOR THE HYDROGEN SECTOR
+
+ANNEX A
+
+LIST OF DEFINITIONS
+
+20
+
+ANNEX B
+
+LIST OF ABBREVIATIONS
+
+29
+
+3
+
+1
+
+PREFACE
+
+1.1
+
+Structure and content of the guidance documents
+
+This series of documents has been written to support stakeholders by explaining the
+requirements of the CBAM Regulation in a non-legislative language. This series of
+guidance documents should benefit a variety of stakeholders. A specific focus has been put
+on clarifying the requirements for operators of installations producing CBAM goods
+outside of the EU for the definitive period.
+•
+
+Guidance 1 provides an overview of the main changes to the CBAM methodology
+between the definitive period and the concluded transitional period. It also
+introduces the CBAM and an overview of the compliance cycle, roles and
+responsibilities, as well as milestones and deadlines for operators of installations
+outside the EU during the definitive period and explains the general exemptions
+from the CBAM.
+
+•
+
+Guidance 2 provides a quick guidance for the intended reader of this document,
+the operator of an installation producing CBAM goods. It provides a roadmap of
+the most important concepts of CBAM emissions monitoring and where to find
+more information in this series of documents.
+
+•
+
+Guidance 3 sets out the monitoring and reporting obligations and
+recommendations which are potentially applicable to any affected producer of
+CBAM goods.
+
+•
+
+Guidance 4 provides an overview of how the adjustment for free allocation is to
+be determined and what information is needed.
+
+•
+
+Guidance documents 5a, 5b, 5c, 5d, 5e and 5f present an overview per sector of
+the production processes and value chains for goods that are included in the scope
+of the CBAM, as well as sector-specific monitoring and reporting considerations
+for each CBAM good where this is relevant. These sections are supplemented by
+examples for each sector.
+
+The series of guidance documents is accompanied by an electronic template for
+information that should be used by installation operators to communicate information to
+the authorised CBAM declarants and CBAM Registry.
+
+Presentation of numbers in EU documents
+To align with EU legal documents, this guidance document uses the following
+convention when presenting numbers.
+The decimal separator used to separate the integral part of a number from its fractional
+part is a comma, e.g.: 0,890
+Thousands, and powers of 103n thereafter, are separated by a space, e.g.:
+•
+
+fifteen thousand is written as 15 000
+
+•
+
+fifteen million is written as 15 000 000
+4
+
+1.2
+
+Reference regulations and legal acts
+
+Several regulations and legal acts are referred to throughout this series of guidance
+documents. For ease of reading and to avoid ambiguity, simplified references are used
+when citing these acts.
+•
+
+CBAM Regulation: Regulation (EU) 2023/956 and Regulation (EU) 2025/2083
+amending Regulation (EU) 2023/956. Notably, where article numbers are given
+in this document without further specification, they always refer to the CBAM
+Regulation.
+It can be accessed at the following link (consolidated version):
+http://data.europa.eu/eli/reg/2023/956/2025-10-20
+
+•
+
+Methodology Act: Commission Implementing Regulation (EU) 2025/2547, in
+legal texts referred to as “Implementing act pursuant to Article 7(7) of the CBAM
+Regulation”.
+It can be accessed at the following link:
+http://data.europa.eu/eli/reg_impl/2025/2547/oj
+
+•
+
+Default Values Act: Commission Implementing Regulation (EU) 2025/2621, in
+legal texts referred to as “Implementing act pursuant to Article 7(7) of the CBAM
+Regulation”, also referred to as “default values determined in accordance with
+Annex IV to the CBAM Regulation”.
+It can be accessed at the following
+link: http://data.europa.eu/eli/reg_impl/2025/2621/oj
+
+•
+
+Verification Principles Act: Commission Implementing Regulation (EU)
+2025/2546, in legal texts referred to as “Implementing act pursuant to Article 8(3)
+of the CBAM Regulation”.
+It can be accessed at the following link:
+http://data.europa.eu/eli/reg_impl/2025/2546/oj
+
+•
+
+Accreditation & Verification Requirements Act: Commission Delegated
+Regulation (EU) 2025/2551, in legal texts referred to as “Delegated act pursuant
+to Article 18(3) of the CBAM Regulation”.
+It can be accessed at the following
+link: http://data.europa.eu/eli/reg_del/2025/2551/oj
+
+•
+
+Free Allocation Adjustment Act: Commission Implementing Regulation (EU)
+2025/2620, in legal texts referred to as “Implementing act pursuant to Article
+31(2) of the CBAM Regulation”.
+It can be accessed at the following link:
+http://data.europa.eu/eli/reg_impl/2025/2620/oj
+
+For acronyms and definitions used in this document, please see Annex B and Annex A.
+
+5
+
+A series of icons are used throughout to help guide the reader:
+Icon
+
+Description of use
+Points to information of particular importance for operators of
+installations producing CBAM goods.
+
+Simplified!
+
+Highlights simplified approaches of the general requirements of
+the CBAM.
+Used where recommended improvements are presented.
+Used where other documents, templates or electronic tools are
+available from other sources.
+Points to examples given for the topics discussed in the
+surrounding text.
+
+6
+
+2
+
+CBAM GOODS AND PRODUCTION ROUTES
+
+This section provides guidance on industry-sector-specific rules that apply for the
+definitive period (from 2026 onwards), for the hydrogen sector. It deals with the
+specification of products covered by the CBAM and the relevant production routes.
+
+2.1
+
+Foreword to sector-specific sections
+
+The following sections provide an overview of the different production routes for the goods
+under chemical sectors in CBAM (hydrogen) and provide sector specific guidance. Where
+goods to which the same functional unit applies are produced in one installation via
+different production routes, the embedded emissions shall be determined in accordance
+with the averaging rules applicable in the definitive period.
+Additional information on the production processes of the goods can also be found in the
+BREF1 documents for best available techniques (BAT).
+Diagrams used in the following sections.
+For the system boundary graphics presented in the sections below, the following
+conventions are applied:
+⚫
+Production processes (for which monitoring of the direct emissions would take
+place) are shown as rectangles with white background.
+⚫
+Optional processes (e.g. CCS/CCU) are shown in blue boxes. In particular,
+CCS/CCU would not be taken into account for developing default values, but
+where you (as an operator) use them, the related emissions or emission savings
+should be taken into account for determining actual embedded emissions in line
+with the CBAM Regulation and the Methodology Act.
+⚫
+Materials which are considered to have no embedded emissions are shown in
+pink boxes, materials with embedded emissions (precursor materials and final
+products, i.e. goods under the CBAM) in green boxes. Simple goods are shown
+in normal font, complex goods in bold font. Materials which are optional are
+shown in boxes with a blue dashed outline and must be included where actually
+used at the installation.
+⚫
+Input materials are presented without trying to be complete. This means that the
+focus is on materials which are relevant for demonstrating the differences
+between different production routes. As a consequence, less important input
+materials and in particular fuels are usually omitted in order to keep graphs
+simple.
+⚫
+Electricity as input is shown only in cases where it is the main “precursor” of
+the process (i.e. in particular for electric arc furnaces and electrolysis processes).
+Electricity is shown in light grey boxes.
+
+1
+
+BAT Reference document (BREF), BAT being “Best Available Techniques” as defined by the IED
+(Industrial Emissions Directive). Relevant BREF documents are those for: the production of cement; for
+iron and steel production; large volume inorganic chemicals (which includes fertilisers); for Chlor-alkali;
+and for non-ferrous metals (which includes both aluminium and ferro-alloys). All BREFs can be found
+at the European IPPC Bureau, under https://eippcb.jrc.ec.europa.eu/reference.
+7
+
+2.2
+
+Identifying CBAM goods
+
+This section explains how goods covered by the CBAM are defined and identified in the
+Regulation. The textbox below signposts the key sections for the definition and reporting
+of CBAM goods, relevant for the CBAM transitional period.
+Methodology Act references:
+•
+
+Annex I, point 2 Table 1 “Mapping of CN codes to aggregated goods categories”
+
+•
+
+Annex III “Rules for attributing emissions to goods”.
+
+2.3
+
+Chemicals sector – Hydrogen
+
+The textbox below signposts sector-specific sections in the Methodology Act, relevant for
+the CBAM definitive period.
+Methodology Act references:
+•
+
+Annex I, Table 1 “Mapping of CN codes to aggregated goods categories” (aggregated goods
+category “Hydrogen”) of the Methodology Act adopted pursuant to Article 7(7) of Regulation (EU)
+2023/956.
+
+•
+
+Annex I, point 3.6 “Hydrogen”, which defines the functional unit, system boundaries and
+precursors for hydrogen production routes, and
+
+•
+
+Annex III to the Methodology Act, which sets out the rules for attributing emissions of an
+installation to goods.
+
+2.3.1
+
+Unit of production and embedded emissions
+
+The quantity of hydrogen imported into the EU must be expressed in metric tonnes (as
+pure hydrogen). As an operator, you must record the quantity of hydrogen produced by
+installation or production process, for the purposes of reporting and for use in the
+calculation of specific embedded emissions in accordance with the CBAM Regulation and
+the Methodology Act.
+Industrial sector
+
+Chemicals – Hydrogen
+
+Production unit of goods
+
+Tonnes (metric) pure hydrogen, reported
+separately by installation or production process
+in the country of origin
+
+Associated activities
+
+Producing hydrogen by steam reforming or
+partial oxidation of hydrocarbons, water
+electrolysis, Chlor-Alkali electrolysis or
+production of sodium chlorate, steam cracking
+of hydrocarbons.
+
+Relevant greenhouse gases
+
+Carbon dioxide (CO2)
+
+Direct Emissions
+
+Tonnes (metric) of CO2e
+
+8
+
+Industrial sector
+
+Chemicals – Hydrogen
+
+Indirect Emissions
+
+Quantity of electricity consumed (MWh),
+source and emissions factor used to calculate
+the indirect emissions in Tonnes (metric) of
+CO2 or CO2e.
+Indirect emissions were monitored and reported
+during the transitional period but, for the
+definitive period, hydrogen is included in
+Annex II to the CBAM Regulation (“Goods for
+which only direct emissions are taken into
+account”), so indirect emissions are not taken
+into account in the embedded emissions of
+hydrogen for CBAM purposes.
+
+Unit for embedded emissions
+
+Tonnes CO2e emissions per tonne of good,
+reported separately for each type of good, by
+installation in the country of origin
+
+In the definitive period, for CBAM purposes the hydrogen sector has to account for direct
+emissions only, since hydrogen is listed in Annex II to the CBAM Regulation as a good
+for which only direct emissions are taken into account. Indirect emissions were reported
+separately during the transitional period but are not included in the embedded emissions
+of hydrogen in the definitive period2. Emissions must be reported in metric tonnes CO2
+equivalent (t CO2e) emissions per tonne of output. This figure must be calculated for the
+specific installation or production process in your country of origin.
+The following sections set out how the system boundaries of different hydrogen production
+routes should be defined and identify elements of the production process that must be
+included for the purposes of monitoring and reporting.
+2.3.2
+
+Definition and explanation of sector CBAM goods covered
+
+The following Table 2-1 lists the relevant goods in scope for the CBAM definitive period
+in the hydrogen industry sector. The CN codes in the central column are the starting point
+for which ‘production processes’ are to be defined for the purpose of monitoring at
+installation level in a manner consistent with the system boundaries and production routes
+set out in Annex I to the Methodology Act.
+Table 2-1: CBAM goods in the chemicals sector – hydrogen3
+
+Aggregated goods
+category
+
+Product CN Code
+
+Description
+
+Hydrogen
+
+2804 10 00
+
+Hydrogen
+
+2
+
+For this sector indirect emissions were reported during the transitional period, but hydrogen is listed in
+Annex II to Regulation (EU) 2023/956 as a good for which only direct emissions are taken into account,
+so indirect emissions are not taken into account in embedded emissions in the definitive period.
+
+3
+
+Source: Annex I to the CBAM Regulation; Annex I (“Mapping of CN codes to aggregated goods
+categories”) to the Methodology Act.
+
+9
+
+Hydrogen is defined as a simple good in accordance with Article 1 and Annex I of the
+Methodology Act, as there are no possible precursors listed for the production of hydrogen
+and the embedded emissions are determined solely from the direct emissions of the
+hydrogen production process.
+There are no precursors relevant for hydrogen. However, hydrogen may itself be a
+precursor for other processes, where it is separately produced for use as a chemical
+feedstock to produce ammonia, or to produce pig iron or direct reduced iron (DRI).
+Where hydrogen is used as a precursor in the production of ammonia and the conditions
+laid down in the Methodology Act for disregarding indirect emissions of precursors are
+met (e.g. where the precursor itself is listed in Annex II), the indirect emissions of
+electricity associated with the hydrogen precursor may be disregarded when determining
+the embedded emissions of the ammonia CBAM goods.
+The production of hydrogen is by a number of different production routes, outlined below.
+2.3.3
+
+Definition and explanation of relevant production processes and routes
+
+Hydrogen can be produced from various feedstocks including plastic wastes, but currently
+it is derived mostly from fossil fuels. Hydrogen production units are typically integrated
+into larger industrial processes e.g. as for an installation producing ammonia. For CBAM
+purposes, the relevant production routes and their system boundaries are defined for the
+hydrogen aggregated goods category in Annex I, point 3.6 to the Methodology Act, and
+emissions are attributed to hydrogen in accordance with Annex III to the Methodology
+Act.
+The following diagram illustrates the variety of different routes by which hydrogen may
+be produced. Note that chlor-alkali electrolysis and water electrolysis are not mentioned in
+the Methodology Act, as these production routes include minimal direct emissions.
+Figure 2-1: Overview of different production routes for hydrogen relevant for CBAM
+
+Notes to figure: For hydrogen (Annex II goods), only direct emissions are taken into account for embedded emissions; indirect
+emissions from electricity are not included.
+
+10
+
+The system boundaries for direct emissions monitoring for hydrogen include all processes
+directly or indirectly linked to hydrogen production, and all fuels used in the production of
+hydrogen, in line with Annex I, point 3.6 and Annex III to the Methodology Act.
+Note that although other production routes for hydrogen are possible, only the production
+of pure hydrogen or mixtures of hydrogen with nitrogen usable in ammonia production
+shall be considered for the purposes of the hydrogen aggregated goods category under
+Annex I to the CBAM Regulation. Not covered are the production of synthesis gas or of
+hydrogen within refineries or organic chemical installations, where the hydrogen is
+exclusively used within those plants, and is not used for the production of goods under the
+CBAM Regulation and is therefore outside the scope of the hydrogen CBAM good.
+2.3.3.1
+
+Hydrogen – Steam reforming and partial oxidation production routes
+
+The fossil gas (methane) feedstock for this process is converted to carbon dioxide and
+hydrogen through primary and secondary steam reformation. The overall reaction is highly
+endothermic and process heat is supplied by the combustion of natural gas or other gaseous
+fuel. Carbon monoxide produced is almost all converted to carbon dioxide by the process.
+The Methodology Act, in particular Annex I, point 3.6.2.1 (“Steam reforming and partial
+oxidation”), defines the system boundaries for direct emissions monitoring for the steam
+reforming (and partial oxidation4) production routes. For the purposes of this guidance,
+those system boundaries can be described as encompassing:
+“ – All processes directly or indirectly linked to hydrogen production and the
+separation of hydrogen and carbon monoxide, and flue gas cleaning;
+– All fuels used in the hydrogen production process irrespective of their energetic
+or non-energetic use, and fuels used for other combustion processes including for
+the purpose of producing hot water or steam.”
+There are no precursors for this production process. In the definitive period, hydrogen is
+listed in Annex II to the CBAM Regulation as a good for which only direct emissions are
+taken into account. Indirect emissions resulting from electricity consumed by the
+production process are therefore not taken into account in the embedded emissions of
+hydrogen for CBAM purposes, although operators may still monitor such data for other
+regulatory or internal purposes.
+In line with the above definition of systems boundaries, the following production steps
+may be regarded as being within the system boundaries of a hydrogen (steam reformation)
+installation:
+
+4
+
+•
+
+Raw material pre-treatment – natural gas desulphurisation
+
+•
+
+Steam reformation – primary and secondary, H2/CO generation
+
+The partial oxidation production route differs from steam reforming in that heavier hydrocarbon
+fractions such as residual fuel oil or coal are used as feedstocks to produce hydrogen. The system
+boundaries for the partial oxidation production route are very similar to those for the steam methane
+reformation production route, and in addition include the generation of oxygen as a process gas, and
+gasification to produce a synthesis gas, which is then cleaned to remove soot and sulphur impurities,
+from which CO / CO2 are removed to obtain H2.
+11
+
+•
+
+Shift conversion – carbon monoxide to carbon dioxide and hydrogen
+
+•
+
+Separation & purification – CO2 removal, separation processes as present including
+cryogenic, adsorption, absorption, membrane, hydrogenation (methanation)
+
+•
+
+Emissions control – for treating releases to air, water or ground
+
+The stream of carbon dioxide produced by the steam reforming process is very pure and is
+separated and captured for further use, e.g. for urea production. A variation on this process
+may be with permanent geological storage i.e. carbon capture and sequestration (CCS).
+Where CO₂ is captured and permanently stored or chemically bound in accordance with
+the CBAM rules, this is reflected in the determination of embedded emissions in line with
+the Methodology Act.
+2.3.3.2
+
+Hydrogen – Steam cracking production route
+
+Hydrogen is produced as a co-product of the thermal cracking of hydrocarbons using
+feedstocks such as naphtha and natural gas condensates (i.e. ethane, propane and butane)
+alongside the simultaneous production of light olefins such as of ethylene and propylene.
+The Methodology Act, in particular Annex I, point 3.6.2.2 (“Steam cracking”), defines the
+system boundaries for direct emissions monitoring of the steam cracking production route.
+For the purposes of this guidance, the system boundaries for direct emissions monitoring
+can be described as encompassing:
+“ – All processes directly linked to hydrogen production;
+– All processes directly or indirectly linked to the production processes, and from
+flue gas cleaning.”
+There are no precursors for this production process. As for steam methane reforming, in
+the definitive period only direct emissions are taken into account in the embedded
+emissions of hydrogen under the CBAM. Indirect emissions from electricity consumption
+are not taken into account in the embedded emissions of hydrogen, although operators may
+still monitor such data for other regulatory or internal purposes.
+In line with the above definition of systems boundaries, the following production steps
+may be regarded as being within the system boundaries of a hydrogen (steam cracking)
+installation:
+•
+
+Production of hydrogen as a co-product of the steam cracking of hydrocarbons –
+mixing of hydrocarbon feedstocks with steam, cracking of hydrocarbons in
+furnaces, generation of hydrogen as a by-product, and collection.
+
+•
+
+Gas cooling, drying and purification – removal of water vapour and other
+impurities from hydrogen gas.
+
+•
+
+Emissions control – for treating releases to air, water or ground.
+
+12
+
+2.3.3.3
+
+Hydrogen – Electrolysis of water production route
+
+Water electrolysis is a standalone, non-integrated production process that produces a very
+pure stream of hydrogen gas. Direct emissions from this process are minimal. Electricity
+consumption is the main driver of greenhouse gas emissions for this route, and the
+associated emissions are treated as indirect emissions from electricity generation.
+However, in the definitive period, those indirect emissions are not taken into account in
+the embedded emissions of hydrogen for CBAM purposes, as hydrogen is listed in Annex
+II to the CBAM Regulation as a good for which only direct emissions are taken into
+account pursuant to Article 3(2) to the Methodology Act.
+The Methodology Act removes the route-specific provisions for the electrolysis of water
+previously listed in section 3.6.2 of the transitional methodology. Consequently, this route
+is now governed by the generic cross-sectoral rules in Annex I, Section 3.1 and the special
+provisions for hydrogen in Annex I, Section 3.6.1. For the purposes of this guidance, where
+relevant, the system boundaries for direct emissions monitoring are defined by the general
+rule in Section 3.1 as encompassing:
+“ – all processes directly or indirectly linked to the production processes.”
+There are no precursors for this production process under Article 1(7), as input materials
+like water are not CBAM goods listed in Annex I to the CBAM Regulation. Furthermore,
+because this is a multifunctional chemical process yielding hydrogen and co-product
+oxygen, operators must attribute emissions based on the molar ratio rule defined in Annex
+III, Section A.2.1 using equation 43.
+During the transitional period pursuant to Implementing Regulation (EU) 2023/1773,
+indirect emissions resulting from electricity consumed by the production process were
+monitored and, where the produced hydrogen was certified in accordance with
+Commission Delegated Regulation (EU) 2023/1184, an emission factor of zero for the
+electricity could be used, with the applicable rules on indirect embedded emissions in that
+Regulation applying in other cases. In the definitive period, however, hydrogen is listed in
+Annex II to the CBAM Regulation as a good for which only direct emissions are taken into
+account pursuant to Article 3(2) of this Regulation, so indirect emissions from electricity
+consumption are not taken into account in the embedded emissions of hydrogen for CBAM
+purposes.
+
+2.3.3.4
+
+Hydrogen – Chlor-alkali electrolysis (and production of chlorates) production
+routes
+
+Hydrogen is produced as a co-product of the electrolysis of brine, alongside the
+simultaneous production of chlorine and sodium hydroxide. There are three basic chloralkali process techniques: mercury cell, diaphragm cell and the membrane cell. All three
+cell techniques produce hydrogen, which is formed at the cell cathode and which leaves
+the cell at very high purity. The hydrogen gas produced is cooled, dried and purified to
+remove water vapour, and other impurities, which may in some cases include oxygen, and
+is then compressed and stored or exported off site.
+The Methodology Act removes the route-specific provisions for the Chlor-alkali
+electrolysis (and production of chlorates) previously listed in section 3.6.2 of the
+transitional methodology. Consequently, this route is now governed by the generic cross13
+
+sectoral rules in Annex I, Section 3.1 and the special provisions for hydrogen in Annex I,
+Section 3.6.1. For the purposes of this guidance, where relevant, the system boundaries for
+direct emissions monitoring are defined by the general rule in Section 3.1 as encompassing:
+“ – all processes directly or indirectly linked to the production processes.”
+There are no precursors for this production process under Article 1(7), as input materials
+are not CBAM goods listed in Annex I to the CBAM Regulation. Furthermore, because
+this is a multifunctional chemical process yielding chlorine, sodium hydroxide and coproduct hydrogen, operators must attribute emissions based on the molar ratio rule defined
+in Annex III, Section A.2.1.
+During the transitional period, indirect emissions that resulted from electricity consumed
+by the production process also needed to be monitored, and where the produced hydrogen
+had been certified to comply with Commission Delegated Regulations (EU) 2023/1184
+(1), an emission factor of zero for the electricity could be used, with the applicable rules
+on indirect embedded emissions in that Regulation applying in other cases. In the definitive
+period, however, hydrogen is listed in Annex II to the CBAM Regulation as a good for
+which only direct emissions are taken into account pursuant to Article 3(2) of this
+Regulation, so indirect emissions from electricity consumption are not taken into account
+in the Sector specific monitoring and reporting
+3
+
+CHEMICALS – HYDROGEN SECTOR-SPECIFIC REQUIREMENTS FOR MONITORING AND
+REPORTING
+
+The textbox below signposts sector-specific sections in the Methodology Act, relevant for
+the CBAM definitive period.
+Methodology Act references:
+• Annex I, point 3 – Functional unit and system boundaries. Sub-section 3.6 (Hydrogen).
+
+3.1
+
+•
+
+Annex III, Section A.2.1 – Chemicals and fertilisers
+
+•
+
+Annex IV, point 2 – Sector-specific parameters to be included in the operator’s emissions report.
+
+Sector-specific requirements for monitoring and reporting
+
+Direct embedded emissions should be monitored in line with the methodology set out in
+the Methodology Act.
+Exclusions
+As an operator, you should note that only the production of pure hydrogen or mixtures of
+hydrogen with nitrogen usable in ammonia production shall be considered. Not covered
+are the production of synthesis gas or of hydrogen as a precursor within refineries or
+organic chemical installations, where the hydrogen is exclusively used within those plants
+and not used for the production of goods under the CBAM Regulation.
+
+14
+
+3.1.1 Emissions monitoring
+Relevant emissions that must be monitored and reported for the hydrogen sector are:
+•
+
+Carbon dioxide emissions (direct) from the fuel combustion process in the
+hydrogen or synthesis gas production process, primary and secondary steam
+reforming of natural gas, or partial oxidation other hydrocarbons; from stationary
+plant only (excludes emissions from any mobile units such as vehicles).
+
+•
+
+Carbon dioxide emissions (direct) resulting from the production of measurable
+heating (for the purpose of producing hot water or steam) and cooling that is
+consumed within the system boundaries of the production process, regardless of
+the location of the production of the heat (i.e. from on-site generation or from
+imports from off-site).
+
+•
+
+Carbon dioxide emissions (direct) from electrolysis are minimal and so where these
+emissions are significant they are likely to result from ancillary plant.
+
+•
+
+Carbon dioxide emissions (direct) resulting from emissions control (e.g. from
+carbonate raw materials such as soda ash used for acidic flue gas cleaning).
+
+Direct emissions from the different source streams above are not reported separately but
+are added together to result in the total direct emissions for the installation or production
+process.
+In the definitive period, indirect emissions from electricity consumed do not have to be
+reported.
+3.1.2 Additional rules
+Attribution of emissions where different products are simultaneously produced
+Additional rules apply for the attribution of direct (and where applicable indirect)
+emissions to the different products of the following production processes that fall under
+the chemicals aggregated goods category. Where these products have been produced
+simultaneously as co-products of a single multifunctional production process, the
+attribution among the different co-products (whether or not they are CBAM goods) shall
+be based on molar ratio, with the generic formula:
+𝐸𝑚𝑖 = 𝐸𝑚𝑡𝑜𝑡𝑎𝑙 (
+
+𝑚𝑖,𝑝𝑟𝑜𝑑
+𝑀𝑖
+𝑚𝑗,𝑝𝑟𝑜𝑑
+𝑛
+∑𝑗=1
+𝑀𝑗
+
+) (Equation 43)
+
+Where:
+𝐸𝑚𝑖 … Either direct or indirect emissions attributed to each co-product i produced over
+the reporting period, expressed in tonnes of CO2
+𝐸𝑚𝑡𝑜𝑡𝑎𝑙 … Either direct or indirect emissions of the whole (multifunctional) production
+process over the reporting period, expressed in tonnes of CO2
+𝑚𝑖,𝑝𝑟𝑜𝑑 …Mass of the co-product i under consideration, produced in the installation over
+the reporting period, expressed in tonnes
+
+15
+
+𝑚𝑗,𝑝𝑟𝑜𝑑 …Mass of each co-product j produced in the installation over the reporting period,
+expressed in tonnes
+𝑀𝑖 … Molar mass of the co-product i under consideration
+𝑀𝑗 … Molar mass of each co-product j
+If the molar mass of one of the co-products is not known, the emissions will be attributed
+based on mass of the co-products. In that case, the formula would be as follows:
+𝐸𝑚𝑖 = 𝐸𝑚𝑡𝑜𝑡𝑎𝑙 (
+
+𝑚𝑖,𝑝𝑟𝑜𝑑
+)
+𝑛
+∑𝑗=1 𝑚𝑗,𝑝𝑟𝑜𝑑
+
+Worldwide, the most important route for hydrogen production is steam reforming and
+gasification of coal, where hydrogen is the main product. However, equation 43 is relevant
+in particular for production routes of hydrogen where hydrogen is not the main product.
+Taking into account the production routes listed in Annex I to the Methodology Act, this
+is in particular the case for steam cracking. Depending on the raw material used in the
+cracker (e.g. naphtha, ethane, etc.) different product mixes are found. The operator should
+then define which of the co-products are ‘high value chemicals’ (HVCs), i.e. products that
+will be used for economic purposes, while other co-products are usually not purified for
+chemical use, but used as fuel in various parts of the installation. Hence, the molar mass
+and mass produced of each of the HVCs will have to be used in the equation above.
+Regarding the steam cracker, a useful approach is to use the scope of HVC aligned with
+the EU ETS Free Allocation Rules which define the following HVCs as relevant for the
+steam cracker product benchmark: Hydrogen (H2), acetylene (C2H2), ethylene (C2H4),
+propylene (C3H6), butadiene (C4H6) and benzene (C6H6). Furthermore, where those coproducts are separated and used, also the following may be relevant: Toluene, Xylenes,
+Butenes.
+3.1.3 Processes that have only indirect emissions
+For hydrogen production, production routes exist that have only indirect emissions.
+However, those are currently not relevant for hydrogen as CBAM good, as hydrogen is
+listed in Annex II to the CBAM Regulation. Nevertheless, where an operator uses
+hydrogen from such sources as precursor, at least the respective production route must be
+named, and for use of actual values (i.e. zero), verification in line with CBAM rules of the
+installation producing the hydrogen will be required. However, using a risk-based
+approach, verifiers may consider a simplified approach for hydrogen free of direct
+emissions. For example, where hydrogen is certified as an RFNBO (Renewable Fuel of
+Non-Biological Origin) under the Renewable Energy Directive (RED II)5, verification can
+be strongly simplified. Such certification is required for the purpose of importing “green
+hydrogen” under the EU’s renewable energy framework.
+Furthermore, specific cases for co-product attribution exist, although they would only be
+relevant if indirect emissions were relevant for hydrogen. They are mentioned here for
+reasons of completeness. Such calculation was necessary in the transitional phase.
+
+5
+
+In accordance with Commission Delegated Regulation (EU) 2023/1184 supplementing Directive (EU)
+2018/2001 […] by establishing a Union methodology setting out detailed rules for the production of
+renewable
+liquid
+and
+gaseous
+transport
+fuels
+of
+non-biological
+origin.
+See
+http://data.europa.eu/eli/reg_del/2023/1184/oj
+16
+
+•
+
+Electrolysis of water – where oxygen is released to the atmosphere, all emissions
+from the production process are attributed to the hydrogen product. However, if
+oxygen is collected and used in other production processes or is sold then molar
+proportions are used to attribute emissions, using equation 43.
+
+•
+
+Chlor-Alkali electrolysis and the production of chlorates – molar proportions are
+used to attribute emissions to the hydrogen produced, using equation 43.
+
+3.1.4 Additional reporting requirements
+The following Table 3-1 lists out the additional information that needs to be provided by
+you as an operator to importers, in your emissions data communication to them.
+Table 3-1: Additional chemical sector parameters requested in the CBAM declaration
+
+Aggregated good
+category
+
+Reporting requirement in the annual report
+
+Hydrogen
+
+– None
+
+4
+
+WORKED EXAMPLE FOR THE HYDROGEN SECTOR
+
+The following worked example shows how specific embedded emissions are derived for
+hydrogen produced by the steam reforming production route.
+The resulting embedded emissions of imports into the EU are then calculated at the end of
+the example for reporting in the definitive period.
+The diagram below gives an outline view of the installation and shows the system
+boundaries as a hatched line for the single production process. The physical units carrying
+out the production process have been grouped under ‘steam reforming’ and the inputs and
+outputs and sources of emissions have been identified.
+Figure 4-1: Hydrogen example – Overview and complete monitoring approach for hydrogen
+Natural gas
+
+CO2
+Steam
+reforming
+
+Hydrogen
+CN 2804 10
+
+Production process
+
+17
+
+Heat export
+
+A single production process is defined for steam reforming. Inputs are natural gas (both as
+a raw material / feedstock for the process, and as a fuel). Outputs are hydrogen product and
+heat exported to other parts of the installation or to a district heating network.
+The inputs and outputs highlighted in red text in Table 4-1 are the parameters that would
+need to be monitored by the operator in order to attribute emissions and determine direct
+specific embedded emissions for the production process.
+The direct emissions that are monitored in this example result from:
+•
+
+Direct emissions from fuel combustion and from the steam reforming process6.
+
+•
+
+For the purpose of calculating attributed emissions of the process, an equivalent of
+emissions associated with the heat export needs to be determined, and subtracted
+from attributed emissions. The latter section explains that for cases of heat of
+unknown origin, as a default, natural gas with a boiler efficiency of 90% is to be
+used, if no other data sources can be used. This gives a value of 62,3 t CO2/TJ.
+
+The activity level of the hydrogen good produced also needs to be monitored.
+Table 4-1 summarises the inputs and outputs from the process that are monitored for
+determining total direct specific embedded emissions.
+Table 4-1: Example calculation of total direct emissions attributed to hydrogen net of emissions
+for a heat export.
+Direct emissions
+
+AD (t)
+
+NCV
+(GJ/t)
+
+Energy
+(TJ)
+
+EF
+(t CO2/TJ)
+
+Emissions
+(t CO2)
+
+Input natural gas
+
+190 000
+
+48
+
+9 120
+
+56,1
+
+511 632
+
+-800
+
+62,3
+
+-49 867
+
+Heat export
+Total direct emissions of the
+installation
+
+461 765
+
+Total direct emissions of the installation result from one single source stream (natural gas).
+There is no need to distinguish combustion and process emissions for this purpose. In this
+example, these are wholly attributed to the hydrogen product, net of emissions attributed
+to a heat export. If the almost pure CO2 produced by this process were to be captured and
+transferred to a geological CO2 storage site, the related emissions could be deducted,
+provided the receiving installation carries out monitoring under the CBAM.
+Table 4-2: Calculation of embedded emissions of hydrogen product (example)
+Product
+Hydrogen
+
+6
+
+Activity level (t)
+
+Process total emissions (t CO2)
+
+55 000
+
+461 765
+
+SEE (t CO2 / t H2)
+8,396
+
+Emissions of carbon monoxide (CO) to the atmosphere from the process are not counted as outgoing
+source stream in the mass balance but are considered as the molar equivalent amount of CO 2 emissions.
+18
+
+Free allocation adjustment
+Hydrogen is a simple good with no differentiation of the EU ETS benchmark for any
+factors such as production routes. Therefore, the specific free allocation results directly
+from a look-up of the respective CBAM benchmark from the Annex of the Free Allocation
+Adjustment Act using the CN code for hydrogen: 5,089 t CO2 / t H2.
+•
+
+Assumption: Year = 2028.:
+o CSCF = 1,00
+o CBAM = 90%
+
+SEFA = 5,089 × 0,90 × 1,00 = 4,580 t CO2 / t H2
+
+CBAM obligation upon import:
+Using the above approach, the CBAM reporting obligation for the import of hydrogen
+product into the EU during the definitive period may then be determined; for example, for
+the import of 100 tonnes of hydrogen product in year 2028 produced by methane steam
+reforming:
+Definitive period:
+•
+
+Total direct embedded emissions = 100 t × 8,396 t / t CO2 = 839,6 t CO2
+Minus Free Allocation adjustment:
+
+458,0 t CO2
+
+(Further deduction could be made if a carbon price was paid in the country of
+production – outside the scope of this guidance).
+•
+
+Total CBAM obligation to be covered by the authorised declarant with CBAM
+certificates: 839,6 – 458,0 = 381,6 certificates
+
+19
+
+Annex A
+
+List of definitions
+
+Term
+
+Definition
+
+‘Accuracy’
+
+means the closeness of the agreement between the result of
+a measurement and the true value of the particular quantity
+or a reference value determined empirically using
+internationally accepted and traceable calibration materials
+and standard methods, taking into account both random
+and systematic factors
+
+‘Activity data’
+
+means the amount of fuels or materials consumed or
+produced by a process relevant for the calculation-based
+methodology, expressed in terajoules (TJ), mass in tonnes
+or (for gases) volume in normal cubic metres, as
+appropriate
+
+‘Actual emissions’
+
+means the emissions calculated based on primary data from
+the production processes of goods and from the production
+of electricity consumed during those processes as
+determined in accordance with the methods set out in
+Annex IV [to the Methodology Act]
+
+‘Activity level’
+
+means the quantity of goods to which the same functional
+unit applies that are produced within the system boundaries
+of a production process during a reporting period
+
+‘Aggregated goods
+categories’
+
+means aggregated goods categories pursuant to Table 1 of
+point 2 of Annex I. A group of CBAM goods with their CN
+codes, used for the purpose of defining system boundaries
+of production processes.
+
+‘Agricultural,
+aquaculture, fisheries
+and forestry residues’
+
+means residues that are directly generated by agriculture,
+aquaculture, fisheries and forestry and that do not include
+residues from related industries or processing
+
+‘Authorised CBAM
+declarant’
+
+means a person authorised by the competent authority in
+accordance with Article 17 [of the CBAM Regulation].
+The ‘authorised CBAM declarant’ [which replaces the
+term ‘reporting declarant’ from the transitional period]
+may be importers of CBAM goods, or their indirect
+customs representatives, who have applied for and been
+granted the status of authorised CBAM declarant.
+
+7
+
+‘Batch’
+
+means an amount of fuel or material representatively
+sampled and characterised, and transferred as one shipment
+or continuously over a specific period of time
+
+‘Biomass’
+
+means biomass as defined in Article 2, point (24) of the
+Renewable Energy Directive (RED II)7; it includes
+bioliquids and biofuels as defined in Article 2, point (32)
+and (33), biomass fuels as defined in Article 2, point (27)
+and biogas as defined in Article 2 point (28) of the RED II;
+
+Directive (EU) 2018/2001
+20
+
+Term
+
+Definition
+
+‘Biomass fraction’
+
+means the ratio of carbon stemming from biomass to the
+total carbon content of a fuel or material, expressed as a
+fraction
+
+‘Calculation factors’
+
+means net calorific value, emission factor, preliminary
+emission factor, oxidation factor, conversion factor, carbon
+content or biomass fraction
+
+‘Calibration’
+
+means the set of operations, which establishes, under
+specified conditions, the relations between values indicated
+by a measuring instrument or measuring system, or values
+represented by a material measure or a reference material
+and the corresponding values of a quantity realised by a
+reference standard
+
+‘Carbon price’
+
+means the monetary amount paid in a third country, under a
+carbon emissions reduction scheme, in the form of a tax,
+levy or fee or in the form of emission allowances under a
+greenhouse gas emissions trading system, calculated on
+greenhouse gases covered by such a measure, and released
+during the production of goods
+
+‘CBAM certificate’
+
+means a certificate in electronic format corresponding to
+one tonne of CO2e of embedded emissions in goods
+
+‘CO2 emission factor’
+
+means the weighted average of the CO2 intensity of
+electricity produced from fossil fuels within a geographic
+area. The CO2 emission factor is the result of the division of
+the CO2 emission data of the electricity sector by the gross
+electricity generation based on fossil fuels in the relevant
+geographic area. It is expressed in tonnes of CO2 per
+megawatt-hour
+
+‘Combined
+nomenclature’ (CN)
+
+means the classification of goods, designed to meet the
+needs of: i) the Common customs tariff, setting import
+duties for products imported into the European Union (EU),
+as well as the Integrated tariff of the European
+Communities (Taric), incorporating all EU and trade
+measures applied to goods imported into and exported out
+of the EU; ii) the international trade statistics of the EU.
+The CN provides the means of collecting, exchanging and
+publishing data on EU international trade statistics. It is
+also used for the collection and publication of international
+trade statistics in intra-EU trade.8
+
+8
+
+‘Combustion
+emissions’
+
+means greenhouse gas emissions occurring during the
+exothermic reaction of a fuel with oxygen
+
+‘Competent
+authority’
+
+means the authority designated by each Member State in
+accordance with Article 11 [of the CBAM Regulation]
+
+For definition see:
+https://ec.europa.eu/eurostat/statisticsexplained/index.php?title=Glossary:Combined_nomenclature_(CN)
+21
+
+Term
+
+Definition
+
+‘Continuous emission
+measurement’ (CEM)
+
+means a set of operations having the objective of
+determining the value of a quantity by means of periodic
+measurements, applying either measurements in the stack
+or extractive procedures with a measuring instrument
+located close to the stack, whilst excluding measurement
+methodologies based on the collection of individual
+samples from the stack
+
+‘Control system’
+
+means the operator’s risk assessment and entire set of
+control activities, including the continuous management
+thereof, that an operator has established, documented,
+implemented and maintained pursuant to point A.2. of
+Annex II
+
+‘Complex goods’
+
+means goods other than simple goods
+
+‘Conservative’
+
+means that a set of assumptions is defined in order to
+ensure that no under-estimation of reported emissions or
+over-estimation of production of heat, electricity or goods
+occurs
+
+‘Conversion factor’
+
+means the ratio of carbon emitted as CO2 to the total carbon
+contained in the source stream before the emitting process
+takes place, expressed as a fraction, considering CO emitted
+to the atmosphere as the molar equivalent amount of CO2
+
+‘Co-product’
+
+means any of two or more products resulting from the same
+production process
+
+‘Customs declarant’
+
+means a declarant as defined in Article 5, point (15) of
+Regulation (EU) No 952/2013 lodging a customs
+declaration for release for free circulation of goods in its
+own name or the person in whose name such a declaration
+is lodged
+
+‘CCUS system’
+
+means a group of economic operators with technically
+connected installations and transport equipment for CO2
+capture, transport, use in production of goods, or geological
+storage
+
+‘Data flow activities’
+
+mean activities related to the acquisition, processing and
+handling of data that are needed to draft an emissions
+report from primary source data
+
+‘Data set’
+
+means one type of data, either at installation level or
+production process level as relevant in the circumstances,
+as any of the following:
+(a)
+the amount of fuels or materials consumed or
+produced by a production process as relevant for the
+calculation-based methodology, expressed in terajoules,
+mass in tonnes, or for gases as volume in normal cubic
+metres, as appropriate, including for waste gases;
+(b)
+
+a calculation factor;
+
+22
+
+Term
+
+Definition
+(c)
+net quantity of measurable heat, and the relevant
+parameters required for determining this quantity, in
+particular: i) mass flow of heat transfer medium; and ii)
+enthalpy of transmitted and returned heat transfer medium,
+as specified by composition, temperature, pressure and
+saturation;
+(d)
+quantities of non-measurable heat, specified by the
+relevant quantities of fuels used for producing the heat, and
+the net calorific value (NCV) of the fuel mix;
+(e)
+
+quantities of electricity;
+
+(f)
+
+quantities of CO2 transferred between installations;
+
+(g)
+quantities of precursors received from outside the
+production process, and their relevant parameters, such as
+country of origin, used production route, specific direct
+and indirect emissions;
+‘Default value’
+
+means a value, which is calculated or drawn from
+secondary data, which represents the embedded emissions
+in goods
+
+‘Direct emissions’
+
+means emissions from the production processes of goods
+including emissions from the production of heating and
+cooling that is consumed during the production processes,
+irrespective of the location of the production of the heating
+or cooling
+
+‘Embedded emissions’
+
+means direct emissions released during the production of
+goods and indirect emissions from the production of
+electricity that is consumed during the production
+processes, calculated in accordance with the methods set
+out in Annex IV and further specified in the implementing
+acts adopted pursuant to Article 7(7)
+
+‘Emissions’
+
+mean the release of greenhouse gases into the atmosphere
+from the production of goods
+
+‘Emission factor’
+
+means the average emission rate of a greenhouse gas
+relative to the activity data of a source stream assuming
+complete oxidation for combustion and complete
+conversion for all other chemical reactions
+
+‘Emission factor’ for
+electricity
+
+means the default value, expressed in CO2e, representing
+the emission intensity of electricity consumed in production
+of goods.
+
+‘Emission source’
+
+means a separately identifiable part of an installation or a
+process within an installation, from which relevant
+greenhouse gases are emitted
+
+EU ETS
+
+means the system for greenhouse gas emissions allowance
+trading within the Union in respect of activities listed in
+Annex I to Directive 2003/87/EC other than aviation
+activities
+23
+
+Term
+
+Definition
+
+‘EU ETS allowance’
+
+means an allowance as defined in Article 3, point (a), of
+Directive 2003/87/EC in respect of activities listed in
+Annex I to that Directive other than aviation activities
+
+‘Fossil carbon’
+
+means inorganic and organic carbon that is not biomass
+
+‘Fossil fraction’
+
+means the ratio of fossil carbon to the total carbon content
+of a fuel or material, expressed as a fraction
+
+‘Fugitive emissions’
+
+means irregular or unintended emissions from sources that
+are not localised, or too diverse or too small to be
+monitored individually
+
+‘Functional unit’
+
+means the reference unit used for the calculation of
+embedded emissions in goods
+
+‘Goods’
+
+means goods listed in Annex I [to the CBAM the CBAM
+Regulation]
+
+‘Greenhouse gases’
+
+mean greenhouse gases as specified in Annex I [to the
+CBAM the CBAM Regulation] in relation to each of the
+goods listed in that Annex
+
+‘Heat meter’
+
+means a thermal energy meter or any other device to
+measure and record the amount of thermal energy produced
+based upon flow volumes and temperatures
+
+‘Importer’
+
+means either the person lodging a customs declaration for
+release for free circulation of goods or a bill of discharge in
+accordance with Article 175(5) of Delegated Regulation
+(EU) 2015/2446 in its own name and on its own behalf or,
+where the customs declaration is lodged by an indirect
+customs representative in accordance with Article 18 of
+Regulation (EU) No 952/2013, the person on whose behalf
+such a declaration is lodged
+
+‘Importation’
+
+means release for free circulation as provided for in Article
+201 of Regulation (EU) No 952/2013
+
+‘Indirect customs
+
+A customs representative appointed by an importer
+established in a Member State. If the importer appoints an
+indirect customs representative and they agree, they can act
+as an authorised CBAM declarant and submit the
+application for an authorisation on behalf of the importer.
+The indirect customs representative is liable for all
+operations made for the importers it represents
+
+Representative’
+
+‘Indirect emissions’
+
+means emissions from the production of electricity which is
+consumed during the production processes of goods,
+irrespective of the location of the production of the
+consumed electricity
+
+‘Inherent CO2’
+
+means CO2 which is part of a source stream.
+
+‘Installation’
+
+means a stationary technical unit where a production
+process is carried out
+
+24
+
+Term
+
+Definition
+
+‘Legal metrological
+control’
+
+means the control exercised by a public authority or
+regulator of the measurement tasks intended for the field of
+application of a measuring instrument, for reasons of public
+interest, public health, public safety, public order,
+protection of the environment, the levying of taxes and
+duties, the protection of consumers and fair trading
+
+‘Measurable heat’
+
+means a net heat flow transported through identifiable
+pipelines or ducts using a heat transfer medium, such as, in
+particular, steam, hot air, water, oil, liquid metals and salts,
+for which a heat meter is or could be installed
+
+‘Measurement point’
+
+means the emission source for which continuous emission
+measurement systems (CEMS) are used for emission
+measurement, or the cross-section of a pipeline system for
+which the CO2 flow is determined using continuous
+measurement systems
+
+‘Measurement
+system’
+
+means a complete set of measuring instruments and other
+equipment used to determine variables for the monitoring
+and calculation of emissions
+
+‘Minimum
+requirements’
+
+means monitoring methods using the minimum efforts
+allowed for determining data in order to result in emission
+data acceptable for the purpose of the CBAM Regulation.
+
+‘Mixed fuel’
+
+means a fuel which contains both biomass and fossil carbon
+
+‘Mixed material’
+
+means a material which contains both biomass and fossil
+carbon
+
+‘Multifunctional
+process’
+
+means a process that delivers multiple outputs or whose
+outputs feed into several production processes
+
+‘Net calorific value’
+(NCV)
+
+means the specific amount of energy released as heat when
+a fuel or material undergoes complete combustion with
+oxygen under standard conditions, less the heat of
+vaporisation of any water formed
+
+‘Non-CBAM good’
+
+means any good produced in the installation that is not
+included in Annex I to the CBAM Regulation
+
+‘Non-measurable
+heat’
+
+means all heat other than measurable heat
+
+‘Operator’
+
+means any person who operates or controls an installation
+in a third country, including a parent company that controls
+an installation in a third country
+
+‘Oxidation factor’
+
+means the ratio of carbon oxidised to CO2 as a consequence
+of combustion to the total carbon contained in the fuel,
+expressed as a fraction, considering carbon monoxide (CO)
+emitted to the atmosphere as the molar equivalent amount
+of carbon dioxide (CO2)
+
+‘Power purchase
+agreement’
+
+means a contract under which a person agrees to purchase
+electricity directly from an electricity producer
+25
+
+9
+
+Term
+
+Definition
+
+‘Precursor’
+
+means any input material into a production process
+included in the list of goods set out in Annex I to the
+CBAM Regulation;
+
+‘Preliminary
+emission factor’
+
+means the assumed total emission factor of a fuel or
+material based on the carbon content of its biomass fraction
+and its fossil fraction before multiplying it by the fossil
+fraction to produce the emission factor
+
+‘Production process’
+
+means the chemical and physical processes carried out to
+produce goods in an installation
+
+‘Production route’ 9
+
+means a specific technology used in a production process
+to produce goods
+
+‘Process emissions’
+
+means greenhouse gas emissions other than combustion
+emissions occurring as a result of intentional and
+unintentional reactions between substances or their
+transformation, for a primary purpose other than the
+generation of heat, including from the following processes:
+(a) the chemical, electrolytic or pyrometallurgical
+reduction of metal compounds in ores, concentrates and
+secondary materials; (b) the removal of impurities from
+metals and metal compounds; (c) the decomposition of
+carbonates, including those used for flue gas cleaning; (d)
+chemical syntheses of products and intermediate products
+where the carbon bearing material participates in the
+reaction; (e) the use of carbon containing additives or raw
+materials; (f) the chemical or electrolytic reduction of
+metalloid oxides or non-metal oxides such as silicon
+oxides and phosphates.
+
+‘Proxy data’
+
+means annual values which are empirically substantiated or
+derived from accepted sources and which an operator uses
+to substitute a data set10 for the purpose of ensuring
+complete reporting
+
+‘Rebate’
+
+means any amount that reduces the amount due or paid by a
+person liable for the payment of a carbon price, before its
+payment or after, in a monetary form or in any other form.
+
+‘Recommended
+improvements’
+
+means monitoring methods which are proven means to
+ensure that data are more accurate or less prone to mistakes
+than by mere application of minimum requirements
+
+‘Related emissions’
+
+means: – the direct emissions caused by the source stream
+or emission source concerned; – emissions attributed to a
+quantity of measurable heat; – the indirect emissions related
+to the quantity of electricity concerned; – embedded
+emissions of a material produced or of a precursor
+consumed.
+
+Note that different production routes can fall within the same production process.
+
+10
+
+Refers to the activity data or the calculation factors.
+26
+
+Term
+
+Definition
+
+‘Reporting period’
+
+means the period corresponding to the calendar year during
+which the good was produced and used by the authorised
+CBAM declarant as reference for the determination of
+embedded emissions
+
+‘Residue’
+
+means a substance that is not the end product that a
+production process directly seeks to produce; it is not a
+primary aim of the production process and the process has
+not been deliberately modified to produce it
+
+‘Simple goods’
+
+means goods produced in a production process requiring
+exclusively input materials (precursors) and fuels having
+zero embedded emissions
+
+‘Source stream’
+
+means either of the following: (a) a specific fuel type, raw
+material or product giving rise to emissions of relevant
+greenhouse gases at one or more emission sources as a
+result of its consumption or production; (b) a specific fuel
+type, raw material or product containing carbon and
+included in the calculation of greenhouse gas emissions
+using a mass-balance method
+
+‘Specific embedded
+emissions’
+
+means the embedded emissions of one tonne of goods,
+expressed as tonnes of CO2e emissions per tonne of goods
+
+‘Standard conditions’
+
+means temperature of 273,15 K and pressure conditions of
+101 325 Pa defining normal cubic metres (Nm3)
+
+‘System boundary’
+
+means the group of chemical or physical processes included
+in the calculation of embedded emissions of goods under
+the same aggregated goods category.
+The system boundaries shall cover direct emissions,
+indirect emissions for goods not listed in Annex II to the
+CBAM Regulation, and the embedded emissions of any
+precursor.
+
+11
+
+‘Third country’
+
+means a country or territory outside the customs territory of
+the [European] Union
+
+‘Tonne of CO2(e)’
+
+means one metric tonne of carbon dioxide (‘CO2’), or an
+amount of any other greenhouse gas listed in Annex I [to
+the CBAM Regulation] with an equivalent global warming
+potential [‘CO2e‘]
+
+‘Transmission system
+operator’
+
+means an operator as defined in Article 2, point (35) of
+Directive (EU) 2019/944 of the European Parliament and of
+the Council (11).
+
+Directive (EU) 2019/944 of the European Parliament and of the Council of 5 June 2019 on common
+rules for the internal market for electricity and amending Directive 2012/27/EU (OJ L 158, 14.6.2019,
+p. 125).
+27
+
+Term
+
+Definition
+
+‘Uncertainty’
+
+means a parameter, associated with the result of the
+determination of a quantity, that characterises the
+dispersion of the values that could reasonably be attributed
+to the particular quantity, including the effects of
+systematic as well as of random factors, expressed in
+percent, and describes a confidence interval around the
+mean value comprising 95% of inferred values taking into
+account any asymmetry of the distribution of values
+
+‘Waste’
+
+means any substance or object which the holder discards or
+intends or is required to discard, excluding substances that
+have been intentionally modified or contaminated in order
+to meet this definition
+
+‘Waste gas’
+
+means a gas containing incompletely oxidised carbon in a
+gaseous state under standard conditions which is a result of
+any of the processes listed under ‘process emissions’
+
+28
+
+Annex B
+
+List of abbreviations
+
+Abbreviation
+
+Full term
+
+AD
+
+Activity Data
+
+AEM
+
+Anode Effect Minutes
+
+AEO
+
+Anode Effect Overvoltage
+
+AL
+
+Activity Level
+
+AOD
+
+Argon Oxygen Decarburisation.
+
+BAT
+
+Best Available Techniques
+
+BF
+
+Biomass Fraction
+
+BFG
+
+Blast Furnace Gas
+
+BM
+
+Benchmark
+
+BOF
+
+Basic Oxygen Furnace
+
+BOFG
+
+Basic Oxygen Furnace Gas
+
+BREFs
+
+Best Available Techniques Reference documents
+
+CA
+
+Competent Authority
+
+CBAM
+
+Carbon Border Adjustment Mechanism, the
+
+CCR
+
+Clinker to Cement Ratio
+
+CCS
+
+Carbon Capture and Storage
+
+CCU(S)
+
+Carbon Capture and Utilisation (and Storage)
+
+CEMS
+
+Continuous Emission Measurement Systems
+
+CF
+
+Conversion Factor
+
+CFP
+
+Carbon footprint of products
+
+CHP
+
+Combined Heat and Power
+
+CKD
+
+Cement Kiln Dust
+
+CN
+
+Combined nomenclature
+
+COG
+
+Coke Oven Gas
+
+DRI
+
+Direct Reduced Iron
+
+EAF
+
+Electric Arc Furnace
+
+EEA
+
+European Economic Area (EU-27, Iceland, Norway, Liechtenstein)
+
+EF
+
+Emission Factor
+
+EFTA
+
+European Free Trade Area
+
+EORI
+
+Economic Operator Registration and Identification
+
+ETS
+
+Emissions Trading System
+
+EU ETS
+
+EU Emissions Trading System
+
+EUA
+
+EU Allowances (used in the EU ETS)
+
+EUR
+
+Euro (currency)
+29
+
+Abbreviation
+
+Full term
+
+FAR
+
+Free Allocation Rules (Regulation 2019/331)12
+
+FIFO
+
+First-In-First-Out principle
+
+GHG
+
+Greenhouse Gas
+
+GWP
+
+Global Warming Potential
+
+HBI
+
+Hot Briquetted Iron
+
+HS
+
+Harmonised System (for international trade)
+
+IEA
+
+International Energy Agency
+
+ISO
+
+International Organization for Standardization
+
+LULUCF
+
+Land-use, land change and forestry (criteria)
+
+MP
+
+Monitoring Plan
+
+MRR
+
+Monitoring and Reporting Regulation (Regulation 2018/2066)13
+
+MRV
+
+Monitoring, Reporting and Verification
+
+MS
+
+Member State(s)
+
+MWh
+
+Megawatt-hour
+
+NCV
+
+Net Calorific Value
+
+NPI
+
+Nickel pig iron
+
+OF
+
+Oxidation Factor
+
+PCI
+
+Pulverised Coal Injection
+
+PEMS
+
+Predictive Emission Monitoring System
+
+PFC
+
+Perfluoro-carbon
+
+PoS
+
+Proofs of Sustainability
+
+RED II
+
+Renewable Energy Directive, re-cast
+
+SEE
+
+Specific embedded emissions
+
+SEFA
+
+Specific embedded free allocation
+
+TARIC
+
+Integrated Tariff of the European Union database
+
+TJ
+
+Terajoules
+
+TSO
+
+Transmission System Operator
+
+UCC
+
+Union Custom Code
+
+UN/LOCODE
+
+United Nations Code for Trade and Transport Location
+
+12
+
+Free Allocation Rules (Commission Delegated Regulation (EU) 2019/331 of 19 December 2018
+determining transitional Union-wide rules for harmonised free allocation of emission allowances
+pursuant to Article 10a of Directive 2003/87/EC of the European Parliament and of the Council)
+
+13
+
+Monitoring and Reporting Regulation (Commission Implementing Regulation (EU) 2018/2066 of 19
+December 2018 on the monitoring and reporting of greenhouse gas emissions pursuant to Directive
+2003/87/EC of the European Parliament and of the Council and amending Commission Regulation (EU)
+No 601/2012
+30
+
+

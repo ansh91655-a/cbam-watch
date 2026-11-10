@@ -1,0 +1,2354 @@
+EUROPEAN COMMISSION
+DIRECTORATE-GENERAL
+TAXATION AND CUSTOMS UNION
+Indirect Taxation and Tax Administration
+CBAM, Energy and Green Taxation
+
+Brussels, 14 August 2026
+
+GUIDANCE DOCUMENT 5C: SECTOR-SPECIFIC GUIDANCE
+DOCUMENT ON FERTILISERS
+
+Disclaimer: This guidance document is not legally binding and it is of an explanatory nature.
+Legal provisions of Union law take precedence over the contents of this document and should
+always be consulted. The authentic texts of the EU legal instruments are those published in the
+Official Journal of the European Union. This guidance was prepared by Commission services
+and does not represent an official position of the Commission. Only the Court of Justice of the
+European Union is competent to authoritatively interpret Union law.
+
+Commission européenne/Europese Commissie, 1049 Bruxelles/Brussel, BELGIQUE/BELGIË – Tel. +32 22991111
+
+VERSION HISTORY
+Date
+
+Version notes
+
+14.08.2026
+
+First Publication of this document for the definitive period.
+
+2
+
+CONTENTS
+1
+
+PREFACE
+
+4
+
+1.1
+
+Structure and content of the guidance documents
+
+4
+
+1.2
+
+Reference regulations and legal acts
+
+5
+
+2
+2.1
+
+CBAM GOODS AND PRODUCTION ROUTES
+Foreword to sector-specific sections
+
+7
+7
+
+2.2
+Fertilisers sector goods and production routes
+8
+2.2.1
+Unit of production and embedded emissions
+8
+2.2.2
+Definition and explanation of sector CBAM goods covered
+9
+2.2.3
+Definition and explanation of relevant production processes and routes
+11
+3
+
+FERTILISERS SECTOR-SPECIFIC REQUIREMENTS
+
+16
+
+3.1
+Sector-specific requirements for monitoring and reporting
+3.1.1
+Emissions monitoring
+3.1.2
+Additional rules
+3.1.3
+Additional reporting requirements
+
+17
+17
+18
+19
+
+4
+
+20
+
+WORKED EXAMPLE FOR THE FERTILISER SECTOR
+
+ANNEX A
+
+LIST OF DEFINITIONS
+
+25
+
+ANNEX B
+
+LIST OF ABBREVIATIONS
+
+34
+
+3
+
+1
+
+PREFACE
+
+1.1
+
+Structure and content of the guidance documents
+
+This series of documents has been written to support stakeholders by explaining the
+requirements of the CBAM Regulation in a non-legislative language. This series of
+guidance documents should benefit a variety of stakeholders. A specific focus has been put
+on clarifying the requirements for operators of installations producing CBAM goods
+outside of the EU for the definitive period.
+•
+
+Guidance 1 provides an overview of the main changes to the CBAM methodology
+between the definitive period and the concluded transitional period. It also
+introduces the CBAM and an overview of the compliance cycle, roles and
+responsibilities, as well as milestones and deadlines for operators of installations
+outside the EU during the definitive period and explains the general exemptions
+from the CBAM.
+
+•
+
+Guidance 2 provides a quick guidance for the intended reader of this document,
+the operator of an installation producing CBAM goods. It provides a roadmap of
+the most important concepts of CBAM emissions monitoring and where to find
+more information in this series of documents.
+
+•
+
+Guidance 3 sets out the monitoring and reporting obligations and
+recommendations which are potentially applicable to any affected producer of
+CBAM goods.
+
+•
+
+Guidance 4 provides an overview of how the adjustment for free allocation is to
+be determined and what information is needed.
+
+•
+
+Guidance documents 5a, 5b, 5c, 5d, 5e and 5f present an overview per sector of
+the production processes and value chains for goods that are included in the scope
+of the CBAM, as well as sector-specific monitoring and reporting considerations
+for each CBAM good where this is relevant. These sections are supplemented by
+examples for each sector.
+
+The series of guidance documents is accompanied by an electronic template for
+information that should be used by installation operators to communicate information to
+the authorised CBAM declarants and CBAM Registry.
+
+Presentation of numbers in EU documents
+To align with EU legal documents, this guidance document uses the following
+convention when presenting numbers.
+The decimal separator used to separate the integral part of a number from its fractional
+part is a comma, e.g.: 0,890
+Thousands, and powers of 103n thereafter, are separated by a space, e.g.:
+•
+
+fifteen thousand is written as 15 000
+
+•
+
+fifteen million is written as 15 000 000
+4
+
+1.2
+
+Reference regulations and legal acts
+
+Several regulations and legal acts are referred to throughout this series of guidance
+documents. For ease of reading and to avoid ambiguity, simplified references are used
+when citing these acts.
+•
+
+CBAM Regulation: Regulation (EU) 2023/956 and Regulation (EU) 2025/2083
+amending Regulation (EU) 2023/956. Notably, where article numbers are given
+in this document without further specification, they always refer to the CBAM
+Regulation.
+It can be accessed at the following link (consolidated version):
+http://data.europa.eu/eli/reg/2023/956/2025-10-20
+
+•
+
+Methodology Act: Commission Implementing Regulation (EU) 2025/2547, in
+legal texts referred to as “Implementing act pursuant to Article 7(7) of the CBAM
+Regulation”.
+It can be accessed at the following link:
+http://data.europa.eu/eli/reg_impl/2025/2547/oj
+
+•
+
+Default Values Act: Commission Implementing Regulation (EU) 2025/2621, in
+legal texts referred to as “Implementing act pursuant to Article 7(7) of the CBAM
+Regulation”, also referred to as “default values determined in accordance with
+Annex IV to the CBAM Regulation”.
+It can be accessed at the following
+link: http://data.europa.eu/eli/reg_impl/2025/2621/oj
+
+•
+
+Verification Principles Act: Commission Implementing Regulation (EU)
+2025/2546, in legal texts referred to as “Implementing act pursuant to Article 8(3)
+of the CBAM Regulation”.
+It can be accessed at the following link:
+http://data.europa.eu/eli/reg_impl/2025/2546/oj
+
+•
+
+Accreditation & Verification Requirements Act: Commission Delegated
+Regulation (EU) 2025/2551, in legal texts referred to as “Delegated act pursuant
+to Article 18(3) of the CBAM Regulation”.
+It can be accessed at the following
+link: http://data.europa.eu/eli/reg_del/2025/2551/oj
+
+•
+
+Free Allocation Adjustment Act: Commission Implementing Regulation (EU)
+2025/2620, in legal texts referred to as “Implementing act pursuant to Article
+31(2) of the CBAM Regulation”.
+It can be accessed at the following link:
+http://data.europa.eu/eli/reg_impl/2025/2620/oj
+
+For acronyms and definitions used in this document, please see Annex B and Annex A.
+5
+
+A series of icons are used throughout to help guide the reader:
+Icon
+
+Description of use
+Points to information of particular importance for operators of
+installations producing CBAM goods.
+
+Simplified!
+
+Highlights simplified approaches of the general requirements of
+the CBAM.
+Used where recommended improvements are presented.
+Used where other documents, templates or electronic tools are
+available from other sources.
+Points to examples given for the topics discussed in the
+surrounding text.
+
+6
+
+2
+
+CBAM GOODS AND PRODUCTION ROUTES
+
+This section provides guidance on industry-sector-specific rules that apply for the
+definitive period (from 2026 onwards) in the fertilisers sector. It deals with the
+specification of products covered by the CBAM and the relevant production routes.
+
+2.1
+
+Foreword to sector-specific sections
+
+The following sections provide an overview of the different production routes for the goods
+under fertilisers sector in CBAM and provide sector specific guidance. Where goods to
+which the same functional unit applies are produced in one installation via different
+production routes, the embedded emissions shall be determined in accordance with the
+averaging rules applicable in the definitive period.
+Additional information on the production processes of the goods can also be found in the
+BREF1 documents for best available techniques (BAT).
+Diagrams used in the following sections.
+For the system boundary graphics presented in the sections below, the following
+conventions are applied:
+⚫
+Production processes (for which monitoring of the direct emissions would take
+place) are shown as rectangles with white background.
+⚫
+Optional processes (e.g. CCS/CCU) are shown in blue boxes. In particular,
+CCS/CCU would not be taken into account for developing default values, but
+where you (as an operator) use them, the related emissions or emission savings
+should be taken into account for determining actual embedded emissions in line
+with the CBAM Regulation and the Methodology Act.
+⚫
+Materials which are considered to have no embedded emissions are shown in
+pink boxes, materials with embedded emissions (precursor materials and final
+products, i.e. goods under the CBAM) in green boxes. Simple goods are shown
+in normal font, complex goods in bold font. Materials which are optional are
+shown in boxes with a blue dashed outline and must be included where actually
+used at the installation.
+⚫
+Input materials are presented without trying to be complete. This means that the
+focus is on materials which are relevant for demonstrating the differences
+between different production routes. As a consequence, less important input
+materials and in particular fuels are usually omitted in order to keep graphs
+simple.
+⚫
+Electricity as input is shown only in cases where it is the main “precursor” of
+the process (i.e. in particular for electric arc furnaces and electrolysis processes).
+Electricity is shown in light grey boxes.
+
+1
+
+BAT Reference document (BREF), BAT being “Best Available Techniques” as defined by the IED
+(Industrial Emissions Directive). Relevant BREF documents are those for: the production of cement; for
+iron and steel production; large volume inorganic chemicals (which includes fertilisers); for Chlor-alkali;
+and for non-ferrous metals (which includes both aluminium and ferro-alloys). All BREFs can be found
+at the European IPPC Bureau, under https://eippcb.jrc.ec.europa.eu/reference.
+7
+
+2.2
+
+Fertilisers sector goods and production routes
+
+The textbox below signposts sector-specific sections in the Methodology Act, relevant for
+the CBAM definitive period.
+Methodology Act references:
+•
+
+Annex I, Table 1 “Mapping of CN codes to aggregated goods categories” (aggregated goods
+categories “Ammonia”, “Nitric acid”, “Urea” and “Mixed fertilisers”) to the Methodology Act.
+
+•
+
+Annex I, points 3.7–3.10 (“Ammonia”, “Nitric acid”, “Urea”, “Mixed fertilisers”), which define the
+functional unit, system boundaries and possible precursors for nitrogenous fertiliser goods, together
+with the cross-sectoral rules on emissions monitoring and attribution in Annex II and Annex III.
+
+2.2.1
+
+Unit of production and embedded emissions
+
+The quantity of declared nitrogen containing fertiliser sector goods imported into the EU
+must be expressed using the functional unit applicable to the relevant fertiliser CBAM
+good (i.e. kilograms of nitrogen content or the relevant supplementary units, as applicable).
+As an operator, you must record the quantity of CBAM goods produced by installation or
+production process, for the purposes of reporting and calculating specific embedded
+emissions in accordance with the CBAM Regulation and the Methodology Act. For the
+purposes of calculating specific embedded emissions, the functional unit for fertiliser
+CBAM goods is defined in Article 4(4) of the Methodology Act, as kilograms of nitrogen
+contained in the goods produced under CN codes 2808 00 00, 2814 and 3105, and the
+relevant supplementary units laid down in Regulation (EEC) No 2658/87 for other fertiliser
+CN codes, which are defined as kilograms of nitrogen contained in the goods as well.
+
+Industrial sector
+
+Fertilisers
+
+Production unit of goods
+
+Functional unit as defined in Article 4(4) of the
+Methodology Act (kilograms of nitrogen
+contained in the goods for CN codes 2808 00
+00, 2814 and 3105, or the relevant
+supplementary units laid down in Regulation
+(EEC) No 2658/87 for other fertiliser CN
+codes), reported separately for each type of
+CBAM good, by installation or production
+process in the country of origin.
+
+Associated activities
+
+Producing chemical precursors for nitrogenous
+fertiliser production, producing nitrogenous
+fertilisers by physical mixing or chemical
+reaction, and processing into their final form.
+
+Relevant greenhouse gas
+emissions
+
+Carbon dioxide (CO2) and nitrous oxide (N2O)
+
+Direct Emissions
+
+Tonnes (metric) of CO2e
+
+8
+
+Industrial sector
+
+Fertilisers
+
+Indirect emissions
+
+Quantity of electricity consumed (MWh),
+source and emissions factor used to calculate
+the indirect emissions in tonnes (metric) of CO2
+or CO2e.
+Indirect emissions resulting from electricity
+consumption must be monitored and taken into
+account in the embedded emissions of fertiliser
+CBAM goods, in accordance with Article 3(2)
+of the CBAM Regulation and the Methodology
+Act, since fertiliser CBAM goods are not listed
+in Annex II (“Goods for which only direct
+emissions are taken into account”).
+
+Unit for embedded emissions
+
+Tonnes CO2e emissions per functional unit of
+goods (kilogram of nitrogen contained in the
+fertiliser ), reported separately for each type of
+goods, by installation in the country of origin.
+
+During the transitional period, the fertiliser industry sector reported both direct and indirect
+emissions, with indirect emissions reported separately. In the definitive period, fertiliser
+CBAM goods are subject to the general rule in Article 3(2) of the CBAM Regulation: both
+direct and indirect emissions, as well as the embedded emissions of any precursors, must
+be taken into account when determining embedded emissions, since fertiliser CBAM
+goods are not listed in Annex II (“Goods for which only direct emissions are taken into
+account”). Emissions must be reported in metric tonnes CO2 equivalent (t CO2e) per
+functional unit of fertiliser good (per kg of nitrogen content), calculated for the specific
+installation or production process in your country of origin. Where fertiliser goods are
+produced and placed on the market with different nitrogen contents, emissions shall be
+calculated and averaged in line with the composition-based rules set out in Annex III,
+Section B to the Methodology Act (i.e. by averaging across nitrogen-content ranges, with
+ranges not exceeding 10%, see equation 66).
+The following sections set out how the system boundaries of fertiliser sector goods should
+be defined and identify elements of the production process that must be included for the
+purposes of monitoring and reporting.
+2.2.2
+
+Definition and explanation of sector CBAM goods covered
+
+The following Table 2-1 lists the relevant goods in scope for the CBAM definitive period
+in the fertiliser industry sector. The CN codes in the central column are the starting point
+for which ‘production processes’ are to be defined for the purpose of monitoring at
+installation level and, where multiple CN codes share the same precursors and production
+steps, may be grouped within one production process, in line with Annex I, Table 1 to the
+Methodology Act.
+
+9
+
+Table 2-1: CBAM goods in the fertiliser sector2
+
+Aggregated goods
+category
+
+Product CN
+Code3
+
+Description
+
+Nitric acid
+
+2808 00 00
+
+Nitric acid; sulphonitric acids
+
+Urea
+
+3102 104
+
+Urea, whether or not in aqueous
+solution
+
+Ammonia
+
+2814
+
+Ammonia, anhydrous or in aqueous
+solution
+
+Mixed fertilisers
+
+2834 21 00,
+3102,
+3105
+
+2834 21 00 – Nitrates of potassium
+
+- Except 3102 10
+(Urea) and
+3105 60 00
+
+- Except 3102 10 (Urea)
+
+3102 – Mineral or chemical fertilisers,
+nitrogenous
+3105 – Mineral or chemical fertilisers
+containing two or three of the
+fertilising elements nitrogen,
+phosphorus, and potassium; other
+fertilisers
+- Except: 3105 60 00 – Mineral or
+chemical fertilisers containing the two
+fertilising elements phosphorus and
+potassium5
+
+The aggregated goods categories listed in Table 2-1 include both the finished nitrogenous
+fertiliser goods and chemical precursor goods (intermediate products) that are consumed
+in the production of fertiliser.
+The system boundaries specified in the Methodology Act do not mention explicitly which
+precursors are relevant for the production process. Therefore, Table 2-2 should help to
+identify the possible precursors by aggregated goods category and production route.
+
+2
+
+Source: Annex I to the CBAM Regulation; Annex I (“Mapping of CN codes to aggregated goods
+categories”) to the Methodology Act.
+
+3
+
+Where the CN codes indicated in this table consist of 4, 5 or 6 digits, all 8-digit CN codes sharing the
+same initial digits shall be considered included, unless otherwise specified.
+
+4
+
+The urea six-digit code includes at eight-digit CN code level: 3102 10 12; 3102 10 15; 3102 10 19;
+3102 10 90
+
+5
+
+Only nitrogen (N) containing fertilisers have significant embedded emissions, therefore their precursors
+are included in the CBAM.
+10
+
+Table 2-2: Aggregated goods categories, their production routes and possible precursors
+
+Aggregated Goods Category
+
+Precursors
+
+Production route
+Ammonia
+
+Hydrogen6.
+
+Haber Bosch with steam
+reforming
+Haber Bosch with
+gasification
+Nitric Acid
+
+Ammonia (as 100% ammonia).
+
+Urea
+
+Ammonia (as 100% ammonia).
+
+Mixed fertiliser
+
+If used in the process: ammonia (as 100%
+ammonia), nitric acid (as 100% nitric acid), urea,
+mixed fertilisers (in particular salts containing
+ammonium or nitrate).
+
+For the production of mixed fertiliser, not all precursors will apply in every case. Note in
+particular that in some instances an aggregated goods category (mixed fertiliser itself) may
+be used as a precursor for its own category, depending on the final formulation of the mixed
+fertiliser product required.
+The final nitrogenous chemical fertiliser goods produced from the precursors (in bulk in
+integrated plants) are defined as complex goods as they include the embedded emissions
+from precursor goods.
+The production of fertiliser sector goods is by a number of different process routes,
+outlined below.
+2.2.3
+
+Definition and explanation of relevant production processes and routes
+
+The system boundaries of chemical precursors and fertilisers are distinct and may, under
+certain conditions, be added together to include all processes directly or indirectly linked
+to the production processes for these goods, including input activities to the process, and
+output activities from the process in line with the definitions of functional units, system
+boundaries and precursors for “Ammonia”, “Nitric acid”, “Urea” and “Mixed fertilisers”
+in Annex I, points 3.7–3.10, and the rules for attributing emissions to goods in Annex III
+of the Methodology Act.
+
+6
+
+Where hydrogen is used in the process, it shall be treated as a precursor with its own embedded emissions
+determined in accordance with the rules applicable to the hydrogen aggregated goods category. Indirect
+emissions of electricity associated with the hydrogen precursor may be disregarded when determining
+the embedded emissions of ammonia CBAM goods. However, this applies only where hydrogen from
+external installations or separate production processes (e.g. an electrolysis process on the ammonia
+production site) is used in the synthesis of ammonia. In cases of generic Haber-Bosch processes, where
+the production of hydrogen is only a highly integrated intermediate step of the overall production process
+(and indirect emissions from hydrogen production can thus not be determined separately), the indirect
+emissions of the complete process are to be included.
+
+11
+
+The following Figure 2-1 provides an overview of the different processes and process
+routes for the production of nitrogenous fertiliser and its precursors.
+Figure 2-1: System boundaries and value chain for the production of nitrogenous
+fertiliser and its precursors – overview
+
+Notes to figure:
+• Functional unit for embedded emissions (fertilisers): kg N content for relevant CN codes.
+• Where the functional unit is based on nitrogen content, embedded emissions are calculated by averaging across
+nitrogen-content ranges (≤10%).
+• *Indirect emissions from electricity are included in embedded emissions for fertiliser goods where indirect
+emissions are in scope.
+• ** The production of hydrogen is typically fully integrated in the process so it is unfeasible to distinguish a
+separate production process of hydrogen. However, separately-produced Hydrogen in another production process
+may be used as an input to ammonia synthesis.
+
+Urea is used as a precursor in mixed fertiliser production but may also be used as a
+convenient fertiliser on its own due to its high nitrogen content and is therefore both a
+CBAM good in its own right (aggregated goods category “Urea”) and, where applicable,
+a precursor for mixed fertilisers as defined in Annex I, Table 1 of the Methodology Act.
+Mixed fertilisers comprise all kinds of nitrogen (N) containing fertilisers, including
+ammonium nitrate, calcium ammonium nitrate, ammonium sulphate, ammonium
+phosphates, urea ammonium nitrate solutions, as well as nitrogen-phosphorus (NP),
+nitrogen-potassium (NK) and nitrogen-phosphorus-potassium (NPK) fertilisers falling
+under the “Mixed fertilisers” aggregated goods category of the Methodology Act. In
+addition, the amounts of different nitrogen compounds contained in the final product shall
+be recorded in accordance with Annex I, point 3.10.1 of the Methodology Act.
+2.2.3.1
+
+Ammonia – Haber-Bosch with steam reforming production route
+
+Ammonia is synthesised from nitrogen and hydrogen via the Haber-Bosch process.
+Hydrogen for the process is obtained in this production route by steam reforming natural
+gas or biogas, whilst nitrogen is obtained from the air. The overall reaction is highly
+endothermic, and process heat is supplied by the combustion of natural gas or other
+gaseous fuel. Any carbon monoxide produced is almost all converted to carbon dioxide.
+The production of hydrogen is typically fully integrated in the process, so it is unfeasible
+to distinguish a separate production process of hydrogen. On some occasions, hydrogen
+produced from other separated production processes can be also used and its embedded
+emissions shall be accounted.
+
+12
+
+The Methodology Act and its annexes (in particular the provisions for the “Ammonia”
+aggregated goods category) define the system boundaries for direct emissions monitoring
+for the Haber–Bosch process with steam reforming production route. For the purposes of
+this guidance, those system boundaries can be described as encompassing:
+“ – All processes directly or indirectly linked to the production process, and from
+flue gas cleaning.
+– All fuels shall be monitored, irrespective of whether used as energetic or nonenergetic input.
+– Where biogas is used, the provisions of Section B.3.3 of Annex II shall be
+applied.”
+If hydrogen used in the process is separately produced, it is a precursor with its own
+embedded direct emissions.
+Indirect emissions that result from electricity consumed by the ammonia production
+process must be monitored and taken into account in embedded emissions in accordance
+with the CBAM Regulation and the Methodology Act.
+In line with the above definition of system boundaries, the following production steps may
+be regarded as being within the system boundaries of the Haber-Bosch with steam
+reforming process:
+•
+
+Steam reforming natural gas or biogas.
+
+•
+
+Synthesis of ammonia – from hydrogen and nitrogen, at high temperature and
+pressure in the presence of a catalyst; ammonia condensation, purification and
+storage (if applicable).
+
+•
+
+Emissions control – for treating releases to air, water or ground.
+
+The stream of carbon dioxide from the production of ammonia is of high purity and can be
+separated, captured and transferred elsewhere for other uses e.g. for urea production.
+Note that the ammonia produced is reported as 100% ammonia, whether in hydrous or
+anhydrous form.
+2.2.3.2
+
+Ammonia – Haber-Bosch with gasification production route
+
+With this production route, hydrogen is obtained by the gasification of hydrocarbons,
+typically from heavy feedstocks such as coal, heavy refinery fuels or other fossil
+feedstocks. A synthesis gas containing hydrogen is produced, which has to be purified
+before it can be used for the next production step. Ammonia is then synthesised from the
+hydrogen produced and from nitrogen obtained from the air, at high temperature and
+pressure in the presence of a catalyst. Any carbon monoxide produced is almost all
+converted to carbon dioxide. The production of hydrogen is typically fully integrated in
+the process so it is unfeasible to distinguish a separate production process of hydrogen. In
+some occasion, hydrogen produced from other separated production processes can be also
+used and its embedded emissions shall be accounted.
+The Methodology Act and its annexes (in particular the provisions for the “Ammonia”
+aggregated goods category) also define the system boundaries for direct emissions
+13
+
+monitoring for the Haber–Bosch process with gasification production route. For the
+purposes of this guidance, those system boundaries can be described as encompassing:
+“ – All processes directly or indirectly linked to the production processes, and from
+flue gas cleaning.
+– Each fuel input shall be monitored as one fuel stream, irrespective of whether it
+is used as energetic or non-energetic input.”
+If hydrogen used in the process is separately produced, it is a precursor with its own
+embedded direct emissions.
+Indirect emissions that result from electricity consumed by the ammonia production
+process must be monitored and taken into account in embedded emissions in accordance
+with the CBAM Regulation and the Methodology Act.
+In line with the above definition of system boundaries, the following production steps may
+be regarded as being within the system boundaries of the Haber-Bosch with gasification
+process:
+•
+
+Gasification (partial oxidation).
+
+•
+
+Synthesis of ammonia – from hydrogen and nitrogen, at high temperature and
+pressure in the presence of a catalyst; ammonia condensation, purification and
+storage (if applicable).
+
+•
+
+Emissions control – for treating releases to air, water or ground.
+
+Note that the ammonia produced is reported as 100% ammonia, whether in hydrous or
+anhydrous form.
+2.2.3.3
+
+Nitric acid (and sulphonitric acids) production process
+
+Nitric acid is mostly produced via the oxidation of ammonia by Ostwald process. Ammonia
+is first oxidised in the presence of a catalyst to form nitrogen oxide, which is then further
+oxidised to nitrogen dioxide, followed by absorption in water in an absorption tower to
+form nitric acid. The reaction is exothermic and heat and power may be recovered to the
+process.
+The Methodology Act and its annexes (in particular the provisions for the “Nitric acid”
+aggregated goods category) define the system boundaries for direct emissions monitoring
+for the nitric acid production route. For the purposes of this guidance, those system
+boundaries can be described as encompassing:
+“ – All processes directly or indirectly linked to the production processes, and from
+flue gas cleaning.
+– All sources emitting N2O from the production process, including unabated and
+abated emissions. Any N2O emissions from the combustion of fuels are excluded
+from monitoring.”
+A precursor is ammonia (as 100% ammonia). Indirect emissions that result from electricity
+consumed by the production process must be monitored and taken into account in
+embedded emissions in accordance with the CBAM Regulation and the Methodology Act.
+14
+
+In line with the above definition of systems boundaries, the following production steps
+may be regarded as being within the system boundaries of the nitric acid process
+production:
+•
+
+Raw material preparation – evaporation and filtration of ammonia and process air.
+
+•
+
+Oxidation of ammonia – to nitrogen oxide, all process steps.
+
+•
+
+Further oxidation and absorption – to nitrogen dioxide and absorption in water to
+form nitric acid, all process steps.
+
+•
+
+Emissions control – for treating releases to air, water or ground.
+
+Note that nitric acid produced is reported as 100% nitric acid.
+2.2.3.4
+
+Urea production process
+
+Urea is synthesised by reacting ammonia and carbon dioxide together at high pressure, to
+form ammonium carbamate, which is then dehydrated to form urea.
+The Methodology Act and its annexes (in particular the provisions for the “Urea”
+aggregated goods category) define the system boundaries for direct emissions monitoring
+for the urea production route. For the purposes of this guidance, those system boundaries
+can be described as encompassing:
+“ – All processes directly or indirectly linked to the production processes, and from
+flue gas cleaning.
+– Where CO2 is received from another installation as process input, the CO2
+received shall be considered an emission, if not already counted as emission of the
+installation where the CO2 was produced.”
+A precursor is ammonia (as 100% ammonia). Indirect emissions that result from electricity
+consumed by the production process must be monitored and taken into account in
+embedded emissions in accordance with the CBAM Regulation and the Methodology Act.
+In line with the above definition of systems boundaries, the following production steps
+may be regarded as being within the system boundaries of the urea production process:
+•
+
+Raw material preparation – evaporation and filtration of ammonia, CO2.
+
+•
+
+Production of urea – all process steps, from synthesis to particle formation.
+
+•
+
+Emissions control – for treating releases to air, water or ground.
+
+The ammonia and CO2 consumed by this production process are usually delivered from
+other production processes on the same site.
+2.2.3.5
+
+Mixed fertilisers production process
+
+A wide range of operations are included in the production of all kinds of nitrogen
+containing mixed fertilisers (especially ammonium salts and NP, NK and NPK), such as
+
+15
+
+mixing, neutralisation7, particle formation (such as by granulation or prilling), irrespective
+of whether only physical mixing or chemical reactions take place.
+The Methodology Act and its annexes (in particular the provisions for the “Mixed
+fertilisers” aggregated goods category) define the system boundaries for direct emissions
+monitoring for the mixed fertiliser production route. For the purposes of this guidance,
+those system boundaries can be described as encompassing:
+“ – All processes directly or indirectly linked to the production processes, such as
+driers and for heating input materials, and from flue gas cleaning.
+Precursors (if used in the process) are: ammonia (as 100% ammonia); nitric acid (as 100%
+nitric acid); urea; mixed fertilisers (in particular salts containing ammonium or nitrate).
+Indirect emissions that result from electricity consumed by the production process must be
+monitored and taken into account in embedded emissions in accordance with the CBAM
+Regulation and the Methodology Act.
+In line with the above definition of systems boundaries, the following production steps
+may be regarded as being within the system boundaries of the mixed fertiliser production
+process:
+
+3
+
+•
+
+Raw material preparation.
+
+•
+
+Production of mixed fertiliser – all process steps.
+
+•
+
+Emissions control – for treating releases to air, water or ground.
+
+FERTILISERS SECTOR-SPECIFIC REQUIREMENTS
+
+The textbox below signposts sector-specific sections in the Methodology Act, relevant for
+the CBAM definitive period.
+Methodology Act references:
+•
+Annex I, point 3 – Functional unit and system boundaries. Sub-sections 3.7 to 3.10 (fertiliser sector
+aggregated goods categories).
+
+7
+
+•
+
+Annex II. Section B.6 Requirements for a measurement-based methodology for CO2 and N2O. Section
+B.8. Requirements for CO2 transfers between installations. Section B.9.3 Additional rules for determining
+emissions from nitric acid production, covering: B.9.3.1 General rules for measurement-of N2O
+emissions; B.9.3.2 Determination of flue gas flow; B.9.3.3 Oxygen (O2) concentrations.
+
+•
+
+Annex III: Section A.2.1, for attribution rules for co-products in the case of chemicals and fertilisers.
+
+•
+
+Annex IV, point 2 – Sector-specific parameters to be included in the operator’s emissions report.
+
+Nitrogen containing chemical fertilisers are produced by the neutralisation of an acid with ammonia to
+form the corresponding ammonium salt. Fertilisers produced in this way include ammonium nitrate,
+calcium ammonium nitrate, ammonium sulphate, ammonium phosphates, urea ammonium nitrate.
+16
+
+3.1
+
+Sector-specific requirements for monitoring and reporting
+
+Direct and indirect embedded emissions must be monitored in line with the methodology
+set out in the Methodology Act and outlined in this of the guidance document.
+3.1.1 Emissions monitoring
+Relevant emissions that must be monitored and reported for the fertilisers sector are:
+•
+
+Carbon dioxide emissions (direct) from the fuel combustion process, from
+stationary plant only (excludes emissions from any mobile plant such as vehicles).
+
+•
+
+Carbon dioxide and nitrous oxide (N2O) emissions (direct) from the process, in
+particular:
+o In the production of nitric acid, N2O emissions from the catalytic oxidation
+of ammonia and/or from the NOX/N2O abatement units (but not from
+combustion); and
+o Under certain conditions CO2 transferred from the production process for
+ammonia to other installations. However, CO2 consumed in the production
+of urea has to be considered as being emitted at the installation, as it does
+not comply with the requirements for permanently chemically bound CO2.
+
+•
+
+Carbon dioxide emissions (direct) resulting from the production of measurable
+heating (e.g. steam) and cooling that is consumed within the system boundaries of
+the production process, regardless of the location of the production of the heat (i.e.
+from on-site generation or from imports from off-site).
+
+•
+
+Carbon dioxide emissions (direct) resulting from emissions control (e.g. from
+carbonate raw materials such as soda ash used for acidic flue gas cleaning). This is
+included for any good where this is applicable.
+
+Direct emissions from the different source streams above are not reported separately but
+are added together to result in the total direct emissions for the installation or production
+process.
+Indirect emissions from electricity consumed must be reported separately from direct
+emissions. In accordance with section 3.1 of Annex I to the Methodology Act, indirect
+emissions of precursors do not have to be included if those precursors are listed in Annex
+II to the CBAM Regulation, i.e. if indirect emissions are excluded for those precursors.
+This is relevant for ammonia production, where hydrogen can be a precursor. Hydrogen’s
+indirect emissions are not counted even though ammonia as a good has to take into account
+indirect emissions. However, this needs to be understood to apply only where hydrogen
+from external installations or separate production processes is used in the synthesis of
+ammonia. In cases of generic Haber-Bosch processes, where the production of hydrogen
+is only a highly integrated intermediate step of the overall production process, the indirect
+emissions of the complete process are to be included.
+Note that other N2O emissions resulting from the combustion of fuels are excluded from
+the system boundaries.
+
+17
+
+3.1.2 Additional rules
+Functional unit and Attribution of emissions for mixed fertilisers
+For fertiliser goods whose functional units are kilograms of nitrogen content and that
+are sold in different ranges of composition, you as the operator will need to calculate the
+specific embedded emissions of the goods according to the nitrogen contained in the goods
+averaged for each range of composition, using the following equation.
+𝑆𝐸𝐸𝑔(𝑁𝑖) = 𝑆𝐸𝐸𝑔 ∙ 𝑁𝑖
+
+(Equation 65)
+
+Where:
+SEEg(Ni) is the specific embedded emissions of the good with nitrogen content Ni expressed
+as t CO2e per tonne of good;
+SEEg is the specific embedded emissions calculated in Equation 59 or 62, i.e. expressed as
+t CO2e per kg N, and
+Ni is the average nitrogen content of the goods within a range of composition in kilograms
+of nitrogen per tonnes of goods.
+Note that for goods whose functional units are kg of nitrogen content, and that are sold in
+custom-made compositions at the request of the client, you as the operator are required to
+issue a declaration of nitrogen content for each consignment and with the calculation of
+specific embedded emissions according to the correspondent Equation 65, where Ni will
+be the specific nitrogen content of the consignment8.
+Measurable heat produced from exothermic chemical processes
+Where an installation consumes measurable heat produced/recovered from an exothermic
+chemical process other than combustion, such as in the production of ammonia or nitric
+acid, the amount of recovered heat consumed is determined separately from other
+measurable heat, and is assigned zero CO2 emissions.
+Production of electricity
+If electricity is produced within the production process, a correction to the attributed
+emissions has to be made. Where the electricity stems from processes without combustion
+(e.g. expansion turbines in ammonia production), the emission factor of that electricity is
+considered zero.
+Measurement-based approach for monitoring N2O emissions
+If you, as an operator, produce nitric acid, you must monitor N2O emissions from the
+process (not from combustion) using a Continuous Emission Measurement System
+(CEMS) installed at a suitable measurement point9..
+
+8
+
+In mixed fertiliser production European fertiliser legislation requires the content of N (in its different
+forms, as ammonium (NH4+) or nitrate (NO3–), urea or other (organic) forms) to be clearly indicated on
+the packaging or in accompanying sales documentation in case of bulk deliveries. These content values
+may be used to determine embedded emissions of any mixed fertiliser.
+
+9
+
+If there are multiple emissions points that cannot be monitored from a single location, emissions from
+these various points must be separately monitored and the results combined for reporting purposes.
+18
+
+N2O emissions are only regarded relevant for monitoring in the production of nitric acid.
+However, where nitric acid or the resulting nitrates (mixed fertilisers) are used as
+precursor, the related N2O emissions form an integral part of the embedded emissions,
+which are expressed as t CO2e:
+CO2(e) [t] = N2Oannual[t] × GWPN2O (Equation 18)
+Where:
+N2Oannual … total annual N2O emissions.
+GWPN2O … Global Worming Potential of N2O (t CO2e / t N2O). Please see
+Annex II point G to the Methodology Act for relevant GWP values as shown in
+Table 3-1.
+Table 3-1: Global warming potentials
+Gas
+
+Global warming potential
+
+N2O
+
+265 t CO2e / t N2O
+
+CF4
+
+6 630 t CO2e / t CF4
+
+C2F6
+
+11 100 t CO2e / t C2F6
+
+For determining the flow rate of the flue gas, the Methodology Act states that
+the mass balance method is preferred over continuous emissions flow
+measurements.
+
+3.1.3 Additional reporting requirements
+Table 3-2 lists out the additional information that needs to be provided by you as an
+operator to importers or operators using your goods as precursors, in your verified
+emissions report which you provide to them.
+Table 3-2: Additional fertiliser sector parameters requested in the CBAM declaration
+
+Aggregated
+category
+
+good Reporting requirement in the annual report
+
+Ammonia10
+
+– Concentration, if hydrous solution.
+– Content of nitrogen (N).
+
+Nitric acid11
+
+– Concentration (mass %).
+
+10
+
+Both hydrous and anhydrous ammonia shall be reported jointly as 100% ammonia.
+
+11
+
+Amounts of nitric acid produced shall be monitored and reported as 100% nitric acid.
+19
+
+Aggregated
+category
+
+good Reporting requirement in the annual report
+– Content of N.
+
+Urea
+Mixed fertilisers
+
+12,13
+
+-
+
+Purity (mass % urea contained, % N contained).
+
+-
+
+Content of N.
+Information required anyway under Regulation (EU)
+2019/1009:
+
+-
+
+-
+
+Content of N as ammonium (NH4+);
+
+-
+
+Content of N as nitrate (NO3–);
+
+-
+
+Content of N as urea;
+
+-
+
+Content of N in other (organic) forms.
+
+Content of N total.
+
+You need to ensure that you collect all the parameters necessary for your CBAM goods
+and communicate them to the importers of your goods. The importer will need to report
+the additional parameters in their annual CBAM declaration for the relevant reporting
+period.
+
+4
+
+WORKED EXAMPLE FOR THE FERTILISER SECTOR
+
+The following worked example shows how specific embedded emissions are derived for a
+particular mixed fertiliser grade, NPK 15-15-15, produced by mixing and granulation.
+The resulting embedded emissions of imports into the EU are then calculated at the end of
+the example for reporting in the definitive period.
+Figure 4-1 gives an outline view of the installation and shows the system boundaries as a
+hatched line for the single production process. The physical units carrying out the
+production process have been grouped under ‘Granulation with Pipe reactor’ (including an
+assumed dryer using natural gas) and the inputs and outputs and sources of emissions have
+been identified.
+
+12
+
+The amounts of different nitrogen compounds contained in the final product must be recorded in
+accordance with Regulation (EU) 2019/1009 laying down rules on the making available on the market
+of EU fertilizing products.
+
+13
+
+Regulation (EU) 2019/1009 of the European Parliament and of the Council laying down rules on the
+making available on the market of EU fertilizing products.
+See: http://data.europa.eu/eli/reg/2019/1009/2025-12-30
+20
+
+Figure 4-1: Fertiliser example – Overview and complete monitoring approach for the production
+of a mixed fertiliser grade.
+
+Inputs into the production process are raw materials, precursor goods urea and ammonia
+(anhydrous), and electrical energy. Outputs are mixed fertiliser product.
+The inputs and outputs highlighted in red text above are the parameters that would need to
+be monitored by the operator in order to attribute emissions and determine direct and
+indirect specific embedded emissions for the production process.
+The direct and indirect emissions that are monitored in this example result from:
+•
+
+Direct emissions from natural gas used in the dryer.
+
+•
+
+Indirect emissions from the electrical energy consumed by the production process.
+
+The inputs of precursors (with embedded emissions) and the activity level of the mixed
+fertiliser goods produced also need to be monitored.
+Note that a single mixed fertiliser production process can make a wide range of different
+fertiliser grades (or formulations) using different quantities of precursor. However, this
+issue was resolved in the rules for the definitive phase by introduction of the ‘functional
+unit’. In this way, the specific embedded emissions for each fertiliser grade can be
+determined easily.
+The following needs to be monitored:
+•
+
+The relevant mass of each precursor used over the reporting period;
+
+•
+
+The production ‘recipe’ of each mixed fertiliser grade (or an analysis of the final
+product); and
+
+•
+
+The specific embedded emissions of the precursors used to make a given mixed
+fertiliser grade.
+21
+
+•
+
+Assuming that the granulation and drying process is similar for all produced
+fertiliser grades, the direct and indirect emissions of the production process can be
+monitored over the full reporting period and then divided by the total activity level
+of the process, i.e. the total amount of all fertilisers produced in the reporting
+period. This gives a value of energy per tonne of fertiliser as used in the calculation
+in Table 4-1.
+
+•
+
+The embedded emissions are first calculated per functional unit (kg N used in the
+reporting period) and then converted into embedded emissions per tonne of (mixed)
+fertiliser using equation 65 (see section 3.1.2).
+
+For the example, it is assumed that the installation is situated in Türkiye. The electricity
+grid emission factor as found in Annex II to the default Values Act is used for the
+calculation of indirect embedded emissions. The precursors ammonia and urea are
+assumed to be sourced from Azerbaijan. Production year both for the precursors and the
+actual production are assumed to be 2026. Default values including mark-up are taken from
+Annex I to the Default Values Act. Table 4-1 sets out the process by which total direct and
+indirect specific embedded emissions for mixed fertiliser product NPK 15-15-15, are
+determined.
+Total direct and indirect specific embedded emissions for the mixed fertiliser product are
+calculated by combining the default SEE values for precursors (which cover both direct
+and indirect emissions) and for energy needed for granulation, per tonne product, as above
+Precursor goods are NH3 and Urea. In order to determine the total embedded emissions of
+the mixed fertiliser product, the amount (kg) of each precursor used per tonne of mixed
+fertiliser product is taken into account, e.g. for urea the total input mass of precursor per
+tonne of product is 160 kg:
+•
+
+Ammonia total embedded emissions: 0,093 t / t × 2,273 t CO2 / t = 0,211 t CO2 / t
+mixed fertiliser product.
+
+•
+
+Urea total embedded emissions: 0,160 t / t × 1,545 t CO2 / t = 0,247 t CO2 / t
+mixed fertiliser product.
+
+22
+
+Table 4-1: Example calculation of total direct and indirect specific embedded emissions for NPK
+mixed fertiliser.
+Inputs
+
+Input mass
+
+Precursor embedded
+emissions (t CO2/t)
+
+Embedded emissions
+(t CO2/t)
+
+(kg / t)
+
+Direct / total
+
+indirect
+
+Direct / total
+
+indirect
+
+KCl
+
+251,3
+
+n.a.
+
+n.a.
+
+n.a.
+
+n.a.
+
+SSP14 17% P2O5
+
+200,0
+
+n.a.
+
+n.a.
+
+n.a.
+
+n.a.
+
+Phosphoric acid (40% P2O5)
+
+300,0
+
+n.a.
+
+n.a.
+
+n.a.
+
+n.a.
+
+Sulphuric acid (96 wt-%)
+
+116,0
+
+n.a.
+
+n.a.
+
+n.a.
+
+n.a.
+
+2,273
+
+(included)16
+
+0,211
+
+--
+
+1,545
+
+(included)16
+
+0,247
+
+--
+
+Emissions from energy needed for
+granulation
+(average of reporting period)
+
+0,018
+
+0,0126
+
+Total SEE for mixed fertiliser
+product NPK 15-15-15
+
+0,489
+
+Total SEE expressed per
+functional unit, i.e. t CO2e/kg N
+
+0,00326
+
+NH315
+
+93,0
+
+Urea17
+
+160,0
+
+Direct and indirect emissions arising from the mixing and granulation production process
+must also be included, as is done in Table 4-1 above per tonne of product.
+Other chemical raw material inputs (KCl, SSP, Phosphoric and Sulphuric acids) do not
+have embedded emissions and do not need to be taken into account.
+Note on calculation pathway: In the example above, only a single NPK formulation is
+produced. Therefore, it is simple to make all calculations per tonne of final fertiliser as
+presented above. However, if the installation produces many different NPK grades, the
+approach would be different:
+•
+
+Instead of the specific input of each fertiliser component (precursor and other
+inputs) expressed as kg/t, the table would have to contain the total amount of each
+component (in tonnes) used during the production year.
+
+•
+
+As the activity level, the total amount of nitrogen contained in all produced NPKs
+would be calculated (expressed as kg N, not differentiating between ammonia and
+urea inputs).
+
+•
+
+Then an average level of embedded emissions per NPK would be calculated,
+expressed as t CO2e/ kg N.
+
+14
+
+Single Super Phosphate
+
+15
+
+CN 2814 10 00 – Anhydrous ammonia
+
+16
+
+The default values include the indirect embedded emissions, where relevant. This is the case for
+ammonia and urea.
+
+17
+
+CN 3102 10 19 – Urea, whether or not in aqueous solution, containing >45% nitrogen in relation to the
+weight of the dry product
+23
+
+•
+
+Finally, for each NPK the embedded emissions per t would be calculated from the
+value per kg N and the N content.
+
+Using the above approach, the CBAM reporting obligation due for the import of mixed
+fertiliser product into the EU during the definitive period may then be determined; for
+example, for the import of 100 tonnes of NPK 15-15-15 product:
+•
+
+Definitive period:
+o Total embedded emissions = 100 t × 0,489 t CO2 / t = 48,9 t CO2
+
+24
+
+Annex A
+
+List of definitions
+
+Term
+
+Definition
+
+‘Accuracy’
+
+means the closeness of the agreement between the result of
+a measurement and the true value of the particular quantity
+or a reference value determined empirically using
+internationally accepted and traceable calibration materials
+and standard methods, taking into account both random
+and systematic factors
+
+‘Activity data’
+
+means the amount of fuels or materials consumed or
+produced by a process relevant for the calculation-based
+methodology, expressed in terajoules (TJ), mass in tonnes
+or (for gases) volume in normal cubic metres, as
+appropriate
+
+‘Actual emissions’
+
+means the emissions calculated based on primary data from
+the production processes of goods and from the production
+of electricity consumed during those processes as
+determined in accordance with the methods set out in
+Annex IV [to the Methodology Act]
+
+‘Activity level’
+
+means the quantity of goods to which the same functional
+unit applies that are produced within the system boundaries
+of a production process during a reporting period
+
+‘Aggregated goods
+categories’
+
+means aggregated goods categories pursuant to Table 1 of
+point 2 of Annex I. A group of CBAM goods with their CN
+codes, used for the purpose of defining system boundaries
+of production processes.
+
+‘Agricultural,
+aquaculture, fisheries
+and forestry residues’
+
+means residues that are directly generated by agriculture,
+aquaculture, fisheries and forestry and that do not include
+residues from related industries or processing
+
+‘Authorised CBAM
+declarant’
+
+means a person authorised by the competent authority in
+accordance with Article 17 [of the CBAM Regulation].
+The ‘authorised CBAM declarant’ [which replaces the
+term ‘reporting declarant’ from the transitional period]
+may be importers of CBAM goods, or their indirect
+customs representatives, who have applied for and been
+granted the status of authorised CBAM declarant.
+
+‘Batch’
+
+means an amount of fuel or material representatively
+sampled and characterised, and transferred as one shipment
+or continuously over a specific period of time
+
+‘Biomass’
+
+means biomass as defined in Article 2, point (24) of the
+Renewable Energy Directive (RED II)18; it includes
+bioliquids and biofuels as defined in Article 2, point (32)
+and (33), biomass fuels as defined in Article 2, point (27)
+and biogas as defined in Article 2 point (28) of the RED II;
+
+18
+
+Directive (EU) 2018/2001
+25
+
+Term
+
+Definition
+
+‘Biomass fraction’
+
+means the ratio of carbon stemming from biomass to the
+total carbon content of a fuel or material, expressed as a
+fraction
+
+‘Calculation factors’
+
+means net calorific value, emission factor, preliminary
+emission factor, oxidation factor, conversion factor, carbon
+content or biomass fraction
+
+‘Calibration’
+
+means the set of operations, which establishes, under
+specified conditions, the relations between values indicated
+by a measuring instrument or measuring system, or values
+represented by a material measure or a reference material
+and the corresponding values of a quantity realised by a
+reference standard
+
+‘Carbon price’
+
+means the monetary amount paid in a third country, under a
+carbon emissions reduction scheme, in the form of a tax,
+levy or fee or in the form of emission allowances under a
+greenhouse gas emissions trading system, calculated on
+greenhouse gases covered by such a measure, and released
+during the production of goods
+
+‘CBAM certificate’
+
+means a certificate in electronic format corresponding to
+one tonne of CO2e of embedded emissions in goods
+
+‘CO2 emission factor’
+
+means the weighted average of the CO2 intensity of
+electricity produced from fossil fuels within a geographic
+area. The CO2 emission factor is the result of the division of
+the CO2 emission data of the electricity sector by the gross
+electricity generation based on fossil fuels in the relevant
+geographic area. It is expressed in tonnes of CO2 per
+megawatt-hour
+
+‘Combined
+nomenclature’ (CN)
+
+means the classification of goods, designed to meet the
+needs of: i) the Common customs tariff, setting import
+duties for products imported into the European Union (EU),
+as well as the Integrated tariff of the European
+Communities (Taric), incorporating all EU and trade
+measures applied to goods imported into and exported out
+of the EU; ii) the international trade statistics of the EU.
+The CN provides the means of collecting, exchanging and
+publishing data on EU international trade statistics. It is
+also used for the collection and publication of international
+trade statistics in intra-EU trade.19
+
+‘Combustion
+emissions’
+
+means greenhouse gas emissions occurring during the
+exothermic reaction of a fuel with oxygen
+
+‘Competent
+authority’
+
+means the authority designated by each Member State in
+accordance with Article 11 [of the CBAM Regulation]
+
+19
+
+For definition see:
+https://ec.europa.eu/eurostat/statisticsexplained/index.php?title=Glossary:Combined_nomenclature_(CN)
+26
+
+Term
+
+Definition
+
+‘Continuous emission
+measurement’ (CEM)
+
+means a set of operations having the objective of
+determining the value of a quantity by means of periodic
+measurements, applying either measurements in the stack
+or extractive procedures with a measuring instrument
+located close to the stack, whilst excluding measurement
+methodologies based on the collection of individual
+samples from the stack
+
+‘Control system’
+
+means the operator’s risk assessment and entire set of
+control activities, including the continuous management
+thereof, that an operator has established, documented,
+implemented and maintained pursuant to point A.2. of
+Annex II
+
+‘Complex goods’
+
+means goods other than simple goods
+
+‘Conservative’
+
+means that a set of assumptions is defined in order to
+ensure that no under-estimation of reported emissions or
+over-estimation of production of heat, electricity or goods
+occurs
+
+‘Conversion factor’
+
+means the ratio of carbon emitted as CO2 to the total carbon
+contained in the source stream before the emitting process
+takes place, expressed as a fraction, considering CO emitted
+to the atmosphere as the molar equivalent amount of CO2
+
+‘Co-product’
+
+means any of two or more products resulting from the same
+production process
+
+‘Customs declarant’
+
+means a declarant as defined in Article 5, point (15) of
+Regulation (EU) No 952/2013 lodging a customs
+declaration for release for free circulation of goods in its
+own name or the person in whose name such a declaration
+is lodged
+
+‘CCUS system’
+
+means a group of economic operators with technically
+connected installations and transport equipment for CO2
+capture, transport, use in production of goods, or geological
+storage
+
+‘Data flow activities’
+
+mean activities related to the acquisition, processing and
+handling of data that are needed to draft an emissions
+report from primary source data
+
+‘Data set’
+
+means one type of data, either at installation level or
+production process level as relevant in the circumstances,
+as any of the following:
+(a)
+the amount of fuels or materials consumed or
+produced by a production process as relevant for the
+calculation-based methodology, expressed in terajoules,
+mass in tonnes, or for gases as volume in normal cubic
+metres, as appropriate, including for waste gases;
+(b)
+
+a calculation factor;
+
+27
+
+Term
+
+Definition
+(c)
+net quantity of measurable heat, and the relevant
+parameters required for determining this quantity, in
+particular: i) mass flow of heat transfer medium; and ii)
+enthalpy of transmitted and returned heat transfer medium,
+as specified by composition, temperature, pressure and
+saturation;
+(d)
+quantities of non-measurable heat, specified by the
+relevant quantities of fuels used for producing the heat, and
+the net calorific value (NCV) of the fuel mix;
+(e)
+
+quantities of electricity;
+
+(f)
+
+quantities of CO2 transferred between installations;
+
+(g)
+quantities of precursors received from outside the
+production process, and their relevant parameters, such as
+country of origin, used production route, specific direct
+and indirect emissions;
+‘Default value’
+
+means a value, which is calculated or drawn from
+secondary data, which represents the embedded emissions
+in goods
+
+‘Direct emissions’
+
+means emissions from the production processes of goods
+including emissions from the production of heating and
+cooling that is consumed during the production processes,
+irrespective of the location of the production of the heating
+or cooling
+
+‘Embedded emissions’
+
+means direct emissions released during the production of
+goods and indirect emissions from the production of
+electricity that is consumed during the production
+processes, calculated in accordance with the methods set
+out in Annex IV and further specified in the implementing
+acts adopted pursuant to Article 7(7)
+
+‘Emissions’
+
+mean the release of greenhouse gases into the atmosphere
+from the production of goods
+
+‘Emission factor’
+
+means the average emission rate of a greenhouse gas
+relative to the activity data of a source stream assuming
+complete oxidation for combustion and complete
+conversion for all other chemical reactions
+
+‘Emission factor’ for
+electricity
+
+means the default value, expressed in CO2e, representing
+the emission intensity of electricity consumed in production
+of goods.
+
+‘Emission source’
+
+means a separately identifiable part of an installation or a
+process within an installation, from which relevant
+greenhouse gases are emitted
+
+EU ETS
+
+means the system for greenhouse gas emissions allowance
+trading within the Union in respect of activities listed in
+Annex I to Directive 2003/87/EC other than aviation
+activities
+28
+
+Term
+
+Definition
+
+‘EU ETS allowance’
+
+means an allowance as defined in Article 3, point (a), of
+Directive 2003/87/EC in respect of activities listed in
+Annex I to that Directive other than aviation activities
+
+‘Fossil carbon’
+
+means inorganic and organic carbon that is not biomass
+
+‘Fossil fraction’
+
+means the ratio of fossil carbon to the total carbon content
+of a fuel or material, expressed as a fraction
+
+‘Fugitive emissions’
+
+means irregular or unintended emissions from sources that
+are not localised, or too diverse or too small to be
+monitored individually
+
+‘Functional unit’
+
+means the reference unit used for the calculation of
+embedded emissions in goods
+
+‘Goods’
+
+means goods listed in Annex I [to the CBAM the CBAM
+Regulation]
+
+‘Greenhouse gases’
+
+mean greenhouse gases as specified in Annex I [to the
+CBAM the CBAM Regulation] in relation to each of the
+goods listed in that Annex
+
+‘Heat meter’
+
+means a thermal energy meter or any other device to
+measure and record the amount of thermal energy produced
+based upon flow volumes and temperatures
+
+‘Importer’
+
+means either the person lodging a customs declaration for
+release for free circulation of goods or a bill of discharge in
+accordance with Article 175(5) of Delegated Regulation
+(EU) 2015/2446 in its own name and on its own behalf or,
+where the customs declaration is lodged by an indirect
+customs representative in accordance with Article 18 of
+Regulation (EU) No 952/2013, the person on whose behalf
+such a declaration is lodged
+
+‘Importation’
+
+means release for free circulation as provided for in Article
+201 of Regulation (EU) No 952/2013
+
+‘Indirect customs
+
+A customs representative appointed by an importer
+established in a Member State. If the importer appoints an
+indirect customs representative and they agree, they can act
+as an authorised CBAM declarant and submit the
+application for an authorisation on behalf of the importer.
+The indirect customs representative is liable for all
+operations made for the importers it represents
+
+Representative’
+
+‘Indirect emissions’
+
+means emissions from the production of electricity which is
+consumed during the production processes of goods,
+irrespective of the location of the production of the
+consumed electricity
+
+‘Inherent CO2’
+
+means CO2 which is part of a source stream.
+
+‘Installation’
+
+means a stationary technical unit where a production
+process is carried out
+
+29
+
+Term
+
+Definition
+
+‘Legal metrological
+control’
+
+means the control exercised by a public authority or
+regulator of the measurement tasks intended for the field of
+application of a measuring instrument, for reasons of public
+interest, public health, public safety, public order,
+protection of the environment, the levying of taxes and
+duties, the protection of consumers and fair trading
+
+‘Measurable heat’
+
+means a net heat flow transported through identifiable
+pipelines or ducts using a heat transfer medium, such as, in
+particular, steam, hot air, water, oil, liquid metals and salts,
+for which a heat meter is or could be installed
+
+‘Measurement point’
+
+means the emission source for which continuous emission
+measurement systems (CEMS) are used for emission
+measurement, or the cross-section of a pipeline system for
+which the CO2 flow is determined using continuous
+measurement systems
+
+‘Measurement
+system’
+
+means a complete set of measuring instruments and other
+equipment used to determine variables for the monitoring
+and calculation of emissions
+
+‘Minimum
+requirements’
+
+means monitoring methods using the minimum efforts
+allowed for determining data in order to result in emission
+data acceptable for the purpose of the CBAM Regulation.
+
+‘Mixed fuel’
+
+means a fuel which contains both biomass and fossil carbon
+
+‘Mixed material’
+
+means a material which contains both biomass and fossil
+carbon
+
+‘Multifunctional
+process’
+
+means a process that delivers multiple outputs or whose
+outputs feed into several production processes
+
+‘Net calorific value’
+(NCV)
+
+means the specific amount of energy released as heat when
+a fuel or material undergoes complete combustion with
+oxygen under standard conditions, less the heat of
+vaporisation of any water formed
+
+‘Non-CBAM good’
+
+means any good produced in the installation that is not
+included in Annex I to the CBAM Regulation
+
+‘Non-measurable
+heat’
+
+means all heat other than measurable heat
+
+‘Operator’
+
+means any person who operates or controls an installation
+in a third country, including a parent company that controls
+an installation in a third country
+
+‘Oxidation factor’
+
+means the ratio of carbon oxidised to CO2 as a consequence
+of combustion to the total carbon contained in the fuel,
+expressed as a fraction, considering carbon monoxide (CO)
+emitted to the atmosphere as the molar equivalent amount
+of carbon dioxide (CO2)
+
+‘Power purchase
+agreement’
+
+means a contract under which a person agrees to purchase
+electricity directly from an electricity producer
+30
+
+Term
+
+Definition
+
+‘Precursor’
+
+means any input material into a production process
+included in the list of goods set out in Annex I to the
+CBAM Regulation;
+
+‘Preliminary
+emission factor’
+
+means the assumed total emission factor of a fuel or
+material based on the carbon content of its biomass fraction
+and its fossil fraction before multiplying it by the fossil
+fraction to produce the emission factor
+
+‘Production process’
+
+means the chemical and physical processes carried out to
+produce goods in an installation
+
+‘Production route’ 20
+
+means a specific technology used in a production process
+to produce goods
+
+‘Process emissions’
+
+means greenhouse gas emissions other than combustion
+emissions occurring as a result of intentional and
+unintentional reactions between substances or their
+transformation, for a primary purpose other than the
+generation of heat, including from the following processes:
+(a) the chemical, electrolytic or pyrometallurgical
+reduction of metal compounds in ores, concentrates and
+secondary materials; (b) the removal of impurities from
+metals and metal compounds; (c) the decomposition of
+carbonates, including those used for flue gas cleaning; (d)
+chemical syntheses of products and intermediate products
+where the carbon bearing material participates in the
+reaction; (e) the use of carbon containing additives or raw
+materials; (f) the chemical or electrolytic reduction of
+metalloid oxides or non-metal oxides such as silicon
+oxides and phosphates.
+
+‘Proxy data’
+
+means annual values which are empirically substantiated or
+derived from accepted sources and which an operator uses
+to substitute a data set21 for the purpose of ensuring
+complete reporting
+
+‘Rebate’
+
+means any amount that reduces the amount due or paid by a
+person liable for the payment of a carbon price, before its
+payment or after, in a monetary form or in any other form.
+
+‘Recommended
+improvements’
+
+means monitoring methods which are proven means to
+ensure that data are more accurate or less prone to mistakes
+than by mere application of minimum requirements
+
+‘Related emissions’
+
+means: – the direct emissions caused by the source stream
+or emission source concerned; – emissions attributed to a
+quantity of measurable heat; – the indirect emissions related
+to the quantity of electricity concerned; – embedded
+emissions of a material produced or of a precursor
+consumed.
+
+20
+
+Note that different production routes can fall within the same production process.
+
+21
+
+Refers to the activity data or the calculation factors.
+31
+
+Term
+
+Definition
+
+‘Reporting period’
+
+means the period corresponding to the calendar year during
+which the good was produced and used by the authorised
+CBAM declarant as reference for the determination of
+embedded emissions
+
+‘Residue’
+
+means a substance that is not the end product that a
+production process directly seeks to produce; it is not a
+primary aim of the production process and the process has
+not been deliberately modified to produce it
+
+‘Simple goods’
+
+means goods produced in a production process requiring
+exclusively input materials (precursors) and fuels having
+zero embedded emissions
+
+‘Source stream’
+
+means either of the following: (a) a specific fuel type, raw
+material or product giving rise to emissions of relevant
+greenhouse gases at one or more emission sources as a
+result of its consumption or production; (b) a specific fuel
+type, raw material or product containing carbon and
+included in the calculation of greenhouse gas emissions
+using a mass-balance method
+
+‘Specific embedded
+emissions’
+
+means the embedded emissions of one tonne of goods,
+expressed as tonnes of CO2e emissions per tonne of goods
+
+‘Standard conditions’
+
+means temperature of 273,15 K and pressure conditions of
+101 325 Pa defining normal cubic metres (Nm3)
+
+‘System boundary’
+
+means the group of chemical or physical processes included
+in the calculation of embedded emissions of goods under
+the same aggregated goods category.
+The system boundaries shall cover direct emissions,
+indirect emissions for goods not listed in Annex II to the
+CBAM Regulation, and the embedded emissions of any
+precursor.
+
+22
+
+‘Third country’
+
+means a country or territory outside the customs territory of
+the [European] Union
+
+‘Tonne of CO2(e)’
+
+means one metric tonne of carbon dioxide (‘CO2’), or an
+amount of any other greenhouse gas listed in Annex I [to
+the CBAM Regulation] with an equivalent global warming
+potential [‘CO2e‘]
+
+‘Transmission system
+operator’
+
+means an operator as defined in Article 2, point (35) of
+Directive (EU) 2019/944 of the European Parliament and of
+the Council (22).
+
+Directive (EU) 2019/944 of the European Parliament and of the Council of 5 June 2019 on common
+rules for the internal market for electricity and amending Directive 2012/27/EU (OJ L 158, 14.6.2019,
+p. 125).
+32
+
+Term
+
+Definition
+
+‘Uncertainty’
+
+means a parameter, associated with the result of the
+determination of a quantity, that characterises the
+dispersion of the values that could reasonably be attributed
+to the particular quantity, including the effects of
+systematic as well as of random factors, expressed in
+percent, and describes a confidence interval around the
+mean value comprising 95% of inferred values taking into
+account any asymmetry of the distribution of values
+
+‘Waste’
+
+means any substance or object which the holder discards or
+intends or is required to discard, excluding substances that
+have been intentionally modified or contaminated in order
+to meet this definition
+
+‘Waste gas’
+
+means a gas containing incompletely oxidised carbon in a
+gaseous state under standard conditions which is a result of
+any of the processes listed under ‘process emissions’
+
+33
+
+Annex B
+
+List of abbreviations
+
+Abbreviation
+
+Full term
+
+AD
+
+Activity Data
+
+AEM
+
+Anode Effect Minutes
+
+AEO
+
+Anode Effect Overvoltage
+
+AL
+
+Activity Level
+
+AOD
+
+Argon Oxygen Decarburisation.
+
+BAT
+
+Best Available Techniques
+
+BF
+
+Biomass Fraction
+
+BFG
+
+Blast Furnace Gas
+
+BM
+
+Benchmark
+
+BOF
+
+Basic Oxygen Furnace
+
+BOFG
+
+Basic Oxygen Furnace Gas
+
+BREFs
+
+Best Available Techniques Reference documents
+
+CA
+
+Competent Authority
+
+CBAM
+
+Carbon Border Adjustment Mechanism, the
+
+CCR
+
+Clinker to Cement Ratio
+
+CCS
+
+Carbon Capture and Storage
+
+CCU(S)
+
+Carbon Capture and Utilisation (and Storage)
+
+CEMS
+
+Continuous Emission Measurement Systems
+
+CF
+
+Conversion Factor
+
+CFP
+
+Carbon footprint of products
+
+CHP
+
+Combined Heat and Power
+
+CKD
+
+Cement Kiln Dust
+
+CN
+
+Combined nomenclature
+
+COG
+
+Coke Oven Gas
+
+DRI
+
+Direct Reduced Iron
+
+EAF
+
+Electric Arc Furnace
+
+EEA
+
+European Economic Area (EU-27, Iceland, Norway, Liechtenstein)
+
+EF
+
+Emission Factor
+
+EFTA
+
+European Free Trade Area
+
+EORI
+
+Economic Operator Registration and Identification
+
+ETS
+
+Emissions Trading System
+
+EU ETS
+
+EU Emissions Trading System
+
+EUA
+
+EU Allowances (used in the EU ETS)
+
+EUR
+
+Euro (currency)
+34
+
+Abbreviation
+
+Full term
+
+FAR
+
+Free Allocation Rules (Regulation 2019/331)23
+
+FIFO
+
+First-In-First-Out principle
+
+GHG
+
+Greenhouse Gas
+
+GWP
+
+Global Warming Potential
+
+HBI
+
+Hot Briquetted Iron
+
+HS
+
+Harmonised System (for international trade)
+
+IEA
+
+International Energy Agency
+
+ISO
+
+International Organization for Standardization
+
+LULUCF
+
+Land-use, land change and forestry (criteria)
+
+MP
+
+Monitoring Plan
+
+MRR
+
+Monitoring and Reporting Regulation (Regulation 2018/2066)24
+
+MRV
+
+Monitoring, Reporting and Verification
+
+MS
+
+Member State(s)
+
+MWh
+
+Megawatt-hour
+
+NCV
+
+Net Calorific Value
+
+NPI
+
+Nickel pig iron
+
+OF
+
+Oxidation Factor
+
+PCI
+
+Pulverised Coal Injection
+
+PEMS
+
+Predictive Emission Monitoring System
+
+PFC
+
+Perfluoro-carbon
+
+PoS
+
+Proofs of Sustainability
+
+RED II
+
+Renewable Energy Directive, re-cast
+
+SEE
+
+Specific embedded emissions
+
+SEFA
+
+Specific embedded free allocation
+
+TARIC
+
+Integrated Tariff of the European Union database
+
+TJ
+
+Terajoules
+
+TSO
+
+Transmission System Operator
+
+UCC
+
+Union Custom Code
+
+UN/LOCODE
+
+United Nations Code for Trade and Transport Location
+
+23
+
+Free Allocation Rules (Commission Delegated Regulation (EU) 2019/331 of 19 December 2018
+determining transitional Union-wide rules for harmonised free allocation of emission allowances
+pursuant to Article 10a of Directive 2003/87/EC of the European Parliament and of the Council)
+
+24
+
+Monitoring and Reporting Regulation (Commission Implementing Regulation (EU) 2018/2066 of 19
+December 2018 on the monitoring and reporting of greenhouse gas emissions pursuant to Directive
+2003/87/EC of the European Parliament and of the Council and amending Commission Regulation (EU)
+No 601/2012
+35
+
+

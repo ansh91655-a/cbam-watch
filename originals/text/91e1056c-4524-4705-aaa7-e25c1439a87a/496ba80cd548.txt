@@ -1,0 +1,732 @@
+EUROPEAN COMMISSION
+DIRECTORATE-GENERAL
+TAXATION AND CUSTOMS UNION
+Indirect Taxation and Tax Administration
+CBAM, Energy and Green Taxation
+
+Brussels, 14 August 2026
+
+GUIDANCE DOCUMENT 2: QUICK GUIDE FOR NON-EU
+OPERATORS ON CBAM IMPLEMENTATION
+
+Disclaimer: This guidance document is not legally binding and it is of an explanatory nature.
+Legal provisions of Union law take precedence over the contents of this document and should
+always be consulted. The authentic texts of the EU legal instruments are those published in the
+Official Journal of the European Union. This guidance was prepared by Commission services
+and does not represent an official position of the Commission. Only the Court of Justice of the
+European Union is competent to authoritatively interpret Union law.
+
+Commission européenne/Europese Commissie, 1049 Bruxelles/Brussel, BELGIQUE/BELGIË – Tel. +32 22991111
+
+VERSION HISTORY
+Date
+
+Version notes
+
+14.08.2026
+
+First Publication of this document for the definitive period.
+
+2
+
+CONTENTS
+1 PREFACE: STRUCTURE AND CONTENT OF THE GUIDANCE
+DOCUMENTS
+
+4
+
+2
+
+UNDERSTANDING THE CBAM: MAIN ROLES AND CONCEPTS
+
+5
+
+3
+
+PLANNING THE MONITORING PLAN
+
+6
+
+4
+
+DEVELOPING THE MONITORING PLAN
+
+13
+
+5
+
+PERFORM MONITORING AND PREPARE THE EMISSIONS REPORT 14
+
+6
+
+VERIFICATION: KEY CONCEPTS
+
+3
+
+15
+
+1
+
+PREFACE: STRUCTURE AND CONTENT OF THE GUIDANCE DOCUMENTS
+
+This series of documents has been written to support stakeholders by explaining the
+requirements of the CBAM Regulation in a non-legislative language. This series of
+guidance documents should benefit a variety of stakeholders. A specific focus has been put
+on clarifying the requirements for operators of installations producing CBAM goods
+outside of the EU for the definitive period.
+•
+
+Guidance 1 provides an overview of the main changes to the CBAM methodology
+between the definitive period and the concluded transitional period. It also
+introduces the CBAM and an overview of the compliance cycle, roles and
+responsibilities, as well as milestones and deadlines for operators of installations
+outside the EU during the definitive period and explains the general exemptions
+from the CBAM.
+
+•
+
+Guidance 2 provides a quick guidance for the intended reader of this document,
+the operator of an installation producing CBAM goods. It provides a roadmap of
+the most important concepts of CBAM emissions monitoring and where to find
+more information in this series of documents.
+
+•
+
+Guidance 3 sets out the monitoring and reporting obligations and
+recommendations which are potentially applicable to any affected producer of
+CBAM goods.
+
+•
+
+Guidance 4 provides an overview of how the adjustment for free allocation is to
+be determined and what information is needed.
+
+•
+
+Guidance documents 5a, 5b, 5c, 5d, 5e and 5f present an overview per sector of
+the production processes and value chains for goods that are included in the scope
+of the CBAM, as well as sector-specific monitoring and reporting considerations
+for each CBAM good where this is relevant. These sections are supplemented by
+examples for each sector.
+
+The series of guidance documents is accompanied by an electronic template for
+information that should be used by installation operators to communicate information to
+the authorised CBAM declarants and CBAM Registry.
+In this document we provide a step-by-step overview of important concepts, rules and
+obligations under the definitive period. This builds on the experience gained during the
+transitional period (1 October 2023 to 31 December 2025).
+
+4
+
+2
+
+UNDERSTANDING THE CBAM: MAIN ROLES AND CONCEPTS
+
+Are you an operator of an installation producing “CBAM goods”?
+CBAM goods are goods from the cement, iron and steel, aluminium and some chemical
+industries (fertilisers and hydrogen), and electricity included in Annex I of the CBAM
+Regulation. To answer this question, you must compare the CN codes1 of your products
+against the list of goods given in Annex I to the CBAM Regulation.
+If you do not produce such goods, you do not have to read this document. However, it is
+written to be of help also to all other kinds of interested audiences (academia, CBAM
+importers, GHG verifiers, competent authorities, consultants, etc.).
+Are you exporting your goods to customers in EU Member States?
+The CBAM affects you if this is the case.
+Please note that your products are also subject to CBAM if they are purchased by clients
+who themselves manufacture CBAM goods. In that case, your products serve as
+“precursor” for their CBAM goods, which then may be exported to EU countries. Also, if
+you sell your products to traders who then sell them to EU customers, your goods fall under
+the CBAM.
+In all those cases where CBAM goods end up being imported into the EU, at some point
+the importer will contact you to gather information on the “embedded emissions” of these
+CBAM goods. Alternatively, the operator using your goods as precursor for producing
+other CBAM goods will ask for the embedded emissions. Therefore, you must be
+prepared to provide these data and as soon as possible start to develop a monitoring
+methodology at your installation, as described in this guidance document.
+How to communicate your data?
+At this time, two different routes are available:
+• The recommended, but currently voluntary method is that you, as the operator, obtain
+a registration in the CBAM Registry, i.e. the IT system run by the European
+Commission for managing inter alia the CBAM Declarations by the authorised
+declarants, their purchases and surrenders of CBAM certificates, and the verification
+process. If you choose this approach, you need to upload your emissions data for each
+installation only once, and after verification, you will be able to share the relevant data
+with all declarants who import your goods into the EU. In 2027, the CBAM Registry
+will be extended so that you can also share emissions data with other operators who
+use your goods as precursors for their own CBAM goods. You are strongly advised to
+register and share emissions data through the CBAM Registry, since this will greatly
+facilitate the declaration of emissions by authorised CBAM declarants. Furthermore,
+using the CBAM registry helps you protect potentially confidential parts of the
+emissions reports by limiting the information seen by the declarant to a summary of
+the emissions report.
+•
+
+Alternatively, without such a registration, you will have to organise the data
+communication with authorised CBAM declarants and other operators using your own
+
+1
+
+CN (Common Nomenclature) codes are the EU version of the HS (Harmonised System) codes for
+international trade. CN codes consist of 8 digits (the first 6 digits are identical to the HS code). Where
+Annex I to the CBAM Regulation contains fewer digits, it means that all CN codes starting with those
+digits are covered.
+5
+
+tools, but using the same emissions report template as used by registered operators.
+With this approach you would have to communicate with all concerned parties
+separately, which you may find inconvenient. It is recommended to use email only for
+non-confidential communication, unless you and your recipient have the ability to use
+encrypted emails. In this context you should note that authorised declarants are obliged
+to request complete verification reports and emissions reports from you, in order to
+make them available in case of review by the competent authorities, whereas with
+registration, declarants and other operators gain access only to necessary summary data
+for you.
+For registering in the “O3CI” Module2 of the CBAM Registry, please see the
+Commission’s CBAM Website:
+https://taxation-customs.ec.europa.eu/carbon-border-adjustmentmechanism/cbamregistry-and-reporting_en#module-for-non-eu-installation-operators-o3ci
+At that site, you will find respective guidance documents and video tutorials for the
+registration process.
+
+What are embedded emissions?
+The concept has been developed to reflect as much as possible the way in which emissions
+are covered by the EU ETS if the CBAM goods were produced in the EU. The EU ETS
+requires operators to pay a price for their own (“direct”) emissions. However, if they
+consume electricity, they also incur the CO2 costs included in the price of electricity they
+purchase3 (carbon costs associated with “indirect emissions”). The same applies to the
+input materials needed for their production process, and which may be supplied by an EU
+ETS installation. These so-called precursors therefore contribute to the carbon costs the
+EU ETS installation faces. The “embedded emissions” are defined in parallel to the
+emissions causing carbon costs in the EU ETS: they take into account the direct and
+indirect4 emissions of the production process as well as the embedded emissions of
+precursors, subject to the sector-specific rule on whether indirect emissions are in scope
+for the good and (where relevant) for its precursors. Embedded emissions are similar in
+concept to a carbon footprint of the goods. The scope of the CBAM is principally related
+to the rules of the EU ETS and therefore has differences to other methods for calculating
+product carbon footprints such as the “GHG Protocol” or ISO14067.
+
+3
+
+PLANNING THE MONITORING PLAN
+
+What do you need to monitor?
+To answer this question, you need to perform the following steps to develop your
+monitoring methodology and document it in writing as a ‘monitoring plan’ (MP), i.e. the
+2
+
+O3CI = Operators of 3rd country Installations
+
+3
+
+If the EU installation produces its own electricity, it experiences the CO 2 costs directly.
+
+4
+
+In the definitive period, indirect emissions are taken into account only for those CBAM goods for which
+indirect emissions are required under the CBAM Regulation (i.e. CBAM goods listed in Annex I to
+Regulation (EU) 2023/956, other than those listed in Annex II, for which only direct emissions are taken
+into account).
+6
+
+handbook you and your personnel use as a basis for performing monitoring tasks in a
+consistent way during the coming years. This monitoring plan will be of crucial support
+also during the verification process. The presented steps will ensure that all the data which
+you need to calculate embedded emissions are covered.
+•
+
+Step 1: Define the installation’s boundaries, production processes and production
+routes. Production process means the system boundaries which are needed to attribute
+emissions to specific goods produced, to which the same ‘functional unit’ applies5. A
+production process shall be identified for goods to which the same functional unit
+applies and shall, where relevant, encompass all production routes used within the
+installation for producing those goods.
+Since the functional unit focusses on CN codes for defining the boundaries of each
+production process, there could be a high number of production processes which
+require separate monitoring. To avoid this situation, i.e. to aggregate several CN codes
+into production processes that are more manageable from a monitoring point of view,
+the Methodology Act provides for rules on how to aggregate goods into larger
+production processes.
+
+•
+
+Step 2: Define the reporting period you are going to use. For your own installation’s
+emission monitoring, in the definitive period, the reporting period corresponds always
+to the calendar year6 during which the goods are produced. When the authorised
+CBAM declarant imports the goods this information serves as reference for the
+determination of embedded emissions. Where there is sufficient evidence to identify
+the actual time of production, the reporting period shall be the period during which the
+good was produced (but not before 2026); otherwise, for goods imported in 2026 the
+reporting period shall be 2026 and for goods imported in subsequent years the reporting
+period shall by default be the calendar year during which the good was imported. For
+electricity imported into the customs territory of the Union, the reporting period shall
+be the year of import.
+
+•
+
+Step 3: Identify all the parameters you need to monitor:
+o Direct emissions of the installation: you have two options available:
+a) The “calculation-based” approach, where you need to determine the
+quantities of all fuels and relevant materials7 consumed, and corresponding
+“calculation factors” (in particular the so-called “emission factor” based on
+the carbon content of the fuel or material);
+b) The “measurement-based” approach, where you need to measure in real-time
+the concentration of the greenhouse gases as well as the flow of the flue gas
+for each “emission source” (stack).
+In the definitive period, you must apply the monitoring and calculation methods
+laid down in the Monitoring Regulation. For PFC8 emissions from primary
+aluminium production a special methodology based on overvoltage measurements
+must be applied. For N2O emissions from nitric acid production, the measurement-
+
+5
+
+If you are familiar with the EU ETS, it may help you to understand the concept of “production process”
+that it is very similar to the “sub-installations” used for benchmarking.
+
+6
+
+Gregorian calendar, i.e. from 1 January to 31 December.
+
+7
+
+The term “source stream” is used to cover both, fuels and other input or output materials that have an
+influence on emissions.
+
+8
+
+Perfluorocarbons.
+7
+
+based method is compulsory. In all other cases, you may choose which method
+best fits to the situation of your installation.
+Additionally, if your installation has more than one production process, there may
+be a need to monitor fuel or material streams between the production processes in
+order to enable correct attribution of emissions to production processes9.
+o (Direct) emissions related to heat flows10: Heat consumption (of both heat
+produced in the installation or received from a separate installation) needs to be
+attributed to each production process, and emissions related to heat exported from
+production processes need to be deducted from the attributed emissions of each
+production process from where the heat is produced or recovered. Therefore, rules
+for monitoring heat flows are found in section C of Annex II and section A.2.2 of
+Annex III to the Methodology Act. There are also rules on determining the
+emission factor of heat.
+o Indirect emissions: For goods listed in Annex I to the CBAM Regulation and not
+listed in Annex II to that Regulation, indirect emissions must be included. These
+are emissions occurring during the production of the electricity your installation
+consumes for its production processes, irrespective of whether this electricity was
+produced within the installation or imported from outside. If you produce such
+goods, you need to monitor the quantities of electricity consumed in each relevant
+production process and multiply it by the relevant emission factor of electricity.
+For the emissions factor, the following options exist:
+i.
+
+If the electricity comes from the grid, you use the emission factor made
+available in Annex II to the Default Values Act (which were determined in
+accordance with Annex IV to the CBAM Regulation).
+
+ii.
+
+If you produce electricity yourself in your installation (i.e. you are an “autoproducer”), you need to monitor the emissions of the power plant or CHP
+plant11 in the same way as you monitor other direct emissions of your
+installation, and use specific rules to calculate the emission factor from the
+fuel mix and taking into account CHP heat production, if applicable. The
+relevant rules are found in points D.4.1 and D.4.2 of Annex II to the
+Methodology Act.
+
+iii.
+
+If you receive electricity from a specific installation other than your own one,
+you may want to use that installation’s actual emissions data. For this purpose,
+
+9
+
+For example, if a blast furnace produces pig iron, a part of the waste gases is usually used as fuel in other
+parts of the installation (e.g. a power plant or a hot-rolling mill). In such a case, the quantity and
+calculation factors need to be determined also for this waste gas, although they are not necessary to
+calculate the total emissions of the installation.
+
+10
+
+Note 1: this is only about “measurable heat”, i.e. heat that is transported via a heat medium such as
+steam, hot water, liquid salts, etc. and where its flow rate can be measured in a pipe, duct, etc. Where
+heat is produced in a burner and directly used e.g. in a kiln or dryer there is no need to monitor the heat
+flow, instead the emissions are determined from the fuel consumption. On the other hand, measurable
+heat is often produced centrally or at several points in the installation, which do not directly correspond
+to the system boundaries of production processes. It is therefore useful to determine the emissions of the
+heat production separately, and to attribute the emissions to production processes via the heat consumed
+in each production process.
+Note 2: In the context of carbon footprints, emissions from (imported) heat is often considered “scope 2
+emissions” and therefore termed “indirect emissions”. Please be aware that in the CBAM legislation as
+well as in this document, the expression “indirect emissions” refers only to electricity, not heat.
+
+11
+
+CHP means combined heat and power, also known as “cogeneration”.
+8
+
+you need to provide evidence either for the fact that the specific installation
+(supplying power) is directly connected to your own one, or that you have a
+valid “power purchase agreement”. Furthermore, that power plant must
+monitor its emissions in line with the same rules as applicable for autoproduced electricity, have it verified and communicate that information to you
+appropriately. If these criteria are fulfilled, you may use the resulting emission
+factor for this electricity. Additional evidence and documentation
+requirements apply where actual emissions are used for imported electricity,
+as set out in point D.2.4 of Annex II to the Methodology Act.
+Where an installation receives electricity from multiple sources during a reporting
+period, the embedded indirect emissions shall by default be determined as the
+average of the emission factors of each electricity source, weighted by the share
+of total electricity consumed that the electricity received from each source
+represents; however, where sufficient evidence is provided that for a given
+production process, only electricity from one single source, or from a subset of
+sources, was used, the embedded indirect emissions for goods produced through
+that production process shall be determined accordingly.
+o Precursors: The concept of embedded emissions includes the addition12 of
+embedded emissions of certain materials used in the production process, the socalled precursors. Which precursors are relevant to each production process is
+determined by the definition of “precursor” in Article 1 of the Methodology Act,
+which refers to all CBAM goods (i.e. the goods listed in Annex I to the CBAM
+Regulation) if they are used in a production process. There is no threshold defined
+for omitting minimal amounts of precursors. However, the Methodology Act
+clarifies that “the purchase and maintenance of infrastructure and equipment” are
+excluded13. In addition, cross-sectoral rules clarify how precursor embedded
+emissions are accounted for (including where precursors are produced on-site or
+acquired). The following parameters need to be monitored for each precursor
+material:
+a) If the precursor is produced within your installation, all relevant
+monitoring is already done in line with the above points. You only need to
+take the precursor’s embedded emissions into account when calculating the
+embedded emissions of the goods which use the precursor in the production
+process.
+b) If you purchase the precursor from other installations, and if you want to
+use actual data instead of default values, you need to request data from the
+relevant producers in the same way as you are asked for data when your goods
+are imported into the EU. This means, a valid, positive verification report from
+the installation producing the good, covering the relevant year of production,
+needs to be provided, and you have to keep it in your records. The relevant
+information to be used then in your calculation of embedded emissions
+includes the following, for each precursor, by precursor CN code (and, where
+12
+
+Note the difference between precursors and normal input materials: For the determination of direct
+emissions it is taken into account that the carbon atoms contained in a material may be oxidised to CO 2
+and emitted. However, for precursors, additionally the emissions which took place already earlier
+(during their own production), i.e. the precursor’s embedded emissions, need to be added.
+
+13
+
+E.g. materials purchased by the installation for maintaining its existing infrastructure or creating new
+infrastructure (such as steel or cement used for construction) are excluded from the installation’s system
+boundaries.
+9
+
+relevant, by reporting period and installation of production), as needed to
+apply the default weighted-average rules:
+▪
+
+Identification of the installation(s) where it was produced and the
+applicable reporting period(s);
+
+▪
+
+The specific14 direct and indirect embedded emissions of the precursor;
+
+▪
+
+The production route, and additional parameters that the importer needs
+to report when the final good is imported to the EU under the CBAM.
+These additional parameters are listed in point 2 of Annex IV to the
+Methodology Act.
+
+▪
+
+The reporting period applied by the producer of the precursor (noting that,
+by default, the reporting period of a precursor is the year of production of
+the complex good, unless sufficient evidence identifies the actual time of
+production).
+
+▪
+
+Where actual data is provided for precursors produced outside the
+installation producing the complex good, the relevant verification report
+issued by an accredited verifier covering the reporting period during
+which the precursor was produced.
+
+▪
+
+The specific embedded free allocation of the precursor.
+
+▪
+
+If applicable, information on a carbon price paid in the relevant
+jurisdiction production of the precursor.
+
+▪
+
+Where a precursor originates in the Union or in exempted
+countries/territories, the precursor’s specific embedded emissions (direct
+and, if applicable, indirect) are counted as zero for the complex good
+calculation. However, the information to identify the precursor and the
+quantities used must still be monitored and reported.
+
+c) In both cases, i.e. for purchased or self-produced precursors, you need to
+monitor the quantity of each precursor you used during the reporting period
+for each of your production processes.
+Where indirect emissions are included in embedded emissions for a complex good,
+note that: (i) if the complex good is listed in Annex II to the CBAM Regulation
+and includes precursors not listed in Annex II, the precursor’s indirect emissions
+are included; (ii) if the complex good is not listed in Annex II and includes
+precursors listed in Annex II, indirect embedded emissions from that precursor are
+not included.
+The rules for monitoring precursor-related data are found in point E of Annex II
+to the Methodology Act.
+o Finally, there are some additional qualifying parameters that the EU importer
+needs to report under the CBAM. These depend on the goods produced. For
+example, for cements imported, the total clinker content needs to be reported, for
+mixed fertilisers the contents of the different forms of nitrogen, etc. The relevant
+parameters are listed in point 2 of Annex IV to the Methodology Act. You need to
+ensure that you collect all the parameters necessary for your CBAM goods and
+communicate them to the importers of your goods or downstream producers of
+other CBAM goods.
+14
+
+Specific (embedded) emissions means emissions related to one tonne of the material under discussion.
+10
+
+•
+
+Step 4: Determine the methodology to monitor each parameter you have identified:
+o For quantities of fuels and materials (including precursors) used, you may either
+have measurement instruments available which tell you how much has been
+consumed during the reporting period (e.g. weighing belts, flow meters, heat
+meters, etc.) or you may determine the used amounts from purchase records and
+stock measurements at the end of each period.
+o For the so-called calculation factors (e.g. the carbon content of the fuel or
+material) you can either choose a “standard value” from applicable literature (in
+particular national GHG inventories submitted under the UNFCCC/ Paris
+Agreement) or from point G of Annex II to the Methodology Act, or you can
+determine them based on laboratory analyses, for which the Methodology Act
+provides further rules in point B.5.4 of Annex II.
+o For continuous emission measurements, heat flow and electricity measurements
+you also need to define the instruments to use, and applicable calibration and
+maintenance measures.
+o In some cases, it may be necessary to define estimation methods, or indirect
+methods based on known correlations of measurement parameters.
+o As the very last resort, if you have no other methods available for monitoring your
+goods’ embedded emissions, and in particular if the producer of your precursors
+used does not provide the required data, you may use the default values for
+embedded emissions of CBAM goods (which include precursors) laid down in
+accordance with Annex IV to the CBAM Regulation, as referred to in Article 11
+of the Methodology Act.
+Note that sometimes you may have the choice of different monitoring approaches (e.g.
+you may have more than one measurement instrument, or you need to choose between
+continual metering and use of batch-wise delivery records, or choose between
+calculation-based and measurement-based methods, etc.) The Methodology Act
+contains provisions in section A.3 of Annex II on how to select the best available (i.e.
+most accurate) data source.
+
+•
+
+Step 5: Determine data needs for the free allocation adjustment:
+What is required to determine the free allocation? As a new element in the definitive
+period of the CBAM, you as an operator must also determine the level of free
+allocation which you would receive for your production process if your installation
+were situated in the EU. This level of free allocation is deducted from the embedded
+emissions to determine the amount of CBAM certificates which the authorised
+declarant has to surrender upon the import of your goods (“the CBAM obligation”).
+This is necessary to make the CBAM obligation comparable to the carbon costs faced
+by EU ETS operators. The rules to determine the “embedded free allocation” of CBAM
+goods are well aligned with the monitoring needs you already have for the embedded
+emissions. Like for embedded emissions, either default values (“default CBAM
+benchmarks”) can be used or values that take into account actual data from your
+installation. Because the free allocation in the EU ETS is phased out while the CBAM
+is gradually introduced, the production year of the goods produced and of the
+precursors used are important parameters.
+
+11
+
+•
+
+Step 6: Determine data needs if you pay a carbon price in your own jurisdiction:
+Do you pay a carbon price in your own jurisdiction? To ensure similar treatment
+between installations in the EU ETS and in other countries, an effective carbon price
+paid in the country where a CBAM good is produced allows for a reduction in the
+CBAM obligation in the definitive period from 2026 onwards. This is a reporting
+requirement under the CBAM Regulation, because EU authorised declarants need this
+information to calculate any related reduction of CBAM certificates. You need to
+ensure that you include information on carbon pricing in your monitoring
+methodology, so you can convey the relevant information to the importer of your
+CBAM goods.
+If your installation is subject to a carbon price, you will have to collect information on
+the carbon price paid, in such a way that you can attribute it to production processes
+and CBAM goods categories, in a similar way as you attribute embedded emissions to
+the goods. The effective carbon price is to be considered, i.e. taking into account any
+applicable rebates (in case of an ETS, any free allocation is considered a rebate).
+Note that you need to collect information for each precursor purchased if a carbon
+price applies in its country of origin. If the producer of the precursor does not provide
+the required information, you can use default carbon price values for the precursor,
+when they will be published by the Commission.
+The total effective carbon price needs to be attributed to the CBAM goods in a similar
+way as the specific embedded emissions, i.e. it needs to be expressed as euros per
+tonne of CBAM good (or euros per MWh in case of imported electricity).
+The reporting rules of information regarding the carbon price paid are to be found in
+the Implementing Act pursuant to Article 9 to the CBAM Regulation. A separate
+guidance document on topics related to the carbon price paid in third countries will be
+provided on the Commission’s website.
+
+•
+
+Step 7: Set up data flow and control procedures:
+In order to minimise the risk of misstatements (15), the operator shall define data flow
+procedures and set up a control system accompanying the monitoring plan. The better
+the control system functions, the simpler will be the verification. While the rules for
+such control system are not spelled out in detail in the Methodology Act, CBAM
+guidance document No. 3 on methodology in its section 4.5.6 provides guidance. In
+the Monitoring and Reporting Regulation (MRR) for the EU ETS there are more
+detailed requirements, which may serve as guidance for CBAM operators, too. They
+are explained in detail in the Commission’s MRR guidance document No.6 (“Data flow
+activities and control system”) (16). For the CBAM, the following step-by-step
+recommendation can be given:
+
+15
+
+‘misstatement’ means an omission, misrepresentation or error in the operator’s reported data, not
+considering the uncertainty permissible for measurements.
+
+16
+
+It can be found in the MRR guidance section of https://climate.ec.europa.eu/eu-action/carbonmarkets/eu-emissions-trading-system-eu-ets/monitoring-reporting-andverification_en?prefLang=de#documentation
+12
+
+o Step 7a: Perform a (simplified, if appropriate) risk assessment on the data flows.
+This has to take into account the probability of an error to happen, and its impact
+(e.g. inaccurate data, complete loss of data, size of the data gap resulting). Identify
+areas of high and medium risk which require control activities.
+o Step 7b: Define the control measures (e.g. corroboration of data with a second data
+source, regularly performing independent reviews (“4-eyes principle”), installing
+redundant measurement instruments, define maintenance and calibration cycles for
+instruments, etc.).
+o Step 7c: Repeat the risk assessment including the control measures defined. If there
+are still remaining high or medium risk issues, go back to step 7b.
+It is to be noted that a control system is a “living system”, i.e. the control measures
+should be evaluated for their effectiveness regularly, and where relevant, e.g. because
+new data flows are introduced, the risk assessment may have to be repeated or at least
+updated. Therefore, the above steps have to be understood as being performed at the
+time the monitoring plan is developed.
+
+4
+
+DEVELOPING THE MONITORING PLAN
+
+Compile the monitoring plan (MP) for the installation: At this point you have listed all
+the monitoring methods for all the materials or emission sources you need to monitor
+throughout the year. You must then compile this information together into one written
+document (the “monitoring plan” of your installation) so that the selected monitoring
+methods and information that comprises your monitoring methodology can be consistently
+used over the coming years. This should be done in a systematic way (e.g. by listing all
+measurement instruments, all reading intervals, all data sources for standard values). An
+outline template containing the minimum required elements for the installation monitoring
+plan is provided in section A.5 of Annex II to the Methodology Act.
+The guiding principle for setting up this monitoring plan is that it must be sufficiently clear
+and transparent so that independent persons, who have some knowledge of GHG
+monitoring, are enabled to understand the monitoring methodology. It needs to be detailed
+enough to serve as instructions to the installation’s personnel to perform all necessary tasks
+for determining the embedded emissions of goods. It must therefore also contain the
+applicable calculation steps, and all calculation factors which are not determined by
+analyses. The monitoring methodology that is documented in the monitoring plan should
+only be subsequently changed where this can be objectively justified; for example, relevant
+reasons could be changes to the configuration of the installation in terms of technology
+used, input materials or fuels used, or goods produced; or the introduction of new data
+sources or monitoring methods; or changes to data collection e.g. improvements to the data
+control system.
+For laying down the monitoring methodology for all relevant parameters, and for
+respective data flows and calculation steps, operators shall design and implement a
+monitoring plan containing at least the elements outlined in section A.5 of Annex II to the
+Methodology Act. The monitoring plan shall be made available (in particular to the
+verifier) in English. However, as it needs to serve as a “recipe book” to the installation’s
+personnel, you should also have a version in your local language available. It may also be
+helpful to check the monitoring methodology against the templates for the operator’s
+emissions report and the summary thereof, as set out in points 1.1. and 1.2. of Annex IV
+13
+
+to the Methodology Act. You may want to use the data requirements of that template for
+checking the completeness of the MP.
+Furthermore, the MP needs to contain control measures in the data flow from primary data
+to final specific embedded emissions. These measures must be commensurate with the
+risks for errors. Measures should include frequent checking by an independent person, and
+comparing data from different sources, consistency checking of time series, etc.
+
+5
+
+PERFORM MONITORING AND PREPARE THE EMISSIONS REPORT
+
+Perform monitoring throughout the reporting period: While all the steps above are
+necessary only once to prepare your installation and its staff for the monitoring tasks, this
+and the following point are to be performed continuously throughout all the following
+years.
+You have to perform the monitoring tasks defined in the MP. You have to regularly read
+fuel meters, take stock of materials consumed or produced, take samples of fuels or
+materials to be analysed, carry out maintenance, control and calibration of measuring
+instruments, etc. You need to collect the relevant data, perform calculation of emissions,
+and perform all relevant quality control and assurance measures defined in the MP.
+Furthermore, at least once per reporting period, you must review the MP and check if it is
+still accurate and appropriate. For instance, does it still reflect the technologies used in
+your installation, is the list of produced goods still up to date? Have new fuels or materials
+become relevant? Can you use better (more accurate) monitoring methods and can you
+reduce the risk for errors in the data flow? All changes and improvements must be
+documented in the MP, and you must ensure that only the latest version of the MP is used.
+Finally, you must communicate the embedded emissions data of your CBAM goods to
+the EU importer(s) who bear(s) the reporting obligation under the CBAM Regulation. As
+you may sell your goods to a multitude of clients, there may be a large number of EU
+importers who must request this information from you. In order to perform this
+communication as efficiently as possible, where the embedded emissions are calculated
+based on actual emissions, operators shall prepare an annual emissions report (“operator’s
+emissions report”) and a summary thereof, and, where the embedded emissions of
+electricity are calculated based on actual emissions, operators shall, in addition, prepare a
+declarant-specific addendum to the operator’s emissions report.
+The use of this ‘operator’s emissions report' template is mandatory in accordance with
+Article 10 of the Methodology Act. The use of such a common template greatly
+simplifies the communication on both ends. Your customers may be established in
+different EU Member States, may speak different languages, and may themselves purchase
+CBAM goods from many suppliers in different countries. The common operator’s
+emissions report template ensures a common reporting format in English, so that the same
+type of information can always be found in the same field in the template.
+After the end of a calendar year, you must compile the monitored data of the whole
+reporting period, determine the attributed emissions of each production process, and
+divide them by the corresponding “activity level” (i.e. the total tonnes of goods or other
+functional unit under the related CBAM category produced within the reporting period) in
+order to get the specific embedded emissions of this good. This is the main parameter the
+EU importer is interested in. Until you finalise the data compilation of the following
+reporting period, you should use these embedded emissions data (using the template you
+14
+
+have filled for this reporting period) and provide it to all your customers who need them
+for CBAM purposes.
+The operator’s emissions report template is intended to facilitate the communication of
+embedded emissions data from operators of installations to authorised CBAM declarants..
+
+6
+
+VERIFICATION: KEY CONCEPTS
+
+If you provide your emissions data and free allocation data to the authorised declarant for
+use in the CBAM declaration, or to other operators who use your products as precursors
+for other CBAM goods, these “actual data” are eligible to be used instead of default values
+only if they are verified by an accredited verifier. For this purpose, you as operator of the
+installation must contract a verifier.
+The verifier must have an accreditation from a National Accreditation Body situated in the
+EU, valid at the time it issues the final verification report. The accreditation must cover the
+industrial sector of your installation. In order to avoid capacity bottlenecks near the end of
+the reporting period, you should seek for a verifier already early during the reporting
+period. The verifier will then guide you through the process. This usually means that the
+verifier will request all documents and data from you which are relevant to verification,
+will agree the time of a site visit, etc.
+
+Certification
+In case of the carbon price paid in third countries, the Article 9 of the CBAM Regulation
+requires data to be “certified by a person that is independent from the authorised CBAM
+declarant and from the authorities of the third country.” The implementing act on carbon
+price provides further competence requirements for such certifiers. Accredited verifiers
+(see above) may also meet these requirements. A separate guidance document on topics
+related to the carbon price paid in third countries will be provided on the Commission’s
+website.
+
+15
+
+

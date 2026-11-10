@@ -1,0 +1,2587 @@
+EUROPEAN COMMISSION
+DIRECTORATE-GENERAL
+TAXATION AND CUSTOMS UNION
+Indirect Taxation and Tax Administration
+CBAM, Energy and Green Taxation
+
+Brussels, 14 August 2026
+
+GUIDANCE DOCUMENT 5E: SECTOR-SPECIFIC GUIDANCE
+DOCUMENT ON ALUMINIUM
+
+Disclaimer: This guidance document is not legally binding and it is of an explanatory nature.
+Legal provisions of Union law take precedence over the contents of this document and should
+always be consulted. The authentic texts of the EU legal instruments are those published in the
+Official Journal of the European Union. This guidance was prepared by Commission services
+and does not represent an official position of the Commission. Only the Court of Justice of the
+European Union is competent to authoritatively interpret Union law.
+
+Commission européenne/Europese Commissie, 1049 Bruxelles/Brussel, BELGIQUE/BELGIË – Tel. +32 22991111
+
+VERSION HISTORY
+Date
+
+Version notes
+
+14.08.2026
+
+First Publication of this document for the definitive period.
+
+2
+
+CONTENTS
+1
+
+PREFACE
+
+4
+
+1.1
+
+Structure and content of the guidance documents
+
+4
+
+1.2
+
+Reference regulations and legal acts
+
+5
+
+2
+2.1
+
+CBAM GOODS AND PRODUCTION ROUTES
+Foreword to sector-specific sections
+
+7
+7
+
+2.2
+Aluminium sector
+8
+2.2.1
+Unit of production and embedded emissions
+8
+2.2.2
+Definition and explanation of sector goods covered
+9
+2.2.3
+Definition and explanation of relevant production processes and routes
+11
+3
+
+ALUMINIUM SECTOR-SPECIFIC REQUIREMENTS
+
+18
+
+3.1
+Sector-specific requirements for monitoring and reporting
+3.1.1
+Emissions monitoring
+3.1.2
+Additional rules
+3.1.3
+Additional reporting requirements
+
+18
+18
+19
+23
+
+4
+
+23
+
+WORKED EXAMPLE FOR THE ALUMINIUM SECTOR
+
+ANNEX A
+
+LIST OF DEFINITIONS
+
+29
+
+ANNEX B
+
+LIST OF ABBREVIATIONS
+
+38
+
+3
+
+1
+
+PREFACE
+
+1.1
+
+Structure and content of the guidance documents
+
+This series of documents has been written to support stakeholders by explaining the
+requirements of the CBAM Regulation in a non-legislative language. This series of
+guidance documents should benefit a variety of stakeholders. A specific focus has been put
+on clarifying the requirements for operators of installations producing CBAM goods
+outside of the EU for the definitive period.
+•
+
+Guidance 1 provides an overview of the main changes to the CBAM methodology
+between the definitive period and the concluded transitional period. It also
+introduces the CBAM and an overview of the compliance cycle, roles and
+responsibilities, as well as milestones and deadlines for operators of installations
+outside the EU during the definitive period and explains the general exemptions
+from the CBAM.
+
+•
+
+Guidance 2 provides a quick guidance for the intended reader of this document,
+the operator of an installation producing CBAM goods. It provides a roadmap of
+the most important concepts of CBAM emissions monitoring and where to find
+more information in this series of documents.
+
+•
+
+Guidance 3 sets out the monitoring and reporting obligations and
+recommendations which are potentially applicable to any affected producer of
+CBAM goods.
+
+•
+
+Guidance 4 provides an overview of how the adjustment for free allocation is to
+be determined and what information is needed.
+
+•
+
+Guidance documents 5a, 5b, 5c, 5d, 5e and 5f present an overview per sector of
+the production processes and value chains for goods that are included in the scope
+of the CBAM, as well as sector-specific monitoring and reporting considerations
+for each CBAM good where this is relevant. These sections are supplemented by
+examples for each sector.
+
+The series of guidance documents is accompanied by an electronic template for
+information that should be used by installation operators to communicate information to
+the authorised CBAM declarants and CBAM Registry.
+
+Presentation of numbers in EU documents
+To align with EU legal documents, this guidance document uses the following
+convention when presenting numbers.
+The decimal separator used to separate the integral part of a number from its fractional
+part is a comma, e.g.: 0,890
+Thousands, and powers of 103n thereafter, are separated by a space, e.g.:
+•
+
+fifteen thousand is written as 15 000
+
+•
+
+fifteen million is written as 15 000 000
+4
+
+1.2
+
+Reference regulations and legal acts
+
+Several regulations and legal acts are referred to throughout this series of guidance
+documents. For ease of reading and to avoid ambiguity, simplified references are used
+when citing these acts.
+•
+
+CBAM Regulation: Regulation (EU) 2023/956 and Regulation (EU) 2025/2083
+amending Regulation (EU) 2023/956. Notably, where article numbers are given
+in this document without further specification, they always refer to the CBAM
+Regulation.
+It can be accessed at the following link (consolidated version):
+http://data.europa.eu/eli/reg/2023/956/2025-10-20
+
+•
+
+Methodology Act: Commission Implementing Regulation (EU) 2025/2547, in
+legal texts referred to as “Implementing act pursuant to Article 7(7) of the CBAM
+Regulation”.
+It can be accessed at the following link:
+http://data.europa.eu/eli/reg_impl/2025/2547/oj
+
+•
+
+Default Values Act: Commission Implementing Regulation (EU) 2025/2621, in
+legal texts referred to as “Implementing act pursuant to Article 7(7) of the CBAM
+Regulation”, also referred to as “default values determined in accordance with
+Annex IV to the CBAM Regulation”.
+It can be accessed at the following
+link: http://data.europa.eu/eli/reg_impl/2025/2621/oj
+
+•
+
+Verification Principles Act: Commission Implementing Regulation (EU)
+2025/2546, in legal texts referred to as “Implementing act pursuant to Article 8(3)
+of the CBAM Regulation”.
+It can be accessed at the following link:
+http://data.europa.eu/eli/reg_impl/2025/2546/oj
+
+•
+
+Accreditation & Verification Requirements Act: Commission Delegated
+Regulation (EU) 2025/2551, in legal texts referred to as “Delegated act pursuant
+to Article 18(3) of the CBAM Regulation”.
+It can be accessed at the following
+link: http://data.europa.eu/eli/reg_del/2025/2551/oj
+
+•
+
+Free Allocation Adjustment Act: Commission Implementing Regulation (EU)
+2025/2620, in legal texts referred to as “Implementing act pursuant to Article
+31(2) of the CBAM Regulation”.
+It can be accessed at the following link:
+http://data.europa.eu/eli/reg_impl/2025/2620/oj
+
+For acronyms and definitions used in this document, please see Annex B and Annex A.
+5
+
+A series of icons are used throughout to help guide the reader:
+Icon
+
+Description of use
+Points to information of particular importance for operators of
+installations producing CBAM goods.
+
+Simplified!
+
+Highlights simplified approaches of the general requirements of
+the CBAM.
+Used where recommended improvements are presented.
+Used where other documents, templates or electronic tools are
+available from other sources.
+Points to examples given for the topics discussed in the
+surrounding text.
+
+6
+
+2
+
+CBAM GOODS AND PRODUCTION ROUTES
+
+This section provides guidance on industry-sector-specific rules that apply for the
+definitive period (from 2026 onwards), for aluminium sector. It deals with the specification
+of products covered by the CBAM and the relevant production routes.
+
+2.1
+
+Foreword to sector-specific sections
+
+The following sections provide an overview of the different production routes for the goods
+under aluminium sector in CBAM and provide sector specific guidance. Where goods to
+which the same functional unit applies are produced in one installation via different
+production routes, the embedded emissions shall be determined in accordance with the
+averaging rules applicable in the definitive period.
+Additional information on the production processes of the goods can also be found in the
+BREF1 documents for best available techniques (BAT).
+Diagrams used in the following sections.
+For the system boundary graphics presented in the sections below, the following
+conventions are applied:
+⚫
+Production processes (for which monitoring of the direct emissions would take
+place) are shown as rectangles with white background.
+⚫
+Optional processes (e.g. CCS/CCU) are shown in blue boxes. In particular,
+CCS/CCU would not be taken into account for developing default values, but
+where you (as an operator) use them, the related emissions or emission savings
+should be taken into account for determining actual embedded emissions in line
+with the CBAM Regulation and the Methodology Act.
+⚫
+Materials which are considered to have no embedded emissions are shown in
+pink boxes, materials with embedded emissions (precursor materials and final
+products, i.e. goods under the CBAM) in green boxes. Simple goods are shown
+in normal font, complex goods in bold font. Materials which are optional are
+shown in boxes with a blue dashed outline and must be included where actually
+used at the installation.
+⚫
+Input materials are presented without trying to be complete. This means that the
+focus is on materials which are relevant for demonstrating the differences
+between different production routes. As a consequence, less important input
+materials and in particular fuels are usually omitted in order to keep graphs
+simple.
+⚫
+Electricity as input is shown only in cases where it is the main “precursor” of
+the process (i.e. in particular for electric arc furnaces and electrolysis processes).
+Electricity is shown in light grey boxes.
+
+1
+
+BAT Reference document (BREF), BAT being “Best Available Techniques” as defined by the IED
+(Industrial Emissions Directive). Relevant BREF documents are those for: the production of cement; for
+iron and steel production; large volume inorganic chemicals (which includes fertilisers); for Chlor-alkali;
+and for non-ferrous metals (which includes both aluminium and ferro-alloys). All BREFs can be found
+at the European IPPC Bureau, under https://eippcb.jrc.ec.europa.eu/reference.
+7
+
+2.2
+
+Aluminium sector
+
+The textbox below signposts the sector-specific sections in the Methodology Act, relevant
+for the CBAM definitive period.
+Methodology Act references:
+•
+
+Annex I (“Mapping of CN codes to aggregated goods categories”) to the Methodology Act.
+
+•
+
+Annex I, points 3.17 (“Unwrought aluminium”) and 3.18 (“Aluminium products”) which define the
+functional unit, system boundaries and possible precursors for aluminium sector goods.
+
+2.2.1
+
+Unit of production and embedded emissions
+
+The quantity of declared aluminium goods imported into the EU must be expressed in
+metric tonnes. As an operator, you must record the quantity of CBAM good(s) produced
+by the installation or production process, for the purposes of reporting. In the definitive
+period, the reporting period corresponds to the calendar year of production, in accordance
+with Article 1(5) of the Methodology Act.
+Industrial sector
+
+Aluminium
+
+Production unit of goods
+
+Tonnes (metric), reported separately for each
+type of sector goods, by installation or
+production process in the country of origin.
+
+Associated activities
+
+Producing unwrought aluminium from alumina,
+or secondary raw materials (aluminium scrap),
+by metallurgical, chemical or electrolytic
+means; manufacture of semi-processed and
+finished aluminium products.
+
+Relevant greenhouse gases
+
+Carbon dioxide (CO2) and perfluorocarbons
+(CF4 and C2F6)
+
+Direct Emissions
+
+Tonnes (metric) of CO2e
+
+Indirect Emissions
+
+Quantity of electricity consumed (MWh),
+source and emission factor used to calculate the
+indirect emissions in tonnes (metric) of CO2 or
+CO2e.
+During the transitional period, indirect
+emissions resulting from electricity
+consumption were monitored and reported
+separately. In the definitive period, for
+aluminium CBAM goods which are listed in
+Annex II (“Goods for which only direct
+emissions are taken into account”) to the
+CBAM Regulation, only direct emissions are
+taken into account in their embedded emissions
+under the CBAM; indirect emissions of
+electricity are not included.
+
+Unit for embedded emissions
+
+Tonnes CO2e emissions per tonne of goods,
+reported separately for each type of good, by
+installation in the country of origin.
+8
+
+During the transitional period, the aluminium sector reported both direct emissions and
+indirect emissions, with indirect emissions monitored and reported separately. For the
+definitive period, aluminium CBAM goods are listed in Annex II to the CBAM Regulation
+(“List of goods for which only direct emissions are to be taken into account, pursuant to
+Article 7(1)”). For those goods, only direct emissions are taken into account when
+determining embedded emissions for CBAM purposes; indirect emissions of electricity are
+not included, in line with Article 7(1) and Annex II of the CBAM Regulation and the crosssectoral rules on system boundaries and precursors in the Methodology Act. Emissions
+must be reported in metric tonnes CO2 equivalent (t CO2e) emissions per tonne of output.
+This figure must be calculated for the specific installation or production process in your
+country of origin.
+The following sections set out how the system boundaries of aluminium sector goods
+should be defined and identify elements of the production process that must be included
+for the purposes of monitoring and reporting.
+
+2.2.2
+
+Definition and explanation of sector goods covered
+
+The following Table 2-1 lists the relevant goods in scope for the CBAM definitive period
+in the aluminium industry sector. The CN codes in the central column are the starting point
+for which ‘production processes’ are to be defined are to be defined for the purpose of
+monitoring in line with Annex I to the CBAM Regulation and Annex I (“Mapping of CN
+codes to aggregated goods categories”) to the Methodology Act. Where goods with
+different CN codes to which the same functional unit applies are produced using different
+production routes within an installation, a single production process shall be used
+encompassing all production routes.
+Table 2-1: CBAM goods in the aluminium sector2
+
+Aggregated
+goods
+category
+
+Product
+CN
+Code3
+
+Description
+
+Unwrought
+aluminium
+
+7601
+
+Unwrought aluminium
+
+2
+
+Source: Annex I to the CBAM Regulation; Annex I (“Mapping of CN codes to aggregated goods
+categories”) and points 3.17 (“Unwrought aluminium”) and 3.18 (“Aluminium products”) of Annex I to
+the Methodology Act.
+
+3
+
+Where the CN codes indicated in this table consist of 4, 5 or 6 digits, all 8-digit CN codes sharing the
+same initial digits shall be considered included, unless otherwise specified.
+9
+
+Aggregated
+goods
+category
+
+Product
+CN
+Code3
+
+Description
+
+Aluminium
+products
+
+7603 –
+7608,
+7609 00
+00, 7610,
+7611 00
+00, 7612,
+7613 00
+00, 7614,
+7616
+
+7603 – Aluminium powders and flakes
+7604 – Aluminium bars, rods and profiles
+7605 – Aluminium wire
+7606 – Aluminium plates, sheets and strip, of a
+thickness exceeding 0,2 mm
+7607 – Aluminium foil (whether or not printed or
+backed with paper, paper-board, plastics or similar
+backing materials) of a thickness (excluding any
+backing) not exceeding 0,2 mm
+7608 – Aluminium tubes and pipes
+7609 00 00 – Aluminium tube or pipe fittings (for
+example, couplings, elbows, sleeves)
+7610 – Aluminium structures (excluding prefabricated
+buildings of heading 9406) and parts of structures (for
+example, bridges and bridge-sections, towers, lattice
+masts, roofs, roofing frameworks, doors and windows
+and their frames and thresholds for doors, balustrades,
+pillars and columns); aluminium plates, rods, profiles,
+tubes and the like, prepared for use in structures
+7611 00 00 – Aluminium reservoirs, tanks, vats and
+similar containers, for any material (other than
+compressed or liquefied gas), of a capacity exceeding
+300 litres, whether or not lined or heat-insulated, but
+not fitted with mechanical or thermal equipment
+7612 – Aluminium casks, drums, cans, boxes and
+similar containers (including rigid or collapsible
+tubular containers), for any material (other than
+compressed or liquefied gas), of a capacity not
+exceeding 300 litres, whether or not lined or heatinsulated, but not fitted with mechanical or thermal
+equipment
+7613 00 00 – Aluminium containers for compressed
+or liquefied gas
+7614 – Stranded wire, cables, plaited bands and the
+like, of aluminium, not electrically insulated
+7616 – Other articles of aluminium
+
+The aggregated goods categories listed in Table 2-1 include both finished aluminium
+products and a precursor ‘unwrought aluminium’ that is itself used in the production of
+aluminium goods. The system boundaries specified in the Methodology Act do not
+mention explicitly which precursors are relevant for the production process. Therefore,
+Table 2-2 should help to identify the possible precursors by aggregated goods category and
+production route.
+10
+
+Table 2-2: Aggregated goods categories, their production routes and possible precursors
+
+Aggregated Goods Category
+
+Precursors
+
+Production route
+Unwrought aluminium
+Primary aluminium
+Secondary aluminium
+Aluminium products
+
+None for primary aluminium
+For secondary aluminium – unwrought aluminium
+from other sources, if used in the process4
+Unwrought aluminium (differentiated between
+primary and secondary aluminium, if known), other
+aluminium products (if used in the production
+process).
+
+Unwrought aluminium is produced by several production routes (‘primary aluminium’ for
+electrolytic smelting, ‘secondary aluminium’ for melting/recycling of scrap) as metal
+ingots, blocks, billets, slabs or similar. It is defined as a ‘simple good’, as the raw materials
+(carbon anodes and alumina for primary aluminium, scrap for secondary aluminium) used
+in its manufacture are themselves not treated as precursors (i.e. their upstream embedded
+emissions are not included).
+The aluminium goods listed above include most types of aluminium product
+manufactured5. Aluminium products are defined as complex goods as they include the
+embedded emissions from the precursor unwrought aluminium.
+The production of aluminium sector goods is by a number of different process routes,
+outlined below.
+
+2.2.3
+
+Definition and explanation of relevant production processes and routes
+
+The system boundaries of the precursor unwrought aluminium and of aluminium products
+are distinct and may, under certain conditions, be added together to include all processes
+directly or indirectly linked to the production processes for these goods, including input
+activities to, and output activities from the process. In line with Annex I, point 3.1 (crosssectoral rules) of the Methodology Act, the purchase and maintenance of infrastructure and
+equipment are excluded from the system boundaries.
+
+4
+
+Note that any alloying elements contained in unwrought aluminium, that are not defined as CBAM
+precursor goods, must be excluded from the determination of mass and embedded emissions of the
+aluminium good.
+
+5
+
+Excludes CN 7615 (certain household articles) and CN 7602 00 (aluminium waste and scrap).
+11
+
+Figure 2-1: System boundaries and value chain for unwrought aluminium and aluminium
+products
+System boundaries and value chain of aluminium products
+
+Note to figure:
+•
+The differences between the aluminium production routes shown in the diagram are as follows: the two
+primary aluminium smelting routes differ in the electrode materials used (pre-baked versus Søderberg
+anodes), while the secondary aluminium route uses aluminium scrap instead of alumina as input. Boxes with
+a blue dashed outline represent optional inputs that are only included where they are actually used at the
+installation.
+•
+*Primary smelting / Secondary melting denotes the unwrought aluminium production step(s) as defined in
+the system boundaries for “Unwrought aluminium” in Section 3.17 of Annex I to the Act. Electricity may be
+consumed operationally in the steps shown; for aluminium goods listed in Annex II to the CBAM Regulation,
+indirect emissions from electricity are not included in embedded emissions (direct emissions only). Purchase
+and maintenance of infrastructure and equipment are excluded from the system boundaries.
+•
+**Forming* covers all processes directly or indirectly linked to the production of aluminium products,
+excluding cutting, welding and finishing of aluminium products, in line with point 2 (“System boundary”) of
+Section 3.18 “Aluminium products” of Annex I to the Methodology Act
+
+The differences between the aluminium production routes shown in the diagram are as
+follows: the two primary aluminium smelting routes differ in the electrode materials used
+(pre-baked anodes versus anode paste (Søderberg)), while the secondary aluminium route
+uses aluminium scrap instead of alumina as input.
+The relevant emissions that must be monitored for the aluminium sector are detailed in
+section 3.1.1 of this document.
+
+12
+
+2.2.3.1
+
+Unwrought aluminium – Primary (electrolytic) smelting production route
+
+Primary aluminium is produced by the electrolysis of alumina6 in electrolytic cells. During
+electrolysis, aluminium is reduced and oxygen from the alumina is liberated and combines
+with the carbon anode to form carbon dioxide and carbon monoxide – the carbon anodes
+in the primary aluminium process are therefore continuously consumed during the process.
+Primary aluminium cell systems vary according to the type of anode used. The ‘Pre-baked’
+electrolytic cell uses multiple pre-baked carbon anodes that must be regularly replaced.
+The ‘Søderberg’ electrolytic cell uses a single continuous carbon anode, which is selfbaked in situ within the cell by means of the heat released during the electrolytic process
+within the smelter; ‘green’ anode paste briquettes are added at the top while the anode is
+consumed at the bottom. Molten aluminium is deposited at the cathode and collects at the
+bottom of the cell, where it is periodically withdrawn by vacuum siphons into crucibles
+before being transported to the casting plant. At the casting plant molten aluminium is held
+in holding furnaces for further processing prior to casting metal ingots, blocks, billets, slabs
+or similar; small quantities of clean commercial scrap may also be added at this stage.
+Annex I, point 3.17.2 (“Unwrought aluminium – primary aluminium from electrolytic
+reduction”) to the Methodology Act defines the system boundaries for direct emissions
+monitoring for the primary (electrolytic) smelting production route, as encompassing:
+“ – All processes directly or indirectly linked to the production processes emitting
+CO2 emissions from the consumption of electrodes or electrode pastes.
+– All processes directly or indirectly linked to the production processes emitting
+CO2 emissions from any fuels used (e.g. for drying and pre-heating of raw
+materials, heating of electrolysis cells, heating required for casting).
+– All processes directly or indirectly linked to the production processes emitting
+CO2 emissions from any flue gas treatment, from soda ash or limestone if relevant.
+– Perfluorocarbon emissions caused by anode effects monitored in accordance
+with Section B.7 of Annex II.”
+There are no precursors for this production process. Indirect emissions resulting from
+electricity consumed by the production process are not taken into account in the embedded
+emissions of unwrought aluminium CBAM goods, in line with Article 7(1) and Annex II
+(“List of goods for which only direct emissions are to be taken into account”) to the CBAM
+Regulation. Operators may nevertheless monitor electricity consumption and related
+indirect emissions, for example for internal purposes or under other monitoring and
+reporting schemes. In addition, in line with Annex I, point 3.1 (cross-sectoral rules), the
+system boundaries exclude the purchase and maintenance of infrastructure and equipment.
+In line with the above definition of systems boundaries, the following production steps
+may be regarded as being within the system boundaries of primary aluminium installations:
+•
+
+6
+
+Raw material preparation – including storage of various additive constituents.
+
+Alumina is purified aluminium oxide produced by beneficiation of bauxite ore via the Bayer process.
+Production of alumina usually takes place at a different site to primary aluminium production for
+logistical and power supply reasons
+13
+
+•
+
+Electrolytic cell system for aluminium production process – all steps.
+
+•
+
+Casting plant – all steps including holding furnaces, conveying systems, further
+metal processing (metal treatment, alloying and homogenisation) and casting.
+
+•
+
+Emissions control – for treating releases to air, water or ground.
+
+•
+
+The process materials consumed by the primary aluminium production route –
+alumina, pre-baked carbon anodes, ‘green’ anode paste briquettes, cryolite and
+other additives – are treated as raw materials and so have zero embedded emissions.
+
+Figure 2-2: System boundaries of the unwrought aluminium – primary smelting production
+route
+Unwrought aluminium – Primary smelting
+
+Note to figure:
+• Boxes with a blue dashed outline represent optional inputs that are only included where they are
+actually used at the installation. The “Pre-baked anodes” and “Anode paste (Søderberg route)”
+boxes represent alternative anode systems (route-dependent), not additional optional inputs.
+Electricity is consumed operationally in primary smelting; for aluminium goods listed in Annex II
+to the CBAM Regulation, indirect emissions from electricity are not included in embedded
+emissions (direct emissions only).
+• *Purchase and maintenance of infrastructure and equipment are excluded from the system
+boundaries.
+
+2.2.3.2
+
+Unwrought aluminium – Secondary melting (recycling) production route
+
+Secondary aluminium is produced mainly from post-consumer aluminium scrap collected
+for recycling (although unwrought aluminium may also be separately added). Scrap is
+sorted according to type (cast or wrought alloy) and the sort of pre-treatment measures
+required (e.g. de-coating, de-oiling), and is then re-melted in the appropriate type of
+furnace (typically rotary or reverberatory, but induction furnaces may also be used) before
+further processing including: alloying, melt treatment (addition of salt or chlorination) and
+finally casting metal ingots, blocks, billets, slabs or similar. Typical fuels used are natural
+gas, LPG or fuel oil.
+14
+
+The Methodology Act (Annex I, point 3.17.3 (“Unwrought aluminium – secondary
+aluminium from melting) defines the system boundaries for direct emissions monitoring
+for the secondary melting (recycling) production route, as encompassing:
+“ – All processes directly or indirectly linked to the production processes emitting
+CO2 emissions from any fuels used for drying and pre-heating of raw materials,
+used in melting furnaces, in pre-treatment of scrap such as de-coating and deoiling, and combustion of the related residues, and fuels required for casting of
+ingots, billets or slabs.
+– All processes directly or indirectly linked to the production processes emitting
+CO2 emissions from any fuels used in associated activities such as treatment of
+skimmings and slag recovery.
+– All processes directly or indirectly linked to the production processes emitting
+CO2 emissions from any flue gas treatment, from soda ash or limestone if relevant.”
+A precursor is unwrought aluminium from other sources, if used in the process. During the
+transitional period, indirect emissions resulting from electricity consumption were
+monitored and reported separately. In the definitive period, for aluminium CBAM goods
+listed in Annex II to the CBAM Regulation, indirect emissions from electricity are not
+included in embedded emissions (direct emissions only); operators may nevertheless
+monitor electricity consumption and related indirect emissions for internal purposes or
+under other monitoring and reporting schemes.
+In line with the above definition of systems boundaries, the following production steps
+should be regarded as being within the system boundaries of secondary aluminium:
+•
+
+Raw material preparation – including sorting, pre-treatment (de-coating, de-oiling),
+drying and pre-heating of scrap.
+
+•
+
+Furnace system for aluminium production process – all steps, including furnace
+charging, melting and holding furnaces.
+
+•
+
+Casting plant – all steps including holding furnaces, conveying systems, further
+metal processing (metal treatment, alloying and homogenisation) and casting.
+
+•
+
+Emissions control – for treating releases to air, water or ground.
+
+The following Figure 2-3 shows the system boundaries of the relevant processes for
+secondary aluminium production.
+There are no PFC emissions from the secondary aluminium process.
+Aluminium scrap is the main material input to the secondary melting production route.
+Scrap (whether pre-consumer or post-consumer) is treated as a raw material and so has
+zero embedded emissions.
+.
+
+15
+
+Figure 2-3: System boundaries of the Unwrought aluminium – secondary melting
+production route
+Unwrought aluminium – Secondary melting
+
+Note to figure
+•
+Boxes with a blue dashed outline represent optional inputs that are only included where they are
+actually used at the installation.
+•
+
+Electricity may be consumed operationally in the production steps shown; for aluminium goods
+listed in Annex II to the CBAM Regulation, indirect emissions from electricity are not included in
+embedded emissions (direct emissions only).
+
+•
+
+*Purchase and maintenance of infrastructure and equipment are excluded from the system
+boundaries.
+
+2.2.3.3
+
+Aluminium products production process
+
+Aluminium products are produced by the further processing of precursor unwrought
+aluminium (alloyed or un-alloyed). Aluminium products are produced by a variety of
+forming processes including extrusion, casting, hot and cold rolling, forging and drawing.
+Extrusion is a common process used to produce aluminium profiles. Hot and cold rolling
+may be used to produce plate, sheet and foil. Casting may be used to produce complex
+forms.
+The Methodology Act (Annex I, point 3.18 (“Aluminium products”) defines the system
+boundaries for direct emissions monitoring for the aluminium products production route,
+as encompassing:
+“ – All processes directly or indirectly linked to the production processes emitting
+CO2 emissions from combustion of fuels and process emissions from flue gas
+treatment, excluding the following processes: cutting, welding and finishing of
+aluminium products.”
+Precursors are unwrought aluminium, if used in the production process (note that primary
+and secondary aluminium must be treated separately, if data is known, as each has different
+embedded emissions), and aluminium products, if used in the production process.
+Electricity consumption and related indirect emissions may be monitored (e.g. for internal
+purposes or under other monitoring and reporting schemes), but are not taken into account
+in embedded emissions for aluminium CBAM goods listed in Annex II to the CBAM
+Regulation (direct emissions only).
+16
+
+In line with the above definition of systems boundaries, the following production steps
+should be regarded as being within the system boundaries of basic aluminium products
+installations:
+•
+
+Raw material preparation – including pre-heating, re-melting and alloying.
+
+•
+
+Forming processes – all forming process steps for basic aluminium products,
+including (but not limited to): extrusion, casting, hot and cold rolling, forging,
+drawing.
+
+•
+
+Annealing, surface preparation and treatment
+
+•
+
+Emissions control – for treating releases to air, water or ground.
+
+Purchase and maintenance of infrastructure and equipment are excluded from the system
+boundaries, in accordance with Annex I, point 3.1 (cross-sectoral rules) of the
+Methodology Act.
+The following Figure 2-4 shows the system boundaries of the relevant processes for
+aluminium products.
+
+Figure 2-4: System boundaries of Aluminium products production process
+Aluminium products production process
+
+Note to figure:
+•
+Boxes with a blue dashed outline represent optional inputs that are only included where they are actually
+used at the installation. “Forming steps” covers all processes directly or indirectly linked to the
+production of aluminium products, excluding cutting, welding and finishing of aluminium products, in
+line with point 2 (“System boundary”) of Section 3.18 (“Aluminium products”) of Annex I to the Act.
+Electricity may be consumed operationally; for aluminium goods listed in Annex II to the CBAM
+Regulation, indirect emissions from electricity are not included in embedded emissions (direct emissions
+only).
+•
+Purchase and maintenance of infrastructure and equipment are excluded from the system boundaries.
+
+There are no PFC emissions resulting from aluminium products forming processes.
+
+17
+
+Also note that the quantity of aluminium products shall be reported in accordance with the
+applicable CN code and the functional unit (tonnes), without applying a standalone massthreshold adjustment for non-aluminium components (e.g. lining or insulation).
+
+3
+
+ALUMINIUM SECTOR-SPECIFIC REQUIREMENTS
+
+The textbox below signposts the sector-specific sections in the Methodology Act, relevant
+for the CBAM definitive period.
+Methodology Act references:
+• Annex II, point 3 – Functional unit and system boundaries. Sub-sections 3.17 to 3.18 (aluminium
+sector aggregated goods categories).
+•
+
+Annex II, section G – Global warming potentials for non-CO2 greenhouse gases.
+
+•
+
+Annex III, Section A – Principles and general requirements, sub-section A.4 Specific provisions of
+division of installations into production processes.
+
+•
+
+Annex III, Section B – Monitoring of direct emissions at installation level, sub-section B.7.
+Requirements for determining perfluorocarbon emissions, covering: B.7.1 Calculation method A –
+Slope Method; B.7.2 Calculation method B – Overvoltage Method; B.7.3 Determination of CO2e
+emissions.
+Annex IV, point 2 – Sector-specific parameters to be included in the operator’s emissions report.
+
+3.1
+
+Sector-specific requirements for monitoring and reporting
+
+Direct embedded emissions should be monitored in line with the methodology set out in
+the Methodology Act.
+3.1.1 Emissions monitoring
+Relevant emissions that must be monitored and reported for the aluminium sector are:
+
+7
+
+•
+
+Carbon dioxide emissions (direct) resulting from the consumption of pre-baked
+carbon anodes or green anode paste during electrolysis – emissions result from the
+reaction of the carbon electrode with oxygen from the alumina or from other
+sources of oxygen such as from air7. There are also emissions associated with the
+self-baking (coking) of green anode paste in situ in the Søderberg process.
+
+•
+
+Carbon dioxide emissions (direct) resulting from furnaces (e.g. holding, preheating, re-melting and annealing), where heated by the combustion of fuels used
+for the furnaces, from stationary plant only (excludes emissions from any mobile
+units such as vehicles).
+
+•
+
+Carbon dioxide emissions (direct) resulting from the production of measurable
+heating (e.g. steam) and cooling, that is consumed within the system boundaries of
+the production process, regardless of the location of the production of the heating
+and cooling (i.e. from on-site generation or from imports from off-site).
+
+All formed carbon monoxide (CO) is assumed to be converted to CO 2.
+18
+
+•
+
+PFC (perfluorocarbon) emissions (direct) for CF4 and C2F6 only, formed during
+brief upset conditions known as the ‘Anode Effect’, when alumina concentration
+levels drop too low and the electrolytic bath itself undergoes electrolysis.
+
+•
+
+Carbon dioxide emissions (direct) resulting from emissions control (e.g. from
+carbonate raw materials such as soda ash used for acidic flue gas cleaning).
+
+Note that emissions related to the production of pre-baked carbon anodes (even if produced
+on the same site) and alumina are excluded from the system boundary, i.e. they are not
+CBAM goods themselves and therefore no precursors with embedded emissions.
+Direct emissions from the different source streams above are not reported separately but
+are added together to result in the total direct emissions for the installation or production
+process.
+Installations that only carry out excluded processes for aluminium products
+Where the installation only carries out processes excluded from the system boundaries (see
+section 3.18 of Annex I to the Methodology Act), verification obligations still apply if
+operators want to use actual values. Notably, the verification process will have to establish
+the following:
+•
+
+That the installation only operates within the list of excluded processes
+
+•
+
+Whether the production process carried out on the installation changed the specific
+embedded emissions of the goods:
+o
+
+•
+
+for instance, in an installation where only cutting occurs, to compute
+embedded emissions of precursors, operators shall use the mass of
+precursors as entering the production process (before cutting), even if
+emissions from cutting activities will not be accounted for in embedded
+emissions of the complex good (see point B of Annex III to the
+Methodology Act). This means that SEE will increase, even if no emissions
+need to be reported for CBAM purposes.
+
+That embedded emissions of precursors, whether based on default values or actual
+values, are correctly calculated. For instance, the origin of precursors needs to be
+verified (to establish zero-rating if produced in the EU or exempted territories; to
+justify the use of the appropriate country-specific default values where relevant; to
+check that verification reports exist for precursors where relevant).
+
+As the installation needs to be verified, the operator will have to establish a monitoring
+plan. In this case, the monitoring plan might be very concise given the absence of process
+emissions, combustion emissions, and indirect emissions. Emissions from excluded
+process steps do not have to be included in the monitoring plan as a source stream and do
+not have to be reported in the operator’s emissions report.
+
+3.1.2 Additional rules
+Attribution of emissions
+
+19
+
+Given the complexity of production processes in the aluminium sector, installations
+producing two or more goods from the aggregated goods categories ‘unwrought Simplified!
+aluminium’ or ‘aluminium products’, may be monitored and reported defining one joint
+production process for all the products from these groups covered, provided no
+intermediate product (i.e. precursor to the second processes) is sold or otherwise
+transferred out of the installation.
+Determining PFC process emissions
+Additional rules also apply for determining PFC emissions (CF4 and C2F6 only) from
+primary aluminium production. However, where primary aluminium is used as a precursor,
+the related PFC emissions form part of the embedded emissions of the final product.
+Two different calculation-based methods are available in accordance with Methodology
+Act, Annex II, section B.7. Both methods are considered equivalent, but as each requires
+different data, you should choose the method that is most appropriate for your installation’s
+process control equipment:
+•
+
+‘Slope method’ (Method A) – where the ‘anode effect minutes per cell-day’
+(AEM) are recorded. The AEM expresses the frequency of anode effects (number
+of anode effects / cell-day) multiplied by the average duration of anode effects
+(anode effect minutes / occurrence).
+
+•
+
+‘Overvoltage method’ (Method B) – where the ‘anode effect overvoltage’ (AEO)
+per cell [mV] is recorded. The AEO is determined as the integral of (time × voltage
+above the target voltage) divided by the time (duration) of data collection.
+
+Calculation Method A – Slope Method
+The following equations for determining PFC emissions shall be used under method A:
+CF4 emissions [t] = AEM × (SEFCF4/1 000) × PrAl (Equation 21)
+C2F6 emissions [t] = CF4 emissions × FC2F6 (Equation 22)
+Where:
+AEM is the anode effect minutes / cell-day;
+SEFCF4 is the slope emission factor expressed in (kg CF4 / t Al produced) / (anode effect
+minutes / cell-day)]. Where different cell-types are used, different SEF may be applied as
+appropriate;
+PrAl is the production of primary aluminium [t] during the reporting period, and
+FC2F6 is the weight fraction of C2F6 [t C2F6 / t CF4].
+The anode effect minutes per cell-day expresses the frequency of anode effects (number
+anode effects / cell-day) multiplied by the average duration of anode effects (anode effect
+minutes / occurrence):
+AEM = frequency × average duration (Equation 23)
+Emission factor: the emission factor for CF4 (slope emission factor, SEFCF4) expresses the
+amount [kg] of CF4 emitted per tonne of aluminium produced per anode effect minute per
+cell-day. The emission factor (weight fraction FC2F6) of C2F6 expresses the amount [kg] of
+C2F6 emitted proportionate to the amount [kg] of CF4 emitted.
+20
+
+Table 3-1: Technology-specific emission factors related to activity data for the slope
+
+method.
+Technology
+
+Emission factor for CF4
+(SEFCF4)
+
+Emission factor for C2F6
+(FC2F6)
+
+[(kg CF4/t Al) / (AEmin/cell-day)]
+
+[t C2F6/ t CF4]
+
+Legacy Point Feed Pre Bake (PFPB L)
+
+0,122
+
+0,097
+
+Modern Point Feed Pre Bake (PFPB M)
+
+0,104
+
+0,057
+
+Modern Point-Fed Prebake without fully
+automated anode effect intervention
+strategies for PFC emissions (PFPB
+MW)
+
+– (*)
+
+– (*)
+
+Centre Worked Prebake (CWPB)
+
+0,143
+
+0,121
+
+Side Worked Prebake (SWPB)
+
+0,233
+
+0,280
+
+Vertical Stud Søderberg (VSS)
+
+0,058
+
+0,086
+
+Horizontal Stud Søderberg (HSS)
+
+0,165
+
+0,077
+
+(*) The installation has to determine the factor by own measurements. If this is technically not feasible or
+involves unreasonable costs, the values for CWPB methodology shall be used.
+
+Calculation Method B – Overvoltage Method
+For the overvoltage method, the following equations shall be used:
+CF4 emissions [t] = OVC × (AEO/CE) × PrAl × 0,001 (Equation 24)
+C2F6 emissions [t] = CF4 emissions × FC2F6 (Equation 25)
+Where:
+OVC is the overvoltage coefficient (‘emission factor’) expressed in kg CF4 per tonne of
+aluminium produced per mV overvoltage;
+AEO is the anode effect overvoltage per cell [mV] determined as the integral of (time ×
+voltage above the target voltage) divided by the time (duration) of data collection;
+CE is the average current efficiency of aluminium production [%];
+PrAl is the annual production of primary aluminium [t], and
+FC2F6 is the weight fraction of C2F6 [t C2F6 / t CF4].
+The term AEO/CE (Anode effect overvoltage / current efficiency) expresses the timeintegrated average anode effect overvoltage [mV overvoltage] per average current
+efficiency [%].
+Table 3-2: Technology-specific emission factors related to overvoltage activity data.
+Technology
+Centre Worked Prebake (CWPB)
+
+Emission factor for CF4
+
+Emission factor for C2F6
+
+[(kg CF4/t Al) / mV]
+
+[t C2F6/ t CF4]
+
+1,16
+
+0,121
+
+21
+
+Technology
+
+Emission factor for CF4
+
+Emission factor for C2F6
+
+[(kg CF4/t Al) / mV]
+
+[t C2F6/ t CF4]
+
+3,65
+
+0,252
+
+Side Worked Prebake (SWPB)
+
+•
+
+Minimum requirement for both methods: technology-specific emission factors
+given in the Methodology Act, Annex II, section B.7 are used.
+
+•
+
+Recommended improvement for both methods: Installation-specific emission
+factors for CF4 and C2F6 are established through continuous or intermittent field
+measurements at least every 3 years or after significant changes8 in the installation,
+taking into account industry best practice guidelines9. The emission factors shall be
+determined with a maximum uncertainty of ±15% each.
+
+Calculating CO2(e) emissions from PFC emissions
+The following formula (Equation 26) may be used to calculate CO2(e) from CF4 and C2F6
+emissions, using the global warming potential (GWP) for these gases:
+PFC emissions [t CO2(e)] = CF4 emissions [t] × GWPCF4 + C2F6 emissions [t] ×
+GWPC2F6
+Please see Table 6 in section G of Annex II to the Methodology Act for relevant GWP
+values as shown in Table 3-3.
+Table 3-3: Global warming potentials
+Gas
+
+Global warming potential
+
+N2 O
+
+265 t CO2e / t N2O
+
+CF4
+
+6 630 t CO2e / t CF4
+
+C2F6
+
+11 100 t CO2e / t C2F6
+
+Furthermore, fugitive emissions of PFC are taken into account calculated from the
+emissions measurable in a duct or stack (‘point source emissions’) using the collection
+efficiency of the duct:
+PFC emissions (total) = PFC emissions (duct) / collection efficiency (Equation 20)
+The collection efficiency shall be measured when the installation-specific emission factors
+are determined.
+
+8
+
+Relevant changes shall include a change in the distribution of anode effect duration, or a change in the
+control algorithm affecting the mix of the types of anode effects or the nature of the anode effect
+termination routine.
+
+9
+
+In particular, the most recent best practice guidelines provided by the International Aluminium Institute.
+22
+
+3.1.3 Additional reporting requirements
+The following Table 3-4 lists out the additional information that needs to be provided by
+you as an operator to importers, in your emissions data communication to them.
+Table 3-4: Additional aluminium sector parameters requested in the CBAM declaration
+
+Aggregated good
+category
+
+Reporting requirement in the annual report
+
+Unwrought aluminium
+
+– Tonnes of scrap used for producing one tonne of the
+unwrought aluminium product.
+– % of scrap that is pre-consumer scrap.
+– Content of alloys in aluminium: If the total content of
+elements other than aluminium exceeds 1%, the total
+percentage of such elements.
+
+Aluminium products
+
+– Tonnes of scrap used for producing one tonne of the
+aluminium product.
+– % of scrap that is pre-consumer scrap.
+– Content of alloys in aluminium: If the total content of
+elements other than aluminium exceeds 1%, the total
+percentage of such elements.
+
+These parameters depend on the goods produced. Alloying elements play a minor role and
+are not reflected in the CN classification of aluminium goods. Note that any alloying
+elements contained in unwrought aluminium, that are not defined as CBAM precursor
+goods, are excluded from the determination of mass and embedded emissions of the
+unwrought aluminium or resulting aluminium product good.
+You need to ensure that you collect all the parameters necessary for your CBAM goods
+and communicate them to the importers of your goods. The importer will need to report
+the additional parameters when the goods are imported to the EU under the CBAM.
+
+4
+
+WORKED EXAMPLE FOR THE ALUMINIUM SECTOR
+
+The following worked example shows how specific embedded emissions are derived for
+aluminium sector goods. The resulting embedded emissions of imports into the EU are
+then calculated at the end of the example for reporting in the definitive period. In this
+example the installation produces products from two aggregated goods categories,
+unwrought aluminium and aluminium products, each of which is defined as a single
+production process, as the intermediate product is sold. Therefore, a ‘bubble approach’ is
+not possible. All goods produced from the category “Aluminium products” belong to CN
+23
+
+codes that comply with the criterion to differ only in size or shape, but having the same
+composition. Therefore, these CN codes may be grouped into one production process, as
+in this example.
+Figure 4-1 gives an outline view of the installation and shows the system boundaries as a
+hatched line for each production process. The physical units carrying out each production
+process have been grouped under ‘Primary smelting’ and ‘Forming steps’ and the different
+inputs and outputs and sources of emissions have been identified for each production
+process.
+Figure 4-1: Aluminium example – overview
+Voluntary monitoring
+
+Anode
+production
+
+Purchased
+anodes
+Alumina
+
+Own anodes
+
+Forming
+steps:
+Rolling
+Etc.
+Primary
+smelting
+
+Liquid Al
+
+Scrap
+
+Slabs
+
+Production process 1
+
+Installation
+boundaries
+
+Aluminium
+products
+• Wire
+CN 7605 nn nn
+• Sheets
+CN 7606 nn nn
+• Foils
+CN 7607 nn nn
+• …
+• …
+
+Production process 2
+
+Ingots
+CN 7601 10
+
+The two production processes defined above are:
+•
+
+Production process 1 – primary smelting process route producing unwrought
+aluminium as ingots (which may be sold) and slabs, which are transferred to
+production process 2. Raw material inputs are anodes, both manufactured on site
+and purchased from elsewhere, and alumina.
+
+•
+
+Production process 2 – different forming processes producing a range of aluminium
+products, such as wire, sheets and foils. Raw material inputs are unwrought
+aluminium slabs transferred from production process 1. There is also scrap from
+this process. This is sent off-site for recycling.
+
+The second diagram (Figure 4-2) identifies sources of direct emissions from the
+installation.
+
+24
+
+Figure 4-2: Aluminium example – Identification of source streams for monitoring of direct
+emissions
+
+Voluntary monitoring
+
+CO2
+
+Natural gas
+
+CO2
+Anode
+production
+Anode stumps
+
+Purchased
+anodes
+Alumina
+
+Own anodes
+
+Forming
+steps:
+Rolling
+Etc.
+
+CO2,
+PFCs
+Primary
+smelting
+
+Liquid Al
+
+Aluminium
+products
+• Wire
+CN 7605 nn nn
+• Sheets
+CN 7606 nn nn
+• Foils
+CN 7607 nn nn
+• …
+• …
+
+Slabs
+
+Production process 1
+
+Installation
+boundaries
+
+Production process 2
+
+Ingots
+CN 7601 10
+
+Direct emissions above result from fuel combustion in both production processes, and from
+the primary smelting process – from the consumption of carbon anodes and from the
+formation of PFCs.
+Note that on-site anode production is omitted from monitoring, as anodes are raw materials
+and are therefore considered to have zero embedded emissions. For monitoring the anode
+consumption, the difference of anode input and anode stumps recycled result in the activity
+data of anode consumption.
+However, for completeness you may wish on a voluntary basis to fully monitor all sources
+of direct and indirect emissions, which in this case would include a full mass balance of
+raw materials and additional fuels consumed in the anode production. Alumina
+consumption does not need monitoring, as it neither contributes to the direct emissions nor
+to embedded emissions.
+The third diagram (Figure 4-3) provides a complete monitoring approach for all source
+streams, for the example installation.
+
+25
+
+Figure 4-3: Aluminium example – complete monitoring approach. All elements highlighted in red
+need to be monitored.
+
+The inputs and outputs highlighted in red text in Figure 4-3 are the parameters that need to
+be monitored by the operator in order to attribute emissions and determine direct specific
+embedded emissions for both production processes.
+The direct emissions that are monitored in this example result from:
+•
+
+Direct CO2 emissions from fuel (natural gas) combustion, and from the process
+resulting from the consumption of carbon anodes.
+
+•
+
+Direct emissions of PFCs formed during the electrolysis process.
+
+•
+
+In the case of production process 2, embedded emissions in precursors (the slabs
+produced in process 1).
+
+The inputs of precursors (with embedded emissions) and the activity level of the
+aluminium goods produced by each production process also need to be monitored. There
+is no need to monitor the electricity consumption, as no indirect emissions are included for
+aluminium goods.
+Table 4-1 summarises the inputs and outputs from the two production processes that are
+monitored in order to determine total direct specific embedded emissions.
+
+26
+
+Table 4-1: Input & production levels of the aluminium example
+Production:
+
+Ingots & liquid aluminium, total
+
+200 000 t
+
+Ingots (sale):
+
+80 000 t
+
+Primary aluminium into process 2 (slabs)
+
+120 000 t
+
+Aluminium products (process 2)
+Wire (CN 7605)
+
+45 000 t
+
+Sheets (CN 7606)
+
+60 000 t
+
+Foils (CN 7607)
+
+8 000 t
+
+Total Aluminium products (process 2)
+Inputs:
+
+113 000 t
+
+Scrap10 sold
+
+7 000 t
+
+Alumina
+
+380 000 t
+
+Electrodes (sum self-produced and purchased, minus stumps)
+
+69 000 t
+
+Natural gas (12 219 t for process 1, 1 962 t for process 2)
+
+14 181 t
+
+Whilst some unwrought aluminium is sold off site in the form of ingots (80 000 tonnes),
+120 000 tonnes is used as a precursor in production process 2, and there is scrap of 7 000
+tonnes at the end. No emissions are attributed to aluminium scrap, which therefore has zero
+embedded emissions.
+Table 4-2 summarises the calculation of direct emissions and their attribution to each
+production process.
+
+Table 4-2: Aluminium example – Installation's total direct emissions
+Direct emissions CO2e
+
+Emissions
+
+Units
+
+From electrodes (using factor 3,664 t CO2 / t C):
+
+252 816
+
+t CO2
+
+From natural gas (NCV = 48 GJ/t, EF=56,1 t CO2 / TJ):
+
+32 902
+
+t CO2
+
+From PFCs (using a method described in section 3.1.2)
+
+25 282
+
+t CO2e
+
+Total Process 1 (primary aluminium)
+
+311 000
+
+t CO2e
+
+5 283
+
+t CO2
+
+316 283
+
+t CO2
+
+Total process 2 (final aluminium products), emissions from natural gas
+Total direct emissions of the installation
+
+Using the data in the tables above, direct specific embedded emissions are then calculated
+separately for each production process as shown in Table 4-3.
+
+10
+
+Not a CBAM good
+27
+
+Table 4-3: Example calculation of specific embedded emissions of complex final aluminium goods
+Production levels (t)
+
+Process total
+emissions
+(t CO2e)
+
+Mass ratio (Mi)
+of precursor
+(t / t)
+
+SEE dir. (t CO2e / t)
+
+Process 1 (unwrought aluminium – ingots and slabs)
+Product
+Ingots
+
+80 000
+
+Slabs
+
+120 000
+
+Total
+
+200 000
+
+311 000
+
+1,555
+
+Process 2 (final aluminium products)
+Precursor
+
+Slabs
+
+Aluminium
+products
+
+120 000
+
+1,062
+
+113 000
+
+5 283
+
+Total embedded emissions of final aluminium
+products
+
+1,651
+0,047
+1,698
+
+When calculating the total embedded emissions of final aluminium products above, the
+mass ratio (Mi) of the precursor is taken into. This is the mass of unwrought aluminium
+slabs consumed per tonne of aluminium products, and is calculated as:
+•
+
+Mass slabs / mass aluminium products: 120 000 t / 113 000 t = 1,062 t / t (as above).
+
+The direct SEEi values of the precursor are then adjusted by this ratio i.e.:
+•
+
+For SEEi direct (precursor): 1,555 t CO2 / t × 1,062 t / t = 1,651 t CO2 / t.
+
+Total direct specific embedded emissions of the final complex aluminium product are
+calculated by adding the SEE values of the precursor (adjusted by the Mi) to the emissions
+of the production process for aluminium products, as above.
+Using the above approach, the CBAM reporting obligation due for the import of final
+aluminium product into the EU during the definitive period may then be determined; for
+example, for the import of 100 tonnes of basic aluminium product e.g. sheets:
+•
+
+Definitive period (report only):
+o Direct embedded emissions = 100 t × 1,698 t CO2 / t = 169,8 t CO2
+Total: 169,8 t CO2
+
+28
+
+Annex A
+
+List of definitions
+
+Term
+
+Definition
+
+‘Accuracy’
+
+means the closeness of the agreement between the result of
+a measurement and the true value of the particular quantity
+or a reference value determined empirically using
+internationally accepted and traceable calibration materials
+and standard methods, taking into account both random
+and systematic factors
+
+‘Activity data’
+
+means the amount of fuels or materials consumed or
+produced by a process relevant for the calculation-based
+methodology, expressed in terajoules (TJ), mass in tonnes
+or (for gases) volume in normal cubic metres, as
+appropriate
+
+‘Actual emissions’
+
+means the emissions calculated based on primary data from
+the production processes of goods and from the production
+of electricity consumed during those processes as
+determined in accordance with the methods set out in
+Annex IV [to the Methodology Act]
+
+‘Activity level’
+
+means the quantity of goods to which the same functional
+unit applies that are produced within the system boundaries
+of a production process during a reporting period
+
+‘Aggregated goods
+categories’
+
+means aggregated goods categories pursuant to Table 1 of
+point 2 of Annex I. A group of CBAM goods with their CN
+codes, used for the purpose of defining system boundaries
+of production processes.
+
+‘Agricultural,
+aquaculture, fisheries
+and forestry residues’
+
+means residues that are directly generated by agriculture,
+aquaculture, fisheries and forestry and that do not include
+residues from related industries or processing
+
+‘Authorised CBAM
+declarant’
+
+means a person authorised by the competent authority in
+accordance with Article 17 [of the CBAM Regulation].
+The ‘authorised CBAM declarant’ [which replaces the
+term ‘reporting declarant’ from the transitional period]
+may be importers of CBAM goods, or their indirect
+customs representatives, who have applied for and been
+granted the status of authorised CBAM declarant.
+
+‘Batch’
+
+means an amount of fuel or material representatively
+sampled and characterised, and transferred as one shipment
+or continuously over a specific period of time
+
+‘Biomass’
+
+means biomass as defined in Article 2, point (24) of the
+Renewable Energy Directive (RED II)11; it includes
+bioliquids and biofuels as defined in Article 2, point (32)
+and (33), biomass fuels as defined in Article 2, point (27)
+and biogas as defined in Article 2 point (28) of the RED II;
+
+11
+
+Directive (EU) 2018/2001
+29
+
+Term
+
+Definition
+
+‘Biomass fraction’
+
+means the ratio of carbon stemming from biomass to the
+total carbon content of a fuel or material, expressed as a
+fraction
+
+‘Calculation factors’
+
+means net calorific value, emission factor, preliminary
+emission factor, oxidation factor, conversion factor, carbon
+content or biomass fraction
+
+‘Calibration’
+
+means the set of operations, which establishes, under
+specified conditions, the relations between values indicated
+by a measuring instrument or measuring system, or values
+represented by a material measure or a reference material
+and the corresponding values of a quantity realised by a
+reference standard
+
+‘Carbon price’
+
+means the monetary amount paid in a third country, under a
+carbon emissions reduction scheme, in the form of a tax,
+levy or fee or in the form of emission allowances under a
+greenhouse gas emissions trading system, calculated on
+greenhouse gases covered by such a measure, and released
+during the production of goods
+
+‘CBAM certificate’
+
+means a certificate in electronic format corresponding to
+one tonne of CO2e of embedded emissions in goods
+
+‘CO2 emission factor’
+
+means the weighted average of the CO2 intensity of
+electricity produced from fossil fuels within a geographic
+area. The CO2 emission factor is the result of the division of
+the CO2 emission data of the electricity sector by the gross
+electricity generation based on fossil fuels in the relevant
+geographic area. It is expressed in tonnes of CO2 per
+megawatt-hour
+
+‘Combined
+nomenclature’ (CN)
+
+means the classification of goods, designed to meet the
+needs of: i) the Common customs tariff, setting import
+duties for products imported into the European Union (EU),
+as well as the Integrated tariff of the European
+Communities (Taric), incorporating all EU and trade
+measures applied to goods imported into and exported out
+of the EU; ii) the international trade statistics of the EU.
+The CN provides the means of collecting, exchanging and
+publishing data on EU international trade statistics. It is
+also used for the collection and publication of international
+trade statistics in intra-EU trade.12
+
+‘Combustion
+emissions’
+
+means greenhouse gas emissions occurring during the
+exothermic reaction of a fuel with oxygen
+
+‘Competent
+authority’
+
+means the authority designated by each Member State in
+accordance with Article 11 [of the CBAM Regulation]
+
+12
+
+For definition see:
+https://ec.europa.eu/eurostat/statisticsexplained/index.php?title=Glossary:Combined_nomenclature_(CN)
+30
+
+Term
+
+Definition
+
+‘Continuous emission
+measurement’ (CEM)
+
+means a set of operations having the objective of
+determining the value of a quantity by means of periodic
+measurements, applying either measurements in the stack
+or extractive procedures with a measuring instrument
+located close to the stack, whilst excluding measurement
+methodologies based on the collection of individual
+samples from the stack
+
+‘Control system’
+
+means the operator’s risk assessment and entire set of
+control activities, including the continuous management
+thereof, that an operator has established, documented,
+implemented and maintained pursuant to point A.2. of
+Annex II
+
+‘Complex goods’
+
+means goods other than simple goods
+
+‘Conservative’
+
+means that a set of assumptions is defined in order to
+ensure that no under-estimation of reported emissions or
+over-estimation of production of heat, electricity or goods
+occurs
+
+‘Conversion factor’
+
+means the ratio of carbon emitted as CO2 to the total carbon
+contained in the source stream before the emitting process
+takes place, expressed as a fraction, considering CO emitted
+to the atmosphere as the molar equivalent amount of CO2
+
+‘Co-product’
+
+means any of two or more products resulting from the same
+production process
+
+‘Customs declarant’
+
+means a declarant as defined in Article 5, point (15) of
+Regulation (EU) No 952/2013 lodging a customs
+declaration for release for free circulation of goods in its
+own name or the person in whose name such a declaration
+is lodged
+
+‘CCUS system’
+
+means a group of economic operators with technically
+connected installations and transport equipment for CO2
+capture, transport, use in production of goods, or geological
+storage
+
+‘Data flow activities’
+
+mean activities related to the acquisition, processing and
+handling of data that are needed to draft an emissions
+report from primary source data
+
+‘Data set’
+
+means one type of data, either at installation level or
+production process level as relevant in the circumstances,
+as any of the following:
+(a)
+the amount of fuels or materials consumed or
+produced by a production process as relevant for the
+calculation-based methodology, expressed in terajoules,
+mass in tonnes, or for gases as volume in normal cubic
+metres, as appropriate, including for waste gases;
+(b)
+
+a calculation factor;
+
+31
+
+Term
+
+Definition
+(c)
+net quantity of measurable heat, and the relevant
+parameters required for determining this quantity, in
+particular: i) mass flow of heat transfer medium; and ii)
+enthalpy of transmitted and returned heat transfer medium,
+as specified by composition, temperature, pressure and
+saturation;
+(d)
+quantities of non-measurable heat, specified by the
+relevant quantities of fuels used for producing the heat, and
+the net calorific value (NCV) of the fuel mix;
+(e)
+
+quantities of electricity;
+
+(f)
+
+quantities of CO2 transferred between installations;
+
+(g)
+quantities of precursors received from outside the
+production process, and their relevant parameters, such as
+country of origin, used production route, specific direct
+and indirect emissions;
+‘Default value’
+
+means a value, which is calculated or drawn from
+secondary data, which represents the embedded emissions
+in goods
+
+‘Direct emissions’
+
+means emissions from the production processes of goods
+including emissions from the production of heating and
+cooling that is consumed during the production processes,
+irrespective of the location of the production of the heating
+or cooling
+
+‘Embedded emissions’
+
+means direct emissions released during the production of
+goods and indirect emissions from the production of
+electricity that is consumed during the production
+processes, calculated in accordance with the methods set
+out in Annex IV and further specified in the implementing
+acts adopted pursuant to Article 7(7)
+
+‘Emissions’
+
+mean the release of greenhouse gases into the atmosphere
+from the production of goods
+
+‘Emission factor’
+
+means the average emission rate of a greenhouse gas
+relative to the activity data of a source stream assuming
+complete oxidation for combustion and complete
+conversion for all other chemical reactions
+
+‘Emission factor’ for
+electricity
+
+means the default value, expressed in CO2e, representing
+the emission intensity of electricity consumed in production
+of goods.
+
+‘Emission source’
+
+means a separately identifiable part of an installation or a
+process within an installation, from which relevant
+greenhouse gases are emitted
+
+EU ETS
+
+means the system for greenhouse gas emissions allowance
+trading within the Union in respect of activities listed in
+Annex I to Directive 2003/87/EC other than aviation
+activities
+32
+
+Term
+
+Definition
+
+‘EU ETS allowance’
+
+means an allowance as defined in Article 3, point (a), of
+Directive 2003/87/EC in respect of activities listed in
+Annex I to that Directive other than aviation activities
+
+‘Fossil carbon’
+
+means inorganic and organic carbon that is not biomass
+
+‘Fossil fraction’
+
+means the ratio of fossil carbon to the total carbon content
+of a fuel or material, expressed as a fraction
+
+‘Fugitive emissions’
+
+means irregular or unintended emissions from sources that
+are not localised, or too diverse or too small to be
+monitored individually
+
+‘Functional unit’
+
+means the reference unit used for the calculation of
+embedded emissions in goods
+
+‘Goods’
+
+means goods listed in Annex I [to the CBAM the CBAM
+Regulation]
+
+‘Greenhouse gases’
+
+mean greenhouse gases as specified in Annex I [to the
+CBAM the CBAM Regulation] in relation to each of the
+goods listed in that Annex
+
+‘Heat meter’
+
+means a thermal energy meter or any other device to
+measure and record the amount of thermal energy produced
+based upon flow volumes and temperatures
+
+‘Importer’
+
+means either the person lodging a customs declaration for
+release for free circulation of goods or a bill of discharge in
+accordance with Article 175(5) of Delegated Regulation
+(EU) 2015/2446 in its own name and on its own behalf or,
+where the customs declaration is lodged by an indirect
+customs representative in accordance with Article 18 of
+Regulation (EU) No 952/2013, the person on whose behalf
+such a declaration is lodged
+
+‘Importation’
+
+means release for free circulation as provided for in Article
+201 of Regulation (EU) No 952/2013
+
+‘Indirect customs
+
+A customs representative appointed by an importer
+established in a Member State. If the importer appoints an
+indirect customs representative and they agree, they can act
+as an authorised CBAM declarant and submit the
+application for an authorisation on behalf of the importer.
+The indirect customs representative is liable for all
+operations made for the importers it represents
+
+Representative’
+
+‘Indirect emissions’
+
+means emissions from the production of electricity which is
+consumed during the production processes of goods,
+irrespective of the location of the production of the
+consumed electricity
+
+‘Inherent CO2’
+
+means CO2 which is part of a source stream.
+
+‘Installation’
+
+means a stationary technical unit where a production
+process is carried out
+
+33
+
+Term
+
+Definition
+
+‘Legal metrological
+control’
+
+means the control exercised by a public authority or
+regulator of the measurement tasks intended for the field of
+application of a measuring instrument, for reasons of public
+interest, public health, public safety, public order,
+protection of the environment, the levying of taxes and
+duties, the protection of consumers and fair trading
+
+‘Measurable heat’
+
+means a net heat flow transported through identifiable
+pipelines or ducts using a heat transfer medium, such as, in
+particular, steam, hot air, water, oil, liquid metals and salts,
+for which a heat meter is or could be installed
+
+‘Measurement point’
+
+means the emission source for which continuous emission
+measurement systems (CEMS) are used for emission
+measurement, or the cross-section of a pipeline system for
+which the CO2 flow is determined using continuous
+measurement systems
+
+‘Measurement
+system’
+
+means a complete set of measuring instruments and other
+equipment used to determine variables for the monitoring
+and calculation of emissions
+
+‘Minimum
+requirements’
+
+means monitoring methods using the minimum efforts
+allowed for determining data in order to result in emission
+data acceptable for the purpose of the CBAM Regulation.
+
+‘Mixed fuel’
+
+means a fuel which contains both biomass and fossil carbon
+
+‘Mixed material’
+
+means a material which contains both biomass and fossil
+carbon
+
+‘Multifunctional
+process’
+
+means a process that delivers multiple outputs or whose
+outputs feed into several production processes
+
+‘Net calorific value’
+(NCV)
+
+means the specific amount of energy released as heat when
+a fuel or material undergoes complete combustion with
+oxygen under standard conditions, less the heat of
+vaporisation of any water formed
+
+‘Non-CBAM good’
+
+means any good produced in the installation that is not
+included in Annex I to the CBAM Regulation
+
+‘Non-measurable
+heat’
+
+means all heat other than measurable heat
+
+‘Operator’
+
+means any person who operates or controls an installation
+in a third country, including a parent company that controls
+an installation in a third country
+
+‘Oxidation factor’
+
+means the ratio of carbon oxidised to CO2 as a consequence
+of combustion to the total carbon contained in the fuel,
+expressed as a fraction, considering carbon monoxide (CO)
+emitted to the atmosphere as the molar equivalent amount
+of carbon dioxide (CO2)
+
+‘Power purchase
+agreement’
+
+means a contract under which a person agrees to purchase
+electricity directly from an electricity producer
+34
+
+Term
+
+Definition
+
+‘Precursor’
+
+means any input material into a production process
+included in the list of goods set out in Annex I to the
+CBAM Regulation;
+
+‘Preliminary
+emission factor’
+
+means the assumed total emission factor of a fuel or
+material based on the carbon content of its biomass fraction
+and its fossil fraction before multiplying it by the fossil
+fraction to produce the emission factor
+
+‘Production process’
+
+means the chemical and physical processes carried out to
+produce goods in an installation
+
+‘Production route’ 13
+
+means a specific technology used in a production process
+to produce goods
+
+‘Process emissions’
+
+means greenhouse gas emissions other than combustion
+emissions occurring as a result of intentional and
+unintentional reactions between substances or their
+transformation, for a primary purpose other than the
+generation of heat, including from the following processes:
+(a) the chemical, electrolytic or pyrometallurgical
+reduction of metal compounds in ores, concentrates and
+secondary materials; (b) the removal of impurities from
+metals and metal compounds; (c) the decomposition of
+carbonates, including those used for flue gas cleaning; (d)
+chemical syntheses of products and intermediate products
+where the carbon bearing material participates in the
+reaction; (e) the use of carbon containing additives or raw
+materials; (f) the chemical or electrolytic reduction of
+metalloid oxides or non-metal oxides such as silicon
+oxides and phosphates.
+
+‘Proxy data’
+
+means annual values which are empirically substantiated or
+derived from accepted sources and which an operator uses
+to substitute a data set14 for the purpose of ensuring
+complete reporting
+
+‘Rebate’
+
+means any amount that reduces the amount due or paid by a
+person liable for the payment of a carbon price, before its
+payment or after, in a monetary form or in any other form.
+
+‘Recommended
+improvements’
+
+means monitoring methods which are proven means to
+ensure that data are more accurate or less prone to mistakes
+than by mere application of minimum requirements
+
+‘Related emissions’
+
+means: – the direct emissions caused by the source stream
+or emission source concerned; – emissions attributed to a
+quantity of measurable heat; – the indirect emissions related
+to the quantity of electricity concerned; – embedded
+emissions of a material produced or of a precursor
+consumed.
+
+13
+
+Note that different production routes can fall within the same production process.
+
+14
+
+Refers to the activity data or the calculation factors.
+35
+
+Term
+
+Definition
+
+‘Reporting period’
+
+means the period corresponding to the calendar year during
+which the good was produced and used by the authorised
+CBAM declarant as reference for the determination of
+embedded emissions
+
+‘Residue’
+
+means a substance that is not the end product that a
+production process directly seeks to produce; it is not a
+primary aim of the production process and the process has
+not been deliberately modified to produce it
+
+‘Simple goods’
+
+means goods produced in a production process requiring
+exclusively input materials (precursors) and fuels having
+zero embedded emissions
+
+‘Source stream’
+
+means either of the following: (a) a specific fuel type, raw
+material or product giving rise to emissions of relevant
+greenhouse gases at one or more emission sources as a
+result of its consumption or production; (b) a specific fuel
+type, raw material or product containing carbon and
+included in the calculation of greenhouse gas emissions
+using a mass-balance method
+
+‘Specific embedded
+emissions’
+
+means the embedded emissions of one tonne of goods,
+expressed as tonnes of CO2e emissions per tonne of goods
+
+‘Standard conditions’
+
+means temperature of 273,15 K and pressure conditions of
+101 325 Pa defining normal cubic metres (Nm3)
+
+‘System boundary’
+
+means the group of chemical or physical processes included
+in the calculation of embedded emissions of goods under
+the same aggregated goods category.
+The system boundaries shall cover direct emissions,
+indirect emissions for goods not listed in Annex II to the
+CBAM Regulation, and the embedded emissions of any
+precursor.
+
+15
+
+‘Third country’
+
+means a country or territory outside the customs territory of
+the [European] Union
+
+‘Tonne of CO2(e)’
+
+means one metric tonne of carbon dioxide (‘CO2’), or an
+amount of any other greenhouse gas listed in Annex I [to
+the CBAM Regulation] with an equivalent global warming
+potential [‘CO2e‘]
+
+‘Transmission system
+operator’
+
+means an operator as defined in Article 2, point (35) of
+Directive (EU) 2019/944 of the European Parliament and of
+the Council (15).
+
+Directive (EU) 2019/944 of the European Parliament and of the Council of 5 June 2019 on common
+rules for the internal market for electricity and amending Directive 2012/27/EU (OJ L 158, 14.6.2019,
+p. 125).
+36
+
+Term
+
+Definition
+
+‘Uncertainty’
+
+means a parameter, associated with the result of the
+determination of a quantity, that characterises the
+dispersion of the values that could reasonably be attributed
+to the particular quantity, including the effects of
+systematic as well as of random factors, expressed in
+percent, and describes a confidence interval around the
+mean value comprising 95% of inferred values taking into
+account any asymmetry of the distribution of values
+
+‘Waste’
+
+means any substance or object which the holder discards or
+intends or is required to discard, excluding substances that
+have been intentionally modified or contaminated in order
+to meet this definition
+
+‘Waste gas’
+
+means a gas containing incompletely oxidised carbon in a
+gaseous state under standard conditions which is a result of
+any of the processes listed under ‘process emissions’
+
+37
+
+Annex B
+
+List of abbreviations
+
+Abbreviation
+
+Full term
+
+AD
+
+Activity Data
+
+AEM
+
+Anode Effect Minutes
+
+AEO
+
+Anode Effect Overvoltage
+
+AL
+
+Activity Level
+
+AOD
+
+Argon Oxygen Decarburisation.
+
+BAT
+
+Best Available Techniques
+
+BF
+
+Biomass Fraction
+
+BFG
+
+Blast Furnace Gas
+
+BM
+
+Benchmark
+
+BOF
+
+Basic Oxygen Furnace
+
+BOFG
+
+Basic Oxygen Furnace Gas
+
+BREFs
+
+Best Available Techniques Reference documents
+
+CA
+
+Competent Authority
+
+CBAM
+
+Carbon Border Adjustment Mechanism, the
+
+CCR
+
+Clinker to Cement Ratio
+
+CCS
+
+Carbon Capture and Storage
+
+CCU(S)
+
+Carbon Capture and Utilisation (and Storage)
+
+CEMS
+
+Continuous Emission Measurement Systems
+
+CF
+
+Conversion Factor
+
+CFP
+
+Carbon footprint of products
+
+CHP
+
+Combined Heat and Power
+
+CKD
+
+Cement Kiln Dust
+
+CN
+
+Combined nomenclature
+
+COG
+
+Coke Oven Gas
+
+DRI
+
+Direct Reduced Iron
+
+EAF
+
+Electric Arc Furnace
+
+EEA
+
+European Economic Area (EU-27, Iceland, Norway, Liechtenstein)
+
+EF
+
+Emission Factor
+
+EFTA
+
+European Free Trade Area
+
+EORI
+
+Economic Operator Registration and Identification
+
+ETS
+
+Emissions Trading System
+
+EU ETS
+
+EU Emissions Trading System
+
+EUA
+
+EU Allowances (used in the EU ETS)
+
+EUR
+
+Euro (currency)
+38
+
+Abbreviation
+
+Full term
+
+FAR
+
+Free Allocation Rules (Regulation 2019/331)16
+
+FIFO
+
+First-In-First-Out principle
+
+GHG
+
+Greenhouse Gas
+
+GWP
+
+Global Warming Potential
+
+HBI
+
+Hot Briquetted Iron
+
+HS
+
+Harmonised System (for international trade)
+
+IEA
+
+International Energy Agency
+
+ISO
+
+International Organization for Standardization
+
+LULUCF
+
+Land-use, land change and forestry (criteria)
+
+MP
+
+Monitoring Plan
+
+MRR
+
+Monitoring and Reporting Regulation (Regulation 2018/2066)17
+
+MRV
+
+Monitoring, Reporting and Verification
+
+MS
+
+Member State(s)
+
+MWh
+
+Megawatt-hour
+
+NCV
+
+Net Calorific Value
+
+NPI
+
+Nickel pig iron
+
+OF
+
+Oxidation Factor
+
+PCI
+
+Pulverised Coal Injection
+
+PEMS
+
+Predictive Emission Monitoring System
+
+PFC
+
+Perfluoro-carbon
+
+PoS
+
+Proofs of Sustainability
+
+RED II
+
+Renewable Energy Directive, re-cast
+
+SEE
+
+Specific embedded emissions
+
+SEFA
+
+Specific embedded free allocation
+
+TARIC
+
+Integrated Tariff of the European Union database
+
+TJ
+
+Terajoules
+
+TSO
+
+Transmission System Operator
+
+UCC
+
+Union Custom Code
+
+UN/LOCODE
+
+United Nations Code for Trade and Transport Location
+
+16
+
+Free Allocation Rules (Commission Delegated Regulation (EU) 2019/331 of 19 December 2018
+determining transitional Union-wide rules for harmonised free allocation of emission allowances
+pursuant to Article 10a of Directive 2003/87/EC of the European Parliament and of the Council)
+
+17
+
+Monitoring and Reporting Regulation (Commission Implementing Regulation (EU) 2018/2066 of 19
+December 2018 on the monitoring and reporting of greenhouse gas emissions pursuant to Directive
+2003/87/EC of the European Parliament and of the Council and amending Commission Regulation (EU)
+No 601/2012
+39
+
+
