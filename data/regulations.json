@@ -974,11 +974,11 @@
     "시행"
    ],
    "at": 1,
-   "stage": "채택 대기",
+   "stage": "채택 보도(공식 확인 전)",
    "tone": "progress",
    "summary": "제3국에서 이미 낸 탄소가격만큼 제출할 CBAM 인증서 수를 줄여 주는 방법(계산, 증빙, 인증)을 정할 이행규정입니다. EU 집행위원회는 탄소가격 제도가 있는 나라별로 기본 탄소가격도 따로 내놓을 계획이라고 밝혔습니다.",
-   "status": "법령 초안에 대한 의견수렴이 2026년 6월 10일에 끝났고, EU 집행위원회의 채택을 기다리고 있습니다. 2026년 11월에 채택될 것이라는 보도가 있습니다(2026년 10월 23일 보도).",
-   "next": "EU 집행위원회의 채택과 유럽연합 관보 게재가 남아 있습니다.",
+   "status": "법령 초안에 대한 의견수렴이 2026년 6월 10일에 끝났습니다. EU 집행위원회가 2026년 11월 5일에 이 이행규정을 채택했다는 보도가 한 건 있으나, EU 집행위원회의 의견수렴 화면과 법령 데이터베이스에서는 아직 채택이 확인되지 않습니다(2026년 11월 10일 기준).",
+   "next": "채택이 공식 기록으로 확인되고 유럽연합 관보에 실리는 일이 남아 있습니다. 공개된 초안은 적용 시작일을 2026년 1월 1일로 적고 있습니다.",
    "timeline": [
     {
      "date": "2025-08-29",
@@ -1028,6 +1028,14 @@
      "text": "EU 집행위원회가 2026년 11월에 이 이행규정을 채택하고 기본 탄소가격 목록도 공개할 것이라는 보도가 있었습니다.",
      "source": "Carbon Pulse 보도",
      "link": "https://carbon-pulse.com/563955/",
+     "basis": "press",
+     "checkedOn": "2026-11-10"
+    },
+    {
+     "date": "2026-11-05",
+     "text": "EU 집행위원회가 이 이행규정을 채택했다는 보도가 있었습니다(문서 번호 C(2026) 7665). 보도는 회원국 위원회에서 과반 지지를 얻지 못한 채 채택되었고 법령 데이터베이스에는 아직 본문이 올라오지 않았다고 전합니다. 보도는 한 건이며 공식 기록으로는 확인되지 않았습니다.",
+     "source": "steelnews.biz 보도(Gerber Group)",
+     "link": "https://steelnews.biz/cbam-rules-for-crediting-3rd-country-carbon-prices/",
      "basis": "press",
      "checkedOn": "2026-11-10"
     }
@@ -2285,11 +2293,25 @@
    "stage": "2027년 1월 1일 시행 예정",
    "tone": "adopted",
    "summary": "영국으로 수입되는 CBAM 대상 제품의 내재배출량에 매기는 세금입니다. 근거는 2026년 재정법(Finance Act 2026) 제5편이고, 행정 절차, 요율과 탄소가격 경감, 경과 조치, 배출량 산정과 검증을 다루는 하위 법령이 만들어졌습니다. EU CBAM과는 별개의 제도입니다.",
-   "status": "근거 법률이 2026년 3월 18일에 제정되었고, 하위 법령이 2026년 7월과 9월에 제정되어 2027년 1월 1일에 시행됩니다. 영국 국세청 안내에 따르면 2027년 1월 1일부터 기록을 보관해야 하고, 등록은 2028년 1월 1일에 열립니다.",
+   "status": "근거 법률이 2026년 3월 18일에 제정되었고, 하위 법령이 2026년 7월과 9월에 제정되어 2027년 1월 1일에 시행됩니다. 영국 국세청 안내에 따르면 2027년 1월 1일부터 기록을 보관해야 하고, 등록은 2028년 1월 1일에 열립니다. 2026년 10월 28일에는 대상 부문을 정유 제품으로 넓히는 방안에 대한 협의가 시작되어 2027년 1월 20일까지 의견을 받습니다.",
    "next": "영국 CBAM이 시행됩니다.",
    "nextDate": "2027-01-01",
    "calendar": false,
    "timeline": [
+    {
+     "date": "2026-02-10",
+     "text": "하위 법령 초안에 대한 협의가 시작되었습니다(2026년 3월 24일 마감).",
+     "source": "영국 정부(GOV.UK)",
+     "link": "https://www.gov.uk/government/consultations/draft-regulations-carbon-border-adjustment-mechanism-cbam",
+     "basis": "stored",
+     "evidence": {
+      "index": "uk-govuk",
+      "where": {
+       "opens": "2026-02-10",
+       "closes": "2026-03-24"
+      }
+     }
+    },
     {
      "date": "2026-03-18",
      "text": "2026년 재정법(Finance Act 2026)이 제정되었습니다. 제5편이 CBAM을 다룹니다.",
@@ -2302,6 +2324,20 @@
        "[18th March 2026]",
        "Part 5 Carbon border adjustment mechanism"
       ]
+     }
+    },
+    {
+     "date": "2026-04-09",
+     "text": "배출량·검증 규정 초안에 대한 협의가 시작되었습니다(2026년 5월 21일 마감).",
+     "source": "영국 정부(GOV.UK)",
+     "link": "https://www.gov.uk/government/consultations/draft-regulations-carbon-border-adjustment-mechanism-cbam-emissions-and-verification",
+     "basis": "stored",
+     "evidence": {
+      "index": "uk-govuk",
+      "where": {
+       "opens": "2026-04-09",
+       "closes": "2026-05-21"
+      }
      }
     },
     {
@@ -2344,6 +2380,20 @@
        "8th September 2026",
        "1st January 2027"
       ]
+     }
+    },
+    {
+     "date": "2026-10-28",
+     "text": "영국 정부가 CBAM의 대상 부문을 정유 제품으로 넓히는 방안에 대한 협의를 시작했습니다(2027년 1월 20일 마감).",
+     "source": "영국 정부(GOV.UK)",
+     "link": "https://www.gov.uk/government/consultations/carbon-border-adjustment-mechanism-cbam-a-consultation-on-sectoral-scope-expansion-to-include-refinery-products",
+     "basis": "stored",
+     "evidence": {
+      "index": "uk-govuk",
+      "where": {
+       "date": "2026-10-28",
+       "closes": "2027-01-20"
+      }
      }
     }
    ],

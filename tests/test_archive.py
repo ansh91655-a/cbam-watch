@@ -193,6 +193,7 @@ class GovUkTest(unittest.TestCase):
         from tools.archive import govuk
         rows = [{"title": "Carbon Border Adjustment Mechanism (CBAM): a consultation", "link": "/government/consultations/a", "public_timestamp": "2026-10-28T12:00:00Z"},
                 {"title": "Budget 2026", "link": "/government/publications/b", "public_timestamp": "2026-10-28T12:00:00Z"},
+                {"title": "Criminal Bills Assessment Manual (CBAM) and Supervisor Guidance", "link": "/government/news/e", "public_timestamp": "2026-07-31T12:00:00Z"},
                 {"title": "CBAM policy update", "link": "https://example.org/c", "public_timestamp": "2026-10-28T12:00:00Z"},
                 {"title": "Factsheet: CBAM", "link": "/government/publications/d", "public_timestamp": "2024-03-01T12:00:00Z"}]
         self.assertEqual(govuk.titled(rows), ["/government/consultations/a"])

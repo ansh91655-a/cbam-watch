@@ -17,6 +17,7 @@ SEARCH = "https://www.gov.uk/api/search.json?q={query}&count=50&start={start}&or
 COLLECTION = "/government/collections/carbon-border-adjustment-mechanism"
 QUERIES = ["carbon+border+adjustment+mechanism", "CBAM"]
 TITLE = re.compile(r"carbon border adjustment|\bCBAM\b", re.I)
+OTHER = re.compile(r"criminal bills", re.I)  # 약자가 같은 다른 제도(Criminal Bills Assessment Manual)
 PAGE = 50
 
 
@@ -37,7 +38,7 @@ def _read(path):
 
 def titled(rows):
     """검색 결과에서, 제목에 CBAM이 들고 수집 시작일 뒤에 고쳐진 GOV.UK 문서의 경로만 고른다."""
-    return [row["link"] for row in rows if str(row.get("link", "")).startswith("/") and TITLE.search(str(row.get("title", "")))
+    return [row["link"] for row in rows if str(row.get("link", "")).startswith("/") and TITLE.search(str(row.get("title", ""))) and not OTHER.search(str(row.get("title", "")))
             and str(row.get("public_timestamp", ""))[:10] >= SINCE]
 
 

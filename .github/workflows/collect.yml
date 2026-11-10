@@ -43,7 +43,7 @@ jobs:
         # 유럽의회 절차, 집행위 의견수렴과 보도자료, EU 법령 데이터베이스의 연관 문서, 영국 법령, 미국 연방관보. 실패해도 나머지 수집은 계속한다.
         continue-on-error: true
         timeout-minutes: 15
-        run: python -m tools.archive.crawl --budget-minutes 10 eur-lex-related eur-lex-docs ep-oeil ec-hys ec-press-recent uk-legislation us-fedreg to-feed
+        run: python -m tools.archive.crawl --budget-minutes 10 eur-lex-related eur-lex-docs ep-oeil ec-hys ec-press-recent uk-legislation uk-govuk-recent us-fedreg to-feed
       - name: 인증서 가격표 읽기
         run: python -m tools.prices.run
       - name: 원문 판 점검
