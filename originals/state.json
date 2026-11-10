@@ -9,7 +9,7 @@
    "page": "ec-guidance",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-10",
-   "lastChecked": "2026-11-10T16:28:56+09:00",
+   "lastChecked": "2026-11-10T17:16:36+09:00",
    "linked": true,
    "versions": [
     {
@@ -33,7 +33,7 @@
    "page": "ec-guidance",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-10",
-   "lastChecked": "2026-11-10T16:28:56+09:00",
+   "lastChecked": "2026-11-10T17:16:36+09:00",
    "linked": true,
    "versions": [
     {
@@ -57,7 +57,7 @@
    "page": "ec-guidance",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-10",
-   "lastChecked": "2026-11-10T16:28:56+09:00",
+   "lastChecked": "2026-11-10T17:16:36+09:00",
    "linked": true,
    "versions": [
     {
@@ -81,7 +81,7 @@
    "page": "ec-guidance",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-10",
-   "lastChecked": "2026-11-10T16:28:56+09:00",
+   "lastChecked": "2026-11-10T17:16:36+09:00",
    "linked": true,
    "versions": [
     {
@@ -105,7 +105,7 @@
    "page": "ec-guidance",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-10",
-   "lastChecked": "2026-11-10T16:28:56+09:00",
+   "lastChecked": "2026-11-10T17:16:36+09:00",
    "linked": true,
    "versions": [
     {
@@ -129,7 +129,7 @@
    "page": "ec-guidance",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-10",
-   "lastChecked": "2026-11-10T16:28:56+09:00",
+   "lastChecked": "2026-11-10T17:16:36+09:00",
    "linked": true,
    "versions": [
     {
@@ -153,7 +153,7 @@
    "page": "ec-guidance",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-10",
-   "lastChecked": "2026-11-10T16:28:56+09:00",
+   "lastChecked": "2026-11-10T17:16:36+09:00",
    "linked": true,
    "versions": [
     {
@@ -177,7 +177,7 @@
    "page": "ec-guidance",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-10",
-   "lastChecked": "2026-11-10T16:28:56+09:00",
+   "lastChecked": "2026-11-10T17:16:36+09:00",
    "linked": true,
    "versions": [
     {
@@ -201,7 +201,7 @@
    "page": "ec-guidance",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-10",
-   "lastChecked": "2026-11-10T16:28:56+09:00",
+   "lastChecked": "2026-11-10T17:16:36+09:00",
    "linked": true,
    "versions": [
     {
@@ -988,11 +988,9 @@
   }
  },
  "baseline": "2026-11-10",
- "checkedAt": "2026-11-10T17:06:00+09:00",
+ "checkedAt": "2026-11-10T17:16:36+09:00",
  "full": false,
- "notes": [
-  "받지 못한 응답이 2번 이어져 이번 실행에서는 그만 받음(남은 18건은 다음 실행에서)"
- ],
+ "notes": [],
  "docCount": 41,
  "pages": {
   "ec-verification": "2026-11-10",
@@ -1006,85 +1004,104 @@
   "97ae41e4-f785-40fd-b4df-f141ad69f522": {
    "firstSeen": "2026-11-10",
    "quiet": true,
-   "tries": 1,
+   "tries": 2,
    "page": "ec-guidance",
    "name": "",
    "lastError": "202",
-   "lastTried": "2026-11-10T17:06:00+09:00"
+   "lastTried": "2026-11-10T17:16:36+09:00"
   },
   "5eb1f852-7c81-4d99-ae04-5593303076c1": {
+   "firstSeen": "2026-11-10",
+   "quiet": true,
+   "tries": 2,
+   "page": "ec-news",
+   "name": "",
+   "lastError": "403 HTTP Error 403: Forbidden",
+   "lastTried": "2026-11-10T17:16:36+09:00"
+  },
+  "37c2855b-8913-455a-a7da-c2258b932e54": {
    "firstSeen": "2026-11-10",
    "quiet": true,
    "tries": 1,
    "page": "ec-news",
    "name": "",
    "lastError": "403 HTTP Error 403: Forbidden",
-   "lastTried": "2026-11-10T17:06:00+09:00"
-  },
-  "37c2855b-8913-455a-a7da-c2258b932e54": {
-   "firstSeen": "2026-11-10",
-   "quiet": true,
-   "tries": 0,
-   "page": "ec-news",
-   "name": ""
+   "lastTried": "2026-11-10T17:16:36+09:00"
   },
   "d255e5a1-9f16-4613-85bd-0f126a5f87de": {
    "firstSeen": "2026-11-10",
    "quiet": true,
-   "tries": 0,
+   "tries": 1,
    "page": "ec-news",
-   "name": ""
+   "name": "",
+   "lastError": "403 HTTP Error 403: Forbidden",
+   "lastTried": "2026-11-10T17:16:36+09:00"
   },
   "c5e2f28e-e9d7-411d-b2d6-560d094d30c2": {
    "firstSeen": "2026-11-10",
    "quiet": true,
-   "tries": 0,
+   "tries": 1,
    "page": "ec-sectors",
-   "name": ""
+   "name": "",
+   "lastError": "403 HTTP Error 403: Forbidden",
+   "lastTried": "2026-11-10T17:16:36+09:00"
   },
   "fa3c6d9a-4884-46d6-9729-d12bd4be80bd": {
    "firstSeen": "2026-11-10",
    "quiet": true,
-   "tries": 0,
+   "tries": 1,
    "page": "ec-sectors",
-   "name": ""
+   "name": "",
+   "lastError": "403 HTTP Error 403: Forbidden",
+   "lastTried": "2026-11-10T17:16:36+09:00"
   },
   "c86ff3a8-9e5b-4b4c-9042-21622760a489": {
    "firstSeen": "2026-11-10",
    "quiet": true,
-   "tries": 0,
+   "tries": 1,
    "page": "ec-sectors",
-   "name": ""
+   "name": "",
+   "lastError": "403 HTTP Error 403: Forbidden",
+   "lastTried": "2026-11-10T17:16:36+09:00"
   },
   "781ea8fa-6611-451f-9a2d-a546342bed9c": {
    "firstSeen": "2026-11-10",
    "quiet": true,
-   "tries": 0,
+   "tries": 1,
    "page": "ec-sectors",
-   "name": ""
+   "name": "",
+   "lastError": "403 HTTP Error 403: Forbidden",
+   "lastTried": "2026-11-10T17:16:36+09:00"
   },
   "e8793d8c-2334-4d8a-98ac-1675857f1c2f": {
    "firstSeen": "2026-11-10",
    "quiet": true,
-   "tries": 0,
+   "tries": 1,
    "page": "ec-sectors",
-   "name": ""
+   "name": "",
+   "lastError": "403 HTTP Error 403: Forbidden",
+   "lastTried": "2026-11-10T17:16:36+09:00"
   },
   "872865bc-9961-493d-ac2e-c3c69c91b9ea": {
    "firstSeen": "2026-11-10",
    "quiet": true,
-   "tries": 0,
+   "tries": 1,
    "page": "ec-sectors",
-   "name": ""
+   "name": "",
+   "lastError": "403 HTTP Error 403: Forbidden",
+   "lastTried": "2026-11-10T17:16:36+09:00"
   },
   "52a9eac1-f855-47e0-b51f-94b270b0a0ba": {
    "firstSeen": "2026-11-10",
    "quiet": true,
-   "tries": 0,
+   "tries": 1,
    "page": "ec-sectors",
-   "name": ""
+   "name": "",
+   "lastError": "403 HTTP Error 403: Forbidden",
+   "lastTried": "2026-11-10T17:16:36+09:00"
   }
  },
  "pendingCount": 11,
- "checkedThisRun": 20
+ "checkedThisRun": 20,
+ "unreachableCount": 0
 }
