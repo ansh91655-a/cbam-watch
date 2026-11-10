@@ -636,6 +636,121 @@
    "collector": "github",
    "note": "EU 집행위원회가 보내는 CBAM 소식지의 지난 호 목록",
    "ops": "보관함 목록의 날짜 묶음(dated)으로 새 호를 찾음. 웨비나 접속 안내 같은 알림 메일도 목록에 섞여 있음"
+  },
+  {
+   "no": 37,
+   "code": "ep-oeil-2025-0418",
+   "name": "EP Legislative Observatory 2025/0418(COD)",
+   "group": "EU 공식",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0418(COD)",
+   "tier": "A",
+   "watch": [
+    "rows"
+   ],
+   "filter": false,
+   "minLine": 30,
+   "collector": "github",
+   "note": "임시 탈탄소화 기금 설치 규정안(2025/0418(COD))의 절차 진행표",
+   "skipTables": [
+    "Interest representatives"
+   ],
+   "ops": "면담 기록 표는 skipTables로 제외"
+  },
+  {
+   "no": 38,
+   "code": "ep-oeil-2026-0211",
+   "name": "EP Legislative Observatory 2026/0211(COD)",
+   "group": "EU 공식",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0211(COD)",
+   "tier": "A",
+   "watch": [
+    "rows"
+   ],
+   "filter": false,
+   "minLine": 30,
+   "collector": "github",
+   "note": "EU 배출권거래제 열·연료 벤치마크 값 개정안(2026/0211(COD))의 절차 진행표",
+   "skipTables": [
+    "Interest representatives"
+   ],
+   "ops": "면담 기록 표는 skipTables로 제외"
+  },
+  {
+   "no": 39,
+   "code": "ep-oeil-2025-0574",
+   "name": "EP Legislative Observatory 2025/0574(CNS)",
+   "group": "EU 공식",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0574(CNS)",
+   "tier": "A",
+   "watch": [
+    "rows"
+   ],
+   "filter": false,
+   "minLine": 30,
+   "collector": "github",
+   "note": "EU 자체 재원 결정안(2025/0574(CNS))의 절차 진행표. CBAM 인증서 판매 수입의 EU 예산 편입을 담고 있음",
+   "skipTables": [
+    "Interest representatives"
+   ],
+   "ops": "면담 기록 표는 skipTables로 제외"
+  },
+  {
+   "no": 40,
+   "code": "uk-legislation",
+   "name": "legislation.gov.uk (CBAM 법령)",
+   "group": "해외",
+   "url": "https://www.legislation.gov.uk/all?title=carbon%20border%20adjustment",
+   "tier": "B",
+   "watch": [
+    "links"
+   ],
+   "filter": false,
+   "minLine": 30,
+   "collector": "github",
+   "note": "제목에 CBAM이 든 영국 법령의 목록",
+   "ops": "새 법령이 생기면 새 링크로 잡힘. 제정일·시행일은 tools/archive/ukleg.py가 법령마다 읽어 collected/archive/uk-legislation.json에 둠"
+  },
+  {
+   "no": 41,
+   "code": "ec-press",
+   "name": "European Commission Press corner",
+   "group": "EU 공식",
+   "url": "https://ec.europa.eu/commission/presscorner/home/en",
+   "tier": "A",
+   "watch": [],
+   "filter": false,
+   "minLine": 30,
+   "collector": "archive",
+   "note": "EU 집행위원회 보도자료·문답 자료·일일 소식 가운데 CBAM을 다룬 것",
+   "ops": "tools/archive/presscorner.py가 평일마다 목록 앞쪽을 보고 본문이 CBAM을 말하는 자료를 collected/archive/ec-press.json에 더함. 새 자료는 tools.run.rules_watch가 알려 줌"
+  },
+  {
+   "no": 42,
+   "code": "eur-lex-related",
+   "name": "EU 법령 데이터베이스(CELLAR)의 CBAM 연관 문서",
+   "group": "EU 공식",
+   "url": "https://publications.europa.eu/webapi/rdf/sparql",
+   "tier": "A",
+   "watch": [],
+   "filter": false,
+   "minLine": 30,
+   "collector": "archive",
+   "note": "CBAM 규정을 근거로 삼거나 고치거나 인용하는 EU 문서와, CBAM 규정을 다투는 EU 법원 사건의 문서",
+   "ops": "tools/archive/cellar.py가 평일마다 조회하고 docs.py가 새 문서의 앞부분을 받음. 새 문서는 tools.run.rules_watch가 알려 줌"
+  },
+  {
+   "no": 43,
+   "code": "us-fedreg",
+   "name": "U.S. Federal Register (CBAM 공고)",
+   "group": "해외",
+   "url": "https://www.federalregister.gov/documents/search?conditions%5Bterm%5D=%22carbon+border+adjustment%22",
+   "tier": "B",
+   "watch": [],
+   "filter": false,
+   "minLine": 30,
+   "collector": "archive",
+   "note": "제목에 CBAM이 든 미국 연방관보 공고",
+   "ops": "tools/archive/fedreg.py가 평일마다 연방관보 API로 읽음. 새 공고는 tools.run.rules_watch가 알려 줌"
   }
  ]
 }

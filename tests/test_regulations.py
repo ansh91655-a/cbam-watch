@@ -71,5 +71,84 @@ class RegulationsTest(unittest.TestCase):
         self.assertGreaterEqual(len(data["regulations"]), 20)
 
 
+class RuleEventsTest(unittest.TestCase):
+    def test_next_dates_become_calendar_events_unless_switched_off(self):
+        from tools.publish import derive
+        data = body(next="표결이 잡혀 있습니다.", nextDate="2026-12-14")
+        rows = derive.rule_events(data)
+        self.assertEqual([(row["date"], row["title"], row["kind"], row["note"], row["link"]) for row in rows],
+                         [("2026-12-14", "표본 규정", "입법", "표결이 잡혀 있습니다.", "https://example.eu/a")])
+        self.assertEqual(derive.rule_events(body(next="표결이 잡혀 있습니다.", nextDate="2026-12-14", calendar=False)), [])
+        self.assertEqual(derive.rule_events(body(next="표결이 잡혀 있습니다.")), [])
+        merged = derive.events([{"date": "2026-12-01", "title": "기존 일정"}], {}, data)
+        self.assertEqual([row["date"] for row in merged], ["2026-12-01", "2026-12-14"])
+
+
+class RuleEditTest(unittest.TestCase):
+    def setUp(self):
+        import argparse
+        from tools.publish import rule_edit
+        self.edit, self.args = rule_edit, argparse.Namespace
+        self.body = body()
+
+    def test_add_event_keeps_the_timeline_in_date_order(self):
+        self.edit.add_event(self.body, self.args(id="sample-rule", date="2025-01-10", text="먼저 있었던 일입니다.", source="S", link="https://example.eu/x",
+                                                   basis="stored", index="eur-lex", where=["celex=32025R2083", "date=2025-10-17"], path="", contains=[]))
+        rule = self.body["regulations"][0]
+        self.assertEqual([event["date"] for event in rule["timeline"]], ["2025-01-10", "2025-12-17"])
+        self.assertEqual(rule["timeline"][0]["evidence"], {"index": "eur-lex", "where": {"celex": "32025R2083", "date": "2025-10-17"}})
+        with self.assertRaises(SystemExit):  # 같은 줄을 두 번 넣지 못한다
+            self.edit.add_event(self.body, self.args(id="sample-rule", date="2025-01-10", text="먼저 있었던 일입니다.", source="S", link="https://example.eu/x",
+                                                       basis="web", index="", where=[], path="", contains=[]))
+
+    def test_set_changes_and_clears_fields(self):
+        self.body["regulations"][0].update({"next": "다음입니다.", "nextDate": "2026-12-01"})
+        self.edit.set_fields(self.body, self.args(id="sample-rule", stage="채택", tone="adopted", status=None, at=1, next="", next_date="", next_title=None))
+        rule = self.body["regulations"][0]
+        self.assertEqual((rule["stage"], rule["tone"], rule["at"], rule["status"]), ("채택", "adopted", 1, "제안 단계입니다."))
+        self.assertNotIn("next", rule)
+        self.assertNotIn("nextDate", rule)
+
+    def test_drop_event_needs_exactly_one_match(self):
+        with self.assertRaises(SystemExit):
+            self.edit.drop_event(self.body, self.args(id="sample-rule", date="2025-12-17", starts="없는 글"))
+        self.edit.drop_event(self.body, self.args(id="sample-rule", date="2025-12-17", starts="제안이"))
+        self.assertEqual(self.body["regulations"][0]["timeline"], [])
+
+
+class RulesWatchTest(unittest.TestCase):
+    def test_new_changed_and_gone_entries(self):
+        from tools.run import rules_watch
+        before = {"의회 절차의 단계": {"2025/0419(COD)": "Awaiting Parliament's position in 1st reading", "2025/0001(COD)": "x"}, "영국 법령": {"2026 No. 802": "A"}}
+        now = {"의회 절차의 단계": {"2025/0419(COD)": "Awaiting Council's 1st reading position", "2025/0418(COD)": "y"}, "영국 법령": {}}
+        found = rules_watch.changes(before, now)
+        self.assertIn({"group": "의회 절차의 단계", "key": "2025/0419(COD)", "before": "Awaiting Parliament's position in 1st reading", "now": "Awaiting Council's 1st reading position"}, found)
+        self.assertIn({"group": "의회 절차의 단계", "key": "2025/0418(COD)", "before": None, "now": "y"}, found)
+        self.assertIn({"group": "의회 절차의 단계", "key": "2025/0001(COD)", "before": "x", "now": None}, found)
+        # 기록을 통째로 읽지 못한 날은 항목마다 '사라짐'으로 적지 않고 한 줄로 알린다
+        self.assertIn({"group": "영국 법령", "key": "(기록 전체)", "before": "1건", "now": None}, found)
+
+    def test_snapshot_covers_the_tracked_records(self):
+        from tools.run import rules_watch
+        now = rules_watch.snapshot()
+        self.assertIn("2025/0419(COD)", now["의회 절차의 단계"])
+        self.assertIn("62023CJ0512", now["법원 사건 문서"])
+        self.assertEqual(rules_watch.changes(now, now), [])
+
+
+class RulesHealthTest(unittest.TestCase):
+    def test_reports_nothing_on_a_clean_day_and_flags_a_passed_date(self):
+        import json
+        import pathlib
+        from tools.run import rules_health
+        found, counts = rules_health.problems("2026-11-10", False)
+        self.assertEqual([what for what in found if "다음 일정" in what or "꼴" in what], [])
+        self.assertGreaterEqual(counts["regulations"], 20)
+        # 다음 일정이 사흘 넘게 지난 날에는 알린다
+        late, _ = rules_health.problems("2026-12-05", False)
+        self.assertTrue(any("다음 일정(2026-11-30)이 지났는데 그대로임" in what for what in late))
+        self.assertTrue(json.loads(pathlib.Path("data/rules-seen.json").read_text(encoding="utf-8"))["seen"])
+
+
 if __name__ == "__main__":
     unittest.main()

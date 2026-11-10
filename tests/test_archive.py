@@ -167,6 +167,18 @@ class MoreReadersTest(unittest.TestCase):
         self.assertFalse(ukleg.ITEM.match("https://www.legislation.gov.uk/search?type=uksi"))
 
 
+class ToFeedTest(unittest.TestCase):
+    def test_only_unseen_records_become_candidates(self):
+        from tools.archive import tofeed
+        everything, now = tofeed.fresh({})
+        self.assertTrue(everything and all(item["kind"] == "link" and item["source"] in ("ec-press", "eur-lex-related", "us-fedreg") for item in everything))
+        self.assertTrue(all(item["textPath"].startswith("collected/archive/pages/") for item in everything))
+        again, _ = tofeed.fresh(now)
+        self.assertEqual(again, [])
+        partly = {name: values[1:] for name, values in now.items()}
+        self.assertEqual(len(tofeed.fresh(partly)[0]), len(now))
+
+
 class StoreTest(unittest.TestCase):
     def test_dates(self):
         self.assertEqual(store.iso_from_long("30 September 2026"), "2026-09-30")

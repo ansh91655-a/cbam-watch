@@ -38,6 +38,7 @@
 .stepper .name { padding: 0 2px; overflow-wrap: anywhere; }
 .stepper.compact li[data-state="done"] .name, .stepper.compact li[data-state="todo"] .name { display: none; }
 .stepper.compact { margin-bottom: 0; }
+.stepper.compact li[data-state="now"] .name { white-space: nowrap; }
 @media (max-width: 520px) { .stepper:not(.compact) li[data-state="done"] .name, .stepper:not(.compact) li[data-state="todo"] .name { font-size: 0.72rem; } }
 
 /* 한 규제의 자세한 화면 */

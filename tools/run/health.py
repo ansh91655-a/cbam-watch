@@ -9,6 +9,7 @@ import subprocess
 import sys
 
 from tools.common.jsonio import KST, now_kst, read_json, today
+from tools.run import rules_health
 
 FAIL_LIMIT = 3  # 출처를 이만큼 이어서 읽지 못하면 문제로 본다
 
@@ -81,9 +82,13 @@ def report():
         if not deployed_today:
             problems.append(f"사이트가 오늘 다시 배포되지 않음(마지막 {deployed or '알 수 없음'})")
 
+    rule_problems, rule_counts = rules_health.problems(day, workday)
+    problems += rule_problems
+
     return {
         "today": day,
         "problems": problems,
+        **rule_counts,
         "collectCheckedAt": status.get("checkedAt", ""),
         "collectToday": collect_today,
         "sourcesChecked": len(status.get("sources", {})),

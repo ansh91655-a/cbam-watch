@@ -63,6 +63,7 @@
    "status": "2026년 1월 1일부터 확정기간이 시행되고 있습니다. 2025년 10월의 간소화 개정을 반영한 통합본이 공개되어 있습니다. 2026년 수입분에 대한 CBAM 인증서는 2027년 2월 1일부터 판매되고, 첫 CBAM 신고서와 인증서 제출 기한은 2027년 9월 30일입니다. EU 집행위원회는 2027년에 CBAM을 종합 검토하겠다고 밝혔습니다.",
    "next": "2026년 수입분에 대한 CBAM 인증서 판매가 시작됩니다.",
    "nextDate": "2027-02-01",
+   "calendar": false,
    "timeline": [
     {
      "date": "2023-05-16",
@@ -401,6 +402,7 @@
    "status": "유럽의회와 EU 이사회가 각자 입장을 정했고, 지금은 3자 협상 단계입니다. 대상 품목 수는 EU 집행위원회 제안이 180개이고(집행위원회 발표), EU 이사회의 일반적 접근은 약 200개, 유럽의회 입장은 457개로 알려져 있습니다(이사회와 의회의 수치는 법률회사 분석과 언론 보도 기준). 2026년 10월 20일의 첫 3자 협상에서는 합의에 이르지 못했다는 보도가 있습니다.",
    "next": "두 번째 3자 협상이 열릴 예정이라는 보도가 있습니다. 합의되면 유럽의회와 EU 이사회의 공식 채택, 유럽연합 관보 게재가 남습니다. 제안된 적용 시작일은 2028년 1월 1일입니다.",
    "nextDate": "2026-11-30",
+   "nextTitle": "CBAM 하류제품 확대 개정안의 두 번째 3자 협상(보도 기준)",
    "timeline": [
     {
      "date": "2025-03-19",
@@ -780,6 +782,7 @@
    "status": "EU 집행위원회가 2026년 7월 17일에 두 제안을 냈습니다. 본 개정안(2026/0212(COD))은 유럽의회 위원회에서 심의하고 있고, 벤치마크 값을 다루는 제안(2026/0211(COD))은 유럽의회가 2026년 10월 22일에 제1독회 입장을 채택해 기관 간 협상으로 넘겼습니다.",
    "next": "본 개정안의 유럽의회 본회의 제1독회 표결이 잠정적으로 잡혀 있습니다.",
    "nextDate": "2026-12-14",
+   "nextTitle": "EU 배출권거래제 개정안의 유럽의회 본회의 표결(잠정)",
    "timeline": [
     {
      "date": "2026-07-17",
@@ -1475,7 +1478,8 @@
     ]
    },
    "next": "2026년 4분기 가격이 게시될 예정입니다.",
-   "nextDate": "2027-01-04"
+   "nextDate": "2027-01-04",
+   "calendar": false
   },
   {
    "id": "ir-free-allocation",
@@ -2196,17 +2200,20 @@
    "status": "EU 이사회가 2025년 11월 13일에 협상 개시를 승인했습니다. 2026년 11월 20일의 EU·영국 정상회의에서 협상 타결이 발표될 것이라는 보도가 있으나, 공식 발표는 아직 확인되지 않았습니다(2026년 11월 10일 기준).",
    "next": "EU·영국 정상회의가 열릴 예정이라는 보도가 있습니다. 타결되더라도 서명과 비준, 발효를 거쳐야 CBAM 적용 제외로 이어집니다.",
    "nextDate": "2026-11-20",
+   "nextTitle": "EU·영국 정상회의(배출권거래제 연계 협상 타결 발표 예상, 보도 기준)",
    "timeline": [
     {
      "date": "2025-05-19",
-     "text": "EU·영국 정상회의에서 두 배출권거래제를 연계하는 방향에 뜻을 모았습니다.",
-     "source": "이사회 결정 (EU) 2025/2468",
-     "link": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32025D2468",
+     "text": "EU 집행위원회와 영국이 정상회의에서 두 배출권거래제를 연계하는 방향으로 일하기로 합의했습니다. 연계 협정이 양쪽 CBAM의 상호 적용 제외의 조건을 만든다고 밝혔습니다.",
+     "source": "EU 집행위원회 보도자료",
+     "link": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_25_1268",
      "basis": "stored",
      "evidence": {
-      "path": "collected/archive/pages/eur-lex-docs/32025D2468.txt",
+      "path": "collected/archive/pages/ec-press/qanda_25_1268.txt",
       "contains": [
-       "summit of 19 May 2025"
+       "[날짜] 2025-05-19",
+       "agreed to work towards establishing a link between their emission trading systems",
+       "mutual exemptions"
       ]
      }
     },
@@ -2281,6 +2288,7 @@
    "status": "근거 법률이 2026년 3월 18일에 제정되었고, 하위 법령이 2026년 7월과 9월에 제정되어 2027년 1월 1일에 시행됩니다. 영국 국세청 안내에 따르면 2027년 1월 1일부터 기록을 보관해야 하고, 등록은 2028년 1월 1일에 열립니다.",
    "next": "영국 CBAM이 시행됩니다.",
    "nextDate": "2027-01-01",
+   "calendar": false,
    "timeline": [
     {
      "date": "2026-03-18",
@@ -2498,9 +2506,9 @@
   {
    "id": "ustr-comments",
    "group": "trade",
-   "name": "미국 무역대표부의 EU CBAM 의견 요청",
+   "name": "미국: EU·미국 공동성명과 무역대표부의 의견 요청",
    "official": "Federal Register 2026-20615 · USTR-2026-0661",
-   "kind": "의견 요청 공고",
+   "kind": "통상 협의·의견 요청 공고",
    "path": [
     "공고",
     "의견 접수",
@@ -2509,9 +2517,24 @@
    "at": 1,
    "stage": "의견 접수 마감",
    "tone": "dispute",
-   "summary": "미국 무역대표부가 EU CBAM과 하류제품 확대 제안이 미국의 생산자와 대EU 무역에 미치는 영향에 대해 의견을 구한 공고입니다. 모은 의견은 미국 정부가 EU와 CBAM을 협의하는 데 쓰겠다고 밝혔습니다.",
+   "summary": "미국 정부와 EU 사이에서 CBAM이 다뤄진 공식 기록입니다. 2025년 8월의 EU·미국 공동성명에 관해 EU 집행위원회는 CBAM을 바꾸거나 미국 기업을 우대하기로 한 것은 아니며 모든 기업을 위해 이행의 유연성을 더 두도록 노력하기로 했다고 설명했습니다. 2026년 10월에는 미국 무역대표부가 EU CBAM과 하류제품 확대 제안이 미국의 생산자와 대EU 무역에 미치는 영향에 대해 의견을 구했고, 모은 의견은 EU와의 협의에 쓰겠다고 밝혔습니다.",
    "status": "2026년 10월 8일 미국 연방관보에 실렸고, 의견 접수는 2026년 11월 9일에 마감되었습니다. 마감 뒤의 절차는 공고에 적혀 있지 않습니다.",
    "timeline": [
+    {
+     "date": "2025-08-21",
+     "text": "EU 집행위원회가 EU·미국 공동성명 문답 자료에서, CBAM을 특정한 방식으로 바꾸거나 미국 기업을 우대하기로 한 것은 아니며 모든 기업, 특히 중소기업을 위해 이행의 유연성을 더 두도록 노력하기로 했다고 밝혔습니다.",
+     "source": "EU 집행위원회 보도자료",
+     "link": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_25_1974",
+     "basis": "stored",
+     "evidence": {
+      "path": "collected/archive/pages/ec-press/qanda_25_1974.txt",
+      "contains": [
+       "[날짜] 2025-08-21",
+       "We have not committed to change CBAM in any specific way",
+       "additional flexibilities in the implementation of CBAM for all companies"
+      ]
+     }
+    },
     {
      "date": "2026-10-08",
      "text": "미국 무역대표부의 의견 요청 공고가 미국 연방관보에 실렸습니다.",
@@ -2545,11 +2568,16 @@
     {
      "text": "미국 연방관보 공고",
      "url": "https://www.federalregister.gov/documents/2026/10/08/2026-20615/request-for-comments-on-the-effect-of-the-european-unions-carbon-border-adjustment-mechanism-and-the"
+    },
+    {
+     "text": "EU 집행위원회: EU·미국 공동성명 문답",
+     "url": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_25_1974"
     }
    ],
    "related": {
     "words": [
-     "무역대표부"
+     "무역대표부",
+     "EU·미국 공동성명"
     ]
    }
   }

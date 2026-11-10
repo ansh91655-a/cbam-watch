@@ -17,7 +17,7 @@ SOURCE = "data/regulations.json"
 ARCHIVE = pathlib.Path("collected/archive")
 DATE = re.compile(r"^\d{4}(-\d{2}(-\d{2})?)?$")
 BASES = {"stored", "web", "press"}
-TEXT_FIELDS = ["summary", "status", "next"]
+TEXT_FIELDS = ["summary", "status", "next", "nextTitle"]
 RELATED_LIMIT = 8
 
 

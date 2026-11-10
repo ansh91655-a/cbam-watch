@@ -4,6 +4,7 @@
 CBAM 규정을 근거로 삼거나 고치는 문서는 모두 받고, CBAM 규정을 인용만 하는 문서는 아래 ALSO에 적은 것만 받는다.
 문서의 글은 EU 출판국의 자료 창구에서 받으며, 앞부분만 남긴다(긴 보고서와 의견은 조금 더 남긴다).
 """
+import pathlib
 import re
 import time
 import urllib.parse
@@ -88,8 +89,14 @@ def lines_of(celex, notes):
 def crawl(deadline=None):
     related = read_json(ROOT / "eur-lex-related.json", {}).get("entries", [])
     targets = wanted(related)
-    entries, report = [], {"targets": len(targets), "stored": 0, "failures": [], "notes": []}
+    entries, report = [], {"targets": len(targets), "stored": 0, "kept": 0, "failures": [], "notes": []}
+    have = {entry["celex"]: entry for entry in read_json(ROOT / "eur-lex-docs.json", {}).get("entries", [])}
     for target in targets:
+        known = have.get(target["celex"])
+        if known and pathlib.Path(known.get("textPath", "")).exists():  # 이미 받은 문서는 그대로 둔다
+            entries.append({**known, "relations": target.get("relations", known.get("relations", []))})
+            report["kept"] += 1
+            continue
         if deadline and time.monotonic() > deadline:
             report["stoppedAt"] = target["celex"]
             break

@@ -81,12 +81,28 @@ def price_events(prices):
     return rows
 
 
-def events(listed, prices):
-    """게시 데이터의 일정에 가격표의 게시일을 더한다. 같은 날의 가격 일정이 겹치면 가격표에서 만든 것을 남긴다."""
+def rule_events(rules):
+    """규제별 진행 상황에 적힌 다음 일정을 일정으로 만든다. 규제에 "calendar": false가 있으면 만들지 않는다(이미 일정에 있는 날짜).
+
+    일정의 이름은 규제의 nextTitle(그 날 있을 일을 적은 짧은 구)이고, 없으면 규제 이름이다.
+    """
+    rows = []
+    for rule in (rules or {}).get("regulations", []):
+        date = str(rule.get("nextDate", ""))
+        links = rule.get("links") or [{}]
+        if len(date) != 10 or rule.get("calendar") is False or not rule.get("next"):
+            continue
+        rows.append({"date": date, "title": rule.get("nextTitle") or rule.get("name", ""), "kind": "입법", "note": rule["next"], "sourceName": links[0].get("text", ""),
+                     "link": links[0].get("url", ""), "derived": True, "rule": rule.get("id", "")})
+    return rows
+
+
+def events(listed, prices, rules=None):
+    """게시 데이터의 일정에 가격표의 게시일과 규제의 다음 일정을 더한다. 같은 날의 가격 일정이 겹치면 가격표에서 만든 것을 남긴다."""
     derived = price_events(prices)
     price_days = {row["date"] for row in derived}
     kept = [row for row in listed if not (row.get("date") in price_days and "가격" in str(row.get("title", "")))]
-    return sorted(kept + derived, key=lambda row: (str(row.get("date", "")), str(row.get("title", ""))))
+    return sorted(kept + derived + rule_events(rules), key=lambda row: (str(row.get("date", "")), str(row.get("title", ""))))
 
 
 def site(counts):

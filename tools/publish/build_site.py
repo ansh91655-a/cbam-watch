@@ -31,12 +31,6 @@ def main(argv):
             body = {LIST_KEY[name]: []}
         counts[name] = len(body[LIST_KEY[name]])
         bodies[name] = body
-    # 일정에는 가격표에 적힌 게시일을 더한다(가격표가 바뀌면 일정도 따라 바뀐다)
-    bodies["events"] = {**bodies["events"], "events": derive.events(bodies["events"]["events"], bodies["prices"])}
-    counts["events"] = len(bodies["events"]["events"])
-    for name, body in bodies.items():
-        write_json(data_out / f"{name}.json", body)
-
     # 규제별 진행 상황: 연혁의 근거를 다시 맞춰 보고, 안에서만 쓰는 값을 뺀 뒤 관련 소식을 붙여 싣는다
     rules = read_json("data/regulations.json", None)
     if rules is None:
@@ -47,6 +41,12 @@ def main(argv):
         print(f"규제 자료 점검: {where}: {what}")
     write_json(data_out / "regulations.json", regulations.public(rules, bodies["items"]["items"]))
     counts["regulations"] = len(rules.get("regulations", []))
+
+    # 일정에는 가격표에 적힌 게시일과 규제의 다음 일정을 더한다(가격표나 규제 자료가 바뀌면 일정도 따라 바뀐다)
+    bodies["events"] = {**bodies["events"], "events": derive.events(bodies["events"]["events"], bodies["prices"], rules)}
+    counts["events"] = len(bodies["events"]["events"])
+    for name, body in bodies.items():
+        write_json(data_out / f"{name}.json", body)
 
     documents, diffs = derive.documents()
     counts.update({"documents": len(documents["documents"])})

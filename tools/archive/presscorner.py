@@ -7,8 +7,9 @@ import json
 import re
 import time
 
-from tools.archive.store import SINCE, save_index, save_text
+from tools.archive.store import ROOT, SINCE, save_index, save_text
 from tools.common.htmltext import parse
+from tools.common.jsonio import read_json
 from tools.common.net import fetch
 
 LIST = "https://ec.europa.eu/commission/presscorner/api/search?language=en&pagesize=50&pagenumber={page}"
@@ -19,6 +20,7 @@ TITLE = re.compile(r"CBAM|carbon border|emissions trading|\bETS\b|carbon market|
                    r"|United Kingdom|\bUK\b|United States|\bUS\b|India|Norway|Iceland|own resources|multiannual financial", re.I)
 MENTION = re.compile(r"CBAM|carbon border adjustment", re.I)
 MAX_PAGES, MAX_LINES, LINE_LIMIT, PAUSE = 260, 260, 900, 0.25
+RECENT_PAGES, SEEN_LIMIT = 8, 4000
 
 
 def listing(page):
@@ -55,10 +57,17 @@ def around(lines):
     return [lines[index] for index in sorted(keep) if 0 <= index < len(lines)]
 
 
-def crawl(deadline=None):
+def recent(deadline=None):
+    """평일 자동 실행용: 목록의 앞쪽 몇 쪽만 보고, 전에 모은 것에 새 자료를 더한다."""
+    return crawl(deadline, pages=RECENT_PAGES, merge=True)
+
+
+def crawl(deadline=None, pages=MAX_PAGES, merge=False):
+    before = read_json(ROOT / "ec-press.json", {}) if merge else {}
+    seen = set(before.get("report", {}).get("seen", [])) | {entry["reference"] for entry in before.get("entries", [])}
     entries, report = [], {"pages": 0, "listed": 0, "opened": 0, "kept": 0, "failures": []}
     previous_first, done = None, False
-    for page in range(1, MAX_PAGES + 1):
+    for page in range(1, pages + 1):
         if deadline and time.monotonic() > deadline:
             report["stoppedAt"] = f"목록 {page}쪽"
             break
@@ -78,8 +87,9 @@ def crawl(deadline=None):
                 break
             report["listed"] += 1
             kind = (row.get("docutype") or {}).get("code") or ""
-            if not reference or not (kind == "MEX" or TITLE.search(title) or TITLE.search(row.get("leadText") or "")):
+            if not reference or reference in seen or not (kind == "MEX" or TITLE.search(title) or TITLE.search(row.get("leadText") or "")):
                 continue
+            seen.add(reference)
             _, lines = document(reference)
             report["opened"] += 1
             count = sum(len(MENTION.findall(line)) for line in lines)
@@ -94,6 +104,9 @@ def crawl(deadline=None):
             report["kept"] += 1
         if done:
             break
+    entries += [entry for entry in before.get("entries", []) if entry["reference"] not in {row["reference"] for row in entries}]
     report["oldest"] = min((entry["date"] for entry in entries), default="")
-    save_index("ec-press", sorted(entries, key=lambda entry: (entry["date"], entry["reference"]), reverse=True), report)
+    report["total"] = len(entries)
+    # 열어 본 자료의 번호를 남겨, 다음 실행이 같은 자료를 다시 열지 않게 한다(목록만 남기고 화면에 찍지는 않는다)
+    save_index("ec-press", sorted(entries, key=lambda entry: (entry["date"], entry["reference"]), reverse=True), {**report, "seen": sorted(seen)[-SEEN_LIMIT:]})
     return report
