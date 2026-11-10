@@ -405,7 +405,8 @@
    "filter": false,
    "minLine": 80,
    "collector": "github",
-   "note": "CBAM 안내 글(바뀔 때만 확인)"
+   "note": "CBAM 안내 글",
+   "ops": "바뀔 때만 확인"
   },
   {
    "no": 23,
@@ -481,7 +482,8 @@
    "filter": false,
    "minLine": 80,
    "collector": "github",
-   "note": "CBAM 안내 글(바뀔 때만 확인)"
+   "note": "CBAM 안내 글",
+   "ops": "바뀔 때만 확인"
   },
   {
    "no": 28,
@@ -512,8 +514,8 @@
    "filter": false,
    "minLine": 100,
    "collector": "claude",
-   "note": "CBAM 해설 글(바뀔 때만 확인)",
-   "ops": "GitHub 실행에서는 403. 정리 실행이 직접 연다"
+   "note": "CBAM 해설 글",
+   "ops": "GitHub 실행에서는 403. 정리 실행이 직접 연다. 바뀔 때만 확인"
   },
   {
    "no": 30,
@@ -558,7 +560,8 @@
    "filter": false,
    "minLine": 30,
    "collector": "github",
-   "note": "CBAM 관련 기사 제목(유료 본문은 열지 않음)"
+   "note": "CBAM 관련 기사(제목과 링크)",
+   "ops": "유료 본문은 열지 않음"
   },
   {
    "no": 33,

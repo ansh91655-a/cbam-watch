@@ -47,16 +47,23 @@ class ExcerptCheckTest(unittest.TestCase):
 
 
 class StyleCheckTest(unittest.TestCase):
-    def test_plain_sentence_passes(self):
-        hits = style_check.check("EU 집행위원회는 2026년 10월 5일에 가격을 게시했다. 15,000톤을 넘으면 제6조(1)이 적용된다.")
+    def test_polite_sentence_passes(self):
+        hits = style_check.check("EU 집행위원회는 2026년 10월 5일에 가격을 게시했습니다. 15,000톤을 넘으면 제6조(1)이 적용됩니다.")
         self.assertEqual(hits, [])
 
+    def test_plain_ending_is_hard(self):
+        hits = style_check.check("EU 집행위원회는 가격을 게시했다. 대상은 수소다.")
+        self.assertEqual([(hit["rule"], hit["hard"], hit["count"]) for hit in hits], [("plain-ending", True, 2)])
+
+    def test_title_without_period_is_not_a_sentence(self):
+        self.assertEqual(style_check.check("2026년 3분기 CBAM 인증서 가격 82.32유로\nEU 집행위원회가 가격을 게시했습니다."), [])
+
     def test_decimal_comma_is_hard(self):
-        hits = style_check.check("가격은 82,32유로다.")
+        hits = style_check.check("가격은 82,32유로입니다.")
         self.assertEqual([(hit["rule"], hit["hard"]) for hit in hits], [("decimal-comma", True)])
 
     def test_citation_form(self):
-        hits = style_check.check("제6조 제1항에 따른다.")
+        hits = style_check.check("제6조 제1항에 따릅니다.")
         self.assertEqual([hit["rule"] for hit in hits], ["citation"])
 
 

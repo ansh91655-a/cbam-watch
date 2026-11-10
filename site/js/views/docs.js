@@ -24,7 +24,7 @@ function diffView(result) {
 // 문서 이름 아래의 한 줄. 문서 이름이 파일 이름에서 온 것이면 파일 이름을 되풀이하지 않는다.
 function meta(doc) {
   const stem = String(doc.filename).replace(/\.[^.]+$/, "").replace(/_/g, " ").replace(/\s+/g, " ").trim();
-  return [stem === doc.title ? "" : doc.filename, doc.pages ? `${count(doc.pages)}쪽` : "", doc.bytes ? bytes(doc.bytes) : "", doc.date ? `${doc.date} 확인` : "", doc.stored ? "" : "EU 사이트에서 받음"].filter(Boolean).join(", ");
+  return [stem === doc.title ? "" : doc.filename, doc.pages ? `${count(doc.pages)}쪽` : "", doc.bytes ? bytes(doc.bytes) : "", doc.date ? `${doc.date} 기준` : "", doc.stored ? "" : "EU 사이트로 연결"].filter(Boolean).join(", ");
 }
 
 function row(doc) {
@@ -65,7 +65,7 @@ function row(doc) {
 
 export async function render(main) {
   const [documents, sources, unreachable] = await Promise.all([data.documents(), data.sources(), data.unreachableDocuments()]);
-  const head = band("원문 대장", "EU 집행위원회가 올린 CBAM 문서입니다. 문서 이름을 누르면 파일을 내려받습니다. 평일마다 다시 확인해 문서가 바뀌면 새 판으로 바꿔 두고, 바뀐 곳을 보여 줍니다.");
+  const head = band("원문 대장", "EU 집행위원회가 올린 CBAM 문서입니다. 문서 이름을 누르면 파일을 내려받습니다. 문서가 바뀌면 바뀐 곳을 함께 보여 줍니다.");
   if (!documents.length) {
     fill(main, head, empty("문서 목록을 준비하고 있습니다."));
     return;
@@ -80,10 +80,10 @@ export async function render(main) {
     return h("section", { class: "stack", "data-group": "true" }, [
       h("div", { class: "sec-head" }, [
         h("h2", { text: source ? source.name : "그 밖의 문서" }),
-        source ? safeLink(source.url, "이 문서들이 올라온 화면 열기") : null,
+        source ? safeLink(source.url, "EU 집행위원회의 원래 화면 열기") : null,
       ]),
       h("ul", { class: "doc-list" }, mine.map(row)),
-      unreachable[page] ? h("p", { class: "count", text: `이 화면의 문서 링크 가운데 ${unreachable[page]}건은 자동으로 받지 못했습니다. 위의 화면 링크에서 직접 받으세요.` }) : null,
+      unreachable[page] ? h("p", { class: "count", text: `이 목록에 없는 문서가 ${unreachable[page]}건 더 있습니다. 위의 화면 링크에서 받을 수 있습니다.` }) : null,
     ]);
   });
   const none = h("div", { hidden: true }, empty("찾는 문서가 없습니다. 다른 낱말로 찾아보세요."));

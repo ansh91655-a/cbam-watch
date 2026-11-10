@@ -39,7 +39,7 @@ async function fillChrome() {
     fresh.state = stale ? "stale" : "ok";
     fresh.text = stale
       ? `마지막 갱신 ${minute(site.builtAt)}. ${age}일 동안 갱신되지 않았습니다. 최신 내용은 원문에서 확인하세요.`
-      : `마지막 갱신 ${minute(site.builtAt)}${site.lastCollected ? `, 출처 확인 ${minute(site.lastCollected)}` : ""}`;
+      : `마지막 갱신 ${minute(site.builtAt)}`;
   } else {
     fresh.state = "bad";
     fresh.text = "게시 데이터를 읽지 못했습니다.";
@@ -59,8 +59,8 @@ function previewBar() {
   const theme = window.CBAM_THEME || {};
   if (!theme.preview) return;
   document.body.append(h("div", { class: "preview-bar", role: "note" }, [
-    h("span", { text: `'${theme.name}' 변형을 미리 보는 중입니다.` }),
-    h("a", { href: "#design", text: "다른 변형 보기" }),
+    h("span", { text: `'${theme.name}' 색으로 보는 중입니다.` }),
+    h("a", { href: "#design", text: "다른 색 보기" }),
   ]));
 }
 

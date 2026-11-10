@@ -28,19 +28,11 @@ def _download(version, doc):
 
 
 def sources():
+    """사이트의 출처 화면에 쓰는 목록. 방문자에게 필요한 것만 싣는다(확인 방법과 확인 결과는 운영 콘솔과 보고가 다룬다)."""
     registry = read_json("sources/registry.json", {"sources": []})
-    status = read_json("collected/status.json", {"sources": {}}).get("sources", {})
-    claude = read_json("collected/claude-status.json", {"sources": {}}).get("sources", {})
-    rows = []
-    for source in registry["sources"]:
-        # 확인 방법에 맞는 기록만 쓴다: 자동 수집은 수집 실행의 기록, 자동 열람은 정리 실행의 기록
-        book = {"github": status, "claude": claude}.get(source["collector"], {})
-        state = book.get(source["code"]) or {}
-        rows.append({
-            "no": source["no"], "code": source["code"], "name": source["name"], "group": source["group"], "url": source["url"],
-            "tier": source["tier"], "collector": source["collector"], "note": source.get("note", ""),
-            "lastChecked": state.get("lastOk") or "", "ok": state.get("ok") if state else None, "failCount": int(state.get("failCount", 0) or 0),
-        })
+    rows = [{"no": source["no"], "code": source["code"], "name": source["name"], "group": source["group"], "url": source["url"],
+             "tier": source["tier"], "note": source.get("note", "")}
+            for source in registry["sources"] if source.get("collector") != "off"]
     return {"builtAt": stamp(), "sources": rows}
 
 

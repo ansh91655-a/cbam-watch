@@ -17,9 +17,8 @@ ICONS = {
     # 그 밖
     "download": "download", "out": "arrow-up-right", "calendar": "calendar-days", "search": "search", "file": "file-text",
     "trend": "trending-up", "clock": "clock", "news": "newspaper", "next": "chevron-right",
-    # 안내 화면: 소식이 실리기까지의 단계와 항목
-    "collect": "radar", "write": "pen-line", "publish": "send", "recheck": "refresh-cw",
-    "who": "user-round", "what": "compass", "how": "list-checks", "limits": "triangle-alert", "reuse": "recycle", "stage": "flask-conical",
+    # 안내 화면
+    "terms": "book-open", "sources": "library", "who": "user-round", "limits": "triangle-alert", "reuse": "recycle",
 }
 
 

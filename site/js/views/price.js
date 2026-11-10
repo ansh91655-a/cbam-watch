@@ -59,7 +59,7 @@ export async function render(main) {
   const book = await data.prices();
   const rows = book.prices || [];
   const source = book.source || {};
-  const head = band("CBAM 인증서 가격", "EU 집행위원회가 게시한 가격표를 그대로 읽어 보여 줍니다. 가격표가 바뀌면 평일 아침에 따라 바뀝니다.");
+  const head = band("CBAM 인증서 가격", "EU 집행위원회가 게시한 CBAM 인증서 가격과 그 추세입니다.");
   if (!rows.length) {
     fill(main, head, empty("가격표를 아직 읽지 못했습니다. 원문에서 확인하세요."), safeLink(source.url, "가격 원문 보기"));
     return;
@@ -80,7 +80,7 @@ export async function render(main) {
     rows.length >= RANGE_FROM ? h("div", { class: "filters" }, h("div", { class: "seg", role: "group", "aria-label": "기간" }, buttons)) : null,
     h("section", { class: "chart-card", "aria-labelledby": "h-chart" }, [
       h("h2", { id: "h-chart", text: "가격 추세" }),
-      h("p", { class: "sub", text: `단위는 ${unit}. 가격은 적용 기간 동안 같은 값이어서 계단 모양으로 그렸습니다.` }),
+      h("p", { class: "sub", text: `단위는 ${unit}입니다. 가격은 적용 기간 동안 같은 값이어서 계단 모양으로 그렸습니다.` }),
       chartHolder,
     ]),
     h("section", { class: "stack", "aria-labelledby": "h-table" }, [
@@ -91,10 +91,10 @@ export async function render(main) {
     h("section", { class: "stack", "aria-labelledby": "h-method" }, [
       h("h2", { id: "h-method", text: "가격을 정하는 방법" }),
       h("ul", { class: "note-list" }, [
-        h("li", { text: "가격은 경매에 나온 EU 배출권의 경매 낙찰가격을 가중평균한 값이다." }),
-        h("li", { text: "2026년에는 분기 가격을 네 번 계산해 게시하고, 2027년부터는 주간 가격을 계산해 게시한다." }),
-        h("li", { text: "2026년의 분기 가격은 그 분기가 끝난 다음 첫 주에 계산하며, 그 분기에 EU로 수입된 CBAM 대상 품목의 배출량에 해당하는 CBAM 인증서 판매에 적용된다." }),
-        h("li", { text: "2027년 2월부터 모든 CBAM 인증서는 공통 중앙 플랫폼에서 구매한다." }),
+        h("li", { text: "가격은 경매에 나온 EU 배출권의 경매 낙찰가격을 가중평균한 값입니다." }),
+        h("li", { text: "2026년에는 분기 가격을 네 번 계산해 게시하고, 2027년부터는 주간 가격을 계산해 게시합니다." }),
+        h("li", { text: "2026년의 분기 가격은 그 분기가 끝난 다음 첫 주에 계산하며, 그 분기에 EU로 수입된 CBAM 대상 품목의 배출량에 해당하는 CBAM 인증서 판매에 적용됩니다." }),
+        h("li", { text: "2027년 2월부터 모든 CBAM 인증서는 공통 중앙 플랫폼에서 구매합니다." }),
       ]),
       h("p", { class: "count" }, [h("span", { text: "2026년 11월 10일에 확인한 원문을 옮긴 것입니다. 바뀌었을 수 있으니 원문에서 확인하세요. " }), safeLink(source.url, source.name || "가격 원문")]),
     ]),

@@ -80,7 +80,7 @@ function feature(item, important, others) {
     h("h2", {}, title),
     h("p", { class: "feature-summary", text: item.summary || "" }),
     h("p", { class: "meta" }, [
-      h("span", { text: item.published ? day(item.published) : `등재 ${day(item.listed)}` }),
+      h("span", { text: item.published ? day(item.published) : `${day(item.listed)} 수록` }),
       h("span", { text: topicName(topic) }),
       item.sourceName ? h("span", { text: item.sourceName }) : null,
     ]),
@@ -199,7 +199,7 @@ export async function render(main) {
     h("div", { class: "bento" }, [lead ? feature(lead, Boolean(important), others) : null, schedule(events), pricePanel(book), topicsPanel(items)]),
     h("section", { class: "stack", "aria-labelledby": "h-recent" }, [
       h("div", { class: "sec-head" }, [h("h2", { id: "h-recent", text: "새로 오른 소식" }), h("a", { href: "#news", text: `소식 ${items.length}건 모두 보기` })]),
-      recent.length ? h("div", { class: "cards-2" }, recent.map(card)) : empty(items.length ? "다른 최근 소식이 없습니다." : "아직 게시된 소식이 없습니다. 자동 수집이 새 소식을 찾으면 여기에 나타납니다."),
+      recent.length ? h("div", { class: "cards-2" }, recent.map(card)) : empty(items.length ? "다른 최근 소식이 없습니다." : "아직 게시된 소식이 없습니다."),
     ]),
     digest(digests),
     sectors(documents),
