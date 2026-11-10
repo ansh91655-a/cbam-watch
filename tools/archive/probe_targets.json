@@ -1,23 +1,37 @@
 {
  "targets": [
   {
-   "code": "newsroom",
+   "code": "oeil",
    "urls": [
-    "https://ec.europa.eu/newsroom/taxud/newsletter-archives/view/service/9510",
-    "https://ec.europa.eu/newsroom/taxud/user-subscriptions/9510/create"
+    "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0420(COD)",
+    "https://oeil.europarl.europa.eu/oeil/en/search?fullText.mode=EXACT_WORD&fullText.text=carbon+border+adjustment",
+    "https://oeil.europarl.europa.eu/oeil/en/document-summary?id=1835218"
    ]
   },
   {
-   "code": "cellar",
+   "code": "presscorner",
    "urls": [
-    "http://publications.europa.eu/resource/celex/32025R2621",
-    "http://publications.europa.eu/resource/celex/32026R1740",
-    "http://publications.europa.eu/resource/celex/32025R0486"
+    "https://ec.europa.eu/commission/presscorner/api/search?language=en&keywords=CBAM&pagesize=50&pagenumber=1",
+    "https://ec.europa.eu/commission/presscorner/api/documents?reference=IP/25/614&language=en",
+    "https://ec.europa.eu/commission/presscorner/detail/en/ip_25_614"
    ],
    "headers": {
-    "Accept": "application/xhtml+xml, text/html;q=0.9",
-    "Accept-Language": "eng"
+    "Accept": "application/json, text/html;q=0.9"
    }
+  },
+  {
+   "code": "council",
+   "urls": [
+    "https://data.consilium.europa.eu/doc/document/ST-10000-2026-INIT/en/pdf",
+    "https://www.consilium.europa.eu/en/press/press-releases/?keyword=CBAM"
+   ]
+  },
+  {
+   "code": "uk-leg",
+   "urls": [
+    "https://www.legislation.gov.uk/all?title=carbon%20border%20adjustment",
+    "https://www.legislation.gov.uk/all/data.feed?title=carbon%20border%20adjustment"
+   ]
   }
  ]
 }

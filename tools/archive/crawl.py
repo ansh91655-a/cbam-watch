@@ -9,11 +9,12 @@ import argparse
 import sys
 import time
 
-from tools.archive import boards, ecnews, eurlex, govuk, hys, newsletter, oeil
+from tools.archive import boards, cellar, ecnews, eurlex, govuk, hys, newsletter, oeil
 from tools.archive.store import ROOT, SINCE
 from tools.common.jsonio import stamp, write_json
 
-STEPS = [("ec-news", ecnews.crawl), ("ec-newsletter", newsletter.crawl), ("eur-lex", eurlex.crawl), ("ep-oeil", oeil.crawl), ("ec-hys", hys.crawl),
+STEPS = [("ec-news", ecnews.crawl), ("ec-newsletter", newsletter.crawl), ("eur-lex", eurlex.crawl), ("eur-lex-related", cellar.crawl),
+         ("ep-oeil", oeil.crawl), ("ec-hys", hys.crawl),
          ("uk-govuk", govuk.crawl), ("kr-boards", boards.crawl)]
 
 
