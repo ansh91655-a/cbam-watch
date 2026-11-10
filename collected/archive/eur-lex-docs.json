@@ -1,15 +1,13 @@
 {
  "source": "eur-lex-docs",
- "fetchedAt": "2026-11-11T02:14:03+09:00",
+ "fetchedAt": "2026-11-11T03:14:48+09:00",
  "since": "2025-01-01",
  "report": {
   "targets": 23,
-  "stored": 3,
-  "kept": 20,
+  "stored": 0,
+  "kept": 23,
   "failures": [],
-  "notes": [
-   "52025PC0990: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/95ee45d7-db37-11f0-8da2-01aa75ed71a1.0001.03/DOC_1"
-  ]
+  "notes": []
  },
  "entries": [
   {

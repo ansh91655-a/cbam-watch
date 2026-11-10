@@ -1,5 +1,5 @@
 {
- "ranAt": "2026-11-11T03:02:54+09:00",
+ "ranAt": "2026-11-11T03:15:06+09:00",
  "since": "2025-01-01",
  "result": {
   "procedures": {
@@ -50,6 +50,7 @@
     "forecasts": [],
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0211(COD)"
    }
-  }
+  },
+  "failures": []
  }
 }
