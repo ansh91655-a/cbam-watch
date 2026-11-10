@@ -9,6 +9,9 @@
       brief 표시를 떼고 고친 날(revised)을 적는다.
   python -m tools.publish.revise --id <소식 id> --keep
       본문에 제목보다 더 알려 주는 것이 없을 때: 요약은 그대로 두고, 다시 고르지 않게 살펴본 날(briefChecked)만 적는다.
+  python -m tools.publish.revise --id <소식 id> --fail
+      그 글을 읽지 못했거나 새 요약이 검사를 끝내 통과하지 못했을 때: 해 본 횟수(briefTries)만 올린다.
+      두 번 실패한 소식은 다시 고르지 않는다(한 줄로 남는다).
 검사에 걸리면 고치지 않고 1로 끝난다. 뽑은 글 파일은 저장소 밖에 둔다(저장소에 올리지 않는다).
 """
 import argparse
@@ -24,6 +27,7 @@ from tools.common.jsonio import read_json, today, write_json
 ITEMS = "data/items.json"
 OLD_EVENT_DAYS = 60
 SHORT, LONG = 60, 600  # 새 요약의 길이(글자)
+MAX_TRIES = 2  # 이만큼 실패한 소식은 다시 고르지 않는다
 
 
 def candidates(items, limit, now=None):
@@ -32,7 +36,7 @@ def candidates(items, limit, now=None):
     shared = {link for link, count in collections.Counter(item.get("link", "") for item in items).items() if count > 1}
     cutoff = (datetime.date.fromisoformat(now) - datetime.timedelta(days=OLD_EVENT_DAYS)).isoformat()
     rows = [item for item in items if item.get("brief") and not item.get("briefChecked") and not item.get("withdrawn")
-            and item.get("link") not in shared and not (item.get("kind") == "행사" and str(item.get("published", "")) < cutoff)]
+            and int(item.get("briefTries", 0) or 0) < MAX_TRIES and item.get("link") not in shared and not (item.get("kind") == "행사" and str(item.get("published", "")) < cutoff)]
     rows.sort(key=lambda item: str(item.get("published", "")), reverse=True)
     rows.sort(key=lambda item: item.get("kind") == "행사")  # 자료와 동향을 먼저
     return [{key: item.get(key, "") for key in ("id", "published", "title", "summary", "kind", "sourceCode", "sourceName", "link")} for item in rows[:limit]]
@@ -65,6 +69,7 @@ def main(argv):
     parser.add_argument("--source-file", default="")
     parser.add_argument("--impact", default="")
     parser.add_argument("--keep", action="store_true")
+    parser.add_argument("--fail", action="store_true")
     args = parser.parse_args(argv)
     body = read_json(ITEMS, None)
     if body is None:
@@ -83,6 +88,11 @@ def main(argv):
         write_json(ITEMS, body)
         print(json.dumps({"ok": True, "id": args.id, "kept": True}, ensure_ascii=False))
         return 0
+    if args.fail:
+        item["briefTries"] = int(item.get("briefTries", 0) or 0) + 1
+        write_json(ITEMS, body)
+        print(json.dumps({"ok": True, "id": args.id, "tries": item["briefTries"], "again": item["briefTries"] < MAX_TRIES}, ensure_ascii=False))
+        return 0
     try:
         summary = " ".join(pathlib.Path(args.summary_file).read_text(encoding="utf-8").split())
         source = pathlib.Path(args.source_file).read_text(encoding="utf-8", errors="replace")
@@ -99,6 +109,7 @@ def main(argv):
     if args.impact.strip():
         item["impact"] = args.impact.strip()
     item.pop("brief", None)
+    item.pop("briefTries", None)
     item["revised"] = today()
     write_json(ITEMS, body)
     print(json.dumps({"ok": True, "id": args.id, "revised": item["revised"]}, ensure_ascii=False))

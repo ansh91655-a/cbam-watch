@@ -193,6 +193,17 @@ class DaySummaryTest(unittest.TestCase):
     def test_weekend_has_no_missing_run_problem(self):
         self.assertEqual(day_summary.summarize([], "2026-11-14")["problems"], [])
 
+    def test_problems_of_an_adhoc_run_are_reported_too(self):
+        runs = [
+            {"kind": "collect", "startedAt": "2026-11-10T07:05:00+09:00", "counts": {}, "problems": []},
+            {"kind": "verify", "startedAt": "2026-11-10T08:20:00+09:00", "counts": {}, "pushed": True, "problems": []},
+            {"kind": "adhoc", "startedAt": "2026-11-10T01:00:00+09:00", "counts": {"revised": 3}, "problems": ["요약 보강: 웹 읽기가 되지 않음"]},
+            {"kind": "report", "startedAt": "2026-11-10T10:05:00+09:00", "problems": ["보고 실행이 적은 글은 다시 모으지 않음"]},
+        ]
+        result = day_summary.summarize(runs, self.DAY)
+        self.assertEqual(result["problems"], ["요약 보강: 웹 읽기가 되지 않음"])
+        self.assertEqual(result["runs"], {"collect": 1, "verify": 1, "adhoc": 1})
+
 
 if __name__ == "__main__":
     unittest.main()

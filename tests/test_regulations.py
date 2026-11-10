@@ -298,12 +298,14 @@ class ReviseTest(unittest.TestCase):
         {"id": "e", "brief": True, "kind": "국내", "published": "2026-10-21", "link": "https://k.example/list", "title": "공지 2", "summary": "공지입니다."},
         {"id": "f", "brief": True, "briefChecked": "2026-11-10", "kind": "국내", "published": "2026-10-25", "link": "https://k.example/view?id=6", "title": "살펴본 것", "summary": "자료입니다."},
         {"id": "g", "kind": "국내", "published": "2026-11-05", "link": "https://k.example/view?id=7", "title": "이미 요약한 것", "summary": "요약이 있습니다."},
+        {"id": "h", "brief": True, "briefTries": 2, "kind": "국내", "published": "2026-11-06", "link": "https://k.example/view?id=8", "title": "두 번 실패한 것", "summary": "자료입니다."},
+        {"id": "i", "brief": True, "briefTries": 1, "kind": "국내", "published": "2026-09-01", "link": "https://k.example/view?id=9", "title": "한 번 실패한 것", "summary": "자료입니다."},
     ]
 
     def test_candidates_put_materials_first_and_skip_what_cannot_or_need_not_be_redone(self):
         from tools.publish import revise
         picked = [row["id"] for row in revise.candidates(self.ITEMS, 10, now="2026-11-11")]
-        self.assertEqual(picked, ["a", "b"])  # 자료 먼저, 그다음 아직 지나지 않은 행사. 같은 주소를 쓰는 것, 지난 행사, 살펴본 것, 요약이 있는 것은 빠진다
+        self.assertEqual(picked, ["a", "i", "b"])  # 자료 먼저(한 번 실패한 것은 다시 고른다), 그다음 아직 지나지 않은 행사. 같은 주소를 쓰는 것, 지난 행사, 살펴본 것, 요약이 있는 것, 두 번 실패한 것은 빠진다
 
     def test_a_new_summary_must_be_polite_long_enough_and_backed_by_the_page(self):
         from tools.publish import revise
