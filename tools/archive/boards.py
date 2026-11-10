@@ -1,7 +1,9 @@
 """국내 기관 게시판에서 CBAM 관련 게시물의 제목, 날짜, 주소를 모은다. 본문은 저장하지 않는다.
+산업통상부 보도자료만 부제와 첫 문단을 짧게(700자까지) 남긴다. 한 줄 요약을 원문과 대조하는 데 쓴다.
 
 게시판마다 쪽을 넘기는 방법이 달라서 게시판별 함수를 따로 둔다. 찾지 못한 게시판은 report에 사유를 적는다.
 """
+import base64
 import json
 import re
 import time
@@ -62,7 +64,10 @@ def keco():
         pages += 1
         if not new or min(entry["date"] for entry in found) < SINCE:
             break
-    return list(entries.values()), {"pages": pages}
+    # 공지로 목록 위에 한 번 더 뜨는 글은 주소 없이 잡힌다. 같은 날짜와 제목의 글이 주소와 함께 있으면 그 줄은 버린다.
+    with_link = {(entry["date"], entry["title"]) for entry in entries.values() if "view.do" in entry["url"]}
+    kept = [entry for entry in entries.values() if "view.do" in entry["url"] or (entry["date"], entry["title"]) not in with_link]
+    return kept, {"pages": pages}
 
 
 def kosmes():
@@ -112,9 +117,35 @@ def motir():
             if not new or min(entry["date"] for entry in found) < SINCE:
                 break
     # 낱말 찾기가 듣지 않으면 관계없는 글이 섞이므로 제목에 낱말이 든 것만 남긴다
-    kept = [entry for entry in entries.values() if KEY.search(entry["title"])]
+    kept = [entry for entry in entries.values() if KEY.search(entry["title"]) and entry["date"] >= SINCE]
     report["all"] = len(entries)
+    report["leads"] = 0
+    for entry in kept:
+        html, _ = _get(entry["url"])
+        entry["lead"] = lead_of(parse(html, entry["url"])[1], entry["title"]) if html else ""
+        report["leads"] += 1 if entry["lead"] else 0
     return kept, report
+
+
+def lead_of(lines, title, limit=700):
+    """보도자료 화면의 글에서 부제와 첫 문단만 남긴다. 본문은 제목이 마지막으로 나온 줄 다음부터 '목록' 줄 앞까지다."""
+    starts = [index for index, line in enumerate(lines) if line.strip() == title.strip()]
+    if not starts:
+        return ""
+    picked, paragraphs = [], 0
+    for line in lines[starts[-1] + 1:]:
+        text = line.strip()
+        if text == "목록" or text.startswith(("이전글", "다음글")):
+            break
+        if not text:
+            continue
+        subtitle = text.startswith(("-", "–", "―", "▴", "ㅇ"))
+        if not subtitle:
+            paragraphs += 1
+        if paragraphs > 1:
+            break
+        picked.append(text)
+    return "\n".join(picked)[:limit]
 
 
 def moj():
@@ -122,10 +153,11 @@ def moj():
     base = "https://www.moj.go.kr/bbs/moj/177/artclList.do"
     entries, pages = {}, 0
     for number in range(1, 6):
-        html, error = _get(base, {"layout": "", "page": number, "srchColumn": "", "srchWrd": "", "bbsClSeq": "", "bbsOpenWrdSeq": "",
-                                  "rgsBgndeStr": "", "rgsEnddeStr": "", "isViewMine": "false"})
+        # 첫 쪽은 그냥 열고, 다음 쪽부터는 게시판의 양식대로 쪽 번호를 보낸다
+        html, error = _get(base) if number == 1 else _get(base, {"layout": "", "page": number, "srchColumn": "", "srchWrd": "", "bbsClSeq": "", "bbsOpenWrdSeq": "",
+                                                                 "rgsBgndeStr": "", "rgsEnddeStr": "", "isViewMine": "false"})
         if html is None:
-            return list(entries.values()), {"pages": pages, "error": error}
+            return [entry for entry in entries.values() if KEY.search(entry["title"])], {"pages": pages, "all": len(entries), "error": error}
         found = table_entries(html, base, 1, 4, re.compile(r"artclView\.do"))
         new = 0
         for entry in found:
@@ -134,7 +166,7 @@ def moj():
                 entries[key] = entry
                 new += 1
         pages += 1
-        if not new:
+        if not new or min(entry["date"] for entry in found) < SINCE:
             break
     return [entry for entry in entries.values() if KEY.search(entry["title"])], {"pages": pages, "all": len(entries)}
 
@@ -152,18 +184,27 @@ def compass():
         return [], {"error": "자료를 풀지 못함"}
     found = []
     for row in rows:
-        date = _compass_date(row.get("rdate"))
+        date = iso_from_numbers(str(row.get("rdateStr") or "")[:10])  # 화면에 보이는 등록일(한국 시각)
         if date and row.get("title"):
-            found.append({"date": date, "title": str(row["title"]).strip(), "url": base, "cells": [str(row.get("originNm") or "")]})
-    return found, {"rows": len(rows)}
+            found.append({"date": date, "title": str(row["title"]).strip(), "url": base, "view": _compass_view(row.get("idx")), "cells": [str(row.get("originNm") or "")]})
+    # 글 하나의 주소는 화면의 스크립트가 만드는 꼴을 따라 지었다. 가장 최근 글 하나를 열어 제목이 보이면 그 주소를 쓴다.
+    report = {"rows": len(rows), "viewLinks": False}
+    newest = max(found, key=lambda entry: entry["date"], default=None)
+    if newest and newest["view"]:
+        html, _ = _get(newest["view"])
+        report["viewLinks"] = bool(html and newest["title"][:12] in html)
+    for entry in found:
+        view = entry.pop("view")
+        if report["viewLinks"] and view:
+            entry["url"] = view
+    return found, report
 
 
-def _compass_date(value):
-    """날짜 값이 글이면 앞의 열 글자를, 수이면 1970년부터의 밀리초로 보고 날짜로 바꾼다(한국 시각)."""
-    if isinstance(value, (int, float)):
-        import datetime
-        return (datetime.datetime.fromtimestamp(value / 1000, datetime.timezone.utc) + datetime.timedelta(hours=9)).date().isoformat()
-    return iso_from_numbers(str(value or "")[:10])
+def _compass_view(idx):
+    """자료실의 글 하나를 여는 주소. 화면의 스크립트는 글 번호를 base64로 바꿔 idx에 넣는다."""
+    if idx in (None, ""):
+        return ""
+    return "https://www.compass.or.kr/eucbam/data/view?idx=" + urllib.parse.quote(base64.b64encode(str(idx).encode("utf-8")).decode("ascii"))
 
 
 BOARDS = [("keco-cbam", keco), ("kosmes-esg", kosmes), ("motir", motir), ("moj", moj), ("compass", compass)]

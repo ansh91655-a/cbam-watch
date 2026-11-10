@@ -1,7 +1,7 @@
 """소급 수집과 소급 게시 도구를 확인한다."""
 import unittest
 
-from tools.archive import gate, store
+from tools.archive import boards, ecnews, gate, store
 from tools.check import term_check
 
 TOPICS = {"law", "legis", "etc"}
@@ -59,6 +59,31 @@ class GateTest(unittest.TestCase):
         self.assertEqual(gate.excerpt_of(draft(excerpt="Commission proposes to simplify CBAM"), SOURCE), "Commission proposes to simplify CBAM")
         self.assertEqual(gate.excerpt_of(draft(excerpt="Commission proposes to simplify CBAM", tier="B"), SOURCE), "")
         self.assertEqual(gate.excerpt_of(draft(excerpt="Commission proposed to simplify CBAM"), SOURCE), "")
+
+
+class ReadersTest(unittest.TestCase):
+    def test_article_keeps_only_the_body(self):
+        lines = ["Price published - Taxation and Customs Union Skip to main content", "Menu", "CBAM", "Home", "News", "Price published", "Price published",
+                 "The first CBAM price is out.", "News article", "7 April 2026", "1 min read", "Body line about CBAM.", "Publication date", "7 April 2026", "Footer CBAM"]
+        title, text = ecnews.article(lines)
+        self.assertEqual(title, "Price published")
+        self.assertEqual(text[0], "Price published")
+        self.assertEqual(text[1], "The first CBAM price is out.")
+        self.assertEqual(text[-1], "Body line about CBAM.")
+        self.assertEqual(len(ecnews.KEY.findall("\n".join(text))), 2)  # 메뉴와 바닥글의 CBAM은 세지 않는다
+
+    def test_sitemap_pattern(self):
+        xml = "<url><loc>https://taxation-customs.ec.europa.eu/news/first-cbam-certificate-price-now-available-2026-04-07_en</loc></url><url><loc>https://taxation-customs.ec.europa.eu/index_en</loc></url>"
+        self.assertEqual(ecnews.NEWS_LOC.findall(xml), [("https://taxation-customs.ec.europa.eu/news/first-cbam-certificate-price-now-available-2026-04-07_en", "2026-04-07")])
+
+    def test_lead_is_subtitles_and_first_paragraph(self):
+        lines = ["설명회 개최", "담당부서", "설명회 개최", "- 부제 하나", "- 부제 둘", "첫 문단입니다.", "둘째 문단입니다.", "목록"]
+        self.assertEqual(boards.lead_of(lines, "설명회 개최"), "- 부제 하나\n- 부제 둘\n첫 문단입니다.")
+        self.assertEqual(boards.lead_of(lines, "없는 제목"), "")
+
+    def test_compass_view_address(self):
+        self.assertEqual(boards._compass_view("1"), "https://www.compass.or.kr/eucbam/data/view?idx=MQ%3D%3D")
+        self.assertEqual(boards._compass_view(""), "")
 
 
 class StoreTest(unittest.TestCase):
