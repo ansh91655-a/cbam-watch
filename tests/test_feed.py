@@ -49,6 +49,15 @@ class NewsFeedTest(unittest.TestCase):
         ])
         self.assertEqual(entries, [])
 
+    def test_the_date_follows_the_same_rule_as_the_site(self):
+        entries = self._entries([
+            {"id": "d-1", "title": "게시일이 없는 새 소식", "summary": "요약", "link": "https://eu.example/e", "listed": "2026-11-10"},
+            {"id": "d-2", "title": "날짜 없이 한꺼번에 채운 제도 안내", "summary": "요약", "link": "https://eu.example/f", "listed": "2026-11-10", "backfill": True},
+            {"id": "d-3", "title": "한꺼번에 채운 지난 소식", "summary": "요약", "link": "https://eu.example/g", "published": "2026-06-12", "listed": "2026-11-10", "backfill": True},
+        ])
+        self.assertEqual([(entry.find(f"{ATOM}title").text, entry.find(f"{ATOM}updated").text[:10]) for entry in entries],
+                         [("게시일이 없는 새 소식", "2026-11-10"), ("한꺼번에 채운 지난 소식", "2026-06-12")])
+
 
 class RulesFeedTest(unittest.TestCase):
     def test_a_timeline_entry_opens_the_rule_on_this_site(self):

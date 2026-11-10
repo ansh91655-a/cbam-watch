@@ -17,6 +17,14 @@ def _stamp(day):
     return f"{day}T00:00:00+09:00" if len(day) == 10 and day[4] == "-" and day[7] == "-" else ""
 
 
+def _day(item):
+    """소식의 날짜. 화면(site/js/data.js의 dateOf)과 같은 기준이다: 원문의 게시일, 없으면 이 사이트에 실린 날.
+
+    한꺼번에 채운 지난 소식(backfill)은 실린 날이 소식의 날짜가 아니므로, 게시일이 없으면 날짜가 없는 것으로 본다.
+    """
+    return str(item.get("published") or ("" if item.get("backfill") else item.get("listed")) or "")[:10]
+
+
 def _entry(key, title, link, updated, summary, label, related=""):
     """항목 하나. link는 눌렀을 때 열리는 주소, related는 함께 싣는 원문 주소(link와 같으면 싣지 않는다)."""
     quote = {chr(34): "&quot;"}
@@ -43,10 +51,10 @@ def _feed(site_url, name, title, subtitle, built, entries):
 
 
 def news(items, topics, site_url, built):
-    """새 소식 피드의 글. 게시일(없으면 이 사이트에 실린 날)이 가까운 것부터 LIMIT건."""
+    """새 소식 피드의 글. 날짜(_day)가 가까운 것부터 LIMIT건. 날짜가 없는 소식(날짜 없이 실은 제도 안내)은 넣지 않는다."""
     names = {topic.get("code"): topic.get("name", "") for topic in topics}
-    rows = [item for item in items if not item.get("withdrawn") and _stamp(item.get("published") or item.get("listed"))]
-    rows.sort(key=lambda item: (str(item.get("published") or item.get("listed"))[:10], str(item.get("id", ""))), reverse=True)
+    rows = [item for item in items if not item.get("withdrawn") and _stamp(_day(item))]
+    rows.sort(key=lambda item: (_day(item), str(item.get("id", ""))), reverse=True)
     entries = []
     for item in rows[:LIMIT]:
         summary = " ".join(part for part in (item.get("summary", ""), f"실무 영향: {item['impact']}" if item.get("impact") else "", f"출처: {item['sourceName']}" if item.get("sourceName") else "") if part)
@@ -54,7 +62,7 @@ def news(items, topics, site_url, built):
         has_page = bool(item.get("id")) and not item.get("brief")  # 화면의 ui/itemlink.js와 같은 기준
         original = item.get("link", "")
         entries.append(_entry(page, item.get("title", ""), page if has_page else original,
-                              _stamp(item.get("published") or item.get("listed")), summary, names.get(item.get("topic"), ""),
+                              _stamp(_day(item)), summary, names.get(item.get("topic"), ""),
                               related=original if has_page else ""))
     return _feed(site_url, "feed.xml", "CBAM 규제동향: 새 소식", "EU 탄소국경조정제도(CBAM) 소식을 원문 링크와 함께 국문으로 정리합니다.", built, entries)
 
