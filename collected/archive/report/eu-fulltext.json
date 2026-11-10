@@ -1,8 +1,8 @@
 {
- "ranAt": "2026-11-10T23:53:54+09:00",
+ "ranAt": "2026-11-10T23:55:55+09:00",
  "since": "2025-01-01",
  "result": {
-  "stored": 4,
+  "stored": 6,
   "failures": [
    "downstream-parliament TA-10-2026-0276: 응답 202"
   ]

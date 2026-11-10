@@ -1,9 +1,9 @@
 {
  "source": "eu-fulltext",
- "fetchedAt": "2026-11-10T23:53:54+09:00",
+ "fetchedAt": "2026-11-10T23:55:55+09:00",
  "since": "2025-01-01",
  "report": {
-  "targets": 4,
+  "targets": 5,
   "failures": [
    "downstream-parliament TA-10-2026-0276: 응답 202"
   ]
@@ -36,6 +36,20 @@
    "url": "https://data.consilium.europa.eu/doc/document/ST-10423-2026-INIT/en/pdf",
    "lines": 3215,
    "textPath": "collected/archive/pages/eu-fulltext/downstream-council.txt"
+  },
+  {
+   "name": "downstream-oeil-summary-1879956",
+   "code": "2025/0419(COD)",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/document-summary?id=1879956",
+   "lines": 94,
+   "textPath": "collected/archive/pages/eu-fulltext/downstream-oeil-summary-1879956.txt"
+  },
+  {
+   "name": "downstream-oeil-summary-1914940",
+   "code": "2025/0419(COD)",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/document-summary?id=1914940",
+   "lines": 101,
+   "textPath": "collected/archive/pages/eu-fulltext/downstream-oeil-summary-1914940.txt"
   }
  ]
 }

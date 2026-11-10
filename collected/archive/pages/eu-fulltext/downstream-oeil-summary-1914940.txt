@@ -1,0 +1,103 @@
+[주소] https://oeil.europarl.europa.eu/oeil/en/document-summary?id=1914940
+
+Document summary | Legislative Observatory | European Parliament
+Access to page content (press "Enter")
+Direct access to language menu (press "Enter")
+Direct access to search menu (press "Enter")
+EN - English
+FR - français
+EN - English
+News
+Topics
+MEPs
+About Parliament
+Plenary
+Committees
+Delegations
+EU budget
+Other websites View other websites
+News
+Topics
+MEPs
+About Parliament
+Plenary
+Committees
+Delegations
+EU budget
+Multimedia Centre
+Presidency
+Secretariat-general
+Elections
+Thinktank
+EP Newshub
+At your service
+Visits
+Legislative Observatory
+Legislative train
+Contracts and Grants
+Register
+Open Data Portal
+Liaison offices
+Legislative Observatory
+European Parliament
+Find a procedure
+Please fill in this field to find a procedure
+European Parliament
+Search Menu
+Home
+Search
+Legislative priorities
+Find out more
+Contact us
+Carbon Border Adjustment Mechanism: extension of its scope to downstream goods and anti-circumvention measures
+2025/0419(COD) 15/09/2026
+The European Parliament adopted by 464 votes to 50, with 159 abstentions, amendments to the proposal for a regulation of the European Parliament and of the Council amending Regulation (EU) 2023/956 as regards the extension of its scope to downstream goods and anti-circumvention measures.
+The matter has been referred back to the committee responsible for interinstitutional negotiations.
+The Commission proposes to expand the scope of the CBAM as of 1 January 2028 to include selected steel- and aluminium-intensive downstream products, thereby addressing the risk that emissions are shifted along the value chain rather than effectively reduced. At the same time, the Commission proposes additional measures to prevent avoidance behaviour.
+The main amendments adopted in plenary session concern the following points:
+Scope
+Members approved the Commission's proposal to extend the scope beyond basic materials to an extensive list of downstream products – finished steel and aluminium goods such as fasteners, wire, springs and household articles – and broadened it further than the Commission proposed.
+The Regulation should not apply to electricity flows from non-EU countries used by grid operators to maintain network stability.
+The amended text specifies that the Commission should actively engage with third countries on the interoperability of carbon pricing systems and the alignment of monitoring, reporting and verification systems.
+Outermost regions
+The Commission should be empowered to grant, on a duly reasoned request from the Member State concerned, a temporary and product-specific temporary derogation of the obligations laid down in that Regulation for operators established in outermost regions, having limited access to Union supply chains. Any temporary derogation should be subject to a prior assessment by the Commission on a case-by-case basis, taking into account criteria such as the distance from the European continent, the specific conditions of supply, market size, logistical constraints, the risk of circumvention and the need to ensure a level playing field.
+Scrap steel or aluminium
+Where the good contains steel or aluminium scrap, whether from pre- or post-consumer scrap, details of the quantity of scrap contained in the good and whether this consists of pre-consumer scrap, post-consumer scrap, or a mix of both.
+Combating abusive practices
+To effectively address abusive practices, country-level default values should be applied systematically and ex ante to combinations of countries and goods defined as being at high risk of abusive practices.
+To identify the combinations of goods and countries at high risk of abusive practices, the Commission should evaluate at least the following indicators: (i) a higher heterogeneity of emission intensities, (ii) the ability to circumvent measures, (iii) the third country’s climate ambition and (iv) the risks of voluntary public intervention to reallocate production.
+Operators and importers should retain the possibility to use actual values when they fulfil previously defined set of criteria, that confirm that they do not engage in abusive practices.
+The Commission should publish the default values referred to in Regulation (EU) 2023/956 in a timely manner before their application. Those default values should be regularly reviewed in accordance with transparent and robust methodologies.
+Trade, cooperation or other agreements concluded by the Union with third countries, unless specifically providing for linking with the EU ETS, should not directly or indirectly exempt authorised CBAM declarants from obligations under this Regulation and should not contain provisions that could undermine the effective implementation of the CBAM or give rise to trade remedies in response to its application.
+Simplified reporting for the LDCs
+Members are proposing simplified reporting for least-developed countries (LDCs) and a technical assistance framework, but removed the Commission's option to count Paris Agreement Article 6 carbon credits against CBAM obligations, since this issue is likely to be discussed in the context of the upcoming revision of the EU emissions trading system (ETS).
+International cooperation on carbon pricing
+The Commission should proactively engage with third countries and international organisations to promote carbon pricing policies, enhance transparency and mutual understanding on the CBAM, and encourage collaborative solutions to technical and policy concerns raised by third countries.
+Remote sales
+Members introduced a new provision on monitoring and enforcement of the single mass-based threshold for importers for distance sales. The competent authorities will require importers for distance sales, or their appointed representatives, to report to the competent authority of the Member State where they are registered, the aggregate value and volume of CBAM goods facilitated through distance sales transactions.
+Severe price-related disruptions
+Members rejected the Commission's proposed safeguard that would have allowed goods to be removed from the scope of the mechanism in the event of price shocks. In its place, Members want to add a mechanism to temporarily redirect CBAM revenues generated from those goods to the sectors affected by the severe disturbances in the internal market.
+Text adopted by Parliament, partial vote at 1st reading/single reading
+Share this page
+Facebook
+X
+LinkedIn
+Whatsapp
+Data Protection Notice
+Legislative Observatory
+Tools
+Press Service Ordinary legislative procedure Parliament register EUR-Lex Council register Delegated acts register
+Committees
+Home Meetings Documents Events Supporting analyses
+Plenary
+Plenary sitting Around plenary Questions and declarations Legislative texts adopted Plenary calendar
+Delegations
+Delegations calendar Home
+MEPs
+Search
+At your service
+Home
+European Parliament
+News Topics MEPs About Parliament Plenary Committees Delegations EU budget
+Facebook Twitter Flickr LinkedIn YouTube Instagram Pinterest Reddit
+Contact Sitemap Legal notice Privacy policy Accessibility
