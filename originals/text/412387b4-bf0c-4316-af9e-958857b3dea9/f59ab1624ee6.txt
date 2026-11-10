@@ -1,0 +1,65 @@
+EUROPEAN COMMISSION
+DIRECTORATE-GENERAL
+TAXATION AND CUSTOMS UNION
+
+Brussels, 08 January 2026
+
+Q & A ON NEW ARTICLE 27A
+Subject:
+
+The potential application of new Article 27a of the CBAM Regulation
+
+Q1. What could the Commission do if CBAM has a severe impact on the price of
+goods?
+A1. The CBAM Regulation does not currently allow for the suspension or removal of
+goods from the scope of application of the measure. Any modification of the list of goods
+would require an amendment of the Regulation after agreement of the European Parliament
+and the Council.
+Therefore, the Commission has included, as part of the proposal adopted last 17 December,
+a new Article 27a would allow the Commission to remove goods temporarily from the list
+in Annex I of the Regulation if it considers that the inclusion of a good in Annex I causes
+severe harm to the Union internal market due to serious and unforeseen circumstances
+related to the impact on the prices of goods.
+If Article 27a (as adopted by the Commission in December 2025) is adopted by the colegislators, the Commission would assess whether there is relevant evidence showing that
+the impact of the CBAM on the price of certain goods causes severe harm to the Union
+internal market due to serious and unforeseen circumstances. If the conclusion of that
+assessment is that a CBAM good should be removed from Annex I, the Commission would
+be empowered to remove the affected goods from Annex I of the CBAM Regulation.
+If the Commission concludes that such evidence exists, it could remove the goods affected
+from such impact from the scope of the CBAM Regulation through the adoption of a
+delegated act, until those serious and unforeseen circumstances no longer exist. Those
+measures can apply to any goods covered by Annex I of the CBAM Regulation.
+
+Q2. If the Commission applies Article 27a (if adopted by the co-legislators as
+proposed by the Commission), can the removal of a certain good from the scope of
+the CBAM Regulation be retroactive?
+A2. Yes, it can.
+If Article 27a (as adopted by the Commission in December 2025) is adopted by the colegislators, and the Commission assesses a concrete case and concludes that the conditions
+in such Article are met, it needs to adopt a delegated act to remove the affected goods from
+Annex I of the CBAM Regulation. It is likely that the serious and unforeseen circumstances
+causing severe harm to the Union internal market exist before that delegated act is
+1
+
+published in the official journal, which means that the affected goods have to be removed
+from the scope of the CBAM Regulation with retroactive effect, i.e. from the moment the
+Commission considers that the conditions set out in Article 27a started to be met.
+
+Q3. If the Commission decides to apply Article 27a retroactively, as of 1 January
+2026, and CBAM declarants had purchased CBAM certificates for the affected goods
+imported during the period where that measure applies, what would happen?
+A3. This circumstance would not apply in 2026 because CBAM certificates can only be
+purchased as of 1 February 2027 according to Article 20 of the CBAM Regulation. If the
+delegated act stemming from Article 27a applies before that date, no CBAM certificates
+could have been purchased and therefore, no financial consequences would take place for
+CBAM declarants.
+However, if the delegated act stemming from Article 27a would apply after that date and
+CBAM declarants have bought CBAM certificates corresponding to imports in 2026 or
+later, CBAM declarants who had purchased CBAM certificates for the imports of such
+goods would have to be reimbursed of the price they paid for those certificates.
+This procedure is the natural consequence of the retroactive effect of that measure. This
+reimbursement has to be set out in an EU legal text, which could be the delegated act
+stemming from Article 27a or a different one.
+
+2
+
+

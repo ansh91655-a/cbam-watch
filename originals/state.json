@@ -407,11 +407,627 @@
     }
    ],
    "replaces": ""
+  },
+  "bc15e68d-566d-4419-88ec-b8f5c6823eb2": {
+   "id": "bc15e68d-566d-4419-88ec-b8f5c6823eb2",
+   "filename": "TAXUD-2023-01189-01-00-EN-ORI-00.pdf",
+   "label": "Download (1.65 MB - PDF)",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/bc15e68d-566d-4419-88ec-b8f5c6823eb2_en?filename=TAXUD-2023-01189-01-00-EN-ORI-00.pdf",
+   "lang": "en",
+   "page": "ec-guidance",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-10",
+   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "9e97f779be795e857e3bc68642cbda2314f04fbc33143d122736743072a4d810",
+     "date": "2026-11-10",
+     "bytes": 1733884,
+     "pages": 98,
+     "file": "originals/files/bc15e68d-566d-4419-88ec-b8f5c6823eb2/9e97f779be79.pdf",
+     "text": "originals/text/bc15e68d-566d-4419-88ec-b8f5c6823eb2/9e97f779be79.txt",
+     "chars": 201065
+    }
+   ],
+   "replaces": ""
+  },
+  "013fa763-5dce-4726-a204-69fec04d5ce2": {
+   "id": "013fa763-5dce-4726-a204-69fec04d5ce2",
+   "filename": "CBAM_Questions and Answers.pdf",
+   "label": "Download (604.21 KB - PDF)",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/013fa763-5dce-4726-a204-69fec04d5ce2_en?filename=CBAM_Questions%20and%20Answers.pdf",
+   "lang": "en",
+   "page": "ec-news",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-10",
+   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "0d86eac8f7509269da665822a0d1e2d16368035df3b93cf7155793666c9cf278",
+     "date": "2026-11-10",
+     "bytes": 618710,
+     "pages": 63,
+     "file": "originals/files/013fa763-5dce-4726-a204-69fec04d5ce2/0d86eac8f750.pdf",
+     "text": "originals/text/013fa763-5dce-4726-a204-69fec04d5ce2/0d86eac8f750.txt",
+     "chars": 142852
+    }
+   ],
+   "replaces": ""
+  },
+  "412387b4-bf0c-4316-af9e-958857b3dea9": {
+   "id": "412387b4-bf0c-4316-af9e-958857b3dea9",
+   "filename": "Q A on Article 27a.pdf",
+   "label": "Download (116.05 KB - PDF)",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/412387b4-bf0c-4316-af9e-958857b3dea9_en?filename=Q%20%20A%20on%20Article%2027a.pdf",
+   "lang": "en",
+   "page": "ec-news",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-10",
+   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "f59ab1624ee6515ac24e7ff8490f53986e27e2cf5fb899534d2a86d250796423",
+     "date": "2026-11-10",
+     "bytes": 118839,
+     "pages": 2,
+     "file": "originals/files/412387b4-bf0c-4316-af9e-958857b3dea9/f59ab1624ee6.pdf",
+     "text": "originals/text/412387b4-bf0c-4316-af9e-958857b3dea9/f59ab1624ee6.txt",
+     "chars": 3883
+    }
+   ],
+   "replaces": ""
+  },
+  "918c5629-b1a1-4c4a-9e38-77c1f9e2df12": {
+   "id": "918c5629-b1a1-4c4a-9e38-77c1f9e2df12",
+   "filename": "FAQ-electricity-24Mar26.pdf",
+   "label": "Download (237.93 KB - PDF)",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/918c5629-b1a1-4c4a-9e38-77c1f9e2df12_en?filename=FAQ-electricity-24Mar26.pdf",
+   "lang": "en",
+   "page": "ec-news",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-10",
+   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "4a74e2d22ca4c4c576bd17e178e5c9158fe26cbd09529984782d950758719344",
+     "date": "2026-11-10",
+     "bytes": 243641,
+     "pages": 3,
+     "file": "originals/files/918c5629-b1a1-4c4a-9e38-77c1f9e2df12/4a74e2d22ca4.pdf",
+     "text": "originals/text/918c5629-b1a1-4c4a-9e38-77c1f9e2df12/4a74e2d22ca4.txt",
+     "chars": 6534
+    }
+   ],
+   "replaces": ""
+  },
+  "2c15cd0e-2447-4ef8-ab70-68b80b66ede8": {
+   "id": "2c15cd0e-2447-4ef8-ab70-68b80b66ede8",
+   "filename": "CBAM Communication template for installations_en_20241213.xlsx",
+   "label": "Download (1.27 MB - XLSX)",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/2c15cd0e-2447-4ef8-ab70-68b80b66ede8_en?filename=CBAM%20Communication%20template%20for%20installations_en_20241213.xlsx",
+   "lang": "en",
+   "page": "ec-news",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-10",
+   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "5a4e28fdbccfdca45a2c0520184b551a20c0c7bba3db79f87d78c9e58a6c0917",
+     "date": "2026-11-10",
+     "bytes": 1333557,
+     "pages": 0,
+     "file": "originals/files/2c15cd0e-2447-4ef8-ab70-68b80b66ede8/5a4e28fdbccf.xlsx",
+     "text": "originals/text/2c15cd0e-2447-4ef8-ab70-68b80b66ede8/5a4e28fdbccf.txt",
+     "chars": 234513
+    }
+   ],
+   "replaces": ""
+  },
+  "8d00a979-e57d-4e53-a11f-8b01370236a9": {
+   "id": "8d00a979-e57d-4e53-a11f-8b01370236a9",
+   "filename": "Communication-template-examples.zip",
+   "label": "Download (7.77 MB - ZIP)",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/8d00a979-e57d-4e53-a11f-8b01370236a9_en?filename=Communication-template-examples.zip",
+   "lang": "en",
+   "page": "ec-news",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-10",
+   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "8869495c30def9600d95e60313d3fc753721efbbe90f54fb3a860c08fc577705",
+     "date": "2026-11-10",
+     "bytes": 8148247,
+     "pages": 0,
+     "file": "",
+     "text": "",
+     "chars": 0,
+     "kept": false
+    }
+   ],
+   "replaces": ""
+  },
+  "9e724f6e-0860-4abb-848a-8b0f1911463a": {
+   "id": "9e724f6e-0860-4abb-848a-8b0f1911463a",
+   "filename": "Outreach wave.zip",
+   "label": "Download (18.8 MB - ZIP)",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/9e724f6e-0860-4abb-848a-8b0f1911463a_en?filename=Outreach%20wave.zip",
+   "lang": "en",
+   "page": "ec-news",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-10",
+   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "4b90fc971638a58dfae44b1b68cc06d7e69f6e8b4557897c265dd5ead38fd571",
+     "date": "2026-11-10",
+     "bytes": 19709795,
+     "pages": 0,
+     "file": "",
+     "text": "",
+     "chars": 0,
+     "kept": false
+    }
+   ],
+   "replaces": ""
+  },
+  "5595ce5b-9fd2-42f6-9908-ed6325338ffa": {
+   "id": "5595ce5b-9fd2-42f6-9908-ed6325338ffa",
+   "filename": "20251208-Updated-list-of-NCAs-for-CBAM.pdf",
+   "label": "national competent authority",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/5595ce5b-9fd2-42f6-9908-ed6325338ffa_en?filename=20251208-Updated-list-of-NCAs-for-CBAM.pdf",
+   "lang": "en",
+   "page": "ec-definitive",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-10",
+   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "708b6db1e811194042aea83f133e928fde11654ce6b58ae7076ac630818fed90",
+     "date": "2026-11-10",
+     "bytes": 357960,
+     "pages": 9,
+     "file": "originals/files/5595ce5b-9fd2-42f6-9908-ed6325338ffa/708b6db1e811.pdf",
+     "text": "originals/text/5595ce5b-9fd2-42f6-9908-ed6325338ffa/708b6db1e811.txt",
+     "chars": 8710
+    }
+   ],
+   "replaces": ""
+  },
+  "7abe56cc-4af0-490d-90e1-0a0825aabe37": {
+   "id": "7abe56cc-4af0-490d-90e1-0a0825aabe37",
+   "filename": "CBAM and developing countries.pdf",
+   "label": "Download (113.2 KB - PDF)",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/7abe56cc-4af0-490d-90e1-0a0825aabe37_en?filename=CBAM%20and%20developing%20countries.pdf",
+   "lang": "en",
+   "page": "ec-definitive",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-10",
+   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "03bc70163ccf9d2d07a8ecc9e88f7bef51e70c3f17fa3e574396cfd5924c9cf2",
+     "date": "2026-11-10",
+     "bytes": 115913,
+     "pages": 2,
+     "file": "originals/files/7abe56cc-4af0-490d-90e1-0a0825aabe37/03bc70163ccf.pdf",
+     "text": "originals/text/7abe56cc-4af0-490d-90e1-0a0825aabe37/03bc70163ccf.txt",
+     "chars": 4206
+    }
+   ],
+   "replaces": ""
+  },
+  "9afeaac7-a967-4d14-81a3-3a2f7802894e": {
+   "id": "9afeaac7-a967-4d14-81a3-3a2f7802894e",
+   "filename": "CBAM-UMN-UI-manual-Release-2.2-Declarant-Portal-SfA-v2.00-EN.pdf",
+   "label": "CBAM UMN UI manual",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/9afeaac7-a967-4d14-81a3-3a2f7802894e_en?filename=CBAM-UMN-UI-manual-Release-2.2-Declarant-Portal-SfA-v2.00-EN.pdf",
+   "lang": "en",
+   "page": "ec-definitive",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-10",
+   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "509c1e598d50d4ca9cbe6f9e2333ab6e38319da8c61b9e7100397b21e93cada0",
+     "date": "2026-11-10",
+     "bytes": 2378722,
+     "pages": 49,
+     "file": "originals/files/9afeaac7-a967-4d14-81a3-3a2f7802894e/509c1e598d50.pdf",
+     "text": "originals/text/9afeaac7-a967-4d14-81a3-3a2f7802894e/509c1e598d50.txt",
+     "chars": 87236
+    }
+   ],
+   "replaces": ""
+  },
+  "bc281bd8-6cef-4859-97e2-590d563c08be": {
+   "id": "bc281bd8-6cef-4859-97e2-590d563c08be",
+   "filename": "CBAM-Registry-access-for-non-EU-installation-operators-technical-user-manual-v3.00-EN.pdf",
+   "label": "Technical user manual – CBAM Registry access for non-EU installation operators",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/bc281bd8-6cef-4859-97e2-590d563c08be_en?filename=CBAM-Registry-access-for-non-EU-installation-operators-technical-user-manual-v3.00-EN.pdf",
+   "lang": "en",
+   "page": "ec-registry",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-10",
+   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "47445518635c1e138dc285b0d7b3fd314accae79b3368cf0480c6124f5fe659c",
+     "date": "2026-11-10",
+     "bytes": 10820051,
+     "pages": 117,
+     "file": "originals/files/bc281bd8-6cef-4859-97e2-590d563c08be/47445518635c.pdf",
+     "text": "originals/text/bc281bd8-6cef-4859-97e2-590d563c08be/47445518635c.txt",
+     "chars": 175561
+    }
+   ],
+   "replaces": ""
+  },
+  "b51e2e64-6ca5-4ece-b035-fb569d4d60ba": {
+   "id": "b51e2e64-6ca5-4ece-b035-fb569d4d60ba",
+   "filename": "O3CI Presentation-V1.pdf",
+   "label": "Download (588.28 KB - PDF)",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/b51e2e64-6ca5-4ece-b035-fb569d4d60ba_en?filename=O3CI%20Presentation-V1.pdf",
+   "lang": "en",
+   "page": "ec-registry",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-10",
+   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "093348c2cf77d13959a2204e3e78da1dfa62660bb8dc79e3023f7819f7d04a0a",
+     "date": "2026-11-10",
+     "bytes": 602399,
+     "pages": 3,
+     "file": "originals/files/b51e2e64-6ca5-4ece-b035-fb569d4d60ba/093348c2cf77.pdf",
+     "text": "originals/text/b51e2e64-6ca5-4ece-b035-fb569d4d60ba/093348c2cf77.txt",
+     "chars": 2457
+    }
+   ],
+   "replaces": ""
+  },
+  "88ad279b-b8a2-4688-b4bf-4b06fc69a0f9": {
+   "id": "88ad279b-b8a2-4688-b4bf-4b06fc69a0f9",
+   "filename": "CBAM Registration Guide_Factsheet.pdf",
+   "label": "Download (3.45 MB - PDF)",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/88ad279b-b8a2-4688-b4bf-4b06fc69a0f9_en?filename=CBAM%20Registration%20Guide_Factsheet.pdf",
+   "lang": "en",
+   "page": "ec-registry",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-10",
+   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "e2968ffd04552f665cf439bf8531713d969c814b56b06677cc7cdee680a14b84",
+     "date": "2026-11-10",
+     "bytes": 3615951,
+     "pages": 2,
+     "file": "originals/files/88ad279b-b8a2-4688-b4bf-4b06fc69a0f9/e2968ffd0455.pdf",
+     "text": "originals/text/88ad279b-b8a2-4688-b4bf-4b06fc69a0f9/e2968ffd0455.txt",
+     "chars": 3249
+    }
+   ],
+   "replaces": ""
+  },
+  "9361fade-6f19-4799-b2ef-f6a4ff681af2": {
+   "id": "9361fade-6f19-4799-b2ef-f6a4ff681af2",
+   "filename": "CBAM-Operators-Non-EU-Companies-Guidance-on-access-request-procedure-v2.00.pdf",
+   "label": "Download (5.27 MB - PDF)",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/9361fade-6f19-4799-b2ef-f6a4ff681af2_en?filename=CBAM-Operators-Non-EU-Companies-Guidance-on-access-request-procedure-v2.00.pdf",
+   "lang": "en",
+   "page": "ec-registry",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-10",
+   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "bd4e5b323b632d72310dcc84b6e7a4c4ec6b41999356f4b857f205ff48942f02",
+     "date": "2026-11-10",
+     "bytes": 5525211,
+     "pages": 29,
+     "file": "originals/files/9361fade-6f19-4799-b2ef-f6a4ff681af2/bd4e5b323b63.pdf",
+     "text": "originals/text/9361fade-6f19-4799-b2ef-f6a4ff681af2/bd4e5b323b63.txt",
+     "chars": 50562
+    }
+   ],
+   "replaces": ""
+  },
+  "df0ccebd-805e-4d2d-97f0-fa7e81160733": {
+   "id": "df0ccebd-805e-4d2d-97f0-fa7e81160733",
+   "filename": "CBAM-Operators_Non-EU-Companies_Guidance-on-Delegation-of-Access-Rights-to-Employees-procedure-v2.10_Final.pdf",
+   "label": "Download (2.01 MB - PDF)",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/df0ccebd-805e-4d2d-97f0-fa7e81160733_en?filename=CBAM-Operators_Non-EU-Companies_Guidance-on-Delegation-of-Access-Rights-to-Employees-procedure-v2.10_Final.pdf",
+   "lang": "en",
+   "page": "ec-registry",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-10",
+   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "c3f95f9d4a97b02e900df7b1fb7c5713d835dd8d79b9f3f94d1e0782ed72f116",
+     "date": "2026-11-10",
+     "bytes": 2107929,
+     "pages": 29,
+     "file": "originals/files/df0ccebd-805e-4d2d-97f0-fa7e81160733/c3f95f9d4a97.pdf",
+     "text": "originals/text/df0ccebd-805e-4d2d-97f0-fa7e81160733/c3f95f9d4a97.txt",
+     "chars": 43410
+    }
+   ],
+   "replaces": ""
+  },
+  "bf7a956b-3cf5-4508-83bd-507395ce44a2": {
+   "id": "bf7a956b-3cf5-4508-83bd-507395ce44a2",
+   "filename": "CBAM-Accredited_Verifiers_Guidance-on-access-request-procedure-v1.00_EN.pdf",
+   "label": "Download (5.64 MB - PDF)",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/bf7a956b-3cf5-4508-83bd-507395ce44a2_en?filename=CBAM-Accredited_Verifiers_Guidance-on-access-request-procedure-v1.00_EN.pdf",
+   "lang": "en",
+   "page": "ec-registry",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-10",
+   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "b75e68fa28da997548a855c05359f520133ed32a2819a3357cad50853fe8db88",
+     "date": "2026-11-10",
+     "bytes": 5908776,
+     "pages": 40,
+     "file": "originals/files/bf7a956b-3cf5-4508-83bd-507395ce44a2/b75e68fa28da.pdf",
+     "text": "originals/text/bf7a956b-3cf5-4508-83bd-507395ce44a2/b75e68fa28da.txt",
+     "chars": 64263
+    }
+   ],
+   "replaces": ""
+  },
+  "60557464-fa82-4b09-bb04-974ef94ae488": {
+   "id": "60557464-fa82-4b09-bb04-974ef94ae488",
+   "filename": "QUICK GUIDE FOR ACCREDITED VERIFIERS ON HOW TO REQUEST TECHNICAL USER ACCESS.pdf",
+   "label": "Download (984.66 KB - PDF)",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/60557464-fa82-4b09-bb04-974ef94ae488_en?filename=QUICK%20GUIDE%20FOR%20ACCREDITED%20VERIFIERS%20ON%20HOW%20TO%20REQUEST%20TECHNICAL%20USER%20ACCESS.pdf",
+   "lang": "en",
+   "page": "ec-registry",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-10",
+   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "24b3f34fb86e3ce0c166c6e09976deb0c31d8b4f3006ca1efd2e225ee5f511e6",
+     "date": "2026-11-10",
+     "bytes": 1008288,
+     "pages": 5,
+     "file": "originals/files/60557464-fa82-4b09-bb04-974ef94ae488/24b3f34fb86e.pdf",
+     "text": "originals/text/60557464-fa82-4b09-bb04-974ef94ae488/24b3f34fb86e.txt",
+     "chars": 3955
+    }
+   ],
+   "replaces": ""
+  },
+  "fdefe841-6058-47fe-962b-0e6e8d904f69": {
+   "id": "fdefe841-6058-47fe-962b-0e6e8d904f69",
+   "filename": "CBAM-UMN-UI-manual-R3.2-Installation-Operators-and-Accredited-Verifiers-Portal-v4.00-EN.pdf",
+   "label": "Download (12.44 MB - PDF)",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/fdefe841-6058-47fe-962b-0e6e8d904f69_en?filename=CBAM-UMN-UI-manual-R3.2-Installation-Operators-and-Accredited-Verifiers-Portal-v4.00-EN.pdf",
+   "lang": "en",
+   "page": "ec-registry",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-10",
+   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "ffb786fe3be709bffbd796e73c3d6e8417c0b27d1c5d2380daf7789f53dbd35f",
+     "date": "2026-11-10",
+     "bytes": 13039562,
+     "pages": 146,
+     "file": "originals/files/fdefe841-6058-47fe-962b-0e6e8d904f69/ffb786fe3be7.pdf",
+     "text": "originals/text/fdefe841-6058-47fe-962b-0e6e8d904f69/ffb786fe3be7.txt",
+     "chars": 229242
+    }
+   ],
+   "replaces": ""
+  },
+  "d047c9eb-2acd-4d88-a561-6dda809d7b24": {
+   "id": "d047c9eb-2acd-4d88-a561-6dda809d7b24",
+   "filename": "Privacy Statement_CBAM Registry.pdf",
+   "label": "Download (247.95 KB - PDF)",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/d047c9eb-2acd-4d88-a561-6dda809d7b24_en?filename=Privacy%20Statement_CBAM%20Registry.pdf",
+   "lang": "en",
+   "page": "ec-registry",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-10",
+   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "2448b6a5916e0ff9af308836b5e6a0a09a6ecef91464d88fbcf9bbd5b3b5ab51",
+     "date": "2026-11-10",
+     "bytes": 253900,
+     "pages": 9,
+     "file": "originals/files/d047c9eb-2acd-4d88-a561-6dda809d7b24/2448b6a5916e.pdf",
+     "text": "originals/text/d047c9eb-2acd-4d88-a561-6dda809d7b24/2448b6a5916e.txt",
+     "chars": 22654
+    }
+   ],
+   "replaces": ""
+  },
+  "08a58996-5d5e-4541-9b35-2dd3503e49d0": {
+   "id": "08a58996-5d5e-4541-9b35-2dd3503e49d0",
+   "filename": "A4_CBAM Factsheet_EN_Cement_V02.pdf",
+   "label": "Download (1 MB - PDF)",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/08a58996-5d5e-4541-9b35-2dd3503e49d0_en?filename=A4_CBAM%20Factsheet_EN_Cement_V02.pdf",
+   "lang": "en",
+   "page": "ec-sectors",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-10",
+   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "a64debac7080d58c12d2123a9db4da71e201999cbcaa6e35a63a9ba2a1c1a294",
+     "date": "2026-11-10",
+     "bytes": 1050647,
+     "pages": 2,
+     "file": "originals/files/08a58996-5d5e-4541-9b35-2dd3503e49d0/a64debac7080.pdf",
+     "text": "originals/text/08a58996-5d5e-4541-9b35-2dd3503e49d0/a64debac7080.txt",
+     "chars": 6028
+    }
+   ],
+   "replaces": ""
+  },
+  "b568f476-7704-4333-af33-eeb99c95b49d": {
+   "id": "b568f476-7704-4333-af33-eeb99c95b49d",
+   "filename": "A4_CBAM Factsheet_EN_Aluminium_V02.pdf",
+   "label": "Download (1008.56 KB - PDF)",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/b568f476-7704-4333-af33-eeb99c95b49d_en?filename=A4_CBAM%20Factsheet_EN_Aluminium_V02.pdf",
+   "lang": "en",
+   "page": "ec-sectors",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-10",
+   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "810504a79457ecd350bf0423ee551997b1481837cf29f779f50597fe5d812d67",
+     "date": "2026-11-10",
+     "bytes": 1032766,
+     "pages": 2,
+     "file": "originals/files/b568f476-7704-4333-af33-eeb99c95b49d/810504a79457.pdf",
+     "text": "originals/text/b568f476-7704-4333-af33-eeb99c95b49d/810504a79457.txt",
+     "chars": 6216
+    }
+   ],
+   "replaces": ""
+  },
+  "c5f12baf-c021-493d-bb20-3705e8d73cb9": {
+   "id": "c5f12baf-c021-493d-bb20-3705e8d73cb9",
+   "filename": "A4_CBAM Factsheet_EN_Fertilisers_V03.pdf",
+   "label": "Download (1.07 MB - PDF)",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/c5f12baf-c021-493d-bb20-3705e8d73cb9_en?filename=A4_CBAM%20Factsheet_EN_Fertilisers_V03.pdf",
+   "lang": "en",
+   "page": "ec-sectors",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-10",
+   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "358d5f8ee78586650db86f1154d839692c945a174df79c06550f68cb6799ef63",
+     "date": "2026-11-10",
+     "bytes": 1123574,
+     "pages": 2,
+     "file": "originals/files/c5f12baf-c021-493d-bb20-3705e8d73cb9/358d5f8ee785.pdf",
+     "text": "originals/text/c5f12baf-c021-493d-bb20-3705e8d73cb9/358d5f8ee785.txt",
+     "chars": 6109
+    }
+   ],
+   "replaces": ""
+  },
+  "79b2a2c0-ec2e-48ce-b36e-dbd0e2913404": {
+   "id": "79b2a2c0-ec2e-48ce-b36e-dbd0e2913404",
+   "filename": "A4_CBAM Factsheet_EN_Hydrogen_V2.pdf",
+   "label": "Download (936.7 KB - PDF)",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/79b2a2c0-ec2e-48ce-b36e-dbd0e2913404_en?filename=A4_CBAM%20Factsheet_EN_Hydrogen_V2.pdf",
+   "lang": "en",
+   "page": "ec-sectors",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-10",
+   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "4474f5a5fed4c63b48a96b4d7f54384d35a30d1c2a14fbd68d72c3dfbaa023da",
+     "date": "2026-11-10",
+     "bytes": 959184,
+     "pages": 2,
+     "file": "originals/files/79b2a2c0-ec2e-48ce-b36e-dbd0e2913404/4474f5a5fed4.pdf",
+     "text": "originals/text/79b2a2c0-ec2e-48ce-b36e-dbd0e2913404/4474f5a5fed4.txt",
+     "chars": 5302
+    }
+   ],
+   "replaces": ""
+  },
+  "38cd3170-997a-45cf-bda5-4cc41ed3dea5": {
+   "id": "38cd3170-997a-45cf-bda5-4cc41ed3dea5",
+   "filename": "A4_CBAM Factsheet_EN_Electricity_V03.pdf",
+   "label": "Download (964.22 KB - PDF)",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/38cd3170-997a-45cf-bda5-4cc41ed3dea5_en?filename=A4_CBAM%20Factsheet_EN_Electricity_V03.pdf",
+   "lang": "en",
+   "page": "ec-sectors",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-10",
+   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "582bbd852fb551ffc40cc36d3ef403bb0b7996180c92fc78f88f3a5fca970674",
+     "date": "2026-11-10",
+     "bytes": 987364,
+     "pages": 2,
+     "file": "originals/files/38cd3170-997a-45cf-bda5-4cc41ed3dea5/582bbd852fb5.pdf",
+     "text": "originals/text/38cd3170-997a-45cf-bda5-4cc41ed3dea5/582bbd852fb5.txt",
+     "chars": 3687
+    }
+   ],
+   "replaces": ""
   }
  },
  "baseline": "2026-11-10",
- "checkedAt": "2026-11-10T16:49:01+09:00",
+ "checkedAt": "2026-11-10T16:57:46+09:00",
  "full": false,
- "notes": [],
- "docCount": 17
+ "notes": [
+  "97ae41e4: 받지 못함(202 , 2035바이트)",
+  "5eb1f852: 받지 못함(403 HTTP Error 403: Forbidden, 7978바이트)",
+  "37c2855b: 받지 못함(403 HTTP Error 403: Forbidden, 7990바이트)",
+  "d255e5a1: 받지 못함(403 HTTP Error 403: Forbidden, 7974바이트)",
+  "c5e2f28e: 받지 못함(403 HTTP Error 403: Forbidden, 8102바이트)",
+  "A4_CBAM Factsheet_HI_Cement.pdf: 받지 못함(403 HTTP Error 403: Forbidden, 8015바이트)",
+  "A4_CBAM Factsheet_Cement_MK.pdf: 받지 못함(403 HTTP Error 403: Forbidden, 7974바이트)",
+  "A4_CBAM Factsheet_Cement_SR.pdf: 받지 못함(403 HTTP Error 403: Forbidden, 8033바이트)",
+  "fa3c6d9a: 받지 못함(403 HTTP Error 403: Forbidden, 8074바이트)",
+  "A4_CBAM Factsheet_HI_Aluminium.pdf: 받지 못함(403 HTTP Error 403: Forbidden, 8023바이트)",
+  "A4_CBAM Factsheet_Aluminium_MK.pdf: 받지 못함(403 HTTP Error 403: Forbidden, 8087바이트)",
+  "A4_CBAM Factsheet_Aluminium_SR.pdf: 받지 못함(403 HTTP Error 403: Forbidden, 7933바이트)",
+  "c86ff3a8: 받지 못함(403 HTTP Error 403: Forbidden, 8034바이트)",
+  "A4_CBAM Factsheet_HI_Fertilisers.pdf: 받지 못함(403 HTTP Error 403: Forbidden, 7970바이트)",
+  "A4_CBAM Factsheet_Fertilisers_MK.pdf: 받지 못함(403 HTTP Error 403: Forbidden, 7988바이트)",
+  "A4_CBAM Factsheet_EN_Fertilisers_SR.pdf: 받지 못함(403 HTTP Error 403: Forbidden, 8028바이트)",
+  "781ea8fa: 받지 못함(403 HTTP Error 403: Forbidden, 8016바이트)",
+  "e8793d8c: 받지 못함(403 HTTP Error 403: Forbidden, 7953바이트)",
+  "A4_CBAM Factsheet_HI_Iron & Steel.pdf: 받지 못함(403 HTTP Error 403: Forbidden, 8007바이트)",
+  "A4_CBAM Factsheet_Iron & Steel_MK.pdf: 받지 못함(403 HTTP Error 403: Forbidden, 8017바이트)",
+  "A4_CBAM Factsheet_Iron & Steel_SR.pdf: 받지 못함(403 HTTP Error 403: Forbidden, 7971바이트)",
+  "872865bc: 받지 못함(403 HTTP Error 403: Forbidden, 8054바이트)",
+  "A4_CBAM Factsheet_HI_Hydrogen.pdf: 받지 못함(403 HTTP Error 403: Forbidden, 7955바이트)",
+  "A4_CBAM Factsheet_Hydrogen_MK.pdf: 받지 못함(403 HTTP Error 403: Forbidden, 8100바이트)",
+  "A4_CBAM Factsheet_Hydrogen_SR.pdf: 받지 못함(403 HTTP Error 403: Forbidden, 7954바이트)",
+  "52a9eac1: 받지 못함(403 HTTP Error 403: Forbidden, 8055바이트)",
+  "A4_CBAM Factsheet_HI_Electricity.pdf: 받지 못함(403 HTTP Error 403: Forbidden, 7968바이트)",
+  "A4_CBAM Factsheet_Electricity_MK.pdf: 받지 못함(403 HTTP Error 403: Forbidden, 8020바이트)",
+  "A4_CBAM Factsheet_Electricity_SR.pdf: 받지 못함(403 HTTP Error 403: Forbidden, 8062바이트)"
+ ],
+ "docCount": 41,
+ "pages": {
+  "ec-registry": "2026-11-10",
+  "ec-verification": "2026-11-10",
+  "ec-definitive": "2026-11-10",
+  "ec-news": "2026-11-10",
+  "ec-guidance": "2026-11-10",
+  "ec-sectors": "2026-11-10"
+ }
 }

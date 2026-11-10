@@ -1,0 +1,98 @@
+Version 18 March 2026
+
+Frequently Asked Questions on CBAM1 and Electricity
+Disclaimer: this document does not constitute a legally binding act and it is of an
+explanatory nature. Legal provisions of Union law take precedence over the contents of this
+document and should always be consulted. The authentic texts of the EU legal instruments
+are those published in the Official Journal of the European Union. This guidance was
+prepared by Commission services and does not commit the European Commission. Only the
+Court of Justice of the European Union is competent to authoritatively interpret Union law.
+
+Who is the authorised CBAM declarant for electricity?
+The authorised declarant for CBAM purposes must be the same entity that imports the CBAM
+goods, i.e. the entity that submits the customs declaration and refers to the CBAM account
+number therein. This entity is either the importer or the indirect customs representative. This
+applies to all CBAM goods including electricity, and follows from the combined provisions of
+Articles 3(15), 3(17) 5(1), 5(2) and 5(4) and 17(1) of Regulation (EU) 2023/956 (the CBAM
+Regulation). Under customs legislation, the “importer” is the person identified by current data
+element 13 04 000 000 in Annex B of the Union Customs Code Delegated Act (UCC-DA)2. It
+should be noted that customs legislation does not dictate which type of entity should submit
+this declaration. The entities could be electricity traders, interconnector operators,
+transmission system operators (TSOs), individual companies who consume electricity etc.
+The person lodging the customs declaration will be the result of commercial arrangements
+between the parties involved.
+It should also be noted that Article 5(4) of the CBAM merely provides a derogation from the
+general authorisation regime that applies to certain electricity importers, but does not define
+who the CBAM declarant should be. In cases covered by Article 5(4), the CBAM declarant is
+the person to whom capacity has been allocated and who nominates this capacity, and who
+declares the import of electricity in the customs declaration. Hence, the general regime
+remains applicable that only an importer or an indirect customs representative can act as
+CBAM declarant. Equally, for electricity importers not covered by Article 5(4), the CBAM
+declarant is either the importer or the indirect customs representative. The only difference
+between importers covered by Art. 5(4) and those not covered by that Article is that the
+former are considered to be CBAM declarant, without having to apply for a CBAM
+authorisation, while the latter are required to undergo the standard authorisation procedure in
+line with Articles 5 and 17 of the CBAM Regulation in order to become authorised CBAM
+declarants. It should be noted that where an indirect customs representative wants to act as
+CBAM declarant for the person to whom capacity has been allocated and who nominates this
+
+Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023 establishing a
+carbon border adjustment mechanism (CBAM), as amended.
+2
+Commission Delegated Regulation (EU) 2015/2446 of 28 July 2015 supplementing Regulation (EU) No
+952/2013 of the European Parliament and of the Council as regards detailed rules concerning certain provisions
+of the Union Customs Code.
+1
+
+Version 18 March 2026
+
+capacity, that indirect customs representative is also required to undergo the standard
+authorisation procedure.
+
+What type of electricity flow should be reported in CBAM?
+According to Articles 2(1) and 5(4) of the CBAM Regulation, CBAM declarations must
+report the same electricity flows that were included in the customs declarations for release for
+free circulation (importation).
+Customs legislation requires that a customs declaration is lodged for all goods imported into
+the EU. For electricity, only quantities intended to be put in the Union market or for private
+use or consumption in the customs territory Union have to be declared for customs purposes,
+for release for free circulation (see Article 201 UCC3). The CBAM declarant should be
+prepared to provide any evidence supporting the imports declared both in the CBAM and
+customs declarations.
+
+How to deal with electricity in transit?
+Following the general CBAM principles, imports of electricity that must be declared in
+CBAM have to match the ones declared in the customs declarations for release for free
+circulation (import). Unlike other goods that are normally declared to customs when they are
+at the border customs office, in the case of imported electricity that is to be consumed in the
+Union, this electricity is deemed to be placed under the Union transit procedure and later
+declared for release for free circulation after it has entered the Union. Where electricity enters
+and exits the EU without being consumed in the EU this electricity is deemed to have been
+placed under the customs transit procedure (see Article 321 of Regulation (EU) 2015/24474)
+and no CBAM declaration is required. It is to be noted that Article 5(4) of the CBAM
+Regulation (“Imports are to be measured per border for time periods no longer than one hour
+and no deduction of export or transit in the same hour shall be possible.”) does not refer to
+transit in the sense of a customs procedure as set out in the UCC.
+It should also be noted that under custom rules, the country of production of electricity is
+always the same as the country of origin.
+CBAM declarants should ensure that the same identification of country of origin is made both
+in the customs declaration and in the CBAM declaration.
+
+Regulation (EU) No 952/2013 of the European Parliament and of the Council of 9 October 2013 laying down
+the Union Customs Code, as amended.
+4
+Commission Implementing Regulation (EU) 2015/2447 of 24 November 2015 laying down detailed rules for
+implementing certain provisions of Regulation (EU) No 952/2013 of the European Parliament and of the Council
+laying down the Union Customs Code.
+3
+
+Version 18 March 2026
+
+If electricity that is produced in a third country A, is traded via another third country B, and
+then exported to the EU, and the embedded emissions of that electricity are calculated for
+CBAM purposes based on default values, then the value to be used for the calculation is the
+one for country A, i.e. the country of production of the imported electricity (see Annex IV,
+point 4.2 of the Regulation).
+Finally, it should be recalled that electricity produced in the EU is not subject to CBAM.
+
+

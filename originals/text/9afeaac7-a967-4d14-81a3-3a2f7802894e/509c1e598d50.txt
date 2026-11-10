@@ -1,0 +1,2059 @@
+EUROPEAN COMMISSION
+DIRECTORATE-GENERAL
+TAXATION AND CUSTOMS UNION
+Digital Delivery of Customs and Taxation Policies
+Architecture & Digital Operations
+
+User Interface Manual
+CBAM – Declarants Portal
+
+Date:
+
+16/06/2026
+
+Status:
+
+Submitted for acceptance (SfA)
+
+Version:
+
+6.00 EN
+
+Author:
+
+SOFT-DEV
+
+Approved by:
+
+DG TAXUD
+
+Reference number:
+
+DLV-984-7.3-202-1-15
+
+Public:
+
+DG TAXUD external
+
+Confidentiality:
+
+Publicly available (PA)
+
+Commission européenne/Europese Commissie, 1049 Bruxelles/Brussel, BELGIQUE/BELGIË - Tel. +32 22991111
+
+Document control information
+Property
+Title
+Subtitle
+Author
+Project owner
+Solution provider
+DG TAXUD Project Manager
+Version
+Confidentiality
+Date
+
+Value
+User Interface Manual
+CBAM – Declarants Portal
+SOFT-DEV
+Head of Unit of DG TAXUD Unit C2 CBAM, Energy and Green Taxation
+DG TAXUD Unit B2 Architecture & Digital Operations
+DG TAXUD Unit B2 Architecture & Digital Operations
+6.00 EN
+Publicly available (PA)
+16/06/2026
+
+Property
+Framework Contract
+Specific Contract
+
+Value
+TAXUD/2021/CC/162
+
+Contract information
+SC35
+
+Document history
+The document author is authorised to make the following types of changes to the document without
+requiring that the document be re-approved:
+• Editorial, formatting, and spelling;
+• Clarification.
+To request a change to this document, contact the document author or project owner.
+Changes to this document are summarised in the table in reverse chronological order (latest version
+first).
+Version Date
+
+Description
+
+6.00
+
+16/07/2026
+
+5.10
+
+26/06/2026
+
+Updated as per reviewer’s comments
+(QC60087).
+Document submitted for acceptance (SfA)
+Updated for release 3.2
+Document submitted for review (SfR)
+
+5.00
+
+10/11/2025
+
+4.10
+
+24/10/2025
+
+Updated as per reviewer’s comments
+(QC58112).
+Document submitted for acceptance (SfA)
+Updated for release 3.1.
+Document submitted for review (SfR)
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Action1
+I/R
+
+Section
+
+I/R
+
+1.2,
+2.1,
+2.1.2,
+2.4,
+3.2,
+3.3,
+3.4.1, 3.4.2,
+3.4.6,
+3.5.2.0,
+3.5.3, 3.5.5,
+3.5.6, 4.1.1.4,
+4.1.4, 4.2.1,
+4.2.3, 4.2.4.3,
+4.2.4.4,
+4.2.4.5,
+4.3.1
+Where
+needed.
+
+I/R
+
+I/R
+
+Where
+needed.
+
+2.4, 3.2, 3.3
+4.2, 4.3.
+
+Page 2 / 49
+
+Version Date
+
+Description
+
+4.00
+
+01/07/2025
+
+3.10
+
+23/05/2025
+
+3.00
+
+14/04/2025
+
+2.10
+
+01/04/2025
+
+Updated as per reviewer’s comments
+(QC56977).
+Document submitted for acceptance (SfA)
+Updated for release 3.0.
+Document submitted for review (SfR)
+No change (QC56360)
+Document submitted for acceptance (SfA)
+Updated for release 2.2.3.
+Document submitted for review (SfR)
+
+2.00
+
+10/12/2024
+
+1.10
+
+21/11/2024
+
+1.00
+
+11/10/2024
+
+0.10
+0.01
+
+27/09/2024
+13/09/2024
+
+1
+
+Updated as per reviewer’s comments.
+Document submitted for acceptance (SfA)
+Updated for release 2.2.
+Document submitted for review (SfR)
+Updated as per reviewer’s comments.
+Document submitted for acceptance (SfA)
+Document submitted for review (SfR)
+Initial version of the document containing only
+specific information for AMM.
+Document submitted for information (SfI)
+
+Action1
+R
+
+Section
+
+I/R
+
+All
+
+-
+
+None
+
+I/R
+
+Where
+needed.
+Where
+needed.
+Where
+needed.
+Where
+needed.
+All
+All
+
+R
+I/R
+R
+I
+I
+
+Where
+needed.
+
+Action: I=Insert R=Replace
+
+Configuration management: document location
+The latest accepted version of this controlled document is stored on: CIRCABC.
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 3 / 49
+
+Table of contents
+1
+1.1
+1.2
+1.3
+1.4
+1.5
+1.6
+1.7
+1.8
+2
+2.1
+
+2.2
+2.3
+2.4
+3
+3.1
+3.2
+3.3
+3.4
+
+3.5
+
+3.6
+4
+4.1
+
+INTRODUCTION ............................................................................................................................. 8
+Document purpose............................................................................................................................... 8
+Target audience ................................................................................................................................... 8
+Scope ................................................................................................................................................... 8
+Structure .............................................................................................................................................. 8
+Reference documents .......................................................................................................................... 8
+Applicable documents ......................................................................................................................... 8
+Abbreviations & acronyms .................................................................................................................. 9
+Definitions ......................................................................................................................................... 10
+GENERAL INFORMATION ........................................................................................................ 11
+System Overview .............................................................................................................................. 11
+2.1.1 Authorisation Management Module ...................................................................................... 11
+2.1.2 Data Reconciliation for Monitoring and Control Purposes ................................................... 12
+Authorised Use Permission ............................................................................................................... 12
+User Support...................................................................................................................................... 12
+Supported Browsers .......................................................................................................................... 12
+GETTING STARTED .................................................................................................................... 14
+Access the CBAM Declarant Portal .................................................................................................. 14
+Declarant user permissions overview ................................................................................................ 14
+Navigation Map ................................................................................................................................. 15
+Generic User Interface Features ........................................................................................................ 16
+3.4.1 Header ................................................................................................................................... 16
+3.4.2 Footer .................................................................................................................................... 17
+3.4.3 Tooltips.................................................................................................................................. 17
+3.4.4 Validation of a form .............................................................................................................. 17
+3.4.5 Read-only and editable modes ............................................................................................... 19
+3.4.6 General error messages.......................................................................................................... 19
+3.4.7 Language ............................................................................................................................... 20
+3.4.8 Time zone .............................................................................................................................. 20
+Basic System Functions .................................................................................................................... 20
+3.5.1 List and tables ........................................................................................................................ 20
+3.5.2 Homepage.............................................................................................................................. 21
+3.5.3 Attachments ........................................................................................................................... 22
+3.5.4 Received notifications management ...................................................................................... 23
+3.5.5 Sent notifications management .............................................................................................. 27
+3.5.6 Email preferences page.......................................................................................................... 28
+Exit the CBAM Declarant Portal ....................................................................................................... 30
+USING THE SYSTEM FOR A SPECIFIC BUSINESS COMPONENT ................................... 31
+Authorisations ................................................................................................................................... 31
+4.1.1 Common functionalities ........................................................................................................ 31
+4.1.2 Submit a new application ...................................................................................................... 33
+4.1.3 Find my applications and authorisations ............................................................................... 34
+4.1.4 Submit documentation for import of electricity .................................................................... 34
+4.1.5 View application or authorisation details .............................................................................. 36
+4.1.6 Make an action on an application .......................................................................................... 37
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 4 / 49
+
+4.2
+
+4.3
+
+4.1.7 Make an action on an authorisation ....................................................................................... 38
+Data Reconciliation for Monitoring and Control Purposes ............................................................... 40
+4.2.1 View CBAM declarant account ............................................................................................. 40
+4.2.2 View quantifiable assets overview ........................................................................................ 40
+4.2.3 Financial liabilities ................................................................................................................ 41
+4.2.4 Monitor quantifiable assets .................................................................................................... 42
+4.2.5 Control quantifiable assets .................................................................................................... 47
+Operators 3rd Countries Installation................................................................................................... 47
+4.3.1 Search for Installations .......................................................................................................... 47
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 5 / 49
+
+List of tables
+Table 1: Reference documents ................................................................................................................................ 8
+Table 2: Applicable documents ............................................................................................................................... 9
+Table 3: Abbreviations and acronyms ................................................................................................................... 10
+Table 4: Definitions .............................................................................................................................................. 11
+Table 5: Security roles .......................................................................................................................................... 14
+Table 6: Declarant Portal menu ............................................................................................................................. 16
+Table 7: General error messages ........................................................................................................................... 19
+
+List of figures
+Figure 1: Header.................................................................................................................................................... 16
+Figure 2: Details when clicking on the user icon .................................................................................................. 17
+Figure 3: Footer..................................................................................................................................................... 17
+Figure 4: Tooltip ................................................................................................................................................... 17
+Figure 5: Validation of a form .............................................................................................................................. 18
+Figure 6: Text field in error due to syntactic validation ........................................................................................ 18
+Figure 7: Text field in error due to semantic validation ........................................................................................ 18
+Figure 8: Example of an error message ................................................................................................................. 19
+Figure 9: Pagination of a list ................................................................................................................................. 20
+Figure 10: Sorting applied on the first column of a list ......................................................................................... 21
+Figure 11: Filtering applied with wildcard search ................................................................................................. 21
+Figure 12: Notification widgets............................................................................................................................. 22
+Figure 13: Add new button ................................................................................................................................... 22
+Figure 14: Upload attachment area with drag and drop capability ........................................................................ 22
+Figure 15: Upload of an attachment ...................................................................................................................... 23
+Figure 16: Editable view of the attachments ......................................................................................................... 23
+Figure 17: Received notifications list button in the CBAM declarant portal menu .............................................. 24
+Figure 18: Received notifications list in the CBAM declarant portal ................................................................... 24
+Figure 19: Columns button and column selection drop-down menu..................................................................... 25
+Figure 20: View notification button ...................................................................................................................... 25
+Figure 21: Archive and Unarchive buttons ........................................................................................................... 26
+Figure 22: Reply button on the notifications list page .......................................................................................... 26
+Figure 23: Reply button on top of the notification page ....................................................................................... 26
+Figure 24: Sent notifications list button in the CBAM declarant portal menu ...................................................... 27
+Figure 25: Sent notifications list in the CBAM declarant portal ........................................................................... 27
+Figure 26: View sent notification button ............................................................................................................... 28
+Figure 27: Email preferences button in the CBAM Declarant menu .................................................................... 29
+Figure 28: Add email preference ........................................................................................................................... 29
+Figure 29: Email preference details page .............................................................................................................. 29
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 6 / 49
+
+Figure 30: Save email preference .......................................................................................................................... 30
+Figure 31: Send validation email functionality ..................................................................................................... 30
+Figure 32: Logout button ...................................................................................................................................... 30
+Figure 33: Authorisation management related pages ............................................................................................ 31
+Figure 34: Prefill and clear buttons ....................................................................................................................... 31
+Figure 35: Save for later use button ...................................................................................................................... 31
+Figure 36: Search actor information based on EORI number button .................................................................... 32
+Figure 37: Export button on the view authorisation page ..................................................................................... 32
+Figure 38: Export button on the view application page ........................................................................................ 33
+Figure 39: New application button ........................................................................................................................ 33
+Figure 40: Available tabs on the submit application page .................................................................................... 33
+Figure 41: My applications and authorisations button .......................................................................................... 34
+Figure 42: Example of view application button .................................................................................................... 34
+Figure 43: Provide documentation for import of electricity button ....................................................................... 35
+Figure 44: Submit documentation for import of electricity form page ................................................................. 36
+Figure 45: Example of "Process data" tab on the view application page .............................................................. 37
+Figure 46: Actions available on view application page......................................................................................... 38
+Figure 47: Actions available on view authorisation page ..................................................................................... 39
+Figure 48: Actions available on view authorisation page (Guarantee) .................................................................. 39
+Figure 49: Data reconciliation for monitoring and control purposes related pages ............................................... 40
+Figure 50: CBAM declarant account .................................................................................................................... 40
+Figure 51: Quantifiable assets overview ............................................................................................................... 41
+Figure 52: Current overview of quantifiable assets ............................................................................................... 41
+Figure 53: Financial liabilities (2026) ................................................................................................................... 42
+Figure 54: Goods and emission ............................................................................................................................. 42
+Figure 55: Query goods and emissions page ......................................................................................................... 43
+Figure 56: Query button ........................................................................................................................................ 43
+Figure 57: General tab in query overview results ................................................................................................. 44
+Figure 58: Query results table in query details results (Yearly aggregation) ........................................................ 45
+Figure 59: Query results table in query details results (Quarterly aggregation) .................................................... 45
+Figure 60: Query results table in query details results (None aggregation) .......................................................... 46
+Figure 61: Search for installations ........................................................................................................................ 48
+Figure 62: Search for Installations - Options ........................................................................................................ 48
+Figure 63: Search for installations – List of Results ............................................................................................. 49
+Figure 64: Search for Installations – Export search results ................................................................................... 49
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 7 / 49
+
+1 INTRODUCTION
+1.1 DOCUMENT PURPOSE
+The purpose of this document is to explain to the end-users of the CBAM declarant portal how to use it
+and benefit from its added value. This document provides help to get general information on the system,
+how to get started with the system and finally how to use the system with specific roles.
+
+1.2 TARGET AUDIENCE
+The target audience for this document includes:
+• Importers of CBAM goods into the EU or their indirect representatives (CBAM declarants)1;
+• Directorate-General Taxation and Customs Union (DG TAXUD)‘s Project team;
+o DG TAXUD Unit C2 CBAM, Energy and Green Taxation;
+o DG TAXUD Unit B2 Architecture & Digital Operations ;
+o DG TAXUD Unit B3 Customs Systems;
+• Directorate General for Informatics (DIGIT);
+• Directorate-General for Climate Action (DG CLIMA);
+• EU Member states and their National Competent Authorities;
+• SOFT-DEV Project team;
+• QA5 Project team;
+• TAXUD-OPS LOT1;
+• TAXUD-OPS LOT3 (responsible for Network and Security);
+• Operational teams.
+
+1.3 SCOPE
+The scope of this document is to provide directions to CBAM Declarants on the effective utilisation of
+the CBAM Declarant Portal. The features described comply with CBAM release 3.1.
+
+1.4 STRUCTURE
+This document is organised as follows:
+• Chapter 1 – Introduction: describes the scope and the objectives of the document;
+• Chapter 2 – General Information: provides the practical and theoretical details for the topics
+covered in the document;
+• Chapter 3 – Getting Started: details how to access the portal and introduces the generic User
+Interface features and basic system functions;
+• Chapter 4 - Using the System for a specific business component: describes the access to the
+pages and the actions that can be performed based on the business component.
+
+1.5 REFERENCE DOCUMENTS
+The table below lists the documents that are referred to in the current document.
+Ref.
+Title
+Originator
+Version
+No reference documents.
+Table 1: Reference documents
+
+Date
+
+1.6 APPLICABLE DOCUMENTS
+The table below lists the documents to which the current document must be compliant (e.g. FWC, SC,
+RfA).
+
+1
+
+More
+information
+mechanism_en#cbam
+
+available
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+on
+
+https://taxation-customs.ec.europa.eu/carbon-border-adjustmentPage 8 / 49
+
+Ref.
+A01
+A02
+A03
+A04
+
+A05
+
+Title
+Originator
+Framework Contract
+TAXUD/2021/CC/162
+SOFT-DEV Framework Quality Plan SDEV-FQP
+Specific Contract 35
+TAXUD/2025/DE/1057
+COMMISSION IMPLEMENTING
+European Commission
+REGULATION (EU) 2023/956
+of 10 May 2023
+REGULATION (EU) 2025/2083
+European Commission
+of 8 October 2025 amending
+Regulation (EU) 2023/956 as regards
+simplifying and strengthening the
+carbon border adjustment mechanism
+Table 2: Applicable documents
+
+Version
+N/A
+1.00
+N/A
+N/A
+
+Date
+24/06/2021
+18/06/2026
+11/12/2025
+10/05/2023
+
+N/A
+
+17/10/2025
+
+1.7 ABBREVIATIONS & ACRONYMS
+For a better understanding of the present document, the following table provides a list of the principal
+abbreviations and acronyms used.
+Abbreviation/Acronym
+Definition
+AMM
+Authorisation Management Module
+CBAM
+Carbon Border Adjustment Mechanism2
+CBAM TR
+CBAM Transitional Registry
+COM
+The Commission
+DRMC
+Data Reconciliation for Monitoring and Control
+purposes
+DTCA
+Decision-taking Competent Authority
+EFTA
+European Free Trade Association
+EORI
+Economic Operator Registration and
+Identification3
+EU
+European Union
+HRZ
+Horizontal
+IGM
+Imported Goods Management
+MS
+Member State
+NCA
+National Competent Authority
+TIN
+Trader Identification number
+UI
+User Interface
+UUM&DS
+Uniform User Management & Digital Signature4
+QA
+Quality Assurance
+
+2
+
+More
+information
+available
+on
+https://taxation-customs.ec.europa.eu/carbon-border-adjustmentmechanism_en#cbam.
+3
+More information available on https://taxation-customs.ec.europa.eu/customs-4/customs-procedures-importand-export-0/customs-procedures/economic-operators-registration-and-identification-number-eori_en.
+4
+More information available on https://customs-taxation.learning.europa.eu/course/view.php?id=494&section=1
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 9 / 49
+
+Table 3: Abbreviations and acronyms
+
+1.8 DEFINITIONS
+For a better understanding of the present document, the following table provides a list of the principal
+terms used.
+Term
+Definition
+An importer established in a Member State or an indirect customs representative
+Applicant
+who applies for the status of an authorised CBAM declarant.
+The CBAM system is separated in different business components depending on
+the type of business that an actor is involved. Examples of business components
+Business component
+covered in CBAM are amongst others: Authorisation management module,
+certificate management or declaration lifecycle management.
+CBAM Goods
+Goods listed in Annex I of CBAM Regulation. More details are provided in:
+https://eur-lex.europa.eu/eli/reg/2023/956/oj.
+The authority of a Member State responsible for registering the authorised
+CBAM declarant in the CBAM registry, processing applications for
+authorisation, and maintaining relevant information. There is only one CBAM
+Competent Authority per Member State; therefore, it is identified by the country
+code.
+In the following, two types of Competent Authorities are distinguished:
+Decision-taking Competent Authority: this is the Competent Authority of the
+Competent Authority
+country where the applicant or declarant is established. It holds the authority to
+make decisions regarding CBAM authorisations within its own country.
+Other Competent Authorities: these are Competent Authorities in the Member
+State, excluding the decision-taking Competent Authority. While they have
+supporting roles by providing information on the applicant during the
+consultation procedures, they do not have the final decision-taking authority for
+CBAM authorisations granted by the decision-taking Competent Authority.
+This means an authorised CBAM declarant, which is an importer established in
+a Member State or an indirect customs representative appointed by an importer,
+Declarant
+who is authorised to import goods into the customs territory of the European
+Union under the CBAM framework.
+Economic Operator Refers to a business or individual engaged in activities that fall under the
+regulations of the CBAM. This typically includes importers or producers of
+goods whose carbon emissions are subject to the CBAM regulations. These
+operators are responsible for complying with the CBAM s requirements, which
+may involve reporting the carbon content of their goods and paying carbon
+costs.
+Imported
+The Imported Goods Management module is intended to receive, store,
+Goods Management maintain and process Customs information related to CBAM Goods.
+Importer
+Either the person lodging a customs declaration for release for free circulation
+of goods in its own name and on its own behalf or, where the customs
+declaration is lodged by an indirect customs representative in accordance with
+Article 18 of Regulation (EU) No 952/2013, the person on whose behalf such a
+declaration is lodged.
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 10 / 49
+
+Term
+Indirect customs
+representative
+NCA
+Operator
+Representative
+Third country
+
+Definition
+A customs representative appointed by an importer established in a Member
+State. If the importer appoints an indirect customs representative and they agree,
+they can act as an authorised CBAM declarant and submit the application for
+an authorisation on behalf of the importer. The indirect customs representative
+is liable for all operations made for the importers it represents.
+National Competent Authority.
+Any person who operates or controls an installation in a third country.
+The indirect representative declared in imports customs declaration.
+A country or territory outside the customs territory of the Union.
+Table 4: Definitions
+
+2 GENERAL INFORMATION
+2.1 SYSTEM OVERVIEW
+The Declarant Portal User Interface facilitates the management of the CBAM Regulation, from the
+application lodging for an authorisation to the decision granting by the Competent Authority.
+The overall CBAM system covers several business components and is also composed of a horizontal
+component which provides functionalities that can be used horizontally by all business components (e.g.
+notifications, email preferences, document management). The Declarant portal covers the Authorisation
+management module (AMM) as business components.
+In practice, several User Interface systems cooperate with the Declarant portal providing an integrated
+solution allowing interactions between economic operators, national Competent Authorities, the
+commission and other IT applications.
+More information about
+the
+CBAM
+system
+is
+available
+customs.ec.europa.eu/carbon-border-adjustment-mechanism_en#cbam.
+
+on
+
+https://taxation-
+
+2.1.1 Authorisation Management Module
+To comply with the EU's Carbon Border Adjustment Mechanism (CBAM), importers must obtain a
+CBAM Authorisation. This authorisation is essential for importing regulated goods into the EU,
+ensuring that the carbon reporting and payment obligations set by the EU to reduce carbon leakage are
+met.
+The Authorisation Management Module allows to request a CBAM Authorisation and manage all
+related tasks. It serves as entry point to initiate the process, track the authorisation application status,
+and handle the ongoing authorisation.
+The Authorisation management module includes the following processes:
+• Authorisation granting;
+• Amendment;
+• Revocation;
+• End revocation;
+• Re-assessment;
+• Information which may affect the status or content of the decision;
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 11 / 49
+
+•
+•
+•
+•
+•
+
+Right to appeal;
+Request for additional information;
+Guarantee registration;
+Guarantee adjustment;
+Guarantee release.
+
+2.1.2 Data Reconciliation for Monitoring and Control Purposes
+DRMC includes the following functionalities:
+• View CBAM declarant account;
+• View quantifiable assets overview;
+• View financial liabilities;
+• Monitor quantifiable assets:
+o Query goods and emissions;
+o Query coverage;
+o Query certificates;
+o Monitor CBAM declaration;
+• Control quantifiable assets
+o View emission coverage rule compliance control results;
+The quantifiable assets are based on data from different CBAM components and include:
+• Goods quantities (in tonnes (t) and megawatt-hours (MWh));
+• Emissions (in tonnes of CO₂ (tCO₂));
+• CBAM certificates (in number of certificates and in euros (€)).
+
+The purchase of CBAM certificates and all related processes will only begin on 1 February 2027. In
+addition, the first CBAM declaration will be submitted during 2027.
+As a result, the screens related to CBAM certificates and CBAM declarations will not contain any data
+at this stage.
+
+2.2 AUTHORISED USE PERMISSION
+CBAM Declarant Portal is allowed to be used by importers of CBAM goods (or their indirect
+representative) who are registered in UUM&DS. Please contact your national CBAM helpdesk to get
+help to register and get permissions on UUM&DS.
+Further details on the required roles and responsibilities can be found in the section “Declarant user
+permissions overview”.
+
+2.3 USER SUPPORT
+CBAM Declarants need to contact their respective National Competent Authority Service Desk both for
+business & technical issues.
+
+2.4 SUPPORTED BROWSERS
+The application is relying on the browser compatibility of the latest and the 2 previous versions of
+common web browsers (Google Chrome, Mozilla Firefox, Microsoft Edge Chromium, Safari). More
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 12 / 49
+
+information can be found on the browser compatibility page of eUI in the following link:
+https://euidev.ecdevops.eu/eui-showcase-ux-components-19.x/showcase-dev-guide/docs/00b-generalinfos/04-browsers-support. In general, update to the latest browser version is advised for security
+reasons.
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 13 / 49
+
+3 GETTING STARTED
+Access to CBAM Declarant Portal is only allowed to economic operators who have registered in
+UUM&DS.
+Their respective NCA are responsible to assign the allowed roles in UUM&DS.
+
+3.1 ACCESS THE CBAM DECLARANT PORTAL
+Access to the Declarant Portal is established via UUM&DS. UUM&DS is used to authenticate
+the economic operator. Upon successful login to the Declarant Portal, the user will be directed
+to the Homepage. Please contact your national CBAM helpdesk for information about the actual
+procedure to connect to the portal via UUM&DS and for support about any issue with this
+matter.
+
+3.2 DECLARANT USER PERMISSIONS OVERVIEW
+Access to specific pages and functionalities in the CBAM Declarant portal is determined by the assigned
+Declarant user permissions. The overview table below lists the so far available declarant user
+permissions and the pages and actions accessible for each permission.
+Note that the “Administrate CBAM authorisation information” and “Submit CBAM authorisation
+information” permissions give access to the same pages; only the available actions are different.
+Permission
+
+Pages/functionalities
+
+View general
+information
+
+This permission is needed for any user connecting to the
+Declarant portal to access the general pages of the system.
+
+Upload file
+
+Grants permission to upload files within the Document
+Management System. Required for any document upload
+across the portal.
+
+View CBAM
+authorisation
+information
+Administrate
+CBAM
+authorisation
+information
+
+Submit CBAM
+authorisation
+information
+View monitoring
+and control
+performed by the
+CBAM Registry
+for the CBAM
+declarant
+
+This permission is proposed for any user needing to
+access the information of authorisation applications
+without the ability to modify them.
+This permission must be assigned to a user in charge of all
+actions that must be performed for CBAM authorisation
+application to prepare information to be communicated to
+the decision taking Competent Authority. However, this
+permission gives no rights to submit the information.
+This permission must be assigned to a user in charge of
+the effective submission of the information relevant to
+authorisation applications to a decision taking Competent
+Authority. In practice, this permission is also authorised to
+prepare the information and is therefore a complete
+permission with all rights.
+This permission allows declarant users to view the
+monitoring and control data managed by the CBAM
+Registry for the CBAM declarant.
+
+Table 5: Security roles
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 14 / 49
+
+3.3 NAVIGATION MAP
+The Declarant Portal is used by the economic operator for interacting with the other CBAM actors (NCA
+and the COM) in the scope of CBAM activities.
+The menu – available on the left-hand side of each page of the CBAM application – is given in Table 6.
+The Authorisations block is only displayed if the user has the role “AMM View information”.
+Block
+Header
+Action
+Description
+-
+
+-
+
+Homepage
+
+New application
+
+-
+
+My applications and
+authorisations
+
+-
+
+Provide documentation
+for import of electricity
+
+-
+
+My drafts
+
+Allows the user to view their
+saved drafts.
+
+-
+
+Received notifications
+list
+
+Allows the user to view all
+the notifications they have
+received.
+
+-
+
+Sent notifications list
+
+Allows the user to view all
+the notifications they have
+sent.
+
+-
+
+Email preferences
+
+Allows the user to view and
+configure the email
+preferences.
+
+CBAM declarant
+account
+
+Allows the user to view the
+CBAM declarant account
+details of the current CBAM
+declarant account
+
+Quantifiable assets
+overview
+
+Allows the user to view the
+overview of the quantifiable
+assets.
+
+Notifications
+
+-
+
+Monitor and
+control
+
+Allows the user to create a
+new application. More
+information is given in the
+section “Submit a new
+application”.
+Allows the user to view all
+applications and
+authorisations.
+Allows the user to submit
+supporting documents to the
+Competent Authority when
+electricity is imported through
+explicit capacity allocation.
+
+-
+
+Authorisations
+
+Account
+
+Allows the user to access the
+home page.
+
+-
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 15 / 49
+
+Block
+
+Header
+
+Action
+
+Description
+
+-
+
+Monitor quantifiable
+assets
+
+Control quantifiable
+assets
+
+Financial liabilities
+(2026)
+
+Allows the user to view his
+financial liabilities.
+
+Goods and emissions
+
+Allows the user to query data
+on the imported goods and the
+associated estimated
+emissions.
+
+Coverage
+
+Allows the user to query the
+coverage of estimated
+embedded emissions by
+credited CBAM certificates.
+
+Certificates
+
+Allows the user to query data
+on their CBAM certificates.
+
+Monitor CBAM
+declaration
+
+Allows the user to query data
+regarding the declarations.
+
+Emission coverage
+compliance
+
+Allows the user to control if
+the declarant has covered the
+required emission coverage.
+
+Table 6: Declarant Portal menu
+
+3.4 GENERIC USER INTERFACE FEATURES
+This section provides an explanation on the different generic User Interface features that can be found
+on the CBAM portal. The following sections can be found: Header, Footer, Tooltips, Validation of a
+form, Read-only and editable modes, General error messages, Language and Time zone.
+
+3.4.1 Header
+The header, which is displayed on each page, contains a button to display/hide the navigation menu, the
+European Commission logo, the title of the application, the logged-in username, the user icon and the
+language selector.
+
+Figure 1: Header
+When clicking on the user icon, the user can either view its user information (identification number,
+name, country…) or log out. To change the language, the user can click on the displayed language and
+select the desired one in the menu.
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 16 / 49
+
+Figure 2: Details when clicking on the user icon
+
+3.4.2 Footer
+The footer, which is displayed on each page, contains the “© European Commission” copyright, the
+indication of the current version of the system, a link to the privacy statement website of the European
+Commission, a link to the user manual and a link to the legal notice.
+Figure 3: Footer
+
+3.4.3 Tooltips
+The tooltips are used to provide extra information on some elements. An info icon
+indicates the
+availability of a tooltip, and the tooltip text appears when the user hovers over it with its cursor.
+
+Figure 4: Tooltip
+
+3.4.4 Validation of a form
+When the user fills in a form, the system verifies that the data has been properly entered according to
+the given rules. The validation of a form is performed in two steps:
+• Syntactic validation, performed at client-side;
+•
+
+Semantic / business validation, performed at server-side.
+The process is depicted in the figure below. Once the syntactic validation is successful, the
+semantic/business validation is performed (at submission of the form). If the latter is successful as well,
+the form is finally submitted.
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 17 / 49
+
+Figure 5: Validation of a form
+
+3.4.4.1 Syntactic validation
+With the syntactic validation, the following is checked: the cardinality (mandatory or optional) and the
+data format of a field. Field validation is performed in real time as the user enters data and when the user
+clicks the "Submit" button. Validation messages are displayed directly within the form, allowing users
+to identify and correct errors before submission.
+In case such validation is not satisfied, a corresponding message is displayed below the field, marked as
+invalid and highlighted in red.
+
+Figure 6: Text field in error due to syntactic validation
+
+3.4.4.2 Semantic validation
+With the semantic validation, the business rules are checked (e.g. one field out of two must be filled out,
+but not both). A field is validated only when the user clicks on the "Submit" button. Hence, such
+validation is not directly visible when the user completes a form; they must submit the form in order to
+see the error message(s). In case a field is not correctly filled in according to the business rule(s), an
+error message in a red box appears under the data group or element.
+
+Figure 7: Text field in error due to semantic validation
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 18 / 49
+
+3.4.5 Read-only and editable modes
+The system has two modes: read-only and editable. These modes control what users can do, ensuring
+that important information is protected while allowing necessary updates.
+In read-only mode, users can look at information but cannot make changes. This mode is useful for
+reviewing without the risk of accidentally changing anything. Examples of elements displayed in readonly mode: list pages (e.g., notifications list) and view pages (view application, view notification, view
+process data, …).
+In editable mode, users can add, change, or delete information, depending on their roles. This mode is
+designed on form elements on which input is needed from the users. Examples of elements displayed in
+editable-only mode: page forms (submit application, amendment request, reply pages,…), email
+preferences.
+
+3.4.6 General error messages
+In case of a generic error from the system, a generic error message will be displayed at the top-right
+corner of the page as a pop-up notification.
+
+Figure 8: Example of an error message
+The following error messages are displayed depending of the type of error that occurred:
+Error type
+Error message
+Generic technical A generic technical issue has occurred. Please try again later. If the issue
+persists,
+please
+contact
+the
+CBAM
+support
+(customsissue
+support@itsmtaxud.europa.eu) and provide the following:
+•
+•
+•
+
+a description of the situation where the error message appeared;
+a screenshot of the page where the error message occurred;
+the browser used and its version.
+
+Access restriction
+
+Access denied. You do not have permission to access this resource. If you
+believe this is an error, please contact the CBAM support (customssupport@itsmtaxud.europa.eu).
+
+Resource not found
+
+Resource not found. Please try again later, and if the issue persists, please
+contact the CBAM support (customs-support@itsmtaxud.europa.eu).
+Table 7: General error messages
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 19 / 49
+
+3.4.7 Language
+The system is available in the different EU languages, which allows the user to use the system in their
+own language. Note that the translation is applied for each label and tooltip separately in order to provide
+a maximum of textual information in the language of the user. Hence, some labels might not be translated
+in the selected languages (in such cases, the English translation will be displayed). By default, the
+selected language is the one previously chosen in the header, or if none is specified, it defaults to the
+browser’s language.
+The user is able to manually change the language of the system from the header. More information is
+provided in the section “Header”.
+
+3.4.8 Time zone
+Date fields and time limits are based on the Brussels Time Zone: Central European Time (UTC+01:00)
+for winter time or Central European Summer Time (UTC+02:00) for summer time. The system
+interprets these data as follows:
+• If a date is a start date, the related decision will take effect at the beginning of the day i.e., at
+00:00;
+• If a date is an end date, then the related decision will take effect at the end of the day, i.e., at
+24:00.
+Time limits are always computed in calendar days.
+
+3.5 BASIC SYSTEM FUNCTIONS
+3.5.1 List and tables
+Several list pages are present in the application. The following features are available in order to enhance
+the results’ consultation: pagination, sorting and filtering.
+
+3.5.1.1 Pagination
+The pagination capability can be available at the bottom of a list page or of a table.
+The maximum number of results to display per page can be configured by the user. By default, 20 results
+are displayed per page. The user is allowed to choose between 10, 20, 50, 75 or 100 displayed results
+per page. A navigation bar allows navigating among the different pages.
+Figure 9: Pagination of a list
+For data tables, the maximum number of entries shown is 5 per page of the data table.
+Users can navigate through the pages using a navigation bar with hyperlinks. This allows moving
+sequentially (e.g., from page 1 to 2, then 2 to 3, etc.) using the previous and next buttons. If the user is
+on the first or the last page, the corresponding link is not active.
+
+3.5.1.2 Sorting
+When the sorting capability is available, a clickable sorting icon is displayed next to the column title
+and will allow the user to sort the result in ascending or descending order. When enabled, the sorting is
+applied to the results of all pages.
+By default, records with an empty value will be displayed at the bottom of the list when sorting on
+ascending order and at the top when sorting on descending order.
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 20 / 49
+
+When sorting is done on alphanumeric fields, the order does not depend on the use of upper- or lowercase letters. Criteria related to a code list are sorted according to the code and not the description of the
+code.
+
+Figure 10: Sorting applied on the first column of a list
+
+3.5.1.3 Filtering and wildcards
+The filtering capability can be available in edit and read only mode. When it is available, an editable
+field box is displayed below the column title and will allow the user to filter the results based on the
+entered value. The filtering is case insensitive.
+When wildcard search is activated, the user can search with the use of the asterisk (*) or the percent (%)
+symbols to match any number of characters. Therefore, a query for which the reference number is
+CBAM-DE* (or CBAM-DE%) will retrieve all reference numbers starting with "CBAM-DE".
+Wildcard search is activated on the following pages:
+• Received notifications list
+• Sent notifications list
+
+Figure 11: Filtering applied with wildcard search
+
+3.5.2 Homepage
+When connecting to the GUI, after successful logging in, the user is automatically directed to the
+homepage. However, to come back to this page, the user can click on the “Homepage” button of the
+CBAM Declarant Portal menu (see section “Declarant user permissions overview”).
+On this page, the user can see a set of widgets focusing on the elements requiring some attention.
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 21 / 49
+
+3.5.2.0 Notifications widgets
+The widgets “Unanswered notifications” and “Unread notifications” both provide a filtered view of
+received notifications by the economic operator.
+The “Unanswered notifications” widget includes all notifications for which an answer is expected (i.e.
+“Request” = “Yes” and “Answered” = “No”). The “Unread notifications” widget includes all
+notifications for which the status is “Unread”.
+From these widgets, the user can directly access a specific notification detail or view the complete list
+of notifications by clicking on the title of the widget.
+
+Figure 12: Notification widgets
+
+3.5.3 Attachments
+When an attachment is expected in an editable form, the user can add a new attachment by clicking on
+the “Add new” button above the attachments table.
+
+Figure 13: Add new button
+Then, the upload attachment capability allows the user to select a file using the dedicated button or drag
+and drop a file into the delimited upload area. The maximum allowed file size is 20MB.
+
+Figure 14: Upload attachment area with drag and drop capability
+Once uploaded, the file information is displayed below the upload area, allowing to delete the file before
+adding the attachment in the user form. The user can also enter additional document information before
+inserting it in the form.
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 22 / 49
+
+Figure 15: Upload of an attachment
+The attached documents are displayed in a data table. In editable mode, the user can edit the document
+information, download the file and remove the document and its associated information. It is also
+possible to remove all documents by clicking on the “Remove all” button at the top of the table.
+
+Figure 16: Editable view of the attachments
+In read-only mode, the user can download the attached document, but they have no possibility to update
+the table.
+
+3.5.4 Received notifications management
+To view the list of received notifications, the user can click on “Received notifications list” in the
+“Notifications” drop-down of the CBAM declarant portal menu (see section “Declarant user permissions
+overview”).
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 23 / 49
+
+Figure 17: Received notifications list button in the CBAM declarant portal menu
+The user is then redirected to the “Notifications list” page in the “Received notifications” tab, displaying
+the list of all received notifications, with different information given in each column. The unread
+notifications are highlighted in bold font.
+
+Figure 18: Received notifications list in the CBAM declarant portal
+Notifications can be of two kinds:
+• Simple notifications informing the economic operator about new information. Example: status
+changes, new decision;
+• Requests for which the economic operator must provide an answer. Example: request for
+additional information.
+In particular, the list of notifications can contain amongst others:
+• The sender information. In the context of the Declarant Portal it essentially corresponds to the
+country of the Competent Authority. Note that no identifier is provided when the sender is a
+country or the commission;
+• The reference number corresponds to the reference number of the object (e.g. application,
+authorisation) related to the notification.
+• The subject of the notification;
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 24 / 49
+
+•
+•
+•
+
+•
+
+•
+
+The business context of the notification. In the case of the declarant portal, only authorisation
+management is supported for the time being;
+The reception time of the notification;
+The information related to the request notifications:
+o A boolean indicating whether the notification is a request;
+o The expiry date for the task to be completed;
+o An answer status indicating whether the notification has been answered, is pending or
+is obsolete.
+The read status of the notification:
+o Unread: specifies that the notification has not been read by the user;
+o Read: specifies that the notification has been read by the user. Note that as soon as the
+notification is opened, the notification is automatically marked as read;
+The priority of the notification, in case it has been indicated: “Low”, “Medium” or “High”.
+
+By clicking on the “Columns” button, the user can select which columns are displayed through a dropdown menu. The selection is saved for each user.
+
+Figure 19: Columns button and column selection drop-down menu
+For each displayed notification, the user can click on the related “View received notification” button in
+the actions column of the table to view all the information of one specific notification.
+
+Figure 20: View notification button
+Notifications can be archived. By clicking on the “Archive” button, the notification will disappear from
+the received notifications list. If the consult archives toggle is activated, the archived notifications can
+be viewed. Notifications can be unarchived by clicking on the “Unarchive” button, returning to the initial
+received notifications list.
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 25 / 49
+
+Figure 21: Archive and Unarchive buttons
+On a sent notification detail page, in addition to archiving/unarchiving, the following actions may be
+available:
+•
+
+"View received answer": opens the received notification containing the reply, when the sent
+notification was a request and a reply has been received;
+
+•
+
+"View request": opens the request originally received, when the sent notification is itself a
+reply.
+
+In addition to replying (on request notifications, see How to provide an answer to a notification?) and
+archiving/unarchiving, the following actions may be available on a received notification detail page,
+depending on the context:
+•
+
+"Mark as read": opening a notification marks it as read automatically; the user can also
+manually mark it as read or unread using this checkbox.
+
+•
+
+"View initial request": opens the related sent notification, when the received notification is the
+reply to a request previously sent by the user's group.
+
+•
+
+"View reply": opens the reply that was sent to this request.
+
+•
+
+"View linked task(s)": opens the Tasks list filtered on the notification's reference number. This
+action is only available to users who have the "View tasks list" role and only if at least one
+related task exists for the user's group.
+
+3.5.4.1 How to provide an answer to a notification?
+On the “Notifications list” page, some notifications are displayed with a “Reply” button in the actions
+column of the table.
+
+Figure 22: Reply button on the notifications list page
+When this button is displayed for a received notification, it means that an answer to the notification is
+expected from the declarant.
+To do so, the user can either directly click on the “Reply” button in the list, or first consult the notification
+details and then click on the “Reply” button at the top of the page.
+
+Figure 23: Reply button on top of the notification page
+The user is then redirected to the “Reply details page”, where the user must provide the requested
+information.
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 26 / 49
+
+3.5.5 Sent notifications management
+To view the list of sent notifications, the user can click on “Sent notifications list” in the “Notifications”
+drop-down of the CBAM declarant portal menu (see section “Declarant user permissions overview”).
+
+Figure 24: Sent notifications list button in the CBAM declarant portal menu
+The user is then redirected to the “Notifications list” page in the “Sent notifications” tab, displaying the
+list of all sent notifications, with different information given in each column.
+
+Figure 25: Sent notifications list in the CBAM declarant portal
+The sent notification can be related to the following contexts:
+• An answer to a request;
+• A request to trigger a new business process. Note that such possibility is defined in each business
+component.
+In particular, the list of sent notifications contains:
+• The recipient information (type and identifier when applicable): the recipient to which the
+notification has been sent. In case of a country or the commission, the identifier is not applicable;
+• The reference number corresponds to the reference number of the object (e.g. application,
+authorisation) related to the sent notification;
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 27 / 49
+
+•
+•
+•
+•
+•
+
+The subject of the sent notification;
+The business context of the sent notification. In the case of the declarant portal, only
+Authorisation management is supported for the time being;
+The sent time: the date and time at which the notification has been sent;
+The status of the sent notification, indicating if it has been successfully sent;
+The priority of the sent notification, in case it has been indicated: “Low”, “Medium” or
+“High”.
+
+By clicking on the “Columns” button, the user can select which columns are displayed through a dropdown menu, similarly as explained in Received notifications management. The selection is saved for
+each user.
+Note that for each displayed sent notification, the user can click on the related “View sent notification”
+button in the actions column of the table to consult all the information of one specific sent notification.
+
+Figure 26: View sent notification button
+Sent notifications can be archived. By clicking on the “Archive” button, the notification will disappear
+from the sent notifications list. If the consult archives toggle is activated, the archived sent notifications
+can be viewed. Sent notifications can be unarchived by clicking on the “Unarchive” button, returning to
+the initial sent notifications list.
+On a sent notification detail page, in addition to archiving/unarchiving, the following actions may be
+available:
+•
+•
+
+"View received answer": opens the received notification containing the reply, when the sent
+notification was a request and a reply has been received;
+"View request": opens the request originally received, when the sent notification is itself a reply.
+
+3.5.6 Email preferences page
+The email preferences page is related to a functionality in the CBAM Declarant portal that allows the
+user to receive email notifications related to the notifications that they receive inside the portal itself.
+To consult the email preferences page, the user can click on "Email preferences" in the "Account" dropdown of the CBAM Declarant menu (see section “Declarant user permissions overview”).
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 28 / 49
+
+Figure 27: Email preferences button in the CBAM Declarant menu
+On this page, the user can provide several email addresses for each business context. Each preference is
+defined for a single email address, together with the email language, one or more business contexts, and
+the indication of whether email alerts for new notifications must be received with that address.
+To add a new email preference, select "Add" in the table relevant for the business context in which you
+need to receive email alerts:
+
+Figure 28: Add email preference
+Then, complete the information required, including the business context(s) for which the alerts must be
+received. Set "Receive email alerts for new notifications" as "Yes" to activate the functionality and click
+on "Ok". Two additional filters can be set for each address: "Requests only", to receive emails only for
+request notifications, and "Minimum priority", to receive emails only for notifications with a priority
+equal to or higher than the one selected (notifications with no priority are then not sent). For each
+address, the user must also select the email language.
+
+Figure 29: Email preference details page
+At the bottom of the page, save the new preferences.
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 29 / 49
+
+Figure 30: Save email preference
+As soon as the indication is positive, all new filtered notifications relevant for the indicated business
+context received by the economic operator identified with an EORI number will be notified by email
+with non-sensitive information.
+Each email address must be verified before any email alert is sent to it. In the email preferences
+overview, an "Email verified" indicator is displayed for each address (a check icon when verified, a
+cross icon when not). When an address is added or updated, the user can trigger the verification by
+saving the preference: a dialog informs them that a confirmation link will be sent to the address and that
+it is valid for 24 hours. The verification email can also be resent at any time using the "Send verification
+email" action.
+No email notifications are sent to an address before it has been verified. When the recipient clicks the
+verification link in the confirmation email, they are redirected to the "Email verification" page, which
+confirms whether the verification succeeded. If the link is expired or invalid, the message "The provided
+link is expired or has been invalidated." is displayed. The user must be logged in to open this page.
+
+Figure 31: Send validation email functionality
+
+3.6 EXIT THE CBAM DECLARANT PORTAL
+When the user wants to exit the CBAM Declarant Portal, they must click on the “Logout” button located
+in the user drop-down, on the right-hand side of the header of the system. For security reasons, it is
+advisable for the users to logout when they have finished their work session.
+
+Figure 32: Logout button
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 30 / 49
+
+4 USING THE SYSTEM FOR A SPECIFIC BUSINESS
+COMPONENT
+4.1 AUTHORISATIONS
+The following section specifies the pages and functionalities that are specific to the Authorisation
+management module. The relevant pages are accessible under the block “Authorisations” in the CBAM
+declarant menu (see section “Declarant user permissions overview”).
+
+Figure 33: Authorisation management related pages
+
+4.1.1 Common functionalities
+4.1.1.1 Prefill functionality
+The prefill capability allows the user to prefill some information in an editable page with values already
+known by the system, that were for example provided at another step of the process.
+Each prefill is associated with a clear capability, which will delete all data present in the fields that can
+be prefilled.
+
+Figure 34: Prefill and clear buttons
+
+4.1.1.2 Save for later use
+On some editable pages, the user has the possibility to saves the page’s form fields for later. Doing so
+will allow the user to save an application draft in the case of application submission or to save a reply
+to a request from the NCA.
+
+Figure 35: Save for later use button
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 31 / 49
+
+All saved drafts are listed on the “My saved drafts page”. The user must click on “My drafts” in the
+“Authorisations” drop-down of the CBAM declarant menu (see section “Declarant user permissions
+overview”).
+Note that the drafts remain accessible until the user decides to submit or delete them.
+
+4.1.1.3 Actor information retrieval
+On some editable pages, the user has the possibility to search the name and address data related to a
+specific EORI or TIN number. For EFTA importers, a TIN number may be used as the main identifier
+instead of an EORI number.
+Hence when filling in a form, the user can click on the button "Search actor information based on
+EORI/TIN number". Depending on the identifier provided, the name and address data related to the
+EORI or TIN number will be retrieved and used to pre-fill the form.
+
+Figure 36: Search actor information based on EORI number button
+
+4.1.1.4 Export an application or an authorisation
+From the view application page or the view authorisation page, the user has the possibility to generate
+a printable version (in the form of a PDF document) of an application or an authorisation.
+To do so the user can click on the "Export" button on the "View application" or "View authorisation"
+page. Then the user must select a language in which they want to have the data exported, and click on
+"Export" in the dialog. The PDF will be automatically generated by the system.
+
+Figure 37: Export button on the view authorisation page
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 32 / 49
+
+Figure 38: Export button on the view application page
+For an application, the header, the stakeholders details, the activity details and the financial and
+operational details (the latter only if visible to the NCA) are exported. For an authorisation, only the
+header and the authorisation details are exported. In both cases, attachments themselves are not
+included in the export.
+The PDF file name follows the pattern YYYY-MM-DD-[Reference number] where the date is the
+current date and the reference number is the application reference number or the CBAM account
+number associated with the exported application or authorisation respectively.
+
+4.1.2 Submit a new application
+To submit an application, the user must click on the “New application” button in the “Authorisations”
+block of the menu (see section “Declarant user permissions overview”).
+
+Figure 39: New application button
+Clicking on this button will redirect the user on the “Submit application” page where the user must fill
+in the information for all different tabs.
+
+Figure 40: Available tabs on the submit application page
+When filling in and submitting the form, different errors could occur. More explanation on errors is
+given in the section “Validation of a form”. Once the application is successfully submitted, the user is
+redirected to the related “View application” page.
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 33 / 49
+
+Note that if needed, the user has the possibility to save the application draft for later use (see the section
+“Save for later use”).
+
+4.1.3 Find my applications and authorisations
+To view the details of a specific application or authorisation, the user can click on “My applications and
+authorisations” in the “Authorisations” drop-down of the CBAM declarant menu (see section “Declarant
+user permissions overview”).
+
+Figure 41: My applications and authorisations button
+The user will be redirected to the “My applications and authorisations” page. The page displays two
+tables:
+• The list above provides the application(s) submitted to the decision taking Competent Authority.
+• The list below provides a list of authorisations owned by the declarant.
+In order to see the details of a specific application or authorisation, the user must click on the associated
+view button, located at the right of each table.
+
+Figure 42: Example of view application button
+
+4.1.4 Submit documentation for import of electricity
+When transmission capacity for the import of electricity is allocated through explicit capacity allocation,
+the person to whom this capacity has been allocated, and who nominates it for import, is considered the
+authorised CBAM declarant in the Member State where the electricity import is declared in the customs
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 34 / 49
+
+declaration (Article 5(4) of Regulation (EU) 2023/956). In this case, the economic operator must provide
+supporting documentation to the Competent Authority in order to be authorised.
+To submit this documentation, the user clicks on "Provide documentation for import of electricity" in
+the "Authorisations" block of the menu (see section “Declarant user permissions overview”).
+
+Figure 43: Provide documentation for import of electricity button
+The user is redirected to the "Submit documentation for import of electricity" page. The economic
+operator identification (EORI number and/or TIN number, name and address) is prefilled by the system
+based on the logged-in user and cannot be modified. The user must:
+•
+
+Confirm whether the economic operator imports electricity through explicit capacity allocation;
+
+•
+
+Attach the required supporting documents (see section "Attachments"). The accepted file
+formats are PDF, DOC(X), XLS(X), JPG, PNG, JSON and CSV, with a maximum size of 20MB
+per file;
+
+•
+
+Optionally, provide a general remark.
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 35 / 49
+
+Figure 44: Submit documentation for import of electricity form page
+Once the form is completed, the user clicks on "Proceed" to submit the documentation. The system
+automatically routes it to the relevant Competent Authority based on the economic operator's
+identification and country of establishment. The user is then redirected to the Homepage.
+If needed, the user can save the form for later use (see section "Save for later use") or close the page
+without saving.
+Note that the "Proceed" button is only available to users with the "AMM Submit information" role.
+
+4.1.5 View application or authorisation details
+For both an application and an authorisation, the economic operator can consult the information related
+to the status and the processes that have been triggered.
+In both cases, a preview of the main information is provided in the Application / Authorisation process
+data.
+To access this page please refer to the section “Find my applications and authorisations”.
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 36 / 49
+
+Figure 45: Example of "Process data" tab on the view application page
+The following process data are available on the application details page
+• Authorisation issuance process
+• Request for additional information
+• Request for time limit extension
+• Provide adjustments
+• Application withdrawal
+• Appeal procedure
+• Guarantee registration
+The following process data are available on the authorisation details page:
+• Request for additional information
+• Revocation
+• Right to appeal
+• End revocation
+• Re-assessment
+• Amendment
+• Information which may affect the authorisation status or content
+• Guarantee adjustment
+• Guarantee release.
+The details of each previewed information are available when the user selects one of the displayed
+entities.
+
+4.1.6 Make an action on an application
+The applicant with the appropriate role can start actions on an application. Starting an action will always
+trigger a business process in the NCA portal and can therefore impact the status of the related
+application.
+Regardless of the action and the application, each action is launched in the same way by clicking on the
+appropriate button in the application details page.
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 37 / 49
+
+The following actions are available depending on the user role and the context:
+• Adjust application: allows a user to create a proposal for application adjustments and a period
+of time to implement the adjustments. The functionality is only available if the status of the
+Application is "Registered".
+• Withdraw application: allows a user to create a request to Withdraw the Application if no
+decision on the Application has been taken yet by the DTCA.
+• Right to appeal: allows a user to access information about the right to appeal procedure. This
+procedure is external and cannot be launched from the Declarant Portal.
+As explained in the section “Declarant user permissions overview”, the “AMM Administrate
+information” or “AMM Submit information” is needed to trigger any action. However, only the “AMM
+Submit Information” gives the right to actually submit the information during any process.
+
+Figure 46: Actions available on view application page
+
+4.1.7 Make an action on an authorisation
+The declarant with the appropriate role can start actions on an authorisation. Starting an action will
+always trigger a business process in the NCA portal and can therefore impact the status of the related
+authorisation.
+Regardless of the action and the authorisation, each action is launched in the same way by clicking on
+the appropriate button in the authorisation details page.
+The following actions are available depending on the user role and the context:
+• Request Amendment: allows a user to create a request to amend the Authorisation. This
+functionality is only available in case the authorisation status is "Active" and if there is no other
+ongoing process for that Authorisation;
+• Request Revocation: allows a user to create a request to revoke the Authorisation. This
+functionality is only available in case the authorisation status is "Active" and if there is no other
+ongoing process for that Authorisation;
+• Request Revocation withdrawal: allows a user to withdraw their revocation request, before the
+decision on the revocation is taken by the Competent Authority. The revocation withdrawal
+request can be received until a final decision has been made by the Competent Authority.
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 38 / 49
+
+•
+
+•
+
+Provide information which may affect the authorisation status or content: allows a user to inform
+the DTCA about changes that occurred to the information originally provided in the application.
+This functionality is only available in case the authorisation status is "Active" and if there is no
+other ongoing process for that Authorisation;
+Right to appeal: allows a user to access information about the right to appeal procedure
+regarding the revocation. This procedure is external and cannot be launched from the Declarant
+Portal.
+
+As explained in the section “Declarant user permissions overview”, the “AMM Administrate
+information” or “AMM Submit information” is needed to trigger any action. However, only the “AMM
+Submit Information” gives the right to actually submit the information during any process.
+
+Figure 47: Actions available on view authorisation page
+
+4.1.7.1 Make an action related to the guarantee management of an authorisation
+The following action is available depending on the user role and the context:
+• Request guarantee release: allows a user to initiate the guarantee release process. This is only
+available if a guarantee has been registered for the authorisation.
+As explained in the section “Declarant user permissions overview”, the “AMM Administrate
+information” or “AMM Submit information” is needed to trigger any action. However, only the “AMM
+Submit Information” gives the right to actually submit the information during any process.
+
+Figure 48: Actions available on view authorisation page (Guarantee)
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 39 / 49
+
+4.2 DATA RECONCILIATION FOR MONITORING AND CONTROL PURPOSES
+The following section specifies the pages and functionalities that are specific to DRMC. The relevant
+pages are accessible under the block “Monitor and control” in the declarant menu (see section
+“Navigation Map”).
+
+Figure 49: Data reconciliation for monitoring and control purposes related pages
+
+4.2.1 View CBAM declarant account
+To view data related to the current CBAM declarant account, the user can click on “CBAM declarant
+account” in the “Monitor and control” drop-down menu of the declarant menu (see section “Navigation
+Map”).
+Note: This screen is populated based on CBAM certificate data. As a result, no information regarding
+certificates will be displayed in the current version.
+
+Figure 50: CBAM declarant account
+
+4.2.2 View quantifiable assets overview
+To obtain a comprehensive overview of all quantifiable assets associated with the current CBAM
+declarant, the user can click on “quantifiable assets overview” in the “Monitor and control” drop-down
+of the declarant menu (see section “Navigation Map”).
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 40 / 49
+
+Figure 51: Quantifiable assets overview
+The user will have access to two separate tabs:
+•
+
+Current overview: Provides a view of all asset accounts for the current calendar year;
+
+•
+
+Declaration overview: Provides a view of data related to the declaration year (visible only
+after the CBAM declaration has been submitted).
+
+Figure 52: Current overview of quantifiable assets
+Note: These screens are populated based on IGM, CBAM declaration and CBAM certificate data. As a
+result, only information related to IGM will be displayed in the current version.
+
+4.2.3 Financial liabilities
+To view the financial liabilities of the CBAM declarant in 2026, the user can click on “Financial
+liabilities (2026)” in the “Monitor and control” drop-down of the declarant menu (see section
+“Navigation Map”).
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 41 / 49
+
+Figure 53: Financial liabilities (2026)
+
+4.2.4 Monitor quantifiable assets
+4.2.4.1 Query goods and emissions
+To view the details of goods and emissions imported by the logged-in CBAM declarant for a specific
+year, the user can click on “Goods and emissions” in the “Monitor and control” drop-down of the CBAM
+declarant menu (see section “Navigation Map”).
+
+Figure 54: Goods and emission
+The user will be redirected to the “Query goods and emissions” page. The page contains two tabs, each
+allowing separate query functionalities:
+• Overview tab: enables querying based on the following parameters: year, aggregation type,
+yearly aggregation, quarterly aggregation, and sector.
+• Details tab: provides more granular query options such as sector, goods code, country of origin,
+imported goods quantity, goods unit and estimated emissions (tCO2).
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 42 / 49
+
+Figure 55: Query goods and emissions page
+To view the results of the search criteria, the user must click on the “Query” button at the bottom of the
+page to view the matching results.
+
+Figure 56: Query button
+
+4.2.4.2 Goods and emission query result
+As described previously in Query goods and emissions, the Overview and Details tabs can be queried
+independently.
+
+4.2.4.2.1 Overview
+Upon querying the Overview tab, the following results are displayed:
+• General information
+• Query request
+• Update information
+• Several tabs presenting the results:
+o General: Display a column chart for imported goods quantity (Tons and MWh) and
+estimated emissions (tCO2).
+o Imported goods quantity: Display a pie chart for imported goods per sector.
+o Estimated embedded emissions: Display a pie chart for estimated emissions per sector.
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 43 / 49
+
+Figure 57: General tab in query overview results
+
+4.2.4.2.2 Details
+Upon querying the details tab, the following results are displayed:
+• General information;
+• Query request;
+• Update information;
+• Query results table (Based on selected aggregation type: Yearly, Quarterly and None).
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 44 / 49
+
+Figure 58: Query results table in query details results (Yearly aggregation)
+
+Figure 59: Query results table in query details results (Quarterly aggregation)
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 45 / 49
+
+Figure 60: Query results table in query details results (None aggregation)
+
+4.2.4.3 Query coverage
+To view the details of emissions coverage (i.e. the number of available certificates compared to the
+estimated emissions to be covered by certificates) for the current CBAM account number and a given
+year, the user can click on “Coverage” in the “Monitor quantifiable assets” drop-down of the declarant
+menu (see section “Navigation Map”).
+Note: This screen is populated based on IGM and CBAM certificate data. Therefore, no coverage
+information is displayed in the current version.
+
+4.2.4.4 Query certificates
+To view the details of CBAM certificates related to the current CBAM account number in a specific
+year, the user can click on “Certificates” in the “Monitor quantifiable assets” drop-down of the declarant
+menu (see section “Navigation Map”).
+The user can view data based on either the calendar year or the purchase year:
+• Calendar year view: Includes all certificate operations carried out during that year, regardless
+of when the certificates were purchased;
+• Purchase year view: Includes all certificate operations related to certificates purchased during
+that year, regardless of when the CBAM certificates are used.
+Note: This screen is populated based on CBAM certificate data. Therefore, no information is displayed
+in the current version.
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 46 / 49
+
+4.2.4.5 Query CBAM declaration
+To view the details of CBAM obligations following CBAM declaration submission, the user can click
+on “Monitor CBAM declarations” in the “Monitor quantifiable assets” drop-down of the declarant menu
+(see section “Navigation Map”).
+Note: This screen is populated based on CBAM declaration data. Therefore, no information is
+displayed in the current version.
+
+4.2.5 Control quantifiable assets
+4.2.5.1 View emission coverage rule compliance control results
+To view the details of emissions coverage rule compliance (i.e., whether the CBAM declarant complies
+with the 50% at the end of each quarter), the user can click on “Emission coverage rule compliance” in
+the “Control quantifiable assets” drop-down of the declarant menu (see section “Navigation Map”).
+Note: The 50% rule will apply starting from 2027. Consequently, no related information is available in
+the current version.
+
+4.3 OPERATORS 3RD COUNTRIES INSTALLATION
+The following section specifies the pages and functionalities that are specific to the operators of third
+countries installations module.
+
+4.3.1 Search for Installations
+1.
+
+Upon logging into the Declarant’s portal, the user has the ability to search for installations based on
+specific criteria. This can be achieved via navigating to the “Search Installations” screen. The system
+will present a comprehensive search interface organised into two categories: Installations and
+Operators.
+The Installations section allows the user to search by:
+• Installation ID;
+• Installation name (in Latin characters);
+• Country of establishment;
+• Economic Activity.
+The Operators section provides criteria including:
+• Operator Corporate Register Number;
+• Operator name.
+
+2.
+
+After entering the desired selection criteria, there are several actions available:
+• “Search”: Initiates the search based on the specified criteria;
+• “Clear”: Resets all entered selection criteria, allowing the user to start a new search;
+• “Back”: Redirects the user to the "Home Page."
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 47 / 49
+
+Figure 61: Search for installations
+
+Figure 62: Search for Installations - Options
+3.
+
+Once the user clicks the “Search” button, the system will search for installations that match the
+criteria and display the results in a table-like view. The results table will include columns for
+Installation ID, Installation name (in Latin characters), Country of establishment, Economic
+Activity, Operator Corporate Register Number and Operator name. This organised presentation
+allows the user to quickly identify relevant installations.
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 48 / 49
+
+Figure 63: Search for installations – List of Results
+4.
+
+In addition, the user can export the search results in CSV format. This option is enabled only if there
+is at least one search result.
+
+Figure 64: Search for Installations – Export search results
+
+User Interface Manual - CBAM – Declarants Portal
+Document version 6.00 EN dated 16/06/2026
+Confidentiality: Publicly available (PA)
+
+Page 49 / 49
+
+

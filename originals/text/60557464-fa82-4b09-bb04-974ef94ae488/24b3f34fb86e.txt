@@ -1,0 +1,118 @@
+QUICK GUIDE FOR ACCREDITED VERIFIERS
+ON HOW TO REQUEST TECHNICAL USER ACCESS
+Access to the CBAM Registry for Accredited Verifiers consists of 2 steps:
+
+1
+
+2
+REQUEST FOR
+TECHNICAL USER
+ACCESS
+
+EU ACCESS (handled by the
+Commission)
+1
+
+REQUEST FOR
+REGISTRATION
+AS VERIFIER
+CBAM Registry 03CI Portal (managed
+by National Competent Authorities of
+the EU MSs)
+
+This Quick Guide describes
+the first step in the process
+technical user access.
+For more details on the technical user
+access, please consult the following
+document:
+CBAM Registry - Guidance on access
+and registration request procedures for
+Accredited Verifiers
+
+–
+
+First step – Access CBAM Registry – O3CI Portal and login
+using your EU Login account
+
+Page to start the access request to EU access .​
+If you are not an Accredited Entity (e.g. an accredited
+verifier for CBAM), your technical user access request will be
+rejected.
+
+Domain: this field must display “Carbon Boder Adjustment
+Mechanism”
+Subdomain: this field must display “Accredited Entities”
+Application: this field must display “CBAM Registry”
+Identity: this field must display “Request new identity”​
+Type of Person: this field must display “Legal Person”​
+Legal name: this field must be completed with the Name of
+the company as it appears in the supporting document
+(company registration documentation) and in the
+transliterated internationalised name.​
+Type of Actor: this field must display “Accredited Entity
+Operator”​
+Type of Identifier: this field must display "Oganisation ID"
+
+Both boxes must be checked for the request, except in the case
+where the Company does not wish to delegate access to an
+employee, in which case you should only select Admin User.
+
+Accreditation Country Code: This field is mandatory. Select the
+country code of the NAB that provided the Accreditation.
+
+Accreditation Number: Enter the accreditation number as provided
+by NAB.
+Company Address: the address of the company must be completed
+as it appears on the supporting document and using Latin
+characters.
+
+Company Email: It is recommended to use a corporate email
+address of the company making the request.
+Company Identifier: It is very important that the organization's
+identification number is entered exactly as it appears on the
+supporting document (company registration documentation).
+Otherwise, the application will be rejected.
+Company ISO-2 Country Code: this field refers to the company’s
+country of registration nomenclature according to the ISO standard.
+Company Website: this field is not mandatory, but it is a
+recommendation to facilitate the application.
+
+Attachment - Supporting Document: The supporting
+documents must be official documents from the
+country where the company is located (1 and 2) and
+from the country of the authority which granted
+accreditation to the verifier (3):
+1.
+
+Company registration documentation
+
+2.
+
+Identity document(s) of the person(s) acting
+on behalf of the accredited entity
+
+3.
+
+Accreditation Certificate
+
+Please, upload one PDF file merging the 3
+documents indicated above
+Please note that EU access is a first step, whose exclusive purpose is to become a user to get access to the CBAM registry. This step is a prerequisite
+to request access to the CBAM registry as an accredited verifier.
+
+The second step for you is to request registration as a Registered Accredited Verifier in the CBAM registry. The decision to grant such registration is to
+be taken by the National Competent Authority of the country of accreditation.
+To complete the second step, see the links below:
+-
+
+List of EU NCA authorities
+CBAM Registry - Guidance on access and registration request procedures for Accredited Verifiers
+
+PLEASE NOTE THAT TO PROCESS AND ACCEPT YOUR TECHNICAL
+USER ACCESS REQUEST, IT IS NECESSARY TO COMPLETE ALL THE
+REQUIRED FIELDS ON THE PREVIOUS PAGES. IF THIS INFORMATION
+IS NOT PROVIDED, WE WILL BE UNABLE TO VERIFY THE DETAILS,
+AND THE TECHNICAL USER ACCESS REQUEST WILL BE REJECTED.
+
+

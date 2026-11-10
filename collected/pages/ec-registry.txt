@@ -1,0 +1,373 @@
+CBAM Registry - Taxation and Customs Union - European Commission Skip to main content
+en
+Select your language
+Close
+bgбългарски
+esespañol
+csčeština
+dadansk
+deDeutsch
+eteesti
+elελληνικά
+enEnglish
+frfrançais
+gaGaeilge
+hrhrvatski
+ititaliano
+lvlatviešu
+ltlietuvių
+humagyar
+mtMalti
+nlNederlands
+plpolski
+ptportuguês
+roromână
+skslovenčina
+slslovenščina
+fisuomi
+svsvenska
+Search
+Search
+Taxation and Customs Union
+Menu
+Close
+Menu
+Back
+Previous itemsNext items
+Home
+About us
+Directorate-General for Taxation and Customs Union
+Application of EU Law
+EU funding for customs and tax
+Transparency Portal
+Events
+Tenders and Grants
+Glossary
+Contact us
+See all
+Taxation
+Value Added Tax (VAT)
+Excise Duties
+Business Taxation
+Personal Taxation
+Other taxes
+Outermost regions
+Tax Transparency and Cooperation
+Economic Analysis
+National Tax Administrations
+EU Training
+See all
+Customs
+National customs administrations
+Rules of origin for goods
+Customs Controls
+EU Training
+EU Customs Reform
+Authorised Economic Operator (AEO)
+Prohibitions and Restrictions
+Customs Procedures for import and export
+EU Customs Union: facts and figures
+Union Customs code
+Customs security
+International affairs
+Electronic customs
+See all
+CBAM
+CBAM archive
+CBAM communication and news
+CBAM definitive regime
+CBAM legislation and guidance
+CBAM Registry
+CBAM sectors
+Price of CBAM certificates
+Verification of CBAM emissions
+See all
+Online services
+Online services and databases for Customs
+Online services and databases for Taxation
+See all
+News
+Home
+CBAM
+CBAM Registry
+CBAM Registry
+Information on the CBAM Registry and reporting requirements for importers and installation operators
+PlayPause
+Page contents
+Page contents
+The CBAM Registry is an electronic platform for importers under the Carbon Border Adjustment Mechanism (CBAM) to perform their obligations and report on them. The registry includes functionalities related to:
+CBAM authorisations
+reporting obligations
+submissions of emissions data
+access to CBAM modules and functionalities
+This page provides information on the registry as well as access management, reporting obligations and operational resources for all stakeholders involved in the application of CBAM.
+Accessing the registry
+Access to the CBAM Registry may be required for:
+importers of CBAM goods and indirect customs representatives
+authorised CBAM declarants
+non-EU installation operators
+National Competent Authorities
+All users need to set up two-factor authentication (2FA) on their EU Login account to access the registry. For assistance with the setup, watch the explainer on EU Login 2FA or consult the EU Login FAQ. An EU Login User Guide is also available.
+Access EU Login
+Authorisation Management Module
+Importers of CBAM goods, or their indirect customs representatives, are urged to apply for the status of authorised CBAM declarants through the Authorisation Management Module (AMM). The AMM allows importers and indirect customs representatives to submit applications for the status of authorised CBAM declarant in their EU country of establishment.
+List of National Competent Authorities for CBAM
+Access CBAM Registry - AMM
+Step-by-step guidance and training materials on AMM access procedures, authorisation requests and the use of AMM functionalities are available in video form.
+AMM videos
+Step-by-step guidance and training materials on AMM access procedures, authorisation requests and the use of AMM functionalities are available in video form.
+AMM videos
+Description
+Introduction to training
+This video presents the purpose, objectives, and audience of the training, and provides an overview of the main CBAM AMM concepts, including applications, authorisations, guarantees, and the roles of different actors.
+Consult my homepage and my user information
+Guides users through the homepage layout, main widgets, notifications, menu, language options, and user profile.
+Consult my notifications
+Familiarises users with the notifications system, including viewing received and sent notifications, checking key details such as sender, subject, and read/unread status, responding to requests, and managing notifications through actions like archiving.
+Set my email preference
+Assists users in setting their email preferences for system notifications, including adding email addresses, selecting a preferred language, and configuring alerts for new notifications.
+Access the user manual
+Guide users on how to access the user manual, ensuring they can easily locate and refer to it for additional information and guidance on system functionalities.
+Lodge an application
+Guide users through the process of lodging a new application by filling in the required information across the three tabs (Stakeholders details, Activity details, and Financial and operational details).
+Find my application and authorisation
+Help users locate and consult their applications and authorisations within the system.
+View application and authorisation details
+Familiarize users with the layout and functions available in the application details page.
+Find my drafts
+Guide users in locating and managing their draft applications.
+Withdraw an application
+Show users how to withdraw an application that is in the correct status, including filling in the withdrawal justification, submitting the request, and viewing the updated status and related notifications.
+Provide adjustments to an application
+Guide users in providing adjustments to an existing application, including specifying the type of adjustment, referencing relevant regulatory articles, adding supporting details or documents, and reviewing submitted adjustments in the process data and notifications.
+Request a revocation
+Show users how to request the revocation of an existing authorisation, including accessing the revocation form, completing the justification, optionally attaching documents, submitting the request, and viewing the ongoing revocation in the process data and related notifications.
+Withdraw a revocation request
+Guide users in withdrawing a revocation request that is under processing, including filling in the withdrawal justification, submitting the request, and viewing the updated revocation status and related notifications in the system.
+Communicate changes which may affect the authorisation
+Show users how to communicate changes that may affect their authorisation, including updating relevant application data, submitting the changes, saving drafts for later, and viewing the updates in the process data and related notifications.
+Request amendment
+Guide users in requesting an amendment to specific data within their authorisation, including filling in the amendment justification, optionally attaching supporting documents, submitting the request, and reviewing the amendment details in the process data and notifications.
+Provide additional information
+Show users how to provide additional information when requested by the national competent authority, including filling in the required details, optionally attaching supporting documents, submitting the information, and reviewing it in the process data and sent notifications.
+Exercise my right to be heard
+Guide users in exercising their right to be heard regarding a decision, including reviewing the notification details, providing their point of view, optionally attaching supporting documents, saving drafts, submitting their response, and tracking it in the sent notifications.
+Register a guarantee
+Guide users in exercising their right to be heard regarding a decision, including reviewing the notification details, providing their point of view, optionally attaching supporting documents, saving drafts, submitting their response, and tracking it in the sent notifications.
+Adjust a guarantee
+Guide users in adjusting their guarantee information as requested, including updating amounts and validity dates, adding multiple guarantees, attaching supporting documents, submitting the adjustment, and tracking the adjustment status in the system.
+Request guarantee release
+Show users how to request the release of a guarantee associated with their authorisation, including providing a justification, attaching supporting documents, and submitting the request.
+Data reconciliation for monitoring and control
+The data reconciliation for monitoring and control (DRMC) component monitors the CBAM declarant’s account and gives declarants a view of all data on imported goods, emissions, certificates and penalties. It also enables declarants to monitor and anticipate requirements for the 50% rule.
+Access CBAM Registry - DRMC
+Step-by-step guidance and training materials on DRMC monitoring, reporting and data management functionalities are available in video form.
+DRMC videos
+Video name
+Description
+CBAM: Introduction to DRMC
+Introduce users to the DRMC component, showing the key concepts, data flows, and quantifiable assets, and familiarising them with the C1 Declarant portal to monitor goods and emissions.
+DRMC: Goods and Emissions
+Show users how to view threshold notifications for linked importers and perform goods and emissions queries at an overview level using yearly and quarterly aggregation.
+DRMC: Goods and Emissions – Detailed level
+Show users how to query and view goods and emissions at a detailed level using yearly, quarterly, or no aggregation, applying filters such as sector, goods code, country of origin, quantity, and estimated emissions.
+For non-EU installation operators
+This module is intended exclusively for installation operators outside the EU. Operators of companies established within the EU should use the Authorisation Management Module (AMM).
+The module for non-EU installation operators (Operators of Third-Country Installations – O3CI) allows installation operators outside the EU to upload and share their installations and emissions data with reporting declarants in a streamlined manner, instead of submitting it to each declarant separately.
+Read more
+O3CI allows operators to ensure confidential treatment of business-sensitive data. Reporting declarants are then able to automatically populate their CBAM reports with this emissions data to comply with their reporting obligations.
+CBAM declarants can retrieve the information provided by non-EU installation operators in the CBAM Registry. Via the ‘Emissions’ tab, declarants can ‘Search in Third Country Installations registry’ and access the respective installation and emissions data. For this to work, CBAM declarants need to share their EORI number with the supplier outside the CBAM Registry.
+Access CBAM Registry - O3CI portal
+To become a Registered Operator, non-EU installation operators need to follow the steps outlined below and consult the dedicated e-learning modules and guidance documents.
+Step 1: Create an EU Login account
+Go to EU Login.
+Register using your email address (a company email is strongly recommended), create a password, and confirm your registration via the email link you receive.
+Set up two-factor authentication (EU Login App, QR code, or FIDO2 key).
+Each user must register individually.
+Step 2: Submit access request
+Go to the CBAM Registery - O3CI Portal.
+Log in using your EU Login credentials.
+Complete the onboarding form with the following information:
+Company details and registration number/identifiers
+Company email and website
+User role (Admin Operator or Simple Operator)
+Upload a single PDF containing (documents preferably in English, including a courtesy translation, along with the original documents):
+Company registration certificate (including registration number/identifier matching the one provided in the form)
+Proof of representation (e.g., power of attorney)
+ID of the authorised representative
+Step 3: Submit access request in the CBAM portal
+Go to O3CI.
+Complete all the information as requested in the following Technical user manual – CBAM Registry access for non-EU installation operators
+Step-by-step guidance and training materials on the use of the O3CI functionalities in the CBAM Registry, including registration procedures, access requests and user guidance for non-EU installation operators, are available in document and video form.
+O3CI operators' documents
+Guide to filling out forms and avoiding errors – for non-EU operators (O3CI)
+24 February 2026
+English
+Download (588.28 KB - PDF)
+CBAM Registration Guide for non-EU Operators (O3CI)
+24 February 2026
+English
+Download (3.45 MB - PDF)
+Guidance on access request procedure – for CBAM operators, non-EU companies
+19 February 2026
+English
+Download (5.27 MB - PDF)
+Guide to delegating access to employees – for non-EU operators (O3CI)
+4 June 2026
+English
+Download (2.01 MB - PDF)
+O3CI operators' videos
+Video tutorial
+Description
+Manage registration requests, requests for change, parent company details and export list of installations
+This training video series consists of 10 sessions covering the comprehensive workflow for operator request management and system interaction with the O3CI (Operators of Third Country Installations) platform.
+The series will help operators (with standard and administrative user roles) to navigate in O3CI platform, create, save, submit, correct, and resubmit requests following Commission’s feedback. Additional functionality covers parent company management and the ability to search and export installation data.
+The sessions presented follow a logical progression from initial registration to advanced features, allowing users to follow either a sequential path or select specific topics, as needed.
+Manage deregistration requests
+This training video series consists of 2 sessions covering the process of Deregistration request by Operator and Deregistration request by Commission (Right to be heard) within O3CI portal.
+The series will help operators (with standard and administrative user roles) to initiate, edit, track and view a deregistration request. Users will learn how to request a deregistration, check the submission status, and the details with the justification for the deregistration confirming the transaction for that specific operator.
+The sessions presented follow a logical progression from initiating, viewing, editing and tracking a deregistration request, up until the completion of the deregistration process.
+Search, Navigate and view details of operator, installations and supporting documents
+This 11-minute training video demonstrates how to effectively search, navigate, and access detailed information about operators, installations, and supporting documentation within O3CI portal.
+The video will help operators to learn how to utilize the platform's pagination, sorting and filtering functionality to locate specific installation using various criteria such as installation id, installation name, country and city of establishment.
+This essential navigation training ensures authorized operators can efficiently locate required information in other functionalities of the O3CI portal such as emission management.
+Accredited verifiers
+The O3CI portal also allows accredited verifiers to access the CBAM Registry as verifiers. Through the portal, verifiers can submit to the NCA of the country where they have been accredited their application for registration, but also connect with non-EU installation operators, review their emissions data and supporting documentation, and issue the corresponding verification report.
+Read more
+Although accredited verifiers and non-EU installation operators access the CBAM Registry through the same O3CI portal, they perform different functions. Operators provide their installation and emissions data, while verifiers independently review the information and supporting evidence made available by the operators.
+Following the assessment, the verifier issues a verification report for the relevant installation. This enables CBAM declarants to use actual verified emissions data when fulfilling their CBAM reporting obligations.
+Access CBAM Registry - O3CI portal
+To become a Registered CBAM Verifier, accredited verifiers need to follow the steps outlined below and consult the dedicated e-learning modules and guidance documents.
+Step 1: Create an EU Login account
+Go to EU Login.
+Register using your email address (a company email is strongly recommended), create a password, and confirm your registration via the email link you receive.
+Set up two-factor authentication (EU Login App, QR code, or FIDO2 key).
+Each user must register individually.
+Step 2: Submit access request
+Go to the CBAM Registry – O3CI portal
+Log in using your EU Login credentials.
+Complete the onboarding form with the following information:
+Accreditation country and accreditation number
+Company details and registration number/identifiers
+Company email and website
+User role (Accredited Entity - Admin User and/or Accredited Entity - Simple User)
+Upload a single PDF containing (documents preferably in English, including a courtesy translation, along with the original documents):
+Accreditation Certificate
+Company registration documentation (including registration number/identifier matching the one provided in the form)
+Proof of representation (e.g., power of attorney)
+ID of the authorised representative
+Step 3: Submit to the EU NCA the application to become a registered accredited verifier
+Go to the CBAM Registry - O3CI portal.
+Log in using your EU Login credentials.
+While in the O3CI portal, complete the application to become a registered accredited verifier, as detailed in the following manuals.
+Submit your application to the EU NCA of the country where you have been accredited.
+Step-by-step guidance and training materials on the O3CI functionalities available to accredited verifiers, including registration procedures, access requests and user guidance for verifiers, are available in document and video form.
+O3CI accredited verifiers' documents
+CBAM Registry - Guidance on access and registration request procedures for Accredited Verifiers
+28 August 2026
+English
+Download (5.64 MB - PDF)
+Quick guide for accredited verifiers on how to request technical user access
+28 August 2026
+English
+Download (984.66 KB - PDF)
+O3CI accredited verifiers' videos
+Video Tutorial
+Description
+Manage Accredited Entities registration request
+This training video presents the processes for Accredited Entity to submit to the NCA of the country where they have been accredited their application to become Registered Verifiers.
+Video will help the Accredited Entity user (with standard and administrative user roles) to navigate in the CBAM Registry - O3CI portal - to create, save, submit, correct, and view requests following National Competent Authority’s feedback.
+Manage Accredited Entities requests for change
+This training video presents the processes for an already registered Accredited Entity to submit to the NCA of the country where they have been accredited their request for change.
+Video will help the Accredited Entity user (with standard and administrative user roles) to navigate in the CBAM Registry - O3CI portal - to create and save requests for change.
+Manage Accredited Entities request for collaboration with the operators of third countries installations
+This training video consists of 4 sessions covering the workflow for both Accredited Entity and Operator of Third Country Installations for the management of collaboration requests.
+The series will help Accredited Entity (with standard and administrative user roles) to navigate in the CBAM Registry - O3CI Portal to search, and request a collaboration with an Operator of Third Country Installations.
+Additional functionality covers Accredited Entity's ability to view and accept a collaboration request from an Operator.
+The series will also help the Operator (with standard and administrative user roles) to navigate in CBAM Registry - O3CI Portal to search, and request a collaboration with an Accredited Entity. Additional functionality covers Operator's ability to view and accept a collaboration request from an Accredited Entity.
+The sessions presented follow a logical progression from initial search of a collaboration to advanced features.
+Additional documents
+The following documents provide additional operational and technical information related to the CBAM Registry and its functionalities.
+CBAM Registry - User manual – Accredited verifiers and Installation operators Portal
+27 August 2026
+English
+Download (12.44 MB - PDF)
+CBAM Registry – User manual – Declarants portal
+21 August 2026
+English
+Download (2.27 MB - PDF)
+Privacy Statement - CBAM Registry
+26 March 2025
+English
+Download (247.95 KB - PDF)
+Carbon Border Adjustment Mechanism (CBAM)
+CBAM definitive regime
+CBAM legislation and guidance
+CBAM Registry
+CBAM sectors
+Verification of CBAM emissions
+Price of CBAM certificates
+CBAM communication and news
+CBAM archive
+Taxation and Customs Union
+This site is managed by:
+Directorate-General for Taxation and Customs Union
+Bluesky
+LinkedIn
+YouTube
+About us
+Glossary
+Newsletter
+Related links
+VAT e-Commerce - One Stop Shop
+VAT rules for small enterprises – SME scheme
+Have your say
+Follow the European Commission
+Mastodon
+LinkedIn
+Bluesky
+Facebook
+Youtube
+Other
+Contact us
+Report an IT vulnerability
+Languages on our websites
+Cookies
+Privacy policy
+Legal notice
+Accessibility
+
+[표의 행]
+AMM videos | Description
+Introduction to training | This video presents the purpose, objectives, and audience of the training, and provides an overview of the main CBAM AMM concepts, including applications, authorisations, guarantees, and the roles of different actors.
+Consult my homepage and my user information | Guides users through the homepage layout, main widgets, notifications, menu, language options, and user profile.
+Consult my notifications | Familiarises users with the notifications system, including viewing received and sent notifications, checking key details such as sender, subject, and read/unread status, responding to requests, and managing notifications through actions like archiving.
+Set my email preference | Assists users in setting their email preferences for system notifications, including adding email addresses, selecting a preferred language, and configuring alerts for new notifications.
+Access the user manual | Guide users on how to access the user manual, ensuring they can easily locate and refer to it for additional information and guidance on system functionalities.
+Lodge an application | Guide users through the process of lodging a new application by filling in the required information across the three tabs (Stakeholders details, Activity details, and Financial and operational details).
+Find my application and authorisation | Help users locate and consult their applications and authorisations within the system.
+View application and authorisation details | Familiarize users with the layout and functions available in the application details page.
+Find my drafts | Guide users in locating and managing their draft applications.
+Withdraw an application | Show users how to withdraw an application that is in the correct status, including filling in the withdrawal justification, submitting the request, and viewing the updated status and related notifications.
+Provide adjustments to an application | Guide users in providing adjustments to an existing application, including specifying the type of adjustment, referencing relevant regulatory articles, adding supporting details or documents, and reviewing submitted adjustments in the process data and notifications.
+Request a revocation | Show users how to request the revocation of an existing authorisation, including accessing the revocation form, completing the justification, optionally attaching documents, submitting the request, and viewing the ongoing revocation in the process data and related notifications.
+Withdraw a revocation request | Guide users in withdrawing a revocation request that is under processing, including filling in the withdrawal justification, submitting the request, and viewing the updated revocation status and related notifications in the system.
+Communicate changes which may affect the authorisation | Show users how to communicate changes that may affect their authorisation, including updating relevant application data, submitting the changes, saving drafts for later, and viewing the updates in the process data and related notifications.
+Request amendment | Guide users in requesting an amendment to specific data within their authorisation, including filling in the amendment justification, optionally attaching supporting documents, submitting the request, and reviewing the amendment details in the process data and notifications.
+Provide additional information | Show users how to provide additional information when requested by the national competent authority, including filling in the required details, optionally attaching supporting documents, submitting the information, and reviewing it in the process data and sent notifications.
+Exercise my right to be heard | Guide users in exercising their right to be heard regarding a decision, including reviewing the notification details, providing their point of view, optionally attaching supporting documents, saving drafts, submitting their response, and tracking it in the sent notifications.
+Register a guarantee | Guide users in exercising their right to be heard regarding a decision, including reviewing the notification details, providing their point of view, optionally attaching supporting documents, saving drafts, submitting their response, and tracking it in the sent notifications.
+Adjust a guarantee | Guide users in adjusting their guarantee information as requested, including updating amounts and validity dates, adding multiple guarantees, attaching supporting documents, submitting the adjustment, and tracking the adjustment status in the system.
+Request guarantee release | Show users how to request the release of a guarantee associated with their authorisation, including providing a justification, attaching supporting documents, and submitting the request.
+Video name | Description
+CBAM: Introduction to DRMC | Introduce users to the DRMC component, showing the key concepts, data flows, and quantifiable assets, and familiarising them with the C1 Declarant portal to monitor goods and emissions.
+DRMC: Goods and Emissions | Show users how to view threshold notifications for linked importers and perform goods and emissions queries at an overview level using yearly and quarterly aggregation.
+DRMC: Goods and Emissions – Detailed level | Show users how to query and view goods and emissions at a detailed level using yearly, quarterly, or no aggregation, applying filters such as sector, goods code, country of origin, quantity, and estimated emissions.
+Video tutorial | Description
+Manage registration requests, requests for change, parent company details and export list of installations | This training video series consists of 10 sessions covering the comprehensive workflow for operator request management and system interaction with the O3CI (Operators of Third Country Installations) platform.The series will help operators (with standard and administrative user roles) to navigate in O3CI platform, create, save, submit, correct, and resubmit requests following Commission’s feedback. Additional functionality covers parent company management and the ability to search and export installation data.The sessions presented follow a logical progression from initial registration to advanced features, allowing users to follow either a sequential path or select specific topics, as needed.
+Manage deregistration requests | This training video series consists of 2 sessions covering the process of Deregistration request by Operator and Deregistration request by Commission (Right to be heard) within O3CI portal.The series will help operators (with standard and administrative user roles) to initiate, edit, track and view a deregistration request. Users will learn how to request a deregistration, check the submission status, and the details with the justification for the deregistration confirming the transaction for that specific operator.The sessions presented follow a logical progression from initiating, viewing, editing and tracking a deregistration request, up until the completion of the deregistration process.
+Search, Navigate and view details of operator, installations and supporting documents | This 11-minute training video demonstrates how to effectively search, navigate, and access detailed information about operators, installations, and supporting documentation within O3CI portal.The video will help operators to learn how to utilize the platform's pagination, sorting and filtering functionality to locate specific installation using various criteria such as installation id, installation name, country and city of establishment.This essential navigation training ensures authorized operators can efficiently locate required information in other functionalities of the O3CI portal such as emission management.
+Video Tutorial | Description
+Manage Accredited Entities registration request | This training video presents the processes for Accredited Entity to submit to the NCA of the country where they have been accredited their application to become Registered Verifiers.Video will help the Accredited Entity user (with standard and administrative user roles) to navigate in the CBAM Registry - O3CI portal - to create, save, submit, correct, and view requests following National Competent Authority’s feedback.
+Manage Accredited Entities requests for change | This training video presents the processes for an already registered Accredited Entity to submit to the NCA of the country where they have been accredited their request for change.Video will help the Accredited Entity user (with standard and administrative user roles) to navigate in the CBAM Registry - O3CI portal - to create and save requests for change.
+Manage Accredited Entities request for collaboration with the operators of third countries installations | This training video consists of 4 sessions covering the workflow for both Accredited Entity and Operator of Third Country Installations for the management of collaboration requests.The series will help Accredited Entity (with standard and administrative user roles) to navigate in the CBAM Registry - O3CI Portal to search, and request a collaboration with an Operator of Third Country Installations. Additional functionality covers Accredited Entity's ability to view and accept a collaboration request from an Operator.The series will also help the Operator (with standard and administrative user roles) to navigate in CBAM Registry - O3CI Portal to search, and request a collaboration with an Accredited Entity. Additional functionality covers Operator's ability to view and accept a collaboration request from an Accredited Entity.The sessions presented follow a logical progression from initial search of a collaboration to advanced features.

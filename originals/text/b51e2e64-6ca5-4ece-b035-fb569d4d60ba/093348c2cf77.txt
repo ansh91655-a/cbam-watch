@@ -1,0 +1,63 @@
+GUIDE TO FILLING OUT FORMS AND
+AVOIDING ERRORS
+
+Page to start with the access request to EU access .
+If you are not an Operator of a third country Installation(outside
+the EU or included in Annex III), your request will be rejected.
+
+These points must be completed exactly as shown in the screen shot.
+If they are not, the request will be rejected
+
+Identity: this field must display “Request new identity”
+Type of Person: this field must display “Legal Person”
+Legal person: this field must be completed with the Name of the
+company as it appears in the supporting document and in
+transliterated internationalized name.
+Type of Actor: this field must display “Third country Operator”
+Type of Identifier: this field must display "ORG_ID"
+
+Both boxes must always be checked for the request.
+
+Company Address: the address of the company must be
+completed as it appears on the supporting document using
+English character/translation.
+Company Email: It is recommended to use a corporate email
+address of the company making the request.
+Company Website: this field is not mandatory, but it is a
+recommendation to facilitate the application.
+Company Identifier: It is extremely important that the
+organization's identification number is entered exactly as it
+appears on the supporting document. Otherwise, the application
+will be rejected.
+Company ISO-2 Country Code: the field refers to the country's
+nomenclature according to the ISO standard.
+
+Support Document: The supporting document must be official
+documents from each of the countries where the installation is
+located:
+- Commercial registry or certificate of incorporation of the
+installation.
+- Identification of the legal representative.
+
+TO PROCESS AND ACCEPT YOUR APPLICATION, IT IS
+NECESSARY TO COMPLETE ALL THE REQUIRED FIELDS ON THE
+PREVIOUS PAGES. IF THIS INFORMATION IS NOT PROVIDED,
+UNFORTUNATELY WE WILL BE UNABLE TO VERIFY THE
+DETAILS, AND THE APPLICATION WILL BE REJECTED.
+
+© European Union, 2026
+Reuse of this document is allowed, provided appropriate credit is given and any changes are
+indicated (Creative Commons Attribution 4.0 International license). For any use or reproduction
+of elements that are not owned by the EU, permission may need to be sought directly from
+the respective right holders. All images © European Union, unless otherwise stated.
+
+Luxembourg: Publications Office of the European Union, 2026
+PDF
+
+ISBN 978-92-68-37609-6
+
+doi: 10.2778/7846979
+
+KP-01-26-003-EN-N
+
+

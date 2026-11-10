@@ -1,0 +1,373 @@
+Data Privacy Statement – CBAM Registry
+
+1. Introduction
+The European Commission (hereafter ‘the Commission’) is committed to protect your personal data and
+to respect your privacy. The Commission collects and further processes personal data pursuant to
+Regulation (EU) 2018/1725 of the European Parliament and of the Council of 23 October 2018 on the
+protection of natural persons with regard to the processing of personal data by the Union institutions,
+bodies, offices and agencies and on the free movement of such data (repealing Regulation (EC) No
+45/2001). This privacy statement explains the reason for the processing of your personal data, the way
+we collect, handle and ensure protection of all personal data provided, how that information is used and
+what rights you have in relation to your personal data. It also specifies the contact details of the
+responsible Data Controller with whom you may exercise your rights, the Data Protection Officer and the
+European Data Protection Supervisor. The information in relation to processing operations of “personal
+data in the CBAM Registry“ is presented below.
+
+2. Why and how do we process your personal data?
+2.1. Controllership
+The Commission and competent authorities in Member States (joint controllers) act as joint controllers
+for:
+(a)
+
+management of the CBAM registry;
+
+(b)
+
+the personal data processing for the management of CBAM declarations in accordance
+with Regulation (EU) 956/2023;
+
+(c)
+
+the personal data processing for the CBAM certificates management in accordance with
+Regulation (EU) 2023/956.
+
+The competent authority is the sole controller for the personal data processing for the following
+purposes:
+a. to take decisions on the granting and revocation of authorisations of CBAM declarants in
+accordance with Regulation (EU) 2023/956;
+b. take decisions regarding penalties in accordance with Article 26 of Regulation (EU) 2023/956.
+c. for the access management in the CBAM registry of declarants established within their Member
+State
+The Commission acts as a sole controller for the following purposes:
+a. for the registration of third country operators in the CBAM registry and management of the
+account;
+b. for the processing of personal data for the access management for the Commission, and;
+
+c. for the use, validation and retrieving of EORI or other data for the purpose of the risk analysis
+and circumvention monitoring as provided for in Articles 15, and 27 of Regulation (EU)
+2023/956.
+
+2.2. Purpose of the processing operation:
+2.2.1. Processing of applications for the status of authorised CBAM declarant
+Regulation (EU) 2023/956 lays down the rules for the submission of the application to become an
+authorised CBAM declarant (the ‘application’), and sets out the criteria and procedures for granting
+such authorisation.
+In order to obtain the authorisation an applicant should, prior to the first importation of goods,
+submit the application to the Member State of establishment by means of a standard format provided
+in the CBAM registry.
+The Competent Authority will have 120 days from receipt of the application to assess the application.
+The assessment will include a consultation phase in which the Commission and other Member States
+(together the "consultation parties") have the opportunity to provide input on the assessment. The
+final decision will be communicated in the CBAM Registry.
+Regarding the criteria for assessment, applicants will be assessed on the basis of the criteria outlined
+in the CBAM regulation, including whether:
+•
+•
+•
+•
+
+the applicant has an EU Economic Operator Registration and Identification (EORI);
+the application is submitted in the Member State of establishment;
+the applicant has been involved in serious or repeated infringements of customs legislation,
+taxation rules, etc. related to the CBAM regulation in the previous five years, and;
+the applicant can demonstrate financial and operational capacity to fulfil its obligations under
+the CBAM regulation.
+
+Competent Authorities will assess additional factors, such as the estimated volume of imports and the
+annual CBAM certificate obligations as part of application.
+The applicant will proof the above mentioned criteria via declaration of honour and tax certificates.
+The competent authority may request the criminal record or any other document that is accepted under
+national law as a criminal record. Where requested the criminal record will be deleted immediately after
+the needed confirmation by the competent authority, or where a decision during an appeal proceeding
+has been taken.
+The information submitted by the applicant will be available during the consultation procedure of the
+other competent authorities or the Commission. The consultation procedure is mandatory for all
+applications, where the competent authority intends to grant an authorisation. The consulted parties
+will be given opportunity provide its observations on the applicant.
+
+An application will either result in a decision to grant an authorisation or to refuse an authorisation. The
+decision will be stored in the CBAM registry.
+A decision will contain the following information of the authorised CBAM declarant:
+• First and last name;
+• Contact information (email address, telephone number),
+• Address (Member State of establishment, city, street, number, postcode, P.O. Box);
+• EORI;
+• First and last name of contact person;
+• Contact information (email address, telephone number), and;
+• CBAM account number
+
+2.2.2. Administering of processes in the CBAM Operators’ Portal
+The Commission will, upon request by an operator of an installation located in a third country, register
+the information on that operator and on its installation in the CBAM registry. The Commission will notify
+the operator of the registration in the CBAM registry. The registration is valid for a period of five years
+from the date of its notification to the operator of the installation.
+The operator informs the Commission without delay of any changes in the information in CBAM registry
+arising after the registration, and the Commission will update the relevant information in the CBAM
+registry.
+When an operator determines the embedded emissions of goods produced in one of its installations, he
+needs to ensure (starting from 2026) that the emissions information is verified in accordance with the
+verification principles set out in Annex VI by a verifier accredited pursuant to Article 18.
+An operator may disclose the information on the verification of embedded emissions to an authorised
+CBAM declarant (starting from 2026). An operator may also disclose the information on goods produced
+by an installation and on the emissions embedded in those goods to a reporting declarant during the
+transitional period. The reporting declarants may use this information to comply with their CBAM
+reporting obligations. For this purpose the CBAM registry is interoperable with the declarants’ portal in
+the transitional registry.
+The operator may, at any time, ask to be deregistered from the CBAM registry. The Commission will,
+upon such request, and after notifying the competent authorities, deregister the operator and delete the
+information on that operator and on its installation from the CBAM registry, provided that such
+information is not necessary for the review of CBAM declarations that have been submitted. The
+Commission may, after having given the operator concerned the possibility to be heard and having
+consulted with the relevant competent authorities, also deregister the information if the Commission
+finds that the information on that operator is no longer accurate. The Commission will inform the
+competent authorities of such deregistrations.
+
+Your personal data will not be used for automated decision-making including profiling.
+
+2.2.3. Management of CBAM registry
+The CBAM registry contains accounts with information about each authorised CBAM declarant, in
+particular:
+(a)
+
+the name, address and contact information of the authorised CBAM declarant;
+
+(b)
+
+the EORI number of the authorised CBAM declarant;
+
+(c)
+
+the CBAM account number;
+
+(d)
+
+the identification number, the sale price, the date of sale, and the date of surrender,
+repurchase or cancellation of CBAM certificates for each authorised CBAM
+declarant.
+
+In a separate section, the CBAM registry contains the information about the operators and installations
+in third countries registered in the CBAM Operators’ Portal.
+The Commission is required to publish, on a yearly basis, for each of the goods listed in Annex I of
+Regulation (EU) 2023/956, the aggregated emissions embedded in the imported goods. This will be done
+on the basis of data contained in the CBAM registry.
+The Commission is also tasked to carry out risk-based controls on the data and the transactions recorded
+in the CBAM registry to ensure that there are no irregularities in the purchase, holding, surrender,
+repurchase and cancellation of CBAM certificates.
+The competent authorities and the Commission process personal data registered on the CBAM Registry
+in line with their tasks as specified in Regulation 2023/956 and as such, for the management of the
+CBAM registry, of the declarations and of the CBAM certificates, they act as data controllers in the
+meaning of Article 26 of the Regulation (EU) 2016/679 and Article 28 of the Regulation (EU) 2018/1725.
+Personal data should be kept in a form which permits the identification of data subjects for no longer
+than necessary for the purposes for which personal data are processed. In this regard, the data retention
+period for the CBAM registry shall be limited to 7 years from the registration in the CBAM registry to
+enable the analysis of the functioning of CBAM and in particular the analysis of the conclusions drawn
+from the review of the CBAM declarations.
+The CBAM registry’s components are developed, tested, deployed and managed by the Commission, and
+may be tested by Member States. The Commission is tasked to design and maintain the common
+specifications of the interfaces. Where appropriate, the Commission will define common technical
+specifications in close cooperation with, and subject to review by, the competent authorities, with a view
+to deploying them in due time. The Commission and Member States will collaborate with CBAM
+declarants, applicants and other stakeholders. In collaboration with the competent authorities, the
+Commission will conduct testing and validation of the interoperability between the CBAM registry and
+
+the systems to ensure that data is cross-checked accurately, efficiently and confidentially. The
+Commission also performs maintenance of the CBAM registry.
+
+2.2.4. Certificates Management
+Authorised CBAM declarants will purchase CBAM certificates from Member States on a common central
+platform. The Commission will establish and manage the common central platform. The Commission and
+the competent authorities will have access to the information in the common central platform. The
+information on the sale, repurchase and cancellation of CBAM certificates in the common central
+platform will be transferred to the CBAM registry at the end of each working day.
+The CBAM registry, in the form of a standardised electronic database, will contain the data regarding the
+CBAM certificates of authorised CBAM declarants. In particular, it will contain the identification number,
+the sale price, the date of sale, and the date of surrender, repurchase or cancellation of CBAM
+certificates for each authorised CBAM declarant.
+
+2.3 Other systems in place
+In order to secure access to the CBAM Registry, the Uniform User Management and Digital Signature
+(UUM&DS) system, as referred to in Article 16 of Commission Implementing Regulation (EU) 2023/1070
+(7), is used for managing the authentication, and access verification process for data subjects.
+Economic Operator Registration and Identification (EORI) numbers are processed for the purpose of
+identifying the data subjects (importers or indirect representatives) and establishing a list of the persons
+(data subjects).
+Personal data taken from Surveillance (DPR-EC-08713.1) are processed for the purpose of retrieving
+information on Customs Imports Declarations for goods listed in Annex I to Regulation (EU) 2023/956 for
+checks of the CBAM declarations and compliance, developed through the UCC Surveillance 3 (SURV3), as
+referred to in Article 99 of Implementing Regulation (EU) 2023/1070.
+Personal data from the CBAM Transitional Registry established in accordance with Article 10 of
+Commission Implementing Regulation (EU) 2023/1773 of 17 August 2023 laying down the rules for the
+application of Regulation (EU) 2023/956 of the European Parliament and of the Council as regards
+reporting obligations for the purposes of the carbon border adjustment mechanism during the
+transitional period for the purpose of making information of third country operators available to the
+CBAM declarants.
+
+3. On what legal ground(s) do we process your personal data
+We are authorised to process your personal data based on:
+•
+
+Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023
+establishing a carbon border adjustment mechanism, and;
+
+•
+
+•
+
+Commission Implementing Regulation (EU) 2024/3210 laying down the rules for the application
+of Regulation (EU) 2023/956 of the European Parliament and of the Council as regards the CBAM
+registry
+Commission Implementing Regulation (EU) 2025/486 laying down the rules for the application of
+Regulation (EU) 2023/956 of the European Parliament and of the Council as regards the
+conditions and procedures related to the status of authorised CBAM declarant
+We process your personal data, because:
+• (a) processing is necessary for the performance of a task carried out in the public interest or in
+the exercise of official authority vested in the Union institution or body, and;
+
+•
+
+(b) Processing is necessary for compliance with a legal obligation to which the controller is
+subject Lawfulness for the processing of personal data under Article 5(2).
+
+The controllers process, collect and use the data in the CBAM Registry in order to fulfil their legally
+assigned roles and obligations in accordance with the Regulation (EU) 2023/956 (CBAM Regulation), the
+Implementing Regulation (EU) 2024/3210 on the CBAM registry, and the Implementing Regulation (EU)
+2025/486 on the authorisation of declarants. The processing is lawful and necessary for compliance with
+a legal obligation to which the joint controllers are subjects.
+Data subjects provide personal data (importer or the indirect customs representative) and data on other
+persons in the CBAM Registry (the importer and/or the operator of an installation in a third country),
+when submitting CBAM declarations or CBAM reports in compliance with Regulation (EU) 2023/956.
+Regulation (EU) 2023/956 requires the Commission to establish, at Union level, a standardised and
+secure electronic database for CBAM certificates management, CBAM declarations, applications to
+become authorised CBAM declarants, a registration of operators and of installations in third countries
+(‘operators’), and for providing access, case handling while ensuring the confidentiality of information.
+The Commission already gained experience in setting up a registry for CBAM purposes when it
+implemented the CBAM Transitional Registry under the Commission Implementing Regulation (EU)
+2023/1773.
+Article 14 of Regulation (EU) 2023/956 - CBAM registry
+Article 15 of Regulation (EU) 2023/956 - risk analysis
+Article 16 of Regulation (EU) 2023/956 - CBAM accounts in the registry
+Article 17 of Regulation (EU) 2023/956 - authorizations of CBAM declarants
+Article 19 of Regulation (EU) 2023/956 - review of CBAM declarations
+
+4. Which personal data do we collect and further process?
+In this context, personal data means any information relating to the data subject, as an identified or
+identifiable natural person.
+
+In order to carry out this processing operation the joint controllers process the following categories of
+personal data:
+4.1. Personal data of the applicant and authorised CBAM declarant (the importer or the indirect
+customs representative):
+• First and last name;
+• Contact information (email address, telephone number),
+• Address (Member State of establishment, city, street, number, postcode, P.O. Box), and;
+• EORI;
+•
+•
+
+CBAM account number;
+Identification number of CBAM certificates.
+
+4.2. Personal data of the person (importer) registered by the applicant or authorised CBAM
+declarant, who is acting on behalf of an importer:
+• First and last name;
+• Contact information (email address, telephone number), and;
+• Address (Member State of establishment, city, street, number, postcode, P.O. Box).
+
+4.2.1. Operator of an installation
+• First and last name;
+• Contact information (email address, telephone number), and;
+• Address (country of establishment, city, street, number, postcode, P.O. Box);
+• Location and main economic activity of the operator’s installation.
+• Information on the goods produced in an installation and information of the emissions
+embedded in those goods; and
+• Verification report attesting the accuracy of the indicated embedded emissions (from
+January 2026).
+
+4.3. Personal data of the operator operators of a third country installation:
+• name, address and contact information;
+• location of each installation including the complete address and geographical
+coordinates expressed in longitude and latitude, including six decimals;
+• main economic activity of the installation;
+• information on the goods produced in an installation and information of the emissions
+embedded in those goods; and
+• verification report attesting the accuracy of the indicated embedded emissions (from
+January 2026).
+
+Your personal data may be indirectly obtained from:
+• The customs representative appointed by you. This is applicable where you are an
+importer; or
+• The customs representative or importer, who has imported goods steaming from your
+installation. This is applicable where you are an operator of an installation.
+5. How long do we keep your personal data?
+Your personal data in the CBAM Transitional Registry are retained for the time necessary to fulfil the
+purpose. The maximum retention period is 7 years from the registration in the CBAM registry.
+Where an appeal has been lodged or where court proceedings have begun involving data retained in the
+CBAM Registry, those data shall be retained until the appeal procedure or court proceedings are
+terminated and shall only be used for the purpose of the mentioned appeal procedure or court
+proceedings.
+
+6. How do we protect and safeguard your personal data?
+All personal data in electronic format (e-mails, documents, databases, uploaded batches of data, etc.)
+are stored on the servers of the European Commission. All processing operations are carried out
+pursuant to the Commission Decision (EU, Euratom) 2017/46 of 10 January 2017 on the security of
+communication and information systems in the European Commission.
+In order to protect your personal data, the Commission has put in place a number of technical and
+organisational measures. Technical measures include appropriate actions to address online security, risk
+of data loss, alteration of data or unauthorised access, taking into consideration the risk presented by
+the processing and the nature of the personal data being processed. Organisational measures include
+restricting access to the personal data solely to authorised persons with a legitimate need to know for
+the purposes of this processing operation.
+
+7. Who has access to your personal data and to whom is it disclosed?
+Access to your personal data is provided to the Commission staff responsible for carrying out this
+processing operation and to authorised staff according to the “need to know” principle. Such staff abide
+by statutory, and when required, additional confidentiality agreements.
+Access to your personal data is also provided to authorised officials of the competent authorities and
+customs authorities in Member States.
+The information we collect will not be given to any third party, except to the extent and for the purpose
+we may be required to do so by law.
+
+8. What are your rights and how can you exercise them?
+
+You have specific rights as a ‘data subject’ under Chapter III (Articles 14-25) of Regulation (EU)
+2018/1725, in particular the right to access your personal data and to rectify them in case your personal
+data are inaccurate or incomplete. Where applicable, you have the right to erase your personal data, to
+restrict the processing of your personal data, to object to the processing, and the right to data
+portability.
+You have the right to object to the processing of your personal data, which is lawfully carried out
+pursuant to Article 5(1)(a) on grounds relating to your particular situation.
+You can exercise your rights by contacting the Data Controller, or in case of conflict the Data Protection
+Officer. If necessary, you can also address the European Data Protection Supervisor. Their contact
+information is given under Heading 9 below.
+Where you wish to exercise your rights in the context of one or several specific processing operations,
+please provide their description (i.e. their Record reference(s) as specified under Heading 10 below) in
+your request.
+
+9. Contact information
+-
+
+The Data Controller
+
+If you would like to exercise your rights under Regulation (EU) 2018/1725, or if you have comments,
+questions or concerns, or if you would like to submit a complaint regarding the collection and use of your
+personal data, please feel free to contact the Data Controller, TAXUD-CBAM@ec.europa.eu.
+-
+
+The Data Protection Officer (DPO) of the Commission
+
+You may contact the Data Protection Officer (DATA-PROTECTION-OFFICER@ec.europa.eu) with regard to
+issues related to the processing of your personal data under Regulation (EU) 2018/1725.
+-
+
+The European Data Protection Supervisor (EDPS)
+
+You have the right to have recourse (i.e. you can lodge a complaint) to the European Data Protection
+Supervisor (edps@edps.europa.eu ) if you consider that your rights under Regulation (EU) 2018/1725
+have been infringed as a result of the processing of your personal data by the Data Controller.
+
+10. Where to find more detailed information?
+The Commission Data Protection Officer (DPO) publishes the register of all processing operations on
+personal data by the Commission, which have been documented and notified to him. You may access the
+register via the following link: https://intragate.ec.europa.eu/dpms/record/DPR-EC-31148.1 .
+
+

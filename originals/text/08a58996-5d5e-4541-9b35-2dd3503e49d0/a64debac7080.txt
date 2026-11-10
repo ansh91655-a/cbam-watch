@@ -1,0 +1,133 @@
+CARBON BORDER ADJUSTMENT MECHANISM
+INFORMATION FOR PRODUCERS OF CEMENT GOODS
+THAT ARE EXPORTED TO THE EU
+
+>
+
+What is the EU CBAM?
+
+EU CBAM is the EU’s landmark tool to put a fair price on the greenhouse gases (GHG) emitted during the production of
+certain GHG-intensive goods, including cement, entering the EU. It will ensure that the EU’s climate objectives are not
+undermined and encourage cleaner industrial production in non-EU countries. Since 1 October 2023, the EU’s Carbon
+Border Adjustment Mechanism (EU CBAM) applies in its transitional phase.
+
+>
+
+As a producer of cement goods that are exported to the EU,
+CBAM is relevant for you!
+
+>
+
+What does this mean for me?
+
+Since EU CBAM entered into application in its transitional phase, EU importers must report quarterly
+on the quantities of cement goods they import into the EU, the greenhouse gas emissions released
+as they were produced (embedded in those goods) and the carbon price due in the country of origin.
+As a producer, you will need to submit above mentioned information to importers so that they can
+correctly report the embedded emissions of the goods they have imported into the EU. This also
+sets out an opportunity to reduce greenhouse gas emissions in your production processes and
+contribute to combatting climate change.
+
+>
+
+How does the European Commission help?
+
+To help you navigate the new system in its transitional phase, the European Commission provides operational
+guidance, available in many languages, as well as e-learning materials for you and your international
+trading partners.
+To facilitate the information exchange between you and the EU importer (or the customs representative
+acting on behalf of the importer), the European Commission created an Excel communication template.
+The template can be used as a tool to determine the embedded emissions of the produced goods.
+The information on the summary worksheet can then be shared with the EU importer. The summary
+worksheet contains the information needed by the EU importer for the quarterly CBAM report. Examples
+of filled-in templates for different sectors as well as a recorded course on how to use the template are
+available on the Commission’s CBAM website.
+
+KEY POINTS FOR PRODUCERS OF CEMENT TO REMEMBER IN THE EU CBAM
+TRANSITIONAL PHASE AS OF 1 OCTOBER 2023
+Cement producers will transmit information to EU importers or their customs
+representatives who must report on a quarterly basis:
+The quantity of cement
+products (in tonnes)
+exported into the EU during
+the previous quarter
+
+Direct CO2 emissions embedded
+during the production of the goods
+exported into the EU, at installation
+or production site level.
+
+Any carbon price due or paid
+in the country of origin for
+the embedded emissions in the
+imported goods, together with
+information on any rebate or
+other forms of compensation.
+
+Indirect emissions embedded
+in the goods resulting from the
+production of electricity which is
+consumed during the production
+of those goods.
+Contextual
+information on the
+produced CBAM
+goods such as the
+production route and,
+depending on the
+good, sector-specific
+parameters.
+
+>
+
+>
+
+Which cement goods fall under CBAM?
+
+Cement goods falling within the scope of the new reporting obligations are
+detailed in Annex I to the CBAM Regulation (EU) 2023/956. They include
+iron and steel goods determined by their Combined Nomenclature (CN) for
+example: 2523 21 00 – White Portland cement, whether or not artificially
+coloured.
+In order to find out if the goods you produce fall under the scope of the
+CBAM, you may use the CBAM self-assessment tool that will soon be
+available on the CBAM website or you may use the TARIC consultation tool.
+
+How should I determine the embedded emissions of CBAM goods?
+
+The methodology to determine embedded emissions of CBAM goods is laid out in Implementing Regulation (EU) 2023/1773.
+Further guidance is available on the CBAM website, in particular the guidance for operators in third countries and sectorspecific guidance in the form of a recorded webinar and an e-learning contain module.
+The aforementioned implementing regulation provides for two flexibilities when determining emissions:
+
+1. For imports until 31 December 2024, embedded emissions of the goods may be determined using other methods that
+lead to similar coverage and accuracy. They may be based on (a) a carbon pricing scheme, (b) a compulsory emission
+monitoring scheme or (c) an emission monitoring scheme at the installation.
+2. Estimated values (including default values) can be used for input materials or subprocesses with a relatively minor
+contribution to the total embedded emissions of complex goods (i.e. <20%).
+
+>
+
+Can I report my data directly to the European Commission?
+
+From January 2025 onwards, third-country operators will be able to provide information directly to the European Commission
+through the operator’s portal of the CBAM Registry. Operators may provide information on their installations and the
+embedded emissions in the produced CBAM goods. Operators may decide if they wish to share such information with EU
+importers. The objective of this direct reporting is to reduce administrative burden, as data could only be reported once and
+importers then simply refer to those data. Moreover, the direct reporting allows restricting access to some sensitive data
+only to the authorities.
+You can find all details needed to calculate and report the embedded
+emissions in the guidance and e-learning materials available on the
+dedicated website: Visit: https://encr.pw/QryJu
+The Frequently Asked Questions
+The Guidance Documents for operators in third countries.
+Also available in Spanish, German, French, Italian, Polish, Arabic, Chinese,
+Hindi, Korean, Ukrainian and Turkish.
+
+EU CBAM and developing countries
+The Communication template
+Recorded course on how to use the template
+Sector specific guidance: the webinar and the e-learning
+We also advise you to consult regularly our website where
+new material and tools are uploaded on a regular basis.
+
+
