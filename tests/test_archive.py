@@ -133,6 +133,7 @@ class MoreReadersTest(unittest.TestCase):
             {"celex": "02023R0956-20251020", "date": "2025-10-20", "relations": ["title-match"]},
             {"celex": "32023R1773", "date": "2023-08-17", "relations": ["http://x#resource_legal_based_on_resource_legal:32023R0956"]},
             {"celex": "52026SC0067", "date": "2026-03-16", "relations": ["title-match"]},
+            {"celex": "32025R2083R(01)", "date": "2025-11-12", "relations": ["http://x#resource_legal_corrects_resource_legal:32025R2083"]},
         ]
         self.assertEqual([row["celex"] for row in docs.wanted(rows)], ["52025PC0990", "52026PC0616"])
 

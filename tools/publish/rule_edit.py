@@ -58,6 +58,9 @@ def set_fields(body, args):
             rule[field] = value
     if args.at is not None:
         rule["at"] = args.at
+    # 다음 단계나 그 날짜를 바꾸면서 일정 이름을 새로 주지 않으면, 옛 일정 이름은 지운다(다른 일에 옛 이름이 붙지 않게)
+    if (args.next is not None or args.next_date is not None) and args.next_title is None:
+        rule.pop("nextTitle", None)
     for field, value in (("next", args.next), ("nextDate", args.next_date), ("nextTitle", args.next_title)):
         if value == "":
             rule.pop(field, None)

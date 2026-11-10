@@ -108,6 +108,12 @@ class RuleEditTest(unittest.TestCase):
         self.assertEqual((rule["stage"], rule["tone"], rule["at"], rule["status"]), ("채택", "adopted", 1, "제안 단계입니다."))
         self.assertNotIn("next", rule)
         self.assertNotIn("nextDate", rule)
+        # 날짜만 바꾸면 옛 일정 이름은 지워지고, 새 이름을 주면 그 이름이 남는다
+        rule.update({"next": "표결입니다.", "nextDate": "2026-12-01", "nextTitle": "옛 이름"})
+        self.edit.set_fields(self.body, self.args(id="sample-rule", stage=None, tone=None, status=None, at=None, next=None, next_date="2026-12-08", next_title=None))
+        self.assertEqual((rule["nextDate"], rule.get("nextTitle")), ("2026-12-08", None))
+        self.edit.set_fields(self.body, self.args(id="sample-rule", stage=None, tone=None, status=None, at=None, next=None, next_date="2026-12-09", next_title="본회의 표결"))
+        self.assertEqual(rule["nextTitle"], "본회의 표결")
 
     def test_drop_event_needs_exactly_one_match(self):
         with self.assertRaises(SystemExit):

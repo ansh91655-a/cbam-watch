@@ -32,7 +32,8 @@ def wanted(entries):
     chosen = []
     for entry in entries:
         celex = entry.get("celex", "")
-        if celex in ACTS or celex.startswith(("0", "C/")) or (entry.get("date") or "9999") < SINCE:
+        # 정오표(번호에 괄호가 든 것)는 자료 창구가 이 주소로 내어 주지 않는다. 날짜와 제목은 조회 결과에 있다.
+        if celex in ACTS or celex.startswith(("0", "C/")) or "(" in celex or (entry.get("date") or "9999") < SINCE:
             continue
         linked = any(not relation.split(":")[0].endswith("work_cites_work") for relation in entry.get("relations", []))
         if celex in ALSO or (linked and celex[5:7] != "SC"):
