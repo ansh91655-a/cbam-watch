@@ -28,7 +28,7 @@ def numbers(text):
 def check(summary, source):
     summary_dates, summary_rest = dates.find(summary)
     source_dates, _ = dates.find(source)
-    source_plain = re.sub(r"(?<=\d),(?=\d{3}\b)", "", source)
+    source_plain = re.sub(r"(?<=\d)[,\u00a0\u202f ](?=\d{3}\b)", "", source)  # 천 단위의 쉼표나 띄움을 뗀다
     source_numbers = set(numbers(source_plain))
     missing_dates = sorted(f"{y}-{m:02d}-{d:02d}" for (y, m, d) in summary_dates - source_dates)
     missing_numbers = []

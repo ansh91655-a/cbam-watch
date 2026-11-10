@@ -199,3 +199,18 @@ tr[hidden] { display: none; }
 
 .diff-old { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--bad); }
 .diff-label { font-size: 12px; color: var(--muted); }
+
+/* 원문 대조: 요약 아래에 접어 두는 원문 대목 */
+.excerpt { max-width: 72ch; font-size: 13.5px; }
+.excerpt summary { cursor: pointer; color: var(--accent); width: fit-content; }
+.excerpt summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.excerpt blockquote {
+  margin: 8px 0 4px;
+  padding: 8px 12px;
+  border-left: 3px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+  display: grid;
+  gap: 6px;
+}
+.excerpt blockquote p { margin: 0; }

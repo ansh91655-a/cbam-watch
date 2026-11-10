@@ -4,6 +4,15 @@ import { day } from "./format.js";
 
 const TONE = { "높음": "bad", "보통": "accent" };
 
+// 원문 대조. 요약의 근거가 된 원문 대목을 그대로 보여 준다(EU 공식 자료만).
+function excerpt(item) {
+  return h("details", { class: "excerpt" }, [
+    h("summary", { text: "원문 대조" }),
+    h("blockquote", { lang: "en", cite: item.link || null }, String(item.excerpt).split("\n").filter(Boolean).map((line) => h("p", { text: line }))),
+    h("p", { class: "count", text: `출처: ${item.sourceName || "원문"}. 원문 글을 그대로 옮긴 것입니다.` }),
+  ]);
+}
+
 export function card(item) {
   const meta = [
     item.published ? h("span", { text: day(item.published) }) : (item.listed ? h("span", { text: `등재 ${day(item.listed)}` }) : null),
@@ -23,6 +32,7 @@ export function card(item) {
     item.withdrawn ? h("p", { class: "summary withdrawn", text: "다시 대조한 결과 원문과 어긋난 곳이 있어 요약을 내렸습니다. 원문에서 직접 확인하세요." }) : null,
     !item.withdrawn && item.summary ? h("p", { class: "summary", text: item.summary }) : null,
     !item.withdrawn && item.impact ? h("p", { class: "impact" }, [h("strong", { text: "실무 영향 " }), h("span", { text: item.impact })]) : null,
+    !item.withdrawn && item.excerpt ? excerpt(item) : null,
     h("div", { class: "foot" }, foot),
   ]);
 }

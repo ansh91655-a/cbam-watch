@@ -77,6 +77,35 @@ class PublishTest(unittest.TestCase):
         _, again = _run(add_items.main, ["--db-dir", "db"])
         self.assertEqual(again["added"], [])
 
+    def test_numbers_must_be_in_the_source_text(self):
+        source = "5Oct2026 Q3 2026 CBAM Certificate price now available! The price is 82.32 EUR."
+        pathlib.Path("collected/pages").mkdir(parents=True)
+        pathlib.Path("collected/pages/ec-news.txt").write_text(source, encoding="utf-8")
+        common = {"sourceTextPath": "collected/pages/ec-news.txt", "tier": "A", "kind": "가격", "title": "3분기 가격 게시"}
+        self._draft("20261110-ec-news-good01", summary="2026년 10월 5일에 3분기 가격 82.32유로가 게시됐다.", excerpt="The price is 82.32 EUR.", **common)
+        self._draft("20261110-ec-news-bad001", summary="2026년 10월 5일에 3분기 가격 83.32유로가 게시됐다.", **common)
+        self._draft("20261110-ec-news-note01", summary="2026년 10월 5일에 가격 82.32유로(약 12만 원)가 게시됐다.", excerpt="The price is 82.33 EUR.", **common)
+        for item_id in ("20261110-ec-news-good01", "20261110-ec-news-bad001"):
+            self._verdict(item_id, "pass")
+        _write("db/verdicts/20261110-ec-news-note01.json", {"id": "20261110-ec-news-note01", "result": "pass", "factNote": "표기 차이: 12는 환산 설명", "at": "2026-11-10T08:30:00+09:00"})
+        _, result = _run(add_items.main, ["--db-dir", "db"])
+        self.assertEqual(sorted(result["added"]), ["20261110-ec-news-good01", "20261110-ec-news-note01"])
+        self.assertEqual(result["rejected"][0]["id"], "20261110-ec-news-bad001")
+        self.assertIn("83.32", result["rejected"][0]["problems"][0])
+        self.assertEqual(result["withoutExcerpt"], ["20261110-ec-news-note01"])  # 원문과 다른 발췌는 싣지 않는다
+        rows = {row["id"]: row for row in _read("data/items.json")["items"]}
+        self.assertEqual(rows["20261110-ec-news-good01"]["excerpt"], "The price is 82.32 EUR.")
+        self.assertNotIn("excerpt", rows["20261110-ec-news-note01"])
+
+    def test_excerpt_only_for_eu_official_sources(self):
+        pathlib.Path("collected/pages").mkdir(parents=True)
+        pathlib.Path("collected/pages/keco.txt").write_text("CBAM 설명회가 열린다는 공지입니다.", encoding="utf-8")
+        self._draft("20261110-keco-cbam-aaaa01", sourceTextPath="collected/pages/keco.txt", tier="B", excerpt="CBAM 설명회가 열린다는 공지입니다.", summary="설명회가 열린다.")
+        self._verdict("20261110-keco-cbam-aaaa01", "pass")
+        _, result = _run(add_items.main, ["--db-dir", "db"])
+        self.assertEqual(result["added"], ["20261110-keco-cbam-aaaa01"])
+        self.assertNotIn("excerpt", _read("data/items.json")["items"][-1])
+
     def test_digest_is_validated_and_replaced(self):
         _write("digest.json", {"from": "2026-11-09", "to": "2026-11-15", "title": "가격과 가이던스", "paragraphs": ["한 문단"], "itemIds": ["seed-one"]})
         code, result = _run(add_digest.main, ["--file", "digest.json"])
