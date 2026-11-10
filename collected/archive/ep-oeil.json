@@ -1,6 +1,6 @@
 {
  "source": "ep-oeil",
- "fetchedAt": "2026-11-10T22:05:34+09:00",
+ "fetchedAt": "2026-11-10T22:16:14+09:00",
  "since": "2025-01-01",
  "report": {
   "procedures": {
@@ -44,13 +44,15 @@
     "forecasts": [],
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0574(CNS)"
    },
+   "2026/0179(NLE)": "읽지 못함(404 HTTP Error 404: )",
    "2026/0211(COD)": {
     "title": "EU Emissions Trading System: heat and fuel benchmark values for 2026–2030",
     "events": 8,
     "status": "Awaiting Parliament's position in 1st reading",
     "forecasts": [],
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0211(COD)"
-   }
+   },
+   "2026/0223(NLE)": "읽지 못함(404 HTTP Error 404: )"
   }
  },
  "entries": [
