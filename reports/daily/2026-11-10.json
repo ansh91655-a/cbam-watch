@@ -1,0 +1,19 @@
+{
+ "kind": "daily",
+ "date": "2026-11-10",
+ "writtenAt": "2026-11-10T18:11:38+09:00",
+ "status": "문제",
+ "problems": [],
+ "runProblems": 1,
+ "holds": [
+  {
+   "id": "20261110-ec-news-eb3fa2-r2",
+   "gate": "출처"
+  }
+ ],
+ "counts": {
+  "published": 5,
+  "total": 18,
+  "retryHolds": 1
+ }
+}
