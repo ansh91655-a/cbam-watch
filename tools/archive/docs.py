@@ -6,6 +6,7 @@ CBAM 규정을 근거로 삼거나 고치는 문서는 모두 받고, CBAM 규�
 """
 import re
 import time
+import urllib.parse
 
 from tools.archive.store import ROOT, SINCE, save_index, save_text
 from tools.common.htmltext import decode, parse
@@ -48,25 +49,55 @@ def procedures_in(lines):
     return found
 
 
+ACCEPT = {"Accept": "application/xhtml+xml, text/html;q=0.9", "Accept-Language": "eng"}
+
+
+def lines_of(celex, notes):
+    """문서의 글을 줄 목록으로 돌려준다. 받지 못하면 (빈 목록, 사유).
+
+    한 문서에 파일이 여럿이면(본문과 부속서) 자료 창구가 고를 목록을 준다(300). 그때는 목록의 첫 파일(본문)을 받는다.
+    정오표는 번호의 괄호를 풀어 쓴 주소로 한 번 더 묻는다.
+    """
+    addresses = [CELLAR.format(celex=celex)]
+    if "(" in celex:
+        addresses.append(CELLAR.format(celex=urllib.parse.quote(celex, safe="")))
+    reason = ""
+    for address in addresses:
+        status, headers, body, error = fetch(address, timeout=240, retries=1, headers=ACCEPT)
+        time.sleep(PAUSE)
+        if status == 300 and body:
+            links, _, _ = parse(decode(body, header(headers, "Content-Type")), address)
+            choices = [url for url, _ in links if "/resource/cellar/" in url]
+            choices.sort(key=lambda url: (not url.endswith("DOC_1"), url))
+            notes.append(f"{celex}: 고를 파일 {len(choices)}개, 첫째 {choices[0] if choices else '없음'}")
+            for choice in choices[:4]:
+                status, headers, body, error = fetch(choice, timeout=240, retries=1, headers=ACCEPT)
+                time.sleep(PAUSE)
+                if status == 200 and body and b"<" in body[:400]:
+                    break
+        if status == 200 and body:
+            _, lines, _ = parse(decode(body, header(headers, "Content-Type")), address)
+            if len(lines) >= 5:
+                return lines, ""
+            reason = f"글이 거의 없음: {len(lines)}줄"
+        else:
+            reason = f"{status} {error[:60]}"
+    return [], reason
+
+
 def crawl(deadline=None):
     related = read_json(ROOT / "eur-lex-related.json", {}).get("entries", [])
     targets = wanted(related)
-    entries, report = [], {"targets": len(targets), "stored": 0, "failures": []}
+    entries, report = [], {"targets": len(targets), "stored": 0, "failures": [], "notes": []}
     for target in targets:
         if deadline and time.monotonic() > deadline:
             report["stoppedAt"] = target["celex"]
             break
         celex = target["celex"]
         source = CELLAR.format(celex=celex)
-        status, headers, body, error = fetch(source, timeout=240, retries=1,
-                                             headers={"Accept": "application/xhtml+xml, text/html;q=0.9", "Accept-Language": "eng"})
-        time.sleep(PAUSE)
-        if status != 200 or not body:
-            report["failures"].append(f"{celex} ({status} {error[:60]})")
-            continue
-        _, lines, _ = parse(decode(body, header(headers, "Content-Type")), source)
-        if len(lines) < 5:
-            report["failures"].append(f"{celex} (글이 거의 없음: {len(lines)}줄)")
+        lines, reason = lines_of(celex, report["notes"])
+        if not lines:
+            report["failures"].append(f"{celex} ({reason})")
             continue
         kept = [line[:LINE_LIMIT] for line in lines[:LONG_LINES if celex in LONG else HEAD_LINES]]
         url = EURLEX.format(celex=celex)
