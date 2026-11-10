@@ -1,0 +1,22 @@
+{
+ "source": "us-fedreg",
+ "fetchedAt": "2026-11-10T22:06:04+09:00",
+ "since": "2025-01-01",
+ "report": {
+  "results": 1,
+  "kept": 1
+ },
+ "entries": [
+  {
+   "date": "2026-10-08",
+   "number": "2026-20615",
+   "title": "Request for Comments on the Effect of the European Union's Carbon Border Adjustment Mechanism and the Proposals To Expand Coverage on U.S. Trade",
+   "agencies": [
+    "Trade Representative, Office of United States"
+   ],
+   "commentsClose": "2026-11-09",
+   "url": "https://www.federalregister.gov/documents/2026/10/08/2026-20615/request-for-comments-on-the-effect-of-the-european-unions-carbon-border-adjustment-mechanism-and-the",
+   "textPath": "collected/archive/pages/us-fedreg/2026-20615.txt"
+  }
+ ]
+}

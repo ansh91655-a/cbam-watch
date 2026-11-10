@@ -1,0 +1,48 @@
+[주소] https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025AP0108
+[받은 곳] http://publications.europa.eu/resource/celex/52025AP0108
+
+C_202506221EN.000101.fmx.xml
+Official Journal
+of the European Union
+EN
+C series
+C/2025/6221
+2.12.2025
+P10_TA(2025)0108
+Amending Regulation (EU) 2023/956 as regards simplifying and strengthening the carbon border adjustment mechanism
+Amendments adopted by the European Parliament on 22 May 2025 on the proposal for a regulation of the European Parliament and of the Council amending Regulation (EU) 2023/956 as regards simplifying and strengthening the carbon border adjustment mechanism (COM(2025)0087 – C10-0035/2025 – 2025/0039(COD)) (1)
+(Ordinary legislative procedure: first reading)
+(C/2025/6221)
+Amendment 1
+Proposal for a regulation
+Recital 25 a (new)
+Text proposed by the Commission
+Amendment
+(25a)
+The CBAM applies to importation of electricity, but it should not apply to electricity generated entirely in the exclusive economic zone of an EEA Member State and imported directly into the customs territory of the Union;
+Amendment 2
+Proposal for a regulation
+Article 1 – paragraph 1 – point 1 – point b a (new)
+Regulation (EU) 2023/956
+Article 2 – paragraph 3 b (new)
+Text proposed by the Commission
+Amendment
+(ba)
+the following paragraph 3b is inserted:
+3b. By way of derogation from paragraphs 1 and 2, this Regulation shall not apply to electricity generated entirely in the exclusive economic zone of an EEA Member State and imported directly into the customs territory of the Union.
+Amendment 3
+Proposal for a regulation
+Annex I – paragraph 1 – point 1 a (new)
+Regulation (EU) 2023/956
+Annex IV – point 3 – paragraph 1 – subparagraph 5
+Present text
+Amendment
+(1a)
+In point 3, in the notes explaining the formula for SEEg in the first paragraph, the note for EEInpMat is replaced by the following:
+EEInpMat
+EEInpMat
+are the embedded emissions of the input materials (precursors) consumed in the production process. Only input materials (precursors) listed as relevant to the system boundaries of the production process as specified in the implementing act adopted pursuant to Article 7(7) are to be considered. The relevant EEInpMat are calculated as follows:
+are the embedded emissions of the input materials (precursors) consumed in the production process. Only input materials (precursors) listed in Annex I and originating in third countries and territories that are not exempted pursuant to Annex III, Point 1 are to be considered. The relevant EEInpMat are calculated as follows:
+(1) The matter was referred back for interinstitutional negotiations to the committee responsible, pursuant to Rule 60(4), fourth subparagraph (A10-0085/2025).
+ELI: http://data.europa.eu/eli/C/2025/6221/oj
+ISSN 1977-091X (electronic edition)

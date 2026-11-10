@@ -1,20 +1,55 @@
 {
  "source": "ep-oeil",
- "fetchedAt": "2026-11-10T20:37:14+09:00",
+ "fetchedAt": "2026-11-10T22:05:34+09:00",
  "since": "2025-01-01",
  "report": {
   "procedures": {
    "2025/0039(COD)": {
     "title": "Carbon Border Adjustment Mechanism: simplification and strengthening (Omnibus I)",
-    "events": 15
+    "events": 15,
+    "status": "Procedure completed",
+    "forecasts": [],
+    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0039(COD)"
    },
    "2025/0419(COD)": {
     "title": "Carbon Border Adjustment Mechanism: extension of its scope to downstream goods and anti-circumvention measures",
-    "events": 8
+    "events": 8,
+    "status": "Awaiting Parliament's position in 1st reading",
+    "forecasts": [],
+    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0419(COD)"
+   },
+   "2025/0418(COD)": {
+    "title": "Establishing the Temporary Decarbonisation Fund",
+    "events": 8,
+    "status": "Awaiting Parliament's position in 1st reading",
+    "forecasts": [],
+    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0418(COD)"
    },
    "2026/0212(COD)": {
     "title": "EU Emissions Trading System and market stability reserve: competitiveness and cost-effective decarbonisation",
-    "events": 2
+    "events": 2,
+    "status": "Awaiting committee decision",
+    "forecasts": [
+     {
+      "date": "2026-12-14",
+      "subject": "Indicative plenary sitting date, 1st reading"
+     }
+    ],
+    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0212(COD)"
+   },
+   "2025/0574(CNS)": {
+    "title": "System of own resources of the European Union",
+    "events": 2,
+    "status": "Awaiting committee decision",
+    "forecasts": [],
+    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0574(CNS)"
+   },
+   "2026/0211(COD)": {
+    "title": "EU Emissions Trading System: heat and fuel benchmark values for 2026–2030",
+    "events": 8,
+    "status": "Awaiting Parliament's position in 1st reading",
+    "forecasts": [],
+    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0211(COD)"
    }
   }
  },
@@ -101,6 +136,15 @@
    "textPath": "collected/archive/pages/ep-oeil/2025-0039-COD.txt"
   },
   {
+   "date": "2025-07-16",
+   "event": "Legislative proposal published",
+   "reference": "COM(2025)0574",
+   "procedure": "2025/0574(CNS)",
+   "procedureTitle": "System of own resources of the European Union",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0574(CNS)",
+   "textPath": "collected/archive/pages/ep-oeil/2025-0574-CNS.txt"
+  },
+  {
    "date": "2025-09-09",
    "event": "Debate in Parliament",
    "reference": "",
@@ -137,6 +181,15 @@
    "textPath": "collected/archive/pages/ep-oeil/2025-0039-COD.txt"
   },
   {
+   "date": "2025-10-06",
+   "event": "Committee referral announced in Parliament",
+   "reference": "",
+   "procedure": "2025/0574(CNS)",
+   "procedureTitle": "System of own resources of the European Union",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0574(CNS)",
+   "textPath": "collected/archive/pages/ep-oeil/2025-0574-CNS.txt"
+  },
+  {
    "date": "2025-10-08",
    "event": "Final act signed",
    "reference": "",
@@ -157,6 +210,15 @@
   {
    "date": "2025-12-17",
    "event": "Legislative proposal published",
+   "reference": "COM(2025)0990",
+   "procedure": "2025/0418(COD)",
+   "procedureTitle": "Establishing the Temporary Decarbonisation Fund",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0418(COD)",
+   "textPath": "collected/archive/pages/ep-oeil/2025-0418-COD.txt"
+  },
+  {
+   "date": "2025-12-17",
+   "event": "Legislative proposal published",
    "reference": "COM(2025)0989",
    "procedure": "2025/0419(COD)",
    "procedureTitle": "Carbon Border Adjustment Mechanism: extension of its scope to downstream goods and anti-circumvention measures",
@@ -167,10 +229,28 @@
    "date": "2026-02-12",
    "event": "Committee referral announced in Parliament, 1st reading",
    "reference": "",
+   "procedure": "2025/0418(COD)",
+   "procedureTitle": "Establishing the Temporary Decarbonisation Fund",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0418(COD)",
+   "textPath": "collected/archive/pages/ep-oeil/2025-0418-COD.txt"
+  },
+  {
+   "date": "2026-02-12",
+   "event": "Committee referral announced in Parliament, 1st reading",
+   "reference": "",
    "procedure": "2025/0419(COD)",
    "procedureTitle": "Carbon Border Adjustment Mechanism: extension of its scope to downstream goods and anti-circumvention measures",
    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0419(COD)",
    "textPath": "collected/archive/pages/ep-oeil/2025-0419-COD.txt"
+  },
+  {
+   "date": "2026-07-06",
+   "event": "Vote in committee, 1st reading",
+   "reference": "",
+   "procedure": "2025/0418(COD)",
+   "procedureTitle": "Establishing the Temporary Decarbonisation Fund",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0418(COD)",
+   "textPath": "collected/archive/pages/ep-oeil/2025-0418-COD.txt"
   },
   {
    "date": "2026-07-06",
@@ -191,6 +271,24 @@
    "textPath": "collected/archive/pages/ep-oeil/2025-0419-COD.txt"
   },
   {
+   "date": "2026-07-15",
+   "event": "Committee report tabled for plenary, 1st reading",
+   "reference": "A10-0202/2026",
+   "procedure": "2025/0418(COD)",
+   "procedureTitle": "Establishing the Temporary Decarbonisation Fund",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0418(COD)",
+   "textPath": "collected/archive/pages/ep-oeil/2025-0418-COD.txt"
+  },
+  {
+   "date": "2026-07-17",
+   "event": "Legislative proposal published",
+   "reference": "COM(2026)0619",
+   "procedure": "2026/0211(COD)",
+   "procedureTitle": "EU Emissions Trading System: heat and fuel benchmark values for 2026–2030",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0211(COD)",
+   "textPath": "collected/archive/pages/ep-oeil/2026-0211-COD.txt"
+  },
+  {
    "date": "2026-07-17",
    "event": "Legislative proposal published",
    "reference": "COM(2026)0616",
@@ -200,6 +298,24 @@
    "textPath": "collected/archive/pages/ep-oeil/2026-0212-COD.txt"
   },
   {
+   "date": "2026-09-04",
+   "event": "Urgent procedure requested by a committee",
+   "reference": "",
+   "procedure": "2026/0211(COD)",
+   "procedureTitle": "EU Emissions Trading System: heat and fuel benchmark values for 2026–2030",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0211(COD)",
+   "textPath": "collected/archive/pages/ep-oeil/2026-0211-COD.txt"
+  },
+  {
+   "date": "2026-09-14",
+   "event": "Debate in Parliament",
+   "reference": "",
+   "procedure": "2025/0418(COD)",
+   "procedureTitle": "Establishing the Temporary Decarbonisation Fund",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0418(COD)",
+   "textPath": "collected/archive/pages/ep-oeil/2025-0418-COD.txt"
+  },
+  {
    "date": "2026-09-14",
    "event": "Debate in Parliament",
    "reference": "",
@@ -207,6 +323,42 @@
    "procedureTitle": "Carbon Border Adjustment Mechanism: extension of its scope to downstream goods and anti-circumvention measures",
    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0419(COD)",
    "textPath": "collected/archive/pages/ep-oeil/2025-0419-COD.txt"
+  },
+  {
+   "date": "2026-09-14",
+   "event": "Committee referral announced in Parliament, 1st reading",
+   "reference": "",
+   "procedure": "2026/0211(COD)",
+   "procedureTitle": "EU Emissions Trading System: heat and fuel benchmark values for 2026–2030",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0211(COD)",
+   "textPath": "collected/archive/pages/ep-oeil/2026-0211-COD.txt"
+  },
+  {
+   "date": "2026-09-15",
+   "event": "Decision by Parliament, 1st reading",
+   "reference": "T10-0277/2026",
+   "procedure": "2025/0418(COD)",
+   "procedureTitle": "Establishing the Temporary Decarbonisation Fund",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0418(COD)",
+   "textPath": "collected/archive/pages/ep-oeil/2025-0418-COD.txt"
+  },
+  {
+   "date": "2026-09-15",
+   "event": "Results of vote in Parliament",
+   "reference": "",
+   "procedure": "2025/0418(COD)",
+   "procedureTitle": "Establishing the Temporary Decarbonisation Fund",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0418(COD)",
+   "textPath": "collected/archive/pages/ep-oeil/2025-0418-COD.txt"
+  },
+  {
+   "date": "2026-09-15",
+   "event": "Matter referred back to the committee responsible for interinstitutional negotiations",
+   "reference": "",
+   "procedure": "2025/0418(COD)",
+   "procedureTitle": "Establishing the Temporary Decarbonisation Fund",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0418(COD)",
+   "textPath": "collected/archive/pages/ep-oeil/2025-0418-COD.txt"
   },
   {
    "date": "2026-09-15",
@@ -243,6 +395,51 @@
    "procedureTitle": "EU Emissions Trading System and market stability reserve: competitiveness and cost-effective decarbonisation",
    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0212(COD)",
    "textPath": "collected/archive/pages/ep-oeil/2026-0212-COD.txt"
+  },
+  {
+   "date": "2026-10-19",
+   "event": "Vote in committee, 1st reading",
+   "reference": "",
+   "procedure": "2026/0211(COD)",
+   "procedureTitle": "EU Emissions Trading System: heat and fuel benchmark values for 2026–2030",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0211(COD)",
+   "textPath": "collected/archive/pages/ep-oeil/2026-0211-COD.txt"
+  },
+  {
+   "date": "2026-10-19",
+   "event": "Committee report tabled for plenary, 1st reading",
+   "reference": "A10-0276/2026",
+   "procedure": "2026/0211(COD)",
+   "procedureTitle": "EU Emissions Trading System: heat and fuel benchmark values for 2026–2030",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0211(COD)",
+   "textPath": "collected/archive/pages/ep-oeil/2026-0211-COD.txt"
+  },
+  {
+   "date": "2026-10-22",
+   "event": "Decision by Parliament, 1st reading",
+   "reference": "T10-0363/2026",
+   "procedure": "2026/0211(COD)",
+   "procedureTitle": "EU Emissions Trading System: heat and fuel benchmark values for 2026–2030",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0211(COD)",
+   "textPath": "collected/archive/pages/ep-oeil/2026-0211-COD.txt"
+  },
+  {
+   "date": "2026-10-22",
+   "event": "Results of vote in Parliament",
+   "reference": "",
+   "procedure": "2026/0211(COD)",
+   "procedureTitle": "EU Emissions Trading System: heat and fuel benchmark values for 2026–2030",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0211(COD)",
+   "textPath": "collected/archive/pages/ep-oeil/2026-0211-COD.txt"
+  },
+  {
+   "date": "2026-10-22",
+   "event": "Matter referred back to the committee responsible for interinstitutional negotiations",
+   "reference": "",
+   "procedure": "2026/0211(COD)",
+   "procedureTitle": "EU Emissions Trading System: heat and fuel benchmark values for 2026–2030",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0211(COD)",
+   "textPath": "collected/archive/pages/ep-oeil/2026-0211-COD.txt"
   }
  ]
 }

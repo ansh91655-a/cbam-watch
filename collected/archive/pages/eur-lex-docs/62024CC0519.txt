@@ -1,0 +1,123 @@
+[주소] https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:62024CC0519
+[받은 곳] http://publications.europa.eu/resource/celex/62024CC0519
+
+62024CC0519
+OPINION OF ADVOCATE GENERAL
+ĆAPETA
+delivered on 9 October 2025 ( 1 )
+Case C‑519/24
+Nitrogénművek Vegyipari Zrt.
+v
+Nemzeti Adó- és Vámhivatal Fellebbviteli Igazgatósága
+(Request for a preliminary ruling from the Veszprémi törvényszék (Veszprém High Court, Hungary))
+(Reference for a preliminary ruling – Environmental protection – Directive 2003/87/EC – Greenhouse gas emission allowance trading system – EU ETS – Objectives of Directive 2003/87 – Emission allowances free of charge – Carbon leakage – National tax on carbon dioxide produced as a result of the use of free allowances)
+I. Introduction
+1.
+The emissions trading system established by Directive 2003/87/EC ( 2 ) (‘the EU ETS’) is one of the instruments through which the European Union endeavours to achieve its environmental goals. The directive aims to decarbonise the economy of the European Union by regulating greenhouse gas emissions (‘GHG emissions’). At the same time, and taking into consideration the economic interests of the European Union, it strives to achieve reductions in a cost-effective and economically efficient manner. ( 3 )
+2.
+The present case raises the question as to what extent Member States can supplement that system established at EU level.
+II. The facts in the main proceedings, the questions referred for a preliminary ruling and the procedure before the Court
+3.
+In the aftermath of the COVID-19 pandemic and due to Russia’s war of aggression against Ukraine, on 17 July 2023 Hungary adopted the a jelentős térítésmentes kibocsátásiegység-kiosztásban részesülő létesítmény üzemeltetőjét érintő egyes veszélyhelyzeti szabályokról szóló 320/2023. (VII. 17.) Kormányrendelet (Government Decree No 320/2023 on certain emergency rules relating to operators of installations qualifying for a significant free allocation of emission allowances; ‘the Government Decree’).
+4.
+By the present reference for a preliminary ruling, the Veszprémi törvényszék (Veszprém High Court, Hungary; ‘the referring court’) seeks clarification from the Court of Justice of the relevant EU law in order to decide on the compatibility of that government decree with the objectives and provisions of Directive 2003/87.
+5.
+Before the referring court, Nitrogénművek Vegyipari Zrt., a nitrogen fertiliser producing company established in Hungary (‘the applicant’), challenges a decision of the national tax authority, which found the applicant liable to pay a carbon tax under the Government Decree.
+6.
+The Government Decree imposes a carbon tax, calculated on the basis of the quantity of emission, on ‘operator[s] of an installation qualifying for a significant free allocation of emission allowances’. Tax is imposed if such operators (i) produced an annual average of certified emissions of carbon dioxide in the three years preceding the year in question in excess of 25000 tonnes and (ii) received in the year prior to the year in question the allocation of free allowances equivalent to at least 50% of the average of its total certified emissions of carbon dioxide in the three years preceding the year in question. ( 4 )
+7.
+The Government Decree defines its scope of application ratione personae as applying only to those operators of an installation that qualify for a significant free allocation of emission allowances which have a ‘product benchmark sub-installation’ or a ‘process emissions sub-installation’ within the meaning of Commission Delegated Regulation (EU) 2019/331. ( 5 )
+8.
+Falling within that scope of application, the applicant was held liable to pay tax on carbon dioxide emissions.
+9.
+However, the applicant considered that the Government Decree, upon which the fiscal charge is based, was contrary both to the Magyarország Alaptörvénye (Hungarian Basic Law) and to EU law, and thus requested that the tax authorities allow it to amend its tax return.
+10.
+The Nemzeti Adó- és Vámhivatal Veszprém Vármegyei Adó- és Vámigazgatósága (National Tax and Customs Authority – Tax and Customs Directorate, Province of Veszprém, Hungary; ‘the first-tier tax authority’) rejected the applicant’s tax return, filed on 21 December 2023, considering that the provisions of the Government Decree were in force and applicable to the applicant.
+11.
+The applicant then lodged an administrative appeal against the decision of the first-tier tax authority to the Nemzeti Adó- és Vámhivatal Fellebbviteli Igazgatósága (National Tax and Customs Authority – Appeals Directorate, Hungary; ‘the second-tier tax authority’ or ‘the defendant’).
+12.
+The second-tier tax authority confirmed the decision of the first-tier tax authority. It explained that, as law enforcement authorities, tax authorities are not empowered to rule on the legality of a rule of law from the point of view of any alleged incompatibility of the latter with provisions of the Hungarian Constitution or of EU law. It considered that a ruling on the substance of an infringement of EU law must be given in judicial review proceedings.
+13.
+Following that decision, the applicant initiated proceedings before the referring court, claiming that the decisions of both the first-tier and the second-tier tax authorities (‘the contested decisions’) should be amended in such a way that the referring court allows its tax return. In the alternative, it claimed that the contested decisions should be annulled and the defendant should be ordered to conduct new proceedings and issue a new decision. The applicant based its claims on the contention that the contested decisions infringe the Hungarian Basic Law and the EU ETS, and are contrary to the objectives of Directive 2003/87.
+14.
+In respect of the latter, the applicant claimed before the referring court that the tax on carbon dioxide is incompatible with the objective to avoid carbon leakage, which the European Union sought to ensure by introducing the free allocation of allowances in the EU ETS. As the levying of that tax is directly linked to the free allowances received under Directive 2003/87, it has the effect, in practice, of depriving those allowances of their character as allowances allocated without consideration.
+15.
+The applicant further stated that the Government Decree constitutes an obstacle to the exercise of fundamental freedoms guaranteed by the Treaty and that the legislation in question is discriminatory. In that regard, the applicant claimed that the definition of the scope ratione personae of the Government Decree is arbitrary and discriminatory against operators that fall within the scope of that law as compared with those who do not, as well as against operators established in Hungary who fall within its scope as compared to operators from other Member States.
+16.
+The applicant further claimed that that Government Decree is contrary both to the freedom of establishment and to the freedom to provide services, since it contains a disproportionate restriction not justified by an overriding reason in the public interest and therefore in breach of the principle of non-discrimination, in the light of the concept of ‘operator’ under Article 3(f) of Directive 2003/87. Furthermore, in conferring a selective advantage on other economic operators, the Government Decree also constitutes non-notified State aid that infringes Articles 107 and 108 TFEU.
+17.
+Finally, the applicant claimed that the Government Decree constitutes a disproportionate restriction on property and thus infringes Article 17 of the Charter of Fundamental Rights of the European Union (‘the Charter’) and Article 1 of the First Additional Protocol to the Convention for the Protection of Human Rights and Fundamental Freedoms (ECHR). In that regard, the applicant stated that any restriction of fundamental rights must respect the principles of legal certainty and the protection of legitimate expectations, meaning that it must be foreseeable and must allow those affected enough time to make the amendments required by the legislative changes in question. The absence of a transiti
+18.
+The defendant before the referring court submitted that the action for judicial review should be dismissed and the legal reasoning set out in the contested decisions maintained. In particular, the defendant contended that the Government Decree does not infringe Directive 2003/87.
+19.
+In respect of their claims regarding the (non-)conformity of the Government Decree with Directive 2003/87, both the applicant and the defendant relied on the same case-law of the Court, namely Iberdrola and Others, ( 6 )ŠKO–Energo ( 7 ) and PPC Power. ( 8 )
+20.
+Concerning the applicant’s argument relating to the freedom of establishment, the defendant stated that it is unclear how such a freedom could have been infringed since the applicant is already established in Hungary and its establishment – or the commencement or continuation of its business activities – in another Member State is not, from any point of view, the subject of the present case. ( 9 ) Finally, the defendant referred to Adusbef and Others ( 10 ) in order to support its argument that the freedom to conduct a business is not an absolute right and may be subject to interventions on the part of public authorities which may limit the exercise of economic activity in the public interes
+21.
+In those circumstances, the Veszprémi törvényszék (Veszprém High Court) decided to stay the proceedings and to refer the following questions to the Court of Justice for a preliminary ruling:
+‘(1)
+Must – or may – the objectives and the provisions of [Directive 2003/87] – in particular, although not exclusively, Articles 1, 10 and 11 and recitals 5, 7 and 20 thereof – be interpreted as precluding a national measure ([g]overnment decree) which:
+–
+retrospectively subjects emissions produced as a result of the use of emission allowances to a fiscal charge (levying of a charge);
+–
+retrospectively subjects emissions produced as a result of the use of free emission allowances to a fiscal charge (levying of a charge);
+–
+retrospectively subjects emissions produced as a result of the use of free emission allowances to a fiscal charge (levying of a charge) the effect of which is to deprive the free emission allowances of their value and their compensatory effect;
+–
+retrospectively subjects emissions produced as a result of the use of free emission allowances to a fiscal charge (levying of a charge) the effect of which is to deter operators from reducing their emissions, improving their environmental efficiency or investing in more environmentally friendly technologies;
+–
+retrospectively subjects emissions produced as a result of the use of free emission allowances to a fiscal charge (levying of a charge) the purpose of which bears no relation to environmental protection or to the European Union’s emissions trading scheme and its objectives; on the contrary, the purpose of, and sole basis for, authorising the imposition of that charge is to deal with the effects of the armed conflict and humanitarian disaster close to Hungary?
+(2)
+In the light of the prohibition of discrimination arising from Articles 18, 49 and 56 [TFEU], Article 21 of the [Charter] and Article 14 [ECHR], must – or may – the concept of “operator” referred to in Article 3(f) of [Directive 2003/87] be interpreted as precluding a national measure ([g]overnment decree) which discriminates, in an unjustified and arbitrary manner and without any overriding reason in the public interest, against a particular category of such operators by comparison with operators not falling within its scope?
+(3)
+Must – or may – Articles 18, 49 and 56 TFEU be interpreted as precluding a national measure ([g]overnment decree) which restricts the exercise of those freedoms and which:
+–
+[d]iscriminates, in an unjustified and arbitrary manner and without any overriding reason in the public interest, against a particular category of operators within the meaning of Article 3(f) of [Directive 2003/87] by subjecting them to different (more onerous) rules;
+–
+defines its scope ratione personae in an arbitrary manner without any overriding reason in the public interest, and which is not suitable for attaining the objectives of empowerment that led to its adoption; and
+–
+is introduced suddenly and unforeseeably, with only three days having elapsed between its publication and its entry into force, and at the same time retrospectively imposes retroactive obligations in respect of events that occurred prior to its entry into force?
+(4)
+Must – or may – the protection of the right to property guaranteed by Article 17 of the Charter and Article 1 of the First Additional Protocol to the ECHR be interpreted as precluding a national measure ([g]overnment decree) which is confiscatory in nature and which deprives operators falling within its scope of all of their gains in the immediate future, thus constituting a disproportionate and intolerable interference?’
+22.
+The applicant in the main proceedings, the Hungarian Government and the European Commission submitted written observations to the Court.
+23.
+A hearing was held on 25 June 2025 at which those parties presented oral argument.
+III. Analysis
+A. On the questions referred
+24.
+A few preliminary remarks are in order in relation to the first question referred.
+25.
+First, by that question, the referring court seeks the interpretation of inter alia Article 10 of Directive 2003/87. In the original version of that directive, the provision which dealt with the allocation of free allowances was indeed Article 10. However, that directive has since been amended multiple times, ( 11 ) and thus the allocation of free allowances is now provided for in Article 10a thereof. Therefore, the first question of the referring court should be understood as requiring the interpretation of Article 10a of that directive, not of Article 10 thereof.
+26.
+Second, the first question referred relates to different scenarios presented in five parts. The scenario presented in the first part, which concerns the tax on emissions produced as a result of the use of emission allowances in general, is hypothetical, since that scenario does not represent the circumstances of the case before the referring court. Instead, the tax at issue in the present case, imposed by the Government Decree, concerns a tax on carbon dioxide emissions produced by installations which are allocated significant amount of free allowances, and only concerns such installations. For that reason, the Court cannot provide an answer to that part of the first question.
+27.
+The remaining components of the first question relate to tax on emissions produced as a result of the use of free allowances. Those parts of the question in fact already qualify the national legislation at issue as depriving the free emission allowances of their value and of their compensatory effect, as well as having the effect of deterring operators from reducing their emissions, improving their environmental efficiency and/or investing in more environmentally friendly technologies. It then asks whether that national legislation, having such effects, is allowed or prohibited under Directive 2003/87.
+28.
+Whether or not the national legislation at issue really has such effects is not a question that the Court can consider in preliminary reference procedures. Given that any national legislation that specifically undermines the objectives of a directive is inevitably precluded by that directive, it must be understood from the questions before the Court in the present case that the referring court is in fact asking for confirmation that the objectives it mentions are indeed the objectives being pursued by Directive 2003/87 in maintaining the free allowances in the EU ETS.
+29.
+In my analysis, I will therefore answer the question by focusing on the objectives of maintaining the free allowances in the EU ETS, and the legal framework through which those objectives are ensured.
+30.
+The final part of the first question asks whether a fiscal charge is precluded on the ground that it bears no relation to environmental protection or to the EU ETS and its objectives, but whose purpose is rather to deal with the effects of the COVID-19 pandemic and Russia’s war of aggression against Ukraine. To my mind, this question requires an answer only if the tax at issue does not run contrary to the objectives of the free allowances within the EU ETS. If it does, it is prohibited by Directive 2003/87 regardless of its domestic budgetary purpose.
+31.
+As far as the second, third and fourth questions are concerned, I do not find them to be relevant. Directive 2003/87 was adopted on the basis of Article 192(1) TFEU (then Article 175(1) TEC), which is the legal basis for the adoption of legislation in the area of the environment. Nevertheless, under recital 7 of that directive, its provisions are also considered necessary for preserving the integrity of the internal market and to avoid distortions of competition. Therefore, if the national legislation at issue is found to contravene that directive, it will not be necessary to establish whether it is also contrary both to the freedom of establishment and to the freedom to provide services, as
+32.
+Taking the above into consideration, I will address the objectives of distributing emissions allowances free of charge to certain market operators. If the referring court finds that the Government Decree and the decisions adopted on the basis of that decree run contrary to those objectives, it must set aside the national legislation at issue.
+B. Objectives of the free emission allowances
+33.
+As stated in the introductory part and confirmed by the case-law of the Court, the EU ETS aims to reduce substantially the GHG emissions in the European Union without, however, harming the economic development, employment and competitiveness of EU industries. ( 12 )
+34.
+In general, the EU ETS scheme functions so that every GHG emission covered by the scheme must correspond to the amount of emission allowances to be surrendered. By 30 April each year at the latest, the operator of every installation must surrender the quantity of allowances corresponding to their GHG emissions during that period. ( 13 )
+35.
+Allowances may be acquired by auction, that is for consideration, or allocated for free. While, at the same time, the cap on the overall amount of emissions allowed is progressively decreased.
+36.
+The EU ETS as it exists today has been introduced in stages. Thus far, there have been four EU ETS trading periods. ( 14 )
+37.
+During the first trading period, from 2005 to 2007, almost all allowances covering emissions from installations included in the scheme were allocated free of charge based on the quantity of the past emissions of those industries. For that period, it was the responsibility of each Member State to set the cap, which meant that national authorities were tasked with establishing the volume of allowances allocated to each installation based on their national allocation plan.
+38.
+During the second trading period, from 2008 to 2012, the proportion of allocation of free allowances fell to around 90%. As in the previous period, the allowance allocation was decided on at Member State level, which led to diverging national approaches. In order to avoid the discrepancies that that created, the EU legislature adapted the system for the third time.
+39.
+The big change to the system occurred in the third trading period, lasting from 2013 to 2020. From the beginning of that period, Member States were no longer required to prepare national allocation plans. Instead, those plans were replaced by a single EU-wide cap on allowances. That cap has since been reduced annually in line with the European Union’s climate target, ensuring that overall EU emissions decrease over time.
+40.
+During that third period, the auctioning of emission allowances became the default system when allocating them. However, free allowances continued to be distributed.
+41.

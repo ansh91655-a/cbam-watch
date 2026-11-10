@@ -1,0 +1,262 @@
+[주소] https://data.consilium.europa.eu/doc/document/ST-10423-2026-INIT/en/pdf
+
+10423/26 1
+ECOFIN.2.B EN
+Council of the
+European Union
+Brussels, 12 June 2026
+(OR. en)
+10423/26
+ECOFIN 805
+FISC 217
+UD 176
+ENV 706
+CLIMA 317
+CODEC 1146
+Interinstitutional File:
+2025/0419 (COD)
+OUTCOME OF PROCEEDINGS
+From: General Secretariat of the Council
+To: Delegations
+Subject: Draft Regulation of the European Parliament and of the Council amending
+Regulation (EU) 2023/956 as regards the extension of its scope to
+downstream goods and anti-circumvention measures
+- General approach
+Delegations will find attached the text of the general approach on the above draft Regulation,
+reached at the meeting of the Council (Economic and Financial Affairs) on 12 June 2026.
+10423/26 2
+ECOFIN.2.B EN
+DRAFT
+REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL
+amending Regulation (EU) 2023/956 as regards the extension of its scope to downstream
+goods and anti-circumvention measures
+(Text with EEA relevance)
+THE EUROPEAN PARLIAMENT AND THE COUNCIL OF THE EUROPEAN UNION,
+Having regard to the Treaty on the Functioning of the European Union, and in particular Article
+192(1) thereof,
+Having regard to the proposal from the European Commission,
+After transmission of the draft legislative act to the national parliaments,
+Having regard to the opinion of the European Economic and Social Committee1,
+After consulting the Committee of the Regions2,
+Acting in accordance with the ordinary legislative procedure,
+Whereas:
+1 OJ C , , p. .
+2 OJ C , , p. .
+10423/26 3
+ECOFIN.2.B EN
+(1) Regulation (EU) 2023/956 of the European Parliament and of the Council3 was initially
+designed with a limited scope, covering those goods that are most exposed to the risk of
+carbon leakage and that are most carbon intensive. The scope of that Regulation should be
+gradually extended to cover products further down the value chain of the goods listed in
+Annex I to that Regulation.
+(2) In its Communication entitled ‘A European Steel and Metals Action Plan’4, the Commission
+set out the objectives of extending the scope of the carbon border adjustment mechanism
+(‘CBAM’) to certain steel and aluminium-intensive downstream products, as
+well as addressing the risk of circumvention and practices which could undermine the
+objectives of the CBAM, including the redirection by third countries of low emission-
+intensive goods to the Union market in the absence of efforts to decarbonise the entirety of
+their production.
+3 Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023
+establishing a carbon border adjustment mechanism (OJ L 130, 16.5.2023, p. 52, ELI:
+http://data.europa.eu/eli/reg/2023/956/oj).
+4 Communication on the European Steel and Metals Action Plan, COM/2025/125
+finalhttps://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:52025DC0085.
+10423/26 4
+ECOFIN.2.B EN
+(3) As the CBAM aims to create incentives for the reduction of emissions by operators in third
+countries, the Union is committed to working with and supporting low and middle-income
+third countries towards the decarbonisation of their manufacturing industries as part of the
+external dimension of the European Green Deal5 and in line with the Paris Agreement6. The
+Union should continue to support those countries through the Union budget, especially
+LDCs, in order to contribute to ensuring their adaptation to the obligations under this
+Regulation. The Union should continue to support climate mitigation and adaptation actions
+in these countries, including in their efforts towards the decarbonisation and transformation
+of their industries within the ceiling of the multi-annual financial framework and the
+financial support provided by the Union to international climate finance. This is further
+reinforced in the EU global climate and energy vision7, which indicates that the EU will
+engage proactively with partners to ensure better coherence between internal and external
+EU policies. While the CBAM gradually enters into application, the Union intends to
+strengthen partnerships and support broader climate mitigation efforts, including by
+providing financial support to countries’ decarbonisation efforts.
+(4) Upon the incorporation of Regulation (EU) 2023/956 in the EEA Agreement, the EFTA
+States applying the CBAM should not be considered third countries for the purposes of this
+Regulation and should be deleted from its Annex III. A common CBAM area would be
+created where the threshold pursuant to Article 2a of Regulation (EU) 2023/956 would
+become jointly applicable to importation into the Union and the customs territories of the
+EFTA States that apply CBAM.
+5 Communication: The European Green Deal, COM/2019/640 final.
+6 OJ L 282, 19.10.2016, p. 4.
+7 Joint Communication: EU global climate and energy vision: securing Europe's competitive
+role in world markets and accelerating the clean transition, JOIN(2025) 25 final.
+10423/26 5
+ECOFIN.2.B EN
+(5) Upon the incorporation of Regulation (EU) 2023/956 in the EEA Agreement, that
+Regulation should apply to processed products from goods listed in Annex I originating in a
+third country that are resulting from the inward processing procedure referred to in Article
+256 of Regulation (EU) No 952/2013, where they are re-exported to the customs territory of
+an EFTA State that incorporated the CBAM, provided that they are imported to one of those
+customs territories. Implementing powers should be conferred on the Commission to lay
+down detailed conditions for the application of the CBAM to such goods.
+(6) Upon the incorporation of Regulation (EU) 2023/956 in the EEA Agreement, it should be
+clarified that that Regulation shall not apply to goods previously released for free circulation
+in the customs territory of EFTA States that incorporated the CBAM, provided that the
+customs declarant indicates in the subsequent customs declaration that the goods have been
+previously released for free circulation within the customs territory of the EFTA States.
+(7) [deleted]
+(7a) To facilitate the implementation of Regulation (EU) 2023/956 as well as the application of
+carbon border adjustment mechanisms across countries, the Union may conclude agreements
+for the mutual recognition of third-country accreditation bodies. These agreements should
+recognise accreditation systems that provide safety, quality, impartiality and independence
+of an equivalent nature to and no lesser standard than CBAM accreditation rules.
+10423/26 6
+ECOFIN.2.B EN
+(7b) Given their structural constraints, including remoteness, insularity, and vulnerability to
+natural disasters, outermost regions often depend on carbon-intensive imports with limited
+local alternatives. Therefore, it is appropriate to allow for temporary exemptions for certain
+essential heavy construction materials when such outermost regions are confronted with
+exceptional circumstances, such as natural disasters or similar public emergencies, strictly
+limited in scope and duration, while preserving CBAM’s environmental integrity.
+(7c) To prevent distortions in the internal market, exemptions should only apply to certain
+outermost regions where remoteness and isolation inherently minimise circumvention risks,
+given the logistical and economic barriers to re-exporting goods. Exemptions must be
+subject to strict conditions and assessed by the Commission to ensure alignment with the
+Regulation’s objectives and the Union’s climate policy.
+(8) Whereas the electricity market is based on commercial trade schedules, deviations occur due
+to the physical nature of electricity. Moreover, electricity flows may result from actions that
+transmission system operators undertake to ensure the safe and secure operation of the
+transmission system. Such flows should be excluded from the scope of CBAM, as they do
+not represent a commercial activity.
+10423/26 7
+ECOFIN.2.B EN
+(9) Due recognition of the progress made by the relevant third countries towards market
+coupling of the electricity systems ensures that any exemptions as foreseen in this
+Regulation fully align with the strategic objectives of the Union and those third countries’
+specific achievements. The efficient use of the existing electricity infrastructure and the
+integration of electricity markets of third countries into the internal electricity market of the
+Union is essential to reduce costs for both Member States and the relevant third countries, as
+well as to ensure security of supply. Such recognition should be put forward by means of a
+Memorandum of Understanding between the Commission and the third countries that have
+fully transposed the relevant electricity market acquis, as verified by the Commission. The
+Memorandum of Understanding should set the timeline for the application of the exemption
+foreseen in Regulation (EU) 2023/956, while considering adherence to relevant market rules
+and transmission system operator (TSO) institutions in line with Regulation (EU) 2019/943
+of the European Parliament and of the Council8 and Commission Regulation (EU)
+2015/12229, and the progress made by the relevant countries on carbon pricing instruments
+equivalent to the EU ETS insofar as electricity generation is concerned.
+(9a) For the purposes of furthering the alignment between Regulation (EU) No 956/2023 and
+customs legislation, defective goods or goods not complying with the terms of the contract,
+as well as returned goods, as indicated by the importer in the customs declaration or in any
+other relevant document submitted to the customs authorities, should not be included in the
+calculation of the single mass-based threshold.
+8 Regulation (EU) 2019/943 of the European Parliament and of the Council of 5 June 2019 on
+the internal market for electricity (recast) (OJ L 158, 14.6.2019, pp. 54–124, ELI:
+http://data.europa.eu/eli/reg/2019/943/oj).
+9 Commission Regulation (EU) 2015/1222 of 24 July 2015 establishing a guideline on
+capacity allocation and congestion management (OJ L 197, 25.7.2015, pp. 24–72, ELI:
+http://data.europa.eu/eli/reg/2015/1222/oj).
+10423/26 8
+ECOFIN.2.B EN
+(10) To ensure that the single mass-based threshold does not exceed 1% of the emissions
+embedded in the imported goods and processed products following the extension of
+Regulation (EU) 2023/956 to downstream products, the annual assessment in the year 2027
+of the threshold should be carried out on the basis of import data covering the downstream
+goods covered under this extension.
+(11) The CBAM seeks to address the risk of carbon leakage by ensuring that products,
+irrespective of whether they are imported or produced in the Union, are subject to an
+equivalent carbon price. However, as long as a significant number of the Union’s
+international partners have policy approaches that do not achieve the same level of climate
+ambition, there is a risk of carbon leakage, resulting in overall emissions being higher than
+what they would be in the absence of carbon leakage.
+(12) Abusive practices could occur when actors put in place arrangements or a series thereof for
+the main purpose of gaining an undue benefit by avoiding, wholly or partially, the CBAM
+financial liability and thereby undermine the effectiveness of the CBAM in addressing the
+risk of carbon leakage in the Union and the attainment of the Union’s climate policy
+objectives.
+(12a) Abusive practices include, but are not limited to, practices of harmful resource shuffling,
+where actors, controlling several production sites, with different technologies of production
+with material differences in emission intensity purposefully export to the Union the cleanest
+proportion of the goods without engaging in any structural decarbonisation strategy for the
+rest of the production of those goods, while not being exposed to a carbon price comparable
+to that applicable to production of the same goods in the Union. Due to harmful resource
+shuffling, imported goods could make Union producers’ operations unviable. The
+subsequent emissions reduction in the Union due to disappearance of EU production would
+be offset by an increase in emissions in the rest of the world, if the demand for these goods
+in the Union would be covered by third-country production, meaning carbon leakage occurs.
+Therefore, harmful resource shuffling risks undermining the effectiveness of the CBAM in
+addressing the risk of carbon leakage in the Union and the attainment of the Union’s climate
+policy objectives.
+10423/26 9
+ECOFIN.2.B EN
+(12b) Given the importance and urgency of addressing the risk of abusive practices in the form of
+harmful resource shuffling, the Commission should do its utmost to act by way of
+implementing acts as soon as possible after entry into force of this regulation. The risk of
+harmful resource shuffling can be circumscribed to a subset of CN codes and origins of the
+goods listed in Annex I to Regulation (EU) 2023/956, for which a high likelihood of harmful
+resource shuffling occurring can be demonstrated. This risk can be appreciated by reference
+to the level of the climate ambition of a third country, the heterogeneity of emissions, at
+country-level, embedded in products imported into the EU, the volume of goods imported
+into the Union from a third-country, as well as the economic incentives for operators to
+engage in harmful resource shuffling. For this subset of CN codes and origins, it is justified
+to introduce by way of implementing acts conditions to be fulfilled by operators and to
+request evidence to be provided by the CBAM declarant, demonstrating that no harmful
+resource shuffling has occurred, given the high degree of uncertainty of the market response
+to the introduction of a financial liability corresponding to the emissions embedded in goods
+imported into the EU and the parallel phase-out of EU ETS free allocations. The conditions
+to be fulfilled, as well as the evidence to be provided demonstrating the fulfilment of these
+conditions, should be designed in a way that is proportionate to the identified risks and do
+not burden operators and importers unnecessarily. Where the evidence provided by the
+CBAM declarant is insufficient to demonstrate that no harmful resource shuffling has
+occurred, the CBAM declaration would have to be based on the default values as determined
+by the Commission.
+(12c) The Commission should monitor and assess the evolution of the risk of abusive practices,
+including harmful resource shuffling, for combinations of goods and third countries and
+swiftly update the list of goods for which additional evidence is required for the
+determination of the embedded emissions on the basis of actual emissions. The Commission
+should conduct its monitoring through an analysis of customs import declarations and
+CBAM declarations or on the basis of any relevant source of information, including from
+Member States through exchanges in the Expert Group on the CBAM or other relevant
+exchanges.
+10423/26 10
+ECOFIN.2.B EN
+(13) [deleted]
+(14) To enable a swift reaction in the case of evidence pointing towards a high risk of abusive
+practices other than harmful resource shuffling, the Commission should be empowered to
+adopt delegated acts to lay down, the description of the abusive practice identified, the
+method used for identifying the combinations of good and origin at risk of the abusive
+practice identified, the measures to be taken with a view to addressing the risk of abusive
+practices as well as the evidence demonstrating that such abusive practices have not
+occurred. Where the Commission finds sufficient evidence pointing towards a high risk of
+abusive practices other than harmful resource shuffling, the Commission should be required
+to act by way of delegated acts within three months after the finding. These measures and
+evidence should be designed in a proportionate manner and they should not place
+unnecessary burden on operators and importers.
+(15) In order to identify the importers represented by an indirect customs representative, the
+application for an authorisation should include the Economic Operators Registration and
+Identification (EORI) number, or any other type of national identification number, of the
+importers represented.
+10423/26 11
+ECOFIN.2.B EN
+(16) To address the risk of misdeclaration of the embedded emissions determined on the basis of
+actual emissions, the Commission and the competent authority should be allowed to request
+the authorised CBAM declarant to provide evidence that the imported goods were produced
+in the declared installation, and during the declared production period. For certain goods,
+such as those subject to a higher heterogeneity of emission intensities, or only in certain
+cases, the evidence should be required as part of the CBAM declaration. For specific
+products, it should be required that a CBAM declaration includes evidence on the
+installation in which raw material was initially produced in liquid form within a making
+furnace and subsequently cast into its first solid state, such as mill certificates issued by the
+original producers or by a product pass. The Commission should be empowered to adopt
+implementing acts to identify the goods for which such evidence should be required as part
+of the CBAM declaration as well as the specific type and format of evidence to be provided.
+The required format of this evidence should be determined in a manner that minimises the
+administrative burden.
+(17) To facilitate the processing of information on operators in third countries, reduce the
+administrative burden for the operator and the authorised CBAM declarant and facilitate
+the review of CBAM declarations, the registration of operators should be a
+necessary step for the determination of embedded emissions on the basis of
+actual verified emissions.
+(18) In order to foster a harmonised approach for the review of CBAM declarations, it should be
+clarified that the Commission may, as part of the implementing act concerning the standard
+format of the CBAM declaration, set out procedures for the review of CBAM declarations
+via the CBAM registry.
+(19) Emissions from the production of pre-consumer scrap in the Union are subject to a carbon

@@ -1,0 +1,55 @@
+{
+ "ranAt": "2026-11-10T22:05:34+09:00",
+ "since": "2025-01-01",
+ "result": {
+  "procedures": {
+   "2025/0039(COD)": {
+    "title": "Carbon Border Adjustment Mechanism: simplification and strengthening (Omnibus I)",
+    "events": 15,
+    "status": "Procedure completed",
+    "forecasts": [],
+    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0039(COD)"
+   },
+   "2025/0419(COD)": {
+    "title": "Carbon Border Adjustment Mechanism: extension of its scope to downstream goods and anti-circumvention measures",
+    "events": 8,
+    "status": "Awaiting Parliament's position in 1st reading",
+    "forecasts": [],
+    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0419(COD)"
+   },
+   "2025/0418(COD)": {
+    "title": "Establishing the Temporary Decarbonisation Fund",
+    "events": 8,
+    "status": "Awaiting Parliament's position in 1st reading",
+    "forecasts": [],
+    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0418(COD)"
+   },
+   "2026/0212(COD)": {
+    "title": "EU Emissions Trading System and market stability reserve: competitiveness and cost-effective decarbonisation",
+    "events": 2,
+    "status": "Awaiting committee decision",
+    "forecasts": [
+     {
+      "date": "2026-12-14",
+      "subject": "Indicative plenary sitting date, 1st reading"
+     }
+    ],
+    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0212(COD)"
+   },
+   "2025/0574(CNS)": {
+    "title": "System of own resources of the European Union",
+    "events": 2,
+    "status": "Awaiting committee decision",
+    "forecasts": [],
+    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0574(CNS)"
+   },
+   "2026/0211(COD)": {
+    "title": "EU Emissions Trading System: heat and fuel benchmark values for 2026–2030",
+    "events": 8,
+    "status": "Awaiting Parliament's position in 1st reading",
+    "forecasts": [],
+    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0211(COD)"
+   }
+  }
+ }
+}

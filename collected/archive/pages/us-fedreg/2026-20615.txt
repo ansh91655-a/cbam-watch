@@ -1,0 +1,12 @@
+[주소] https://www.federalregister.gov/documents/2026/10/08/2026-20615/request-for-comments-on-the-effect-of-the-european-unions-carbon-border-adjustment-mechanism-and-the
+기관: Trade Representative, Office of United States
+title: Request for Comments on the Effect of the European Union's Carbon Border Adjustment Mechanism and the Proposals To Expand Coverage on U.S. Trade
+type: Notice
+abstract: The Office of the United States Trade Representative (USTR) invites comments regarding the current and potential impact of the European Union's (EU) Carbon Border Adjustment Mechanism (CBAM) on U.S. producers, including small- and medium-sized producers; workers; U.S. direct and indirect exports; and overall U.S. trade with the EU. Under CBAM, EU importers of products covered by the CBAM (covered products) in the aluminum, cement, electricity, fertilizer, hydrogen, and iron and steel sectors are required to declare information on carbon dioxide and other specified greenhouse gas emissions generated in the production of imported goods and to purchase CBAM certificates based on the amount of that embedded carbon. The EU began the full implementation of CBAM on January 1, 2026. The EU is also considering legislative proposals to expand CBAM coverage to downstream steel- and aluminum-intensive products. USTR is seeking comments on the impact of the CBAM on U.S. trade with the EU, as well as the potential impact of the EU's proposals to expand CBAM coverage. Such comments will help inform continued USTR and U.S. government engagement with the EU on CBAM.
+document_number: 2026-20615
+publication_date: 2026-10-08
+comments_close_on: 2026-11-09
+dates: The deadline for submission of comments is November 9, 2026.
+docket_ids: ['USTR-2026-0661']
+citation: 91 FR 64450
+action: Request for comments.

@@ -1,0 +1,123 @@
+[주소] https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32026D2256
+[받은 곳] http://publications.europa.eu/resource/celex/32026D2256
+
+L_202602256EN.000101.fmx.xml
+Official Journal
+of the European Union
+EN
+L series
+2026/2256
+8.10.2026
+COUNCIL DECISION (EU) 2026/2256
+of 24 September 2026
+on the position to be adopted on behalf of the European Union within the EEA Joint Committee concerning the amendment of Protocol 10 to the EEA Agreement, on simplification of inspections and formalities in respect of carriage of goods, and Protocol 31 to the EEA Agreement, on cooperation in specific fields outside the four freedoms (CBAM financial contribution)
+(Text with EEA relevance)
+THE COUNCIL OF THE EUROPEAN UNION,
+Having regard to the Treaty on the Functioning of the European Union, and in particular Article 192(1), in conjunction with Article 218(9), thereof,
+Having regard to Council Regulation (EC) No 2894/94 of 28 November 1994 concerning arrangements for implementing the Agreement on the European Economic Area (1), and in particular Article 1(3) thereof,
+Having regard to the proposal from the European Commission,
+Whereas:
+(1)
+The Agreement on the European Economic Area (2) (the ‘EEA Agreement’) entered into force on 1 January 1994.
+(2)
+Pursuant to Article 98 of the EEA Agreement, the EEA Joint Committee is able to adopt amendments, inter alia, of Protocol 10 to the EEA Agreement, on simplification of inspections and formalities in respect of carriage of goods, and Protocol 31 to the EEA Agreement, on cooperation in specific fields outside the four freedoms.
+(3)
+EEA EFTA States are to contribute financially to the operation of the systems needed for the operation of the carbon border adjustment mechanism (CBAM) across the whole EEA via a mechanism established in parallel through a separate decision of the EEA Joint Committee amending Protocol 10 and Protocol 31 to the EEA Agreement.
+(4)
+Protocol 10 and Protocol 31 to the EEA Agreement should therefore be amended accordingly.
+(5)
+It is therefore appropriate to establish the position to be adopted within the EEA Joint Committee concerning the amendment of Protocol 10 and Protocol 31 to the EEA Agreement,
+HAS ADOPTED THIS DECISION:
+Article 1
+The position to be adopted on the Union’s behalf within the EEA Joint Committee concerning the proposed amendment of Protocol 10 to the EEA Agreement, on simplification of inspections and formalities in respect of carriage of goods, and Protocol 31 to the EEA Agreement, on cooperation in specific fields outside the four freedoms, shall be based on the draft decision of the EEA Joint Committee attached to this Decision.
+Article 2
+This Decision shall enter into force on the date of its adoption.
+Done at Brussels, 24 September 2026.
+For the Council
+The President
+P. BURKE
+(1) OJ L 305, 30.11.1994, p. 6, ELI: http://data.europa.eu/eli/reg/1994/2894/oj.
+(2) OJ L 1, 3.1.1994, p. 3, ELI: http://data.europa.eu/eli/agree_internation/1994/1/oj.
+DRAFT
+DECISION OF THE EEA JOINT COMMITTEE No …/…
+of …
+amending Protocol 10 to the EEA Agreement, on simplification of inspections and formalities in respect of carriage of goods, and Protocol 31 to the EEA Agreement, on cooperation in specific fields outside the four freedoms
+THE EEA JOINT COMMITTEE,
+Having regard to the Agreement on the European Economic Area (the ‘EEA Agreement’), and in particular Articles 86 and 98 thereof,
+Whereas:
+(1)
+The incorporation of Regulation (EU) 2023/956 of the European Parliament and of the Council (1) into the EEA Agreement requires the use of Union information systems which partly relate to the operation of the customs territory of the Union. Furthermore, the carbon border adjustment mechanism (CBAM) Registry and the common central platform are developed specifically for the operation of CBAM, with which the EFTA States need to be associated. The CBAM Registry and the common central platform therefore require specific adjustments for that purpose. The EFTA States are not part of the customs territory of the Union and therefore by default have not had access to the specific customs information 
+(2)
+Indicative amounts of the financial contributions from the EFTA States for the purposes of Protocol 10 to the EEA Agreement at the time of adoption of this Decision are annexed to this Decision.
+(3)
+As Regulation (EU) 2023/956 does not apply to Liechtenstein, this Decision should not apply to Liechtenstein.
+(4)
+Protocol 10 and Protocol 31 to the EEA Agreement should therefore be amended accordingly,
+HAS ADOPTED THIS DECISION:
+Article 1
+Protocol 10 to the EEA Agreement is amended as follows:
+(1)
+in Article 2, the following paragraph is added:
+‘5. Provisions in Annex III to this Protocol related to the application of Regulation (EU) 2023/956 apply between the Community, Iceland and Norway.’
+;
+(2)
+the following annex is added after Annex II:
+‘Annex III
+Technical and financial arrangements for the application of Regulation (EU) 2023/956
+Article 1
+Definitions
+For the purposes of this Annex:
+(a)
+“CBAM Registry” shall mean the registry of authorised CBAM declarants in the form of a standardised electronic database containing the data regarding the CBAM certificates of those authorised CBAM declarants, as established pursuant to Article 14 of Regulation (EU) 2023/956;
+(b)
+“common central platform” shall mean the platform established for the sale and repurchase of CBAM certificates, pursuant to Article 20 of Regulation (EU) 2023/956;
+(c)
+“CRMS” shall mean the customs risk management system referred to in Article 36 of Commission Implementing Regulation (EU) 2015/2447;
+(d)
+“CCN2” shall mean the Common Communication Network 2;
+(e)
+“CRS” shall mean the Customer Reference Services system;
+(f)
+“Datalab” shall mean the system used for risk management analysis and for data aggregation and transformation regarding customs transactions data.
+Article 2
+CBAM processes related to customs controls and risk management
+1. For the exchange and storage of information pertaining to the communication between the Commission and the customs authorities of Norway and Iceland, the CBAM Registry shall be used. For CBAM customs risk-related information, CRMS shall be used.
+2. CRMS shall be used for communication between the customs authorities and between the customs authorities and the Commission for the application of Regulation (EU) 2023/956, and for the exchange of CBAM customs risk-related information and risk analysis as referred to in Regulation (EU) 2023/956.
+Article 3
+Uniform User Management and Digital Signature platform
+1. The authentication and access verification of economic operators, officials of Iceland and Norway and officials of the EFTA Surveillance Authority, for the purposes of access to the CBAM Registry, shall be effected using the Uniform User Management and Digital Signature (UUM&DS) platform.
+2. The UUM&DS platform shall enable the communication between the Contracting Parties’ identity and access management systems referred to in paragraph 7 for the purpose of providing secure authorised access to the electronic systems to economic operators and the Contracting Parties’ officials.
+3. The UUM&DS platform shall consist of the following common components:
+(a)
+an access management system;
+(b)
+an administration management system.
+4. The UUM&DS platform shall be used to ensure the authentication and access verification of:
+(a)
+economic operators for the purpose of having access to the CBAM Registry;
+(b)
+the Contracting Parties’ officials, including officials of the EFTA Surveillance Authority, for the purpose of having access to the common components of the CBAM Registry and for the purposes of maintenance and management of the UUM&DS platform.
+5. The Contracting Parties shall set up the access management system provided by the Commission to validate the access requests submitted by economic operators and Contracting Parties’ officials, including officials of the EFTA Surveillance Authority, within the UUM&DS platform by interoperating with the Contracting Parties’ identity and access management systems referred to in paragraph 7.
+6. The Contracting Parties shall set up the administration management system to manage the authentication and authorisation rules for validating the identification data of economic operators for the purpose of allowing access to the electronic systems.
+7. The Contracting Parties shall set up identity and access management systems to ensure:
+(a)
+secure registration and storage of identification data of economic operators;
+(b)
+secure exchange of signed and encrypted identification data of economic operators, used in the identity and access management platform for the purpose of granting them access to the platform by the administrator of the platform.
+Article 4
+Protection of professional secrecy and personal data
+1. The information exchanged by the Contracting Parties as part of the measures provided for in this Chapter shall enjoy the protection extended to professional secrecy and personal data as defined in the relevant laws applicable in the territory of the recipient Contracting Party.
+2. In particular, that information shall not be further transferred to persons other than the competent authorities in the recipient Contracting Party, nor shall it be used by those authorities for purposes other than those provided for in the EEA Agreement.
+Article 5
+Data management, ownership and security
+The Contracting Parties shall ensure that the data registered at national level correspond to the data registered in the common components and are kept up to date.
+Article 6
+Financing Arrangements concerning the responsibilities, commitments and expectations upon the implementation and operation of the CBAM Registry components and services, communications systems and underlying systems required for the operation of CBAM
+Regarding the extension of the use of the CBAM Registry to Iceland and Norway, these Financing Arrangements (hereinafter referred to as the “Arrangements”) define the elements of collaboration between the Contracting Parties related to the CBAM Registry and services, communication systems and underlying systems required for the operation of CBAM.
+(a)
+The Commission shall develop, test, deploy, manage and operate the specific adjustments to CBAM Registry components, including the applications and services, communication systems and underlying customs systems, such as UUM&DS, CCN2, CRMS, CRS and analytics (Datalab), that are necessary for the EFTA States’ operation of CBAM, including any specific adjustments related to the common central platform.
+(b)
+Iceland and Norway shall develop, test, deploy, manage and operate any national components that are deemed necessary for the interconnection to the CBAM Registry and operation of the common central CBAM processes, such as:
+(1)
+providing customs data compatible with the relevant data structure needed for communications with the CBAM Registry;
+(2)

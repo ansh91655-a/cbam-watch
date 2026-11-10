@@ -1,0 +1,64 @@
+[주소] https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32025D2468
+[받은 곳] http://publications.europa.eu/resource/celex/32025D2468
+
+L_202502468EN.000101.fmx.xml
+Official Journal
+of the European Union
+EN
+L series
+2025/2468
+4.12.2025
+COUNCIL DECISION (EU) 2025/2468
+of 13 November 2025
+authorising the opening of negotiations between the European Union and the United Kingdom of Great Britain and Northern Ireland on a common sanitary and phytosanitary area between the European Union and the United Kingdom in respect of Great Britain and to link the United Kingdom’s and the Union’s greenhouse gas emissions trading systems
+THE COUNCIL OF THE EUROPEAN UNION,
+Having regard to the Treaty on the Functioning of the European Union, and in particular Article 207(4), first subparagraph, and Article 192(1), in conjunction with Article 218(3) and (4) thereof,
+Having regard to the recommendation from the European Commission,
+Whereas:
+(1)
+The Trade and Cooperation Agreement between the European Union and the European Atomic Energy Community, of the one part, and the United Kingdom of Great Britain and Northern Ireland, of the other part (the ‘Trade and Cooperation Agreement’) (1), has applied since 1 January 2021. It is, together with the Agreement on the withdrawal of the United Kingdom of Great Britain and Northern Ireland from the European Union and the European Atomic Energy Community (the ‘Withdrawal Agreement’) (2), the cornerstone of bilateral relations between the Union and the United Kingdom of Great Britain and Northern Ireland (the ‘United Kingdom’).
+(2)
+On 31 December 2020, when the transition period provided for in the Withdrawal Agreement ended, Union law ceased to apply to the United Kingdom, and the Protocol on Ireland/Northern Ireland (now referred to as the ‘Windsor Framework’) (3), which forms an integral part of the Withdrawal Agreement, became applicable.
+(3)
+Since 1 January 2021, the sanitary and phytosanitary areas of the Union, on the one hand, and the United Kingdom, on the other hand, have been separated from each other, and therefore separate legislation and policies apply. However, the Union’s sanitary and phytosanitary rules and other relevant rules apply to and in the United Kingdom in respect of Northern Ireland by virtue of the Windsor Framework.
+(4)
+Since 1 January 2021, the Union and the United Kingdom have had separate greenhouse gas emissions trading systems, except in Northern Ireland, where the Union’s greenhouse gas emissions trading system applies insofar as it relates to wholesale electricity markets in accordance with Article 9 of and Annex 4 to the Windsor Framework.
+(5)
+Article 764 of the Trade and Cooperation Agreement provides that the fight against climate change constitutes an essential element of the partnership established by the Trade and Cooperation Agreement and shall also constitute an essential element of future supplementing agreements.
+(6)
+In accordance with Article 392(6) of the Trade and Cooperation Agreement, the Union and the United Kingdom are to give serious consideration to linking their respective carbon pricing systems in a way that preserves the integrity of those systems and provides for the possibility to increase their effectiveness.
+(7)
+Article 25(1a) of Directive 2003/87/EC of the European Parliament and of the Council (4) provides for the possibility to conclude agreements with third countries for the mutual recognition of allowances between greenhouse gas emissions trading systems.
+(8)
+Directive 2003/87/EC requires that any such third country emissions trading system be mandatory and based on absolute emissions caps. Those criteria are currently met by the United Kingdom’s greenhouse gas emissions trading system.
+(9)
+In accordance with Article 2(4) and (6) of Regulation (EU) 2023/956 of the European Parliament and of the Council (5), that Regulation is not to apply to goods originating in a third country with which the Union has concluded an agreement fully linking the Union’s emission trading system and the emission trading system of that third country and which fulfils all the relevant conditions.
+(10)
+As part of the outcomes of the United Kingdom – European Union summit of 19 May 2025, the European Commission recommended that negotiations be opened with the United Kingdom for agreements on a common sanitary and phytosanitary area and on linking the United Kingdom’s and the Union’s greenhouse gas emissions trading systems.
+(11)
+Negotiations should therefore be opened with a view to concluding two separate agreements with the United Kingdom: one on a common sanitary and phytosanitary area and another to link the United Kingdom’s and the Union’s greenhouse gas emissions trading systems. The Commission should be nominated as the Union negotiator,
+HAS ADOPTED THIS DECISION:
+Article 1
+1. The Commission is hereby authorised to negotiate the following agreements, on behalf of the Union, with the United Kingdom:
+(a)
+an agreement on a common sanitary and phytosanitary area between the Union and the United Kingdom in respect of Great Britain; and
+(b)
+an agreement to link the United Kingdom’s and the Union’s greenhouse gas emissions trading systems.
+2. The negotiations shall be conducted on the basis of the negotiating directives of the Council set out in the Addendum to this Decision, subject to any directives which the Council may subsequently issue to the Commission.
+Article 2
+The Commission is hereby nominated as the Union negotiator.
+Article 3
+The negotiations shall be conducted in consultation with the Working Party on the United Kingdom, acting as a special committee in accordance with Article 218(4) of the Treaty.
+Article 4
+This Decision is addressed to the Commission.
+Done at Brussels, 13 November 2025.
+For the Council
+The President
+S. LOSE
+(1) OJ L 149, 30.4.2021, p. 10, ELI: http://data.europa.eu/eli/agree_internation/2021/689(1)/oj.
+(2) OJ L 29, 31.1.2020, p. 7, ELI: http://data.europa.eu/eli/treaty/withd_2020/sign.
+(3) The Windsor Framework is the new way in which the Protocol on Ireland/Northern Ireland, as amended by the Withdrawal Agreement Joint Committee Decision No 1/2023, is referred to in accordance with Joint Declaration No 1/2023 of the Union and the United Kingdom (OJ L 102, 17.4.2023, p. 87).
+(4) Directive 2003/87/EC of the European Parliament and of the Council of 13 October 2003 establishing a system for greenhouse gas emission allowance trading within the Union and amending Council Directive 96/61/EC (OJ L 275, 25.10.2003, p. 32, ELI: http://data.europa.eu/eli/dir/2003/87/oj).
+(5) Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023 establishing a carbon border adjustment mechanism (OJ L 130, 16.5.2023, p. 52, ELI: http://data.europa.eu/eli/reg/2023/956/oj).
+ELI: http://data.europa.eu/eli/dec/2025/2468/oj
+ISSN 1977-0677 (electronic edition)

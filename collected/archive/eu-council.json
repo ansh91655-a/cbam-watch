@@ -1,0 +1,28 @@
+{
+ "source": "eu-council",
+ "fetchedAt": "2026-11-10T22:05:44+09:00",
+ "since": "2025-01-01",
+ "report": {
+  "documents": 2,
+  "stored": 2,
+  "failures": []
+ },
+ "entries": [
+  {
+   "date": "2026-06-12",
+   "code": "ST-10423-2026-INIT",
+   "label": "CBAM 하류제품 확대·우회방지 개정안에 대한 이사회 일반 접근 본문",
+   "pages": 117,
+   "url": "https://data.consilium.europa.eu/doc/document/ST-10423-2026-INIT/en/pdf",
+   "textPath": "collected/archive/pages/eu-council/ST-10423-2026-INIT.txt"
+  },
+  {
+   "date": "2026-06-25",
+   "code": "ST-10684-2026-INIT",
+   "label": "2026년 6월 12일 경제·재무 이사회 회의록 초안",
+   "pages": 7,
+   "url": "https://data.consilium.europa.eu/doc/document/ST-10684-2026-INIT/en/pdf",
+   "textPath": "collected/archive/pages/eu-council/ST-10684-2026-INIT.txt"
+  }
+ ]
+}

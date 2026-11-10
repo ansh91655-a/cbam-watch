@@ -1,0 +1,92 @@
+[주소] https://www.legislation.gov.uk/uksi/2026/995/made
+
+Statutory Instruments
+2026 No. 995
+CARBON BORDER ADJUSTMENT MECHANISM
+The Carbon Border Adjustment Mechanism (Emissions and Verification) Regulations 2026
+Made
+8th September 2026
+Laid before the House of Commons
+9th September 2026
+Coming into force
+1st January 2027
+The Treasury make regulations 1 to 5 and 7 in exercise of the powers conferred by sections 148(2) and 157(1) and (2) of the Finance Act 2026(1).
+The Commissioners for His Majesty’s Revenue and Customs make regulations 1, 2, 6, 7, 8 and 9 to 17 in exercise of the powers conferred by sections 154(4) and 157(1) and (2) of, and paragraphs 7(3), 10, 13 and 14 of Schedule 17 to, the Finance Act 2026(2).
+Part 1Preliminary matters
+Citation and commencement
+1.—(1) These Regulations may be cited as the Carbon Border Adjustment Mechanism (Emissions and Verification) Regulations 2026.
+(2) These Regulations come into force on 1st January 2027.
+Interpretation
+2. In these Regulations—
+“accreditation body” has the meaning given by regulation 15;
+“carbon dioxide equivalent” has the meaning given by regulation 8;
+“default value” means the amount of carbon dioxide equivalent specified for a tonne of CBAM good(3) or precursor good in a notice published by the Treasury under paragraph 11(1) of Schedule 17 to FA 2026(4);
+“emissions intensity” in relation to a CBAM good has the meaning given by step 7 of regulation 5, and in relation to a precursor good has the meaning set out in a notice under regulation 7;
+“imported CBAM good” has the meaning given by regulation 5(1);
+“installation” means a stationary industrial unit where CBAM goods, either solely or alongside other goods, are manufactured or processed;
+“monitoring period” has the meaning given by regulation 9(1);
+“operator” of an installation means a person who has control over its operation;
+“precursor good” means a CBAM good which is used in the production of another CBAM good and is identified as relevant to determining the emissions embodied in that CBAM good in the system boundaries document;
+“produced” in relation to a good means that all of the processes identified as relevant for the CBAM good or precursor good in the system boundaries document have been completed, and references to production are to be read accordingly;
+“relevant emissions” means the specified types of emissions(5) produced by the specified production processes for a CBAM good or a precursor good, as the case may be, as set out in the system boundaries document;
+“system boundaries document” means the document entitled “Carbon Border Adjustment Mechanism: System Boundaries Document”, version 1.00 dated 10th July 2026 which specifies—
+(a)
+which emissions, including those relevant to the production of precursor goods, are to be taken into account when determining the emissions embodied in a CBAM good(6);
+(b)
+which production processes, including the production processes of precursor goods, are to be taken into account when determining the emissions embodied in CBAM goods;
+(c)
+which goods are precursor goods for a CBAM good;
+(d)
+how to determine the weight of a CBAM good;
+“tonne” means metric tonne, and any figure in tonnes must be rounded to the nearest tonne, unless the context otherwise requires;
+“type” of CBAM good or precursor good means goods falling under a commodity code(7) in Schedule 16 to FA 2026;
+“verification opinion statement” has the meaning given by regulation 14(2)(f);
+“verification report” has the meaning given by regulation 14(1);
+“verified emissions data” has the meaning given by regulation 10;
+“verifier” has the meaning given by regulation 12;
+“weight”—
+(a)
+in step 6 of regulation 5(1) and in paragraph (b) of regulation 7 means the weight, in tonnes, determined in accordance with the system boundaries document;
+(b)
+in all other cases means the weight of a CBAM good—
+(i)
+without packing materials and packing containers of any kind,
+(ii)
+at the time that good is imported into the United Kingdom(8), and
+(iii)
+expressed in tonnes.
+Part 2Calculating embodied emissions
+Emissions attributable to the production of a CBAM good
+3. For the purposes of section 148 of FA 2026, emissions that are attributable to the production of a CBAM good means an amount, in tonnes of carbon dioxide equivalent, which must be determined in accordance with this Part.
+Default values
+4. Where a default value is being used to determine emissions for the CBAM good, the emissions are the weight of the good multiplied by the default value.
+Actual emissions
+5.—(1) Where no default value is being used for the CBAM good (“imported CBAM good”), the emissions must be calculated in accordance with the following steps—
+Step 1
+Identify the monitoring period for the imported CBAM good.
+Step 2
+In accordance with the notice published under regulation 6, use verified emissions data from that monitoring period to identify the amount, in tonnes, of relevant emissions emitted by the installation that produced the imported CBAM good in the production of that type of CBAM good during the monitoring period.
+Step 3
+Where amounts of relevant emissions identified in step 2 are not amounts of carbon dioxide, convert them into an amount of carbon dioxide equivalent in accordance with regulation 8.
+Step 4
+Add together all amounts from steps 2 and 3 to produce a total amount, in tonnes, of carbon dioxide equivalent.
+Step 5
+Where precursor goods were used in the production of the imported CBAM good, add all precursor emissions for the imported CBAM good, determined in accordance with regulation 7, to the amount from step 4.
+Step 6
+Identify the weight of the type of CBAM good produced by the installation during the monitoring period.
+Step 7
+Divide the figure from step 4 or, where relevant, step 5 by the figure from step 6 to produce an amount, in tonnes, of carbon dioxide equivalent emitted in the course of the production of a tonne of the type of CBAM good (“the emissions intensity”), rounded to five decimal places.
+Step 8
+Multiply the emissions intensity by the weight of the imported CBAM good.
+(2) This paragraph applies where—
+(a)all precursor goods for an imported CBAM good were produced by the same installation that made the imported CBAM good,
+(b)all the precursor goods produced by that installation that are the same type as the precursor goods for the imported CBAM good are used by that installation in the production of CBAM goods that are the same type as the imported CBAM good, and
+(c)no default value is being used for the imported CBAM good.
+(3) Where paragraph (2) applies the emissions for the imported CBAM good may be calculated in accordance with paragraph (1) as follows—
+(a)references to a CBAM good include all precursor goods for the imported CBAM good;
+(b)omit step 5 from paragraph (1).
+(4) This paragraph applies where no default value is being used for an imported CBAM good and the good falls under one of the following headings in the Table in Schedule 16 to FA 2026—
+(a)cement;
+(b)fertilisers.
+(5) Where paragraph (4) applies, emissions for the imported CBAM good must be calculated in accordance with paragraph (1) as if for step 7 there were substituted—
+“a

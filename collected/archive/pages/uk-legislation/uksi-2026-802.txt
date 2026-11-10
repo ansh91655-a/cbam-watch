@@ -1,0 +1,92 @@
+[주소] https://www.legislation.gov.uk/uksi/2026/802/made
+
+Statutory Instruments
+2026 No. 802
+carbon border adjustment mechanism
+The Carbon Border Adjustment Mechanism (Administrative Provisions) Regulations 2026
+Made
+13th July 2026
+Laid before the House of Commons
+14th July 2026
+Coming into force
+1st January 2027
+The Commissioners for His Majesty’s Revenue and Customs make these Regulations in exercise of the powers conferred by section 157(2) of, and paragraphs 2(5)(a), 5, 7(3), 13, 14 and 28 of Schedule 17 to, the Finance Act 2026(1).
+Part 1Introductory provisions
+Citation and commencement
+1.—(1) These Regulations may be cited as the Carbon Border Adjustment Mechanism (Administrative Provisions) Regulations 2026.
+(2) These Regulations come into force on 1st January 2027.
+Interpretation
+2. In these Regulations, unless stated otherwise, references to—
+(a)sections are to sections of the Finance Act 2026;
+(b)Parts and paragraphs of Schedule 17 are to Parts and paragraphs of Schedule 17 to the Finance Act 2026.
+Meaning of value of CBAM goods
+3.—(1) For the purposes of Part 2 of Schedule 17, the value of a CBAM good(2) is to be determined in accordance with this regulation, and references to the value of a CBAM good in regulations 5 and 7 are to be construed accordingly.
+(2) In the case of a CBAM good which is described in section 144(2) or (3), the value of that CBAM good is the same as the value determined for customs purposes in accordance with Part 12 of the Customs (Import Duty) (EU Exit) Regulations 2018(3).
+(3) In the case of a CBAM good which is described in the following subsections of section 144—
+(a)subsection (5)(b), but only in a case where the import results from entry into Great Britain from the Isle of Man,
+(b)subsection (5)(c),
+(c)subsection (5)(d), or
+(d)subsection (6),
+the value of that CBAM good is to be determined in accordance with Part 12 of the Customs (Import Duty) (EU Exit) Regulations 2018, as if the CBAM good is a chargeable good, and has been presented to Customs on import, for the purposes of Part 1 of TCTA 2018(4).
+(4) In the case of a CBAM good which is described in the following subsections of section 144—
+(a)subsection (4), but only in cases where that good is not taken out of the charge to duty under section 30A(3) or 40A(1)(a) of TCTA 2018 by regulations made under section 30B(1)(a) or 40B(1)(a) of that Act(5), or
+(b)subsection (5)(b), but only in cases where the import results from entry into Northern Ireland from the Isle of Man,
+the value of that CBAM good is the same as the value of those goods determined for customs purposes in accordance with Chapter 3 of Title II of UCC 2013(6).
+(5) In the case of a CBAM good which is described in the following subsections of section 144—
+(a)subsection (4), but only in cases where that good is taken out of the charge to duty under section 30A(3) or 40A(1)(a) of TCTA 2018 by regulations made under section 30B(1)(a) or 40B(1)(a) of that Act, or
+(b)subsection (5)(a),
+the value of the CBAM good is to be determined in accordance with Chapter 3 of Title II of UCC 2013.
+(6) For the purposes of a determination under the applied legislation referred to in paragraph (5), the CBAM good is to be treated as if it—
+(a)is a chargeable good for the purposes of Part 1 of TCTA 2018, and
+(b)has been brought into the customs territory of the European Union.
+(7) For the purposes of a valuation under the applied legislation referred to in paragraphs (3) to (5), goods that are expected to be imported for the purposes of paragraph 2(2)(b) of Schedule 17 are to be treated as imported goods.
+(8) In paragraph (3), “presented to Customs on import” has the meaning given by section 34 of TCTA 2018.
+Meaning of weight of CBAM goods
+4. In these Regulations, references to the weight of a CBAM good are to the weight of that good—
+(a)without packing materials and packing containers of any kind,
+(b)at the time that good is imported into the United Kingdom(7), and
+(c)expressed in kilogrammes.
+Part 2Record-keeping
+Requirements to keep records
+5. A person who imports a CBAM good in the course of a business must keep a record evidencing the following for that good—
+(a)the 8 digit commodity code(8) and description for the good;
+(b)the date the good was imported into the United Kingdom;
+(c)the value of the good;
+(d)the weight of the good.
+Preservation and form of records
+6.—(1) This regulation applies to records required to be kept under these Regulations, excluding regulation 17.
+(2) Where the record relates to an accounting period(9) that record must be preserved for a period of 6 years beginning with the day after the end of the accounting period.
+(3) In any other case, the record must be preserved for a period of 6 years beginning with the day on which the record is created.
+(4) All records must be kept and preserved in writing.
+Part 3Registration
+Information to be provided on registration
+7.—(1) A person who is required to register with HMRC(10) under paragraph 2(1) of Schedule 17 must provide the following information when registering—
+(a)the person’s name, correspondence address, telephone number and (where available) email address,
+(b)where information is provided by an officer or employee of the person on behalf of that person, the officer’s or employee’s name, position in the business(11), telephone number and (where available) email address,
+(c)the address of the person’s principal place of business (if different from sub-paragraph (a)),
+(d)whether the business is carried on by an individual, a limited company, partnership or other unincorporated body, or in any other capacity,
+(e)the person’s EORI number,
+(f)the person’s VAT registration number, if that person has such a number,
+(g)the date on which the person triggered registration under paragraph 2(2) of Schedule 17,
+(h)the value of the CBAM goods which the person imported(12), or expects to import, during the period specified by paragraph 2(2)(a) or (b) of Schedule 17, as applicable, and
+(i)the estimated weight of the CBAM goods in each CBAM sector(13) which the person expects to import into the United Kingdom in the period of 12 months beginning with the date on which the person triggered registration.
+(2) In this regulation—
+“EORI number” means a valid Economic Operators' Identification Number assigned by HMRC on the registration of the applicant under Article 9 of Regulation (EU) No 952/2013 of the European Parliament and of the Council of 9 October 2013 laying down the Union Customs Code(14), read with Articles 5 and 6 of Commission Delegated Regulation (EU) 2015/2446 of 28 July 2015 supplementing Regulation (EU) No 952/2013 of the European Parliament and of the Council as regards detailed rules concerning certain provisions of the Union Customs Code(15);
+“VAT registration number” means the number allocated by the Commissioners to a person registered under the Value Added Tax Act 1994(16).
+Record-keeping for registration
+8. A registered person must keep records evidencing the information required to be provided under regulation 7.
+Part 4Returns
+Interpretation of this Part
+9. In this Part, “the place of origin of the good” is to be determined in accordance with provision made under section 17(1) to (6) of TCTA 2018 that is applicable to the customs tariff, as defined in section 8 of TCTA 2018, as it has effect without regard to any provision made under sections 9 to 15 or 19(4) of that Act(17).
+Information to be included in a return
+10.—(1) Where a person is required to make a return under paragraph 7 of Schedule 17, the return must include the following information for each CBAM good imported during the accounting period in respect of which CBAM is charged—
+(a)the 8 digit commodity code;
+(b)the weight of the CBAM good;
+(c)the amount of carbon price(18) relief;
+(d)the place of origin of the good.
+(2) A return must include a declaration by the person making it that the return is, to the best of their knowledge, true and accurate.
+(3) The Commissioners may publish a notice specifying additional information which is to be included in a return.
+Record-keeping for returns
+11. A person who makes a return for a CBAM good must keep records evidencing the place of origin of that good.
+Part 5Assessment of weight
+Assessment of weight by an officer of Revenue and Customs

@@ -1,0 +1,22 @@
+{
+ "ranAt": "2026-11-10T22:05:12+09:00",
+ "since": "2025-01-01",
+ "result": {
+  "targets": 26,
+  "stored": 14,
+  "failures": [
+   "52026PC0402 (300 HTTP Error 300: )",
+   "52026PC0616 (300 HTTP Error 300: )",
+   "52026PC0335 (300 HTTP Error 300: )",
+   "52025PC0990R(01) (404 HTTP Error 404: )",
+   "52025PC0990 (300 HTTP Error 300: )",
+   "52025PC0989 (300 HTTP Error 300: )",
+   "52025DC0783 (300 HTTP Error 300: )",
+   "32025R2083R(01) (404 HTTP Error 404: )",
+   "32023R0956R(04) (404 HTTP Error 404: )",
+   "52025PC0574 (300 HTTP Error 300: )",
+   "52025PC0408 (300 HTTP Error 300: )",
+   "52025PC0087 (300 HTTP Error 300: )"
+  ]
+ }
+}
