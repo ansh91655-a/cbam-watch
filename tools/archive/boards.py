@@ -127,8 +127,14 @@ def motir():
     return kept, report
 
 
+META = ("담당자", "담당부서", "연락처", "등록일", "조회수", "첨부파일")
+
+
 def lead_of(lines, title, limit=700):
-    """보도자료 화면의 글에서 부제와 첫 문단만 남긴다. 본문은 제목이 마지막으로 나온 줄 다음부터 '목록' 줄 앞까지다."""
+    """보도자료 화면의 글에서 부제와 첫 문단만 남긴다. 본문은 제목이 마지막으로 나온 줄 다음부터 '목록' 줄 앞까지다.
+
+    담당자 이름이나 첨부파일 이름 같은 줄은 본문이 아니므로 건너뛴다.
+    """
     starts = [index for index, line in enumerate(lines) if line.strip() == title.strip()]
     if not starts:
         return ""
@@ -137,10 +143,12 @@ def lead_of(lines, title, limit=700):
         text = line.strip()
         if text == "목록" or text.startswith(("이전글", "다음글")):
             break
-        if not text:
+        if not text or text.startswith(META) or "바로보기" in text or text.isdigit():
             continue
-        subtitle = text.startswith(("-", "–", "―", "▴", "ㅇ"))
+        subtitle = text.startswith(("-", "–", "―", "▴", "ㅇ")) or text.endswith("-")
         if not subtitle:
+            if len(text) < 30:  # 본문 문단이 아닌 짧은 줄(표의 머리 등)은 싣지 않는다
+                continue
             paragraphs += 1
         if paragraphs > 1:
             break

@@ -47,6 +47,11 @@ class GateTest(unittest.TestCase):
         self.assertIn("원문 글 없음", self.problems(draft(), source=None))
         self.assertIn("주제", self.problems(draft(topic="none")))
 
+    def test_link_must_come_from_collected_material(self):
+        self.assertEqual(gate.problems(draft(), SOURCE, self.INDEX, TOPICS, {"https://example.eu/news/a_en"}), [])
+        self.assertEqual(gate.problems(draft(), SOURCE + "[주소] https://example.eu/news/a_en", self.INDEX, TOPICS, set()), [])
+        self.assertIn("링크가 모아 둔 자료에 없는 주소", gate.problems(draft(link="https://example.eu/news/b_en"), SOURCE, self.INDEX, TOPICS, {"https://example.eu/news/a_en"}))
+
     def test_avoided_term_is_rejected(self):
         index = term_check.load()
         hard = next((rule for rule in index["rules"] if rule["hard"]), None)
@@ -80,6 +85,10 @@ class ReadersTest(unittest.TestCase):
         lines = ["설명회 개최", "담당부서", "설명회 개최", "- 부제 하나", "- 부제 둘", "첫 문단입니다.", "둘째 문단입니다.", "목록"]
         self.assertEqual(boards.lead_of(lines, "설명회 개최"), "- 부제 하나\n- 부제 둘\n첫 문단입니다.")
         self.assertEqual(boards.lead_of(lines, "없는 제목"), "")
+        # 제목이 본문에 다시 나오지 않는 글: 담당자와 첨부파일 줄을 건너뛰고 본문의 첫 문단을 찾는다
+        lines = ["책자 발간", "담당자홍길동", "담당부서통상과", "연락처044-000-0000", "등록일2026-03-30", "조회수1,234", "첨부파일", "책자.pdf [1 MB] 바로보기", "81",
+                 "정부는 3월 30일에 기업이 실무에 바로 쓸 수 있는 매뉴얼 책자를 발간했다고 밝혔다.", "둘째 문단은 싣지 않는다. 길이가 충분히 긴 문장이어도 마찬가지다.", "목록"]
+        self.assertEqual(boards.lead_of(lines, "책자 발간"), "정부는 3월 30일에 기업이 실무에 바로 쓸 수 있는 매뉴얼 책자를 발간했다고 밝혔다.")
 
     def test_compass_view_address(self):
         self.assertEqual(boards._compass_view("1"), "https://www.compass.or.kr/eucbam/data/view?idx=MQ%3D%3D")

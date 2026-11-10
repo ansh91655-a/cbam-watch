@@ -31,9 +31,20 @@ def date_problems(item, source):
     return [] if (year, month, day) in found else [f"게시일 {published}이 원문 글에 없음"]
 
 
-def problems(item, source, term_index, known_topics):
-    """걸린 것의 목록을 돌려준다. 비어 있으면 실어도 된다. source는 저장소에 받아 둔 원문 글이다."""
+def link_problems(item, source, known_links):
+    """링크가 모아 둔 자료에 적힌 주소인지 본다. 손으로 옮겨 적다 틀린 주소를 막는다."""
+    link = str(item.get("link", ""))
+    return [] if link in known_links or (source and link in source) else ["링크가 모아 둔 자료에 없는 주소"]
+
+
+def problems(item, source, term_index, known_topics, known_links=None):
+    """걸린 것의 목록을 돌려준다. 비어 있으면 실어도 된다. source는 저장소에 받아 둔 원문 글이다.
+
+    known_links를 주면 링크가 그 안에 있거나 원문 글에 적혀 있어야 한다.
+    """
     found = list(add_items.format_problems(item))
+    if known_links is not None:
+        found += link_problems(item, source, known_links)
     if item.get("topic") not in known_topics:
         found.append("주제")
     if not str(item.get("sourceCode", "")).strip() or not str(item.get("sourceName", "")).strip():

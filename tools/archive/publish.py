@@ -6,6 +6,7 @@
     sourceEntry:    {"index": "kr-keco-cbam", "url": "..."} 처럼 목록 파일(collected/archive/<index>.json)의 한 줄.
                     글 본문을 받아 두지 않는 출처에 쓴다. 이때는 그 줄의 제목·날짜·주소가 대조할 원문이다.
 - 검사(tools.archive.gate)에 걸린 항목은 싣지 않고 사유를 알려 준다. 이미 실린 id나 링크와 겹치는 항목도 싣지 않는다.
+- 링크는 모아 둔 목록 파일이나 원문 글, 출처 대장에 적힌 주소여야 한다(손으로 옮겨 적다 틀린 주소를 막는다).
 - 실린 항목에는 backfill 표시가 붙는다. 주간 요약은 이 표시가 있는 항목을 지난주의 새 소식으로 세지 않는다.
 마지막 줄에 결과를 JSON으로 출력한다.
 """
@@ -37,6 +38,14 @@ def source_text(item):
     return None
 
 
+def collected_links():
+    """모아 둔 목록 파일과 출처 대장에 적힌 주소. 항목의 링크는 이 가운데 하나여야 한다."""
+    found = {source.get("url", "") for source in read_json("sources/registry.json", {"sources": []})["sources"]}
+    for path in sorted(ROOT.glob("*.json")):
+        found.update(str(row.get("url", "")) for row in read_json(path, {}).get("entries", []) if isinstance(row, dict))
+    return found - {""}
+
+
 def main(argv):
     parser = argparse.ArgumentParser()
     parser.add_argument("--drafts", required=True)
@@ -48,6 +57,7 @@ def main(argv):
     known_links = {item["link"] for item in data["items"] if item.get("link")}
     term_index = term_check.load()
     known_topics = topics.codes()
+    links = collected_links()
 
     added, rejected, skipped, without_excerpt = [], [], [], []
     for item in drafts:
@@ -56,7 +66,7 @@ def main(argv):
             skipped.append(item_id)
             continue
         source = source_text(item)
-        found = gate.problems(item, source, term_index, known_topics)
+        found = gate.problems(item, source, term_index, known_topics, links)
         if found:
             rejected.append({"id": item_id, "problems": found})
             continue
