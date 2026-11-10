@@ -38,7 +38,7 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 
 | 묶음 | 하는 일 |
 | --- | --- |
-| `tools/common` | 웹에서 받기, HTML에서 글 뽑기, JSON 읽고 쓰기 |
+| `tools/common` | 웹에서 받기, HTML에서 글 뽑기, JSON 읽고 쓰기, 사이트 주소와 배포하는 곳 읽기(`siteinfo`: 주소는 `site/site.config.json`의 `url`, 사이트만 싣는 저장소를 따로 둘 때의 이름은 `deploy.json`의 `siteRepo`) |
 | `tools/collect` | 출처 화면에서 새 항목 찾기(`extract`), JSON 목록 보기(`jsonwatch`), 그날 목록 만들기(`feed`), 실행(`run`) |
 | `tools/originals` | 문서 링크 찾기(`discover`), 받을 차례 정하기(`queue`), 판 남기기와 비교(`versions`, `diff`), 본문 뽑기(`textify`), 실행(`run`) |
 | `tools/check` | 국문 글 검사: 용어(`term_check`, `term_lookup`), 표기(`style_check`), 수치와 날짜 대조(`fact_check`), 원문 발췌 확인(`excerpt_check`) |
