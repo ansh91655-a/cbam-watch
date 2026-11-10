@@ -106,12 +106,46 @@
    "group": "EU 공식",
    "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives_en?text=CBAM",
    "tier": "A",
-   "watch": [],
+   "watch": [
+    "json"
+   ],
    "filter": false,
    "minLine": 30,
-   "collector": "off",
-   "note": "CBAM 관련 의견수렴 목록",
-   "ops": "화면이 스크립트로 그려짐. brpapi/searchInitiatives JSON으로 읽는 수집기를 만들 예정"
+   "collector": "github",
+   "note": "CBAM 관련 입법 계획과 의견수렴의 단계와 기간",
+   "ops": "화면이 스크립트로 그려져 JSON(brpapi/searchInitiatives)으로 읽음. 항목의 단계나 의견수렴 상태가 바뀌면 새 후보가 됨",
+   "json": {
+    "url": "https://ec.europa.eu/info/law/better-regulation/brpapi/searchInitiatives?text=CBAM&language=EN&page=0&size=50",
+    "list": "initiativeResultDtoPage.content",
+    "id": "id",
+    "state": [
+     "currentStatuses.0.frontEndStage",
+     "currentStatuses.0.receivingFeedbackStatus"
+    ],
+    "fields": {
+     "제목": "shortTitle",
+     "문서 번호": "reference",
+     "예정 법령 유형": "foreseenActType",
+     "단계": "currentStatuses.0.frontEndStage",
+     "의견수렴 상태": "currentStatuses.0.receivingFeedbackStatus",
+     "의견수렴 시작": "currentStatuses.0.feedbackStartDate",
+     "의견수렴 마감": "currentStatuses.0.feedbackEndDate"
+    },
+    "labels": {
+     "REG_IMPL": "이행규정",
+     "REG_DEL": "위임규정",
+     "PROP_REG": "규정 제안",
+     "INIT_PLANNED": "준비 단계",
+     "PLANNING_WORKFLOW": "근거 수집(Call for evidence) 단계",
+     "OPC_LAUNCHED": "공개 의견수렴(Public consultation) 단계",
+     "ISC_WORKFLOW": "법령 초안(Draft act) 의견수렴 단계",
+     "ADOPTION_WORKFLOW": "집행위원회 채택(Commission adoption) 단계",
+     "OPEN": "의견 받는 중",
+     "CLOSED": "의견수렴 마감",
+     "DISABLED": "의견수렴 없음",
+     "UPCOMING": "의견수렴 예정"
+    }
+   }
   },
   {
    "no": 7,
@@ -212,7 +246,7 @@
    "minLine": 30,
    "collector": "off",
    "note": "CBAM 전문가그룹의 회의와 자료",
-   "ops": "화면이 스크립트로 그려짐. expertGroups/3927 JSON으로 읽는 수집기를 만들 예정"
+   "ops": "화면이 스크립트로 그려짐. 그룹 정보 JSON(expertGroups/3927)은 읽히나 회의 목록 주소는 찾지 못함(…/meetings는 404). 회의 자료를 읽는 방법을 찾으면 연다"
   },
   {
    "no": 13,

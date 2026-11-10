@@ -13,7 +13,8 @@ for index, names in enumerate([
 _NAME = "|".join(sorted(MONTHS, key=len, reverse=True))
 PATTERNS = [
     (re.compile(r"(\d{4})\s*년\s*(\d{1,2})\s*월\s*(\d{1,2})\s*일"), lambda m: (int(m[1]), int(m[2]), int(m[3]))),
-    (re.compile(r"(\d{4})-(\d{2})-(\d{2})"), lambda m: (int(m[1]), int(m[2]), int(m[3]))),
+    # 연-월-일. 구분 글자는 -, /, . 가운데 하나(예: 2026-07-09, 2026/07/09, 2026.07.09)
+    (re.compile(r"(?<![\d/])(\d{4})([-/.])(\d{1,2})\2(\d{1,2})(?![\d/])"), lambda m: (int(m[1]), int(m[3]), int(m[4]))),
     # 일 월 연. 사이를 띄우지 않은 표기(예: 28Sep2026)도 읽는다.
     (re.compile(rf"(?<!\d)(\d{{1,2}})\.?\s*({_NAME})\.?,?\s*(\d{{4}})(?!\d)", re.I), lambda m: (int(m[3]), MONTHS[m[2].lower()], int(m[1]))),
     (re.compile(rf"({_NAME})\.?\s+(\d{{1,2}}),?\s+(\d{{4}})", re.I), lambda m: (int(m[3]), MONTHS[m[1].lower()], int(m[2]))),

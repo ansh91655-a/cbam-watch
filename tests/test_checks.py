@@ -6,7 +6,7 @@ from tools.check import dates, fact_check, style_check
 
 class DatesTest(unittest.TestCase):
     def test_formats(self):
-        for text in ("28Sep2026", "28 September 2026", "September 28, 2026", "2026-09-28", "2026년 9월 28일", "28/09/2026", "28. September 2026"):
+        for text in ("28Sep2026", "28 September 2026", "September 28, 2026", "2026-09-28", "2026년 9월 28일", "28/09/2026", "28. September 2026", "2026/09/28 23:59:59", "2026.09.28"):
             found, _ = dates.find(text)
             self.assertEqual(found, {(2026, 9, 28)}, text)
 

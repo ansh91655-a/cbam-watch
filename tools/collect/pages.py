@@ -29,6 +29,13 @@ def save_source_text(code, html, url):
     _write(source_path(code), lines + (["", "[표의 행]"] + table_lines if table_lines else []))
 
 
+def save_lines(item_id, lines):
+    """주어진 줄들을 그 항목의 원문 글 파일로 남기고 경로를 돌려준다."""
+    path = f"{PAGE_DIR}/items/{item_id}.txt"
+    _write(path, lines)
+    return path
+
+
 def save_item_text(item):
     """새 링크가 가리키는 화면의 글을 받아 둔다. EU 기관의 HTML 화면만, 한 번 실행에 정해진 건수까지만."""
     global _fetched

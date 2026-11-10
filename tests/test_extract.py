@@ -63,3 +63,27 @@ class RowsTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class JsonWatchTest(unittest.TestCase):
+    SOURCE = {
+        "code": "hys", "url": "https://ec.europa.eu/list", "tier": "A", "watch": ["json"],
+        "json": {"url": "https://ec.europa.eu/api", "list": "page.content", "id": "id", "state": ["statuses.0.stage", "statuses.0.feedback"],
+                 "fields": {"제목": "title", "단계": "statuses.0.stage", "마감": "statuses.0.end"}, "labels": {"DRAFT": "법령 초안 단계"}},
+    }
+
+    def _body(self, stage, feedback="OPEN"):
+        import json
+        return json.dumps({"page": {"content": [{"id": 16932.0, "title": "CBAM declarations", "statuses": [{"stage": stage, "feedback": feedback, "end": "2026/08/06 23:59:59"}]}]}}).encode()
+
+    def test_state_change_makes_a_new_entry(self):
+        from tools.collect import jsonwatch
+        first, counts = jsonwatch.entries(self.SOURCE, self._body("PLANNED"), [])
+        same, _ = jsonwatch.entries(self.SOURCE, self._body("PLANNED"), [])
+        moved, _ = jsonwatch.entries(self.SOURCE, self._body("DRAFT"), [])
+        self.assertEqual(counts["rows"], 1)
+        self.assertEqual(first[0]["key"], same[0]["key"])
+        self.assertNotEqual(first[0]["key"], moved[0]["key"])
+        self.assertEqual(moved[0]["text"], "CBAM declarations | DRAFT | 2026/08/06 23:59:59")
+        self.assertIn("번호: 16932", moved[0]["detail"])
+        self.assertIn("단계: DRAFT (법령 초안 단계)", moved[0]["detail"])

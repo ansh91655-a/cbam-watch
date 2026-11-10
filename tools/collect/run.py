@@ -4,7 +4,7 @@
 """
 import sys
 
-from tools.collect import extract, feed, pages, registry, state
+from tools.collect import extract, feed, jsonwatch, pages, registry, state
 from tools.common.htmltext import decode
 from tools.common.jsonio import now_kst, read_json, stamp, today, write_json
 from tools.common.net import fetch, header, sha256_hex
@@ -17,16 +17,20 @@ MIN_BODY = 800       # 이보다 작은 본문은 차단 안내나 빈 화면으
 def check_source(source, keywords, moment):
     code = source["code"]
     result = {"code": code, "checkedAt": stamp(moment), "ok": False, "status": 0, "new": 0, "note": ""}
-    status, headers, body, error = fetch(source["url"])
+    as_json = "json" in source.get("watch", [])
+    status, headers, body, error = fetch(source["json"]["url"], headers={"Accept": "application/json"}) if as_json else fetch(source["url"])
     result["status"] = status
     if status != 200 or len(body) < MIN_BODY:
         result["note"] = (error or f"본문 {len(body)}바이트")[:160]
         return result, []
 
-    html = decode(body, header(headers, "Content-Type"))
-    if source.get("tier") == "A":
-        pages.save_source_text(code, html, source["url"])
-    found, counts = extract.entries(source, html, keywords)
+    if as_json:
+        found, counts = jsonwatch.entries(source, body, keywords)
+    else:
+        html = decode(body, header(headers, "Content-Type"))
+        if source.get("tier") == "A":
+            pages.save_source_text(code, html, source["url"])
+        found, counts = extract.entries(source, html, keywords)
     result.update({"ok": True, "bytes": len(body), "pageHash": sha256_hex(body)[:16], "counts": counts, "entries": len(found)})
 
     previous = state.load(code)
@@ -55,7 +59,9 @@ def check_source(source, keywords, moment):
             item = {"id": feed.item_id(code, entry["key"]), "source": code, "kind": entry["kind"], "url": entry["url"], "text": entry["text"], "seenAt": stamp(moment)}
             if "cells" in entry:
                 item["cells"] = entry["cells"]
-            if source.get("tier") == "A":
+            if entry.get("detail"):  # JSON에서 온 항목: 그 항목의 값들을 원문 글 파일로 남긴다
+                item["textPath"] = pages.save_lines(item["id"], entry["detail"]) if source.get("tier") == "A" else ""
+            elif source.get("tier") == "A":
                 item["textPath"] = pages.save_item_text(item) if entry["kind"] == "link" else pages.source_path(code)
             items.append(item)
     result["new"] = len(items)
