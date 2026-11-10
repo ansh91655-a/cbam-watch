@@ -1,7 +1,7 @@
 """국문 정리를 검사하는 도구를 확인한다."""
 import unittest
 
-from tools.check import dates, fact_check, style_check
+from tools.check import dates, excerpt_check, fact_check, style_check
 
 
 class DatesTest(unittest.TestCase):
@@ -27,6 +27,23 @@ class FactCheckTest(unittest.TestCase):
         self.assertFalse(result["ok"])
         self.assertEqual(result["missingDates"], ["2026-09-29"])
         self.assertEqual(result["missingNumbers"], ["0.78"])
+
+
+class ExcerptCheckTest(unittest.TestCase):
+    SOURCE = "Latest developments\n30Sep2026\nWebinar follow-up: CBAM from policy to practice\nThe Commission  held the fourth webinar.\n"
+
+    def test_short_date_line_is_fine_when_present(self):
+        result = excerpt_check.check("30Sep2026\nWebinar follow-up: CBAM from policy to practice\nThe Commission held the fourth webinar.", self.SOURCE)
+        self.assertTrue(result["ok"], result)
+
+    def test_changed_letter_fails(self):
+        result = excerpt_check.check("The Commission held the fifth webinar.", self.SOURCE)
+        self.assertFalse(result["ok"])
+        self.assertEqual(len(result["missing"]), 1)
+
+    def test_only_tiny_fragments_fail(self):
+        self.assertFalse(excerpt_check.check("30Sep2026", self.SOURCE)["ok"])
+        self.assertFalse(excerpt_check.check("", self.SOURCE)["ok"])
 
 
 class StyleCheckTest(unittest.TestCase):

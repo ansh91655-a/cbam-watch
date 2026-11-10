@@ -22,9 +22,12 @@ def check(excerpt, source):
     plain_source = squeeze(source)
     segments = [squeeze(line) for line in (excerpt or "").splitlines()]
     segments = [segment for segment in segments if segment]
-    missing = [segment[:60] for segment in segments if len(segment) < MIN_SEGMENT or segment not in plain_source]
+    missing = [segment[:60] for segment in segments if segment not in plain_source]
     chars = sum(len(segment) for segment in segments)
-    return {"ok": bool(segments) and not missing and chars <= MAX_CHARS, "missing": missing, "chars": chars, "tooLong": chars > MAX_CHARS, "segments": len(segments)}
+    # 날짜만 적힌 줄처럼 짧은 대목도 원문에 있으면 된다. 다만 발췌 전체가 짧은 조각뿐이면 대조의 뜻이 없으므로 받지 않는다.
+    too_short = not any(len(segment) >= MIN_SEGMENT for segment in segments)
+    return {"ok": bool(segments) and not missing and not too_short and chars <= MAX_CHARS, "missing": missing, "chars": chars,
+            "tooLong": chars > MAX_CHARS, "tooShort": too_short, "segments": len(segments)}
 
 
 def main(argv):
