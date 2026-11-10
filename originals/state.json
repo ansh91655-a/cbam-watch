@@ -225,7 +225,7 @@
    "page": "ec-guidance",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-10",
-   "lastChecked": "2026-11-10T16:28:56+09:00",
+   "lastChecked": "2026-11-10T17:26:05+09:00",
    "linked": true,
    "versions": [
     {
@@ -249,7 +249,7 @@
    "page": "ec-guidance",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-10",
-   "lastChecked": "2026-11-10T16:28:56+09:00",
+   "lastChecked": "2026-11-10T17:26:05+09:00",
    "linked": true,
    "versions": [
     {
@@ -273,7 +273,7 @@
    "page": "ec-guidance",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-10",
-   "lastChecked": "2026-11-10T16:28:56+09:00",
+   "lastChecked": "2026-11-10T17:26:05+09:00",
    "linked": true,
    "versions": [
     {
@@ -297,7 +297,7 @@
    "page": "ec-guidance",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-10",
-   "lastChecked": "2026-11-10T16:28:56+09:00",
+   "lastChecked": "2026-11-10T17:26:05+09:00",
    "linked": true,
    "versions": [
     {
@@ -321,7 +321,7 @@
    "page": "ec-guidance",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-10",
-   "lastChecked": "2026-11-10T16:28:56+09:00",
+   "lastChecked": "2026-11-10T17:26:05+09:00",
    "linked": true,
    "versions": [
     {
@@ -345,7 +345,7 @@
    "page": "ec-guidance",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-10",
-   "lastChecked": "2026-11-10T16:28:56+09:00",
+   "lastChecked": "2026-11-10T17:26:05+09:00",
    "linked": true,
    "versions": [
     {
@@ -369,7 +369,7 @@
    "page": "ec-guidance",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-10",
-   "lastChecked": "2026-11-10T16:28:56+09:00",
+   "lastChecked": "2026-11-10T17:26:05+09:00",
    "linked": true,
    "versions": [
     {
@@ -393,7 +393,7 @@
    "page": "ec-verification",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-10",
-   "lastChecked": "2026-11-10T16:28:56+09:00",
+   "lastChecked": "2026-11-10T17:26:05+09:00",
    "linked": true,
    "versions": [
     {
@@ -417,7 +417,7 @@
    "page": "ec-guidance",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-10",
-   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "lastChecked": "2026-11-10T17:26:05+09:00",
    "linked": true,
    "versions": [
     {
@@ -441,7 +441,7 @@
    "page": "ec-news",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-10",
-   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "lastChecked": "2026-11-10T17:26:05+09:00",
    "linked": true,
    "versions": [
     {
@@ -465,7 +465,7 @@
    "page": "ec-news",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-10",
-   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "lastChecked": "2026-11-10T17:26:05+09:00",
    "linked": true,
    "versions": [
     {
@@ -489,7 +489,7 @@
    "page": "ec-news",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-10",
-   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "lastChecked": "2026-11-10T17:26:05+09:00",
    "linked": true,
    "versions": [
     {
@@ -513,7 +513,7 @@
    "page": "ec-news",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-10",
-   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "lastChecked": "2026-11-10T17:26:05+09:00",
    "linked": true,
    "versions": [
     {
@@ -537,7 +537,7 @@
    "page": "ec-news",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-10",
-   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "lastChecked": "2026-11-10T17:26:05+09:00",
    "linked": true,
    "versions": [
     {
@@ -562,7 +562,7 @@
    "page": "ec-news",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-10",
-   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "lastChecked": "2026-11-10T17:26:05+09:00",
    "linked": true,
    "versions": [
     {
@@ -576,7 +576,8 @@
      "kept": false
     }
    ],
-   "replaces": ""
+   "replaces": "",
+   "lastError": "0 IncompleteRead: IncompleteRead(5974649 bytes read)"
   },
   "5595ce5b-9fd2-42f6-9908-ed6325338ffa": {
    "id": "5595ce5b-9fd2-42f6-9908-ed6325338ffa",
@@ -587,7 +588,7 @@
    "page": "ec-definitive",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-10",
-   "lastChecked": "2026-11-10T16:57:46+09:00",
+   "lastChecked": "2026-11-10T17:26:05+09:00",
    "linked": true,
    "versions": [
     {
@@ -988,7 +989,7 @@
   }
  },
  "baseline": "2026-11-10",
- "checkedAt": "2026-11-10T17:16:36+09:00",
+ "checkedAt": "2026-11-10T17:26:05+09:00",
  "full": false,
  "notes": [],
  "docCount": 41,
@@ -1022,38 +1023,38 @@
   "37c2855b-8913-455a-a7da-c2258b932e54": {
    "firstSeen": "2026-11-10",
    "quiet": true,
-   "tries": 1,
+   "tries": 2,
    "page": "ec-news",
    "name": "",
    "lastError": "403 HTTP Error 403: Forbidden",
-   "lastTried": "2026-11-10T17:16:36+09:00"
+   "lastTried": "2026-11-10T17:26:05+09:00"
   },
   "d255e5a1-9f16-4613-85bd-0f126a5f87de": {
    "firstSeen": "2026-11-10",
    "quiet": true,
-   "tries": 1,
+   "tries": 2,
    "page": "ec-news",
    "name": "",
    "lastError": "403 HTTP Error 403: Forbidden",
-   "lastTried": "2026-11-10T17:16:36+09:00"
+   "lastTried": "2026-11-10T17:26:05+09:00"
   },
   "c5e2f28e-e9d7-411d-b2d6-560d094d30c2": {
    "firstSeen": "2026-11-10",
    "quiet": true,
-   "tries": 1,
+   "tries": 2,
    "page": "ec-sectors",
    "name": "",
    "lastError": "403 HTTP Error 403: Forbidden",
-   "lastTried": "2026-11-10T17:16:36+09:00"
+   "lastTried": "2026-11-10T17:26:05+09:00"
   },
   "fa3c6d9a-4884-46d6-9729-d12bd4be80bd": {
    "firstSeen": "2026-11-10",
    "quiet": true,
-   "tries": 1,
+   "tries": 2,
    "page": "ec-sectors",
    "name": "",
    "lastError": "403 HTTP Error 403: Forbidden",
-   "lastTried": "2026-11-10T17:16:36+09:00"
+   "lastTried": "2026-11-10T17:26:05+09:00"
   },
   "c86ff3a8-9e5b-4b4c-9042-21622760a489": {
    "firstSeen": "2026-11-10",
