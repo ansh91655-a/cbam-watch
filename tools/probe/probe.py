@@ -10,6 +10,7 @@ import subprocess
 import tempfile
 
 from tools.common.net import fetch, sha256_hex
+from tools.probe import forms
 
 TARGETS = [
     # (이름, 주소, 더할 머리글). 닿는지 모르는 주소만 둔다. 닿는 것이 확인된 출처는 tools.collect가 맡는다.
@@ -29,7 +30,10 @@ TARGETS = [
     ("pages-data", "https://ansh91655-a.github.io/cbam-watch/data/site.json", {}),
     ("mcee-board", "https://mcee.go.kr/home/web/index.do?menuId=286", {}),
     ("expert-group-meetings", "https://ec.europa.eu/transparency/expert-groups-register/core/api/front/expertGroups/3927/meetings", {"Accept": "application/json"}),
+    ("motir-policy-board", "https://www.motir.go.kr/kor/article/ATCLf724eb567", {}),
 ]
+# 걸러 보기 양식(분류, 한 쪽에 보이는 건수)을 읽어 둘 목록 화면. 게시판을 출처로 더할 때 주소를 정하는 데 쓴다.
+FORM_TARGETS = {"motir-policy-board"}
 
 OUT = pathlib.Path("originals/_probe/result.json")
 
@@ -65,6 +69,10 @@ def describe(name, url, extra=None):
     }
     if row["isPdf"]:
         row["pdfTextChars"] = pdf_text_chars(body)
+    if name in FORM_TARGETS and body and not row["isPdf"]:
+        html = body.decode("utf-8", "replace")
+        row["forms"] = forms.describe(html)
+        row["postLinks"] = sorted(set(re.findall(r'href="([^"]*/view[^"]*)"', html)))[:12]
     return row, body
 
 
