@@ -1,44 +1,22 @@
 {
  "targets": [
   {
-   "code": "ec-sitemap",
+   "code": "newsroom",
    "urls": [
-    "https://taxation-customs.ec.europa.eu/sitemap.xml"
+    "https://ec.europa.eu/newsroom/taxud/newsletter-archives/view/service/9510",
+    "https://ec.europa.eu/newsroom/taxud/user-subscriptions/9510/create"
    ]
   },
   {
-   "code": "ec-article",
+   "code": "cellar",
    "urls": [
-    "https://taxation-customs.ec.europa.eu/news/new-guidance-electricity-imports-under-centralised-clearance-import-cci-2026-11-06_en"
-   ]
-  },
-  {
-   "code": "ec-list",
-   "urls": [
-    "https://taxation-customs.ec.europa.eu/news_en?page=1",
-    "https://taxation-customs.ec.europa.eu/news_en?page=3"
-   ]
-  },
-  {
-   "code": "motir-article",
-   "urls": [
-    "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172324/view"
-   ]
-  },
-  {
-   "code": "keco-article",
-   "urls": [
-    "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=100866"
-   ]
-  },
-  {
-   "code": "compass-json",
-   "urls": [
-    "https://www.compass.or.kr/eucbam/data/euDataList?receiveCnt=0&requestCnt=5&orderName=&orderDir=&searchKey=&searchKeywd="
+    "http://publications.europa.eu/resource/celex/32025R2621",
+    "http://publications.europa.eu/resource/celex/32026R1740",
+    "http://publications.europa.eu/resource/celex/32025R0486"
    ],
    "headers": {
-    "Accept": "application/json",
-    "X-Requested-With": "XMLHttpRequest"
+    "Accept": "application/xhtml+xml, text/html;q=0.9",
+    "Accept-Language": "eng"
    }
   }
  ]
