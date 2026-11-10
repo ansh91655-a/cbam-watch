@@ -1,0 +1,206 @@
+CBAM verification - Taxation and Customs Union - European Commission Skip to main content
+en
+Select your language
+Close
+bgбългарски
+esespañol
+csčeština
+dadansk
+deDeutsch
+eteesti
+elελληνικά
+enEnglish
+frfrançais
+gaGaeilge
+hrhrvatski
+ititaliano
+lvlatviešu
+ltlietuvių
+humagyar
+mtMalti
+nlNederlands
+plpolski
+ptportuguês
+roromână
+skslovenčina
+slslovenščina
+fisuomi
+svsvenska
+Search
+Search
+Taxation and Customs Union
+Menu
+Close
+Menu
+Back
+Previous itemsNext items
+Home
+About us
+Directorate-General for Taxation and Customs Union
+Application of EU Law
+EU funding for customs and tax
+Transparency Portal
+Events
+Tenders and Grants
+Glossary
+Contact us
+See all
+Taxation
+Value Added Tax (VAT)
+Excise Duties
+Business Taxation
+Personal Taxation
+Other taxes
+Outermost regions
+Tax Transparency and Cooperation
+Economic Analysis
+National Tax Administrations
+EU Training
+See all
+Customs
+National customs administrations
+Rules of origin for goods
+Customs Controls
+EU Training
+EU Customs Reform
+Authorised Economic Operator (AEO)
+Prohibitions and Restrictions
+Customs Procedures for import and export
+EU Customs Union: facts and figures
+Union Customs code
+Customs security
+International affairs
+Electronic customs
+See all
+CBAM
+CBAM archive
+CBAM communication and news
+CBAM definitive regime
+CBAM legislation and guidance
+CBAM Registry
+CBAM sectors
+Price of CBAM certificates
+Verification of CBAM emissions
+See all
+Online services
+Online services and databases for Customs
+Online services and databases for Taxation
+See all
+News
+Home
+CBAM
+Verification of CBAM emissions
+Verification of CBAM emissions
+Information on CBAM verification rules and accreditation framework
+PlayPause
+Under CBAM, importers must submit annual declarations based either on actual verified emissions data or on default emissions values. In the case of actual emissions, the verification must be carried out by independent verifiers accredited by EU national accreditation bodies. This ensures the credibility, consistency and transparency of emissions reporting across the EU
+Page contents
+Page contents
+Why verification matters?
+Robust verification of the actual emissions data provided by non-EU operators is essential to the proper functioning of CBAM. It ensures that the emissions data used by importers is trustworthy and comparable across operators and sectors.
+CBAM verifiers provide reasonable assurance that the calculation of embedded emissions is correct. In turn, verifiers are subject to strict oversight from EU countries’ national accreditation bodies. Verification reports used by importers may also be subject to a review by the European Commission and the National Competent Authorities.
+Who can be a verifier?
+To become a CBAM verifier, applicants must receive CBAM accreditation provided by EU countries’ national accreditation bodies. Applications to become a verifier are open to any company which can demonstrate that they:
+have the required technical competence in the relevant industrial sectors
+operate independently and impartially
+apply consistent and reliable verification approaches
+The first CBAM verifiers are expected to receive CBAM accreditation around September 2026. The list of accredited CBAM verifiers will be published on this page. CBAM verifiers have the obligation of registering in the CBAM registry.
+Text version
+This infographic explains the process of becoming a Carbon Border Adjustment Mechanism (CBAM) accredited verifier in the European Union. The title, “Become a CBAM Accredited Verifier,” appears at the top in large blue letters highlighted in green. Below, a sequence of five steps is illustrated with blue icons and curved arrows that guide the reader through the process:
+Check requirements,
+Contact an EU National Accreditation Body,
+Submit for accreditation,
+Get accredited,
+Start verifying.
+National Accreditation Bodies
+National accreditation bodies (NABs) located in an EU country (or an EEA country, after the incorporation of the CBAM Regulation in the EEA Agreement) are the sole stakeholders competent to grant accreditation for the CBAM.
+As a general rule, verification companies established in an EU or EEA country must seek CBAM accreditation in the NAB of their country of establishment. Only if this country does not offer the relevant accreditation services can applicants apply with another NAB. Verification companies that are established outside the EU may apply in any national accreditation body offering this service.
+Building on the information provided by the European cooperation for Accreditation (EA), Commission services maintain a list of NABs that provide CBAM accreditation services.
+State-of-play CBAM accreditation
+9 November 2026
+English
+Download (293.71 KB - PDF)
+Verification of non-EU installation operators
+CBAM verification applies at the level of the installation where CBAM goods are produced.
+National Accreditation Bodies
+National Accreditation Bodies (NABs) ensure that CBAM verifiers are qualified to verify embedded emissions by accrediting them for CBAM activities and providing oversight throughout the year.
+Non-EU installation operators
+Non-EU installation operators monitor and calculate embedded emissions in accordance with the CBAM methodology and provide the relevant information to an accredited verifier.
+Accredited CBAM verifiers
+Accredited CBAM verifiers review the monitoring approach, emissions calculations and supporting evidence. Following the assessment, they issue a verification report which can be included to the CBAM declaration.
+CBAM declarants
+CBAM declarants retrieve the actual verified emissions from the CBAM Registry and use this information to complete and submit their CBAM declaration.
+Text version
+The image is a flowchart entitled “Actors involved in CBAM accreditation and verification.” It illustrates the roles and interactions of the different entities involved in the Carbon Border Adjustment Mechanism (CBAM).
+The upper row begins with the European Co-operation for Accreditation (EA), which performs peer evaluations of Member States’ national accreditation bodies. An arrow points to the Member States’ National Accreditation Body, which is responsible for the accreditation and surveillance of verifiers. Another arrow leads to the Verifier, whose role is to visit the installations of a third-country operator and issue one verification report per installation.
+The third-country operator sells CBAM goods to various importers and transmits emissions calculations and the verification report through the CBAM Registry.
+In the lower row, CBAM declarants submit CBAM declarations, including the verification report for each installation, to the European Commission. The information is then reviewed by the National Competent Authority (NCA), which may impose penalties on declarants. Arrows throughout the diagram indicate the direction of information and responsibility flows between actors.
+Timeline
+2026
+January
+Importers apply for CBAM authorisation and start importing
+Operators start monitoring and calculating embedded emissions
+April
+NABs begin CBAM accreditation
+September
+Accredited CBAM verifiers can register in CBAM Registry
+Start of first verification (documentation review, site visit)
+2027
+January
+Accredited CBAM verifiers can issue first verification reports
+Operators can share available verification reports with declarants
+February
+Declarants can purchase CBAM certificates
+September
+Declarants finalise CBAM declaration for year 2026
+Documentation & resources
+This section provides key CBAM documentation, guidance, FAQs and reference links related to CBAM verification requirements and the accreditation of CBAM verifiers.
+Documents
+Guidance on CBAM verification and accreditation for verifiers and National Accreditation Bodies
+General publications
+24 August 2026
+English
+Download (1.75 MB - PDF)
+More languages coming soon: Spanish, French, Arabic, Portuguese, Chinese, Japanese, Korean, Ukrainian, Vietnamese, Indonesian, and Turkish.
+Legislation
+Commission Implementing Regulation (EU) 2025/2546 on the application of verification principles
+Commission Delegated Regulation (EU) 2025/2551 on accreditation and verification
+Commission Implementing Regulation (EU) 2025/2547 on methods for the calculation of emissions embedded in goods
+FAQs
+Further explanations on accreditation and verification are available in the CBAM Frequently Asked Questions.
+Carbon Border Adjustment Mechanism (CBAM)
+CBAM definitive regime
+CBAM legislation and guidance
+CBAM Registry
+CBAM sectors
+Verification of CBAM emissions
+Price of CBAM certificates
+CBAM communication and news
+CBAM archive
+Taxation and Customs Union
+This site is managed by:
+Directorate-General for Taxation and Customs Union
+Bluesky
+LinkedIn
+YouTube
+About us
+Glossary
+Newsletter
+Related links
+VAT e-Commerce - One Stop Shop
+VAT rules for small enterprises – SME scheme
+Have your say
+Follow the European Commission
+Mastodon
+LinkedIn
+Bluesky
+Facebook
+Youtube
+Other
+Contact us
+Report an IT vulnerability
+Languages on our websites
+Cookies
+Privacy policy
+Legal notice
+Accessibility
