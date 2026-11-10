@@ -29,8 +29,9 @@ export function openSubscribe() {
       h("ul", {}, [
         h("li", { text: "RSS 구독 앱(Feedly, Inoreader 등): 구독 추가에 주소를 붙여 넣습니다." }),
         h("li", {}, ["Slack: RSS 앱을 더한 뒤 받을 채널에 ", h("code", { text: "/feed subscribe 주소" }), "를 보냅니다."]),
+        h("li", { text: "메일: RSS를 메일로 보내 주는 서비스(Blogtrottr, Feedrabbit 등)에 주소와 받을 메일 주소를 넣습니다." }),
       ]),
     ]),
-    h("p", { class: "count", text: "주소를 브라우저에서 바로 열면 기계가 읽는 글자(XML)가 보이는데, 정상입니다. 메일로 받아 보는 기능은 아직 없습니다." }),
+    h("p", { class: "count", text: "주소를 브라우저에서 바로 열면 기계가 읽는 글자(XML)가 보이는데, 정상입니다. 이 사이트가 직접 메일을 보내지는 않습니다. 위에 든 앱과 서비스는 이 사이트와 관계없는 외부 서비스입니다." }),
   ]);
 }
