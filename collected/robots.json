@@ -126,10 +126,5 @@
    "text": "  Sitemap: https://www.federalregister.gov/sitemaps/sitemap.xml.gz\n\n  User-Agent: *\n  Disallow: /documents/current\n  Disallow: /documents/email-a-friend\n\n  Disallow: /articles/search\n  Disallow: /documents/search\n  Disallow: /public-inspection/search\n  Disallow: /regulations/search\n\n  Disallow: /my/\n  Disallow: /auth/\n"
   }
  },
- "blocked": {
-  "https://www.compass.or.kr/eucbam/data/list": {
-   "why": "robots.txt가 자동 읽기를 막음",
-   "seenAt": "2026-11-11T02:06:16+09:00"
-  }
- }
+ "blocked": {}
 }

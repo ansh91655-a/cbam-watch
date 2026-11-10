@@ -3,8 +3,6 @@
 
 게시판마다 쪽을 넘기는 방법이 달라서 게시판별 함수를 따로 둔다. 찾지 못한 게시판은 report에 사유를 적는다.
 """
-import base64
-import json
 import re
 import time
 import urllib.parse
@@ -179,43 +177,8 @@ def moj():
     return [entry for entry in entries.values() if KEY.search(entry["title"])], {"pages": pages, "all": len(entries)}
 
 
-def compass():
-    """국제환경규제 기업지원센터(COMPASS)의 EU CBAM 헬프데스크 자료실. 목록을 자료(JSON)로 준다."""
-    base = "https://www.compass.or.kr/eucbam/data/list"
-    query = urllib.parse.urlencode({"receiveCnt": 0, "requestCnt": 300, "orderName": "", "orderDir": "", "searchKey": "", "searchKeywd": ""})
-    status, _, body, error = fetch(f"https://www.compass.or.kr/eucbam/data/euDataList?{query}", headers={"Accept": "application/json", "X-Requested-With": "XMLHttpRequest"})
-    if status != 200 or not body:
-        return [], {"error": f"{status} {error[:60]}"}
-    try:
-        rows = json.loads(body.decode("utf-8", "replace")).get("list") or []
-    except Exception:
-        return [], {"error": "자료를 풀지 못함"}
-    found = []
-    for row in rows:
-        date = iso_from_numbers(str(row.get("rdateStr") or "")[:10])  # 화면에 보이는 등록일(한국 시각)
-        if date and row.get("title"):
-            found.append({"date": date, "title": str(row["title"]).strip(), "url": base, "view": _compass_view(row.get("idx")), "cells": [str(row.get("originNm") or "")]})
-    # 글 하나의 주소는 화면의 스크립트가 만드는 꼴을 따라 지었다. 가장 최근 글 하나를 열어 제목이 보이면 그 주소를 쓴다.
-    report = {"rows": len(rows), "viewLinks": False}
-    newest = max(found, key=lambda entry: entry["date"], default=None)
-    if newest and newest["view"]:
-        html, _ = _get(newest["view"])
-        report["viewLinks"] = bool(html and newest["title"][:12] in html)
-    for entry in found:
-        view = entry.pop("view")
-        if report["viewLinks"] and view:
-            entry["url"] = view
-    return found, report
-
-
-def _compass_view(idx):
-    """자료실의 글 하나를 여는 주소. 화면의 스크립트는 글 번호를 base64로 바꿔 idx에 넣는다."""
-    if idx in (None, ""):
-        return ""
-    return "https://www.compass.or.kr/eucbam/data/view?idx=" + urllib.parse.quote(base64.b64encode(str(idx).encode("utf-8")).decode("ascii"))
-
-
-BOARDS = [("keco-cbam", keco), ("kosmes-esg", kosmes), ("motir", motir), ("moj", moj), ("compass", compass)]
+# COMPASS(www.compass.or.kr)의 자료실은 넣지 않는다. 그 사이트의 robots.txt가 모든 자동 읽기를 막는다.
+BOARDS = [("keco-cbam", keco), ("kosmes-esg", kosmes), ("motir", motir), ("moj", moj)]
 
 
 def crawl():

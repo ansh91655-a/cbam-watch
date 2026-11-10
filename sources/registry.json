@@ -373,8 +373,9 @@
    ],
    "filter": false,
    "minLine": 12,
-   "collector": "github",
-   "note": "EU CBAM 헬프데스크 자료실"
+   "collector": "off",
+   "note": "EU CBAM 헬프데스크 자료실",
+   "ops": "이 사이트의 robots.txt가 모든 자동 읽기를 막는다(User-agent: * 에 Disallow: /, 2026-11-11 확인). 자동으로 받지 않는다. 그 전에 실은 소식의 제목과 링크는 그대로 두었다"
   },
   {
    "no": 21,

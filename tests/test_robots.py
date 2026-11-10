@@ -1,8 +1,6 @@
 """robots.txt를 지키는지: 어느 묶음을 따르는지, 어느 줄이 이기는지, 읽지 못한 날에는 어떻게 하는지."""
 import datetime
-import json
 import os
-import pathlib
 import tempfile
 import unittest
 

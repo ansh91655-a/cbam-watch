@@ -91,9 +91,6 @@ class ReadersTest(unittest.TestCase):
                  "정부는 3월 30일에 기업이 실무에 바로 쓸 수 있는 매뉴얼 책자를 발간했다고 밝혔다.", "둘째 문단은 싣지 않는다. 길이가 충분히 긴 문장이어도 마찬가지다.", "목록"]
         self.assertEqual(boards.lead_of(lines, "책자 발간"), "정부는 3월 30일에 기업이 실무에 바로 쓸 수 있는 매뉴얼 책자를 발간했다고 밝혔다.")
 
-    def test_compass_view_address(self):
-        self.assertEqual(boards._compass_view("1"), "https://www.compass.or.kr/eucbam/data/view?idx=MQ%3D%3D")
-        self.assertEqual(boards._compass_view(""), "")
 
 
 class LawAndNewsletterTest(unittest.TestCase):

@@ -47,11 +47,14 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 | `tools/notify` | 보고 파일에서 알릴 것을 골라 '운영 보고' 이슈에 적기(`reports`, `messages`, `github`, `run`) |
 | `tools/run` | 예약 실행이 쓰는 보조 도구: 후보 고르기, 검증 대기 고르기, 원문 발췌 자르기, 상태 점검(`health`, 규제 자료는 `rules_health`, 품목 코드 목록과 기관별 입장 비교표는 `cn_health`), 하루와 한 주의 요약, 보고 파일 만들기(`write_report`) |
 | `tools/archive` | 공식 기록을 모으는 프로그램. 지난 소식을 한꺼번에 채울 때 손으로 돌리고, 규제 진행 상황에 쓰는 기록은 평일마다 자동으로 돈다: 출처별 모으기(`ecnews`, `newsletter`, `eurlex`, `cellar`, `docs`, `oeil`, `hys`, `presscorner`, `council`, `govuk`, `ukleg`, `fedreg`, `boards`)와 실행(`crawl`), 새 자료를 그날의 후보로 넘기기(`tofeed`), 화면의 짜임 살펴보기(`dump`), 싣기 전 검사(`gate`), 싣기(`publish`) |
-| `tools/cn` | 품목 코드 조회의 목록을 법령 원문에서 만드는 프로그램: 부속서의 품목 표 읽기(`annex`), `data/cn.json` 만들기(`build`). 원문은 워크플로 '소급 수집'의 `eu-fulltext` 단계가 `collected/archive/pages/eu-fulltext/`에 받아 둔다. 코드를 견주는 셈은 사이트의 `site/js/cn/match.js`가 한다 |
-| `tools/thumbs` | 소식 카드의 미리보기 그림을 만드는 프로그램: 만들 것 고르기(`plan`), 원문 화면의 제목 부분 찍기(`shots.mjs`), 법령 PDF의 첫 장 받기(`pdfcover`), 줄여서 싣기(`finish`). 재이용이 허용된 공식 출처만 다룬다 |
+| `tools/cn` | 품목 코드 조회의 목록을 법령 원문에서 만드는 프로그램: 부속서의 품목 표 읽기(`annex`), `data/cn.json` 만들기(`build`), 통합본의 판 다루기(`versions`), 새 통합본이 나오면 본문을 받아 목록을 다시 만들기(`refresh`, 평일 수집이 돌린다. 부속서를 제대로 읽었는지의 확인에 걸리면 아무것도 바꾸지 않고 사유를 `collected/cn/refresh.json`에 남긴다). 원문은 `collected/archive/pages/eu-fulltext/`에 있다. 코드를 견주는 셈은 사이트의 `site/js/cn/match.js`, 개정안의 단계에 따라 안내의 말을 바꾸는 기준은 `site/js/cn/stage.js`에 있다 |
+| `tools/thumbs` | 소식 카드의 미리보기 그림을 만드는 프로그램: 만들 것 고르기(`plan`), 원문 화면의 제목 부분 찍기(`shots.mjs`), 법령 PDF의 첫 장 받기(`pdfcover`), 줄여서 싣기(`finish`). 재이용이 허용된 공식 출처만 다루고, 화면을 여는 브라우저는 자동으로 여는 것임을 숨기지 않는다 |
+| `tools/common` | 여러 프로그램이 함께 쓰는 것: 웹에서 받기(`net`), robots.txt 지키기(`robots`), 화면의 글 뽑기(`htmltext`), JSON 읽고 쓰기(`jsonio`), 사이트 주소와 배포 저장소(`siteinfo`) |
 | `tools/art` | 사이트의 그림을 만드는 프로그램. 손으로 돌린다: 점 지도(`dotmap`), 아이콘(`icons`), 라이선스 고지(`notices`), 공유 미리보기 그림의 원본(`social.html`) |
 
-프로그램은 저장소 맨 위에서 `python3 -m tools.<묶음>.<이름>` 꼴로 돌립니다. 표준 라이브러리만 쓰고, PDF 본문을 뽑을 때만 `pdftotext`가 필요합니다. 시험은 `python3 -m unittest discover -s tests -t .`로 돌립니다.
+자동으로 받는 것은 모두 `tools/common/net.py`를 거치고, 이 함수는 주소를 열기 전에 그 사이트의 robots.txt를 봅니다(`tools/common/robots.py`). 사이트가 자동 읽기를 막은 주소는 받지 않고, 막힌 주소는 `collected/robots.json`에 남아 그날의 상태 점검이 알립니다. 이 수집기의 이름(cbam-watch)을 적은 규칙과 함께 Claude의 수집기 이름을 적은 규칙도 따릅니다(받은 글을 Claude가 읽고 요약하기 때문입니다). 사이트가 확인 요청이나 접근 거부 화면을 내면 넘어서려 하지 않습니다. 주소 하나를 손으로 확인하려면 `python3 -m tools.common.robots <주소>`를 씁니다.
+
+프로그램은 저장소 맨 위에서 `python3 -m tools.<묶음>.<이름>` 꼴로 돌립니다. 표준 라이브러리만 쓰고, PDF 본문을 뽑을 때만 `pdftotext`가 필요합니다. 시험은 `python3 -m unittest discover -s tests -t .`로 돌리고, 올리기 전에는 `sh tools/dev/check.sh`(자동 실행과 같은 꾸러미만 깐 깨끗한 환경에서 시험과 사이트 만들기)를 돌립니다.
 
 ## 규제별 진행 상황
 
