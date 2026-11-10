@@ -1,0 +1,51 @@
+name: 소급 수집
+
+# 지난 소식을 한꺼번에 모을 때 손으로 돌린다. 평소의 자동 실행은 이 워크플로를 쓰지 않는다.
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "probe(화면의 짜임 살펴보기) 또는 crawl(모으기)"
+        type: choice
+        options: [probe, crawl]
+        default: probe
+
+permissions:
+  contents: write
+
+concurrency:
+  group: archive
+  cancel-in-progress: false
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 화면의 짜임 살펴보기
+        if: inputs.mode == 'probe'
+        run: |
+          python -m tools.archive.dump
+          git config user.name "cbam-watch-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -q --orphan archive-probe
+          git rm -rq --cached .
+          git add -f _dump
+          git commit -qm "소급 수집 준비 자료 $(TZ=Asia/Seoul date '+%F %H:%M')"
+          git push -f origin archive-probe
+      - name: 지난 소식 모으기
+        if: inputs.mode == 'crawl'
+        run: |
+          python -m tools.archive.crawl
+          git config user.name "cbam-watch-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add collected/archive
+          git diff --cached --quiet || git commit -m "소급 수집 결과 $(TZ=Asia/Seoul date '+%F %H:%M')"
+          for attempt in 1 2 3; do
+            git pull --rebase --autostash && git push && break
+            sleep 5
+          done
