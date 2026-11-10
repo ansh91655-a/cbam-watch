@@ -16,6 +16,11 @@ from tools.run import dbdump
 
 NOT_FIXABLE = {"출처", "확인 불가"}
 AGAIN = "다시 쓴 초안도 보류"
+NO_COLLECT = "수집·작성 실행 기록이 없음"
+NO_VERIFY = "검증·게시 실행 기록이 없음"
+NOT_PUSHED = "게시 데이터를 저장소에 올리지 못함"
+# 이 프로그램이 정해 둔 문구. 실행이 직접 적은 글과 달리 공개 보고 파일에 그대로 실어도 된다.
+FIXED_PROBLEMS = {NO_COLLECT, NO_VERIFY, NOT_PUSHED}
 
 
 def summarize(runs, day):
@@ -25,16 +30,16 @@ def summarize(runs, day):
     problems = []
     if datetime.date.fromisoformat(day).weekday() < 5:
         if not collect:
-            problems.append("수집·작성 실행 기록이 없음")
+            problems.append(NO_COLLECT)
         if not verify:
-            problems.append("검증·게시 실행 기록이 없음")
+            problems.append(NO_VERIFY)
     for run in collect + verify:
         for problem in run.get("problems", []) or []:
             text = str(problem).strip()
             if text and text not in problems:
                 problems.append(text)
     if any(run.get("pushed") is False for run in verify):
-        problems.append("게시 데이터를 저장소에 올리지 못함")
+        problems.append(NOT_PUSHED)
     final_holds, retry = [], 0
     for run in verify:
         for hold in run.get("holds", []) or []:

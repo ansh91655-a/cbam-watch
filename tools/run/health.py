@@ -52,7 +52,8 @@ def _originals_problems(originals, day):
     return problems
 
 
-def main():
+def report():
+    """저장소의 상태를 사전으로 돌려준다. problems가 사람에게 알릴 문제다."""
     day = today()
     workday = now_kst().weekday() < 5
     status = read_json("collected/status.json", {"sources": {}})
@@ -73,7 +74,7 @@ def main():
         if not deployed_today:
             problems.append(f"사이트가 오늘 다시 배포되지 않음(마지막 {deployed or '알 수 없음'})")
 
-    report = {
+    return {
         "today": day,
         "problems": problems,
         "collectCheckedAt": status.get("checkedAt", ""),
@@ -89,7 +90,10 @@ def main():
         "listedToday": sum(1 for item in items if item.get("listed") == day),
         "withdrawn": sum(1 for item in items if item.get("withdrawn")),
     }
-    print(json.dumps(report, ensure_ascii=False))
+
+
+def main():
+    print(json.dumps(report(), ensure_ascii=False))
     return 0
 
 

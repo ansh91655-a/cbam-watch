@@ -1,0 +1,46 @@
+name: 운영 알림
+
+# 보고 파일(reports/)을 읽어 알릴 것이 있으면 '운영 보고' 이슈에 댓글을 단다.
+# GitHub가 그 댓글을 저장소 주인에게 메일로 알린다(계정의 알림 설정을 따른다).
+on:
+  push:
+    branches: [main]
+    paths:
+      - "reports/**"
+  schedule:
+    - cron: "10 2 * * 1-5" # 한국 시각 평일 11:10. 그때까지 오늘 보고 파일이 없으면 알린다
+  workflow_dispatch:
+    inputs:
+      message:
+        description: "시험 알림에 넣을 글"
+        required: false
+        default: "알림 시험"
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: notify
+  cancel-in-progress: false
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 알릴 것을 찾아 이슈에 적기
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EVENT_NAME: ${{ github.event_name }}
+          TEST_MESSAGE: ${{ github.event.inputs.message }}
+        run: |
+          case "$EVENT_NAME" in
+            schedule) python -m tools.notify.run --event watch ;;
+            workflow_dispatch) python -m tools.notify.run --event test --message "$TEST_MESSAGE" ;;
+            *) python -m tools.notify.run --event push ;;
+          esac
