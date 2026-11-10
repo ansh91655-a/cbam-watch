@@ -13,7 +13,7 @@ from tools.common.htmltext import decode, parse
 from tools.common.net import fetch, header
 
 OUT = pathlib.Path("_dump")
-RAW_LIMIT = 1_500_000
+RAW_LIMIT = 6_000_000
 
 
 def expand(target):

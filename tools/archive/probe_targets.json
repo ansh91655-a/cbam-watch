@@ -1,87 +1,45 @@
 {
  "targets": [
   {
-   "code": "ec-news-list",
-   "template": "https://taxation-customs.ec.europa.eu/news_en?f%5B0%5D=oe_news_title%3Acbam&page={n}",
-   "pages": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5
+   "code": "ec-sitemap",
+   "urls": [
+    "https://taxation-customs.ec.europa.eu/sitemap.xml"
    ]
   },
   {
-   "code": "ec-news-all",
+   "code": "ec-article",
    "urls": [
-    "https://taxation-customs.ec.europa.eu/news_en"
+    "https://taxation-customs.ec.europa.eu/news/new-guidance-electricity-imports-under-centralised-clearance-import-cci-2026-11-06_en"
    ]
   },
   {
-   "code": "ec-latest",
+   "code": "ec-list",
    "urls": [
-    "https://taxation-customs.ec.europa.eu/node/2046/latest_en",
-    "https://taxation-customs.ec.europa.eu/node/2046/latest_en?page=1",
-    "https://taxation-customs.ec.europa.eu/node/2046/latest_en?page=2"
+    "https://taxation-customs.ec.europa.eu/news_en?page=1",
+    "https://taxation-customs.ec.europa.eu/news_en?page=3"
    ]
   },
   {
-   "code": "ep-oeil-2025-0039",
+   "code": "motir-article",
    "urls": [
-    "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0039(COD)"
+    "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172324/view"
    ]
   },
   {
-   "code": "hmrc-api",
+   "code": "keco-article",
    "urls": [
-    "https://www.gov.uk/api/content/government/collections/carbon-border-adjustment-mechanism"
+    "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=100866"
+   ]
+  },
+  {
+   "code": "compass-json",
+   "urls": [
+    "https://www.compass.or.kr/eucbam/data/euDataList?receiveCnt=0&requestCnt=5&orderName=&orderDir=&searchKey=&searchKeywd="
    ],
    "headers": {
-    "Accept": "application/json"
+    "Accept": "application/json",
+    "X-Requested-With": "XMLHttpRequest"
    }
-  },
-  {
-   "code": "keco-cbam",
-   "urls": [
-    "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/list.do"
-   ]
-  },
-  {
-   "code": "motir",
-   "urls": [
-    "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c"
-   ]
-  },
-  {
-   "code": "compass",
-   "urls": [
-    "https://www.compass.or.kr/eucbam/data/list"
-   ]
-  },
-  {
-   "code": "kosmes-esg",
-   "urls": [
-    "https://kdoctor.kosmes.or.kr/esgplatform/board/board13.do"
-   ]
-  },
-  {
-   "code": "moj",
-   "urls": [
-    "https://www.moj.go.kr/bbs/moj/177/artclList.do"
-   ]
-  },
-  {
-   "code": "kba-europe",
-   "urls": [
-    "https://kba-europe.com/"
-   ]
-  },
-  {
-   "code": "gokea",
-   "urls": [
-    "https://www.gokea.org/core/?cid=53"
-   ]
   }
  ]
 }
