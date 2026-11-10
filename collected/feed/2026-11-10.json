@@ -95,8 +95,16 @@
    "text": "European Association Automotive Suppliers",
    "seenAt": "2026-11-10T16:45:16+09:00",
    "textPath": "collected/pages/ep-oeil-2025-0419.txt"
+  },
+  {
+   "id": "f2e01184f152",
+   "source": "hmrc-cbam",
+   "kind": "line",
+   "url": "https://www.gov.uk/government/collections/carbon-border-adjustment-mechanism",
+   "text": "If you’re liable for CBAM, you will need to register, when registration opens on 1 January 2028.",
+   "seenAt": "2026-11-10T18:40:11+09:00"
   }
  ],
- "generatedAt": "2026-11-10T16:45:16+09:00",
- "count": 10
+ "generatedAt": "2026-11-10T18:40:11+09:00",
+ "count": 11
 }
