@@ -5,9 +5,9 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "probe(화면의 짜임 살펴보기) 또는 crawl(모으기)"
+        description: "probe(화면의 짜임 살펴보기), crawl(모으기), clean(살펴본 자료 가지 지우기)"
         type: choice
-        options: [probe, crawl]
+        options: [probe, crawl, clean]
         default: probe
       steps:
         description: "crawl일 때 돌릴 출처 이름(띄어 적는다. 비우면 모두). 예: ec-news ep-oeil"
@@ -42,6 +42,9 @@ jobs:
           git add -f _dump
           git commit -qm "소급 수집 준비 자료 $(TZ=Asia/Seoul date '+%F %H:%M')"
           git push -f origin archive-probe
+      - name: 살펴본 자료 가지 지우기
+        if: inputs.mode == 'clean'
+        run: git push origin --delete archive-probe || echo "지울 가지가 없음"
       - name: 지난 소식 모으기
         if: inputs.mode == 'crawl'
         timeout-minutes: 40
