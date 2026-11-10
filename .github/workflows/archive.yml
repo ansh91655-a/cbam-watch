@@ -54,7 +54,7 @@ jobs:
         env:
           STEPS: ${{ inputs.steps }}
         run: |
-          pip install -q pypdf pdfplumber
+          pip install -q -r requirements.txt
           python -m tools.archive.crawl --budget-minutes 30 $STEPS
       - name: 모은 것 올리기
         if: always() && inputs.mode == 'crawl'

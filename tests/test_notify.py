@@ -92,5 +92,17 @@ class ReportTests(unittest.TestCase):
         self.assertTrue(reports.has_daily(found, "2026-11-10"))
 
 
+class TestsFailedNoticeTest(unittest.TestCase):
+    def test_a_failed_check_is_reported_once_per_commit(self):
+        from tools.notify import run
+        notices = run.pending("tests", "", "owner", sha="0832b3d4c5e6f7a8", url="https://github.com/o/r/actions/runs/1")
+        self.assertEqual(len(notices), 1)
+        mark, text = notices[0]
+        self.assertIn("tests:0832b3d4c5e6", mark)
+        self.assertIn("도구 검사가 실패", text)
+        self.assertIn("`0832b3d`", text)
+        self.assertIn("https://github.com/o/r/actions/runs/1", text)
+
+
 if __name__ == "__main__":
     unittest.main()

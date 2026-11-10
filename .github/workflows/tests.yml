@@ -5,6 +5,7 @@ on:
     paths:
       - "tools/**"
       - "tests/**"
+      - "requirements.txt"
       - ".github/workflows/tests.yml"
   workflow_dispatch:
 
@@ -22,5 +23,5 @@ jobs:
           python-version: "3.12"
       - name: 자동 시험
         run: |
-          pip install -q pillow  # 미리보기 그림을 줄이는 도구의 시험이 쓴다
+          pip install -q -r requirements.txt
           python -m unittest discover -s tests -t .

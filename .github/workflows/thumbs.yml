@@ -32,7 +32,7 @@ jobs:
       - name: 만들 그림 고르기
         id: plan
         run: |
-          pip install -q pillow
+          pip install -q -r requirements.txt
           mkdir -p /tmp/thumbs/raw
           python -m tools.thumbs.plan /tmp/thumbs/todo.json --limit "${{ inputs.limit || '150' }}"
           echo "count=$(python -c 'import json; print(len(json.load(open("/tmp/thumbs/todo.json"))))')" >> "$GITHUB_OUTPUT"

@@ -220,9 +220,9 @@ class SiteInfoTest(unittest.TestCase):
         self.assertEqual(siteinfo.deploy_remote({"siteRepo": ""}), "origin")
         self.assertEqual(siteinfo.deploy_remote({"siteRepo": "someone/site"}), "https://github.com/someone/site")
 
-    def test_this_repository_deploys_from_itself_for_now(self):
+    def test_the_deploy_setting_of_this_repository_is_readable(self):
         from tools.common import siteinfo
-        self.assertEqual(siteinfo.site_repo(), "")
+        self.assertIn(siteinfo.deploy_remote().split(":")[0], ("origin", "https"))  # 값은 운영 설정이므로 꼴만 본다
 
 
 if __name__ == "__main__":

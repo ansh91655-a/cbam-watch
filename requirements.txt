@@ -1,0 +1,5 @@
+# 자동 실행과 시험이 쓰는 파이썬 꾸러미. 워크플로는 모두 이 파일로 설치한다(작업 환경에만 깔려 있어 시험이 통과하는 일을 막는다).
+# 프로그램의 대부분은 표준 라이브러리만 쓴다. 아래는 그림과 PDF를 다루는 도구가 쓴다.
+pillow      # tools/thumbs: 미리보기 그림 줄이기
+pypdf       # tools/archive/fulltext: 이사회 문서의 본문
+pdfplumber  # tools/archive/fourcolumn: 네 칸 대조 문서를 칸별로 읽기

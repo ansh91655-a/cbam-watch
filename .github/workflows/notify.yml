@@ -9,6 +9,9 @@ on:
       - "reports/**"
   schedule:
     - cron: "10 2 * * 1-5" # 한국 시각 평일 11:10. 그때까지 오늘 보고 파일이 없으면 알린다
+  workflow_run:
+    workflows: ["도구 검사"]
+    types: [completed] # 도구 검사가 실패로 끝나면 알린다
   workflow_dispatch:
     inputs:
       message:
@@ -38,8 +41,13 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           EVENT_NAME: ${{ github.event_name }}
           TEST_MESSAGE: ${{ github.event.inputs.message }}
+          RUN_RESULT: ${{ github.event.workflow_run.conclusion }}
+          RUN_SHA: ${{ github.event.workflow_run.head_sha }}
+          RUN_URL: ${{ github.event.workflow_run.html_url }}
         run: |
           case "$EVENT_NAME" in
+            workflow_run)
+              if [ "$RUN_RESULT" = "failure" ]; then python -m tools.notify.run --event tests --sha "$RUN_SHA" --url "$RUN_URL"; else echo "도구 검사 결과: $RUN_RESULT (알릴 것 없음)"; fi ;;
             schedule) python -m tools.notify.run --event watch ;;
             workflow_dispatch) python -m tools.notify.run --event test --message "$TEST_MESSAGE" ;;
             *) python -m tools.notify.run --event push ;;
