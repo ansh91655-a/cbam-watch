@@ -1,5 +1,5 @@
 {
- "checkedAt": "2026-11-10T23:05:07+00:00",
+ "checkedAt": "2026-11-10T23:07:50+00:00",
  "rows": [
   {
    "name": "ec-guidance-page",
@@ -62,19 +62,19 @@
    "url": "http://data.europa.eu/eli/reg/2023/956/oj",
    "status": 200,
    "contentType": "text/html; charset=UTF-8",
-   "bytes": 757249,
-   "sha256": "a7bb7b899f408a9b40fc17a298eb9ecd55467bbf4ea5a495a716d5b9f16eb676",
+   "bytes": 757247,
+   "sha256": "e50d4e6d46e474eb9432658372255a9654fa577e253625b7e6fd7a61f60ea1ed",
    "isPdf": false,
    "error": "",
-   "head": " <!DOCTYPE html> <html lang=\"en\" class=\"no-js\" xml:lang=\"en\" prefix=\"eli: http://data.europa.eu/eli/ontology#\" > <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <script type=\"text/javascript\" src=\"/eurlex-frontoffice/ruxitagentjs_ICANVfgqrux_10343260715123811.js\" data-dtconfig=\"app=47d4c64c3b67ec69|agentId=76662337d4384c38|srtbv=4|owasp=1|featureHash=ICANVfgqrux|rdnt=1|uxrgce=1|cuc=m097nmfl|mel=100000|mb=null|dpvc=1|iub=null|lastModification=1794334918169|tp=500,50,0|srbbv=3|agentUri=/eurl"
+   "head": " <!DOCTYPE html> <html lang=\"en\" class=\"no-js\" xml:lang=\"en\" prefix=\"eli: http://data.europa.eu/eli/ontology#\" > <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <script type=\"text/javascript\" src=\"/eurlex-frontoffice/ruxitagentjs_ICANVfgqrux_10343260715123811.js\" data-dtconfig=\"app=47d4c64c3b67ec69|agentId=5d07db28734b72e1|srtbv=4|owasp=1|featureHash=ICANVfgqrux|rdnt=1|uxrgce=1|cuc=m097nmfl|mel=100000|mb=null|dpvc=1|iub=null|lastModification=1794334918169|tp=500,50,0|srbbv=3|agentUri=/eurl"
   },
   {
    "name": "eurlex-html",
    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02023R0956-20251020",
    "status": 200,
    "contentType": "text/html; charset=UTF-8",
-   "bytes": 509528,
-   "sha256": "a0248fd8f4abb3986b74f8860f61940db0993c15e3a85e56adfa28cfb65304fb",
+   "bytes": 509529,
+   "sha256": "a8825a9fae4d7c6844da00f88a41c610dffd16a35a8ab4501e379ce04308a8ac",
    "isPdf": false,
    "error": "",
    "head": " <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML//EN\" \"xhtml-strict.dtd\"> <html xmlns=\"http://www.w3.org/1999/xhtml\"> <!-- CONVEX # converter_version:9.17.0 # generated_on:20251204-1702 --> <head><meta name=\"format-detection\" content=\"telephone=no\"/><meta http-equiv='X-UA-Compatible' content='IE=edge'/><meta name='viewport' content='width=device-width, initial-scale=1'><meta name='WT.z_usr_lan' content='EN'> <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/> <title>Consolidated TEXT: 32023R0956 — EN — 20.10.2025</title> <script type=\"text/javascript\" src=\"/eurlex-frontoffice/ruxitag"
@@ -369,6 +369,225 @@
     "/kor/article/ATCLf724eb567/213778/view?mno=&pageIndex=1",
     "/kor/article/ATCLf724eb567/213779/view?mno=&pageIndex=1",
     "/kor/article/ATCLf724eb567/213782/view?mno=&pageIndex=1"
+   ],
+   "rows": [
+    "번호 | 분류 | 제목 | 담당부서 | 등록일 | 조회수 | 첨부파일",
+    "7,104 | 산업·기술 | 인재혁신전문기업 등록 공고 | 산업일자리혁신과 | 2026-11-10 | 57",
+    "7,103 | 무역·투자 | 해외진출기업의 국내복귀 지원에 관한 고시 | 해외투자과 | 2026-11-10 | 89",
+    "7,102 | 산업·기술 | 스마트그린산업단지 지정 및 촉진사업계획 승인 고시 중 정정 | 입지총괄과 | 2026-11-10 | 86",
+    "7,101 | 산업·기술 | 2027년도「자동차·조선산업 발전 유공(자동차산업)」포상 공고 | 자동차과 | 2026-11-09 | 100",
+    "7,100 | 산업·기술 | 미래자동차 부품 전문기업 지정 신청 공고 | 자동차과 | 2026-11-09 | 105",
+    "7,099 | 산업·기술 | 핵심전략기술과 그 관련 품목 및 소재·부품·장비 분야 경제안보품목등의 선정·확인·재검토 세부절차 등에 관한 고시 개정안 행정예고 | 산업공급망정책과 | 2026-11-09 | 104",
+    "7,098 | 통상·FTA | 산업통상부 임기제 공무원 경력경쟁채용시험 공고 | 운영지원과 | 2026-11-09 | 133",
+    "7,097 | 산업·기술 | 2027년도 소재·부품·장비 양산성능평가지원사업 총괄주관연구개발기관 모집 공고 | 소재부품장비개발과 | 2026-11-09 | 117",
+    "7,096 | 산업·기술 | 국가첨단전략산업 특성화대학 등 지정 및 지원에 관한 운영지침 | 산업일자리혁신과 | 2026-11-09 | 100",
+    "7,095 | 산업·기술 | 핵심전략기술과 그 관련 품목 및 소재·부품·장비 분야 경제안보품목등의 선정·확인·재검토 세부절차 등에 관한 고시 개정안 | 산업공급망정책과 | 2026-11-09 | 114"
+   ]
+  },
+  {
+   "name": "motir-policy-trade",
+   "url": "https://www.motir.go.kr/kor/article/ATCLf724eb567?mno=&pageIndex=1&rowPageC=0&displayAuthor=&searchCategory=3&startDtD=&endDtD=&searchCondition=1&searchKeyword=",
+   "status": 200,
+   "contentType": "text/html;charset=UTF-8",
+   "bytes": 135354,
+   "sha256": "e5d4fd899e33818cce7b2c916452982f592af0f7ba9fd79e0a9b00baa7186d43",
+   "isPdf": false,
+   "error": "",
+   "head": " <!DOCTYPE html> <html lang=\"ko\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"> <meta name=\"viewport\" content=\"width=device-width,initial-scale=1,user-scalable=yes\"> <!-- <meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no, target-densitydpi=device-dpi\"> --> <meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0\"> <meta name=\"format-detection\" content=\"telephone=no,email=no,address=no\"> <meta name=\"description\" content=\"산업통상부\"> <meta name=\"keywords\" content=\"산업통상부\"> <meta pro",
+   "forms": [
+    {
+     "action": "/kor/search",
+     "method": "get",
+     "id": "",
+     "fields": [
+      {
+       "tag": "input",
+       "type": "hidden",
+       "name": "kwd",
+       "value": ""
+      },
+      {
+       "tag": "input",
+       "type": "hidden",
+       "name": "site",
+       "value": "main"
+      },
+      {
+       "tag": "input",
+       "type": "text",
+       "name": "total-input-box",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "action": "/kor/article/ATCLf724eb567",
+     "method": "get",
+     "id": "searchForm",
+     "fields": [
+      {
+       "tag": "input",
+       "type": "hidden",
+       "name": "mno",
+       "value": ""
+      },
+      {
+       "tag": "input",
+       "type": "hidden",
+       "name": "pageIndex",
+       "value": "1"
+      },
+      {
+       "tag": "input",
+       "type": "hidden",
+       "name": "rowPageC",
+       "value": "0"
+      },
+      {
+       "tag": "input",
+       "type": "hidden",
+       "name": "displayAuthor",
+       "value": ""
+      },
+      {
+       "tag": "input",
+       "type": "radio",
+       "name": "searchCategory",
+       "value": "0"
+      },
+      {
+       "tag": "input",
+       "type": "radio",
+       "name": "searchCategory",
+       "value": "1"
+      },
+      {
+       "tag": "input",
+       "type": "radio",
+       "name": "searchCategory",
+       "value": "2"
+      },
+      {
+       "tag": "input",
+       "type": "radio",
+       "name": "searchCategory",
+       "value": "3"
+      },
+      {
+       "tag": "input",
+       "type": "radio",
+       "name": "searchCategory",
+       "value": "4"
+      },
+      {
+       "tag": "input",
+       "type": "checkbox",
+       "name": "schClear",
+       "value": ""
+      },
+      {
+       "tag": "input",
+       "type": "text",
+       "name": "startDtD",
+       "value": ""
+      },
+      {
+       "tag": "input",
+       "type": "text",
+       "name": "endDtD",
+       "value": ""
+      },
+      {
+       "tag": "select",
+       "name": "searchCondition",
+       "options": [
+        {
+         "value": "1",
+         "text": "제목",
+         "selected": true
+        },
+        {
+         "value": "2",
+         "text": "내용",
+         "selected": false
+        },
+        {
+         "value": "4",
+         "text": "담당부서",
+         "selected": false
+        }
+       ]
+      },
+      {
+       "tag": "input",
+       "type": "text",
+       "name": "searchKeyword",
+       "value": ""
+      }
+     ]
+    },
+    {
+     "action": "/kor/satisfaction",
+     "method": "get",
+     "id": "writeForm",
+     "fields": [
+      {
+       "tag": "input",
+       "type": "radio",
+       "name": "score",
+       "value": "5"
+      },
+      {
+       "tag": "input",
+       "type": "radio",
+       "name": "score",
+       "value": "4"
+      },
+      {
+       "tag": "input",
+       "type": "radio",
+       "name": "score",
+       "value": "3"
+      },
+      {
+       "tag": "input",
+       "type": "radio",
+       "name": "score",
+       "value": "2"
+      },
+      {
+       "tag": "input",
+       "type": "radio",
+       "name": "score",
+       "value": "1"
+      }
+     ]
+    }
+   ],
+   "postLinks": [
+    "/kor/article/ATCLf724eb567/213633/view?mno=&pageIndex=1",
+    "/kor/article/ATCLf724eb567/213635/view?mno=&pageIndex=1",
+    "/kor/article/ATCLf724eb567/213652/view?mno=&pageIndex=1",
+    "/kor/article/ATCLf724eb567/213677/view?mno=&pageIndex=1",
+    "/kor/article/ATCLf724eb567/213682/view?mno=&pageIndex=1",
+    "/kor/article/ATCLf724eb567/213695/view?mno=&pageIndex=1",
+    "/kor/article/ATCLf724eb567/213704/view?mno=&pageIndex=1",
+    "/kor/article/ATCLf724eb567/213717/view?mno=&pageIndex=1",
+    "/kor/article/ATCLf724eb567/213718/view?mno=&pageIndex=1",
+    "/kor/article/ATCLf724eb567/213775/view?mno=&pageIndex=1"
+   ],
+   "rows": [
+    "번호 | 분류 | 제목 | 담당부서 | 등록일 | 조회수 | 첨부파일",
+    "1,045 | 통상·FTA | 산업통상부 임기제 공무원 경력경쟁채용시험 공고 | 운영지원과 | 2026-11-09 | 133",
+    "1,044 | 통상·FTA | 통상변화대응지원대상 통상조약 등과 외국통상조치의 범위 지정 고시 | 통상협정활용과 | 2026-10-22 | 316",
+    "1,043 | 통상·FTA | 통상변화대응지원 및 통상피해대응지원 사업 운영규정 | 통상협정활용과 | 2026-10-22 | 306",
+    "1,042 | 통상·FTA | 산업통상부 임기제 공무원 경력경쟁채용시험 공고 | 운영지원과 | 2026-10-19 | 251",
+    "1,041 | 통상·FTA | 2026년도 산업통상부 임기제 공무원 경력경쟁채용시험 최종결과 공고 | 운영지원과 | 2026-10-16 | 232",
+    "1,040 | 통상·FTA | 2026년도 산업통상부 임기제 공무원 경력경쟁채용시험 최종합격자 발표 일정 변경공고 | 운영지원과 | 2026-10-08 | 282",
+    "1,039 | 통상·FTA | 2026년도 산업통상협력개발지원(ODA) 사전타당성조사 공고 | 통상협력총괄과 | 2026-10-02 | 446",
+    "1,038 | 통상·FTA | 2026년도 산업통상부 임기제 공무원 경력경쟁채용시험 서류전형 합격자 및 면접시험 공고 | 운영지원과 | 2026-09-23 | 394",
+    "1,037 | 통상·FTA | 2026년도 산업통상부 공무직 근로자(영문에디터) 채용 최종합격자 공고 | 미주통상과 | 2026-09-18 | 371",
+    "1,036 | 통상·FTA | 2026년 농어촌ESG실천제도 시행 공고 | 통상협정활용과 | 2026-09-18 | 389"
    ]
   },
   {
