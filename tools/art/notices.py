@@ -10,13 +10,9 @@ import sys
 # (사이트에서 쓰는 곳, 꾸러미 이름, 덧붙이는 말)
 PARTS = [
     ("아이콘 (site/js/ui/icons.js)", "lucide-static", "Lucide https://lucide.dev"),
-    ("지도의 나라 경계 (site/js/ui/heromap.js)", "world-atlas",
+    ("점 지도의 나라 경계 (site/js/ui/heromap.js)", "world-atlas",
      "world-atlas https://github.com/topojson/world-atlas . 나라 경계 자료는 Natural Earth(공개 자료, https://www.naturalearthdata.com)의 것이다."),
-    ("글꼴: 본문과 화면의 글자 (site/assets/fonts/pretendard)", "pretendard",
-     "Pretendard https://github.com/orioncactus/pretendard . 글꼴 파일 안에 'Copyright © 2023 Kil Hyung-jin'과 "
-     "SIL Open Font License 1.1이라는 표시가 들어 있다(파일의 이름표에서 읽은 값). 이 라이선스의 전문은 아래 Noto Serif KR 항목에 실린 것과 같다."),
-    ("글꼴: 큰 제목의 명조 (site/assets/fonts/noto-serif-kr)", "@fontsource/noto-serif-kr",
-     "Noto Serif KR https://fonts.google.com/noto/specimen/Noto+Serif+KR . Fontsource(https://fontsource.org)가 나눠 묶은 파일을 쓴다."),
+    ("글꼴 (site/assets/fonts/pretendard)", "pretendard", "Pretendard https://github.com/orioncactus/pretendard"),
 ]
 
 
@@ -29,8 +25,8 @@ def main(argv):
     blocks = ["이 사이트에 쓴 다른 사람의 자료와 그 라이선스입니다. (Third-party notices)\n"]
     for where, package, note in PARTS:
         meta = json.loads((root / package / "package.json").read_text(encoding="utf-8"))
-        found = [root / package / name for name in ("LICENSE", "LICENSE.md", "LICENSE.txt") if (root / package / name).exists()]
-        # 꾸러미에 LICENSE 파일이 없으면(글꼴) 라이선스의 이름만 적고 전문은 그 저장소를 보게 한다.
+        found = [root / package / name for name in ("LICENSE", "LICENSE.md", "LICENSE.txt", "dist/LICENSE.txt") if (root / package / name).exists()]
+        # 꾸러미에 LICENSE 파일이 없으면 라이선스의 이름만 적고 전문은 그 저장소를 보게 한다.
         text = found[0].read_text(encoding="utf-8").strip() if found else "이 꾸러미에는 LICENSE 파일이 들어 있지 않습니다. 라이선스의 전문은 위 주소의 저장소에 있습니다."
         blocks.append("\n".join([
             "=" * 78,

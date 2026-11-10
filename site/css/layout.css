@@ -2,14 +2,14 @@
 .head-inner, main, .foot-inner, .hero-inner, .band-inner { max-width: var(--maxw); margin-inline: auto; padding-inline: 20px; }
 
 /* 머리글: 어느 화면에서나 위에 붙어 있는 짙은 띠 */
-.site-head { position: sticky; top: 0; z-index: 30; background: var(--head-bg); color: var(--on-deep); border-bottom: 1px solid var(--head-line); }
+.site-head { position: sticky; top: 0; z-index: 30; background: var(--head-bg); color: var(--on-deep); border-bottom: 1px solid var(--head-line); -webkit-backdrop-filter: saturate(160%) blur(14px); backdrop-filter: saturate(160%) blur(14px); }
 .head-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0 28px; min-height: 64px; }
-/* 이름표: 'CBAM' 글자와 노란 세로선(국경선), 그 뒤에 '규제동향'. 네모난 표지(favicon.svg)는 탭 아이콘과 공유 그림에만 쓴다. */
 .brand { display: inline-flex; align-items: center; gap: 12px; color: var(--on-deep); text-decoration: none; }
+/* 이름표: 'CBAM' 글자, 노란 세로선(국경), '규제동향' */
 .brand-word { font-size: 1.36rem; font-weight: 800; letter-spacing: 0.03em; line-height: 1; }
 .brand-name { position: relative; padding-left: 14px; font-size: 1.04rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1; }
 .brand-name::before { content: ""; position: absolute; left: 0; top: 50%; width: 2px; height: 1.2em; background: var(--accent); transform: translateY(-50%); }
-.stage { margin-left: 2px; padding: 1px 9px; border: 1px solid var(--deep-line); border-radius: 4px; font-size: 0.74rem; color: var(--on-deep-2); white-space: nowrap; }
+.stage { margin-left: 2px; padding: 1px 9px; border: 1px solid var(--glass-line); border-radius: 999px; font-size: 0.74rem; color: var(--on-deep-2); white-space: nowrap; }
 .site-nav { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; margin-inline: -10px; }
 .site-nav::-webkit-scrollbar { display: none; }
 .site-nav a { position: relative; padding: 20px 12px; color: var(--on-deep-2); font-size: 0.95rem; font-weight: 500; text-decoration: none; white-space: nowrap; }
@@ -28,69 +28,95 @@
 }
 
 /* 본문 */
-/* 칸의 너비를 내용이 아니라 화면에 맞춘다(minmax(0, 1fr)). 그러지 않으면 줄을 바꾸지 않는 긴 글이 본문을 화면보다 넓게 민다. */
-main { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--gap-6); padding-block: 0 var(--gap-7); min-height: 60vh; align-content: start; }
+main { display: grid; gap: var(--gap-6); padding-block: 0 var(--gap-7); min-height: 60vh; align-content: start; }
 main:focus { outline: none; }
+/* 맨 아래가 짙은 띠로 끝나는 화면은 바닥글과 붙인다 */
+main:has(> .showcase:last-child) { padding-bottom: 0; }
+/* 화면이 바뀔 때 내용이 아래에서 살짝 올라온다. 끝나면 제자리이므로 움직임을 끈 사람에게도 내용은 그대로 보인다. */
+@media (prefers-reduced-motion: no-preference) {
+  main > :not(.hero):not(.view-head), .hero-copy > *, .hero-stats > * { animation: rise 0.55s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  main > :nth-child(3), .hero-copy > :nth-child(2), .hero-stats > :nth-child(2) { animation-delay: 0.07s; }
+  main > :nth-child(n + 4), .hero-copy > :nth-child(3), .hero-stats > :nth-child(3) { animation-delay: 0.14s; }
+  .hero-copy > :nth-child(4) { animation-delay: 0.21s; }
+  .hero-stats > * { animation-delay: 0.25s; }
+  .hero-stats > :nth-child(2) { animation-delay: 0.32s; }
+  .hero-stats > :nth-child(3) { animation-delay: 0.39s; }
+}
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } }
 /* 화면 너비 끝까지 가는 면. 본문 폭 안에 있어도 양옆으로 뻗는다. */
 .bleed { margin-inline: calc(50% - 50vw); }
 
-/* 첫 화면의 큰 머리: 왼쪽에 이번 주 요약, 오른쪽에 한국에서 EU로 가는 길을 그린 지도, 아래에 지표 줄 */
+/* 첫 화면의 큰 머리 */
 .hero { position: relative; background: var(--hero-bg); color: var(--on-deep); overflow: clip; }
-.hero-inner { position: relative; display: grid; gap: 30px; padding-block: 44px 0; }
-.hero-top { position: relative; display: grid; gap: 28px 40px; align-items: start; }
-@media (min-width: 980px) { .hero-top { grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr); } }
-.hero-copy { position: relative; z-index: 2; display: grid; gap: 14px; align-content: start; }
-.hero-about { max-width: 40em; font-size: 0.92rem; line-height: 1.65; color: var(--on-deep-2); }
-.hero-kicker { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; font-size: var(--fs-s); color: var(--on-deep-3); font-variant-numeric: tabular-nums; }
-.hero-kicker strong { color: var(--accent); font-weight: 700; }
-.hero h1 { font-family: var(--font-display); font-size: clamp(1.7rem, 3.1vw, 2.35rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.34; text-wrap: balance; }
-.hero-lead { max-width: 36em; font-size: 1.02rem; line-height: 1.72; color: var(--on-deep-2); }
-.hero-more { width: fit-content; color: var(--on-deep-link); font-size: var(--fs-s); font-weight: 600; }
-.hero-figure { position: relative; z-index: 1; display: grid; gap: 10px; align-content: start; margin: 0; }
-.hero-map { position: relative; width: 100%; aspect-ratio: 1002 / 598; border-radius: var(--radius-l); background: var(--map-sea); overflow: hidden; pointer-events: none; }
-.hero-map .map { display: block; width: 100%; height: 100%; }
-.hero-legend { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 0.78rem; color: var(--on-deep-3); }
-.hero-legend i { display: inline-block; width: 8px; height: 8px; margin-right: 6px; border-radius: 50%; background: var(--map-eu); }
-.hero-legend i.kr { background: var(--map-kr); }
-.hero-legend i.route { width: 16px; height: 0; border-radius: 0; border-top: 2px solid var(--map-kr); vertical-align: middle; background: none; }
-@media (max-width: 979px) {
-  .hero-inner { padding-top: 30px; gap: 22px; }
-  .hero-figure { order: 2; }
+.hero-inner { position: relative; display: grid; gap: 28px; padding-block: 56px 44px; }
+.hero-copy { position: relative; z-index: 2; display: grid; gap: 18px; max-width: 560px; }
+.hero-fresh { display: inline-flex; align-items: center; gap: 8px; width: fit-content; padding: 4px 12px 4px 10px; border: 1px solid var(--glass-line); border-radius: 999px; background: var(--glass); font-size: 0.8rem; color: var(--on-deep-2); font-variant-numeric: tabular-nums; }
+.hero-fresh::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.22); }
+.hero-fresh[data-state="stale"]::before, .hero-fresh[data-state="bad"]::before { background: var(--accent); box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.22); }
+.hero h1 { font-size: var(--fs-hero); font-weight: 800; letter-spacing: -0.035em; line-height: 1.16; }
+.hero h1 .hl { background: linear-gradient(90deg, var(--hl-from), var(--hl-to)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero-lead { max-width: 30em; font-size: 1.08rem; color: var(--on-deep-2); }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+.hero-map { position: absolute; z-index: 1; top: 34px; right: -84px; width: min(62%, 720px); aspect-ratio: 1117 / 488; pointer-events: none; -webkit-mask-image: linear-gradient(90deg, transparent, #000 14%, #000 88%, transparent); mask-image: linear-gradient(90deg, transparent, #000 14%, #000 88%, transparent); }
+.hero-map .map { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.hero-legend { position: relative; z-index: 2; justify-self: end; margin-top: -8px; font-size: 0.78rem; color: var(--on-deep-3); }
+.hero-legend i.route { display: inline-block; width: 22px; height: 2px; margin-right: 8px; border-radius: 1px; background: linear-gradient(90deg, var(--map-arc-to), var(--map-arc-from)); vertical-align: 3px; }
+.hero-stats { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 900px) {
+  .hero-inner { padding-block: 36px 32px; }
+  .hero-copy { order: 1; }
+  .hero-map { order: 2; position: relative; top: auto; right: auto; width: auto; margin: -6px -20px -10px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 95%, transparent); mask-image: linear-gradient(90deg, transparent, #000 7%, #000 95%, transparent); }
+  .hero-legend { order: 3; justify-self: start; margin-top: 0; }
+  .hero-stats { order: 4; }
+  .hero-stats { grid-template-columns: 1fr; }
 }
 
-/* 지도 그림: 나라의 면을 칠하고, 나라 사이는 바탕색 가는 선으로 가른다. 경위선은 땅 아래에 깔려 바다에서만 보인다. */
-.map-land, .map-eu, .map-kr { stroke: var(--map-line); stroke-width: 1.1; stroke-linejoin: round; }
-.map-land { fill: var(--map-land); }
-.map-eu { fill: var(--map-eu); }
-.map-kr { fill: var(--map-kr); }
-.map-grid { fill: none; stroke: var(--on-deep-3); stroke-width: 0.8; stroke-dasharray: 2 7; opacity: 0.32; }
-.map-route { fill: none; stroke: var(--map-kr); stroke-width: 3.2; stroke-linecap: round; stroke-dasharray: 100; stroke-dashoffset: 100; animation: route-draw 1.8s 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
-.map-head { fill: var(--map-kr); opacity: 0; animation: route-head 0.3s 1.9s forwards; }
-@keyframes route-draw { to { stroke-dashoffset: 0; } }
-@keyframes route-head { to { opacity: 1; } }
+/* 지도 그림 */
+.map-land, .map-eu, .map-kr { fill: none; stroke-linecap: round; }
+.map-land { stroke: var(--map-land); stroke-width: 4.6; }
+.map-eu { stroke: var(--map-eu); stroke-width: 5.6; }
+.map-kr { stroke: var(--map-kr); stroke-width: 6.4; }
+.map-glow-in { stop-color: var(--map-glow); stop-opacity: 1; }
+.map-glow-out { stop-color: var(--map-glow); stop-opacity: 0; }
+.map-arc-from { stop-color: var(--map-arc-from); }
+.map-arc-to { stop-color: var(--map-arc-to); }
+/* 흐름선: 화면이 열릴 때 한국에서 EU 쪽으로 한 번 그려지고, 그 뒤로는 작은 빛이 같은 쪽으로 천천히 지나간다 */
+.map-arc { fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-dasharray: 100; stroke-dashoffset: 100; animation: arc-draw 1.9s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+.map-arc:nth-child(2) { animation-delay: 0.12s; }
+.map-arc:nth-child(3) { animation-delay: 0.24s; }
+.map-arc:nth-child(4) { animation-delay: 0.36s; }
+.map-arc:nth-child(5) { animation-delay: 0.48s; }
+@keyframes arc-draw { to { stroke-dashoffset: 0; } }
+.map-light { fill: none; stroke: var(--map-light); stroke-width: 2.8; stroke-linecap: round; stroke-dasharray: 2.4 97.6; stroke-dashoffset: 2.4; opacity: 0; animation: arc-light 7.5s linear 2.6s infinite; }
+.map-light:nth-child(2) { animation-delay: 4.1s; }
+.map-light:nth-child(3) { animation-delay: 5.6s; }
+.map-light:nth-child(4) { animation-delay: 7.1s; }
+.map-light:nth-child(5) { animation-delay: 8.6s; }
+@keyframes arc-light { 0% { stroke-dashoffset: 2.4; opacity: 0; } 3% { opacity: 1; } 38% { opacity: 1; } 42%, 100% { stroke-dashoffset: -97.6; opacity: 0; } }
+.map-port { fill: var(--map-port); stroke: var(--map-arc-to); stroke-width: 1.6; }
 .map-home { fill: var(--map-kr); }
-.map-home-ring { fill: none; stroke: var(--map-kr); stroke-width: 1.6; opacity: 0.55; }
-/* 지도 위에 얹는 글. 그림 밖의 글자라서 그림이 줄어도 크기가 그대로다. */
-.map-tag { position: absolute; transform: translate(-50%, -50%); font-size: 0.8rem; font-weight: 700; line-height: 1.2; color: var(--on-deep); white-space: nowrap; }
-.map-tag-kr { color: var(--map-kr); }
-@media (prefers-reduced-motion: reduce) { .map-route { stroke-dashoffset: 0; animation: none; } .map-head { opacity: 1; animation: none; } }
+.map-home-ring { fill: none; stroke: var(--map-kr); stroke-width: 1.5; opacity: 0.5; }
+.map-home-pulse { fill: none; stroke: var(--map-kr); stroke-width: 1.5; transform-box: fill-box; transform-origin: center; opacity: 0; animation: home-pulse 3.2s ease-out 2s infinite; }
+@keyframes home-pulse { 0% { transform: scale(0.45); opacity: 0.85; } 75%, 100% { transform: scale(2.1); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .map-arc { stroke-dashoffset: 0; } .map-light, .map-home-pulse { display: none; } }
+/* 지도 위의 글 */
+.map-tag { position: absolute; transform: translate(-50%, -50%); padding: 1px 9px; border: 1px solid var(--glass-line); border-radius: 999px; background: var(--map-tag-bg); color: var(--on-deep); font-size: 0.72rem; font-weight: 700; line-height: 1.6; white-space: nowrap; }
+.map-tag-kr { border-color: color-mix(in srgb, var(--map-kr) 55%, transparent); }
 
-/* 화면 머리 띠(첫 화면이 아닌 화면). 오른쪽에 첫 화면의 지도를 옅게 깐다. */
+/* 화면 머리 띠(첫 화면이 아닌 화면). 오른쪽에 점 지도를 옅게 깐다. */
 .view-head { position: relative; background: var(--band-bg); color: var(--on-deep); overflow: clip; }
-.band-inner { position: relative; display: grid; gap: 8px; padding-block: 38px 34px; }
+.band-inner { position: relative; display: grid; gap: 8px; padding-block: 46px 42px; }
 .band-inner > :not(.band-map) { position: relative; z-index: 1; }
-.band-map { position: absolute; top: 50%; right: -150px; width: 560px; aspect-ratio: 1002 / 598; border-radius: 0; background: none; transform: translateY(-50%); opacity: 0.75; pointer-events: none; -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 62%, transparent 96%); mask-image: linear-gradient(90deg, transparent, #000 12%, #000 62%, transparent 96%); }
-.band-map .map { display: block; width: 100%; height: 100%; }
-.band-map .map-eu { fill: color-mix(in srgb, var(--map-eu) 45%, var(--map-land)); }
-.band-map .map-kr { fill: var(--map-land); }
-.band-map .map-arcs, .band-map .map-grid, .band-map .map-home, .band-map .map-home-ring { display: none; }
+.band-map { position: absolute; top: 50%; right: -150px; width: 640px; aspect-ratio: 1117 / 488; transform: translateY(-60%); opacity: 0.75; pointer-events: none; -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 62%, transparent 96%); mask-image: linear-gradient(90deg, transparent, #000 12%, #000 62%, transparent 96%); }
+.band-map .map { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.band-map .map-over, .band-map .map-kr { display: none; }
 @media (max-width: 900px) { .band-map { display: none; } .band-inner { padding-block: 30px 28px; } }
 /* 주 메뉴 하나에 묶인 화면들을 고르는 탭(머리 띠 안) */
-.tabs { display: flex; flex-wrap: wrap; gap: 0 22px; margin-bottom: 16px; border-bottom: 1px solid color-mix(in srgb, var(--on-deep) 16%, transparent); }
-.tabs a { display: inline-flex; align-items: center; gap: 7px; margin-bottom: -1px; padding: 6px 0 10px; border-bottom: 2px solid transparent; color: var(--on-deep-2); font-size: 0.94rem; font-weight: 600; text-decoration: none; }
-.tabs a:hover { color: var(--on-deep); }
-.tabs a[aria-current="page"] { border-bottom-color: var(--accent); color: var(--on-deep); font-weight: 700; }
-.view-head h1 { font-family: var(--font-display); font-size: clamp(1.6rem, 3.1vw, 2.1rem); font-weight: 700; letter-spacing: -0.02em; }
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.tabs a { display: inline-flex; align-items: center; gap: 7px; padding: 7px 16px 7px 13px; border: 1px solid color-mix(in srgb, var(--on-deep) 24%, transparent); border-radius: 999px; background: color-mix(in srgb, var(--on-deep) 7%, transparent); color: var(--on-deep-2); font-size: 0.92rem; font-weight: 600; text-decoration: none; transition: background 0.15s, border-color 0.15s, color 0.15s; }
+.tabs a:hover { border-color: color-mix(in srgb, var(--on-deep) 50%, transparent); color: var(--on-deep); }
+.tabs a[aria-current="page"] { border-color: var(--accent); background: var(--accent); color: var(--on-accent); font-weight: 700; }
+.view-head h1 { font-size: clamp(1.7rem, 3.4vw, 2.3rem); letter-spacing: -0.03em; }
 .view-head .lead { max-width: 58ch; color: var(--on-deep-2); }
 .view-head .fresh { font-size: 0.8rem; color: var(--on-deep-3); font-variant-numeric: tabular-nums; }
 .view-head .fresh[data-state="stale"], .view-head .fresh[data-state="bad"] { color: var(--accent); }
@@ -99,8 +125,14 @@ main:focus { outline: none; }
 @media (min-width: 960px) { .cols { grid-template-columns: minmax(0, 1fr) 330px; align-items: start; } }
 .with-side { display: grid; gap: var(--gap-5) 36px; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 960px) { .with-side { grid-template-columns: 236px minmax(0, 1fr); align-items: start; } .with-side > .side { position: sticky; top: 88px; } }
-.stack { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--gap-4); align-content: start; }
-.stack-l { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--gap-6); align-content: start; }
+/* 짙은 띠 안에 내용을 두는 자리(첫 화면의 품목별 가이던스) */
+.showcase { position: relative; background: var(--band-bg); color: var(--on-deep); overflow: clip; }
+.showcase::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(var(--glass-line) 1px, transparent 1.5px); background-size: 22px 22px; -webkit-mask-image: linear-gradient(180deg, #000, transparent 55%); mask-image: linear-gradient(180deg, #000, transparent 55%); opacity: 0.5; pointer-events: none; }
+.showcase-inner { position: relative; display: grid; gap: var(--gap-4); max-width: var(--maxw); margin-inline: auto; padding: 60px 20px 68px; }
+.showcase .sec-head a { color: var(--on-deep-link); }
+.showcase .sec-lead { color: var(--on-deep-2); }
+.stack { display: grid; gap: var(--gap-4); align-content: start; }
+.stack-l { display: grid; gap: var(--gap-6); align-content: start; }
 .sec-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px; }
 .sec-head a { font-size: var(--fs-s); font-weight: 600; }
 .sec-lead { color: var(--ink-2); max-width: 62ch; margin-top: -8px; }

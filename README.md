@@ -43,14 +43,14 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 | `tools/originals` | 문서 링크 찾기(`discover`), 받을 차례 정하기(`queue`), 판 남기기와 비교(`versions`, `diff`), 본문 뽑기(`textify`), 실행(`run`) |
 | `tools/check` | 국문 글 검사: 용어(`term_check`, `term_lookup`), 표기(`style_check`), 수치와 날짜 대조(`fact_check`), 원문 발췌 확인(`excerpt_check`) |
 | `tools/prices` | 인증서 가격표 읽기: 적용 기간 읽기(`periods`), 표의 행 읽기(`parse`), 가격 자료 만들기(`run`) |
-| `tools/publish` | 게시 데이터에 더하기(`add_items`, `add_digest`), 요약 내리기(`withdraw`), 같은 일을 두 번 실은 소식을 하나로 묶기(`merge`: 묶인 소식은 `data/merged.json`에 남고, 옛 주소는 남긴 소식으로 넘어간다), 주제 목록(`topics`), 사이트와 운영 화면의 폴더 만들기(`build_site`, `build_console`). 사이트 폴더를 만들 때 규제 자료의 공개용 사본(`regulations`), 소식의 미리보기 그림 주소(`thumbs`), 구독 피드 `feed.xml`과 `rules.xml`(`feed`), 화면에서 바로 보는 문서 사본 `files/`(`derive`)도 함께 만든다. 규제 자료 고치기(`rule_edit`), 제목만 옮겨 실은 소식의 요약을 원문을 읽고 다시 쓴 것으로 바꾸기(`revise`)도 여기에 있다 |
+| `tools/publish` | 게시 데이터에 더하기(`add_items`, `add_digest`), 요약 내리기(`withdraw`), 같은 일을 두 번 실은 소식을 하나로 묶기(`merge`: 묶인 소식은 `data/merged.json`에 남고, 옛 주소는 남긴 소식으로 넘어간다), 주제 목록(`topics`), 사이트와 운영 화면의 폴더 만들기(`build_site`, `build_console`). 사이트 폴더를 만들 때 규제 자료의 공개용 사본(`regulations`), 소식의 미리보기 그림 주소(`thumbs`), 구독 피드 `feed.xml`과 `rules.xml`(`feed`. 새 소식 받아 보기를 열어 둔 동안에만), 화면에서 바로 보는 문서 사본 `files/`(`derive`)도 함께 만든다. 규제 자료 고치기(`rule_edit`), 제목만 옮겨 실은 소식의 요약을 원문을 읽고 다시 쓴 것으로 바꾸기(`revise`)도 여기에 있다 |
 | `tools/notify` | 보고 파일에서 알릴 것을 골라 '운영 보고' 이슈에 적기(`reports`, `messages`, `github`, `run`) |
 | `tools/run` | 예약 실행이 쓰는 보조 도구: 후보 고르기, 검증 대기 고르기, 원문 발췌 자르기, 상태 점검(`health`, 규제 자료는 `rules_health`, 품목 코드 목록과 기관별 입장 비교표는 `cn_health`), 하루와 한 주의 요약, 보고 파일 만들기(`write_report`) |
 | `tools/archive` | 공식 기록을 모으는 프로그램. 지난 소식을 한꺼번에 채울 때 손으로 돌리고, 규제 진행 상황에 쓰는 기록은 평일마다 자동으로 돈다: 출처별 모으기(`ecnews`, `newsletter`, `eurlex`, `cellar`, `docs`, `oeil`, `hys`, `presscorner`, `council`, `govuk`, `ukleg`, `fedreg`, `boards`)와 실행(`crawl`), 새 자료를 그날의 후보로 넘기기(`tofeed`), 화면의 짜임 살펴보기(`dump`), 싣기 전 검사(`gate`), 싣기(`publish`) |
 | `tools/cn` | 품목 코드 조회의 목록을 법령 원문에서 만드는 프로그램: 부속서의 품목 표 읽기(`annex`), `data/cn.json` 만들기(`build`), 통합본의 판 다루기(`versions`), 새 통합본이 나오면 본문을 받아 목록을 다시 만들기(`refresh`, 평일 수집이 돌린다. 부속서를 제대로 읽었는지의 확인에 걸리면 아무것도 바꾸지 않고 사유를 `collected/cn/refresh.json`에 남긴다). 원문은 `collected/archive/pages/eu-fulltext/`에 있다. 코드를 견주는 셈은 사이트의 `site/js/cn/match.js`, 개정안의 단계에 따라 안내의 말을 바꾸는 기준은 `site/js/cn/stage.js`에 있다 |
 | `tools/thumbs` | 소식 카드의 미리보기 그림을 만드는 프로그램: 만들 것 고르기(`plan`), 원문 화면의 제목 부분 찍기(`shots.mjs`), 법령 PDF의 첫 장 받기(`pdfcover`), 줄여서 싣기(`finish`). 재이용이 허용된 공식 출처만 다루고, 화면을 여는 브라우저는 자동으로 여는 것임을 숨기지 않는다 |
 | `tools/common` | 여러 프로그램이 함께 쓰는 것: 웹에서 받기(`net`), robots.txt 지키기(`robots`), 화면의 글 뽑기(`htmltext`), JSON 읽고 쓰기(`jsonio`), 사이트 주소와 배포 저장소(`siteinfo`) |
-| `tools/art` | 사이트의 그림을 만드는 프로그램. 손으로 돌린다: 지도(`routemap`), 아이콘(`icons`), 라이선스 고지(`notices`), 공유 미리보기 그림의 원본(`social.html`) |
+| `tools/art` | 사이트의 그림을 만드는 프로그램. 손으로 돌린다: 점 지도(`dotmap`, 나라 경계 읽기는 `world`), 아이콘(`icons`), 라이선스 고지(`notices`), 공유 미리보기 그림의 원본(`social.html`) |
 
 자동으로 받는 것은 모두 `tools/common/net.py`를 거치고, 이 함수는 주소를 열기 전에 그 사이트의 robots.txt를 봅니다(`tools/common/robots.py`). 사이트가 자동 읽기를 막은 주소는 받지 않고, 막힌 주소는 `collected/robots.json`에 남아 그날의 상태 점검이 알립니다. 이 수집기의 이름(cbam-watch)을 적은 규칙과 함께 Claude의 수집기 이름을 적은 규칙도 따릅니다(받은 글을 Claude가 읽고 요약하기 때문입니다). 사이트가 확인 요청이나 접근 거부 화면을 내면 넘어서려 하지 않습니다. 주소 하나를 손으로 확인하려면 `python3 -m tools.common.robots <주소>`를 씁니다.
 
@@ -84,29 +84,29 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 
 ## 사이트의 디자인
 
-- 방향: 규제 소식을 찾아 읽는 자료 사이트입니다. 꾸밈보다 글과 표가 먼저 보이게 합니다. 면은 그림자나 색 번짐 없이 가는 선으로 가르고, 움직임은 사람이 누른 것에 답할 때(창 열기, 펼치기)와 첫 화면 지도의 길을 한 번 그릴 때만 씁니다.
+- 방향: 짙은 남색의 큰 머리(점 지도, 지금 알아 둘 수치 세 칸)와 밝은 본문입니다. 본문의 칸은 모서리가 둥근 카드에 옅은 그림자를 두고, 단추는 알약 모양입니다. 값은 모두 `site/css/tokens.css`에 있습니다.
 - 색은 EU 깃발의 파랑(#003399)과 노랑(#FFCC00)을 빌렸습니다. 깃발(별 열두 개)과 EU 기관의 로고는 쓰지 않습니다. 개인이 운영하는 비공식 사이트입니다.
-- 글꼴은 두 가지입니다. 화면의 글자는 Pretendard, 큰 제목(화면 제목, 주간 요약의 제목, 중요 소식의 제목)은 Noto Serif KR 700입니다. 제목의 글꼴을 바꾸려면 `site/css/tokens.css`의 `--font-display` 한 줄을 고칩니다.
+- 글꼴은 Pretendard 하나입니다.
 - 이름표는 글자입니다: 'CBAM' 뒤에 노란 세로선(국경선)과 '규제동향'. 네모난 표지(`site/assets/favicon.svg`, CB와 AM 사이에 노란 선)는 탭 아이콘에만 씁니다.
-- 첫 화면은 큰 머리의 가장 최근 요약(기간에 따라 '이번 주 요약', '지난주 요약', '주간 요약'으로 부르고, 여러 주를 묶은 요약은 '최근 동향 요약'이라고 부릅니다. `site/js/views/home/hero.js`)과 지도(한국에서 EU로 가는 길 하나), 지표 줄, 품목 코드 조회, 중요 소식과 최근 소식(옆에 일정·가격·규제), 주제별 찾아보기, 품목별 가이던스 표의 차례입니다. 칸마다의 모듈은 `site/js/views/home/`에 있습니다.
-- 소식의 제목을 누르면 원문으로 가기 전에 국문 요약 화면(`#item-<소식 번호>`, `site/js/views/item.js`)을 먼저 보여 줍니다. 제목이 곧 내용인 한 줄 소식만 원문으로 바로 갑니다(`site/js/ui/itemlink.js`). 구독 피드의 링크도 같은 기준입니다(`tools/publish/feed.py`). 뒤로 가면 보던 자리로 돌아옵니다(`site/js/router.js`).
-- 의견 보내기(`site/js/ui/feedback.js`): 넓은 화면에서는 오른쪽 여백의 탭, 그 밖에는 바닥글의 단추로 창을 엽니다. 메일 제목에 `[CBAM 규제동향 의견]`을 붙여서 받은 편지함에서 의견만 골라 찾을 수 있게 합니다. 구독 안내 창은 `site/js/ui/subscribe.js`입니다.
+- 첫 화면(`site/js/views/home.js`가 `home/` 폴더의 칸들을 차례로 놓습니다): 큰 머리(`hero`, `facts`), 가장 최근의 요약(`digest`. 기간에 따라 '이번 주 요약', '지난주 요약', '주간 요약'으로 부르고, 여러 주를 묶은 요약은 '최근 동향 요약'이라고 부릅니다), 가장 중요한 소식(`feature`), 다가오는 일정·인증서 가격 추세·주제별 소식·규제 진행 상황(`panels`), 품목 코드 조회(`lookup`), 최근 소식, 품목별 가이던스(`sectors`).
+- 점 지도(`site/js/ui/heromap.js`)는 두 장을 겹친 것입니다. 아래 장은 유라시아를 점으로 찍은 지도(EU 회원국은 밝게, 한국은 노랗게)이고, 위 장은 한국에서 EU의 항구 다섯 곳으로 가는 선입니다. 선은 화면이 열릴 때 한국에서 EU 쪽으로 한 번 그려지고, 그 뒤로는 작은 빛이 같은 쪽으로 천천히 지나갑니다(움직임을 줄이도록 설정한 기기에서는 멈춘 그림). 선은 실제 뱃길이 아니라 방향을 나타낸 그림이고, 화면에도 그렇게 적습니다.
+- 소식의 제목이나 미리보기 그림을 누르면 원문으로 가기 전에 국문 요약 화면(`#item-<소식 번호>`, `site/js/views/item.js`)을 먼저 보여 줍니다. 제목이 곧 내용인 한 줄 소식만 원문으로 바로 갑니다(`site/js/ui/itemlink.js`). 뒤로 가면 보던 자리로 돌아옵니다(`site/js/router.js`).
+- 닫아 둔 기능: 새 소식 받아 보기(구독 피드와 안내 창, `site/js/ui/subscribe.js`, `tools/publish/feed.py`)와 의견 보내기(`site/js/ui/feedback.js`)는 만들어 두었지만 지금은 닫혀 있습니다. `site/site.config.json`의 `features`에서 `subscribe`, `feedback`을 `true`로 바꾸면 다시 열립니다. 닫혀 있는 동안에는 화면에 단추가 없고 구독 피드 파일(`feed.xml`, `rules.xml`)도 만들지 않습니다.
 - 색 변형은 세 가지입니다: 네이비(기본), 화이트, 미드나잇. 주소에 `?theme=white`처럼 붙이면 바꿔 볼 수 있고, 기본값은 `site/js/theme.js`의 `DEFAULT`입니다. 변형마다 달라지는 값은 `site/css/themes.css`에만 있습니다.
 - CSS는 쓰임새로 나눴습니다: 값(`tokens`), 바탕(`base`), 틀과 큰 머리와 지도(`layout`), 여러 화면이 함께 쓰는 부품(`components`), 첫 화면(`home`), 소식 요약 화면(`item`), 뜨는 창과 여백의 탭(`overlay`), 화면마다 따로 쓰는 것(`views`), 가격 그림(`chart`), 일정(`calendar`), 규제(`rules`), 품목 코드 조회(`cn`), 색 변형(`themes`).
 - 그림은 사진 없이 직접 만든 것과 자유롭게 쓸 수 있는 것만 씁니다.
 
 | 그림 | 어디서 왔나 | 만드는 법 |
 | --- | --- | --- |
-| 지도(`site/js/ui/heromap.js`) | 직접 그린 것: 유라시아의 나라들을 면으로 그리고 EU 회원국과 한국을 다른 색으로 칠함. 나라 경계는 Natural Earth(공개 자료)를 묶은 world-atlas(ISC) | `python3 -m tools.art.routemap <countries-110m.json>` |
+| 점 지도(`site/js/ui/heromap.js`) | 직접 그린 것. 나라 경계는 Natural Earth(공개 자료)를 묶은 world-atlas(ISC) | `python3 -m tools.art.dotmap <countries-110m.json>`. 항구를 바꿔 선이 서로 엇갈리면 프로그램이 멈춘다. 나라 경계 읽기는 `tools/art/world.py` |
 | 아이콘(`site/js/ui/icons.js`) | Lucide(ISC, 일부는 Feather에서 온 것으로 MIT) | `python3 -m tools.art.icons <lucide-static/icons>` |
 | 글꼴(`site/assets/fonts/pretendard/`) | Pretendard(SIL OFL) 1.3.9의 가변 글꼴 조각 파일. 사이트에 직접 싣는다 | npm의 `pretendard` 꾸러미에서 `dist/web/variable/`의 CSS와 `woff2-dynamic-subset/`을 복사한다 |
-| 제목 글꼴(`site/assets/fonts/noto-serif-kr/`) | Noto Serif KR(SIL OFL)의 700 굵기 조각 파일. 사이트에 직접 싣는다 | npm의 `@fontsource/noto-serif-kr` 꾸러미에서 700 굵기의 한글·라틴 조각과 그 `@font-face` 선언을 복사한다 |
-| 공유 미리보기 그림(`site/assets/og.jpg`) | 사이트의 색, 글꼴, 이름표, 지도로 만든 것 | `tools/art/social.html`을 1200x630 창으로 열어 화면 그림을 찍는다 |
+| 공유 미리보기 그림(`site/assets/og.jpg`) | 사이트의 색, 글꼴, 이름표, 점 지도로 만든 것 | `tools/art/social.html`을 1200x630 창으로 열어 화면 그림을 찍는다 |
 | 표지(`site/assets/favicon.svg`) | 직접 그린 것: 파란 네모에 CB와 AM, 그 사이에 노란 선 | 파일의 SVG를 고친다. 머리글의 이름표는 글자라서 `site/index.html`과 `site/css/layout.css`의 `.brand`를 고친다 |
-| 소식 카드의 미리보기 그림(`site/assets/thumbs/`) | 재이용이 허용된 공식 출처(EU 기관, 영국 정부)의 원문 화면에서 제목부터의 글 부분, 법령 PDF 첫 장의 머리 띠 아래. 화면의 사진과 삽화, 기관 로고는 넣지 않는다. 그림이 없는 소식에는 주제 아이콘과 출처 이름을 적는다(`site/js/ui/thumb.js`) | 워크플로 '썸네일 만들기'가 만든다. 실패는 `collected/thumbs/state.json`에 남고 세 번까지 다시 시도한다 |
+| 소식 카드의 미리보기 그림(`site/assets/thumbs/`) | 재이용이 허용된 공식 출처(EU 기관, 영국 정부)의 원문 화면에서 제목부터의 글 부분, 법령 PDF 첫 장의 머리 띠 아래. 화면의 사진과 삽화, 기관 로고는 넣지 않는다. 그 밖의 소식은 사이트가 주제 색과 아이콘으로 그린다(`site/js/ui/thumb.js`) | 워크플로 '썸네일 만들기'가 만든다. 실패는 `collected/thumbs/state.json`에 남고 세 번까지 다시 시도한다 |
 | 라이선스 고지(`site/assets/third-party.txt`) | 위 꾸러미의 LICENSE 파일 | `python3 -m tools.art.notices <node_modules>` |
 
-world-atlas, lucide-static, pretendard, @fontsource/noto-serif-kr은 npm에서 받습니다. 그림을 고칠 때만 필요하고, 평소의 자동 실행은 `tools/art`를 쓰지 않습니다.
+world-atlas, lucide-static, pretendard는 npm에서 받습니다. 그림을 고칠 때만 필요하고, 평소의 자동 실행은 `tools/art`를 쓰지 않습니다.
 
 ## 게시하기 전에 거치는 것
 

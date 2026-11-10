@@ -4,7 +4,7 @@ import * as data from "../data.js";
 import { empty, fill, h, safeLink, unsplit } from "../ui/dom.js";
 import { day } from "../ui/format.js";
 import { icon } from "../ui/icons.js";
-import { itemRows } from "../ui/rows.js";
+import { card } from "../ui/card.js";
 import { topicName, topicOf } from "../ui/topics.js";
 
 const RELATED = 4;
@@ -96,7 +96,7 @@ export async function render(main, id) {
     h("div", { class: "cols item-cols" }, [body(item), facts(item, topic)]),
     related.length ? h("section", { class: "stack", "aria-labelledby": "h-related" }, [
       h("div", { class: "sec-head" }, [h("h2", { id: "h-related", text: `${topicName(topic)}의 다른 소식` }), h("a", { href: `#news-${topic}`, text: "이 주제 모두 보기" })]),
-      itemRows(related, { summary: true }),
+      h("div", { class: "cards-2" }, related.map(card)),
     ]) : null,
   );
   return item.title || "소식";

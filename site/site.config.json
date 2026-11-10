@@ -10,5 +10,9 @@
   "user": "ansh91655",
   "host": "gmail.com"
  },
+ "features": {
+  "subscribe": false,
+  "feedback": false
+ },
  "url": "https://ansh91655-a.github.io/cbam-watch/"
 }

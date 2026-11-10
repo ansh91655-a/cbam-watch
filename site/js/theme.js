@@ -8,7 +8,7 @@
   var key = THEMES[picked] ? picked : DEFAULT;
   document.documentElement.setAttribute("data-theme", key);
   // 브라우저의 주소창 색도 변형의 머리 색에 맞춘다.
-  var BAR = { navy: "#071236", white: "#ffffff", midnight: "#060b22" };
+  var BAR = { navy: "#050b24", white: "#ffffff", midnight: "#060b22" };
   var meta = document.querySelector('meta[name="theme-color"]');
   if (meta) meta.setAttribute("content", BAR[key]);
   window.CBAM_THEME = { key: key, name: THEMES[key], preview: Boolean(THEMES[picked]) };

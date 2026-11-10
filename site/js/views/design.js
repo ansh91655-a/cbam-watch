@@ -4,7 +4,7 @@ import { band } from "../ui/band.js";
 import { fill, h } from "../ui/dom.js";
 
 const VARIANTS = [
-  { key: "navy", name: "네이비", line: "짙은 남색 머리에 밝은 본문", about: "머리글과 첫 화면의 큰 머리, 화면 머리 띠를 짙은 남색으로 두고 본문은 밝게 둡니다. 강조에 노랑을 씁니다.", colors: ["#071236", "#0c1a4d", "#003399", "#ffcc00", "#f6f7f9", "#ffffff"] },
+  { key: "navy", name: "네이비", line: "짙은 남색 머리에 밝은 본문", about: "머리글과 첫 화면의 큰 머리, 화면 머리 띠를 짙은 남색으로 두고 본문은 밝게 둡니다. 숫자와 단추에 노랑을 씁니다.", colors: ["#050b24", "#0a1540", "#003399", "#ffcc00", "#f4f6fb", "#ffffff"] },
   { key: "white", name: "화이트", line: "전체를 밝게", about: "머리 쪽까지 흰 바탕으로 두고, 지도와 강조만 파랑으로 둡니다. 가볍고 깔끔합니다.", colors: ["#ffffff", "#f1f5ff", "#2b59e0", "#003399", "#ffcc00", "#0b1230"] },
   { key: "midnight", name: "미드나잇", line: "전체를 어둡게", about: "본문까지 짙은 남색으로 둡니다. 어두운 곳에서 보기 편하고 숫자와 그림이 도드라집니다.", colors: ["#060b22", "#0d1535", "#121c45", "#5b82f5", "#ffcc00", "#eef1fb"] },
 ];

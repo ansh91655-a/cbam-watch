@@ -81,5 +81,17 @@ class RulesFeedTest(unittest.TestCase):
         self.assertFalse(entries[1].findtext(f"{ATOM}summary").startswith("[언론 보도]"))
 
 
+class SwitchTest(unittest.TestCase):
+    """새 소식 받아 보기를 닫아 둔 동안에는 구독 피드를 만들지 않는다."""
+
+    def test_feeds_are_made_only_while_subscribing_is_open(self):
+        self.assertTrue(feed.wanted({"url": SITE, "features": {"subscribe": True}}))
+        self.assertFalse(feed.wanted({"url": SITE, "features": {"subscribe": False, "feedback": True}}))
+        self.assertFalse(feed.wanted({"url": SITE}))
+
+    def test_no_feed_without_a_site_address(self):
+        self.assertFalse(feed.wanted({"url": "", "features": {"subscribe": True}}))
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -2,7 +2,7 @@
    기본은 '네이비': EU 엠블럼의 파랑(#003399)과 노랑(#FFCC00)을 중심에 두고, 머리 쪽은 짙은 남색, 본문은 밝은 바탕. */
 :root {
   color-scheme: light;
-  --bg: #f6f7f9;
+  --bg: #f4f6fb;
   --surface: #ffffff;
   --surface-2: #eef2fa;
   --ink: #0b1230;
@@ -25,26 +25,36 @@
   --bad: #c0202d;
 
   /* 어두운 면: 머리글, 첫 화면의 큰 머리, 화면 머리 띠, 바닥글 */
+  --deep-1: #050b24;
+  --deep-2: #0a1540;
+  --deep-3: #11256f;
   --on-deep: #ffffff;
   --on-deep-2: #c9d3f5;
   --on-deep-3: #9aa9da;
-  --deep-line: rgba(255, 255, 255, 0.16);
-  --head-bg: #071236;
+  --glass: rgba(255, 255, 255, 0.07);
+  --glass-line: rgba(255, 255, 255, 0.16);
+  --head-bg: rgba(5, 11, 36, 0.86);
   --head-line: rgba(255, 255, 255, 0.09);
-  --hero-bg: #071236;
-  --band-bg: #071236;
-  --foot-bg: #071236;
-  --feat-bg: #0c1a4d;
+  --hero-bg: radial-gradient(820px 460px at 14% 92%, rgba(43, 89, 224, 0.5), transparent 64%), radial-gradient(760px 420px at 96% 0%, rgba(0, 51, 153, 0.7), transparent 62%), linear-gradient(180deg, #050b24, #0a1540);
+  --band-bg: radial-gradient(640px 260px at 88% 120%, rgba(43, 89, 224, 0.55), transparent 65%), linear-gradient(120deg, #050b24, #0a1540 60%, #0f1f5c);
+  --foot-bg: #050b24;
+  --feat-bg: linear-gradient(135deg, #0a1540, #11256f);
   --on-feat: #ffffff;
   --on-feat-2: #c9d3f5;
   --on-feat-3: #9aa9da;
-  --tip-bg: #071236;
+  --tip-bg: #050b24;
   --on-deep-link: #ffd84d;
-  --map-sea: #0a1744;
-  --map-land: #1a2c6c;
-  --map-eu: #4a6fe3;
+  --hl-from: #ffcc00;
+  --hl-to: #ffe58a;
+  --map-land: rgba(157, 178, 255, 0.24);
+  --map-eu: #a9c1ff;
   --map-kr: #ffcc00;
-  --map-line: #0a1744;
+  --map-arc-from: #ffcc00;
+  --map-arc-to: #b9ccff;
+  --map-glow: rgba(72, 120, 255, 0.5);
+  --map-light: #fff6cf;
+  --map-port: #ffffff;
+  --map-tag-bg: rgba(5, 11, 36, 0.62);
 
   /* 주제마다의 색. 아이콘과 그 바탕에만 쓰고 글자에는 쓰지 않는다. */
   --t-law: #2b59e0;
@@ -59,13 +69,12 @@
   --t-etc: #5d6787;
 
   --font: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
-  /* 제목용 명조. 화면의 큰 제목과 기사 제목에만 쓴다. */
-  --font-display: "Noto Serif KR", "Nanum Myeongjo", "Apple SD Gothic Neo", serif;
   --fs-s: 0.875rem;
   --fs-m: 1rem;
   --fs-l: 1.125rem;
   --fs-xl: 1.5rem;
   --fs-2xl: 2rem;
+  --fs-hero: clamp(2.1rem, 4.4vw, 3.1rem);
 
   --gap-2: 8px;
   --gap-3: 12px;
@@ -74,12 +83,12 @@
   --gap-6: 40px;
   --gap-7: 64px;
   --maxw: 1160px;
-  --radius: 6px;
-  --radius-l: 10px;
+  --radius: 10px;
+  --radius-l: 18px;
+  --radius-pill: 999px;
   --card-pad: 22px 24px;
-  /* 면은 그림자 대신 가는 선으로 가른다. 그림자는 떠 있는 것(창, 펼친 판)에만 쓴다. */
-  --shadow-1: none;
-  --shadow-2: 0 18px 44px -20px rgba(11, 18, 48, 0.38);
+  --shadow-1: 0 1px 2px rgba(11, 18, 48, 0.05), 0 10px 28px -14px rgba(11, 18, 48, 0.18);
+  --shadow-2: 0 2px 6px rgba(11, 18, 48, 0.06), 0 26px 56px -22px rgba(11, 18, 48, 0.32);
 
   --chart-line: #2a5bd7;
   --chart-fill: color-mix(in srgb, var(--chart-line) 12%, transparent);

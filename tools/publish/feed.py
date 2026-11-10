@@ -11,6 +11,14 @@ from xml.sax.saxutils import escape
 LIMIT = 40
 
 
+def wanted(config):
+    """구독 피드를 만들 것인가. 사이트 주소가 있고, 새 소식 받아 보기를 열어 둔 동안에만 만든다.
+
+    여닫는 곳은 site/site.config.json의 features.subscribe이다. 닫아 둔 동안에는 화면에 구독 단추가 없으므로 파일도 두지 않는다.
+    """
+    return bool(config.get("url")) and bool((config.get("features") or {}).get("subscribe"))
+
+
 def _stamp(day):
     """날짜(YYYY-MM-DD)를 피드가 쓰는 시각 꼴로 바꾼다. 날짜가 아니면 빈 글."""
     day = str(day or "")[:10]

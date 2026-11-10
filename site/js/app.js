@@ -3,8 +3,6 @@ import * as data from "./data.js";
 import { markNav, onRoute } from "./router.js";
 import { daysSince, minute } from "./ui/format.js";
 import { empty, h } from "./ui/dom.js";
-import { feedbackTab, openFeedback } from "./ui/feedback.js";
-import { openSubscribe } from "./ui/subscribe.js";
 import { loadTopics } from "./ui/topics.js";
 import { render as home } from "./views/home.js";
 import { render as news } from "./views/news.js";
@@ -61,7 +59,7 @@ async function fillChrome() {
     maker.replaceChildren(h("span", { text: `Made by ${site.maker.name || ""}`.trim() }), h("a", { href: `mailto:${address}`, text: address }));
     maker.hidden = false;
   }
-  setContact(address);
+  openFeatures(site.features || {}, address);
   const operator = document.getElementById("operator");
   if (site.operator) {
     operator.textContent = `운영 ${site.operator}`;
@@ -69,27 +67,39 @@ async function fillChrome() {
   }
 }
 
-// 구독 안내와 의견 보내기 창을 여는 단추(data-open). 바닥글과 안내 화면에 있고, 오른쪽 여백에는 의견 보내기 탭을 붙인다.
-// 화면이 바뀌면서 새로 그려지는 단추도 듣도록 문서 전체에서 누름을 듣는다.
-const contact = { address: "" };
-
-function wireOpeners() {
-  document.addEventListener("click", (event) => {
+// 새 소식 받아 보기(구독 안내 창)와 의견 보내기(오른쪽 여백의 탭과 창). 설정(site.config.json의 features)에서 켠 것만 연다.
+// 꺼 둔 기능은 단추도 만들지 않고 그 모듈도 불러오지 않는다. 지금은 둘 다 임시로 닫아 두었다.
+async function openFeatures(features, address) {
+  const subscribe = Boolean(features.subscribe);
+  const feedback = Boolean(features.feedback) && Boolean(address);
+  if (!subscribe && !feedback) return;
+  const foot = document.getElementById("foot-feeds");
+  foot.replaceChildren(...[
+    subscribe ? h("button", { type: "button", class: "linklike", "data-open": "subscribe", text: "새 소식 받아 보기(RSS)" }) : null,
+    feedback ? h("button", { type: "button", class: "linklike", "data-open": "feedback", text: "의견 보내기" }) : null,
+  ].filter(Boolean));
+  foot.hidden = false;
+  if (subscribe) {  // 피드 리더가 주소를 찾을 수 있게 알린다
+    for (const [title, href] of [["CBAM 규제동향: 새 소식", "feed.xml"], ["CBAM 규제동향: 규제 변화", "rules.xml"]]) {
+      document.head.append(h("link", { rel: "alternate", type: "application/atom+xml", title, href }));
+    }
+  }
+  if (feedback) {
+    const { feedbackTab } = await import("./ui/feedback.js");
+    const tab = feedbackTab(address);
+    if (tab) document.body.append(tab);
+  }
+  // 화면이 바뀌면서 새로 그려지는 단추(data-open)도 듣도록 문서 전체에서 누름을 듣는다.
+  document.addEventListener("click", async (event) => {
     const button = event.target instanceof Element ? event.target.closest("[data-open]") : null;
     if (!button) return;
     const kind = button.dataset.open;
-    const opened = kind === "subscribe" ? openSubscribe() : (kind === "feedback" ? openFeedback(contact.address) : true);
+    let opened = true;
+    if (kind === "subscribe" && subscribe) opened = (await import("./ui/subscribe.js")).openSubscribe();
+    if (kind === "feedback" && feedback) opened = (await import("./ui/feedback.js")).openFeedback(address);
     // 창을 띄울 수 없는 오래된 브라우저에서는 구독 주소나 메일 쓰기로 바로 보낸다.
-    if (!opened) location.href = kind === "subscribe" ? "feed.xml" : `mailto:${contact.address}`;
+    if (!opened) location.href = kind === "subscribe" ? "feed.xml" : `mailto:${address}`;
   });
-}
-
-// 연락할 주소를 알게 되면 의견 보내기를 켠다. 주소가 없으면 바닥글의 단추를 감춘다.
-function setContact(address) {
-  contact.address = address;
-  for (const button of document.querySelectorAll(".site-foot [data-open='feedback']")) button.hidden = !address;
-  const tab = feedbackTab(address);
-  if (tab) document.body.append(tab);
 }
 
 // '본문으로 건너뛰기'는 주소를 바꾸지 않고 본문으로 초점만 옮긴다(주소가 바뀌면 화면을 다시 그리게 된다).
@@ -128,7 +138,6 @@ async function show(route) {
 }
 
 fillChrome();
-wireOpeners();
 wireSkip();
 previewBar();
 loadTopics().then(() => onRoute(show));

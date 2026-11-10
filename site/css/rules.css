@@ -22,7 +22,7 @@
 [data-tone="adopted"] { --rule-tone: var(--t-legis); }
 [data-tone="dispute"] { --rule-tone: var(--t-korea); }
 [data-tone="ended"] { --rule-tone: var(--ink-3); }
-.stage-chip { display: inline-flex; align-items: center; gap: 6px; padding: 2px 11px; border-radius: 4px; background: color-mix(in srgb, var(--rule-tone, var(--brand-bright)) 10%, var(--surface)); color: var(--rule-tone, var(--brand)); font-size: 0.82rem; font-weight: 700; line-height: 1.7; }
+.stage-chip { display: inline-flex; align-items: center; gap: 6px; padding: 2px 11px; border-radius: 999px; background: color-mix(in srgb, var(--rule-tone, var(--brand-bright)) 12%, var(--surface)); color: var(--rule-tone, var(--brand)); font-size: 0.82rem; font-weight: 700; line-height: 1.7; }
 .stage-chip::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
 
 /* 단계 표시 */
@@ -60,7 +60,7 @@
 .tl p { max-width: 72ch; }
 .tl-src { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: var(--fs-s); }
 .tl-src a { display: inline-flex; align-items: center; gap: 4px; }
-.tl-press { padding: 0 8px; border: 1px solid currentColor; border-radius: 4px; color: var(--warn); font-size: 0.76rem; font-weight: 700; line-height: 1.6; }
+.tl-press { padding: 0 8px; border: 1px solid currentColor; border-radius: 999px; color: var(--warn); font-size: 0.76rem; font-weight: 700; line-height: 1.6; }
 
 /* 곧 움직일 규제 */
 .rule-soon { display: grid; gap: 12px; padding: 20px 24px; border-radius: var(--radius-l); background: var(--feat-bg); color: var(--on-feat); }
@@ -81,6 +81,7 @@
 
 /* 기관별 입장 비교표. 칸이 넷이라 글 폭(860px)에 가두지 않고 본문 폭을 다 쓴다. */
 .pos-wide { width: calc(min(var(--maxw), 100vw) - 40px); }
+.pos-past { max-width: 86ch; padding: 12px 16px; border-left: 3px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; background: var(--surface); color: var(--ink-2); }
 .pos-table table { table-layout: fixed; }
 .pos-table th[scope="col"]:first-child { width: 21%; }
 .pos-table td, .pos-table th { vertical-align: top; }
@@ -92,7 +93,6 @@
 .pos-sources strong { color: var(--ink-2); }
 .pos-sources a { display: inline-flex; align-items: center; gap: 3px; font-weight: 600; }
 .pos-note { max-width: 86ch; font-size: var(--fs-s); color: var(--ink-3); }
-.pos-past { max-width: 86ch; padding: 12px 16px; border-left: 3px solid var(--accent); background: var(--surface); color: var(--ink-2); }
 @media (max-width: 640px) {
   /* 좁은 화면: 쟁점을 카드의 제목으로 두고 기관의 칸을 아래로 쌓는다 */
   .pos-table.table-stack tr { grid-template-columns: minmax(0, 1fr); gap: 10px; }
