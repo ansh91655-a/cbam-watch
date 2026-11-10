@@ -1,0 +1,23 @@
+[주소] https://taxation-customs.ec.europa.eu/news/new-guidance-electricity-imports-under-centralised-clearance-import-cci-2026-11-06_en
+
+New guidance on electricity imports under Centralised Clearance for Import (CCI)
+New guidance supports a harmonised EU approach to electricity imports under the Centralised Clearance for Import (CCI) framework.
+News article
+6 November 2026
+Directorate-General for Taxation and Customs Union
+2 min read
+This Guidance addresses the different practices previously applied by Member States and outlines standardised procedures for these imports. It covers:
+Entry in the Declarant’s Records (EIDR) and CCI authorisation, declaration and supervision measures;
+Carbon Border Adjustment Mechanism (CBAM) requirements and compliance obligations for electricity imports.
+CCI and EIDR authorisations
+Electricity cannot be physically presented to customs due to its nature. The guidance explains how CCI is used together with EIDR, meaning that the import declaration data are in the traders' systems and that no presentation notification is required to be submitted by the trader to customs at the time of release for free circulation. It also describes the information that needs to be aligned in the CCI and EIDR authorisations, including their geographical validity and the location of the goods.
+Declarations and customs supervision
+The guidance explains the process for declaring electricity by means of an entry in the declarant’s records, followed by the submission of a supplementary declaration through the CCI system.
+As physical checks are not possible, customs supervision should rely primarily on documentary controls carried out after release. These may include checks of records, invoices, contracts and evidence provided by transmission operators.
+The guidance also addresses the origin of electricity, as well as the treatment of customs duties, VAT and excise duties.
+CBAM requirements for electricity imports
+The guidance covers CBAM compliance obligations for electricity generated in, and imported from, third countries. It describes checks on authorised CBAM declarant status and how the CBAM account number is declared and validated.
+It also addresses the quantities to be declared where electricity transmission capacity is allocated explicitly, and the distinction between customs transit and electricity in transit for CBAM purposes.
+Resources
+Centralised Clearance for Import – access the Guidance.
+CBAM communication and news – find CBAM news, communication materials and frequently asked questions.

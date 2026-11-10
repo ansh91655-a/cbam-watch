@@ -1,0 +1,46 @@
+[주소] https://taxation-customs.ec.europa.eu/news/cbam-successfully-entered-force-1-january-2026-2026-01-14_en
+
+CBAM successfully entered into force on 1 January 2026
+The Carbon Border Adjustment Mechanism (CBAM) successfully entered into force on 1 January 2026.
+News article
+14 January 2026
+Directorate-General for Taxation and Customs Union
+2 min read
+The Carbon Border Adjustment Mechanism (CBAM) successfully entered into force on the 1 January 2026, following a coordinated deployment across all EU Member States, integrating seamlessly the CBAM Registry with National Customs Import Systems, Taric and EU Customs Single Window. This seamless interconnection ensured real-time data exchange, efficient validation of declarants, and uninterrupted import procedures at EU external borders.
+In alignment with CBAM Regulation as of the 1 January 2026, the validation of CBAM authorisations for CBAM goods is enforced by Customs before Release for Free Circulation, including the monitoring of 50 tonnes threshold, while facilitating SME Importers of CBAM goods in alignment with Omnibus package.
+The successful deployment of the definitive CBAM Registry and integration with the new UCC MS Customs Import Operations, demonstrates the robustness of the regulatory framework, the preparedness of the Commission services, National Competent Authorities (NCAs) and National Customs Authorities together with Economic operators, and the effectiveness of the integrated digital and customs solutions.
+The successful implementation of CBAM on 1 January 2026 demonstrates the EU’s capacity to deploy complex climate policy instruments without hindering trade, while reinforcing transparency, fairness, and climate ambition across global supply chains.
+National authorities report stable processing times, supported by harmonised digital workflows.
+Key operational results
+This section provides an overview of CBAM volumetrics:
+More than 12000 of economic operators submitted an application for CBAM authorisation till 7th January 2026.
+More than 4100 CBAM economic operators successfully obtained CBAM authorized declarant status across EU prior to and immediately after 1 January 2026.
+In total from the 1 January to 7 January 2026, 10483 Import Customs Declarations with CBAM goods were validated automatically and in real time via integrated customs systems.
+Trade volumes covered
+CBAM imports declared in the first reporting window (from 1 until 6 January 2026) covered 1.655.613 tonnes of goods with the following split per sector:
+Iron & Steel: 98% of total CBAM-covered volumes
+Aluminium: 0,3%
+Fertilisers: 1,2%
+Cement: 0,5%
+Electricity & Hydrogen: 0 % (Note: data to be considered as a preliminary snapshot. Import of electricity & hydrogen will appear as the transmission of data becomes complete.)
+Top exporting third countries (CBAM goods)
+The main countries of origin of CBAM-covered imports included:
+Türkiye
+China
+India
+Canada
+Taiwan
+Vietnam
+Top importing Member States
+The highest volumes of CBAM declarations were recorded in:
+Belgium
+Spain
+Romania
+Netherlands
+France
+Germany
+A call to economic operators
+Submit your CBAM authorisation application now.
+Economic operators who have not yet submitted their CBAM authorisation applications are strongly encouraged to do so as soon as possible via the CBAM Registry. Early submission ensures uninterrupted compliance, access to automated validation, and full integration with customs clearance processes.
+For further information, economic operators are invited to consult CBAM national competent authorities or the CBAM Registry guidance materials.
+More information about CBAM

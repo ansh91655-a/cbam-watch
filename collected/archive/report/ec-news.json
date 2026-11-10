@@ -1,0 +1,14 @@
+{
+ "ranAt": "2026-11-10T20:49:08+09:00",
+ "since": "2025-01-01",
+ "result": {
+  "sitemap": 674,
+  "newsSince": 137,
+  "fetched": 136,
+  "kept": 25,
+  "failures": [
+   "https://taxation-customs.ec.europa.eu/news/test-2025-12-19_en (403 HTTP Error 403: Forbidden)"
+  ],
+  "stoppedEarly": false
+ }
+}

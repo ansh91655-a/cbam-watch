@@ -1,10 +1,10 @@
 {
  "source": "kr-moj",
- "fetchedAt": "2026-11-10T20:38:33+09:00",
+ "fetchedAt": "2026-11-10T20:52:40+09:00",
  "since": "2025-01-01",
  "report": {
-  "pages": 0,
-  "error": "307 HTTP Error 307: Temporary Redirect",
+  "pages": 1,
+  "all": 10,
   "found": 0,
   "kept": 0
  },

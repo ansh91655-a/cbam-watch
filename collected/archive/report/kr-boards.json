@@ -1,0 +1,43 @@
+{
+ "ranAt": "2026-11-10T20:52:45+09:00",
+ "since": "2025-01-01",
+ "result": {
+  "keco-cbam": {
+   "pages": 6,
+   "found": 58,
+   "kept": 50
+  },
+  "kosmes-esg": {
+   "pages": 6,
+   "all": 60,
+   "found": 27,
+   "kept": 26
+  },
+  "motir": {
+   "탄소국경": {
+    "pages": 2,
+    "lastPageRows": 10
+   },
+   "CBAM": {
+    "pages": 1,
+    "lastPageRows": 10
+   },
+   "all": 21,
+   "leads": 14,
+   "found": 14,
+   "kept": 14
+  },
+  "moj": {
+   "pages": 1,
+   "all": 10,
+   "found": 0,
+   "kept": 0
+  },
+  "compass": {
+   "rows": 66,
+   "viewLinks": true,
+   "found": 66,
+   "kept": 46
+  }
+ }
+}

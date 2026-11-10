@@ -1,15 +1,242 @@
 {
  "source": "ec-news",
- "fetchedAt": "2026-11-10T20:37:07+09:00",
+ "fetchedAt": "2026-11-10T20:49:08+09:00",
  "since": "2025-01-01",
  "report": {
-  "listPages": 1,
-  "foundPages": 0,
-  "listTotal": 717,
-  "foundTotal": -1,
-  "stoppedAt": "전체 목록 1쪽을 읽지 못함",
-  "articles": 0,
-  "articleFailures": []
+  "sitemap": 674,
+  "newsSince": 137,
+  "fetched": 136,
+  "kept": 25,
+  "failures": [
+   "https://taxation-customs.ec.europa.eu/news/test-2025-12-19_en (403 HTTP Error 403: Forbidden)"
+  ],
+  "stoppedEarly": false
  },
- "entries": []
+ "entries": [
+  {
+   "date": "2026-11-06",
+   "title": "New guidance on electricity imports under Centralised Clearance for Import (CCI)",
+   "teaser": "New guidance supports a harmonised EU approach to electricity imports under the Centralised Clearance for Import (CCI) framework.",
+   "url": "https://taxation-customs.ec.europa.eu/news/new-guidance-electricity-imports-under-centralised-clearance-import-cci-2026-11-06_en",
+   "mentions": 9,
+   "lines": 21,
+   "textPath": "collected/archive/pages/ec-news/new-guidance-electricity-imports-under-centralised-clearance-import-cci-2026-11-06_en.txt"
+  },
+  {
+   "date": "2026-09-30",
+   "title": "Webinar follow up: “CBAM: from policy to practice - emissions calculation, declarations, and certificates”",
+   "teaser": "The European Commission held the fourth in a series of webinars on the implementation of the EU’s Carbon Border Adjustment Mechanism (CBAM).",
+   "url": "https://taxation-customs.ec.europa.eu/news/webinar-follow-cbam-policy-practice-emissions-calculation-declarations-and-certificates-2026-09-30_en",
+   "mentions": 22,
+   "lines": 35,
+   "textPath": "collected/archive/pages/ec-news/webinar-follow-cbam-policy-practice-emissions-calculation-declarations-and-certificates-2026-09-30_en.txt"
+  },
+  {
+   "date": "2026-09-30",
+   "title": "CBAM De Minimis Threshold Assessment",
+   "teaser": "The European Commission has assessed whether the current CBAM de minimis single mass-based threshold applies to no more than 1% of the emissions.",
+   "url": "https://taxation-customs.ec.europa.eu/news/cbam-de-minimis-threshold-assessment-2026-09-30_en",
+   "mentions": 5,
+   "lines": 8,
+   "textPath": "collected/archive/pages/ec-news/cbam-de-minimis-threshold-assessment-2026-09-30_en.txt"
+  },
+  {
+   "date": "2026-09-28",
+   "title": "New resources available for CBAM verifiers",
+   "teaser": "New resources are available to help CBAM verifiers navigate verification, accreditation and access to the CBAM Registry.",
+   "url": "https://taxation-customs.ec.europa.eu/news/new-resources-available-cbam-verifiers-2026-09-28_en",
+   "mentions": 17,
+   "lines": 32,
+   "textPath": "collected/archive/pages/ec-news/new-resources-available-cbam-verifiers-2026-09-28_en.txt"
+  },
+  {
+   "date": "2026-08-27",
+   "title": "New training paths available for Taxation and Customs officers from candidate and potential candidate countries",
+   "teaser": "Discover the new available training paths for taxation and for customs officers on the EU Learning Potal.",
+   "url": "https://taxation-customs.ec.europa.eu/news/new-training-paths-available-taxation-and-customs-officers-candidate-and-potential-candidate-2026-08-27_en",
+   "mentions": 1,
+   "lines": 11,
+   "textPath": "collected/archive/pages/ec-news/new-training-paths-available-taxation-and-customs-officers-candidate-and-potential-candidate-2026-08-27_en.txt"
+  },
+  {
+   "date": "2026-08-24",
+   "title": "The European Commission publishes guidance for CBAM verifiers and accreditation bodies",
+   "teaser": "On 24 August 2026, the European Commission published new Guidance on CBAM verification and accreditation for verifiers and National Accreditation Bodies.",
+   "url": "https://taxation-customs.ec.europa.eu/news/european-commission-publishes-guidance-cbam-verifiers-and-accreditation-bodies-2026-08-24_en",
+   "mentions": 23,
+   "lines": 23,
+   "textPath": "collected/archive/pages/ec-news/european-commission-publishes-guidance-cbam-verifiers-and-accreditation-bodies-2026-08-24_en.txt"
+  },
+  {
+   "date": "2026-08-14",
+   "title": "The European Commission publishes a series of guidance documents to support CBAM implementation in the definitive period",
+   "teaser": "On 14 August 2026, the European Commission published a series of ten guidance documents to help non-EU operators with the implementation of the Carbon Border Adjustment Mechanism (CBAM) during its definitive period.",
+   "url": "https://taxation-customs.ec.europa.eu/news/european-commission-publishes-series-guidance-documents-support-cbam-implementation-definitive-2026-08-14_en",
+   "mentions": 17,
+   "lines": 31,
+   "textPath": "collected/archive/pages/ec-news/european-commission-publishes-series-guidance-documents-support-cbam-implementation-definitive-2026-08-14_en.txt"
+  },
+  {
+   "date": "2026-07-31",
+   "title": "CBAM webinar follow up: “Become a CBAM verifier: all about accreditation and verification”",
+   "teaser": "On Thursday 16 July 2026, DG TAXUD hosted the third in a series of webinars on the implementation of the EU’s Carbon Border Adjustment Mechanism (CBAM).",
+   "url": "https://taxation-customs.ec.europa.eu/news/cbam-webinar-follow-become-cbam-verifier-all-about-accreditation-and-verification-2026-07-31_en",
+   "mentions": 17,
+   "lines": 36,
+   "textPath": "collected/archive/pages/ec-news/cbam-webinar-follow-become-cbam-verifier-all-about-accreditation-and-verification-2026-07-31_en.txt"
+  },
+  {
+   "date": "2026-07-09",
+   "title": "9th Seminar of European Customs Chemists",
+   "teaser": "The 9th Seminar of European Customs Chemists (9SECC) took place in Stockholm, Sweden, from 1 to 3 July 2026 under the theme ‘Fostering Unity in Uncertain Times’.",
+   "url": "https://taxation-customs.ec.europa.eu/news/9th-seminar-european-customs-chemists-2026-07-09_en",
+   "mentions": 3,
+   "lines": 27,
+   "textPath": "collected/archive/pages/ec-news/9th-seminar-european-customs-chemists-2026-07-09_en.txt"
+  },
+  {
+   "date": "2026-06-12",
+   "title": "Commission welcomes Council agreement on strengthening CBAM",
+   "teaser": "The European Commission welcomes the Council agreement to extend the Carbon Border Adjustment Mechanism (CBAM) to specific downstream goods and reinforce existing anti-circumvention safeguards.",
+   "url": "https://taxation-customs.ec.europa.eu/news/commission-welcomes-council-agreement-strengthening-cbam-2026-06-12_en",
+   "mentions": 8,
+   "lines": 14,
+   "textPath": "collected/archive/pages/ec-news/commission-welcomes-council-agreement-strengthening-cbam-2026-06-12_en.txt"
+  },
+  {
+   "date": "2026-06-11",
+   "title": "CBAM webinar follow up: “How to make your decarbonisation efforts pay off”",
+   "teaser": "On Thursday 7 May 2026, DG TAXUD hosted the second in a series of webinars on the implementation of the EU’s Carbon Border Adjustment Mechanism (CBAM).",
+   "url": "https://taxation-customs.ec.europa.eu/news/cbam-webinar-follow-how-make-your-decarbonisation-efforts-pay-2026-06-11_en",
+   "mentions": 14,
+   "lines": 31,
+   "textPath": "collected/archive/pages/ec-news/cbam-webinar-follow-how-make-your-decarbonisation-efforts-pay-2026-06-11_en.txt"
+  },
+  {
+   "date": "2026-06-08",
+   "title": "Technical Study on Indirect Emissions in the CBAM",
+   "teaser": "News article",
+   "url": "https://taxation-customs.ec.europa.eu/news/technical-study-indirect-emissions-cbam-2026-06-08_en",
+   "mentions": 5,
+   "lines": 16,
+   "textPath": "collected/archive/pages/ec-news/technical-study-indirect-emissions-cbam-2026-06-08_en.txt"
+  },
+  {
+   "date": "2026-05-13",
+   "title": "Carbon price paid in Third Countries",
+   "teaser": "News article",
+   "url": "https://taxation-customs.ec.europa.eu/news/carbon-price-paid-third-countries-2026-05-13_en",
+   "mentions": 5,
+   "lines": 13,
+   "textPath": "collected/archive/pages/ec-news/carbon-price-paid-third-countries-2026-05-13_en.txt"
+  },
+  {
+   "date": "2026-04-07",
+   "title": "First CBAM certificate price is now available",
+   "teaser": "The European Commission has published the first price of CBAM certificates for 2026 Q1 on its new dedicated page on the CBAM website, marking an important milestone in the implementation of CBAM.",
+   "url": "https://taxation-customs.ec.europa.eu/news/first-cbam-certificate-price-now-available-2026-04-07_en",
+   "mentions": 10,
+   "lines": 10,
+   "textPath": "collected/archive/pages/ec-news/first-cbam-certificate-price-now-available-2026-04-07_en.txt"
+  },
+  {
+   "date": "2026-03-26",
+   "title": "CBAM webinar follow-up: “What changes for me?”",
+   "teaser": "On Thursday 19th March 2026, DG TAXUD hosted the first in a series of webinars on the implementation of the EU’s Carbon Border Adjustment Mechanism (CBAM).",
+   "url": "https://taxation-customs.ec.europa.eu/news/cbam-webinar-follow-what-changes-me-2026-03-26_en",
+   "mentions": 16,
+   "lines": 26,
+   "textPath": "collected/archive/pages/ec-news/cbam-webinar-follow-what-changes-me-2026-03-26_en.txt"
+  },
+  {
+   "date": "2026-03-06",
+   "title": "First CBAM Certificate price to be published on 7 April",
+   "teaser": "The implementation of the EU’s Carbon Border Adjustment Mechanism (CBAM) reaches a new milestone: the first quarterly price of CBAM certificates will soon be published by the European Commission.",
+   "url": "https://taxation-customs.ec.europa.eu/news/first-cbam-certificate-price-be-published-7-april-2026-03-06_en",
+   "mentions": 12,
+   "lines": 19,
+   "textPath": "collected/archive/pages/ec-news/first-cbam-certificate-price-be-published-7-april-2026-03-06_en.txt"
+  },
+  {
+   "date": "2026-03-02",
+   "title": "CBAM call for tender to establish the Common Central Platform (CCP)",
+   "teaser": "The European Commission has launched a call for tenders for services to establish and manage the CCP for the sale and repurchase of CBAM certificates.",
+   "url": "https://taxation-customs.ec.europa.eu/news/cbam-call-tender-establish-common-central-platform-ccp-2026-03-02_en",
+   "mentions": 7,
+   "lines": 14,
+   "textPath": "collected/archive/pages/ec-news/cbam-call-tender-establish-common-central-platform-ccp-2026-03-02_en.txt"
+  },
+  {
+   "date": "2026-01-14",
+   "title": "CBAM successfully entered into force on 1 January 2026",
+   "teaser": "The Carbon Border Adjustment Mechanism (CBAM) successfully entered into force on 1 January 2026.",
+   "url": "https://taxation-customs.ec.europa.eu/news/cbam-successfully-entered-force-1-january-2026-2026-01-14_en",
+   "mentions": 28,
+   "lines": 44,
+   "textPath": "collected/archive/pages/ec-news/cbam-successfully-entered-force-1-january-2026-2026-01-14_en.txt"
+  },
+  {
+   "date": "2025-12-23",
+   "title": "Reminder: CBAM goes live on 1 January 2026",
+   "teaser": "On 1 January 2026, CBAM rules enter into effect.",
+   "url": "https://taxation-customs.ec.europa.eu/news/reminder-cbam-goes-live-1-january-2026-2025-12-23_en",
+   "mentions": 4,
+   "lines": 14,
+   "textPath": "collected/archive/pages/ec-news/reminder-cbam-goes-live-1-january-2026-2025-12-23_en.txt"
+  },
+  {
+   "date": "2025-10-20",
+   "title": "Officially published: Simplifications for the Carbon Border Adjustment Mechanism (CBAM)",
+   "teaser": "The amended Regulation as regards simplifying and strengthening the CBAM has been published in the Official Journal of the European Union.",
+   "url": "https://taxation-customs.ec.europa.eu/news/officially-published-simplifications-carbon-border-adjustment-mechanism-cbam-2025-10-20_en",
+   "mentions": 11,
+   "lines": 11,
+   "textPath": "collected/archive/pages/ec-news/officially-published-simplifications-carbon-border-adjustment-mechanism-cbam-2025-10-20_en.txt"
+  },
+  {
+   "date": "2025-08-29",
+   "title": "CBAM: Call for evidence on emission methodology, free allocation adjustment and carbon price paid in third countries",
+   "teaser": "News article",
+   "url": "https://taxation-customs.ec.europa.eu/news/cbam-call-evidence-emission-methodology-free-allocation-adjustment-and-carbon-price-paid-third-2025-08-29_en",
+   "mentions": 17,
+   "lines": 17,
+   "textPath": "collected/archive/pages/ec-news/cbam-call-evidence-emission-methodology-free-allocation-adjustment-and-carbon-price-paid-third-2025-08-29_en.txt"
+  },
+  {
+   "date": "2025-07-03",
+   "title": "CBAM: Commission announces plan to mitigate carbon leakage risk for exporters",
+   "teaser": "The European Commission has announced plans to introduce a new measure to address the risk of carbon leakage for EU-produced goods produced in CBAM sectors.",
+   "url": "https://taxation-customs.ec.europa.eu/news/cbam-commission-announces-plan-mitigate-carbon-leakage-risk-exporters-2025-07-03_en",
+   "mentions": 3,
+   "lines": 12,
+   "textPath": "collected/archive/pages/ec-news/cbam-commission-announces-plan-mitigate-carbon-leakage-risk-exporters-2025-07-03_en.txt"
+  },
+  {
+   "date": "2025-07-02",
+   "title": "CBAM: Public consultation on the extension of CBAM to downstream products",
+   "teaser": "Public consultation on the scope extension to specific downstream products, anti-circumvention measures and rules for the electricity sector",
+   "url": "https://taxation-customs.ec.europa.eu/news/cbam-public-consultation-extension-cbam-downstream-products-2025-07-02_en",
+   "mentions": 9,
+   "lines": 19,
+   "textPath": "collected/archive/pages/ec-news/cbam-public-consultation-extension-cbam-downstream-products-2025-07-02_en.txt"
+  },
+  {
+   "date": "2025-03-28",
+   "title": "Commission Implementing Regulation as regards the conditions and procedures related to the status of authorised CBAM declarant",
+   "teaser": "Statement",
+   "url": "https://taxation-customs.ec.europa.eu/news/commission-implementing-regulation-regards-conditions-and-procedures-related-status-authorised-cbam-2025-03-28_en",
+   "mentions": 8,
+   "lines": 10,
+   "textPath": "collected/archive/pages/ec-news/commission-implementing-regulation-regards-conditions-and-procedures-related-status-authorised-cbam-2025-03-28_en.txt"
+  },
+  {
+   "date": "2025-02-26",
+   "title": "CBAM: new Commission proposal will simplify and strengthen",
+   "teaser": "News announcement",
+   "url": "https://taxation-customs.ec.europa.eu/news/cbam-new-commission-proposal-will-simplify-and-strengthen-2025-02-26_en",
+   "mentions": 18,
+   "lines": 18,
+   "textPath": "collected/archive/pages/ec-news/cbam-new-commission-proposal-will-simplify-and-strengthen-2025-02-26_en.txt"
+  }
+ ]
 }
