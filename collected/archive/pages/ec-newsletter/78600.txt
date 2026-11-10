@@ -1,0 +1,42 @@
+[주소] https://ec.europa.eu/newsroom/taxud/newsletter-archives/78600
+[보낸 날] 2026-08-31
+
+CBAM Newsletter #3: Latest guidance, resources and key milestones
+Read the online version
+31/08/2026
+CARBON BORDER ADJUSTMENT MECHANISM (CBAM)
+Follow us
+Over the summer, the European Commission published several important CBAM updates and new resources to support stakeholders with CBAM implementation.
+Here is a recap of the latest developments and upcoming milestones.
+For verifiers: 1 September is an important milestone
+From 1 September 2026, accredited CBAM verifiers can apply for access to the CBAM Registry.
+Accreditation by the relevant National Accreditation Body is the first step in the process, followed by an application for access to the CBAM Registry. The relevant National Competent Authority will grant access after checking that the verifier is duly accredited. From January 2027, verifiers will issue verification reports in the CBAM Registry, allowing importers to use actual verified emissions to complete their CBAM declarations.
+more
+New guidance for CBAM verifiers and accreditation bodies
+Following the July webinar on accreditation and verification, the Commission published new Guidance on CBAM verification and accreditation on 24 August.
+The guidance supports verifiers and National Accreditation Bodies (NABs) in understanding the requirements applicable to verification and accreditation during the CBAM definitive period.
+more
+New resources for non-EU installation operators
+On 14 August, the European Commission published a series of ten guidance documents to help non-EU operators with CBAM implementation.
+The series includes four general guidance documents covering CBAM concepts, implementation, the calculation of embedded emissions and the free allocation adjustment, as well as six sector-specific guides for cement, hydrogen, fertilisers, iron and steel, aluminium and electricity.
+more
+Targeted corrections to CBAM default values
+On 31 July, the Commission published Commission Implementing Regulation (EU) 2026/1740, correcting Commission Implementing Regulation (EU) 2025/2621 through targeted corrections to a limited number of CBAM default values.
+The Commission also published the corrected CBAM default values, which are available in an Excel file.
+Consult the CBAM legislation.
+more
+New CBAM TARIC codes for the cement sector
+New CBAM TARIC codes for the cement sector were published on 31 July 2026 and apply from 1 January 2026. The new TARIC codes mirror the approach taken for the CBAM default values and CBAM benchmarks to be applied. By improving the visibility of different goods, the update supports a more accurate reflection of embedded emissions and strengthens the effective implementation of CBAM.
+more
+An updated CBAM website
+To provide a clearer and more user-friendly experience, we have updated both the content and structure of the CBAM website to ensure it reflects the latest CBAM developments.
+The main pages now focus on the definitive period, while historical information and materials that are no longer applicable – including content related to the transitional period – remain available in the new CBAM Archive.
+more
+Q2 2026 CBAM certificate price now available
+In 2026, the Commission is calculating and publishing four quarterly prices, one for each calendar quarter. From 2027 onwards, the Commission will calculate and publish weekly prices.
+The CBAM certificate price for the second quarter of 2026 was published on 6 July.
+more
+This newsletter is published by the European Commission's Directorate-General for Taxation and Customs Union. The Directorate-General for Taxation and Customs Union is the Commission department responsible for EU policies on taxation and customs. Visit our website.
+Subscribe if this email was forwarded to you. You can unsubscribe on your profile page.
+Legal notice
+The European Commission is committed to personal data protection. Any personal data is processed in line with the Regulation (EU) 2018/1725. Please read the privacy statement.

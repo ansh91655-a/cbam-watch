@@ -1,0 +1,71 @@
+[주소] https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2547
+[받은 곳] http://publications.europa.eu/resource/celex/32025R2547
+
+L_202502547EN.000101.fmx.xml
+Official Journal
+of the European Union
+EN
+L series
+2025/2547
+22.12.2025
+COMMISSION IMPLEMENTING REGULATION (EU) 2025/2547
+of 10 December 2025
+laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and the Council as regards the methods for the calculation of emissions embedded in goods
+(Text with EEA relevance)
+THE EUROPEAN COMMISSION,
+Having regard to the Treaty on the Functioning of the European Union,
+Having regard to Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023 establishing a carbon border adjustment mechanism (1), and in particular Article 7(7) thereof,
+Whereas:
+(1)
+Pursuant to Regulation (EU) 2023/956, embedded emissions in goods imported into the customs territory of the Union from 2026, whether they are determined based on actual or default values, are to be calculated in accordance with the methods set out in Annex IV to that Regulation. Such calculation methods are to build upon the methodology applicable under the Emission Trading Scheme for installations located in the Union (EU ETS), as specified in Commission Implementing Regulation (EU) 2018/2066 (2).
+(2)
+The applicable methodology for the calculation of embedded emissions during the period lasting from 1 October 2023 until 31 December 2025 is laid down in Commission Implementing Regulation (EU) 2023/1773 (3). During that transitional period, the Commission gathered valuable experience and information from stakeholders, experts, and reporting declarants. In parallel with technical consultations with the Member States, including at expert level, the Commission carried out extensive consultations with relevant stakeholders, including industry representatives, to gather input in its preparatory work on the rules laid down in this Regulation.
+(3)
+Based on the experience gained during the transitional period, it is necessary to adjust the calculation methodology to ensure the effectiveness of the Carbon Border Adjustment Mechanism (CBAM). Such changes should aim at enhancing accuracy of calculations of embedded emissions of goods, decreasing the risk of circumvention of CBAM obligations, ensuring that compliance with monitoring and calculation rules can be adequately verified, and maintaining consistency with the EU ETS, while limiting the administrative burden for operators, authorised CBAM declarants, competent authorities and the Commission.
+(4)
+In order to quantify and calculate the embedded emissions of goods, system boundaries should be laid down. The system boundaries should be aligned with those covered under the EU ETS.
+(5)
+In order to quantify and calculate the specific embedded emissions of goods, operators should monitor emissions at installation level, determine which of those emissions are to be attributed to a production process, and then attribute those emissions to goods covered by that production process.
+(6)
+In order to determine the installation-level emissions which are attributable to goods, production processes should be defined for goods to which the same functional unit applies. The functional unit should be, as the general rule, the tonnes of goods under the same CN code listed in Annex I to Regulation (EU) 2023/956. However, since for cement and fertilisers, the emissions are dependent on the clinker content and nitrogen content in the goods respectively, the functional units should be the tonnes of clinker and tonnes of nitrogen contained in those goods. For some fertilisers, a supplementary unit measuring aspects other than the weight of goods, as laid down in the Annexes to Council Re
+(7)
+For the purpose of avoiding deviations in the calculation of emissions of goods to which the same functional unit applies, where such goods are produced using different production routes within an installation, the production process should, for such goods, not be different for each production route but should encompass all production routes, which means that the emissions attributable to goods to which the same functional unit applies should be the weighted average of the emissions of all the production routes used within the installation to produce goods to which the same functional unit applies.
+(8)
+In order to ensure accuracy in the process of monitoring emissions, dedicated monitoring rules should be laid down, including rules applicable to precursors. Those rules should align with the relevant EU ETS monitoring rules.
+(9)
+In order to support the calculation and the verification of actual embedded emissions pursuant to Article 8 of Regulation (EU) 2023/956, as well as the review of the CBAM declarations pursuant to Article 19(2) of that Regulation, operators should set out the main methodological criteria underpinning the collection of data at the installation throughout the year and the calculation of emissions in a monitoring plan. To ensure that the monitoring plan contains the necessary elements for verification, a template with the minimum requirements should be set out. To ensure an efficient verification process and review process of CBAM declarations by the Commission and competent authorities, the mon
+(10)
+In order to quantify and calculate specific embedded emissions of goods covered by a production process, rules should be laid down for attributing emissions of a production process to goods.
+(11)
+The elements of evidence required to allow authorised CBAM declarants to report actual values for electricity and for electricity consumed in the production process of goods in accordance with Article 7(3) and (4) of Regulation (EU) 2023/956 should provide sufficient assurance as to the fulfilment of the criteria laid down in points 5 and 6 of Annex IV to that Regulation.
+(12)
+To allow the accredited verifier to check whether the criteria for using actual values for indirect emissions are fulfilled, the operator of the installation producing electricity and the operator of the installation using that electricity to produce a good should include the necessary information in their emissions reports. Since the operators should be required to demonstrate, for the fulfilment of the criteria referred to in point 6 of Annex IV to Regulation (EU) 2023/956, that electricity for which the actual emissions are claimed is actually flowing from the installation where it is produced to the installation where that electricity is used for the production of goods, and since the fl
+(13)
+To allow the accredited verifier to check whether the criteria for using actual values for electricity imported into the customs territory of the Union are fulfilled, operators of installations producing electricity in a third country should include the necessary information in the emissions report. For this purpose, since operators might not have direct access to the relevant elements of evidence, they may need to receive certain elements of evidence, including for the demonstration of the lack of physical network congestion in accordance with point 5(b) of Annex IV to Regulation (EU) 2023/956, or for the demonstration of the occurred nomination of capacity for the import of electricity at 
+(14)
+To ensure simplicity for the operators in the calculation of embedded emissions, where an installation producing goods listed in Annex I to Regulation (EU) 2023/956 and not listed in Annex II to that Regulation, receives, during a reporting period, electricity from different installations or sources, the indirect embedded emissions of the goods should by default be determined as the weighted average of the embedded emissions of the electricity received from different installations. To ensure proportionality with respect to this default method, where the operators can provide evidence demonstrating that the installation producing goods not listed in Annex II to Regulation (EU) 2023/956 used, 
+(15)
+To enable the verifier to conclude with reasonable assurance that the operator’s emissions report is free from material misstatements and to allow the Commission and competent authorities to review the CBAM declaration, to perform risk assessments and to prevent practices of circumvention of the rules laid down in this Regulation, the operator’s emissions report should contain information on the installation and the goods produced, including their specific embedded emissions, as well as other information facilitating checks on the accuracy of the calculation of the specific embedded emissions. Since the calculation of the adjustment for free allocation depends on data from the installation, 
+(16)
+Due to the commercially sensitive and personal nature of some data related to the demonstration of the fulfilment of the criteria laid down in point 5 of Annex IV to Regulation (EU) 2023/956, operators should, where relevant, prepare a declarant-specific addendum to the operator’s emissions report, which is not to be disclosed to authorised CBAM declarants other than the one to which it refers.
+(17)
+Due to the commercially sensitive nature of some data elements contained in the operator’s emissions report, operators should prepare a summary version of that report to be included in the verification report and to be made accessible to authorised CBAM declarants. Where operators are registered in the CBAM Registry in accordance with Article 10 of Regulation (EU) 2023/956, the operators should be able to choose to disclose to the authorised CBAM declarant only the summary version of the operator’s emissions report and, where applicable, the relevant declarant-specific addendum to the operator’s emissions report.
+(18)
+To ensure compliance with the rules on monitoring and calculation of emissions as laid down in this Regulation, operators should correct, in the monitoring plan and operator’s emissions report, any misstatements, non-conformities or non-compliance notified by the verifier as part of the verification activity. Following any such correction, operators should provide the verifier with the final version of the document. To ensure completeness of information required to calculate and verify embedded emissions in complex goods, where the operator’s emissions report includes actual embedded emissions of precursors which were not produced at the installation, operators should also provide the verifi
+(19)
+The default values should be set for each third country and for each of the goods on the basis of a methodology which is based on the most recent and reliable information, and which takes into consideration the availability of reliable data in third countries. Where the Commission receives alternative reliable data demonstrating that the default values are too high or too low, it should revise the relevant default values.
+(20)
+For indirect emissions, the default value should be calculated based on the average of the emission factor of the country of origin electricity grid. Such method of calculation is the most suitable to achieve both the prevention of carbon leakage as well as the preservation of the environmental integrity of CBAM, given that it reflects to the largest possible degree decarbonisation efforts of third countries’ electricity grids while maintaining a high level of protection against the risk of carbon leakage. In order to reflect the impact of decarbonisation policies of third countries, such as the increase in renewable energy production, as well as climatic conditions on the yearly electricity
+(21)
+For electricity imported into the customs territory of the Union, in order to reflect the impact of decarbonisation policies in the third country or group of third countries, on the emission intensity of the electricity production in the countries concerned, whilst avoiding an excessive volatility of the emission factor due to anomalous years, including attributable to exceptional climatic conditions or other unforeseeable events, the CO2 emission factor should be calculated on the basis of the average of the yearly CO2 emission factors for the most recent five-year period for which reliable data is available.
+(22)
+To allow authorised CBAM declarants to use alternative default values pursuant to point 4.2.2, point 4.3 and point 7 of Annex IV to Regulation (EU) 2023/956, it is necessary to lay down the detailed conditions to be complied with for that purpose. To provide clarity on when alternative default values can be used, rules should be laid down on the modality and timeline for providing alternative official data to the Commission, on the method of calculation of the alternative default values, and on the modality of making the alternative default values available for use by the authorised CBAM declarants. To ensure legal certainty for authorised CBAM declarants, it is necessary that the alternativ
+(23)
+
+[마지막 조문]
+Article 16
+Entry into force
+This Regulation shall enter into force on the third day following that of its publication in the Official Journal of the European Union.
+This Regulation shall be binding in its entirety and directly applicable in all Member States.
+Done at Brussels, 10 December 2025.
+ELI: http://data.europa.eu/eli/reg_impl/2025/2547/oj

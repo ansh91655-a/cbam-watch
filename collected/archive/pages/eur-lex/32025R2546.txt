@@ -1,0 +1,72 @@
+[주소] https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2546
+[받은 곳] http://publications.europa.eu/resource/celex/32025R2546
+
+L_202502546EN.000101.fmx.xml
+Official Journal
+of the European Union
+EN
+L series
+2025/2546
+22.12.2025
+COMMISSION IMPLEMENTING REGULATION (EU) 2025/2546
+of 10 December 2025
+on the application of the principles for verification of declared embedded emissions pursuant to Regulation (EU) 2023/956 of the European Parliament and of the Council
+(Text with EEA relevance)
+THE EUROPEAN COMMISSION,
+Having regard to the Treaty on the Functioning of the European Union,
+Having regard to Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023 establishing a carbon border adjustment mechanism (1), and in particular Article 8(3) thereof,
+Whereas:
+(1)
+Regulation (EU) 2023/956 lays down principles for the verification of emissions, where they are determined based on actual values, embedded in goods imported into the customs territory of the Union from 2026.
+(2)
+To ensure, where possible, equivalence and coherence with the procedures applicable to the EU ETS and set out in Commission Implementing Regulation (EU) 2018/2067 (2), while also considering the specificities of the CBAM and minimising the administrative burden, due consideration should be given to the relevant rules applicable under the EU ETS. Due to the specificities of the CBAM, the verifier’s decision to replace the physical site visit by a virtual site visit or to waive the site visit should not be subject to approval from competent authorities.
+(3)
+In accordance with Regulation (EU) 2023/956, as part of the verification, verifiers are to carry out a physical site visit of the installation where relevant goods are produced. In the first year subject to verification, a physical site visit of the installation should be required in all cases. In a second consecutive year subject to verification, in order to reduce the cost and administrative burden associated with a site visit, the verifier may replace the physical site visit by a virtual site visit or waive the site visit where specific criteria, ensuring that the reliability of the verification is not compromised, are met. The verifier may only decide to do so if the verifier has carried
+(4)
+The verifier may also replace the physical site visit by a virtual site visit, where the verifier is prevented from carrying out a physical site visit due to serious, extraordinary and unforeseeable circumstances. If the applicable conditions are not met, it should not be possible to carry out the verification of the installation.
+(5)
+Analysing the susceptibility of reported data to misstatements and non-conformities that could be material is an essential part of the verification process. The verifier should apply a risk-based approach with the aim of reaching a verification opinion that provides reasonable assurance that the total emissions are not materially misstated and that the report can be verified as satisfactory.
+(6)
+In order to prepare for the verification of the operator’s emissions report and to support the verifier’s assessment of whether a misstatement, a non-conformity or a non-compliance has a material impact on the emissions data or free allocation adjustment, appropriate materiality thresholds should be determined, taking into account the balance between the complexity and novelty of the CBAM verification tasks and the accuracy of the calculation. Given the specific nature of the CBAM, those thresholds should be determined at the level of goods. The materiality levels may be revised over time, taking into account the practical experience gained during the application of this Regulation
+(7)
+To facilitate the preparation, submission, readability and review of verification reports, a single electronic template to be developed by the Commission should be used. The verification report should contain the information necessary for the submission of the CBAM declaration pursuant to Article 6 of Regulation (EU) 2023/956 and its review pursuant to Article 19(2) of that Regulation.
+(8)
+When personal data is processed in the context of the application of this Regulation, Regulation (EU) 2016/679 of the European Parliament and of the Council (3) and, where relevant, Regulation (EU) 2018/1725 of the European Parliament and of the Council (4) are to apply.
+(9)
+The provisions of this Regulation relate to verification principles to be applied by verifiers carrying out activities in relation to greenhouse gas emissions released from 1 January 2026. This Regulation should therefore apply from 1 January 2026.
+(10)
+In parallel with technical consultations with the Member States, including at expert level, the European Commission carried out extensive consultations with relevant stakeholders, including industry representatives, to gather input in the preparation of the rules laid down in this Regulation.
+(11)
+The European Data Protection Supervisor was consulted in accordance with Article 42(1) of Regulation (EU) 2018/1725 and delivered an opinion on 17 November 2025.
+(12)
+The measures provided for in this Regulation are in accordance with the opinion of the CBAM Committee,
+HAS ADOPTED THIS REGULATION:
+Article 1
+Definitions
+For the purposes of this Regulation, in addition to the definitions laid down in Article 1 of Commission Delegated Regulation (EU) 2025/2551 (5) and Article 1 of Commission Implementing Regulation (EU) 2025/2547 (6), the following definitions apply:
+(1)
+‘misstatement’ means an omission, misrepresentation or error in the operator’s reported data, not considering the uncertainty associated with measuring instruments or laboratory analyses;
+(2)
+‘material misstatement’ means a misstatement that, either individually or when aggregated with other misstatements, exceeds the materiality level or could, based on the expert judgement of the verifier, because of its size and nature, have an impact on the total reported emissions or other relevant information;
+(3)
+‘materiality level’ means the quantitative threshold or cut-off point above which the verifier considers misstatements, either individually or when aggregated with other misstatements, to be material;
+(4)
+‘non-conformity’ means any act or omission of an act by the operator that does not meet the requirements of the monitoring plan or of the monitoring methodology applicable to the specific installation, as laid down in Implementing Regulation (EU) 2025/2547;
+(5)
+‘material non-conformity’ means a non-conformity that causes a material misstatement.
+Article 2
+Physical site visits and replacement by virtual site visits or waiver
+1. The verifier may replace a physical site visit referred to in Section 2.12 of Annex II to Delegated Regulation (EU) 2025/2551 with a virtual site visit where the conditions laid down in Article 3 or 4 are met.
+2. The verifier may waive the obligation to carry out a physical site visit referred to in Section 2.12 of Annex II to Delegated Regulation (EU) 2025/2551 where the conditions laid down in Article 3 are met.
+3. The verifier shall inform the operator of its decision to replace the physical site visit by a virtual site visit or to waive the obligation to carry out a physical site visit without delay.
+Article 3
+Conditions for virtual site visit or waiver of the obligation to carry out a physical site visit
+
+[마지막 조문]
+Article 7
+Entry into force and application
+This Regulation shall enter into force on the third day following that of its publication in the Official Journal of the European Union.
+It shall apply from 1 January 2026.
+This Regulation shall be binding in its entirety and directly applicable in all Member States.
+Done at Brussels, 10 December 2025.
+ELI: http://data.europa.eu/eli/reg_impl/2025/2546/oj

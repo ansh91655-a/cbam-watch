@@ -1,0 +1,10 @@
+{
+ "ranAt": "2026-11-10T21:21:04+09:00",
+ "since": "2025-01-01",
+ "result": {
+  "listPages": 2,
+  "issues": 16,
+  "stored": 16,
+  "failures": []
+ }
+}

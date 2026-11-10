@@ -1,0 +1,71 @@
+[주소] https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2083
+[받은 곳] http://publications.europa.eu/resource/celex/32025R2083
+
+L_202502083EN.000101.fmx.xml
+Official Journal
+of the European Union
+EN
+L series
+2025/2083
+17.10.2025
+REGULATION (EU) 2025/2083 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL
+of 8 October 2025
+amending Regulation (EU) 2023/956 as regards simplifying and strengthening the carbon border adjustment mechanism
+(Text with EEA relevance)
+THE EUROPEAN PARLIAMENT AND THE COUNCIL OF THE EUROPEAN UNION,
+Having regard to the Treaty on the Functioning of the European Union, and in particular Article 192(1) thereof,
+Having regard to the proposal from the European Commission,
+After transmission of the draft legislative act to the national parliaments,
+Having regard to the opinion of the European Economic and Social Committee (1),
+After consulting the Committee of the Regions,
+Acting in accordance with the ordinary legislative procedure (2),
+Whereas:
+(1)
+Since the start of the transitional period on 1 October 2023 laid down in Regulation (EU) 2023/956 of the European Parliament and of the Council (3), the Commission has been collecting data and information on the implementation of the carbon border adjustment mechanism (the ‘CBAM’) as provided for therein, including through the analysis of quarterly reports submitted by reporting declarants. The information collected and the exchanges with the stakeholders, including exchanges within the expert group on the CBAM, have indicated areas to simplify and strengthen the CBAM in line with the Union’s commitment to ensure a smooth implementation of the CBAM once the transitional period ends on 1 Jan
+(2)
+Based on the experience acquired and data collected during the transitional period on the distribution of importers of goods listed in Annex I of Regulation (EU) 2023/956 into the Union, only a small proportion of those importers account for the vast majority of emissions embedded in imported goods. The derogation applied to the importation of goods of negligible value, namely those not exceeding a total of EUR 150 per consignment, referred to in Article 23 of Council Regulation (EC) No 1186/2009 (4) appears insufficient to ensure that the CBAM applies to importers in proportion to the impact of those importers on the emissions covered by Regulation (EU) 2023/956. For importers of small quan
+(3)
+A new threshold based on cumulative net mass of the imported goods in a given calendar year per importer (the ‘single mass-based threshold’) should be introduced in Regulation (EU) 2023/956, and initially be set at a level of 50 tonnes. A single mass-based threshold should apply cumulatively to all goods in the sectors of iron and steel, aluminium, fertilisers and cement. Where the net mass of all goods imported by an importer in a given calendar year does not cumulatively exceed the single mass-based threshold, such an importer, including any importer with the status of an authorised CBAM declarant, should be exempted in a given calendar year from the obligations under Regulation (EU) 2023/
+(4)
+In the electricity and hydrogen sectors, key features such as quantity of imports, trade patterns, customs information and emission intensities differ substantially from those in the iron and steel, aluminium, fertilisers and cement sectors. Those differences imply that making electricity and hydrogen imports subject to a single mass-based threshold would require introducing complex adjustments that would not allow for the substantial reduction of administrative costs for importers in those sectors. Imports of electricity or hydrogen should therefore not be included under the de minimis exemption.
+(5)
+The establishment of the single mass-based threshold that reflects the average emissions intensity of the quantity of the imported goods pursues the objective of ensuring that at least 99 % of emissions embedded in imported goods remain within the scope of the CBAM and that therefore the de minimis exemption applies to no more than 1 % of emissions embedded in imported goods. The de minimis exemption would represent a robust and targeted approach as it accurately reflects the environmental nature and the climate objective of the CBAM while substantially reducing the CBAM-related administrative burden for importers, the vast majority of whom will be exempted from the obligations under Regulat
+(6)
+The Commission should each year assess, on the basis of import data for the preceding 12 calendar months, whether a material change has occurred in the average emission intensities of the goods or in the pattern of trade in goods, including practices of circumvention. In order to ensure that at least 99 % of emissions embedded in the imported goods remain within the scope of the CBAM, the Commission should adopt delegated acts in order to amend the single mass-based threshold by using the methodology set out in point 2 of Annex VII of Regulation (EU) 2023/956. To ensure effectiveness and certainty, the Commission should only adopt such acts where the value of the resulting threshold deviates
+(7)
+To ensure that the derogation is sufficiently targeted, the single mass-based threshold should apply to each importer, including those importers with the status of authorised CBAM declarant. For that purpose, imports of an importer should be taken into account irrespective of whether they have been declared by the importer itself or an indirect customs representative. The indirect customs representative, due to the nature of its activity and the related obligations under Regulation (EU) 2023/956, should always be required to obtain the status of an authorised CBAM declarant prior to acting on behalf of an importer in respect of goods listed in Annex I to Regulation (EU) 2023/956. Where an im
+(8)
+For the purposes of legal certainty, it is appropriate to expressly provide that where an indirect customs representative acts as an authorised CBAM declarant on behalf of an importer, the indirect customs representative should be subject to the obligations applicable to that importer pursuant to Regulation (EU) 2023/956, in particular the obligation to submit a CBAM declaration in respect of the goods imported by the indirect customs representative on behalf of that importer and to surrender the CBAM certificates in respect of emissions embedded in those goods. As a result, in the event of non-compliance, it should be the indirect customs representative that is subject to penalties under Re
+(9)
+Based on customs information, the Commission should monitor the quantities of goods imported to assess compliance with the single mass-based threshold. The competent authorities should also be able to carry out such monitoring. To allow the competent authorities to make an informed decision, it is necessary to lay down appropriate arrangements for making the necessary information and data available to the competent authorities. Each competent authority should be able to request necessary information and evidence from customs authorities, including the name, address and contact information of importers where such information is not otherwise available to the competent authority. Where the cus
+(10)
+An importer that expects to exceed the annual single mass-based threshold should submit an application for an authorisation. Such an importer should obtain the status of authorised CBAM declarant before the single mass-based threshold is exceeded. Importers that have not been granted the authorisation before exceeding the single mass-based threshold should be subject to penalties.
+(11)
+The obligation to obtain the status of authorised CBAM declarant before the single mass-based threshold is exceeded could result in a high number of applications being lodged at the beginning of 2026. In order to facilitate the application of Regulation (EU) 2023/956 after the expiry of transitional provisions, and avoid potential import disruptions, it is appropriate to allow importers and indirect customs representatives that have submitted an application for an authorisation by 31 March 2026 to continue importing the goods in 2026 even after exceeding the single mass-based threshold pending the decision on granting of the authorisation. In order to avoid circumvention of Regulation (EU) 2
+(12)
+To ensure that the definition of an importer covers all relevant customs procedures, it is necessary to amend it to include the case of the simplified customs procedure where only a bill of discharge is presented pursuant to Article 175(5) of Commission Delegated Regulation (EU) 2015/2446 (5).
+(13)
+To achieve a balance between the effectiveness of the authorisation procedure and the risk profile of the applicants, the consultation procedure should be optional for the competent authority. The consultation procedure should allow the competent authority to consult other competent authorities and the Commission where it is considered necessary based on the information submitted by the applicant and customs information made available in the CBAM registry.
+(14)
+To provide additional flexibility, the authorised CBAM declarant should be able to delegate the submission of the CBAM declaration to a third party. The authorised CBAM declarant should remain responsible for the submission of the CBAM declaration. In order to enable the authorised CBAM declarant to provide the required delegation and access to a third party, that third party should fulfil certain technical credentials, including holding an Economic Operators Registration and Identification (EORI) number and being established in a Member State.
+(15)
+Authorised CBAM declarants should submit their annual CBAM declaration and surrender the corresponding number of certificates by 30 September of the year following the year of importation of the goods. In order to provide authorised CBAM declarants flexibility to comply with their obligations, a later date of submission would provide authorised CBAM declarants more time to collect the necessary information, ensure that embedded emissions are verified by an accredited verifier, and purchase the corresponding number of CBAM certificates. The date for the cancellation of CBAM certificates should be adjusted accordingly.
+(16)
+The embedded emissions of some aluminium and steel goods currently included in the scope of Regulation (EU) 2023/956 are primarily determined by the embedded emissions of input materials (precursors), while the emissions arising during the production steps of those goods are typically relatively low. Those production steps consist of finishing processes that are carried out by separate installations not covered by the EU emissions trading system (the ‘EU ETS’) as provided for in Directive 2003/87/EC of the European Parliament and of the Council (6), except for the case of integrated facilities. With a view to ensuring coherence with EU ETS rules and to simplifying the application of CBAM rul
+(17)
+Electricity generated on the continental shelf or in the exclusive economic zone of a Member State or a third country is considered as originating in that Member State or that third country, respectively. Hydrogen originating on the continental shelf or in the exclusive economic zone of a Member State or a third country is considered as originating in that Member State or that third country, respectively.
+(18)
+Where input materials (precursors) have already been subject to the EU ETS or to a carbon pricing system that is fully linked with the EU ETS, the embedded emissions of those precursors should not be accounted for in the calculation of the embedded emissions of complex goods.
+(19)
+Authorised CBAM declarants are required to submit an annual CBAM declaration containing the calculation of embedded emissions on the basis of either default values or actual values verified by accredited verifiers. Default values should be calculated and made available by the Commission. The verification of embedded emissions should therefore only apply to actual values.
+(20)
+Information collected during the transitional period indicates that reporting declarants have difficulties in obtaining the required information on the carbon price effectively paid in a third country. To facilitate the deduction of the carbon price, the Commission should, where possible, establish an annual average carbon price expressed in EUR/tonne of CO2e of the effective carbon price paid, including on a conservative basis, based on the best available data from reliable, publicly available information and information provided by third countries to the Commission.
+(21)
+
+[마지막 조문]
+Article 2
+Entry into force
+This Regulation shall enter into force on the third day following that of its publication in the Official Journal of the European Union.
+This Regulation shall be binding in its entirety and directly applicable in all Member States.
+Done at Strasbourg, 8 October 2025.
+ELI: http://data.europa.eu/eli/reg/2025/2083/oj

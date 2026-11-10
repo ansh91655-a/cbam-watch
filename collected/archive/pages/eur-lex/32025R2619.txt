@@ -1,0 +1,73 @@
+[주소] https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2619
+[받은 곳] http://publications.europa.eu/resource/celex/32025R2619
+
+L_202502619EN.000101.fmx.xml
+Official Journal
+of the European Union
+EN
+L series
+2025/2619
+22.12.2025
+COMMISSION IMPLEMENTING REGULATION (EU) 2025/2619
+of 16 December 2025
+laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and of the Council as regards the information communicated by customs authorities
+(Text with EEA relevance)
+THE EUROPEAN COMMISSION,
+Having regard to the Treaty on the Functioning of the European Union,
+Having regard to Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023 establishing a carbon border adjustment mechanism (1), and in particular Article 25(6) thereof,
+Whereas:
+(1)
+Regulation (EU) 2023/956 lays down obligations for customs authorities to communicate to the Commission specific information on goods declared for importation.
+(2)
+The information acquired by the customs authorities is to be stored in the CBAM registry established in accordance with Article 14(1) of Regulation (EU) 2023/956 and used for the purpose of cross-checking the information provided by the authorised CBAM declarants, the importers and the indirect customs representatives in accordance with Article 25 of that Regulation, which includes information related to the compliance of the scope of information in accordance with Article 2 of that Regulation and the related customs procedures in accordance with Article 25(2) of that Regulation, as it is the case of inward processing procedure as referred to in Article 256 of Regulation (EU) No 952/2013 of 
+(3)
+In order to ensure the effective implementation of Regulation (EU) 2023/956, it is necessary to set out the information to be communicated by the customs authorities to the Commission, which is to be included by the authorised CBAM declarants, the importers and the indirect customs representatives, when lodging the customs declaration for the verification of CBAM-relevant information for the imports of goods listed in Annex I to that Regulation. Such information should include the indication of the CBAM account number or other CBAM-relevant information contained in customs declarations, re-export declarations, the bill of discharge, the receipt declaration or any other relevant document subm
+(4)
+To ensure data accuracy and timely verification of authorised CBAM declarants, procedures should be established for the means of communication and cross-checking of information between authorised CBAM declarants, customs authorities, competent authorities, and the Commission, using existing customs systems and the CBAM registry. Where the existing customs systems do not provide for automated communication, alternative means of communication should be used. This Regulation should take into account already established procedures by customs authorities, and therefore customs authorities should be allowed to share information in the format available to them, and insofar as such information is av
+(5)
+For the purpose of ensuring detailed information on importation of goods listed in Annex I to Regulation (EU) 2023/956, the customs authorities should communicate to the Commission the data in the CBAM relevant customs declarations by means of the surveillance mechanism established pursuant to Article 56(5) of Regulation (EU) No 952/2013.
+(6)
+The customs information and data required should take into account all the relevant customs procedure codes related to CBAM lodged in the customs declaration, including information on inward processing in accordance with Article 2(1) of Regulation (EU) 2023/956 and outward processing in accordance with Article 6(4) of that Regulation.
+(7)
+For control purposes and for the purpose of carrying out the tasks referred to in Regulation (EU) 2023/956, the competent authorities or the Commission should be able to request the customs authorities to validate the information made available by the authorised CBAM declarants, the importers, the indirect customs representatives or by the customs authorities.
+(8)
+The competent authorities or the Commission may request from the customs authorities any other relevant document or data submitted to the customs authorities for the purpose of a specific compliance investigation.
+(9)
+This Regulation should limit the periodicity of the request for information, where such a request is based on a risk-assessment or where justified by the Commission.
+(10)
+This Regulation respects the fundamental rights and observes the principles recognised by the Charter of Fundamental Rights of the European Union, and notably the right to protection of personal data. For this purpose, Regulation (EU) 2016/679 of the European Parliament and of the Council (3), as well as, where relevant, Regulation (EU) 2018/1725 of the European Parliament and of the Council (4) shall apply.
+(11)
+The provisions in this Regulation relate to customs information concerning imported goods from 1 January 2026. This Regulation should therefore apply from that date.
+(12)
+The European Data Protection Supervisor was consulted in accordance with Article 42(1) of Regulation (EU) 2018/1725 and delivered an opinion on 20 November 2025.
+(13)
+The measures provided for in this Regulation are in accordance with the opinion of the CBAM Committee,
+HAS ADOPTED THIS REGULATION:
+Article 1
+Definitions
+For the purposes of this Regulation, the following definitions shall apply:
+(1)
+‘bill of discharge’ means the document referred to in Article 175 of Commission Delegated Regulation (EU) 2015/2446 (5);
+(2)
+‘CBAM account number’ means the number assigned to the authorised CBAM declarant in accordance with Article 16(1) of Regulation (EU) 2023/956;
+(3)
+‘customs declaration’ means the act referred to in Article 5, point (12), of Regulation (EU) No 952/2013;
+(4)
+‘receipt declaration’ means the document referred to in Article 4(1) of Commission Implementing Regulation (EU) 2025/2210 (6);
+(5)
+‘alternative means of communication’ means any means of communication other than the systems interoperable with the CBAM registry referred to in Article 5(1) of Commission Implementing Regulation (EU) 2024/3210 (7).
+Article 2
+Information to be communicated by the Customs Authorities
+The customs authorities shall communicate to the CBAM registry, periodically, and at least once a week in accordance with Article 55(2) of Commission Implementing Regulation (EU) 2015/2447 (8), the following information on the goods listed in Annex I to Regulation (EU) 2023/956 declared for importation:
+(a)
+the EORI number;
+
+[마지막 조문]
+Article 10
+Entry into force
+This Regulation shall enter into force on the third day following that of its publication in the Official Journal of the European Union.
+It shall apply from 1 January 2026.
+It will be revised in 2027 at the latest.
+This Regulation shall be binding in its entirety and directly applicable in all Member States.
+Done at Brussels, 16 December 2025.
+ELI: http://data.europa.eu/eli/reg_impl/2025/2619/oj

@@ -1,0 +1,72 @@
+[주소] https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0486
+[받은 곳] http://publications.europa.eu/resource/celex/32025R0486
+
+L_202500486EN.000101.fmx.xml
+Official Journal
+of the European Union
+EN
+L series
+2025/486
+18.3.2025
+COMMISSION IMPLEMENTING REGULATION (EU) 2025/486
+of 17 March 2025
+laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and of the Council as regards the conditions and procedures related to the status of authorised CBAM declarant
+THE EUROPEAN COMMISSION,
+Having regard to the Treaty on the Functioning of the European Union,
+Having regard to Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023 establishing a carbon border adjustment mechanism (1), and in particular Article 5(8) and Article 17(10) thereof,
+Whereas:
+(1)
+Regulation (EU) 2023/956 lays down the rules for the submission of the application to become an authorised CBAM declarant (the ‘application’) and sets out the criteria and procedures for granting such authorisation.
+(2)
+Importers are to submit the application in order to be able to import goods listed in Annex I to Regulation (EU) 2023/956 into the customs territory of the Union. Importers of electricity, to which Article 5(4) of that Regulation applies, are to be regarded as authorised CBAM declarants without the need to submit an application.
+(3)
+The Commission is to adopt implementing rules for the submission of applications and for the authorisation procedure, duly considering the need to minimize administrative burden, through automation of procedures and self-declaration of information to the extent possible.
+(4)
+In order to obtain the authorisation an applicant should, prior to the first importation of goods, submit the application to the Member State of establishment by means of a standard format provided in the CBAM registry.
+(5)
+In order to ensure that the competent authority decides on the basis of a complete and updated set of information, the applicant should be allowed, before the competent authority makes a decision, to request an adjustment of the information provided in the application, accompanied by a justification for such request. That right should be without prejudice to the right of the applicant to obtain from the data controller, at any time, a rectification of his or her incorrect personal data, in accordance with Article 16 of Regulation (EU) 2016/679 of the European Parliament and of the Council (2).
+(6)
+In order to ensure, on the one hand, that the competent authority can appropriately examine the application and conduct the consultation procedure, and, on the other hand, that the applicants receive a timely decision on their application, the competent authority to whom an application is addressed should make a decision on the application within a reasonable period. That period should not exceed 120 calendar days.
+(7)
+Where necessary, the competent authority should be allowed to request additional information from the applicant. In that case the competent authority should be able to extend the deadline for processing the application for a reasonable period.
+(8)
+In order to facilitate the implementation of the authorisation procedure during the first months of application of this Regulation, an extension of the period for the competent authorities to take a decision on the applications is necessary.
+(9)
+The deadline for processing the application may be extended when investigations are necessary to determine whether the applicant has been involved in serious or repeated infringements.
+(10)
+In order to allow for their authorisation, importers of electricity to which Article 5(4) of Regulation (EU) 2023/956 applies should inform the competent authority of the Member State of import that Article 5(4) of that Regulation is applicable to them and provide documents supporting that claim.
+(11)
+To ensure that only bona fide importers become authorised CBAM declarants, the competent authorities should make sure that the applicants have not been involved in serious or repeated infringements of legislation during a reasonable period before submitting an application, in economic criminal offences during the five years preceding the application, and that they have a good financial rating.
+(12)
+Pursuant to a risk assessment by the competent authority, compliance with the criteria in Article 17(2), point (a), of Regulation (EU) 2023/956 may be established on the basis of the declaration of honour as referred to in Article 5(5), point (e), of Regulation (EU) 2023/956. Where necessary, the competent authority may request a criminal record from the applicant to confirm the information submitted in the application.
+(13)
+Additionally, the rules on the consultation procedure should allow the competent authority to garner information from the Commission and other competent authorities concerning the fulfilment, by the applicant, of the criteria for authorisation. Data received during the transitional period shows that importers importing yearly goods weighing less than 1 tonne are engaging in limited cross border activities, therefore the deadline established for the consultation procedure should differentiate accordingly.
+(14)
+To ensure a proportionate application of the authorisation procedure, the competent authorities may, in their evaluation of the criteria for granting an authorisation, consider the specific characteristics of the applicant, and in particular micro, small and medium-sized enterprises that should not be subject to unnecessary administrative burden.
+(15)
+Where the applicant was not established as a legal person throughout the two financial years preceding the year when the application was submitted, the competent authority is to require the provision of a guarantee. The subscription of that guarantee should be registered in the CBAM registry within a period determined by this Regulation. The competent authority should monitor the guarantee to ensure its continued sufficiency, including by requiring an adjustment where necessary, and should release the guarantee when the conditions in Article 17(7) of Regulation (EU) 2023/956 are met.
+(16)
+To ensure that authorised CBAM declarants continue to meet the criteria for the authorisation, the competent authorities should be able, on their own initiative, after an authorisation has been granted, to re-assess the criteria for the authorisation, upon receiving information provided by another competent authority or the Commission, or upon receiving information provided by the authorised CBAM declarant.
+(17)
+The persons whose status of authorised CBAM declarant is revoked should comply with all their obligations for goods imported prior to the revocation. Where the status of authorised CBAM declarant is revoked, the assigned CBAM account shall be closed, where all the obligations are complied with in accordance with Article 16(4) of Regulation (EU) 2023/956. A CBAM account can be reopened only within the review period referred to in Article 19(2) of Regulation (EU) 2023/956. After that period, the CBAM account should be permanently closed.
+(18)
+The provisions on the application for the status of authorised CBAM declarant and those on granting such status are closely linked since they deal with the submission of the application and with the criteria and procedure for the authorisation. To ensure coherence, this Regulation should include provisions required by Article 5(8) and Article 17(10) of Regulation (EU) 2023/956 in a single Regulation.
+(19)
+This Regulation should apply from 28 March 2025 to allow for the smooth authorisation of CBAM declarants in parallel with the development of the IT system for the CBAM registry to make that registry fully operational by 1 January 2026.
+(20)
+This Regulation respects the fundamental rights and observes the principles recognised by the Charter of Fundamental Rights of the European Union, and notably the right to protection of personal data. The processing of personal data should be carried out only for the purposes of measures related to granting or revoking the status of authorised CBAM declarant, as defined in this Regulation. Any processing of personal data should be carried out in accordance with Union law on the protection of personal data. In particular, appropriate safeguards should be put in place to protect the data subjects rights when it is necessary to process personal data under Article 10 of Regulation (EU) 2016/679.
+(21)
+The European Data Protection Supervisor was consulted in accordance with Article 42(1) of Regulation (EU) 2018/1725 of the European Parliament and of the Council (3) and delivered an opinion on 27 November 2024.
+(22)
+In order to allow for its timely application, this Regulation should enter into force on the day following that of its publication in the Official Journal of the European Union.
+(23)
+The measures provided for in this Regulation are in accordance with the opinion of the CBAM Committee,
+
+[마지막 조문]
+Article 29
+Entry into force and application
+1. This Regulation shall enter into force on the day following that of its publication in the Official Journal of the European Union.
+2. It shall apply from 28 March 2025.
+This Regulation shall be binding in its entirety and directly applicable in all Member States.
+Done at Brussels, 17 March 2025.
+ELI: http://data.europa.eu/eli/reg_impl/2025/486/oj

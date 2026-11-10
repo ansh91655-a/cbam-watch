@@ -1,0 +1,72 @@
+[주소] https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2548
+[받은 곳] http://publications.europa.eu/resource/celex/32025R2548
+
+L_202502548EN.000101.fmx.xml
+Official Journal
+of the European Union
+EN
+L series
+2025/2548
+22.12.2025
+COMMISSION IMPLEMENTING REGULATION (EU) 2025/2548
+of 10 December 2025
+laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and of the Council as regards the calculation and publication of the price of CBAM certificates
+(Text with EEA relevance)
+THE EUROPEAN COMMISSION,
+Having regard to the Treaty on the Functioning of the European Union,
+Having regard to Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023 establishing a carbon border adjustment mechanism (1), and in particular Article 21(3) thereof,
+Whereas:
+(1)
+Regulation (EU) 2023/956 lays down rules and features of CBAM certificates. Those rules are to ensure that the price of CBAM certificates reflects closely the European Union’s Emission Trading System (‘EU ETS’) prices to preserve the effectiveness of the CBAM as a measure to prevent carbon leakage, while the features support its overall functioning.
+(2)
+Pursuant to Regulation (EU) 2023/956, the price of CBAM certificates is to reasonably reflect the price of allowances auctioned on the EU ETS market. To ensure a representative coverage, the calculation of the average price should be based on all auctions under the EU ETS. This covers the allowances auctioned on the common auction platform by all auctioneers, thus including the Union funds and third countries as well as those auctioned by Member States using an opt-out platform while excluding the cancelled auctions and the auctions of allowances in respect of buildings, road transport and additional sectors.
+(3)
+As the volume of EU ETS allowances differs among auctions, all auctioned prices should not be treated equally in the calculation of the average price. To produce a more accurate and representative measure of allowance prices, the average should be weighted for each auction. This ensures that the relative impact of each auction’s volume is represented in the overall price, providing an accurate reflection of the prices of auctioned allowances over a given period. The weighting should assign to each allowance price a weight proportional to the volume of all allowances auctioned in that auction.
+(4)
+To reflect closely the EU ETS prices, the calculation of the average price of EU ETS allowances over a given period should be based on the price that is considered the final price of the auction. In accordance with Commission Delegated Regulation (EU) 2023/2830 (2), that price is defined as the auction clearing price which corresponds to the price that successful bidders pay for each EU ETS allowance upon closure of the bidding window in each auction. Therefore, the calculation of the price of CBAM certificates should be based on auction clearing prices.
+(5)
+Pursuant to Article 21(1) and (1a) of Regulation (EU) 2023/956, the price of CBAM certificates is to be calculated, for the year 2026, on the basis of four quarterly averages of EU ETS allowance prices and from 2027 onwards on the basis of the weekly average of EU ETS allowance prices.
+(6)
+For the sake of simplicity, the calculation of weekly and quarterly averages should be based respectively on calendar weeks and calendar quarters and rounded to two decimals only.
+(7)
+The average prices of allowances for CBAM purposes should be calculated in euro, following the same approach as for the prices of allowances on the common auction platform.
+(8)
+To prevent any undue delays, the Commission should determine the price of CBAM certificates as soon as possible from the point in time when the necessary information becomes available. This entails finalising the price after all auctions have taken place over the relevant period, and the auction platforms have made information on all auction clearing prices and auctioned volumes available to the Commission.
+(9)
+A single, clear price indication should be provided for ease of reference. Therefore, the price of CBAM certificates should only be published by the Commission. To ensure full transparency, the Commission should publish that price on its website so that it is publicly available online, in a directly accessible manner and free of charge. In 2026, the Commission should make the quarterly prices available as soon as possible to provide stakeholders certainty.
+(10)
+The Commission should make the price of CBAM certificates directly accessible in authorised CBAM declarants’ accounts in the CBAM registry to facilitate the management of their CBAM financial liability. That would also improve the purchase and repurchase processes and enhance security by ensuring better information reconciliation between the common central platform and the CBAM registry.
+(11)
+The interpretation of ‘working days’ for publishing the price of CBAM certificates should be unambiguous to ensure uniformity, predictability and legal certainty across the Union. As the obligation to publish the price of CBAM certificates lies with the Commission, the working days on which the Commission is to publish the prices should refer to days designated as such by the Commission pursuant to Article 2 of Regulation (EEC, Euratom) No 1182/71 of the Council (3).
+(12)
+For the purposes of monitoring or investigations, the Commission should be able to request from the EU ETS auction platforms the information necessary for the calculation of the price of CBAM certificates during an appropriate period not exceeding five calendar years after the calendar year to which the information relates. The auction platforms and the Commission should maintain a record of such information electronically in a secured way during the same period.
+(13)
+The Commission is to calculate the CBAM certificate prices in 2026 based on the prices of EU ETS allowances auctioned from 1 January 2026. This Regulation should therefore apply from 1 January 2026.
+(14)
+The measures provided for in this Regulation are in accordance with the opinion of the CBAM Committee,
+HAS ADOPTED THIS REGULATION:
+Article 1
+Methodology for calculating the price of CBAM certificates in 2026
+1. For each quarter in 2026, the Commission shall calculate the price of CBAM certificates as the quarterly average of the auction clearing prices of allowances as determined in accordance with Article 7 of Delegated Regulation (EU) 2023/2830.
+2. The Commission shall calculate the price of a quarter during the first calendar week of the following quarter.
+3. The auction clearing prices of all allowances auctioned pursuant to Articles 10 and 11 of Delegated Regulation (EU) 2023/2830 on the common auction platform as defined in Article 3, point (18), of that Regulation and on the opt-out auction platforms, as defined in Article 3, point (19), of that Regulation since the last calculation shall be taken into account. However, auctions which have been cancelled shall not be taken into account in the quarterly average calculation.
+4. For each auction, the auction clearing price shall be weighted by the volume of the auctioned allowances.
+5. The quarterly price of CBAM certificates shall be calculated in euro and rounded up or down to the nearest cent.
+6. The quarterly price of CBAM certificates shall apply to CBAM certificates that correspond to the embedded emissions declared by authorised CBAM declarants in respect of the year 2026 for the quarter of importation of the goods in which those emissions are embedded.
+Article 2
+Access to information regarding 2026
+1. The auction platforms referred to in Article 1(3) shall provide all the necessary information for calculating the price of CBAM certificates in accordance with Article 1 to the Commission upon closure of the bidding window of each auction they operate.
+2. The Commission shall have immediate, direct and free of charge access to the information referred to in paragraph 1.
+Article 3
+Record keeping regarding 2026
+1. The auction platforms and the Commission shall keep the information referred to in Article 2 electronically in a secure way until 31 December 2031.
+2. Until 31 December 2031, upon request by the Commission, the auction platforms shall timely provide the information referred to in Article 2.
+
+[마지막 조문]
+Article 9
+Entry into force and application
+This Regulation shall enter into force on the third day following that of its publication in the Official Journal of the European Union.
+It shall apply from 1 January 2026.
+This Regulation shall be binding in its entirety and directly applicable in all Member States.
+Done at Brussels, 10 December 2025.
+ELI: http://data.europa.eu/eli/reg_impl/2025/2548/oj

@@ -1,0 +1,71 @@
+[주소] https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R1740
+[받은 곳] http://publications.europa.eu/resource/celex/32026R1740
+
+L_202601740EN.000101.fmx.xml
+Official Journal
+of the European Union
+EN
+L series
+2026/1740
+31.7.2026
+COMMISSION IMPLEMENTING REGULATION (EU) 2026/1740
+of 20 July 2026
+correcting Implementing Regulation (EU) 2025/2621 as regards Annexes I and IV thereto
+(Text with EEA relevance)
+THE EUROPEAN COMMISSION,
+Having regard to the Treaty on the Functioning of the European Union,
+Having regard to Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023 establishing a carbon border adjustment mechanism (1), and in particular Article 7(7) thereof,
+Whereas:
+(1)
+Commission Implementing Regulation (EU) 2025/2621 (2) lays down rules for the application of Regulation (EU) 2023/956 as regards the establishment of default values in the field of the carbon border adjustment mechanism (‘CBAM’).
+(2)
+Some production route indicators in some of the tables in Annexes I and IV to Implementing Regulation (EU) 2025/2621 are missing or incorrect. This makes it impossible to correctly calculate the free allocation adjustment in accordance with the rules laid down in Commission Implementing Regulation (EU) 2025/2620 (3). Those missing or incorrect production route indicators should therefore be added or corrected.
+(3)
+While Annexes I and IV to Implementing Regulation (EU) 2025/2621 provide some default values for a group of Combined Nomenclature (CN) codes at Harmonised System (HS) code level (that is, with 4 or 6 digits) with an underlying production route indicator to determine the CBAM benchmark, as defined in Implementing Regulation (EU) 2025/2620, Implementing Regulation (EU) 2025/2620 does not define any production route for the benchmark of one or more of the CN codes at 8-digit level in that group. It should therefore be clarified that, in such case, the CBAM benchmark for the concerned CN code at 8-digit level is independent of the production route.
+(4)
+To ensure legal clarity, the units of the default values in Annexes I and IV to Implementing Regulation (EU) 2025/2621 should be specified.
+(5)
+As regards CN code 2523 10 00 in all the tables in Annexes I and IV to Implementing Regulation (EU) 2025/2621, different default values apply to white clinker and grey clinker. The same applies to the default values for white hydraulic cement and grey hydraulic cements under CN code 2523 90 00 in those Annexes. In order to reflect those differences more clearly, TARIC codes should be used to distinguish between those goods.
+(6)
+As regards CN code 2507 00 80 in all the tables in Annexes I and IV to Implementing Regulation (EU) 2025/2621, Regulation (EU) 2023/956 was amended by Regulation (EU) 2025/2083 of the European Parliament and of the Council (4), with the result that only calcined kaolinic clay now falls within the scope of the CBAM. To ensure alignment with the scope of the CBAM, CN code 2507 00 80 should be replaced with TARIC code 2507 00 80 80.
+(7)
+Some default values in some of the tables in Annex I to Implementing Regulation (EU) 2025/2621 are erroneous as a result of transcription mistakes that were made when the tables were consolidated within a short time frame to ensure that Implementing Regulation (EU) 2025/2621 could apply from 1 January 2026. This is the case for the default values of Taiwan – CN codes 7218 to 7223 , and for ‘Other countries and territories’ – CN code 7226 20 00 . Those erroneous default values should be corrected.
+(8)
+The default value for indirect emissions for CN code 2601 12 00 for Angola in one of the tables in Annex I to Implementing Regulation (EU) 2025/2621 is stated as being not applicable as a result of a transcription mistake. However, it is clear that indirect emissions for this CN code are within the CBAM’s scope, in accordance with Article 7(1) of Regulation (EU) 2023/956. Moreover, the default values provided for direct and total emissions for CN code 2601 12 00 for Angola are the result of a transcription mistake, as they are the numerical values of the default values in the table ‘Other countries and territories’. Those errors should be corrected.
+(9)
+Some default values in some of the tables in Annex I to Implementing Regulation (EU) 2025/2621 have been inadvertently omitted as a result of transcription mistakes that were made when the tables were consolidated. This has resulted in the application of the default values in the table ‘Other countries and territories’ which are higher than or equal to the missing default values. This is the case for the default values of Albania – CN code 7202 41 , Gabon – CN code 2804 10 00 , Guatemala – CN code 7202 60 00 , Liberia – CN code 2804 10 00 , New Caledonia – CN code 7202 60 00 , Zambia – CN code 7202 11 and Zimbabwe – CN codes 7202 11 and 7202 41 . Those missing default values should be added.
+(10)
+Rounding rules have been applied when determining the default values. In order to avoid potential inconsistencies as a result of rounding, the columns with default values that include mark-ups in all the tables for 2026, 2027 and 2028 in Annexes I and IV to Implementing Regulation (EU) 2025/2621 should be deleted. The methodology for calculating the default values with the mark-ups should be stated separately in opening paragraphs in Annexes I and IV. The final default values that include the mark-ups should then be calculated within the CBAM Registry and this calculation should be based on the default values for total emissions as provided for in Annex I. The default values for direct emiss
+(11)
+Some CN codes in one of the tables in Annex I to Implementing Regulation (EU) 2025/2621 are erroneous as a result of transcription mistakes that were made when the tables were consolidated. This is the case for CN codes 7615 10 10 , 7615 10 30 , 7615 10 80 and 7615 20 00 for Tunisia. Those erroneous CN codes should be corrected.
+(12)
+The names of some countries listed in some of the tables set out in Annex I to Implementing Regulation (EU) 2025/2621 are not consistent with the names used in Annexes II and III to that Regulation, which use the nomenclature of Commission Implementing Regulation (EU) 2020/1470 (5). To ensure consistency, the names of those countries in Annex I should be corrected.
+(13)
+The default values for precursors in Annex IV to Implementing Regulation (EU) 2025/2621 for CN codes 7616 99 10 and 7616 99 90 do not correspond to the default values of the third country with the highest emission intensity given in Annex I to Implementing Regulation (EU) 2025/2621. This is due to a transcription mistake. Those erroneous default values should be corrected so that they correspond to the default values of the third country with the highest emission intensity.
+(14)
+To ensure legal certainty with respect to the accurate calculation of the CBAM number of certificates to be surrendered, this Regulation should apply retroactively from the date of entry into force of Implementing Regulation (EU) 2025/2621. Furthermore, in the interests of legal clarity and legal certainty, the corrections set out in this Regulation should enter into force quickly. This Regulation should therefore enter into force on the third day following that of its publication in the Official Journal of the European Union.
+(15)
+The measures provided for in this Regulation are in accordance with the opinion of the CBAM Committee,
+HAS ADOPTED THIS REGULATION:
+Article 1
+1. Annex I to Implementing Regulation (EU) 2025/2621 is replaced by the text in Annex I to this Regulation.
+2. Annex IV to Implementing Regulation (EU) 2025/2621 is replaced by the text in Annex II to this Regulation.
+Article 2
+This Regulation shall enter into force on the third day following that of its publication in the Official Journal of the European Union.
+It shall apply from 1 January 2026.
+This Regulation shall be binding in its entirety and directly applicable in all Member States.
+Done at Brussels, 20 July 2026.
+For the Commission
+The President
+Ursula VON DER LEYEN
+(1) OJ L 130, 16.5.2023, p. 52, ELI: http://data.europa.eu/eli/reg/2023/956/oj.
+(2) Commission Implementing Regulation (EU) 2025/2621 of 16 December 2025 laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and the Council as regards the establishment of default values (OJ L, 2025/2621, 31.12.2025, ELI: http://data.europa.eu/eli/reg_impl/2025/2621/oj).
+(3) Commission Implementing Regulation (EU) 2025/2620 of 16 December 2025 laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and of the Council as regards the calculation of the free allocation adjustment to the number of CBAM certificates to be surrendered (OJ L, 2025/2620, 22.12.2025, ELI: http://data.europa.eu/eli/reg_impl/2025/2620/oj).
+
+[마지막 조문]
+Article 2
+This Regulation shall enter into force on the third day following that of its publication in the Official Journal of the European Union.
+It shall apply from 1 January 2026.
+This Regulation shall be binding in its entirety and directly applicable in all Member States.
+Done at Brussels, 20 July 2026.
+ELI: http://data.europa.eu/eli/reg_impl/2026/1740/oj

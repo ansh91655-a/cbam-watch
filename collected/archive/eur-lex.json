@@ -1,0 +1,129 @@
+{
+ "source": "eur-lex",
+ "fetchedAt": "2026-11-10T21:21:48+09:00",
+ "since": "2025-01-01",
+ "report": {
+  "acts": 13,
+  "stored": 13,
+  "failures": []
+ },
+ "entries": [
+  {
+   "date": "2026-07-31",
+   "celex": "32026R1740",
+   "title": "COMMISSION IMPLEMENTING REGULATION (EU) 2026/1740",
+   "subject": "correcting Implementing Regulation (EU) 2025/2621 as regards Annexes I and IV thereto",
+   "adopted": "2026-07-20",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R1740",
+   "textPath": "collected/archive/pages/eur-lex/32026R1740.txt"
+  },
+  {
+   "date": "2025-12-31",
+   "celex": "32025R2621",
+   "title": "COMMISSION IMPLEMENTING REGULATION (EU) 2025/2621",
+   "subject": "laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and the Council as regards the establishment of default values",
+   "adopted": "2025-12-16",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2621",
+   "textPath": "collected/archive/pages/eur-lex/32025R2621.txt"
+  },
+  {
+   "date": "2025-12-22",
+   "celex": "32025R2546",
+   "title": "COMMISSION IMPLEMENTING REGULATION (EU) 2025/2546",
+   "subject": "on the application of the principles for verification of declared embedded emissions pursuant to Regulation (EU) 2023/956 of the European Parliament and of the Council",
+   "adopted": "2025-12-10",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2546",
+   "textPath": "collected/archive/pages/eur-lex/32025R2546.txt"
+  },
+  {
+   "date": "2025-12-22",
+   "celex": "32025R2547",
+   "title": "COMMISSION IMPLEMENTING REGULATION (EU) 2025/2547",
+   "subject": "laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and the Council as regards the methods for the calculation of emissions embedded in goods",
+   "adopted": "2025-12-10",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2547",
+   "textPath": "collected/archive/pages/eur-lex/32025R2547.txt"
+  },
+  {
+   "date": "2025-12-22",
+   "celex": "32025R2548",
+   "title": "COMMISSION IMPLEMENTING REGULATION (EU) 2025/2548",
+   "subject": "laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and of the Council as regards the calculation and publication of the price of CBAM certificates",
+   "adopted": "2025-12-10",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2548",
+   "textPath": "collected/archive/pages/eur-lex/32025R2548.txt"
+  },
+  {
+   "date": "2025-12-22",
+   "celex": "32025R2549",
+   "title": "COMMISSION IMPLEMENTING REGULATION (EU) 2025/2549",
+   "subject": "amending and correcting Implementing Regulation (EU) 2025/486 laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and of the Council as regards the conditions and procedures related to the status of authorised CBAM declarant",
+   "adopted": "2025-12-10",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2549",
+   "textPath": "collected/archive/pages/eur-lex/32025R2549.txt"
+  },
+  {
+   "date": "2025-12-22",
+   "celex": "32025R2550",
+   "title": "COMMISSION IMPLEMENTING REGULATION (EU) 2025/2550",
+   "subject": "amending and correcting Implementing Regulation (EU) 2024/3210 as regards the CBAM registry",
+   "adopted": "2025-12-10",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2550",
+   "textPath": "collected/archive/pages/eur-lex/32025R2550.txt"
+  },
+  {
+   "date": "2025-12-22",
+   "celex": "32025R2551",
+   "title": "COMMISSION DELEGATED REGULATION (EU) 2025/2551",
+   "subject": "supplementing Regulation (EU) 2023/956 of the European Parliament and of the Council by specifying the conditions for granting accreditation to verifiers, for the control and oversight of accredited verifiers, for the withdrawal of accreditation and for mutual recognition and peer evaluation of accreditation bodies",
+   "adopted": "2025-11-20",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2551",
+   "textPath": "collected/archive/pages/eur-lex/32025R2551.txt"
+  },
+  {
+   "date": "2025-12-22",
+   "celex": "32025R2619",
+   "title": "COMMISSION IMPLEMENTING REGULATION (EU) 2025/2619",
+   "subject": "laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and of the Council as regards the information communicated by customs authorities",
+   "adopted": "2025-12-16",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2619",
+   "textPath": "collected/archive/pages/eur-lex/32025R2619.txt"
+  },
+  {
+   "date": "2025-12-22",
+   "celex": "32025R2620",
+   "title": "COMMISSION IMPLEMENTING REGULATION (EU) 2025/2620",
+   "subject": "laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and of the Council as regards the calculation of the free allocation adjustment to the number of CBAM certificates to be surrendered",
+   "adopted": "2025-12-16",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2620",
+   "textPath": "collected/archive/pages/eur-lex/32025R2620.txt"
+  },
+  {
+   "date": "2025-11-03",
+   "celex": "32025R2210",
+   "title": "COMMISSION IMPLEMENTING REGULATION (EU) 2025/2210",
+   "subject": "laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and of the Council as regards goods and processed products brought to the continental shelf or the exclusive economic zone of Member States",
+   "adopted": "2025-10-31",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2210",
+   "textPath": "collected/archive/pages/eur-lex/32025R2210.txt"
+  },
+  {
+   "date": "2025-10-17",
+   "celex": "32025R2083",
+   "title": "REGULATION (EU) 2025/2083 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+   "subject": "amending Regulation (EU) 2023/956 as regards simplifying and strengthening the carbon border adjustment mechanism",
+   "adopted": "2025-10-08",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2083",
+   "textPath": "collected/archive/pages/eur-lex/32025R2083.txt"
+  },
+  {
+   "date": "2025-03-18",
+   "celex": "32025R0486",
+   "title": "COMMISSION IMPLEMENTING REGULATION (EU) 2025/486",
+   "subject": "laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and of the Council as regards the conditions and procedures related to the status of authorised CBAM declarant",
+   "adopted": "2025-03-17",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0486",
+   "textPath": "collected/archive/pages/eur-lex/32025R0486.txt"
+  }
+ ]
+}

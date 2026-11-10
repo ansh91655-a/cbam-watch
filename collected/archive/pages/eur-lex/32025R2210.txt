@@ -1,0 +1,71 @@
+[주소] https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2210
+[받은 곳] http://publications.europa.eu/resource/celex/32025R2210
+
+L_202502210EN.000101.fmx.xml
+Official Journal
+of the European Union
+EN
+L series
+2025/2210
+3.11.2025
+COMMISSION IMPLEMENTING REGULATION (EU) 2025/2210
+of 31 October 2025
+laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and of the Council as regards goods and processed products brought to the continental shelf or the exclusive economic zone of Member States
+(Text with EEA relevance)
+THE EUROPEAN COMMISSION,
+Having regard to the Treaty on the Functioning of the European Union,
+Having regard to Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023 establishing a carbon border adjustment mechanism (1), and in particular Article 2(2), second subparagraph, thereof,
+Whereas:
+(1)
+Regulation (EU) 2023/956 applies to goods listed in Annex I thereto originating in a third country, where those goods, or processed products from those goods resulting from the inward processing procedure referred to in Article 256 of Regulation (EU) No 952/2013 of the European Parliament and of the Council (2), are brought to an artificial island, a fixed or floating structure, or any other structure on the continental shelf or in the exclusive economic zone of a Member State that is adjacent to the customs territory of the Union.
+(2)
+If goods and processed products referred to in Article 2(2), first subparagraph, of Regulation (EU) 2023/956 are brought to an artificial island, a fixed or floating structure or any other structure in the continental shelf, or in the exclusive economic zone of a Member State of the Union, from the customs territory of the Union, Articles 270, 271 and 274 of Regulation (EU) No 952/2013 require that a re-export declaration, a re-export notification or an exit summary declaration be used to declare such goods or products before their departure from the customs territory of the Union.
+(3)
+In order to determine the holder of the obligations under Regulation (EU) 2023/956, it is necessary to determine who, in the Union, should be considered importer for the purposes of Regulation (EU) 2023/956, when goods concerned are brought to the continental shelf or the exclusive economic zone of a Member State that is adjacent to the customs territory of the Union.
+(4)
+In order to simplify the controls to be carried out by the customs authorities under this Regulation, where goods listed in Annex I to Regulation (EU) 2023/956 originating in a third country, including goods resulting from an inward processing procedure referred to in Article 256 of Regulation (EU) No 952/2013, without being processed, or from transit or storage procedures referred to in Article 210 of that Regulation, are brought to an artificial island, a fixed or floating structure, or any other structure on the continental shelf or in the exclusive economic zone of a Member State that is adjacent to the customs territory of the Union, the recipient of the goods in the continental shelf o
+(5)
+In order to ensure that due information is timely available to the customs authorities, the goods listed in Annex I to Regulation (EU) 2023/956 should be declared by means of a receipt declaration lodged by the recipient within 30 days of the receipt of the goods concerned on an artificial island, a fixed or floating structure, or any other structure in the continental shelf or in the exclusive economic zone. As the Member State to which the continental shelf or exclusive economic zone belongs is best placed to carry out controls, the receipt declaration should be lodged at the competent customs authority of that Member State.
+(6)
+As the recipient of processed products on the continental shelf or the exclusive economic zone may not have the necessary information on the Carbon Border Adjustment Mechanism (CBAM) relevant goods used in processed products, where processed products from goods listed in Annex I to Regulation (EU) 2023/956 resulting from the inward processing procedure referred to in Article 256 of Regulation (EU) No 952/2013 are brought to an artificial island, a fixed or floating structure, or any other structure on the continental shelf or in the exclusive economic zone of a Member State that is adjacent to the customs territory of the Union, the person lodging the re-export declaration covering the proce
+(7)
+In order to ensure that due information is available to the customs authorities, where the holder of the inward processing procedure is the same person as the one lodging the re-export declaration, the bill of discharge relating to the goods concerned should contain the CBAM account number of the person lodging the re-export declaration or of the indirect customs representative who has agreed to act as authorized CBAM declarant, the origin of the goods and an indication of the exclusive economic zone or continental shelf of the Member State to which they are to be brought.
+(8)
+As the recipient of the goods is equivalent to importer, where goods listed in Annex I to Regulation (EU) 2023/956 originating in a third country are brought to an artificial island, a fixed or floating structure, or any other structure on the continental shelf or in the exclusive economic zone of a Member State that is adjacent to the customs territory of the Union, the receipt of those goods should be considered importation.
+(9)
+As the re-exporter of the goods is equivalent to importer, where processed products from goods listed in Annex I to Regulation (EU) 2023/956 resulting from the inward processing procedure referred to in Article 256 of Regulation (EU) No 952/2013 are brought to an artificial island, a fixed or floating structure, or any other structure on the continental shelf or in the exclusive economic zone of a Member State that is adjacent to the customs territory of the Union, the re-export should be considered importation.
+(10)
+To ensure that the information necessary to determine whether CBAM should apply, and whether the importer is an authorised CBAM declarant, is available to the customs authorities of the Member State to which the exclusive economic zone or continental shelf belongs, the receipt of goods referred to in Article 2(2), first subparagraph, of Regulation (EU) 2023/956 should be declared by the recipient by means of a receipt declaration.
+(11)
+For control purposes, where goods are brought to the exclusive economic zone or continental shelf of a Member State, the re-export declaration, re-export notification or exit summary declaration should contain the indication of the continental shelf or the exclusive economic zone of the Member State to which those goods are to be brought and of the country of origin. Where processed products are concerned, the re-export declaration should also contain the CBAM account number of the person lodging the re-export declaration or of the indirect customs representative who has agreed to act as authorized CBAM declarant.
+(12)
+As the provisions on customs controls set out in Regulation (EU) No 952/2013 do not apply outside the customs territory of the Union, it is necessary to establish specific rules as regards customs controls.
+(13)
+For control purposes, it is necessary to lay down rules on the keeping of documents and information, as well as charges and costs, for customs services referred to in Regulation (EU) No 952/2013.
+(14)
+The measures provided for in this Regulation are in accordance with the opinion of the CBAM Committee,
+HAS ADOPTED THIS REGULATION:
+CHAPTER I
+DEFINITIONS
+Article 1
+Definitions
+For the purposes of this Regulation, the following definitions shall apply:
+(1)
+‘holder of the inward processing authorisation’ means the holder of the authorisation for the last inward processing procedure referred to in Article 256 of Regulation (EU) No 952/2013 applied to the goods before re-export to the continental shelf or exclusive economic zone of a Member State, from which the processed products resulted;
+(2)
+‘bill of discharge’ means the bill of discharge provided for in Article 175 of Commission Delegated Regulation (EU) 2015/2446 (3);
+(3)
+‘recipient’ means the person who is the holder of a licence or an authorisation to carry out business activities in the continental shelf, or in the exclusive economic zone of a Member State, and receives, or has arranged for, the receipt of the goods referred to in Article 2(2), first subparagraph, of Regulation (EU) 2023/956 in that continental shelf or in that exclusive economic zone;
+(4)
+‘receipt’ means the physical arrival of the goods referred to in Article 2(2), first subparagraph, of Regulation (EU) 2023/956 to the recipient in the continental shelf or in the exclusive economic zone of a Member State.
+CHAPTER II
+RULES APPLICABLE TO GOODS
+Article 2
+
+[마지막 조문]
+Article 12
+Entry into force
+This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.
+This Regulation shall be binding in its entirety and directly applicable in all Member States.
+Done at Brussels, 31 October 2025.
+ELI: http://data.europa.eu/eli/reg_impl/2025/2210/oj

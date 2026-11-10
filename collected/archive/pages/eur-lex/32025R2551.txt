@@ -1,0 +1,72 @@
+[주소] https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2551
+[받은 곳] http://publications.europa.eu/resource/celex/32025R2551
+
+L_202502551EN.000101.fmx.xml
+Official Journal
+of the European Union
+EN
+L series
+2025/2551
+22.12.2025
+COMMISSION DELEGATED REGULATION (EU) 2025/2551
+of 20 November 2025
+supplementing Regulation (EU) 2023/956 of the European Parliament and of the Council by specifying the conditions for granting accreditation to verifiers, for the control and oversight of accredited verifiers, for the withdrawal of accreditation and for mutual recognition and peer evaluation of accreditation bodies
+(Text with EEA relevance)
+THE EUROPEAN COMMISSION,
+Having regard to the Treaty on the Functioning of the European Union,
+Having regard to Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023 establishing a carbon border adjustment mechanism (1), and in particular Article 18(3) thereof,
+Whereas:
+(1)
+Pursuant to Regulation (EU) 2023/956, where embedded emissions in goods imported into the customs territory of the Union from 2026 are determined based on actual values, they are to be verified by a verifier.
+(2)
+In accordance with Article 1(2) of Regulation (EU) 2023/956, the carbon border adjustment mechanism (CBAM) complements the EU Emissions Trading System (ETS) established under Directive 2003/87/EC of the European Parliament and of the Council (2). Ensuring coherence and consistency between the CBAM accreditation and verification requirements and those applicable to the EU ETS will strengthen synergies between the two instruments and reduce the administrative burden for verifiers, national accreditation bodies and competent authorities.
+(3)
+Pursuant to Regulation (EU) 2023/956, national accreditation bodies, as appointed by each Member State pursuant to Regulation (EC) No 765/2008 of the European Parliament and of the Council (3), are to accredit verifiers. In order to ensure that only applicants that are able to carry out verification of embedded emissions in accordance with Regulation (EU) 2023/956 with the necessary competence and knowledge are accredited, it is necessary to lay down requirements for the competence of verifiers and the activities which they need to be able to perform once accredited.
+(4)
+To ensure consistency with the accreditation and verification requirements applicable to the EU ETS and to take account of the specificities of the CBAM, it is necessary to specify the competence requirements and activities which verifiers are to carry out pursuant to this Regulation, in a similar fashion as for the activities and requirements provided under the EU ETS. To ensure an effective application procedure, it is also necessary to lay down rules for the submission of the request for accreditation through which applicants will demonstrate technical competence.
+(5)
+To their take account of internationally applicable standards, ensure consistency with the rules applicable to the EU ETS and avoid any unnecessary duplication of procedures, it is appropriate to draw on best practices resulting from the application of the relevant harmonised standards adopted by the European Committee for Standardisation on the basis of a request made by the Commission in accordance with Regulation (EU) No 1025/2012 of the European Parliament and of the Council (4). It is therefore appropriate to foresee compliance with certain relevant harmonised standards which shall be complemented by additional and specific requirements set out in this Regulation.
+(6)
+To respect the principle of non-competition between national accreditation bodies, applicants should request accreditation in the Member State in which they are established. However, it is necessary to ensure that applicants are able to request accreditation in another Member State where there is no national accreditation body in the applicant’s Member State or where the national accreditation body is not competent to provide the accreditation services requested.
+(7)
+To increase the number of eligible applicants, reduce costs for verifiers established in third countries and allow operators to use their verification services, it should be possible for a legal person not established in a Member State to apply for accreditation with any national accreditation body. Where the national accreditation body, for reasons of lack of capacity or other related reasons, is unable to process the application of an applicant established in a third country, it should provide the applicant with duly justified reasons thereof, as well as a list of national accreditation bodies which may be able to process the request.
+(8)
+National accreditation bodies should ensure that verifiers possess the necessary competence to understand the technical processes carried out by installations and to assess the specific monitoring and reporting boundaries of an installation depending on the goods produced. For this purpose, a separate accreditation scope should be created for each relevant CBAM activity group so that national accreditation bodies are able to evaluate the verifier’s competence and performance against specific criteria depending on the particular scope of accreditation.
+(9)
+To avoid duplication of processes and an excessive administrative burden while maintaining the robustness of the accreditation process, verifiers that are already accredited for a relevant group of activities under the EU ETS pursuant to Commission Implementing Regulation (EU) 2018/2067 (5) should be able to apply for an extension of the scope of their accreditation to the corresponding CBAM accreditation certificates. To allow national accreditation bodies to take into account the corresponding groups of activities under the EU ETS, it is necessary to identify such corresponding groups of activities.
+(10)
+To ensure that national accreditation bodies are able to adequately carry out accreditation activities, it is necessary to lay down rules and requirements for the assessment of requests for accreditation.
+(11)
+To allow national accreditation bodies to exercise control and oversight over verifiers and to ensure that verifiers maintain their technical competence to perform the entrusted task, it is necessary to specify the surveillance activities that national accreditation bodies are to carry out. Where the national accreditation body concludes that the verifier has failed to meet the requirements and perform the verification activities pursuant to this Regulation, Regulation (EU) 2023/956 and Commission Implementing Regulation (EU) 2025/2546 (6), the national accreditation body should be able to adopt administrative measures including the suspension, withdrawal or reduction of the scope of accredi
+(12)
+To ensure efficient control and oversight of verifiers, it is appropriate to lay down rules for the exchange of information between the verifier and the national accreditation body that has accredited it, the national accreditation body and the competent authority of a Member State as well as between competent authorities and the Commission. Such information exchanges should be governed by the strictest guarantees of confidentiality and professional secrecy and be handled in accordance with applicable Union and national law.
+(13)
+Where a Member State does not establish a national accreditation body or does not carry out accreditation activities for the purpose of this Regulation, to ensure efficient oversight of verifiers, the competent authority should communicate any complaint it received concerning a verifier accredited by another national accreditation body to the latter, as well as information on the review of verification reports to other competent authorities and the Commission via the CBAM registry.
+(14)
+To ensure that the information on accredited verifiers in the CBAM registry is reliable and up-to-date, national accreditation bodies should notify the competent authority of any change to the accreditation of a verifier.
+(15)
+To support the review of verification reports, the national accreditation body should periodically exchange information with the competent authority on the activities planned for verifiers and the results of the control of these activities. The competent authority should share this information with the Commission and other competent authorities via the CBAM registry. In turn, the competent authority should also share with the national accreditation body any relevant information from the review of verification reports in order to support its accreditation activities related to the control and oversight of verifiers.
+(16)
+To ensure the smooth functioning of accreditation and verification, Member States and competent authorities should recognise the equivalence of the services of national accreditation bodies which have successfully undergone peer evaluation, or which have started a peer evaluation during which no irregularity was identified, and should accept the accreditation certificates and verification reports of verifiers accredited by those national accreditation bodies.
+(17)
+National accreditation bodies that demonstrate conformity with this Regulation and that have already successfully undergone peer evaluation before the date of application of this Regulation should be presumed to fulfil the relevant procedural requirements and should be exempt from the obligation to undergo a new peer evaluation in accordance with Regulation.
+(18)
+Where the outcome of the peer evaluation is negative, in order to mitigate any uncertainty about the mutual recognition of accreditation certificates or verification reports, the national accreditation body should be prevented from providing any accreditation services.
+(19)
+When personal data is processed in the context of the application of this Delegated Regulation, Regulation (EU) 2016/679 of the European Parliament and of the Council (7) is to apply.
+(20)
+As this Regulation lays down provisions on the accreditation of verifiers carrying out activities in relation to greenhouse gas emissions released from 1 January 2026, it should apply from that date.
+(21)
+The European Data Protection Supervisor was consulted in accordance with Article 42(1) of Regulation (EU) 2018/1725 of the European Parliament and of the Council (8) and delivered an opinion on 13 November 2025,
+HAS ADOPTED THIS REGULATION:
+CHAPTER I
+GENERAL PROVISIONS
+
+[마지막 조문]
+Article 26
+Entry into force and application
+This Regulation shall enter into force on the third day following that of its publication in the Official Journal of the European Union.
+This Regulation shall apply from 1 January 2026.
+This Regulation shall be binding in its entirety and directly applicable in all Member States.
+Done at Brussels, 20 November 2025.
+ELI: http://data.europa.eu/eli/reg_del/2025/2551/oj

@@ -1,0 +1,109 @@
+{
+ "source": "ec-newsletter",
+ "fetchedAt": "2026-11-10T21:21:04+09:00",
+ "since": "2025-01-01",
+ "report": {
+  "listPages": 2,
+  "issues": 16,
+  "stored": 16,
+  "failures": []
+ },
+ "entries": [
+  {
+   "date": "2026-10-15",
+   "title": "CBAM Newsletter #4: New webinar and explainer video series",
+   "url": "https://ec.europa.eu/newsroom/taxud/newsletter-archives/80397",
+   "textPath": "collected/archive/pages/ec-newsletter/80397.txt"
+  },
+  {
+   "date": "2026-08-31",
+   "title": "CBAM Newsletter #3: Latest guidance, resources and key milestones",
+   "url": "https://ec.europa.eu/newsroom/taxud/newsletter-archives/78600",
+   "textPath": "collected/archive/pages/ec-newsletter/78600.txt"
+  },
+  {
+   "date": "2026-08-06",
+   "title": "Webinar recording available | CBAM webinar on 16 July",
+   "url": "https://ec.europa.eu/newsroom/taxud/newsletter-archives/78264",
+   "textPath": "collected/archive/pages/ec-newsletter/78264.txt"
+  },
+  {
+   "date": "2026-07-20",
+   "title": "Thank you for attending, share your feedback | CBAM webinar on 16 July",
+   "url": "https://ec.europa.eu/newsroom/taxud/newsletter-archives/77795",
+   "textPath": "collected/archive/pages/ec-newsletter/77795.txt"
+  },
+  {
+   "date": "2026-07-16",
+   "title": "Your CBAM webinar starts soon – 9:30 CEST",
+   "url": "https://ec.europa.eu/newsroom/taxud/newsletter-archives/77662",
+   "textPath": "collected/archive/pages/ec-newsletter/77662.txt"
+  },
+  {
+   "date": "2026-07-14",
+   "title": "Your link to join the CBAM webinar – 16 July at 9:30 CEST",
+   "url": "https://ec.europa.eu/newsroom/taxud/newsletter-archives/77568",
+   "textPath": "collected/archive/pages/ec-newsletter/77568.txt"
+  },
+  {
+   "date": "2026-06-29",
+   "title": "Invitation – “Become a CBAM verifier” Webinar (16 July)",
+   "url": "https://ec.europa.eu/newsroom/taxud/newsletter-archives/76981",
+   "textPath": "collected/archive/pages/ec-newsletter/76981.txt"
+  },
+  {
+   "date": "2026-06-25",
+   "title": "CBAM Insider: The latest on CBAM",
+   "url": "https://ec.europa.eu/newsroom/taxud/newsletter-archives/76923",
+   "textPath": "collected/archive/pages/ec-newsletter/76923.txt"
+  },
+  {
+   "date": "2026-06-25",
+   "title": "CBAM Newsletter #2: The latest updates and become a CBAM Insider",
+   "url": "https://ec.europa.eu/newsroom/taxud/newsletter-archives/76921",
+   "textPath": "collected/archive/pages/ec-newsletter/76921.txt"
+  },
+  {
+   "date": "2026-05-08",
+   "title": "Thank you for attending, share your feedback - CBAM webinar on 7 May.",
+   "url": "https://ec.europa.eu/newsroom/taxud/newsletter-archives/75187",
+   "textPath": "collected/archive/pages/ec-newsletter/75187.txt"
+  },
+  {
+   "date": "2026-05-07",
+   "title": "Your link to join the CBAM webinar - 7 May, 13:30- 15:00 CEST",
+   "url": "https://ec.europa.eu/newsroom/taxud/newsletter-archives/75108",
+   "textPath": "collected/archive/pages/ec-newsletter/75108.txt"
+  },
+  {
+   "date": "2026-05-06",
+   "title": "Your link to join the CBAM webinar – 7 May, 13:30- 15:00 CEST",
+   "url": "https://ec.europa.eu/newsroom/taxud/newsletter-archives/75068",
+   "textPath": "collected/archive/pages/ec-newsletter/75068.txt"
+  },
+  {
+   "date": "2026-04-23",
+   "title": "Invitation to European Commission webinar on CBAM – 7 May 2026, 13:30 – 15:00 CEST",
+   "url": "https://ec.europa.eu/newsroom/taxud/newsletter-archives/74504",
+   "textPath": "collected/archive/pages/ec-newsletter/74504.txt"
+  },
+  {
+   "date": "2026-03-25",
+   "title": "Share your feedback – CBAM webinar of 19 March",
+   "url": "https://ec.europa.eu/newsroom/taxud/newsletter-archives/73561",
+   "textPath": "collected/archive/pages/ec-newsletter/73561.txt"
+  },
+  {
+   "date": "2026-03-18",
+   "title": "Your link to join the CBAM webinar – 19 March, 10:00-11:30 CET",
+   "url": "https://ec.europa.eu/newsroom/taxud/newsletter-archives/73253",
+   "textPath": "collected/archive/pages/ec-newsletter/73253.txt"
+  },
+  {
+   "date": "2026-03-11",
+   "title": "CBAM Newsletter #1: Invitation to first webinar & Subscribe to our newsletter",
+   "url": "https://ec.europa.eu/newsroom/taxud/newsletter-archives/73039",
+   "textPath": "collected/archive/pages/ec-newsletter/73039.txt"
+  }
+ ]
+}
