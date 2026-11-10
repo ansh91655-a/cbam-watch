@@ -44,7 +44,7 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 | `tools/publish` | 게시 데이터에 더하기(`add_items`, `add_digest`), 요약 내리기(`withdraw`), 주제 목록(`topics`), 사이트와 운영 화면의 폴더 만들기(`build_site`, `build_console`) |
 | `tools/notify` | 보고 파일에서 알릴 것을 골라 '운영 보고' 이슈에 적기(`reports`, `messages`, `github`, `run`) |
 | `tools/run` | 예약 실행이 쓰는 보조 도구: 후보 고르기, 검증 대기 고르기, 원문 발췌 자르기, 상태 점검, 하루와 한 주의 요약, 보고 파일 만들기(`write_report`) |
-| `tools/archive` | 지난 소식을 한꺼번에 채우는 프로그램. 손으로 돌린다: 출처별 모으기(`ecnews`, `oeil`, `hys`, `govuk`, `boards`)와 실행(`crawl`), 화면의 짜임 살펴보기(`dump`), 싣기 전 검사(`gate`), 싣기(`publish`) |
+| `tools/archive` | 지난 소식을 한꺼번에 채우는 프로그램. 손으로 돌린다: 출처별 모으기(`ecnews`, `newsletter`, `eurlex`, `oeil`, `hys`, `govuk`, `boards`)와 실행(`crawl`), 화면의 짜임 살펴보기(`dump`), 싣기 전 검사(`gate`), 싣기(`publish`) |
 | `tools/art` | 사이트의 그림을 만드는 프로그램. 손으로 돌린다: 점 지도(`dotmap`), 아이콘(`icons`), 라이선스 고지(`notices`), 공유 미리보기 그림의 원본(`social.html`) |
 
 프로그램은 저장소 맨 위에서 `python3 -m tools.<묶음>.<이름>` 꼴로 돌립니다. 표준 라이브러리만 쓰고, PDF 본문을 뽑을 때만 `pdftotext`가 필요합니다. 시험은 `python3 -m unittest discover -s tests -t .`로 돌립니다.
@@ -55,6 +55,7 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 
 1. 모으기. 워크플로 '소급 수집'(`.github/workflows/archive.yml`)을 손으로 돌립니다. `mode`를 `crawl`로 두고 `steps`에 출처 이름을 띄어 적으면 그 출처만 돕니다(비우면 모두). 결과는 `collected/archive/`에 쌓입니다. 출처마다 목록(`<출처>.json`), 재이용이 허용된 자료의 원문 글(`pages/`), 실행 결과(`report/`)가 있습니다.
    - `ec-news`: EU 집행위원회 조세·관세총국 소식. 사이트 지도에서 소식 주소를 얻어 본문에 CBAM이 나오는 것만 남깁니다.
+   - `ec-newsletter`: EU 집행위원회가 보내는 CBAM Newsletter의 보관함. `eur-lex`: CBAM 법령의 제목, 채택일, 관보 게재일, 시행과 적용에 관한 조문(EU 출판국의 자료 창구에서 받습니다).
    - `ep-oeil`: 유럽의회 입법 관측소의 절차 기록. `ec-hys`: 의견수렴 목록. `uk-govuk`: 영국 정부 CBAM 문서의 변경 기록.
    - `kr-boards`: 국내 기관 게시판의 제목, 날짜, 주소. 본문은 받아 두지 않습니다(산업통상부 보도자료만 부제와 첫 문단을 짧게 남깁니다).
 2. 쓰기. 모아 둔 글을 읽고 국문 초안을 만듭니다. 초안 파일은 저장소에 올리지 않습니다.

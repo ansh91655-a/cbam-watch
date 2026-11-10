@@ -1,7 +1,7 @@
 """소급 수집과 소급 게시 도구를 확인한다."""
 import unittest
 
-from tools.archive import boards, ecnews, gate, store
+from tools.archive import boards, ecnews, eurlex, gate, newsletter, store
 from tools.check import term_check
 
 TOPICS = {"law", "legis", "etc"}
@@ -94,6 +94,32 @@ class ReadersTest(unittest.TestCase):
     def test_compass_view_address(self):
         self.assertEqual(boards._compass_view("1"), "https://www.compass.or.kr/eucbam/data/view?idx=MQ%3D%3D")
         self.assertEqual(boards._compass_view(""), "")
+
+
+class LawAndNewsletterTest(unittest.TestCase):
+    def test_act_digest(self):
+        lines = ["L_1.xml", "Official Journal", "of the European Union", "EN", "L series", "2025/2621", "31.12.2025", "COMMISSION IMPLEMENTING REGULATION (EU) 2025/2621",
+                 "of 16 December 2025", "laying down rules as regards the establishment of default values", "Whereas:", "Article 1", "Default values are set out in Annex I.",
+                 "Article 2", "This Regulation shall enter into force on the third day following that of its publication.", "It shall apply from 1 January 2026.",
+                 "Done at Brussels, 16 December 2025.", "For the Commission", "ANNEX I", "a very long table", "ELI: http://data.europa.eu/eli/reg_impl/2025/2621/oj"]
+        kept, published, adopted, name, subject = eurlex.digest(lines)
+        self.assertEqual((published, adopted), ("2025-12-31", "2025-12-16"))
+        self.assertEqual(name, "COMMISSION IMPLEMENTING REGULATION (EU) 2025/2621")
+        self.assertTrue(subject.startswith("laying down rules"))
+        self.assertIn("It shall apply from 1 January 2026.", kept)
+        self.assertEqual(kept[-1], "ELI: http://data.europa.eu/eli/reg_impl/2025/2621/oj")
+        self.assertEqual(kept[kept.index("[마지막 조문]") + 1], "Article 2")
+
+    def test_newsletter_issues(self):
+        html = ('<html><body><table><tr><td>15/10/2026</td><td><a href="/newsroom/taxud/newsletter-archives/80397">CBAM Newsletter #4: New webinar</a></td></tr>'
+                '<tr><td>31/08/2026</td><td><a href="/newsroom/taxud/newsletter-archives/78600">CBAM Newsletter #3: Latest guidance</a></td></tr></table>'
+                '<a href="/newsroom/taxud/newsletter-archives/view">Archives</a></body></html>')
+        found = newsletter.issues_of(html, "https://ec.europa.eu/newsroom/taxud/newsletter-archives/view/service/9510?page=1")
+        self.assertEqual([(issue["date"], issue["url"].rsplit("/", 1)[-1]) for issue in found], [("2026-10-15", "80397"), ("2026-08-31", "78600")])
+
+    def test_newsletter_body_drops_the_site_menu(self):
+        lines = ["TAXUD - Newsletter", "Menu", "Search", "CBAM Newsletter #4", "Dear CBAM Insiders", "Menu", "New webinar available"]
+        self.assertEqual(newsletter.body_of(lines, "CBAM Newsletter #4"), ["CBAM Newsletter #4", "Dear CBAM Insiders", "New webinar available"])
 
 
 class StoreTest(unittest.TestCase):
