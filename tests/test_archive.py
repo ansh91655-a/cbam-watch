@@ -82,8 +82,9 @@ class ReadersTest(unittest.TestCase):
         self.assertEqual(ecnews.NEWS_LOC.findall(xml), [("https://taxation-customs.ec.europa.eu/news/first-cbam-certificate-price-now-available-2026-04-07_en", "2026-04-07")])
 
     def test_lead_is_subtitles_and_first_paragraph(self):
-        lines = ["설명회 개최", "담당부서", "설명회 개최", "- 부제 하나", "- 부제 둘", "첫 문단입니다.", "둘째 문단입니다.", "목록"]
-        self.assertEqual(boards.lead_of(lines, "설명회 개최"), "- 부제 하나\n- 부제 둘\n첫 문단입니다.")
+        first = "정부는 10월 23일 오후 2시에 서울에서 업계 설명회를 열었다고 밝혔다."
+        lines = ["설명회 개최", "담당부서", "설명회 개최", "- 부제 하나", "- 부제 둘", first, "둘째 문단은 싣지 않는다. 길이가 충분히 긴 문장이어도 마찬가지다.", "목록"]
+        self.assertEqual(boards.lead_of(lines, "설명회 개최"), "- 부제 하나\n- 부제 둘\n" + first)
         self.assertEqual(boards.lead_of(lines, "없는 제목"), "")
         # 제목이 본문에 다시 나오지 않는 글: 담당자와 첨부파일 줄을 건너뛰고 본문의 첫 문단을 찾는다
         lines = ["책자 발간", "담당자홍길동", "담당부서통상과", "연락처044-000-0000", "등록일2026-03-30", "조회수1,234", "첨부파일", "책자.pdf [1 MB] 바로보기", "81",
