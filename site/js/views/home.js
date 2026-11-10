@@ -40,8 +40,8 @@ function nextFact(events) {
   ]);
 }
 
-function newsFact(items) {
-  const fresh = items.filter((item) => (daysSince(item.published || item.listed) ?? 999) <= NEW_DAYS).length;
+function newsFact(items, dated) {
+  const fresh = dated.filter((item) => (daysSince(item.published || item.listed) ?? 999) <= NEW_DAYS).length;
   return h("a", { class: "fact", href: "#news" }, [
     h("span", { class: "fact-label" }, [icon("news", 16), h("span", { text: `최근 ${NEW_DAYS}일 소식` })]),
     h("span", { class: "fact-value" }, [h("span", { text: fresh }), h("small", { text: "건" })]),
@@ -49,7 +49,7 @@ function newsFact(items) {
   ]);
 }
 
-function hero(book, events, items) {
+function hero(book, events, items, dated) {
   return h("section", { class: "hero bleed", "aria-label": "소개와 지금 알아 둘 것" }, h("div", { class: "hero-inner" }, [
     heroMap(),
     h("div", { class: "hero-copy" }, [
@@ -65,7 +65,7 @@ function hero(book, events, items) {
       h("span", {}, [h("i", {}), "EU 회원국"]),
       h("span", {}, [h("i", { class: "kr" }), "한국. 선은 EU의 주요 항구로 가는 길을 나타낸 그림입니다."]),
     ]),
-    h("div", { class: "hero-stats" }, [priceFact(book), nextFact(events), newsFact(items)]),
+    h("div", { class: "hero-stats" }, [priceFact(book), nextFact(events), newsFact(items, dated)]),
   ]));
 }
 
@@ -186,16 +186,18 @@ function digest(digests) {
 
 export async function render(main) {
   const [all, events, digests, book, documents] = await Promise.all([data.items(), data.events(), data.digests(), data.prices(), data.documents()]);
+  // 처음에 한꺼번에 채운 소식 가운데 날짜가 없는 것(제도 안내)은 실린 날이 날짜를 대신하므로, 최근 소식으로 세지 않는다.
   const items = data.newestFirst(all).filter((item) => !item.withdrawn);
+  const dated = items.filter((item) => item.published || !item.backfill);
   const isImportant = (item) => item.importance === "높음" && (daysSince(item.published || item.listed) ?? 999) <= IMPORTANT_DAYS;
   const important = items.find(isImportant);
-  const lead = important || items[0];
+  const lead = important || dated[0] || items[0];
   const others = important ? items.filter((item) => isImportant(item) && item.id !== lead.id).slice(0, MORE_IMPORTANT) : [];
   const shown = new Set([lead, ...others].filter(Boolean).map((item) => item.id));
-  const recent = items.filter((item) => !shown.has(item.id)).slice(0, RECENT_COUNT);
+  const recent = dated.filter((item) => !shown.has(item.id)).slice(0, RECENT_COUNT);
 
   fill(main,
-    hero(book, events, items),
+    hero(book, events, items, dated),
     h("div", { class: "bento" }, [lead ? feature(lead, Boolean(important), others) : null, schedule(events), pricePanel(book), topicsPanel(items)]),
     h("section", { class: "stack", "aria-labelledby": "h-recent" }, [
       h("div", { class: "sec-head" }, [h("h2", { id: "h-recent", text: "최근 소식" }), h("a", { href: "#news", text: `소식 ${items.length}건 모두 보기` })]),

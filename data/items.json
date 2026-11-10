@@ -1,5 +1,5 @@
 {
- "builtAt": "2026-11-10T17:35:12+09:00",
+ "builtAt": "2026-11-10T21:03:30+09:00",
  "note": "seed-로 시작하는 항목은 2026-11-10에 원문을 두 번 읽고 자동 검증까지 통과시킨 초기 등록분이다.",
  "items": [
   {
@@ -24,7 +24,8 @@
     "period": "2026년 3분기",
     "value": "82.32",
     "unit": "유로"
-   }
+   },
+   "backfill": true
   },
   {
    "id": "seed-price-2026q2",
@@ -48,7 +49,8 @@
     "period": "2026년 2분기",
     "value": "75.28",
     "unit": "유로"
-   }
+   },
+   "backfill": true
   },
   {
    "id": "seed-price-2026q1",
@@ -72,7 +74,8 @@
     "period": "2026년 1분기",
     "value": "75.36",
     "unit": "유로"
-   }
+   },
+   "backfill": true
   },
   {
    "id": "seed-price-2026q4-date",
@@ -92,7 +95,8 @@
    "sourceName": "EC Price of CBAM Certificates",
    "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en",
    "checkedAt": "2026-11-10T15:05:00+09:00",
-   "authoring": "자동"
+   "authoring": "자동",
+   "backfill": true
   },
   {
    "id": "seed-news-electricity-guidance",
@@ -112,27 +116,8 @@
    "sourceName": "EC CBAM Communication and News",
    "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_en",
    "checkedAt": "2026-11-10T15:05:00+09:00",
-   "authoring": "자동"
-  },
-  {
-   "id": "seed-guidance-verification",
-   "published": "2026-08-24",
-   "title": "검증기관과 국가인정기구를 위한 CBAM 검증·인정 가이던스",
-   "summary": "검증기관과 국가인정기구를 위한 CBAM 검증·인정 가이던스의 문서 날짜는 2026년 8월 24일입니다.",
-   "impact": "",
-   "kind": "가이던스",
-   "topic": "verify",
-   "importance": "보통",
-   "topics": [
-    "검증",
-    "인정"
-   ],
-   "listed": "2026-11-10",
-   "sourceCode": "ec-guidance",
-   "sourceName": "EC CBAM Legislation and Guidance",
-   "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-legislation-and-guidance_en",
-   "checkedAt": "2026-11-10T15:05:00+09:00",
-   "authoring": "자동"
+   "authoring": "자동",
+   "backfill": true
   },
   {
    "id": "seed-acts-numbers",
@@ -151,7 +136,8 @@
    "sourceName": "EC CBAM Legislation and Guidance",
    "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-legislation-and-guidance_en",
    "checkedAt": "2026-11-10T15:05:00+09:00",
-   "authoring": "자동"
+   "authoring": "자동",
+   "backfill": true
   },
   {
    "id": "seed-accreditation-state",
@@ -171,7 +157,8 @@
    "sourceName": "EC Verification of CBAM Emissions",
    "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_en",
    "checkedAt": "2026-11-10T15:05:00+09:00",
-   "authoring": "자동"
+   "authoring": "자동",
+   "backfill": true
   },
   {
    "id": "seed-verification-duty",
@@ -191,7 +178,8 @@
    "sourceName": "EC Verification of CBAM Emissions",
    "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_en",
    "checkedAt": "2026-11-10T15:05:00+09:00",
-   "authoring": "자동"
+   "authoring": "자동",
+   "backfill": true
   },
   {
    "id": "seed-definitive-period",
@@ -210,7 +198,8 @@
    "sourceName": "European Commission CBAM",
    "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en",
    "checkedAt": "2026-11-10T15:05:00+09:00",
-   "authoring": "자동"
+   "authoring": "자동",
+   "backfill": true
   },
   {
    "id": "seed-council-position",
@@ -229,7 +218,8 @@
    "sourceName": "Council of the EU CBAM",
    "link": "https://www.consilium.europa.eu/en/policies/carbon-border-adjustment-mechanism/",
    "checkedAt": "2026-11-10T15:05:00+09:00",
-   "authoring": "자동"
+   "authoring": "자동",
+   "backfill": true
   },
   {
    "id": "seed-ie-threshold",
@@ -248,7 +238,8 @@
    "sourceName": "EPA Ireland",
    "link": "https://www.epa.ie/our-services/licensing/climate-change/eu-carbon-border-adjustment-mechanism/",
    "checkedAt": "2026-11-10T15:05:00+09:00",
-   "authoring": "자동"
+   "authoring": "자동",
+   "backfill": true
   },
   {
    "id": "seed-uk-cbam",
@@ -267,7 +258,8 @@
    "sourceName": "UK HMRC CBAM 자료 모음",
    "link": "https://www.gov.uk/government/collections/carbon-border-adjustment-mechanism",
    "checkedAt": "2026-11-10T15:05:00+09:00",
-   "authoring": "자동"
+   "authoring": "자동",
+   "backfill": true
   },
   {
    "id": "20261110-ec-news-1a22d2",
@@ -284,7 +276,7 @@
    ],
    "sourceCode": "ec-news",
    "sourceName": "EC CBAM Communication and News",
-   "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_en",
+   "link": "https://taxation-customs.ec.europa.eu/news/cbam-de-minimis-threshold-assessment-2026-09-30_en",
    "listed": "2026-11-10",
    "checkedAt": "2026-11-10T17:12:05+09:00",
    "authoring": "자동"
@@ -325,7 +317,7 @@
    ],
    "sourceCode": "ec-news",
    "sourceName": "EC CBAM Communication and News",
-   "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_en",
+   "link": "https://taxation-customs.ec.europa.eu/news/new-resources-available-cbam-verifiers-2026-09-28_en",
    "listed": "2026-11-10",
    "checkedAt": "2026-11-10T17:12:05+09:00",
    "authoring": "자동"
@@ -364,11 +356,3481 @@
    ],
    "sourceCode": "ec-news",
    "sourceName": "EC CBAM Communication and News",
-   "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_en",
+   "link": "https://taxation-customs.ec.europa.eu/news/webinar-follow-cbam-policy-practice-emissions-calculation-declarations-and-certificates-2026-09-30_en",
    "excerpt": "30Sep2026\nWebinar follow-up: “CBAM from policy to practice – emissions calculation, declarations, and certificates”\nThe European Commission held the fourth in a series of webinars on the implementation of the EU’s Carbon Border Adjustment Mechanism (CBAM). The webinar covers the policy context and practical steps for the first compliance deadline of 30 September 2027, when the first CBAM declarations and corresponding certificates are due.",
    "listed": "2026-11-10",
    "checkedAt": "2026-11-10T17:34:42+09:00",
    "authoring": "자동"
+  },
+  {
+   "id": "20261106-ec-news-139ae7",
+   "published": "2026-11-06",
+   "title": "수입 통합통관(CCI)에 따른 전력 수입 가이던스 안내",
+   "summary": "EU 집행위원회 조세총국은 2026년 11월 6일에 수입 통합통관(Centralised Clearance for Import, CCI)에 따른 전력 수입에 관한 새 가이던스를 알렸습니다. 가이던스는 회원국마다 달랐던 관행을 다루고 표준 절차를 제시하며, 신고인 기록 기재(EIDR)와 CCI의 승인·신고·감독 조치, 전력 수입에 대한 CBAM 요건과 준수 의무를 담고 있습니다. CBAM 부분은 승인된 CBAM 신고인 지위의 확인, CBAM 계정 번호의 신고와 검증, 송전 용량이 명시적으로 배정된 경우에 신고할 수량, 세관 통과운송과 CBAM상 경유 전력의 구분을 설명합니다.",
+   "kind": "가이던스",
+   "topic": "declare",
+   "importance": "높음",
+   "topics": [
+    "전력",
+    "가이던스",
+    "통관"
+   ],
+   "sourceCode": "ec-news",
+   "sourceName": "EC CBAM Communication and News",
+   "link": "https://taxation-customs.ec.europa.eu/news/new-guidance-electricity-imports-under-centralised-clearance-import-cci-2026-11-06_en",
+   "impact": "",
+   "excerpt": "New guidance on electricity imports under Centralised Clearance for Import (CCI)\nNew guidance supports a harmonised EU approach to electricity imports under the Centralised Clearance for Import (CCI) framework.\n6 November 2026\nThis Guidance addresses the different practices previously applied by Member States and outlines standardised procedures for these imports. It covers:\nEntry in the Declarant’s Records (EIDR) and CCI authorisation, declaration and supervision measures;\nCarbon Border Adjustment Mechanism (CBAM) requirements and compliance obligations for electricity imports.\nThe guidance covers CBAM compliance obligations for electricity generated in, and imported from, third countries. It describes checks on authorised CBAM declarant status and how the CBAM account number is declared and validated.\nIt also addresses the quantities to be declared where electricity transmission capacity is allocated explicitly, and the distinction between customs transit and electricity in transit for CBAM purposes.",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260824-ec-news-b4b73d",
+   "published": "2026-08-24",
+   "title": "검증기관과 국가인정기구를 위한 CBAM 검증·인정 가이던스 공개",
+   "summary": "EU 집행위원회는 2026년 8월 24일에 검증기관과 국가인정기구(NAB)를 위한 CBAM 검증·인정 가이던스를 공개했습니다. 가이던스는 2026년 1월 1일부터 수입되는 CBAM 제품을 EU 밖에서 생산하는 사업장의 배출량 보고서를 검증하려는 검증기관에 초점을 두고 CBAM 규정의 요건을 설명합니다. 검증기관은 CBAM 인정을 받은 뒤 두 달 안에, 다만 2026년 9월 1일 이후에 CBAM 등록부에 등록해야 하며, 2027년 1월부터 CBAM 등록부에서 검증보고서를 발행합니다.",
+   "impact": "검증: 검증기관은 CBAM 인정을 받은 뒤 두 달 안에(2026년 9월 1일 이후) CBAM 등록부에 등록해야 합니다.",
+   "kind": "가이던스",
+   "topic": "verify",
+   "importance": "높음",
+   "topics": [
+    "검증",
+    "인정",
+    "CBAM 등록부"
+   ],
+   "sourceCode": "ec-news",
+   "sourceName": "EC CBAM Communication and News",
+   "link": "https://taxation-customs.ec.europa.eu/news/european-commission-publishes-guidance-cbam-verifiers-and-accreditation-bodies-2026-08-24_en",
+   "excerpt": "The European Commission publishes guidance for CBAM verifiers and accreditation bodies\nOn 24 August 2026, the European Commission published new Guidance on CBAM verification and accreditation for verifiers and National Accreditation Bodies.\n24 August 2026\nThe guidance is intended to explain the requirements of the CBAM Regulation in clear language, with a particular focus on verifiers intending to verify emissions reports of operators of installations producing CBAM goods outside the EU that are imported from 1 January 2026.\nCBAM verifiers must register in the CBAM Registry within two months of receiving their CBAM accreditation, but not before 1 September 2026.\nStarting from January 2027, they will issue verification reports in the CBAM Registry, thus allowing importers to use actual verified emissions to complete their CBAM declaration.",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260814-ec-news-694c66",
+   "published": "2026-08-14",
+   "title": "확정기간 CBAM 이행을 위한 가이던스 10종 공개",
+   "summary": "EU 집행위원회는 2026년 8월 14일에 확정기간의 CBAM 이행을 돕는 가이던스 10종을 공개했습니다. 일반 가이던스 4종(CBAM 개념 소개, 비EU 사업자를 위한 요약 안내, 내재배출량 산정, 무상할당 조정 산정)과 품목별 가이던스 6종(시멘트, 수소, 비료, 철강, 알루미늄, 전력)으로 이루어져 있습니다. EU 밖에서 CBAM 제품을 생산하는 사업장의 사업자를 주된 대상으로 하고, 승인된 CBAM 신고인과 검증기관도 대상에 듭니다.",
+   "impact": "산정: 가이던스는 전환기간과 달라진 내재배출량 산정, 기본값 사용법, 무상할당 조정 적용법을 설명합니다.",
+   "kind": "가이던스",
+   "topic": "emissions",
+   "importance": "높음",
+   "topics": [
+    "가이던스",
+    "내재배출량",
+    "무상할당 조정"
+   ],
+   "sourceCode": "ec-news",
+   "sourceName": "EC CBAM Communication and News",
+   "link": "https://taxation-customs.ec.europa.eu/news/european-commission-publishes-series-guidance-documents-support-cbam-implementation-definitive-2026-08-14_en",
+   "excerpt": "The European Commission publishes a series of guidance documents to support CBAM implementation in the definitive period\nOn 14 August 2026, the European Commission published a series of ten guidance documents to help non-EU operators with the implementation of the Carbon Border Adjustment Mechanism (CBAM) during its definitive period.\n14 August 2026\nThe series is made up of four general guidance documents and six sector-specific guides:\nGuidance documents No. 5a–5f: Sector-specific guidance: dedicated overviews of production processes, value chains and monitoring and reporting considerations for each CBAM sector (cement, hydrogen, fertilisers, iron and steel, aluminium, electricity), each supplemented with worked examples.",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260731-ec-news-acf37c",
+   "published": "2026-07-31",
+   "title": "CBAM 이행 세 번째 웨비나 후속 소식: 검증기관의 인정과 검증",
+   "summary": "EU 집행위원회 조세총국은 2026년 7월 16일에 CBAM 이행에 관한 연속 웨비나의 세 번째 회차 'Become a CBAM verifier: all about accreditation and verification'를 열었고, 2026년 7월 31일에 후속 소식을 올렸습니다. 웨비나는 인정 절차와 검증 규칙을 다뤘고, 기능 단위(functional unit), 전구물질의 내재배출량 산정, 철강·알루미늄 제품의 새 시스템 경계 등 CBAM 방법론의 최근 변경을 요약했습니다. 원문은 2026년 9월 1일부터 검증기관이 할 일로, EU Login 계정을 만들고 CBAM 등록부에 가입해 국가관할당국(NCA)에 등록을 신청하는 것을 들었습니다.",
+   "kind": "행사",
+   "topic": "events",
+   "importance": "보통",
+   "topics": [
+    "웨비나",
+    "검증",
+    "인정"
+   ],
+   "sourceCode": "ec-news",
+   "sourceName": "EC CBAM Communication and News",
+   "link": "https://taxation-customs.ec.europa.eu/news/cbam-webinar-follow-become-cbam-verifier-all-about-accreditation-and-verification-2026-07-31_en",
+   "impact": "",
+   "excerpt": "CBAM webinar follow up: “Become a CBAM verifier: all about accreditation and verification”\nOn Thursday 16 July 2026, DG TAXUD hosted the third in a series of webinars on the implementation of the EU’s Carbon Border Adjustment Mechanism (CBAM).\n31 July 2026\nUnder CBAM, only verifiers accredited by EU National Accreditation Bodies (NABs) can verify the total embedded emissions declared in an importer’s CBAM declaration. To support verification bodies both within and outside the EU, this webinar covered CBAM accreditation and verification processes.\nThe webinar closed by summarising recent updates to the CBAM methodology: the functional unit, as well as new rules to set up multifunctional production processes and to calculate embedded emissions of precursors, as well as to define the new system boundaries for iron, steel, and aluminium products.\nImportant action for verifiers starting 1 September 2026\nCreate an EU Login Account and join the CBAM Registry to apply for registration to a National Competent Authority (NCA).",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260612-ec-news-607e3e",
+   "published": "2026-06-12",
+   "title": "EU 집행위원회, CBAM 강화에 관한 EU 이사회 합의 환영",
+   "summary": "EU 집행위원회는 2026년 6월 12일에 CBAM을 특정 하류제품으로 확대하고 우회방지 장치를 강화하는 데 대한 EU 이사회의 합의를 환영한다고 밝혔습니다. EU 집행위원회가 2025년 12월에 낸 개정안은 CBAM의 적용 범위를 일부 하류제품으로 넓히고, 우회방지 조치를 강화하며, 전력에 적용되는 규칙을 조정하는 내용입니다. 원문은 유럽의회가 9월로 예상되는 본회의 표결에서 입장을 채택한 뒤 3자 협상에서 논의가 이어진다고 설명합니다.",
+   "kind": "입법",
+   "topic": "legis",
+   "importance": "보통",
+   "topics": [
+    "하류제품",
+    "우회방지",
+    "EU 이사회"
+   ],
+   "sourceCode": "ec-news",
+   "sourceName": "EC CBAM Communication and News",
+   "link": "https://taxation-customs.ec.europa.eu/news/commission-welcomes-council-agreement-strengthening-cbam-2026-06-12_en",
+   "impact": "",
+   "excerpt": "Commission welcomes Council agreement on strengthening CBAM\nThe European Commission welcomes the Council agreement to extend the Carbon Border Adjustment Mechanism (CBAM) to specific downstream goods and reinforce existing anti-circumvention safeguards.\n12 June 2026\nBuilding on the success of the CBAM simplification, the Commission tabled a proposal in December 2025 to strengthen the mechanism’s effectiveness. The proposal extends the scope of CBAM to certain downstream products, strengthens anti-circumvention measures, and adapts rules applicable to electricity, alongside targeted technical changes.\nFurther substantial discussions will take place in the context of the trialogue, following the Parliament’s examination and formal adoption of its position in a plenary vote expected in September.",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260611-ec-news-edfbe2",
+   "published": "2026-06-11",
+   "title": "CBAM 이행 두 번째 웨비나 후속 소식: 제3국 생산자를 위한 방법론",
+   "summary": "EU 집행위원회 조세총국은 2026년 5월 7일에 CBAM 이행에 관한 연속 웨비나의 두 번째 회차 'How to make your decarbonisation efforts pay off'를 열었고, 2026년 6월 11일에 후속 소식을 올렸습니다. 웨비나는 제3국 생산자가 CBAM 방법론을 이해하도록 돕는 자리로, 내재배출량 산정에 영향을 주는 기능 단위(functional unit), 전구물질의 내재배출량 산정 규칙, 철강·알루미늄 제품의 새 시스템 경계를 소개했습니다. 검증에 쓰일 모니터링 계획과 사업자 배출량 보고서의 최소 요소도 다뤘습니다.",
+   "kind": "행사",
+   "topic": "events",
+   "importance": "보통",
+   "topics": [
+    "웨비나",
+    "내재배출량",
+    "모니터링 계획"
+   ],
+   "sourceCode": "ec-news",
+   "sourceName": "EC CBAM Communication and News",
+   "link": "https://taxation-customs.ec.europa.eu/news/cbam-webinar-follow-how-make-your-decarbonisation-efforts-pay-2026-06-11_en",
+   "impact": "",
+   "excerpt": "CBAM webinar follow up: “How to make your decarbonisation efforts pay off”\nOn Thursday 7 May 2026, DG TAXUD hosted the second in a series of webinars on the implementation of the EU’s Carbon Border Adjustment Mechanism (CBAM).\n11 June 2026\nThe webinar aimed to help producers in a third country understand the CBAM methodology and turn their decarbonisation efforts into a strategic business advantage.\nAmong the key updates for the CBAM definitive period (which began on 1 January 2026), the DG TAXUD team introduced the functional unit — a foundational term that affects the calculation of embedded emissions in CBAM goods.\nThe webinar presented new rules to set up multifunctional production processes and to calculate embedded emissions of precursors, as well as to define the new system boundaries for iron, steel, and aluminium products.\nIt also covered the minimum elements of the Monitoring Plan and the operator’s emissions report that will be used for verification.",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260608-ec-news-c855b2",
+   "published": "2026-06-08",
+   "title": "CBAM 간접배출량에 관한 기술 연구 보고서 공개",
+   "summary": "EU 집행위원회 조세총국은 2026년 6월 8일에 CBAM의 간접배출량에 관한 기술 연구(Technical Study on Indirect Emissions in the CBAM) 보고서를 공개했습니다. 연구는 간접배출량의 기본 배출계수를 어떻게 정할지, 신고인이 어떤 조건에서 실제 간접배출량을 주장할 수 있게 할지(직접적인 기술적 연결, 전력구매계약(PPA), 검증 요건 포함), 간접배출량의 적용을 다른 CBAM 품목으로 넓힐지와 그 방법이라는 세 가지 질문을 다룹니다.",
+   "kind": "소식",
+   "topic": "emissions",
+   "importance": "보통",
+   "topics": [
+    "간접배출량",
+    "연구 보고서"
+   ],
+   "sourceCode": "ec-news",
+   "sourceName": "EC CBAM Communication and News",
+   "link": "https://taxation-customs.ec.europa.eu/news/technical-study-indirect-emissions-cbam-2026-06-08_en",
+   "impact": "",
+   "excerpt": "Technical Study on Indirect Emissions in the CBAM\n8 June 2026\nThe study provides policy analysis to support the implementation and potential evolution of the Carbon Border Adjustment Mechanism (CBAM) with respect to indirect emissions embedded in imported goods from third countries. It addresses three questions:\nhow to determine operational default emission factors for indirect emissions;\nunder what conditions declarants should be allowed to claim actual indirect emissions, including requirements for direct technical links, power purchase agreements (PPAs), and verification; and\nwhether and how indirect emissions coverage could be extended to additional CBAM sectors.",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260513-ec-news-ce82ca",
+   "published": "2026-05-13",
+   "title": "제3국에서 지불한 탄소가격에 관한 근거 수집 요약 보고서 공개",
+   "summary": "EU 집행위원회 조세총국은 2026년 5월 13일에 CBAM 확정기간의 제3국 탄소가격 이행법에 관한 근거 수집(Call for Evidence)의 요약 보고서(Synopsis report)를 게시했습니다. EU 집행위원회는 2025년 8월 28일에 확정기간의 이행법 준비를 위해 근거 수집 세 건을 시작했고, 이 건은 제3국에서 지불한 탄소가격을 CBAM 부담의 차감으로 환산하는 일의 기술적·행정적 측면(지불 증빙, 환율 적용, 제3자 확인자의 자격 포함)에 관한 의견을 모으는 것이었습니다. 2026년 5월에 EU 집행위원회는 이 이행법을 4주 동안 공개 의견수렴에 부쳤습니다.",
+   "kind": "입법",
+   "topic": "price",
+   "importance": "보통",
+   "topics": [
+    "탄소가격",
+    "제3국",
+    "의견수렴"
+   ],
+   "sourceCode": "ec-news",
+   "sourceName": "EC CBAM Communication and News",
+   "link": "https://taxation-customs.ec.europa.eu/news/carbon-price-paid-third-countries-2026-05-13_en",
+   "impact": "",
+   "excerpt": "Carbon price paid in Third Countries\n13 May 2026\nOn 28 August 2025, the European Commission launched three Calls for Evidence (CfEs) to support the preparation of the implementing acts for the definitive phase of the Carbon Border Adjustment Mechanism (CBAM). This specific consultation aimed at gathering stakeholders' input on the technical and administrative aspects related to the conversion of foreign carbon costs into a reduction of the CBAM liability, including proof of payment, currency conversion, and the eligibility of third-party certifiers.\nSynopsis report on Call for Evidence on the implementing act on the carbon price paid in third countries for the definitive phase of the CBAM\nIn May 2026, the Commission published the implementing act for a 4-week public feedback.",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260407-ec-news-057b2d",
+   "published": "2026-04-07",
+   "title": "첫 CBAM 인증서 가격(2026년 1분기) 공개",
+   "summary": "EU 집행위원회는 2026년 4월 7일에 2026년 1분기의 첫 CBAM 인증서 가격을 CBAM 웹사이트의 전용 화면에 공개했습니다. 2026년에는 분기마다 가격을 정해 모두 네 개의 가격이 나오며, 각 가격은 해당 분기에 EU로 수입된 CBAM 제품의 배출량에만 적용됩니다. 분기 가격은 EU 배출권거래제 경매 낙찰가격의 평균으로 산정하고, 2027년부터는 주마다 가격을 산정해 공개합니다.",
+   "impact": "인증서 비용: 승인된 CBAM 신고인은 2026년 수입분에 대한 CBAM 인증서를 2027년 2월부터 구매합니다.",
+   "kind": "가격",
+   "topic": "price",
+   "importance": "높음",
+   "topics": [
+    "CBAM 인증서 가격"
+   ],
+   "sourceCode": "ec-news",
+   "sourceName": "EC CBAM Communication and News",
+   "link": "https://taxation-customs.ec.europa.eu/news/first-cbam-certificate-price-now-available-2026-04-07_en",
+   "excerpt": "First CBAM certificate price is now available\nThe European Commission has published the first price of CBAM certificates for 2026 Q1 on its new dedicated page on the CBAM website, marking an important milestone in the implementation of CBAM.\n7 April 2026\nFor 2026, CBAM certificate prices will be determined on a quarterly basis. Therefore, there will be four prices in 2026 (one per quarter). Each price will only apply to emissions in CBAM goods imported into the Union during the quarter it relates to. Each quarterly price will be calculated by the Commission as the average of EU Emissions Trading System (EU ETS) auction clearing prices, ensuring a fair and consistent alignment with the EU carbon market.\nFrom 2027 onwards, the Commission will calculate and publish the price of CBAM certificates on a weekly basis.",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260326-ec-news-87534e",
+   "published": "2026-03-26",
+   "title": "CBAM 이행 첫 웨비나 후속 소식: 확정기간에 달라지는 점",
+   "summary": "EU 집행위원회 조세총국은 2026년 3월 19일에 CBAM 이행에 관한 연속 웨비나의 첫 회차 'What changes for me?'를 열었고, 2026년 3월 26일에 후속 소식을 올렸습니다. 웨비나는 확정기간의 실무상 의미와 주요 의무, 앞으로의 일정을 CBAM 수입자와 신고인, 제3국 수출자, 검증기관이 되려는 기관에 안내했습니다. CBAM 제품의 수입자나 그 간접 세관 대리인은 첫 수입 전에, 늦어도 2026년 3월 31일까지 CBAM 등록부에서 CBAM 신청서를 제출해야 한다는 기한도 알렸습니다.",
+   "impact": "일정: 수입자나 간접 세관 대리인은 첫 수입 전에, 늦어도 2026년 3월 31일까지 CBAM 등록부에서 CBAM 신청서를 제출해야 합니다.",
+   "kind": "행사",
+   "topic": "events",
+   "importance": "보통",
+   "topics": [
+    "웨비나",
+    "확정기간",
+    "CBAM 등록부"
+   ],
+   "sourceCode": "ec-news",
+   "sourceName": "EC CBAM Communication and News",
+   "link": "https://taxation-customs.ec.europa.eu/news/cbam-webinar-follow-what-changes-me-2026-03-26_en",
+   "excerpt": "CBAM webinar follow-up: “What changes for me?”\nOn Thursday 19th March 2026, DG TAXUD hosted the first in a series of webinars on the implementation of the EU’s Carbon Border Adjustment Mechanism (CBAM).\n26 March 2026\nThe webinar clarified the practical implications of the definitive CBAM period and guided stakeholders (CBAM importers/declarants, exporters in a third country, and potential verifiers) through key obligations and upcoming milestones.\nImporters of CBAM goods or their indirect customs representatives must submit their CBAM application in the CBAM Registry before their first import into the EU and by 31 March 2026 at the latest.",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260306-ec-news-a06ff5",
+   "published": "2026-03-06",
+   "title": "첫 CBAM 인증서 가격, 2026년 4월 7일 게시 예정",
+   "summary": "EU 집행위원회는 2026년 3월 6일에 CBAM 인증서의 첫 분기 가격을 2026년 4월 7일에 게시할 예정이라고 알렸습니다. 2026년의 분기 가격은 EU 배출권 경매 낙찰가격의 분기 평균으로 산정하며, 한 분기의 가격은 다음 분기의 첫 주에 산정해 그다음 주의 첫 근무일에 게시합니다. 게시일은 2026년 4월 7일, 2026년 7월 6일, 2026년 10월 5일, 2027년 1월 4일입니다.",
+   "impact": "인증서 비용: CBAM 제품의 수입자는 2026년 수입분에 대한 CBAM 인증서를 2027년 2월부터 구매해야 합니다.",
+   "kind": "가격",
+   "topic": "price",
+   "importance": "보통",
+   "topics": [
+    "CBAM 인증서 가격",
+    "일정"
+   ],
+   "sourceCode": "ec-news",
+   "sourceName": "EC CBAM Communication and News",
+   "link": "https://taxation-customs.ec.europa.eu/news/first-cbam-certificate-price-be-published-7-april-2026-03-06_en",
+   "excerpt": "First CBAM Certificate price to be published on 7 April\nThe implementation of the EU’s Carbon Border Adjustment Mechanism (CBAM) reaches a new milestone: the first quarterly price of CBAM certificates will soon be published by the European Commission.\n6 March 2026\nThe price of a quarter will be calculated during the first calendar week of the following quarter, and published on the first working day of the calendar week following the calculation week. The first publication is expected on Tuesday, 7 April. For transparency and operational purposes, publication will take place on the European Commission’s CBAM webpage.\n7 April 2026\n6 July 2026\n5 October 2026\n4 January 2027",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260302-ec-news-8d7942",
+   "published": "2026-03-02",
+   "title": "CBAM 인증서 판매·환매를 위한 공통 중앙 플랫폼(CCP) 입찰 공고",
+   "summary": "EU 집행위원회는 2026년 3월 2일에 CBAM 인증서의 판매와 환매를 위한 공통 중앙 플랫폼(CCP)을 구축하고 운영할 서비스의 입찰을 공고했다고 알렸습니다. 입찰은 2026년 4월 6일까지 열려 있고, 계약자는 2026년 8월 31일까지 시험할 수 있는 사전 운영 버전을 개발해야 하며, CCP는 2027년 2월 1일부터 완전한 운영 준비를 갖추고 운영을 시작해야 합니다. 27개 회원국 전체와 EU 집행위원회는 2025년 12월 15일에 CCP 조달을 위한 공동조달협정(Joint Procurement Agreement)에 서명했습니다.",
+   "impact": "인증서 비용: 회원국은 2027년 2월 1일부터 CCP를 통해 CBAM 인증서를 판매하기 시작합니다.",
+   "kind": "제도 안내",
+   "topic": "price",
+   "importance": "보통",
+   "topics": [
+    "CBAM 인증서",
+    "공통 중앙 플랫폼"
+   ],
+   "sourceCode": "ec-news",
+   "sourceName": "EC CBAM Communication and News",
+   "link": "https://taxation-customs.ec.europa.eu/news/cbam-call-tender-establish-common-central-platform-ccp-2026-03-02_en",
+   "excerpt": "CBAM call for tender to establish the Common Central Platform (CCP)\nThe European Commission has launched a call for tenders for services to establish and manage the CCP for the sale and repurchase of CBAM certificates.\n2 March 2026\nThe call will be open until 6 April 2026 at 5:00 PM (CET).\nBy 31 August 2026, the Contractor must have developed a pre-operational version of the CCP, incorporating all core functionalities necessary to support sales, repurchase and reconciliation operations, and ready for testing. From 1 February 2027, the CCP must ensure full operational readiness and start of operations.\nFollowing one year of intensive collaboration, all 27 Member States and the European Commission signed a Joint Procurement Agreement on 15 December 2025 for the procurement of the CCP.",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260114-ec-news-44ca80",
+   "published": "2026-01-14",
+   "title": "CBAM 확정기간 시행 첫 주의 운영 결과 공개",
+   "summary": "EU 집행위원회는 2026년 1월 14일에 CBAM이 2026년 1월 1일에 차질 없이 시행되었다고 알렸습니다. 2026년 1월 7일까지 12,000곳이 넘는 경제운영자가 CBAM 승인을 신청했고, 4,100곳이 넘는 경제운영자가 승인된 CBAM 신고인 지위를 얻었습니다. 2026년 1월 1일부터 2026년 1월 7일까지 CBAM 제품이 든 수입 세관신고 10,483건이 통합 세관 시스템에서 자동으로 확인되었고, 첫 보고 기간에 신고된 CBAM 수입품 1,655,613톤 가운데 철강이 98%였습니다.",
+   "impact": "적용 범위: 2026년 1월 1일부터 세관은 자유유통 반출 전에 CBAM 승인을 확인하며, 50톤 임계값도 함께 살핍니다.",
+   "kind": "제도 안내",
+   "topic": "declare",
+   "importance": "보통",
+   "topics": [
+    "확정기간",
+    "승인된 CBAM 신고인",
+    "통관"
+   ],
+   "sourceCode": "ec-news",
+   "sourceName": "EC CBAM Communication and News",
+   "link": "https://taxation-customs.ec.europa.eu/news/cbam-successfully-entered-force-1-january-2026-2026-01-14_en",
+   "excerpt": "CBAM successfully entered into force on 1 January 2026\nThe Carbon Border Adjustment Mechanism (CBAM) successfully entered into force on 1 January 2026.\n14 January 2026\nMore than 12000 of economic operators submitted an application for CBAM authorisation till 7th January 2026.\nMore than 4100 CBAM economic operators successfully obtained CBAM authorized declarant status across EU prior to and immediately after 1 January 2026.\nIn total from the 1 January to 7 January 2026, 10483 Import Customs Declarations with CBAM goods were validated automatically and in real time via integrated customs systems.\nCBAM imports declared in the first reporting window (from 1 until 6 January 2026) covered 1.655.613 tonnes of goods with the following split per sector:\nIron & Steel: 98% of total CBAM-covered volumes",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251223-ec-news-1aa8cc",
+   "published": "2025-12-23",
+   "title": "CBAM 2026년 1월 1일 시행 안내와 승인 신청 기한",
+   "summary": "EU 집행위원회는 2025년 12월 23일에 CBAM 관련 규칙이 2026년 1월 1일에 시행된다고 다시 알렸습니다. 시멘트, 철강, 알루미늄, 비료를 50톤 넘게 수입하는 자와 전력이나 수소를 수입하는 모든 수입자는 수입 시점에 승인을 신청했거나 승인을 받은 상태여야 합니다. 신청은 수입 전에, 늦어도 2026년 3월 31일까지 제출해야 합니다.",
+   "impact": "일정: 승인 신청은 수입 전에, 늦어도 2026년 3월 31일까지 제출해야 합니다.",
+   "kind": "제도 안내",
+   "topic": "declare",
+   "importance": "보통",
+   "topics": [
+    "확정기간",
+    "승인된 CBAM 신고인",
+    "일정"
+   ],
+   "sourceCode": "ec-news",
+   "sourceName": "EC CBAM Communication and News",
+   "link": "https://taxation-customs.ec.europa.eu/news/reminder-cbam-goes-live-1-january-2026-2025-12-23_en",
+   "excerpt": "Reminder: CBAM goes live on 1 January 2026\nOn 1 January 2026, CBAM rules enter into effect.\n23 December 2025\nThis means that those importing more than 50 tonnes of cement, iron and steel, aluminium, fertiliser, as well as all importers of electricity or hydrogen need to have submitted an application or received an authorisation at the time of import. Importers who have not already submitted applications need to act fast now to avoid risking disruptions, delays, or penalties. Applications must be submitted prior to import and at the latest by 31 March 2026 for all concerned import companies.",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251020-ec-news-78678f",
+   "published": "2025-10-20",
+   "title": "CBAM 간소화 개정 규정 공포: 연 50톤 미만 수입자 면제",
+   "summary": "EU 집행위원회는 2025년 10월 20일에 CBAM을 간소화하고 강화하는 개정 규정이 유럽연합 관보에 게재되었다고 알렸습니다. 핵심은 CBAM 제품에 대한 50톤의 새 면제 임계값으로, CBAM 대상 제품을 한 해 50톤 미만으로 수입하는 수입자는 CBAM 의무에서 면제됩니다. 이 조치로 약 182,000명의 수입자가 면제될 것으로 예상되며, 그래도 대상 배출량의 99% 이상이 적용 범위에 남습니다. 2027년부터 EU 집행위원회는 탄소가격제를 둔 제3국의 기본 탄소가격을 정해 CBAM 등록부에 제공할 수 있습니다.",
+   "impact": "적용 범위: CBAM 대상 제품을 한 해 50톤 미만으로 수입하는 수입자는 CBAM 의무에서 면제됩니다.",
+   "kind": "법령",
+   "topic": "law",
+   "importance": "높음",
+   "topics": [
+    "옴니버스 패키지 I",
+    "단일 중량 임계값",
+    "유럽연합 관보"
+   ],
+   "sourceCode": "ec-news",
+   "sourceName": "EC CBAM Communication and News",
+   "link": "https://taxation-customs.ec.europa.eu/news/officially-published-simplifications-carbon-border-adjustment-mechanism-cbam-2025-10-20_en",
+   "excerpt": "Officially published: Simplifications for the Carbon Border Adjustment Mechanism (CBAM)\nThe amended Regulation as regards simplifying and strengthening the CBAM has been published in the Official Journal of the European Union.\n20 October 2025\nKey element of the package is a new exemption threshold of 50 tonnes for CBAM goods. Companies importing less than 50 tonnes of goods subject to CBAM annually will be exempt from CBAM obligations. This measure is expected to exempt approximately 182,000 importers, mostly SMEs and individuals, while still covering over 99% of emissions in scope. For those importers that remain in the CBAM scope, the adjustments will facilitate compliance with the reporting requirements and simplify the authorisation of declarants, the calculation of emissions, and compliance with the financial liability. The changes will reduce the regulatory and administrative burdens and compliance costs, particularly benefiting SMEs. In addition, as from 2027, the Commission may also, for third countries where carbon pricing rules are in place, determine and make available, in the CBAM registry, the default carbon prices for those third countries and publish the methodology for their calculation.",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250829-ec-news-44eb58",
+   "published": "2025-08-29",
+   "title": "확정기간 산정 방법론·무상할당 조정·제3국 탄소가격에 관한 근거 수집 개시",
+   "summary": "EU 집행위원회는 2025년 8월 28일에 CBAM 제품의 내재배출량 산정 방법론, EU 배출권거래제 무상할당을 반영한 CBAM 인증서 조정, 제3국에서 지불한 탄소가격의 차감에 관한 규칙에 대해 이해관계자의 의견을 모으는 근거 수집(call for evidence)을 시작했습니다. 의견은 2025년 9월 25일까지 낼 수 있다고 안내했습니다.",
+   "kind": "입법",
+   "topic": "legis",
+   "importance": "보통",
+   "topics": [
+    "의견수렴",
+    "내재배출량",
+    "무상할당 조정"
+   ],
+   "sourceCode": "ec-news",
+   "sourceName": "EC CBAM Communication and News",
+   "link": "https://taxation-customs.ec.europa.eu/news/cbam-call-evidence-emission-methodology-free-allocation-adjustment-and-carbon-price-paid-third-2025-08-29_en",
+   "impact": "",
+   "excerpt": "CBAM: Call for evidence on emission methodology, free allocation adjustment and carbon price paid in third countries\n29 August 2025\nOn 28 August 2025, the Commission launched a call for evidence that aims to gather the opinions of all stakeholders on the rules on the methodology for calculating emissions embedded in CBAM goods, rules on the adjustment of CBAM certificates to reflect the EU ETS free allocation, and rules on the deduction of the carbon price paid in a third country.\nYou are encouraged to provide feedback on this initiative until 25 September 2025 here:",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250703-ec-news-6891b3",
+   "published": "2025-07-03",
+   "title": "EU 집행위원회, CBAM 품목 수출품의 탄소누출 위험 완화 계획 발표",
+   "summary": "EU 집행위원회는 2025년 7월 3일에 CBAM 품목에서 EU가 생산한 제품의 탄소누출 위험에 대응하는 새 조치를 도입할 계획이라고 밝혔습니다. 제안은 2025년 말까지 나올 것으로 예상되며, 탄소누출 위험이 있는 제품의 생산자를 지원하고 EU에서 생산해 판매하는 제품, EU로 수입되는 제품, 수출되는 제품을 동등하게 대우하는 것을 목표로 합니다. 원문은 이 제도를 처음에 정한 기간 동안 두고, 새 2026년 ETS 개편이 승인된 뒤 검토한다고 설명합니다.",
+   "kind": "입법",
+   "topic": "legis",
+   "importance": "보통",
+   "topics": [
+    "탄소누출",
+    "수출"
+   ],
+   "sourceCode": "ec-news",
+   "sourceName": "EC CBAM Communication and News",
+   "link": "https://taxation-customs.ec.europa.eu/news/cbam-commission-announces-plan-mitigate-carbon-leakage-risk-exporters-2025-07-03_en",
+   "impact": "",
+   "excerpt": "CBAM: Commission announces plan to mitigate carbon leakage risk for exporters\nThe European Commission has announced plans to introduce a new measure to address the risk of carbon leakage for EU-produced goods produced in CBAM sectors.\n3 July 2025\nThe proposal, which is expected to be made by the end of 2025, aims to support producers of goods at risk of such carbon leakage and ensure equal treatment for all goods, whether produced and sold in the EU, imported into the EU or exported. This scheme would be in place for an initially defined period and then will be reviewed after the new 2026 ETS reform is approved.",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250702-ec-news-097941",
+   "published": "2025-07-02",
+   "title": "CBAM 하류제품 확대·우회방지·전력 규칙에 관한 공개 의견수렴 개시",
+   "summary": "EU 집행위원회는 2025년 7월 1일에 CBAM의 적용 범위를 특정 하류제품으로 넓히는 방안, 우회방지 조치, 전력 부문 규칙의 정책 설계와 그 영향에 대해 이해관계자의 의견을 모으는 공개 의견수렴을 시작했습니다. 의견은 2025년 8월 26일까지 낼 수 있다고 안내했습니다. 원문은 European Steel and Metals Action Plan이 철강·알루미늄 집약적인 일부 하류제품으로 CBAM을 확대할 필요를 강조했고, 올해 말까지 EU 집행위원회 제안을 채택하겠다고 예고했다고 설명합니다.",
+   "kind": "입법",
+   "topic": "legis",
+   "importance": "높음",
+   "topics": [
+    "하류제품",
+    "우회방지",
+    "의견수렴"
+   ],
+   "sourceCode": "ec-news",
+   "sourceName": "EC CBAM Communication and News",
+   "link": "https://taxation-customs.ec.europa.eu/news/cbam-public-consultation-extension-cbam-downstream-products-2025-07-02_en",
+   "impact": "",
+   "excerpt": "CBAM: Public consultation on the extension of CBAM to downstream products\nPublic consultation on the scope extension to specific downstream products, anti-circumvention measures and rules for the electricity sector\n2 July 2025\nOn 1 July 2025, the Commission has launched a public consultation that aims to gather the opinions of all stakeholders on the policy design of CBAM’s potential scope extension to specific downstream products, anti-circumvention measures and rules for the electricity sector, as well as on their potential social, economic, environmental, and administrative impacts.\nYou can share your feedback on this initiative until 26 August 2025.",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250328-ec-news-3ace8d",
+   "published": "2025-03-28",
+   "title": "승인된 CBAM 신고인 지위에 관한 이행규정 채택",
+   "summary": "EU 집행위원회는 2025년 3월 28일에 CBAM 신고인의 승인에 관한 이행규정을 2025년 3월 17일에 채택해 EU 집행위원회 웹사이트에 게시했다고 알렸습니다. 이에 따라 수입자와 간접 세관 대리인은 2026년 1월 1일부터 CBAM 제품을 수입할 수 있도록 승인된 CBAM 신고인 지위를 신청할 수 있습니다. EU 집행위원회는 신청 절차와 승인 관리에 쓰는 승인 관리 모듈(Authorisation Management Module, AMM)을 2025년 3월 31일에 CBAM 등록부에서 연다고 밝혔습니다. 또 50톤 임계값 제안을 고려해, 임계값을 넘을 것으로 예상하는 수입자는 가능한 한 빨리 신청하고 넘지 않을 것으로 예상하는 수입자는 초가을까지 신청을 미루도록 관할당국이 안내할 것을 권했습니다.",
+   "kind": "법령",
+   "topic": "declare",
+   "importance": "높음",
+   "topics": [
+    "승인된 CBAM 신고인",
+    "이행규정",
+    "CBAM 등록부"
+   ],
+   "sourceCode": "ec-news",
+   "sourceName": "EC CBAM Communication and News",
+   "link": "https://taxation-customs.ec.europa.eu/news/commission-implementing-regulation-regards-conditions-and-procedures-related-status-authorised-cbam-2025-03-28_en",
+   "impact": "",
+   "excerpt": "Commission Implementing Regulation as regards the conditions and procedures related to the status of authorised CBAM declarant\n28 March 2025\nThe Commission is pleased to announce that the Implementing Regulation as regards the authorisation of CBAM declarants was adopted by the Commission on 17 March 2025 and is published on the Commission website.\nThis will allow importers and indirect customs representatives to apply for the status of authorised CBAM declarant to be able to import CBAM goods from 1 January 2026.\nThe Commission will launch the Authorisation Management Module (AMM) on 31 March 2025 in the CBAM Registry, which is the module to be used by the importers and indirect customs representatives for the application process and the management of the authorisations by the competent authorities.",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250226-ec-news-f6b8cb",
+   "published": "2025-02-26",
+   "title": "EU 집행위원회, CBAM 간소화·강화 개정안 발표",
+   "summary": "EU 집행위원회는 2025년 2월 26일에 첫 옴니버스(Omnibus) 패키지의 하나로 CBAM을 간소화하고 더 효과적으로 만드는 개정안을 냈습니다. 소규모 CBAM 수입자를 위해 50톤의 새 소량 면제 임계값을 도입하는 내용으로, 대상 배출량의 약 99%를 CBAM 적용 범위에 두면서 수입자의 약 90%를 면제합니다. 적용 범위에 남는 수입자에 대해서는 신고인 승인, 배출량 산정, CBAM 재정 책임의 관리를 간소화하고, 남용 방지 규정을 강화하며 국가 당국과 함께 공동 우회방지 전략을 마련합니다. 원문은 올해 안에 CBAM을 전면 검토해 다른 ETS 부문, 하류제품, 간접배출량으로의 확대 가능성을 평가하고, 2026년 초에 입법 제안을 내겠다고 밝혔습니다.",
+   "impact": "적용 범위: 개정안은 50톤의 소량 면제 임계값을 도입하는 내용입니다.",
+   "kind": "입법",
+   "topic": "legis",
+   "importance": "높음",
+   "topics": [
+    "옴니버스 패키지 I",
+    "소량 면제",
+    "단일 중량 임계값"
+   ],
+   "sourceCode": "ec-news",
+   "sourceName": "EC CBAM Communication and News",
+   "link": "https://taxation-customs.ec.europa.eu/news/cbam-new-commission-proposal-will-simplify-and-strengthen-2025-02-26_en",
+   "excerpt": "CBAM: new Commission proposal will simplify and strengthen\n26 February 2025\nAs part of this, the Commission proposed a set of changes to simplify CBAM and make it more effective.\nFirstly, the Commission proposes to simplify CBAM for small CBAM importers, mostly SMEs and individuals, by introducing a new CBAM de minimis threshold exemption of 50 tonnes mass. These are importers who import small quantities of CBAM goods, representing very small quantities of embedded emissions entering the EU from third countries. This means keeping around 99% of emissions still in the CBAM scope, while exempting around 90% of the importers.\nThis will be coupled with measures making CBAM more effective, by strengthening anti-abuse provisions and developing a joint anti-circumvention strategy together with national authorities.",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250513-ep-oeil-2025-0039-212d39",
+   "published": "2025-05-13",
+   "title": "유럽의회 환경위원회, CBAM 간소화·강화 개정안 표결",
+   "summary": "유럽의회 절차 기록 2025/0039(COD)에 따르면, 소관 위원회인 환경·기후·식품안전위원회(ENVI)가 2025년 5월 13일에 CBAM 간소화·강화 개정안을 제1독회(1st reading) 단계에서 표결했습니다. 위원회 보고서(A10-0085/2025)는 2025년 5월 14일에 본회의에 제출되었습니다.",
+   "kind": "입법",
+   "topic": "legis",
+   "importance": "보통",
+   "topics": [
+    "옴니버스 패키지 I",
+    "유럽의회"
+   ],
+   "sourceCode": "ep-oeil-2025-0039",
+   "sourceName": "EP Legislative Observatory 2025/0039(COD)",
+   "link": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0039(COD)",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250522-ep-oeil-2025-0039-c62339",
+   "published": "2025-05-22",
+   "title": "유럽의회 본회의, CBAM 간소화·강화 개정안 제1독회 표결",
+   "summary": "유럽의회는 2025년 5월 22일 본회의에서 CBAM 간소화·강화 개정안에 대해 제1독회(1st reading) 결정을 내렸습니다(채택 문서 T10-0108/2025). 같은 날 이 안건은 기관 간 협상(interinstitutional negotiations)을 위해 소관 위원회로 되돌려 보내졌습니다. 본회의 토론은 2025년 5월 21일에 있었습니다.",
+   "kind": "입법",
+   "topic": "legis",
+   "importance": "높음",
+   "topics": [
+    "옴니버스 패키지 I",
+    "유럽의회"
+   ],
+   "sourceCode": "ep-oeil-2025-0039",
+   "sourceName": "EP Legislative Observatory 2025/0039(COD)",
+   "link": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0039(COD)",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250703-ep-oeil-2025-0039-27bf96",
+   "published": "2025-07-03",
+   "title": "유럽의회 환경위원회, CBAM 간소화 기관 간 합의문 승인",
+   "summary": "유럽의회 절차 기록 2025/0039(COD)에 따르면, 소관 위원회가 2025년 7월 3일에 제1독회 기관 간 협상에서 합의된 문안(PE775.547)을 승인했습니다. EU 이사회 쪽에서는 기관 간 합의를 확인하는 상주대표회의(Coreper) 서한(GEDA/A/(2025)003110)이 2025년 6월 27일자로 기록되어 있습니다.",
+   "kind": "입법",
+   "topic": "legis",
+   "importance": "높음",
+   "topics": [
+    "옴니버스 패키지 I",
+    "기관 간 합의"
+   ],
+   "sourceCode": "ep-oeil-2025-0039",
+   "sourceName": "EP Legislative Observatory 2025/0039(COD)",
+   "link": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0039(COD)",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250910-ep-oeil-2025-0039-788e79",
+   "published": "2025-09-10",
+   "title": "유럽의회, CBAM 간소화·강화 개정안 제1독회 채택",
+   "summary": "유럽의회는 2025년 9월 10일 본회의에서 CBAM 간소화·강화 개정안을 제1독회(1st reading)에서 채택했습니다(채택 문서 T10-0178/2025). 본회의 토론은 2025년 9월 9일에 있었습니다.",
+   "kind": "입법",
+   "topic": "legis",
+   "importance": "높음",
+   "topics": [
+    "옴니버스 패키지 I",
+    "유럽의회"
+   ],
+   "sourceCode": "ep-oeil-2025-0039",
+   "sourceName": "EP Legislative Observatory 2025/0039(COD)",
+   "link": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0039(COD)",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250929-ep-oeil-2025-0039-f09660",
+   "published": "2025-09-29",
+   "title": "EU 이사회, CBAM 간소화·강화 개정 규정 채택",
+   "summary": "유럽의회 절차 기록 2025/0039(COD)에 따르면, EU 이사회는 2025년 9월 29일에 유럽의회의 제1독회 뒤 이 법령을 채택했습니다(Act adopted by Council after Parliament's 1st reading).",
+   "kind": "입법",
+   "topic": "legis",
+   "importance": "높음",
+   "topics": [
+    "옴니버스 패키지 I",
+    "EU 이사회"
+   ],
+   "sourceCode": "ep-oeil-2025-0039",
+   "sourceName": "EP Legislative Observatory 2025/0039(COD)",
+   "link": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0039(COD)",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251017-ep-oeil-2025-0039-b74ef5",
+   "published": "2025-10-17",
+   "title": "CBAM 간소화·강화 개정 규정(EU) 2025/2083, 유럽연합 관보 게재",
+   "summary": "CBAM을 간소화하고 강화하는 개정 규정인 규정(EU) 2025/2083이 2025년 10월 17일에 유럽연합 관보에 게재되었습니다. 최종 법령은 2025년 10월 8일에 서명되었고, 유럽의회 절차 2025/0039(COD)는 완료된 것으로 기록되어 있습니다.",
+   "kind": "법령",
+   "topic": "law",
+   "importance": "높음",
+   "topics": [
+    "옴니버스 패키지 I",
+    "유럽연합 관보"
+   ],
+   "sourceCode": "ep-oeil-2025-0039",
+   "sourceName": "EP Legislative Observatory 2025/0039(COD)",
+   "link": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0039(COD)",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251217-ep-oeil-2025-0419-1e1b9a",
+   "published": "2025-12-17",
+   "title": "CBAM 하류제품 확대·우회방지 개정안(COM(2025)0989) 공표",
+   "summary": "유럽의회 절차 기록 2025/0419(COD)에 따르면, CBAM의 적용 범위를 하류제품으로 넓히고 우회방지 조치를 두는 개정안(COM(2025)0989)이 2025년 12월 17일에 공표되었습니다. 규정(EU) 2023/956을 개정하는 일반입법절차(COD)이고, 유럽의회의 소관 위원회는 환경·기후·식품안전위원회(ENVI)입니다.",
+   "kind": "입법",
+   "topic": "legis",
+   "importance": "높음",
+   "topics": [
+    "하류제품",
+    "우회방지"
+   ],
+   "sourceCode": "ep-oeil-2025-0419",
+   "sourceName": "EP Legislative Observatory 2025/0419(COD)",
+   "link": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0419(COD)",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260706-ep-oeil-2025-0419-3a3afa",
+   "published": "2026-07-06",
+   "title": "유럽의회 환경위원회, CBAM 하류제품 확대·우회방지 개정안 표결",
+   "summary": "유럽의회 절차 기록 2025/0419(COD)에 따르면, 소관 위원회인 환경·기후·식품안전위원회(ENVI)가 2026년 7월 6일에 CBAM 하류제품 확대·우회방지 개정안을 제1독회(1st reading) 단계에서 표결했습니다. 위원회 보고서(A10-0201/2026)는 2026년 7월 9일에 본회의에 제출되었습니다.",
+   "kind": "입법",
+   "topic": "legis",
+   "importance": "보통",
+   "topics": [
+    "하류제품",
+    "유럽의회"
+   ],
+   "sourceCode": "ep-oeil-2025-0419",
+   "sourceName": "EP Legislative Observatory 2025/0419(COD)",
+   "link": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0419(COD)",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260915-ep-oeil-2025-0419-0173c5",
+   "published": "2026-09-15",
+   "title": "유럽의회 본회의, CBAM 하류제품 확대·우회방지 개정안 제1독회 표결",
+   "summary": "유럽의회는 2026년 9월 15일 본회의에서 CBAM 하류제품 확대·우회방지 개정안에 대해 제1독회(1st reading) 결정을 내렸습니다(채택 문서 T10-0276/2026). 같은 날 이 안건은 기관 간 협상(interinstitutional negotiations)을 위해 소관 위원회로 되돌려 보내졌습니다. 본회의 토론은 2026년 9월 14일에 있었습니다.",
+   "kind": "입법",
+   "topic": "legis",
+   "importance": "높음",
+   "topics": [
+    "하류제품",
+    "유럽의회"
+   ],
+   "sourceCode": "ep-oeil-2025-0419",
+   "sourceName": "EP Legislative Observatory 2025/0419(COD)",
+   "link": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0419(COD)",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260717-ep-oeil-2026-0212-419cfd",
+   "published": "2026-07-17",
+   "title": "EU 배출권거래제·시장안정화비축 개정안(COM(2026)0616) 공표",
+   "summary": "유럽의회 절차 기록 2026/0212(COD)에 따르면, EU 배출권거래제와 시장안정화비축(market stability reserve)에 관한 개정안(COM(2026)0616)이 2026년 7월 17일에 공표되었습니다. 절차의 이름은 'EU Emissions Trading System and market stability reserve: competitiveness and cost-effective decarbonisation'이고, 지침 2003/87과 결정 2015/1814를 개정하는 안입니다.",
+   "kind": "입법",
+   "topic": "legis",
+   "importance": "보통",
+   "topics": [
+    "EU 배출권거래제",
+    "시장안정화비축"
+   ],
+   "sourceCode": "ep-oeil-2026-0212",
+   "sourceName": "EP Legislative Observatory 2026/0212(COD)",
+   "link": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0212(COD)",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260513-ec-haveyoursay-e58744",
+   "published": "2026-05-13",
+   "title": "제3국에서 지불한 탄소가격에 관한 이행규정 초안 의견수렴",
+   "summary": "EU 집행위원회는 'Carbon price paid in a third country under the carbon border adjustment mechanism (CBAM)' 이니셔티브의 법령 초안(Draft act) 의견수렴을 2026년 5월 13일부터 2026년 6월 10일까지 진행했습니다. 예정된 법령 유형은 이행규정이고, 문서 번호는 Ares(2025)6809938입니다.",
+   "kind": "입법",
+   "topic": "legis",
+   "importance": "보통",
+   "topics": [
+    "탄소가격",
+    "제3국",
+    "의견수렴"
+   ],
+   "sourceCode": "ec-haveyoursay",
+   "sourceName": "EC Have Your Say (CBAM 검색)",
+   "link": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14830_en",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260709-ec-haveyoursay-2ba569",
+   "published": "2026-07-09",
+   "title": "CBAM 인증서의 판매와 환매에 관한 위임규정 초안 의견수렴",
+   "summary": "EU 집행위원회는 'Sale and repurchase of CBAM certificates' 이니셔티브의 법령 초안(Draft act) 의견수렴을 2026년 7월 9일부터 2026년 8월 6일까지 진행했습니다. 예정된 법령 유형은 위임규정이고, 문서 번호는 Ares(2024)546926입니다.",
+   "kind": "입법",
+   "topic": "legis",
+   "importance": "보통",
+   "topics": [
+    "CBAM 인증서",
+    "환매",
+    "의견수렴"
+   ],
+   "sourceCode": "ec-haveyoursay",
+   "sourceName": "EC Have Your Say (CBAM 검색)",
+   "link": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14132_en",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250424-hmrc-cbam-872766",
+   "published": "2025-04-24",
+   "title": "영국 정부, CBAM 팩트시트 공개",
+   "summary": "영국 정부는 2025년 4월 24일에 'Factsheet: Carbon border adjustment mechanism (CBAM)'을 처음 게시했습니다.",
+   "kind": "해외",
+   "topic": "abroad",
+   "importance": "보통",
+   "topics": [
+    "영국 CBAM"
+   ],
+   "sourceCode": "hmrc-cbam",
+   "sourceName": "UK HMRC CBAM 자료 모음",
+   "link": "https://www.gov.uk/government/publications/factsheet-carbon-border-adjustment-mechanism-cbam",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251128-hmrc-cbam-d4b7f1",
+   "published": "2025-11-28",
+   "title": "영국 CBAM 팩트시트 갱신: 간접배출량 포함 연기와 무상할당 조정",
+   "summary": "영국 정부는 2025년 11월 28일에 CBAM 팩트시트를 고쳤습니다. Budget 2025에서 발표한 대로 간접배출량을 CBAM 적용 범위에 넣는 시기를 늦춘다는 내용, CBAM 요율(CBAM rate) 안의 무상할당 조정과 FAR2의 결과를 확인하는 내용이 들어갔습니다. 납부 의무자(liable person)와 등록에 관한 정보도 고쳤습니다.",
+   "kind": "해외",
+   "topic": "abroad",
+   "importance": "높음",
+   "topics": [
+    "영국 CBAM",
+    "간접배출량",
+    "무상할당 조정"
+   ],
+   "sourceCode": "hmrc-cbam",
+   "sourceName": "UK HMRC CBAM 자료 모음",
+   "link": "https://www.gov.uk/government/publications/factsheet-carbon-border-adjustment-mechanism-cbam",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:29+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260210-hmrc-cbam-0d0b72",
+   "published": "2026-02-10",
+   "title": "영국 정부, CBAM 정책 요약과 준비 자료 모음 공개",
+   "summary": "영국 정부는 2026년 2월 10일에 CBAM 정책 요약(Carbon border adjustment mechanism (CBAM): Policy summary)과 자료 모음 'Prepare for the Carbon Border Adjustment Mechanism (CBAM)'을 처음 게시했습니다.",
+   "kind": "해외",
+   "topic": "abroad",
+   "importance": "보통",
+   "topics": [
+    "영국 CBAM"
+   ],
+   "sourceCode": "hmrc-cbam",
+   "sourceName": "UK HMRC CBAM 자료 모음",
+   "link": "https://www.gov.uk/government/publications/carbon-border-adjustment-mechanism-cbam-policy-summary",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260409-hmrc-cbam-161903",
+   "published": "2026-04-09",
+   "title": "영국, CBAM 배출량·검증 규정 초안 공개",
+   "summary": "영국 정부는 2026년 4월 9일에 CBAM 배출량·검증 규정 초안(Draft regulations: Carbon Border Adjustment Mechanism (CBAM) (Emissions and Verification))을 게시했습니다. 같은 날 정책 요약에는 배출량 자료의 모니터링과 검증에 관한 CBAM 정책의 요약이 더해졌고, 홍보 자료(communications resources)도 처음 게시되었습니다.",
+   "kind": "해외",
+   "topic": "abroad",
+   "importance": "높음",
+   "topics": [
+    "영국 CBAM",
+    "검증"
+   ],
+   "sourceCode": "hmrc-cbam",
+   "sourceName": "UK HMRC CBAM 자료 모음",
+   "link": "https://www.gov.uk/government/consultations/draft-regulations-carbon-border-adjustment-mechanism-cbam-emissions-and-verification",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260513-hmrc-cbam-3556ee",
+   "published": "2026-05-13",
+   "title": "영국 국세청, CBAM 안내 영상 추가",
+   "summary": "영국 국세청(HMRC)은 2026년 5월 13일에 세무 대리인과 자문가를 위한 영상·웨비나 안내에 'Carbon Border Adjustment Mechanism (CBAM)' 영상을 더했습니다.",
+   "kind": "해외",
+   "topic": "abroad",
+   "importance": "낮음",
+   "topics": [
+    "영국 CBAM",
+    "교육 자료"
+   ],
+   "sourceCode": "hmrc-cbam",
+   "sourceName": "UK HMRC CBAM 자료 모음",
+   "link": "https://www.gov.uk/guidance/help-and-support-for-agents",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260713-hmrc-cbam-48a307",
+   "published": "2026-07-13",
+   "title": "영국, CBAM 법적 효력 고시와 참고 문서 공개",
+   "summary": "영국 정부는 2026년 7월 13일에 'Carbon Border Adjustment Mechanism: force of law notices and reference document'를 처음 게시했습니다.",
+   "kind": "해외",
+   "topic": "abroad",
+   "importance": "보통",
+   "topics": [
+    "영국 CBAM"
+   ],
+   "sourceCode": "hmrc-cbam",
+   "sourceName": "UK HMRC CBAM 자료 모음",
+   "link": "https://www.gov.uk/government/publications/carbon-border-adjustment-mechanism-force-of-law-notice-and-reference-document",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260716-hmrc-cbam-56a2c0",
+   "published": "2026-07-16",
+   "title": "영국, CBAM 등록 대상 확인·기록 보관·탄소가격 경감 안내 공개",
+   "summary": "영국 정부는 2026년 7월 16일에 CBAM 기록 보관 안내(Keeping records for Carbon Border Adjustment Mechanism (CBAM)), 등록 대상 확인 자료 모음(Check if you'll need to register), 탄소가격 경감 신청 자료 모음(Claiming Carbon Price Relief)을 처음 게시했습니다. 자료 모음 'Prepare for the Carbon Border Adjustment Mechanism (CBAM)'에는 CBAM 문의를 보낼 곳에 관한 정보가 더해졌습니다.",
+   "kind": "해외",
+   "topic": "abroad",
+   "importance": "보통",
+   "topics": [
+    "영국 CBAM",
+    "등록"
+   ],
+   "sourceCode": "hmrc-cbam",
+   "sourceName": "UK HMRC CBAM 자료 모음",
+   "link": "https://www.gov.uk/government/collections/check-if-youll-need-to-register-for-carbon-border-adjustment-mechanism-cbam",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260827-hmrc-cbam-7e5f7e",
+   "published": "2026-08-27",
+   "title": "영국 CBAM의 적격 탄소가격제 목록 공개",
+   "summary": "영국 정부는 2026년 8월 27일에 'UK CBAM: Current qualifying carbon pricing schemes'를 처음 게시했습니다.",
+   "kind": "해외",
+   "topic": "abroad",
+   "importance": "보통",
+   "topics": [
+    "영국 CBAM",
+    "탄소가격"
+   ],
+   "sourceCode": "hmrc-cbam",
+   "sourceName": "UK HMRC CBAM 자료 모음",
+   "link": "https://www.gov.uk/government/publications/uk-cbam-current-qualifying-carbon-pricing-schemes",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20261016-hmrc-cbam-01ed03",
+   "published": "2026-10-16",
+   "title": "영국, CBAM 요율·기본값·배출량 모니터링과 검증 안내 공개",
+   "summary": "영국 정부는 2026년 10월 16일에 CBAM 요율(Rates), 기본값 확인(Check the default values), 배출 집약도 구하기(Getting the emissions intensity), 해외 사업장의 배출량 모니터링, 배출량 자료 검증에 관한 안내와 기술 가이던스를 처음 게시했습니다. 같은 날 기록 보관 안내에는 CBAM 등록이 2028년 1월 1일에 열린다는 내용이 더해졌습니다.",
+   "kind": "해외",
+   "topic": "abroad",
+   "importance": "높음",
+   "topics": [
+    "영국 CBAM",
+    "기본값",
+    "검증"
+   ],
+   "sourceCode": "hmrc-cbam",
+   "sourceName": "UK HMRC CBAM 자료 모음",
+   "link": "https://www.gov.uk/guidance/rates-for-the-carbon-border-adjustment-mechanism-cbam",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20261020-hmrc-cbam-dfcf2a",
+   "published": "2026-10-20",
+   "title": "영국 국세청, CBAM 질문 접수 안내 공개",
+   "summary": "영국 국세청(HMRC)은 2026년 10월 20일에 CBAM에 관한 질문을 보내는 방법을 안내하는 'Send HMRC questions about the Carbon Border Adjustment Mechanism (CBAM)'을 처음 게시했습니다. 2026년 10월 21일에는 HMRC가 받은 의견을 15일 안에 검토해 답한다는 내용이 더해졌습니다.",
+   "kind": "해외",
+   "topic": "abroad",
+   "importance": "낮음",
+   "topics": [
+    "영국 CBAM"
+   ],
+   "sourceCode": "hmrc-cbam",
+   "sourceName": "UK HMRC CBAM 자료 모음",
+   "link": "https://www.gov.uk/guidance/send-hmrc-questions-about-the-carbon-border-adjustment-mechanism-cbam",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20261029-hmrc-cbam-c12a3b",
+   "published": "2026-10-29",
+   "title": "영국 국세청, CBAM 개요 녹화 웨비나 추가",
+   "summary": "영국 국세청(HMRC)은 2026년 10월 29일에 세무 대리인과 자문가를 위한 영상·웨비나 안내에 'Carbon Border Adjustment Mechanism (CBAM) overview' 녹화 웨비나를 더했습니다.",
+   "kind": "해외",
+   "topic": "abroad",
+   "importance": "낮음",
+   "topics": [
+    "영국 CBAM",
+    "웨비나"
+   ],
+   "sourceCode": "hmrc-cbam",
+   "sourceName": "UK HMRC CBAM 자료 모음",
+   "link": "https://www.gov.uk/guidance/help-and-support-for-agents",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20261102-hmrc-cbam-786818",
+   "published": "2026-11-02",
+   "title": "영국 CBAM 정책 요약, 탄소가격 경감 산정 정보 추가",
+   "summary": "영국 정부는 2026년 11월 2일에 CBAM 정책 요약을 고쳐, 'How to calculate CPR' 부분의 그림 13 아래에 탄소가격 경감(Carbon Price Relief) 산정에 관한 정보를 넣었습니다.",
+   "kind": "해외",
+   "topic": "abroad",
+   "importance": "보통",
+   "topics": [
+    "영국 CBAM",
+    "탄소가격"
+   ],
+   "sourceCode": "hmrc-cbam",
+   "sourceName": "UK HMRC CBAM 자료 모음",
+   "link": "https://www.gov.uk/government/publications/carbon-border-adjustment-mechanism-cbam-policy-summary",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20261103-hmrc-cbam-779846",
+   "published": "2026-11-03",
+   "title": "영국 CBAM 기록 보관 안내, 제품 순중량 기재 방법 추가",
+   "summary": "영국 정부는 2026년 11월 3일에 CBAM 기록 보관 안내의 'Weight of goods records you should keep' 부분을 고쳐, 기록할 때 제품의 순중량(net mass of the goods)을 적는 방법을 넣었습니다.",
+   "kind": "해외",
+   "topic": "abroad",
+   "importance": "낮음",
+   "topics": [
+    "영국 CBAM",
+    "순중량"
+   ],
+   "sourceCode": "hmrc-cbam",
+   "sourceName": "UK HMRC CBAM 자료 모음",
+   "link": "https://www.gov.uk/guidance/keeping-records-for-carbon-border-adjustment-mechanism-cbam",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20261110-hmrc-cbam-6305a0",
+   "published": "2026-11-10",
+   "title": "영국 CBAM, 2027년 1월 1일부터 기록 보관·2028년 1월 1일 등록 개시",
+   "summary": "영국 정부는 2026년 11월 10일에 자료 모음 'Prepare for the Carbon Border Adjustment Mechanism (CBAM)'을 고쳐, 2027년 1월 1일부터 CBAM 기록을 보관해야 하고 등록은 2028년 1월 1일에 열린다는 점을 확인했습니다.",
+   "impact": "일정: 영국 CBAM 기록은 2027년 1월 1일부터 보관해야 하고, 등록은 2028년 1월 1일에 열립니다.",
+   "kind": "해외",
+   "topic": "abroad",
+   "importance": "보통",
+   "topics": [
+    "영국 CBAM",
+    "등록",
+    "일정"
+   ],
+   "sourceCode": "hmrc-cbam",
+   "sourceName": "UK HMRC CBAM 자료 모음",
+   "link": "https://www.gov.uk/government/collections/carbon-border-adjustment-mechanism",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20261023-motir-8bf87c",
+   "published": "2026-10-23",
+   "title": "EU CBAM 하류재 확대 시행 대비 수출기업 맞춤형 설명회 개최",
+   "summary": "산업통상부는 2026년 10월 23일 서울 트레이드 타워에서 EU CBAM 하류재 대상 업계 설명회를 열었습니다. EU CBAM의 하류재 확대 적용으로 영향이 예상되는 주요 기업의 임직원 100여 명이 참석했습니다. 보도자료의 부제는 2028년 1월부터 철강·알루미늄 하류제품으로 EU CBAM 적용이 확대된다고 적고 있습니다.",
+   "kind": "행사",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "설명회",
+    "하류제품"
+   ],
+   "sourceCode": "motir",
+   "sourceName": "산업통상부 보도·참고자료",
+   "link": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172324/view",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260902-motir-330fa4",
+   "published": "2026-09-02",
+   "title": "CBAM 대응역량 강화를 위한 2026년도 제13차 정부 합동설명회 개최",
+   "summary": "정부는 2026년 9월 2일 영남대학교 천마아트센터(경북 경산시)에서 관계부처와 유관기관 합동으로 EU CBAM 대응을 위한 2026년도 제13차 정부 합동 설명회를 연다고 밝혔습니다. 보도자료의 부제는 CBAM 이행 규정과 실무 대응 방안을 안내하고, CBAM 대응 우수 중소기업이 대응 현황과 전략을 소개한다고 적고 있습니다.",
+   "kind": "행사",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "설명회"
+   ],
+   "sourceCode": "motir",
+   "sourceName": "산업통상부 보도·참고자료",
+   "link": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172151/view",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260623-motir-599d8a",
+   "published": "2026-06-23",
+   "title": "EU CBAM 이행 가속화, 우리 기업 대응역량 강화 지원",
+   "summary": "정부는 2026년 6월 23일 부산상공회의소에서 관계부처와 유관기관 합동으로 EU CBAM 대응을 위한 2026년도 제12차 정부 합동 설명회를 연다고 밝혔습니다. 설명회는 유튜브로 생중계되며, 보도자료의 부제는 관세청이 EU 품목분류 사전심사 신청 가이드를 제공한다고 적고 있습니다.",
+   "kind": "행사",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "설명회",
+    "품목분류"
+   ],
+   "sourceCode": "motir",
+   "sourceName": "산업통상부 보도·참고자료",
+   "link": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/171953/view",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260421-motir-835e01",
+   "published": "2026-04-21",
+   "title": "2026년 EU CBAM 확정기간 맞춤형 가이드 제공",
+   "summary": "정부는 2026년 4월 21일 서울 트레이드 타워에서 관계부처와 유관기관 합동으로 EU CBAM 대응 2026년도 제11차 정부 합동설명회를 열었습니다. 현장에는 CBAM 대상 품목을 수출하는 중소기업의 임직원 200여 명이 참석했고, 보도자료의 부제는 배출량 산정과 인증서 구매를 안내했다고 적고 있습니다.",
+   "kind": "행사",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "설명회",
+    "확정기간"
+   ],
+   "sourceCode": "motir",
+   "sourceName": "산업통상부 보도·참고자료",
+   "link": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/171751/view",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260330-motir-9345b5",
+   "published": "2026-03-30",
+   "title": "「EU 탄소국경조정제도(CBAM) 확정기간 실무 매뉴얼」 책자 발간",
+   "summary": "정부는 관계부처와 한국생산기술연구원 공동으로 2026년 3월 30일에 「EU CBAM 확정기간 실무 매뉴얼 – 고유 내재배출량 산정과 CBAM 인증서 수량 산정(배산인수)」을 발간했습니다. 보도자료의 부제는 확정기간의 배출량과 인증서 수량 산정을 사례로 안내하는 책자라고 적고 있습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "실무 매뉴얼",
+    "확정기간"
+   ],
+   "sourceCode": "motir",
+   "sourceName": "산업통상부 보도·참고자료",
+   "link": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/171647/view",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260226-motir-b09a0a",
+   "published": "2026-02-26",
+   "title": "영국 탄소국경조정제도 내년 시행 예정, 민관 공동으로 대응방안 모색",
+   "summary": "산업통상부는 2026년 2월 26일 한국철강협회 대회의실에서 영국 탄소국경조정제도에 관한 업계 간담회를 열었습니다. 정부와 업계는 영국의 입법 동향을 점검하고 우리 수출에 미치는 영향을 줄일 방안을 논의했습니다. 보도자료의 부제는 영국이 관련 하위법령 초안 4건을 발표하고 의견수렴을 진행하고 있다고 적고 있습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "영국 CBAM",
+    "간담회"
+   ],
+   "sourceCode": "motir",
+   "sourceName": "산업통상부 보도·참고자료",
+   "link": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/171544/view",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260211-motir-da1105",
+   "published": "2026-02-11",
+   "title": "우리 기업의 탄소국경조정제도 대응, 올해 15건의 지원 제공",
+   "summary": "산업통상부, 기후에너지환경부, 중소벤처기업부, 관세청 등 관계부처는 2026년 2월 11일 대한상공회의소에서 유관기관과 함께 탄소국경조정제도 대응 실무회의를 열어 올해의 세부 지원 계획을 정리하고 추가 지원 방안을 논의했습니다. 우리 기업이 EU CBAM에 대응할 수 있도록 모두 15건의 지원이 제공됩니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "지원사업"
+   ],
+   "sourceCode": "motir",
+   "sourceName": "산업통상부 보도·참고자료",
+   "link": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/171512/view",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260108-motir-e29295",
+   "published": "2026-01-08",
+   "title": "유럽 탄소국경조정제도 전면시행, 민관 공동 대응 논의",
+   "summary": "산업통상부는 2026년 1월 8일 한국철강협회 대회의실에서 EU CBAM에 관한 업계 간담회를 열었습니다. 제도의 영향을 받는 철강업계가 참여해 전면 시행에 따른 영향을 점검하고 대응 방안을 논의했습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "간담회",
+    "철강"
+   ],
+   "sourceCode": "motir",
+   "sourceName": "산업통상부 보도·참고자료",
+   "link": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/171416/view",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251218-motir-171f0f",
+   "published": "2025-12-18",
+   "title": "유럽 탄소국경조정제도 품목확대 대응 위해 업계 간담회 개최",
+   "summary": "2025년 12월 18일에 나온 이 참고자료는 유럽 탄소국경조정제도의 품목 확대에 대응하기 위한 업계 간담회 개최를 알립니다. 부제는 탄소국경조정제도의 적용을 철강·알루미늄 가공제품으로 확대한다는 발표가 있었고, 간담회에서 정부 간 협의 결과를 공유하고 업계 건의사항을 듣는다고 적고 있습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "간담회",
+    "하류제품"
+   ],
+   "sourceCode": "motir",
+   "sourceName": "산업통상부 보도·참고자료",
+   "link": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/171356/view",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251211-motir-c544bf",
+   "published": "2025-12-11",
+   "title": "유럽 탄소국경조정제도 내년 본격 시행, 기업지원 위해 제6차 합동 설명회 개최",
+   "summary": "2025년 12월 11일에 나온 이 보도자료는 유럽 탄소국경조정제도의 본격 시행을 앞두고 정부가 기업 지원을 위한 제6차 합동 설명회를 연다고 알립니다. 부제는 기업 관계자에게 최신 제도 동향과 대응 방안을 안내한다고 적고 있습니다.",
+   "kind": "행사",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "설명회"
+   ],
+   "sourceCode": "motir",
+   "sourceName": "산업통상부 보도·참고자료",
+   "link": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/171334/view",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251126-motir-9cc44e",
+   "published": "2025-11-26",
+   "title": "유럽 탄소국경조정제도 내년 본격시행, 철강 등 관련업계 대상 설명회 개최",
+   "summary": "정부는 2025년 11월 26일 경북 포항 라한호텔에서 관계부처와 유관기관 합동으로 EU CBAM 대응 2025년도 제5차 설명회를 열었습니다. 보도자료의 부제는 최근의 관련 법 개정에 따른 수출기업의 대응 방법을 안내하고, 기업 현장을 방문해 탄소국경조정제도 대응에 관한 의견을 들었다고 적고 있습니다.",
+   "kind": "행사",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "설명회",
+    "철강"
+   ],
+   "sourceCode": "motir",
+   "sourceName": "산업통상부 보도·참고자료",
+   "link": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/171254/view",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251017-motir-f7b2c2",
+   "published": "2025-10-17",
+   "title": "CBAM 본격시행 대비, 대응역량 강화를 위한 합동 설명회 개최",
+   "summary": "정부는 2025년 10월 17일 대전 인터시티 호텔에서 관계부처와 유관기관 합동으로 EU CBAM 대응 역량 강화를 위한 2025년도 제4차 정부 합동 설명회를 열었습니다. 보도자료의 부제는 CBAM 대응 기업의 재직자 150여 명이 참석했고, CBAM 대응 우수 중소기업이 대응 현황과 전략을 소개했다고 적고 있습니다.",
+   "kind": "행사",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "설명회"
+   ],
+   "sourceCode": "motir",
+   "sourceName": "산업통상부 보도·참고자료",
+   "link": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/171082/view",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250618-motir-d1f79b",
+   "published": "2025-06-18",
+   "title": "관계부처 합동, 중소기업의 CBAM 대응 적극 지원",
+   "summary": "정부는 2025년 6월 18일 서울 여의도 중소기업중앙회 KBIZ홀에서 관계부처와 유관기관 합동으로 2025년도 EU CBAM 대응 제2차 정부 합동 설명회를 열었습니다. 보도자료의 부제는 중소기업 실무자에 맞춘 설명회를 열고, 중소기업용 대응 설명서와 디지털 측정·보고·검증(MRV) 소프트웨어를 보급한다고 적고 있습니다.",
+   "kind": "행사",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "설명회",
+    "중소기업"
+   ],
+   "sourceCode": "motir",
+   "sourceName": "산업통상부 보도·참고자료",
+   "link": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/170623/view",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250314-motir-3fc4fc",
+   "published": "2025-03-14",
+   "title": "탄소국경조정제도(CBAM) 관련 정부 지원사업 안내",
+   "summary": "2025년 3월 14일에 나온 이 보도자료는 탄소국경조정제도(CBAM)와 관련된 정부 지원사업을 한데 안내합니다. 부제는 최근 발표된 탄소국경조정제도 개정안의 주요 내용을 소개하고, 탄소배출량 산정·감축을 위한 컨설팅과 설비 지원 등 관련 사업을 중점 안내한다고 적고 있습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "지원사업"
+   ],
+   "sourceCode": "motir",
+   "sourceName": "산업통상부 보도·참고자료",
+   "link": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/170280/view",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20261109-keco-cbam-609a38",
+   "published": "2026-11-09",
+   "title": "월간 CBAM 동향 및 주요 Q&A (36호, 2026년 10월)",
+   "summary": "한국환경공단 CBAM 헬프데스크가 2026년 10월의 CBAM 동향과 주요 질의응답을 담은 월간 자료 36호를 2026년 11월 9일에 올렸습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "월간 동향"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=100866",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20261014-keco-cbam-23b575",
+   "published": "2026-10-14",
+   "title": "EU CBAM 헬프데스크 제2회 오프라인 역량강화교육(부산) 참여 신청 안내",
+   "summary": "한국환경공단 CBAM 헬프데스크 게시판에 2026년 10월 14일에 올라온 행사·교육 안내입니다.",
+   "kind": "행사",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "행사·교육"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=100753",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20261006-keco-cbam-e41bc3",
+   "published": "2026-10-06",
+   "title": "월간 CBAM 동향 및 주요 Q&A (35호, 2026년 9월)",
+   "summary": "한국환경공단 CBAM 헬프데스크가 2026년 9월의 CBAM 동향과 주요 질의응답을 담은 월간 자료 35호를 2026년 10월 6일에 올렸습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "월간 동향"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=100708",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20261006-keco-cbam-df8974",
+   "published": "2026-10-06",
+   "title": "EU CBAM 업무 대응 매뉴얼",
+   "summary": "한국환경공단 CBAM 헬프데스크 게시판에 2026년 10월 6일에 올라온 안내 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "안내 자료"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=100705",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260929-keco-cbam-182997",
+   "published": "2026-09-29",
+   "title": "EU CBAM 하류재 확산 설명회 안내",
+   "summary": "한국환경공단 CBAM 헬프데스크 게시판에 2026년 9월 29일에 올라온 행사·교육 안내입니다.",
+   "kind": "행사",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "행사·교육"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=100655",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260907-keco-cbam-df8245",
+   "published": "2026-09-07",
+   "title": "월간 CBAM 동향 및 주요 Q&A (34호, 2026년 8월)",
+   "summary": "한국환경공단 CBAM 헬프데스크가 2026년 8월의 CBAM 동향과 주요 질의응답을 담은 월간 자료 34호를 2026년 9월 7일에 올렸습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "월간 동향"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=100531",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260807-keco-cbam-501a71",
+   "published": "2026-08-07",
+   "title": "월간 CBAM 동향 및 주요 Q&A (33호, 2026년 7월)",
+   "summary": "한국환경공단 CBAM 헬프데스크가 2026년 7월의 CBAM 동향과 주요 질의응답을 담은 월간 자료 33호를 2026년 8월 7일에 올렸습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "월간 동향"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=100225",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260715-keco-cbam-1e0f8a",
+   "published": "2026-07-15",
+   "title": "국제탄소규제대응 전문인력 교육 교육생 모집 안내(7/15~)",
+   "summary": "한국환경공단 CBAM 헬프데스크 게시판에 2026년 7월 15일에 올라온 행사·교육 안내입니다.",
+   "kind": "행사",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "행사·교육"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=100092",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260713-keco-cbam-186709",
+   "published": "2026-07-13",
+   "title": "EU CBAM 배출량 산정 실무 핸드북 활용 역량강화 온라인 교육 안내",
+   "summary": "한국환경공단 CBAM 헬프데스크 게시판에 2026년 7월 13일에 올라온 행사·교육 안내입니다.",
+   "kind": "행사",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "행사·교육"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=100070",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260709-keco-cbam-7d3d6d",
+   "published": "2026-07-09",
+   "title": "찾아가는 EU CBAM 헬프데스크 안내",
+   "summary": "한국환경공단 CBAM 헬프데스크 게시판에 2026년 7월 9일에 올라온 행사·교육 안내입니다.",
+   "kind": "행사",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "행사·교육"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=100047",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260707-keco-cbam-b57d87",
+   "published": "2026-07-07",
+   "title": "월간 CBAM 동향 및 주요 Q&A (32호, 2026년 6월)",
+   "summary": "한국환경공단 CBAM 헬프데스크가 2026년 6월의 CBAM 동향과 주요 질의응답을 담은 월간 자료 32호를 2026년 7월 7일에 올렸습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "월간 동향"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=100024",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260616-keco-cbam-2abaaa",
+   "published": "2026-06-16",
+   "title": "EU CBAM 배출량 산정 실무 핸드북 3권",
+   "summary": "한국환경공단 CBAM 헬프데스크 게시판에 2026년 6월 16일에 올라온 안내 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "안내 자료"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=99856",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260616-keco-cbam-b97090",
+   "published": "2026-06-16",
+   "title": "알기쉽게 풀어쓰는 CBAM 해설서 3권 개정본_v4",
+   "summary": "한국환경공단 CBAM 헬프데스크 게시판에 2026년 6월 16일에 올라온 안내 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "안내 자료"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=99855",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260605-keco-cbam-b60116",
+   "published": "2026-06-05",
+   "title": "월간 CBAM 동향 및 주요 Q&A (31호, 2026년 5월)",
+   "summary": "한국환경공단 CBAM 헬프데스크가 2026년 5월의 CBAM 동향과 주요 질의응답을 담은 월간 자료 31호를 2026년 6월 5일에 올렸습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "월간 동향"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=99808",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260506-keco-cbam-234c68",
+   "published": "2026-05-06",
+   "title": "월간 CBAM 동향 및 주요 Q&A (30호, 2026년 4월)",
+   "summary": "한국환경공단 CBAM 헬프데스크가 2026년 4월의 CBAM 동향과 주요 질의응답을 담은 월간 자료 30호를 2026년 5월 6일에 올렸습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "월간 동향"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=99606",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260428-keco-cbam-387d29",
+   "published": "2026-04-28",
+   "title": "2026년 중소기업 CBAM대응 인프라(MRV)구축 사업 참여기업 모집",
+   "summary": "한국환경공단 CBAM 헬프데스크 게시판에 2026년 4월 28일에 올라온 지원사업 안내입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "지원사업"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=99575",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260406-keco-cbam-c97aec",
+   "published": "2026-04-06",
+   "title": "2026년도 EU 탄소국경조정제도 대응 제1차 정부 합동설명회 안내",
+   "summary": "한국환경공단 CBAM 헬프데스크 게시판에 2026년 4월 6일에 올라온 행사·교육 안내입니다.",
+   "kind": "행사",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "행사·교육"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=99416",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260402-keco-cbam-5e36c9",
+   "published": "2026-04-02",
+   "title": "월간 CBAM 동향 및 주요 Q&A (29호, 2026년 3월)",
+   "summary": "한국환경공단 CBAM 헬프데스크가 2026년 3월의 CBAM 동향과 주요 질의응답을 담은 월간 자료 29호를 2026년 4월 2일에 올렸습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "월간 동향"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=99400",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260327-keco-cbam-46c213",
+   "published": "2026-03-27",
+   "title": "2026년 EU CBAM 대응 기업지원 컨설팅 모집 공고",
+   "summary": "한국환경공단 CBAM 헬프데스크 게시판에 2026년 3월 27일에 올라온 지원사업 안내입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "지원사업"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=99347",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260319-keco-cbam-914040",
+   "published": "2026-03-19",
+   "title": "EU CBAM 헬프데스크 확정기간 Q&A 사례집",
+   "summary": "한국환경공단 CBAM 헬프데스크 게시판에 2026년 3월 19일에 올라온 안내 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "안내 자료"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=99270",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260306-keco-cbam-ad777d",
+   "published": "2026-03-06",
+   "title": "월간 CBAM 동향 및 주요 Q&A (28호, 2026년 2월)",
+   "summary": "한국환경공단 CBAM 헬프데스크가 2026년 2월의 CBAM 동향과 주요 질의응답을 담은 월간 자료 28호를 2026년 3월 6일에 올렸습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "월간 동향"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=99176",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260209-keco-cbam-0f1762",
+   "published": "2026-02-09",
+   "title": "월간 CBAM 동향 및 주요 Q&A (27호, 2026년 1월)",
+   "summary": "한국환경공단 CBAM 헬프데스크가 2026년 1월의 CBAM 동향과 주요 질의응답을 담은 월간 자료 27호를 2026년 2월 9일에 올렸습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "월간 동향"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=99033",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260109-keco-cbam-02334b",
+   "published": "2026-01-09",
+   "title": "2025년 EU CBAM 대응 우수기업 사례집",
+   "summary": "한국환경공단 CBAM 헬프데스크 게시판에 2026년 1월 9일에 올라온 안내 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "안내 자료"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=98862",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260105-keco-cbam-e704a5",
+   "published": "2026-01-05",
+   "title": "월간 CBAM 동향 및 주요 Q&A (26호, 2025년 12월)",
+   "summary": "한국환경공단 CBAM 헬프데스크가 2025년 12월의 CBAM 동향과 주요 질의응답을 담은 월간 자료 26호를 2026년 1월 5일에 올렸습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "월간 동향"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=98829",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251212-keco-cbam-f3f252",
+   "published": "2025-12-12",
+   "title": "알기쉽게 풀어쓰는 CBAM 해설서(요약), Q&A 사례집",
+   "summary": "한국환경공단 CBAM 헬프데스크 게시판에 2025년 12월 12일에 올라온 안내 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "안내 자료"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=98705",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251204-keco-cbam-4595d2",
+   "published": "2025-12-04",
+   "title": "제 6차 EU CBAM 정부합동 설명회 발표자료",
+   "summary": "한국환경공단 CBAM 헬프데스크 게시판에 2025년 12월 4일에 올라온 설명회 발표자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "발표자료"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=98674",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251204-keco-cbam-0869e1",
+   "published": "2025-12-04",
+   "title": "월간 CBAM 동향 및 주요 Q&A (25호, 2025년 11월)",
+   "summary": "한국환경공단 CBAM 헬프데스크가 2025년 11월의 CBAM 동향과 주요 질의응답을 담은 월간 자료 25호를 2025년 12월 4일에 올렸습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "월간 동향"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=98673",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251126-keco-cbam-561054",
+   "published": "2025-11-26",
+   "title": "2025년 제6차 EU CBAM 대응 정부합동 설명회 개최 안내",
+   "summary": "한국환경공단 CBAM 헬프데스크 게시판에 2025년 11월 26일에 올라온 행사·교육 안내입니다.",
+   "kind": "행사",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "행사·교육"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=98612",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251106-keco-cbam-f8f8ad",
+   "published": "2025-11-06",
+   "title": "월간 CBAM 동향 및 주요 Q&A (24호, 2025년 10월)",
+   "summary": "한국환경공단 CBAM 헬프데스크가 2025년 10월의 CBAM 동향과 주요 질의응답을 담은 월간 자료 24호를 2025년 11월 6일에 올렸습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "월간 동향"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=98520",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251002-keco-cbam-6a7f6b",
+   "published": "2025-10-02",
+   "title": "월간 CBAM 동향 및 주요 Q&A (23호, 2025년 9월)",
+   "summary": "한국환경공단 CBAM 헬프데스크가 2025년 9월의 CBAM 동향과 주요 질의응답을 담은 월간 자료 23호를 2025년 10월 2일에 올렸습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "월간 동향"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=85356",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251002-keco-cbam-ead0aa",
+   "published": "2025-10-02",
+   "title": "제 4차 EU CBAM 대응 유관기관 합동 설명회",
+   "summary": "한국환경공단 CBAM 헬프데스크 게시판에 2025년 10월 2일에 올라온 행사·교육 안내입니다.",
+   "kind": "행사",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "행사·교육"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=85349",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250929-keco-cbam-d9485f",
+   "published": "2025-09-29",
+   "title": "2025년 Post CBAM 대응 기업역량 강화 컨설팅 공고 안내",
+   "summary": "한국환경공단 CBAM 헬프데스크 게시판에 2025년 9월 29일에 올라온 지원사업 안내입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "지원사업"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=85054",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250908-keco-cbam-f46723",
+   "published": "2025-09-08",
+   "title": "월간 CBAM 동향 및 주요 Q&A (22호, 2025년 8월)",
+   "summary": "한국환경공단 CBAM 헬프데스크가 2025년 8월의 CBAM 동향과 주요 질의응답을 담은 월간 자료 22호를 2025년 9월 8일에 올렸습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "월간 동향"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=84957",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250813-keco-cbam-65dcf7",
+   "published": "2025-08-13",
+   "title": "2025년 Post CBAM 대응 전문인력 교육 모집 안내",
+   "summary": "한국환경공단 CBAM 헬프데스크 게시판에 2025년 8월 13일에 올라온 행사·교육 안내입니다.",
+   "kind": "행사",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "행사·교육"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=84701",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250811-keco-cbam-5c5010",
+   "published": "2025-08-11",
+   "title": "월간 CBAM 동향 및 주요 Q&A (21호, 2025년 7월)",
+   "summary": "한국환경공단 CBAM 헬프데스크가 2025년 7월의 CBAM 동향과 주요 질의응답을 담은 월간 자료 21호를 2025년 8월 11일에 올렸습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "월간 동향"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=84677",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250708-keco-cbam-ac8afc",
+   "published": "2025-07-08",
+   "title": "월간 CBAM 동향 및 주요 Q&A (20호, 2025년 6월)",
+   "summary": "한국환경공단 CBAM 헬프데스크가 2025년 6월의 CBAM 동향과 주요 질의응답을 담은 월간 자료 20호를 2025년 7월 8일에 올렸습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "월간 동향"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=84467",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250702-keco-cbam-9932c7",
+   "published": "2025-07-02",
+   "title": "EU CBAM 제3차 정부 합동설명회 개최 안내",
+   "summary": "한국환경공단 CBAM 헬프데스크 게시판에 2025년 7월 2일에 올라온 행사·교육 안내입니다.",
+   "kind": "행사",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "행사·교육"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=84436",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250609-keco-cbam-c335a1",
+   "published": "2025-06-09",
+   "title": "월간 CBAM 동향 및 주요 Q&A (19호, 2025년 5월)",
+   "summary": "한국환경공단 CBAM 헬프데스크가 2025년 5월의 CBAM 동향과 주요 질의응답을 담은 월간 자료 19호를 2025년 6월 9일에 올렸습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "월간 동향"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=84298",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250605-keco-cbam-2c4f7c",
+   "published": "2025-06-05",
+   "title": "EU-CBAM 중소기업 대응 정부 합동 설명회 개최안내",
+   "summary": "한국환경공단 CBAM 헬프데스크 게시판에 2025년 6월 5일에 올라온 행사·교육 안내입니다.",
+   "kind": "행사",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "행사·교육"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=84278",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250522-keco-cbam-252c06",
+   "published": "2025-05-22",
+   "title": "알기쉽게 풀어쓰는 CBAM 해설서 3권 개정본_v3",
+   "summary": "한국환경공단 CBAM 헬프데스크 게시판에 2025년 5월 22일에 올라온 안내 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "안내 자료"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=84191",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250508-keco-cbam-7cd1fb",
+   "published": "2025-05-08",
+   "title": "월간 CBAM 동향 및 주요 Q&A (18호, 2025년 4월)",
+   "summary": "한국환경공단 CBAM 헬프데스크가 2025년 4월의 CBAM 동향과 주요 질의응답을 담은 월간 자료 18호를 2025년 5월 8일에 올렸습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "월간 동향"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=84096",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250418-keco-cbam-70dbb1",
+   "published": "2025-04-18",
+   "title": "2025년 EU CBAM 대응 기업지원 컨설팅 공고 연장 안내",
+   "summary": "한국환경공단 CBAM 헬프데스크 게시판에 2025년 4월 18일에 올라온 지원사업 안내입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "지원사업"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=83756",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250404-keco-cbam-a79fdb",
+   "published": "2025-04-04",
+   "title": "월간 CBAM 동향 및 주요 Q&A (17호, 2025년 3월)",
+   "summary": "한국환경공단 CBAM 헬프데스크가 2025년 3월의 CBAM 동향과 주요 질의응답을 담은 월간 자료 17호를 2025년 4월 4일에 올렸습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "월간 동향"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=83954",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250306-keco-cbam-38666a",
+   "published": "2025-03-06",
+   "title": "월간 CBAM 동향 및 주요 Q&A (16호, 2025년 2월)",
+   "summary": "한국환경공단 CBAM 헬프데스크가 2025년 2월의 CBAM 동향과 주요 질의응답을 담은 월간 자료 16호를 2025년 3월 6일에 올렸습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "월간 동향"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=83698",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250226-keco-cbam-7f4b2d",
+   "published": "2025-02-26",
+   "title": "2025년도 제1차 EU CBAM 정부합동 설명회 개최 안내",
+   "summary": "한국환경공단 CBAM 헬프데스크 게시판에 2025년 2월 26일에 올라온 행사·교육 안내입니다.",
+   "kind": "행사",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "행사·교육"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=83650",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250214-keco-cbam-07e5f4",
+   "published": "2025-02-14",
+   "title": "월간 CBAM 동향 및 주요 Q&A (15호, 2025년 1월)",
+   "summary": "한국환경공단 CBAM 헬프데스크가 2025년 1월의 CBAM 동향과 주요 질의응답을 담은 월간 자료 15호를 2025년 2월 14일에 올렸습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "월간 동향"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=83577",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250108-keco-cbam-a4fd2f",
+   "published": "2025-01-08",
+   "title": "월간 CBAM 동향 및 주요 Q&A (14호, 2024년 12월)",
+   "summary": "한국환경공단 CBAM 헬프데스크가 2024년 12월의 CBAM 동향과 주요 질의응답을 담은 월간 자료 14호를 2025년 1월 8일에 올렸습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "월간 동향"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=83406",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20261002-kosmes-esg-5c426a",
+   "published": "2026-10-02",
+   "title": "2026년 중소기업 CBAM 대응 인프라구축 사업 참여기업 모집안내(11.2(월)~예산 소진 시 까지)",
+   "summary": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항에 2026년 10월 2일에 올라온 지원사업 안내입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "지원사업"
+   ],
+   "sourceCode": "kosmes-esg",
+   "sourceName": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항",
+   "link": "https://kdoctor.kosmes.or.kr/esgplatform/board/board13.do",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260826-kosmes-esg-b49f29",
+   "published": "2026-08-26",
+   "title": "2026년 중소기업 CBAM 대응 인프라구축 사업 3차 수요기업 모집 공고",
+   "summary": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항에 2026년 8월 26일에 올라온 지원사업 안내입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "지원사업"
+   ],
+   "sourceCode": "kosmes-esg",
+   "sourceName": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항",
+   "link": "https://kdoctor.kosmes.or.kr/esgplatform/board/board13.do",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260720-kosmes-esg-e53694",
+   "published": "2026-07-20",
+   "title": "2026년 중소기업 CBAM 대응 맞춤형 교육(CBAM 아카데미) 수강생 모집 안내",
+   "summary": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항에 2026년 7월 20일에 올라온 행사·교육 안내입니다.",
+   "kind": "행사",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "행사·교육"
+   ],
+   "sourceCode": "kosmes-esg",
+   "sourceName": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항",
+   "link": "https://kdoctor.kosmes.or.kr/esgplatform/board/board13.do",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260720-kosmes-esg-1e6a51",
+   "published": "2026-07-20",
+   "title": "2026년 중소기업 CBAM 대응 인프라구축 사업 2차 수요기업 모집 공고",
+   "summary": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항에 2026년 7월 20일에 올라온 지원사업 안내입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "지원사업"
+   ],
+   "sourceCode": "kosmes-esg",
+   "sourceName": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항",
+   "link": "https://kdoctor.kosmes.or.kr/esgplatform/board/board13.do",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260716-kosmes-esg-413859",
+   "published": "2026-07-16",
+   "title": "2026년 중소기업 CBAM 대응 인프라(MRV) 구축 사업 배출량 검증기관 모집 공고",
+   "summary": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항에 2026년 7월 16일에 올라온 지원사업 안내입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "지원사업"
+   ],
+   "sourceCode": "kosmes-esg",
+   "sourceName": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항",
+   "link": "https://kdoctor.kosmes.or.kr/esgplatform/board/board13.do",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260602-kosmes-esg-40b082",
+   "published": "2026-06-02",
+   "title": "2026년 EU CBAM대응 제2차정부합동설명회 안내",
+   "summary": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항에 2026년 6월 2일에 올라온 행사·교육 안내입니다.",
+   "kind": "행사",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "행사·교육"
+   ],
+   "sourceCode": "kosmes-esg",
+   "sourceName": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항",
+   "link": "https://kdoctor.kosmes.or.kr/esgplatform/board/board13.do",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260406-kosmes-esg-a4e8f6",
+   "published": "2026-04-06",
+   "title": "2026년 중소기업 CBAM대응 인프라(MRV)구축 사업 참여기업 모집 수정 공고(~5/14(목), 18시)",
+   "summary": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항에 2026년 4월 6일에 올라온 지원사업 안내입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "지원사업"
+   ],
+   "sourceCode": "kosmes-esg",
+   "sourceName": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항",
+   "link": "https://kdoctor.kosmes.or.kr/esgplatform/board/board13.do",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251218-kosmes-esg-383867",
+   "published": "2025-12-18",
+   "title": "중소기업 CBAM대응 인프라구축 사업 참여기업 상시 모집안내",
+   "summary": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항에 2025년 12월 18일에 올라온 지원사업 안내입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "지원사업"
+   ],
+   "sourceCode": "kosmes-esg",
+   "sourceName": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항",
+   "link": "https://kdoctor.kosmes.or.kr/esgplatform/board/board13.do",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251103-kosmes-esg-edd43c",
+   "published": "2025-11-03",
+   "title": "2025년 제5차 EU CBAM대응 유관기관 합동 설명회 개최안내(11.26(수))",
+   "summary": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항에 2025년 11월 3일에 올라온 행사·교육 안내입니다.",
+   "kind": "행사",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "행사·교육"
+   ],
+   "sourceCode": "kosmes-esg",
+   "sourceName": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항",
+   "link": "https://kdoctor.kosmes.or.kr/esgplatform/board/board13.do",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250929-kosmes-esg-25e476",
+   "published": "2025-09-29",
+   "title": "중소기업 CBAM대응 인프라구축 사업 참여기업 상시 모집안내",
+   "summary": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항에 2025년 9월 29일에 올라온 지원사업 안내입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "지원사업"
+   ],
+   "sourceCode": "kosmes-esg",
+   "sourceName": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항",
+   "link": "https://kdoctor.kosmes.or.kr/esgplatform/board/board13.do",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250902-kosmes-esg-5fd8af",
+   "published": "2025-09-02",
+   "title": "CBAM대응 오프라인 실습교육 신청안내",
+   "summary": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항에 2025년 9월 2일에 올라온 행사·교육 안내입니다.",
+   "kind": "행사",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "행사·교육"
+   ],
+   "sourceCode": "kosmes-esg",
+   "sourceName": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항",
+   "link": "https://kdoctor.kosmes.or.kr/esgplatform/board/board13.do",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250724-kosmes-esg-cee78c",
+   "published": "2025-07-24",
+   "title": "CBAM대응 오프라인 기초교육 신청안내",
+   "summary": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항에 2025년 7월 24일에 올라온 행사·교육 안내입니다.",
+   "kind": "행사",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "행사·교육"
+   ],
+   "sourceCode": "kosmes-esg",
+   "sourceName": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항",
+   "link": "https://kdoctor.kosmes.or.kr/esgplatform/board/board13.do",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250612-kosmes-esg-171ed2",
+   "published": "2025-06-12",
+   "title": "중소기업 CBAM대응 인프라구축 사업 참여기업 상시모집안내(6.10(화)~예산소진시 까지)",
+   "summary": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항에 2025년 6월 12일에 올라온 지원사업 안내입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "지원사업"
+   ],
+   "sourceCode": "kosmes-esg",
+   "sourceName": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항",
+   "link": "https://kdoctor.kosmes.or.kr/esgplatform/board/board13.do",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250430-kosmes-esg-7cd324",
+   "published": "2025-04-30",
+   "title": "(CBAM대응 인프라구축 지원기업용) ESG플랫폼 이용 안내자료",
+   "summary": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항에 2025년 4월 30일에 올라온 지원사업 안내입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "지원사업"
+   ],
+   "sourceCode": "kosmes-esg",
+   "sourceName": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항",
+   "link": "https://kdoctor.kosmes.or.kr/esgplatform/board/board13.do",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250430-kosmes-esg-1adb78",
+   "published": "2025-04-30",
+   "title": "2025년 중소기업 CBAM대응 인프라구축 참여기업 2차모집 공고(~25.5.30 18시)",
+   "summary": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항에 2025년 4월 30일에 올라온 지원사업 안내입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "지원사업"
+   ],
+   "sourceCode": "kosmes-esg",
+   "sourceName": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항",
+   "link": "https://kdoctor.kosmes.or.kr/esgplatform/board/board13.do",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250221-kosmes-esg-afdd05",
+   "published": "2025-02-21",
+   "title": "2025년 중소기업 CBAM대응 인프라구축 참여기업 모집 공고(~25.3.21 18시)",
+   "summary": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항에 2025년 2월 21일에 올라온 지원사업 안내입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "지원사업"
+   ],
+   "sourceCode": "kosmes-esg",
+   "sourceName": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항",
+   "link": "https://kdoctor.kosmes.or.kr/esgplatform/board/board13.do",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250123-kosmes-esg-e39880",
+   "published": "2025-01-23",
+   "title": "2025년 중소기업 CBAM대응 인프라구축 사업 컨설팅 · 검증기관 모집 공고 (수정)",
+   "summary": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항에 2025년 1월 23일에 올라온 지원사업 안내입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "지원사업"
+   ],
+   "sourceCode": "kosmes-esg",
+   "sourceName": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항",
+   "link": "https://kdoctor.kosmes.or.kr/esgplatform/board/board13.do",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20261026-compass-c0113d",
+   "published": "2026-10-26",
+   "title": "EU CBAM 하류재 확산 설명회 발표자료집",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2026년 10월 26일에 올라온 설명회 발표자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "발표자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=NjY%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260904-compass-cfa23c",
+   "published": "2026-09-04",
+   "title": "2026년 EU 탄소국경조정제도 대응 제3차 정부 합동 설명회 발표자료집",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2026년 9월 4일에 올라온 설명회 발표자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "발표자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=NjU%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260818-compass-ab32e2",
+   "published": "2026-08-18",
+   "title": "EU CBAM Guidance 자료",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2026년 8월 18일에 올라온 안내 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "안내 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=NjQ%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260813-compass-269f85",
+   "published": "2026-08-13",
+   "title": "기본값 이행규정(EU) 2026/1740 (2026.07.31 관보게재)",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2026년 8월 13일에 올라온 EU 법령 자료입니다. 제목에 적힌 유럽연합 관보 게재일은 2026년 7월 31일입니다.",
+   "kind": "국내",
+   "topic": "emissions",
+   "importance": "보통",
+   "topics": [
+    "법령 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=NjM%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260721-compass-a30351",
+   "published": "2026-07-21",
+   "title": "EU 하류재 확대대상 집행위원회안, 이사회안, 의회안 비교('26.9.15 수정)",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2026년 7월 21일에 올라온 분석 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "분석 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=NjI%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260626-compass-e58b5d",
+   "published": "2026-06-26",
+   "title": "관세청, EU 품목분류 사전심사(BTI) 가이드북",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2026년 6월 26일에 올라온 안내 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "안내 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=NjE%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260623-compass-5f028c",
+   "published": "2026-06-23",
+   "title": "2026년 EU 탄소국경조정제도 대응 제2차 정부 합동 설명회 발표자료집",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2026년 6월 23일에 올라온 설명회 발표자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "발표자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=NjA%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260602-compass-9cb6e6",
+   "published": "2026-06-02",
+   "title": "EU 집행위 Q&A 업데이트('26.5.27)",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2026년 6월 2일에 올라온 안내 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "안내 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=NTk%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260421-compass-4982bb",
+   "published": "2026-04-21",
+   "title": "2026년 EU 탄소국경조정제도 대응 제1차 정부 합동 설명회 발표자료집",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2026년 4월 21일에 올라온 설명회 발표자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "발표자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=NTg%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260407-compass-fddfee",
+   "published": "2026-04-07",
+   "title": "제3국 사업자 포털(CBAM Operator Portal, O3CI) 직원 권한 위임 및 보안 가이드",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2026년 4월 7일에 올라온 안내 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "안내 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=NTY%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260330-compass-a3b539",
+   "published": "2026-03-30",
+   "title": "EU CBAM 확정기간 실무 매뉴얼(배산인수) ('26.03.30 발행)",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2026년 3월 30일에 올라온 안내 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "안내 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=NTU%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260325-compass-7779c3",
+   "published": "2026-03-25",
+   "title": "EU 집행위원회 개최 CBAM 웨비나 녹화본 및 자료 공유",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2026년 3월 25일에 올라온 안내 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "안내 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=NTQ%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260303-compass-8afa5b",
+   "published": "2026-03-03",
+   "title": "제3국 사업자 포털(CBAM Operator Portal, O3CI) 접근 권한 신청 가이드",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2026년 3월 3일에 올라온 안내 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "안내 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=NTM%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260219-compass-b58e51",
+   "published": "2026-02-19",
+   "title": "기본값 및 무상할당 벤치마크 엑셀 파일",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2026년 2월 19일에 올라온 안내 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "안내 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=NTI%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260211-compass-8848c3",
+   "published": "2026-02-11",
+   "title": "2026년 정부 탄소국경조정제도 대응 지원",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2026년 2월 11일에 올라온 지원사업 안내입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "지원사업"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=NTc%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260210-compass-384eb2",
+   "published": "2026-02-10",
+   "title": "EU CBAM 대상 확대 품목 한-EU 품목번호 연계표 (관세청 제공)",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2026년 2월 10일에 올라온 안내 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "안내 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=NTE%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260204-compass-ce6399",
+   "published": "2026-02-04",
+   "title": "EU 탄소국경조정제도 법률 번역서 버전5.0 ('26.02.04 발행)",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2026년 2월 4일에 올라온 안내 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "안내 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=NTA%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260114-compass-0fc2b5",
+   "published": "2026-01-14",
+   "title": "EU 집행위의 확정기간 CBAM 신고인 의무 요약자료",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2026년 1월 14일에 올라온 안내 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "안내 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=NDk%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20260102-compass-1f859d",
+   "published": "2026-01-02",
+   "title": "기본값 이행규정(EU) 2025/2621 (2025.12.31 관보게재)",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2026년 1월 2일에 올라온 EU 법령 자료입니다. 제목에 적힌 유럽연합 관보 게재일은 2025년 12월 31일입니다.",
+   "kind": "국내",
+   "topic": "emissions",
+   "importance": "보통",
+   "topics": [
+    "법령 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=NDg%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251222-compass-86986b",
+   "published": "2025-12-22",
+   "title": "CBAM 등록부 개정 이행규정(EU) 2025/2550 (2025.12.22 관보게재)",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2025년 12월 22일에 올라온 EU 법령 자료입니다. 제목에 적힌 유럽연합 관보 게재일은 2025년 12월 22일입니다.",
+   "kind": "국내",
+   "topic": "declare",
+   "importance": "보통",
+   "topics": [
+    "법령 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=NDU%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251222-compass-7b14bd",
+   "published": "2025-12-22",
+   "title": "세관당국 정보전달 이행규정(EU) 2025/2619 (2025.12.22 관보게재)",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2025년 12월 22일에 올라온 EU 법령 자료입니다. 제목에 적힌 유럽연합 관보 게재일은 2025년 12월 22일입니다.",
+   "kind": "국내",
+   "topic": "declare",
+   "importance": "보통",
+   "topics": [
+    "법령 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=NDc%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251222-compass-48e444",
+   "published": "2025-12-22",
+   "title": "검증원칙 이행규정(EU) 2025/2546 (2025.12.22 관보게재)",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2025년 12월 22일에 올라온 EU 법령 자료입니다. 제목에 적힌 유럽연합 관보 게재일은 2025년 12월 22일입니다.",
+   "kind": "국내",
+   "topic": "verify",
+   "importance": "보통",
+   "topics": [
+    "법령 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=NDY%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251222-compass-9a0414",
+   "published": "2025-12-22",
+   "title": "CBAM 신고인 승인 개정 이행규정(EU) 2025/2549 (2025.12.22 관보게재)",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2025년 12월 22일에 올라온 EU 법령 자료입니다. 제목에 적힌 유럽연합 관보 게재일은 2025년 12월 22일입니다.",
+   "kind": "국내",
+   "topic": "declare",
+   "importance": "보통",
+   "topics": [
+    "법령 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=NDQ%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251222-compass-28704b",
+   "published": "2025-12-22",
+   "title": "CBAM 인증서 가격 이행규정(EU) 2025/2548 (2025.12.22 관보게재)",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2025년 12월 22일에 올라온 EU 법령 자료입니다. 제목에 적힌 유럽연합 관보 게재일은 2025년 12월 22일입니다.",
+   "kind": "국내",
+   "topic": "price",
+   "importance": "보통",
+   "topics": [
+    "법령 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=NDM%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251222-compass-9a65dc",
+   "published": "2025-12-22",
+   "title": "확정기간 배출량 산정방법 이행규정(EU) 2025/2547 (2025.12.22 관보게재)",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2025년 12월 22일에 올라온 EU 법령 자료입니다. 제목에 적힌 유럽연합 관보 게재일은 2025년 12월 22일입니다.",
+   "kind": "국내",
+   "topic": "emissions",
+   "importance": "보통",
+   "topics": [
+    "법령 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=NDI%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251222-compass-97c67b",
+   "published": "2025-12-22",
+   "title": "무상할당 조정량 이행규정(EU) 2025/2620 (2025.12.22 관보게재)",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2025년 12월 22일에 올라온 EU 법령 자료입니다. 제목에 적힌 유럽연합 관보 게재일은 2025년 12월 22일입니다.",
+   "kind": "국내",
+   "topic": "price",
+   "importance": "보통",
+   "topics": [
+    "법령 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=NDE%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251222-compass-aaf213",
+   "published": "2025-12-22",
+   "title": "인정조건 위임규정(EU) 2025/2551 (2025.11.20 관보게재)",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2025년 12월 22일에 올라온 EU 법령 자료입니다. 제목에 적힌 유럽연합 관보 게재일은 2025년 11월 20일입니다.",
+   "kind": "국내",
+   "topic": "verify",
+   "importance": "보통",
+   "topics": [
+    "법령 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=NDA%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251218-compass-f98fc4",
+   "published": "2025-12-18",
+   "title": "EU집행위 하위스트림 확대안 발표대상CN코드",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2025년 12월 18일에 올라온 안내 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "안내 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=MzY%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251218-compass-34e57e",
+   "published": "2025-12-18",
+   "title": "EU 탄소국경조정제도 확정기간 이행 가이드라인 (버전 1.0)",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2025년 12월 18일에 올라온 안내 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "안내 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=Mzc%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251205-compass-22027a",
+   "published": "2025-12-05",
+   "title": "2025년 제5차 EU CBAM대응 정부 합동 설명회 발표자료집",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2025년 12월 5일에 올라온 설명회 발표자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "발표자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=MzQ%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251107-compass-e4e7a8",
+   "published": "2025-11-07",
+   "title": "EU 탄소국경조정제도 법률 번역서 버전4.0 ('25.11.07 발행)",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2025년 11월 7일에 올라온 안내 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "안내 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=MzM%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251103-compass-6cecaa",
+   "published": "2025-11-03",
+   "title": "대륙붕과 EEZ 이행규정(EU) 2025/2210 (2025.11.3 관보게재)",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2025년 11월 3일에 올라온 EU 법령 자료입니다. 제목에 적힌 유럽연합 관보 게재일은 2025년 11월 3일입니다.",
+   "kind": "국내",
+   "topic": "law",
+   "importance": "보통",
+   "topics": [
+    "법령 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=Mzk%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251020-compass-03c25d",
+   "published": "2025-10-20",
+   "title": "2025년 제4차 EU CBAM대응 유관기관 합동 설명회 발표자료집",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2025년 10월 20일에 올라온 설명회 발표자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "발표자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=MzI%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20251017-compass-757041",
+   "published": "2025-10-17",
+   "title": "CBAM 개정 규정(EU) 2025/2083 (2025.10.17 관보게재)",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2025년 10월 17일에 올라온 EU 법령 자료입니다. 제목에 적힌 유럽연합 관보 게재일은 2025년 10월 17일입니다.",
+   "kind": "국내",
+   "topic": "law",
+   "importance": "보통",
+   "topics": [
+    "법령 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=Mzg%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250709-compass-c97a2f",
+   "published": "2025-07-09",
+   "title": "2025년 EU CBAM 대응 제3차 정부합동설명회 발표자료집",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2025년 7월 9일에 올라온 설명회 발표자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "발표자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=MzE%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250703-compass-a5a923",
+   "published": "2025-07-03",
+   "title": "UK CBAM 기본법률 초안('25.4.24) 분석보고서",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2025년 7월 3일에 올라온 분석 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "분석 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=MzA%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250623-compass-0de587",
+   "published": "2025-06-23",
+   "title": "2025년 EU CBAM 대응 제2차 정부합동설명회 발표자료집",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2025년 6월 23일에 올라온 설명회 발표자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "발표자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=Mjk%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250519-compass-f36f7b",
+   "published": "2025-05-19",
+   "title": "EU 탄소국경조정제도 전환기간 이행 가이드라인(버전 3.0.0)",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2025년 5월 19일에 올라온 안내 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "안내 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=Mjg%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250514-compass-aafc6c",
+   "published": "2025-05-14",
+   "title": "EU 탄소국경조정제도 중소∙중견기업 대응 매뉴얼 ('25.5.13 발행)",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2025년 5월 14일에 올라온 안내 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "안내 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=MjY%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250514-compass-586962",
+   "published": "2025-05-14",
+   "title": "EU 탄소국경조정제도 중소∙중견기업 대응매뉴얼_예시 엑셀파일(알루미늄)",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2025년 5월 14일에 올라온 안내 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "안내 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=Mjc%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250410-compass-833328",
+   "published": "2025-04-10",
+   "title": "EU 탄소국경조정제도 법률 번역서 버전3.1 ('25.4.10 발행)",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2025년 4월 10일에 올라온 안내 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "안내 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=MjU%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250317-compass-6a35d8",
+   "published": "2025-03-17",
+   "title": "2025년 EU CBAM 대응 제1차 정부 합동설명회 발표자료집",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2025년 3월 17일에 올라온 설명회 발표자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "낮음",
+   "topics": [
+    "발표자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=MjQ%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250313-compass-d8bcce",
+   "published": "2025-03-13",
+   "title": "EU CBAM 개정안(EU 집행위 '25.2.26발표) 분석보고서",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2025년 3월 13일에 올라온 분석 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "분석 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=MjM%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250311-compass-89e9ca",
+   "published": "2025-03-11",
+   "title": "EU 탄소국경조정제도 법률 번역서 버전3.0 ('25.3.11 발행)",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2025년 3월 11일에 올라온 안내 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "안내 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=MjI%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
+  },
+  {
+   "id": "20250305-compass-e1d692",
+   "published": "2025-03-05",
+   "title": "EU CBAM 개정안(EU 집행위 '25.2.26 발표) 분석자료",
+   "summary": "국제환경규제 사전대응 지원시스템(COMPASS)의 EU CBAM 헬프데스크 자료실에 2025년 3월 5일에 올라온 분석 자료입니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "분석 자료"
+   ],
+   "sourceCode": "compass",
+   "sourceName": "COMPASS EU CBAM 헬프데스크 자료실",
+   "link": "https://www.compass.or.kr/eucbam/data/view?idx=MjE%3D",
+   "impact": "",
+   "listed": "2026-11-10",
+   "checkedAt": "2026-11-10T21:03:30+09:00",
+   "authoring": "자동",
+   "backfill": true
   }
  ]
 }
