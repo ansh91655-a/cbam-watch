@@ -1,0 +1,48 @@
+[주소] https://ec.europa.eu/commission/presscorner/detail/en/ip_25_614
+[날짜] 2025-02-26
+[제목] Commission simplifies rules on sustainability and EU investments, delivering over €6 billion in administrative relief
+
+The European Commission has adopted a new package of proposals to simplify EU rules, boost competitiveness, and unlock additional investment capacity. This is a major step forward in creating a more favourable business environment to help EU companies grow, innovate, and create quality jobs.
+By bringing our competitiveness and climate goals together, we are creating the conditions for EU businesses to thrive, attract investment, achieve our shared goals – such as the European Green Deal objectives – and unlock our full economic potential.
+The Commission has a clear target to deliver an unprecedented simplification effort, by achieving at least 25% reduction in administrative burdens, and at least 35% for SMEs until the end of this mandate. These first ‘Omnibus' packages, bringing together proposals in a number of related legislative fields, cover a far-reaching simplification in the fields of sustainable finance reporting, sustainability due diligence, EU Taxonomy, carbon border adjustment mechanism, and European investment programmes.
+These proposals will reduce complexity of EU requirements for all businesses, notably SMEs and small mid-caps, focus our regulatory framework on the largest companies which are likely to have a bigger impact on the climate and the environment, while still enabling companies to access sustainable finance for their clean transition.
+If adopted and implemented as set out today, the proposals are conservatively estimated to bring total savings in annual administrative costs of around €6.3 billion and to mobilise additional public and private investment capacity of €50 billion to support policy priorities.
+President Ursula von der Leyen said: "Simplification promised, simplification delivered! We are presenting our first proposal for far-reaching simplification. EU companies will benefit from streamlined rules on sustainable finance reporting, sustainability due diligence and taxonomy. This will make life easier for our businesses while ensuring we stay firmly on course toward our decarbonisation goals. And more simplification is on the way".
+Making sustainability reporting more accessible and efficient
+Specifically, the main changes in the area of sustainability reporting (CSRD and EU Taxonomy) will:
+Remove around 80% of companies from the scope of CSRD, focusing the sustainability reporting obligations on the largest companies which are more likely to have the biggest impacts on people and the environment;
+Ensure that sustainability reporting requirements on large companies do not burden smaller companies in their value chains;
+Postpone by two years (until 2028) the reporting requirements for companies currently in the scope of CSRD and which are required to report as of 2026 or 2027.
+Reduce the burden of the EU Taxonomy reporting obligations and limit it to the largest companies (corresponding to the scope of the CSDDD), while keeping the possibility to report voluntarily for the other large companies within the future scope of the CSRD. This is expected to deliver significant cost savings for smaller companies, while allowing businesses that wish to access sustainable finance to continue that reporting.
+Introduce the option of reporting on activities that are partially aligned with the EU Taxonomy, fostering a gradual environmental transition of activities over time, in line with the aim to scale up transition finance to help companies on their path towards sustainability.
+Introduce a financial materiality threshold for the Taxonomy reporting and reduce the reporting templates by around 70%.
+Introduce simplifications to the most complex “Do no Significant harm” (DNSH) criteria for pollution prevention and control related to the use and presence of chemicals that apply horizontally to all economic sectors under the EU Taxonomy – as a first step in revising and simplifying all such DNSH criteria.
+Adjust, among others, the main Taxonomy-based key performance indicator for banks, the Green Asset Ratio (GAR). Banks will be able to exclude from the denominator of the GAR exposures that relate to undertakings which are outside the future scope of the CSRD (i.e. companies with less than 1000 employees and €50m turnover).
+Simplifying due diligence to support responsible business practices
+The main changes in the area of sustainability due diligence will:
+Simplify sustainability due diligence requirements so that companies in scope avoid unnecessary complexities and costs, e.g. by focusing systematic due diligence requirements on direct business partners; and by reducing the frequency of periodic assessments and monitoring of their partners from annual to 5 years, with ad hoc assessments where necessary.
+Reduce burdens and trickle-down effects for SMEs and and small mid-caps by limiting the amount of information that may be requested as part of the value chain mapping by large companies;
+Further increase the harmonisation of due diligence requirements to ensure a level playing field across the EU;
+Remove the EU civil liability conditions while preserving victims' right to full compensation for damage caused by non-compliance, and protecting companies against over-compensation, under the civil liability regimes of Member States; and
+Give companies more time to prepare to comply with the new requirements by postponing the application of the sustainability due diligence requirements for the largest companies by one year (to 26 July 2028), while advancing the adoption of the guidelines by one year (to July 2026).
+Simplifying the carbon border adjustment mechanism (CBAM) for a fairer trade
+The main changes on CBAM will:
+Exempt small importers from CBAM obligations, mostly SMEs and individuals. These are importers who import small quantities of CBAM goods, representing very small quantities of embedded emissions entering the Union from third countries. This works by introducing a new CBAM cumulative annual threshold of 50 tonnes per importer, thus eliminating CBAM obligations for approximately 182,000 or 90% of importers, mostly SMEs, while still covering over 99% emissions in scope.
+Simplify the rules for companies that remain in CBAM scope: on authorisation of CBAM declarants, as well as the rules related to CBAM obligations, including the calculation of embedded emissions and reporting requirements.
+Make CBAM more effective in the long term, by strengthening the rules to avoid circumvention and abuse.
+This simplification precedes a future extension of CBAM to other ETS sectors, downstream goods, followed by new legislative proposal on the scope extension of CBAM in early 2026.
+Unlocking investment opportunities
+The Commission is also proposing a series of amendments to simplify and optimise the use of several investment programs including InvestEU, EFSI, and legacy financial instruments.
+InvestEU, the EU's largest risk-sharing instrument to support priority investments within the Union, plays a key role in addressing financial barriers and driving the investments needed for competitiveness, research and innovation, decarbonisation, environmental sustainability and skills. Currently, close to 45 % of its operations are supporting climate objectives.
+The proposed changes:
+Increase the EU's investment capacity through the use of returns from past investments, as well as optimised use of funds still available under the legacy instruments, thus allowing for more funding to be made available to businesses. This is expected to mobilise around €50 billion in additional public and private investments. The increased InvestEU capacity will be mainly used to finance more innovative activities in support of priority policies, such as the Competitiveness Compass and the Clean Industrial Deal.
+Make it easier for Member States to contribute to the programme and support their own businesses and mobilise private investments.
+Simplify administrative requirements for our implementing partners, financial intermediaries and final recipients, notably SMEs. The simplification measures proposed are expected to generate €350 million in cost savings.
+Next steps
+The legislative proposals will now be submitted to the European Parliament and the Council for their consideration and adoption. The changes on the CSRD, CSDDD, and CBAM will enter into force once the co-legislators have reached an agreement on the proposals and after publication in the EU Official Journal. In line with the Communication on simplification and implementation published on 11 January 2024, the Commission invites the co-legislators to treat this omnibus package with priority, in particular the proposal postponing certain disclosure requirements under the CSRD and the transposition deadline under CSDDD, as they aim to address key concerns identified by stakeholders.
+The draft Delegated Act amending the current delegated acts under the Taxonomy Regulation will be adopted after public feedback and will apply at the end of the scrutiny period by the European Parliament and the Council.
+For More Information
+Get a detailed breakdown of the key simplifications and their impact on the Commission's Q&A.
+Read the full Commission proposals (Omnibus 1 | Omnibus 2) to understand the legal changes introduced.
+Explore the Commission Staff Working Documents (1 and 2) for a detailed analysis of the rationale and expected impact of the simplification measures.
+A Call for Evidence has been open on the Taxonomy Delegated Acts

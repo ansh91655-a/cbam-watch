@@ -1,0 +1,31 @@
+[주소] https://ec.europa.eu/commission/presscorner/detail/en/ip_25_3088
+[날짜] 2025-12-17
+[제목] Commission strengthens the Carbon Border Adjustment Mechanism*
+
+The Commission proposed measures to close loopholes to prevent circumvention and strengthen the efficacy of EU's Carbon Border Adjustment Mechanism's (CBAM), in response to feedback received from industry. Starting January 1, 2028, CBAM's scope will expand to include specific steel and aluminium-intensive downstream products. The Commission is also proposing measures to close loopholes to prevent circumvention. Answering the call of the sector, a temporary support scheme is being introduced to protect EU producers vulnerable to carbon leakage, rewarding cleaner companies globally and fostering a fair, competitive environment.
+Today's proposals also take into account concerns raised by trusted international partners, which will benefit from some simplifications and flexibilities. It introduces the concept of equivalence in carbon tax and price deduction, and includes a new clause allowing for negotiated trade facilitation measures, such as mutual recognition of trustworthy accreditation bodies, and new facilities on equivalence of carbon price deduction.
+This will further strengthen CBAM's role in promoting decarbonisation beyond EU borders, facilitated by outreach and technical aid, which is confirmed in the CBAM Review report, unveiled today.
+The measures proposed today:
+Extension to downstream products
+The EU's Carbon Border Adjustment Mechanism (CBAM) currently targets basic materials like aluminium, cement, electricity, and steel.
+From 2028, importers will pay a carbon price for emissions tied to these goods, levelling the field with EU-produced materials subject to the EU's Emissions Trading System (ETS). While this safeguards against carbon leakage, it raises costs for EU producers using these materials in downstream products, such as washing machines. Production may shift to countries with weaker climate policies, or EU goods might be substituted with carbon-heavy imports.
+To combat this, the Commission plans to expand CBAM's reach to include 180 steel and aluminium-intensive products, like machinery and appliances, ensuring emissions are reduced rather than relocated.
+The vast majority, 94%, of these downstream goods concerned are industrial supply chain products with a high (on average 79%) steel and aluminium content, used in heavy machinery and specialised equipment, such as base metal mountings, cylinders, industrial radiators, or machines for casting. A small share, 6%, of the downstream goods concerned are also household goods. An EU producer of such downstream products can face increased costs for the steel and aluminium materials used in the production process.
+Additional anti-circumvention measures
+Building on lessons from the transitional period, the European Commission is reinforcing strategies to combat circumvention risks identified in the 'Steel and Metal Action Plan' and via stakeholder consultations.
+Promoting scrap usage to cut emissions in energy-intensive products, the Commission is now incorporating pre-consumer aluminium and steel scrap in CBAM calculations. This ensures fair carbon pricing for both EU-made and imported goods.
+Key proposals include enhanced reporting requirements for better traceability of CBAM goods and addressing emission intensity misdeclarations. The Commission gains authority to tackle evidence-based abuses circumventing CBAM's financial responsibilities, requiring additional evidence when actual values are unreliable, and defaulting to country values in such specific cases.
+Temporary Decarbonisation Fund
+The European Commission has launched a fund to temporarily support EU producers of CBAM goods and mitigate carbon leakage risks. This addresses the competitiveness loss in third-country markets where EU goods might be supplanted by cheaper, more emission-intensive alternatives, potentially increasing global emissions.
+The fund will reimburse a portion of the EU-ETS carbon costs for goods still facing carbon leakage risks, with support contingent upon demonstrated decarbonisation efforts.
+Financing will come from member state contributions, constituting 25% of revenues from CBAM certificate sales in 2026 and 2027, while the remaining 75% will be an EU Own Resource.
+CBAM review report
+The Commission also published a report reviewing the experience with the delivery of the CBAM during the transitional period from October 2023 to the end of 2025. It evaluates CBAM's contribution in addressing carbon leakage and fostering global carbon pricing, and examines governance, administration and enforcement as well as CBAM's international dimension.
+The findings highlight CBAM as a key driver in the promotion of decarbonisation in countries outside of the EU, partly due to the outreach and technical assistance provided to facilitate implementation. The report also sets out the implementation roadmap and accompanying measures required to secure an efficient and effective definitive regime from 2026 onwards.
+Background
+The CBAM is an environmental measure pivotal to reach the EU's climate objective of climate neutrality by 2050, developed in line with the commitments under the Paris Agreement. While the ETS prices carbon production within the EU, CBAM puts a price on producers selling goods within Europe. Launched in its transitional phase in October 2023, CBAM allowed for a predictable and proportionate transition for EU and non-EU businesses. After two years of transitional period, the CBAM financial adjustment will be progressively phased in as of 1 January 2026. This will mirror the phase-out of free allocations under the EU ETS, which will take place until 2034.
+For more information
+Questions and answers
+Implementing Acts and Delegated Acts (Carbon Border Adjustment Mechanism - Taxation and Customs Union)
+CBAM Review report (Carbon Border Adjustment Mechanism - Taxation and Customs Union)
+*: updated on 17 December 2025 - 12.30

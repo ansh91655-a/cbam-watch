@@ -1,0 +1,74 @@
+[주소] https://ec.europa.eu/commission/presscorner/detail/en/speech_25_3107
+[날짜] 2025-12-17
+[제목] Remarks by Executive Vice-President Séjourné and Commissioners Hoekstra at the press conference on the Clean Industrial Deal Package (including CBAM)
+
+Executive Vice-President Séjourné
+Mesdames et Messieurs,
+Après le paquet automobile hier, je suis heureux de vous retrouver aujourd'hui pour présenter un autre grand chantier, celui de la réforme du Mécanisme européen d'Ajustement Carbone aux Frontières (CBAM).
+Cette réforme, c'est d'abord une demande forte de nos industriels européens. Ce qui explique pourquoi nous présentons aujourd'hui à deux voix, le Commissaire Hoekstra et moi-même. Ils réclament, depuis longtemps et à juste titre, un traitement égal et juste vis-à-vis de leurs concurrents étrangers. En particulier ceux qui n'ont pas, ou peu, de règles climatiques. Nous faisons payer à nos producteurs l'ETS. Nous avons besoin d'une compensation de ce mécanisme – d'un ‘level playing field' vis-à-vis des concurrents étrangers. Le premier enjeu de cette réforme, c'est donc de renforcer ce level playing field, et d'assurer une plus grande ‘justice climatique et économique' dans l'application du CBAM.
+Deuxième point – cette réforme, c'est aussi le respect d'un engagement de notre Pacte pour une industrie propre. Car au-delà d'un instrument de politique climatique, il s'agit également d'un enjeu de politique industrielle. Une politique qui, je le rappelle, vise à jumeler la décarbonation et la compétitivité de notre industrie. Cette réforme confirme cette double ambition, en mettant fin aux contournements possibles.
+Troisièmement, cette réforme, c'est aussi une mesure phare du plan acier et aluminium et une grande demande des deux secteurs de ces industries. Je le rappelle – nous avons adopté le 7 octobre dernier la clause de sauvegarde la plus protectrice de l'acier européen jamais lancée. Nous proposerons des mesures ciblées pour restreindre l'exportation de déchets d'aluminium. C'est inscrit dans notre stratégie et nous le ferons dès le printemps 2026. Notre travail réglementaire pour protéger nos industries lourdes continue.
+Avec cette réforme, nous aurons donc tout fait pour garder notre industrie de l'acier en Europe.
+En un mot, nous l'avions promis. Aujourd'hui, nous délivrons.
+Depuis octobre 2023, le CBAM est testé en phase pilote. Nous avons donc eu le temps d'analyser le retour d'expérience des entreprises et des États-membres. Et de faire la liste des points à améliorer.
+Si je devais résumer ces points en quelques mots, je dirais : un CBAM plus simple, plus robuste dans son application, et plus juste dans sa portée.
+Alors concrètement :
+Tout d'abord, nous étendons le mécanisme aux produits en aval. Ce n'est donc plus seulement l'acier, l'aluminium ou le ciment en tant que tels, mais les portières de voitures, les câbles métalliques, les équipements domestiques qui seront concernés. Au total, 180 produits en aval sont ajoutés au champ d'application du CBAM.
+Ensuite, nous introduisons de nouvelles mesures pour éviter les contournements du système, qui était facilement contournable.
+Troisièmement, nous mettons en place un mécanisme de soutien temporaire de deux ans pour les producteurs les plus exposés au risque de fuite de carbone sur un certain nombre de produits.
+Cette réforme, c'est la possibilité pour nos industries de renforcer leur position en Europe et à l'étranger. Ce sera la fin de l'injustice vis à vis de leurs concurrents étrangers.
+C'est une bonne réforme, attendue par de nombreux secteurs.
+Elle complète l'ensemble des dispositifs que nous avons mis en place depuis le début de ce mandat.
+Elle renforce nos chaines de valeurs et de nos capacités de production.
+Je vous remercie.
+---
+Commissioner Hoekstra
+Ladies and gentlemen,
+Good morning,
+Thank you, Stéphane, for introducing the topic and for the great work and collaboration.
+Many will be familiar with our Emissions Trading Scheme and the Carbon Border Adjustment Mechanism – better known as CBAM.
+The ETS puts a price tag on carbon produced within the EU.
+CBAM makes sure there is a level playing field – that we're not asking anything more, or asking anything less for those goods that come into the EU.
+And in doing so, we're rewarding investments in low carbon.
+The good news here, if you zoom out of this specific proposal, you will find that all over the world, geographies are embarking on pricing carbon.
+We've seen that in Brazil, Mexico, the Chinese are doing it. They're doing it in parts of the US and Canada.
+It's truly an idea for which the time has come, which makes it one of the most effective things to do in climate action.
+For the EU, it makes sense to ensure that we balance the ETS with CBAM.
+Ladies and gentlemen,
+As you know, CBAM officially starts in January, putting a price on carbon in six sectors: iron, steel, aluminium, electricity, fertilizers, hydrogen.
+But we have had a test period, and we have spoken to industry and Member States extensively.
+Their feedback is clear: CBAM truly is a very good idea but it's also like a good cheese with some holes in it.
+We want to close these loopholes. And make sure the system works, that it's simple, fair to everyone, in Europe and abroad, and that it's effective.
+The whole name of the game is to avoid carbon leakage.
+We're not going to ask anything more from others, than we're asking from ourselves.
+During the CBAM transition period, we learned important lessons. Our system was too broad, too clunky and had too many loopholes.
+So first, we started by simplifying CBAM, taking 90% of companies out of scope while still covering 99% of emissions. I think that's a very good step forward.
+A more targeted scheme will ease compliance burden for thousands of companies while ensuring those that really matter are paying the price.
+And now we are simplifying even CBAM further, offering additional flexibilities ahead of the January 1st implementation.
+Today, we are coming with more measures aimed primarily at closing loopholes.
+This is a strong ask from both business and EU Member States – and rightly so because it's only fair.
+We committed to this in the Clean Industrial Deal, and in the Steel and Metals Action Plan.
+There are four main elements:
+1. First, we're addressing the risk of downstream carbon leakage.
+This will cover only metal-intensive products and have very simple compliance rules. It will concern goods such as car doors, washing machines, kitchen and garden equipment. The aim is to avoid that, for example, a washing machine production in Poland moves to just outside the EU because CBAM on metal makes the washing machine more expensive. We want to avoid this.
+This will increase CBAM revenues by 23% and generate as much as half a billion euros in revenue by 2030.
+2. Second, we're strengthening CBAM with additional anti-circumvention safeguards.
+We will be able to take strong anti-circumvention measures whenever we are confronted with evidence of fraud.
+And obligatory country values will be used when it is necessary to tackle widespread evasion.
+We should facilitate trade, but we should not facilitate fraud and evasion.
+3. Third, we're simplifying the rules for electricity imports.
+The aim is to calculate CBAM not on the marginal production but on average emission of the grid, to incentivise further decarbonisation.
+We will also make technical adjustments to CBAM to facilitate market coupling when the relevant countries are ready.
+4. And fourth, we're putting in place a temporary Decarbonisation Fund. This is very much linked to the conversation about exports.
+using the money from national CBAM revenues
+to address remaining carbon leakage risks
+the fund will be there for 2 years (waiting for the next ETS review), refunding allowances paid in 2026/2027
+with simple conditions linked to decarbonisation, in line with the ETS directive
+and there will be no additional paperwork as reporting will be aligned with the ETS reporting. This is hugely important for those sectors high on exports outside the EU.
+Ladies and gentlemen,
+These are important signals to our industry. Important signals on climate action. And they're line with every decision we have taken from the first of December last year.
+From day one, this Commission has stressed that we want to focus on a combination of climate, competitiveness, and independence.
+Europe is a climate leader worldwide – but this also has to be fair for our businesses and people. Decarbonisation starts at home, but it's fair to seek support from around the world.
+We want our businesses, as well as businesses from outside thrive, to in a low-carbon economy.
+Today's proposals are an important step in that direction.
+Thank you.

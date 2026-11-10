@@ -1,0 +1,330 @@
+{
+ "source": "ec-press",
+ "fetchedAt": "2026-11-10T22:19:22+09:00",
+ "since": "2025-01-01",
+ "report": {
+  "pages": 94,
+  "listed": 4650,
+  "opened": 633,
+  "kept": 35,
+  "failures": [],
+  "oldest": "2025-02-18"
+ },
+ "entries": [
+  {
+   "date": "2026-10-14",
+   "reference": "MEX/26/2159",
+   "kind": "MEX",
+   "title": "Daily News 14 / 10 / 2026",
+   "mentions": 9,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2159",
+   "textPath": "collected/archive/pages/ec-press/mex_26_2159.txt"
+  },
+  {
+   "date": "2026-07-17",
+   "reference": "QANDA/26/1598",
+   "kind": "QANDA",
+   "title": "Questions and answers on the EU Emissions Trading System (EU ETS) review ",
+   "mentions": 6,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_1598",
+   "textPath": "collected/archive/pages/ec-press/qanda_26_1598.txt"
+  },
+  {
+   "date": "2026-07-17",
+   "reference": "IP/26/1596",
+   "kind": "IP",
+   "title": "Commission boosts Europe's competitiveness, decarbonisation and independence with Electrification Action Plan and ETS review",
+   "mentions": 2,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1596",
+   "textPath": "collected/archive/pages/ec-press/ip_26_1596.txt"
+  },
+  {
+   "date": "2026-07-07",
+   "reference": "MEX/26/1549",
+   "kind": "MEX",
+   "title": "Daily News 07 / 07 / 2026",
+   "mentions": 1,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_1549",
+   "textPath": "collected/archive/pages/ec-press/mex_26_1549.txt"
+  },
+  {
+   "date": "2026-05-20",
+   "reference": "SPEECH/26/1117",
+   "kind": "SPEECH",
+   "title": "Remarks by Commissioner Hoekstra during the debate in the European Parliament on ‘Reviewing the ETS system to support European competitiveness'",
+   "mentions": 1,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1117",
+   "textPath": "collected/archive/pages/ec-press/speech_26_1117.txt"
+  },
+  {
+   "date": "2026-02-24",
+   "reference": "MEX/26/462",
+   "kind": "MEX",
+   "title": "Daily News 24 / 02 / 2026",
+   "mentions": 3,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_462",
+   "textPath": "collected/archive/pages/ec-press/mex_26_462.txt"
+  },
+  {
+   "date": "2025-12-17",
+   "reference": "SPEECH/25/3107",
+   "kind": "SPEECH",
+   "title": "Remarks by Executive Vice-President Séjourné and Commissioners Hoekstra at the press conference on the Clean Industrial Deal Package (including CBAM)",
+   "mentions": 20,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_25_3107",
+   "textPath": "collected/archive/pages/ec-press/speech_25_3107.txt"
+  },
+  {
+   "date": "2025-12-17",
+   "reference": "QANDA/25/3089",
+   "kind": "QANDA",
+   "title": "Questions and answers on the Carbon Border Adjustment Mechanism (CBAM) ",
+   "mentions": 99,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_25_3089",
+   "textPath": "collected/archive/pages/ec-press/qanda_25_3089.txt"
+  },
+  {
+   "date": "2025-12-17",
+   "reference": "IP/25/3088",
+   "kind": "IP",
+   "title": "Commission strengthens the Carbon Border Adjustment Mechanism*",
+   "mentions": 25,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_25_3088",
+   "textPath": "collected/archive/pages/ec-press/ip_25_3088.txt"
+  },
+  {
+   "date": "2025-10-21",
+   "reference": "QANDA/25/2424",
+   "kind": "QANDA",
+   "title": "Questions and answers on the 2025 Overview Report on Simplification, Implementation and Enforcement of EU rules",
+   "mentions": 1,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_25_2424",
+   "textPath": "collected/archive/pages/ec-press/qanda_25_2424.txt"
+  },
+  {
+   "date": "2025-10-07",
+   "reference": "SPEECH/25/2308",
+   "kind": "SPEECH",
+   "title": "Remarks by Executive Vice-President Séjourné and Commissioner Šefčovič on the proposal to protect the EU steel sector from unfair impacts of global steel overcapacity",
+   "mentions": 1,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_25_2308",
+   "textPath": "collected/archive/pages/ec-press/speech_25_2308.txt"
+  },
+  {
+   "date": "2025-07-02",
+   "reference": "SPEECH/25/1711",
+   "kind": "SPEECH",
+   "title": "Remarks by Executive Vice-President Ribera and Commissioner Hoekstra at the press conference on the proposal for an EU climate target for 2040",
+   "mentions": 2,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_25_1711",
+   "textPath": "collected/archive/pages/ec-press/speech_25_1711.txt"
+  },
+  {
+   "date": "2025-07-02",
+   "reference": "QANDA/25/1688",
+   "kind": "QANDA",
+   "title": "Questions and answers on the 2040 EU climate target proposal",
+   "mentions": 4,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_25_1688",
+   "textPath": "collected/archive/pages/ec-press/qanda_25_1688.txt"
+  },
+  {
+   "date": "2025-07-02",
+   "reference": "IP/25/1687",
+   "kind": "IP",
+   "title": "EU's Climate Law presents a new way to get to 2040",
+   "mentions": 3,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_25_1687",
+   "textPath": "collected/archive/pages/ec-press/ip_25_1687.txt"
+  },
+  {
+   "date": "2025-06-18",
+   "reference": "IP/25/1563",
+   "kind": "IP",
+   "title": "Commission welcomes political agreement to simplify and strengthen the carbon border adjustment mechanism",
+   "mentions": 19,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_25_1563",
+   "textPath": "collected/archive/pages/ec-press/ip_25_1563.txt"
+  },
+  {
+   "date": "2025-05-28",
+   "reference": "SPEECH/25/1347",
+   "kind": "SPEECH",
+   "title": "Remarks by Commissioner Dombrovskis on simplification at the Employers Group of the European Economic and Social Committee",
+   "mentions": 1,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_25_1347",
+   "textPath": "collected/archive/pages/ec-press/speech_25_1347.txt"
+  },
+  {
+   "date": "2025-05-26",
+   "reference": "MEX/25/1333",
+   "kind": "MEX",
+   "title": "Daily News 26 / 05 / 2025",
+   "mentions": 1,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_25_1333",
+   "textPath": "collected/archive/pages/ec-press/mex_25_1333.txt"
+  },
+  {
+   "date": "2025-05-21",
+   "reference": "SPEECH/25/1323",
+   "kind": "SPEECH",
+   "title": "Remarks by Commissioner Hoekstra in the debate on simplifying and strengthening the carbon border adjustment mechanism (CBAM) in the plenary of the European Parliament",
+   "mentions": 5,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_25_1323",
+   "textPath": "collected/archive/pages/ec-press/speech_25_1323.txt"
+  },
+  {
+   "date": "2025-05-14",
+   "reference": "IP/25/1205",
+   "kind": "IP",
+   "title": "Commission simplifies Common Agricultural Policy to support farmers and enhance competitiveness",
+   "mentions": 1,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_25_1205",
+   "textPath": "collected/archive/pages/ec-press/ip_25_1205.txt"
+  },
+  {
+   "date": "2025-04-07",
+   "reference": "READ/25/998",
+   "kind": "READ",
+   "title": "Read-out of the Dialogue on Steel and Metals ",
+   "mentions": 3,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/read_25_998",
+   "textPath": "collected/archive/pages/ec-press/read_25_998.txt"
+  },
+  {
+   "date": "2025-03-19",
+   "reference": "STATEMENT/25/830",
+   "kind": "STATEMENT",
+   "title": "Remarks by Executive Vice-President Séjourné at the press conference on the Action Plan on Steel and Metals",
+   "mentions": 1,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_25_830",
+   "textPath": "collected/archive/pages/ec-press/statement_25_830.txt"
+  },
+  {
+   "date": "2025-03-19",
+   "reference": "QANDA/25/806",
+   "kind": "QANDA",
+   "title": "Questions and answers on the Action Plan on Steel and Metals*",
+   "mentions": 8,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_25_806",
+   "textPath": "collected/archive/pages/ec-press/qanda_25_806.txt"
+  },
+  {
+   "date": "2025-03-19",
+   "reference": "IP/25/805",
+   "kind": "IP",
+   "title": "Commission's Action Plan to secure a competitive and decarbonised steel and metals industry in Europe",
+   "mentions": 5,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_25_805",
+   "textPath": "collected/archive/pages/ec-press/ip_25_805.txt"
+  },
+  {
+   "date": "2025-02-28",
+   "reference": "MEX/25/646",
+   "kind": "MEX",
+   "title": "Daily News 28 / 02 / 2025",
+   "mentions": 1,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_25_646",
+   "textPath": "collected/archive/pages/ec-press/mex_25_646.txt"
+  },
+  {
+   "date": "2025-02-27",
+   "reference": "AC/25/640",
+   "kind": "AC",
+   "title": "President von der Leyen meets EU business leaders to present the Clean Industrial Deal",
+   "mentions": 3,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/ac_25_640",
+   "textPath": "collected/archive/pages/ec-press/ac_25_640.txt"
+  },
+  {
+   "date": "2025-02-26",
+   "reference": "STATEMENT/25/630",
+   "kind": "STATEMENT",
+   "title": "Remarks by Executive Vice-Presidents Ribera and Séjourné and Commissioner Hoekstra at the press conference on the Clean Industrial Deal*",
+   "mentions": 5,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_25_630",
+   "textPath": "collected/archive/pages/ec-press/statement_25_630.txt"
+  },
+  {
+   "date": "2025-02-26",
+   "reference": "STATEMENT/25/629",
+   "kind": "STATEMENT",
+   "title": "Remarks by Commissioner Dombrovskis at the press conference presenting Omnibus proposals to simplify EU rules",
+   "mentions": 5,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_25_629",
+   "textPath": "collected/archive/pages/ec-press/statement_25_629.txt"
+  },
+  {
+   "date": "2025-02-26",
+   "reference": "SPEECH/25/631",
+   "kind": "SPEECH",
+   "title": "Remarks by Commissioners Dombrovskis and Albuquerque on the proposals to simplify rules on sustainability and EU investments",
+   "mentions": 5,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_25_631",
+   "textPath": "collected/archive/pages/ec-press/speech_25_631.txt"
+  },
+  {
+   "date": "2025-02-26",
+   "reference": "SPEECH/25/628",
+   "kind": "SPEECH",
+   "title": "Opening address by President von der Leyen on the Clean Industrial Deal at the European Industry Summit",
+   "mentions": 3,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_25_628",
+   "textPath": "collected/archive/pages/ec-press/speech_25_628.txt"
+  },
+  {
+   "date": "2025-02-26",
+   "reference": "QANDA/25/615",
+   "kind": "QANDA",
+   "title": "Questions and answers on simplification omnibus I and II",
+   "mentions": 22,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_25_615",
+   "textPath": "collected/archive/pages/ec-press/qanda_25_615.txt"
+  },
+  {
+   "date": "2025-02-26",
+   "reference": "QANDA/25/551",
+   "kind": "QANDA",
+   "title": "Questions and answers on the Clean Industrial Deal",
+   "mentions": 3,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_25_551",
+   "textPath": "collected/archive/pages/ec-press/qanda_25_551.txt"
+  },
+  {
+   "date": "2025-02-26",
+   "reference": "IP/25/614",
+   "kind": "IP",
+   "title": "Commission simplifies rules on sustainability and EU investments, delivering over €6 billion in administrative relief",
+   "mentions": 15,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_25_614",
+   "textPath": "collected/archive/pages/ec-press/ip_25_614.txt"
+  },
+  {
+   "date": "2025-02-26",
+   "reference": "IP/25/550",
+   "kind": "IP",
+   "title": "A Clean Industrial Deal for competitiveness and decarbonisation in the EU ",
+   "mentions": 2,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_25_550",
+   "textPath": "collected/archive/pages/ec-press/ip_25_550.txt"
+  },
+  {
+   "date": "2025-02-25",
+   "reference": "AC/25/612",
+   "kind": "AC",
+   "title": "Concept Note: Strategic Dialogue on Steel",
+   "mentions": 1,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/ac_25_612",
+   "textPath": "collected/archive/pages/ec-press/ac_25_612.txt"
+  },
+  {
+   "date": "2025-02-18",
+   "reference": "STATEMENT/25/546",
+   "kind": "STATEMENT",
+   "title": "Statement by Commissioner Dombrovskis on implementation and simplification at the European Parliament's Committee on Legal Affairs ",
+   "mentions": 1,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_25_546",
+   "textPath": "collected/archive/pages/ec-press/statement_25_546.txt"
+  }
+ ]
+}
