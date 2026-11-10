@@ -1,0 +1,511 @@
+{
+ "note": "출처 목록. tier A는 EU 공식 자료(재이용 가능), B는 공공기관, C는 민간·협회(제목과 링크만 다룬다). watch는 새 항목을 찾는 방법이다: links(새 링크), lines(새 문장), rows(표의 새 행).",
+ "keywords": [
+  "CBAM",
+  "탄소국경",
+  "carbon border",
+  "Carbon Border",
+  "ETS",
+  "배출권",
+  "무상할당",
+  "하류제품",
+  "하류재",
+  "CO2-Grenzausgleich",
+  "Grenzausgleich",
+  "koolstofgrens"
+ ],
+ "sources": [
+  {
+   "no": 1,
+   "code": "ec-cbam",
+   "name": "European Commission CBAM",
+   "group": "EU 공식",
+   "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en",
+   "tier": "A",
+   "watch": [
+    "lines",
+    "links"
+   ],
+   "filter": false,
+   "minLine": 40,
+   "collector": "github",
+   "note": "본문 공지와 일정 문구"
+  },
+  {
+   "no": 2,
+   "code": "ec-guidance",
+   "name": "EC CBAM Legislation and Guidance",
+   "group": "EU 공식",
+   "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-legislation-and-guidance_en",
+   "tier": "A",
+   "watch": [
+    "links",
+    "lines"
+   ],
+   "filter": false,
+   "minLine": 40,
+   "collector": "github",
+   "note": "법령과 가이던스 문서. 문서 파일은 originals에서 따로 추적"
+  },
+  {
+   "no": 3,
+   "code": "ec-news",
+   "name": "EC CBAM Communication and News",
+   "group": "EU 공식",
+   "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_en",
+   "tier": "A",
+   "watch": [
+    "links"
+   ],
+   "filter": false,
+   "minLine": 30,
+   "collector": "github",
+   "note": "최신 소식 목록"
+  },
+  {
+   "no": 4,
+   "code": "ec-price",
+   "name": "EC Price of CBAM Certificates",
+   "group": "EU 공식",
+   "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en",
+   "tier": "A",
+   "watch": [
+    "rows"
+   ],
+   "filter": false,
+   "minLine": 30,
+   "collector": "github",
+   "note": "분기 가격표"
+  },
+  {
+   "no": 5,
+   "code": "ec-verification",
+   "name": "EC Verification of CBAM Emissions",
+   "group": "EU 공식",
+   "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_en",
+   "tier": "A",
+   "watch": [
+    "links",
+    "lines"
+   ],
+   "filter": false,
+   "minLine": 40,
+   "collector": "github",
+   "note": "검증기관 관련 문서와 공지"
+  },
+  {
+   "no": 6,
+   "code": "ec-haveyoursay",
+   "name": "EC Have Your Say (CBAM 검색)",
+   "group": "EU 공식",
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives_en?text=CBAM",
+   "tier": "A",
+   "watch": [],
+   "filter": false,
+   "minLine": 30,
+   "collector": "off",
+   "note": "화면이 스크립트로 그려져 일반 수집으로 읽히지 않음. 읽는 방법을 찾는 중"
+  },
+  {
+   "no": 7,
+   "code": "ep-oeil-2025-0419",
+   "name": "EP Legislative Observatory 2025/0419(COD)",
+   "group": "EU 공식",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0419(COD)",
+   "tier": "A",
+   "watch": [
+    "rows",
+    "lines"
+   ],
+   "filter": false,
+   "minLine": 30,
+   "collector": "github",
+   "note": "CBAM 확대 법안의 주요 사건 표"
+  },
+  {
+   "no": 8,
+   "code": "ep-oeil-2026-0212",
+   "name": "EP Legislative Observatory 2026/0212(COD)",
+   "group": "EU 공식",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0212(COD)",
+   "tier": "A",
+   "watch": [
+    "rows",
+    "lines"
+   ],
+   "filter": false,
+   "minLine": 30,
+   "collector": "github",
+   "note": "EU ETS 개정 법안의 주요 사건 표"
+  },
+  {
+   "no": 9,
+   "code": "ep-train",
+   "name": "EP Legislative Train CBAM 확대",
+   "group": "EU 공식",
+   "url": "https://www.europarl.europa.eu/legislative-train/theme-a-global-europe-leveraging-our-power-and-partnerships/file-extension-of-cbam-to-downstream-goods-and-anticircumvention-measures",
+   "tier": "A",
+   "watch": [
+    "lines"
+   ],
+   "filter": false,
+   "minLine": 60,
+   "collector": "github",
+   "note": "진행 상황 문단"
+  },
+  {
+   "no": 10,
+   "code": "council-cbam",
+   "name": "Council of the EU CBAM",
+   "group": "EU 공식",
+   "url": "https://www.consilium.europa.eu/en/policies/carbon-border-adjustment-mechanism/",
+   "tier": "A",
+   "watch": [
+    "lines",
+    "links"
+   ],
+   "filter": false,
+   "minLine": 60,
+   "collector": "github",
+   "note": "정책 페이지와 타임라인"
+  },
+  {
+   "no": 11,
+   "code": "op-europa",
+   "name": "Publications Office of the EU",
+   "group": "EU 공식",
+   "url": "https://op.europa.eu/en/home",
+   "tier": "A",
+   "watch": [
+    "links"
+   ],
+   "filter": true,
+   "minLine": 30,
+   "collector": "github",
+   "note": "CBAM 관련 항목만"
+  },
+  {
+   "no": 12,
+   "code": "ec-expert-group",
+   "name": "EC Register of Expert Groups (CBAM)",
+   "group": "EU 공식",
+   "url": "https://ec.europa.eu/transparency/expert-groups-register/screen/expert-groups/consult?lang=en&groupID=3927",
+   "tier": "A",
+   "watch": [],
+   "filter": false,
+   "minLine": 30,
+   "collector": "off",
+   "note": "화면이 스크립트로 그려져 일반 수집으로 읽히지 않음. 읽는 방법을 찾는 중"
+  },
+  {
+   "no": 13,
+   "code": "keco-cbam",
+   "name": "한국환경공단 CBAM 헬프데스크",
+   "group": "국내",
+   "url": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/list.do",
+   "tier": "B",
+   "watch": [
+    "links",
+    "lines"
+   ],
+   "filter": false,
+   "minLine": 12,
+   "collector": "github",
+   "note": "월간 CBAM 동향 등 게시물"
+  },
+  {
+   "no": 14,
+   "code": "motir",
+   "name": "산업통상부 보도·참고자료",
+   "group": "국내",
+   "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c",
+   "tier": "B",
+   "watch": [
+    "links",
+    "lines"
+   ],
+   "filter": true,
+   "minLine": 12,
+   "collector": "github",
+   "note": ""
+  },
+  {
+   "no": 15,
+   "code": "mcee",
+   "name": "기후에너지환경부 보도·설명",
+   "group": "국내",
+   "url": "https://me.go.kr/home/web/index.do?menuId=286",
+   "tier": "B",
+   "watch": [
+    "links",
+    "lines"
+   ],
+   "filter": true,
+   "minLine": 12,
+   "collector": "off",
+   "note": "자동 실행 환경에서 주소를 찾지 못함. 읽는 방법을 찾는 중"
+  },
+  {
+   "no": 16,
+   "code": "kotra-calendar",
+   "name": "KOTRA 주요 EU 통상규제 캘린더",
+   "group": "국내",
+   "url": "https://dream.kotra.or.kr/dream/cms/com/index.do?MENU_ID=5220",
+   "tier": "B",
+   "watch": [
+    "rows",
+    "lines"
+   ],
+   "filter": true,
+   "minLine": 20,
+   "collector": "github",
+   "note": ""
+  },
+  {
+   "no": 17,
+   "code": "kba-europe",
+   "name": "한국무역협회 브뤼셀지부",
+   "group": "국내",
+   "url": "https://kba-europe.com/",
+   "tier": "C",
+   "watch": [
+    "links"
+   ],
+   "filter": true,
+   "minLine": 30,
+   "collector": "github",
+   "note": ""
+  },
+  {
+   "no": 18,
+   "code": "gokea",
+   "name": "한국전자정보통신산업진흥회 이슈리포트",
+   "group": "국내",
+   "url": "https://www.gokea.org/core/?cid=53",
+   "tier": "C",
+   "watch": [
+    "links",
+    "lines"
+   ],
+   "filter": true,
+   "minLine": 12,
+   "collector": "github",
+   "note": ""
+  },
+  {
+   "no": 19,
+   "code": "moj",
+   "name": "법무부 해외규제 모니터링",
+   "group": "국내",
+   "url": "https://www.moj.go.kr/bbs/moj/177/artclList.do",
+   "tier": "B",
+   "watch": [
+    "links",
+    "lines"
+   ],
+   "filter": true,
+   "minLine": 12,
+   "collector": "github",
+   "note": ""
+  },
+  {
+   "no": 20,
+   "code": "compass",
+   "name": "COMPASS EU CBAM 헬프데스크 자료실",
+   "group": "국내",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "tier": "B",
+   "watch": [
+    "links",
+    "lines"
+   ],
+   "filter": false,
+   "minLine": 12,
+   "collector": "github",
+   "note": ""
+  },
+  {
+   "no": 21,
+   "code": "kosmes-esg",
+   "name": "중소벤처기업진흥공단 ESG 통합플랫폼 공지사항",
+   "group": "국내",
+   "url": "https://kdoctor.kosmes.or.kr/esgplatform/board/board13.do",
+   "tier": "B",
+   "watch": [
+    "links",
+    "lines"
+   ],
+   "filter": true,
+   "minLine": 12,
+   "collector": "github",
+   "note": ""
+  },
+  {
+   "no": 22,
+   "code": "carbontrust",
+   "name": "Carbon Trust CBAM 가이드",
+   "group": "해외",
+   "url": "https://www.carbontrust.com/our-work-and-impact/guides-reports-and-tools/cbam-what-it-means-for-businesses",
+   "tier": "C",
+   "watch": [
+    "lines"
+   ],
+   "filter": false,
+   "minLine": 80,
+   "collector": "github",
+   "note": "참고용. 본문이 바뀔 때만"
+  },
+  {
+   "no": 23,
+   "code": "carbonchain",
+   "name": "CarbonChain",
+   "group": "해외",
+   "url": "https://www.carbonchain.com/cbam",
+   "tier": "C",
+   "watch": [
+    "links"
+   ],
+   "filter": true,
+   "minLine": 30,
+   "collector": "github",
+   "note": ""
+  },
+  {
+   "no": 24,
+   "code": "epa-ie",
+   "name": "EPA Ireland",
+   "group": "해외",
+   "url": "https://www.epa.ie/our-services/licensing/climate-change/eu-carbon-border-adjustment-mechanism/",
+   "tier": "B",
+   "watch": [
+    "links",
+    "lines"
+   ],
+   "filter": false,
+   "minLine": 40,
+   "collector": "github",
+   "note": ""
+  },
+  {
+   "no": 25,
+   "code": "dehst",
+   "name": "DEHSt (독일)",
+   "group": "해외",
+   "url": "https://www.dehst.de/DE/Themen/CBAM/cbam_node.html",
+   "tier": "B",
+   "watch": [
+    "links"
+   ],
+   "filter": false,
+   "minLine": 30,
+   "collector": "github",
+   "note": "독일어"
+  },
+  {
+   "no": 26,
+   "code": "nea",
+   "name": "NEa (네덜란드)",
+   "group": "해외",
+   "url": "https://www.emissieautoriteit.nl/onderwerpen/themas/cbam",
+   "tier": "B",
+   "watch": [
+    "links"
+   ],
+   "filter": false,
+   "minLine": 30,
+   "collector": "github",
+   "note": "네덜란드어"
+  },
+  {
+   "no": 27,
+   "code": "kpmg",
+   "name": "KPMG",
+   "group": "해외",
+   "url": "https://kpmg.com/xx/en/our-insights/esg/carbon-border-adjustment-mechanism-cbam.html",
+   "tier": "C",
+   "watch": [
+    "lines"
+   ],
+   "filter": false,
+   "minLine": 80,
+   "collector": "github",
+   "note": "참고용. 본문이 바뀔 때만"
+  },
+  {
+   "no": 28,
+   "code": "hmrc-cbam",
+   "name": "UK HMRC CBAM 자료 모음",
+   "group": "해외",
+   "url": "https://www.gov.uk/government/collections/carbon-border-adjustment-mechanism",
+   "tier": "B",
+   "watch": [
+    "links",
+    "lines"
+   ],
+   "filter": false,
+   "minLine": 30,
+   "collector": "github",
+   "note": ""
+  },
+  {
+   "no": 29,
+   "code": "oecd-blog",
+   "name": "OECD 블로그(2025년 3월)",
+   "group": "해외",
+   "url": "https://www.oecd.org/en/blogs/2025/03/eu-carbon-border-adjustment-mechanism-what-is-it-how-does-it-work-and-what-are-the-effects.html",
+   "tier": "C",
+   "watch": [
+    "lines"
+   ],
+   "filter": false,
+   "minLine": 100,
+   "collector": "github",
+   "note": "참고용"
+  },
+  {
+   "no": 30,
+   "code": "icap-news",
+   "name": "ICAP 뉴스",
+   "group": "해외",
+   "url": "https://icapcarbonaction.com/en/news",
+   "tier": "C",
+   "watch": [
+    "links"
+   ],
+   "filter": true,
+   "minLine": 30,
+   "collector": "github",
+   "note": ""
+  },
+  {
+   "no": 31,
+   "code": "ea-news",
+   "name": "European co-operation for Accreditation 뉴스",
+   "group": "해외",
+   "url": "https://european-accreditation.org/publications-and-news/newsroom/news/",
+   "tier": "C",
+   "watch": [
+    "links"
+   ],
+   "filter": true,
+   "minLine": 30,
+   "collector": "github",
+   "note": ""
+  },
+  {
+   "no": 32,
+   "code": "carbon-pulse",
+   "name": "Carbon Pulse CBAM & Tariffs",
+   "group": "해외",
+   "url": "https://carbon-pulse.com/category/international/cbam-tariffs/",
+   "tier": "C",
+   "watch": [
+    "links"
+   ],
+   "filter": false,
+   "minLine": 30,
+   "collector": "github",
+   "note": "제목만. 유료 본문은 열지 않음"
+  }
+ ]
+}

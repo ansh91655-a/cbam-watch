@@ -12,19 +12,20 @@ import tempfile
 from tools.common.net import fetch, sha256_hex
 
 TARGETS = [
-    ("ec-guidance-page", "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-legislation-and-guidance_en"),
-    ("ec-news-page", "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_en"),
-    ("eurlex-pdf", "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:02023R0956-20251020"),
-    ("eurlex-html", "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02023R0956-20251020"),
-    ("eurlex-eli", "https://eur-lex.europa.eu/eli/reg/2023/956/oj"),
-    ("have-your-say", "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives_en?text=CBAM"),
-    ("expert-groups", "https://ec.europa.eu/transparency/expert-groups-register/screen/expert-groups/consult?lang=en&groupID=3927"),
-    ("me-go-kr", "https://me.go.kr/home/web/index.do?menuId=286"),
-    ("compass", "https://www.compass.or.kr/eucbam/data/list"),
-    ("moj", "https://www.moj.go.kr/bbs/moj/177/artclList.do"),
-    ("carbon-pulse", "https://carbon-pulse.com/category/international/cbam-tariffs/"),
-    ("keco", "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/list.do"),
-    ("motir", "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c"),
+    # (이름, 주소, 더할 머리글). 닿는지 모르는 주소만 둔다. 닿는 것이 확인된 출처는 tools.collect가 맡는다.
+    ("ec-guidance-page", "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-legislation-and-guidance_en", {}),
+    ("cellar-consolidated-html", "http://publications.europa.eu/resource/celex/02023R0956-20251020", {"Accept": "text/html, application/xhtml+xml", "Accept-Language": "eng"}),
+    ("cellar-consolidated-pdf", "http://publications.europa.eu/resource/celex/02023R0956-20251020", {"Accept": "application/pdf", "Accept-Language": "eng"}),
+    ("cellar-base-xhtml", "http://publications.europa.eu/resource/celex/32023R0956", {"Accept": "application/xhtml+xml", "Accept-Language": "eng"}),
+    ("cellar-base-rdf", "http://publications.europa.eu/resource/celex/32023R0956", {"Accept": "application/rdf+xml"}),
+    ("eli-oj", "http://data.europa.eu/eli/reg/2023/956/oj", {}),
+    ("eurlex-html", "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02023R0956-20251020", {}),
+    ("hys-api", "https://ec.europa.eu/info/law/better-regulation/brpapi/searchInitiatives?text=CBAM&language=EN&page=0&size=10", {"Accept": "application/json"}),
+    ("expert-group-api", "https://ec.europa.eu/transparency/expert-groups-register/core/api/front/expertGroups/3927", {"Accept": "application/json"}),
+    ("me-www", "https://www.me.go.kr/home/web/index.do?menuId=286", {}),
+    ("mcee", "https://www.mcee.go.kr/", {}),
+    ("mcee-bare", "https://mcee.go.kr/", {}),
+    ("moj", "https://www.moj.go.kr/bbs/moj/177/artclList.do", {}),
 ]
 
 OUT = pathlib.Path("originals/_probe/result.json")
@@ -42,12 +43,12 @@ def pdf_text_chars(data):
         return -1
 
 
-def describe(name, url):
-    status, headers, body, error = fetch(url)
+def describe(name, url, extra=None):
+    status, headers, body, error = fetch(url, headers=extra or {})
     content_type = headers.get("Content-Type", headers.get("content-type", ""))
     text_head = ""
     if body and b"%PDF" not in body[:8]:
-        text_head = re.sub(r"\s+", " ", body[:4000].decode("utf-8", "replace"))[:300]
+        text_head = re.sub(r"\s+", " ", body[:6000].decode("utf-8", "replace"))[:600]
     row = {
         "name": name,
         "url": url,
@@ -67,8 +68,8 @@ def describe(name, url):
 def main():
     rows = []
     links = []
-    for name, url in TARGETS:
-        row, body = describe(name, url)
+    for name, url, extra in TARGETS:
+        row, body = describe(name, url, extra)
         if name == "ec-guidance-page" and body:
             html = body.decode("utf-8", "replace")
             found = re.findall(r'href="([^"]*document/download/[^"]+)"', html)
