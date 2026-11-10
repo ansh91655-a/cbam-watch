@@ -40,6 +40,14 @@ class DatedTest(unittest.TestCase):
 
 
 class LinksTest(unittest.TestCase):
+    def test_day_month_year_date_lines(self):
+        # 소식지 보관함처럼 날짜를 '15/10/2026' 꼴로 적는 목록도 날짜 묶음으로 읽는다
+        html = "<html><body><p>15/10/2026</p><p>CBAM Newsletter #4: New webinar</p><p>Dear CBAM Insiders</p><p>31/08/2026</p><p>CBAM Newsletter #3: Latest guidance</p></body></html>"
+        source = {"code": "ec-newsletter", "url": "https://example.eu/archive", "tier": "A", "watch": ["dated"], "filter": False}
+        found, _ = extract.entries(source, html, [])
+        self.assertEqual([entry["text"].split(" | ")[:2] for entry in found],
+                         [["15/10/2026", "CBAM Newsletter #4: New webinar"], ["31/08/2026", "CBAM Newsletter #3: Latest guidance"]])
+
     def test_document_links_left_to_originals(self):
         with_docs, _ = extract.entries(_source(watch=["links"], documents=True), NEWS, [])
         without, _ = extract.entries(_source(watch=["links"]), NEWS, [])

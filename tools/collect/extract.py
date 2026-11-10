@@ -14,7 +14,8 @@ from tools.common.htmltext import parse_tables, squeeze
 LETTERS = re.compile(r"[A-Za-z가-힣À-ÿ]")
 MAX_TEXT = 300
 # 날짜만 적힌 줄. 소식 목록에서 항목의 머리에 온다(예: 22Oct2026, 22 October 2026, 2026-10-22, 2026.10.22).
-DATE_LINE = re.compile(r"^(\d{1,2}\s?[A-Z][a-z]{2,8}\.?\s?\d{4}|\d{4}[-./]\s?\d{1,2}[-./]\s?\d{1,2}\.?)$")
+# 날짜만 적힌 줄: "30 September 2026", "30Sep2026", "2026.09.30", "30/09/2026"
+DATE_LINE = re.compile(r"^(\d{1,2}\s?[A-Z][a-z]{2,8}\.?\s?\d{4}|\d{4}[-./]\s?\d{1,2}[-./]\s?\d{1,2}\.?|\d{1,2}/\d{1,2}/\d{4})$")
 # 내려받기 카드의 줄(예: "Download (430.01 KB - HTML)", "(430.58 KB - HTML)"). 소식이 아니라 문서 목록이다.
 DOWNLOAD_CARD = re.compile(r"^(Download\s*\(|\(\s*\d[\d.,]*\s*[KMG]B\b|\((HTML|PDF|ZIP|XLSX|DOCX)\))", re.I)
 DOCUMENT_LINK = "/document/download/"

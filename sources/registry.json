@@ -620,6 +620,22 @@
     "Factsheet_HI_",
     "_(MK|SR)\\.pdf$"
    ]
+  },
+  {
+   "no": 36,
+   "code": "ec-newsletter",
+   "name": "EC CBAM Newsletter",
+   "group": "EU 공식",
+   "url": "https://ec.europa.eu/newsroom/taxud/newsletter-archives/view/service/9510",
+   "tier": "A",
+   "watch": [
+    "dated"
+   ],
+   "filter": false,
+   "minLine": 30,
+   "collector": "github",
+   "note": "EU 집행위원회가 보내는 CBAM 소식지의 지난 호 목록",
+   "ops": "보관함 목록의 날짜 묶음(dated)으로 새 호를 찾음. 웨비나 접속 안내 같은 알림 메일도 목록에 섞여 있음"
   }
  ]
 }
