@@ -1,26 +1,16 @@
 {
  "source": "eur-lex-docs",
- "fetchedAt": "2026-11-10T22:09:07+09:00",
+ "fetchedAt": "2026-11-10T22:44:44+09:00",
  "since": "2025-01-01",
  "report": {
   "targets": 26,
-  "stored": 24,
+  "stored": 0,
+  "kept": 24,
   "failures": [
    "32025R2083R(01) (404 HTTP Error 404: )",
    "32023R0956R(04) (404 HTTP Error 404: )"
   ],
-  "notes": [
-   "52026PC0402: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/915f35c9-89c3-11f1-bf5e-01aa75ed71a1.0006.03/DOC_1",
-   "52026PC0616: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/757bd24a-8413-11f1-bf5e-01aa75ed71a1.0001.03/DOC_1",
-   "52026PC0335: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/33ae19cd-752a-11f1-bf5e-01aa75ed71a1.0010.03/DOC_1",
-   "52025PC0990R(01): 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/bac726f5-2150-11f1-8c3a-01aa75ed71a1.0024.03/DOC_1",
-   "52025PC0990: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/95ee45d7-db37-11f0-8da2-01aa75ed71a1.0001.03/DOC_1",
-   "52025PC0989: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/a837cf93-db4d-11f0-8da2-01aa75ed71a1.0001.03/DOC_1",
-   "52025DC0783: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/05f0b7f5-da86-11f0-8da2-01aa75ed71a1.0001.03/DOC_1",
-   "52025PC0574: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/176f6907-626d-11f0-bf4e-01aa75ed71a1.0001.03/DOC_1",
-   "52025PC0408: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/56c7c27f-6221-11f0-bf4e-01aa75ed71a1.0001.03/DOC_1",
-   "52025PC0087: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/731e787f-f4fb-11ef-b7db-01aa75ed71a1.0001.03/DOC_1"
-  ]
+  "notes": []
  },
  "entries": [
   {
