@@ -7,8 +7,9 @@ import { render as holds } from "./views/holds.js";
 import { render as items } from "./views/items.js";
 import { render as runs } from "./views/runs.js";
 import { render as candidates } from "./views/candidates.js";
+import { render as audits } from "./views/audits.js";
 
-const VIEWS = { summary, holds, items, runs, candidates };
+const VIEWS = { summary, holds, items, runs, candidates, audits };
 let model = null;
 
 function current() {

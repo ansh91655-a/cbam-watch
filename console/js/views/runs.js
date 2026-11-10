@@ -1,13 +1,13 @@
 // 실행 기록.
 import { empty, h, pill, table, viewHead } from "../ui/dom.js";
-import { minute } from "../ui/format.js";
+import { countsText, minute } from "../ui/format.js";
 
 export function render(main, model) {
   const rows = model.runs.map((run) => h("tr", {}, [
-    h("td", { text: run.id }),
+    h("td", {}, [h("span", { text: run.id }), run.notes ? h("p", { class: "count", text: run.notes }) : null]),
     h("td", { class: "num", text: minute(run.startedAt) }),
     h("td", { class: "num", text: minute(run.finishedAt) }),
-    h("td", { text: Object.entries(run.counts || {}).map(([key, value]) => `${key} ${value}`).join(", ") }),
+    h("td", { text: countsText(run.counts) }),
     h("td", {}, (run.problems || []).length ? [pill(`문제 ${run.problems.length}건`, "bad"), h("ul", { class: "plain-list" }, run.problems.map((text) => h("li", { text })))] : pill("문제 없음", "accent")),
   ]));
   main.replaceChildren(

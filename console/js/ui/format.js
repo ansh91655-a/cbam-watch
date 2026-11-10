@@ -1,32 +1,14 @@
-// 날짜와 숫자를 화면에 보이는 꼴로 바꾼다.
+// 사이트와 같은 표기 함수에 콘솔만 쓰는 것을 더한다.
+// format-base.js와 dom.js, css 폴더는 저장소에 두 벌 두지 않고, 콘솔 폴더를 만들 때(tools/publish/build_console) site에서 복사한다.
+export * from "./format-base.js";
 
-// "2026-11-10" 또는 ISO 시각에서 날짜만.
-export function day(value) {
-  const match = String(value || "").match(/^(\d{4})-(\d{2})-(\d{2})/);
-  return match ? `${match[1]}-${match[2]}-${match[3]}` : "";
-}
+// 실행 기록의 건수를 국문 이름으로 풀어 쓴다.
+const COUNT_LABEL = {
+  candidates: "후보", written: "초안", rewritten: "다시 씀", excluded: "제외", bulk: "묶음", skipped: "건너뜀", waiting: "미룸",
+  pending: "검증 대기", pass: "통과", hold: "보류", published: "게시", total: "누적",
+  items: "지난주 소식", digest: "주간 요약", audited: "다시 대조", match: "일치", mismatch: "어긋남", unknown: "확인 불가", withdrawn: "요약 내림",
+};
 
-// ISO 시각에서 "2026-11-10 08:20".
-export function minute(value) {
-  const match = String(value || "").match(/^(\d{4}-\d{2}-\d{2})[T ](\d{2}:\d{2})/);
-  return match ? `${match[1]} ${match[2]}` : day(value);
-}
-
-// 오늘부터 며칠 지났는지. 날짜를 읽지 못하면 null.
-export function daysSince(value) {
-  const text = day(value);
-  if (!text) return null;
-  const then = new Date(`${text}T00:00:00+09:00`).getTime();
-  return Math.floor((Date.now() - then) / 86400000);
-}
-
-export function bytes(value) {
-  const number = Number(value) || 0;
-  if (number >= 1048576) return `${(number / 1048576).toFixed(1)} MB`;
-  if (number >= 1024) return `${Math.round(number / 1024)} KB`;
-  return `${number} B`;
-}
-
-export function count(value) {
-  return (Number(value) || 0).toLocaleString("ko-KR");
+export function countsText(counts) {
+  return Object.entries(counts || {}).map(([key, value]) => `${COUNT_LABEL[key] || key} ${value}`).join(", ");
 }

@@ -1,39 +1,50 @@
-// 오늘 상태. 조치가 필요한 것을 먼저 보여 준다.
+// 오늘 상태. 사람이 봐야 하는 것을 먼저 보여 준다.
 import { empty, h, pill, table, viewHead } from "../ui/dom.js";
-import { minute } from "../ui/format.js";
-import { latest, today } from "../model.js";
+import { countsText, minute } from "../ui/format.js";
+import { isHold, latest, needsEyes, today } from "../model.js";
 
-const KIND = { collect: "수집·작성", verify: "검증·게시", report: "실행 확인과 보고" };
+const KIND = { collect: "수집·작성", verify: "검증·게시", report: "실행 확인과 보고", weekly: "주간 작업" };
 
 function runRow(run, kind) {
   if (!run) return h("tr", {}, [h("td", { text: KIND[kind] }), h("td", { colspan: "3" }, pill("기록 없음", "warn"))]);
   const problems = (run.problems || []).length;
-  const counts = Object.entries(run.counts || {}).map(([key, value]) => `${key} ${value}`).join(", ");
   return h("tr", {}, [
     h("td", { text: KIND[kind] }),
     h("td", { class: "num", text: minute(run.startedAt) }),
-    h("td", { text: counts }),
+    h("td", { text: countsText(run.counts) }),
     h("td", {}, problems ? pill(`문제 ${problems}건`, "bad") : pill("문제 없음", "accent")),
   ]);
+}
+
+function tile(value, label) {
+  return h("div", { class: "panel figure" }, [h("p", { class: "value", text: String(value) }), h("p", { class: "label", text: label })]);
 }
 
 export function render(main, model) {
   const day = today();
   const todays = model.runs.filter((run) => String(run.startedAt || "").startsWith(day));
   const problems = [...new Set(todays.flatMap((run) => run.problems || []))];
-  const holds = model.items.filter((item) => item.state === "보류");
+  const eyes = model.items.filter(needsEyes);
+  const retry = model.items.filter((item) => item.state === "보류(다시 쓸 예정)");
   const waiting = model.items.filter((item) => item.state === "검증 대기");
+  const mismatches = model.audits.filter((audit) => audit.result === "mismatch");
   const report = latest(model.runs, "report");
-  const tiles = h("div", { class: "filters" }, [
-    h("div", { class: "panel figure" }, [h("p", { class: "value", text: String(problems.length) }), h("p", { class: "label", text: "오늘의 문제" })]),
-    h("div", { class: "panel figure" }, [h("p", { class: "value", text: String(holds.length) }), h("p", { class: "label", text: "보류 중인 항목" })]),
-    h("div", { class: "panel figure" }, [h("p", { class: "value", text: String(waiting.length) }), h("p", { class: "label", text: "검증 대기" })]),
-    h("div", { class: "panel figure" }, [h("p", { class: "value", text: String(model.items.filter((item) => item.state === "통과").length) }), h("p", { class: "label", text: "통과한 항목(최근 300건 안)" })]),
-  ]);
+  const todo = [
+    ...problems.map((text) => h("li", { text })),
+    ...eyes.map((item) => h("li", { text: `보류: ${item.title || item.id} (${item.verdict.gate || ""} ${item.verdict.why || ""})` })),
+  ];
   main.replaceChildren(
     viewHead("오늘 상태", report ? `마지막 보고 ${minute(report.startedAt)}: ${report.ok ? "정상" : "문제 있음"}` : "아직 보고 실행의 기록이 없습니다."),
-    tiles,
-    h("section", { class: "stack" }, [h("h2", { text: "오늘의 문제" }), problems.length ? h("ul", { class: "plain-list" }, problems.map((text) => h("li", { text }))) : empty("오늘 기록된 문제가 없습니다.")]),
-    h("section", { class: "stack" }, [h("h2", { text: "가장 최근 실행" }), table(["실행", { text: "시작", num: true }, "건수", "문제"], ["collect", "verify", "report"].map((kind) => runRow(latest(model.runs, kind), kind)))]),
+    h("div", { class: "filters" }, [
+      tile(problems.length, "오늘의 문제"),
+      tile(eyes.length, "확인이 필요한 보류"),
+      tile(retry.length, "다시 쓸 초안"),
+      tile(waiting.length, "검증 대기"),
+      tile(model.items.filter((item) => item.state === "통과").length, "통과(최근 300건 안)"),
+      tile(mismatches.length, "다시 대조에서 어긋남"),
+    ]),
+    h("section", { class: "stack" }, [h("h2", { text: "확인이 필요한 것" }), todo.length ? h("ul", { class: "plain-list" }, todo) : empty("지금 확인할 것이 없습니다. 보류된 초안 가운데 글을 고치면 풀리는 것은 다음 실행이 한 번 다시 씁니다.")]),
+    h("section", { class: "stack" }, [h("h2", { text: "가장 최근 실행" }), table(["실행", { text: "시작", num: true }, "건수", "문제"], ["collect", "verify", "report", "weekly"].map((kind) => runRow(latest(model.runs, kind), kind)))]),
+    h("p", { class: "count", text: `보류 전체 ${model.items.filter(isHold).length}건은 보류함에서 볼 수 있습니다.` }),
   );
 }
