@@ -32,11 +32,12 @@ main { display: grid; gap: var(--gap-6); padding-block: 0 var(--gap-7); min-heig
 main:focus { outline: none; }
 /* 맨 아래가 짙은 띠로 끝나는 화면은 바닥글과 붙인다 */
 main:has(> .showcase:last-child) { padding-bottom: 0; }
-/* 화면이 바뀔 때 내용이 아래에서 살짝 올라온다. 끝나면 제자리이므로 움직임을 끈 사람에게도 내용은 그대로 보인다. */
+/* 움직임은 첫 화면의 큰 머리에서 한 번만 쓴다: 글과 수치 칸이 차례로 올라오고 지도의 선이 그려진다.
+   화면을 옮길 때마다 본문이 올라오게 하지는 않는다(읽으려는 글이 움직이면 방해가 된다). */
 @media (prefers-reduced-motion: no-preference) {
-  main > :not(.hero):not(.view-head), .hero-copy > *, .hero-stats > * { animation: rise 0.55s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
-  main > :nth-child(3), .hero-copy > :nth-child(2), .hero-stats > :nth-child(2) { animation-delay: 0.07s; }
-  main > :nth-child(n + 4), .hero-copy > :nth-child(3), .hero-stats > :nth-child(3) { animation-delay: 0.14s; }
+  .hero-copy > *, .hero-stats > * { animation: rise 0.55s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  .hero-copy > :nth-child(2) { animation-delay: 0.07s; }
+  .hero-copy > :nth-child(3) { animation-delay: 0.14s; }
   .hero-copy > :nth-child(4) { animation-delay: 0.21s; }
   .hero-stats > * { animation-delay: 0.25s; }
   .hero-stats > :nth-child(2) { animation-delay: 0.32s; }
