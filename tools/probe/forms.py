@@ -1,7 +1,8 @@
-"""목록 화면의 걸러 보기 양식을 읽는다. 게시판을 출처로 더할 때, 분류나 한 쪽에 보이는 건수를 정하는 주소를 알아내는 데 쓴다.
+"""목록 화면의 걸러 보기 양식과 목록의 줄을 읽는다. 게시판을 출처로 더할 때, 분류나 한 쪽에 보이는 건수를 정하는 주소를 알아내고 그 주소가 뜻대로 걸러 주는지 보는 데 쓴다.
 
 양식마다 보내는 곳(action)과 방식(method), 칸의 이름과 값(고르는 칸은 보기의 값과 글)을 돌려준다.
 """
+import re
 from html.parser import HTMLParser
 
 MAX_FIELDS = 40    # 양식 하나에서 적는 칸의 수
@@ -57,3 +58,16 @@ def describe(html):
     reader = _Forms()
     reader.feed(html or "")
     return [form for form in reader.forms if form["fields"]]
+
+
+def rows(html, limit=12, width=160):
+    """표의 줄마다 칸의 글을 ' | '로 이어 돌려준다(머리 줄 포함, 앞에서 limit줄). 걸러 본 목록이 맞는지 눈으로 보려는 것이다."""
+    found = []
+    for row in re.findall(r"<tr\b[^>]*>(.*?)</tr>", html or "", flags=re.S | re.I):
+        cells = [" ".join(re.sub(r"<[^>]+>", " ", cell).split()) for cell in re.findall(r"<t[dh]\b[^>]*>(.*?)</t[dh]>", row, flags=re.S | re.I)]
+        text = " | ".join(cell for cell in cells if cell)
+        if text:
+            found.append(text[:width])
+        if len(found) >= limit:
+            break
+    return found

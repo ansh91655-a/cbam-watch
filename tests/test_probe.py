@@ -33,5 +33,17 @@ class FormsTest(unittest.TestCase):
         self.assertEqual(forms.describe(""), [])
 
 
+class RowsTest(unittest.TestCase):
+    """목록의 줄 읽기: 걸러 본 목록이 맞는지 눈으로 보는 데 쓴다."""
+
+    def test_cells_are_joined_and_empty_rows_are_skipped(self):
+        html = "<table><tr><th>번호</th><th>분류</th><th>제목</th></tr><tr><td>7</td><td>통상·FTA</td><td><a href='/x'>  안내서\n 발간 </a></td></tr><tr><td></td></tr></table>"
+        self.assertEqual(forms.rows(html), ["번호 | 분류 | 제목", "7 | 통상·FTA | 안내서 발간"])
+
+    def test_it_stops_at_the_limit(self):
+        html = "".join(f"<tr><td>{n}</td></tr>" for n in range(30))
+        self.assertEqual(len(forms.rows(html, limit=5)), 5)
+
+
 if __name__ == "__main__":
     unittest.main()
