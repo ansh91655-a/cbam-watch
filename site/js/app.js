@@ -11,10 +11,11 @@ import { render as price } from "./views/price.js";
 import { render as calendar } from "./views/calendar.js";
 import { render as docs } from "./views/docs.js";
 import { render as terms } from "./views/terms.js";
+import { render as cn } from "./views/cn.js";
 import { render as about } from "./views/about.js";
 import { render as design } from "./views/design.js";
 
-const VIEWS = { home, news, rules, price, calendar, docs, terms, about, design };
+const VIEWS = { home, news, rules, price, calendar, docs, terms, cn, about, design };
 const STALE_DAYS = 5; // 이보다 오래 갱신되지 않으면 알린다.
 const fresh = { text: "데이터를 읽는 중", state: "ok" };
 

@@ -1,0 +1,55 @@
+/* 품목 코드 조회 화면 */
+.cn-box { display: grid; gap: 14px; padding: 22px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); }
+.cn-form { display: flex; flex-wrap: wrap; align-items: end; gap: 12px; }
+.cn-form .field { flex: 1 1 280px; }
+.cn-form input { font-size: 1.15rem; font-weight: 600; letter-spacing: 0.04em; font-variant-numeric: tabular-nums; }
+.btn-primary { display: inline-flex; align-items: center; gap: 7px; border-color: var(--brand); background: var(--brand); color: #fff; }
+.btn-primary:hover { background: var(--brand-bright); border-color: var(--brand-bright); color: #fff; }
+.cn-examples { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; font-size: var(--fs-s); color: var(--ink-3); }
+.cn-examples .pill { background: var(--surface); cursor: pointer; font: inherit; font-size: 0.8rem; font-variant-numeric: tabular-nums; }
+.cn-examples .pill:hover { border-color: var(--brand-bright); color: var(--link); }
+.cn-result { display: grid; gap: 14px; padding-top: 6px; }
+.cn-verdict { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding: 16px 18px; border-radius: var(--radius); background: var(--surface-2); }
+.cn-query { font-size: 1.5rem; font-weight: 800; letter-spacing: 0.02em; font-variant-numeric: tabular-nums; }
+.cn-verdict .pill { font-size: 0.86rem; font-weight: 700; }
+.cn-about { flex: 1 1 100%; color: var(--ink-2); }
+.cn-result[data-state="in"] .cn-verdict { background: color-mix(in srgb, var(--ok) 10%, var(--surface)); }
+.cn-result[data-state="part"] .cn-verdict, .cn-result[data-state="mixed"] .cn-verdict { background: color-mix(in srgb, var(--accent) 16%, var(--surface)); }
+.cn-entries { display: grid; gap: 10px; }
+.cn-entry { display: grid; gap: 10px; padding: 16px 18px; border: 1px solid var(--line-2); border-radius: var(--radius); background: var(--surface); }
+.cn-entry-head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; align-items: start; }
+.cn-code { font-weight: 800; font-variant-numeric: tabular-nums; letter-spacing: 0.02em; color: var(--ink); white-space: nowrap; }
+.cn-text { color: var(--ink-2); }
+.cn-facts { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 2px 16px; font-size: var(--fs-s); }
+.cn-facts dt { color: var(--ink-3); }
+.cn-facts dd { margin: 0; color: var(--ink); font-weight: 600; }
+.cn-note { font-size: var(--fs-s); color: var(--ink-3); }
+.cn-except { padding: 10px 14px; border-radius: 10px; background: var(--surface-2); font-size: var(--fs-s); }
+.cn-except > p { margin-bottom: 4px; font-weight: 700; color: var(--ink-2); }
+.cn-except ul, .cn-list { display: grid; gap: 3px; margin: 0; padding: 0; list-style: none; }
+.cn-except li, .cn-list li { display: grid; grid-template-columns: 96px minmax(0, 1fr) auto; gap: 10px; color: var(--ink-2); }
+.cn-basis { display: flex; flex-wrap: wrap; gap: 4px; font-size: var(--fs-s); color: var(--ink-3); }
+.cn-basis a { display: inline-flex; align-items: center; gap: 3px; font-weight: 600; }
+.cn-later { display: grid; gap: 10px; padding: 18px; border: 1px dashed color-mix(in srgb, var(--accent-strong) 70%, var(--line)); border-radius: var(--radius); background: color-mix(in srgb, var(--accent) 7%, var(--surface)); }
+.cn-later h3 { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 1.05rem; }
+.cn-notes ul { display: grid; gap: 8px; padding-left: 18px; color: var(--ink-2); }
+.cn-sector { border: 1px solid var(--line-2); border-radius: var(--radius); background: var(--surface); }
+.cn-sector summary { display: flex; align-items: center; gap: 12px; padding: 12px 16px; cursor: pointer; list-style: none; }
+.cn-sector summary::-webkit-details-marker { display: none; }
+.cn-sector summary .chipicon { width: 34px; height: 34px; border-radius: 10px; }
+.cn-sector summary .count { margin-left: auto; }
+.cn-sector .cn-list { padding: 4px 16px 16px; font-size: var(--fs-s); }
+.cn-list li { padding: 5px 0; border-top: 1px solid var(--line-2); }
+.cn-list a.cn-code { color: var(--link); text-decoration: none; }
+.cn-list a.cn-code:hover { text-decoration: underline; }
+/* 첫 화면의 조회 띠 */
+.cn-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; padding: 18px 22px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); }
+.cn-bar-text { flex: 1 1 260px; display: grid; gap: 2px; }
+.cn-bar-text strong { font-size: 1.05rem; letter-spacing: -0.01em; }
+.cn-bar-text span { font-size: var(--fs-s); color: var(--ink-3); }
+.cn-bar form { display: flex; flex: 1 1 300px; gap: 8px; }
+.cn-bar input { flex: 1; min-width: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+@media (max-width: 560px) {
+  .cn-except li, .cn-list li { grid-template-columns: 84px minmax(0, 1fr); }
+  .cn-list li .count { display: none; }
+}

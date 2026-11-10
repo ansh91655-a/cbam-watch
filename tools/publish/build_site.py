@@ -50,6 +50,13 @@ def main(argv):
     for name, body in bodies.items():
         write_json(data_out / f"{name}.json", body)
 
+    codes = read_json("data/cn.json", None)  # 품목 코드 조회의 목록(법령 원문에서 뽑은 것)
+    if codes is None or not codes.get("current"):
+        problems.append("data/cn.json 을 읽지 못함")
+    else:
+        write_json(data_out / "cn.json", codes)
+        counts["cn"] = len(codes["current"])
+
     documents, diffs = derive.documents()
     counts.update({"documents": len(documents["documents"])})
     write_json(data_out / "documents.json", documents)

@@ -201,6 +201,17 @@ function rulesPanel(body) {
   ]);
 }
 
+// 품목 코드로 CBAM 대상인지 바로 확인하러 가는 띠
+function lookupBar() {
+  const input = h("input", { type: "search", inputmode: "numeric", autocomplete: "off", placeholder: "CN 코드 예: 7318 15", "aria-label": "CN 코드" });
+  return h("section", { class: "cn-bar", "aria-label": "품목 코드 조회" }, [
+    h("div", { class: "cn-bar-text" }, [h("strong", { text: "내 제품이 CBAM 대상인지 확인하기" }), h("span", { text: "CN 코드를 넣으면 대상 여부와 법령 근거를 보여 줍니다." })]),
+    h("form", { role: "search", onsubmit: (event) => { event.preventDefault(); location.hash = `#cn-${input.value.replace(/\D/g, "")}`; } }, [
+      input, h("button", { class: "btn btn-primary", type: "submit" }, [icon("search", 16), h("span", { text: "확인" })]),
+    ]),
+  ]);
+}
+
 export async function render(main) {
   const [all, events, digests, book, documents, rules] = await Promise.all([data.items(), data.events(), data.digests(), data.prices(), data.documents(), data.regulations()]);
   // 처음에 한꺼번에 채운 소식 가운데 날짜가 없는 것(제도 안내)은 최근 소식으로 세지 않는다.
@@ -216,6 +227,7 @@ export async function render(main) {
   fill(main,
     hero(book, events, items, dated),
     h("div", { class: "bento" }, [lead ? feature(lead, Boolean(important), others) : null, schedule(events), pricePanel(book), topicsPanel(items), rulesPanel(rules)]),
+    lookupBar(),
     h("section", { class: "stack", "aria-labelledby": "h-recent" }, [
       h("div", { class: "sec-head" }, [h("h2", { id: "h-recent", text: "최근 소식" }), h("a", { href: "#news", text: `소식 ${items.length}건 모두 보기` })]),
       recent.length ? h("div", { class: "cards-2" }, recent.map(card)) : empty(items.length ? "다른 최근 소식이 없습니다." : "아직 게시된 소식이 없습니다."),

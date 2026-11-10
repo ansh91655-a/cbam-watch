@@ -1,0 +1,141 @@
+// 품목 코드 조회. CN 코드를 넣으면 CBAM 규정 부속서 I에 든 품목인지와 그 근거를 보여 준다.
+// 판정은 js/cn/match.js가 하고, 품목 목록은 법령 원문에서 뽑은 data/cn.json이다. 문구는 이 파일에서 정한다.
+import * as data from "../data.js";
+import { digits, verdict } from "../cn/match.js";
+import { band } from "../ui/band.js";
+import { empty, fill, h, pill, safeLink } from "../ui/dom.js";
+import { icon } from "../ui/icons.js";
+import { libraryTabs } from "../ui/tabs.js";
+
+const SECTOR = { cement: "시멘트", electricity: "전력", fertilisers: "비료", steel: "철강", aluminium: "알루미늄", chemicals: "화학제품(수소)", combined: "복합 금속 제품" };
+const SECTOR_ICON = { cement: "cement", electricity: "electricity", fertilisers: "fertilisers", steel: "steel", aluminium: "aluminium", chemicals: "hydrogen", combined: "steel" };
+const GAS = { co2: "이산화탄소", n2o: "아산화질소", pfc: "과불화탄소" };
+const EXAMPLES = ["7208", "7318 15", "7606", "2523 29 00", "3102", "2804 10 00", "7202 21 00"];
+// 판정마다: [짧은 이름, 색, 설명]
+const STATE = {
+  in: ["대상", "ok", "이 코드의 품목은 CBAM 대상입니다."],
+  part: ["일부 품목만 대상", "warn", "이 코드의 품목 가운데 아래 품목 이름에 해당하는 것만 CBAM 대상입니다."],
+  mixed: ["하위 코드에 따라 다름", "warn", "이 코드 아래의 일부 코드만 CBAM 대상입니다. 8자리 코드로 다시 확인해 주세요."],
+  excluded: ["대상에서 제외", "", "이 코드는 부속서 I이 따로 제외한 품목입니다."],
+  out: ["목록에 없음", "", "이 코드는 부속서 I의 대상 품목 목록에 없습니다."],
+};
+
+function spaced(code) {
+  return code.replace(/^(\d{4})(\d{2})?(\d{2})?(\d+)?$/, (all, a, b, c, d) => [a, b, c, d].filter(Boolean).join(" "));
+}
+
+function goods(item) {
+  return h("li", {}, [h("span", { class: "cn-code", text: item.shown }), h("span", { lang: "en", text: item.text })]);
+}
+
+// 목록의 한 줄(품목)을 보여 준다. 제외 품목이 있으면 함께 적는다.
+function entryCard(hit, proposed) {
+  const entry = hit.entry;
+  const facts = [
+    ["부문", SECTOR[entry.sector] || entry.sector],
+    ["온실가스", (entry.gases || []).map((key) => GAS[key] || key).join(", ")],
+    proposed ? null : ["산정 범위", entry.directOnly ? "직접배출만(부속서 II)" : "직접배출과 간접배출"],
+  ].filter(Boolean);
+  const listed = hit.excluded.length ? hit.excluded : (hit.partly.length ? hit.partly : entry.except || []);
+  return h("article", { class: "cn-entry", "data-sector": entry.sector }, [
+    h("div", { class: "cn-entry-head" }, [
+      h("span", { class: "chipicon" }, icon(SECTOR_ICON[entry.sector] || "file", 20)),
+      h("div", {}, [h("p", { class: "cn-code", text: entry.shown }), h("p", { class: "cn-text", lang: "en", text: entry.text })]),
+    ]),
+    h("dl", { class: "cn-facts" }, facts.flatMap(([name, value]) => [h("dt", { text: name }), h("dd", { text: value })])),
+    entry.ex ? h("p", { class: "cn-note", text: "코드 앞의 ex는 이 코드의 품목 가운데 위 품목 이름에 해당하는 것만 든다는 뜻입니다." }) : null,
+    listed.length ? h("div", { class: "cn-except" }, [h("p", { text: hit.excluded.length ? "이 코드가 해당하는 제외 품목" : "이 품목에서 제외되는 코드" }), h("ul", {}, listed.map(goods))]) : null,
+  ]);
+}
+
+function basis(source, lead) {
+  const link = safeLink(source.url, source.name);
+  if (link) link.append(icon("out", 14));
+  return h("p", { class: "cn-basis" }, [h("span", { text: lead }), link || h("span", { text: source.name })]);
+}
+
+function result(text, book) {
+  const now = verdict(text, book.current);
+  if (now.state === "short") {
+    return h("div", { class: "cn-result" }, empty(digits(text) ? "코드를 4자리 이상 넣어 주세요." : "CN 코드나 HS 코드의 앞 4~8자리를 넣어 주세요."));
+  }
+  const [name, tone, about] = STATE[now.state];
+  const later = verdict(text, book.proposed || []);
+  // 개정안이 지금의 목록에 없는 품목을 더할 때만 알린다(같은 줄이 개정안에도 있는 것은 새 소식이 아니다)
+  const added = later.rows.filter((row) => !now.rows.some((mine) => mine.entry.shown === row.entry.shown && mine.entry.sector === row.entry.sector));
+  const wider = !["in", "part"].includes(now.state) && ["in", "part", "mixed"].includes(later.state) && added.length > 0;
+  return h("div", { class: "cn-result", "data-state": now.state }, [
+    h("div", { class: "cn-verdict" }, [
+      h("p", { class: "cn-query", text: spaced(now.query) }),
+      pill(name, tone),
+      h("p", { class: "cn-about", text: about }),
+    ]),
+    now.rows.length ? h("div", { class: "cn-entries" }, now.rows.map((hit) => entryCard(hit, false))) : null,
+    basis(book.law, "근거: "),
+    wider ? h("section", { class: "cn-later" }, [
+      h("h3", {}, [h("span", { text: "확대 개정안에는 들어 있습니다" }), pill("제안 단계", "warn")]),
+      h("p", { text: `EU 집행위원회가 2025년 12월에 낸 하류제품 확대 개정안의 부속서에 이 코드${later.state === "mixed" ? " 아래의 일부 코드" : ""}가 들어 있습니다. 아직 법이 아니며, 유럽의회와 EU 이사회의 안은 품목이 더 많아 최종 목록은 협상 결과에 따라 달라집니다.` }),
+      h("div", { class: "cn-entries" }, added.slice(0, 12).map((hit) => entryCard(hit, true))),
+      added.length > 12 ? h("p", { class: "count", text: `이 밖에 ${added.length - 12}줄이 더 있습니다. 코드를 더 길게 넣으면 좁혀집니다.` }) : null,
+      basis(book.proposal, "근거: "),
+      h("p", {}, h("a", { href: "#rules-cbam-downstream", text: "이 개정안의 진행 상황 보기" })),
+    ]) : null,
+  ]);
+}
+
+// 부속서 I의 품목을 부문별로 펼쳐 볼 수 있게 한다.
+function listing(book) {
+  const order = ["cement", "electricity", "fertilisers", "steel", "aluminium", "chemicals"];
+  return h("section", { class: "stack", "aria-labelledby": "h-cn-list" }, [
+    h("div", { class: "sec-head" }, [h("h2", { id: "h-cn-list", text: "부속서 I의 대상 품목" }), safeLink(book.law.url, "법령 원문 열기")]),
+    ...order.map((sector) => {
+      const mine = book.current.filter((entry) => entry.sector === sector);
+      return h("details", { class: "cn-sector" }, [
+        h("summary", {}, [h("span", { class: "chipicon" }, icon(SECTOR_ICON[sector], 18)), h("strong", { text: SECTOR[sector] }), h("span", { class: "count", text: `${mine.length}줄` })]),
+        h("ul", { class: "cn-list" }, mine.map((entry) => h("li", {}, [
+          h("a", { class: "cn-code", href: `#cn-${entry.codes[0]}`, text: entry.shown }),
+          h("span", { lang: "en", text: entry.text }),
+          entry.except && entry.except.length ? h("span", { class: "count", text: `제외 ${entry.except.length}줄` }) : null,
+        ]))),
+      ]);
+    }),
+  ]);
+}
+
+function notes() {
+  return h("section", { class: "panel cn-notes", "aria-labelledby": "h-cn-notes" }, [
+    h("h2", { id: "h-cn-notes", text: "함께 알아 둘 점" }),
+    h("ul", {}, [
+      h("li", { text: "한 해 동안 수입한 대상 품목의 순중량 합계가 50톤(단일 중량 임계값)을 넘지 않는 수입자는 CBAM 의무가 면제됩니다. 전력과 수소에는 이 면제가 적용되지 않습니다(CBAM 규정 제2a조, 부속서 VII)." }),
+      h("li", { text: "이 조회는 코드의 앞자리를 부속서의 목록과 견주어 보여 주는 참고 자료입니다. 실제 품목 분류는 EU 세관의 판단을 따르므로, 신고 전에는 수입자와 함께 8자리 CN 코드를 확인해 주세요." }),
+      h("li", { text: "품목 이름은 법령 원문(영문) 그대로입니다. 목록은 법령이 바뀌면 다시 만듭니다." }),
+    ]),
+  ]);
+}
+
+export async function render(main, arg) {
+  const book = await data.cn();
+  const head = band("품목 코드 조회", "CN 코드를 넣으면 CBAM 대상 품목인지와 그 근거를 보여 줍니다.", libraryTabs("cn"));
+  if (!book || !Array.isArray(book.current) || !book.current.length) {
+    fill(main, head, empty("품목 목록을 준비하고 있습니다."));
+    return;
+  }
+  const holder = h("div", { "aria-live": "polite" });
+  const input = h("input", { id: "cn-q", type: "search", inputmode: "numeric", autocomplete: "off", placeholder: "예: 7208 또는 7318 15 00", value: arg ? spaced(digits(arg)) : "" });
+  const show = () => fill(holder, result(input.value, book));
+  input.addEventListener("input", show);
+  const form = h("form", { class: "cn-form", role: "search", onsubmit: (event) => {
+    event.preventDefault();
+    history.replaceState(null, "", `#cn-${digits(input.value)}`);
+    show();
+  } }, [
+    h("label", { class: "field", for: "cn-q" }, [h("span", { text: "CN 코드(HS 코드의 앞 6자리도 됩니다)" }), input]),
+    h("button", { class: "btn btn-primary", type: "submit" }, [icon("search", 16), h("span", { text: "확인" })]),
+  ]);
+  const examples = h("p", { class: "cn-examples" }, [h("span", { text: "예시" }), ...EXAMPLES.map((code) => h("button", {
+    type: "button", class: "pill", text: code, onclick: () => { input.value = code; history.replaceState(null, "", `#cn-${digits(code)}`); show(); },
+  }))]);
+  fill(main, head, h("section", { class: "cn-box" }, [form, examples, holder]), notes(), listing(book),
+    h("p", { class: "count", text: `목록 기준일 ${book.asOf}. ${book.law.name}` }));
+  show();
+}

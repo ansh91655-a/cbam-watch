@@ -1,0 +1,2624 @@
+{
+ "asOf": "2026-11-10",
+ "law": {
+  "name": "규정 (EU) 2023/956 부속서 I·II(2025년 10월 20일 통합본)",
+  "celex": "02023R0956-20251020",
+  "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0956-20251020",
+  "fetched": "http://publications.europa.eu/resource/celex/02023R0956-20251020"
+ },
+ "proposal": {
+  "name": "하류제품 확대 개정안의 부속서(집행위 제안 COM(2025) 989)",
+  "celex": "52025PC0989",
+  "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52025PC0989",
+  "fetched": "http://publications.europa.eu/resource/cellar/a837cf93-db4d-11f0-8da2-01aa75ed71a1.0001.03/DOC_2"
+ },
+ "current": [
+  {
+   "sector": "cement",
+   "codes": [
+    "25070080"
+   ],
+   "shown": "ex 2507 00 80",
+   "ex": true,
+   "text": "Other kaolinic clays except non-calcined kaolinic clays",
+   "gases": [
+    "co2"
+   ],
+   "except": [],
+   "directOnly": false
+  },
+  {
+   "sector": "cement",
+   "codes": [
+    "25231000"
+   ],
+   "shown": "2523 10 00",
+   "ex": false,
+   "text": "Cement clinkers",
+   "gases": [
+    "co2"
+   ],
+   "except": [],
+   "directOnly": false
+  },
+  {
+   "sector": "cement",
+   "codes": [
+    "25232100"
+   ],
+   "shown": "2523 21 00",
+   "ex": false,
+   "text": "White Portland cement, whether or not artificially coloured",
+   "gases": [
+    "co2"
+   ],
+   "except": [],
+   "directOnly": false
+  },
+  {
+   "sector": "cement",
+   "codes": [
+    "25232900"
+   ],
+   "shown": "2523 29 00",
+   "ex": false,
+   "text": "Other Portland cement",
+   "gases": [
+    "co2"
+   ],
+   "except": [],
+   "directOnly": false
+  },
+  {
+   "sector": "cement",
+   "codes": [
+    "25233000"
+   ],
+   "shown": "2523 30 00",
+   "ex": false,
+   "text": "Aluminous cement",
+   "gases": [
+    "co2"
+   ],
+   "except": [],
+   "directOnly": false
+  },
+  {
+   "sector": "cement",
+   "codes": [
+    "25239000"
+   ],
+   "shown": "2523 90 00",
+   "ex": false,
+   "text": "Other hydraulic cements",
+   "gases": [
+    "co2"
+   ],
+   "except": [],
+   "directOnly": false
+  },
+  {
+   "sector": "electricity",
+   "codes": [
+    "27160000"
+   ],
+   "shown": "2716 00 00",
+   "ex": false,
+   "text": "Electrical energy",
+   "gases": [
+    "co2"
+   ],
+   "except": [],
+   "directOnly": true
+  },
+  {
+   "sector": "fertilisers",
+   "codes": [
+    "28080000"
+   ],
+   "shown": "2808 00 00",
+   "ex": false,
+   "text": "Nitric acid; sulphonitric acids",
+   "gases": [
+    "co2",
+    "n2o"
+   ],
+   "except": [],
+   "directOnly": false
+  },
+  {
+   "sector": "fertilisers",
+   "codes": [
+    "2814"
+   ],
+   "shown": "2814",
+   "ex": false,
+   "text": "Ammonia, anhydrous or in aqueous solution",
+   "gases": [
+    "co2"
+   ],
+   "except": [],
+   "directOnly": false
+  },
+  {
+   "sector": "fertilisers",
+   "codes": [
+    "28342100"
+   ],
+   "shown": "2834 21 00",
+   "ex": false,
+   "text": "Nitrates of potassium",
+   "gases": [
+    "co2",
+    "n2o"
+   ],
+   "except": [],
+   "directOnly": false
+  },
+  {
+   "sector": "fertilisers",
+   "codes": [
+    "3102"
+   ],
+   "shown": "3102",
+   "ex": false,
+   "text": "Mineral or chemical fertilisers, nitrogenous",
+   "gases": [
+    "co2",
+    "n2o"
+   ],
+   "except": [],
+   "directOnly": false
+  },
+  {
+   "sector": "fertilisers",
+   "codes": [
+    "3105"
+   ],
+   "shown": "3105",
+   "ex": false,
+   "text": "Mineral or chemical fertilisers containing two or three of the fertilising elements nitrogen, phosphorus and potassium; other fertilisers; goods of this chapter in tablets or similar forms or in packages of a gross weight not exceeding 10 kg",
+   "gases": [
+    "co2",
+    "n2o"
+   ],
+   "except": [
+    {
+     "codes": [
+      "31056000"
+     ],
+     "shown": "3105 60 00",
+     "ex": false,
+     "text": "Mineral or chemical fertilisers containing the two fertilising elements phosphorus and potassium"
+    }
+   ],
+   "directOnly": false
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "72"
+   ],
+   "shown": "72",
+   "ex": false,
+   "text": "Iron and steel",
+   "gases": [
+    "co2"
+   ],
+   "except": [
+    {
+     "codes": [
+      "72022"
+     ],
+     "shown": "7202 2",
+     "ex": false,
+     "text": "Ferro-silicon"
+    },
+    {
+     "codes": [
+      "72023000"
+     ],
+     "shown": "7202 30 00",
+     "ex": false,
+     "text": "Ferro-silico-manganese"
+    },
+    {
+     "codes": [
+      "72025000"
+     ],
+     "shown": "7202 50 00",
+     "ex": false,
+     "text": "Ferro-silico-chromium"
+    },
+    {
+     "codes": [
+      "72027000"
+     ],
+     "shown": "7202 70 00",
+     "ex": false,
+     "text": "Ferro-molybdenum"
+    },
+    {
+     "codes": [
+      "72028000"
+     ],
+     "shown": "7202 80 00",
+     "ex": false,
+     "text": "Ferro-tungsten and ferro-silico-tungsten"
+    },
+    {
+     "codes": [
+      "72029100"
+     ],
+     "shown": "7202 91 00",
+     "ex": false,
+     "text": "Ferro-titanium and ferro-silico-titanium"
+    },
+    {
+     "codes": [
+      "72029200"
+     ],
+     "shown": "7202 92 00",
+     "ex": false,
+     "text": "Ferro-vanadium"
+    },
+    {
+     "codes": [
+      "72029300"
+     ],
+     "shown": "7202 93 00",
+     "ex": false,
+     "text": "Ferro-niobium"
+    },
+    {
+     "codes": [
+      "720299"
+     ],
+     "shown": "7202 99",
+     "ex": false,
+     "text": "Other:"
+    },
+    {
+     "codes": [
+      "72029910"
+     ],
+     "shown": "7202 99 10",
+     "ex": false,
+     "text": "Ferro-phosphorus"
+    },
+    {
+     "codes": [
+      "72029930"
+     ],
+     "shown": "7202 99 30",
+     "ex": false,
+     "text": "Ferro-silico-magnesium"
+    },
+    {
+     "codes": [
+      "72029980"
+     ],
+     "shown": "7202 99 80",
+     "ex": false,
+     "text": "Other"
+    },
+    {
+     "codes": [
+      "7204"
+     ],
+     "shown": "7204",
+     "ex": false,
+     "text": "Ferrous waste and scrap; remelting scrap ingots and steel"
+    }
+   ],
+   "directOnly": true
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "26011200"
+   ],
+   "shown": "2601 12 00",
+   "ex": false,
+   "text": "Agglomerated iron ores and concentrates, other than roasted iron pyrites",
+   "gases": [
+    "co2"
+   ],
+   "except": [],
+   "directOnly": false
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "7301"
+   ],
+   "shown": "7301",
+   "ex": false,
+   "text": "Sheet piling of iron or steel, whether or not drilled, punched or made from assembled elements; welded angles, shapes and sections, of iron or steel",
+   "gases": [
+    "co2"
+   ],
+   "except": [],
+   "directOnly": true
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "7302"
+   ],
+   "shown": "7302",
+   "ex": false,
+   "text": "Railway or tramway track construction material of iron or steel, the following: rails, check-rails and rack rails, switch blades, crossing frogs, point rods and other crossing pieces, sleepers (cross-ties), fish- plates, chairs, chair wedges, sole plates (base plates), rail clips, bedplates, ties and other material specialised for jointing or fixing rails",
+   "gases": [
+    "co2"
+   ],
+   "except": [],
+   "directOnly": true
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "730300"
+   ],
+   "shown": "7303 00",
+   "ex": false,
+   "text": "Tubes, pipes and hollow profiles, of cast iron",
+   "gases": [
+    "co2"
+   ],
+   "except": [],
+   "directOnly": true
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "7304"
+   ],
+   "shown": "7304",
+   "ex": false,
+   "text": "Tubes, pipes and hollow profiles, seamless, of iron (other than cast iron) or steel",
+   "gases": [
+    "co2"
+   ],
+   "except": [],
+   "directOnly": true
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "7305"
+   ],
+   "shown": "7305",
+   "ex": false,
+   "text": "Other tubes and pipes (for example, welded, riveted or similarly closed), having circular cross-sections, the external diameter of which exceeds 406,4 mm, of iron or steel",
+   "gases": [
+    "co2"
+   ],
+   "except": [],
+   "directOnly": true
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "7306"
+   ],
+   "shown": "7306",
+   "ex": false,
+   "text": "Other tubes, pipes and hollow profiles (for example, open seam or welded, riveted or similarly closed), of iron or steel",
+   "gases": [
+    "co2"
+   ],
+   "except": [],
+   "directOnly": true
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "7307"
+   ],
+   "shown": "7307",
+   "ex": false,
+   "text": "Tube or pipe fittings (for example, couplings, elbows, sleeves), of iron or steel",
+   "gases": [
+    "co2"
+   ],
+   "except": [],
+   "directOnly": true
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "7308"
+   ],
+   "shown": "7308",
+   "ex": false,
+   "text": "Structures (excluding prefabricated buildings of heading 9406 ) and parts of structures (for example, bridges and bridge-sections, lock- gates, towers, lattice masts, roofs, roofing frameworks, doors and windows and their frames and thresholds for doors, shutters, balustrades, pillars and columns), of iron or steel; plates, rods, angles, shapes, sections, tubes and the like, prepared for use in structures, of iron or steel",
+   "gases": [
+    "co2"
+   ],
+   "except": [],
+   "directOnly": true
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "730900"
+   ],
+   "shown": "7309 00",
+   "ex": false,
+   "text": "Reservoirs, tanks, vats and similar containers for any material (other than compressed or liquefied gas), of iron or steel, of a capacity exceeding 300 l, whether or not lined or heat-insulated, but not fitted with mechanical or thermal equipment",
+   "gases": [
+    "co2"
+   ],
+   "except": [],
+   "directOnly": true
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "7310"
+   ],
+   "shown": "7310",
+   "ex": false,
+   "text": "Tanks, casks, drums, cans, boxes and similar containers, for any material (other than compressed or liquefied gas), of iron or steel, of a capacity not exceeding 300 l, whether or not lined or heat-insulated, but not fitted with mechanical or thermal equipment",
+   "gases": [
+    "co2"
+   ],
+   "except": [],
+   "directOnly": true
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "731100"
+   ],
+   "shown": "7311 00",
+   "ex": false,
+   "text": "Containers for compressed or liquefied gas, of iron or steel",
+   "gases": [
+    "co2"
+   ],
+   "except": [],
+   "directOnly": true
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "7318"
+   ],
+   "shown": "7318",
+   "ex": false,
+   "text": "Screws, bolts, nuts, coach screws, screw hooks, rivets, cotters, cotter pins, washers (including spring washers) and similar articles, of iron or steel",
+   "gases": [
+    "co2"
+   ],
+   "except": [],
+   "directOnly": true
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "7326"
+   ],
+   "shown": "7326",
+   "ex": false,
+   "text": "Other articles of iron or steel",
+   "gases": [
+    "co2"
+   ],
+   "except": [],
+   "directOnly": true
+  },
+  {
+   "sector": "aluminium",
+   "codes": [
+    "7601"
+   ],
+   "shown": "7601",
+   "ex": false,
+   "text": "Unwrought aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": [],
+   "directOnly": true
+  },
+  {
+   "sector": "aluminium",
+   "codes": [
+    "7603"
+   ],
+   "shown": "7603",
+   "ex": false,
+   "text": "Aluminium powders and flakes",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": [],
+   "directOnly": true
+  },
+  {
+   "sector": "aluminium",
+   "codes": [
+    "7604"
+   ],
+   "shown": "7604",
+   "ex": false,
+   "text": "Aluminium bars, rods and profiles",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": [],
+   "directOnly": true
+  },
+  {
+   "sector": "aluminium",
+   "codes": [
+    "7605"
+   ],
+   "shown": "7605",
+   "ex": false,
+   "text": "Aluminium wire",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": [],
+   "directOnly": true
+  },
+  {
+   "sector": "aluminium",
+   "codes": [
+    "7606"
+   ],
+   "shown": "7606",
+   "ex": false,
+   "text": "Aluminium plates, sheets and strip, of a thickness exceeding 0,2 mm",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": [],
+   "directOnly": true
+  },
+  {
+   "sector": "aluminium",
+   "codes": [
+    "7607"
+   ],
+   "shown": "7607",
+   "ex": false,
+   "text": "Aluminium foil (whether or not printed or backed with paper, paper-board, plastics or similar backing materials) of a thickness (excluding any backing) not exceeding 0,2 mm",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": [],
+   "directOnly": true
+  },
+  {
+   "sector": "aluminium",
+   "codes": [
+    "7608"
+   ],
+   "shown": "7608",
+   "ex": false,
+   "text": "Aluminium tubes and pipes",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": [],
+   "directOnly": true
+  },
+  {
+   "sector": "aluminium",
+   "codes": [
+    "76090000"
+   ],
+   "shown": "7609 00 00",
+   "ex": false,
+   "text": "Aluminium tube or pipe fittings (for example, couplings, elbows, sleeves)",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": [],
+   "directOnly": true
+  },
+  {
+   "sector": "aluminium",
+   "codes": [
+    "7610"
+   ],
+   "shown": "7610",
+   "ex": false,
+   "text": "Aluminium structures (excluding prefabricated buildings of heading 9406 ) and parts of structures (for example, bridges and bridge-sections, towers, lattice masts, roofs, roofing frameworks, doors and windows and their frames and thresholds for doors, balustrades, pillars and columns); aluminium plates, rods, profiles, tubes and the like, prepared for use in structures",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": [],
+   "directOnly": true
+  },
+  {
+   "sector": "aluminium",
+   "codes": [
+    "76110000"
+   ],
+   "shown": "7611 00 00",
+   "ex": false,
+   "text": "Aluminium reservoirs, tanks, vats and similar containers, for any material (other than compressed or liquefied gas), of a capacity exceeding 300 litres, whether or not lined or heat-insulated, but not fitted with mechanical or thermal equipment",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": [],
+   "directOnly": true
+  },
+  {
+   "sector": "aluminium",
+   "codes": [
+    "7612"
+   ],
+   "shown": "7612",
+   "ex": false,
+   "text": "Aluminium casks, drums, cans, boxes and similar containers (including rigid or collapsible tubular containers), for any material (other than compressed or liquefied gas), of a capacity not exceeding 300 litres, whether or not lined or heat-insulated, but not fitted with mechanical or thermal equipment",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": [],
+   "directOnly": true
+  },
+  {
+   "sector": "aluminium",
+   "codes": [
+    "76130000"
+   ],
+   "shown": "7613 00 00",
+   "ex": false,
+   "text": "Aluminium containers for compressed or liquefied gas",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": [],
+   "directOnly": true
+  },
+  {
+   "sector": "aluminium",
+   "codes": [
+    "7614"
+   ],
+   "shown": "7614",
+   "ex": false,
+   "text": "Stranded wire, cables, plaited bands and the like, of aluminium, not electrically insulated",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": [],
+   "directOnly": true
+  },
+  {
+   "sector": "aluminium",
+   "codes": [
+    "7616"
+   ],
+   "shown": "7616",
+   "ex": false,
+   "text": "Other articles of aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": [],
+   "directOnly": true
+  },
+  {
+   "sector": "chemicals",
+   "codes": [
+    "28041000"
+   ],
+   "shown": "2804 10 00",
+   "ex": false,
+   "text": "Hydrogen",
+   "gases": [
+    "co2"
+   ],
+   "except": [],
+   "directOnly": true
+  }
+ ],
+ "proposed": [
+  {
+   "sector": "steel",
+   "codes": [
+    "72"
+   ],
+   "shown": "72",
+   "ex": false,
+   "text": "Iron and steel",
+   "gases": [
+    "co2"
+   ],
+   "except": [
+    {
+     "codes": [
+      "72022100",
+      "720229"
+     ],
+     "shown": "7202 21 00, 7202 29",
+     "ex": false,
+     "text": "Ferro-silicon"
+    },
+    {
+     "codes": [
+      "72023000"
+     ],
+     "shown": "7202 30 00",
+     "ex": false,
+     "text": "Ferro-silico-manganese"
+    },
+    {
+     "codes": [
+      "72025000"
+     ],
+     "shown": "7202 50 00",
+     "ex": false,
+     "text": "Ferro-silico-chromium"
+    },
+    {
+     "codes": [
+      "72027000"
+     ],
+     "shown": "7202 70 00",
+     "ex": false,
+     "text": "Ferro-molybdenum"
+    },
+    {
+     "codes": [
+      "72028000"
+     ],
+     "shown": "7202 80 00",
+     "ex": false,
+     "text": "Ferro-tungsten and ferro-silico-tungsten"
+    },
+    {
+     "codes": [
+      "72029100"
+     ],
+     "shown": "7202 91 00",
+     "ex": false,
+     "text": "Ferro-titanium and ferro-silico-titanium"
+    },
+    {
+     "codes": [
+      "72029200"
+     ],
+     "shown": "7202 92 00",
+     "ex": false,
+     "text": "Ferro-vanadium"
+    },
+    {
+     "codes": [
+      "72029300"
+     ],
+     "shown": "7202 93 00",
+     "ex": false,
+     "text": "Ferro-niobium"
+    },
+    {
+     "codes": [
+      "720299"
+     ],
+     "shown": "7202 99",
+     "ex": false,
+     "text": "Other:"
+    },
+    {
+     "codes": [
+      "72029910"
+     ],
+     "shown": "7202 99 10",
+     "ex": false,
+     "text": "Ferro-phosphorus"
+    },
+    {
+     "codes": [
+      "72029930"
+     ],
+     "shown": "7202 99 30",
+     "ex": false,
+     "text": "Ferro-silico-magnesium"
+    },
+    {
+     "codes": [
+      "72029980"
+     ],
+     "shown": "7202 99 80",
+     "ex": false,
+     "text": "Other"
+    },
+    {
+     "codes": [
+      "7204"
+     ],
+     "shown": "7204",
+     "ex": false,
+     "text": "Ferrous waste and scrap; remelting scrap ingots of iron or and steel"
+    }
+   ]
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "26011200"
+   ],
+   "shown": "2601 12 00",
+   "ex": false,
+   "text": "Agglomerated iron ores and concentrates, other than roasted iron pyrites",
+   "gases": [
+    "co2"
+   ],
+   "except": []
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "7301"
+   ],
+   "shown": "7301",
+   "ex": false,
+   "text": "Sheet piling of iron or steel, whether or not drilled, punched or made from assembled elements; welded angles, shapes and sections, of iron or steel",
+   "gases": [
+    "co2"
+   ],
+   "except": []
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "7302"
+   ],
+   "shown": "7302",
+   "ex": false,
+   "text": "Railway or tramway track construction material of iron or steel, the following: rails, check-rails and rack rails, switch blades, crossing frogs, point rods and other crossing pieces, sleepers (cross-ties), fish- plates, chairs, chair wedges, sole plates (base plates), rail clips, bedplates, ties and other material specialised for jointing or fixing rails",
+   "gases": [
+    "co2"
+   ],
+   "except": []
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "730300"
+   ],
+   "shown": "7303 00",
+   "ex": false,
+   "text": "Tubes, pipes and hollow profiles, of cast iron",
+   "gases": [
+    "co2"
+   ],
+   "except": []
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "7304"
+   ],
+   "shown": "7304",
+   "ex": false,
+   "text": "Tubes, pipes and hollow profiles, seamless, of iron (other than cast iron) or steel",
+   "gases": [
+    "co2"
+   ],
+   "except": []
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "7305"
+   ],
+   "shown": "7305",
+   "ex": false,
+   "text": "Other tubes and pipes (for example, welded, riveted or similarly closed), having circular cross-sections, the external diameter of which exceeds 406,4 mm, of iron or steel",
+   "gases": [
+    "co2"
+   ],
+   "except": []
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "7306"
+   ],
+   "shown": "7306",
+   "ex": false,
+   "text": "Other tubes, pipes and hollow profiles (for example, open seam or welded, riveted or similarly closed), of iron or steel",
+   "gases": [
+    "co2"
+   ],
+   "except": []
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "7307"
+   ],
+   "shown": "7307",
+   "ex": false,
+   "text": "Tube or pipe fittings (for example, couplings, elbows, sleeves), of iron or steel",
+   "gases": [
+    "co2"
+   ],
+   "except": []
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "7308"
+   ],
+   "shown": "7308",
+   "ex": false,
+   "text": "Structures (excluding prefabricated buildings of heading 9406) and parts of structures (for example, bridges and bridge-sections, lock- gates, towers, lattice masts, roofs, roofing frameworks, doors and windows and their frames and thresholds for doors, shutters, balustrades, pillars and columns), of iron or steel; plates, rods, angles, shapes, sections, tubes and the like, prepared for use in structures, of iron or steel",
+   "gases": [
+    "co2"
+   ],
+   "except": []
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "730900"
+   ],
+   "shown": "7309 00",
+   "ex": false,
+   "text": "Reservoirs, tanks, vats and similar containers for any material (other than compressed or liquefied gas), of iron or steel, of a capacity exceeding 300 l, whether or not lined or heat-insulated, but not fitted with mechanical or thermal equipment",
+   "gases": [
+    "co2"
+   ],
+   "except": []
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "7310"
+   ],
+   "shown": "7310",
+   "ex": false,
+   "text": "Tanks, casks, drums, cans, boxes and similar containers, for any material (other than compressed or liquefied gas), of iron or steel, of a capacity not exceeding 300 l, whether or not lined or heat-insulated, but not fitted with mechanical or thermal equipment",
+   "gases": [
+    "co2"
+   ],
+   "except": []
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "731100"
+   ],
+   "shown": "7311 00",
+   "ex": false,
+   "text": "Containers for compressed or liquefied gas, of iron or steel",
+   "gases": [
+    "co2"
+   ],
+   "except": []
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "731210"
+   ],
+   "shown": "7312 10",
+   "ex": false,
+   "text": "Stranded wire, ropes and cables, of iron or steel",
+   "gases": [
+    "co2"
+   ],
+   "except": []
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "73143900"
+   ],
+   "shown": "7314 39 00",
+   "ex": false,
+   "text": "Other grill, netting and fencing, of iron or steel wire, welded at the intersection",
+   "gases": [
+    "co2"
+   ],
+   "except": []
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "7318"
+   ],
+   "shown": "7318",
+   "ex": false,
+   "text": "Screws, bolts, nuts, coach screws, screw hooks, rivets, cotters, cotter pins, washers (including spring washers) and similar articles, of iron or steel",
+   "gases": [
+    "co2"
+   ],
+   "except": []
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "73202089"
+   ],
+   "shown": "7320 20 89",
+   "ex": false,
+   "text": "Other helical springs, of iron or steel",
+   "gases": [
+    "co2"
+   ],
+   "except": []
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "73209090"
+   ],
+   "shown": "7320 90 90",
+   "ex": false,
+   "text": "Other springs and leaves for springs, of iron or steel",
+   "gases": [
+    "co2"
+   ],
+   "except": []
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "73239400"
+   ],
+   "shown": "7323 94 00",
+   "ex": false,
+   "text": "Table, kitchen or other household articles, and parts thereof, of iron other than cast iron or steel, enamelled",
+   "gases": [
+    "co2"
+   ],
+   "except": []
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "73239900"
+   ],
+   "shown": "7323 99 00",
+   "ex": false,
+   "text": "Other table, kitchen or other household articles, and parts thereof",
+   "gases": [
+    "co2"
+   ],
+   "except": []
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "7325"
+   ],
+   "shown": "7325",
+   "ex": false,
+   "text": "Other cast articles of iron or steel",
+   "gases": [
+    "co2"
+   ],
+   "except": []
+  },
+  {
+   "sector": "steel",
+   "codes": [
+    "7326"
+   ],
+   "shown": "7326",
+   "ex": false,
+   "text": "Other articles of iron or steel",
+   "gases": [
+    "co2"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "73143100"
+   ],
+   "shown": "7314 31 00",
+   "ex": false,
+   "text": "Other grill, netting and fencing, of iron or steel wire, welded at the intersection, plated or coated with zinc",
+   "gases": [
+    "co2"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "73144100"
+   ],
+   "shown": "7314 41 00",
+   "ex": false,
+   "text": "Grill, netting and fencing, of iron or steel wire, not welded at the intersection, plated or coated with zinc",
+   "gases": [
+    "co2"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "73144900"
+   ],
+   "shown": "7314 49 00",
+   "ex": false,
+   "text": "Grill, netting and fencing, of iron or steel wire, not welded at the intersection (excl. plated or coated with zinc or coated with plastics)",
+   "gases": [
+    "co2"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "731700"
+   ],
+   "shown": "7317 00",
+   "ex": false,
+   "text": "Nails, tacks, drawing pins, corrugated nails, staples (other than those of heading 8305) and similar articles of iron or steel, whether or not with heads of other material but excluding such articles with heads of copper",
+   "gases": [
+    "co2"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "74151000"
+   ],
+   "shown": "ex 7415 10 00",
+   "ex": true,
+   "text": "Nails, tacks, drawing pins, staples and similar articles, of copper or of iron or steel with heads of copper, containing steel or aluminium",
+   "gases": [
+    "co2"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "83024200"
+   ],
+   "shown": "ex 8302 42 00",
+   "ex": true,
+   "text": "Other base metal mountings, fittings and similar articles suitable for furniture, containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "83024900"
+   ],
+   "shown": "ex 8302 49 00",
+   "ex": true,
+   "text": "Other base metal mountings, fittings and similar articles, containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "83099090"
+   ],
+   "shown": "ex 8309 90 90",
+   "ex": true,
+   "text": "Other stoppers, caps and lids, (including screw caps and pouring stoppers, capsules for bottles, threaded bungs, bung covers, seals and other packing accessories, of base metal), containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84082010"
+   ],
+   "shown": "8408 20 10",
+   "ex": false,
+   "text": "Compression-ignition internal combustion piston engine (diesel or semi-diesel engine) for the industrial assembly of: pedestrian-controlled tractors of subheading 8701 10, motor vehicles of heading 8703, motor vehicles of heading 8704 with engines of a cylinder capacity of less than 2.500 cm³ and motor vehicles of heading 8705",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84082051"
+   ],
+   "shown": "8408 20 51",
+   "ex": false,
+   "text": "Compression-ignition internal combustion piston engine (diesel or semi-diesel engine) for vehicles of chapter 87, of a power not exceeding 50 kW",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84082055"
+   ],
+   "shown": "8408 20 55",
+   "ex": false,
+   "text": "Compression-ignition internal combustion piston engine (diesel or semi-diesel engine) for vehicles of chapter 87, of a power exceeding 50 kW but not exceeding 100 kW",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84082057"
+   ],
+   "shown": "8408 20 57",
+   "ex": false,
+   "text": "Compression-ignition internal combustion piston engine (diesel or semi-diesel engine) for vehicles of chapter 87, of a power exceeding 100 kW but not exceeding 200 kW",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84082099"
+   ],
+   "shown": "8408 20 99",
+   "ex": false,
+   "text": "Compression-ignition internal combustion piston engine (diesel or semi-diesel engine) for vehicles of chapter 87, of a power exceeding 200 kW",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84089065"
+   ],
+   "shown": "8408 90 65",
+   "ex": false,
+   "text": "Compression-ignition internal combustion piston engine (diesel or semi-diesel engine), new, of a power exceeding 200 kW but not exceeding 300 kW",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84089067"
+   ],
+   "shown": "8408 90 67",
+   "ex": false,
+   "text": "Compression-ignition internal combustion piston engine (diesel or semi-diesel engine), new, of a power exceeding 300 kW but not exceeding 500 kW",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "841330"
+   ],
+   "shown": "8413 30",
+   "ex": false,
+   "text": "Fuel, lubricating or cooling medium pumps for internal combustion piston engine",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84137035"
+   ],
+   "shown": "8413 70 35",
+   "ex": false,
+   "text": "Other centrifugal pumps, with a discharge outlet diameter not exceeding 15 mm",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "841610"
+   ],
+   "shown": "8416 10",
+   "ex": false,
+   "text": "Furnace burners for liquid fuel",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "841620"
+   ],
+   "shown": "8416 20",
+   "ex": false,
+   "text": "Other furnace burners, including combination burners",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84169000"
+   ],
+   "shown": "ex 8416 90 00",
+   "ex": true,
+   "text": "Parts of furnace burners, mechanical stokers, including their mechanical grates, mechanical ash dischargers and similar appliances, containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "841810"
+   ],
+   "shown": "8418 10",
+   "ex": false,
+   "text": "Combined refrigerator-freezers, fitted with separate external doors or drawers, or combinations thereof",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84189990"
+   ],
+   "shown": "ex 8418 99 90",
+   "ex": true,
+   "text": "Parts of refrigerating or freezing equipment and heat pumps, containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84198910"
+   ],
+   "shown": "8419 89 10",
+   "ex": false,
+   "text": "Cooling towers and similar plant for direct cooling (without a separating wall) by means of recirculated water",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84198998"
+   ],
+   "shown": "8419 89 98",
+   "ex": false,
+   "text": "Other machinery, plant and equipment",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84199085"
+   ],
+   "shown": "ex 8419 90 85",
+   "ex": true,
+   "text": "Parts of machinery, plant or laboratory equipment, containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "842091"
+   ],
+   "shown": "8420 91",
+   "ex": false,
+   "text": "Cylinders for calendering or other rolling machines (other than for metals or glass)",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84212300"
+   ],
+   "shown": "ex 8421 23 00",
+   "ex": true,
+   "text": "Oil or petrol-filters for internal combustion engines, containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "842430"
+   ],
+   "shown": "8424 30",
+   "ex": false,
+   "text": "Steam or sand blasting machines and similar jet projecting machines",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84248210"
+   ],
+   "shown": "ex 8424 82 10",
+   "ex": true,
+   "text": "Agricultural or horticultural watering appliances, containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "842489"
+   ],
+   "shown": "ex 8424 89",
+   "ex": true,
+   "text": "Other mechanical appliances, whether or not hand-operated, for projecting, dispersing or spraying liquids or powders, n.e.s., containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "842490"
+   ],
+   "shown": "ex 8424 90",
+   "ex": true,
+   "text": "Parts of mechanical appliances, fire extinguishers, spray guns and similar appliances, steam or sandblasting machines and similar jet projecting machines, containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84253100"
+   ],
+   "shown": "8425 31 00",
+   "ex": false,
+   "text": "Winches and capstans powered by electric motor",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84253900"
+   ],
+   "shown": "8425 39 00",
+   "ex": false,
+   "text": "Other winches and capstans",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84254200"
+   ],
+   "shown": "8425 42 00",
+   "ex": false,
+   "text": "Other jacks and hoists, hydraulic of a kind used for raising vehicles",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84261900"
+   ],
+   "shown": "8426 19 00",
+   "ex": false,
+   "text": "Other overhead travelling cranes, transporter cranes, gantry cranes, bridge cranes and mobile lifting frames",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84269900"
+   ],
+   "shown": "8426 99 00",
+   "ex": false,
+   "text": "Other Ships' derricks; cranes, including cable cranes; mobile lifting frames, straddle carriers and works trucks fitted with a crane:",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84279000"
+   ],
+   "shown": "8427 90 00",
+   "ex": false,
+   "text": "Other works trucks fitted with lifting or handling equipment, not self-propelled",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "842820"
+   ],
+   "shown": "8428 20",
+   "ex": false,
+   "text": "Pneumatic elevators and conveyors",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84283300"
+   ],
+   "shown": "8428 33 00",
+   "ex": false,
+   "text": "Continuous-action elevators and conveyors for goods or materials, belt type",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84283990"
+   ],
+   "shown": "8428 39 90",
+   "ex": false,
+   "text": "Other Continuous-action elevators and conveyors for goods or materials elevators",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84287000"
+   ],
+   "shown": "8428 70 00",
+   "ex": false,
+   "text": "Industrial robots",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "842890"
+   ],
+   "shown": "8428 90",
+   "ex": false,
+   "text": "Other machinery for lifting, handling, loading or unloading not elsewhere specified",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84306100"
+   ],
+   "shown": "8430 61 00",
+   "ex": false,
+   "text": "Tamping or compacting machinery, not self-propelled",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84306900"
+   ],
+   "shown": "8430 69 00",
+   "ex": false,
+   "text": "Other machinery, not self-propelled",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84311000"
+   ],
+   "shown": "ex 8431 10 00",
+   "ex": true,
+   "text": "Parts of machinery of heading 8425 (pulley tackles and hoists (other than skip hoists), winches, capstans and jacks), containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84312000"
+   ],
+   "shown": "ex 8431 20 00",
+   "ex": true,
+   "text": "Parts of machinery of heading 8427 (fork-lift trucks and other works trucks fitted with lifting or handling equipment), containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84313100"
+   ],
+   "shown": "ex 8431 31 00",
+   "ex": true,
+   "text": "Parts of lifts, skip hoists or escalators, containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84313900"
+   ],
+   "shown": "ex 8431 39 00",
+   "ex": true,
+   "text": "Other parts of machinery of heading 8428, containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "843149"
+   ],
+   "shown": "8431 49",
+   "ex": false,
+   "text": "Other parts of machinery of heading 8426, 8429 or 8430",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84328000"
+   ],
+   "shown": "8432 80 00",
+   "ex": false,
+   "text": "Other agricultural, horticultural or forestry machinery for soil preparation or cultivation; lawn or sports-ground rollers",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84329000"
+   ],
+   "shown": "8432 90 00",
+   "ex": false,
+   "text": "Parts of agricultural, horticultural or forestry machinery for soil preparation or cultivation or of lawn or sports-ground rollers",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "845011"
+   ],
+   "shown": "8450 11",
+   "ex": false,
+   "text": "Fully-automatic household or laundry-type washing machines",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84501200"
+   ],
+   "shown": "8450 12 00",
+   "ex": false,
+   "text": "Other household or laundry-type washing machines, with built-in centrifugal drier",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84501900"
+   ],
+   "shown": "8450 19 00",
+   "ex": false,
+   "text": "Other household or laundry-type washing machines, of a dry linen capacity not exceeding 10 kg",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84512100"
+   ],
+   "shown": "8451 21 00",
+   "ex": false,
+   "text": "Drying machines, of a dry linen capacity not exceeding 10 kg",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84541000"
+   ],
+   "shown": "8454 10 00",
+   "ex": false,
+   "text": "Converters of a kind used in metallurgy or in metal foundries",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84542000"
+   ],
+   "shown": "8454 20 00",
+   "ex": false,
+   "text": "Ingot moulds and ladles, of a kind used in metallurgy or in metal foundries",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "845430"
+   ],
+   "shown": "8454 30",
+   "ex": false,
+   "text": "Casting machines of a kind used in metallurgy or in metal foundries",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84641000"
+   ],
+   "shown": "8464 10 00",
+   "ex": false,
+   "text": "Sawing machines",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84649000"
+   ],
+   "shown": "8464 90 00",
+   "ex": false,
+   "text": "Other machine tools for working stones, ceramics, concrete, asbestos cement or like mineral materials or for cold-working glass",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84741000"
+   ],
+   "shown": "8474 10 00",
+   "ex": false,
+   "text": "Sorting, screening, separating or washing machines for earth, stone, ores or other mineral substances, in solid (including powder or paste) form",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84742000"
+   ],
+   "shown": "8474 20 00",
+   "ex": false,
+   "text": "Crushing or grinding machines for earth, stone, ores or other mineral substances, in solid (including powder or paste) form",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84743900"
+   ],
+   "shown": "8474 39 00",
+   "ex": false,
+   "text": "Other mixing or kneading machines for earth, stone, ores or other mineral substances, in solid (including powder or paste) form",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84791000"
+   ],
+   "shown": "8479 10 00",
+   "ex": false,
+   "text": "Machinery for public works, building or the like",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "84805000"
+   ],
+   "shown": "ex 8480 50 00",
+   "ex": true,
+   "text": "Moulds for glass, containing iron",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "85013200"
+   ],
+   "shown": "8501 32 00",
+   "ex": false,
+   "text": "DC motors, DC generators of an output exceeding 750 W but not exceeding 75 kW (other than photovoltaic generators)",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "85015381"
+   ],
+   "shown": "8501 53 81",
+   "ex": false,
+   "text": "AC motors, multi-phase, of an output of exceeding 75 kW but not exceeding 375 kW",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "85043180"
+   ],
+   "shown": "8504 31 80",
+   "ex": false,
+   "text": "Other transformers having a power handling capacity not exceeding 1 kVA",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "85043300"
+   ],
+   "shown": "8504 33 00",
+   "ex": false,
+   "text": "Other transformers having a power handling capacity exceeding 16 kVA but not exceeding 500 kVA",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "85045000"
+   ],
+   "shown": "ex 8504 50 00",
+   "ex": true,
+   "text": "Inductors, containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "85153990"
+   ],
+   "shown": "8515 39 90",
+   "ex": false,
+   "text": "Other machines and apparatus for arc welding of metals, incl. plasma arc (including plasma arc) welding of metals",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "85441110"
+   ],
+   "shown": "ex 8544 11 10",
+   "ex": true,
+   "text": "Winding wire for electrical purposes, of copper, lacquered or enamelled, containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "85441190"
+   ],
+   "shown": "ex 8544 11 90",
+   "ex": true,
+   "text": "Winding wire for electrical purposes, of copper, insulated (excl. lacquered or enamelled), containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "85441900"
+   ],
+   "shown": "ex 8544 19 00",
+   "ex": true,
+   "text": "Winding wire for electrical purposes, of material other than copper, insulated, containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "85444920"
+   ],
+   "shown": "ex 8544 49 20",
+   "ex": true,
+   "text": "Conductors, electric, for a voltage <= 80 V, insulated, not fitted with connectors, of a kind used for telecommunications, n.e.s., containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "85444991"
+   ],
+   "shown": "ex 8544 49 91",
+   "ex": true,
+   "text": "Electric wire and cables, for a voltage <= 1.000 V, insulated, not fitted with connectors, with individual conductor wires of a diameter > 0,51 mm, n.e.s., containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "85444993"
+   ],
+   "shown": "ex 8544 49 93",
+   "ex": true,
+   "text": "Conductors, electric, for a voltage <= 80 V, insulated, not fitted with connectors, n.e.s. (excl. winding wire, coaxial conductors, wiring sets for vehicles, aircraft or ships, and wire and cables with individual conductor wires of a diameter > 0,51 mm), containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "85444995"
+   ],
+   "shown": "ex 8544 49 95",
+   "ex": true,
+   "text": "Electric conductors for a voltage > 80 V but < 1.000 V, insulated, not fitted with connectors, n.e.s. (excl. winding wire, coaxial conductors, wiring sets for vehicles, aircraft or ships, and wire and cables with individual conductor wires of a diameter > 0,51 mm), containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "85444999"
+   ],
+   "shown": "ex 8544 49 99",
+   "ex": true,
+   "text": "Electric conductors for a voltage 1.000 V, insulated, not fitted with connectors, n.e.s. (excl. winding wire, coaxial conductors, wiring sets for vehicles, aircraft or ships, and wire and cables with individual conductor wires of a diameter > 0,51 mm), containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "85446010"
+   ],
+   "shown": "ex 8544 60 10",
+   "ex": true,
+   "text": "Electric conductors for a voltage > 1.000 V, insulated, with copper conductors, n.e.s., containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "85446090"
+   ],
+   "shown": "ex 8544 60 90",
+   "ex": true,
+   "text": "Electric conductors for a voltage > 1.000 V, insulated, not with copper conductors, n.e.s., containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "870421"
+   ],
+   "shown": "ex 8704 21",
+   "ex": true,
+   "text": "Motor vehicles of a gross vehicle weight not exceeding 5 tonnes, excluding 8704 21 39 and 8704 21 99",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "870422"
+   ],
+   "shown": "ex 8704 22",
+   "ex": true,
+   "text": "Motor vehicles of a gross vehicle weight exceeding 5 tonnes but not exceeding 20 tonnes, excluding 8704 22 99",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "87042310"
+   ],
+   "shown": "ex 8704 23 10",
+   "ex": true,
+   "text": "Motor vehicles of a gross vehicle weight exceeding 20 tonnes, excluding 8704 23 99",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "870431"
+   ],
+   "shown": "ex 8704 31",
+   "ex": true,
+   "text": "Motor vehicles, with only spark-ignition internal combustion piston engine, of a gross vehicle weight not exceeding <= 5 tonnes, excluding 8704 31 39 and 8704 31 99",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "87043210"
+   ],
+   "shown": "ex 8704 32 10",
+   "ex": true,
+   "text": "Motor vehicles, with only spark-ignition internal combustion piston engine, of a gross vehicle weight exceeding 5 tonnes, excluding 8704 32 99",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "870441"
+   ],
+   "shown": "ex 8704 41",
+   "ex": true,
+   "text": "Motor vehicles, with both compression-ignition internal combustion piston engine (diesel or semi-diesel) and electric motor as motors for propulsion, of a gross vehicle weight not exceeding 5 t, excluding 8704 41 39 and 8704 41 99",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "870442"
+   ],
+   "shown": "ex 8704 42",
+   "ex": true,
+   "text": "Motor vehicles, with both compression-ignition internal combustion piston engine (diesel or semi-diesel) and electric motor as motors for propulsion, of a gross vehicle weight exceeding 5 tonnes but not exceeding 20 tonnes, excluding 8704 42 99",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "870443"
+   ],
+   "shown": "ex 8704 43",
+   "ex": true,
+   "text": "Motor vehicles, with both compression-ignition internal combustion piston engine (diesel or semi-diesel) and electric motor as motors for propulsion, of a gross vehicle weight exceeding 20 tonnes, excluding 8704 43 99",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "87046000"
+   ],
+   "shown": "8704 60 00",
+   "ex": false,
+   "text": "Motor vehicles for the transport of goods, with only electric motor as motor for propulsion",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "87049000"
+   ],
+   "shown": "8704 90 00",
+   "ex": false,
+   "text": "Other motor vehicles for the transport of goods",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "870600"
+   ],
+   "shown": "8706 00",
+   "ex": false,
+   "text": "Chassis fitted with engines, for motor vehicles of heading 8701 to 8705",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "870710"
+   ],
+   "shown": "8707 10",
+   "ex": false,
+   "text": "Bodies for the vehicles of heading 8703",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "870840"
+   ],
+   "shown": "8708 40",
+   "ex": false,
+   "text": "Gear boxes and parts thereof, of the motor vehicles of headings 8701 to 8705",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "870870"
+   ],
+   "shown": "8708 70",
+   "ex": false,
+   "text": "Road wheels and parts and accessories thereof, of the motor vehicles of headings 8701 to 8705",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "870880"
+   ],
+   "shown": "8708 80",
+   "ex": false,
+   "text": "Suspension systems and parts thereof, including. shock-absorbers, of the motor vehicles of headings 8701 to 8705",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "870891"
+   ],
+   "shown": "ex 8708 91",
+   "ex": true,
+   "text": "Radiators and parts thereof, for the industrial assembly of: pedestrian-controlled tractors of subheading 8701 10, vehicles of heading 8703, vehicles of heading 8704 with either a, containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "87168000"
+   ],
+   "shown": "ex 8716 80 00",
+   "ex": true,
+   "text": "Other vehicles pushed or drawn by hand",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "87169090"
+   ],
+   "shown": "8716 90 90",
+   "ex": false,
+   "text": "Other parts of trailers, semi-trailers and other vehicles",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "90183210"
+   ],
+   "shown": "9018 32 10",
+   "ex": false,
+   "text": "Tubular metal needles",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "90189075"
+   ],
+   "shown": "ex 9018 90 75",
+   "ex": true,
+   "text": "Apparatus for nerve stimulation, containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "90189084"
+   ],
+   "shown": "ex 9018 90 84",
+   "ex": true,
+   "text": "Other instruments and appliances , containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "90271090"
+   ],
+   "shown": "ex 9027 10 90",
+   "ex": true,
+   "text": "Other gas or smoke analysis apparatus, containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "94017900"
+   ],
+   "shown": "9401 79 00",
+   "ex": false,
+   "text": "Seats, with metal frames",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "940310"
+   ],
+   "shown": "9403 10",
+   "ex": false,
+   "text": "Metal furniture of a kind used in offices",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "940320"
+   ],
+   "shown": "ex 9403 20",
+   "ex": true,
+   "text": "Other metal furniture, containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  },
+  {
+   "sector": "combined",
+   "codes": [
+    "94069090"
+   ],
+   "shown": "ex 9406 90 90",
+   "ex": true,
+   "text": "Prefabricated buildings, containing steel or aluminium",
+   "gases": [
+    "co2",
+    "pfc"
+   ],
+   "except": []
+  }
+ ]
+}
