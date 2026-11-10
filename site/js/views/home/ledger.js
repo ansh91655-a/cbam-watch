@@ -6,12 +6,26 @@ import { countdown, daysSince, koreanDate, price, signed, today } from "../../ui
 const NEW_DAYS = 30;
 const OPEN_TONES = ["progress", "planned", "dispute"];
 
-function cell(href, label, value, unit, note) {
+const CAVEATS = ["보도 기준", "잠정"];
+
+// flag: 설명 앞에 따로 적는 단서("보도 기준" 같은 것)
+function cell(href, label, value, unit, note, flag = "") {
   return h("a", { class: "ledger-cell", href }, [
     h("span", { class: "ledger-label", text: label }),
     h("span", { class: "ledger-value" }, [h("span", { text: value }), unit ? h("small", { text: unit }) : null]),
-    h("span", { class: "ledger-note", text: note }),
+    h("span", { class: "ledger-note" }, [flag ? h("em", { class: "ledger-flag", text: flag }) : null, note]),
   ]);
+}
+
+// 일정 이름의 끝 괄호에 든 단서("보도 기준", "잠정")를 떼어 낸다. 칸이 좁아 이름이 잘려도 단서는 보이도록 앞에 따로 적는 데 쓴다.
+export function splitCaveat(title) {
+  const text = String(title || "");
+  const match = text.match(/^(.*)\(([^()]*)\)$/);
+  const parts = match ? match[2].split(",").map((part) => part.trim()) : [];
+  const flag = CAVEATS.find((word) => parts.includes(word)) || "";
+  if (!flag) return { name: text, flag: "" };
+  const rest = parts.filter((part) => part !== flag).join(", ");
+  return { name: rest ? `${match[1]}(${rest})` : match[1].trim(), flag };
 }
 
 function priceCell(book) {
@@ -26,7 +40,8 @@ function nextCell(events) {
   const now = today();
   const next = events.filter((event) => String(event.date).length === 10 && event.date >= now).sort((a, b) => a.date.localeCompare(b.date))[0];
   if (!next) return null;
-  return cell(`#calendar-${next.date.slice(0, 4)}`, "다음 일정", countdown(next.date), "", `${koreanDate(next.date)} ${next.title}`);
+  const { name, flag } = splitCaveat(next.title);
+  return cell(`#calendar-${next.date.slice(0, 4)}`, "다음 일정", countdown(next.date), "", `${koreanDate(next.date)} ${name}`, flag);
 }
 
 function newsCell(items) {
