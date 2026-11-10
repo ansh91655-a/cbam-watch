@@ -12,6 +12,7 @@ from tools.common.net import fetch, header
 
 SEARCH = "https://www.legislation.gov.uk/all?title=carbon%20border%20adjustment"
 ACT = "https://www.legislation.gov.uk/ukpga/2026/11/contents"
+ACT_INTRODUCTION = "https://www.legislation.gov.uk/ukpga/2026/11/introduction"
 ITEM = re.compile(r"^https://www\.legislation\.gov\.uk/(uksi|ukpga|ukdsi)/(\d{4})/(\d+)/contents(/made)?$")
 DATED = re.compile(r"^(Made|Laid before the House of Commons|Laid before Parliament|Coming into force)\b")
 HEAD_LINES, LINE_LIMIT = 90, 600
@@ -67,6 +68,11 @@ def crawl():
         part = [index for index, line in enumerate(text) if re.search(r"carbon border adjustment mechanism", line, re.I)]
         if title and part:
             kept = text[max(0, part[0] - 2):part[0] + 60]
+            # 법률의 머리글(제정일이 적혀 있다)도 함께 남긴다
+            _, opening, _ = page(ACT_INTRODUCTION)
+            start = next((index for index, line in enumerate(opening) if line.strip().startswith("2026 CHAPTER")), None)
+            if start is not None:
+                kept = ["[머리글] " + ACT_INTRODUCTION] + opening[start:start + 6] + ["", "[차례]"] + kept
             entries.append({"title": title, "number": "2026 c. 11", "dates": {}, "url": ACT,
                             "textPath": save_text("uk-legislation/ukpga-2026-11.txt", [f"[주소] {ACT}", "", title, ""] + [line[:LINE_LIMIT] for line in kept])})
             report["stored"] += 1
