@@ -32,6 +32,10 @@ jobs:
       - name: 사이트 폴더 만들기
         run: python -m tools.publish.build_site _site
       - name: 배포 가지에 올리기
+        env:
+          # 사이트만 따로 두는 공개 저장소를 쓸 때 저장소 설정에 넣는 값(없으면 이 저장소의 gh-pages로 올린다)
+          SITE_REPO: ${{ vars.SITE_REPO }}
+          SITE_TOKEN: ${{ secrets.SITE_TOKEN }}
         run: |
           cd _site
           git init -q -b gh-pages
@@ -39,4 +43,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -q -m "사이트 배포 $(TZ=Asia/Seoul date '+%F %H:%M')"
-          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" gh-pages
+          if [ -n "$SITE_REPO" ] && [ -n "$SITE_TOKEN" ]; then
+            git push -f "https://x-access-token:${SITE_TOKEN}@github.com/${SITE_REPO}" gh-pages
+          else
+            git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" gh-pages
+          fi

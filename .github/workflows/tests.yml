@@ -21,4 +21,6 @@ jobs:
         with:
           python-version: "3.12"
       - name: 자동 시험
-        run: python -m unittest discover -s tests -t .
+        run: |
+          pip install -q pillow  # 미리보기 그림을 줄이는 도구의 시험이 쓴다
+          python -m unittest discover -s tests -t .
