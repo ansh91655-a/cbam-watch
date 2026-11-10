@@ -14,10 +14,11 @@ from tools.common.net import fetch
 LIST = "https://ec.europa.eu/commission/presscorner/api/search?language=en&pagesize=50&pagenumber={page}"
 DOCUMENT = "https://ec.europa.eu/commission/presscorner/api/documents?reference={reference}&language=en"
 DETAIL = "https://ec.europa.eu/commission/presscorner/detail/en/{name}"
-TITLE = re.compile(r"CBAM|carbon border|emissions trading|\bETS\b|carbon market|carbon pric|carbon leakage|decarbonisation|omnibus|simplif"
-                   r"|steel|clean industrial|climate law|2040", re.I)
+TITLE = re.compile(r"CBAM|carbon border|emissions trading|\bETS\b|carbon market|carbon pric|carbon leakage|decarboni|omnibus|simplif"
+                   r"|steel|alumini|fertili|cement|clean industrial|industrial accelerator|climate|2040|\btrade\b|tariff|summit|joint statement"
+                   r"|United Kingdom|\bUK\b|United States|\bUS\b|India|Norway|Iceland|own resources|multiannual financial", re.I)
 MENTION = re.compile(r"CBAM|carbon border adjustment", re.I)
-MAX_PAGES, MAX_LINES, LINE_LIMIT, PAUSE = 260, 260, 900, 0.4
+MAX_PAGES, MAX_LINES, LINE_LIMIT, PAUSE = 260, 260, 900, 0.25
 
 
 def listing(page):
