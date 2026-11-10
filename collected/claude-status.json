@@ -1,29 +1,37 @@
 {
- "checkedAt": "2026-11-10T17:05:39+09:00",
+ "checkedAt": "2026-11-10T17:30:47+09:00",
  "sources": {
   "ep-train": {
-   "checkedAt": "2026-11-10T17:05:39+09:00",
+   "code": "ep-train",
+   "checkedAt": "2026-11-10T17:30:47+09:00",
    "ok": true,
-   "lastOk": "2026-11-10T17:05:39+09:00",
-   "note": "갱신일 25/10/2026"
+   "note": "",
+   "failCount": 0,
+   "lastOk": "2026-11-10T17:30:47+09:00"
   },
   "council-cbam": {
-   "checkedAt": "2026-11-10T17:05:39+09:00",
+   "code": "council-cbam",
+   "checkedAt": "2026-11-10T17:30:47+09:00",
    "ok": true,
-   "lastOk": "2026-11-10T17:05:39+09:00",
-   "note": "Last review: 12 June 2026"
+   "note": "",
+   "failCount": 0,
+   "lastOk": "2026-11-10T17:30:47+09:00"
   },
   "op-europa": {
-   "checkedAt": "2026-11-10T17:05:39+09:00",
+   "code": "op-europa",
+   "checkedAt": "2026-11-10T17:30:47+09:00",
    "ok": true,
-   "lastOk": "2026-11-10T17:05:39+09:00",
-   "note": "첫 화면에 간행물 목록과 갱신일이 없음"
+   "note": "",
+   "failCount": 0,
+   "lastOk": "2026-11-10T17:30:47+09:00"
   },
   "oecd-blog": {
-   "checkedAt": "2026-11-10T17:05:39+09:00",
+   "code": "oecd-blog",
+   "checkedAt": "2026-11-10T17:30:47+09:00",
    "ok": true,
-   "lastOk": "2026-11-10T17:05:39+09:00",
-   "note": "게시일 21 March 2025, 갱신 표시 없음"
+   "note": "",
+   "failCount": 0,
+   "lastOk": "2026-11-10T17:30:47+09:00"
   }
  }
 }
