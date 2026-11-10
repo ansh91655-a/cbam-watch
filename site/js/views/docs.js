@@ -64,15 +64,15 @@ function row(doc) {
 }
 
 export async function render(main) {
-  const [documents, sources, unreachable] = await Promise.all([data.documents(), data.sources(), data.unreachableDocuments()]);
+  const [documents, pageOf, unreachable] = await Promise.all([data.documents(), data.documentPages(), data.unreachableDocuments()]);
   const head = band("원문 대장", "EU 집행위원회가 올린 CBAM 문서입니다. 문서 이름을 누르면 파일을 내려받습니다. 문서가 바뀌면 바뀐 곳을 함께 보여 줍니다.");
   if (!documents.length) {
     fill(main, head, empty("문서 목록을 준비하고 있습니다."));
     return;
   }
-  // 문서가 걸려 있는 화면별로 묶는다. 화면의 차례는 출처 목록의 차례를 따른다.
-  const sourceOf = new Map(sources.map((source, index) => [source.code, { ...source, index }]));
-  const pages = [...new Set(documents.map((doc) => doc.page || ""))].sort((a, b) => (sourceOf.get(a)?.index ?? 999) - (sourceOf.get(b)?.index ?? 999));
+  // 문서가 걸려 있는 EU 집행위원회 화면별로 묶는다.
+  const sourceOf = new Map(Object.entries(pageOf));
+  const pages = [...new Set(documents.map((doc) => doc.page || ""))].sort((a, b) => (sourceOf.get(a)?.order ?? 999) - (sourceOf.get(b)?.order ?? 999));
   const status = h("p", { class: "count", role: "status", text: `문서 ${documents.length}건` });
   const sections = pages.map((page) => {
     const source = sourceOf.get(page);

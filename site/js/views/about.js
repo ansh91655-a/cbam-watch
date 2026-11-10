@@ -10,7 +10,6 @@ const SCREENS = [
   ["calendar", "일정", "신고 기한과 시행일처럼 날짜가 정해진 일정을 모았습니다.", "#calendar"],
   ["file", "원문 대장", "EU 집행위원회의 가이던스와 서식을 내려받을 수 있습니다.", "#docs"],
   ["terms", "용어집", "CBAM 용어의 국문 표기를 찾아볼 수 있습니다.", "#terms"],
-  ["sources", "출처", "이 사이트가 살펴보는 기관과 화면의 목록입니다.", "#sources"],
 ];
 
 const SECTIONS = [

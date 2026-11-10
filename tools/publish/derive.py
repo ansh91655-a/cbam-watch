@@ -27,13 +27,14 @@ def _download(version, doc):
     return doc.get("url", "")
 
 
-def sources():
-    """사이트의 출처 화면에 쓰는 목록. 방문자에게 필요한 것만 싣는다(확인 방법과 확인 결과는 운영 콘솔과 보고가 다룬다)."""
+def document_pages(codes):
+    """문서가 걸려 있는 화면의 이름과 주소(원문 대장이 문서를 화면별로 묶는 데 쓴다).
+
+    살펴보는 출처의 목록은 사이트에 싣지 않는다. 여기에는 문서를 실제로 내려받은 화면만 들어간다.
+    """
     registry = read_json("sources/registry.json", {"sources": []})
-    rows = [{"no": source["no"], "code": source["code"], "name": source["name"], "group": source["group"], "url": source["url"],
-             "tier": source["tier"], "note": source.get("note", "")}
-            for source in registry["sources"] if source.get("collector") != "off"]
-    return {"builtAt": stamp(), "sources": rows}
+    return {source["code"]: {"name": source["name"], "url": source["url"], "order": index}
+            for index, source in enumerate(registry["sources"]) if source["code"] in codes}
 
 
 def documents():
@@ -61,7 +62,8 @@ def documents():
     for entry in state.get("pending", {}).values():
         if int(entry.get("tries", 0) or 0) > 0:
             unreachable[entry.get("page", "")] = unreachable.get(entry.get("page", ""), 0) + 1
-    return {"builtAt": stamp(), "checkedAt": state.get("checkedAt", ""), "unreachable": unreachable, "documents": rows}, diffs
+    pages = document_pages({row["page"] for row in rows})
+    return {"builtAt": stamp(), "checkedAt": state.get("checkedAt", ""), "unreachable": unreachable, "pages": pages, "documents": rows}, diffs
 
 
 def price_events(prices):

@@ -37,10 +37,8 @@ def main(argv):
     for name, body in bodies.items():
         write_json(data_out / f"{name}.json", body)
 
-    sources = derive.sources()
     documents, diffs = derive.documents()
-    counts.update({"sources": len(sources["sources"]), "documents": len(documents["documents"])})
-    write_json(data_out / "sources.json", sources)
+    counts.update({"documents": len(documents["documents"])})
     write_json(data_out / "documents.json", documents)
     for diff_path in diffs:
         source = pathlib.Path(diff_path)

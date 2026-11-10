@@ -1,6 +1,6 @@
 // 주소의 #이름으로 화면을 고른다. 이름 뒤에 -값을 붙여 화면에 값을 넘긴다(예: #news-price, #calendar-2027).
 
-const VIEWS = ["home", "news", "price", "calendar", "docs", "terms", "sources", "about", "design"];
+const VIEWS = ["home", "news", "price", "calendar", "docs", "terms", "about", "design"];
 
 export function current() {
   const [name, ...rest] = location.hash.replace(/^#/, "").split("-");
