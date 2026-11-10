@@ -241,3 +241,49 @@ class FeedTest(unittest.TestCase):
         self.assertEqual(len(entries), 2)
         self.assertTrue(entries[0].findtext("a:summary", namespaces=space).startswith("[언론 보도] "))
         self.assertFalse(entries[1].findtext("a:summary", namespaces=space).startswith("[언론 보도]"))
+
+
+class PositionsTest(unittest.TestCase):
+    def table(self, **changes):
+        book = {"asOf": "2026-11-11", "note": "세 안은 협상의 출발점입니다.",
+                "parties": [{"key": "a", "name": "가 기관", "date": "2026-01-01", "source": "문서 1", "link": "https://a.example/1"},
+                            {"key": "b", "name": "나 기관", "date": "2026-02-01", "source": "문서 2", "link": "https://b.example/2"}],
+                "rows": [{"topic": "쟁점 하나", "a": {"text": "넣음", "evidence": {"path": "data/regulations.json", "contains": ["regulations"]}}, "b": {"text": ""}}]}
+        book.update(changes)
+        return {"id": "r1", "positions": book}
+
+    def test_a_sound_table_has_no_problems_and_empty_cells_are_allowed(self):
+        from tools.check import term_check
+        from tools.publish import regulations
+        self.assertEqual(regulations.position_problems(self.table(), term_check.load(), ("format", "evidence")), [])
+        self.assertEqual(regulations.position_problems({"id": "r1"}, term_check.load(), ("format", "evidence")), [])
+
+    def test_evidence_must_hold_and_a_missing_clause_can_be_shown_by_absence(self):
+        from tools.check import term_check
+        from tools.publish import regulations
+        wrong = self.table(rows=[{"topic": "쟁점", "a": {"text": "넣음", "evidence": {"path": "data/regulations.json", "contains": ["이 글은 자료에 없다 zzz"]}}}])
+        self.assertTrue(any("근거 어긋남" in what for _, what in regulations.position_problems(wrong, term_check.load(), ("format", "evidence"))))
+        self.assertEqual(regulations.evidence_problem({"path": "data/regulations.json", "lacks": ["이 글은 자료에 없다 zzz"]}, ""), "")
+        self.assertIn("없어야 할 글", regulations.evidence_problem({"path": "data/regulations.json", "lacks": ["REGULATIONS"]}, ""))
+        blank = self.table(rows=[{"topic": "쟁점", "a": {"text": ""}, "b": {}}])
+        self.assertTrue(any("모두 비어" in what for _, what in regulations.position_problems(blank, term_check.load(), ("format",))))
+
+    def test_the_public_copy_keeps_the_text_and_drops_the_evidence(self):
+        import json
+        from tools.publish import regulations
+        with open("data/regulations.json", encoding="utf-8") as handle:
+            body = json.load(handle)
+        shown = next(rule for rule in regulations.public(body, [])["regulations"] if rule["id"] == "cbam-downstream")
+        self.assertGreaterEqual(len(shown["positions"]["rows"]), 6)
+        self.assertNotIn("evidence", json.dumps(shown["positions"]))
+        self.assertTrue(all(set(row) == {"topic", "commission", "council", "parliament"} for row in shown["positions"]["rows"]))
+
+    def test_the_council_counts_in_the_table_match_the_code_list(self):
+        import json
+        with open("data/cn.json", encoding="utf-8") as handle:
+            council = json.load(handle)["council"]
+        with open("data/regulations.json", encoding="utf-8") as handle:
+            rule = next(rule for rule in json.load(handle)["regulations"] if rule["id"] == "cbam-downstream")
+        cell = rule["positions"]["rows"][0]["council"]["text"]
+        self.assertIn(f"{len(council['added'])}개를 더하고", cell)
+        self.assertIn(f"{len(council['removed'])}개를 뺌", cell)

@@ -26,7 +26,7 @@ export const digests = () => load("digests", { digests: [] }).then((body) => bod
 // 규제별 진행 상황: 묶음, 규제마다의 단계와 연혁
 export const regulations = () => load("regulations", { groups: [], regulations: [] });
 // 품목 코드 조회에 쓰는 목록: 현행 부속서(current)와 확대 개정안의 부속서(proposed)
-export const cn = () => load("cn", { current: [], proposed: [] });
+export const cn = () => load("cn", { current: [], proposed: [], council: { added: [], removed: [] } });
 export const events = () => load("events", { events: [] }).then((body) => body.events || []);
 
 // 판 비교 결과는 문서마다 따로 있어서 필요할 때만 읽는다.

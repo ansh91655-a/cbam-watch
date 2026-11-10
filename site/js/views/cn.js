@@ -10,7 +10,8 @@ import { libraryTabs } from "../ui/tabs.js";
 const SECTOR = { cement: "시멘트", electricity: "전력", fertilisers: "비료", steel: "철강", aluminium: "알루미늄", chemicals: "화학제품(수소)", combined: "복합 금속 제품" };
 const SECTOR_ICON = { cement: "cement", electricity: "electricity", fertilisers: "fertilisers", steel: "steel", aluminium: "aluminium", chemicals: "hydrogen", combined: "steel" };
 const GAS = { co2: "이산화탄소", n2o: "아산화질소", pfc: "과불화탄소" };
-const EXAMPLES = ["7208", "7318 15", "7606", "2523 29 00", "3102", "2804 10 00", "7202 21 00"];
+const LIMIT = 10; // 개정안의 품목을 한 번에 보여 주는 줄 수
+const EXAMPLES = ["7208", "7318 15", "7606", "2523 29 00", "3102", "7202 21 00", "8544 49", "8708 10"];
 // 판정마다: [짧은 이름, 색, 설명]
 const STATE = {
   in: ["대상", "ok", "이 코드의 품목은 CBAM 대상입니다."],
@@ -60,10 +61,36 @@ function result(text, book) {
     return h("div", { class: "cn-result" }, empty(digits(text) ? "코드를 4자리 이상 넣어 주세요." : "CN 코드나 HS 코드의 앞 4~8자리를 넣어 주세요."));
   }
   const [name, tone, about] = STATE[now.state];
+  const open = !["in", "part"].includes(now.state); // 지금의 목록으로 대상이 아닐 때만 개정안을 알린다
+  const live = (found) => ["in", "part", "mixed"].includes(found.state);
+  // 집행위 제안: 지금의 목록에 없는 품목을 더할 때만 알린다(같은 줄이 개정안에도 있는 것은 새 소식이 아니다)
   const later = verdict(text, book.proposed || []);
-  // 개정안이 지금의 목록에 없는 품목을 더할 때만 알린다(같은 줄이 개정안에도 있는 것은 새 소식이 아니다)
   const added = later.rows.filter((row) => !now.rows.some((mine) => mine.entry.shown === row.entry.shown && mine.entry.sector === row.entry.sector));
-  const wider = !["in", "part"].includes(now.state) && ["in", "part", "mixed"].includes(later.state) && added.length > 0;
+  // 이사회 안: 집행위 목록에 더한 코드와 뺀 코드
+  const council = book.council || { added: [], removed: [] };
+  const more = verdict(text, council.added || []);
+  const cut = verdict(text, council.removed || []);
+  const blocks = [];
+  if (open && live(later) && added.length) {
+    blocks.push(h("section", { class: "cn-later" }, [
+      h("h3", {}, [h("span", { text: "확대 개정안에는 들어 있습니다" }), pill("제안 단계", "warn")]),
+      h("p", { text: `EU 집행위원회가 2025년 12월에 낸 하류제품 확대 개정안의 부속서에 이 코드${later.state === "mixed" ? " 아래의 일부 코드" : ""}가 들어 있습니다. 아직 법이 아니며, 최종 목록은 유럽의회와 EU 이사회의 협상 결과에 따라 달라집니다.` }),
+      h("div", { class: "cn-entries" }, added.slice(0, LIMIT).map((hit) => entryCard(hit, true))),
+      added.length > LIMIT ? h("p", { class: "count", text: `이 밖에 ${added.length - LIMIT}줄이 더 있습니다. 코드를 더 길게 넣으면 좁혀집니다.` }) : null,
+      live(cut) ? h("div", { class: "cn-except" }, [h("p", { text: "EU 이사회의 안은 이 가운데 다음 코드를 뺐습니다" }), h("ul", {}, cut.rows.map((hit) => goods(hit.entry)))]) : null,
+      basis(book.proposal, "근거: "),
+    ]));
+  }
+  if (open && live(more)) {
+    blocks.push(h("section", { class: "cn-later" }, [
+      h("h3", {}, [h("span", { text: "EU 이사회의 안에는 들어 있습니다" }), pill("협상 단계", "warn")]),
+      h("p", { text: `EU 이사회가 2026년 6월 12일에 정한 일반적 접근은 집행위원회의 목록에 이 코드${more.state === "mixed" ? " 아래의 일부 코드" : ""}를 더했습니다. 집행위원회의 제안에는 없던 코드이며, 최종 목록에 들어갈지는 협상 결과에 달려 있습니다.` }),
+      h("div", { class: "cn-except" }, h("ul", {}, more.rows.slice(0, LIMIT).map((hit) => goods(hit.entry)))),
+      more.rows.length > LIMIT ? h("p", { class: "count", text: `이 밖에 ${more.rows.length - LIMIT}개가 더 있습니다. 코드를 더 길게 넣으면 좁혀집니다.` }) : null,
+      basis(council, "근거: "),
+    ]));
+  }
+  if (blocks.length) blocks.push(h("p", { class: "cn-basis" }, h("a", { href: "#rules-cbam-downstream", text: "이 개정안의 진행 상황과 기관별 입장 보기" })));
   return h("div", { class: "cn-result", "data-state": now.state }, [
     h("div", { class: "cn-verdict" }, [
       h("p", { class: "cn-query", text: spaced(now.query) }),
@@ -72,14 +99,7 @@ function result(text, book) {
     ]),
     now.rows.length ? h("div", { class: "cn-entries" }, now.rows.map((hit) => entryCard(hit, false))) : null,
     basis(book.law, "근거: "),
-    wider ? h("section", { class: "cn-later" }, [
-      h("h3", {}, [h("span", { text: "확대 개정안에는 들어 있습니다" }), pill("제안 단계", "warn")]),
-      h("p", { text: `EU 집행위원회가 2025년 12월에 낸 하류제품 확대 개정안의 부속서에 이 코드${later.state === "mixed" ? " 아래의 일부 코드" : ""}가 들어 있습니다. 아직 법이 아니며, 유럽의회와 EU 이사회의 안은 품목이 더 많아 최종 목록은 협상 결과에 따라 달라집니다.` }),
-      h("div", { class: "cn-entries" }, added.slice(0, 12).map((hit) => entryCard(hit, true))),
-      added.length > 12 ? h("p", { class: "count", text: `이 밖에 ${added.length - 12}줄이 더 있습니다. 코드를 더 길게 넣으면 좁혀집니다.` }) : null,
-      basis(book.proposal, "근거: "),
-      h("p", {}, h("a", { href: "#rules-cbam-downstream", text: "이 개정안의 진행 상황 보기" })),
-    ]) : null,
+    ...blocks,
   ]);
 }
 

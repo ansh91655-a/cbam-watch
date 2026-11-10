@@ -41,15 +41,55 @@ def evidence_problem(evidence, date):
             return f"근거 파일이 없음: {path}"
         text = path.read_text(encoding="utf-8")
         missing = [phrase for phrase in evidence.get("contains", []) if phrase not in text]
-        if not evidence.get("contains"):
-            return "근거에 찾을 글(contains)이 없음"
-        return f"근거 파일에 없는 글: {missing}" if missing else ""
+        present = [phrase for phrase in evidence.get("lacks", []) if phrase.lower() in text.lower()]  # '그런 조항이 없음'의 근거
+        if not evidence.get("contains") and not evidence.get("lacks"):
+            return "근거에 찾을 글(contains)이나 없어야 할 글(lacks)이 없음"
+        if missing:
+            return f"근거 파일에 없는 글: {missing}"
+        return f"근거 파일에 없어야 할 글이 있음: {present}" if present else ""
     return "근거의 꼴을 알 수 없음"
 
 
 def text_problems(text, term_index):
     found = [f"표기 규칙({hit['rule']}: {hit['sample']})" for hit in style_check.check(text) if hit["hard"]]
     found += [f"쓰지 않는 용어({hit['avoid']} → {hit['use']})" for hit in term_check.check(text, term_index) if hit["hard"]]
+    return found
+
+
+def position_problems(rule, term_index, kinds):
+    """기관별 입장 비교표(positions)의 문제. 표가 없으면 빈 목록.
+
+    표는 기관의 목록(parties: key, name, source, link)과 줄의 목록(rows: topic과 기관 key마다의 칸)이다.
+    칸은 {"text": 글, "evidence": 근거}이고, 그 기관의 문서가 다루지 않는 줄은 칸을 비운다(없거나 text가 빈 글).
+    """
+    table = rule.get("positions")
+    if table is None:
+        return []
+    where, found = f"규제 {rule.get('id')} 비교표", []
+    parties = table.get("parties", [])
+    keys = [party.get("key") for party in parties]
+    if len(keys) < 2 or len(set(keys)) != len(keys) or not DATE.match(str(table.get("asOf", ""))):
+        found.append((where, "기관이 둘보다 적거나 겹치거나, 기준일(asOf)이 날짜가 아님"))
+    for party in parties:
+        if not party.get("name") or not party.get("source") or not str(party.get("link", "")).startswith("https://"):
+            found.append((where, f"기관의 이름, 문서 이름, 주소(https)가 온전하지 않음: {party.get('key')}"))
+    found += [(where, problem) for problem in text_problems(str(table.get("note", "")), term_index)]
+    if not table.get("rows"):
+        found.append((where, "줄이 없음"))
+    for row in table.get("rows", []):
+        spot = f"{where} '{row.get('topic', '')}'"
+        if not str(row.get("topic", "")).strip():
+            found.append((spot, "줄의 이름(topic)이 비어 있음"))
+        if not any(str((row.get(key) or {}).get("text", "")).strip() for key in keys):
+            found.append((spot, "칸이 모두 비어 있음"))
+        for key in keys:
+            cell = row.get(key) or {}
+            if not str(cell.get("text", "")).strip():
+                continue
+            found += [(f"{spot} {key}", problem) for problem in text_problems(cell["text"], term_index)]
+            problem = evidence_problem(cell.get("evidence"), "") if "evidence" in kinds else ""
+            if problem:
+                found.append((f"{spot} {key}", "근거 어긋남: " + problem))
     return found
 
 
@@ -112,6 +152,7 @@ def problems(body, term_index=None, kinds=("format", "evidence")):
         for link in rule.get("links", []):
             if not str(link.get("url", "")).startswith("https://") or not link.get("text"):
                 found.append((where, f"링크가 온전하지 않음: {link}"))
+        found += position_problems(rule, term_index, kinds)
     return found if "format" in kinds else [row for row in found if row[1].startswith("근거 어긋남")]
 
 
@@ -135,6 +176,10 @@ def public(body, items):
         row = {key: value for key, value in rule.items() if key not in ("related", "timeline")}
         row["timeline"] = [{"date": event["date"], "text": event["text"], "source": event["source"], "link": event["link"],
                             **({"press": True} if event.get("basis") == "press" else {})} for event in rule.get("timeline", [])]
+        if rule.get("positions"):  # 비교표: 칸의 근거는 빼고 글만 싣는다
+            keys = [party.get("key") for party in rule["positions"].get("parties", [])]
+            row["positions"] = {**rule["positions"], "rows": [{"topic": line.get("topic", ""), **{key: {"text": (line.get(key) or {}).get("text", "")} for key in keys}}
+                                                             for line in rule["positions"].get("rows", [])]}
         row["relatedItems"] = related_items(rule, items)
         rules.append(row)
     return {"asOf": body.get("asOf", ""), "groups": body.get("groups", []), "regulations": rules}

@@ -79,6 +79,16 @@ def add_rule(body, args):
     body["regulations"].insert(last + 1, rule)
 
 
+def set_positions(body, args):
+    """기관별 입장 비교표를 파일의 것으로 바꾼다(파일은 positions 값 하나를 담은 JSON)."""
+    rule = next((rule for rule in body.get("regulations", []) if rule.get("id") == args.id), None)
+    if rule is None:
+        raise SystemExit(f"없는 규제: {args.id}")
+    rule["positions"] = read_json(args.file, None)
+    if rule["positions"] is None:
+        raise SystemExit(f"파일을 읽지 못함: {args.file}")
+
+
 def main(argv):
     parser = argparse.ArgumentParser()
     commands = parser.add_subparsers(dest="command", required=True)
@@ -104,13 +114,16 @@ def main(argv):
     change.add_argument("--next-title")
     new = commands.add_parser("add-rule")
     new.add_argument("--file", required=True)
+    table = commands.add_parser("positions")
+    table.add_argument("--id", required=True)
+    table.add_argument("--file", required=True)
     args = parser.parse_args(argv)
 
     body = read_json(regulations.SOURCE, None)
     if body is None:
         print("자료를 읽지 못함")
         return 1
-    {"add-event": add_event, "drop-event": drop_event, "set": set_fields, "add-rule": add_rule}[args.command](body, args)
+    {"add-event": add_event, "drop-event": drop_event, "set": set_fields, "add-rule": add_rule, "positions": set_positions}[args.command](body, args)
     body["asOf"] = today()
     found = regulations.problems(body)
     for where, what in found:

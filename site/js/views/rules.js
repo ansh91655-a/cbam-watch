@@ -3,9 +3,10 @@
 import * as data from "../data.js";
 import { band } from "../ui/band.js";
 import { card } from "../ui/card.js";
-import { empty, fill, h, safeLink } from "../ui/dom.js";
+import { empty, fill, h, safeLink, table } from "../ui/dom.js";
 import { countdown, day, koreanDate } from "../ui/format.js";
 import { icon } from "../ui/icons.js";
+import { stackable } from "../ui/stack.js";
 import { stepper } from "../ui/stepper.js";
 
 function stageChip(rule) {
@@ -46,6 +47,32 @@ function timeline(rule) {
   }));
 }
 
+// 기관별 입장 비교표. 입법 중인 규제에서, 기관마다 낸 안이 쟁점별로 어떻게 다른지 보여 준다. 빈칸은 그 문서에서 확인하지 못한 것이다.
+function positions(rule) {
+  const book = rule.positions;
+  if (!book || !Array.isArray(book.rows) || !book.rows.length) return null;
+  const rows = book.rows.map((row) => h("tr", {}, [
+    h("th", { scope: "row", text: row.topic }),
+    ...book.parties.map((party) => {
+      const text = (row[party.key] || {}).text || "";
+      return h("td", { class: text ? null : "blank", text: text || "확인된 내용 없음" });
+    }),
+  ]));
+  const wrap = stackable(table(["쟁점", ...book.parties.map((party) => party.name)], rows));
+  wrap.classList.add("pos-table");
+  const sources = h("ul", { class: "pos-sources" }, book.parties.map((party) => {
+    const link = safeLink(party.link, party.source);
+    if (link) link.append(icon("out", 13));
+    return h("li", {}, [h("strong", { text: party.name }), h("time", { datetime: party.date, text: day(party.date) }), link]);
+  }));
+  return h("section", { class: "stack", "aria-labelledby": "h-pos" }, [
+    h("div", { class: "sec-head" }, [h("h2", { id: "h-pos", text: "기관별 입장 비교" }), h("span", { class: "count", text: `${day(book.asOf)} 기준` })]),
+    wrap,
+    sources,
+    h("p", { class: "pos-note", text: book.note }),
+  ]);
+}
+
 function detail(main, rule, group, items) {
   const related = (rule.relatedItems || []).map((id) => items.find((item) => item.id === id)).filter(Boolean);
   const links = (rule.links || []).map((link) => {
@@ -65,6 +92,7 @@ function detail(main, rule, group, items) {
         nextLine(rule),
       ]),
       h("section", { class: "stack", "aria-labelledby": "h-what" }, [h("h2", { id: "h-what", text: "무엇을 정하는 규제인가요" }), h("p", { class: "rule-summary", text: rule.summary })]),
+      positions(rule),
       h("section", { class: "stack", "aria-labelledby": "h-tl" }, [
         h("div", { class: "sec-head" }, [h("h2", { id: "h-tl", text: "연혁" }), h("span", { class: "count", text: `${rule.timeline.length}건 · 새 일부터` })]),
         timeline(rule),

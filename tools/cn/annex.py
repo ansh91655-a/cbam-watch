@@ -83,3 +83,27 @@ def between(lines, start, end):
         return []
     finish = next((index for index in range(begin + 1, len(lines)) if clean(lines[index]) == end), len(lines))
     return lines[begin + 1:finish]
+
+
+PAGE_MARK = re.compile(r"^(\[쪽 \d+\]|\d+/\d+ \d+|[A-Z]+\.\d\.[A-Z] EN)$")  # PDF에서 뽑은 글에 끼어 있는 쪽 머리
+PLAIN_CODE = re.compile(r"^(?P<ex>ex\s*-?\s*)?(?P<code>\d{8}|\d{4} \d{2} \d{2}|\d{4} \d{2})\b\s*(?:–|-)?\s*(?P<text>.*)$")
+
+
+def code_list(lines):
+    """코드와 품목 이름이 표 없이 이어진 목록을 읽는다(이사회 문서의 '더할 코드', '뺄 코드' 목록).
+
+    코드로 시작하는 줄에서 새 품목이 시작하고, 다음 코드가 나올 때까지의 줄은 그 품목의 이름이다. 온실가스 줄과 쪽 머리는 건너뛴다.
+    """
+    entries = []
+    for raw in lines:
+        line = clean(raw)
+        if not line or PAGE_MARK.match(line) or gases_of(line) is not None or line.lower() == "perfluorocarbons":
+            continue
+        match = PLAIN_CODE.match(line)
+        if match:
+            code = re.sub(r"\D", "", match.group("code"))
+            shown = " ".join([code[:4], code[4:6], code[6:8]]).strip()
+            entries.append({"codes": [code], "shown": ("ex " if match.group("ex") else "") + shown, "ex": bool(match.group("ex")), "text": match.group("text").strip()})
+        elif entries:
+            entries[-1]["text"] = (entries[-1]["text"] + " " + line).strip()
+    return entries
