@@ -29,16 +29,23 @@ def documents(html, page_url):
     return [doc for _, doc in best.values()]
 
 
-def scan(pages):
-    """화면들을 읽어 (찾은 문서, 특이사항, 읽는 데 성공한 화면 코드)를 돌려준다. 같은 문서는 먼저 본 화면의 것으로 둔다."""
+def scan(sources):
+    """화면들을 읽어 (찾은 문서, 특이사항, 읽는 데 성공한 화면 코드)를 돌려준다. 같은 문서는 먼저 본 화면의 것으로 둔다.
+
+    출처 설정의 skipDocuments(정규식 목록)에 파일 이름이 맞는 문서는 추적하지 않는다(예: 다른 언어로 옮긴 판).
+    """
     found, notes, read_codes = {}, [], set()
-    for code, url in pages:
+    for source in sources:
+        code, url = source["code"], source["url"]
+        skip = [re.compile(pattern, re.I) for pattern in source.get("skipDocuments", [])]
         status, headers, body, error = fetch(url)
         if status != 200 or len(body) < MIN_PAGE:
-            notes.append(f"{code}: 읽지 못함({status} {error[:80]})")
+            notes.append(f"{code}: 화면을 읽지 못함({status} {error[:80]})")
             continue
         read_codes.add(code)
         for doc in documents(decode(body, header(headers, "Content-Type")), url):
+            if any(pattern.search(doc["filename"]) for pattern in skip):
+                continue
             doc["page"] = code
             found.setdefault(doc["id"], doc)
     return found, notes, read_codes

@@ -26,8 +26,11 @@ class Web:
 
     def __init__(self):
         self.pages = {}
+        self.blocked = set()
 
     def fetch(self, url, **_):
+        if url in self.blocked:
+            return 403, {}, b"blocked", "HTTP Error 403: Forbidden"
         if url not in self.pages:
             return 404, {}, b"", "HTTP Error 404"
         headers, body = self.pages[url]
@@ -128,6 +131,48 @@ class OriginalsFlowTest(unittest.TestCase):
         self.assertEqual(set(state["pages"]), {"page-a", "page-b"})
         version = state["docs"][ID4]["versions"][0]
         self.assertEqual((version["file"], version.get("kept")), ("", False))  # 압축 파일은 해시만 적는다
+
+    def test_blocked_downloads_wait_quietly(self):
+        # 첫 실행에서 접속이 막혀 일부 문서를 받지 못한다: 받지 못한 것은 대기 목록에 남고, 나중에 받아도 소식이 아니다
+        urls = [self._doc(doc_id, "en", f"Doc{index}.txt", f"본문 {index}") for index, doc_id in enumerate((ID1, ID2, ID3, ID4))]
+        self.web.pages[PAGE_A] = ({"Content-Type": "text/html"}, _page(*urls))
+        self.web.blocked = {urls[1], urls[2], urls[3]}
+        run.main([])
+        state = self._state()
+        self.assertEqual(set(state["docs"]), {ID1})
+        self.assertEqual(set(state["pending"]), {ID2, ID3, ID4})
+        self.assertEqual([state["pending"][doc_id]["tries"] for doc_id in (ID2, ID3, ID4)], [1, 1, 0])  # 두 번 막히면 그만 받는다
+        self.assertTrue(any("그만 받음" in note for note in state["notes"]))
+        self.web.blocked = set()
+        run.main([])
+        state = self._state()
+        self.assertEqual(set(state["docs"]), {ID1, ID2, ID3, ID4})
+        self.assertEqual(state["pending"], {})
+        self.assertEqual(self._feed(), [])
+
+    def test_new_link_on_known_page_is_news_even_if_late(self):
+        one = self._doc(ID1, "en", "Guide.txt", "본문")
+        self.web.pages[PAGE_A] = ({"Content-Type": "text/html"}, _page(one))
+        run.main([])
+        late = self._doc(ID2, "en", "Late.txt", "늦게 받은 새 문서")
+        self.web.pages[PAGE_A] = ({"Content-Type": "text/html"}, _page(one, late))
+        self.web.blocked = {late}
+        run.main([])
+        self.assertEqual(self._feed(), [])
+        self.assertFalse(self._state()["pending"][ID2]["quiet"])
+        self.web.blocked = set()
+        run.main([])
+        self.assertEqual([item["change"] for item in self._feed()], ["new-document"])
+
+    def test_translations_can_be_skipped(self):
+        english = self._doc(ID1, "en", "Factsheet_EN_Cement.txt", "english")
+        serbian = self._doc(ID2, "en", "Factsheet_Cement_SR.pdf", "srpski")
+        self.web.pages[PAGE_A] = ({"Content-Type": "text/html"}, _page(english, serbian))
+        registry = json.loads(pathlib.Path("sources/registry.json").read_text(encoding="utf-8"))
+        registry["sources"][0]["skipDocuments"] = ["_(MK|SR)\\.pdf$"]
+        pathlib.Path("sources/registry.json").write_text(json.dumps(registry), encoding="utf-8")
+        run.main([])
+        self.assertEqual(set(self._state()["docs"]), {ID1})
 
     def test_same_text_is_not_a_new_version(self):
         one = self._doc(ID1, "en", "Guide.html", "<html><body><p>같은 본문</p></body></html>")

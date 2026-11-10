@@ -44,19 +44,30 @@ function row(doc, detailRow) {
 }
 
 export async function render(main) {
-  const documents = await data.documents();
+  const [documents, sources] = await Promise.all([data.documents(), data.sources()]);
   if (!documents.length) {
     main.replaceChildren(viewHead("원문 대장", "추적하는 원문 문서가 아직 등록되지 않았습니다."), empty("원문 문서 목록을 준비하고 있습니다."));
     return;
   }
-  const body = [];
-  for (const doc of [...documents].sort((a, b) => String(a.title).localeCompare(String(b.title)))) {
-    const detailRow = h("tr", { hidden: true }, h("td", { colspan: "6" }));
-    body.push(row(doc, detailRow), detailRow);
-  }
+  // 문서가 걸려 있는 화면별로 묶는다. 화면의 차례는 출처 목록의 차례를 따른다.
+  const sourceOf = new Map(sources.map((source, index) => [source.code, { ...source, index }]));
+  const pages = [...new Set(documents.map((doc) => doc.page || ""))]
+    .sort((a, b) => (sourceOf.get(a)?.index ?? 999) - (sourceOf.get(b)?.index ?? 999));
+  const sections = pages.map((page) => {
+    const source = sourceOf.get(page);
+    const body = [];
+    for (const doc of documents.filter((item) => (item.page || "") === page).sort((a, b) => String(a.title).localeCompare(String(b.title)))) {
+      const detailRow = h("tr", { hidden: true }, h("td", { colspan: "6" }));
+      body.push(row(doc, detailRow), detailRow);
+    }
+    return h("section", { class: "stack" }, [
+      h("h2", {}, source ? safeLink(source.url, source.name) || h("span", { text: source.name }) : h("span", { text: "그 밖의 문서" })),
+      table(["문서", { text: "판 확인일", num: true }, { text: "쪽수", num: true }, { text: "크기", num: true }, { text: "판 수", num: true }, "보관본"], body),
+    ]);
+  });
   main.replaceChildren(
     viewHead("원문 대장", "EU 집행위원회가 올린 법령 관련 문서와 가이던스의 사본을 보관하고, 문서가 바뀌면 이전 판과 비교합니다. 문서 이름을 누르면 원래 올라온 곳이 열립니다. '판 확인일'은 이 사이트가 그 판을 처음 확인한 날입니다."),
     h("p", { class: "count", text: `문서 ${documents.length}건. 판 수가 2 이상이면 바뀐 곳을 볼 수 있습니다.` }),
-    table(["문서", { text: "판 확인일", num: true }, { text: "쪽수", num: true }, { text: "크기", num: true }, { text: "판 수", num: true }, "보관본"], body),
+    ...sections,
   );
 }
