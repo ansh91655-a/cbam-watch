@@ -1,5 +1,5 @@
 // 첫 화면. 맨 위에 큰 머리(점 지도, 한 줄 소개, 지금 알아 둘 수치 세 개)를 두고,
-// 그 아래에 가장 중요한 소식, 다가오는 일정, 가격 추세, 주제별 소식, 새로 오른 소식, 주간 요약을 칸으로 나눠 놓고, 맨 아래 짙은 띠에 품목별 가이던스를 둔다.
+// 그 아래에 가장 중요한 소식, 다가오는 일정, 가격 추세, 주제별 소식, 최근 소식, 주간 요약을 칸으로 나눠 놓고, 맨 아래 짙은 띠에 품목별 가이던스를 둔다.
 import * as data from "../data.js";
 import { card } from "../ui/card.js";
 import { priceChart, sparkline } from "../ui/chart.js";
@@ -12,7 +12,7 @@ import { topicList, topicName, topicOf } from "../ui/topics.js";
 const IMPORTANT_DAYS = 45;
 const RECENT_COUNT = 6;
 const MORE_IMPORTANT = 2;
-const NEW_DAYS = 7;
+const NEW_DAYS = 30;
 // CBAM 대상 품목과 EU 집행위원회의 품목별 가이던스 번호
 const SECTORS = [["cement", "시멘트", "5a"], ["steel", "철강", "5d"], ["aluminium", "알루미늄", "5e"], ["fertilisers", "비료", "5c"], ["electricity", "전력", "5f"], ["hydrogen", "수소", "5b"]];
 
@@ -41,9 +41,9 @@ function nextFact(events) {
 }
 
 function newsFact(items) {
-  const fresh = items.filter((item) => (daysSince(item.listed) ?? 999) <= NEW_DAYS).length;
+  const fresh = items.filter((item) => (daysSince(item.published || item.listed) ?? 999) <= NEW_DAYS).length;
   return h("a", { class: "fact", href: "#news" }, [
-    h("span", { class: "fact-label" }, [icon("news", 16), h("span", { text: `최근 ${NEW_DAYS}일 동안 오른 소식` })]),
+    h("span", { class: "fact-label" }, [icon("news", 16), h("span", { text: `최근 ${NEW_DAYS}일 소식` })]),
     h("span", { class: "fact-value" }, [h("span", { text: fresh }), h("small", { text: "건" })]),
     h("span", { class: "fact-note", text: `지금까지 모두 ${items.length}건` }),
   ]);
@@ -69,7 +69,7 @@ function hero(book, events, items) {
   ]));
 }
 
-// 가장 중요한 소식 하나. 최근의 중요 소식이 없으면 가장 늦게 오른 소식을 쓴다. 다른 중요 소식이 있으면 아래에 제목만 덧붙인다.
+// 가장 중요한 소식 하나. 최근의 중요 소식이 없으면 날짜가 가장 늦은 소식을 쓴다. 다른 중요 소식이 있으면 아래에 제목만 덧붙인다.
 function feature(item, important, others) {
   const topic = topicOf(item);
   const title = safeLink(item.link, item.title) || h("span", { text: item.title });
@@ -189,16 +189,16 @@ export async function render(main) {
   const items = data.newestFirst(all).filter((item) => !item.withdrawn);
   const isImportant = (item) => item.importance === "높음" && (daysSince(item.published || item.listed) ?? 999) <= IMPORTANT_DAYS;
   const important = items.find(isImportant);
-  const lead = important || data.newestListedFirst(items)[0];
+  const lead = important || items[0];
   const others = important ? items.filter((item) => isImportant(item) && item.id !== lead.id).slice(0, MORE_IMPORTANT) : [];
   const shown = new Set([lead, ...others].filter(Boolean).map((item) => item.id));
-  const recent = data.newestListedFirst(items).filter((item) => !shown.has(item.id)).slice(0, RECENT_COUNT);
+  const recent = items.filter((item) => !shown.has(item.id)).slice(0, RECENT_COUNT);
 
   fill(main,
     hero(book, events, items),
     h("div", { class: "bento" }, [lead ? feature(lead, Boolean(important), others) : null, schedule(events), pricePanel(book), topicsPanel(items)]),
     h("section", { class: "stack", "aria-labelledby": "h-recent" }, [
-      h("div", { class: "sec-head" }, [h("h2", { id: "h-recent", text: "새로 오른 소식" }), h("a", { href: "#news", text: `소식 ${items.length}건 모두 보기` })]),
+      h("div", { class: "sec-head" }, [h("h2", { id: "h-recent", text: "최근 소식" }), h("a", { href: "#news", text: `소식 ${items.length}건 모두 보기` })]),
       recent.length ? h("div", { class: "cards-2" }, recent.map(card)) : empty(items.length ? "다른 최근 소식이 없습니다." : "아직 게시된 소식이 없습니다."),
     ]),
     digest(digests),

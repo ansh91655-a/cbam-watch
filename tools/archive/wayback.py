@@ -7,9 +7,10 @@ import hashlib
 import json
 import time
 
-from tools.archive.store import save_index, save_text
+from tools.archive.store import ROOT, save_index, save_text
 from tools.collect.extract import DATE_LINE
 from tools.common.htmltext import decode, parse
+from tools.common.jsonio import read_json
 from tools.common.net import fetch, header
 
 PAGES = [
@@ -52,8 +53,11 @@ def section(lines):
     return []
 
 
-def crawl():
-    snapshots, report = [], {"pages": {}, "stored": 0, "failures": []}
+def crawl(deadline=None):
+    """사본을 읽어 목록 부분을 저장한다. 앞서 읽어 둔 사본은 다시 읽지 않는다. deadline(time.monotonic 값)을 넘기면 거기서 멈춘다."""
+    before = read_json(ROOT / "ec-latest.json", {"entries": []})["entries"]
+    done = {(row["page"], row["stamp"]) for row in before}
+    snapshots, report = list(before), {"pages": {}, "stored": 0, "failures": [], "stoppedEarly": False}
     last_hash = ""
     for page in PAGES:
         status, _, body, error = fetch(CDX.format(url=page), timeout=120)
@@ -66,10 +70,18 @@ def crawl():
         chosen = choose(stamps)
         report["pages"][page] = {"snapshots": len(stamps), "chosen": len(chosen), "cdx": status, "error": error[:80]}
         name = "main" if page.endswith("mechanism_en") else "news"
-        for stamp in chosen:
+        last_hash = next((row["hash"] for row in reversed(before) if row["page"] == page), "")
+        for count, stamp in enumerate(chosen):
+            if (page, stamp) in done:
+                continue
+            if deadline is not None and time.monotonic() > deadline:
+                report["stoppedEarly"] = True
+                break
             url = SNAPSHOT.format(stamp=stamp, url=page)
-            status, headers, body, error = fetch(url, timeout=120, retries=3, pause=8)
+            status, headers, body, error = fetch(url, timeout=45, retries=1, pause=6)
             time.sleep(PAUSE)
+            if count % 10 == 9:
+                save_index("ec-latest", snapshots, report)  # 중간에 끊겨도 읽은 데까지 남긴다
             if status != 200 or not body:
                 report["failures"].append(f"{stamp} {name} ({status} {error[:50]})")
                 continue

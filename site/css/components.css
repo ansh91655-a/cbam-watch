@@ -96,12 +96,18 @@ a.m-topic:hover { text-decoration: underline; }
 .chip[aria-current="true"] { border-color: var(--brand); background: var(--brand); color: var(--on-brand); font-weight: 700; }
 .filters { display: flex; flex-wrap: wrap; align-items: end; gap: 10px 14px; }
 .field { display: grid; gap: 3px; font-size: 0.8rem; font-weight: 600; color: var(--ink-3); }
-.field input, .field select { min-width: 150px; padding: 9px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); font-size: var(--fs-m); font-weight: 400; color: var(--ink); }
+.field input, .field select { box-sizing: border-box; height: 44px; min-width: 150px; padding: 9px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); font-size: var(--fs-m); font-weight: 400; color: var(--ink); }
 .field input[type="search"] { min-width: min(300px, 72vw); }
 .field input:focus, .field select:focus { border-color: var(--brand-bright); }
-.seg { display: inline-flex; padding: 3px; border-radius: 12px; background: var(--surface-2); }
+.seg { display: inline-flex; align-items: center; box-sizing: border-box; height: 44px; padding: 3px; border-radius: 12px; background: var(--surface-2); }
+.filters > .count { padding-bottom: 11px; }
 .seg button { padding: 7px 16px; border: 0; border-radius: 9px; background: none; color: var(--ink-2); font-size: var(--fs-s); font-weight: 600; }
 .seg button[aria-pressed="true"] { background: var(--surface); color: var(--ink); box-shadow: var(--shadow-1); }
+
+/* 달마다 다는 머리(소식을 날짜순으로 볼 때) */
+.month-head { display: flex; align-items: center; gap: 14px; margin-top: 14px; font-size: var(--fs-l); font-weight: 700; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.month-head:first-child { margin-top: 0; }
+.month-head::after { content: ""; flex: 1; height: 1px; background: var(--line); }
 
 /* 주제별 묶음(소식 화면) */
 .topic-sec { display: grid; gap: var(--gap-4); }

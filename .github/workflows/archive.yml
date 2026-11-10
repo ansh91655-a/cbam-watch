@@ -9,6 +9,10 @@ on:
         type: choice
         options: [probe, crawl]
         default: probe
+      steps:
+        description: "crawl일 때 돌릴 출처 이름(띄어 적는다. 비우면 모두). 예: ec-news ep-oeil"
+        type: string
+        default: ""
 
 permissions:
   contents: write
@@ -20,7 +24,7 @@ concurrency:
 jobs:
   archive:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 50
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -39,8 +43,13 @@ jobs:
           git push -f origin archive-probe
       - name: 지난 소식 모으기
         if: inputs.mode == 'crawl'
+        timeout-minutes: 40
+        env:
+          STEPS: ${{ inputs.steps }}
+        run: python -m tools.archive.crawl --budget-minutes 30 $STEPS
+      - name: 모은 것 올리기
+        if: always() && inputs.mode == 'crawl'
         run: |
-          python -m tools.archive.crawl
           git config user.name "cbam-watch-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add collected/archive
