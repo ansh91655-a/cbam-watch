@@ -7,7 +7,9 @@ import datetime
 import json
 import subprocess
 import sys
+import urllib.parse
 
+from tools.common import robots
 from tools.common.jsonio import KST, now_kst, read_json, today
 from tools.common.siteinfo import deploy_remote
 from tools.run import cn_health, rules_health
@@ -59,6 +61,15 @@ def _price_problems(prices):
     return [f"인증서 가격표에서 읽지 못한 행 {len(rows)}건(표의 꼴이 바뀐 것으로 보임): {str(rows[0])[:80]}"] if rows else []
 
 
+def _robots_problems(day, blocked=None):
+    """그날 robots.txt에 막혀 받지 않은 주소가 있으면 사이트별로 묶어 알린다."""
+    blocked = robots.blocked_today(day) if blocked is None else blocked
+    if not blocked:
+        return []
+    hosts = sorted({urllib.parse.urlsplit(url).netloc for url, _ in blocked})
+    return [f"robots.txt가 자동 읽기를 막아 받지 않은 주소 {len(blocked)}건({', '.join(hosts)[:140]}). 출처 대장에서 빼거나 받는 방법을 바꿔야 함"]
+
+
 def report():
     """저장소의 상태를 사전으로 돌려준다. problems가 사람에게 알릴 문제다."""
     day = today()
@@ -78,6 +89,7 @@ def report():
     problems += _source_problems(status, claude)
     prices = read_json("data/prices.json", {}) or {}
     problems += _price_problems(prices)
+    problems += _robots_problems(day)
     if workday:
         problems += _originals_problems(originals, day)
         if not deployed_today:

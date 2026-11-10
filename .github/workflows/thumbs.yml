@@ -40,6 +40,8 @@ jobs:
         if: steps.plan.outputs.count != '0'
         run: |
           npm install --no-save --no-package-lock --silent puppeteer-core
+          # 화면을 여는 브라우저의 이름표는 수집기와 같은 것을 쓴다(이 도구의 이름과 주소가 들어 있다)
+          export CBAM_AGENT="$(python -c 'from tools.common.net import USER_AGENT; print(USER_AGENT)')"
           node tools/thumbs/shots.mjs /tmp/thumbs/todo.json /tmp/thumbs/raw
       - name: 법령 PDF의 첫 장 받기
         if: steps.plan.outputs.count != '0'

@@ -1,6 +1,8 @@
 // 원문 화면의 제목 부분을 찍는다(kind가 "page"인 것만).
 // 쓰는 법: node tools/thumbs/shots.mjs <할 일 파일> <그림을 둘 폴더>   결과는 <폴더>/pages.json에 쓴다.
 // 화면에 떠 있는 것(쿠키 안내, 붙박이 머리글)과 그림을 치운 뒤 제목(h1)부터 아래로 찍는다. 기관 로고가 있는 머리 부분은 그림에 들어가지 않는다.
+// 자동으로 여는 것임을 숨기지 않는다: 이름표(User-Agent)에 이 도구의 이름과 주소를 적고, 자동 조종 표시를 지우는 설정을 쓰지 않는다.
+// 사이트가 막는 화면(확인 요청, 접근 거부)이 나오면 넘어서려 하지 않고 그 원문은 그림 없이 둔다.
 import fs from "node:fs";
 import puppeteer from "puppeteer-core";
 
@@ -9,7 +11,8 @@ const jobs = JSON.parse(fs.readFileSync(todoPath, "utf8")).filter((job) => job.k
 const CHROME = process.env.CHROME_BIN || ["/usr/bin/google-chrome", "/usr/bin/google-chrome-stable", "/usr/bin/chromium-browser", "/usr/bin/chromium"].find((path) => fs.existsSync(path));
 const VIEW = { width: 390, height: 1200, deviceScaleFactor: 2 }; // 휴대전화 너비로 열어 제목이 그림에서 읽힐 만큼 크게 나오게 한다
 const CLIP = { width: 390, height: 244 };
-const AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36";
+// 이름표는 수집기와 같은 것을 쓴다(워크플로가 tools/common/net.py의 값을 CBAM_AGENT로 넘긴다).
+const AGENT = process.env.CBAM_AGENT || "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36 cbam-watch/0.1 (+https://github.com/ansh91655-a/cbam-watch)";
 const ROBOT = /captcha|automated scraping|flagged as potentially automated|unusual traffic|enable javascript and cookies/i; // 본문에 이런 말이 있으면 막힌 화면이다
 const REFUSED = /access denied|forbidden|not found|just a moment|are you a robot|verify you are|error \d{3}|request blocked/i;
 
@@ -63,7 +66,7 @@ async function shoot(browser, job) {
 fs.mkdirSync(outDir, { recursive: true });
 const results = [];
 if (jobs.length) {
-  const browser = await puppeteer.launch({ executablePath: CHROME, headless: "new", args: ["--no-sandbox", "--disable-gpu", "--disable-blink-features=AutomationControlled", "--lang=en-GB"] });
+  const browser = await puppeteer.launch({ executablePath: CHROME, headless: "new", args: ["--no-sandbox", "--disable-gpu", "--lang=en-GB"] });
   for (const job of jobs) {
     const result = await shoot(browser, job);
     results.push(result);

@@ -2,12 +2,14 @@
 
 쓰는 법: python -m tools.thumbs.plan <할 일 파일> [--limit 150]
 고르는 것: 재이용이 허용된 공식 출처의 원문이고, 아직 그림이 없고, 세 번 넘게 실패하지 않은 것. 같은 원문은 한 번만 넣는다.
+그 사이트의 robots.txt가 자동 읽기를 막은 주소는 넣지 않는다(tools.common.robots).
 법령 데이터베이스(EUR-Lex)의 문서는 PDF 첫 장으로(kind "pdf"), 그 밖은 원문 화면으로(kind "page") 만든다.
 """
 import argparse
 import sys
 import urllib.parse
 
+from tools.common import robots
 from tools.common.jsonio import read_json, write_json
 from tools.publish import thumbs
 
@@ -30,10 +32,13 @@ def job_of(link):
     return job
 
 
-def todo(items, state, exists, limit):
-    """items에서 만들 것을 고른다. exists(name)는 그림이 이미 있는지 알려 주는 함수다."""
+def todo(items, state, exists, limit, permitted=None):
+    """items에서 만들 것을 고른다. exists(name)는 그림이 이미 있는지, permitted(link)는 robots.txt가 그 주소를 허용하는지 알려 주는 함수다."""
+    permitted = permitted or (lambda link: robots.check(link)[0])
     seen, jobs = set(), []
     for item in items:
+        if len(jobs) >= limit:
+            break
         link = item.get("link", "")
         if item.get("withdrawn") or not allowed(link):
             continue
@@ -41,8 +46,10 @@ def todo(items, state, exists, limit):
         if name in seen or exists(name) or state.get(name, {}).get("tries", 0) >= MAX_TRIES:
             continue
         seen.add(name)
+        if not permitted(link):  # 사이트가 자동 읽기를 막은 주소는 그림 없이 둔다
+            continue
         jobs.append(job_of(link))
-    return jobs[:limit]
+    return jobs
 
 
 def main(argv):

@@ -1,4 +1,7 @@
-"""웹에서 파일을 받아 오는 공통 함수. 표준 라이브러리만 쓴다."""
+"""웹에서 파일을 받아 오는 공통 함수. 표준 라이브러리만 쓴다.
+
+주소를 열기 전에 그 사이트의 robots.txt가 자동 읽기를 허용하는지 먼저 본다(tools.common.robots). 막힌 주소는 받지 않는다.
+"""
 import hashlib
 import http.cookiejar
 import time
@@ -20,11 +23,18 @@ DEFAULT_HEADERS = {
 _opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
 
 
-def fetch(url, timeout=60, retries=2, pause=5, headers=None, method="GET", data=None):
+def fetch(url, timeout=60, retries=2, pause=5, headers=None, method="GET", data=None, robots=True):
     """주소를 열어 (상태 코드, 머리글, 본문 바이트, 오류 글)을 돌려준다. 예외를 던지지 않는다.
 
     data(바이트)를 주면 그 내용을 본문으로 보낸다(양식으로 쪽을 넘기는 게시판을 읽을 때 쓴다).
+    그 사이트의 robots.txt가 막은 주소면 열지 않고 상태 코드 0과 그 까닭을 돌려준다.
+    robots=False는 robots.txt 자체를 받을 때만 쓴다.
     """
+    if robots:
+        from tools.common import robots as gate  # 서로를 부르는 모듈이라 여기에서 들여온다
+        allowed, why = gate.check(url)
+        if not allowed:
+            return 0, {}, b"", why
     merged = dict(DEFAULT_HEADERS)
     merged.update(headers or {})
     last_error = ""

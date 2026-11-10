@@ -169,11 +169,19 @@ class ThumbsTest(unittest.TestCase):
                  {"link": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2083"}, {"link": "https://www.gov.uk/guidance/x"},
                  {"link": "https://www.keco.or.kr/web/x"}, {"link": "https://www.consilium.europa.eu/en/press/x"}, {"link": "http://www.gov.uk/y"},
                  {"link": "https://www.federalregister.gov/d/1", "withdrawn": True}, {"link": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0419(COD)"}]
-        jobs = plan.todo(items, {}, lambda name: False, 10)
+        anything = lambda link: True
+        jobs = plan.todo(items, {}, lambda name: False, 10, permitted=anything)
         self.assertEqual([job["kind"] for job in jobs], ["page", "pdf", "page", "page"])
         self.assertEqual(jobs[1]["celex"], "32025R2083")
         tried = {thumbs.name_of("https://www.gov.uk/guidance/x"): {"tries": 3}}
-        self.assertEqual(len(plan.todo(items, tried, lambda name: name == jobs[0]["name"], 10)), 2)
+        self.assertEqual(len(plan.todo(items, tried, lambda name: name == jobs[0]["name"], 10, permitted=anything)), 2)
+        self.assertEqual(len(plan.todo(items, {}, lambda name: False, 2, permitted=anything)), 2)  # 한도까지만
+
+    def test_addresses_a_site_closes_to_automatic_reading_are_left_without_a_picture(self):
+        from tools.thumbs import plan
+        items = [{"link": "https://taxation-customs.ec.europa.eu/news/a_en"}, {"link": "https://www.gov.uk/guidance/x"}]
+        jobs = plan.todo(items, {}, lambda name: False, 10, permitted=lambda link: "gov.uk" not in link)
+        self.assertEqual([job["url"] for job in jobs], ["https://taxation-customs.ec.europa.eu/news/a_en"])
 
     def test_items_get_a_thumb_only_when_the_file_exists(self):
         import pathlib
