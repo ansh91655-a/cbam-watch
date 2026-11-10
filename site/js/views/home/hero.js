@@ -1,4 +1,4 @@
-// 첫 화면의 큰 머리. 왼쪽에 이번 주 요약(제목과 첫 문단, 나머지는 펼쳐서 읽는다), 오른쪽에 한국에서 EU로 가는 길을 그린 점 지도와 사이트 소개.
+// 첫 화면의 큰 머리. 왼쪽에 이번 주 요약(제목과 첫 문단, 나머지는 펼쳐서 읽는다), 오른쪽에 한국에서 EU로 가는 길을 그린 지도와 사이트 소개.
 import { h } from "../../ui/dom.js";
 import { koreanDate } from "../../ui/format.js";
 import { heroMap } from "../../ui/heromap.js";

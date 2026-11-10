@@ -40,9 +40,11 @@
   --on-feat-3: #9aa9da;
   --tip-bg: #071236;
   --on-deep-link: #ffd84d;
-  --map-land: rgba(157, 178, 255, 0.34);
-  --map-eu: #a9c1ff;
+  --map-sea: #0a1744;
+  --map-land: #1a2c6c;
+  --map-eu: #4a6fe3;
   --map-kr: #ffcc00;
+  --map-line: #0a1744;
 
   /* 주제마다의 색. 아이콘과 그 바탕에만 쓰고 글자에는 쓰지 않는다. */
   --t-law: #2b59e0;

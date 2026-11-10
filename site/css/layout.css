@@ -47,8 +47,8 @@ main:focus { outline: none; }
 .hero-lead { max-width: 36em; font-size: 1.02rem; line-height: 1.72; color: var(--on-deep-2); }
 .hero-more { width: fit-content; color: var(--on-deep-link); font-size: var(--fs-s); font-weight: 600; }
 .hero-figure { position: relative; z-index: 1; display: grid; gap: 10px; align-content: start; margin: 0; }
-.hero-map { position: relative; width: 100%; aspect-ratio: 1002 / 610; pointer-events: none; }
-.hero-map .map { display: block; width: 100%; height: 100%; overflow: visible; }
+.hero-map { position: relative; width: 100%; aspect-ratio: 1002 / 598; border-radius: var(--radius-l); background: var(--map-sea); overflow: hidden; pointer-events: none; }
+.hero-map .map { display: block; width: 100%; height: 100%; }
 .hero-legend { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 0.78rem; color: var(--on-deep-3); }
 .hero-legend i { display: inline-block; width: 8px; height: 8px; margin-right: 6px; border-radius: 50%; background: var(--map-eu); }
 .hero-legend i.kr { background: var(--map-kr); }
@@ -58,12 +58,12 @@ main:focus { outline: none; }
   .hero-figure { order: 2; }
 }
 
-/* 지도 그림 */
-.map-land, .map-eu, .map-kr { fill: none; stroke-linecap: round; }
-.map-land { stroke: var(--map-land); stroke-width: 4.2; }
-.map-eu { stroke: var(--map-eu); stroke-width: 5; }
-.map-kr { stroke: var(--map-kr); stroke-width: 5.6; }
-.map-grid { fill: none; stroke: var(--on-deep-3); stroke-width: 0.8; stroke-dasharray: 2 7; opacity: 0.3; }
+/* 지도 그림: 나라의 면을 칠하고, 나라 사이는 바탕색 가는 선으로 가른다. 경위선은 땅 아래에 깔려 바다에서만 보인다. */
+.map-land, .map-eu, .map-kr { stroke: var(--map-line); stroke-width: 1.1; stroke-linejoin: round; }
+.map-land { fill: var(--map-land); }
+.map-eu { fill: var(--map-eu); }
+.map-kr { fill: var(--map-kr); }
+.map-grid { fill: none; stroke: var(--on-deep-3); stroke-width: 0.8; stroke-dasharray: 2 7; opacity: 0.32; }
 .map-route { fill: none; stroke: var(--map-kr); stroke-width: 3.2; stroke-linecap: round; stroke-dasharray: 100; stroke-dashoffset: 100; animation: route-draw 1.8s 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
 .map-head { fill: var(--map-kr); opacity: 0; animation: route-head 0.3s 1.9s forwards; }
 @keyframes route-draw { to { stroke-dashoffset: 0; } }
@@ -75,12 +75,14 @@ main:focus { outline: none; }
 .map-tag-kr { color: var(--map-kr); }
 @media (prefers-reduced-motion: reduce) { .map-route { stroke-dashoffset: 0; animation: none; } .map-head { opacity: 1; animation: none; } }
 
-/* 화면 머리 띠(첫 화면이 아닌 화면). 오른쪽에 점 지도를 옅게 깐다. */
+/* 화면 머리 띠(첫 화면이 아닌 화면). 오른쪽에 첫 화면의 지도를 옅게 깐다. */
 .view-head { position: relative; background: var(--band-bg); color: var(--on-deep); overflow: clip; }
 .band-inner { position: relative; display: grid; gap: 8px; padding-block: 38px 34px; }
 .band-inner > :not(.band-map) { position: relative; z-index: 1; }
-.band-map { position: absolute; top: 50%; right: -150px; width: 560px; aspect-ratio: 1002 / 610; transform: translateY(-50%); opacity: 0.75; pointer-events: none; -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 62%, transparent 96%); mask-image: linear-gradient(90deg, transparent, #000 12%, #000 62%, transparent 96%); }
-.band-map .map { display: block; width: 100%; height: 100%; overflow: visible; }
+.band-map { position: absolute; top: 50%; right: -150px; width: 560px; aspect-ratio: 1002 / 598; border-radius: 0; background: none; transform: translateY(-50%); opacity: 0.75; pointer-events: none; -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 62%, transparent 96%); mask-image: linear-gradient(90deg, transparent, #000 12%, #000 62%, transparent 96%); }
+.band-map .map { display: block; width: 100%; height: 100%; }
+.band-map .map-eu { fill: color-mix(in srgb, var(--map-eu) 45%, var(--map-land)); }
+.band-map .map-kr { fill: var(--map-land); }
 .band-map .map-arcs, .band-map .map-grid, .band-map .map-home, .band-map .map-home-ring { display: none; }
 @media (max-width: 900px) { .band-map { display: none; } .band-inner { padding-block: 30px 28px; } }
 /* 주 메뉴 하나에 묶인 화면들을 고르는 탭(머리 띠 안) */

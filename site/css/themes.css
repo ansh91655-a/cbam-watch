@@ -12,9 +12,11 @@ html[data-theme="white"] {
   --on-deep-2: #3f486a;
   --on-deep-3: #5d6787;
   --deep-line: #dde3f2;
-  --map-land: rgba(43, 89, 224, 0.17);
+  --map-sea: #f3f6fd;
+  --map-land: #dfe5f4;
   --map-eu: #2b59e0;
-  --map-kr: #c98f00;
+  --map-kr: #e0a400;
+  --map-line: #f3f6fd;
   --on-deep-link: var(--link);
 }
 html[data-theme="white"] .site-nav a[aria-current="page"]::after { background: var(--brand-bright); }

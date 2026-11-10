@@ -10,7 +10,7 @@ import sys
 # (사이트에서 쓰는 곳, 꾸러미 이름, 덧붙이는 말)
 PARTS = [
     ("아이콘 (site/js/ui/icons.js)", "lucide-static", "Lucide https://lucide.dev"),
-    ("점 지도의 나라 경계 (site/js/ui/heromap.js)", "world-atlas",
+    ("지도의 나라 경계 (site/js/ui/heromap.js)", "world-atlas",
      "world-atlas https://github.com/topojson/world-atlas . 나라 경계 자료는 Natural Earth(공개 자료, https://www.naturalearthdata.com)의 것이다."),
     ("글꼴: 본문과 화면의 글자 (site/assets/fonts/pretendard)", "pretendard",
      "Pretendard https://github.com/orioncactus/pretendard . 글꼴 파일 안에 'Copyright © 2023 Kil Hyung-jin'과 "

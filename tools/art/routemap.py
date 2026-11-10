@@ -1,7 +1,7 @@
-"""첫 화면의 점 지도를 만든다. 유라시아를 점으로 찍고 EU 회원국과 한국을 따로 표시하고, 한국에서 EU로 가는 길을 선 하나로 그린다.
+"""첫 화면의 지도를 만든다. 유라시아의 나라들을 면으로 그리고 EU 회원국과 한국을 다른 색으로 칠하고, 한국에서 EU로 가는 길을 선 하나로 그린다.
 
 지도의 나라 경계는 Natural Earth(공개 자료)를 TopoJSON으로 묶은 world-atlas의 countries-110m.json에서 읽는다.
-쓰는 법: python -m tools.art.dotmap <countries-110m.json의 경로> [출력 파일]
+쓰는 법: python -m tools.art.routemap <countries-110m.json의 경로> [출력 파일]
 출력은 화면 모듈(site/js/ui/heromap.js)이다. 지도를 고칠 때만 손으로 돌리고, 평소의 자동 실행은 이 프로그램을 쓰지 않는다.
 """
 import json
@@ -16,7 +16,7 @@ KOREA = "410"
 # 그리는 범위. 남쪽을 인도와 동남아시아의 바닷가까지 넣어야 뭍의 생김새로 어디인지 알아볼 수 있다.
 WEST, EAST, SOUTH, NORTH = -14.0, 150.0, 6.0, 71.5
 SCALE = 350.0   # 1라디안이 몇 px인가
-STEP = 10.0     # 점 사이의 거리(px)
+EDGE = 3.0      # 그리는 범위를 이만큼(도) 벗어난 나라까지 그린다(가장자리에서 잘려 보이게)
 HOME = (128.9, 35.3)  # 길이 떠나는 곳(한국 남동부)
 GATE = (4.3, 51.9)    # 길이 닿는 곳(북해 연안)
 LIFT = 0.17           # 길이 북쪽으로 휘는 정도(두 곳을 잇는 가장 짧은 길은 북쪽으로 휜다)
@@ -37,11 +37,6 @@ HEIGHT = (TOP - mercator(SOUTH)) * SCALE
 
 def project(lon, lat):
     return math.radians(lon - WEST) * SCALE, (TOP - mercator(lat)) * SCALE
-
-
-def unproject(x, y):
-    lat = math.degrees(2 * math.atan(math.exp(TOP - y / SCALE)) - math.pi / 2)
-    return WEST + math.degrees(x / SCALE), lat
 
 
 def countries(path):
@@ -78,50 +73,48 @@ def countries(path):
     return found
 
 
-def inside(ring, lon, lat):
-    hit = False
-    count = len(ring)
-    for index in range(count):
-        x1, y1 = ring[index]
-        x2, y2 = ring[(index + 1) % count]
-        if (y1 > lat) != (y2 > lat) and lon < (x2 - x1) * (lat - y1) / (y2 - y1) + x1:
-            hit = not hit
-    return hit
-
-
 def box(ring):
     xs = [point[0] for point in ring]
     ys = [point[1] for point in ring]
     return min(xs), min(ys), max(xs), max(ys)
 
 
-def classify(world):
-    """점마다 어느 나라 위인지 본다. (EU의 점, 한국의 점, 그 밖의 땅의 점)을 돌려준다."""
-    shapes = []
+def unwrap(ring):
+    """날짜 변경선을 넘는 고리(러시아의 동쪽 끝)는 서쪽으로 넘어간 점을 동쪽으로 이어 붙인다. 그러지 않으면 지도를 가로지르는 선이 생긴다."""
+    west, _, east, _ = box(ring)
+    if east - west <= 180:
+        return ring
+    return [(lon + 360 if lon < 0 else lon, lat) for lon, lat in ring]
+
+
+def visible(ring):
+    west, south, east, north = box(ring)
+    return east >= WEST - EDGE and west <= EAST + EDGE and north >= SOUTH - EDGE and south <= NORTH + EDGE
+
+
+def ring_path(ring):
+    """고리 하나를 그림의 길로 바꾼다. 자리는 정수로 줄인다(그림이 화면에서 절반쯤으로 줄어들기 때문에 충분하다)."""
+    points = []
+    for lon, lat in ring:
+        x, y = project(lon, max(-60.0, min(84.0, lat)))
+        point = (round(x), round(y))
+        if not points or point != points[-1]:
+            points.append(point)
+    if len(points) < 3:
+        return ""
+    return "M" + "L".join(f"{x} {y}" for x, y in points) + "Z"
+
+
+def shapes(world):
+    """나라의 면을 (EU 회원국, 한국, 그 밖의 땅)의 길로 돌려준다. 그리는 범위에 걸치지 않는 나라는 뺀다."""
+    eu, korea, land = [], [], []
     for code, polygons in world:
         for polygon in polygons:
-            shapes.append((code, polygon, box(polygon[0])))
-    eu, korea, land = [], [], []
-    row = 0
-    y = STEP / 2
-    while y < HEIGHT:
-        x = STEP / 2 + (STEP / 2 if row % 2 else 0)
-        while x < WIDTH:
-            lon, lat = unproject(x, y)
-            for code, polygon, (x1, y1, x2, y2) in shapes:
-                if not (x1 <= lon <= x2 and y1 <= lat <= y2):
-                    continue
-                if inside(polygon[0], lon, lat) and not any(inside(hole, lon, lat) for hole in polygon[1:]):
-                    (eu if code in EU else korea if code == KOREA else land).append((round(x, 1), round(y, 1)))
-                    break
-            x += STEP
-        y += STEP * 0.866
-        row += 1
-    return eu, korea, land
-
-
-def dots(points):
-    return "".join(f"M{x:g} {y:g}h0" for x, y in points)
+            rings = [unwrap(ring) for ring in polygon]
+            if not visible(rings[0]):
+                continue
+            (eu if code in EU else korea if code == KOREA else land).append("".join(ring_path(ring) for ring in rings))
+    return "".join(eu), "".join(korea), "".join(land)
 
 
 def route():
@@ -164,15 +157,15 @@ def tags():
 
 
 def svg(world):
-    eu, korea, land = classify(world)
+    eu, korea, land = shapes(world)
     path, head, home = route()
     body = (
         f'<svg class="map" viewBox="0 0 {WIDTH:.0f} {HEIGHT:.0f}" role="img" '
-        'aria-label="유라시아를 점으로 그린 지도. 밝은 점은 EU 회원국, 노란 점은 한국이고, 한국에서 EU로 선 하나가 이어진다.">'
-        f'{graticule()}'
-        f'<path class="map-land" d="{dots(land)}"/>'
-        f'<path class="map-eu" d="{dots(eu)}"/>'
-        f'<path class="map-kr" d="{dots(korea)}"/>'
+        'aria-label="유라시아 지도. 파랗게 칠한 곳은 EU 회원국, 노랗게 칠한 곳은 한국이고, 한국에서 EU로 선 하나가 이어진다.">'
+        f'{graticule()}'  # 경위선은 땅 아래에 깔려 바다에서만 보인다
+        f'<path class="map-land" fill-rule="evenodd" d="{land}"/>'
+        f'<path class="map-eu" fill-rule="evenodd" d="{eu}"/>'
+        f'<path class="map-kr" fill-rule="evenodd" d="{korea}"/>'
         f'<g class="map-arcs">{path}{head}</g>{home}'
         '</svg>'
     )
@@ -181,12 +174,12 @@ def svg(world):
 
 def main(argv):
     if not argv:
-        print("쓰는 법: python -m tools.art.dotmap <countries-110m.json> [출력 파일]")
+        print("쓰는 법: python -m tools.art.routemap <countries-110m.json> [출력 파일]")
         return 1
     out = pathlib.Path(argv[1] if len(argv) > 1 else "site/js/ui/heromap.js")
     body, counts = svg(countries(argv[0]))
     module = (
-        "// 첫 화면의 점 지도. tools/art/dotmap.py가 만든 파일이므로 손으로 고치지 않는다.\n"
+        "// 첫 화면의 지도. tools/art/routemap.py가 만든 파일이므로 손으로 고치지 않는다.\n"
         "// 나라 경계: Natural Earth(공개 자료), world-atlas(ISC)의 countries-110m.\n"
         f"const SVG = {json.dumps(body, ensure_ascii=False)};\n"
         f"const TAGS = {json.dumps(tags(), ensure_ascii=False)};\n\n"

@@ -50,7 +50,7 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 | `tools/cn` | 품목 코드 조회의 목록을 법령 원문에서 만드는 프로그램: 부속서의 품목 표 읽기(`annex`), `data/cn.json` 만들기(`build`), 통합본의 판 다루기(`versions`), 새 통합본이 나오면 본문을 받아 목록을 다시 만들기(`refresh`, 평일 수집이 돌린다. 부속서를 제대로 읽었는지의 확인에 걸리면 아무것도 바꾸지 않고 사유를 `collected/cn/refresh.json`에 남긴다). 원문은 `collected/archive/pages/eu-fulltext/`에 있다. 코드를 견주는 셈은 사이트의 `site/js/cn/match.js`, 개정안의 단계에 따라 안내의 말을 바꾸는 기준은 `site/js/cn/stage.js`에 있다 |
 | `tools/thumbs` | 소식 카드의 미리보기 그림을 만드는 프로그램: 만들 것 고르기(`plan`), 원문 화면의 제목 부분 찍기(`shots.mjs`), 법령 PDF의 첫 장 받기(`pdfcover`), 줄여서 싣기(`finish`). 재이용이 허용된 공식 출처만 다루고, 화면을 여는 브라우저는 자동으로 여는 것임을 숨기지 않는다 |
 | `tools/common` | 여러 프로그램이 함께 쓰는 것: 웹에서 받기(`net`), robots.txt 지키기(`robots`), 화면의 글 뽑기(`htmltext`), JSON 읽고 쓰기(`jsonio`), 사이트 주소와 배포 저장소(`siteinfo`) |
-| `tools/art` | 사이트의 그림을 만드는 프로그램. 손으로 돌린다: 점 지도(`dotmap`), 아이콘(`icons`), 라이선스 고지(`notices`), 공유 미리보기 그림의 원본(`social.html`) |
+| `tools/art` | 사이트의 그림을 만드는 프로그램. 손으로 돌린다: 지도(`routemap`), 아이콘(`icons`), 라이선스 고지(`notices`), 공유 미리보기 그림의 원본(`social.html`) |
 
 자동으로 받는 것은 모두 `tools/common/net.py`를 거치고, 이 함수는 주소를 열기 전에 그 사이트의 robots.txt를 봅니다(`tools/common/robots.py`). 사이트가 자동 읽기를 막은 주소는 받지 않고, 막힌 주소는 `collected/robots.json`에 남아 그날의 상태 점검이 알립니다. 이 수집기의 이름(cbam-watch)을 적은 규칙과 함께 Claude의 수집기 이름을 적은 규칙도 따릅니다(받은 글을 Claude가 읽고 요약하기 때문입니다). 사이트가 확인 요청이나 접근 거부 화면을 내면 넘어서려 하지 않습니다. 주소 하나를 손으로 확인하려면 `python3 -m tools.common.robots <주소>`를 씁니다.
 
@@ -96,11 +96,11 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 
 | 그림 | 어디서 왔나 | 만드는 법 |
 | --- | --- | --- |
-| 점 지도(`site/js/ui/heromap.js`) | 나라 경계는 Natural Earth(공개 자료)를 묶은 world-atlas(ISC) | `python3 -m tools.art.dotmap <countries-110m.json>` |
+| 지도(`site/js/ui/heromap.js`) | 직접 그린 것: 유라시아의 나라들을 면으로 그리고 EU 회원국과 한국을 다른 색으로 칠함. 나라 경계는 Natural Earth(공개 자료)를 묶은 world-atlas(ISC) | `python3 -m tools.art.routemap <countries-110m.json>` |
 | 아이콘(`site/js/ui/icons.js`) | Lucide(ISC, 일부는 Feather에서 온 것으로 MIT) | `python3 -m tools.art.icons <lucide-static/icons>` |
 | 글꼴(`site/assets/fonts/pretendard/`) | Pretendard(SIL OFL) 1.3.9의 가변 글꼴 조각 파일. 사이트에 직접 싣는다 | npm의 `pretendard` 꾸러미에서 `dist/web/variable/`의 CSS와 `woff2-dynamic-subset/`을 복사한다 |
 | 제목 글꼴(`site/assets/fonts/noto-serif-kr/`) | Noto Serif KR(SIL OFL)의 700 굵기 조각 파일. 사이트에 직접 싣는다 | npm의 `@fontsource/noto-serif-kr` 꾸러미에서 700 굵기의 한글·라틴 조각과 그 `@font-face` 선언을 복사한다 |
-| 공유 미리보기 그림(`site/assets/og.jpg`) | 사이트의 색, 글꼴, 이름표, 점 지도로 만든 것 | `tools/art/social.html`을 1200x630 창으로 열어 화면 그림을 찍는다 |
+| 공유 미리보기 그림(`site/assets/og.jpg`) | 사이트의 색, 글꼴, 이름표, 지도로 만든 것 | `tools/art/social.html`을 1200x630 창으로 열어 화면 그림을 찍는다 |
 | 표지(`site/assets/favicon.svg`) | 직접 그린 것: 파란 네모에 CB와 AM, 그 사이에 노란 선 | 파일의 SVG를 고친다. 머리글의 이름표는 글자라서 `site/index.html`과 `site/css/layout.css`의 `.brand`를 고친다 |
 | 소식 카드의 미리보기 그림(`site/assets/thumbs/`) | 재이용이 허용된 공식 출처(EU 기관, 영국 정부)의 원문 화면에서 제목부터의 글 부분, 법령 PDF 첫 장의 머리 띠 아래. 화면의 사진과 삽화, 기관 로고는 넣지 않는다. 그림이 없는 소식에는 주제 아이콘과 출처 이름을 적는다(`site/js/ui/thumb.js`) | 워크플로 '썸네일 만들기'가 만든다. 실패는 `collected/thumbs/state.json`에 남고 세 번까지 다시 시도한다 |
 | 라이선스 고지(`site/assets/third-party.txt`) | 위 꾸러미의 LICENSE 파일 | `python3 -m tools.art.notices <node_modules>` |
