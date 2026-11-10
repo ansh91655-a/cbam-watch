@@ -2,9 +2,14 @@
 import { empty, h, pill, table, viewHead } from "../ui/dom.js";
 import { countsText, minute } from "../ui/format.js";
 
+// 메모는 글 하나로 적는 것이 약속이지만, 목록으로 적힌 기록도 읽을 수 있게 한다.
+function notesText(notes) {
+  return Array.isArray(notes) ? notes.filter(Boolean).join(" · ") : String(notes || "");
+}
+
 export function render(main, model) {
   const rows = model.runs.map((run) => h("tr", {}, [
-    h("td", {}, [h("span", { text: run.id }), run.notes ? h("p", { class: "count", text: run.notes }) : null]),
+    h("td", {}, [h("span", { text: run.id }), notesText(run.notes) ? h("p", { class: "count", text: notesText(run.notes) }) : null]),
     h("td", { class: "num", text: minute(run.startedAt) }),
     h("td", { class: "num", text: minute(run.finishedAt) }),
     h("td", { text: countsText(run.counts) }),
