@@ -23,6 +23,9 @@ TARGETS = [
     ("downstream-commission", "celex", "52025PC0989", "2023/956"),
     ("downstream-council", "council", "ST-10423-2026-INIT", "2023/956"),
     ("downstream-parliament", "parliament", "TA-10-2026-0276", "2023/956"),
+    # 기관 간 협상에 쓰는 대조 문서(집행위 제안, 유럽의회 수정안, 이사회 안을 나란히 실은 것). 이사회 문서 등록부에 공개되어 있다.
+    # 유럽의회 누리집은 자동 실행에 문서를 내주지 않아, 유럽의회가 채택한 수정안의 문안은 이 문서에서 확인한다.
+    ("downstream-fourcolumn", "council", "WK-14239-2026-INIT", "2025/0419"),
     # 유럽의회 입법 관측소가 절차의 문서마다 붙인 요약(집행위 제안, 위원회 보고서, 본회의 채택 문서)
     ("downstream-oeil-summary", "oeil", "2025/0419(COD)", "CBAM"),
 ]
