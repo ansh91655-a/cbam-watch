@@ -1,0 +1,49 @@
+[주소] https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_1100
+[날짜] 2026-05-19
+[제목] Questions and answers on the Fertiliser Action Plan
+
+Why does the EU need a new Fertiliser Action Plan?
+Fertilisers are essential for agricultural production and food security. However, the EU remains heavily dependent on imports for a significant share of mineral fertilisers and the raw materials used to produce them, further burdened by high energy costs. Recent geopolitical events and supply disruptions have, in addition, driven energy and fertiliser prices sharply higher, which increased pressure on farmers across Europe.
+High prices are increasingly affecting farmers' planting decisions ahead of the 2027 season. Fertiliser needs for the current harvest year appear to be covered. However, many farmers have delayed purchase of fertilisers for the next sowing season due to high prices. This is raising concerns over potential logistical bottlenecks and changes in crop choices for 2027. This could lead to farmers reducing fertiliser use or scale back cultivated areas, with risks for crop yields, food production and the resilience of the EU agri-food sector.
+To tackle these issues, the EU needs to support its domestic fertiliser industry, to prevent deindustrialisation, guarantee stable supplies, and reduce our dependency on imports. This will also be done by accelerating the transition to bio-based, low-carbon and circular fertilisers.
+Since the 2022 Communication on fertilisers, the context has evolved, and availability and affordability of fertilisers must now be seen in a different light. This is caused by many factors. For instance, the crisis in the Middle East is increasing global prices. Farmers are also facing more moderate agricultural commodity prices. In addition, reacting to Russia's illegal invasion to Ukraine, the EU imposed higher tariffs or complete import restrictions on fertiliser imports from Russia and Belarus. These were amongst our main suppliers of nitrogen fertilisers. These developments have exposed persistent vulnerabilities in the EU fertiliser value chain and further limited farmers' ability to absorb high input costs.
+How import dependent is the EU in fertiliser supply?
+Approximately 30% of the EU's nitrogen fertiliser demand is imported, with some products more than others. The first step in producing inorganic nitrogen fertilisers involves fixing atmospheric nitrogen in ammonia. This process is energy-intensive and relies largely on imported natural gas both as feedstock and energy source. At the same time, EU's ammonia production capacity has decreased in recent years by nearly 10%.
+Furthermore, 70% of EU phosphatic fertiliser needs are met by imports of phosphate rock. Most phosphate rock reserves in the world are concentrated in a few countries outside of the EU. In particular, in Morocco. This makes the EU highly dependent on imports.
+The EU is less dependent on imports for potash, with around 40% of the needs covered by imports. There is significant domestic mining activity of potash, in particular in Germany and Spain.
+Availability is not currently at stake. The EU fertiliser market remains supplied. However, affordability remains a key concern. Nitrogen fertiliser prices are strongly influenced by international market conditions and, in particular, by gas prices. They are a major driver of production costs. Therefore, to protect European farmers from global price volatility when physical supply is available, the Commission is taking action with this Plan.
+How does the 2026 Fertiliser Action Plan build on the measures introduced in 2022?
+In 2022, when gas and fertilisers' prices peaked, the Commission presented a Communication on ensuring the availability and affordability of fertilisers, which identified key challenges and set out immediate measures to protect supply and keep prices down. The market had stabilised in 2023 and 2024. However, pressure on prices for farmers resumed in 2025.
+The Commission announced a new Fertiliser Action Plan in its ResourceEU Action Plan, to ensure the availability and affordability of domestic fertilisers and to propose actions that support the shift to recycled nutrients and other alternatives. The new Action Plan takes a fresh look at the challenges identified in 2022 and at new or evolving issues and proposes the necessary next steps to tackle them in a partnership approach.
+What immediate support will the plan provide to farmers?
+To secure farmers' access to fertilisers, the Commission is putting forward the following short-term measures:
+Commitment to providing a significant financial support package for the most-affected farmers before summer;
+Propose a targeted legislative package enabling Member States to make maximum use of support available under the current Common Agricultural Policy (CAP) Strategic plans. This package includes the creation of a new liquidity scheme to provide cashflow to farmers, more flexible advance payments, a new or adjusted eco-scheme or agri-environment-climate measure to increase fertilisation efficiency, and investment measures to support efficient fertiliser use;
+Launch an EU fertilisers value chain Partnership between fertiliser producers, farmers and the Member States to provide predictability, stability and facilitate cooperation across the value chain;
+Explore short term measures to facilitate the use of digestates within the scope of the Nitrates directive;
+Increase market transparency by creating a framework to ensure the availability of up-to-date data.
+Support biogas and biomethane projects and address funding, scale-up, permitting and transport bottlenecks, in line with the AccelerateEU communication;
+Consider proposing the activation of the internal market vigilance or emergency mode in accordance with the Internal Market Emergency and Resilience Act if necessary;
+Consolidate and disseminate an information package for Member States on the CAP tools available to farmers to improve nutrient management, as well as on research and innovation results related to bio-based fertilisers and support advisory network on optimal fertiliser use;
+Use the temporary state aid framework for primary agricultural producers affected by the Middle East crisis, complementing existing state aid tools;
+How will the plan strengthen Europe's fertiliser resilience and reduce dependency on imports?
+The Fertiliser Action Plan combines immediate support for farmers with longer-term measures to strengthen Europe's domestic fertiliser production and reduce dependency on imported inputs.
+The Plan will, in particular, support the transition to more sustainable and circular fertiliser production where import dependency is less acute. This includes bio-based fertilisers produced from the biomass generated in the EU and low-carbon inorganic fertilisers based on energy sources available in the EU. It aims to improve supply resilience, strengthen cooperation across the fertiliser value chain and increase market transparency, helping Europe better withstand future supply shocks and price volatility.
+Will the plan affect fertiliser prices in the short term?
+The actions outlined in the Plan aim at alleviating the pressure on costs of fertilisers for farmers, both in the short and long term. Thanks to financial support delivered before summer, European farmers will be able to secure their supply of fertilisers.
+In the medium to long-term, the actions laid out in the Plan will contribute to boosting domestic production and keeping the fertiliser industry actively producing in the EU, by diversifying supply through production of alternative fertilisers, bio-based, organic and mineral, inorganic, by diversifying imports and by increasing fertilising efficiency through better nutrient management.
+Finally, a well-functioning value chain with sound competition in the Single Market, higher transparency and policy dialogues will ensure all partners in the chain optimise their contribution to food security and affordability.
+Could the plan lead to higher food prices for consumers?
+The Fertiliser Action Plan is to help avoid higher food prices. Fertilisers are an important part of farmers' costs. They represent more than 7% of input costs for the EU farming sector in general, rising to 16% for arable crop farmers .
+Rising energy prices and global tensions are already pushing up fertiliser costs, which can then increase the cost of producing food. The Action Plan includes measures to help farmers cope with these higher costs and to keep fertiliser prices more stable and predictable. By reducing pressure on farmers' production costs, the plan should help limit the impact on food prices for consumers.
+By boosting domestic production, diversifying supply chains, and promoting sustainable alternatives, we will reduce volatility in input prices. Over time, this will ease cost pressures on farmers, helping to stabilise and ultimately lower food prices for consumers.
+Some farmers argue that CBAM/ETS is increasing fertiliser costs. How does the Commission respond to that?
+Emission Trading System (ETS) and Carbon Border Adjustment Mechanism (CBAM) are at the heart of the EU's climate framework to support the decarbonisation of our economy, and are also essential tools to support the competitiveness of our domestic industry.
+The aim of the CBAM is to ensure that those exporting into the EU meet the same standards we apply to ourselves via the ETS.
+For more information
+Fertilise Action Plan
+Press release
+Fertilisers - Agriculture and rural development (Fertilisers Market Observatory)
+Ensuring availability and affordability of fertilisers
+Commission adopts RESourceEU to secure raw materials, reduce dependencies and boost competitiveness
+Commission proposes actions to protect Europeans from the fossil energy crisis

@@ -1,12 +1,12 @@
 {
  "source": "ec-press",
- "fetchedAt": "2026-11-10T22:19:22+09:00",
+ "fetchedAt": "2026-11-10T22:41:41+09:00",
  "since": "2025-01-01",
  "report": {
   "pages": 94,
   "listed": 4650,
-  "opened": 633,
-  "kept": 35,
+  "opened": 1208,
+  "kept": 51,
   "failures": [],
   "oldest": "2025-02-18"
  },
@@ -57,6 +57,33 @@
    "textPath": "collected/archive/pages/ec-press/speech_26_1117.txt"
   },
   {
+   "date": "2026-05-19",
+   "reference": "QANDA/26/1100",
+   "kind": "QANDA",
+   "title": "Questions and answers on the Fertiliser Action Plan",
+   "mentions": 4,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_1100",
+   "textPath": "collected/archive/pages/ec-press/qanda_26_1100.txt"
+  },
+  {
+   "date": "2026-05-19",
+   "reference": "IP/26/1099",
+   "kind": "IP",
+   "title": "Commission presents plan to secure Europe's fertiliser supply and food security",
+   "mentions": 3,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1099",
+   "textPath": "collected/archive/pages/ec-press/ip_26_1099.txt"
+  },
+  {
+   "date": "2026-05-04",
+   "reference": "SPEECH/26/986",
+   "kind": "SPEECH",
+   "title": "Introductory remarks by Commissioner Hoekstra at the Structured Dialogue in the European Parliament's Committee on Environment, Climate and Food Safety (ENVI)",
+   "mentions": 1,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_986",
+   "textPath": "collected/archive/pages/ec-press/speech_26_986.txt"
+  },
+  {
    "date": "2026-02-24",
    "reference": "MEX/26/462",
    "kind": "MEX",
@@ -64,6 +91,15 @@
    "mentions": 3,
    "url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_462",
    "textPath": "collected/archive/pages/ec-press/mex_26_462.txt"
+  },
+  {
+   "date": "2026-01-08",
+   "reference": "STATEMENT/26/53",
+   "kind": "STATEMENT",
+   "title": "Joint Statement Jordan–EU Summit",
+   "mentions": 1,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_53",
+   "textPath": "collected/archive/pages/ec-press/statement_26_53.txt"
   },
   {
    "date": "2025-12-17",
@@ -93,6 +129,24 @@
    "textPath": "collected/archive/pages/ec-press/ip_25_3088.txt"
   },
   {
+   "date": "2025-11-27",
+   "reference": "SPEECH/25/2830",
+   "kind": "SPEECH",
+   "title": "Speech by Commissioner Hoekstra in the European Parliament's Plenary debate on the outcome of the UN Climate Change Conference - Belém (COP30) ",
+   "mentions": 2,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_25_2830",
+   "textPath": "collected/archive/pages/ec-press/speech_25_2830.txt"
+  },
+  {
+   "date": "2025-11-25",
+   "reference": "STATEMENT/25/2799",
+   "kind": "STATEMENT",
+   "title": "Joint Declaration of the 7th African Union - European Union Summit 2025, 24-25 November 2025",
+   "mentions": 1,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_25_2799",
+   "textPath": "collected/archive/pages/ec-press/statement_25_2799.txt"
+  },
+  {
    "date": "2025-10-21",
    "reference": "QANDA/25/2424",
    "kind": "QANDA",
@@ -102,6 +156,15 @@
    "textPath": "collected/archive/pages/ec-press/qanda_25_2424.txt"
   },
   {
+   "date": "2025-10-16",
+   "reference": "SPEECH/25/2401",
+   "kind": "SPEECH",
+   "title": "Remarks by Executive Vice-President Ribera and Commissioners Hoekstra and Jørgensen at the press conference on an EU global climate and energy vision",
+   "mentions": 1,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_25_2401",
+   "textPath": "collected/archive/pages/ec-press/speech_25_2401.txt"
+  },
+  {
    "date": "2025-10-07",
    "reference": "SPEECH/25/2308",
    "kind": "SPEECH",
@@ -109,6 +172,33 @@
    "mentions": 1,
    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_25_2308",
    "textPath": "collected/archive/pages/ec-press/speech_25_2308.txt"
+  },
+  {
+   "date": "2025-08-21",
+   "reference": "QANDA/25/1974",
+   "kind": "QANDA",
+   "title": "Questions and answers on the EU-US Joint Statement on Transatlantic Trade and Investment *",
+   "mentions": 4,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_25_1974",
+   "textPath": "collected/archive/pages/ec-press/qanda_25_1974.txt"
+  },
+  {
+   "date": "2025-07-23",
+   "reference": "STATEMENT/25/1890",
+   "kind": "STATEMENT",
+   "title": "Joint statement following the EU-Japan Summit 2025",
+   "mentions": 1,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_25_1890",
+   "textPath": "collected/archive/pages/ec-press/statement_25_1890.txt"
+  },
+  {
+   "date": "2025-07-16",
+   "reference": "IP/25/1847",
+   "kind": "IP",
+   "title": "An ambitious budget for a stronger Europe: 2028-2034*",
+   "mentions": 3,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_25_1847",
+   "textPath": "collected/archive/pages/ec-press/ip_25_1847.txt"
   },
   {
    "date": "2025-07-02",
@@ -136,6 +226,15 @@
    "mentions": 3,
    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_25_1687",
    "textPath": "collected/archive/pages/ec-press/ip_25_1687.txt"
+  },
+  {
+   "date": "2025-07-01",
+   "reference": "STATEMENT/25/1704",
+   "kind": "STATEMENT",
+   "title": "Joint press statement following the Türkiye-EU High-Level Dialogue on Trade",
+   "mentions": 1,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_25_1704",
+   "textPath": "collected/archive/pages/ec-press/statement_25_1704.txt"
   },
   {
    "date": "2025-06-18",
@@ -174,6 +273,33 @@
    "textPath": "collected/archive/pages/ec-press/speech_25_1323.txt"
   },
   {
+   "date": "2025-05-19",
+   "reference": "STATEMENT/25/1267",
+   "kind": "STATEMENT",
+   "title": "A renewed agenda for European Union – United Kingdom cooperation Common Understanding",
+   "mentions": 1,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_25_1267",
+   "textPath": "collected/archive/pages/ec-press/statement_25_1267.txt"
+  },
+  {
+   "date": "2025-05-19",
+   "reference": "QANDA/25/1268",
+   "kind": "QANDA",
+   "title": "Questions and answers on the package agreed at EU-United Kingdom Summit",
+   "mentions": 1,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_25_1268",
+   "textPath": "collected/archive/pages/ec-press/qanda_25_1268.txt"
+  },
+  {
+   "date": "2025-05-19",
+   "reference": "AC/25/1280",
+   "kind": "AC",
+   "title": "New chapter in EU-UK relations announced at Leaders' Summit in London",
+   "mentions": 1,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/ac_25_1280",
+   "textPath": "collected/archive/pages/ec-press/ac_25_1280.txt"
+  },
+  {
    "date": "2025-05-14",
    "reference": "IP/25/1205",
    "kind": "IP",
@@ -181,6 +307,15 @@
    "mentions": 1,
    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_25_1205",
    "textPath": "collected/archive/pages/ec-press/ip_25_1205.txt"
+  },
+  {
+   "date": "2025-05-05",
+   "reference": "SPEECH/25/1140",
+   "kind": "SPEECH",
+   "title": "Introductory remarks by Commissioner Hoekstra at the European Parliament's Committee on the Environment, Climate and Food Safety (ENVI)",
+   "mentions": 2,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_25_1140",
+   "textPath": "collected/archive/pages/ec-press/speech_25_1140.txt"
   },
   {
    "date": "2025-04-07",
@@ -217,6 +352,15 @@
    "mentions": 5,
    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_25_805",
    "textPath": "collected/archive/pages/ec-press/ip_25_805.txt"
+  },
+  {
+   "date": "2025-02-28",
+   "reference": "STATEMENT/25/643",
+   "kind": "STATEMENT",
+   "title": "Joint statement on the second meeting of the EU-India Trade and Technology Council ",
+   "mentions": 2,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_25_643",
+   "textPath": "collected/archive/pages/ec-press/statement_25_643.txt"
   },
   {
    "date": "2025-02-28",
