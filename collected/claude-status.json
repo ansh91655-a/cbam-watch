@@ -1,36 +1,36 @@
 {
- "checkedAt": "2026-11-10T17:30:47+09:00",
+ "checkedAt": "2026-11-11T07:11:37+09:00",
  "sources": {
   "ep-train": {
    "code": "ep-train",
-   "checkedAt": "2026-11-10T17:30:47+09:00",
-   "ok": true,
-   "note": "",
-   "failCount": 0,
+   "checkedAt": "2026-11-11T07:11:37+09:00",
+   "ok": false,
+   "note": "웹 읽기 승인 대기 시간 초과",
+   "failCount": 1,
    "lastOk": "2026-11-10T17:30:47+09:00"
   },
   "council-cbam": {
    "code": "council-cbam",
-   "checkedAt": "2026-11-10T17:30:47+09:00",
-   "ok": true,
-   "note": "",
-   "failCount": 0,
+   "checkedAt": "2026-11-11T07:11:37+09:00",
+   "ok": false,
+   "note": "웹 읽기 승인 대기 시간 초과",
+   "failCount": 1,
    "lastOk": "2026-11-10T17:30:47+09:00"
   },
   "op-europa": {
    "code": "op-europa",
-   "checkedAt": "2026-11-10T17:30:47+09:00",
-   "ok": true,
-   "note": "",
-   "failCount": 0,
+   "checkedAt": "2026-11-11T07:11:37+09:00",
+   "ok": false,
+   "note": "웹 읽기 승인 대기 시간 초과",
+   "failCount": 1,
    "lastOk": "2026-11-10T17:30:47+09:00"
   },
   "oecd-blog": {
    "code": "oecd-blog",
-   "checkedAt": "2026-11-10T17:30:47+09:00",
-   "ok": true,
-   "note": "",
-   "failCount": 0,
+   "checkedAt": "2026-11-11T07:11:37+09:00",
+   "ok": false,
+   "note": "웹 읽기 승인 대기 시간 초과",
+   "failCount": 1,
    "lastOk": "2026-11-10T17:30:47+09:00"
   }
  }
