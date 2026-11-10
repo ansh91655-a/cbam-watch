@@ -1,0 +1,41 @@
+{
+ "source": "eu-fulltext",
+ "fetchedAt": "2026-11-10T23:53:54+09:00",
+ "since": "2025-01-01",
+ "report": {
+  "targets": 4,
+  "failures": [
+   "downstream-parliament TA-10-2026-0276: 응답 202"
+  ]
+ },
+ "entries": [
+  {
+   "name": "cbam-consolidated",
+   "code": "02023R0956-20251020",
+   "url": "http://publications.europa.eu/resource/celex/02023R0956-20251020",
+   "lines": 1400,
+   "textPath": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt"
+  },
+  {
+   "name": "downstream-commission-DOC_1",
+   "code": "52025PC0989",
+   "url": "http://publications.europa.eu/resource/cellar/a837cf93-db4d-11f0-8da2-01aa75ed71a1.0001.03/DOC_1",
+   "lines": 1578,
+   "textPath": "collected/archive/pages/eu-fulltext/downstream-commission-DOC_1.txt"
+  },
+  {
+   "name": "downstream-commission-DOC_2",
+   "code": "52025PC0989",
+   "url": "http://publications.europa.eu/resource/cellar/a837cf93-db4d-11f0-8da2-01aa75ed71a1.0001.03/DOC_2",
+   "lines": 338,
+   "textPath": "collected/archive/pages/eu-fulltext/downstream-commission-DOC_2.txt"
+  },
+  {
+   "name": "downstream-council",
+   "code": "ST-10423-2026-INIT",
+   "url": "https://data.consilium.europa.eu/doc/document/ST-10423-2026-INIT/en/pdf",
+   "lines": 3215,
+   "textPath": "collected/archive/pages/eu-fulltext/downstream-council.txt"
+  }
+ ]
+}

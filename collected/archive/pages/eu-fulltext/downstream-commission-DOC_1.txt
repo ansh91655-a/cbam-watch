@@ -1,0 +1,1580 @@
+[주소] http://publications.europa.eu/resource/cellar/a837cf93-db4d-11f0-8da2-01aa75ed71a1.0001.03/DOC_1
+
+1_EN_ACT_part1_v9.docx
+EUROPEAN COMMISSION
+Brussels, 17.12.2025
+COM(2025) 989 final
+2025/0419(COD)
+Proposal for a
+REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL
+amending Regulation (EU) 2023/956 as regards the extension of its scope to downstream goods and anti-circumvention measures
+(Text with EEA relevance)
+{SEC(2025) 989 final} - {SWD(2025) 987 final} - {SWD(2025) 988 final} - {SWD(2025) 989 final}
+EXPLANATORY MEMORANDUM
+1.CONTEXT OF THE PROPOSAL
+•Reasons for and objectives of the proposal
+Regulation (EU) 2023/956 establishing a Carbon Border Adjustment Mechanism (‘CBAM Regulation’) 1 entered into force on 1 October 2023. The CBAM ensures that the EU’s climate ambition is not undermined by carbon leakage, which occurs when companies based in the EU move the production of carbon-intensive goods to third countries with less stringent climate policies. It can also occur when EU products are replaced by cheaper but more carbon-intensive imports. Carbon leakage thereby results in emissions being displaced from the EU to third countries instead of leading to the intended reduction in global carbon emissions. The CBAM addresses this risk by making carbon-intensive goods imported into the EU subject to a carbon price equivalent to that faced by domestic producers under the EU Emissions Trading System (‘EU ETS’) 2 . Following a transitional period applicable since October 2023, the next phase of the CBAM starts in January 2026, with a gradual phasing in of carbon pricing on imported embedded emissions.
+The overall objective of the legislative proposal is to strengthen the effectiveness of CBAM, thus reducing GHG emissions and fighting climate change globally.
+To ensure an effective implementation of CBAM, the proposal will amend the CBAM Regulation to address three main issues. First, the proposal will extend the scope of the CBAM to address the risk of carbon leakage for products further down the value chain of the steel and aluminium products currently in CBAM’s scope. Second, the proposal will tackle attempts to avoid compliance with CBAM obligation. Third, the proposal will improve the technical rules for attributing emissions to electricity with the aim of encouraging the decarbonisation of electricity imports. Where needed, the proposal will also provide a number of small simplifications and improvements to the application of the mechanism and to allow for a CBAM integrated area with the EEA EFTA countries.
+The CBAM currently applies to a limited set of basic material goods, listed in Annex I of the CBAM regulation (aluminium, cement, electricity, fertilisers, hydrogen, and iron and steel). These basic materials are often used as intermediate inputs in the production of goods further down the value chain (downstream products). EU producers of these downstream products are faced with a dual cost-push, which would incentivise relocation, therefore the EU would be “exporting” its emissions abroad, nullifying the effectiveness of EU climate policy. First, the EU’s increased climate ambition and the progressive phase-out of free allowances under the EU ETS is expected to increase the cost of domestically-sourced basic materials 3 . Second, the progressive phase-in of CBAM is expected to increase the cost of imported basic materials within its scope. As a result of this dual cost-push, there is an increasing gap between the total carbon costs faced by domestic downstream producers and the carbon costs faced by third country producers. This results in a significant risk of carbon leakage for certain downstream products.
+Acknowledging this risk, Article 30(3) of the CBAM Regulation requires the Commission to identify downstream products at risk of carbon leakage for possible inclusion in the scope of CBAM. The Commission’s European Steel and Metals Action Plan 4 sets out the objectives of extending the scope of the CBAM, focusing on steel and aluminium-intensive downstream products. In line with this objective and based on an assessment identifying the downstream products that are the most at risk of carbon leakage and which contain a significant share of CBAM goods, this proposal will extend the scope of CBAM to selected steel and aluminium-intensive downstream products. A potential extension to downstream products in other CBAM sectors, namely those related to cement, fertilisers and hydrogen, is discussed in the Commission’s review report set out under Article 30(2) of the CBAM Regulation. An extension to these goods will be considered in a future legislative revision.
+The European Steel and Metals Action Plan also stressed the importance of addressing the risk of circumvention and avoidance of the CBAM, which could undermine the CBAM’s effectiveness in preventing the risk of carbon leakage. The current CBAM enforcement framework already provides several anti-circumvention safeguards, including to address risks of misclassification and under-declaration of goods. However, during the transitional period, various stakeholders (including national competent authorities, customs authorities, business associations, as well as individual companies) have raised concerns that the CBAM Regulation contains insufficient safeguards against the risk of misdeclaration of emission intensities and the risk of abusive practices. The proposal contains provisions aimed at addressing these risks.
+Experience with the implementation of the CBAM during the transitional period and stakeholder feedback have demonstrated that the rules for electricity imports are overly rigid. In particular, the current framework does not sufficiently acknowledge progress made by non-EU electricity producers in decarbonising their electricity generation, thereby discouraging trade in low-carbon electricity and providing limited incentives for third country electricity producers to reduce emissions. These shortcomings are caused by two main issues. First, in accordance with the CBAM Regulation, default emission values 5 for electricity imports only reflect electricity production from fossil fuels. These default values may therefore overestimate the carbon content of electricity from third countries that export relatively clean power to the EU. Second, the conditions which must be met to declare actual emissions of electricity have proven very difficult to meet in practice. The proposal contains provisions to address these issues.
+Finally, the proposal will also provide small improvements to the application of the mechanism, such as extending the possibility for national competent authorities to request a guarantee, clarifying that operators may share verified emissions data with other operators, or streamlining the record-keeping obligation of the authorised CBAM declarant.
+•Consistency with existing policy provisions in the policy area
+The proposal, which aims to improve the effectiveness of CBAM, will help ensuring that the Union delivers on its ambitious climate objectives. The European Climate Law sets a legally binding target for the EU to achieve climate neutrality by 2050 and to cut GHG emissions by at least 55% by 2030 compared to 1990 levels 6 . Earlier this year, the European Commission further proposed a target of a 90% reduction in net GHG emissions by 2040. The planned reduction in the overall number of EU ETS allowances is set to increase the carbon price paid for emissions in the EU. This increases the need for effective and credible instruments to address the risk of carbon leakage. A wider carbon cost gap between domestic and third country producers increases both the risks of downstream carbon leakage and the risk of avoidance and circumvention.
+The proposal forms part of a broader effort to strengthen the effectiveness of the CBAM. It builds on Regulation (EU) 2025/2083 as regards simplifying and strengthening the CBAM 7 by delivering additional simplifications while preserving the environmental objective of the mechanism. For example, this proposal will improve the rules for using default values for electricity imports, while making it easier to declare actual values for electricity.
+The Commission also conducted a broad review of CBAM in line with Article 30(2) of the CBAM Regulation. This review took stock of how the mechanism has worked so far, assessing relations with and impacts on developing countries including least developed countries (LDCs) 8 , and considers possible next steps. The review also considered the possibility for future extension of the CBAM to other EU ETS sectors at risk of carbon leakage, as well as downstream products in other sectors (cement, fertilisers and hydrogen) 9 . The European Commission is, in parallel, adopting a series of implementing and delegated acts that will lay out the technical rules for the functioning of CBAM in its current scope 10 .
+•Consistency with other Union policies
+The proposed initiative is part of the Clean Industrial Deal 11 and aligns closely with the objectives of the forthcoming Industrial Accelerator Act (IAA).
+2.LEGAL BASIS, SUBSIDIARITY AND PROPORTIONALITY
+•Legal basis
+The CBAM Regulation is based on Article 192(1) Treaty on the Functioning of the European Union (‘TFEU’). In accordance with Articles 191 and 192(1) of TFEU, the Union shall contribute to the pursuit, inter alia, of the preservation, protection and improvement of the quality of the environment, promotion of measures at international level to deal with regional or worldwide environmental problems, and in particular combating climate change.
+•Subsidiarity (for non-exclusive competence)
+The CBAM creates a common and uniform framework to ensure an equivalence between the carbon pricing policy applied in the EU’s internal market and the carbon pricing policy applied on imports. A uniform application of CBAM is crucial to avoid that any good released for free circulation in the Union is subject to the CBAM. The effectiveness of CBAM depends on a uniform carbon price signal applied consistently for the relevant sectors across all EU Member States. The proposed amendments to the CBAM Regulation equally require such a uniform application.
+Different exposures to the risk of carbon leakage do not provide sufficient justification for action at the national level. The mechanism targets emissions released outside the Union and, like the EU ETS, the CBAM achieves greater efficiency when uniformly applied on a broader scale.
+•Proportionality
+The proposal aims to strengthen the effectiveness of the CBAM Regulation in view of preserving the effectiveness and integrity of the EU’s climate policies. At the same time, policy options were designed in view of limiting the impact on the administrative burden of companies, authorities and other stakeholders.
+The proposed extension of the scope of CBAM to downstream steel and aluminium-intensive products builds on the logic of the current CBAM Regulation and the EU ETS, with a focus on the products and sectors where embedded emissions and the risk of carbon leakage are the highest. In addition, as described in section 8.1 of the impact assessment accompanying the proposal, the policy options were assessed regarding their possible impact in terms of complexity and administrative burden. This was evaluated using a set of efficiency and proportionality indicators, including the total production and import emissions per CN code and an indicator capturing the material composition of downstream products. Products with a higher share of basic materials in their weight have more embedded emissions relative to the total weight of the product and are thus typically the most at risk of leakage. Furthermore, indicators were used to ensure that the selection of goods also considers the complexity of supply chains. On this basis, the proposal expands the scope of CBAM to selected steel and aluminium-intensive downstream products in a way that maximises environmental benefits by covering additional emissions, while limiting, to the extent possible, the administrative burden and complexity for importers and third-country operators.
+The proposal regarding the risk of circumvention and avoidance equally balances the needs to ensure the effectiveness of CBAM and to limit the complexity and administrative burden of the mechanism. It employs a flexible and targeted approach, via implementing and delegated acts, to identify imports at risk of circumvention or other practices aimed at avoiding CBAM obligations, for which additional conditions should apply for the use of actual emissions.
+The proposal on electricity imports will simplify conditions to declare actual emission values. This will improve the effectiveness of the CBAM in incentivising the decarbonisation in third countries while making the use of actual emission values more feasible for all stakeholders. The changes to the approach for default values for electricity imports do not create any additional complexity for importers or third-country operators.
+•Choice of the instrument
+The proposal requires amending the CBAM Regulation. It lays down specific rules necessary for the application of the CBAM Regulation. Moreover, this Regulation requires uniform and consistent application and enforcement throughout the Union in order to pursue the objectives of Articles 32 (regarding a common approach for foreign policy) and 207 of TFEU (regarding common commercial and trade policies).
+For this reason, the objectives of the present proposal can best be pursued through a Regulation. This will ensure direct applicability of its provisions.
+3.RESULTS OF EX-POST EVALUATIONS, STAKEHOLDER CONSULTATIONS AND IMPACT ASSESSMENTS
+•Ex-post evaluations/fitness checks of existing legislation
+The proposal relies on the experience gained in implementing the CBAM Regulation since the mechanism started to apply in its transitional phase on 1 October 2023.
+•Stakeholder consultations
+Since the CBAM started to apply in its transitional phase on 1 October 2023, the Commission services have continuously consulted stakeholders in the Union and in third countries via multiple communication channels. A Call for Evidence and a public consultation were carried out from 1 July to 26 August 2025 on the topics of scope extension to downstream products, the risk of circumvention and practices which could undermine the objectives of the CBAM, and electricity. Based on the results of the public consultation, most downstream stakeholders consider that there is a risk of carbon leakage due to the CBAM in downstream sectors. They largely agree that extending CBAM to downstream products would reduce this risk of carbon leakage, enhance EU climate policy, promote low-carbon innovation and encourage both EU consumption of low-carbon products and global carbon pricing efforts. Most respondents indicated that the current CBAM is at risk of circumvention, which could undermine its effectiveness. Most respondents also indicated that the current methodology for calculating the default values for electricity is not appropriate because they do not take account of electricity produced from non-fossil fuel sources. In addition, most respondents indicated that the conditions for applying actual embedded emissions in imported electricity need to be simplified.
+In addition to these, the Commission services engaged in extensive consultations with public authorities within the EU and in third countries, as well as with industry representatives, civil society representatives and international or intergovernmental organisations. These took the form of bilateral meetings, discussions in the CBAM expert group, interviews in the context of studies dedicated to the extension of scope to downstream products and electricity, as well as surveys of the national competent authorities and customs authorities in the context of the CBAM risk management framework.
+•Collection and use of expertise
+The proposal was elaborated on the basis of a number of studies and expert advice, analysing the potential design options as well as its environmental, social and economic impacts.
+A dedicated support study was carried out ahead of the preparation of the proposal, focusing on the extension of the scope of CBAM to downstream steel and aluminium-intensive goods. In addition to this study, dedicated modelling of socioeconomic and environmental impacts was performed with the support of the European Commission’s Joint Research Centre, while extensive desk research and in-depth statistical analysis was undertaken by the Commission services. Furthermore, the information gathered in the context of sectoral studies including a study on electricity as a CBAM good was considered in the context of this initiative.
+Feeding into the above analysis, the Commission services undertook targeted consultations with relevant economic operators and Member States and conducted exchanges with stakeholders through the CBAM Expert Group and in dedicated stakeholder meetings. The Commission services also analysed the data collected through the quarterly CBAM report submitted by declarants during the transitional period.
+•Impact assessment
+The Regulatory Scrutiny Board issued a positive opinion with reservations on the impact assessment, including suggestions for improvement. The Impact Assessment report was further revised to address these suggestions.
+The impact assessment outlines the policy options considered for a downstream extension, for additional safeguards against circumvention and practices which could undermine the objectives of the CBAM and for revised rules on the conditions for applying actual embedded emissions in imported electricity. The assessment evaluates all options in terms of their effectiveness in addressing the relevant issues. In addition, it describes the impact of the possible policy options on economic and social indicators as well as on administrative burden, before concluding on a preferred option. Policy options are compared to a baseline scenario that reflects CBAM as currently legislated. The baseline also includes the implementation of the EU’s ’Fit For 55’ package of climate measures, including the phasing out of free allowances under the EU ETS. Furthermore, the baseline scenario assumes the implementation of the simplification of CBAM as adopted in October 2025, including the de minimis mass-based threshold per importer per year of 50 tonnes of CBAM goods (for four CBAM-good categories).
+For a possible scope extension to products downstream of the steel and aluminium basic materials, the products’ carbon leakage risk was assessed using two main criteria. First, the trade intensity 12 of goods was taken as a proxy for their tradability. Goods that are more easily tradable are at higher risk of carbon leakage through a displacement of production or replacement by imports from third countries. Second, a cost push indicator captures how much the carbon cost of CBAM inputs drives a downstream good’s overall costs compared to its overall value added. In addition, to ensure that only products with the highest climate relevance are included, goods below a specified floor of total embedded emissions at sectoral level were excluded from the selection. The application of different thresholds for these criteria resulted in three representative options for a downstream extension. Option 1 covers a targeted extension aimed only at the goods with the highest carbon leakage risk and emission intensity. Option 2 covers a balanced extension focussed on at-risk downstream goods with high emission intensity. Option 3 covers a broad extension to all at-risk downstream goods.
+The impact assessment concludes that option 2 is the preferred option, given the objective to maximise the environmental benefits while limiting the costs in terms of additional complexity and administrative burden. Under this option, the environmental benefits in terms of emissions covered, carbon leakage reduction and estimated emission reduction, significantly exceed those under option 1. At the same time, environmental benefits under option 2 are similar to those under option 3 while the expected costs are much more limited. Compared to option 3, option 2 affects fewer importers, includes fewer new CN codes and generally concerns goods of lower complexity for the calculation of embedded emissions.
+To further address the risk of carbon leakage, two main options were considered regarding scrap. Option 1 provides for the inclusion of pre-consumer scrap in the scope of the CBAM as a CBAM precursor. Option 2 includes both pre-and post-consumer scrap as CBAM precursors. The impact assessment concludes that option 1 reflects the best overall approach, targeting only high-risk areas to minimise unnecessary administrative burden. In particular, it was considered that the inclusion of post-consumer scrap as CBAM precursor, as proposed under option 2, could disincentivise the circular economy and would not be consistent with several EU policies in this area.
+For circumvention practices which could undermine the objectives of the CBAM, two policy options were considered, both sharing a common set of measures.
+The common set of measures consist firstly in providing the Commission with an empowerment to further detail CN codes to better capture the specific composition of the different products falling within any given CN code under the CBAM scope. With this empowerment, it will be possible to capture the relevant compositions of products within the same CN code. Secondly, it provides the Commission with an empowerment to attach additional conditions to the use of actual emissions for certain CN codes/third countries’ installations in case of a high risk of abusive practices. This will allow to introduce additional conditions to be fulfilled for the use of actual verified values relating to specific cases of goods, as well as evidence demonstrating that the abusive practices have not materialised. These conditions and evidence should be designed in a way that is proportionate, and which does not burden operators and importers unnecessarily.
+Option 1 proposes the inclusion of aluminium and steel pre-consumer scrap as precursor, thereby allowing to attribute emissions to scrap as a precursor. It also empowers the Commission to request additional evidence to prove the place of production, thereby addressing the risk of misdeclaration of emissions intensities due to the lack of traceability. The requirement to provide additional evidence would be targeted to imports of specific CN codes and origins, with the most material risk of circumvention due to misdeclaration of emission intensity.
+Option 2 builds upon Option 1 but further extends the scope of its policy measures. In addition to pre-consumer scrap, this option would also include post-consumer scrap as CBAM precursor. The requirement to provide evidence of the place of production would apply to all CN codes/origins. It would therefore affect all CBAM declarations relying on actual values for emissions.
+The preferred choice is Option 1 because of its balanced and proportionate approach allowing to effectively address circumvention risks.
+Four options have been considered to address the shortcomings in the treatment of electricity imports. These options differ regarding the methodology used to calculate the emission factor and the conditions to declare actual values. They cover the various combinations of two main policy choices: (i) retaining the current approach for a fossil fuel-based CO2 emission factor of the exporting country or changing to an average grid emission factor of the exporting country; (ii) modifying the criterion related to congestion by referring to the absence of structural congestion, or removing it altogether. Furthermore, two elements also apply to all options. First, there is a modified criterion clarifying that power purchase agreements (PPAs) only include physical PPAs whilst also allowing for the use of indirect PPAs. Second, the condition relating to the nomination of capacity is modified, and it only applies in case of explicit capacity allocation.
+The preferred option for electricity imports is to change to an average grid emission factor for exporting countries and to remove the criterion for the use of actual emission values related to congestion. The average grid emission factor will better reflect the decarbonisation trend of the country of origin, since electricity produced from renewable sources will also be accounted for. Together with the changes to the conditions related to PPAs and the nomination of capacity, the removal of the condition of absence of network congestion will further facilitate the reporting of actual values.
+•Regulatory fitness and simplification
+The extension of the scope of the CBAM to downstream steel and aluminium-intensive products benefits from the simplification of the mechanism as adopted in October 2025 13 . The de minimis threshold of 50 tonnes of imported CBAM goods excludes around 182,000 importers from the current CBAM’s scope, reducing the administrative cost for importers by an estimated EUR 1,123 million per year 14 . The de minimis threshold also benefits downstream importers, with more than 90% of importers active in sectors covered by the extension under this proposal excluded from CBAM obligations while keeping over 99% of emissions in scope.
+The impact of all policy options considered (as described in the impact assessment section) have been carefully assessed regarding their impact on administrative burden. The policy package as included in this proposal has been selected by weighing the environmental benefits with the need to limit the additional administrative burden and avoid making the CBAM more complex. This has also been described in the section on proportionality and the summary of the impact assessment in this memorandum.
+The CBAM downstream extension has a moderate impact on the number of SME importers (and third-country SME producers) brought into CBAM’s scope, with about half of the new importers in scope of CBAM being SMEs. In total, this results in around 3,800 – 3,900 additional SMEs facing CBAM obligations.
+•Fundamental rights
+The proposal respects the fundamental rights and observes the principles recognised in particular by the Charter of Fundamental Rights of the European Union In particular, it contributes to the objective of a high level of environmental protection in accordance with the principle of sustainable development as laid down in Article 37 of the Charter.
+4.BUDGETARY IMPLICATIONS
+The downstream extension is not aimed at generating revenues but rather at strengthening the climate effectiveness of CBAM in preventing carbon leakage. According to the impact assessment, the proposal is projected to generate around EUR 0.58 billion of annual revenues by 2030. Beyond 2030, since free allocations under the EU ETS are phased out and CBAM is phased in, revenue should continue to increase, reaching an estimated EUR 0.69 billion by 2035. The impact on the EU budget is estimated at EUR 0.2 billion on average per year over the period 2028-2034 as per the Commission’s proposal for the 2028-2034 Multiannual Financial Framework.
+The measures taken to address avoidance and circumvention risks will contribute to ensuring that the projected revenues materialise in practice.
+5.OTHER ELEMENTS
+•Implementation plans and monitoring, evaluation and reporting arrangements
+The CBAM transitional period is applicable until end-2025, with the definitive phase starting in 2026.
+Before the end of the transitional period, and in line with Article 30(2) of the CBAM Regulation, the Commission is to report to the European Parliament and the Council with a comprehensive review report on the lessons learnt from the transitional period. This report will also outline the possible future steps for further revisions and scope extensions. In addition, the European Commission is preparing the adoption of a series of implementing and delegated acts that will lay out the technical rules for the functioning of CBAM in its current scope.
+The Commission will continue to monitor and evaluate the implementation of the CBAM and will report on this in line with the requirements of the CBAM regulation.
+•Detailed explanation of the specific provisions of the proposal
+This Regulation makes the following amendments to Regulation (EU) 2023/956:
+Article 1(1) clarifies the application of Regulation (EU) 2023/956 upon its incorporation in the EEA Agreement and empowers the Commission to adopt implementing acts to modify Annex III of that Regulation accordingly.
+Article 1(1), points (c) and (d) provides the possibility to recognise the transposition of the relevant electricity market acquis, for the purpose of requesting the integration of a third country’s electricity market into that of the Union through market coupling, by means of a Memorandum of Understanding between the Commission and the third countries.
+Article 1(1), point (e), and (19) provide for the possibility to adopt delegated acts in an urgency procedure for the purpose of adding a third country or territory to the list of exempted third countries or territories in Annex III of Regulation (EU) 2023/956.
+Article 1(1), point (e) provides the possibility for the Union to conclude agreements with third countries to take into account carbon pricing mechanism and for mutual recognition of accreditation bodies.
+Article 1(3), (5), points (a)(2) and (c), and (8), points (b) and (c) empower the Commission to adopt delegated acts requiring, in cases where there is sufficient evidence pointing towards a high risk of abusive practices, for a subset of CN codes and origins, that additional evidence be provided to demonstrate that such abusive practices have not materialised.
+Article 1(2), (6), point (c), (21) to (23), point (b), extend the scope of Regulation (EU) 2023/956 to certain steel and aluminium-intensive downstream goods and provide the possibility to apply a phased in mark-up for some of these goods.
+Article 1(4) adds a requirement for the indirect customs representative applying for authorisation to indicate, in their application, the EORI number or other national identification number of the importers represented.
+Article 1(5), point (a)(1), and (8), point (a), provide for the registration of the operator in the CBAM registry for the determination of embedded emissions on the basis of actual verified emissions.
+Article 1(5), points (b) and (c), require the authorised CBAM declarant to provide, where applicable, evidence of the place and time of production of the goods declared on the basis of actual emissions.
+Article 1(5), point (b), clarifies that the Commission is empowered to adopt implementing acts concerning the procedures for the review of CBAM declarations.
+Article 1(6), point (a), and (24) provide for the inclusion of input materials (precursors) in the methodology for the determination of embedded emissions in goods.
+Article 1(6), point (b), (8), point (d), and (23), provide a possibility for the operator to disclose to the authorised CBAM declarant only a subset of the data elements required for the reporting, calculation and verification of actual emissions.
+Article 1(7) clarifies that the Commission is empowered to adopt implementing acts concerning the conditions to ascertain the qualifications of the independent person responsible for the certification of the carbon price paid, including the granting of an accreditation by a national accreditation body.
+Article 1(9), point (b) clarifies that the Commission is empowered to adopt implementing acts for accounting the carbon price paid abroad on the basis of the principle of equivalence and considering the efforts made on carbon credits.
+Article 1(8), point (c), clarifies that an operator may disclose information relating to the verification of emissions embedded in input materials (precursors) with another operator.
+Article 1(9) allows competent authorities to require the provision of a guarantee in additional cases and to use it, where the authorised CBAM declarant does not surrender the sufficient amount of CBAM certificates, to recover any outstanding financial adjustment.
+Article 1(10) clarifies that the Commission is empowered to adopt implementing acts laying down the verification procedures to be used by verifiers.
+Article 1(11) clarifies that the Commission or the competent authority may, as part of the review of the CBAM declaration, request the authorised CBAM declarant to provide evidence that the imported goods were produced in the declared installation, and for the declared production period.
+Article 1(12) provides a specific calculation rule for the price of CBAM certificates where there is only one auction taking place on the auction platform.
+Article 1(13) clarifies that the requirement for authorised CBAM declarants to ensure that the number of CBAM certificates on their account in the CBAM registry at the end of each quarter corresponds to at least 50 % is based on an annual cycle, therefore it should exclude from the quarterly calculation certificates purchased during other years than the calendar year.
+Article 1(14) streamlines the repurchase process by removing the involvement from the Commission from the repurchase process.
+Article 1(15), point (a), clarifies that the role of the CBAM account number in the determination of the person responsible for assuming the CBAM obligations.
+Article 1(15), points (b) and (c), allows competent authorities to request a verification of the correctness of the relevant customs data and information communicated via the CBAM registry. empowers the Commission to adopt implementing acts identifying the material and chemical compositions of a good and allows customs authorities to communicate this information to the Commission.
+Article 1(15), points (a) and (d), empowers the Commission to adopt implementing acts identifying the material and chemical compositions of a good and allows customs authorities to communicate this information to the Commission.
+Article 1(16) defines a new practice of circumvention consisting of artificially adjusting the supply chains of goods to benefit from lower default value.
+Article 1(17) empowers the Commission to adopt delegated acts to remove a good from Annex I in case of serious and unforeseen circumstances causing severe harm to the Union’s internal market.
+Article 1(18) amends the empowerments given to the Commission by the co-legislators to adopt delegated acts in light of the changes made by this proposal.
+Article 1(20) clarifies that the report evaluating the functioning of the CBAM should assess the impact of the CBAM on sectors to be covered in the future, and that the report may, where appropriate, be accompanied by a legislative proposal.
+Article 1(22) changes the emission factor for imported electricity to take into account the electricity produced from all sources. It also changes the conditions for applying actual embedded emissions in imported electricity to make them more flexible.
+Article 2 contains provisions on the entry into force and application of the proposed measures. To allow for the timely submission of the first CBAM declarations by 30 September 2027, the changes to the method used to calculate the emission factor for imported electricity and to the conditions for applying actual embedded emissions in imported electricity will apply to imports of electricity that occurred as of 1 January 2026. The changes requiring implementation in the CBAM registry or a launch at the start of the calendar year, including the extension of scope to downstream products, will apply on 1 January 2028.
+2025/0419 (COD)
+Proposal for a
+REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL
+amending Regulation (EU) 2023/956 as regards the extension of its scope to downstream goods and anti-circumvention measures
+(Text with EEA relevance)
+THE EUROPEAN PARLIAMENT AND THE COUNCIL OF THE EUROPEAN UNION,
+Having regard to the Treaty on the Functioning of the European Union, and in particular Article 192(1) thereof,
+Having regard to the proposal from the European Commission,
+After transmission of the draft legislative act to the national parliaments,
+Having regard to the opinion of the European Economic and Social Committee 15 ,
+After consulting the Committee of the Regions 16 ,
+Acting in accordance with the ordinary legislative procedure,
+Whereas:
+(1)Regulation (EU) 2023/956 of the European Parliament and of the Council 17 was initially designed with a limited scope, covering those goods that are most exposed to the risk of carbon leakage and that are most carbon intensive. The scope of that Regulation should be gradually extended to cover products further down the value chain of the goods listed in Annex I to that Regulation.
+(2)In its Communication entitled ‘A European Steel and Metals Action Plan’ 18 , the Commission set out the objectives of extending the scope of the carbon border adjustment mechanism (‘CBAM’) to certain steel and aluminium-intensive downstream products, as well as addressing the risk of circumvention and practices which could undermine the objectives of the CBAM, including the redirection by third countries of low emission-intensive goods to the Union market in the absence of efforts to decarbonise the entirety of their production.
+(3)As the CBAM aims to create incentives for the reduction of emissions by operators in third countries, the Union is committed to working with and supporting low and middle-income third countries towards the decarbonisation of their manufacturing industries as part of the external dimension of the European Green Deal 19 and in line with the Paris Agreement 20 . The Union should continue to support those countries through the Union budget, especially LDCs, in order to contribute to ensuring their adaptation to the obligations under this Regulation. The Union should continue to support climate mitigation and adaptation actions in these countries, including in their efforts towards the decarbonisation and transformation of their industries within the ceiling of the multi-annual financial framework and the financial support provided by the Union to international climate finance. This is further reinforced in the EU global climate and energy vision 21 , which indicates that the EU will engage proactively with partners to ensure better coherence between internal and external EU policies. While the CBAM gradually enters into application, the Union intends to strengthen partnerships and support broader climate mitigation efforts, including by providing financial support to countries’ decarbonisation efforts.
+(4)Upon the incorporation of Regulation (EU) 2023/956 in the EEA Agreement, the EFTA States applying the CBAM should not be considered third countries for the purposes of this Regulation and should be deleted from its Annex III. A common CBAM area would be created where the threshold pursuant to Article 2a of Regulation (EU) 2023/956 would become jointly applicable to importation into the Union and the customs territories of the EFTA States that apply CBAM.
+(5)Upon the incorporation of Regulation (EU) 2023/956 in the EEA Agreement, that Regulation should apply to processed products from goods listed in Annex I originating in a third country that are resulting from the inward processing procedure referred to in Article 256 of Regulation (EU) No 952/2013, where they are re-exported to the customs territory of an EFTA State that incorporated the CBAM, provided that they are imported to one of those customs territories. Implementing powers should be conferred on the Commission to lay down detailed conditions for the application of the CBAM to such goods.
+(6)Upon the incorporation of Regulation (EU) 2023/956 in the EEA Agreement, it should be clarified that that Regulation shall not apply to goods previously released for free circulation in the customs territory of EFTA States that incorporated the CBAM, provided that the customs declarant indicates in the subsequent customs declaration that the goods have been previously released for free circulation within the customs territory of the EFTA States.
+(7)Upon the incorporation of Regulation (EU) 2023/956 in the EEA Agreement, the EFTA States applying the CBAM should not be considered third countries for the purposes of this Regulation and should be deleted from its Annex III. A common CBAM area would be created where the threshold pursuant to Article 2a of Regulation (EU) 2023/956 would become jointly applicable to importation into the Union and the customs territories of the EFTA States that apply CBAM.
+(8)Electricity flows from third countries resulting from actions that transmission system operators take to ensure the safe and secure operation of their networks, including handling emergencies and unscheduled flows, should not be subject to this Regulation.
+(9)Due recognition of the progress made by the relevant third countries towards market coupling of the electricity systems ensures that any time-limited exemptions as foreseen in this Regulation fully align with the strategic objectives of the Union and those third countries’ specific achievements. The efficient use of the existing electricity infrastructure and the integration of electricity markets of third countries into the internal electricity market of the Union is essential to reduce costs for both Member States and the relevant third countries, as well as to ensure security of supply. Such recognition should be put forward by means of a Memorandum of Understanding between the Commission and the third countries that have fully transposed the relevant electricity market acquis, as verified by the Commission. The Memorandum of Understanding should set the timeline for the application of the exemption foreseen in Regulation (EU) 2023/956, while considering adherence to relevant market rules and transmission system operator (TSO) institutions in line with Regulation (EU) 2019/943 of the European Parliament and of the Council 22 and Commission Regulation (EU) 2015/1222 23 , and the progress made by the relevant countries on carbon pricing instruments equivalent to the EU ETS insofar as electricity generation is concerned.
+(10)To ensure that the single mass-based threshold does not exceed 1% of the emissions embedded in the imported goods and processed products following the extension of Regulation (EU) 2023/956 to downstream products, the annual assessment in the year 2027 of the threshold should be carried out on the basis of import data covering the downstream goods covered under this extension.
+(11)The CBAM seeks to address the risk of carbon leakage by ensuring that products, irrespective of whether they are imported or produced in the Union, are subject to an equivalent carbon price. However, as long as a significant number of the Union’s international partners have policy approaches that do not achieve the same level of climate ambition, there is a risk of carbon leakage, resulting in overall emissions being higher than what they would be in the absence of carbon leakage.
+(12)Abusive practices could occur when actors exploit the possibility of using actual emissions for the purpose of unduly avoiding, wholly or partially, the CBAM financial liability and thereby undermine the effectiveness of the CBAM in addressing the risk of carbon leakage in the Union and the attainment of the Union’s climate policy objectives.
+(13)The Commission should monitor the impact of the CBAM on the Union internal market with a view to assessing the risk of abusive practices undermining the effectiveness of the CBAM and the potential impact on the Union internal market, including through an analysis of customs import declarations and CBAM declarations or on the basis of any relevant source of information, including from Member States through exchanges in the Expert Group on the CBAM or other relevant exchanges.
+(14)To enable a swift reaction in the case of evidence pointing towards a high risk of abusive practices, the Commission should be empowered to adopt delegated acts to lay down, for the use of actual emissions for a combination of goods and origins, the information to be declared as well as the evidence demonstrating that such abusive practices have not materialised. Where the Commission finds sufficient evidence pointing towards a high risk of abusive practices, the Commission should be required to act by way of delegated acts within three months after the finding. These conditions and evidence should be designed in a proportionate manner and they should not place unnecessary burden on operators and importers.
+(15)In order to identify the importers represented by an indirect customs representative, the application for an authorisation should include the Economic Operators Registration and Identification (EORI) number, or any other type of national identification number, of the importers represented.
+(16)To address the risk of misdeclaration of the embedded emissions determined on the basis of actual emissions, the Commission and the competent authority should be allowed to request the authorised CBAM declarant to provide evidence that the imported goods were produced in the declared installation, and for the declared production period. For certain goods, such as those subject to a higher heterogeneity of emission intensities, or only in certain cases, the evidence should be required as part of the CBAM declaration. The Commission should be empowered to adopt implementing acts to identify the goods for which such evidence should be required as part of the CBAM declaration as well as the specific type of evidence to be provided.
+(17)To facilitate the processing of information on operators in third countries, reduce the administrative burden for the operator and the authorised CBAM declarant and facilitate the review of CBAM declarations, the registration of operators should be a necessary step for the determination of embedded emissions on the basis of actual verified emissions.
+(18)In order to foster a harmonised approach for the review of CBAM declarations, it should be clarified that the Commission may, as part of the implementing act concerning the standard format of the CBAM declaration, set out procedures for the review of CBAM declarations.
+(19)Emissions from the production of pre-consumer scrap in the Union are subject to a carbon price since, under the EU ETS, emissions are measured at installation level. Since pre-consumer aluminium and pre-consumer steel scrap under Regulation (EU) 2023/956 are assigned zero-emissions, imported goods using pre-consumer aluminium and pre-consumer steel scrap as input material are subject to a lower carbon price compared to goods produced in the Union, thus weakening the effectiveness of the CBAM in addressing the risk of carbon leakage of goods listed in Annex I.
+(20)With a view to strengthening the effectiveness of the CBAM to address the risk of carbon leakage of goods, emissions of pre-consumer aluminium scrap and pre-consumer steel scrap should be taken into account for the calculation of embedded emissions of goods. Since pre-consumer scrap is a co-product generated unintentionally in the production process of metal goods and immediately reusable in a production process, it is not considered at risk of carbon leakage in its own right. Therefore, the emissions of pre-consumer aluminium scrap and pre-consumer steel scrap should only be taken into account when used as a precursor for goods listed in Annex I of this Regulation. The Commission should ensure that the monitoring, reporting and verification of emissions embedded in pre-consumer scrap used as input material (precursor) is not circumvented, including by misreporting pre-consumer scrap as post-consumer scrap to lower the determination of embedded emissions.
+(21)To facilitate the application of Regulation (EU) 2023/956, the Union may in the context of the Implementing Regulation for accounting the carbon price paid abroad, consider the carbon credits under Article 6 of the Paris Agreement.
+(22)It should be clarified that, due to the commercially sensitive nature of some data elements required for the reporting, calculation and verification of actual emissions, the operator may choose to disclose only a summary of these elements that are necessary for the determination and the verification of the embedded emissions, and the application of the conditions for the use of actual emissions for relevant combinations of goods and origins. The authorised CBAM declarant should only be required to keep records of the information disclosed.
+(23)Specific challenges arise for the use of actual emissions embedded in downstream goods produced with multiple input material (precursors), and where those materials belong to different CBAM sectors or to sectors not covered in the scope of this Regulation. These goods typically have longer and more complex global value chains, and their production involves multiple production steps. Sourcing verified information on the actual emissions of their input materials (precursors) will be administratively difficult, which would in turn disincentivise the use of actual emissions. To address these challenges, the use of default values for these specific goods should be facilitated by the non-application of the mark-up, without prejudice to the environmental integrity of the CBAM.
+(24)Since the certification of the carbon price documentation may take place prior to the import of the good into the Union, it is not appropriate to require the person certifying the information contained in the carbon price documentation to be independent from the authorised CBAM declarant.
+(25)Since the deduction of the carbon price effectively paid in a third country requires the embedded emissions to be based on actual verified emissions, and since the certification of the carbon price documentation must rely on the prior verification of embedded emissions, the verification of embedded emissions and the certification of the carbon price paid on those emissions are closely related and can possibly be undertaken by the same person. Furthermore, the certification of the carbon price should be subject to a similar control and oversight as the one exercised for the verification of emissions. It should therefore be clarified that the Commission is empowered to adopt implementing acts concerning the conditions to ascertain the qualifications of the person responsible for certifying, via the CBAM registry, the information contained in the carbon price documentation, and including the granting of an accreditation by a national accreditation body, and cover the necessary certification procedures and exchange of information.
+(26)To facilitate the verification of embedded emissions in the case of complex goods, it should be clarified that an operator should be able to share information, including on the verification of emissions embedded in input materials (precursors), with another operator.
+(27)To ensure the financial standing of an applicant or of an authorised CBAM declarant, competent authorities should be allowed to require the provision of a guarantee in other cases than where an applicant was not established in the two financial years prior the year when the application was submitted. To safeguard the proper collection of revenues, it is also appropriate to enable competent authorities to use the guarantee provided, where the authorised CBAM declarant fail to comply with their obligation to have, at the end of each quarter, the number of CBAM certificates that corresponds to 50% of the emissions embedded in the goods they have imported into the Union since the beginning of the year.
+(28)It should be clarified that, to enable national accreditation bodies, the Commission and competent authorities to control and monitor verifiers, it is necessary to lay down the verification procedures to be used by verifiers.
+(29)In order to preserve its effectiveness as a measure to prevent carbon leakage, the price of CBAM certificates is to be calculated by the Commission based on weekly averages of the allowances auctioned in the Union’s Emission Trading System (‘EU ETS’). To ensure that the price of CBAM certificate always reflects closely ETS prices, it is appropriate to provide a specific calculation rule for the calendar weeks during which there is only one auction taking place on the auction platform.
+(30)From 2027 onwards, authorised CBAM declarants above the single-mass based threshold are to ensure that the number of CBAM certificates on their account in the CBAM registry at the end of each quarter corresponds to at least 50 % of the emissions embedded in imported goods since the beginning of that year. Since this rule is based on an annual cycle, on which the repurchase limit of CBAM certificates relies, it is appropriate to exclude, from the number of CBAM certificates affected by the quarterly calculation, certificates purchased during other years than that calendar year.
+(31)To streamline the repurchase process, increase the efficiency of the process and reduce the administrative burden while maintaining the security integrity and a robust oversight, an authorised CBAM declarant should be allowed to have their excess CBAM certificates be directly repurchased by the competent authority.
+(32)For certain goods, such as the clinker content of cement, the nitrogen content of fertilisers or the alloying elements of steel, the material and chemical compositions of the good is an important determining factor of the embedded emissions. To address the risk of misdeclaration of the embedded emissions determined on the basis of actual emissions for certain goods that are subject to a higher heterogeneity of emission intensities, the Commission should be empowered to adopt implementing acts to identify the material and chemical compositions of a good in the customs declaration.
+(33)In order to ensure that the competent authorities and the Commission are provided with all the customs information and data necessary for the implementation of Regulation (EU) 2023/956 by the customs authorities, it is necessary to specify the relevant supporting documents, information and data, including the bill of discharge, to be communicated by customs authorities.
+(34)It should be clarified that the CBAM account number included in the customs declaration, the bill of discharge, the receipt declaration, or any other relevant customs document at the time goods are released for free circulation, should be used to determine the person responsible for assuming the obligations set out in this Regulation.
+(35)To ensure the accuracy of the customs data and information available to the competent authorities in the CBAM registry, the competent authorities should be allowed to request the customs authorities or the Commission to validate this information. The Commission should be empowered to adopt implementing acts defining the scope of the information and the periodicity, timing and means for communicating that information.
+(36)To prevent practices which could undermine the achievement of the objectives of the CBAM, the Commission should continuously monitor at Union level practices of circumvention consisting of artificially adjusting the supply chain of goods to avoid the obligations laid down in Regulation (EU) 2023/956.
+(37)To enable a swift reaction in the case of serious and unforeseeable consequences from the inclusion of a good in the scope of the CBAM, leading to severe harm to the Union internal market, the Commission should be empowered to adopt delegated acts to remove a good from the scope of Regulation (EU) 2023/956.
+(38)To ensure better alignment with the Combined Nomenclature (‘CN’) set out in Council Regulation (EEC) No 2658/87 24 , the description of certain CN codes in Annex I to Regulation (EU) 2023/956 should be clarified.
+(39)With the progressive phase-out of transitional free allocation of allowances under Directive 2003/87/EC of the European Parliament and of the Council 25 , which establishes a system for greenhouse gas emission allowance trading within the Union (‘EU ETS’), and the progressive phase-in of the CBAM, the risk of carbon leakage will likely shift from the upstream sectors currently covered by the CBAM to downstream products. To preserve the effectiveness of the objectives of the CBAM, it is therefore necessary to extend the scope of Regulation (EU) 2023/956 to products further down the value chain.
+(40)In accordance with the European Steel and Metals Action Plan, the extension of the scope of Regulation (EU) 2023/956 should focus on the metal sectors and goods that contain a significant share of CBAM products. It should therefore cover steel and aluminium-intensive downstream goods that are the most imported into the Union in terms of numbers, value and volume, and that face the highest risk of carbon leakage. The steel and aluminium sectors also demonstrate the highest technical feasibility for the calculation of actual emissions embedded in goods.
+(41)The selection of the downstream steel and aluminium-intensive goods should be based on clearly defined criteria and thresholds, reflecting the risk of carbon leakage associated to each product, including their share of embedded emissions, their climate relevance and the technical feasibility of their inclusion in the scope of Regulation (EU) 2023/956. The risk of carbon leakage should be appreciated with regards to both the tradability of the product and the comparison between the carbon cost embedded in the product’s inputs materials (precursors) and the product’s overall value added. Based on the same criteria, the Commission should in the future assess the extension of the scope of that Regulation to additional downstream goods and present its conclusions in a report to the European Parliament and to the Council.
+(42)Following the principles and calculation methods applicable to other goods, embedded emissions in downstream goods should be calculated on the basis of actual emissions verified by a verifier, or by reference to default values calculated and made available by the Commission. Since the system boundaries of production processes are limited to the system boundaries of production processes covered by the EU ETS, the attribution of emissions embedded in downstream goods should be limited to the emissions contained in input materials (precursors). Input materials (precursors) of downstream goods that are not listed in Annex II to Regulation (EU) 2023/956 should be taken into account in the calculation of embedded emissions.
+(43)For a limited number of downstream goods, the embedded emissions may, depending on the material composition of the good, fall entirely outside the scope of the CBAM. It is therefore necessary to specify that downstream goods that are exclusively made of materials which fall outside the scope of the CBAM should not be covered in the scope of Annex I to Regulation (EU) 2023/956.
+(44)Specific challenges arise for the use of actual emissions embedded in downstream goods produced with multiple input material (precursors), and where those materials belong to different CBAM sectors or to sectors not covered in the scope of this Regulation. These goods typically have longer and more complex global value chains, and their production involves multiple production steps. Sourcing verified information on the actual emissions of their input materials (precursors) will be administratively difficult, which would in turn disincentivise the use of actual emissions. To address these challenges, the use of default values for these specific goods should be facilitated by the non-application of the mark-up, without prejudice to the environmental integrity of the CBAM.
+(45)Specific challenges arise for the use of actual emissions embedded in downstream goods covered in the sectors ‘Iron and Steel’, ‘Aluminium’ and ‘Combined Metal Goods’ referred to in Annex I to Regulation (EU) 2023/956. Due to challenges in data collection along the supply chain of some of the components of these goods, the specific embedded emissions of all goods covered in these sections should be calculated as a function of the embedded emissions of the input materials (precursors) contained in the goods.
+(46)The method used to calculate the emission factor for imported electricity should be modified so as to take into account the electricity produced from all sources, including non-fossil fuel sources. As a result, revised default values for imported electricity should be calculated and made available by the Commission.
+(47)To ensure a consistent methodological approach with respect to the default values applied for indirect emissions, it should be clarified that the alternative default value for indirect emissions that a third country, or a group of third countries, may demonstrate to be lower than the one established by the Commission, should be based on the same calculation method as the default values for indirect emissions determined by the Commission.
+(48)To facilitate the determination of embedded emissions of electricity on the basis of actual emissions, the conditions for applying actual embedded emissions in imported electricity should be made more flexible. It should be clarified that certain power purchase agreements concluded between intermediaries may be used. Moreover, in light of practical difficulties to demonstrate the absence of physical network congestion at any point of the network at the time of import, this criterion, as well as the alternative criterion to prove the direct connection to the Union transmission system should be removed. Finally, it should not be necessary to demonstrate a firm nomination of the allocated interconnection capacity where transmission capacity is allocated through implicit capacity allocation.
+(49)Due to the commercially sensitive nature of some data elements underpinning the verification of embedded emissions, the verification report should contain only the information that is needed to establish the embedded emissions of the goods. Information on the emissions released by the installation or on goods that are not included in the scope of this Regulation, while nevertheless subject to review from the verifier, should not be included in the verification report.
+(50)In order to amend certain non-essential elements of Regulation (EU) 2023/956, the power to adopt acts in accordance with Article 290 of the Treaty on the Functioning of the European Union should be delegated to the Commission in respect of removing goods from the scope of Annex I, where necessary, due to severe harm to the Union internal market caused by serious and unforeseeable circumstances, and until these serious and unforeseeable circumstances have passed. In particular, to ensure equal participation in the preparation of delegated acts, the European Parliament and the Council should receive all documents at the same time as Member States' experts, and their experts should systematically have access to meetings of Commission expert groups dealing with the preparation of delegated acts.
+(51)Since the objectives of this Regulation cannot be sufficiently achieved by the Member States, namely extending the mechanism that the Union has adopted to prevent the risk of carbon leakage and thereby reduce global carbon emissions as well as addressing the risk of circumvention and practices which could undermine the objectives of the CBAM, but can rather, by reason of the scale or effects of the action, be better achieved at Union level, the Union may adopt measures, in accordance with the principle of subsidiarity as set out in Article 5 of the Treaty on European Union. In accordance with the principle of proportionality as set out in that Article, this Regulation does not go beyond what is necessary in order to achieve those objectives.
+(52)Regulation (EU) 2023/956 should therefore be amended accordingly,
+(53)For the determination of embedded emissions of electricity, to allow for the submission of the first CBAM declarations by 30 September 2027 on the basis of this Regulation, the changes to the method used to calculate the emission factor for imported electricity and to the conditions for applying actual embedded emissions in imported electricity should apply to imports of electricity that occurred as of 1 January 2026. To provide sufficient predictability, the extension of the scope of Annex I to Regulation (EU) 2023/956 and to input materials (precursors) listed in Annex VIII should apply from 1 January 2028,
+(54)Regulation (EU) 2023/956 should therefore be amended accordingly,
+HAVE ADOPTED THIS REGULATION:
+Article 1
+Amendments to Regulation (EU) 2023/956
+Regulation (EU) 2023/956 is amended as follows:
+(1)Article 2 is amended as follows:
+(a)the following paragraph 2a is inserted:
+‘2a. Upon its incorporation in the EEA Agreement, this Regulation also applies to processed products from goods listed in Annex I originating in a third country that are resulting from the inward processing procedure referred to in Article 256 of Regulation (EU) No 952/2013, where they are re-exported to the customs territory of Norway or Iceland, provided that they are imported to those countries.
+The Commission may adopt implementing acts laying down the detailed conditions for the application of the CBAM to such products. Those implementing acts shall be adopted in accordance with the examination procedure referred to in Article 29(2) of this Regulation.’;
+(b)in paragraph 4, the following subparagraph is added:
+‘Upon its incorporation into the EEA Agreement, by way of derogation from paragraphs 1 and 2, this Regulation shall not apply to goods originating in third countries previously released for free circulation in the customs territory of the EFTA States that incorporated the CBAM, provided that the customs declarant indicates in the subsequent customs declaration lodged in the customs territory of the Union that the goods have been previously released for free circulation in the customs territory of those EFTA States and provided that, at the request of the customs authority, the customs declarant makes available documentation or information proving that the goods have been previously released for free circulation within the customs territory of the respective EFTA States. The customs declarant shall bear responsibility for the availability of this proof at the time of lodging of the customs declaration.’;
+(c)the following paragraph 7a is inserted:
+‘Where a third country has requested to integrate its electricity market into that of the Union through market coupling pursuant to an international agreement, the Commission may, when establishing that the relevant third country has fully transposed the electricity market acquis, conclude a Memorandum of Understanding with that third country.
+The Memorandum of Understanding referred to in the first subparagraph shall set the timeline for the application of the exemption foreseen in Article 2(7) and the timeline for the implementation of a carbon pricing instrument equivalent to the EU ETS, insofar as electricity generation is concerned.’;
+(d)paragraph 8 is replaced by the following:
+‘A third country or territory that fulfils all the conditions set out in paragraph 7, shall be listed in point 2 of Annex III. When assessing whether the conditions set out in paragraph 7 of this Article are fulfilled, the Commission shall take into account advancements in accordance with the timeline laid down in a Memorandum of Understanding under Article 2(7a).
+(e)paragraphs 11 and 12 are replaced by the following:
+‘11. The Commission is empowered to adopt delegated acts in accordance with Article 28 in order to amend the lists of third countries or territories listed in point 1 or 2 of Annex III by adding or removing a third country or territory, depending on whether the conditions set out in paragraph 6, 7 or 9 of this Article are fulfilled in respect of that third country or territory, or as a consequence of the incorporation of the CBAM into the EEA Agreement. Where, in the case of adding a third country to the list of third countries or territories listed in point 2 of Annex III, imperative grounds of urgency so require, the procedure provided for in Article 28a shall apply to delegated acts adopted pursuant to this paragraph.
+The Union may conclude agreements with third countries or territories with a view to taking into account carbon pricing mechanisms in such countries or territories for the purposes of the application of Article 9 as well as the mutual recognition of third-country accreditation bodies for the accreditation of a legal person to be a verifier pursuant to Article 18.’;
+(2)in Article 2a(3), the following subparagraph is added:
+‘For its 2027 assessment due by 30 April 2027, the Commission shall use the import data of goods contained in Annex I to this Regulation and in Annex I to Regulation (EU) XX/XX [Amending Regulation]’;
+(3)in Article 3, the following point (35) is added:
+‘(35) ‘abusive practices’ are practices pursued by an actor for the purpose of gaining a benefit by unduly avoiding, wholly or partially, the CBAM financial liability and thereby undermining the effectiveness of the CBAM to address the risk of carbon leakage in the EU.’;
+(4)in Article 5(5), point (h) is replaced by the following:
+‘(h) EORI number or other national identification number, names and contact information of the persons on behalf of whom the applicant is acting, if applicable.’;
+(5)Article 6 is amended as follows:
+(a)paragraph 2 is amended as follows:
+(1)point (b) is replaced by the following:
+‘(b) the total embedded emissions in the goods referred to in point (a) of this paragraph, expressed in tonnes of CO2e emissions per megawatt-hour of electricity or, for other goods, in tonnes of CO2e emissions per tonne of each type of goods, calculated in accordance with Article 7 and, where the embedded emissions are determined on the basis of actual emissions provided by the operator via the CBAM registry in accordance with Article 10, verified in accordance with Article 8;’;
+(2)the following points (e) and (f) are added:
+‘(e) where applicable for the purpose of addressing the risk of misdeclaration resulting from the lack of supply chain traceability, evidence that the goods imported during the preceding calendar year were produced at the declared installation and at the actual time of production referred to in the CBAM declaration;
+(f) where, in accordance with a delegated act adopted in accordance with paragraph 7, the embedded emissions are determined on the basis of actual emissions for a combination of goods and origins that are subject to a high risk of abusive practices, evidence demonstrating that the high risk of abusive practices has not materialised.’;
+(b)in paragraph 6, the first sentence is replaced by the following:
+‘The Commission is empowered to adopt implementing acts concerning the standard format of the CBAM declaration, including detailed information for each installation and country of origin or other third country and type of goods to be reported, which supports the totals referred to in paragraph 2 of this Article, in particular as regards embedded emissions, the carbon price paid, the default carbon price for the purpose of Article 9(4), the procedure for submitting the CBAM declaration via the CBAM registry, including procedures for the review of CBAM declarations in accordance with Article 19, and the arrangements for surrendering the CBAM certificates referred to in paragraph 2, point (c), of this Article, in accordance with Article 22(1), in particular as regards the process and the selection by the authorised CBAM declarant of certificates to be surrendered.’;
+(c)the following paragraphs 6a and 7 are added:
+‘6a. The Commission is empowered to adopt implementing acts concerning the identification of goods or combination of goods and origins for which evidence is to be included in the CBAM declaration pursuant to paragraph 2, point (e), as well as the specific type of evidence to be provided. Those implementing acts shall be adopted in accordance with the examination procedure referred to in Article 29(2).
+7. The Commission shall monitor at Union level the impact of the CBAM on the Union internal market. Where the Commission, taking into account relevant information, including from customs import declarations and CBAM declarations, finds that there is sufficient evidence pointing towards a high risk of abusive practices for a combination of goods and origins, it may inform importers and authorised CBAM declarants about these risks, it may inform competent authorities and customs aurhoties about these risks with a view of increasing their level of control, and it is empowered to adopt delegated acts in accordance with Article 28 to supplement this Regulation by laying down the methods for the identification of the combination of goods and origins, the information to be declared for the use of actual emissions for those combinations of goods and origins as well as the evidence to be provided to demonstrate that no abuse has taken place.
+The Commission shall adopt the delegated acts referred to in the first subparagraph within three months of finding that there is sufficient evidence pointing towards a high risk of abusive practices’;
+(6)Article 7 is amended as follows:
+(a)the following paragraph 2a is inserted:
+‘2a. Embedded emissions in input materials (precursors) listed in Annex VIII shall be considered in the determination of embedded emissions in goods.’;
+(b)paragraph 5 is replaced by the following:
+‘5. The authorised CBAM declarant shall keep records of the information disclosed in accordance with Article 10(7) that is required to calculate the embedded emissions in accordance with the requirements laid down in Annex V. Those records shall be sufficiently detailed to enable the Commission and the competent authority to review the CBAM declaration in accordance with Article 19(2).’;
+(c)in paragraph 7, the following subparagraph is added:
+‘The implementing acts referred to in the first subparagraph may provide a list of downstream goods for which, due to the complexity of the supply chain and without prejudice to the environmental integrity of the CBAM, no mark-up is to apply.’;
+(7)Article 9 is amended as follows:
+(a)paragraph 2 is amended as follows:
+(1)the third sentence is replaced by the following:
+‘The information contained in that documentation shall be certified by a person that is independent from the authorities of the third country.’;
+(2)the following subparagraph is added:
+‘The independent person referred to in the first subparagraph may be a legal person accredited by a national accreditation body for the relevant scope of accreditation.’;
+(b)paragraph 5 is is amended as follows:
+(1)the first subparagraph is replaced by the following:
+‘The Commission is empowered to adopt implementing acts, based on the principle of equivalence, concerning the conversion of the yearly average carbon price effectively paid in accordance with paragraph 1 of this Article and of the yearly default carbon prices determined in accordance with paragraph 4 of this Article into a corresponding reduction of the number of CBAM certificates to be surrendered.Those acts shall also govern the conversion of the carbon price expressed in foreign currency into euro at the yearly average exchange rate, the evidence required of the actual payment of the carbon price, examples of any relevant rebate or other form of compensation referred to in paragraph 1 of this Article, the qualifications of the independent person referred to in paragraph 2 of this Article and the conditions to ascertain that person’s qualifications and independence. The qualifications mentioned in the previous paragraph shall include the granting of accreditation by a national accreditation body, the specification of the certification procedures, and the appropriate exchanges of information between the independent person, national accreditation bodies, the European Commission and competent authorities. The Commission is also empowered to regulate the conditions for deducting carbon credits under Article 6 of the Paris Agreement. Those implementing acts shall be adopted in accordance with the examination procedure referred to in Article 29(2).
+(2)the following subparagraph is added:
+‘The qualifications referred to in the first subparagraph shall include the granting of accreditation by a national accreditation body, the specification of the certification procedures and the appropriate exchanges of information between the independent person, national accreditation bodies, the Commission and competent authorities.’;
+(8)Article 10 is amended as follows:
+(a)paragraph 1 is replaced by the following:
+‘1. To allow the verification of embedded emissions on the basis of actual emissions as well as the determination, where applicable, of the carbon price paid in a third country, the Commission shall, upon request by an operator of an installation located in a third country, register the information on that operator and on its installation in the CBAM registry referred to in Article 14.’;
+(b)in paragraph 5, the following point (e) is added:
+‘(e) ensure, where applicable pursuant to Article 6(7), that the conditions laid down for the use of actual emissions, for relevant combinations of goods and origins, are met.’;
+(c)in paragraph 7, the first sentence is replaced by the following:
+‘An operator may disclose the information on the conditions for the use of actual emissions, for the relevant combinations of goods and origins pursuant to Article 6(7), the verification of embedded emissions and the carbon price paid in a third country referred to in paragraph 5 of this Article to an authorised CBAM declarant or to another operator.
+(d)in paragraph 7, the second sentence is replaced by the following:
+‘The operator may disclose to the authorised CBAM declarant only a summary of the information contained in paragraph 5, points (a), (b), (c) and (e). The authorised CBAM declarant shall be entitled to use that disclosed information in order to fulfil the obligation referred to in Article 8.
+Where the authorised CBAM declarant chooses to submit the CBAM declaration on the basis of this disclosed information, the authorised CBAM declarant shall remain responsible for surrendering the correct number of CBAM certificates pursuant to Article 22(1).’;
+(9)Article 17 is amended as follows:
+(a)the following paragraph 5a is inserted:
+‘5a. By way of derogation from paragraph 5, where the competent authority finds that the applicant or the authorised CBAM declarant does not demonstrate its financial capacity to fulfil its obligations under this Regulation, including by failing to comply with the requirement set out in Article 22(2), the competent authority may require the provision of a guarantee.
+The competent authority shall fix the amount of such guarantee at the amount, calculated as the aggregate value of the number of CBAM certificates that the authorised CBAM declarant would have to surrender in accordance with Article 22 in respect of one of the following:
+(a) imports of goods reported in accordance with Article 5(5), point (g);
+(b) the amount of imported goods declared in the customs declaration and other relevant information available to the competent authority from the previous two calendar years; or
+(c) an estimation as if the single mass-based threshold were exceeded by an average corresponding to the relevant sectors covered by this Regulation.
+The guarantee provided shall be a bank guarantee, payable at first demand, by a financial institution operating in the Union or another form of guarantee which provides equivalent assurance.’;
+(b)paragraph 7 is replaced by the following:
+‘7. Where a guarantee is required in accordance with paragraph 5, the competent authority shall release the guarantee immediately after 30 September of the second year in which the authorised CBAM declarant has surrendered CBAM certificates in accordance with Article 22.
+Where a guarantee is required in accordance with paragraph 5a, the competent authority shall release the guarantee immediately after 30 September of the second year in which the authorised CBAM declarant has surrendered CBAM certificates in accordance with Article 22. Notwithstanding the foregoing, the competent authority may decide to extend the duration of the guarantee where such extension is duly justified.
+Where the authorised CBAM declarant does not surrender the sufficient amount of CBAM certificates in accordance with Article 22 and following a decision in accordance with Article 19(5), the competent authority shall use the provided guarantee to recover the outstanding financial adjustment.
+The competent authority shall determine the amount to recover based on the number of certificates that should have been surrendered and the price of certificates on the date where the decision was taken.’;
+(10)in Article 18(3), the following sentence is added:
+‘Those delegated acts shall also specify the verification procedures to be used by verifiers.’;
+(11)in Article 19, the following paragraph 2a is inserted:
+‘2a. Where the embedded emissions are determined on the basis of actual emissions, the Commission or the competent authority of the Member State where the CBAM declarant is established may, as part of the review of the CBAM declaration, request the authorised CBAM declarant to provide evidence that the goods imported were produced at the installation referred to in the CBAM declaration.’;
+(12)Article 21 is amended as follows:
+(a)in paragraph 1, the second subparagraph is replaced by the following:
+‘For those calendar weeks in which there is no auction on the auction platform, the price of CBAM certificates shall be the average of the closing prices of EU ETS allowances of the last week in which auctions on the auction platform took place. For those calendar weeks in which only one auction takes place on the auction platform, the price of CBAM certificates shall be the average of that closing price and the closing prices of the last week in which several auctions took place on the auction platform.’;
+(b)in paragraph 2, the first sentence is replaced by the following:
+‘The Commission shall publish the price of CBAM certificates on its website or in any other appropriate manner on the first working day of the following calendar week.’;
+(13)in Article 22(2), the following subparagraph is added:
+‘From 2028, the calculation referred to in the first subparagraph shall be based only on CBAM certificates purchased by the authorised CBAM declarant during that same year.’;
+(14)in Article 23(1), second subparagraph, the first sentence is replaced by the following:
+‘The excess CBAM certificates shall be repurchased through the common central platform referred to in Article 20.’;
+(15)Article 25 is amended as follows:
+(a)paragraph 2 is replaced by the following:
+‘2. The customs authorities shall periodically and automatically, in particular by means of the surveillance mechanism established pursuant to Article 56(5) of Regulation (EU) No 952/2013, communicate to the Commission specific information on the goods declared for importation. That information shall include the EORI number or the form of identification declared in accordance with Article 6(2) of Delegated Regulation (EU) 2015/2446, of the importer or of the authorised CBAM declarant as well as the CBAM account number of the authorised CBAM declarant, the eight-digit CN code of the goods, the quantity, the country of origin, the date of the customs declaration and the customs procedure, as well as any other data relevant for compliance with this Regulation, including, where applicable, bills of discharge, re-export declarations and equivalent customs documentation. Where the importer has no EORI number, the customs authorities shall also communicate the name, address and, where available, contact information of the importer to the Commission.
+The CBAM account number provided in the customs declaration or any other relevant document when declaring goods listed in Annex I or processed products obtained from such goods for importation, shall determine the authorised CBAM declarant assuming the obligations set out in this Regulation.’;
+(b)in paragraph 3, the following subparagraph is added:
+‘Where the competent authority considers that the information is incorrect or inaccurate, the competent authority may request the customs authorities or the Commission to verify the correctness or the accuracy of that information.’;
+(c)in paragraph 6, the first sentence is replaced by the following:
+‘The Commission is empowered to adopt implementing acts defining the scope of information and the periodicity, timing and means for communicating that information pursuant to paragraphs 2 and 3 of this Article.’;
+(d)the following paragraph 7 is added:
+‘7. The Commission is empowered to adopt implementing acts to identify the material and chemical compositions of goods listed in Annex I. Those implementing acts shall be adopted in accordance with the examination procedure referred to in Article 29(2).’;
+(16)in Article 27(2), the following point (c) is added:
+‘(c) artificially adjusting the supply chains to make the goods benefit from lower default values.’;
+(17)the following Article 27a is inserted:
+‘Article 27a
+Serious and unforeseen circumstances
+The Commission shall monitor the situation at Union level with a view to monitoring the impact of the CBAM on the Union internal market. Where the Commission, taking into account the relevant evidence, considers that the inclusion of a good in Annex I causes severe harm to the Union internal market due to serious and unforeseen circumstances related to the impact on the prices of goods, it is empowered to adopt delegated acts in accordance with Article 28 to remove this good from Annex I until those serious and unforeseeable circumstances have passed.’;
+(18)Article 28 is amended as follows:
+(a)paragraphs 2 and 3 are replaced by the following:
+‘2. The power to adopt delegated acts referred to in Article 2(10) and (11), Article 2a (3), Article 6(7), Article 18(3), Article 20(5a) and (6), Article 27(6) and Article 27a shall be conferred on the Commission for a period of five years from [date of entry into force of this amending Regulation]. The Commission shall draw up a report in respect of the delegation of power not later than nine months before the end of the five-year period. The delegation of power shall be tacitly extended for further periods of an identical duration, unless the European Parliament or the Council opposes such extension not later than three months before the end of each period.
+3. The delegation of power referred to in Article 2(10) and (11), Article 2a (3), Article 6(7), Article 18(3), Article 20(5a) and (6), Article 27(6) and Article 27a may be revoked at any time by the European Parliament or by the Council.’;
+(b) paragraph 7 is replaced by the following:
+‘7. A delegated act adopted pursuant to Article 2(10) and (11), Article 2a (3), Article 6(7), Article 18(3), Article 20(5a) and (6), Article 27(6) and Article 27a shall enter into force only if no objection has been expressed either by the European Parliament or by the Council within a period of two months of notification of that act to the European Parliament and to the Council or if, before the expiry of that period, the European Parliament and the Council have both informed the Commission that they will not object. That period shall be extended by two months at the initiative of the European Parliament or of the Council.’;
+(19)the following Article 28a is inserted:
+‘Article 28
+Urgency procedure
+1. Delegated acts adopted under this Article shall enter into force without delay and shall apply as long as no objection is expressed in accordance with paragraph 2. The notification of a delegated act to the European Parliament and to the Council shall state the reasons for the use of the urgency procedure.
+2. Either the European Parliament or the Council may object to a delegated act in accordance with the procedure referred to in paragraph 7 of Article 28. In such a case, the Commission shall repeal the act immediately following the notification of the decision to object by the European Parliament or by the Council.’;
+(20)in Article 30(6), the second subparagraph is replaced by the following:
+‘Before 1 January 2028, as well as every two years thereafter, the Commission shall present a report to the European Parliament and to the Council on the application of this Regulation and functioning of the CBAM. This report may, where appropriate, be accompanied by a legislative proposal or implementing or delegated acts adopted pursuant to this Regulation. The report shall contain at least the following:
+(a) an assessment of the impact of the CBAM on:
+(i) carbon leakage, including in relation to exports;
+(ii) the sectors covered;
+(iii) internal market, economic and territorial impact throughout the Union;
+(iv) inflation and the price of commodities;
+(v) the effect on industries using goods listed in Annex I;
+(vi) international trade, including resource shuffling; and
+(vii) LDCs.
+(b) an assessment of:
+(i) the governance system, including an assessment of the implementation and administration of the guarantees and the authorisation of CBAM declarants by Member States;
+(ii) the scope of this Regulation, including of the possibility to extend the scope of this Regulation to additional goods at risk of carbon leakage;
+(iia) the suitability of implementing acts and delegated acts adopted pursuant to this Regulation;
+(iib) the suitability of the methods for setting default values and the mark-up applied to the default values;
+(iii) practices of circumvention;
+(iv) the application of penalties in Member States;
+(v) the application of the single mass-based threshold, including the possibility of increasing that threshold and of introducing a supplementary consignment-based threshold;
+(c) results of investigations and penalties imposed;
+(d) aggregated information on the emission intensity for each country of origin for the different goods listed in Annex I.;’
+(21)Annex I is amended in accordance with Annex I to this Regulation;
+(22)Annex IV is amended in accordance with Annex II to this Regulation;
+(23)in Annex VI, point 2 is amended as follows:
+(a)points (g) to (j) are deleted;
+(b)the following point (ka) is inserted:
+‘(ka) material composition of each downstream good;’;
+(24)a new Annex VIII is added as set out in Annex III to this Regulation.
+Article 2
+Entry into force and application
+This Regulation shall enter into force on the third day following that of its publication in the Official Journal of the European Union.
+Points 1 and 6 of Annex II, shall apply from 1 January 2026.
+However, Article 1(6), point (a), Article 1(8), points (a), (b) and (c), Article 1(21), (23), and (24), and point 2 of Annex II shall apply from 1 January 2028.
+This Regulation shall be binding in its entirety and directly applicable in all Member States.
+Done at Brussels,
+For the European Parliament For the Council
+The President The President
+LEGISLATIVE FINANCIAL AND DIGITAL STATEMENT
+1.FRAMEWORK OF THE PROPOSAL/INITIATIVE3
+1.1.Title of the proposal/initiative3
+1.2.Policy area(s) concerned3
+1.3.Objective(s)3
+1.3.1.General objective(s)3
+1.3.2.Specific objective(s)3
+1.3.3.Expected result(s) and impact3
+1.3.4.Indicators of performance3
+1.4.The proposal/initiative relates to:4
+1.5.Grounds for the proposal/initiative4
+1.5.1.Requirement(s) to be met in the short or long term including a detailed timeline for roll-out of the implementation of the initiative4
+1.5.2.Added value of EU involvement (it may result from different factors, e.g. coordination gains, legal certainty, greater effectiveness or complementarities). For the purposes of this section 'added value of EU involvement' is the value resulting from EU action, that is additional to the value that would have been otherwise created by Member States alone.4
+1.5.3.Lessons learned from similar experiences in the past4
+1.5.4.Compatibility with the multiannual financial framework and possible synergies with other appropriate instruments5
+1.5.5.Assessment of the different available financing options, including scope for redeployment5
+1.6.Duration of the proposal/initiative and of its financial impact6
+1.7.Method(s) of budget implementation planned6
+2.MANAGEMENT MEASURES8
+2.1.Monitoring and reporting rules8
+2.2.Management and control system(s)8
+2.2.1.Justification of the budget implementation method(s), the funding implementation mechanism(s), the payment modalities and the control strategy proposed8
+2.2.2.Information concerning the risks identified and the internal control system(s) set up to mitigate them8
+2.2.3.Estimation and justification of the cost-effectiveness of the controls (ratio between the control costs and the value of the related funds managed), and assessment of the expected levels of risk of error (at payment & at closure)8
+2.3.Measures to prevent fraud and irregularities9
+3.ESTIMATED FINANCIAL IMPACT OF THE PROPOSAL/INITIATIVE10
+3.1.Heading(s) of the multiannual financial framework and expenditure budget line(s) affected10
+3.2.Estimated financial impact of the proposal on appropriations12
+3.2.1.Summary of estimated impact on operational appropriations12
+3.2.1.1.Appropriations from voted budget12
+3.2.1.2.Appropriations from external assigned revenues17
+3.2.2.Estimated output funded from operational appropriations22
+3.2.3.Summary of estimated impact on administrative appropriations24
+3.2.3.1. Appropriations from voted budget24
+3.2.3.2.Appropriations from external assigned revenues24
+3.2.3.3.Total appropriations24
+3.2.4.Estimated requirements of human resources25
+3.2.4.1.Financed from voted budget25
+3.2.4.2.Financed from external assigned revenues26
+3.2.4.3.Total requirements of human resources26
+3.2.5.Overview of estimated impact on digital technology-related investments28
+3.2.6.Compatibility with the current multiannual financial framework28
+3.2.7.Third-party contributions28
+3.3.Estimated impact on revenue29
+4.Digital dimensions29
+4.1.Requirements of digital relevance30
+4.2.Data30
+4.3.Digital solutions31
+4.4.Interoperability assessment31
+4.5.Measures to support digital implementation32
+1.FRAMEWORK OF THE PROPOSAL/INITIATIVE
+1.1.Title of the proposal/initiative
+Carbon Border Adjustment Mechanism
+1.2.Policy area(s) concerned
+Climate policy
+1.3.Objective(s)
+1.3.1.General objective(s)
+In light of the EU’s increased climate ambitions, the introduction of a CBAM has the overarching objective of addressing climate change by reducing GHG emissions in the EU and globally.
+The amending proposal aims at stregnthening the effectiveness of the CBAM in addressing the risk of carbon leakage.
+1.3.2.Specific objective(s)
+The overarching objective of addressing climate change is further articulated in a number of specific objectives, namely: (i) Addressing the risk of carbon leakage under increased EU ambition. (ii) Contributing to the provision of a stable and secure policy framework for investments in low or zero carbon technologies. (iii) Ensuring that domestic production and imports are subject to similar level of carbon pricing. (iv) Encouraging producers in third countries who export to the EU to adopt low carbon technologies. (v) Ensuring that the measure is effective, minimising the risk of being circumvented, thus providing environmental integrity. (vi) Ensuring a proportionate administrative burden for businesses and public authorities in the application of the measure.
+The amending proposal aims strenghtening the effectiveness of the CBAM to protect against the risk of carbon leakage, by extending the scope to downstream products, introduce additional anti-avoidance provisions and clarify the rules applicable to electricity imports.
+1.3.3.Expected result(s) and impact
+Specify the effects which the proposal/initiative should have on the beneficiaries/groups targeted.
+The introduction of a CBAM envisages a reduction in greenhouse gas emissions both in the EU-27 and in the rest of the world in the sectors covered by CBAM. The CBAM is also expected to reduce the risks of carbon leakage, therefore gradually replacing the free allocation of allowances under the EU ETS.
+As regards economic impacts, the modelling conducted before the adoption of the CBAM Regulation indicated that the introduction of a CBAM and other measures needed to reach the EU’s increased climate ambitions could lead to a GDP contraction for the EU 27 by 0.22 % to 0.23 % in 2030. Impact on the investment side is modest. On the consumption side CBAM appears to have a slightly stronger negative effect relative to the scenario of increased climate ambition and no CBAM.
+By effectively reducing carbon leakage, the introduction of a CBAM leads to a reduction in imports in the EU 27. Overall, the social impacts of CBAM are limited.
+Administrative impacts on the Commission, businesses national authorities, are expected. Altogether, compliance costs for businesses and authorities, while significant, are expected to be proportionate, and manageable in light of the environmental benefits of the measure.
+The amending proposal is estimated to reduce yearly global GHG emissions by approximately 0.7 Mt CO2e by 2030. In addition, it is expected to further reduce carbon leakage. Based on modelling done by the JRC, CBAM as currently legislated is estimated to reduce the carbon leakage rate 26 by 43% compared to a no-CBAM scenario. Extension of the scope to selected steel and aluminium downstream products is estimated to reduce the carbon leakage rate further, with a total decrease compared to a no-CBAM scenario of 76%. The macro-economic impacts of a downstream extension are negligible, with an estimated impact on EU GDP of less than 0.001% and minor impacts overall on trade, production and consumer prices in the EU.
+The downstream extension is not aimed at generating revenues but rather at strengthening the climate effectiveness of CBAM in preventing carbon leakage. That being said, the proposal is projected to generate around EUR 0.58 billion of annual revenues by 2030. Beyond 2030, as free allocations under the EU ETS are phased out and CBAM is phased in, revenue should continue to increase, reaching an estimated EUR 0.69 billion by 2035.
+1.3.4.Indicators of performance
+Specify the indicators for monitoring progress and achievements.
+Objectives
+Indicators
+Measurement tools/data sources
+Reduce GHG emissions
+-Level of emissions in the EU
+-Level of emissions globally
+-Emission statistics
+-Sector statistics
+-Statements by 3rd countries on whether CBAM incentivised their own carbon pricing
+Encourage cleaner production processes in third countries
+-Evolution of actual emissions for CBAM sectors in 3rd countries
+-Level of electricity imports
+-Share of actual values reporting for electricity
+-Level of emissions demonstrated by third country producers subject to the CBAM
+-CBAM Registry
+Prevent carbon leakage
+-As indicators of emissions above
+-Level of emissions in the EU relative to global emissions
+-Trade flows in CBAM sectors
+-Trade flows downstream
+-Emission statistics
+-Trade statistics
+-Sector statistics
+Ensure consistency with EU policies
+-Import certificates price in line with price in the EU ETS
+-Statistics from EU ETS and CBAM authorities
+Limit administrative burden
+-Timely treatment of CBAM enforcement (e.g. possible reconciliation procedure)
+-Checks of actual level of emissions by exporter
+-Feedback from industry and public authorities responsible for CBAM implementation
+-Number of staff necessary for CBAM administration
+1.4.The proposal/initiative relates to:
+ a new action
+ a new action following a pilot project / preparatory action 27
+ the extension of an existing action
+ a merger or redirection of one or more actions towards another/a new action
+1.5.Grounds for the proposal/initiative
+1.5.1.Requirement(s) to be met in the short or long term including a detailed timeline for roll-out of the implementation of the initiative
+The CBAM was introduced from October 2023. A simplified system of the CBAM scheme is currently in place until the end of 2025. Specifically, a transitional period (dry-run for data collection) currently applies to facilitate the smooth roll out of the CBAM and allow traders and importers to adjust.
+Commission services are in charge of implementing and enforcing CBAM both during the transition period (2023-2025) and will also be during the definitive phase (from 2026).
+During the transition period this implied collecting information from importers of CBAM goods in the EU on the embedded GHG emissions of these goods and analysing data.
+The Carbon Border Adjustment Mechanism (CBAM) calls for a progressive introduction of the different functions necessary for its effective implementation. Firstly, a number of reports and reviews need to be prepared in order to facilitate the financial obligation to be set in place. Recognizing this, the CBAM regulation foresees its implementation in two consecutive periods: the Transitional Period from October 2023 until end of 2025 and the Definitive Period as from early 2026.
+During the Transitional Period the obligation placed on importers and the EU Authorities (customs) is limited to the filing of the quarterly CBAM reports in addition of the Import declarations.
+During the transitional period, transitional information management system (CBAM Transitional Period – CBAM TP) were put in place to support the submission and collection of quarterly reports, as well as the assimilation of data from each report into an aggregated database, to allow for their effective analysis for the purposes of reporting in line with the provisions of the Regulation.
+Additionally, during the transitional period, customs authorities are tasked with informing customs declarants of the obligation to report information, so as to contribute to the gathering of information as well as to the awareness on the need to request the status of authorised declarant when applicable (before the first importation of CBAM goods from 1 January 2026).
+The Definitive Period will start on the 01.01.26 for the core CBAM declaration and certificates management services as listed here and one year earlier for authorised declarants registration and processing of CBAM authorisations by the competent authorities:
+- importers are only entitled to import these goods after they have been granted an authorisation (except in case of the derogation) by competent authorities, or if they would appoint a representative authorised as CBAM declarant. Customs authorities should not allow the importation of CBAM goods without a authorised CBAM declarant being involved. Furthermore, the customs authorities may carry out checks on the goods, including with respect to the identification of the authorised CBAM declarant, the eight-digit CN code, the quantity and the country of origin of the imported goods, the date of declaration and the customs procedure. The Commission should include the risks relating to CBAM in the design of the common risk criteria and standards pursuant to Article 50 of Regulation (EU) No 952/2013
+- The CBAM should be based on a declarative system where an authorised CBAM declarant, who may act on its own behalf or represent one or more importers, submits annually a declaration of the embedded emissions in the goods imported to the customs territory of the Union and surrenders a number of CBAM certificates corresponding to those declared emissions.
+- An authorised CBAM declarant should be allowed to claim a reduction in the number of CBAM certificates to be surrendered corresponding to the carbon price already effectively paid for those emissions in other jurisdictions. The amending Regulation proposes to introduce a default carbon price which would allow declarants to claim a deduction where it cannot be demonstrated that a carbon price has been effectively paid.
+- The embedded declared emissions should be verified by a person accredited by an EU national accreditation body where actual emissions are declared.
+- The CBAM central system should allow operators of production installations in third countries to register in the CBAM registry and to make their verified embedded GHG emissions from production of goods available to authorised CBAM declarants. The Commission should manage the CBAM registry containing data on the authorised CBAM declarants, operators and installations in third countries. The amending Regulation proposes to allow accredited verifiers to access the registry to improve the reliability of emission data shared by operators with declarants through the registry.
+- To reduce the risk of carbon leakage the Commission should take action to address practices of circumvention
+- For the sale and re-purchase of CBAM certificates a common central platform should be established. For the purpose of oversight of the transactions on the common central platform, the Commission should facilitate the exchanges of information and the cooperation between competent authorities, and between those authorities and the Commission. Additionally, a swift flow of information between the common central platform and the CBAM registry should be established.
+- The Commission should carry out risk-based controls and should review the content of the CBAM declarations accordingly. For enforcement purposes, Member States may also carry out reviews of individual CBAM declarations. The conclusions of the reviews of individual CBAM declarations should be shared with the Commission and should be made available to other competent authorities in the CBAM registry.
+- Member States should be responsible for the correct establishment and collection of revenues arising from the application of this Regulation.
+Therefore, during the definitive period the number of tasks attributed to the EC increases drastically, requiring an increase in staffing needs. The tasks carried out by this team will include the supervision of authorisation of CBAM declarants made by MS competent authorities, the management of the central database and central registry, coordination and information exchange with MS competent authorities, review of declarations and oversight of the external platform and lastly, tasks requiring legal competencies such as litigation and recovery and financial responsibility oversight. The structure of the team is further defined below.
+During the definitive period the Commission will be in charge of the majority of the tasks resulting from the CBAM regulation.
+The amending proposal introduces new anti-avoidance provisions which imply additional tasks that are to be carried out by the Commission from 2027 onwards. These include the development, implementation and oversight of the operationalisation of the new anti-avodiance provisions. In particular, these measures will require additional validity checks of evidence provided by importers that are supposed to verify the validity of provided information in the CBAM declaration.
+In addition, due to the changes proposed in the amending introduced, additional financing needs arise to finance analytical input provided to the Commission for the execution of essential tasks to be carried out from 2027 onwards. Specifically, the Commission will have to develop (and update annually) default values for the new goods added to Annex I of the regulation. Moreover, its responsibilities in monitoring and detecting circumvention and avoidance practices have been extended, which requires the acquisition of databases and market intelligence to feed into a robust risk analysis and detection system. It is estimated that this will require EUR 2 million for 2027 of non-IT expenditure, in addition to the budgetary needs identified in the LFDS accompanying the proposal to simplify and stregnthen the CBAM (+EUR 2 million on an annual basis).
+CBAM IT Budget
+The CBAM Budget to be engaged/ committed for the period 2023-2027 has been assessed at 120,69 M€. The CBAM IT budget encompasses Analysis & Development services, Deployment services, Operations services, cloud services and/or on premises hardware and software licenses for the Transitional and Definitive CBAM System as detailed below :
+- The CAPEX cost has been estimated based on the actual budget engaged and the budget authorised by EC IT Corporate Governance in the form of approved Vision Documents for the following past projects of DG TAXUD IT projects, due to their similarities in terms of IT Architecture Model: CDS, CRMS2, SURV3, REX, CSRD2, EBTI, Customs Trans-European Declaration Management Systems developed and operated by DG TAXUD.
+- The OPEX cost has been assessed on the basis of the current annual infrastructure and operational costs of DG TAXUD, their provisions for IT infrastructure, IT Support and Service Desk activities for the production systems delivered by the projects referenced above.
+- The pricing is based on the current Framework Contracts pricing in place.
+In the IT Policy budget line, the budget of the joint procurement between the European Commission and Member States of the platform for buying and selling certificates for managing operations is not included.
+The CBAM team would consist of 90 EC staff (including 15 IT staff) in 2027.
+The breaking down of total staff, including IT staff, from 2023 to 2027 would be the following:
+Year
+2023
+2024
+2025
+2026
+2027
+No of Total Resources
+20
+33
+44
+66
+90
+CBAM team
+12
+21
+29
+50
+74
+IT CBAM team
+8
+12
+15
+16
+16
+The strategic importance, the magnitude and complexity of the CBAM IT project require a dedicated CBAM IT team to be established to manage the overall project implementation and operations.
+The CBAM IT team consists of 16 members of specialised IT profiles for defining and managing CBAM IT System Architecture and Project Organisation and planning, the activities in terms of development, deployment, the organisation of the Service Model, the management of operations and support in front of Trade, COM services, climatic and Customs authorities, in parallel of the Transitional and definitive CBAM IT systems.
+The proposed plan of deploying the CBAM IT team is the following:
+Year
+2023
+2024
+2025
+2026
+2027
+No of Resources
+8
+12
+15
+15
+15
+AD
+4
+5
+5
+5
+5
+CA
+4
+7
+10
+10
+10
+Additional extrernal staff (PXE) will be recruited from CBAM IT budget as per needs.
+1.5.2.Added value of EU involvement (it may result from different factors, e.g. coordination gains, legal certainty, greater effectiveness or complementarities). For the purposes of this section 'added value of EU involvement' is the value resulting from EU action, that is additional to the value that would have been otherwise created by Member States alone.
+Reasons for action at EU level (ex-ante) Reducing GHG emissions is fundamentally a trans-boundary issue that requires effective action at the largest possible scale. The EU as a supranational organisation is well-placed to establish effective climate policy in the EU, like it has done with the EU ETS.
+There exists already a harmonised carbon price at EU level. This consists of the price resulting from the EU ETS for the sectors covered by the system. The only meaningful way to ensure equivalence between the carbon pricing policy applied in the EU’s internal market and the carbon pricing policy applied on imports is to take action at the level of the Union.
+Any initiative needs to be implemented in a way that provides importers, regardless of country of origin and port of entry or destination within the EU, with uniform conditions and incentives for GHG emission reductions that are equivalent to those of domestic producers. The single effective way to do this is by taking action at the level of the EU.
+The proposed simplification introduced by the amending Regulation is best done at EU level to ensure legal certainty and consistency. This will ensure a level playing field for companies and authorities across the Union, which will be benefiting from the rationalisation of reporting requirements arising from this proposal.
+Expected generated EU added value (ex-post) In parallel to the EU ETS, reduction of GHG emissions and protection against the risk of carbon leakage in the EU single market can be established most adequately at the EU level. Additionally, the need for minimal administrative costs is best achieved by establishing consistent rules for the entire single market, further underlining the added value of an intervention at the EU level.
+The public consultation has confirmed the added value of taking action on the CBAM at the EU level. In particular, stakeholders agree that an EU CBAM is needed due to existing differences of ambition between the EU and the rest of the world and in order to support the global climate efforts. In addition, in view of the EU’s position in international trade, if it introduces a CBAM the environmental effect on international climate ambitions will be most effective as a potential example to follow.
+Thus, the objective of reducing emissions and climate neutrality requires – without equally ambitious global policies – action by the European Union.
+1.5.3.Lessons learned from similar experiences in the past
+The amending proposal relies on the experience gained in implementing CBAM since the mechanism started to apply in its transitional phase on 1 October 2023.
+1.5.4.Compatibility with the multiannual financial framework and possible synergies with other appropriate instruments
+On 16 July 2025, the Commission presented its proposal for an ambitious and dynamic Multiannual Financial Framework (“MFF”) amounting to almost EUR 2 trillion. The Commission presented five new own resources to fund its priorities while repaying what the EU has borrowed under NextGenerationEU and limiting the national contributions to the EU budget. The proposed new own resources include CBAM, which is expected to generate around EUR 1.45 billion annually (current prices), on average, between 2028 and 2034.
+The amending proposal further increases the tasks and responsibilities of the Commission in ensuring that the CBAM is effectively implemented and not circumvented/avoided. This requires additional budgetary support within the current MFF. Moreover, and without prejudice to the outcome of the negotiations on the next MFF, as most tasks apply on a recurrent basis, the appropriate financing means need to be made available as part of the next MFF.
+1.5.5.Assessment of the different available financing options, including scope for redeployment
+Implementation costs for CBAM will be financed by the EU budget.
+1.6.Duration of the proposal/initiative and of its financial impact
+ limited duration
+– in effect from [DD/MM]YYYY to [DD/MM]YYYY
+– financial impact from YYYY to YYYY for commitment appropriations and from YYYY to YYYY for payment appropriations.
+ unlimited duration
+–Implementation with a start-up period from YYYY to YYYY,
+–followed by full-scale operation.
+1.7.Method(s) of budget implementation planned
+ Direct management by the Commission
+– by its departments, including by its staff in the Union delegations;
+– by the executive agencies
+ Shared management with the Member States
+ Indirect management by entrusting budget implementation tasks to:
+– third countries or the bodies they have designated
+– international organisations and their agencies (to be specified)
+– the European Investment Bank and the European Investment Fund
+– bodies referred to in Articles 70 and 71 of the Financial Regulation
+– public law bodies
+– bodies governed by private law with a public service mission to the extent that they are provided with adequate financial guarantees
+– bodies governed by the private law of a Member State that are entrusted with the implementation of a public-private partnership and that are provided with adequate financial guarantees
+– bodies or persons entrusted with the implementation of specific actions in the common foreign and security policy pursuant to Title V of the Treaty on European Union, and identified in the relevant basic act
+–bodies established in a Member State, governed by the private law of a Member State or Union law and eligible to be entrusted, in accordance with sector-specific rules, with the implementation of Union funds or budgetary guarantees, to the extent that such bodies are controlled by public law bodies or by bodies governed by private law with a public service mission, and are provided with adequate financial guarantees in the form of joint and several liability by the controlling bodies or equivalent financial guarantees and which may be, for each action, limited to the maximum amount of the Union support.
+Comments
+N/A
+2.MANAGEMENT MEASURES
+2.1.Monitoring and reporting rules
+The Commission will ensure that arrangements are in place to monitor and evaluate the functioning of the CBAM and evaluate it against the main policy objectives.
+Before the end of the transitional period at the end of 2025 and every two years thereafter, the Commission will publish comprehensive assessments of the functioning of the CBAM, including its governance.
+2.2.Management and control system(s)
+2.2.1.Justification of the budget implementation method(s), the funding implementation mechanism(s), the payment modalities and the control strategy proposed
+A significantly centralised set-up allows a uniform and efficient implementation of CBAM across the EU including in Member states with more limited administrative capacity on climate issues. The majority of the implementation and enforcement functions have been attributed to Commission services. These also require an increased number of control functions in order to ensure the correct implementation and management of the CBAM. The Commission has also foreseen an increased number of measures for fraud prevention.
+This amending proposal includes a number of provisions to reduce the risk of circumvention and avoidance with a view to increasing the effectiveness of the CBAM. This in turn implies additional funding needs for the Commission to execute these additional tasks and to extend CBAM Registry.
+2.2.2.Information concerning the risks identified and the internal control system(s) set up to mitigate them
+The CBAM will be based on a declarative system, which entails the risk of non-declaration or misdeclaration. Risks of non-declaration and misdeclaration (e.g. of emission intensity, of imported volumes, of place of production of CBAM goods) were identified.
+An internal control system is being setup integrating lines of defences where both automated, expert judgement controls and risk assessments are being deployed. Data analysis techniques are planned to be rolled out to detect such risks.
+In order to address the risk of non-declaration, the system requires an authorisation before importing goods in the scope of the Regulation. National Customs Authorities will be in charge of enforcing this rule by not releasing into free circulation these goods as long as the declarant is not authorised according to this Regulation. Additionally, Commission services will also monitor frequently during a given year, possible cases of importers not having initiated an authorisation process despite having reached or getting close to the CBAM reporting threshold (including in case of cross-border imports).
+In order to address the risk of misdeclaration, a risk-based approach based on pre-determined criteria as well as random audits will be setup. The current CBAM proposal foresees providing the Commission services with empowerments for requesting evidence allowing the use of actual emissions for some CN codes or origins. The proposal also foresees to attach additional conditions to the use of actual emissions for some CN codes and/or origins.
+A deterrent penalty regime will also serve as deterrent to possible circumvention. Auditing will take place both at the level of CBAM declaration by the national authorities and at the level of import declarations by customs authorities.
+2.2.3.Estimation and justification of the cost-effectiveness of the controls (ratio between the control costs and the value of the related funds managed), and assessment of the expected levels of risk of error (at payment & at closure)
+Commission services will control the correct application of CBAM, in particular the surrender of CBAM certificates and the correct application of the de minimis threshold. A strong risk management system will be applied to ensure cost-effective controls and tackle risks of circumvention.
+2.3.Measures to prevent fraud and irregularities
+The financial interests of the Union should be protected through proportionate measures throughout the expenditure cycle, including the prevention, detection and investigation of irregularities, the recovery of funds lost, wrongly paid or incorrectly used and, where appropriate, administrative and financial penalties.
+Efficient anti-fraud actions require active cooperation, including knowledge-sharing and exchange of information, between customs authorities and competent authorities, both at national level and EU level; it may also require cooperation with third countries. The CBAM Regulation already foresees in its current version solid cooperation channels between National Competent Authorities and Custom Authorities. A CBAM risk management network was setup and already started to work on CBAM anti-circumvention notably inspiring the current proposal with operational improvements to the CBAM Regulation to address risks of circumvention.
+The amending proposal further strengthens circumvention risks CBAM is exposed to notably through 1) enhanced traceability monitoring capabilities that will aim to address the risk of misdeclaration of emission intensity, 2) increased granularity in the reporting of the material and chemical composition of CN codes that will aim to address the risk of misdeclaration of emission intensity and lastly 3) measures against abusive practices. Lastly, it is proposed to include pre-consumer scrap as a CBAM precursor that was a circumvention channel identified to artificially reduce the emissions of a production process and therefore its CBAM financial liability.
+A specific attention should be drawn to non-reliable economic operators (e.g. shell company, missing traders) and cross-border trade inside the EU. The CBAM risk management network mentioned above will aim to address such risks.
+Quick anti-fraud action should be put in place to react to new/newly detected fraud risks. Authorities in charge should report and share knowledge on fraudulent patterns. The CBAM Registry is being deployed with principles of knowledge sharing, and automated controls, and check and information sharing among stakeholders. The CBAM risk management system will notably base itself on well-established and functioning communication interfaces with Custom Authorities (CRMS2) to communicate of possible circumvention cases.
+Where an authorised CBAM declarant or an importer fails to comply with the obligations in the CBAM regulation, penalties will be applied. In case of repeated offences, the national competent authority may decide to suspend the account of the declarant.
+3.ESTIMATED FINANCIAL IMPACT OF THE PROPOSAL/INITIATIVE
+3.1.Heading(s) of the multiannual financial framework and expenditure budget line(s) affected
+·Existing budget lines
+In order of multiannual financial framework headings and budget lines.
+Heading of multiannual financial framework
+Budget line
+Type of expenditure
+Contribution
+Number
+Diff./Non-diff. 28
+from EFTA countries 29
+from candidate countries and potential candidates
+from other third countries
+other assigned revenue
+7
+20 01 02 01
+Diff./Non-diff.
+NO
+YES/NO
+YES/NO
+YES/NO
+3
+09 20 04 01 (CBAM)
+Diff.
+NO
+YES/NO
+YES/NO
+YES/NO
+·New budget lines requested
+In order of multiannual financial framework headings and budget lines.
+Heading of multiannual financial framework
+Budget line
+Type of expenditure
+Contribution
+Number
+Diff./Non-diff.
+from EFTA countries
+from candidate countries and potential candidates
+from other third countries
+other assigned revenue
+N/A
+N/A
+Diff./Non-diff.
+YES/NO
+YES/NO
+YES/NO
+YES/NO
+3.2.Estimated financial impact of the proposal on appropriations
+3.2.1.Summary of estimated impact on operational appropriations
+– The proposal/initiative does not require the use of operational appropriations
+– The proposal/initiative requires the use of operational appropriations, as explained below
+Amounts related to 2028-2034 programming period are indicative and do not prejudge the outcome of the ongoing negotiations on the next MFF.
+3.2.1.1.Appropriations from voted budget
+EUR million (to three decimal places)
+Heading of multiannual financial framework
+3
+Natural resources and environment (IT)
+DG: TAXUD
+Year
+Year
+Year
+Year
+TOTAL MFF 2021-2027
+2024
+2025
+2026
+2027
+Operational appropriations
+Budget line 09 20 04 01 (CBAM)
+Commitments
+(1a)
+28,090
+34,750
+33,700
+35,150
+131,690
+Payments
+(2a)
+17,530
+21,157
+32,090
+34,067
+104,844
+Budget line
+Commitments
+(1b)
+0.000
+Payments
+(2b)
+0.000
+Appropriations of an administrative nature financed from the envelope of specific programmes
+Budget line
+(3)
+0.000
+TOTAL appropriations
+for DG TAXUD
+Commitments
+=1a+1b+3
+28,090
+34,750
+33,700
+35,150
+131,690
+Payments
+=2a+2b+3
+17,530
+21,157
+32,090
+34,067
+104,844
+Year
+Year
+Year
+Year
+TOTAL MFF 2021-2027
+2024
+2025
+2026
+2027
+TOTAL operational appropriations
+Commitments
+(4)
+28,090
+34,750
+33,700
+35,150
+131,690
+Payments
+(5)
+17,530
+21,157
+32,090
+34,067
+104,844
+TOTAL appropriations of an administrative nature financed from the envelope for specific programmes
+(6)
+0.000
+0.000
+0.000
+0.000
+0.000
+TOTAL appropriations under HEADING 3
+Commitments
+=4+6
+28,090
+34,750
+33,700
+35,150
+131,690
+of the multiannual financial framework
+Payments
+=5+6
+17,530
+21,157
+32,090
+34,067
+104,844
+Year
+Year
+Year
+Year
+TOTAL MFF 2021-2027
+2024
+2025
+2026
+2027
+• TOTAL operational appropriations (all operational headings)
+Commitments
+(4)
+28,090
+34,750
+33,700
+35,150
+131,690
+Payments
+(5)
+17,530
+21,157
+32,090
+34,067
+104,844
+• TOTAL appropriations of an administrative nature financed from the envelope for specific programmes (all operational headings)
+(6)
+0.000
+0.000
+0.000
+0.000
+0.000
+TOTAL appropriations Under Heading 1 to 6
+Commitments
+=4+6
+28,090
+34,750
+33,700
+35,150
+131,690
+of the multiannual financial framework
+(Reference amount)
+Payments
+=5+6
+17,530
+21,157
+32,090
+34,067
+104,844
+Year
+Year
+Year
+Year
+Year
+Year
+Year
+TOTAL MFF 2028-2034
+2028
+2029
+2030
+2031
+2032
+2033
+2034
+• TOTAL operational appropriations (all operational headings)
+Commitments
+29.100
+24.823
+25.568
+26.335
+27.125
+27.939
+28.777
+189.667
+Payments
+18,042
+15.142
+15,852
+16.064
+25,769
+26,542
+31,367
+148,778
+• TOTAL appropriations of an administrative nature financed from the envelope for specific programmes (all operational headings)
+TOTAL appropriations Under Heading 1 to 3
+Commitments
+29.100
+24.823
+25.568
+26.335
+27.125
+27.939
+28.777
+189.667
+of the multiannual financial framework
+(Reference amount)
+Payments
+18,042
+15.142
+15,852
+16.064
+25,769
+26,542
+31,367
+148,778
+* Figures related to the 2028-2034 MFF in the table above are all strictly indicative pending the outcome of the negotiations which cannot be prejudged.
+Heading of multiannual financial framework
+7
+‘Administrative expenditure’
+DG TAXUD
+Year
+Year
+Year
+Year
+TOTAL MFF 2021-2027
+2024
+2025
+2026
+2027
+ Human resources
+8,572
+6,271
+8,740
+11,700
+35,283
+ Other administrative expenditure
+0,600
+0,300
+0,306
+0,312
+1,518
+TOTAL DG TAXUD
+Appropriations
+9,172
+6,571
+9,046
+12,012
+36,801
+TOTAL appropriations under HEADING 7 of the multiannual financial framework
+(Total commitments = Total payments)
+9,172
+6,571
+9,046
+12,012
+36,801
+EUR million (to three decimal places)
+DG TAXUD
+Year
+Year
+Year
+Year
+Year
+Year
+Year
+TOTAL MFF 2028-2034
+2028
+2029
+2030
+2031
+2032
+2033
+2034
+ Human resources
+13,293
+13,293
+13,293
+13,293
+13,293
+13,293
+13,293
+93,051
+ Other administrative expenditure
+0.310
+0.319
+0.329
+0.339
+0.349
+0.359
+0.370
+2,375
+TOTAL DG TAXUD
+Appropriations
+TOTAL appropriations under HEADING 4 of the multiannual financial framework
+(Total commitments = Total payments)
+* Figures related to the 2028-2034 MFF in the table above are all strictly indicative pending the outcome of the negotiations which cannot be prejudged.
+VOTED APPROPRIATIONS
+Year
+2024
+Year
+2025
+Year
+2026
+Year
+2027
+Year 2028
+Year 2029
+Year 2030
+Year 2031
+Year 2032
+Year 2033
+Year 2034
+TOTAL
+HEADING 7 (programming period 2021-2027); HEADING 4 (programming period 2028-2034)
+Human resources
+8,572
+6,271
+8,740
+11,700
+13,293
+13,293
+13,293
+13,293
+13,293
+13,293
+13,293
+128,334
+Other administrative expenditure - missions
+0,600
+0,300
+0,306
+0,312
+0.310
+0.319
+0.329
+0.339
+0.349
+0.359
+0.370
+3,893
+Total HEADING 7 (programming period 2021-2027); HEADING 4 (programming period 2028-2034)
+9,172
+6,571
+9,046
+12,012
+13.603
+13.612
+13.622
+13.632
+13.642
+13.652
+13.663
+132,227
+* Figures related to the 2028-2034 MFF in the table above are all strictly indicative pending the outcome of the negotiations which cannot be prejudged.
+EUR million (to three decimal places)
+Year
+Year
+Year
+Year
+TOTAL MFF 2021-2027
+2024
+2025
+2026
+2027
+TOTAL appropriations under HEADINGS 1 to 7
+Commitments
+37,262
+41,321
+42,746
+47,162
+168,491
+of the multiannual financial framework
+Payments
+26,702
+27,728
+41,136
+46,079
+141645
+Year
+Year
+Year
+Year
+Year
+Year
+Year
+TOTAL MFF 2028-2034
+2028
+2029
+2030
+2031
+2032
+2033
+2034
+TOTAL appropriations under HEADINGS 1 to 4
+Commitments
+42.703
+38.435
+39.190
+39.967
+40.767
+41.591
+42.440
+285,091
+of the multiannual financial framework
+Payments
+29.892
+26.904
+26,257
+26,778
+39,136
+39,928
+44,986
+233,881
+* Figures related to the 2028-2034 MFF in the table above are all strictly indicative pending the outcome of the negotiations which cannot be prejudged.
+Year
+2024
+Year
+2025
+Year
+2026
+Year
+2027
+Year 2028
+Year 2029
+Year 2030
+Year 2031
+Year 2032
+Year 2033
+Year 2034
+TOTAL LFDS
+TOTAL appropriations under HEADINGS 1 to 7 of the multiannual financial framework
+Commitments
+37.262
+41.321
+42,746
+47,162
+42.703
+38.435
+39.190
+39.967
+40.767
+41.591
+42.440
+453,584
+Payments
+26.702
+27.728
+41,136
+46,079
+29.892
+26.904
+26,257
+26,778
+39,136
+39,928
+44,986
+375,526
+3.2.2.Estimated output funded from operational appropriations (not to be completed for decentralised agencies)
+Commitment appropriations in EUR million (to three decimal places)
+Indicate objectives and outputs
+
+Year
+2024
+Year
+2025
+Year
+2026
+Year
+2027
+Enter as many years as necessary to show the duration of the impact (see Section1.6)
+TOTAL
+OUTPUTS
+Type 30
+Average cost
+No
+Cost
+No
+Cost
+No
+Cost
+No
+Cost
+No
+Cost
+No
+Cost
+No
+Cost
+Total No
+Total cost
+SPECIFIC OBJECTIVE No 1 31 …
+- Output
+- Output
+- Output
+Subtotal for specific objective No 1
+SPECIFIC OBJECTIVE No 2 ...
+- Output
+Subtotal for specific objective No 2
+TOTALS
+3.2.3.Summary of estimated impact on administrative appropriations
+– The proposal/initiative does not require the use of appropriations of an administrative nature
+– The proposal/initiative requires the use of appropriations of an administrative nature, as explained below
+3.2.3.1. Appropriations from voted budget
+VOTED APPROPRIATIONS
+Year
+Year
+Year
+Year
+TOTAL 2021 - 2027
+2024
+2025
+2026
+2027
+HEADING 7
+Human resources
+8,572
+6,271
+8,740
+11,700
+35,283
+Other administrative expenditure
+0,600
+0,300
+0,306
+0,312
+1,518
+Subtotal HEADING 7
+9.172
+6,571
+9,046
+12,012
+36,801
+Outside HEADING 7
+Human resources
+0.000
+0.000
+0.000
+0.000
+0.000
+Other expenditure of an administrative nature
+0.000
+0.000
+0.000
+0.000
+0.000
+Subtotal outside HEADING 7
+0.000
+0.000
+0.000
+0.000
+0.000
+TOTAL
+9,172
+6,571
+9,046
+12,012
+36,801
+3.2.4.Estimated requirements of human resources
+– The proposal/initiative does not require the use of human resources
+– The proposal/initiative requires the use of human resources, as explained below
+3.2.4.1.Financed from voted budget
+Estimate to be expressed in full-time equivalent units (FTEs) 32
+VOTED APPROPRIATIONS
+Year
+Year
+Year
+Year
+MFF
+2028-34
+2024
+2025
+2026
+2027
+ Establishment plan posts (officials and temporary staff)
+20 01 02 01 (Headquarters and Commission’s Representation Offices)
+21
+21
+25
+30
+30 per year
+20 01 02 03 (EU Delegations)
+0
+0
+0
+0
+01 01 01 01 (Indirect research)
+0
+0
+0
+0
+01 01 01 11 (Direct research)
+0
+0
+0
+0
+Other budget lines (specify)
+0
+0
+0
+0
+• External staff (in FTEs)
+20 02 01 (AC, END from the ‘global envelope’)
+12
+23
+40
+60
+60 per year
+20 02 03 (AC, AL, END and JPD in the EU Delegations)
+0
+0
+0
+0
+Admin. Support line
+[XX.01.YY.YY]
+- at Headquarters
+0
+0
+0
+0
+- in EU Delegations
+0
+0
+0
+0
+01 01 01 02 (AC, END - Indirect research)
+0
+0
+0
+0
+01 01 01 12 (AC, END - Direct research)
+0
+0
+0
+0
+Other budget lines (specify) - Heading 7
+0
+0
+0
+0
+Other budget lines (specify) - Outside Heading 7
+0
+0
+0
+0
+TOTAL
+33
+44
+65
+90
+90 per year
+The staff required to implement the proposal (in FTEs):
+To be covered by current staff available in the Commission services
+Exceptional additional staff*
+To be financed under Heading 7 or Research
+To be financed from BA line
+To be financed from fees
+Establishment plan posts
+N/A
+N/A
+N/A
+N/A
+External staff (CA, SNEs, INT)
+N/A
+N/A
+N/A
+N/A
+Description of tasks to be carried out by:
+Officials and temporary staff
+The CBAM regulation requires the Commission to follow up with several delegated and implementing acts once the CBAM regulation is adopted. Commission staff will also be needed to review and assess the functioning of the CBAM system and to implement the IT system.
+The amending proposal introduces new anti-avoidance provisions, which imply additional tasks that are to be carried out by the Commission from 2027 onwards. In particular, these measures will require additional validity checks of evidence provided by importers that are supposed to verify the validity of provided information in the CBAM declaration.
+External staff
+Many tasks can be carried out by external agents.
+The amending proposal introduces new anti-avoidance provisions, which imply additional tasks that are to be carried out by the Commission from 2027 onwards. In particular, these measures will require additional validity checks of evidence provided by importers that are supposed to verify the validity of provided information in the CBAM declaration.
+3.2.5.Overview of estimated impact on digital technology-related investments
+Compulsory: the best estimate of the digital technology-related investments entailed by the proposal/initiative should be included in the table below.
+Exceptionally, when required for the implementation of the proposal/initiative, the appropriations under Heading 7 should be presented in the designated line.
+The appropriations under Headings 1-6 should be reflected as “Policy IT expenditure on operational programmes”. This expenditure refers to the operational budget to be used to re-use/ buy/ develop IT platforms/ tools directly linked to the implementation of the initiative and their associated investments (e.g. licences, studies, data storage etc). The information provided in this table should be consistent with details presented under Section 4 “Digital dimensions”.
+TOTAL Digital and IT appropriations
+Year
+Year
+Year
+Year
+TOTAL MFF 2021 - 2027
+2024
+2025
+2026
+2027
+HEADING 7
+IT expenditure (corporate)
+0.000
+0.000
+0.000
+0.000
+0.000
+Subtotal HEADING 7
+0.000
+0.000
+0.000
+0.000
+0.000
+Outside HEADING 7
+Policy IT expenditure on operational programmes
+0.000
+0.000
+0.000
+5.000
+5.000
+Subtotal outside HEADING 7
+0.000
+0.000
+0.000
+5.000
+5.000
+TOTAL
+0.000
+0.000
+0.000
+5.000
+5.000
+3.2.6.Compatibility with the current multiannual financial framework
+The proposal/initiative:
+– can be fully financed through redeployment within the relevant heading of the multiannual financial framework (MFF)
+– requires use of the unallocated margin under the relevant heading of the MFF and/or use of the special instruments as defined in the MFF Regulation
+Additional IT expenditures amounting to EUR 3 million for 2027 are needed to cover the IT design and, development needed to adapt the CBAM Registry to the new scope and models, enhance the Risk Management analysis tools, integrate the additional downstream products and anti-avoidance / anti-circumvention services and enhance the IT services and support to the required capacity. downstream extension and functionalities supporting risk management and detecting circumvention and avoidance, as part of the CBAM registry and/or CBAM data lab space.
+In addition, an additional EUR 2 million are needed on an annual basis from 2027 onwards, without prejudice to the outcome of the negotiations on the next MFF, to draw on analytical expertise that would allow to execute the tasks allocated to the Commission in the amending proposal. Specifically, the Commission will have to develop (and update annually) default values for the new goods added to Annex I of the regulation. Moreover, its responsibilities in monitoring and detecting circumvention and avoidance practices have been extended, require the acquisition of databases and market intelligence to feed into a robust risk analysis and detection system. These costs were not covered in the previous LFS and will arise effectively from 2027 onwards.
+– requires a revision of the MFF
+3.2.7.Third-party contributions
+The proposal/initiative:
+– does not provide for co-financing by third parties
+– provides for the co-financing by third parties estimated below:
+Appropriations in EUR million (to three decimal places)
+Year
+2024
+Year
+2025
+Year
+2026
+Year
+2027
+Total
+Specify the co-financing body
+TOTAL appropriations co-financed
+3.3. Estimated impact on revenue
+– The proposal/initiative has no financial impact on revenue.
+– The proposal/initiative has the following financial impact:
+– on own resources
+– on other revenue
+– please indicate, if the revenue is assigned to expenditure lines
+EUR million (to three decimal places)
+Budget revenue line:
+Appropriations available for the current financial year
+Impact of the proposal/initiative 33
+Year 2026
+Year 2027
+Year 2028
+Year 2029
+Year 2030
+Article
+p.m.
+p.m.
+p.m.
+p.m.
+p.m.
+For assigned revenue, specify the budget expenditure line(s) affected.
+09 20 04 01
+Other remarks (e.g. method/formula used for calculating the impact on revenue or any other information).
+Impact on own resources indicates as “p.m.” as in relation with the Commission proposal COM(2025)574 to amend the decision on the system of own resources of the European Union.
+Impact on other revenue indicates as “p.m.” as in relation with the collection of the revenue from the fees (Article 20) for the financing of the CBAM common platform for which the estimate will be only known after the establishment of the fees modalities.
+4.Digital dimensions
+There are no changes in that Digital concepts and architecture approved by CBAM Definitive system project charter, in terms of digital requirements, data used, digital solution, reusability assessment and measures to support digital implementation.
+The impact of extended number of CBAM goods (180 additional CN) – extended with downstream prodcuts will results in around 7500new importers. The the Risk management, Circumvention monitoring which was analysed, assessed, and included in Project charter and now will be extnedended to cover addtional goods and related features. The key objective of the Risk management component is supporting detection of the irregularities and limiting the risk of fraud.
+Furthermore additional features/processes required to managed electricity as CBAM good will have to be added however those are not changing the CBAM design.
+Also, the simplification changes do not result in a change of the digital solution architecture, however, requires additional budget to implement the change and extension of existing CBAM business processes.
+4.1.Requirements of digital relevance
+As shown in diagram above, the CBAM Registry gets import information for the CBAM goods from the EU Customs systems either from the MS or via DG TAXUD, along with the importers customs identification and the Customs classification of the imported goods. The CBAM system makes in return the CBAM authorisations of the CBAM Declarants available to the National Customs Import Systems to enforce the CBAM regulation at the import clearance of the CBAM goods. The CBAM Information system exchanges as well risk management information with the EU Customs systems. The interface with the EU Customs Systems is a vital feed for the operation of CBAM as the whole concept of CBAM is to avoid double capture of information by requesting the CBAM Declarants to complement their imports with a report of the emission incurred during their production in third Countries. The “data provided once” is a basic principle of CBAM.
+CBAM will also interact with the new CBAM Mechanism (IT systems or other means) of the National Competent Authorities to foster the integration of the national CBAM enforcement processes across the MS and the national processes for the collection of penalties and recovery information.
+Another key new external system for CBAM is the Common Central Platform (CCP), the Information System by which the CBAM Declarants will purchase the CBAM certificates from the Member States. The price of the certificates will be set by the allowance price defined in the ETS system. The CBAM Declarants will need to keep their CBAM accounts in an 50% balance on a quarterly basis to ensure that they are in position to surrender the required number of certificates for offsetting their declared emissions and emission prices already paid in third Countries. The Commission will re‑purchase the surplus certificates from the CBAM Declarants in name of the Member States. The Commission and the Member States must jointly establish and manage this platform, which is however outside the scope of the CBAM Registry. The interface with the CCP is vital for the CBAM Declarants to provision the necessary certificates in their CBAM accounts. The accounts and the certificates will be highly sensitive information.
+The ETS system will simply set the selling price of the certificates.
+The main users of the CBAM Registry are the CBAM declarants. DG TAXUD expects about 20 000 declarants in 2026 after the simplification was adopted, but we are planning for 40 000 declarants to account for the increase from the CBAM extension to downstream goods.). They will use the CBAM Registry to declare the emission accrued on the production of their imported goods on a yearly basis (May of each year), to monitor the quarterly balance of their CBAM accounts in term of certificates versus declared imports and to interact with the National Customs Authorities during review of their CBAM declarations. The CBAM Declarants will first be vetted by the National Competent Authorities via the CBAM Registry and then be granted an authorisation to import CBAM goods and be given a CBAM account. The CBAM Declarants will then be able to declare annually their emissions in the CBAM Registry and to surrender the required certificates.
+The Operators of the Installations producing the CBAM goods in the third countries will register on the CBAM Registry before entering the emission details of their products. The CBAM Declarants will be able to refer to the entries of the Operators to justify their reported emission. It is a significant measure to reduce the compliance burden of the CBAM Declarants and to improve the quality of the CBAM data. While there is no evidence to support an estimate at this stage, DG TAXUD guestimates the number of Operators at 20.000 - 50.000 in 2026.
+The CBAM National Competent Authorities (NCA) will use the CBAM Registry to grant the access to the CBAM Declarants, to manage the CBAM Authorisations, to monitor the CBAM accounts and declarations and interact with the CBAM Declarants to ensure their compliance with the CBAM regulation. They are the single point of contact to the CBAM Declarants.
+Other Authorities will be granted access to the CBAM Registry to contribute to the risk management and the enforcement from their respective areas of responsibilities. The CBAM Registry will coordinate and support the inter-agencies collaboration in fostering compliance. The National Customs Administrations will validate the CBAM Authorisation during the control of the import declarations using the replication and validation services of the CBAM Registry via the EU CSW-CERTEX.
+The Commission will assign and maintain the CBAM accounts of the CBAM Declarants up to date in the CBAM Registry, combining the information from the imports received from National Customs Administrations, the emissions from the yearly declarations, the quantity of certificates, their purchase reported by the CCP, their yearly surrendering confirmed by the CBAM Declarant, and the re-purchase of unused certificates. The Commission will use the CBAM Registry to monitor the imported goods and associated emissions, for the risk management, and particularly the risk of circumvention. The CBAM Registry will also offer specifc interaface to Cutsom Risk managemnt system CRMS2 to share CBAM related risk with Customs domain. The CBAM Registry will also offer a Case Management component that lets authorities create, enrich, track and resolve cases, exchange notifications and outcomes, and monitor an up‑to‑date list of all cases across the system.
+The access of all actors to the CBAM Registry is performed via dedicated portals supported by a distributed access management across the stakeholders:
+·The NCA will manage the access of the CBAM Declarants to the CBAM Declarant portal, using either national credentials already granted by the National Customs Administrations or an EU Login one;
+·The Commission will manage the access of the Operators of the third countries Installations, to the same name portal, using credentials granted by EU Login. It remains to be clarified whether the Commission will rely on external trusted parties to delegate them the granting of the authorisation to access the CBAM Registry;
+·The NCA, the Commission and other Authorities will each manage the access to their users.
+The CBAM Core Registry depicts the automated processes that the Commission will operate to fulfil its obligations under the CBAM regulation, as summarised above. The Reference Data Management will be a key -office process ensuring the consistency and integrity of all automated processes serving the collaboration and cooperation between all stakeholders. Beyond the “simple” list of goods, of National Competent Authorities, and of the price of emission, they will list the specific parameters used to report emissions according to specific methodologies and the default value for the emissions as established. The default value is key for the plausibility validation of the declared emissions.
+4.2.Data
+CBAM will be processing the following data assets:
+·CBAM Declarant Data. (Phase2)
+·Operators of 3rd Countries and their Installations Data. (Phase2)
+·CBAM Reference Data. (Phase2)
+·CBAM Users’ Access Management Data. (Phase2)
+·CBAM Declarant/ Importer Functions. (Phase2)
+·CBAM EU Commission Authorities Functions. (Phase2)
+·Operators of 3rd Countries Installations (O3CIs) for Phase2 & Accredited Verifiers Functions (TBC Phase3).
+·CBAM Declaration Data, Review, and Declaration Lifecycle Data. (Phase3)
+·CBAM Imported Goods Data. (Phase3)
+·CBAM Emissions & Calculations Data. (Phase3)
+·CBAM Ledger (Registry) Data. (Phase3)
+·CBAM Certificate Management Data. (Phase3)
+·CBAM Non-Compliance Monitoring, Circumvention Investigation, and Risk Management Data. (Phase3)
+·CBAM Reporting, Dashboards, Notifications, and Document Management Data. (Phase3)
+·CBAM Risk Exchange Gateway Ri. (Phase3)
+·National Competent Authorities Functions. (Phase3)
+Further details for each data asset can be found in the table below:
+CBAM Definitive Primary Asset Description
+Relevant Business Component/ Processes Description
+CBAM Certificate Management Data
+CBAM Certificate Lifecycle Management provides information on certificates and number of certificates processed, their value, and manages the certificate's lifecycle, while also providing information for risk and non-compliance monitoring purposes.
+CBAM Declarant Data
+Declarant Authorisation & Declarant Replication & Validation Data.
+Declarant Account & Account Management Data.
+CBAM authorisation management in charge of lifecycle management of the CBAM authorisation granted by the NCA to importers or indirect representatives.
+Communicates the required information of the CBAM Declarant Account to CBAM Authorisation Replication and Validation Services (ARVS), that maintains the information on the CBAM Authorised Declarants to be provided to NCAs and National Customs Competent Administrations (NCCA) in charge of assessing the importer authorisations.
+CBAM Declaration Data, Review, and Declaration Lifecycle Data.
+Declaration Lifecycle Management & Declaration Reporting Data.
+CBAM Declaration Lifecycle (Declaration Creation, Imported Goods, Emissions, Review, Finalisation or Rejection) Management & Reporting.
+CBAM Emissions & Calculations Data.
+Calculation of CBAM Declarant imported goods emissions based on data obtained per declarant, reference data, registry data (declarant's own values), Operators & 3rd Countries (verification report), etc.
+CBAM Imported Goods Data.
+The NCA and Commission Portals feature interfaces that monitor the ingress of SURV3 data (incl. identifying issues) and enable users to manually input data, via file batch upload, for imported goods as well as data for inward processing goods. This data will then undergo processing, be stored within the Portals, and subsequently forwarded to the Registry Back End for consolidation.
+CBAM Ledger (Registry) Data.
+Note: The exact data to be stored in the Ledger is not yet finalised. The main concept is that the Ledger is an immutable journal and appropriate security measures have been addressed. This asset will be re-assessed during P3.
+Registry Ledger Account Processing & Transaction Data.
+CBAM Registry Ledger manages, accounts for, and registers journal entries of Declarant data (incl. account number) and transactions between related CBAM component relationships through an append-only data process and immutable data store (incl. for declaration lifecycle management, authorisation & account management, certificate management, risk & non-compliance monitoring, ARVS, etc.).
+CBAM Non-Compliance Monitoring, Circumvention Investigation, and Risk Management Data.
+CBAM information system used for tracking, monitoring, and enhancing potential or confirmed cases of irregularities & non-compliance in CBAM scheme.
+Identifying, monitoring, investigating, and reporting on circumvention and other illegal practices in non-compliance with CBAM Regulation.
+Risk Assessment (incl. results of declarations assessments) & management component to identify & assess risks (e.g. risk events analysis, verification reports, risk control results, etc.) relating to declaration review process & CBAM Registry Back-End potential irregularities & circumventions (further investigation).
+Integrates information and functionality between investigations, risk management, and secure forum for respective activities.
+CBAM Reference Data.
+Primary source for all CBAM reference data and ensures data consistency and integrity across all CBAM components (directly or indirectly).
+CBAM Reporting, Dashboards, Notifications, and Document Management Data.
+Critical tool for tracking and monitoring CBAM scheme and KPIs and relevant business metrics collection and analysis.
+Used to communicate business information to relevant users of CBAM system and scheme; this includes the ability for replying to notifications where necessary/ required.
+Used for the storage, retrieval, and management of documents affecting many compartments across the CBAM system.
+CBAM Risk Exchange Gateway.
+A bridge between the CBAM policy and Customs policy shareing CBAM relaalted risk with Cutsoms. This gatway that is part of CBAM Registry will share risks from CBAM Registry with Customs Risk Management System 2, via System to System interface. .
+All other structured and/ or un-structured information/ data sourced and/ or extracted from the CBAM system and stored and/ or processed in storage and media locations external to the CBAM system.
+CBAM Users’ Access Management Data.
+Users’ (e.g., declarants, Member States Customs Authorities, EC Authorities, etc.) access, login, and access management data to the CBAM system.
+Operators of 3rd Countries and their Installations Data.
+Allows operators of 3rd country installations producing CBAM applicable goods to register/ de-register (e.g. cessation of operations) as CBAM operators and provide relevant information regarding production processes/ methods, qualifying parameters, emissions data, and verification reports, etc.
+The relevant verification report may be made available for use by CBAM Declarants - this information includes confidential production and qualifying parameters data that may not be available to Declarants but only EU Commission and NCAs).
+CBAM Declarant/ Importer Functions
+Primary business functions performed by the Declarant/ trader relying on processes executed/ initiated through the CBAM Declarant portal.
+CBAM EU Commission Functions
+Primary business functions performed by the European Commission relying on processes executed/ initiated through the CBAM Commission portal.
+CBAM Non-Compliance Monitoring, Circumvention Investigation, and Risk Management Function
+CBAM information system used for tracking, monitoring, and enhancing potential or confirmed cases of irregularities & non-compliance in CBAM scheme.
+National Competent Authorities Functions
+Primary business functions performed by member state’s national competent authorities (NCAs/ NCCAs) relying on processes executed/ initiated through the CBAM NCA portal.
+Operators of 3rd Countries Installations & Accredited Verifiers Functions
+Primary business functions performed by 3rd Country Operators & Installations and Accredited Verifiers (TBC) relying on processes executed/ initiated through the CBAM 3rd Country Operators & Installations portal.
+4.3.Digital solutions
+CBAM Registry High Level architecture will be made of 3 layers:
+·The portal layer offering different portals for each of the user communities of the CBAM Registry: CBAM Declarants, Operators of the third countries Installations, CBAM National Competent Authorities, the Commission, The National Customs Administrations, OLAF, and other EC services;
+·The User Access Management layer: to manage the Authentication and Authorisation of the users of the CBAM Registry. The National Competent Authorities will need to provide and manage the access of the CBAM Declarants (expected to be above 20.000 parties in 2026) while the Commission will do the same for the third countries Operators (estimated at 50.000 parties in 2026) each MS and EU administrations being in charge of the access of its own users;, each MS and EU administrations being in charge of the access of its own users;
+·The Back End: to support all data and rule management required for CBAM as well as all interactions with external systems. To be noted that: to support all data and rule management required for CBAM as well as all interactions with external systems. To be noted that:
+oCBAM will implement numerous workflows, notifications, and exchanges of information across the Commission, the National Competent Authorities and the CBAM Declarants, in particular in the areas of declaration submission, review (including risk assessment);
+oThe management of the Declarant accounts, the management CBAM certificates (potentially financial assets), the risk management and the secure exchange of information have high security requirements.
+4.4.Interoperability assessment
+CBAM is cross border by design as it supports the CBAM lifecycle across the EU, and in particular the orchestration of the Risk Assessment, review of the CBAM Declarations across all NCA and the Commission.
+Collaboration across National Customs systems will be ensured, by leveraging the Commission’s IT services and interfaces (such as SURV3, EU CSW – CERTEX, CRMS2), as well as new components, specifically designed for CBAM purposes.
+The CBAM Registry has been designed to support interoperability by emphasizing use on openness, modularity, decoupling and robust interfaces. It will interact with the CBAM national systems, with the Common Central Platform, the EU Customs systems from DG TAXUD and the National Customs Administrations, with the other DG’s systems via open interfaces
+The CBAM Central Repository will use the existing interfaces of the EU Customs Systems managed by DG TAXUD and will define dedicated formats for the Customs Import and Inward Processing records to be provided by the National Customs Administrations. The new interfaces with the National Customs Systems will be published early 2024 to allow the National Customs Administrations enough lead time to prepare their systems accordingly.
+The S2S interface between the CBAM Registry and the CCP will be based on structured messages exchange and be available early 2024 to allow enough lead time for both the CBAM Registry and the CCP to integrate their respective interfaces by mid-2025.
+All these interfaces will be structured messages based and will comply as far as possible with the EUCDM and with the UCC Annex B. The A2B and B2B specifications will be referred in a CBAM Implementing Act
+Reusability Constraints
+The reusability is at the very heart of the architecture principles adopted for the CBAM Central Register. There are two sides to the reusability: use of external services by the CBAM Registry and re-use components in the build of the CBAM Registry.
+Reusability from DG TAXUD services and components
+The CBAM Registry will use the EU Customs Services offered by DG TAXUD out of the box to:
+·retrieve the EORI information of the trader;
+·get the customs import records available from Surveillance 3;
+·get the CBAM goods from the TARIC system;
+·offer the CBAM Authorisations Replication and Validation service to the National Customs Systems via the EU CSW-CERTEX and;
+·exchange secure information with the CRMS2 system.
+The user access management of the portals of the CBAM Registry will be entrusted to UUM&DS, allowing the willing MS to re-use the Customs credentials of the CBAM Declarants to provide them access to the CBAM Declarant portal and the Commission (or trusted third parties) to grant access right to the Operators of the third countries Installations to their EU Login authentication credentials. The Operators of the 3rd Countries Installations portal will leverage the usage of EU Access for user authorization while relying on EU Login for user authentication.
+The CBAM Registry will reuse several technology components of the DG TAXUD and Corporate IT landscape without compromising its compliance with the floatability principle spelt out in the Architecture Overview in appendix 2, namely:
+·The DG TAXUD TSOAP middleware architecture which will be reused in each of the CBAM Registry compartments;
+·The monitoring and auditing COTS ELK and Kafka;
+·The sources of the Customs application framework management (TATAFng) of DG TAXUD;
+·The documentation and source code of the Customs Decision Management System of DG TAXUD for the built of the CBAM Authorisation system;
+·The documentation and source code of the Customer Reference System of DG TAXUD to provision the CBAM Authorisations to the National Customs Systems for their control during the import clearance;
+·The documentation and source code of the Customs Risk Management System 2 (CRMS2) of DG TAXUD to provision the Risk Exchange Gateway ;The documentation and source code of the Customs Risk Management System 2 (CRMS2) of DG TAXUD to provision the Risk Exchange Gateway RSecure;
+·The DG TAXUD TEMPO methodology, including PM²;
+·The 2 Data Centres of DG TAXUD for the testing, integration and for as long as the CBAM Registry operation is entrusted to DG TAXUD, along with their firewalling, Active-Active clustering, the load balancing and the 2 DC Active-Passive to ensure the scalability, High Availability, Disaster Recovery, some of the security needed by the CBAM Registry.
+To be noted that DG TAXUD has followed all recommendations from DIGIT since 2014 when designing Business Application Services, Data Services and Utility Services for its generation of SOA applications.
+Reusability from EU corporate services and components
+The CBAM Registry will use EU Login for the authentication of the CBAM declarants of the MS being UUM&DS type D, of the Operators of the third Countries Installations and all officials of the National Competent Authorities, of the Commission, of the National Customs Administration and other Commission services. The CBAM Registry will use the Customs eIDAS eID network for the authentication of the CBAM Declarants from the MS UUM&DS type A, B & C.
+The CBAM Registry will use UUM&DS and EU Access for the authorisation of all its users.
+A full migration from UUM&DS to EU Access will be considered when all functionalities of UUM&DS will be offered by EU Access, including the support of the Customs eIDAS eID network. Currently, the Operators of the 3rd Countries Installations portal relies on EU Access for user authorization.
+The CBAM Registry will employ EU Sign, a Commission-managed service that handles Qualified Electronic Signatures, to ensure the origin and integrity of electronic documents, thereby enhancing their overall security and authenticity within the CBAM framework.
+The CBAM Registry will make available the CBAM public information on Europa.
+In addition, DG TAXUD is keen to maximize the re-use of Corporate services and components that would meet some of the CBAM requirements, de-risk its timely deployment and secure the quality of its operation while lowering its CAPEX and OPEX.
+4.5.Measures to support digital implementation
+The CBAM regulation defines the deployment of the CBAM Registry in two periods declined in 3 consecutive phases:
+·Period perspective: a progressive deployment during a Transitional Period from the Q4 2023 until the Q4 2025, followed by a Definitive Period from Q1 2026.
+oDuring the Transitional Period, the CBAM importers report the emission of their imported goods quarterly but do not have to purchase and surrender certificates. It is the running in period of the CBAM scheme.
+oDuring the Definitive Period, starting on 01 January 2026, the CBAM Declarants must be authorised, they declare their emissions once per year, they purchase certificates to keep their CBAM account at minimum 50% balance between their emissions and the purchased certificates, and they surrender their certificates with their yearly declarations.
+·Phase & Part perspective:
+oCBAM Phase 1: the “CBAM reports” by the importers of CBAM goods (so called Part 1), to be used during the whole Transitional Period as from Q4 2023 (out of scope of the Project Charter);
+oCBAM Phase 2: the “CBAM reports” provided by the importers of CBAM goods (Part 1), the CBAM Declarant Authorisation and the registration of the Operators of third countries Installations (so called Part 2) as from 31 December 2024 in anticipation of the Definitive Period;
+CBAM Phase 3: The Part 2 augmented with the CBAM declarations and certificates along with the full CBAM account management (so called Part 3) as from the start of the Definitive Period but without Part 1 “CBAM Reports” as from the end of the Transitional Period 31 December 2025.
+Deployment in two phases/parts of the CBAM Registry
+The CBAM Phase 1 (implementation of CBAM Part 1 and its operation from Q4 2023 until end 2025 is entirely covered by the Project Charter of the Transitional Period
+The two figures below illustrate the approach to deliver the full scope of the Definitive System in two phases, depicting the user communities, the external systems at play and the main entities being managed in the scope of the respective phases. Refer to the next section for the definition of the external systems and entities.
+CBAM Part 2 Scope: on top of Part 1, The “CBAM reports” by the importers of CBAM goods, comes the Part 2 “CBAM Authorisation and Installations” (both in green in the following diagrams), which will enter in operation on 31 December 2024 as mandated by the CBAM regulation. Both Part 1 and Part 2 will then be further maintained and evolved during the remaining of the Transitional Period. The “CBAM Authorisation and Installation” will be integrated in the CBAM Definitive System while the “CBAM reports” will be phased out at the end of the Transitional Period. The Part 1 and Part 2 interface the CBAM Registry with the National Customs Import Systems, with the National Customs Inward Processing Systems and the supporting EU Customs systems of DG TAXUD to foster compliance at minimal burden for trade. CBAM Part 2 comes in anticipation of the Definitive System by delivering its first component.
+The CBAM Phase 2 Timeline: It starts on the 31 December 2024 and ends on the 31 December 2025 with the start of the Definitive Period. The user community is extended to the Operators of the Installations in the third countries while the CBAM Declarants will need to obtain the required authorisations for the Definitive Period.
+CBAM Part 3 Scope: The “CBAM Declarations, Accounts and Risk Management” part (in purple in the following diagram), will enter in operations at the start of the Definitive Period scheduled for the 1 January 2026. It constitutes the core of the CBAM definitive system. CBAM Part 3 also includes the interfaces with the National Import Systems for the CBAM Authorisations via the EU CSW-CERTEX, the Common Central Platform for the purchasing of CBAM Certificates, ETS, OLAF, and the Systems of the National Competent Authorities. Furthermore, it adds the CBAM Certificates capabilities to the CBAM Registry as well as all the Risk Management ones. As the CBAM Certificates and Risk Management modules handle confidential information and monitor cases of circumvention and non-compliance, CBAM Part 3 manages sensitive information and requires highly secure processes. This part will be further maintained and evolved during the Definitive Period.
+The CBAM Phase 3 Timeline: It starts on the 1 January 2026 and matches with the Definitive Period. During this phase, only the parts 2 & 3 of CBAM will operate in parallel and in close interaction, as the Part 1 was specific for the Transitional Period and is phased out. The user community is extended to the National Customs Administrations
+CBAM Part 3 Scope: The “CBAM Declarations, Accounts and Risk Management” part (in purple in the following diagram), will enter in operations at the start of the Definitive Period scheduled for the 1 January 2026. It constitutes the core of the CBAM definitive system. CBAM Part 3 also includes the interfaces with the National Import Systems for the CBAM Authorisations via the EU CSW-CERTEX, the Common Central Platform for the purchasing of CBAM Certificates, CRMS2 for exchanging information related to EU Customs Risk Management, ETS, OLAF, and the Systems of the National Competent Authorities. Furthermore, it adds the CBAM Certificates capabilities to the CBAM Registry as well as all the Risk Management ones. As the CBAM Certificates and Risk Management modules handle confidential information and monitor cases of circumvention and non-compliance, CBAM Part 3 manages sensitive information and requires highly secure processes. This part will be further maintained and evolved during the Definitive Period.
+The CBAM Phase 3 Timeline: It starts on the 1 January 2026 and matches with the Definitive Period. During this phase, only the parts 2 & 3 of CBAM will operate in parallel and in close interaction, as the Part 1 was specific for the Transitional Period and is phased out. The user community is extended to the National Customs Administrations.
+CBAM Phase 3 - High Level Architecture
+(1) Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023 establishing a carbon border adjustment mechanism (OJ L 130, 16.5.2023, p. 52, ELI: http://data.europa.eu/eli/reg/2023/956/oj ).
+(2) Directive 2003/87/EC of the European Parliament and of the Council of 13 October 2003 establishing a system for greenhouse gas emission allowance trading within the Union and amending Council Directive 96/61/EC (OJ L 275, 25.10.2003, p. 32, ELI: http://data.europa.eu/eli/dir/2003/87/oj ).
+(3) The phasing out of ETS free allowances will result in increased demand for auctioned allowances, which is expected to increase the carbon price paid in the EU.
+(4) Communication on A European Steel and Metals Action Plan, COM(2025) 125.
+(5) In the case of imported electricity, Regulation 2023/956 requires the use of default values to calculate the embedded emissions. If certain conditions are met, the actual emissions associated with the production of electricity can be declared.
+(6) Regulation (EU) 2021/1119 of the European Parliament and of the Council of 30 June 2021 establishing the framework for achieving climate neutrality and amending Regulations (EC) No 401/2009 and (EU) 2018/1999 (‘European Climate Law’) (OJ L 243, 9.7.2021, pp. 1–17, ELI: ELI: http://data.europa.eu/eli/reg/2021/1119/oj ).
+(7) Regulation (EU) 2025/2083 of the European Parliament and of the Council of 8 October 2025 amending Regulation (EU) 2023/956 as regards simplifying and strengthening the carbon border adjustment mechanism (OJ L 2025/2083, 17.10.2025, ELI: http://data.europa.eu/eli/reg/2025/2083/oj ).
+(8) This assessment will detail the impacts of the current CBAM scope on a more granular set of countries. The present impact assessment also looks at impacts to third countries in Section 6.
+(9) Downstream products of electricity are not considered given that electricity is used in the production process of virtually all goods, thus rendering the determination of the input share and embedded emissions of electricity in all possible imported goods unfeasible.
+(10) Key aspects addressed include rules for the monitoring, calculation and verification of embedded emissions for goods under the scope of the mechanism, the rules for the adjustment of the CBAM obligation to take into account free allocation levels in the EU ETS sectors covered by CBAM, and the rules for accounting of carbon prices effectively paid in third countries.
+(11) Communication on the Clean Industrial Deal: A joint roadmap for competitiveness and decarbonisation, COM(2025) 85 final .
+(12) For a given product, the value of trade (exports plus imports) of a product divided by the value of total consumption of that product in the EU.
+(13) OJ L 2025/2083.
+(14) Impact assessment accompanying the Proposal for a Regulation of the European Parliament and of the Council amending Regulation (EU) 2023/956 as regards simplifying and strengthening the carbon border adjustment mechanism, COM/2025/87 final.
+(15) OJ C , , p. .
+(16) OJ C , , p. .
+(17) Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023 establishing a carbon border adjustment mechanism (OJ L 130, 16.5.2023, p. 52, ELI: http://data.europa.eu/eli/reg/2023/956/oj).
+(18) Communication on the European Steel and Metals Action Plan, COM/2025/125 final https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:52025DC0085 .
+(19) Communication: The European Green Deal, COM/2019/640 final .
+(20) OJ L 282, 19.10.2016, p. 4.
+(21) Joint Communication: EU global climate and energy vision: securing Europe's competitive role in world markets and accelerating the clean transition, JOIN(2025) 25 final .
+(22) Regulation (EU) 2019/943 of the European Parliament and of the Council of 5 June 2019 on the internal market for electricity (recast) (OJ L 158, 14.6.2019, pp. 54–124, ELI: http://data.europa.eu/eli/reg/2019/943/oj ).
+(23) Commission Regulation (EU) 2015/1222 of 24 July 2015 establishing a guideline on capacity allocation and congestion management (OJ L 197, 25.7.2015, pp. 24–72, ELI: http://data.europa.eu/eli/reg/2015/1222/oj ).
+(24) Council Regulation (EEC) No 2658/87 of 23 July 1987 on the tariff and statistical nomenclature and on the Common Customs Tariff (OJ L 256, 7.9.1987, p. 1, ELI: http://data.europa.eu/eli/reg/1987/2658/oj ).
+(25) Directive 2003/87/EC of the European Parliament and of the Council of 13 October 2003 establishing a system for greenhouse gas emission allowance trading within the Union and amending Council Directive 96/61/EC (OJ L 275, 25.10.2003, p. 32, ELI: http://data.europa.eu/eli/dir/2003/87/oj).
+(26) Leakage rates are defined as increases in emissions in downstream sectors outside the EU relative to decreases in emissions in those sectors in the EU.
+(27) As referred to in Article 58(2), point (a) or (b) of the Financial Regulation applicable to the general budget of the Union.
+(28) Diff. = Differentiated appropriations / Non-diff. = Non-differentiated appropriations.
+(29) EFTA: European Free Trade Association.
+(30) Outputs are products and services to be supplied (e.g. number of student exchanges financed, number of km of roads built, etc.).
+(31) As described in Section 1.3.2. ‘Specific objective(s)’
+(32) Please specify below the table how many FTEs within the number indicated are already assigned to the management of the action and/or can be redeployed within your DG and what are your net needs.
+(33) As regards traditional own resources (customs duties, sugar levies), the amounts indicated must be net amounts, i.e. gross amounts after deduction of 25% for collection costs.

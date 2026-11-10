@@ -1,0 +1,340 @@
+[주소] http://publications.europa.eu/resource/cellar/a837cf93-db4d-11f0-8da2-01aa75ed71a1.0001.03/DOC_2
+
+1_EN_annexe_proposition_part1_v6.docx
+EUROPEAN COMMISSION
+Brussels, 17.12.2025
+COM(2025) 989 final
+ANNEXES
+to the
+Proposal for a Regulation of the European Parliament and of the Council
+amending Regulation (EU) 2023/956 as regards the extension of its scope to downstream goods and anti-circumvention measures
+{SEC(2025) 989 final} - {SWD(2025) 987 final} - {SWD(2025) 988 final} - {SWD(2025) 989 final}
+ANNEX I
+Annex I is amended as follow:
+(1)in point 2, the table ‘Iron and Steel’ is replaced by the following:
+‘[Iron and steel
+CN code
+Greenhouse gas
+72 – Iron and steel
+Except:
+7202 21 00, 7202 29 – Ferro-silicon
+7202 30 00 – Ferro-silico-manganese
+7202 50 00 – Ferro-silico-chromium
+7202 70 00 – Ferro-molybdenum
+7202 80 00 – Ferro-tungsten and ferro-silico-tungsten
+7202 91 00 – Ferro-titanium and ferro-silico-titanium
+7202 92 00 – Ferro-vanadium
+7202 93 00 – Ferro-niobium
+7202 99 – Other:
+7202 99 10 – Ferro-phosphorus
+7202 99 30 – Ferro-silico-magnesium
+7202 99 80 – Other
+7204 – Ferrous waste and scrap; remelting scrap ingots of iron or and steel
+Carbon dioxide
+2601 12 00 – Agglomerated iron ores and concentrates, other than roasted iron pyrites
+Carbon dioxide
+7301 – Sheet piling of iron or steel, whether or not drilled, punched or made from assembled elements; welded angles, shapes and sections, of iron or steel
+Carbon dioxide
+7302 – Railway or tramway track construction material of iron or steel, the following: rails, check-rails and rack rails, switch blades, crossing frogs, point rods and other crossing pieces, sleepers (cross-ties), fish- plates, chairs, chair wedges, sole plates (base plates), rail clips, bedplates, ties and other material specialised for jointing or fixing rails
+Carbon dioxide
+7303 00 – Tubes, pipes and hollow profiles, of cast iron
+Carbon dioxide
+7304 – Tubes, pipes and hollow profiles, seamless, of iron (other than cast iron) or steel
+Carbon dioxide
+7305 – Other tubes and pipes (for example, welded, riveted or similarly closed), having circular cross-sections, the external diameter of which exceeds 406,4 mm, of iron or steel
+Carbon dioxide
+7306 – Other tubes, pipes and hollow profiles (for example, open seam or welded, riveted or similarly closed), of iron or steel
+Carbon dioxide
+7307 – Tube or pipe fittings (for example, couplings, elbows, sleeves), of iron or steel
+Carbon dioxide
+7308 – Structures (excluding prefabricated buildings of heading 9406) and parts of structures (for example, bridges and bridge-sections, lock- gates, towers, lattice masts, roofs, roofing frameworks, doors and windows and their frames and thresholds for doors, shutters, balustrades, pillars and columns), of iron or steel; plates, rods, angles, shapes, sections, tubes and the like, prepared for use in structures, of iron or steel
+Carbon dioxide
+7309 00 – Reservoirs, tanks, vats and similar containers for any material (other than compressed or liquefied gas), of iron or steel, of a capacity exceeding 300 l, whether or not lined or heat-insulated, but not fitted with mechanical or thermal equipment
+Carbon dioxide
+7310 – Tanks, casks, drums, cans, boxes and similar containers, for any material (other than compressed or liquefied gas), of iron or steel, of a capacity not exceeding 300 l, whether or not lined or heat-insulated, but not fitted with mechanical or thermal equipment
+Carbon dioxide
+7311 00 – Containers for compressed or liquefied gas, of iron or steel
+Carbon dioxide
+7312 10 – Stranded wire, ropes and cables, of iron or steel
+Carbon dioxide
+7314 39 00 – Other grill, netting and fencing, of iron or steel wire, welded at the intersection
+Carbon dioxide
+7318 – Screws, bolts, nuts, coach screws, screw hooks, rivets, cotters, cotter pins, washers (including spring washers) and similar articles, of iron or steel
+Carbon dioxide
+7320 20 89 – Other helical springs, of iron or steel
+Carbon dioxide
+7320 90 90 – Other springs and leaves for springs, of iron or steel
+Carbon dioxide
+7323 94 00 – Table, kitchen or other household articles, and parts thereof, of iron other than cast iron or steel, enamelled
+Carbon dioxide
+7323 99 00 – Other table, kitchen or other household articles, and parts thereof
+Carbon dioxide
+7325 – Other cast articles of iron or steel
+Carbon dioxide
+7326 – Other articles of iron or steel
+Carbon dioxide
+’
+(2)the following table is added:
+‘[Combined metal products
+CN code
+Greenhouse gas
+7314 31 00 – Other grill, netting and fencing, of iron or steel wire, welded at the intersection, plated or coated with zinc
+Carbon dioxide
+7314 41 00 – Grill, netting and fencing, of iron or steel wire, not welded at the intersection, plated or coated with zinc
+Carbon dioxide
+7314 49 00 – Grill, netting and fencing, of iron or steel wire, not welded at the intersection (excl. plated or coated with zinc or coated with plastics)
+Carbon dioxide
+7317 00 – Nails, tacks, drawing pins, corrugated nails, staples (other than those of heading 8305) and similar articles of iron or steel, whether or not with heads of other material but excluding such articles with heads of copper
+Carbon dioxide
+ex- 7415 10 00 – Nails, tacks, drawing pins, staples and similar articles, of copper or of iron or steel with heads of copper, containing steel or aluminium
+Carbon dioxide
+ex- 8302 42 00 – Other base metal mountings, fittings and similar articles suitable for furniture, containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+ex-8302 49 00 – Other base metal mountings, fittings and similar articles, containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+ex- 8309 90 90 – Other stoppers, caps and lids, (including screw caps and pouring stoppers, capsules for bottles, threaded bungs, bung covers, seals and other packing accessories, of base metal), containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+8408 20 10 – Compression-ignition internal combustion piston engine (diesel or semi-diesel engine) for the industrial assembly of: pedestrian-controlled tractors of subheading 8701 10, motor vehicles of heading 8703, motor vehicles of heading 8704 with engines of a cylinder capacity of less than 2.500 cm³ and motor vehicles of heading 8705
+Carbon dioxide and perfluorocarbons
+8408 20 51 – Compression-ignition internal combustion piston engine (diesel or semi-diesel engine) for vehicles of chapter 87, of a power not exceeding 50 kW
+Carbon dioxide and perfluorocarbons
+8408 20 55 – Compression-ignition internal combustion piston engine (diesel or semi-diesel engine) for vehicles of chapter 87, of a power exceeding 50 kW but not exceeding 100 kW
+Carbon dioxide and perfluorocarbons
+8408 20 57 – Compression-ignition internal combustion piston engine (diesel or semi-diesel engine) for vehicles of chapter 87, of a power exceeding 100 kW but not exceeding 200 kW
+Carbon dioxide and perfluorocarbons
+8408 20 99 – Compression-ignition internal combustion piston engine (diesel or semi-diesel engine) for vehicles of chapter 87, of a power exceeding 200 kW
+Carbon dioxide and perfluorocarbons
+8408 90 65 – Compression-ignition internal combustion piston engine (diesel or semi-diesel engine), new, of a power exceeding 200 kW but not exceeding 300 kW
+Carbon dioxide and perfluorocarbons
+8408 90 67 – Compression-ignition internal combustion piston engine (diesel or semi-diesel engine), new, of a power exceeding 300 kW but not exceeding 500 kW
+Carbon dioxide and perfluorocarbons
+8413 30 – Fuel, lubricating or cooling medium pumps for internal combustion piston engine
+Carbon dioxide and perfluorocarbons
+8413 70 35 – Other centrifugal pumps, with a discharge outlet diameter not exceeding 15 mm
+Carbon dioxide and perfluorocarbons
+8416 10 – Furnace burners for liquid fuel
+Carbon dioxide and perfluorocarbons
+8416 20 – Other furnace burners, including combination burners
+Carbon dioxide and perfluorocarbons
+ex- 8416 90 00 – Parts of furnace burners, mechanical stokers, including their mechanical grates, mechanical ash dischargers and similar appliances, containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+8418 10 – Combined refrigerator-freezers, fitted with separate external doors or drawers, or combinations thereof
+Carbon dioxide and perfluorocarbons
+ex- 8418 99 90 – Parts of refrigerating or freezing equipment and heat pumps, containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+8419 89 10 – Cooling towers and similar plant for direct cooling (without a separating wall) by means of recirculated water
+Carbon dioxide and perfluorocarbons
+8419 89 98 – Other machinery, plant and equipment
+Carbon dioxide and perfluorocarbons
+ex- 8419 90 85 – Parts of machinery, plant or laboratory equipment, containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+8420 91 – Cylinders for calendering or other rolling machines (other than for metals or glass)
+Carbon dioxide and perfluorocarbons
+ex- 8421 23 00 – Oil or petrol-filters for internal combustion engines, containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+8424 30 – Steam or sand blasting machines and similar jet projecting machines
+Carbon dioxide and perfluorocarbons
+ex- 8424 82 10 – Agricultural or horticultural watering appliances, containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+ex- 8424 89 – Other mechanical appliances, whether or not hand-operated, for projecting, dispersing or spraying liquids or powders, n.e.s., containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+ex- 8424 90 – Parts of mechanical appliances, fire extinguishers, spray guns and similar appliances, steam or sandblasting machines and similar jet projecting machines, containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+8425 31 00 – Winches and capstans powered by electric motor
+Carbon dioxide and perfluorocarbons
+8425 39 00 – Other winches and capstans
+Carbon dioxide and perfluorocarbons
+8425 42 00 – Other jacks and hoists, hydraulic of a kind used for raising vehicles
+Carbon dioxide and perfluorocarbons
+8426 19 00 – Other overhead travelling cranes, transporter cranes, gantry cranes, bridge cranes and mobile lifting frames
+Carbon dioxide and perfluorocarbons
+8426 99 00 – Other Ships' derricks; cranes, including cable cranes; mobile lifting frames, straddle carriers and works trucks fitted with a crane:
+Carbon dioxide and perfluorocarbons
+8427 90 00 – Other works trucks fitted with lifting or handling equipment, not self-propelled
+Carbon dioxide and perfluorocarbons
+8428 20 – Pneumatic elevators and conveyors
+Carbon dioxide and perfluorocarbons
+8428 33 00 – Continuous-action elevators and conveyors for goods or materials, belt type
+Carbon dioxide and perfluorocarbons
+8428 39 90 – Other Continuous-action elevators and conveyors for goods or materials elevators
+Carbon dioxide and perfluorocarbons
+8428 70 00 – Industrial robots
+Carbon dioxide and perfluorocarbons
+8428 90 – Other machinery for lifting, handling, loading or unloading not elsewhere specified
+Carbon dioxide and perfluorocarbons
+8430 61 00 – Tamping or compacting machinery, not self-propelled
+Carbon dioxide and perfluorocarbons
+8430 69 00 – Other machinery, not self-propelled
+Carbon dioxide and perfluorocarbons
+ex- 8431 10 00 – Parts of machinery of heading 8425 (pulley tackles and hoists (other than skip hoists), winches, capstans and jacks), containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+ex- 8431 20 00 – Parts of machinery of heading 8427 (fork-lift trucks and other works trucks fitted with lifting or handling equipment), containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+ex- 8431 31 00 – Parts of lifts, skip hoists or escalators, containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+ex- 8431 39 00 – Other parts of machinery of heading 8428, containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+8431 49 – Other parts of machinery of heading 8426, 8429 or 8430
+Carbon dioxide and perfluorocarbons
+8432 80 00 – Other agricultural, horticultural or forestry machinery for soil preparation or cultivation; lawn or sports-ground rollers
+Carbon dioxide and perfluorocarbons
+8432 90 00 – Parts of agricultural, horticultural or forestry machinery for soil preparation or cultivation or of lawn or sports-ground rollers
+Carbon dioxide and perfluorocarbons
+8450 11 – Fully-automatic household or laundry-type washing machines
+Carbon dioxide and perfluorocarbons
+8450 12 00 – Other household or laundry-type washing machines, with built-in centrifugal drier
+Carbon dioxide and perfluorocarbons
+8450 19 00 – Other household or laundry-type washing machines, of a dry linen capacity not exceeding 10 kg
+Carbon dioxide and perfluorocarbons
+8451 21 00 – Drying machines, of a dry linen capacity not exceeding 10 kg
+Carbon dioxide and perfluorocarbons
+8454 10 00 – Converters of a kind used in metallurgy or in metal foundries
+Carbon dioxide and perfluorocarbons
+8454 20 00 – Ingot moulds and ladles, of a kind used in metallurgy or in metal foundries
+Carbon dioxide and perfluorocarbons
+8454 30 – Casting machines of a kind used in metallurgy or in metal foundries
+Carbon dioxide and perfluorocarbons
+8464 10 00 – Sawing machines
+Carbon dioxide and perfluorocarbons
+8464 90 00 – Other machine tools for working stones, ceramics, concrete, asbestos cement or like mineral materials or for cold-working glass
+Carbon dioxide and perfluorocarbons
+8474 10 00 – Sorting, screening, separating or washing machines for earth, stone, ores or other mineral substances, in solid (including powder or paste) form
+Carbon dioxide and perfluorocarbons
+8474 20 00 – Crushing or grinding machines for earth, stone, ores or other mineral substances, in solid (including powder or paste) form
+Carbon dioxide and perfluorocarbons
+8474 39 00 – Other mixing or kneading machines for earth, stone, ores or other mineral substances, in solid (including powder or paste) form
+Carbon dioxide and perfluorocarbons
+8479 10 00 – Machinery for public works, building or the like
+Carbon dioxide and perfluorocarbons
+ex- 8480 50 00 – Moulds for glass, containing iron
+Carbon dioxide and perfluorocarbons
+8501 32 00 – DC motors, DC generators of an output exceeding 750 W but not exceeding 75 kW (other than photovoltaic generators)
+Carbon dioxide and perfluorocarbons
+8501 53 81 – AC motors, multi-phase, of an output of exceeding 75 kW but not exceeding 375 kW
+Carbon dioxide and perfluorocarbons
+8504 31 80 – Other transformers having a power handling capacity not exceeding 1 kVA
+Carbon dioxide and perfluorocarbons
+8504 33 00 – Other transformers having a power handling capacity exceeding 16 kVA but not exceeding 500 kVA
+Carbon dioxide and perfluorocarbons
+ex- 8504 50 00 – Inductors, containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+8515 39 90 – Other machines and apparatus for arc welding of metals, incl. plasma arc (including plasma arc) welding of metals
+Carbon dioxide and perfluorocarbons
+ex- 8544 11 10 – Winding wire for electrical purposes, of copper, lacquered or enamelled, containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+ex- 8544 11 90 – Winding wire for electrical purposes, of copper, insulated (excl. lacquered or enamelled), containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+ex- 8544 19 00 – Winding wire for electrical purposes, of material other than copper, insulated, containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+ex- 8544 49 20 – Conductors, electric, for a voltage <= 80 V, insulated, not fitted with connectors, of a kind used for telecommunications, n.e.s., containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+ex- 8544 49 91 – Electric wire and cables, for a voltage <= 1.000 V, insulated, not fitted with connectors, with individual conductor wires of a diameter > 0,51 mm, n.e.s., containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+ex- 8544 49 93 – Conductors, electric, for a voltage <= 80 V, insulated, not fitted with connectors, n.e.s. (excl. winding wire, coaxial conductors, wiring sets for vehicles, aircraft or ships, and wire and cables with individual conductor wires of a diameter > 0,51 mm), containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+ex- 8544 49 95 – Electric conductors for a voltage > 80 V but < 1.000 V, insulated, not fitted with connectors, n.e.s. (excl. winding wire, coaxial conductors, wiring sets for vehicles, aircraft or ships, and wire and cables with individual conductor wires of a diameter > 0,51 mm), containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+ex- 8544 49 99 – Electric conductors for a voltage 1.000 V, insulated, not fitted with connectors, n.e.s. (excl. winding wire, coaxial conductors, wiring sets for vehicles, aircraft or ships, and wire and cables with individual conductor wires of a diameter > 0,51 mm), containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+ex- 8544 60 10 – Electric conductors for a voltage > 1.000 V, insulated, with copper conductors, n.e.s., containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+ex- 8544 60 90 – Electric conductors for a voltage > 1.000 V, insulated, not with copper conductors, n.e.s., containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+ex 8704 21 – Motor vehicles of a gross vehicle weight not exceeding 5 tonnes, excluding 8704 21 39 and 8704 21 99
+Carbon dioxide and perfluorocarbons
+ex 8704 22 – Motor vehicles of a gross vehicle weight exceeding 5 tonnes but not exceeding 20 tonnes, excluding 8704 22 99
+Carbon dioxide and perfluorocarbons
+ex 8704 23 10 – Motor vehicles of a gross vehicle weight exceeding 20 tonnes, excluding 8704 23 99
+Carbon dioxide and perfluorocarbons
+ex 8704 31– Motor vehicles, with only spark-ignition internal combustion piston engine, of a gross vehicle weight not exceeding <= 5 tonnes, excluding 8704 31 39 and 8704 31 99
+Carbon dioxide and perfluorocarbons
+ex 8704 32 10 – Motor vehicles, with only spark-ignition internal combustion piston engine, of a gross vehicle weight exceeding 5 tonnes, excluding 8704 32 99
+Carbon dioxide and perfluorocarbons
+ex 8704 41 – Motor vehicles, with both compression-ignition internal combustion piston engine (diesel or semi-diesel) and electric motor as motors for propulsion, of a gross vehicle weight not exceeding 5 t, excluding 8704 41 39 and 8704 41 99
+Carbon dioxide and perfluorocarbons
+ex 8704 42 – Motor vehicles, with both compression-ignition internal combustion piston engine (diesel or semi-diesel) and electric motor as motors for propulsion, of a gross vehicle weight exceeding 5 tonnes but not exceeding 20 tonnes, excluding 8704 42 99
+Carbon dioxide and perfluorocarbons
+ex 8704 43 – Motor vehicles, with both compression-ignition internal combustion piston engine (diesel or semi-diesel) and electric motor as motors for propulsion, of a gross vehicle weight exceeding 20 tonnes, excluding 8704 43 99
+Carbon dioxide and perfluorocarbons
+8704 60 00 – Motor vehicles for the transport of goods, with only electric motor as motor for propulsion
+Carbon dioxide and perfluorocarbons
+8704 90 00 – Other motor vehicles for the transport of goods
+Carbon dioxide and perfluorocarbons
+8706 00 – Chassis fitted with engines, for motor vehicles of heading 8701 to 8705
+Carbon dioxide and perfluorocarbons
+8707 10 – Bodies for the vehicles of heading 8703
+Carbon dioxide and perfluorocarbons
+8708 40 – Gear boxes and parts thereof, of the motor vehicles of headings 8701 to 8705
+Carbon dioxide and perfluorocarbons
+8708 70 – Road wheels and parts and accessories thereof, of the motor vehicles of headings 8701 to 8705
+Carbon dioxide and perfluorocarbons
+8708 80 – Suspension systems and parts thereof, including. shock-absorbers, of the motor vehicles of headings 8701 to 8705
+Carbon dioxide and perfluorocarbons
+ex- 8708 91 – Radiators and parts thereof, for the industrial assembly of: pedestrian-controlled tractors of subheading 8701 10, vehicles of heading 8703, vehicles of heading 8704 with either a, containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+ex 8716 80 00 – Other vehicles pushed or drawn by hand
+Carbon dioxide and perfluorocarbons
+8716 90 90 – Other parts of trailers, semi-trailers and other vehicles
+Carbon dioxide and perfluorocarbons
+9018 32 10 – Tubular metal needles
+Carbon dioxide and perfluorocarbons
+ex- 9018 90 75 – Apparatus for nerve stimulation, containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+ex- 9018 90 84 – Other instruments and appliances , containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+ex- 9027 10 90 – Other gas or smoke analysis apparatus, containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+9401 79 00 – Seats, with metal frames
+Carbon dioxide and perfluorocarbons
+9403 10 – Metal furniture of a kind used in offices
+Carbon dioxide and perfluorocarbons
+ex- 9403 20 – Other metal furniture, containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+ex- 9406 90 90 – Prefabricated buildings, containing steel or aluminium
+Carbon dioxide and perfluorocarbons
+]’
+ANNEX II
+Annex IV is amended as follow:
+(1)in point 1, points (e) and (f) are replaced by the following:
+‘(e) ‘emission factor for electricity’ means the weighted average of the CO2 intensity of the electricity produced within a geographic area;
+(f) ‘power purchase agreement’ means a contract under which a person agrees to purchase electricity directly from an electricity producer and that involves the physical delivery of electricity;’;
+(2)point 3 is replaced by the following:
+‘For determining the specific actual embedded emissions of complex goods produced in a given installation, the following equation is to be applied:
+Where:
+– AttrEmg are the attributed emissions of goods g;
+– ALg is the activity level of the goods, being the quantity of goods produced in the reporting period in that installation, and
+– EEInpMat are the embedded emissions of the input materials (precursors) consumed in the production process. Only input materials (precursors) listed in Annex I and Annex VIII and originating in third countries and territories that are not exempted pursuant to Annex III, Section 1 are to be considered. The relevant EEInpMat are calculated as follows:
+Where:
+– Mi is the mass of input material (precursor) i used in the production process, and
+– SEEi are the specific embedded emissions for the input material (precursor) i. For SEEi the operator of the installation shall use the value of emissions resulting from the installation where the input material (precursor) was produced, provided that that installation’s data can be adequately measured.
+However, for goods listed in sections ‘Iron and Steel’, ‘Aluminium’ and ‘Combined Metal Goods’ of Annex I, Mi is a function of the content of goods used as input materials (precursors) in the manufacturing of the good.’;
+(3)point 4.2.1 is replaced by the following:
+‘4.2.1. Specific default values for a third country, group of third countries or region within a third country
+Specific default values shall be set at the emission factor for electricity in the third country, group of third countries or region within a third country, based on the best data available to the Commission.’;
+(4)point 4.2.2 is replaced by the following:
+‘4.2.2. Alternative default values
+Where a specific default value is not available for a third country, a group of third countries, or a region within a third country, the alternative default value for electricity shall be set at the emission factor for electricity in the Union.
+Where it can be demonstrated, on the basis of reliable data, that the emission factor for electricity in a third country, a group of third countries or a region within a third country is lower than the specific default value determined by the Commission or lower than the emission factor for electricity in the Union, an alternative default value based on that emission factor for electricity may be used for that third country, group of third countries or region within a third country.’;
+(5)in point 4.3, the second paragraph is replaced by the following:
+‘Where a third country, or a group of third countries, demonstrates to the Commission, on the basis of reliable data, that the average electricity mix emission factor or CO2 emission factor of price-setting sources in the third country or group of third countries is lower than the default value for indirect emissions, an alternative default value based on that average electricity mix emission factor or on that average CO2 emission factor shall be established for this country or group of countries.’;
+(6)point 5 is amended as follows:
+(a) point (a) is replaced by the following:
+‘(a) the amount of electricity for which the use of actual embedded emissions is claimed is covered by a power purchase agreement between the importer or authorised CBAM declarant and a producer of electricity located in a third country. Power purchase agreements involving intermediaries shall also be allowed, as long as a verifiable contractual relationship between the producer of electricity, the intermediaries, and the importer, or CBAM declarant, can be demonstrated, in relation to the electricity for which the use of actual emissions is claimed;’;
+(b) point (b) is deleted;
+(c) point (d) is replaced by the following:
+‘(d) the amount of electricity for which the use of actual embedded emissions is claimed has been firmly nominated to the allocated interconnection capacity by all responsible transmission system operators in the country of origin, the country of destination and, if relevant, each country of transit, and the nominated capacity and the production of electricity by the installation refer to the same period of time, which shall not be longer than one hour. This criterion shall not be fulfilled in cases where transmission capacity for the import of electricity is allocated through implicit capacity allocation;’.
+ANNEX III
+The following Annex VIII is added:
+‘ANNEX VIII
+List of non-CBAM goods and greenhouse gases considered as input materials (precursors)
+Iron and steel
+CN code
+Greenhouse gas
+ex 7204 Ferrous waste and scrap; remelting scrap ingots and steel except post-consumer scrap
+Carbon dioxide
+Aluminium
+CN code
+Greenhouse gas
+ex 7602 Aluminium waste and scrap except post-consumer scrap
+Carbon dioxide
+’

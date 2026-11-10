@@ -1,0 +1,3217 @@
+[주소] https://data.consilium.europa.eu/doc/document/ST-10423-2026-INIT/en/pdf
+
+[쪽 1]
+10423/26 1
+ECOFIN.2.B EN
+Council of the
+European Union
+Brussels, 12 June 2026
+(OR. en)
+10423/26
+ECOFIN 805
+FISC 217
+UD 176
+ENV 706
+CLIMA 317
+CODEC 1146
+Interinstitutional File:
+2025/0419 (COD)
+OUTCOME OF PROCEEDINGS
+From: General Secretariat of the Council
+To: Delegations
+Subject: Draft Regulation of the European Parliament and of the Council amending
+Regulation (EU) 2023/956 as regards the extension of its scope to
+downstream goods and anti-circumvention measures
+- General approach
+Delegations will find attached the text of the general approach on the above draft Regulation,
+reached at the meeting of the Council (Economic and Financial Affairs) on 12 June 2026.
+[쪽 2]
+10423/26 2
+ECOFIN.2.B EN
+DRAFT
+REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL
+amending Regulation (EU) 2023/956 as regards the extension of its scope to downstream
+goods and anti-circumvention measures
+(Text with EEA relevance)
+THE EUROPEAN PARLIAMENT AND THE COUNCIL OF THE EUROPEAN UNION,
+Having regard to the Treaty on the Functioning of the European Union, and in particular Article
+192(1) thereof,
+Having regard to the proposal from the European Commission,
+After transmission of the draft legislative act to the national parliaments,
+Having regard to the opinion of the European Economic and Social Committee1,
+After consulting the Committee of the Regions2,
+Acting in accordance with the ordinary legislative procedure,
+Whereas:
+1 OJ C , , p. .
+2 OJ C , , p. .
+[쪽 3]
+10423/26 3
+ECOFIN.2.B EN
+(1) Regulation (EU) 2023/956 of the European Parliament and of the Council3 was initially
+designed with a limited scope, covering those goods that are most exposed to the risk of
+carbon leakage and that are most carbon intensive. The scope of that Regulation should be
+gradually extended to cover products further down the value chain of the goods listed in
+Annex I to that Regulation.
+(2) In its Communication entitled ‘A European Steel and Metals Action Plan’4, the Commission
+set out the objectives of extending the scope of the carbon border adjustment mechanism
+(‘CBAM’) to certain steel and aluminium-intensive downstream products, as
+well as addressing the risk of circumvention and practices which could undermine the
+objectives of the CBAM, including the redirection by third countries of low emission-
+intensive goods to the Union market in the absence of efforts to decarbonise the entirety of
+their production.
+3 Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023
+establishing a carbon border adjustment mechanism (OJ L 130, 16.5.2023, p. 52, ELI:
+http://data.europa.eu/eli/reg/2023/956/oj).
+4 Communication on the European Steel and Metals Action Plan, COM/2025/125
+finalhttps://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:52025DC0085.
+[쪽 4]
+10423/26 4
+ECOFIN.2.B EN
+(3) As the CBAM aims to create incentives for the reduction of emissions by operators in third
+countries, the Union is committed to working with and supporting low and middle-income
+third countries towards the decarbonisation of their manufacturing industries as part of the
+external dimension of the European Green Deal5 and in line with the Paris Agreement6. The
+Union should continue to support those countries through the Union budget, especially
+LDCs, in order to contribute to ensuring their adaptation to the obligations under this
+Regulation. The Union should continue to support climate mitigation and adaptation actions
+in these countries, including in their efforts towards the decarbonisation and transformation
+of their industries within the ceiling of the multi-annual financial framework and the
+financial support provided by the Union to international climate finance. This is further
+reinforced in the EU global climate and energy vision7, which indicates that the EU will
+engage proactively with partners to ensure better coherence between internal and external
+EU policies. While the CBAM gradually enters into application, the Union intends to
+strengthen partnerships and support broader climate mitigation efforts, including by
+providing financial support to countries’ decarbonisation efforts.
+(4) Upon the incorporation of Regulation (EU) 2023/956 in the EEA Agreement, the EFTA
+States applying the CBAM should not be considered third countries for the purposes of this
+Regulation and should be deleted from its Annex III. A common CBAM area would be
+created where the threshold pursuant to Article 2a of Regulation (EU) 2023/956 would
+become jointly applicable to importation into the Union and the customs territories of the
+EFTA States that apply CBAM.
+5 Communication: The European Green Deal, COM/2019/640 final.
+6 OJ L 282, 19.10.2016, p. 4.
+7 Joint Communication: EU global climate and energy vision: securing Europe's competitive
+role in world markets and accelerating the clean transition, JOIN(2025) 25 final.
+[쪽 5]
+10423/26 5
+ECOFIN.2.B EN
+(5) Upon the incorporation of Regulation (EU) 2023/956 in the EEA Agreement, that
+Regulation should apply to processed products from goods listed in Annex I originating in a
+third country that are resulting from the inward processing procedure referred to in Article
+256 of Regulation (EU) No 952/2013, where they are re-exported to the customs territory of
+an EFTA State that incorporated the CBAM, provided that they are imported to one of those
+customs territories. Implementing powers should be conferred on the Commission to lay
+down detailed conditions for the application of the CBAM to such goods.
+(6) Upon the incorporation of Regulation (EU) 2023/956 in the EEA Agreement, it should be
+clarified that that Regulation shall not apply to goods previously released for free circulation
+in the customs territory of EFTA States that incorporated the CBAM, provided that the
+customs declarant indicates in the subsequent customs declaration that the goods have been
+previously released for free circulation within the customs territory of the EFTA States.
+(7) [deleted]
+(7a) To facilitate the implementation of Regulation (EU) 2023/956 as well as the application of
+carbon border adjustment mechanisms across countries, the Union may conclude agreements
+for the mutual recognition of third-country accreditation bodies. These agreements should
+recognise accreditation systems that provide safety, quality, impartiality and independence
+of an equivalent nature to and no lesser standard than CBAM accreditation rules.
+[쪽 6]
+10423/26 6
+ECOFIN.2.B EN
+(7b) Given their structural constraints, including remoteness, insularity, and vulnerability to
+natural disasters, outermost regions often depend on carbon-intensive imports with limited
+local alternatives. Therefore, it is appropriate to allow for temporary exemptions for certain
+essential heavy construction materials when such outermost regions are confronted with
+exceptional circumstances, such as natural disasters or similar public emergencies, strictly
+limited in scope and duration, while preserving CBAM’s environmental integrity.
+(7c) To prevent distortions in the internal market, exemptions should only apply to certain
+outermost regions where remoteness and isolation inherently minimise circumvention risks,
+given the logistical and economic barriers to re-exporting goods. Exemptions must be
+subject to strict conditions and assessed by the Commission to ensure alignment with the
+Regulation’s objectives and the Union’s climate policy.
+(8) Whereas the electricity market is based on commercial trade schedules, deviations occur due
+to the physical nature of electricity. Moreover, electricity flows may result from actions that
+transmission system operators undertake to ensure the safe and secure operation of the
+transmission system. Such flows should be excluded from the scope of CBAM, as they do
+not represent a commercial activity.
+[쪽 7]
+10423/26 7
+ECOFIN.2.B EN
+(9) Due recognition of the progress made by the relevant third countries towards market
+coupling of the electricity systems ensures that any exemptions as foreseen in this
+Regulation fully align with the strategic objectives of the Union and those third countries’
+specific achievements. The efficient use of the existing electricity infrastructure and the
+integration of electricity markets of third countries into the internal electricity market of the
+Union is essential to reduce costs for both Member States and the relevant third countries, as
+well as to ensure security of supply. Such recognition should be put forward by means of a
+Memorandum of Understanding between the Commission and the third countries that have
+fully transposed the relevant electricity market acquis, as verified by the Commission. The
+Memorandum of Understanding should set the timeline for the application of the exemption
+foreseen in Regulation (EU) 2023/956, while considering adherence to relevant market rules
+and transmission system operator (TSO) institutions in line with Regulation (EU) 2019/943
+of the European Parliament and of the Council8 and Commission Regulation (EU)
+2015/12229, and the progress made by the relevant countries on carbon pricing instruments
+equivalent to the EU ETS insofar as electricity generation is concerned.
+(9a) For the purposes of furthering the alignment between Regulation (EU) No 956/2023 and
+customs legislation, defective goods or goods not complying with the terms of the contract,
+as well as returned goods, as indicated by the importer in the customs declaration or in any
+other relevant document submitted to the customs authorities, should not be included in the
+calculation of the single mass-based threshold.
+8 Regulation (EU) 2019/943 of the European Parliament and of the Council of 5 June 2019 on
+the internal market for electricity (recast) (OJ L 158, 14.6.2019, pp. 54–124, ELI:
+http://data.europa.eu/eli/reg/2019/943/oj).
+9 Commission Regulation (EU) 2015/1222 of 24 July 2015 establishing a guideline on
+capacity allocation and congestion management (OJ L 197, 25.7.2015, pp. 24–72, ELI:
+http://data.europa.eu/eli/reg/2015/1222/oj).
+[쪽 8]
+10423/26 8
+ECOFIN.2.B EN
+(10) To ensure that the single mass-based threshold does not exceed 1% of the emissions
+embedded in the imported goods and processed products following the extension of
+Regulation (EU) 2023/956 to downstream products, the annual assessment in the year 2027
+of the threshold should be carried out on the basis of import data covering the downstream
+goods covered under this extension.
+(11) The CBAM seeks to address the risk of carbon leakage by ensuring that products,
+irrespective of whether they are imported or produced in the Union, are subject to an
+equivalent carbon price. However, as long as a significant number of the Union’s
+international partners have policy approaches that do not achieve the same level of climate
+ambition, there is a risk of carbon leakage, resulting in overall emissions being higher than
+what they would be in the absence of carbon leakage.
+(12) Abusive practices could occur when actors put in place arrangements or a series thereof for
+the main purpose of gaining an undue benefit by avoiding, wholly or partially, the CBAM
+financial liability and thereby undermine the effectiveness of the CBAM in addressing the
+risk of carbon leakage in the Union and the attainment of the Union’s climate policy
+objectives.
+(12a) Abusive practices include, but are not limited to, practices of harmful resource shuffling,
+where actors, controlling several production sites, with different technologies of production
+with material differences in emission intensity purposefully export to the Union the cleanest
+proportion of the goods without engaging in any structural decarbonisation strategy for the
+rest of the production of those goods, while not being exposed to a carbon price comparable
+to that applicable to production of the same goods in the Union. Due to harmful resource
+shuffling, imported goods could make Union producers’ operations unviable. The
+subsequent emissions reduction in the Union due to disappearance of EU production would
+be offset by an increase in emissions in the rest of the world, if the demand for these goods
+in the Union would be covered by third-country production, meaning carbon leakage occurs.
+Therefore, harmful resource shuffling risks undermining the effectiveness of the CBAM in
+addressing the risk of carbon leakage in the Union and the attainment of the Union’s climate
+policy objectives.
+[쪽 9]
+10423/26 9
+ECOFIN.2.B EN
+(12b) Given the importance and urgency of addressing the risk of abusive practices in the form of
+harmful resource shuffling, the Commission should do its utmost to act by way of
+implementing acts as soon as possible after entry into force of this regulation. The risk of
+harmful resource shuffling can be circumscribed to a subset of CN codes and origins of the
+goods listed in Annex I to Regulation (EU) 2023/956, for which a high likelihood of harmful
+resource shuffling occurring can be demonstrated. This risk can be appreciated by reference
+to the level of the climate ambition of a third country, the heterogeneity of emissions, at
+country-level, embedded in products imported into the EU, the volume of goods imported
+into the Union from a third-country, as well as the economic incentives for operators to
+engage in harmful resource shuffling. For this subset of CN codes and origins, it is justified
+to introduce by way of implementing acts conditions to be fulfilled by operators and to
+request evidence to be provided by the CBAM declarant, demonstrating that no harmful
+resource shuffling has occurred, given the high degree of uncertainty of the market response
+to the introduction of a financial liability corresponding to the emissions embedded in goods
+imported into the EU and the parallel phase-out of EU ETS free allocations. The conditions
+to be fulfilled, as well as the evidence to be provided demonstrating the fulfilment of these
+conditions, should be designed in a way that is proportionate to the identified risks and do
+not burden operators and importers unnecessarily. Where the evidence provided by the
+CBAM declarant is insufficient to demonstrate that no harmful resource shuffling has
+occurred, the CBAM declaration would have to be based on the default values as determined
+by the Commission.
+(12c) The Commission should monitor and assess the evolution of the risk of abusive practices,
+including harmful resource shuffling, for combinations of goods and third countries and
+swiftly update the list of goods for which additional evidence is required for the
+determination of the embedded emissions on the basis of actual emissions. The Commission
+should conduct its monitoring through an analysis of customs import declarations and
+CBAM declarations or on the basis of any relevant source of information, including from
+Member States through exchanges in the Expert Group on the CBAM or other relevant
+exchanges.
+[쪽 10]
+10423/26 10
+ECOFIN.2.B EN
+(13) [deleted]
+(14) To enable a swift reaction in the case of evidence pointing towards a high risk of abusive
+practices other than harmful resource shuffling, the Commission should be empowered to
+adopt delegated acts to lay down, the description of the abusive practice identified, the
+method used for identifying the combinations of good and origin at risk of the abusive
+practice identified, the measures to be taken with a view to addressing the risk of abusive
+practices as well as the evidence demonstrating that such abusive practices have not
+occurred. Where the Commission finds sufficient evidence pointing towards a high risk of
+abusive practices other than harmful resource shuffling, the Commission should be required
+to act by way of delegated acts within three months after the finding. These measures and
+evidence should be designed in a proportionate manner and they should not place
+unnecessary burden on operators and importers.
+(15) In order to identify the importers represented by an indirect customs representative, the
+application for an authorisation should include the Economic Operators Registration and
+Identification (EORI) number, or any other type of national identification number, of the
+importers represented.
+[쪽 11]
+10423/26 11
+ECOFIN.2.B EN
+(16) To address the risk of misdeclaration of the embedded emissions determined on the basis of
+actual emissions, the Commission and the competent authority should be allowed to request
+the authorised CBAM declarant to provide evidence that the imported goods were produced
+in the declared installation, and during the declared production period. For certain goods,
+such as those subject to a higher heterogeneity of emission intensities, or only in certain
+cases, the evidence should be required as part of the CBAM declaration. For specific
+products, it should be required that a CBAM declaration includes evidence on the
+installation in which raw material was initially produced in liquid form within a making
+furnace and subsequently cast into its first solid state, such as mill certificates issued by the
+original producers or by a product pass. The Commission should be empowered to adopt
+implementing acts to identify the goods for which such evidence should be required as part
+of the CBAM declaration as well as the specific type and format of evidence to be provided.
+The required format of this evidence should be determined in a manner that minimises the
+administrative burden.
+(17) To facilitate the processing of information on operators in third countries, reduce the
+administrative burden for the operator and the authorised CBAM declarant and facilitate
+the review of CBAM declarations, the registration of operators should be a
+necessary step for the determination of embedded emissions on the basis of
+actual verified emissions.
+(18) In order to foster a harmonised approach for the review of CBAM declarations, it should be
+clarified that the Commission may, as part of the implementing act concerning the standard
+format of the CBAM declaration, set out procedures for the review of CBAM declarations
+via the CBAM registry.
+(19) Emissions from the production of pre-consumer scrap in the Union are subject to a carbon
+price since, under the EU ETS, emissions are measured at installation level. Since pre-
+consumer aluminium and pre-consumer steel scrap under Regulation (EU) 2023/956 are
+assigned zero-emissions, imported goods using pre-consumer aluminium and pre-consumer
+steel scrap as input material are subject to a lower carbon price compared to goods produced
+in the Union, thus weakening the effectiveness of the CBAM in addressing the risk of
+carbon leakage of goods listed in Annex I.
+[쪽 12]
+10423/26 12
+ECOFIN.2.B EN
+(20) With a view to strengthening the effectiveness of the CBAM to address the risk of carbon
+leakage of goods, emissions of pre-consumer aluminium scrap and pre-consumer steel scrap
+should be taken into account for the calculation of embedded emissions of goods. Since pre-
+consumer scrap is a co-product generated unintentionally in the production process of metal
+goods and immediately reusable in a production process, it is not considered at risk of
+carbon leakage in its own right. Therefore, the emissions of pre-consumer aluminium scrap
+and pre-consumer steel scrap should only be taken into account when used as a precursor for
+goods listed in Annex I of this Regulation. The Commission should ensure that the
+monitoring, reporting and verification of emissions embedded in pre-consumer scrap used as
+input material (precursor) is not circumvented, including by misreporting pre-consumer
+scrap as post-consumer scrap to lower the determination of embedded emissions. Any claim
+that scrap is post-consumer scrap should therefore be substantiated by robust, reliable, and
+verifiable evidence of origin. In the absence of such evidence, the material should be treated
+as pre-consumer scrap.
+(21) [deleted]
+(22) It should be clarified that, due to the commercially sensitive nature of some data
+elements required for the reporting, calculation and verification of actual emissions, the
+operator may choose to disclose only a summary of these elements that are necessary for the
+determination and the verification of the embedded emissions, and the application of the
+conditions for the use of actual emissions for relevant combinations of goods and origins.
+The authorised CBAM declarant should only be required to keep records of the information
+disclosed.
+[쪽 13]
+10423/26 13
+ECOFIN.2.B EN
+(23) [deleted]
+(24) Since the certification of the carbon price documentation may take place prior to the import
+of the good into the Union, it is not appropriate to require the person certifying the
+information contained in the carbon price documentation to be independent from the
+authorised CBAM declarant.
+(25) Since the deduction of the carbon price effectively paid in a third country requires
+the embedded emissions to be based on actual verified emissions, and since the certification
+of the carbon price documentation must rely on the prior verification of embedded
+emissions, the verification of embedded emissions and the certification of the carbon
+price paid on those emissions are closely related and can possibly be undertaken by the same
+person. Furthermore, the certification of the carbon price should be subject to a
+similar control and oversight as the one exercised for the verification of
+emissions. It should therefore be clarified that the Commission is empowered to adopt
+implementing acts concerning the conditions to ascertain the qualifications of the person
+responsible for certifying, via the CBAM registry, the information contained in the carbon
+price documentation, and including the granting of an accreditation by a national
+accreditation body, and cover the necessary certification procedures and exchange of
+information.
+(26) To facilitate the verification of embedded emissions in the case of complex goods, it should
+be clarified that an operator should be able to share information, including on the
+verification of emissions embedded in input materials (precursors), with another operator.
+[쪽 14]
+10423/26 14
+ECOFIN.2.B EN
+(27) To ensure the financial standing of an applicant or of an authorised CBAM declarant,
+competent authorities should be allowed to require the provision of a
+guarantee in other cases than where an applicant was not established in the two financial
+years prior the year when the application was submitted. To safeguard the proper collection
+of revenues, it is also appropriate to enable competent authorities to use the
+guarantee provided, where the authorised CBAM declarant fail to comply with their
+obligation to have, at the end of each quarter, the number of CBAM certificates that
+corresponds to 50% of the emissions embedded in the goods they have imported into the
+Union since the beginning of the year.
+(28) It should be clarified that, to enable national accreditation bodies, the Commission and
+competent authorities to control and monitor verifiers, it is necessary to lay down the
+verification procedures to be used by verifiers.
+(29) In order to preserve its effectiveness as a measure to prevent carbon leakage, the price of
+CBAM certificates is to be calculated by the Commission based on weekly averages of the
+allowances auctioned in the Union’s Emission Trading System (‘EU ETS’). To ensure that
+the price of CBAM certificate always reflects closely ETS prices, it is appropriate to provide
+a specific calculation rule for the calendar weeks during which there is only one auction
+taking place on the auction platform.
+(30) From 2027 onwards, authorised CBAM declarants above the single-mass based
+threshold are to ensure that the number of CBAM certificates on their account in the CBAM
+registry at the end of each quarter corresponds to at least 50 % of the emissions embedded in
+imported goods since the beginning of that year. Since this rule is based on an annual
+cycle, on which the repurchase limit of CBAM certificates relies, it is appropriate, from
+2028 onwards, to exclude, from the number of CBAM certificates affected by
+the quarterly calculation, certificates purchased during other years than that calendar year.
+[쪽 15]
+10423/26 15
+ECOFIN.2.B EN
+(31) To streamline the repurchase process, increase the efficiency of the process and reduce the
+administrative burden while maintaining the security integrity and a robust
+oversight, an authorised CBAM declarant should be allowed to have their excess CBAM
+certificates be directly repurchased by the Member States.
+(32) For certain goods, such as the clinker content of cement, the nitrogen content of fertilisers or
+the alloying elements of steel, the material and chemical compositions of the good is an
+important determining factor of the embedded emissions. To address the risk
+of misdeclaration of the embedded emissions determined on the basis of actual
+emissions for certain goods that are subject to a higher heterogeneity of emission intensities,
+the Commission should be empowered to adopt implementing acts to identify the material
+and chemical compositions of a good in the customs declaration.
+(33) In order to ensure that the competent authorities and the Commission are provided with all
+the customs information and data necessary for the implementation of Regulation (EU)
+2023/956 by the customs authorities, it is necessary to specify the relevant supporting
+documents, information and data, including the bill of discharge, to be communicated by
+customs authorities.
+(34) It should be clarified that the CBAM account number included in the customs
+declaration, the bill of discharge, the receipt declaration, or any other relevant customs
+document at the time goods are released for free circulation, should be used to determine the
+person responsible for assuming the obligations set out in this Regulation.
+(35) To ensure the accuracy of the customs data and information available to the competent
+authorities in the CBAM registry, the competent authorities should be allowed to request the
+customs authorities or the Commission to validate this information. The Commission should
+be empowered to adopt implementing acts defining the scope of the information and the
+periodicity, timing and means for communicating that information.
+[쪽 16]
+10423/26 16
+ECOFIN.2.B EN
+(36) To prevent practices which could undermine the achievement of the objectives of the
+CBAM, the Commission should continuously monitor at Union level practices of
+circumvention consisting of artificially adjusting the supply chain of goods to avoid the
+obligations laid down in Regulation (EU) 2023/956.
+(37) To enable a swift reaction in the case of serious and unforeseeable consequences from the
+inclusion of a good in the scope of the CBAM, leading to severe harm to the Union internal
+market, the Commission should be empowered to adopt delegated acts to remove a good
+from the scope of Regulation (EU) 2023/956.
+(38) To ensure better alignment with the Combined Nomenclature (‘CN’) set out in Council
+Regulation (EEC) No 2658/8710, the description of certain CN codes in Annex I to
+Regulation (EU) 2023/956 should be clarified.
+(39) With the progressive phase-out of transitional free allocation of allowances under Directive
+2003/87/EC of the European Parliament and of the Council11, which establishes a system for
+greenhouse gas emission allowance trading within the Union (‘EU ETS’), and the
+progressive phase-in of the CBAM, the risk of carbon leakage will likely shift from the
+upstream sectors currently covered by the CBAM to downstream products. To preserve the
+effectiveness of the objectives of the CBAM, it is therefore necessary to extend the scope of
+Regulation (EU) 2023/956 to products further down the value chain.
+10 Council Regulation (EEC) No 2658/87 of 23 July 1987 on the tariff and statistical
+nomenclature and on the Common Customs Tariff (OJ L 256, 7.9.1987, p. 1, ELI:
+http://data.europa.eu/eli/reg/1987/2658/oj).
+11 Directive 2003/87/EC of the European Parliament and of the Council of 13 October 2003
+establishing a system for greenhouse gas emission allowance trading within the Union and
+amending Council Directive 96/61/EC (OJ L 275, 25.10.2003, p. 32, ELI:
+http://data.europa.eu/eli/dir/2003/87/oj).
+[쪽 17]
+10423/26 17
+ECOFIN.2.B EN
+(40) In accordance with the European Steel and Metals Action Plan, the extension of the scope of
+Regulation (EU) 2023/956 should focus on the metal sectors and goods that contain a
+significant share of CBAM products. It should therefore cover steel and aluminium-
+intensive downstream goods that are the most imported into the Union in terms of numbers,
+value and volume, and that face the highest risk of carbon leakage. The steel and aluminium
+sectors also demonstrate the highest technical feasibility for the calculation of actual
+emissions embedded in goods.
+(41) The selection of the downstream steel and aluminium-intensive goods should be based on
+clearly defined criteria and thresholds, reflecting the risk of carbon leakage associated to
+each product, including their share of embedded emissions, their climate relevance and the
+technical feasibility of their inclusion in the scope of Regulation (EU) 2023/956. The risk of
+carbon leakage should be appreciated with regards to both the tradability of the product and
+the comparison between the carbon cost embedded in the product’s inputs materials
+(precursors) and the product’s overall value added. Based on the same criteria,
+the Commission should in the future assess the extension of the scope of that Regulation
+to additional downstream goods and present its conclusions in a report to the European
+Parliament and to the Council.
+(41a) Regulation [CBAM] already foresees that before 1 January 2028, as well as every two years
+thereafter, the Commission should present a report containing an assessment of the impact
+of the CBAM on carbon leakage, including in relation to exports. In this context, since risk
+of carbon leakage could undermine the effectiveness of Union climate policy and both
+upstream and downstream products could be exposed to these risks, such report could,
+where appropriate, also be accompanied by a legislative proposal.
+[쪽 18]
+10423/26 18
+ECOFIN.2.B EN
+(42) Following the principles and calculation methods applicable to other goods, embedded
+emissions in downstream goods should be calculated on the basis of actual emissions
+verified by a verifier, or by reference to default values calculated and made available by the
+Commission. Since the system boundaries of production processes are limited to the system
+boundaries of production processes covered by the EU ETS, the attribution of emissions
+embedded in downstream goods should be limited to the emissions contained
+in input materials (precursors). Input materials (precursors) of downstream goods that are
+not listed in Annex II to Regulation (EU) 2023/956 should be taken into account in the
+calculation of embedded emissions.
+(43) For a limited number of downstream goods, the embedded emissions may, depending on the
+material composition of the good, fall entirely outside the scope of the CBAM. It is therefore
+necessary to specify that downstream goods that are exclusively made of
+materials which fall outside the scope of the CBAM should not be covered in the scope of
+Annex I to Regulation (EU) 2023/956.
+(44) Specific challenges arise for the use of actual emissions embedded
+in downstream goods produced with multiple input material (precursors), and where those
+materials belong to different CBAM sectors or to sectors not covered in the scope of this
+Regulation. These goods typically have longer and more complex global
+value chains, and their production involves multiple production steps. Sourcing verified
+information on the actual emissions of their input materials (precursors) will be
+administratively difficult, which would in turn disincentivise the use of actual emissions.
+To address these challenges, the use of default values for these specific goods should be
+facilitated by the non-application of the mark-up, without prejudice to the environmental
+integrity of the CBAM.
+[쪽 19]
+10423/26 19
+ECOFIN.2.B EN
+(45) Specific challenges arise for the use of actual emissions embedded
+in downstream goods covered in the sectors ‘Iron and Steel’, ‘Aluminium’ and ‘Combined
+Metal Goods’ referred to in Annex I to Regulation (EU) 2023/956. Due to challenges in data
+collection along the supply chain of some of the components of these goods, the specific
+embedded emissions of all goods covered in these sections should be calculated as a
+function of the embedded emissions of the input materials (precursors) contained in the
+goods.
+(46) The method used to calculate the emission factor for imported electricity should
+be modified so as to take into account the electricity produced from all sources,
+including non-fossil fuel sources. As a result, revised default
+values for imported electricity should be calculated and made available by the Commission.
+(47) To ensure a consistent methodological approach with respect to the default values applied
+for indirect emissions, it should be clarified that the alternative default value for indirect
+emissions that a third country, or a group of third countries, may demonstrate to be
+lower than the one established by the Commission, should be based on the same calculation
+method as the default values for indirect emissions determined by the Commission.
+(48) To facilitate the determination of embedded emissions of electricity on the basis of actual
+emissions, the conditions for applying actual embedded emissions in imported electricity
+should be made more flexible. It should be clarified that certain power purchase
+agreements concluded between intermediaries may be used. Moreover, in light of practical
+difficulties to demonstrate the absence of physical network congestion at any point of the
+network at the time of import, this criterion, as well as the alternative criterion to prove the
+direct connection to the Union transmission system should be removed. Finally, it should not
+be necessary to demonstrate a firm nomination of the allocated interconnection capacity
+where transmission capacity is allocated through implicit capacity allocation.
+[쪽 20]
+10423/26 20
+ECOFIN.2.B EN
+(49) Due to the commercially sensitive nature of some data elements underpinning the
+verification of embedded emissions, the verification report should contain only the
+information that is needed to establish the embedded emissions of the goods. Information on
+the emissions released by the installation or on goods that are not included in the scope of
+this Regulation, even though they are subject to review from the verifier, should not be
+included in the verification report.
+(49a) For electricity imported into the customs territory of the Union, real-time emission factors
+determined per exporting country for periods of one hour or less may serve, in particular
+where they would be more accurate and effective, as an alternative to the average emission
+factor, subject to technical feasibility and administrative proportionality. Therefore, when
+reviewing and evaluating the application of this Regulation, the Commission should assess,
+as part of its report, the use of real-time emission factors in view of their potential
+application to electricity imports.
+[쪽 21]
+10423/26 21
+ECOFIN.2.B EN
+(50) In order to amend certain non-essential elements of Regulation (EU) 2023/956, the power to
+adopt acts in accordance with Article 290 of the Treaty on the Functioning of the European
+Union should be delegated to the Commission in respect of temporarily exempting specific
+imported goods from the obligations under this Regulation in cases of severe harm to the
+Union internal market due to serious and unforeseen circumstances. In doing so, the
+Commission should consider the relevant evidence and proceed based on a reasoned
+assessment demonstrating the impact of the temporary exemption on the internal market and
+the functioning of the CBAM, as well as explaining why less intrusive measures would be
+insufficient. To provide certainty and simplicity to authorised CBAM declarants, the
+temporary exemption should apply at least for a full calendar year. Goods should not be
+exempted for more than two years under the same serious and unforeseen circumstances.
+The temporary exemption of a good should not lead to an increased risk of carbon leakage.
+Therefore, during the period of validity of the exemption, the reduction of free allocation
+under Article 10a of Directive 2003/87/EC would not apply to installations covered by that
+Directive for the share of their production covered by the exempted goods. These
+installations should not be prevented from receiving, where applicable, compensation for
+indirect emission costs. In particular, to ensure equal participation in the preparation of
+delegated acts, the European Parliament and the Council should receive all documents at the
+same time as Member States' experts, and their experts should systematically have access to
+meetings of Commission expert groups dealing with the preparation of delegated acts. The
+Commission should also be empowered to adopt implementing acts to further specify the
+application of temporary exemption.
+[쪽 22]
+10423/26 22
+ECOFIN.2.B EN
+(51) Since the objectives of this Regulation, namely extending the mechanism that the Union has
+adopted to prevent the risk of carbon leakage and thereby reduce global carbon emissions as
+well as addressing the risk of circumvention and practices which could undermine the
+objectives of the CBAM, cannot be sufficiently achieved by the Member States but can
+rather, by reason of the scale or effects of the action, be better achieved at Union level, the
+Union may adopt measures, in accordance with the principle of subsidiarity as set out in
+Article 5 of the Treaty on European Union. In accordance with the principle of
+proportionality as set out in that Article, this Regulation does not go beyond what is
+necessary in order to achieve those objectives.
+(52) [deleted]
+(53) For the determination of embedded emissions of electricity, to allow for the submission
+of the first CBAM declarations by 30 September 2027 on the basis of this Regulation, the
+changes to the method used to calculate the emission factor for imported electricity and to
+the conditions for applying actual embedded emissions in imported electricity should
+apply to imports of electricity that occurred as of 1 January 2026. To provide sufficient
+predictability, the extension of the scope of Annex I to Regulation (EU) 2023/956 and to
+input materials (precursors) listed in Annex VIII should apply from 1 January 2028,
+(53a) In order to allow for the timely adoption of delegated and implementing acts under
+Regulation (EU) 2023/956, this Regulation should enter into force on the third day
+following that of its publication in the Official Journal of the European Union.
+(54) Regulation (EU) 2023/956 should therefore be amended accordingly,
+HAVE ADOPTED THIS REGULATION:
+[쪽 23]
+10423/26 23
+ECOFIN.2.B EN
+Article 1
+Amendments to Regulation (EU) 2023/956
+Regulation (EU) 2023/956 is amended as follows:
+(1) Article 2 is amended as follows:
+(a) the following paragraph 2a is inserted:
+‘2a. Upon its incorporation in the EEA Agreement, this Regulation also applies to
+processed products from goods listed in Annex I originating in a third country
+that are resulting from the inward processing procedure referred to in Article
+256 of Regulation (EU) No 952/2013, where they are re-exported to the
+customs territory of EFTA States that incorporated the CBAM in to their law,
+provided that they are imported to those countries.
+The Commission may adopt implementing acts laying down the detailed
+conditions for the application of the CBAM to such products. Those
+implementing acts shall be adopted in accordance with the examination
+procedure referred to in Article 29(2) of this Regulation.’;
+(aa) in paragraph 3a, the following point (c) is inserted:
+‘(c) electricity flows originating from third countries, which result merely from
+the physical nature of electricity transmission, including unintended
+exchanges, or which result from actions that transmission system operators
+take to ensure the safe and secure operation of the transmission systems,
+including preventing and resolving emergency states as well as the cross-
+border activation of balancing energy.
+[쪽 24]
+10423/26 24
+ECOFIN.2.B EN
+(aaa) the following paragraph shall be inserted:
+‘3b. By way of derogation from paragraphs 1 and 2, this Regulation shall not apply
+to goods subject to the temporary exemption laid down in this paragraph.
+Importations of cements falling under the Combined Nomenclature (‘CN’)
+codes […], which are released for free circulation in an outermost region of the
+Union within the meaning of Article 349 TFEU, may temporarily be exempted
+from the application of this Regulation when these territories are confronted
+with exceptional circumstances, such as natural disasters or similar public
+emergencies. The importation of cements and heavy construction materials
+falling under the Combined Nomenclature (‘CN’) codes […], in the case of
+Mayotte and la Réunion, may temporarily be exempted from the application of
+this Regulation when these territories are confronted with exceptional
+circumstances, such as natural disasters or similar public emergencies.
+Where a Member State intends to introduce such a temporary exemption in
+application of the first subparagraph in an outermost region, it shall notify the
+Commission and other Member States of its request by specifying the
+outermost region and the products among those mentioned in the first
+subparagraph covered by the exemption. The Member State shall also specify
+the exceptional circumstances referred to in subparagraph 2 justifying it, its
+intended start and end dates, of application, and the intended measures to
+preserve the integrity of the CBAM and to limit new risks of circumvention.
+These intended measures shall ensure that the relevant goods are exclusively
+intended for local use in the outermost regions.
+[쪽 25]
+10423/26 25
+ECOFIN.2.B EN
+The Commission shall examine the request notified by the Member State
+pursuant to the second subparagraph and assess the supporting reasons
+specified by the requesting Member State. The Commission may request
+additional information from the requesting Member State.
+Within six months of receiving all relevant and necessary information, the
+Commission shall take a decision on the request for exemption and notify all
+Member States.
+Where the Commission finds that the exemption would lead to substantial
+circumvention risks, or where the requested Member State has failed to provide
+the requested information, it shall refuse the exemption. Such decision shall
+provide the reasons for the refusal.
+Member States in which measures referred to in the first subparagraph are in
+force shall submit a report to the Commission assessing whether the
+exceptional circumstances referred to in subparagraph 2 are still present and
+the impact of these measures on the flow of exempted goods from the relevant
+outermost regions. This report shall be submitted every year starting from the
+application start date. Where the Commission finds that the measure has led to
+cases of circumvention that would have not otherwise occurred, it shall, within
+6 months after the relevant Member State has communicated this report,
+request this Member State to amend this measure to prevent circumvention.
+Where the Commission finds that the changes made by the Member State are
+insufficient to ensure the integrity of the CBAM, taking into account the
+reasons supporting the relevant measures, it shall require the Member State to
+terminate these measures within three months following the notification to the
+Member State. Where the Commission finds that the exceptional circumstances
+referred to in subparagraph 2 have ceased to exist the exception has to be
+terminated within three months following the notification to the Member
+State.’ “
+[쪽 26]
+10423/26 26
+ECOFIN.2.B EN
+(b) in paragraph 4, the following subparagraph is added:
+‘Upon its incorporation into the EEA Agreement, by way of derogation from
+paragraphs 1 and 2, this Regulation shall not apply to goods originating in third
+countries previously released for free circulation in the customs territory of the
+EFTA States that incorporated the CBAM into their law, provided that the customs
+declarant indicates in the subsequent customs declaration lodged in the customs
+territory of the Union that the goods have been previously released for free
+circulation in the customs territory of those EFTA States and provided that, at the
+request of the customs authority or the national competent authority, the customs
+declarant makes available documentation or information proving that the goods have
+been previously released for free circulation within the customs territory of the
+respective EFTA States. The customs declarant shall bear responsibility for the
+availability of this proof at the time of lodging of the customs declaration.’;
+(c) the following paragraph 7a is inserted:
+‘Where a third country has requested to integrate its electricity market into that of the
+Union through market coupling pursuant to an international agreement, the
+Commission may, when establishing that the relevant third country has fully
+transposed the electricity market acquis, conclude a Memorandum of Understanding
+with that third country. When concluding such Memorandum of Understanding, the
+Commission shall keep Member States informed.
+The Memorandum of Understanding referred to in the first subparagraph shall set the
+timeline for the application of the exemption foreseen in Article 2(7) and the timeline
+for the implementation of a carbon pricing instrument equivalent to the EU ETS,
+insofar as electricity generation is concerned.’;
+[쪽 27]
+10423/26 27
+ECOFIN.2.B EN
+(d) paragraph 8 is replaced by the following:
+‘A third country or territory that fulfils all the conditions set out in paragraph 7, shall
+be listed in point 2 of Annex III. When assessing whether the conditions set out in
+paragraph 7 of this Article are fulfilled, the Commission shall take into account
+advancements in accordance with the timeline laid down in a Memorandum of
+Understanding under Article 2(7a).
+(e) paragraphs 11 and 12 are replaced by the following:
+‘11. The Commission is empowered to adopt delegated acts in accordance with
+Article 28 in order to amend the lists of third countries or territories listed in point 1
+or 2 of Annex III by adding or removing a third country or territory, depending on
+whether the conditions set out in paragraph 6, 7 or 9 of this Article are fulfilled in
+respect of that third country or territory, or as a consequence of the incorporation of
+the CBAM into the EEA Agreement. Where, in the case of adding a third country to
+the list of third countries or territories listed in point 2 of Annex III, imperative
+grounds of urgency so require, the procedure provided for in Article 28a shall apply
+to delegated acts adopted pursuant to this paragraph.
+The Union may conclude agreements with third countries or territories with a view to
+taking into account carbon pricing mechanisms in such countries or territories for the
+purposes of the application of Article 9, as well as the mutual recognition of third-
+country accreditation bodies for the accreditation of a legal person to be a verifier
+pursuant to Article 18.’;
+[쪽 28]
+10423/26 28
+ECOFIN.2.B EN
+(2) Article 2a is amended as follows:
+(a) the following paragraph 2a is inserted:
+“2a. Within the relevant calendar year, goods referred to in Article 116(1), point
+(b), of Regulation (EU) No 952/2013 and imported goods which are returned
+goods referred to in Article 203 of that Regulation, shall not be included in
+the cumulative calculation of the single mass-based threshold.
+The importer shall make available to the competent authority the customs
+declaration and documentary evidence demonstrating that the goods qualify
+in accordance with Article 116(1), point (b), and Article 203 of Regulation
+(EU) No 952/2013.”
+(b) in Article 2a(3), the following subparagraph is added:
+‘For the assessment due by 30 April 2027, the Commission shall use the import data
+of goods contained in Annex I to this Regulation and in Annex I to Regulation (EU)
+XX/XX [Amending Regulation (this Regulation)]’;
+(2a) in Article 3, point (3) is replaced by the following:
+‘emissions’ means the release of greenhouse gases from the production of goods;
+(2b) in Article 3, point (30) is replaced by the following:
+‘installation’ means a stationary technical unit where one or several technically connected
+production processes are carried out;
+[쪽 29]
+10423/26 29
+ECOFIN.2.B EN
+(3) in Article 3, the following points are added:
+‘(35) ‘abusive practices’ are practices pursued by an operator, importer or an authorised
+CBAM declarant for the purpose of gaining an undue benefit by avoiding, wholly or
+partially, the CBAM financial liability and thereby undermining the effectiveness of
+the CBAM to address the risk of carbon leakage in the EU;
+(36) ‘serious and unforeseen circumstance’ means an exceptional, unexpected and
+sudden, natural or man-made event of extraordinary nature and scale that takes place
+within or outside the Union;
+(37) ‘permanent business establishment‘ means a fixed place of business, where both the
+necessary human and technical resources are permanently present and through which
+a person's CBAM-related operations are wholly or partly carried out.’;
+(3a) Article 5(4) shall be replaced by the following:
+“4. By way of derogation from paragraph 1, where transmission capacity for the
+import of electricity is allocated through explicit capacity allocation, the person to
+whom capacity has been allocated for import and who nominates that capacity for
+import shall, for the purpose of this Regulation, be regarded as an authorised
+CBAM declarant. Imports are to be measured per border for time periods no
+longer than one hour and no deduction of export or transit in the same hour shall
+be possible.
+The person fulfilling the conditions set out in the previous subparagraph shall
+provide the customs declaration to the competent authority of the Member State of
+establishment without any delay.
+The competent authority of the Member State of establishment shall register the
+person in the CBAM registry.”;
+[쪽 30]
+10423/26 30
+ECOFIN.2.B EN
+(4) in Article 5(5):
+(a) the following point (aa) is inserted:
+‘(aa) name of the persons in charge of the applicant’s CBAM matters, the persons in
+charge of the applicant and the persons exercising control over the
+management of the applicant; ‘
+(b) point (h) is replaced by the following:
+‘(h) EORI number or, where the importer does not have an EORI number, other
+national identification number, names and contact information of the persons
+on behalf of whom the applicant is acting, if applicable.’;
+(4a) in Article 5 paragraph 7 is replaced by the following:
+‘The authorised CBAM declarant shall inform without delay the competent authority, via
+the CBAM registry, of any changes related to the information provided under paragraph 5
+of this Article that have occurred after the decision granting the status of the authorised
+CBAM declarant has been adopted pursuant to Article 17 that may influence that decision
+or the content of the authorisation granted thereunder.’
+(5) Article 6 is amended as follows:
+(a) paragraph 2 is amended as follows:
+(1) point (b) is replaced by the following:
+‘(b) the total embedded emissions in the goods referred to in point (a) of this
+paragraph, expressed in tonnes of CO2e emissions per megawatt-hour of
+electricity or, for other goods, in tonnes of CO2e emissions per tonne of
+each type of goods, calculated in accordance with Article 7 and, where
+the embedded emissions are determined on the basis of actual emissions
+provided by the operator via the CBAM registry in accordance with
+Article 10, verified in accordance with Article 8;’;
+[쪽 31]
+10423/26 31
+ECOFIN.2.B EN
+(2) the following points (e) and (f) are added:
+‘(e) where applicable, in accordance with the implementing act referred to
+in paragraph 6a of this Article, for the purpose of addressing the risk of
+misdeclaration of emission intensities resulting from the lack of supply
+chain traceability, evidence that the goods imported during the
+preceding calendar year were produced at the declared installation and
+at the actual time of production referred to in the CBAM declaration;
+(f) where, in accordance with delegated or implementing acts adopted in
+accordance with paragraph 7 point (c) or (d), the embedded emissions
+are determined on the basis of actual emissions for a combination of
+good and origin that are subject to a high risk of abusive practices,
+evidence demonstrating that no abusive practices have occurred.’;
+(aa) paragraph 5 is replaced by the following:
+“For goods referred to in Article 116(1), point (b), of Regulation (EU) No
+952/2013 and the imported goods which are returned goods referred to in Article 203
+of that Regulation, the authorised CBAM declarant shall report separately, in the
+CBAM declaration, ‘zero’ for the total embedded emissions corresponding to those
+goods.”;
+[쪽 32]
+10423/26 32
+ECOFIN.2.B EN
+(ab) the following paragraph 5a shall be inserted:
+5a. In duly justified circumstances, the authorised CBAM declarant shall be
+permitted to correct the information of the CBAM declaration after that
+declaration has been submitted in accordance with paragraph 1.
+No such correction shall be permitted where a review as referred to in Article
+19 of this Regulation has been undertaken.”
+(b) in paragraph 6, the first sentence is replaced by the following:
+‘The Commission is empowered to adopt implementing acts concerning the standard
+format of the CBAM declaration, including detailed information for each installation
+and country of origin or other third country and type of goods to be reported, which
+supports the totals referred to in paragraph 2 of this Article, in particular as regards
+embedded emissions, the carbon price paid, the default carbon price for the purpose
+of Article 9(4), the procedure for submitting and the correction of the CBAM
+declaration via the CBAM registry, including procedures for the review of CBAM
+declarations in accordance with Article 19 via the CBAM registry, the
+conditionalities and the specific deadlines of the correction referred to in paragraph
+5a, and the arrangements for surrendering the CBAM certificates referred to in
+paragraph 2, point (c), of this Article, in accordance with Article 22(1), in particular
+as regards the process and the selection by the authorised CBAM declarant of
+certificates to be surrendered.’;
+[쪽 33]
+10423/26 33
+ECOFIN.2.B EN
+(c) the following paragraphs 6a and 7 are added:
+‘6a. The Commission is empowered to adopt implementing acts concerning the
+identification of goods or combinations of good and origin at risk of
+misdeclaration of emission intensities for which evidence is to be included in
+the CBAM declaration pursuant to paragraph 2, point (e), as well as the
+specific type and format of evidence to be provided. Those implementing acts
+shall be adopted in accordance with the examination procedure referred to in
+Article 29(2).
+7. The Commission shall monitor at Union level the impact of the CBAM on the
+Union internal market. Where the Commission, taking into account relevant
+information, including from customs import declarations and CBAM
+declarations, finds that there is sufficient evidence pointing towards a high risk
+of abusive practices for a combination of good and origin:
+a) it may inform importers and authorised CBAM declarants about these
+risks;
+b) it may inform competent authorities and customs authorities about these
+risks;
+c) it is empowered to adopt delegated acts in accordance with Article 28a to
+supplement this Regulation by laying down:
+(i) the description of the abusive practices identified and the methods
+for the identification of the combination of good and origin at risk
+of abusive practices;
+(ii) the combinations of good and origin referred to under point (i);
+[쪽 34]
+10423/26 34
+ECOFIN.2.B EN
+(iii) the measures to address the risk of abusive practices identified
+(iv) the evidence to be provided to demonstrate that no abusive
+practices have occurred;
+d) it is empowered to adopt implementing acts laying down:
+(i) the methods for the identification of the combinations of good and
+origin at risk of harmful resource shuffling ,
+(ii) the combinations of good and origin referred to in point (i),
+(iii) the conditions to be fulfilled by the operators for the use of actual
+emissions for those combinations of good and origin as well as
+(iv) the evidence to be provided by the CBAM declarant to demonstrate
+that these conditions are fulfilled.
+For abusive practices in the form of harmful resource shuffling, the methods
+for the identification of the goods referred to in point (d) shall take into account
+at least the following factors:
+(a) the heterogeneity of emissions embedded in goods imported into the EU;
+(b) relevance for the internal market, including as measured by trade
+volumes and trade flows;
+(c) the economic incentives for operators to engage in harmful resource
+shuffling.
+The Commission shall adopt the delegated acts referred to in point (c) within
+three months of finding that there is sufficient evidence pointing towards a high
+risk of an abusive practice
+The Commission shall submit the draft implementing act referred to in point
+(d) to the CBAM committee referred to in Article 29 by [OJ: insert date – three
+months after entry into force of this (amending) Regulation]’;
+[쪽 35]
+10423/26 35
+ECOFIN.2.B EN
+(6) Article 7 is amended as follows:
+(a) the following paragraph 2a is inserted:
+‘2a. Embedded emissions in input materials (precursors) listed in Annex VIII shall
+be considered in the determination of embedded emissions in goods.’;
+(b) paragraph 5 is replaced by the following:
+‘5. The authorised CBAM declarant shall keep records of the information
+disclosed in accordance with Article 10(7) that is required to calculate the
+embedded emissions in accordance with the requirements laid down in Annex
+V. Those records shall be sufficiently detailed to enable the Commission and
+the competent authority to review the CBAM declaration in accordance with
+Article 19(2).’;
+[쪽 36]
+10423/26 36
+ECOFIN.2.B EN
+(c) paragraph 7, point (a) is replaced by the following:
+“7. The Commission is empowered to adopt implementing acts concerning:
+(a) the application of the elements of the calculation methods set out in
+Annex IV, including determining system boundaries of production
+processes, which shall be aligned with those covered by the EU ETS,
+and relevant input materials (precursors), emission factors, installation-
+specific values of actual emissions and default values and their
+respective application to individual goods, as well as lay down methods
+to ensure the reliability of data on the basis of which the default values
+shall be determined, including the level of detail of the data, and
+including further specification of goods that are to be considered as
+“simple goods” and “complex goods” for the purpose of point 1 of
+Annex IV, and including further specification of goods for which
+“standard default values” apply and goods for which “global default
+values” apply for the purpose of point 4 of Annex IV. Those
+implementing acts shall also specify the elements of evidence
+demonstrating that the criteria required to justify the use of actual
+emissions for imported electricity and for electricity consumed in the
+production processes of goods for the purposes of paragraphs 2, 3 and 4
+that are listed in points 5 and 6 of Annex IV are met; and”
+[쪽 37]
+10423/26 37
+ECOFIN.2.B EN
+(b) the application of the elements of the calculation methods pursuant to
+paragraph 4 in accordance with point 4.3 of Annex IV.
+Where objectively justified, the implementing acts referred to in the first
+subparagraph shall provide that default values can be adapted to particular
+areas, regions or countries to take into account specific objective factors that
+affect emissions, such as prevailing energy sources or industrial processes.
+Those implementing acts shall build upon existing legislation for the
+monitoring and verification of emissions and activity data for installations
+covered by Directive 2003/87/EC, in particular Commission Implementing
+Regulation (EU) 2018/2066, Implementing Regulation (EU) 2018/2067 and
+Commission Delegated Regulation (EU) 2019/331. Those implementing acts
+shall be adopted in accordance with the examination procedure referred to in
+Article 29(2) of this Regulation.
+The implementing acts referred to in the first subparagraph may provide a list
+of:
+(a) downstream goods for which, due to the complexity of the supply
+chain and without prejudice to the environmental integrity of the
+CBAM, no mark-up is to apply;
+(b) upstream goods for which only “standard default values” should be
+defined.’;
+[쪽 38]
+10423/26 38
+ECOFIN.2.B EN
+(7) Article 9 is amended as follows:
+(a) paragraph 2 is amended as follows:
+(1) the third sentence is replaced by the following:
+‘The information contained in that documentation shall be verified by a person
+that is impartial and independent from the authorities of the third country.’;
+(2) the following subparagraph is added:
+‘The independent person referred to in the first subparagraph may be a legal
+person accredited by a national accreditation body for the relevant scope of
+accreditation or any other person as referred to in paragraph 5.’;
+(b) paragraph 5 is amended as follows:
+(1) the first subparagraph is replaced by the following:
+‘The Commission is empowered to adopt implementing acts, based on the
+principle of equivalence, concerning the conversion of the yearly average
+carbon price effectively paid in accordance with paragraph 1 of this Article and
+of the yearly default carbon prices determined in accordance with paragraph 4
+of this Article into a corresponding reduction of the number of CBAM
+certificates to be surrendered. Those acts shall also govern the conversion of
+the carbon price expressed in foreign currency into euro at the yearly average
+exchange rate, the evidence required of the actual payment of the carbon price,
+examples of any relevant rebate or other form of compensation referred to in
+paragraph 1 of this Article, the qualifications of the independent person
+referred to in paragraph 2 of this Article and the conditions to ascertain that
+person’s qualifications and independence. Those implementing acts shall be
+adopted in accordance with the examination procedure referred to in Article
+29(2).’;
+[쪽 39]
+10423/26 39
+ECOFIN.2.B EN
+(2) the following subparagraph is added:
+‘The qualifications referred to in the first subparagraph shall include the
+granting of accreditation by a national accreditation body, the specification of
+the verification procedures and the appropriate exchanges of information
+between the independent person, national accreditation bodies, the Commission
+and competent authorities.’;
+(8) Article 10 is amended as follows:
+(a) paragraph 1 is replaced by the following:
+‘1. To allow the verification of embedded emissions on the basis of actual
+emissions as well as the determination, where applicable, of the carbon price
+paid in a third country, the Commission shall register the information on an
+operator and on its installation in the CBAM registry referred to in Article 14.
+An operator of an installation located in a third country shall make a request to
+the Commission, via the CBAM registry, to this effect.’;
+(aa) in paragraph 5, point (c) is replaced by the following:
+“(c) keep a copy of the verification report as well as records of the information
+required to calculate the embedded emissions in goods in accordance with the
+requirements laid down in Annex V for a period necessary for the import of
+goods and the review of the CBAM declarations, and, where applicable, a copy
+of the documentation required to demonstrate that the declared embedded
+emissions were subject to a carbon price in a third country that has been
+effectively paid, until the end of the sixth year after the year during which the
+independent person has verified the information contained in that
+documentation in accordance with Article 9(2);”
+[쪽 40]
+10423/26 40
+ECOFIN.2.B EN
+(b) in paragraph 5, the following point (e) is added:
+‘(e) ensure, where applicable pursuant to Article 6(7), that the conditions laid down
+for the use of actual emissions, for relevant combinations of goods and origins,
+are met.’;
+(c) in paragraph 7, the first sentence is replaced by the following:
+‘An operator may disclose the information on the conditions for the use of actual
+emissions, for the relevant combinations of goods and origins pursuant to Article
+6(7), the verification of embedded emissions and the carbon price paid in a third
+country referred to in paragraph 5 of this Article to an authorised CBAM declarant or
+to another operator.
+(d) in paragraph 7, the second sentence is replaced by the following:
+‘The operator may disclose to the authorised CBAM declarant only a summary of the
+information contained in paragraph 5, points (a), (b), (c) and (e). The authorised
+CBAM declarant shall be entitled to use that disclosed information in order to fulfil
+the obligation referred to in Article 8.
+Where the authorised CBAM declarant chooses to submit the CBAM declaration on
+the basis of this disclosed information, the authorised CBAM declarant shall remain
+responsible for surrendering the correct number of CBAM certificates pursuant to
+Article 22(1).’;
+(9) Article 17 is amended as follows:
+(a0) in paragraph 2, point (b) is replaced by the following:
+„(b) the applicant demonstrates its financial and operational capacity to fulfil its
+obligations under this Regulation or, if so required by the competent authority,
+provides a guarantee in accordance with paragraph 5a of this Article“
+[쪽 41]
+10423/26 41
+ECOFIN.2.B EN
+(a) the following paragraph 5a is inserted:
+‘5a. By way of derogation from paragraph 5, where the competent authority finds
+that the applicant or the authorised CBAM declarant does not demonstrate its
+financial capacity to fulfil its obligations under this Regulation, including by
+failing to comply with the requirement set out in Article 22(2), the competent
+authority may require the provision of a guarantee.
+The competent authority shall fix the amount of such guarantee at the amount,
+calculated as the aggregate value of the number of CBAM certificates that the
+authorised CBAM declarant would have to surrender in accordance with
+Article 22 in respect of one of the following:
+(a) imports of goods reported in accordance with Article 5(5), point (g);
+(b) the amount of imported goods declared in the customs declaration and
+other relevant information available to the competent authority from the
+previous two calendar years; or
+(c) an estimation, based on the value of the threshold referred to in point 1 of
+Annex VII of this Regulation, for one or more relevant sectors covered
+by this Regulation and a total of embedded emissions, chosen by the
+competent authority.
+The guarantee provided shall be a bank guarantee, payable at first demand, by
+a financial institution operating in the Union or another form of guarantee
+which provides equivalent assurance.’;
+[쪽 42]
+10423/26 42
+ECOFIN.2.B EN
+(b) paragraph 7 is replaced by the following:
+‘7. Where a guarantee is required in accordance with paragraph 5, the competent
+authority shall release the guarantee immediately after 30 September of the
+second year in which the authorised CBAM declarant has surrendered CBAM
+certificates in accordance with Article 22.
+Where a guarantee is required in accordance with paragraph 5a, the competent
+authority shall release the guarantee immediately after 30 September of the
+second year in which the authorised CBAM declarant has surrendered CBAM
+certificates in accordance with Article 22. Notwithstanding the foregoing, the
+competent authority may decide to extend the duration of the guarantee by
+requesting the authorised CBAM declarant to extend the validity of the
+guarantee or replacing the initial guarantee, where such extension is duly
+justified.
+The competent authority shall use the provided guarantee to recover the
+outstanding financial adjustment, where:
+(a) the authorised CBAM declarant does not surrender the sufficient amount
+of CBAM certificates in accordance with Article 22 and following a
+decision in accordance with Article 19(5), or;
+(b) the authorised CBAM declarant does not comply with the obligation to
+ensure sufficient number of CBAM certificates on its account referred to
+Article 22(2).
+The competent authority shall determine the amount to recover based on the
+number of certificates that should have been surrendered or that should have
+been on the account and the yearly average price of the CBAM certificates for
+the calendar year of the submitted CBAM declaration.’;
+[쪽 43]
+10423/26 43
+ECOFIN.2.B EN
+(c) in paragraph 10, point (b) is replaced by the following:
+‘(b) the application of the guarantee referred to in paragraphs 5, 5a, 6 and 7 of this
+Article, including detailed rules on the currency conversions, the arrangements
+for the recovery of the outstanding financial adjustment, detailed rules for
+calculating the guarantee referred to in paragraphs 5 and 5a of this Article on
+the price of CBAM certificates, and the calculation of the yearly price of the
+CBAM certificates referred to in paragraph 7.’;
+(10) in Article 18(3), the following sentence is added:
+‘Those delegated acts shall also specify the verification procedures to be used by verifiers,
+as well as harmonised standards to be followed.’;
+(11) in Article 19, the following paragraph 2a is inserted:
+‘2a. Where the embedded emissions are determined on the basis of actual emissions, the
+Commission or the competent authority of the Member State where the CBAM
+declarant is established may, as part of the review of the CBAM declaration,
+request the authorised CBAM declarant to provide evidence that the goods
+imported were produced at the installation and at the actual time of production
+referred to in the CBAM declaration.’;
+[쪽 44]
+10423/26 44
+ECOFIN.2.B EN
+(12) Article 21 is amended as follows:
+(a) in paragraph 1, the second subparagraph is replaced by the following:
+‘For those calendar weeks in which there is no auction on the auction platform, the
+price of CBAM certificates shall be the average of the closing prices of EU ETS
+allowances of the last week in which auctions on the auction platform took place. For
+those calendar weeks in which only one auction takes place on the auction platform,
+the price of CBAM certificates shall be the average of that closing price and the
+closing prices of the last week in which several auctions took place on the auction
+platform.’;
+(b) in paragraph 2, the first sentence is replaced by the following:
+‘The Commission shall publish the price of CBAM certificates on its website or in
+any other appropriate manner on the first working day of the following calendar
+week.’;
+[쪽 45]
+10423/26 45
+ECOFIN.2.B EN
+(13) in Article 22(2), the following subparagraphs are added:
+For the year 2027, to calculate their quarterly obligation referred to in this paragraph,
+authorised CBAM declarants may use the actual embedded emissions data from 2026 as
+declared in accordance with Article 6 and verified in accordance with Article 8. Before they
+submit their annual declaration in 2027 for the year 2026, authorised CBAM declarants may
+use the actual embedded emissions data from 2026 including where pending verification.
+From 2028, the calculation referred to in the first subparagraph shall be based only on
+CBAM certificates purchased by the authorised CBAM declarant during the year for which
+the calculation is being performed.’;
+(14) [deleted]
+[쪽 46]
+10423/26 46
+ECOFIN.2.B EN
+(15) Article 25 is amended as follows:
+(a) paragraph 2 is replaced by the following:
+‘2. The customs authorities shall periodically and automatically, in particular by
+means of the surveillance mechanism established pursuant to Article 56(5) of
+Regulation (EU) No 952/2013, communicate to the Commission specific
+information on the goods released for free circulation into the customs territory
+of the Union. That information shall include the EORI number or the form of
+identification declared in accordance with Article 6(2) of Delegated Regulation
+(EU) 2015/2446, of the importer or of the authorised CBAM declarant as well
+as the CBAM account number of the authorised CBAM declarant, the eight-
+digit CN code of the goods, the quantity, the country of origin, the date of the
+customs declaration and the customs procedure. Where the importer has no
+EORI number, the customs authorities shall also communicate the name,
+address and, where available, contact information of the importer to the
+Commission.
+The customs authorities shall communicate upon request by the Commission or
+the competent authority any other data relevant for compliance with this
+Regulation, including, where applicable, bills of discharge, re-export
+declarations, receipt declarations and any customs documentation that are
+relevant for monitoring compliance with Articles 2(1), 2(2) and 2a.
+The CBAM account number provided in the customs declaration or any other
+relevant document when declaring goods listed in Annex I or processed
+products obtained from such goods for importation, shall determine the
+authorised CBAM declarant assuming the obligations set out in this
+Regulation.’;
+[쪽 47]
+10423/26 47
+ECOFIN.2.B EN
+(b) in paragraph 3, the following subparagraph is added:
+‘Where the competent authority considers that the information is incorrect or
+inaccurate, the competent authority may request the customs authorities or the
+Commission to validate the correctness or the accuracy of that information.’;
+(c) in paragraph 6, the first sentence is replaced by the following:
+‘The Commission is empowered to adopt implementing acts defining the scope of
+information and the periodicity, timing and means for communicating that
+information pursuant to paragraphs 2 and 3 of this Article.’;
+(d) the following paragraph 7 is added:
+‘7. The Commission is empowered to adopt implementing acts to identify the
+material and chemical compositions of goods listed in Annex I. Those
+implementing acts shall be adopted in accordance with the examination
+procedure referred to in Article 29(2).’;
+(16) in Article 27(2), the following point (c) is added:
+‘(c) artificially adjusting the supply chains by changing the country or territory where
+the goods underwent their last, substantial, economically justified production step
+for the sole purpose of making these goods benefit from lower default values.’;
+[쪽 48]
+10423/26 48
+ECOFIN.2.B EN
+(17) the following Article 27a is inserted:
+‘Article 27a
+Temporary exemption procedure
+1. The Commission shall monitor the situation at Union level with a view to assessing
+the impact of the CBAM on the Union internal market.
+2. Where the Commission determines that the inclusion of certain goods in Annex I,
+due to unforeseen and serious circumstances, severely harms the internal market of
+the Union, including by disrupting supply chains or distorting price formation, and
+that less intrusive measures would not be appropriate, it shall adopt an implementing
+act to initiate the procedure for a temporary exemption in accordance with the
+examination procedure referred to in Article 29(2) of this Regulation. The
+Commission shall inform the European Parliament and the Council of the adoption
+of that implementing act.
+3. When proposing the implementing act referred to in paragraph 2, the Commission
+shall provide sufficient grounds to initiate a temporary exemption procedure and
+shall, in particular lay out, those serious and unforeseen circumstances and their
+impact on the Union internal market, clear and objective criteria justifying a potential
+exemption, and a detailed explanation why less intrusive measures would not be
+sufficient for a certain CBAM good. To that end, the Commission shall gather and
+evaluate any necessary information, including relevant and objective evidence
+provided by third parties.
+[쪽 49]
+10423/26 49
+ECOFIN.2.B EN
+3a. The criteria referred to in paragraph 3 shall include at least the following:
+a) a sustained price increase (without taking into account the CBAM financial
+liability), where the average import price expressed in constant prices of a good
+for which the EU has import dependency has increased by more than 50%
+compared to the average import price of the same CBAM good over the
+previous ten years;
+b) for a price increase to be sustained, it should be observed over a period of at
+least six months.
+4. Within three months from the entry into force of the implementing act referred to in
+paragraph 2, the Commission may decide to temporarily exempt certain goods
+included in Annex I from the obligations under this Regulation. For that purpose, the
+Commission is empowered to adopt delegated acts to amend Annex I, in accordance
+with the procedure provided for in Article 28a. This amendment shall temporarily
+exempt certain goods included in Annex I from the obligations under this Regulation.
+5. The implementing act referred to in paragraph 2 shall expire after three months from
+the date of its entry into force.
+6. The temporary exemption shall apply to a full calendar year. If the delegated acts
+referred to in paragraph 4 are adopted by 30 June, the temporary exemption shall
+apply from 1 January until 31 December of that calendar year. If the delegated acts
+referred to in paragraph 4 are adopted after 30 June, they shall apply from 1 January
+until 31 December of the next calendar year.
+During the period of validity of the exemption, the reduction of free allocation under
+Article 10a of Directive 2003/87/EC shall not apply to installations covered by that
+Directive for the share of their production covered by the exempted goods. These
+installations shall not be prevented from receiving, where applicable, compensation
+for indirect emission costs.
+[쪽 50]
+10423/26 50
+ECOFIN.2.B EN
+7. The amendment shall take the form of a footnote inserted next to the relevant goods
+referred to in Annex I. The footnote shall state that the CBAM shall not apply to the
+goods in question and specify the year or years of the exemption. Goods shall not be
+exempted for more than two years under the same serious and unforeseen
+circumstances. Once the exemption period ends, the Commission shall remove the
+footnote and promptly publish information about the deletion in the Official Journal
+of the European Union.
+8. Imported goods that are subject to the temporary exemption shall be exempted from
+the obligations under this Regulation. The CBAM certificates purchased pursuant to
+Article 22(2) for goods subject to the temporary exemption may be repurchased in
+accordance with Article 23(1). However, the limit referred to in Article 23(2) shall
+not apply to these CBAM certificates. The Commission may adopt implementing
+acts further specifying the application of the temporary exemption. Those
+implementing acts shall be adopted in accordance with the examination procedure
+referred to in Article 29(2) of this Regulation.
+9. Before a delegated act adopted under this Article expires, the Commission may
+submit a legislative proposal to amend this Regulation and remove certain goods
+from Annex I.’;
+[쪽 51]
+10423/26 51
+ECOFIN.2.B EN
+(18) Article 28 is amended as follows:
+(a) paragraphs 2 and 3 are replaced by the following:
+‘2. The power to adopt delegated acts referred to in Article 2(10) and (11), Article
+2a (3), Article 6(7), Article 18(3), Article 20(5a) and (6), Article 27(6) and
+Article 27a shall be conferred on the Commission for a period of five years
+from [date of entry into force of this amending Regulation]. The Commission
+shall draw up a report in respect of the delegation of power not later than nine
+months before the end of the five-year period. The delegation of power shall be
+tacitly extended for further periods of an identical duration, unless the
+European Parliament or the Council opposes such extension not later than three
+months before the end of each period.
+3. The delegation of power referred to in Article 2(10) and (11), Article 2a (3),
+Article 6(7), Article 18(3), Article 20(5a) and (6), Article 27(6) and Article 27a
+may be revoked at any time by the European Parliament or by the Council.’;
+(b) paragraph 7 is replaced by the following:
+‘7. A delegated act adopted pursuant to Article 2(10) and (11), Article 2a (3),
+Article 6(7), Article 18(3), Article 20(5a) and (6), Article 27(6) and Article 27a
+shall enter into force only if no objection has been expressed either by the
+European Parliament or by the Council within a period of two months of
+notification of that act to the European Parliament and to the Council or if,
+before the expiry of that period, the European Parliament and the Council have
+both informed the Commission that they will not object. That period shall be
+extended by two months at the initiative of the European Parliament or of the
+Council.’;
+[쪽 52]
+10423/26 52
+ECOFIN.2.B EN
+(19) the following Article 28a is inserted:
+‘Article 28a
+Urgency procedure
+1. Delegated acts adopted under this Article shall enter into force without delay and
+shall apply as long as no objection is expressed in accordance with paragraph 2. The
+notification of a delegated act to the European Parliament and to the Council shall
+state the reasons for the use of the urgency procedure.
+2. Either the European Parliament or the Council may object to a delegated act in
+accordance with the procedure referred to in Article 28(7). In such a case, the
+Commission shall repeal the act immediately following the notification of the
+decision to object by the European Parliament or by the Council.’;
+(20) Article 30 is amended as follows:
+(a) paragraph 3 is replaced by the following:
+At least one year before the end of the transitional period and at least once a year
+starting on January 1, 2028, the Commission shall, in consultation with relevant
+stakeholders, present a report to the European Parliament and to the Council that
+identifies products further down the value chain of the goods listed in Annex I that it
+recommends to be considered for inclusion within the scope of this Regulation. To
+that end, the Commission shall develop, in a timely manner, a methodology that
+should be based, among others, on relevance in terms of cumulated greenhouse gas
+emissions and risk of carbon leakage, substitutability of goods and should take into
+account the critical and strategic role of the good in the ecological and energy
+transition.
+[쪽 53]
+10423/26 53
+ECOFIN.2.B EN
+(b) in paragraph 6, the second subparagraph is replaced by the following:
+‘Before 1 January 2028, as well as every two years thereafter, the Commission shall
+present a report to the European Parliament and to the Council on the application of
+this Regulation and functioning of the CBAM. This report may, where appropriate,
+be accompanied by a legislative proposal or implementing or delegated acts adopted
+pursuant to this Regulation. The report shall contain at least the following:
+(a) an assessment of the impact of the CBAM on:
+(i) carbon leakage, including in relation to exports;
+(ii) the sectors covered;
+(iii) internal market, economic and territorial impact throughout the Union;
+(iv) inflation and the price of commodities and the availability of raw
+materials;
+(v) the effect on industries using goods listed in Annex I;
+(vi) international trade, including resource shuffling; and
+(vii) LDCs.
+[쪽 54]
+10423/26 54
+ECOFIN.2.B EN
+(b) an assessment of:
+(i) the governance system, including an assessment of the
+implementation and administration of the guarantees and the
+authorisation of CBAM declarants by Member States;
+(ii) the scope of this Regulation, including of the possibility to extend the
+scope of this Regulation to additional goods at risk of carbon leakage;
+(iia) the suitability of implementing acts and delegated acts adopted
+pursuant to this Regulation;
+(iib) the suitability of the methods for setting default values and the mark-
+up applied to the default values;
+(iii) practices of circumvention;
+(iv) the application of penalties in Member States;
+(v) the application of the single mass-based threshold, including the
+possibility of increasing that threshold and of introducing a
+supplementary consignment-based threshold;
+(vi) the potential use of real-time default values for electricity;
+(vii) the impact of attributing emissions to pre-consumer scrap as a
+precursor on the effectiveness of the CBAM in addressing the risk of
+carbon leakage, as well as the impact on the availability of scrap and
+recycling practices in the EU and globally.
+(c) results of investigations and penalties imposed;
+(d) aggregated information on the emission intensity for each country of origin
+for the different goods listed in Annex I.;’
+[쪽 55]
+10423/26 55
+ECOFIN.2.B EN
+(21) Annex I is amended in accordance with Annex I to this Regulation;
+(22) Annex IV is amended in accordance with Annex II to this Regulation;
+(23) in Annex VI, point 2 is amended as follows:
+(a) points (g) to (j) are deleted;
+(b) the following point (ka) is inserted:
+‘(ka) material composition of each downstream good;’;
+(24) a new Annex VIII is added as set out in Annex III to this Regulation.
+Article 2
+Entry into force and application
+This Regulation shall enter into force on the third day following that of its publication in the
+Official Journal of the European Union.
+Points 1 and 6 of Annex II, shall apply from 1 January 2026.
+However, Article 1(6), point (a), Article 1(8), points (a), (b) and (c), Article 1(21), (23), and (24),
+and point 2 of Annex II shall apply from 1 January 2028.
+This Regulation shall be binding in its entirety and directly applicable in all Member States.
+Done at Brussels,
+For the European Parliament For the Council
+The President The President
+[쪽 56]
+10423/26 56
+ECOFIN.2.B EN
+ANNEX I
+Annex I is amended as follow:
+(1) in point 2, the table ‘Iron and Steel’ is replaced by the following:
+‘[Iron and steel
+CN code Greenhouse gas
+72 – Iron and steel
+Except:
+7202 21 00, 7202 29 –
+Ferro-silicon
+7202 30 00 – Ferro-
+silico-manganese
+7202 50 00 – Ferro-
+silico-chromium
+7202 70 00 – Ferro-
+molybdenum
+7202 80 00 – Ferro-
+tungsten and ferro -
+silico-tungsten
+7202 91 00 – Ferro-
+titanium and ferro -
+silico-titanium
+Carbon dioxide
+[쪽 57]
+10423/26 57
+ECOFIN.2.B EN
+7202 92 00 – Ferro-
+vanadium
+7202 93 00 – Ferro-
+niobium
+7202 99 – Other:
+7202 99 10 – Ferro-
+phosphorus
+7202 99 30 – Ferro-
+silico-magnesium
+7202 99 80 – Other
+7204 – Ferrous waste
+and scrap; remelting
+scrap ingots of iron or
+and steel
+[쪽 58]
+10423/26 58
+ECOFIN.2.B EN
+2601 12 00 – Agglomerated iron
+ores and concentrates, other than
+roasted iron pyrites
+Carbon dioxide
+7301 – Sheet piling of iron or
+steel, whether or not drilled,
+punched or made from
+assembled elements; welded
+angles, shapes and sections, of
+iron or steel
+Carbon dioxide
+7302 – Railway or tramway
+track construction material of
+iron or steel, the following: rails,
+check-rails and rack rails, switch
+blades, crossing frogs, point
+rods and other crossing pieces,
+sleepers (cross-ties), fish- plates,
+chairs, chair wedges, sole plates
+(base plates), rail clips,
+bedplates, ties and other
+material specialised for jointing
+or fixing rails
+Carbon dioxide
+7303 00 – Tubes, pipes and
+hollow profiles, of cast iron
+Carbon dioxide
+7304 – Tubes, pipes and hollow
+profiles, seamless, of iron (other
+than cast iron) or steel
+Carbon dioxide
+[쪽 59]
+10423/26 59
+ECOFIN.2.B EN
+7305 – Other tubes and pipes
+(for example, welded, riveted or
+similarly closed), having
+circular cross -sections, the
+external diameter of which
+exceeds 406,4 mm, of iron or
+steel
+Carbon dioxide
+7306 – Other tubes, pipes and
+hollow profiles (for example,
+open seam or welded, riveted or
+similarly closed), of iron or steel
+Carbon dioxide
+7307 – Tube or pipe fittings (for
+example, couplings, elbows,
+sleeves), of iron or steel
+Carbon dioxide
+[쪽 60]
+10423/26 60
+ECOFIN.2.B EN
+7308 – Structures (excluding
+prefabricated buildings of
+heading 9406) and parts of
+structures (for example, bridges
+and bridge-sections, lock- gates,
+towers, lattice masts, roofs,
+roofing frameworks, doors and
+windows and their frames and
+thresholds for doors, shutters,
+balustrades, pillars and
+columns), of iron or steel; plates,
+rods, angles, shapes, sections,
+tubes and the like, prepared for
+use in structures, of iron or steel
+Carbon dioxide
+7309 00 – Reservoirs, tanks, vats
+and similar containers for any
+material (other than compressed
+or liquefied gas), of iron or steel,
+of a capacity exceeding 300 l,
+whether or not lined or heat -
+insulated, but not fitted with
+mechanical or thermal
+equipment
+Carbon dioxide
+[쪽 61]
+10423/26 61
+ECOFIN.2.B EN
+7310 – Tanks, casks, drums,
+cans, boxes and similar
+containers, for any material
+(other than compressed or
+liquefied gas), of iron or steel, of
+a capacity not exceeding 300 l,
+whether or not lined or heat -
+insulated, but not fitted with
+mechanical or therma l
+equipment
+Carbon dioxide
+7311 00 – Containers for
+compressed or liquefied gas, of
+iron or steel
+Carbon dioxide
+7312 10 – Stranded wire, ropes
+and cables, of iron or steel
+Carbon dioxide
+7314 39 00 – Other grill, netting
+and fencing, of iron or steel
+wire, welded at the intersection
+Carbon dioxide
+7318 – Screws, bolts, nuts,
+coach screws, screw hooks,
+rivets, cotters, cotter pins,
+washers (including spring
+washers) and similar articles, of
+iron or steel
+Carbon dioxide
+[쪽 62]
+10423/26 62
+ECOFIN.2.B EN
+7320 20 89 – Other helical
+springs, of iron or steel
+Carbon dioxide
+7320 90 90 – Other springs and
+leaves for springs, of iron or
+steel
+Carbon dioxide
+7323 94 00 – Table, kitchen or
+other household articles, and
+parts thereof, of iron other than
+cast iron or steel, enamelled
+Carbon dioxide
+7323 99 00 – Other table,
+kitchen or other household
+articles, and parts thereof
+Carbon dioxide
+7325 – Other cast articles of iron
+or steel
+Carbon dioxide
+7326 – Other articles of iron or
+steel Carbon dioxide
+[쪽 63]
+10423/26 63
+ECOFIN.2.B EN
+(2) the following table is added:
+‘[Combined metal products
+CN code Greenhouse gas
+7314 31 00 – Other grill, netting
+and fencing, of iron or steel
+wire, welded at the intersection,
+plated or coated with zinc
+Carbon dioxide
+7314 41 00 – Grill, netting and
+fencing, of iron or steel wire, not
+welded at the intersection,
+plated or coated with zinc
+Carbon dioxide
+7314 49 00 – Grill, netting and
+fencing, of iron or steel wire, not
+welded at the intersection (excl.
+plated or coated with zinc or
+coated with plastics)
+Carbon dioxide
+7317 00 – Nails, tacks, drawing
+pins, corrugated nails, staples
+(other than those of heading
+8305) and similar articles of iron
+or steel, whether or not with
+heads of other material but
+excluding such articles with
+heads of copper
+Carbon dioxide
+[쪽 64]
+10423/26 64
+ECOFIN.2.B EN
+ex- 7415 10 00 – Nails, tacks,
+drawing pins, staples and similar
+articles, of copper or of iron or
+steel with heads of copper,
+containing steel or aluminium
+Carbon dioxide
+ex- 8302 42 00 – Other base
+metal mountings, fittings and
+similar articles suitable for
+furniture, containing steel or
+aluminium
+Carbon dioxide and
+perfluorocarbons
+ex-8302 49 00 – Other base
+metal mountings, fittings and
+similar articles, containing steel
+or aluminium
+Carbon dioxide and
+perfluorocarbons
+ex- 8309 90 90 – Other stoppers,
+caps and lids, (including screw
+caps and pouring stoppers,
+capsules for bottles, threaded
+bungs, bung covers, seals and
+other packing accessories, of
+base metal), containing steel or
+aluminium
+Carbon dioxide and
+perfluorocarbons
+[쪽 65]
+10423/26 65
+ECOFIN.2.B EN
+8408 20 10 – Compression-
+ignition internal combustion
+piston engine (diesel or semi -
+diesel engine) for the industrial
+assembly of: pedestrian -
+controlled tractors of
+subheading 8701 10, motor
+vehicles of heading 8703, motor
+vehicles of heading 8704 with
+engines of a cylinder capacity of
+less than 2.500 cm³ and motor
+vehicles of heading 8705
+Carbon dioxide and
+perfluorocarbons
+8408 20 51 – Compression-
+ignition internal combustion
+piston engine (diesel or semi -
+diesel engine) for vehicles of
+chapter 87, of a power not
+exceeding 50 kW
+Carbon dioxide and
+perfluorocarbons
+8408 20 55 – Compression-
+ignition internal combustion
+piston engine (diesel or semi -
+diesel engine) for vehicles of
+chapter 87, of a power
+exceeding 50 kW but not
+exceeding 100 kW
+Carbon dioxide and
+perfluorocarbons
+[쪽 66]
+10423/26 66
+ECOFIN.2.B EN
+8408 20 57 – Compression-
+ignition internal combustion
+piston engine (diesel or semi -
+diesel engine) for vehicles of
+chapter 87, of a power
+exceeding 100 kW but not
+exceeding 200 kW
+Carbon dioxide and
+perfluorocarbons
+8408 20 99 – Compression-
+ignition internal combustion
+piston engine (diesel or semi -
+diesel engine) for vehicles of
+chapter 87, of a power
+exceeding 200 kW
+Carbon dioxide and
+perfluorocarbons
+8408 90 65 – Compression-
+ignition internal combustion
+piston engine (diesel or semi -
+diesel engine), new, of a power
+exceeding 200 kW but not
+exceeding 300 kW
+Carbon dioxide and
+perfluorocarbons
+8408 90 67 – Compression-
+ignition internal combustion
+piston engine (diesel or semi -
+diesel engine), new, of a power
+exceeding 300 kW but not
+exceeding 500 kW
+Carbon dioxide and
+perfluorocarbons
+[쪽 67]
+10423/26 67
+ECOFIN.2.B EN
+8413 30 – Fuel, lubricating or
+cooling medium pumps for
+internal combustion piston
+engine
+Carbon dioxide and
+perfluorocarbons
+8413 70 35 – Other centrifugal
+pumps, with a discharge outlet
+diameter not exceeding 15 mm
+Carbon dioxide and
+perfluorocarbons
+8416 10 – Furnace burners for
+liquid fuel
+Carbon dioxide and
+perfluorocarbons
+8416 20 – Other furnace
+burners, including combination
+burners
+Carbon dioxide and
+perfluorocarbons
+ex- 8416 90 00 – Parts of furnace
+burners, mechanical stokers,
+including their mechanical
+grates, mechanical ash
+dischargers and similar
+appliances, containing steel or
+aluminium
+Carbon dioxide and
+perfluorocarbons
+8418 10 – Combined
+refrigerator-freezers, fitted with
+separate external doors or
+drawers, or combinations
+thereof
+Carbon dioxide and
+perfluorocarbons
+[쪽 68]
+10423/26 68
+ECOFIN.2.B EN
+ex- 8418 99 90 – Parts of
+refrigerating or freezing
+equipment and heat pumps,
+containing steel or aluminium
+Carbon dioxide and
+perfluorocarbons
+8419 89 10 – Cooling towers
+and similar plant for direct
+cooling (without a separating
+wall) by means of recirculated
+water
+Carbon dioxide and
+perfluorocarbons
+8419 89 98 – Other machinery,
+plant and equipment
+Carbon dioxide and
+perfluorocarbons
+ex- 8419 90 85 – Parts of
+machinery, plant or laboratory
+equipment, containing steel or
+aluminium
+Carbon dioxide and
+perfluorocarbons
+8420 91 – Cylinders for
+calendering or other rolling
+machines (other than for metals
+or glass)
+Carbon dioxide and
+perfluorocarbons
+ex- 8421 23 00 – Oil or petrol-
+filters for internal combustion
+engines, containing steel or
+aluminium
+Carbon dioxide and
+perfluorocarbons
+[쪽 69]
+10423/26 69
+ECOFIN.2.B EN
+8424 30 – Steam or sand
+blasting machines and similar jet
+projecting machines
+Carbon dioxide and
+perfluorocarbons
+ex- 8424 82 10 – Agricultural or
+horticultural watering
+appliances, containing steel or
+aluminium
+Carbon dioxide and
+perfluorocarbons
+ex- 8424 89 – Other mechanical
+appliances, whether or not hand-
+operated, for projecting,
+dispersing or spraying liquids or
+powders, n.e.s., containing steel
+or aluminium
+Carbon dioxide and
+perfluorocarbons
+ex- 8424 90 – Parts of
+mechanical appliances, fire
+extinguishers, spray guns and
+similar appliances, steam or
+sandblasting machines and
+similar jet projecting machines,
+containing steel or aluminium
+Carbon dioxide and
+perfluorocarbons
+8425 31 00 – Winches and
+capstans powered by electric
+motor
+Carbon dioxide and
+perfluorocarbons
+8425 39 00 – Other winches and
+capstans
+Carbon dioxide and
+perfluorocarbons
+[쪽 70]
+10423/26 70
+ECOFIN.2.B EN
+8425 42 00 – Other jacks and
+hoists, hydraulic of a kind used
+for raising vehicles
+Carbon dioxide and
+perfluorocarbons
+8426 19 00 – Other overhead
+travelling cranes, transporter
+cranes, gantry cranes, bridge
+cranes and mobile lifting frames
+Carbon dioxide and
+perfluorocarbons
+8426 99 00 – Other Ships'
+derricks; cranes, including cable
+cranes; mobile lifting frames,
+straddle carriers and works
+trucks fitted with a crane:
+Carbon dioxide and
+perfluorocarbons
+8427 90 00 – Other works trucks
+fitted with lifting or handling
+equipment, not self-propelled
+Carbon dioxide and
+perfluorocarbons
+8428 20 – Pneumatic elevators
+and conveyors
+Carbon dioxide and
+perfluorocarbons
+8428 33 00 – Continuous-action
+elevators and conveyors for
+goods or materials, belt type
+Carbon dioxide and
+perfluorocarbons
+8428 39 90 – Other Continuous-
+action elevators and conveyors
+for goods or materials elevators
+Carbon dioxide and
+perfluorocarbons
+[쪽 71]
+10423/26 71
+ECOFIN.2.B EN
+8428 70 00 – Industrial robots
+Carbon dioxide and
+perfluorocarbons
+8428 90 – Other machinery for
+lifting, handling, loading or
+unloading not elsewhere
+specified
+Carbon dioxide and
+perfluorocarbons
+8430 61 00 – Tamping or
+compacting machinery, not self-
+propelled
+Carbon dioxide and
+perfluorocarbons
+8430 69 00 – Other machinery,
+not self-propelled
+Carbon dioxide and
+perfluorocarbons
+ex- 8431 10 00 – Parts of
+machinery of heading 8425
+(pulley tackles and hoists (other
+than skip hoists), winches,
+capstans and jacks), containing
+steel or aluminium
+Carbon dioxide and
+perfluorocarbons
+ex- 8431 20 00 – Parts of
+machinery of heading 8427
+(fork-lift trucks and other works
+trucks fitted with lifting or
+handling equipment), containing
+steel or aluminium
+Carbon dioxide and
+perfluorocarbons
+[쪽 72]
+10423/26 72
+ECOFIN.2.B EN
+ex- 8431 31 00 – Parts of lifts,
+skip hoists or escalators,
+containing steel or aluminium
+Carbon dioxide and
+perfluorocarbons
+ex- 8431 39 00 – Other parts of
+machinery of heading 8428,
+containing steel or aluminium
+Carbon dioxide and
+perfluorocarbons
+8431 49 – Other parts of
+machinery of heading 8426,
+8429 or 8430
+Carbon dioxide and
+perfluorocarbons
+8432 80 00 – Other agricultural,
+horticultural or forestry
+machinery for soil preparation
+or cultivation; lawn or sports -
+ground rollers
+Carbon dioxide and
+perfluorocarbons
+8432 90 00 – Parts of
+agricultural, horticultural or
+forestry machinery for soil
+preparation or cultivation or of
+lawn or sports-ground rollers
+Carbon dioxide and
+perfluorocarbons
+8450 11 – Fully-automatic
+household or laundry -type
+washing machines
+Carbon dioxide and
+perfluorocarbons
+8450 12 00 – Other household or
+laundry-type washing machines,
+with built-in centrifugal drier
+Carbon dioxide and
+perfluorocarbons
+[쪽 73]
+10423/26 73
+ECOFIN.2.B EN
+8450 19 00 – Other household or
+laundry-type washing machines,
+of a dry linen capacity not
+exceeding 10 kg
+Carbon dioxide and
+perfluorocarbons
+8451 21 00 – Drying machines,
+of a dry linen capacity not
+exceeding 10 kg
+Carbon dioxide and
+perfluorocarbons
+8454 10 00 – Converters of a
+kind used in metallurgy or in
+metal foundries
+Carbon dioxide and
+perfluorocarbons
+8454 20 00 – Ingot moulds and
+ladles, of a kind used in
+metallurgy or in metal foundries
+Carbon dioxide and
+perfluorocarbons
+8454 30 – Casting machines of a
+kind used in metallurgy or in
+metal foundries
+Carbon dioxide and
+perfluorocarbons
+8464 10 00 – Sawing machines
+Carbon dioxide and
+perfluorocarbons
+8464 90 00 – Other machine
+tools for working stones,
+ceramics, concrete, asbestos
+cement or like mineral materials
+or for cold-working glass
+Carbon dioxide and
+perfluorocarbons
+[쪽 74]
+10423/26 74
+ECOFIN.2.B EN
+8474 10 00 – Sorting, screening,
+separating or washing machines
+for earth, stone, ores or other
+mineral substances, in solid
+(including powder or paste)
+form
+Carbon dioxide and
+perfluorocarbons
+8474 20 00 – Crushing or
+grinding machines for earth,
+stone, ores or other mineral
+substances, in solid (including
+powder or paste) form
+Carbon dioxide and
+perfluorocarbons
+8474 39 00 – Other mixing or
+kneading machines for earth,
+stone, ores or other mineral
+substances, in solid (including
+powder or paste) form
+Carbon dioxide and
+perfluorocarbons
+8479 10 00 – Machinery for
+public works, building or the
+like
+Carbon dioxide and
+perfluorocarbons
+ex- 8480 50 00 – Moulds for
+glass, containing iron
+Carbon dioxide and
+perfluorocarbons
+8501 32 00 – DC motors, DC
+generators of an output
+exceeding 750 W but not
+exceeding 75 kW (other than
+photovoltaic generators)
+Carbon dioxide and
+perfluorocarbons
+[쪽 75]
+10423/26 75
+ECOFIN.2.B EN
+8501 53 81 – AC motors, multi-
+phase, of an output of exceeding
+75 kW but not exceeding 375
+kW
+Carbon dioxide and
+perfluorocarbons
+8504 31 80 – Other transformers
+having a power handling
+capacity not exceeding 1 kVA
+Carbon dioxide and
+perfluorocarbons
+8504 33 00 – Other transformers
+having a power handling
+capacity exceeding 16 kVA but
+not exceeding 500 kVA
+Carbon dioxide and
+perfluorocarbons
+ex- 8504 50 00 – Inductors,
+containing steel or aluminium
+Carbon dioxide and
+perfluorocarbons
+8515 39 90 – Other machines
+and apparatus for arc welding of
+metals, incl. plasma arc
+(including plasma arc) welding
+of metals
+Carbon dioxide and
+perfluorocarbons
+ex- 8544 11 10 – Winding wire
+for electrical purposes, of
+copper, lacquered or enamelled ,
+containing steel or aluminium
+Carbon dioxide and
+perfluorocarbons
+[쪽 76]
+10423/26 76
+ECOFIN.2.B EN
+ex- 8544 11 90 – Winding wire
+for electrical purposes, of
+copper, insulated (excl.
+lacquered or enamelled) ,
+containing steel or aluminium
+Carbon dioxide and
+perfluorocarbons
+ex- 8544 19 00 – Winding wire
+for electrical purposes, of
+material other than copper,
+insulated, containing steel or
+aluminium
+Carbon dioxide and
+perfluorocarbons
+ex- 8544 49 20 – Conductors,
+electric, for a voltage <= 80 V,
+insulated, not fitted with
+connectors, of a kind used for
+telecommunications, n.e.s. ,
+containing steel or aluminium
+Carbon dioxide and
+perfluorocarbons
+ex- 8544 49 91 – Electric wire
+and cables, for a voltage <=
+1.000 V, insulated, not fitted
+with connectors, with individual
+conductor wires of a diameter >
+0,51 mm, n.e.s., containing steel
+or aluminium
+Carbon dioxide and
+perfluorocarbons
+[쪽 77]
+10423/26 77
+ECOFIN.2.B EN
+ex- 8544 49 93 – Conductors,
+electric, for a voltage <= 80 V,
+insulated, not fitted with
+connectors, n.e.s. (excl. winding
+wire, coaxial conductors, wiring
+sets for vehicles, aircraft or
+ships, and wire and cables with
+individual conductor wires of a
+diameter > 0,51 mm), containing
+steel or aluminium
+Carbon dioxide and
+perfluorocarbons
+ex- 8544 49 95 – Electric
+conductors for a voltage > 80 V
+but < 1.000 V, insulated, not
+fitted with connectors, n.e.s.
+(excl. winding wire, coaxial
+conductors, wiring sets for
+vehicles, aircraft or ships, and
+wire and cables with individual
+conductor wires of a diameter >
+0,51 mm) , containing steel or
+aluminium
+Carbon dioxide and
+perfluorocarbons
+[쪽 78]
+10423/26 78
+ECOFIN.2.B EN
+ex- 8544 49 99 – Electric
+conductors for a voltage 1.000
+V, insulated, not fitted with
+connectors, n.e.s. (excl. winding
+wire, coaxial conductors, wiring
+sets for vehicles, aircraft or
+ships, and wire and cables with
+individual conductor wires of a
+diameter > 0,51 mm), containing
+steel or aluminium
+Carbon dioxide and
+perfluorocarbons
+ex- 8544 60 10 – Electric
+conductors for a voltage > 1.000
+V, insulated, with copper
+conductors, n.e.s. , containing
+steel or aluminium
+Carbon dioxide and
+perfluorocarbons
+ex- 8544 60 90 – Electric
+conductors for a voltage > 1.000
+V, insulated, not with copper
+conductors, n.e.s. , containing
+steel or aluminium
+Carbon dioxide and
+perfluorocarbons
+ex 8704 21 – Motor vehicles of
+a gross vehicle weight not
+exceeding 5 tonnes, excluding
+8704 21 39 and 8704 21 99
+Carbon dioxide and
+perfluorocarbons
+[쪽 79]
+10423/26 79
+ECOFIN.2.B EN
+ex 8704 22 – Motor vehicles of
+a gross vehicle weight
+exceeding 5 tonnes but not
+exceeding 20 tonnes, excluding
+8704 22 99
+Carbon dioxide and
+perfluorocarbons
+ex 8704 23 10 – Motor vehicles
+of a gross vehicle weight
+exceeding 20 tonnes, excluding
+8704 23 99
+Carbon dioxide and
+perfluorocarbons
+ex 8704 31 – Motor vehicles,
+with only spark-ignition internal
+combustion piston engine, of a
+gross vehicle weight not
+exceeding <= 5 tonnes,
+excluding 8704 31 39 and 8704
+31 99
+Carbon dioxide and
+perfluorocarbons
+ex 8704 32 10 – Motor vehicles,
+with only spark-ignition internal
+combustion piston engine, of a
+gross vehicle weight exceeding
+5 tonnes, excluding 8704 32 99
+Carbon dioxide and
+perfluorocarbons
+[쪽 80]
+10423/26 80
+ECOFIN.2.B EN
+ex 8704 41 – Motor vehicles,
+with both compression -ignition
+internal combustion piston
+engine (diesel or semi -diesel)
+and electric motor as motors for
+propulsion, of a gross vehicle
+weight not exceeding 5 t,
+excluding 8704 41 39 and 8704
+41 99
+Carbon dioxide and
+perfluorocarbons
+ex 8704 42 – Motor vehicles,
+with both compression -ignition
+internal combustion piston
+engine (diesel or semi -diesel)
+and electric motor as motors for
+propulsion, of a gross vehicle
+weight exceeding 5 tonnes but
+not exceeding 20 tonnes,
+excluding 8704 42 99
+Carbon dioxide and
+perfluorocarbons
+ex 8704 43 – Motor vehicles,
+with both compression -ignition
+internal combustion piston
+engine (diesel or semi -diesel)
+and electric motor as motors for
+propulsion, of a gross vehicle
+weight exceeding 20 tonnes,
+excluding 8704 43 99
+Carbon dioxide and
+perfluorocarbons
+[쪽 81]
+10423/26 81
+ECOFIN.2.B EN
+8704 60 00 – Motor vehicles for
+the transport of goods, with only
+electric motor as motor for
+propulsion
+Carbon dioxide and
+perfluorocarbons
+8704 90 00 – Other motor
+vehicles for the transport of
+goods
+Carbon dioxide and
+perfluorocarbons
+8706 00 – Chassis fitted with
+engines, for motor vehicles of
+heading 8701 to 8705
+Carbon dioxide and
+perfluorocarbons
+8707 10 – Bodies for the
+vehicles of heading 8703
+Carbon dioxide and
+perfluorocarbons
+8708 40 – Gear boxes and parts
+thereof, of the motor vehicles of
+headings 8701 to 8705
+Carbon dioxide and
+perfluorocarbons
+8708 70 – Road wheels and parts
+and accessories thereof, of the
+motor vehicles of headings 8701
+to 8705
+Carbon dioxide and
+perfluorocarbons
+8708 80 – Suspension systems
+and parts thereof, including.
+shock-absorbers, of the motor
+vehicles of headings 8701 to
+8705
+Carbon dioxide and
+perfluorocarbons
+[쪽 82]
+10423/26 82
+ECOFIN.2.B EN
+ex- 8708 91 – Radiators and
+parts thereof, for the industrial
+assembly of: pedestrian -
+controlled tractors of
+subheading 8701 10, vehicles of
+heading 8703, vehicles of
+heading 8704 with either a,
+containing steel or aluminium
+Carbon dioxide and
+perfluorocarbons
+ex 8716 80 00 – Other vehicles
+pushed or drawn by hand
+Carbon dioxide and
+perfluorocarbons
+8716 90 90 – Other parts of
+trailers, semi -trailers and other
+vehicles
+Carbon dioxide and
+perfluorocarbons
+9018 32 10 – Tubular metal
+needles
+Carbon dioxide and
+perfluorocarbons
+ex- 9018 90 75 – Apparatus for
+nerve stimulation, containing
+steel or aluminium
+Carbon dioxide and
+perfluorocarbons
+ex- 9018 90 84 – Other
+instruments and appliances ,
+containing steel or aluminium
+Carbon dioxide and
+perfluorocarbons
+ex- 9027 10 90 – Other gas or
+smoke analysis apparatus,
+containing steel or aluminium
+Carbon dioxide and
+perfluorocarbons
+[쪽 83]
+10423/26 83
+ECOFIN.2.B EN
+9401 79 00 – Seats, with metal
+frames
+Carbon dioxide and
+perfluorocarbons
+9403 10 – Metal furniture of a
+kind used in offices
+Carbon dioxide and
+perfluorocarbons
+ex- 9403 20 – Other metal
+furniture, containing steel or
+aluminium
+Carbon dioxide and
+perfluorocarbons
+ex- 9406 90 90 – Prefabricated
+buildings, containing steel or
+aluminium
+Carbon dioxide and
+perfluorocarbons
+[쪽 84]
+10423/26 84
+ECOFIN.2.B EN
+[NOTE 1: the following CN codes shall be integrated into the Annex I above:
+73129000
+Plaited bands, slings and the like, of iron or steel (excl.
+electrically insulated products)
+73141200 Endless bands of stainless steel wire, for machinery
+73142010
+Grill, netting and fencing, welded at the intersection, having a
+mesh size of >= 100 cm², of ribbed iron or steel wire of a
+maximum cross-sectional dimension of >= 3 mm
+73142090
+Grill, netting and fencing, welded at the intersection, having a
+mesh size of >= 100 cm², of iron or steel wire, the constituent
+material of which having a maximum cross-sectional
+dimension of >= 3 mm (other than of ribbed wire)
+73144200
+Grill, netting and fencing, of iron or steel wire, not welded at
+the intersection, coated with plastics
+73145000 Expanded metal, of iron or steel
+73201011 Laminated leaf-springs and leaves therefor, of iron or steel
+73201019
+Leaf-springs and leaves therefor, of iron or steel, hot-worked
+(excl. laminated)
+73201090
+Leaf-springs and leaves therefor, of iron or steel (excl. hot-
+worked)
+[쪽 85]
+10423/26 85
+ECOFIN.2.B EN
+73202020
+Helical springs, of iron or steel, hot-worked (excl. flat spiral
+springs, clock and watch springs, springs for sticks and
+handles of umbrellas or parasols, and shock absorbers of
+Section 17)
+73202081 Coil compression springs, of iron or steel
+73202085 Coil tension springs, of iron or steel
+73209010 Flat spiral springs, of iron or steel
+73209030 Discs springs, of iron or steel
+73239300
+Table, kitchen or other household articles, and parts thereof,
+of stainless steel (excl. cans, boxes and similar containers of
+heading 7310; waste baskets; shovels, corkscrews and other
+articles of the nature of a work implement; articles of cutlery,
+spoons, ladles, forks etc. of heading 8211 to 8215;
+ornamental articles; sanitary ware)
+83021000 Hinges of all kinds, of base metal
+83023000
+Base metal mountings, fittings and similar articles suitable
+for motor vehicles (excl. hinges and castors)
+83024110
+Base metal mountings and fittings suitable for doors (excl.
+locks with keys and hinges)
+83024150
+Base metal mountings and fittings suitable for windows and
+French windows (excl. locks with keys and hinges)
+[쪽 86]
+10423/26 86
+ECOFIN.2.B EN
+83024190
+Base metal mountings and fittings suitable for buildings
+(excl. for doors, windows and French windows and locks
+with keys and hinges)
+83026000 Automatic door closers of base metal
+83091000 Crown corks of base metal
+83099010
+Capsules of lead, for bottles; capsules of aluminium of a
+diameter > 21 mm, for bottles (excl. crown corks)
+84073410
+Spark ignition reciprocating piston engine of a cylinder
+capacity > 1.000 cm³, for the industrial assembly of :
+pedestrian-controlled tractors of subheading 8701.10, motor
+vehicles of heading 8703, motor vehicles of heading 8704
+with engines of a cylinder capacity < 2.800 cm³ and motor
+vehicles of heading 8705
+84073491
+Spark-ignition reciprocating piston engine, of a kind used for
+vehicles of chapter 87, new, of a cylinder capacity <= 1.500
+cm³ but > 1.000 cm³ (excl. engines of subheading
+8407.34.10)
+[쪽 87]
+10423/26 87
+ECOFIN.2.B EN
+84073499
+Spark-ignition reciprocating piston engine, of a kind used for
+vehicles of chapter 87, new, of a cylinder capacity > 1.500
+cm³ (excl. those used for the industrial assembly of
+pedestrian-controlled tractors of subheading 8701.10, motor
+vehicles of heading 8703, motor vehicles of heading 8704
+with engines of a cylinder capacity < 2.800 cm³ and motor
+vehicles of heading 8705)
+84082031
+Compression-ignition internal combustion piston engine
+"diesel or semi-diesel engine" for wheeled agricultural or
+forestry tractors, of a power <= 50 kW
+84082035
+Compression-ignition internal combustion piston engine
+"diesel or semi-diesel engine" for wheeled agricultural or
+forestry tractors, of a power > 50 kW but <= 100 kW
+84082037
+Compression-ignition internal combustion piston engine
+"diesel or semi-diesel engine" for wheeled agricultural or
+forestry tractors, of a power > 100 kW
+84182110
+Household refrigerators, compression-type, of a capacity >
+340 l
+84182151 Household refrigerators, compression-type, table model
+84182159 Household refrigerators, compression-type, building-in type
+84182191
+Household refrigerators compression-type, of a capacity <=
+250 l (excl. table models and building-in types)
+[쪽 88]
+10423/26 88
+ECOFIN.2.B EN
+84182199
+Household refrigerators, compression-type, of a capacity >
+250 l but <= 340 l (excl. table models and building-in types)
+84182900 Household refrigerators, absorption-type
+84185090
+Refrigerating furniture with a refrigerating unit or evaporator
+(excl. combined refrigerator-freezers with separate external
+doors or drawers or combinations thereof, household
+refrigerators, refrigerated show-cases and counters)
+84189910
+Evaporators and condensers for refrigerating equipment
+(excl. for household refrigerators)
+84191100
+Instantaneous gas water heaters (excl. boilers or water heaters
+for central heating)
+84191200 Solar water heaters
+84191900
+Instantaneous or storage water heaters, non-electric (excl.
+instantaneous gas water heaters, solar water heaters and
+boilers or water heaters for central heating)
+84198180
+Machinery, plant and equipment for cooking or heating food
+(excl. percolators and other appliances for making hot drinks
+and domestic appliances)
+[쪽 89]
+10423/26 89
+ECOFIN.2.B EN
+84213925
+Machinery and apparatus for filtering or purifying air (excl.
+intake air filters for internal combustion engines, and those
+with stainless steel housing and with inlet and outlet tube
+bores with inside diameters <= 1,3 cm)
+84213935
+Machinery and apparatus for filtering or purifying gases other
+than air by a catalytic process (excl. those with stainless steel
+housing and with inlet and outlet tube bores with inside
+diameters <= 1,3 cm, and catalytic converters for exhaust
+gases from internal combustion engines)
+84219910
+Parts of machinery and apparatus of subheadings 84212920
+or 84213915, n.e.s.
+84219990
+Parts of machinery and apparatus for filtering or purifying
+liquids or gases, n.e.s.
+84241000 Fire extinguishers, whether or not charged
+84244100 Agricultural or horticultural sprayers, portable
+84248290
+Agricultural or horticultural mechanical appliances, whether
+or not hand-operated, for projecting or dispersing liquids or
+powders (excl. sprayers and watering appliances)
+[쪽 90]
+10423/26 90
+ECOFIN.2.B EN
+84261100 Overhead travelling cranes on fixed support
+84262000 Tower cranes
+84263000 Portal or pedestal jib cranes
+84264100
+Mobile cranes and works trucks fitted with a crane, self-
+propelled, on tyres (excl. wheel-mounted cranes, mobile
+lifting frames on tyres and straddle carriers)
+84264900
+Mobile cranes and works trucks fitted with a crane, self-
+propelled (excl. those on tyres and straddle carriers)
+84269110
+Hydraulic cranes designed for the loading and unloading of
+the vehicle
+84269190
+Cranes designed for mounting on road vehicles (excl.
+hydraulic cranes designed for the loading and unloading of
+vehicles)
+84271010
+Self-propelled works trucks powered by an electric motor,
+with a lifting height >= 1 m
+84271090
+Self-propelled works trucks powered by an electric motor,
+with a lifting height < 1 m
+84272011
+Rough terrain fork-lift and other stacking trucks, self-
+propelled, with a lifting height >= 1 m
+[쪽 91]
+10423/26 91
+ECOFIN.2.B EN
+84272019
+Works trucks, self-propelled, with a lifting height >= 1 m,
+non- powered with an electric motor (excl. rough terrain fork-
+lift trucks and other stacking trucks)
+84272090
+Works trucks, self-propelled, with a lifting height < 1 m, non-
+powered with an electric motor
+84281020 Lifts and skip hoists, electrically operated
+84281080 Lifts and skip hoists, non-electrically operated
+84283200
+Continuous-action elevators and conveyors for goods or
+materials, bucket type (excl. for underground use)
+84283920 Roller conveyors
+84314100
+Buckets, shovels, grabs and grips for machinery of heading
+8426, 8429 and 8430
+84314300
+Parts for boring or sinking machinery of subheading 8430.41
+or 8430.49, n.e.s.
+84509000 Parts of household or laundry-type washing machines, n.e.s.
+84549000
+Parts of converters, ladles, ingot moulds and casting
+machines of a kind used in metallurgy or in metal foundries,
+n.e.s.
+84749010 Parts of machinery of heading 8474, of cast iron or cast steel
+[쪽 92]
+10423/26 92
+ECOFIN.2.B EN
+84749090
+Parts of machinery of heading 8474 (excl. of cast iron or cast
+steel)
+84799015
+Parts of automated electronic component placement machines
+of a kind used solely or principally for the manufacture of
+printed circuit assemblies
+84799020
+Parts of machines and mechanical appliances having
+individual functions, of cast iron or cast steel, n.e.s.
+84799070
+Parts of machines and mechanical appliances having
+individual functions, n.e.s. (excl. of cast iron or cast steel)
+84804900
+Moulds for metal or metal carbides (excl. moulds of graphite
+or other carbons, ceramic or glass moulds, linotype moulds or
+matrices, injection or compression-type moulds and ingot
+moulds)
+84807100 Injection or compression-type moulds for rubber or plastics
+85011010 Synchronous motors of an output <= 18 W
+85011091 Universal AC-DC motors of an output <= 37,5 W
+85011093
+AC motors of an output <= 37,5 W (excl. synchronous
+motors of an output <= 18 W)
+85011099 DC motors of an output <= 37,5 W
+85013100
+DC motors of an output > 37,5 W but <= 750 W and DC
+generators of an output <= 750 W (excl. photovoltaic
+generators)
+[쪽 93]
+10423/26 93
+ECOFIN.2.B EN
+85014020
+AC motors, single phase, of an output of > 37,5 W but <=
+750 W
+85015220
+AC motors, multi-phase, of an output > 750 W but <= 7,5
+kW
+85015290 AC motors, multi-phase, of an output > 37 kW but <= 75 kW
+85015350 AC traction motors, multi-phase, of an output > 75 kW
+85015394
+AC motors, multi-phase, of an output of > 375 kW but <=
+750 kW (excl. traction motors)
+85015399
+AC motors, multi-phase, of an output > 750 kW (excl.
+traction motors)
+85016120
+AC generators "alternators", of an output <= 7,5 kVA (excl.
+photovoltaic generators)
+85016180
+AC generators "alternators", of an output > 7,5 kVA but <=
+75 kVA (excl. photovoltaic generators)
+85041020 Inductors, whether or not connected with a capacitor
+85042100
+Liquid dielectric transformers, having a power handling
+capacity <= 650 kVA
+85042210
+Liquid dielectric transformers, having a power handling
+capacity > 650 kVA but <= 1.600 kVA
+[쪽 94]
+10423/26 94
+ECOFIN.2.B EN
+85042290
+Liquid dielectric transformers, having a power handling
+capacity > 1.600 kVA but <= 10.000 kVA
+85043121
+Measuring transformers for voltage measurement, having a
+power handling capacity <= 1 kVA
+85043129
+Measuring transformers having a power handling capacity <=
+1 kVA (other than for voltage measurement)
+85043200
+Transformers, having a power handling capacity > 1 kVA but
+<= 16 kVA (excl. liquid dielectric transformers)
+85043400
+Transformers having a power handling capacity > 500 kVA
+(excl. liquid dielectric transformers)
+85044083 Rectifiers
+85049011 Ferrite cores for transformers and inductors
+85049013
+Steel laminations and cores, whether or not stacked or
+wound, for transformers and inductors
+85049017
+Parts of transformers and inductors, n.e.s. (excl. ferrite cores
+and steel laminations and cores)
+[쪽 95]
+10423/26 95
+ECOFIN.2.B EN
+87081010
+Bumpers and parts thereof, for the industrial assembly of
+motor cars and other motor vehicles principally designed for
+the transport of persons, vehicles for the transport of goods
+with compression-ignition internal combustion piston engine
+"diesel or semi-diesel engine" of a cylinder capacity <= 2.500
+cm³ or with spark-ignition internal piston engine of a cylinder
+capacity <= 2.800 cm³ and special purpose motor vehicles of
+heading 8705, n.e.s.
+87081090
+Bumpers and parts thereof for tractors, motor vehicles for the
+transport of ten or more persons, motor cars and other motor
+vehicles principally designed for the transport of persons,
+motor vehicles for the transport of goods and special purpose
+motor vehicles, n.e.s. (excl. those for the industrial assembly
+of certain motor vehicles of subheading 8708.10.10)
+87082210
+Front windscreens "windshields", rear windows and other
+windows for motor vehicles of headings 8701 to 8705, for the
+industrial assembly of: Pedestrian-controlled tractors of
+subheading 870110;Vehicles of heading 8703; Vehicles of
+heading 8704 with either a compression-ignition internal
+combustion piston engine "diesel or semi-diesel" of a
+cylinder capacity <= 2500 cm3 or with a spark-ignition
+internal combustion piston engine of a cylinder capacity <=
+2800 cm3; Vehicles of heading 8705
+[쪽 96]
+10423/26 96
+ECOFIN.2.B EN
+87082290
+Front windscreens "windshields", rear windows and other
+windows for motor vehicles of headings 8701 to 8705 (excl.
+for the industrial assembly of: Pedestrian-controlled tractors
+of subheading 870110;Vehicles of heading 8703; Vehicles of
+heading 8704 with either a compression-ignition internal
+combustion piston engine "diesel or semi-diesel" of a
+cylinder capacity <= 2500 cm3 or with a spark-ignition
+internal combustion piston engine of a cylinder capacity <=
+2800 cm3; Vehicles of heading 8705)
+87082910
+Parts and accessories for the industrial assembly of bodies of:
+pedestrian-controlled tractors, motor cars and vehicles
+principally designed for the transport of persons, vehicles for
+the transport of goods with compression-ignition internal
+combustion piston engine "diesel or semi-diesel engine" <=
+2500 cm³ or spark-ignition internal piston engine <= 2800
+cm³; special purpose motor vehicles of No 8705 (excl.
+bumpers, safety seat belts and front windscreens
+"windshields", rear windows and other windows)
+[쪽 97]
+10423/26 97
+ECOFIN.2.B EN
+87082990
+Parts and accessories for the industrial assembly of bodies of:
+tractors, motor vehicles for the transport of >= 10 persons,
+motor cars and vehicles principally designed for the transport
+of persons, motor vehicles for the transport of goods, special
+purpose motor vehicles (excl. bumpers and parts thereof,
+safety seat belts, front windscreens "windshields", rear
+windows and other windows and parts and accessories for the
+industrial assembly of motor vehicles of subheading
+8708.29.10)
+87083010
+Brakes and servo-brakes and their parts, for the industrial
+assembly of: pedestrian-controlled tractors, motor cars and
+vehicles principally designed for the transport of persons,
+vehicles for the transport of goods with compression-ignition
+internal combustion piston engine "diesel or semi-diesel
+engine" <= 2500 cm³ or with spark-ignition internal piston
+engine <= 2800 cm³, special purpose motor vehicles of
+heading 8705, n.e.s.
+87083091
+Parts for disc brakes, for tractors, motor vehicles for the
+transport of ten or more persons, motor cars and other motor
+vehicles principally designed for the transport of persons,
+motor vehicles for the transport of goods and special purpose
+motor vehicles, n.e.s. (excl. those for the industrial assembly
+of certain motor vehicles of subheading 8708.30.10)
+[쪽 98]
+10423/26 98
+ECOFIN.2.B EN
+87083099
+Brakes and servo-brakes and their parts, for tractors, motor
+vehicles for the transport of ten or more persons, motor cars
+and other motor vehicles principally designed for the
+transport of persons, motor vehicles for the transport of goods
+and special purpose motor vehicles, n.e.s. (excl. those for the
+industrial assembly of certain motor vehicles of subheading
+8708.30.10 and for disc brakes)
+87085020
+Drive-axles with differential, whether or not provided with
+other transmission components, and non-driving axles, and
+parts thereof, for the industrial assembly of: pedestrian-
+controlled tractors, motor cars and vehicles principally
+designed for the transport of persons, vehicles for the
+transport of goods with compression-ignition internal
+combustion piston engine "diesel or semi-diesel engine" <=
+2500 cm³ or with spark-ignition internal piston engine <=
+2800 cm³, special purpose motor vehicles of heading 8705,
+n.e.s
+87085035
+Drive-axles with differential, whether or not provided with
+other transmission components, and non-driving axles, for
+tractors, motor vehicles for the transport of ten or more
+persons, motor cars and other motor vehicles principally
+designed for the transport of persons, motor vehicles for the
+transport of goods and special purpose motor vehicles (excl.
+those for the industrial assembly of certain motor vehicles of
+subheading 8708.50.20)
+[쪽 99]
+10423/26 99
+ECOFIN.2.B EN
+87085055
+Parts for drive-axles with differential, whether or not
+provided with other transmission components, and for non-
+driving axles, of closed-die forged steel, for tractors, motor
+vehicles for the transport of ten or more persons, motor cars
+and other motor vehicles principally designed for the
+transport of persons, motor vehicles for the transport of goods
+and special purpose motor vehicles, n.e.s. (excl. those for the
+industrial assembly of certain motor vehicles of subheading
+8708.50.20)
+87085091
+Parts for non-driving axles, for tractors, motor vehicles for
+the transport of ten or more persons, motor cars and other
+motor vehicles principally designed for the transport of
+persons, motor vehicles for the transport of goods and special
+purpose motor vehicles, n.e.s. (excl. those for the industrial
+assembly of certain motor vehicles of subheading 8708.50.20
+and of closed-die forged steel)
+87085099
+Parts for drive-axles with differential, whether or not
+provided with other transmission components, for tractors,
+motor vehicles for the transport of ten or more persons, motor
+cars and other motor vehicles principally designed for the
+transport of persons, motor vehicles for the transport of goods
+and special purpose motor vehicles, n.e.s. (excl. those for the
+industrial assembly of certain motor vehicles of subheading
+8708.50.20, for non-driving axles and of closed-die forged
+steel)
+[쪽 100]
+10423/26 100
+ECOFIN.2.B EN
+87089220
+Silencers "mufflers" and exhaust pipes, and parts thereof, for
+the industrial assembly of: pedestrian-controlled tractors,
+motor cars and vehicles principally designed for the transport
+of persons, vehicles for the transport of goods with
+compression-ignition internal combustion piston engine
+"diesel or semi-diesel engine" <= 2500 cm³ or with spark-
+ignition internal piston engine <= 2800 cm³, special purpose
+motor vehicles of heading 8705, n.e.s
+87089235
+Silencers "mufflers" and exhaust pipes, for tractors, motor
+vehicles for the transport of ten or more persons, motor cars
+and other motor vehicles principally designed for the
+transport of persons, motor vehicles for the transport of goods
+and special purpose motor vehicles (excl. those for the
+industrial assembly of certain motor vehicles of subheading
+8708.92.20)
+87089291
+Parts for silencers "mufflers" and exhaust pipes, of closed-die
+forged steel, for tractors, motor vehicles for the transport of
+ten or more persons, motor cars and other motor vehicles
+principally designed for the transport of persons, motor
+vehicles for the transport of goods and special purpose motor
+vehicles, n.e.s. (excl. those for the industrial assembly of
+certain motor vehicles of subheading 8708.92.20)
+[쪽 101]
+10423/26 101
+ECOFIN.2.B EN
+87089299
+Parts for silencers "mufflers" and exhaust pipes, for tractors,
+motor vehicles for the transport of ten or more persons, motor
+cars and other motor vehicles principally designed for the
+transport of persons, motor vehicles for the transport of goods
+and special purpose motor vehicles, n.e.s. (excl. those for the
+industrial assembly of certain motor vehicles of subheading
+8708.92.20 and of closed-die forged steel)
+87089310
+Clutches and parts thereof, for the industrial assembly of:
+pedestrian-controlled tractors, motor cars and vehicles
+principally designed for the transport of persons, vehicles for
+the transport of goods with compression-ignition internal
+combustion piston engine "diesel or semi-diesel engine" <=
+2500 cm³ or with spark-ignition internal piston engine <=
+2800 cm³, special purpose motor vehicles of heading 8705,
+n.e.s.
+87089390
+Clutches and parts thereof, for tractors, motor vehicles for the
+transport of ten or more persons, motor cars and other motor
+vehicles principally designed for the transport of persons,
+motor vehicles for the transport of goods and special purpose
+motor vehicles, n.e.s. (excl. those for the industrial assembly
+of certain motor vehicles of subheading 8708.93.10)
+[쪽 102]
+10423/26 102
+ECOFIN.2.B EN
+87089420
+Steering wheels, steering columns and steering boxes, and
+parts thereof, for the industrial assembly of: motor cars and
+vehicles principally designed for the transport of persons,
+vehicles for the transport of goods with compression-ignition
+internal combustion piston engine "diesel or semi-diesel
+engine" <= 2500 cm³ or with spark-ignition internal piston
+engine <= 2800 cm³, special purpose motor vehicles of
+heading 8705, n.e.s
+87089435
+Steering wheels, columns and boxes, for tractors, motor
+vehicles for the transport of ten or more persons, motor cars
+and other motor vehicles principally designed for the
+transport of persons, motor vehicles for the transport of goods
+and special purpose motor vehicles (excl. those for the
+industrial assembly of certain motor vehicles of subheading
+8708.94.20)
+87089491
+Parts for steering wheels, steering columns and steering
+boxes, of closed-die forged steel, for tractors, motor vehicles
+for the transport of ten or more persons, motor cars and other
+motor vehicles principally designed for the transport of
+persons, motor vehicles for the transport of goods and special
+purpose motor vehicles, n.e.s. (excl. those for the industrial
+assembly of certain motor vehicles of subheading
+8708.94.20)
+[쪽 103]
+10423/26 103
+ECOFIN.2.B EN
+87089499
+Parts for steering wheels, steering columns and steering
+boxes, for tractors, motor vehicles for the transport of ten or
+more persons, motor cars and other motor vehicles
+principally designed for the transport of persons, motor
+vehicles for the transport of goods and special purpose motor
+vehicles, n.e.s. (excl. those for the industrial assembly of
+certain motor vehicles of subheading 8708.94.20 and of
+closed-die forged steel)
+87089910
+Parts and accessories for the industrial assembly of:
+pedestrian-controlled tractors, motor cars and vehicles
+principally designed for the transport of persons, vehicles for
+the transport of goods with compression-ignition internal
+combustion piston engine "diesel or semi-diesel engine" <=
+2500 cm³ or with spark-ignition internal piston engine <=
+2800 cm³, special purpose motor vehicles of heading 8705,
+n.e.s.
+87089993
+Parts and accessories of closed-die forged steel, for tractors,
+motor vehicles for the transport of ten or more persons, motor
+cars and other motor vehicles principally designed for the
+transport of persons, motor vehicles for the transport of goods
+and special purpose motor vehicles, n.e.s.
+[쪽 104]
+10423/26 104
+ECOFIN.2.B EN
+87089997
+Parts and accessories for tractors, motor vehicles for the
+transport of ten or more persons, motor cars and other motor
+vehicles principally designed for the transport of persons,
+motor vehicles for the transport of goods and special purpose
+motor vehicles, n.e.s. (excl. of closed-die forged steel)
+87161092
+Trailers and semi-trailers of the caravan type, for housing or
+camping, of a weight <= 1600 kg
+87161098
+Trailers and semi-trailers of the caravan type, for housing or
+camping, of a weight > 1600 kg
+87163100
+Tanker trailers and tanker semi-trailers, not designed for
+running on rails
+87163910
+Trailers and semi-trailers, not designed for running on rails,
+for the transport of highly radioactive materials [Euratom]
+87163930
+Semi-trailers for the transport of goods, new (excl. self-
+loading or self-unloading semi-trailers for agricultural
+purposes, tanker semi-trailers, and semi-trailers not designed
+for running on rails for the transport of highly radioactive
+materials [Euratom])
+87163950
+Trailers for the transport of goods, new (excl. self-loading or
+self-unloading trailers for agricultural purposes, tanker
+trailers, and trailers designed for the transport of highly
+radioactive materials)
+[쪽 105]
+10423/26 105
+ECOFIN.2.B EN
+87164000
+Trailers and semi-trailers, not designed for running on rails
+(excl. trailers and semi-trailers for the transport of goods and
+those of the caravan type for housing or camping)
+87169010
+Chassis of trailers, semi-trailers and other vehicles not
+mechanically propelled, n.e.s.
+87169030
+Bodies of trailers, semi-trailers and other vehicles not
+mechanically propelled, n.e.s.
+87169050
+Axles of trailers, semi-trailers and other vehicles not
+mechanically propelled, n.e.s.
+94012000 Seats for motor vehicles
+94039910
+Parts of furniture, of metal, n.e.s. (excl. of seats or medical,
+surgical, dental or veterinary furniture)
+94062000 Modular building units, of steel
+94069010 Mobile homes
+94069031
+Greenhouses, prefabricated, whether or not complete or
+already assembled, made entirely or mainly of iron or steel
+94069038
+Buildings, prefabricated, whether or not complete or already
+assembled, made entirely or mainly of iron or steel (excl.
+mobile homes, greenhouses and modular building units)
+82021000
+Handsaws, with working parts of base metal (excl. power-
+operated saws)
+[쪽 106]
+10423/26 106
+ECOFIN.2.B EN
+82023100
+Circular saw blades, incl. slitting or slotting saw blades, of
+base metal, with working parts of steel
+82024000 Chainsaw blades of base metal
+82029920
+Saw blades, incl. toothless saw blades, of base metal, for
+working metal (excl. bandsaw and chainsaw blades, and
+circular or straight saw blades)
+82029980
+Saw blades, incl. toothless saw blades, of base metal, for
+working materials other than metal (excl. bandsaw and
+chainsaw blades, circular saw blades)
+84021910
+Firetube boilers (excl. central heating hot water boilers
+capable also of producing low pressure steam)
+84021990
+Vapour generating boilers, incl. hybrid boilers (excl.
+watertube boilers, firetube boilers and central heating hot
+water boilers capable also of producing low pressure steam)
+84022000 Superheated water boilers
+84029000
+Parts of vapour generating boilers and superheated water
+boilers, n.e.s.
+84031010
+Central heating boilers, non-electric, of cast iron (excl.
+vapour generating boilers and superheated water boilers of
+heading 8402)
+[쪽 107]
+10423/26 107
+ECOFIN.2.B EN
+84031090
+Central heating boilers, non-electric (excl. of cast iron, and
+vapour generating boilers and superheated water boilers of
+heading 8402)
+84039010 Parts of central heating boilers of cast iron, n.e.s.
+84039090 Parts of central heating boilers, n.e.s.
+84061000 Steam and other vapour turbines for marine propulsion
+84068100
+Steam and other vapour turbines, of an output > 40 MW
+(excl. those for marine propulsion)
+84068200
+Steam and other vapour turbines, of an output <= 40 MW
+(excl. those for marine propulsion)
+84069010 Stator blades, rotors and their blades, of turbines
+84069090
+Parts of steam turbines and other vapour turbines, n.e.s. (excl.
+stator blades, rotors and their blades)
+84109000 Parts of hydraulic turbines and water wheels incl. regulators
+84118100
+Gas turbines of a power <= 5.000 kW (excl. turbojets and
+turbopropellers)
+84118220
+Gas turbines of a power > 5.000 kW but <= 20.000 kW (excl.
+turbojets and turbopropellers)
+84118260
+Gas turbines of a power > 20.000 kW but <= 50.000 kW
+(excl. turbojets and turbopropellers)
+[쪽 108]
+10423/26 108
+ECOFIN.2.B EN
+84118280
+Gas turbines of a power > 50.000 kW (excl. turbojets and
+turbopropellers)
+84119100 Parts of turbojets or turbopropellers, n.e.s.
+84119900 Parts of gas turbines, n.e.s.
+84178030 Ovens and furnaces for firing ceramic products
+84178050
+Ovens and furnaces for firing cement, glass or chemical
+products
+84178070
+Industrial or laboratory furnaces, incl. incinerators, non-
+electric (excl. for the roasting, melting or other heat treatment
+of ores, pyrites or metals, bakery ovens, ovens and furnaces
+for firing ceramic products, ovens and furnaces for firing
+cement, glass or chemical products, drying ovens and ovens
+for cracking operations)
+84179000
+Parts of industrial or laboratory furnaces, non-electric, incl.
+incinerators, n.e.s.
+84183020 Freezers of the chest type, of a capacity <= 400 l
+84183080 Freezers of the chest type, of a capacity > 400 l but <= 800 l
+84184020 Freezers of the upright type, of a capacity <= 250 l
+84184080
+Freezers of the upright type, of a capacity > 250 l but <= 900
+l
+[쪽 109]
+10423/26 109
+ECOFIN.2.B EN
+84185019
+Refrigerated show-cases and counters, with a refrigerating
+unit or evaporator (excl. for frozen food storage)
+84186100
+Heat pumps (excl. air conditioning machines of heading
+8415)
+84186900
+Refrigerating or freezing equipment (excl. refrigerating and
+freezing furniture)
+84871010 Ships' or boats' propellers and blades therefor, of bronze
+84871090
+Ships' or boats' propellers and blades therefor (excl. those of
+bronze)
+84879040
+Parts of machinery of chapter 84, not intended for a specific
+purpose, of cast iron, n.e.s.
+84879051
+Parts of machinery of chapter 84, not intended for a specific
+purpose, of cast steel, n.e.s.
+84879057
+Parts of machinery of chapter 84, not intended for a specific
+purpose, of open-die forged or closed-die forged iron or steel,
+n.e.s.
+84879059
+Parts of machinery of chapter 84, not intended for a specific
+purpose, of iron or steel, n.e.s. (other than cast, open-die or
+closed-die forged)
+84879090
+Machinery parts of chapter 84, not intended for a specific
+purpose, n.e.s.
+85012000 Universal AC-DC motors of an output > 37,5 W
+[쪽 110]
+10423/26 110
+ECOFIN.2.B EN
+85013300
+DC motors and DC generators of an output > 75 kW but <=
+375 kW (excl. photovoltaic generators)
+85013400
+DC motors and DC generators of an output > 375 kW (excl.
+photovoltaic generators)
+85014080 AC motors, single phase, of an output of > 750 W
+85015100
+AC motors, multi-phase, of an output > 37,5 W but <= 750
+W
+85015230
+AC motors, multi-phase, of an output > 7,5 kW but <= 37
+kW
+85016200
+AC generators "alternators", of an output > 75 kVA but <=
+375 kVA (excl. photovoltaic generators)
+85016300
+AC generators "alternators", of an output > 375 kVA but <=
+750 kVA (excl. photovoltaic generators)
+85016400
+AC generators "alternators", of an output > 750 kVA (excl.
+photovoltaic generators)
+85018000 Photovoltaic AC generators
+85030010
+Non-magnetic retaining rings for electric motors and electric
+generating sets
+[쪽 111]
+10423/26 111
+ECOFIN.2.B EN
+85030020
+Steel laminations and stator and rotor cores, whether or not
+stacked, for electric motors and electric generating sets
+85030091
+Parts suitable for use solely or principally with electric
+motors and generators, electric generating sets and rotary
+converters, n.e.s., of cast iron or cast steel
+85030098
+Parts suitable for use solely or principally with electric
+motors and generators, electric generating sets and rotary
+converters, n.e.s. (excl. non-magnetic retaining rings, steel
+laminations and stator and rotor cores and of cast iron or cast
+steel)
+NOTE 2: the following CN codes shall be deleted from Annex I above:
+9018 32 10 – Tubular metal needles
+ex- 9018 90 75 –
+Apparatus for nerve stimulation, containing steel or
+aluminium
+ex- 9018 90 84 –
+Other instruments and appliances, containing steel or
+aluminium
+[쪽 112]
+10423/26 112
+ECOFIN.2.B EN
+ANNEX II
+Annex IV is amended as follow:
+(1) in point 1, points (e) and (f) are replaced by the following:
+‘(e) ‘emission factor for electricity’ means the weighted average of the CO2 intensity of
+the electricity produced within a geographic area;
+(f) ‘power purchase agreement’ means a contract under which a person agrees to purchase
+electricity directly from an electricity producer and that involves the physical delivery of
+electricity;’;
+(2) point 3 is replaced by the following:
+‘For determining the specific actual embedded emissions of complex goods produced in a
+given installation, the following equation is to be applied:
+Where:
+– AttrEmg are the attributed emissions of goods g;
+– ALg is the activity level of the goods, being the quantity of goods produced in the
+reporting period in that installation, and
+– EEInpMat are the embedded emissions of the input materials (precursors) consumed in
+the production process. Only input materials (precursors) listed in Annex I and Annex VIII
+and originating in third countries and territories that are not exempted pursuant to Annex
+III, Section 1 are to be considered. The relevant EEInpMat are calculated as follows:
+[쪽 113]
+10423/26 113
+ECOFIN.2.B EN
+Where:
+– Mi is the mass of input material (precursor) i used in the production process, and
+– SEEi are the specific embedded emissions for the input material (precursor) i. For
+SEEi the operator of the installation shall use the value of emissions resulting from the
+installation where the input material (precursor) was produced, provided that that
+installation’s data can be adequately measured.
+However, for goods listed in sections ‘Iron and Steel’, ‘Aluminium’ and ‘Combined Metal
+Goods’ of Annex I, Mi is a function of the content of goods used as input materials
+(precursors) in the manufacturing of the good.’;
+(2a) point 4.1 is replaced by the following:
+“4.1. Default values referred to in Article 7(2)
+For each of the goods listed in Annex I other than electricity that have standard default
+values, those values shall be set at the average emission intensity of each exporting
+country, and for each of these goods, increased by a proportionately designed mark-up.
+This mark-up shall be determined in the implementing acts adopted pursuant to Article
+7(7) and shall be set at an appropriate level to ensure the environmental integrity of the
+CBAM, building on the most up-to-date and reliable information, including on the basis of
+information gathered during the transitional period. When reliable data for the exporting
+country cannot be applied for a type of goods, the default values shall be based on the
+average emission intensity of the 10 exporting countries with the highest emission
+intensities for which reliable data can be applied for that type of goods.
+[쪽 114]
+10423/26 114
+ECOFIN.2.B EN
+For each of the goods listed in Annex I other than electricity that have a global default
+value, those values shall be set at an appropriate level, balancing administrative burden and
+the environmental objectives of CBAM.
+The Commission shall monitor the administrative cost of applying actual values for goods
+with a global default value, and no later than 1 January 2030, as part of its report evaluate
+the balance between administrative burden and environmental objectives.
+Whether a good has a standard or a global default value shall be determined in the
+implementing acts adopted pursuant to Article 7(7), based on the carbon leakage risk and
+the complexity of the value chain of the good, and taking into account consistency of
+treatment within product groups, as well as the difficulty in setting reliable country specific
+default values due to a lack of reliable, credible and robust data.”
+(3) point 4.2.1 is replaced by the following:
+‘4.2.1. Specific default values for a third country, group of third countries or region
+within a third country
+Specific default values shall be set at the emission factor for electricity in the third country,
+group of third countries or region within a third country, based on the best data available to
+the Commission.’;
+[쪽 115]
+10423/26 115
+ECOFIN.2.B EN
+(4) point 4.2.2 is replaced by the following:
+‘4.2.2. Alternative default values
+Where a specific default value is not available for a third country, a group of third
+countries, or a region within a third country, the alternative default value for electricity
+shall be set at the emission factor for electricity in the Union.
+Where it can be demonstrated, on the basis of reliable data, that the emission factor for
+electricity in a third country, a group of third countries or a region within a third country is
+lower than the specific default value determined by the Commission or lower than the
+emission factor for electricity in the Union, an alternative default value based on that
+emission factor for electricity shall be used for that third country, group of third countries
+or region within a third country.’;
+(5) in point 4.3, the second paragraph is replaced by the following:
+‘Where a third country, or a group of third countries, demonstrates to the Commission, on
+the basis of reliable data, that the average electricity mix emission factor or CO2 emission
+factor of price-setting sources in the third country or group of third countries is lower than
+the default value for indirect emissions, an alternative default value based on that average
+electricity mix emission factor or on that average CO2 emission factor shall be established
+for this country or group of countries.’;
+[쪽 116]
+10423/26 116
+ECOFIN.2.B EN
+(6) point 5 is amended as follows:
+(a) point (a) is replaced by the following:
+‘(a) the amount of electricity for which the use of actual embedded emissions is claimed is
+covered by a power purchase agreement between the importer or authorised CBAM
+declarant and a producer of electricity located in a third country. Power purchase
+agreements involving intermediaries shall also be allowed, as long as a verifiable
+contractual relationship between the producer of electricity, the intermediaries, and the
+importer, or CBAM declarant, can be demonstrated, in relation to the electricity for which
+the use of actual emissions is claimed;’;
+(b) point (b) is deleted;
+(c) point (d) is replaced by the following:
+‘(d) the amount of electricity for which the use of actual embedded emissions is claimed
+has been firmly nominated to the allocated interconnection capacity by all responsible
+transmission system operators in the country of origin, the country of destination and, if
+relevant, each country of transit, and the nominated capacity and the production of
+electricity by the installation refer to the same period of time, which shall not be longer
+than one hour. This criterion shall not be fulfilled in cases where transmission capacity for
+the import of electricity is allocated through implicit capacity allocation;’.
+(d) point (e) is replaced by the following:
+“(e) the fulfilment of the above criteria is verified by an accredited verifier, who shall
+receive at least monthly interim reports demonstrating how those criteria are fulfilled.”
+[쪽 117]
+10423/26 117
+ECOFIN.2.B EN
+ANNEX III
+The following Annex VIII is added:
+‘ANNEX VIII
+List of non-CBAM goods and greenhouse gases considered as input materials (precursors)
+Iron and steel
+CN code Greenhouse gas
+ex 7204 Ferrous waste and
+scrap; remelting scrap ingots
+and steel except post -consumer
+scrap
+Carbon dioxide
+Aluminium
+CN code Greenhouse gas
+ex 7602 Aluminium waste and
+scrap except post -consumer
+scrap
+Carbon dioxide
