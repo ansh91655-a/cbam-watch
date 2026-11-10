@@ -1,4 +1,4 @@
-"""첫 화면의 점 지도를 만든다. 유라시아를 점으로 찍고 EU 회원국과 한국을 따로 표시하고, 한국에서 EU의 항구로 가는 흐름선을 그린다.
+"""첫 화면의 점 지도를 만든다. 유라시아를 점으로 찍고 EU 회원국과 한국을 따로 표시하고, 한국에서 EU로 가는 길을 선 하나로 그린다.
 
 지도의 나라 경계는 Natural Earth(공개 자료)를 TopoJSON으로 묶은 world-atlas의 countries-110m.json에서 읽는다.
 쓰는 법: python -m tools.art.dotmap <countries-110m.json의 경로> [출력 파일]
@@ -13,12 +13,17 @@ import sys
 EU = {"040", "056", "100", "191", "196", "203", "208", "233", "246", "250", "276", "300", "348", "372", "380",
       "428", "440", "442", "470", "528", "616", "620", "642", "703", "705", "724", "752"}
 KOREA = "410"
-WEST, EAST, SOUTH, NORTH = -13.0, 147.0, 27.0, 69.5
-SCALE = 400.0   # 1라디안이 몇 px인가
-STEP = 12.0     # 점 사이의 거리(px)
-HOME = (128.6, 35.6)  # 흐름선이 떠나는 곳(한국 남동부)
-PORTS = [("로테르담", 4.1, 51.9, 0.30), ("함부르크", 9.9, 53.5, 0.36), ("그단스크", 18.7, 54.4, 0.42),
-         ("코페르", 13.7, 45.5, 0.24), ("피레우스", 23.6, 37.9, 0.18), ("발렌시아", -0.3, 39.4, 0.22)]
+# 그리는 범위. 남쪽을 인도와 동남아시아의 바닷가까지 넣어야 뭍의 생김새로 어디인지 알아볼 수 있다.
+WEST, EAST, SOUTH, NORTH = -14.0, 150.0, 6.0, 71.5
+SCALE = 350.0   # 1라디안이 몇 px인가
+STEP = 10.0     # 점 사이의 거리(px)
+HOME = (128.9, 35.3)  # 길이 떠나는 곳(한국 남동부)
+GATE = (4.3, 51.9)    # 길이 닿는 곳(북해 연안)
+LIFT = 0.17           # 길이 북쪽으로 휘는 정도(두 곳을 잇는 가장 짧은 길은 북쪽으로 휜다)
+MERIDIANS = [0, 30, 60, 90, 120]
+PARALLELS = [15, 30, 45, 60]
+# 지도 위에 얹는 글(경도, 위도, 글, 종류). 글자 크기가 지도와 함께 줄지 않게 그림 밖의 HTML로 얹는다.
+TAGS = [(12.0, 67.5, "EU 27개 회원국", "eu"), (128.5, 43.5, "한국", "kr")]
 
 
 def mercator(lat):
@@ -119,38 +124,56 @@ def dots(points):
     return "".join(f"M{x:g} {y:g}h0" for x, y in points)
 
 
-def arcs():
+def route():
+    """한국에서 EU로 가는 길 하나. (길, 화살촉, 떠나는 곳의 표시)를 돌려준다."""
     hx, hy = project(*HOME)
-    paths, ports = [], []
-    for name, lon, lat, lift in PORTS:
-        px, py = project(lon, lat)
-        distance = math.hypot(px - hx, py - hy)
-        cx, cy = (hx + px) / 2, (hy + py) / 2 - distance * lift
-        paths.append(f'<path class="map-arc" pathLength="100" d="M{hx:.1f} {hy:.1f}Q{cx:.1f} {cy:.1f} {px:.1f} {py:.1f}"/>')
-        ports.append(f'<circle class="map-port" cx="{px:.1f}" cy="{py:.1f}" r="4"><title>{name}</title></circle>')
+    gx, gy = project(*GATE)
+    distance = math.hypot(gx - hx, gy - hy)
+    cx, cy = (hx + gx) / 2, (hy + gy) / 2 - distance * LIFT
+    path = f'<path class="map-route" pathLength="100" d="M{hx:.1f} {hy:.1f}Q{cx:.1f} {cy:.1f} {gx:.1f} {gy:.1f}"/>'
+    # 화살촉: 길의 끝에서의 방향(조절점에서 끝점으로 가는 방향)으로 놓는다.
+    angle = math.atan2(gy - cy, gx - cx)
+    tip = [(gx + 13 * math.cos(angle), gy + 13 * math.sin(angle))]
+    for turn in (2.45, -2.45):
+        tip.append((gx + 13 * math.cos(angle + turn), gy + 13 * math.sin(angle + turn)))
+    head = '<path class="map-head" d="M' + "L".join(f"{x:.1f} {y:.1f}" for x, y in tip) + 'Z"/>'
     home = (f'<circle class="map-home-ring" cx="{hx:.1f}" cy="{hy:.1f}" r="13"/>'
-            f'<circle class="map-home" cx="{hx:.1f}" cy="{hy:.1f}" r="6"/>')
-    return "".join(paths), "".join(ports), home, (hx, hy)
+            f'<circle class="map-home" cx="{hx:.1f}" cy="{hy:.1f}" r="5.5"/>')
+    return path, head, home
+
+
+def graticule():
+    """옅은 경선과 위선."""
+    lines = []
+    for lon in MERIDIANS:
+        x, _ = project(lon, NORTH)
+        lines.append(f"M{x:.1f} 0V{HEIGHT:.1f}")
+    for lat in PARALLELS:
+        _, y = project(WEST, lat)
+        lines.append(f"M0 {y:.1f}H{WIDTH:.1f}")
+    return f'<path class="map-grid" d="{"".join(lines)}"/>'
+
+
+def tags():
+    """지도 위에 얹는 글의 자리(그림의 너비와 높이에 대한 백분율)."""
+    found = []
+    for lon, lat, text, kind in TAGS:
+        x, y = project(lon, lat)
+        found.append({"left": round(100 * x / WIDTH, 1), "top": round(100 * y / HEIGHT, 1), "text": text, "kind": kind})
+    return found
 
 
 def svg(world):
     eu, korea, land = classify(world)
-    paths, ports, home, (hx, hy) = arcs()
-    ex, ey = project(12, 49)  # EU 한가운데쯤. 뒤에 은은한 빛을 둔다.
+    path, head, home = route()
     body = (
-        f'<svg class="map" viewBox="0 0 {WIDTH:.0f} {HEIGHT:.0f}" preserveAspectRatio="xMinYMid slice" role="img" '
-        'aria-label="유라시아를 점으로 그린 지도. 밝은 점은 EU 회원국, 노란 점은 한국이고, 한국에서 EU의 항구로 선이 이어진다.">'
-        '<defs>'
-        f'<radialGradient id="map-glow" cx="{ex:.0f}" cy="{ey:.0f}" r="260" gradientUnits="userSpaceOnUse">'
-        '<stop offset="0" class="map-glow-in"/><stop offset="1" class="map-glow-out"/></radialGradient>'
-        f'<linearGradient id="map-arc" x1="{hx:.0f}" y1="0" x2="{ex:.0f}" y2="0" gradientUnits="userSpaceOnUse">'
-        '<stop offset="0" class="map-arc-from"/><stop offset="1" class="map-arc-to"/></linearGradient>'
-        '</defs>'
-        f'<rect class="map-glow" width="{WIDTH:.0f}" height="{HEIGHT:.0f}" fill="url(#map-glow)"/>'
+        f'<svg class="map" viewBox="0 0 {WIDTH:.0f} {HEIGHT:.0f}" role="img" '
+        'aria-label="유라시아를 점으로 그린 지도. 밝은 점은 EU 회원국, 노란 점은 한국이고, 한국에서 EU로 선 하나가 이어진다.">'
+        f'{graticule()}'
         f'<path class="map-land" d="{dots(land)}"/>'
         f'<path class="map-eu" d="{dots(eu)}"/>'
         f'<path class="map-kr" d="{dots(korea)}"/>'
-        f'<g class="map-arcs" stroke="url(#map-arc)">{paths}</g>{ports}{home}'
+        f'<g class="map-arcs">{path}{head}</g>{home}'
         '</svg>'
     )
     return body, {"eu": len(eu), "korea": len(korea), "land": len(land)}
@@ -165,11 +188,23 @@ def main(argv):
     module = (
         "// 첫 화면의 점 지도. tools/art/dotmap.py가 만든 파일이므로 손으로 고치지 않는다.\n"
         "// 나라 경계: Natural Earth(공개 자료), world-atlas(ISC)의 countries-110m.\n"
-        f"const SVG = {json.dumps(body, ensure_ascii=False)};\n\n"
-        "export function heroMap() {\n"
+        f"const SVG = {json.dumps(body, ensure_ascii=False)};\n"
+        f"const TAGS = {json.dumps(tags(), ensure_ascii=False)};\n\n"
+        "// 지도 위의 글은 그림 밖의 글자로 얹는다. 그림이 줄어도 글자 크기가 그대로이게 하려는 것이다.\n"
+        "export function heroMap({ tags = true } = {}) {\n"
         "  const holder = document.createElement(\"div\");\n"
         "  holder.className = \"hero-map\";\n"
         "  holder.innerHTML = SVG; // 이 파일에 든 고정된 그림이다. 데이터가 아니다.\n"
+        "  if (!tags) return holder;\n"
+        "  for (const tag of TAGS) {\n"
+        "    const label = document.createElement(\"span\");\n"
+        "    label.className = `map-tag map-tag-${tag.kind}`;\n"
+        "    label.style.left = `${tag.left}%`;\n"
+        "    label.style.top = `${tag.top}%`;\n"
+        "    label.textContent = tag.text;\n"
+        "    label.setAttribute(\"aria-hidden\", \"true\"); // 그림의 설명글에 이미 들어 있다\n"
+        "    holder.append(label);\n"
+        "  }\n"
         "  return holder;\n"
         "}\n"
     )

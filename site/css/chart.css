@@ -15,7 +15,7 @@
 .chart .hit { fill: transparent; }
 .chart .hit:focus { outline: none; }
 .chart .hit:focus-visible { stroke: var(--accent-strong); stroke-width: 2; }
-.tip { position: absolute; z-index: 5; pointer-events: none; min-width: 150px; padding: 9px 14px; border-radius: 12px; background: var(--tip-bg); color: #ffffff; box-shadow: var(--shadow-2); font-size: var(--fs-s); line-height: 1.5; transform: translate(-50%, -100%); white-space: nowrap; }
+.tip { position: absolute; z-index: 5; pointer-events: none; min-width: 150px; padding: 9px 14px; border-radius: 8px; background: var(--tip-bg); color: #ffffff; box-shadow: var(--shadow-2); font-size: var(--fs-s); line-height: 1.5; transform: translate(-50%, -100%); white-space: nowrap; }
 .tip b { display: block; font-size: var(--fs-l); font-variant-numeric: tabular-nums; }
 .spark { display: block; }
 .spark .line { fill: none; stroke: var(--chart-line); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }

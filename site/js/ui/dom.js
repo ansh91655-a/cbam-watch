@@ -46,7 +46,3 @@ export function table(headers, rows) {
     h("th", { scope: "col", class: header.num ? "num" : null, text: header.text || header }))));
   return h("div", { class: "table-wrap" }, h("table", {}, [head, h("tbody", {}, rows)]));
 }
-
-export function viewHead(title, lead) {
-  return h("div", { class: "view-head" }, [h("h1", { text: title }), lead ? h("p", { text: lead }) : null]);
-}

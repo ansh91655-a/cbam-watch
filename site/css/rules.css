@@ -22,7 +22,7 @@
 [data-tone="adopted"] { --rule-tone: var(--t-legis); }
 [data-tone="dispute"] { --rule-tone: var(--t-korea); }
 [data-tone="ended"] { --rule-tone: var(--ink-3); }
-.stage-chip { display: inline-flex; align-items: center; gap: 6px; padding: 2px 11px; border-radius: 999px; background: color-mix(in srgb, var(--rule-tone, var(--brand-bright)) 12%, var(--surface)); color: var(--rule-tone, var(--brand)); font-size: 0.82rem; font-weight: 700; line-height: 1.7; }
+.stage-chip { display: inline-flex; align-items: center; gap: 6px; padding: 2px 11px; border-radius: 4px; background: color-mix(in srgb, var(--rule-tone, var(--brand-bright)) 10%, var(--surface)); color: var(--rule-tone, var(--brand)); font-size: 0.82rem; font-weight: 700; line-height: 1.7; }
 .stage-chip::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
 
 /* 단계 표시 */
@@ -60,7 +60,7 @@
 .tl p { max-width: 72ch; }
 .tl-src { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: var(--fs-s); }
 .tl-src a { display: inline-flex; align-items: center; gap: 4px; }
-.tl-press { padding: 0 8px; border: 1px solid currentColor; border-radius: 999px; color: var(--warn); font-size: 0.76rem; font-weight: 700; line-height: 1.6; }
+.tl-press { padding: 0 8px; border: 1px solid currentColor; border-radius: 4px; color: var(--warn); font-size: 0.76rem; font-weight: 700; line-height: 1.6; }
 
 /* 곧 움직일 규제 */
 .rule-soon { display: grid; gap: 12px; padding: 20px 24px; border-radius: var(--radius-l); background: var(--feat-bg); color: var(--on-feat); }

@@ -17,6 +17,8 @@ ICONS = {
     # 그 밖
     "download": "download", "out": "arrow-up-right", "calendar": "calendar-days", "search": "search", "file": "file-text",
     "trend": "trending-up", "clock": "clock", "news": "newspaper", "next": "chevron-right",
+    # 창과 단추
+    "mail": "mail", "copy": "copy", "check": "check", "close": "x", "feed": "rss", "back": "arrow-left",
     # 안내 화면
     "terms": "book-open", "sources": "library", "who": "user-round", "limits": "triangle-alert", "reuse": "recycle",
 }

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#050b24">
+<meta name="theme-color" content="#071236">
 <meta name="description" content="EU 탄소국경조정제도(CBAM)의 법령, 가이던스, 인증서 가격, 일정을 원문과 함께 국문으로 정리합니다. 개인이 운영하는 비공식 사이트입니다.">
 <title>CBAM 규제동향</title>
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -14,6 +14,7 @@
 <meta property="og:image" content="https://ansh91655-a.github.io/cbam-watch/assets/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="assets/fonts/pretendard/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="assets/fonts/noto-serif-kr/noto-serif-kr-700.css">
 <link rel="alternate" type="application/atom+xml" title="CBAM 규제동향: 새 소식" href="feed.xml">
 <link rel="alternate" type="application/atom+xml" title="CBAM 규제동향: 규제 변화" href="rules.xml">
 <script src="js/theme.js"></script>
@@ -27,28 +28,17 @@
 <link rel="stylesheet" href="css/calendar.css">
 <link rel="stylesheet" href="css/rules.css">
 <link rel="stylesheet" href="css/cn.css">
+<link rel="stylesheet" href="css/item.css">
+<link rel="stylesheet" href="css/overlay.css">
 <link rel="stylesheet" href="css/themes.css">
 </head>
 <body>
 <a class="skip" href="#main">본문으로 건너뛰기</a>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <linearGradient id="brand-mark-fill" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3f72f5"/><stop offset="1" stop-color="#0a2b93"/></linearGradient>
-    <!-- 표지: 탄소(Carbon)의 C 고리와, 고리의 트인 곳(국경)을 지나 오르는 동향선 -->
-    <symbol id="brand-mark" viewBox="0 0 32 32">
-      <rect width="32" height="32" rx="9" fill="url(#brand-mark-fill)"/>
-      <rect x=".6" y=".6" width="30.8" height="30.8" rx="8.4" fill="none" stroke="#fff" stroke-opacity=".16" stroke-width="1.2"/>
-      <path d="M21.9 21.4A8.4 8.4 0 1 1 17.2 8.4" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round"/>
-      <path d="M10.6 19.6l3.6-3 2.7 2 7.3-7.6" fill="none" stroke="#ffcc00" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M20.3 10.2h4.4v4.4" fill="none" stroke="#ffcc00" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
-    </symbol>
-  </defs>
-</svg>
 <header class="site-head">
   <div class="head-inner">
-    <a class="brand" href="#home">
-      <svg class="brand-mark" aria-hidden="true"><use href="#brand-mark"/></svg>
-      <span class="brand-name">CBAM 규제동향</span>
+    <a class="brand" href="#home" aria-label="CBAM 규제동향 첫 화면">
+      <span class="brand-word" aria-hidden="true">CBAM</span>
+      <span class="brand-name" aria-hidden="true">규제동향</span>
       <span id="stage" class="stage" hidden></span>
     </a>
     <nav class="site-nav" aria-label="주 메뉴">
@@ -65,9 +55,9 @@
 <footer class="site-foot">
   <div class="foot-inner">
     <div class="foot-brand">
-      <a class="brand" href="#home">
-        <svg class="brand-mark" aria-hidden="true"><use href="#brand-mark"/></svg>
-        <span class="brand-name">CBAM 규제동향</span>
+      <a class="brand" href="#home" aria-label="CBAM 규제동향 첫 화면">
+        <span class="brand-word" aria-hidden="true">CBAM</span>
+        <span class="brand-name" aria-hidden="true">규제동향</span>
       </a>
       <p id="independent" class="independent"></p>
       <p id="notice"></p>
@@ -84,7 +74,7 @@
       <h2>갱신</h2>
       <p id="freshness" class="freshness" role="status">데이터를 읽는 중</p>
       <p>평일 아침마다 새 소식과 바뀐 문서를 싣습니다.</p>
-      <p class="foot-feeds"><a href="feed.xml">새 소식 구독(RSS)</a><a href="rules.xml">규제 변화 구독(RSS)</a></p>
+      <p class="foot-feeds"><button type="button" class="linklike" data-open="subscribe">새 소식 받아 보기(RSS)</button><button type="button" class="linklike" data-open="feedback">의견 보내기</button></p>
       <p><a href="assets/third-party.txt">오픈소스 라이선스</a></p>
     </div>
   </div>

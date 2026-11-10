@@ -21,6 +21,17 @@ export function yearLine(events, year, todayIso, onPick) {
   const months = h("div", { class: "yl-months", "aria-hidden": "true" }, Array.from({ length: 12 }, (_, index) => h("span", { text: `${index + 1}월` })));
   const root = h("div", { class: "yearline" }, [labels, track, months]);
   const hidden = h("p", { class: "count", hidden: true });
+  const wrap = h("div", { class: "yearline-wrap" });
+  let centered = false;
+
+  // 좁은 화면에서는 한 해가 다 보이지 않아 옆으로 민다. 처음에 오늘이 가운데에 오게 밀어 둔다(한 번만).
+  function centerToday() {
+    if (centered || !todayIso.startsWith(`${year}-`)) return;
+    const over = wrap.scrollWidth - wrap.clientWidth;
+    if (over <= 0) return;
+    centered = true;
+    wrap.scrollLeft = Math.max(0, Math.min(over, root.offsetLeft + place(year, todayIso) * root.clientWidth - wrap.clientWidth / 2));
+  }
 
   if (todayIso.startsWith(`${year}-`)) {
     const at = place(year, todayIso) * 100;
@@ -67,6 +78,7 @@ export function yearLine(events, year, todayIso, onPick) {
     const left = mine.length - placed.length;
     hidden.hidden = left === 0;
     hidden.textContent = left ? `이름표를 놓을 자리가 없는 일정 ${left}건은 점으로만 표시했습니다. 아래 달력에 모두 있습니다.` : "";
+    centerToday();
   }
 
   new ResizeObserver(layout).observe(root);
@@ -77,5 +89,6 @@ export function yearLine(events, year, todayIso, onPick) {
     h("span", {}, [h("i", { class: "yl-dot", "data-month": "true" }), "달만 정해진 일정"]),
     todayIso.startsWith(`${year}-`) ? h("span", { text: `세로선은 오늘(${koreanDate(todayIso, false)})` }) : null,
   ]);
-  return h("div", { class: "yearline-wrap" }, [root, legend, hidden]);
+  wrap.append(root, legend, hidden);
+  return wrap;
 }

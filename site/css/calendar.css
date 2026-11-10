@@ -14,7 +14,7 @@
 .yl-stem { position: absolute; width: 1px; background: var(--line); }
 .yl-track { position: relative; height: 22px; }
 .yl-line { position: absolute; left: 0; right: 0; top: 9px; height: 4px; border-radius: 2px; background: var(--line); }
-.yl-done { position: absolute; left: 0; top: 9px; height: 4px; border-radius: 2px; background: linear-gradient(90deg, var(--brand), var(--brand-bright)); }
+.yl-done { position: absolute; left: 0; top: 9px; height: 4px; border-radius: 2px; background: var(--brand); }
 .yl-dot { position: absolute; top: 11px; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: var(--brand); border: 2px solid var(--surface); box-shadow: 0 0 0 1px var(--brand); }
 .yl-dot[data-kind="기한"] { background: var(--accent); box-shadow: 0 0 0 1px var(--on-accent); }
 .yl-dot[data-kind="가격"] { background: var(--surface); }

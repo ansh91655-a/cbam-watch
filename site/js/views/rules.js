@@ -15,7 +15,7 @@ function stageChip(rule) {
 
 function nextLine(rule) {
   if (!rule.next) return null;
-  const when = rule.nextDate ? h("time", { datetime: rule.nextDate, text: `${koreanDate(rule.nextDate)} · ${countdown(rule.nextDate)}` }) : null;
+  const when = rule.nextDate ? h("time", { datetime: rule.nextDate, text: `${koreanDate(rule.nextDate)}, ${countdown(rule.nextDate)}` }) : null;
   return h("p", { class: "rule-next" }, [h("strong", { text: "다음 단계" }), h("span", { text: rule.next }), when]);
 }
 
@@ -101,7 +101,7 @@ function detail(main, rule, group, items) {
       h("section", { class: "stack", "aria-labelledby": "h-what" }, [h("h2", { id: "h-what", text: "무엇을 정하는 규제인가요" }), h("p", { class: "rule-summary", text: rule.summary })]),
       positions(rule),
       h("section", { class: "stack", "aria-labelledby": "h-tl" }, [
-        h("div", { class: "sec-head" }, [h("h2", { id: "h-tl", text: "연혁" }), h("span", { class: "count", text: `${rule.timeline.length}건 · 새 일부터` })]),
+        h("div", { class: "sec-head" }, [h("h2", { id: "h-tl", text: "연혁" }), h("span", { class: "count", text: `${rule.timeline.length}건, 새 일부터` })]),
         timeline(rule),
       ]),
       links.some(Boolean) ? h("section", { class: "stack", "aria-labelledby": "h-links" }, [h("h2", { id: "h-links", text: "원문과 공식 화면" }), h("ul", { class: "rule-links" }, links)]) : null,

@@ -24,8 +24,8 @@ def letterhead_end(image):
     위에서부터 글이나 그림이 있는 첫 덩어리를 찾고, 그 아래에 처음 나오는 넓은 빈 띠까지를 머리 띠로 본다.
     첫 덩어리가 쪽의 위쪽 4분의 1을 넘어가면(머리 띠가 따로 없는 문서) 정해 둔 값(PDF_TOP)을 쓴다.
     """
-    gray = image.convert("L").resize((200, 800))
-    rows = [sum(1 for value in gray.crop((0, y, 200, y + 1)).getdata() if value < 225) > 1 for y in range(800)]
+    gray = image.convert("L").resize((200, 800)).tobytes()  # 회색 그림은 점 하나가 한 바이트이고, 한 줄이 200바이트다
+    rows = [sum(1 for value in gray[y * 200:(y + 1) * 200] if value < 225) > 1 for y in range(800)]
     start = next((y for y, ink in enumerate(rows) if ink), None)
     if start is None:
         return PDF_TOP
@@ -62,7 +62,7 @@ def window(image, kind):
 
 def blank(image):
     small = image.convert("L").resize((96, 60))
-    pixels = list(small.getdata())
+    pixels = small.tobytes()  # 회색 그림은 점 하나가 한 바이트다
     return sum(1 for value in pixels if value > 244) / len(pixels) > BLANK
 
 

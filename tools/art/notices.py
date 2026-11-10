@@ -12,7 +12,11 @@ PARTS = [
     ("아이콘 (site/js/ui/icons.js)", "lucide-static", "Lucide https://lucide.dev"),
     ("점 지도의 나라 경계 (site/js/ui/heromap.js)", "world-atlas",
      "world-atlas https://github.com/topojson/world-atlas . 나라 경계 자료는 Natural Earth(공개 자료, https://www.naturalearthdata.com)의 것이다."),
-    ("글꼴 (jsDelivr에서 불러 쓴다. 이 저장소에 파일을 두지 않는다)", "pretendard", "Pretendard https://github.com/orioncactus/pretendard"),
+    ("글꼴: 본문과 화면의 글자 (site/assets/fonts/pretendard)", "pretendard",
+     "Pretendard https://github.com/orioncactus/pretendard . 글꼴 파일 안에 'Copyright © 2023 Kil Hyung-jin'과 "
+     "SIL Open Font License 1.1이라는 표시가 들어 있다(파일의 이름표에서 읽은 값). 이 라이선스의 전문은 아래 Noto Serif KR 항목에 실린 것과 같다."),
+    ("글꼴: 큰 제목의 명조 (site/assets/fonts/noto-serif-kr)", "@fontsource/noto-serif-kr",
+     "Noto Serif KR https://fonts.google.com/noto/specimen/Noto+Serif+KR . Fontsource(https://fontsource.org)가 나눠 묶은 파일을 쓴다."),
 ]
 
 

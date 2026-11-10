@@ -1,13 +1,14 @@
 /* 화면마다 따로 쓰는 것: 원문 대장의 문서 목록, 가격의 수치, 안내의 단계와 항목, 디자인의 색 변형 고르기 */
 
-/* 원문 대장: 누르면 내려받는 문서 목록 */
-.doc-list { display: grid; gap: 8px; }
-.doc-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; align-items: stretch; }
+/* 원문 대장: 문서를 한 목록으로 붙이고 줄 사이는 가는 선으로 가른다. 줄을 누르면 화면에서 바로 보거나 내려받는다. */
+.doc-list { display: grid; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); overflow: hidden; }
+.doc:not([hidden]) ~ .doc:not([hidden]) { border-top: 1px solid var(--line-2); }
+.doc-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: stretch; }
 .doc-row > :only-child { grid-column: 1 / -1; }
-.doc-save { display: grid; place-items: center; width: 52px; border: 1px solid var(--line-2); border-radius: 14px; background: var(--surface); color: var(--ink-3); transition: border-color 0.15s, color 0.15s, transform 0.15s; }
-.doc-save:hover { border-color: var(--brand-bright); color: var(--link); transform: translateY(-1px); }
+.doc-save { display: grid; place-items: center; width: 54px; border-left: 1px solid var(--line-2); color: var(--ink-3); }
+.doc-save:hover { background: var(--surface-2); color: var(--link); }
 /* 문서를 화면에서 바로 보는 창 */
-.viewer { width: min(1120px, 96vw); height: 92vh; max-width: none; max-height: none; padding: 0; border: 0; border-radius: 16px; overflow: hidden; background: #525659; box-shadow: 0 40px 120px -20px rgb(2 6 23 / 0.6); }
+.viewer { width: min(1120px, 96vw); height: 92vh; max-width: none; max-height: none; padding: 0; border: 0; border-radius: var(--radius-l); overflow: hidden; background: #525659; box-shadow: 0 40px 120px -20px rgb(2 6 23 / 0.6); }
 .viewer[open] { display: grid; grid-template-rows: auto minmax(0, 1fr); }
 .viewer::backdrop { background: rgb(5 11 36 / 0.66); -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); }
 .viewer-head { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 11px 12px 11px 20px; background: #0b1437; color: #fff; }
@@ -20,18 +21,18 @@
 .viewer-close { background: #fff; color: #0b1437; border-color: #fff; }
 .viewer-close:hover { background: #e7ecfb; }
 .viewer-frame { width: 100%; height: 100%; border: 0; background: #525659; }
-.doc { display: grid; gap: 6px; }
-.doc-main { display: grid; grid-template-columns: 54px minmax(0, 1fr) auto; align-items: center; gap: 0 16px; padding: 13px 18px 13px 14px; border: 1px solid var(--line-2); border-radius: 14px; background: var(--surface); color: inherit; text-decoration: none; transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s; }
-.doc-main:hover { border-color: var(--brand-bright); box-shadow: var(--shadow-1); transform: translateY(-1px); }
-.doc-type { grid-row: 1 / span 2; padding: 5px 0; border-radius: 9px; background: var(--brand-soft); color: var(--brand); font-size: 0.72rem; font-weight: 800; text-align: center; letter-spacing: 0.02em; }
+.doc { display: grid; }
+.doc-main { display: grid; grid-template-columns: 54px minmax(0, 1fr) auto; align-items: center; gap: 0 16px; padding: 13px 18px 13px 16px; color: inherit; text-decoration: none; }
+a.doc-main:hover { background: var(--surface-2); }
+.doc-type { grid-row: 1 / span 2; padding: 4px 0; border-radius: 4px; background: var(--brand-soft); color: var(--brand); font-size: 0.72rem; font-weight: 800; text-align: center; letter-spacing: 0.02em; }
 .doc-type[data-type="XLSX"] { background: color-mix(in srgb, var(--t-verify) 13%, var(--surface)); color: var(--t-verify); }
 .doc-type[data-type="ZIP"] { background: var(--surface-2); color: var(--ink-2); }
 .doc-title { font-weight: 600; color: var(--ink); }
 .doc-main:hover .doc-title { color: var(--link); }
 .doc-meta { grid-column: 2; font-size: var(--fs-s); color: var(--ink-3); font-variant-numeric: tabular-nums; }
 .doc-get { grid-row: 1 / span 2; grid-column: 3; display: inline-flex; align-items: center; gap: 6px; font-size: var(--fs-s); font-weight: 700; color: var(--link); white-space: nowrap; }
-.doc-extra { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; padding-left: 84px; font-size: var(--fs-s); color: var(--ink-3); }
-.diff { display: grid; gap: 8px; margin-left: 84px; padding: 14px 16px; border-radius: 14px; background: var(--surface-2); font-size: var(--fs-s); }
+.doc-extra { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; padding: 0 18px 13px 86px; font-size: var(--fs-s); color: var(--ink-3); }
+.diff { display: grid; gap: 8px; margin: 0 18px 16px 86px; padding: 14px 16px; border-radius: var(--radius); background: var(--surface-2); font-size: var(--fs-s); }
 .diff-block { display: grid; gap: 4px; padding-left: 10px; border-left: 3px solid var(--line); }
 .diff-block[data-op="added"] { border-left-color: var(--ok); }
 .diff-block[data-op="removed"] { border-left-color: var(--bad); }
@@ -41,37 +42,40 @@
 @media (max-width: 560px) {
   .doc-main { grid-template-columns: 46px minmax(0, 1fr); }
   .doc-get { display: none; }
-  .doc-extra, .diff { padding-left: 0; margin-left: 0; }
+  .doc-extra { padding-left: 16px; }
+  .diff { margin-left: 16px; }
 }
 
-/* 수치(가격 화면) */
-.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
-.stat { display: grid; align-content: start; gap: 3px; padding: 22px 26px 24px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); }
+/* 수치(가격 화면): 칸을 한 줄로 붙이고 가는 선으로 가른다. 맨 앞의 지금 가격만 크게 적는다. */
+.stats { display: grid; grid-template-columns: minmax(0, 1fr); border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); }
+.stat { display: grid; align-content: start; gap: 3px; padding: 22px 26px 24px; border-top: 1px solid var(--line-2); }
+.stat:first-child { border-top: 0; }
+@media (min-width: 760px) {
+  .stats { grid-template-columns: 1.15fr 1fr 1fr; }
+  .stat { border-top: 0; border-left: 1px solid var(--line-2); }
+  .stat:first-child { border-left: 0; }
+}
 .stat-label { font-size: var(--fs-s); font-weight: 600; color: var(--ink-3); }
-.stat-value { font-size: 2rem; font-weight: 800; line-height: 1.2; letter-spacing: -0.03em; }
+.stat-value { font-size: 1.9rem; font-weight: 700; line-height: 1.25; letter-spacing: -0.025em; font-variant-numeric: tabular-nums; }
 .stat-value small { margin-left: 5px; font-size: 1rem; font-weight: 600; color: var(--ink-2); letter-spacing: 0; }
 .stat-note { font-size: var(--fs-s); color: var(--ink-3); }
-.stat-hero { border: 0; background: var(--feat-bg); color: var(--on-feat); box-shadow: var(--shadow-2); }
-.stat-hero .stat-label, .stat-hero .stat-note, .stat-hero .stat-value small { color: var(--on-feat-2); }
-.stat-hero .stat-value { font-size: 3.4rem; line-height: 1.05; color: var(--accent); }
+.stat-hero { box-shadow: inset 3px 0 0 var(--accent); }
+.stat-hero .stat-value { font-size: 2.9rem; line-height: 1.1; }
 
-/* 안내: 화면마다 무엇을 볼 수 있는지 알려 주는 칸. 누르면 그 화면으로 간다. */
-.steps { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
-.step { display: grid; gap: 4px; align-content: start; padding: 22px 22px 24px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); color: inherit; text-decoration: none; transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s; }
-.step:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--brand-bright) 40%, var(--line-2)); box-shadow: var(--shadow-2); }
-.step .chipicon { margin-bottom: 10px; background: var(--feat-bg); color: var(--accent); }
-.step h3 { font-size: 1.15rem; }
-.step p { font-size: var(--fs-s); color: var(--ink-2); }
-/* 안내: 항목마다 한 칸. 두 단으로 흘린다. */
-.about-grid { columns: 1; column-gap: 18px; }
-@media (min-width: 900px) { .about-grid { columns: 2; } }
-.about-card { break-inside: avoid; margin-bottom: 18px; gap: 10px; }
-.about-card h2 { font-size: 1.2rem; margin-bottom: 4px; }
-.about-card .chipicon { width: 38px; height: 38px; border-radius: 11px; }
-.about-card p { color: var(--ink-2); }
+/* 안내: 화면마다 무엇을 볼 수 있는지 한 줄씩 적은 목록. 왼쪽에 화면 이름(누르면 그 화면으로), 오른쪽에 설명. */
+.guide-list { border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); }
+.guide-list li { display: grid; grid-template-columns: 9.5em minmax(0, 1fr); gap: 2px 20px; padding: 14px 22px; border-top: 1px solid var(--line-2); }
+.guide-list li:first-child { border-top: 0; }
+.guide-list a { font-weight: 700; }
+.guide-list span { color: var(--ink-2); }
+@media (max-width: 560px) { .guide-list li { grid-template-columns: minmax(0, 1fr); padding: 13px 16px; } }
+/* 안내의 글: 항목마다 제목과 문단. 넓은 화면에서는 두 단으로 놓는다. */
+.about-text { display: grid; grid-template-columns: minmax(0, 1fr); gap: 34px 56px; }
+@media (min-width: 900px) { .about-text { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.about-text .prose h2 { margin-top: 0; font-size: 1.2rem; }
 
 /* 글 위주의 화면 */
-.prose { display: grid; gap: 10px; max-width: 70ch; }
+.prose { display: grid; gap: 10px; align-content: start; max-width: 70ch; }
 .prose h2 { margin-top: 22px; }
 .prose p { color: var(--ink-2); }
 .note-list { display: grid; gap: 6px; padding-left: 18px; list-style: disc; color: var(--ink-2); max-width: 74ch; }
@@ -81,6 +85,6 @@
 .proposal { display: grid; gap: 12px; align-content: start; padding: 24px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); }
 .proposal[data-current="true"] { border: 2px solid var(--brand-bright); }
 .proposal p { color: var(--ink-2); }
-.swatches { display: flex; gap: 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); }
+.swatches { display: flex; gap: 0; border-radius: 8px; overflow: hidden; border: 1px solid var(--line); }
 .swatch { flex: 1; height: 56px; }
 .refs { display: grid; gap: 8px; padding-left: 18px; list-style: disc; color: var(--ink-2); max-width: 80ch; }

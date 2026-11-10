@@ -111,7 +111,7 @@ export async function render(main, arg) {
     count,
   ]);
   fill(main,
-    band(picked ? `소식: ${topicName(picked)}` : "소식", picked ? topicAbout(picked) : "2025년 1월부터의 소식을 주제별로 나눠 보여 줍니다. 제목을 누르면 원문이 열립니다."),
+    band(picked ? `소식: ${topicName(picked)}` : "소식", picked ? topicAbout(picked) : "2025년 1월부터의 소식을 주제별로 나눠 보여 줍니다. 제목을 누르면 국문 요약을 먼저 보여 줍니다."),
     h("div", { class: "with-side" }, [h("aside", { class: "side" }, side), h("div", { class: "stack-l" }, [filters, body, more])]),
   );
   draw();

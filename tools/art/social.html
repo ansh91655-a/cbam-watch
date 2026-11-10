@@ -6,50 +6,43 @@
 <!--
   링크를 공유할 때 뜨는 미리보기 그림(site/assets/og.jpg)의 원본이다. 크기는 1200x630.
   고칠 때만 쓴다: 저장소 맨 위에서 `python3 -m http.server`를 띄우고 /tools/art/social.html 을 1200x630 창으로 열어 화면 그림을 찍어 site/assets/og.jpg 로 저장한다(JPEG, 품질 90).
-  사이트의 색(tokens.css)과 점 지도(heromap.js)를 그대로 가져다 쓰므로 사이트와 같은 모습이 된다. 바뀌는 값(가격, 날짜)은 넣지 않는다.
+  사이트의 색(tokens.css), 글꼴, 점 지도(heromap.js), 이름표를 그대로 가져다 쓰므로 사이트와 같은 모습이 된다. 바뀌는 값(가격, 날짜)은 넣지 않는다.
 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="/site/assets/fonts/pretendard/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="/site/assets/fonts/noto-serif-kr/noto-serif-kr-700.css">
 <link rel="stylesheet" href="/site/css/tokens.css">
 <link rel="stylesheet" href="/site/css/layout.css">
 <style>
   html, body { margin: 0; }
   body { width: 1200px; height: 630px; overflow: hidden; font-family: var(--font); color: #ffffff; background: var(--hero-bg); word-break: keep-all; -webkit-font-smoothing: antialiased; }
-  .frame { position: relative; width: 1200px; height: 630px; padding: 64px 72px; box-sizing: border-box; display: grid; grid-template-rows: auto 1fr auto; }
-  .brand { display: flex; align-items: center; gap: 16px; font-size: 30px; font-weight: 800; letter-spacing: -0.02em; }
-  .brand svg { width: 52px; height: 52px; }
-  h1 { align-self: center; margin: 0; font-size: 76px; font-weight: 800; line-height: 1.16; letter-spacing: -0.035em; }
-  h1 span { background: linear-gradient(90deg, #ffcc00, #ffe58a); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .lead { margin: 22px 0 0; font-size: 27px; font-weight: 500; line-height: 1.5; letter-spacing: -0.01em; color: var(--on-deep-2); max-width: 640px; }
+  .frame { position: relative; width: 1200px; height: 630px; padding: 60px 72px 56px; box-sizing: border-box; display: grid; grid-template-rows: auto 1fr auto; }
+  .frame .brand { gap: 20px; }
+  .frame .brand-word { font-size: 46px; }
+  .frame .brand-name { padding-left: 23px; font-size: 34px; }
+  .frame .brand-name::before { width: 3px; }
+  h1 { margin: 0; font-family: var(--font-display); font-size: 51px; font-weight: 700; line-height: 1.32; letter-spacing: -0.02em; }
+  .sub { margin: 22px 0 0; max-width: 500px; font-size: 25px; font-weight: 500; line-height: 1.55; letter-spacing: -0.01em; color: var(--on-deep-2); }
   .foot { font-size: 21px; color: var(--on-deep-3); }
-  .art { position: absolute; top: 96px; right: -150px; width: 820px; aspect-ratio: 1117 / 488; -webkit-mask-image: linear-gradient(90deg, transparent, #000 16%, #000 86%, transparent); mask-image: linear-gradient(90deg, transparent, #000 16%, #000 86%, transparent); }
+  .art { position: absolute; top: 150px; right: 60px; width: 500px; aspect-ratio: 1002 / 598; }
   .art .map { display: block; width: 100%; height: 100%; overflow: visible; }
-  .art .map-arc { animation: none; stroke-dashoffset: 0; }
+  .art .map-route { animation: none; stroke-dashoffset: 0; }
+  .art .map-head { animation: none; opacity: 1; }
   .copy { position: relative; z-index: 1; align-self: center; }
 </style>
 </head>
 <body>
 <div class="frame">
-  <div class="brand">
-    <svg viewBox="0 0 32 32" aria-hidden="true">
-      <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3f72f5"/><stop offset="1" stop-color="#0a2b93"/></linearGradient></defs>
-      <rect width="32" height="32" rx="9" fill="url(#g)"/>
-      <rect x=".6" y=".6" width="30.8" height="30.8" rx="8.4" fill="none" stroke="#fff" stroke-opacity=".16" stroke-width="1.2"/>
-      <path d="M21.9 21.4A8.4 8.4 0 1 1 17.2 8.4" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round"/>
-      <path d="M10.6 19.6l3.6-3 2.7 2 7.3-7.6" fill="none" stroke="#ffcc00" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M20.3 10.2h4.4v4.4" fill="none" stroke="#ffcc00" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    <span>CBAM 규제동향</span>
-  </div>
+  <div class="brand"><span class="brand-word">CBAM</span><span class="brand-name">규제동향</span></div>
   <div id="art"></div>
   <div class="copy">
-    <h1>CBAM 규제,<br><span>달라진 것</span>부터 봅니다</h1>
-    <p class="lead">EU 탄소국경조정제도의 법령, 가이던스, 인증서 가격, 일정을 원문과 함께 국문으로 정리합니다.</p>
+    <h1>EU 탄소국경조정제도의<br>규제 동향을 원문과 함께</h1>
+    <p class="sub">법령, 가이던스, 인증서 가격, 일정을 평일마다 확인해 국문으로 정리합니다.</p>
   </div>
   <div class="foot">개인이 운영하는 비공식 사이트</div>
 </div>
 <script type="module">
   import { heroMap } from "/site/js/ui/heromap.js";
-  const art = heroMap();
+  const art = heroMap({ tags: false });
   art.className = "art";
   document.getElementById("art").replaceWith(art);
 </script>
