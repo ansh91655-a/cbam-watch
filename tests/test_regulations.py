@@ -1,3 +1,4 @@
+import pathlib
 """규제별 진행 상황 자료의 검사와 사이트용 변환을 확인한다."""
 import unittest
 
@@ -251,6 +252,15 @@ class PositionsTest(unittest.TestCase):
                 "rows": [{"topic": "쟁점 하나", "a": {"text": "넣음", "evidence": {"path": "data/regulations.json", "contains": ["regulations"]}}, "b": {"text": ""}}]}
         book.update(changes)
         return {"id": "r1", "positions": book}
+
+    def test_evidence_may_ask_for_words_on_one_line(self):
+        from tools.publish import regulations
+        path = "data/topics.json"
+        text = pathlib.Path(path).read_text(encoding="utf-8")
+        row = next(line for line in text.split("\n") if '"code"' in line)
+        first, second = row.strip()[:8], row.strip()[-6:]
+        self.assertEqual(regulations.evidence_problem({"path": path, "lines": [[first, second]]}, ""), "")
+        self.assertIn("한 줄에 함께", regulations.evidence_problem({"path": path, "lines": [[first, "이 파일에 없는 말"]]}, ""))
 
     def test_a_sound_table_has_no_problems_and_empty_cells_are_allowed(self):
         from tools.check import term_check

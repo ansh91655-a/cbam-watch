@@ -222,5 +222,45 @@ class StoreTest(unittest.TestCase):
         self.assertEqual(store.slug("CBAM: New Guidance (2026)"), "cbam-new-guidance-2026")
 
 
+class FourColumnTest(unittest.TestCase):
+    """네 칸 대조 문서: 낱말의 자리로 칸을 가리고, 줄이 그어진 말을 따로 적는다."""
+
+    @staticmethod
+    def word(text, x0, top, font="TimesNewRomanPSMT", width=20):
+        return {"text": text, "x0": x0, "x1": x0 + width, "top": top, "bottom": top + 11, "fontname": font}
+
+    def test_words_fall_into_columns_by_their_left_edge(self):
+        from tools.archive import fourcolumn
+        self.assertEqual([fourcolumn.column_of(x) for x in (54, 63, 100, 274, 449, 629)], ["", "번호", "집행위", "의회", "이사회", "합의안"])
+
+    def test_struck_words_leave_the_current_text_and_added_words_are_listed(self):
+        from tools.archive import fourcolumn
+        w = self.word
+        words = [
+            w("Recital", 54, 100, "ABC+Calibri"), w("21", 90, 100, "ABC+Calibri"),
+            w("34", 63, 118), w("(21)", 100, 118), w("credits", 125, 118),
+            w("deleted", 274, 118),
+            w("(21)", 449, 118), w("credits", 475, 118),
+            w("Article", 54, 150, "ABC+Calibri"), w("30", 90, 150, "ABC+Calibri"),
+            w("204d", 63, 168), w("redirect", 274, 168, "TimesNewRomanPS-BoldItalicMT"), w("revenues", 300, 168, "TimesNewRomanPS-BoldItalicMT"),
+        ]
+        rects = [{"x0": 475, "x1": 495, "top": 123.5, "height": 0.6}]   # 이사회 칸의 credits 위에 그은 줄
+        rows = fourcolumn.rows_of([(31, fourcolumn.mark(words, rects))])
+        self.assertEqual([row["number"] for row in rows], ["34", "204d"])
+        self.assertEqual(rows[0]["cells"], {"집행위": "(21) credits", "의회": "deleted", "이사회": "(21)"})
+        self.assertEqual(rows[0]["removed"], {"이사회": "credits"})
+        self.assertEqual(rows[1]["added"], {"의회": "redirect revenues"})
+        lines = fourcolumn.text_lines(rows)
+        self.assertIn("[이사회 34 지움] credits", lines)
+        self.assertIn("[의회 204d 더함] redirect revenues", lines)
+        self.assertEqual([row["number"] for row in fourcolumn.only_in(rows, "의회")], ["204d"])
+
+    def test_an_underline_below_the_word_is_not_a_strike(self):
+        from tools.archive import fourcolumn
+        word = self.word("kept", 274, 100)
+        self.assertFalse(fourcolumn.struck(word, [{"x0": 274, "x1": 294, "top": 110.6, "height": 0.6}]))
+        self.assertTrue(fourcolumn.struck(word, [{"x0": 274, "x1": 294, "top": 105.5, "height": 0.6}]))
+
+
 if __name__ == "__main__":
     unittest.main()

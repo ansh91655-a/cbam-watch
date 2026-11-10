@@ -9,6 +9,7 @@ import io
 import re
 import time
 
+from tools.archive import fourcolumn
 from tools.archive.store import save_index, save_text
 from tools.common.htmltext import decode, parse, squeeze
 from tools.common.net import fetch, header
@@ -25,7 +26,8 @@ TARGETS = [
     ("downstream-parliament", "parliament", "TA-10-2026-0276", "2023/956"),
     # 기관 간 협상에 쓰는 대조 문서(집행위 제안, 유럽의회 수정안, 이사회 안을 나란히 실은 것). 이사회 문서 등록부에 공개되어 있다.
     # 유럽의회 누리집은 자동 실행에 문서를 내주지 않아, 유럽의회가 채택한 수정안의 문안은 이 문서에서 확인한다.
-    ("downstream-fourcolumn", "council", "WK-14239-2026-INIT", "2025/0419"),
+    # 칸이 섞이지 않게 낱말의 자리로 칸을 가려 받는다(tools/archive/fourcolumn.py).
+    ("downstream-fourcolumn", "fourcolumn", "WK-14239-2026-INIT", "2025/0419"),
     # 유럽의회 입법 관측소가 절차의 문서마다 붙인 요약(집행위 제안, 위원회 보고서, 본회의 채택 문서)
     ("downstream-oeil-summary", "oeil", "2025/0419(COD)", "CBAM"),
 ]
@@ -73,6 +75,18 @@ def council_parts(code):
     return [("", address, lines)], ""
 
 
+def fourcolumn_parts(code):
+    address = COUNCIL.format(code=code)
+    status, _, body, error = fetch(address, timeout=180, retries=1)
+    if status != 200 or not body.startswith(b"%PDF"):
+        return [], f"응답 {status} {error[:60]}".strip()
+    rows = fourcolumn.read_pdf(body)
+    if len(rows) < 50 or not any("의회" in row["cells"] for row in rows):
+        return [], f"네 칸 표로 읽히지 않음(행 {len(rows)}개)"
+    head = [f"[문서] {code} 2025/0419(COD)", "[읽는 법] 행마다 [집행위], [의회], [이사회], [합의안] 칸을 한 줄씩 적었다. '더함'은 집행위 제안에 없던 말, '지움'은 집행위 제안에서 뺀 말이다.", ""]
+    return [("", address, head + fourcolumn.text_lines(rows))], ""
+
+
 def parliament_parts(code):
     address = PARLIAMENT.format(code=code)
     status, headers, body, error = fetch(address, timeout=180, retries=1)
@@ -98,7 +112,7 @@ def oeil_parts(reference):
     return parts, "" if parts else "요약 링크를 찾지 못함"
 
 
-READERS = {"celex": celex_parts, "council": council_parts, "parliament": parliament_parts, "oeil": oeil_parts}
+READERS = {"celex": celex_parts, "council": council_parts, "fourcolumn": fourcolumn_parts, "parliament": parliament_parts, "oeil": oeil_parts}
 
 
 def crawl():

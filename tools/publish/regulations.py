@@ -42,10 +42,15 @@ def evidence_problem(evidence, date):
         text = path.read_text(encoding="utf-8")
         missing = [phrase for phrase in evidence.get("contains", []) if phrase not in text]
         present = [phrase for phrase in evidence.get("lacks", []) if phrase.lower() in text.lower()]  # '그런 조항이 없음'의 근거
-        if not evidence.get("contains") and not evidence.get("lacks"):
-            return "근거에 찾을 글(contains)이나 없어야 할 글(lacks)이 없음"
+        # lines: 묶음마다 그 글들이 한 줄에 함께 있어야 한다(칸별로 한 줄씩 적은 대조 문서에서 "의회 칸에 이 말이 있다"를 확인할 때 쓴다)
+        rows = text.split("\n")
+        apart = [group for group in evidence.get("lines", []) if not any(all(phrase in row for phrase in group) for row in rows)]
+        if not evidence.get("contains") and not evidence.get("lacks") and not evidence.get("lines"):
+            return "근거에 찾을 글(contains, lines)이나 없어야 할 글(lacks)이 없음"
         if missing:
             return f"근거 파일에 없는 글: {missing}"
+        if apart:
+            return f"근거 파일에서 한 줄에 함께 있지 않은 글: {apart}"
         return f"근거 파일에 없어야 할 글이 있음: {present}" if present else ""
     return "근거의 꼴을 알 수 없음"
 
