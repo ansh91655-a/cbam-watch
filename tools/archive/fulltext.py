@@ -11,16 +11,19 @@ import time
 
 from tools.archive import fourcolumn
 from tools.archive.store import save_index, save_text
+from tools.cn import versions
 from tools.common.htmltext import decode, parse, squeeze
+from tools.common.jsonio import read_json
 from tools.common.net import fetch, header
 
 CELLAR = "http://publications.europa.eu/resource/celex/{celex}"
 ACCEPT = {"Accept": "application/xhtml+xml, text/html;q=0.9", "Accept-Language": "eng"}
 COUNCIL = "https://data.consilium.europa.eu/doc/document/{code}/en/pdf"
 PARLIAMENT = "https://www.europarl.europa.eu/doceo/document/{code}_EN.html"
-# (이름, 종류, 번호, 받은 글에 꼭 있어야 하는 말)
+RELATED = "collected/archive/eur-lex-related.json"
+# (이름, 종류, 번호, 받은 글에 꼭 있어야 하는 말). 통합본의 번호는 돌릴 때 가장 새 판으로 바꿔 넣는다(targets).
 TARGETS = [
-    ("cbam-consolidated", "celex", "02023R0956-20251020", "ANNEX I"),
+    ("cbam-consolidated", "celex", versions.FIRST, "ANNEX I"),
     ("downstream-commission", "celex", "52025PC0989", "2023/956"),
     ("downstream-council", "council", "ST-10423-2026-INIT", "2023/956"),
     ("downstream-parliament", "parliament", "TA-10-2026-0276", "2023/956"),
@@ -112,12 +115,22 @@ def oeil_parts(reference):
     return parts, "" if parts else "요약 링크를 찾지 못함"
 
 
+def targets():
+    """받을 문서의 목록. CBAM 규정 통합본은 법령 데이터베이스 기록에 보이는 가장 새 판을 받는다.
+
+    새 통합본이 나왔을 때 품목 목록까지 다시 만드는 일은 날마다의 수집이 돌리는 tools.cn.refresh가 한다.
+    """
+    newest = versions.newer_consolidated(versions.FIRST, read_json(RELATED, {}).get("entries", [])) or versions.FIRST
+    return [(name, kind, newest if name == "cbam-consolidated" else code, must) for name, kind, code, must in TARGETS]
+
+
 READERS = {"celex": celex_parts, "council": council_parts, "fourcolumn": fourcolumn_parts, "parliament": parliament_parts, "oeil": oeil_parts}
 
 
 def crawl():
     entries, failures = [], []
-    for name, kind, code, must in TARGETS:
+    wanted = targets()
+    for name, kind, code, must in wanted:
         try:
             parts, why = READERS[kind](code)
         except Exception as problem:
@@ -130,5 +143,5 @@ def crawl():
         for tail, address, lines in parts:
             path = save_text(f"eu-fulltext/{name}{tail}.txt", [f"[주소] {address}", ""] + lines)
             entries.append({"name": f"{name}{tail}", "code": code, "url": address, "lines": len(lines), "textPath": path})
-    save_index("eu-fulltext", entries, {"targets": len(TARGETS), "failures": failures})
+    save_index("eu-fulltext", entries, {"targets": len(wanted), "failures": failures})
     return {"stored": len(entries), "failures": failures}

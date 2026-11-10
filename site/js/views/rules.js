@@ -1,5 +1,6 @@
 // 규제. 규제마다 지금 어느 단계에 있는지, 그동안 무슨 일이 있었는지, 다음에 무엇이 남았는지를 보여 준다.
 // #rules는 전체 목록, #rules-<묶음>은 한 묶음, #rules-<규제>는 한 규제의 자세한 화면이다.
+import { adopted } from "../cn/stage.js";
 import * as data from "../data.js";
 import { band } from "../ui/band.js";
 import { card } from "../ui/card.js";
@@ -72,8 +73,11 @@ function positions(rule) {
     link.append(icon("out", 13));
     sources.append(h("li", {}, [h("strong", { text: "함께 대조한 문서" }), extra.date ? h("time", { datetime: extra.date, text: day(extra.date) }) : null, link]));
   }
-  return h("section", { class: "stack", "aria-labelledby": "h-pos" }, [
-    h("div", { class: "sec-head" }, [h("h2", { id: "h-pos", text: "기관별 입장 비교" }), h("span", { class: "count", text: `${day(book.asOf)} 기준` })]),
+  // 규제가 채택 단계에 들어가면 이 표는 지난 이야기가 된다. 그때는 협상 전의 기록이라고 스스로 밝힌다.
+  const past = adopted(rule);
+  return h("section", { class: "stack pos-wide", "aria-labelledby": "h-pos" }, [
+    h("div", { class: "sec-head" }, [h("h2", { id: "h-pos", text: past ? "기관별 입장 비교(협상 전의 기록)" : "기관별 입장 비교" }), h("span", { class: "count", text: `${day(book.asOf)} 기준` })]),
+    past ? h("p", { class: "pos-past", text: `이 규제는 지금 '${rule.stage}' 단계입니다. 아래 표는 협상 전에 각 기관이 낸 안을 기록으로 남긴 것이며, 최종 법령의 내용과 다를 수 있습니다.` }) : null,
     wrap,
     sources,
     h("p", { class: "pos-note", text: book.note }),

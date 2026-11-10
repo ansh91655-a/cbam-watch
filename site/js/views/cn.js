@@ -2,6 +2,7 @@
 // 판정은 js/cn/match.js가 하고, 품목 목록은 법령 원문에서 뽑은 data/cn.json이다. 문구는 이 파일에서 정한다.
 import * as data from "../data.js";
 import { digits, verdict } from "../cn/match.js";
+import { adopted, proposalRule } from "../cn/stage.js";
 import { band } from "../ui/band.js";
 import { empty, fill, h, pill, safeLink } from "../ui/dom.js";
 import { icon } from "../ui/icons.js";
@@ -55,7 +56,24 @@ function basis(source, lead) {
   return h("p", { class: "cn-basis" }, [h("span", { text: lead }), link || h("span", { text: source.name })]);
 }
 
-function result(text, book) {
+// 개정안의 품목을 알릴 때 붙이는 말. 개정안이 채택 단계에 들어가면 '협상 전의 목록'이라고 스스로 바꿔 말한다.
+function proposalWords(rule) {
+  const stage = rule && rule.stage ? rule.stage : "";
+  if (adopted(rule)) {
+    return {
+      stage,
+      commission: `이 개정안은 지금 '${stage}' 단계입니다. 아래는 협상 전에 집행위원회가 제안한 목록이어서 최종 법령의 목록과 다를 수 있습니다. 최종 목록은 유럽연합 관보에 실린 원문에서 확인해 주세요.`,
+      council: `이 개정안은 지금 '${stage}' 단계입니다. 아래는 협상 전의 이사회 안이어서 최종 법령의 목록과 다를 수 있습니다.`,
+    };
+  }
+  return {
+    stage,
+    commission: "아직 법이 아니며, 최종 목록은 유럽의회와 EU 이사회의 협상 결과에 따라 달라집니다.",
+    council: "집행위원회의 제안에는 없던 코드이며, 최종 목록에 들어갈지는 협상 결과에 달려 있습니다.",
+  };
+}
+
+function result(text, book, rule) {
   const now = verdict(text, book.current);
   if (now.state === "short") {
     return h("div", { class: "cn-result" }, empty(digits(text) ? "코드를 4자리 이상 넣어 주세요." : "CN 코드나 HS 코드의 앞 4~8자리를 넣어 주세요."));
@@ -70,11 +88,12 @@ function result(text, book) {
   const council = book.council || { added: [], removed: [] };
   const more = verdict(text, council.added || []);
   const cut = verdict(text, council.removed || []);
+  const words = proposalWords(rule);
   const blocks = [];
   if (open && live(later) && added.length) {
     blocks.push(h("section", { class: "cn-later" }, [
-      h("h3", {}, [h("span", { text: "확대 개정안에는 들어 있습니다" }), pill("제안 단계", "warn")]),
-      h("p", { text: `EU 집행위원회가 2025년 12월에 낸 하류제품 확대 개정안의 부속서에 이 코드${later.state === "mixed" ? " 아래의 일부 코드" : ""}가 들어 있습니다. 아직 법이 아니며, 최종 목록은 유럽의회와 EU 이사회의 협상 결과에 따라 달라집니다.` }),
+      h("h3", {}, [h("span", { text: "확대 개정안에는 들어 있습니다" }), pill(words.stage || "제안 단계", "warn")]),
+      h("p", { text: `EU 집행위원회가 2025년 12월에 낸 하류제품 확대 개정안의 부속서에 이 코드${later.state === "mixed" ? " 아래의 일부 코드" : ""}가 들어 있습니다. ${words.commission}` }),
       h("div", { class: "cn-entries" }, added.slice(0, LIMIT).map((hit) => entryCard(hit, true))),
       added.length > LIMIT ? h("p", { class: "count", text: `이 밖에 ${added.length - LIMIT}줄이 더 있습니다. 코드를 더 길게 넣으면 좁혀집니다.` }) : null,
       live(cut) ? h("div", { class: "cn-except" }, [h("p", { text: "EU 이사회의 안은 이 가운데 다음 코드를 뺐습니다" }), h("ul", {}, cut.rows.map((hit) => goods(hit.entry)))]) : null,
@@ -83,8 +102,8 @@ function result(text, book) {
   }
   if (open && live(more)) {
     blocks.push(h("section", { class: "cn-later" }, [
-      h("h3", {}, [h("span", { text: "EU 이사회의 안에는 들어 있습니다" }), pill("협상 단계", "warn")]),
-      h("p", { text: `EU 이사회가 2026년 6월 12일에 정한 일반적 접근은 집행위원회의 목록에 이 코드${more.state === "mixed" ? " 아래의 일부 코드" : ""}를 더했습니다. 집행위원회의 제안에는 없던 코드이며, 최종 목록에 들어갈지는 협상 결과에 달려 있습니다.` }),
+      h("h3", {}, [h("span", { text: "EU 이사회의 안에는 들어 있습니다" }), pill(words.stage || "협상 단계", "warn")]),
+      h("p", { text: `EU 이사회가 2026년 6월 12일에 정한 일반적 접근은 집행위원회의 목록에 이 코드${more.state === "mixed" ? " 아래의 일부 코드" : ""}를 더했습니다. ${words.council}` }),
       h("div", { class: "cn-except" }, h("ul", {}, more.rows.slice(0, LIMIT).map((hit) => goods(hit.entry)))),
       more.rows.length > LIMIT ? h("p", { class: "count", text: `이 밖에 ${more.rows.length - LIMIT}개가 더 있습니다. 코드를 더 길게 넣으면 좁혀집니다.` }) : null,
       basis(council, "근거: "),
@@ -105,13 +124,16 @@ function result(text, book) {
 
 // 부속서 I의 품목을 부문별로 펼쳐 볼 수 있게 한다.
 function listing(book) {
-  const order = ["cement", "electricity", "fertilisers", "steel", "aluminium", "chemicals"];
+  // 정해 둔 차례대로 놓고, 법령에 새 부문이 생기면 그 뒤에 이어 놓는다.
+  const known = ["cement", "electricity", "fertilisers", "steel", "aluminium", "chemicals", "combined"];
+  const present = [...new Set(book.current.map((entry) => entry.sector))];
+  const order = [...known.filter((sector) => present.includes(sector)), ...present.filter((sector) => !known.includes(sector))];
   return h("section", { class: "stack", "aria-labelledby": "h-cn-list" }, [
     h("div", { class: "sec-head" }, [h("h2", { id: "h-cn-list", text: "부속서 I의 대상 품목" }), safeLink(book.law.url, "법령 원문 열기")]),
     ...order.map((sector) => {
       const mine = book.current.filter((entry) => entry.sector === sector);
       return h("details", { class: "cn-sector" }, [
-        h("summary", {}, [h("span", { class: "chipicon" }, icon(SECTOR_ICON[sector], 18)), h("strong", { text: SECTOR[sector] }), h("span", { class: "count", text: `${mine.length}줄` })]),
+        h("summary", {}, [h("span", { class: "chipicon" }, icon(SECTOR_ICON[sector] || "file", 18)), h("strong", { text: SECTOR[sector] || sector }), h("span", { class: "count", text: `${mine.length}줄` })]),
         h("ul", { class: "cn-list" }, mine.map((entry) => h("li", {}, [
           h("a", { class: "cn-code", href: `#cn-${entry.codes[0]}`, text: entry.shown }),
           h("span", { lang: "en", text: entry.text }),
@@ -128,13 +150,14 @@ function notes() {
     h("ul", {}, [
       h("li", { text: "한 해 동안 수입한 대상 품목의 순중량 합계가 50톤(단일 중량 임계값)을 넘지 않는 수입자는 CBAM 의무가 면제됩니다. 전력과 수소에는 이 면제가 적용되지 않습니다(CBAM 규정 제2a조, 부속서 VII)." }),
       h("li", { text: "이 조회는 코드의 앞자리를 부속서의 목록과 견주어 보여 주는 참고 자료입니다. 실제 품목 분류는 EU 세관의 판단을 따르므로, 신고 전에는 수입자와 함께 8자리 CN 코드를 확인해 주세요." }),
-      h("li", { text: "품목 이름은 법령 원문(영문) 그대로입니다. 목록은 법령이 바뀌면 다시 만듭니다." }),
+      h("li", { text: "품목 이름은 법령 원문(영문) 그대로입니다. CBAM 규정의 새 통합본이 나오면 목록을 다시 만듭니다." }),
     ]),
   ]);
 }
 
 export async function render(main, arg) {
-  const book = await data.cn();
+  const [book, rules] = await Promise.all([data.cn(), data.regulations()]);
+  const rule = proposalRule(rules);
   const head = band("품목 코드 조회", "CN 코드를 넣으면 CBAM 대상 품목인지와 그 근거를 보여 줍니다.", libraryTabs("cn"));
   if (!book || !Array.isArray(book.current) || !book.current.length) {
     fill(main, head, empty("품목 목록을 준비하고 있습니다."));
@@ -142,7 +165,7 @@ export async function render(main, arg) {
   }
   const holder = h("div", { "aria-live": "polite" });
   const input = h("input", { id: "cn-q", type: "search", inputmode: "numeric", autocomplete: "off", placeholder: "예: 7208 또는 7318 15 00", value: arg ? spaced(digits(arg)) : "" });
-  const show = () => fill(holder, result(input.value, book));
+  const show = () => fill(holder, result(input.value, book, rule));
   input.addEventListener("input", show);
   const form = h("form", { class: "cn-form", role: "search", onsubmit: (event) => {
     event.preventDefault();

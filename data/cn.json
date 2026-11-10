@@ -1644,6 +1644,7 @@
    }
   ]
  },
+ "proposalEnacted": false,
  "current": [
   {
    "sector": "cement",
