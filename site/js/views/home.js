@@ -49,7 +49,7 @@ function digestPanel(digests) {
 
 export async function render(main) {
   const [all, events, digests] = await Promise.all([data.items(), data.events(), data.digests()]);
-  const items = data.newestFirst(all);
+  const items = data.newestFirst(all).filter((item) => !item.withdrawn);
   const important = items.filter((item) => item.importance === "높음" && (daysSince(item.published || item.listed) ?? 999) <= IMPORTANT_DAYS).slice(0, 5);
   const importantIds = new Set(important.map((item) => item.id));
   const recent = items.filter((item) => !importantIds.has(item.id)).slice(0, RECENT_COUNT);

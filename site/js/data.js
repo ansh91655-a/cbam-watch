@@ -16,6 +16,8 @@ export const site = () => load("site", {});
 export const items = () => load("items", { items: [] }).then((body) => body.items || []);
 export const sources = () => load("sources", { sources: [] }).then((body) => body.sources || []);
 export const documents = () => load("documents", { documents: [] }).then((body) => body.documents || []);
+// 자동으로 받지 못해 사본을 두지 못한 문서 링크의 수. 화면 코드별.
+export const unreachableDocuments = () => load("documents", { documents: [] }).then((body) => body.unreachable || {});
 export const terms = () => load("terms", { terms: [] }).then((body) => body.terms || []);
 export const digests = () => load("digests", { digests: [] }).then((body) => body.digests || []);
 export const events = () => load("events", { events: [] }).then((body) => body.events || []);

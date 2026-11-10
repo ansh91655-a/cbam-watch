@@ -1,13 +1,15 @@
 """이번 실행에서 받을 문서의 차례를 정한다.
 
-EC 사이트는 짧은 시간에 많이 받으면 접속을 막는다. 그래서 한 번에 정해진 건수만 받는다.
-- 처음 보는 문서(아직 받지 못한 것)를 먼저 받는다.
-- 남는 몫으로는 이미 아는 문서 가운데 가장 오래 확인하지 않은 것부터 다시 받아 바뀌었는지 본다.
+한 번에 정해진 건수만 받는다(출처 사이트에 부담을 주지 않고, 막혔을 때 피해를 줄이려는 것이다).
+1. 처음 보는 문서(한 번도 받아 보지 않은 것)를 먼저 받는다.
+2. 남는 몫으로 이미 아는 문서 가운데 가장 오래 확인하지 않은 것부터 다시 받아 바뀌었는지 본다.
+3. 전에 받지 못했던 문서는 맨 뒤에서 몇 건만 다시 시도한다. GIVE_UP번 실패한 문서는 월요일에만 다시 시도한다.
 아직 받지 못한 문서는 pending에 적어 두고 다음 실행에서 이어 받는다.
 """
 
-BUDGET = 20   # 한 번 실행에 받는 문서 수
-GIVE_UP = 5   # 이만큼 실패한 문서는 월요일에만 다시 시도한다
+BUDGET = 20       # 한 번 실행에 받는 문서 수
+RETRY_LIMIT = 4   # 그 가운데 전에 받지 못한 문서를 다시 시도하는 건수
+GIVE_UP = 3       # 이만큼 실패한 문서는 월요일에만 다시 시도한다
 
 
 def note_new_links(pending, found, docs, quiet_pages, first_run, date):
@@ -26,9 +28,19 @@ def drop_vanished(pending, found, read_codes):
 
 def build(found, docs, pending, full, monday):
     """받을 문서 번호의 목록을 차례대로 돌려준다."""
-    fresh = [doc_id for doc_id in found if doc_id in pending and (pending[doc_id]["tries"] < GIVE_UP or monday or full)]
-    fresh.sort(key=lambda doc_id: pending[doc_id]["tries"])
+    fresh = [doc_id for doc_id in found if doc_id in pending and pending[doc_id]["tries"] == 0]
+    retry = [doc_id for doc_id in found if doc_id in pending and pending[doc_id]["tries"] > 0 and (pending[doc_id]["tries"] < GIVE_UP or monday or full)]
+    retry.sort(key=lambda doc_id: pending[doc_id]["tries"])
     known = [doc_id for doc_id in found if doc_id in docs]
     known.sort(key=lambda doc_id: docs[doc_id].get("lastChecked", ""))
-    order = fresh + known
-    return order if full else order[:BUDGET]
+    if full:
+        return fresh + known + retry
+    if not monday:
+        retry = retry[:RETRY_LIMIT]
+    room = max(0, BUDGET - len(fresh) - len(retry))
+    return fresh + known[:room] + retry
+
+
+def unreachable(pending):
+    """여러 번 받지 못해 평소에는 다시 시도하지 않는 문서의 번호."""
+    return [doc_id for doc_id, entry in pending.items() if entry["tries"] >= GIVE_UP]

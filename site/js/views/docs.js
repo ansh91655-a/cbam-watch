@@ -44,7 +44,7 @@ function row(doc, detailRow) {
 }
 
 export async function render(main) {
-  const [documents, sources] = await Promise.all([data.documents(), data.sources()]);
+  const [documents, sources, unreachable] = await Promise.all([data.documents(), data.sources(), data.unreachableDocuments()]);
   if (!documents.length) {
     main.replaceChildren(viewHead("원문 대장", "추적하는 원문 문서가 아직 등록되지 않았습니다."), empty("원문 문서 목록을 준비하고 있습니다."));
     return;
@@ -63,6 +63,7 @@ export async function render(main) {
     return h("section", { class: "stack" }, [
       h("h2", {}, source ? safeLink(source.url, source.name) || h("span", { text: source.name }) : h("span", { text: "그 밖의 문서" })),
       table(["문서", { text: "판 확인일", num: true }, { text: "쪽수", num: true }, { text: "크기", num: true }, { text: "판 수", num: true }, "보관본"], body),
+      unreachable[page] ? h("p", { class: "count", text: `이 화면의 문서 링크 가운데 ${unreachable[page]}건은 자동으로 받지 못해 사본이 없습니다. 위 화면 이름을 눌러 직접 확인하세요.` }) : null,
     ]);
   });
   main.replaceChildren(

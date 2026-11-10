@@ -67,6 +67,8 @@ def main():
     sources, keywords = registry.load()
     targets = registry.github_sources(sources)
     status = read_json(STATUS_PATH, {"sources": {}})
+    codes = {source["code"] for source in targets}
+    status["sources"] = {code: row for code, row in status["sources"].items() if code in codes}  # 대상에서 빠진 출처의 옛 기록은 지운다
     all_items = []
     for source in targets:
         try:

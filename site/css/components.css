@@ -26,6 +26,7 @@
 }
 
 .summary { max-width: 72ch; }
+.summary.withdrawn { color: var(--muted); }
 
 .impact {
   max-width: 72ch;

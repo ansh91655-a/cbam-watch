@@ -39,7 +39,12 @@ def documents():
         title = doc["filename"].rsplit(".", 1)[0]
         rows.append({"id": doc["id"], "title": title, "filename": doc["filename"], "label": doc.get("label", ""), "url": doc.get("url", ""), "page": doc.get("page", ""),
                      "firstSeen": doc.get("firstSeen", ""), "lastChecked": doc.get("lastChecked", ""), "linked": doc.get("linked", True), "replaces": doc.get("replaces", ""), "versions": versions})
-    return {"builtAt": stamp(), "checkedAt": state.get("checkedAt", ""), "documents": rows}, diffs
+    # 자동으로 받지 못해 사본을 두지 못한 문서 링크의 수(화면별). 사이트가 원문 대장에 한 줄로 알린다.
+    unreachable = {}
+    for entry in state.get("pending", {}).values():
+        if int(entry.get("tries", 0) or 0) > 0:
+            unreachable[entry.get("page", "")] = unreachable.get(entry.get("page", ""), 0) + 1
+    return {"builtAt": stamp(), "checkedAt": state.get("checkedAt", ""), "unreachable": unreachable, "documents": rows}, diffs
 
 
 def site(counts):

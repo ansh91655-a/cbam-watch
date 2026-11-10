@@ -133,22 +133,35 @@ class OriginalsFlowTest(unittest.TestCase):
         self.assertEqual((version["file"], version.get("kept")), ("", False))  # 압축 파일은 해시만 적는다
 
     def test_blocked_downloads_wait_quietly(self):
-        # 첫 실행에서 접속이 막혀 일부 문서를 받지 못한다: 받지 못한 것은 대기 목록에 남고, 나중에 받아도 소식이 아니다
+        # 첫 실행에서 일부 문서를 받지 못한다: 받지 못한 것은 대기 목록에 남고, 나머지는 그대로 받으며, 나중에 받아도 소식이 아니다
         urls = [self._doc(doc_id, "en", f"Doc{index}.txt", f"본문 {index}") for index, doc_id in enumerate((ID1, ID2, ID3, ID4))]
         self.web.pages[PAGE_A] = ({"Content-Type": "text/html"}, _page(*urls))
-        self.web.blocked = {urls[1], urls[2], urls[3]}
+        self.web.blocked = {urls[0], urls[1], urls[2]}
         run.main([])
         state = self._state()
-        self.assertEqual(set(state["docs"]), {ID1})
-        self.assertEqual(set(state["pending"]), {ID2, ID3, ID4})
-        self.assertEqual([state["pending"][doc_id]["tries"] for doc_id in (ID2, ID3, ID4)], [1, 1, 0])  # 두 번 막히면 그만 받는다
-        self.assertTrue(any("그만 받음" in note for note in state["notes"]))
-        self.web.blocked = set()
+        self.assertEqual(set(state["docs"]), {ID4})  # 앞의 셋이 막혀도 넷째는 받는다
+        self.assertEqual([state["pending"][doc_id]["tries"] for doc_id in (ID1, ID2, ID3)], [1, 1, 1])
         run.main([])
+        run.main([])
+        state = self._state()
+        self.assertEqual(state["unreachableCount"], 3)  # 세 번 실패하면 평소에는 다시 시도하지 않는다
+        self.web.blocked = set()
+        run.main(["--full"])
         state = self._state()
         self.assertEqual(set(state["docs"]), {ID1, ID2, ID3, ID4})
         self.assertEqual(state["pending"], {})
         self.assertEqual(self._feed(), [])
+
+    def test_known_documents_failing_in_a_row_stop_the_run(self):
+        urls = [self._doc(doc_id, "en", f"Doc{index}.txt", f"본문 {index}") for index, doc_id in enumerate((ID1, ID2, ID3))]
+        self.web.pages[PAGE_A] = ({"Content-Type": "text/html"}, _page(*urls))
+        run.main([])
+        self.web.blocked = set(urls)
+        run.main([])
+        state = self._state()
+        self.assertTrue(any("그만 받음" in note for note in state["notes"]))
+        self.assertEqual(sum(1 for doc in state["docs"].values() if doc.get("lastError")), 2)
+        self.assertEqual(self._feed(), [])  # 받지 못했다고 문서가 사라졌다거나 바뀌었다고 하지 않는다
 
     def test_new_link_on_known_page_is_news_even_if_late(self):
         one = self._doc(ID1, "en", "Guide.txt", "본문")

@@ -15,13 +15,14 @@ export function card(item) {
   const foot = [
     safeLink(item.link, "원문 보기"),
     item.checkedAt ? h("span", { text: `원문 대조 ${day(item.checkedAt)}` }) : null,
-    pill(item.authoring === "사람이 고침" ? "사람이 고침" : "자동 정리"),
+    item.withdrawn ? pill("요약 내림", "warn") : pill(item.authoring === "사람이 고침" ? "사람이 고침" : "자동 정리"),
   ];
   return h("article", { class: "card", "data-importance": item.importance || null, id: item.id ? `item-${item.id}` : null }, [
     h("h3", {}, link || h("span", { text: item.title || "" })),
     h("p", { class: "meta" }, meta),
-    item.summary ? h("p", { class: "summary", text: item.summary }) : null,
-    item.impact ? h("p", { class: "impact" }, [h("strong", { text: "실무 영향 " }), h("span", { text: item.impact })]) : null,
+    item.withdrawn ? h("p", { class: "summary withdrawn", text: "다시 대조한 결과 원문과 어긋난 곳이 있어 요약을 내렸습니다. 원문에서 직접 확인하세요." }) : null,
+    !item.withdrawn && item.summary ? h("p", { class: "summary", text: item.summary }) : null,
+    !item.withdrawn && item.impact ? h("p", { class: "impact" }, [h("strong", { text: "실무 영향 " }), h("span", { text: item.impact })]) : null,
     h("div", { class: "foot" }, foot),
   ]);
 }

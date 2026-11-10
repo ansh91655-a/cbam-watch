@@ -83,14 +83,15 @@ def _download(order, found, docs, pending, families, moment, notes):
         done += 1
         status, headers, body, error = fetch(info["url"], timeout=180, retries=0)
         if status != 200 or not body or len(body) > MAX_BYTES:
-            blocked += 1
             reason = f"{status} {error[:60]}".strip() if status != 200 else f"크기 {len(body)}바이트"
-            if doc_id in pending:
+            if doc_id in pending:  # 한 번도 받아 보지 못한 문서: 그 문서만의 사정일 수 있으므로 다음 문서로 간다
                 pending[doc_id].update({"tries": pending[doc_id]["tries"] + 1, "lastError": reason, "lastTried": stamp(moment)})
-            else:  # 확인 시각을 적어 다음 실행에서는 다른 문서가 먼저 오게 한다
-                docs[doc_id].update({"lastError": reason, "lastChecked": stamp(moment)})
+                continue
+            # 전에는 받았던 문서: 확인 시각을 적어 다음 실행에서는 다른 문서가 먼저 오게 하고, 이어서 실패하면 접속 제한으로 본다
+            docs[doc_id].update({"lastError": reason, "lastChecked": stamp(moment)})
+            blocked += 1
             if blocked >= BLOCK_LIMIT:
-                notes.append(f"받지 못한 응답이 {blocked}번 이어져 이번 실행에서는 그만 받음(남은 {len(order) - done}건은 다음 실행에서)")
+                notes.append(f"전에 받았던 문서를 {blocked}번 이어서 받지 못해 이번 실행에서는 그만 받음(남은 {len(order) - done}건은 다음 실행에서)")
                 break
             continue
         blocked = 0
@@ -143,10 +144,8 @@ def main(argv):
     if first_run:
         state["baseline"] = today(moment)
     waiting = len(pending)
-    stuck = [doc_id[:8] for doc_id, entry in pending.items() if entry["tries"] >= queue.GIVE_UP]
-    if stuck:
-        notes.append(f"여러 번 받지 못한 문서 {len(stuck)}건: {', '.join(stuck[:6])}")
-    state.update({"checkedAt": stamp(moment), "full": full, "notes": notes, "docCount": len(docs), "pendingCount": waiting, "checkedThisRun": len(order)})
+    state.update({"checkedAt": stamp(moment), "full": full, "notes": notes, "docCount": len(docs), "pendingCount": waiting,
+                  "unreachableCount": len(queue.unreachable(pending)), "checkedThisRun": len(order)})
     write_json(STATE_PATH, state)
     added = feed.append(today(moment), items, stamp(moment)) if items else 0
     print(f"문서 링크 {len(found)}건, 이번에 받은 차례 {len(order)}건, 아직 받지 못한 문서 {waiting}건, 새 소식 {added}건, 특이사항 {len(notes)}건")
