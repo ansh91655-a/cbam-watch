@@ -1,6 +1,6 @@
 {
  "source": "eur-lex-related",
- "fetchedAt": "2026-11-11T02:13:53+09:00",
+ "fetchedAt": "2026-11-11T03:02:24+09:00",
  "since": "2025-01-01",
  "report": {
   "links": {
@@ -8,11 +8,14 @@
    "32025R2083": 15
   },
   "titles": {
-   "'carbon border adjustment'": 10,
-   "CBAM": 12,
+   "'carbon border adjustment'": 0,
+   "CBAM": 0,
    "'Temporary Decarbonisation Fund'": 5
   },
-  "failures": [],
+  "failures": [
+   "제목 ''carbon border adjustment'': 503 HTTP Error 503: Service Temporarily Unavailable <html>\n    <head>\n\t<title>Web Site Under Maintenance</title>\n\t<META HTTP-EQUIV=\"CACHE-CONTROL\" CONTENT=\"NO-CACHE\">\n\t<MET",
+   "제목 'CBAM': 206  \n{ \"head\": { \"link\": [], \"vars\": [\"celex\", \"date\", \"title\"] },\n  \"results\": { \"distinct\": false, \"ordered\": true, \"bindi"
+  ],
   "cases": {
    "62023CJ0512": "없음",
    "62023CC0512": "없음",
@@ -22,7 +25,7 @@
    "62024CC0519": "2025-10-09",
    "62024CO0519": "없음"
   },
-  "works": 106
+  "works": 102
  },
  "entries": [
   {
@@ -44,22 +47,12 @@
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52026SC0705"
   },
   {
-   "celex": "32026D2256",
-   "date": "2026-09-24",
-   "title": "Council Decision (EU) 2026/2256 of 24 September 2026 on the position to be adopted on behalf of the European Union within the EEA Joint Committee concerning the amendment of Protocol 10 to the EEA Agreement, on simplification of inspections and formalities in respect of carriage of goods, and Protocol 31 to the EEA Agreement, on cooperation in specific fields outside the four freedoms (CBAM financial contribution) (Text with EEA relevance)",
-   "relations": [
-    "title-match"
-   ],
-   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32026D2256"
-  },
-  {
    "celex": "32026D2240",
    "date": "2026-09-24",
    "title": "Council Decision (EU) 2026/2240 of 24 September 2026 on the position to be adopted, on behalf of the European Union, within the EEA Joint Committee concerning an amendment to Annex XX (Environment) to the EEA Agreement (CBAM) (Text with EEA relevance)",
    "relations": [
     "work_cites_work:32023R0956",
-    "work_cites_work:32025R2083",
-    "title-match"
+    "work_cites_work:32025R2083"
    ],
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32026D2240"
   },
@@ -77,8 +70,7 @@
    "date": "2026-07-31",
    "title": "List of the competent authorities designated by Member States which are empowered to carry out the functions and duties, published in accordance with Article 11 of Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023 establishing a carbon border adjustment mechanism",
    "relations": [
-    "resource_legal_based_on_resource_legal:32023R0956",
-    "title-match"
+    "resource_legal_based_on_resource_legal:32023R0956"
    ],
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52026XC04231"
   },
@@ -88,8 +80,7 @@
    "title": "Proposal for a COUNCIL DECISION on the position to be adopted, on behalf of the European Union, within the EEA Joint Committee concerning an amendment to Protocol 10 to the EEA Agreement, on simplification of inspections and formalities in respect of carriage of goods, and Protocol 31 to the EEA Agreement, on cooperation in specific fields outside the four freedoms (CBAM Financial Contribution)",
    "relations": [
     "work_cites_work:32023R0956",
-    "work_cites_work:32025R2083",
-    "title-match"
+    "work_cites_work:32025R2083"
    ],
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52026PC0402"
   },
@@ -136,8 +127,7 @@
    "title": "Proposal for a COUNCIL DECISION on the position to be adopted, on behalf of the European Union, within the EEA Joint Committee concerning an amendment to Annex XX (Environment) to the EEA Agreement (CBAM)",
    "relations": [
     "work_cites_work:32023R0956",
-    "work_cites_work:32025R2083",
-    "title-match"
+    "work_cites_work:32025R2083"
    ],
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52026PC0335"
   },
@@ -224,24 +214,6 @@
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32026R0065"
   },
   {
-   "celex": "02024R3210-20260101",
-   "date": "2026-01-01",
-   "title": "Commission Implementing Regulation (EU) 2024/3210 of 18 December 2024 laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and of the Council as regards the CBAM registry (Text with EEA relevance)",
-   "relations": [
-    "title-match"
-   ],
-   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02024R3210-20260101"
-  },
-  {
-   "celex": "02025R0486-20251225",
-   "date": "2025-12-25",
-   "title": "Commission Implementing Regulation (EU) 2025/486 of 17 March 2025 laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and of the Council as regards the conditions and procedures related to the status of authorised CBAM declarant",
-   "relations": [
-    "title-match"
-   ],
-   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02025R0486-20251225"
-  },
-  {
    "celex": "52025SC0989",
    "date": "2025-12-17",
    "title": "COMMISSION STAFF WORKING DOCUMENT EXECUTIVE SUMMARY OF THE IMPACT ASSESSMENT REPORT Accompanying the document Proposal for a Regulation of the European Parliament and of the Council amending Regulation (EU) 2023/956 as regards the extension of its scope to downstream goods and anti-circumvention measures",
@@ -295,8 +267,7 @@
    "date": "2025-12-16",
    "title": "P10_TA(2025)0329 – Non-objection to a delegated act: CBAM: conditions for granting accreditation – European Parliament decision to raise no objections to the Commission delegated regulation of 20 November 2025 supplementing Regulation (EU) 2023/956 of the European Parliament and of the Council by specifying the conditions for granting accreditation to verifiers, for the control and oversight of accredited verifiers, for the withdrawal of accreditation and for mutual recognition and peer evaluation of accreditation bodies (C(2025)07845 – 2025/2997(DEA))",
    "relations": [
-    "resource_legal_based_on_resource_legal:32023R0956",
-    "title-match"
+    "resource_legal_based_on_resource_legal:32023R0956"
    ],
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025DP0329"
   },
@@ -306,8 +277,7 @@
    "title": "REPORT FROM THE COMMISSION TO THE EUROPEAN PARLIAMENT AND THE COUNCIL on the application of the Regulation on the Carbon Border Adjustment Mechanism",
    "relations": [
     "resource_legal_based_on_resource_legal:32023R0956",
-    "work_cites_work:32025R2083",
-    "title-match"
+    "work_cites_work:32025R2083"
    ],
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025DC0783"
   },
@@ -325,8 +295,7 @@
    "date": "2025-12-16",
    "title": "Commission Implementing Regulation (EU) 2025/2620 of 16 December 2025 laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and of the Council as regards the calculation of the free allocation adjustment to the number of CBAM certificates to be surrendered",
    "relations": [
-    "resource_legal_based_on_resource_legal:32023R0956",
-    "title-match"
+    "resource_legal_based_on_resource_legal:32023R0956"
    ],
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32025R2620"
   },
@@ -345,8 +314,7 @@
    "title": "Commission Implementing Regulation (EU) 2025/2550 of 10 December 2025 amending and correcting Implementing Regulation (EU) 2024/3210 as regards the CBAM registry",
    "relations": [
     "resource_legal_based_on_resource_legal:32023R0956",
-    "work_cites_work:32025R2083",
-    "title-match"
+    "work_cites_work:32025R2083"
    ],
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32025R2550"
   },
@@ -356,8 +324,7 @@
    "title": "Commission Implementing Regulation (EU) 2025/2549 of 10 December 2025 amending and correcting Implementing Regulation (EU) 2025/486 laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and of the Council as regards the conditions and procedures related to the status of authorised CBAM declarant",
    "relations": [
     "resource_legal_based_on_resource_legal:32023R0956",
-    "work_cites_work:32025R2083",
-    "title-match"
+    "work_cites_work:32025R2083"
    ],
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32025R2549"
   },
@@ -366,8 +333,7 @@
    "date": "2025-12-10",
    "title": "Commission Implementing Regulation (EU) 2025/2548 of 10 December 2025 laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and of the Council as regards the calculation and publication of the price of CBAM certificates",
    "relations": [
-    "resource_legal_based_on_resource_legal:32023R0956",
-    "title-match"
+    "resource_legal_based_on_resource_legal:32023R0956"
    ],
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32025R2548"
   },
@@ -395,8 +361,7 @@
    "title": "Joint Procurement Agreement to procure the Carbon Border Adjustment Mechanism Common Central Platform",
    "relations": [
     "resource_legal_based_on_resource_legal:32023R0956",
-    "work_cites_work:32025R2083",
-    "title-match"
+    "work_cites_work:32025R2083"
    ],
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:42026A02787"
   },
@@ -414,8 +379,8 @@
    "date": "2025-11-20",
    "title": "Commission Delegated Regulation (EU) 2025/2551 of 20 November 2025 supplementing Regulation (EU) 2023/956 of the European Parliament and of the Council by specifying the conditions for granting accreditation to verifiers, for the control and oversight of accredited verifiers, for the withdrawal of accreditation and for mutual recognition and peer evaluation of accreditation bodies",
    "relations": [
-    "resource_legal_completes_resource_legal:32023R0956",
-    "resource_legal_based_on_resource_legal:32023R0956"
+    "resource_legal_based_on_resource_legal:32023R0956",
+    "resource_legal_completes_resource_legal:32023R0956"
    ],
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32025R2551"
   },
@@ -479,10 +444,9 @@
    "title": "Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023 establishing a carbon border adjustment mechanism (Text with EEA relevance)",
    "relations": [
     "act_consolidated_based_on_resource_legal:32023R0956",
-    "act_consolidated_consolidates_resource_legal:32023R0956",
     "work_is_logical_successor_of_work:32023R0956",
-    "act_consolidated_consolidates_resource_legal:32025R2083",
-    "title-match"
+    "act_consolidated_consolidates_resource_legal:32023R0956",
+    "act_consolidated_consolidates_resource_legal:32025R2083"
    ],
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020"
   },
@@ -500,8 +464,7 @@
    "date": "2025-10-08",
    "title": "Regulation (EU) 2025/2083 of the European Parliament and of the Council of 8 October 2025 amending Regulation (EU) 2023/956 as regards simplifying and strengthening the carbon border adjustment mechanism (Text with EEA relevance)",
    "relations": [
-    "resource_legal_amends_resource_legal:32023R0956",
-    "title-match"
+    "resource_legal_amends_resource_legal:32023R0956"
    ],
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32025R2083"
   },
@@ -546,8 +509,7 @@
    "date": "2025-09-10",
    "title": "P10_TA(2025)0178 – Carbon Border Adjustment Mechanism: simplification and strengthening – European Parliament legislative resolution of 10 September 2025 on the proposal for a regulation of the European Parliament and of the Council amending Regulation (EU) 2023/956 as regards simplifying and strengthening the carbon border adjustment mechanism (COM(2025)0087 – C10-0035/2025 – 2025/0039(COD)) (Ordinary legislative procedure: first reading)",
    "relations": [
-    "work_cites_work:32025R2083",
-    "title-match"
+    "work_cites_work:32025R2083"
    ],
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025AP0178"
   },
@@ -610,8 +572,7 @@
    "date": "2025-05-22",
    "title": "P10_TA(2025)0108 – Amending Regulation (EU) 2023/956 as regards simplifying and strengthening the carbon border adjustment mechanism – Amendments adopted by the European Parliament on 22 May 2025 on the proposal for a regulation of the European Parliament and of the Council amending Regulation (EU) 2023/956 as regards simplifying and strengthening the carbon border adjustment mechanism (COM(2025)0087 – C10-0035/2025 – 2025/0039(COD)) (Ordinary legislative procedure: first reading)",
    "relations": [
-    "work_cites_work:32023R0956",
-    "title-match"
+    "work_cites_work:32023R0956"
    ],
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025AP0108"
   },
@@ -643,21 +604,11 @@
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025SC0501"
   },
   {
-   "celex": "52025AE1360",
-   "date": "2025-04-29",
-   "title": "Opinion of the European Economic and Social Committee – Proposal for a Regulation of the European Parliament and of the Council amending Regulation (EU) 2023/956 as regards simplifying and strengthening the carbon border adjustment mechanism (COM(2025) 87 final – 2025/0039 (COD))",
-   "relations": [
-    "title-match"
-   ],
-   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025AE1360"
-  },
-  {
    "celex": "32025R0486",
    "date": "2025-03-17",
    "title": "Commission Implementing Regulation (EU) 2025/486 of 17 March 2025 laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and of the Council as regards the conditions and procedures related to the status of authorised CBAM declarant",
    "relations": [
-    "resource_legal_based_on_resource_legal:32023R0956",
-    "title-match"
+    "resource_legal_based_on_resource_legal:32023R0956"
    ],
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32025R0486"
   },
@@ -666,8 +617,7 @@
    "date": "2025-02-26",
    "title": "COMMISSION STAFF WORKING DOCUMENT Accompanying the document Proposal for a Regulation of the European Parliament and of the Council amending Regulation (EU) 2023/956 as regards simplifying and strengthening the carbon border adjustment mechanism",
    "relations": [
-    "work_cites_work:32023R0956",
-    "title-match"
+    "work_cites_work:32023R0956"
    ],
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025SC0058"
   },
@@ -676,8 +626,7 @@
    "date": "2025-02-26",
    "title": "Proposal for a REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL amending Regulation (EU) 2023/956 as regards simplifying and strengthening the carbon border adjustment mechanism",
    "relations": [
-    "resource_legal_proposes_to_amend_resource_legal:32023R0956",
-    "title-match"
+    "resource_legal_proposes_to_amend_resource_legal:32023R0956"
    ],
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025PC0087"
   },
