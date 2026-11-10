@@ -3,8 +3,9 @@
 쓰는 법: python -m tools.archive.publish --drafts <초안 파일> [--dry-run]
 - 초안 파일은 {"items": [...]} 꼴이다. 항목마다 원문 글의 자리를 적는다.
     sourceTextPath: 저장소에 받아 둔 원문 글 파일(collected/archive/pages/...)
-    sourceEntry:    {"index": "kr-keco-cbam", "url": "..."} 처럼 목록 파일(collected/archive/<index>.json)의 한 줄.
-                    글 본문을 받아 두지 않는 출처에 쓴다. 이때는 그 줄의 제목·날짜·주소가 대조할 원문이다.
+    sourceEntry:    {"index": "kr-keco-cbam", "url": "...", "title": "...", "date": "..."} 처럼 목록 파일
+                    (collected/archive/<index>.json)의 한 줄. 글 본문을 받아 두지 않는 출처에 쓴다.
+                    이때는 그 줄의 제목·날짜·주소(와 짧게 남긴 첫 문단)가 대조할 원문이다.
 - 검사(tools.archive.gate)에 걸린 항목은 싣지 않고 사유를 알려 준다. 이미 실린 id나 링크와 겹치는 항목도 싣지 않는다.
 - 링크는 모아 둔 목록 파일이나 원문 글, 출처 대장에 적힌 주소여야 한다(손으로 옮겨 적다 틀린 주소를 막는다).
 - 실린 항목에는 backfill 표시가 붙는다. 주간 요약은 이 표시가 있는 항목을 지난주의 새 소식으로 세지 않는다.
@@ -32,8 +33,10 @@ def source_text(item):
         return path.read_text(encoding="utf-8", errors="replace") if inside and path.is_file() else None
     entry = item.get("sourceEntry") or {}
     index = read_json(ROOT / f"{entry.get('index', '')}.json", {"entries": []})
+    keys = [key for key in ("url", "title", "date") if entry.get(key)]
     for row in index["entries"]:
-        if row.get("url") and row.get("url") == entry.get("url"):
+        # 여러 글이 게시판 주소 하나를 같이 쓰는 출처가 있어, 적어 준 값(주소, 제목, 날짜)이 모두 맞는 줄을 찾는다
+        if keys and all(row.get(key) == entry[key] for key in keys):
             return "\n".join(str(value) for value in row.values() if isinstance(value, (str, int, float)))
     return None
 
