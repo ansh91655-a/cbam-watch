@@ -1,5 +1,5 @@
 {
- "checkedAt": "2026-11-10T07:20:41+00:00",
+ "checkedAt": "2026-11-10T07:28:33+00:00",
  "rows": [
   {
    "name": "ec-guidance-page",
@@ -10,30 +10,63 @@
    "sha256": "532e04e8f839936cf1bb42cb2d9828fc85bcc168f42689ba0da30875f316f265",
    "isPdf": false,
    "error": "",
-   "head": "<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\" prefix=\"og: https://ogp.me/ns#\"> <head> <meta charset=\"utf-8\" /> <meta name=\"description\" content=\"CBAM is the EU’s environmental policy tool for fair carbon emissions pricing. This page contains guidance on implementing CBAM, information on the self-assessm",
+   "head": "<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\" prefix=\"og: https://ogp.me/ns#\"> <head> <meta charset=\"utf-8\" /> <meta name=\"description\" content=\"CBAM is the EU’s environmental policy tool for fair carbon emissions pricing. This page contains guidance on implementing CBAM, information on the self-assessment tool and other relevant information for the various stakeholders involved.\" /> <meta name=\"keywords\" content=\"tax system,carbon neutrality,emission trading\" /> <link rel=\"canonical\" href=\"https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-legislation-and-guidance_en\" /",
    "documentLinks": 41
   },
   {
-   "name": "ec-news-page",
-   "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_en",
+   "name": "cellar-consolidated-html",
+   "url": "http://publications.europa.eu/resource/celex/02023R0956-20251020",
    "status": 200,
-   "contentType": "text/html; charset=utf-8",
-   "bytes": 151408,
-   "sha256": "d515ab82c9c54a0f86a457ed2c37ab8ea5357444e6b64998ffddaafdf73691d6",
+   "contentType": "application/xhtml+xml;charset=UTF-8",
+   "bytes": 506893,
+   "sha256": "9cea7c8c203076922aa4a1b9c3913225eb94f5f36c4315c5c8c1f652c9e6a8c1",
    "isPdf": false,
    "error": "",
-   "head": "<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\" prefix=\"og: https://ogp.me/ns#\"> <head> <meta charset=\"utf-8\" /> <meta name=\"description\" content=\"This page provides access to communication materials, frequently asked questions (FAQs), and recent webinars related to the Carbon Border Adjustment Mechanism "
+   "head": " <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML//EN\" \"xhtml-strict.dtd\"> <html xmlns=\"http://www.w3.org/1999/xhtml\"> <!-- CONVEX # converter_version:9.17.0 # generated_on:20251204-1702 --> <head> <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/> <title>Consolidated TEXT: 32023R0956 — EN — 20.10.2025</title> <link type=\"text/css\" rel=\"stylesheet\" href=\"http://publications.europa.eu/resource/presentation-style-sheet/clg/clg.css\"/> </head> <body> <p class=\"reference\">02023R0956 — EN — 20.10.2025 — 001.001</p> <hr class=\"separator\"/> <p class=\"disclaimer\">This text is meant purely as "
   },
   {
-   "name": "eurlex-pdf",
-   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:02023R0956-20251020",
+   "name": "cellar-consolidated-pdf",
+   "url": "http://publications.europa.eu/resource/celex/02023R0956-20251020",
+   "status": 404,
+   "contentType": "",
+   "bytes": 214,
+   "sha256": "98b65bddba395d7679652828c59333cbd9ea1c24835ff7d753f45071f22b664b",
+   "isPdf": false,
+   "error": "HTTP Error 404: ",
+   "head": "None of the requests returned successfully a redirection. The following exception was thrown: [cellar identifier cellar:a61c0d38-bf6a-11f0-a612-01aa75ed71a1 does not hold a content datastream of the requested type]"
+  },
+  {
+   "name": "cellar-base-xhtml",
+   "url": "http://publications.europa.eu/resource/celex/32023R0956",
+   "status": 200,
+   "contentType": "application/xhtml+xml;charset=UTF-8",
+   "bytes": 496976,
+   "sha256": "c47e2793e7b92333ce9a891aba18924ff21b15b2745fffda98348b04b15a770e",
+   "isPdf": false,
+   "error": "",
+   "head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML//EN\" \"xhtml-strict.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\"><!-- CONVEX # converter_version:9.15.0 # generated_on:20231208-1048 # ELI version:0.10 --><head> <meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"/> <link type=\"text/css\" rel=\"stylesheet\" href=\"oj-convex.css\"/> <title>L_2023130EN.01005201.xml</title> </head> <body> <table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"> <col width=\"10%\"/> <col width=\"10%\"/> <col width=\"60%\"/> <col width=\"20%\"/> <tbody> <tr> <td > <p class=\"oj"
+  },
+  {
+   "name": "cellar-base-rdf",
+   "url": "http://publications.europa.eu/resource/celex/32023R0956",
+   "status": 200,
+   "contentType": "application/rdf+xml;charset=UTF-8",
+   "bytes": 4266,
+   "sha256": "85ef1d6f583dde3503dd7c4385af37e9257aa87fd67aa54a1560be7748ee9d5b",
+   "isPdf": false,
+   "error": "",
+   "head": "<rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\" xmlns:j.0=\"http://publications.europa.eu/ontology/cdm#\" xmlns:owl=\"http://www.w3.org/2002/07/owl#\" xmlns:j.1=\"http://www.w3.org/2004/02/skos/core#\" xmlns:j.2=\"http://publications.europa.eu/ontology/annotation#\" xmlns:j.3=\"http://publications.europa.eu/ontology/cdm/cmr#\" > <rdf:Description rdf:about=\"http://publications.europa.eu/resource/celex/32023R0956.ENG\"> <rdf:type rdf:resource=\"http://publications.europa.eu/ontology/cdm#expression\"/> <j.0:expression_title_short rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">cbam reg"
+  },
+  {
+   "name": "eli-oj",
+   "url": "http://data.europa.eu/eli/reg/2023/956/oj",
    "status": 202,
    "contentType": "text/html; charset=UTF-8",
    "bytes": 2035,
-   "sha256": "d44ad9a1715bfbeb7ec37ebc30dc578f12deb8baa66c5847bc4485c991283d6a",
+   "sha256": "8e7e28cc66237cb125ea6a1a2a4ae7406442b01d5a43929384666ad32751d9e2",
    "isPdf": false,
    "error": "",
-   "head": "<!DOCTYPE html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <title></title> <style> body { font-family: \"Arial\"; } </style> <script type=\"text/javascript\"> window.awsWafCookieDomainList = []; window.gokuProps = { \"key\":\"AQIDAHjc"
+   "head": "<!DOCTYPE html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <title></title> <style> body { font-family: \"Arial\"; } </style> <script type=\"text/javascript\"> window.awsWafCookieDomainList = []; window.gokuProps = { \"key\":\"AQIDAHjcYu/GjX+QlghicBgQ/7bFaQZ+m5FKCMDnO+vTbNg96AHH5weT1HohkpYgAc79+FLjAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMxINZjF2t//W/c2/zAgEQgDvocE7EgAqRZYOvT2sJIsEYYNiyUwexE2xPvukX4FN+3lCQoZaQwDM5NI/pgfibGC+uXXCTr0QPPznr3g==\", \"iv\":\"D54rjwBBiwAAD9PU\", \"context\":\"ggCQgaUm7ltiQkR2uWyfo"
   },
   {
    "name": "eurlex-html",
@@ -41,109 +74,76 @@
    "status": 202,
    "contentType": "text/html; charset=UTF-8",
    "bytes": 2035,
-   "sha256": "0b08c312e0bbc77cf03779cf71e97e3016f5adccfd8d423c13f8602337a1589b",
+   "sha256": "79ebc39c89b361dd89a5883cd13615a5104b4709c7f3d78e31297932f075dc18",
    "isPdf": false,
    "error": "",
-   "head": "<!DOCTYPE html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <title></title> <style> body { font-family: \"Arial\"; } </style> <script type=\"text/javascript\"> window.awsWafCookieDomainList = []; window.gokuProps = { \"key\":\"AQIDAHjc"
+   "head": "<!DOCTYPE html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <title></title> <style> body { font-family: \"Arial\"; } </style> <script type=\"text/javascript\"> window.awsWafCookieDomainList = []; window.gokuProps = { \"key\":\"AQIDAHjcYu/GjX+QlghicBgQ/7bFaQZ+m5FKCMDnO+vTbNg96AHH5weT1HohkpYgAc79+FLjAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMxINZjF2t//W/c2/zAgEQgDvocE7EgAqRZYOvT2sJIsEYYNiyUwexE2xPvukX4FN+3lCQoZaQwDM5NI/pgfibGC+uXXCTr0QPPznr3g==\", \"iv\":\"D54rhQBIiAAAD9tN\", \"context\":\"CrQL3ISwi+KU5s7Sh+sfl"
   },
   {
-   "name": "eurlex-eli",
-   "url": "https://eur-lex.europa.eu/eli/reg/2023/956/oj",
-   "status": 202,
-   "contentType": "text/html; charset=UTF-8",
-   "bytes": 2035,
-   "sha256": "b7a0f8d2bcb47d9f720cd15edca18e9e9883b7f3a507fa67501b48e7d7661b70",
-   "isPdf": false,
-   "error": "",
-   "head": "<!DOCTYPE html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <title></title> <style> body { font-family: \"Arial\"; } </style> <script type=\"text/javascript\"> window.awsWafCookieDomainList = []; window.gokuProps = { \"key\":\"AQIDAHjc"
-  },
-  {
-   "name": "have-your-say",
-   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives_en?text=CBAM",
+   "name": "hys-api",
+   "url": "https://ec.europa.eu/info/law/better-regulation/brpapi/searchInitiatives?text=CBAM&language=EN&page=0&size=10",
    "status": 200,
-   "contentType": "text/html;charset=UTF-8",
-   "bytes": 3966,
-   "sha256": "35907208ba4ebb05eab354a40a6492d76fb91b1e24a109d36e679cc9ea265df3",
+   "contentType": "application/json;charset=UTF-8",
+   "bytes": 50244,
+   "sha256": "13eb696bda43c307e8c22c50a295dd3710567fe6e6fa2544f2a48189eaa55580",
    "isPdf": false,
    "error": "",
-   "head": "<!doctype html> <html class=\"eui-t-eui-legacy\"> <head> <meta charset=\"utf-8\"> <!-- General --> <meta name=\"description\" content=\"European Commission - Have your say\"> <meta name=\"robots\" content=\"follow, index\"> <meta name=\"revisit-after\" content=\"15 days\"> <meta name=\"reference\" content=\"European C"
+   "head": "{\"exactMatch\":true,\"initiativeResultDtoPage\":{\"content\":[{\"id\":16932.0,\"initiativeStatus\":\"ACTIVE\",\"reference\":\"Ares(2026)1634728\",\"foreseenActType\":\"REG_IMPL\",\"shortTitle\":\"CBAM declarations\",\"snippet\":\"adopt implementing acts as regards to the establishment of the <span class=\\\"highlight\\\">CBAM</span> declarations. This implementing act will set out rules on the standard format of the <span class=\\\"highlight\\\">CBAM</span> declaration, including detailed information, the procedure for submitting the <span class=\\\"highlight\\\">CBAM</span> declaration via the <span class=\\\"highlight\\\">CBAM</span"
   },
   {
-   "name": "expert-groups",
-   "url": "https://ec.europa.eu/transparency/expert-groups-register/screen/expert-groups/consult?lang=en&groupID=3927",
+   "name": "expert-group-api",
+   "url": "https://ec.europa.eu/transparency/expert-groups-register/core/api/front/expertGroups/3927",
    "status": 200,
-   "contentType": "text/html",
-   "bytes": 2036,
-   "sha256": "8c406a156abbd8c3778edb721e64beb3b2415ff86f29e2623808fa84d47138ae",
+   "contentType": "application/json",
+   "bytes": 2049,
+   "sha256": "48ccc37693a38f89670cc420aa3572d0ebed51006b99ebb082efd0a28370ca04",
    "isPdf": false,
    "error": "",
-   "head": "<!doctype html> <html lang=\"en\"> <head> <meta content=\"IE=edge,chrome=1\" http-equiv=\"X-UA-Compatible\"> <meta charset=\"utf-8\"> <title>Register of Commission expert groups and other similar entities</title> <base href=\"/transparency/expert-groups-register/\"> <meta http-equiv=\"Content-Type\" content=\"te"
+   "head": "{\"codeGroup\":\"E03927 \",\"title\":\"Informal Expert Group on the carbon border adjustment mechanism (CBAM)\",\"status\":{\"code\":\"ACTIVE\",\"label\":\"Active\",\"key\":null},\"abbreviation\":null,\"policyAreas\":[{\"id\":null,\"code\":\"reftable.policy_00038\",\"label\":\"Climate\",\"key\":null},{\"id\":null,\"code\":\"reftable.policy_00013\",\"label\":\"Energy\",\"key\":null},{\"id\":null,\"code\":\"reftable.policy_00018\",\"label\":\"External Trade\",\"key\":null}],\"leadDgs\":[{\"id\":38,\"code\":\"TAXUD\",\"label\":\"TAXUD - DG Taxation and Customs Union\",\"key\":null}],\"associatedDgs\":[],\"types\":[{\"code\":\"reftable.type_00002\",\"label\":\"Informal\",\"key\":null"
   },
   {
-   "name": "me-go-kr",
-   "url": "https://me.go.kr/home/web/index.do?menuId=286",
+   "name": "me-www",
+   "url": "https://www.me.go.kr/home/web/index.do?menuId=286",
    "status": 0,
    "contentType": "",
    "bytes": 0,
    "sha256": "",
    "isPdf": false,
-   "error": "URLError: <urlopen error [Errno -5] No address associated with hostname>",
+   "error": "URLError: <urlopen error [Errno -3] Temporary failure in name resolution>",
    "head": ""
   },
   {
-   "name": "compass",
-   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "name": "mcee",
+   "url": "https://www.mcee.go.kr/",
    "status": 200,
-   "contentType": "text/html;charset=UTF-8",
-   "bytes": 57340,
-   "sha256": "40eec52aa094942991c661b1735c72f6e554682ad876c43aabd6cfd7327b0186",
+   "contentType": "text/html; charset=UTF-8",
+   "bytes": 1881,
+   "sha256": "21e714c7875eab93e3818ef64a915bbaa2b3e017d100361f30d017509d70bc3d",
    "isPdf": false,
    "error": "",
-   "head": "<!DOCTYPE html> <html lang=\"ko\"> <head> <title>국제환경규제 사전대응 지원시스템 - 자료실</title> <!-- 헤더영역 시작 --> <meta charset=\"UTF-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"> <link rel=\"stylesheet\" type=\"text/css\" href=\"/css/sub.cs"
+   "head": "<!DOCTYPE html> <html> <head> <meta charset=\"utf-8\"> <title>기후에너지환경부</title> <meta property=\"og:site_name\" content=\"기후에너지환경부\"> <link rel=\"canonical\" href=\"https://mcee.go.kr/home/web/main.do\" /> <script type=\"application/ld+json\"> { \"@context\":\"https://schema.org\", \"@type\":\"WebSite\", \"name\":\"기후에너지환경부\", \"alternateName\":[\"기후부\", \"MCEE\"], \"url\":\"https://mcee.go.kr/\" } </script> </head> <script> function isSmartPhone() { return /Mobi|Android|iPhone|iPad|iPod|Winddows Phone|webOS/i.test(navigator.userAgent); } const {hostname} = window.location; let uri = hostname; let mainUri = '/home/web/main.do';"
+  },
+  {
+   "name": "mcee-bare",
+   "url": "https://mcee.go.kr/",
+   "status": 200,
+   "contentType": "text/html; charset=UTF-8",
+   "bytes": 1881,
+   "sha256": "21e714c7875eab93e3818ef64a915bbaa2b3e017d100361f30d017509d70bc3d",
+   "isPdf": false,
+   "error": "",
+   "head": "<!DOCTYPE html> <html> <head> <meta charset=\"utf-8\"> <title>기후에너지환경부</title> <meta property=\"og:site_name\" content=\"기후에너지환경부\"> <link rel=\"canonical\" href=\"https://mcee.go.kr/home/web/main.do\" /> <script type=\"application/ld+json\"> { \"@context\":\"https://schema.org\", \"@type\":\"WebSite\", \"name\":\"기후에너지환경부\", \"alternateName\":[\"기후부\", \"MCEE\"], \"url\":\"https://mcee.go.kr/\" } </script> </head> <script> function isSmartPhone() { return /Mobi|Android|iPhone|iPad|iPod|Winddows Phone|webOS/i.test(navigator.userAgent); } const {hostname} = window.location; let uri = hostname; let mainUri = '/home/web/main.do';"
   },
   {
    "name": "moj",
    "url": "https://www.moj.go.kr/bbs/moj/177/artclList.do",
-   "status": 307,
-   "contentType": "",
-   "bytes": 0,
-   "sha256": "",
-   "isPdf": false,
-   "error": "HTTP Error 307: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nTemporary Redirect",
-   "head": ""
-  },
-  {
-   "name": "carbon-pulse",
-   "url": "https://carbon-pulse.com/category/international/cbam-tariffs/",
-   "status": 200,
-   "contentType": "text/html; charset=UTF-8",
-   "bytes": 335851,
-   "sha256": "538fb7a725b4ba4c808c539a0767f13cc8ff733f55878776c09c37154014e58b",
-   "isPdf": false,
-   "error": "",
-   "head": " <!DOCTYPE html> <html lang=\"en-GB\"> <head><style>img.lazy{min-height:1px}</style><link href=\"https://carbon-pulse.com/wp-content/plugins/w3-total-cache/pub/js/lazyload.min.js\" as=\"script\"> <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" /> <meta name=\"viewport\" content=\"initial-s"
-  },
-  {
-   "name": "keco",
-   "url": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/list.do",
    "status": 200,
    "contentType": "text/html;charset=UTF-8",
-   "bytes": 187488,
-   "sha256": "7972d43cd1dd0ba7b1a2fcc1721e33100456171f57c26e0c17c74d06107e1e2c",
+   "bytes": 40188,
+   "sha256": "eaed7d2c7270dd5e219b8a36bb92532387096b182d39a8dcd4588ba0450d30f6",
    "isPdf": false,
    "error": "",
-   "head": " <!DOCTYPE HTML> <html lang=\"ko\"> <head> <meta name=\"_csrf_parameter\" content=\"_csrf\" /><meta name=\"_csrf_header\" content=\"X-CSRF-TOKEN\" /><meta name=\"_csrf\" content=\"c9a9ce59-3d12-4448-9ef1-790cde1307cf\" /> <link rel=\"shortcut icon\" href=\"https://www.keco.or.kr/favicon.ico\"> <meta http-equiv=\"Conte"
-  },
-  {
-   "name": "motir",
-   "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c",
-   "status": 200,
-   "contentType": "text/html;charset=UTF-8",
-   "bytes": 124250,
-   "sha256": "a36413ae5a112eba9ab2cd75eb30c48b56c4486e2c66726821e29a5baaea2466",
-   "isPdf": false,
-   "error": "",
-   "head": " <!DOCTYPE html> <html lang=\"ko\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"> <meta name=\"viewport\" content=\"width=device-width,initial-scale=1,user-scalable=yes\"> <!-- <meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,minimum-scale=1.0,maxim"
+   "head": " <script> window.onload=function() { document.title = \"교정본부 홍보 영상\"; } } </script> <!DOCTYPE HTML> <!--[if lt IE 7 ]><html dir=\"ltr\" lang=\"ko\" class=\"no-js ie ie6 lte7 lte8 lte9\"><![endif]--> <!--[if IE 7 ]><html dir=\"ltr\" lang=\"ko\" class=\"no-js ie ie7 lte7 lte8 lte9\"><![endif]--> <!--[if IE 8 ]><html dir=\"ltr\" lang=\"ko\" class=\"no-js ie ie8 lte8 lte9\"><![endif]--> <!--[if IE 9 ]><html dir=\"ltr\" lang=\"ko\" class=\"no-js ie ie9 lte9\"><![endif]--> <!--[if (gt IE 9)|!(IE)]><!--><html dir=\"ltr\" lang=\"ko\" class=\"no-js\"><!--<![endif]--> <head> <meta charset=\"UTF-8\"> <title> 법무부 </title> <meta property=\""
   },
   {
    "name": "ec-document-1",
