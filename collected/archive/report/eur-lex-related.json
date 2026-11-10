@@ -1,0 +1,17 @@
+{
+ "ranAt": "2026-11-10T21:52:20+09:00",
+ "since": "2025-01-01",
+ "result": {
+  "links": {
+   "32023R0956": 100,
+   "32025R2083": 15
+  },
+  "titles": {
+   "'carbon border adjustment'": 10,
+   "CBAM": 12,
+   "'Temporary Decarbonisation Fund'": 5
+  },
+  "failures": [],
+  "works": 106
+ }
+}
