@@ -171,13 +171,42 @@ class MoreReadersTest(unittest.TestCase):
 class ToFeedTest(unittest.TestCase):
     def test_only_unseen_records_become_candidates(self):
         from tools.archive import tofeed
-        everything, now = tofeed.fresh({})
-        self.assertTrue(everything and all(item["kind"] == "link" and item["source"] in ("ec-press", "eur-lex-related", "us-fedreg") for item in everything))
+        names = [record[0] for record in tofeed.RECORDS]
+        everything, now = tofeed.fresh({name: [] for name in names})
+        codes = {record[1] for record in tofeed.RECORDS}
+        self.assertTrue(everything and all(item["kind"] == "link" and item["source"] in codes for item in everything))
         self.assertTrue(all(item["textPath"].startswith("collected/archive/pages/") for item in everything))
         again, _ = tofeed.fresh(now)
         self.assertEqual(again, [])
         partly = {name: values[1:] for name, values in now.items()}
-        self.assertEqual(len(tofeed.fresh(partly)[0]), len(now))
+        self.assertEqual(len(tofeed.fresh(partly)[0]), sum(1 for values in now.values() if values))
+
+    def test_a_record_added_to_the_list_is_only_noted_the_first_time(self):
+        from tools.archive import tofeed
+        first, now = tofeed.fresh({})
+        self.assertEqual(first, [])
+        self.assertEqual(set(now), {record[0] for record in tofeed.RECORDS})
+
+
+class GovUkTest(unittest.TestCase):
+    def test_search_keeps_only_cbam_titles_on_gov_uk_since_the_start(self):
+        from tools.archive import govuk
+        rows = [{"title": "Carbon Border Adjustment Mechanism (CBAM): a consultation", "link": "/government/consultations/a", "public_timestamp": "2026-10-28T12:00:00Z"},
+                {"title": "Budget 2026", "link": "/government/publications/b", "public_timestamp": "2026-10-28T12:00:00Z"},
+                {"title": "CBAM policy update", "link": "https://example.org/c", "public_timestamp": "2026-10-28T12:00:00Z"},
+                {"title": "Factsheet: CBAM", "link": "/government/publications/d", "public_timestamp": "2024-03-01T12:00:00Z"}]
+        self.assertEqual(govuk.titled(rows), ["/government/consultations/a"])
+
+    def test_change_rows_carry_the_consultation_period(self):
+        from tools.archive import govuk
+        document = {"title": "T", "document_type": "open_consultation", "first_published_at": "2026-10-28T12:30:00+00:00",
+                    "details": {"opening_date": "2026-10-28T12:30:00+00:00", "closing_date": "2027-01-20T23:59:00+00:00",
+                                "change_history": [{"public_timestamp": "2026-10-28T12:30:00+00:00", "note": "First  published."}]}}
+        rows = govuk.changes_of(document, "/government/consultations/a", "search")
+        self.assertEqual(len(rows), 1)
+        self.assertEqual((rows[0]["date"], rows[0]["opens"], rows[0]["closes"], rows[0]["via"]), ("2026-10-28", "2026-10-28", "2027-01-20", "search"))
+        self.assertEqual(rows[0]["key"], "/government/consultations/a@2026-10-28")
+        self.assertIn("의견 접수 2026-10-28~2027-01-20", govuk._line(rows[0]))
 
 
 class StoreTest(unittest.TestCase):

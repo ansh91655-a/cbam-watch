@@ -751,6 +751,20 @@
    "collector": "archive",
    "note": "제목에 CBAM이 든 미국 연방관보 공고",
    "ops": "tools/archive/fedreg.py가 평일마다 연방관보 API로 읽음. 새 공고는 tools.run.rules_watch가 알려 줌"
+  },
+  {
+   "no": 44,
+   "code": "uk-govuk",
+   "name": "UK GOV.UK (CBAM 문서 전체)",
+   "group": "해외",
+   "url": "https://www.gov.uk/search/all?keywords=%22carbon+border+adjustment+mechanism%22&order=updated-newest",
+   "tier": "B",
+   "watch": [],
+   "filter": false,
+   "minLine": 30,
+   "collector": "archive",
+   "note": "제목에 CBAM이 든 영국 정부 문서(재무부 협의 문서처럼 국세청 자료 모음 밖에 있는 것 포함)와 문서별 갱신 기록",
+   "ops": "tools/archive/govuk.py가 평일마다 국세청 자료 모음과 정부 검색의 첫 쪽을 보고, 처음 보는 문서와 고쳐진 문서만 다시 읽음. 새 기록은 tools.run.rules_watch가 알려 주고 그날의 후보로도 넘어감"
   }
  ]
 }

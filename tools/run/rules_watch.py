@@ -3,7 +3,7 @@
 쓰는 법: python -m tools.run.rules_watch            달라진 것을 JSON으로 찍는다(달라진 것이 있어도 0으로 끝난다)
         python -m tools.run.rules_watch --accept   지금 상태를 '본 것'으로 적는다(규제 자료에 반영한 뒤에 돌린다)
 보는 것: 유럽의회 절차의 사건·단계·예정 일정, 집행위 의견수렴의 단계, EU 법령 데이터베이스의 연관 문서와 법원 사건,
-        집행위 보도자료, 영국 법령, 미국 연방관보 공고. 본 것은 data/rules-seen.json에 적는다.
+        집행위 보도자료, 영국 법령, 영국 정부 자료, 미국 연방관보 공고. 본 것은 data/rules-seen.json에 적는다.
 """
 import argparse
 import json
@@ -36,6 +36,8 @@ def snapshot():
         "법원 사건 문서": dict(read_json(f"{ARCHIVE}report/eur-lex-related.json", {}).get("result", {}).get("cases", {})),
         "집행위 보도자료": {row["reference"]: f"{row['date']} {row['title'][:120]}" for row in entries("ec-press")},
         "영국 법령": {row["number"]: row["title"] for row in entries("uk-legislation")},
+        "영국 정부 자료": {row["key"]: " | ".join(part for part in (row.get("title", "")[:100], row.get("note", "")[:80], row.get("closes", "")) if part)
+                     for row in entries("uk-govuk") if row.get("key")},
         "미국 연방관보": {row["number"]: f"{row['date']} {row['title'][:120]}" for row in entries("us-fedreg")},
     }
 
