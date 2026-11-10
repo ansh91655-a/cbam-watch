@@ -9,6 +9,7 @@ import subprocess
 import sys
 
 from tools.common.jsonio import KST, now_kst, read_json, today
+from tools.common.siteinfo import deploy_remote
 from tools.run import cn_health, rules_health
 
 FAIL_LIMIT = 3  # 출처를 이만큼 이어서 읽지 못하면 문제로 본다
@@ -66,7 +67,7 @@ def report():
     claude = read_json("collected/claude-status.json", {"sources": {}})
     originals = read_json("originals/state.json", {})
     items = read_json("data/items.json", {"items": []})["items"]
-    _git("fetch", "--depth", "1", "origin", "gh-pages")
+    _git("fetch", "--depth", "1", deploy_remote(), "gh-pages")  # 사이트만 싣는 저장소를 따로 두면 그 저장소의 배포 가지를 본다
     deployed = _git("log", "-1", "--format=%cI", "FETCH_HEAD")
     collect_today = str(status.get("checkedAt", "")).startswith(day)
     deployed_today = _kst_date(deployed) == day

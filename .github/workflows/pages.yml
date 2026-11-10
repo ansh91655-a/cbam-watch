@@ -7,6 +7,7 @@ on:
       - "site/**"
       - "data/**"
       - "tools/publish/**"
+      - "deploy.json"
       - ".github/workflows/pages.yml"
   workflow_run:
     workflows: ["출처 수집과 원문 판 점검", "썸네일 만들기"]
@@ -33,10 +34,12 @@ jobs:
         run: python -m tools.publish.build_site _site
       - name: 배포 가지에 올리기
         env:
-          # 사이트만 따로 두는 공개 저장소를 쓸 때 저장소 설정에 넣는 값(없으면 이 저장소의 gh-pages로 올린다)
+          # 사이트만 싣는 공개 저장소를 따로 둘 때: 저장소 이름은 deploy.json의 siteRepo(또는 저장소 변수 SITE_REPO)에,
+          # 그 저장소에 올리는 토큰은 비밀값 SITE_TOKEN에 둔다. 둘 가운데 하나라도 없으면 이 저장소의 gh-pages로 올린다.
           SITE_REPO: ${{ vars.SITE_REPO }}
           SITE_TOKEN: ${{ secrets.SITE_TOKEN }}
         run: |
+          if [ -z "$SITE_REPO" ]; then SITE_REPO="$(python -c "from tools.common.siteinfo import site_repo; print(site_repo())")"; fi
           cd _site
           git init -q -b gh-pages
           git config user.name "cbam-watch-bot"

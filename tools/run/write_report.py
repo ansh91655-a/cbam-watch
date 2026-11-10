@@ -14,9 +14,10 @@ import json
 import sys
 
 from tools.common.jsonio import read_json, stamp, today, write_json
+from tools.common.siteinfo import site_url
 from tools.run.day_summary import FIXED_PROBLEMS
 
-SITE = "https://ansh91655-a.github.io/cbam-watch/"
+SITE = site_url()
 NOTIFY_LIMIT = 200
 
 

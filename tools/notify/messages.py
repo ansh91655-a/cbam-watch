@@ -1,5 +1,7 @@
 """'운영 보고' 이슈에 적는 글을 만든다. 저장소가 공개이므로 보고 파일에 있는 것만 쓴다."""
-SITE = "https://ansh91655-a.github.io/cbam-watch/"
+from tools.common.siteinfo import site_url
+
+SITE = site_url()
 CONSOLE_NOTE = "자세한 내용(보류 사유, 실행 기록)은 운영 콘솔에서 봅니다."
 
 

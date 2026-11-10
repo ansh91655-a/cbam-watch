@@ -205,5 +205,25 @@ class DaySummaryTest(unittest.TestCase):
         self.assertEqual(result["runs"], {"collect": 1, "verify": 1, "adhoc": 1})
 
 
+class SiteInfoTest(unittest.TestCase):
+    def test_address_comes_from_the_site_settings_and_ends_with_a_slash(self):
+        from tools.common import siteinfo
+        self.assertEqual(siteinfo.site_url({"url": "https://example.org/watch"}), "https://example.org/watch/")
+        self.assertEqual(siteinfo.site_url({}), siteinfo.DEFAULT_URL)
+        self.assertTrue(siteinfo.site_url().startswith("https://") and siteinfo.site_url().endswith("/"))
+
+    def test_deploying_elsewhere_needs_an_owner_and_a_name(self):
+        from tools.common import siteinfo
+        self.assertEqual(siteinfo.site_repo({"siteRepo": ""}), "")
+        self.assertEqual(siteinfo.site_repo({"siteRepo": "someone/site"}), "someone/site")
+        self.assertEqual(siteinfo.site_repo({"siteRepo": "https://github.com/someone/site"}), "")  # 주소가 아니라 이름을 적는다
+        self.assertEqual(siteinfo.deploy_remote({"siteRepo": ""}), "origin")
+        self.assertEqual(siteinfo.deploy_remote({"siteRepo": "someone/site"}), "https://github.com/someone/site")
+
+    def test_this_repository_deploys_from_itself_for_now(self):
+        from tools.common import siteinfo
+        self.assertEqual(siteinfo.site_repo(), "")
+
+
 if __name__ == "__main__":
     unittest.main()
