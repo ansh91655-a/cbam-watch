@@ -62,7 +62,7 @@ a.m-topic:hover { text-decoration: underline; }
     linear-gradient(150deg, color-mix(in srgb, var(--t, var(--brand-bright)) 66%, #0b1437), color-mix(in srgb, var(--t, var(--brand-bright)) 30%, #050b24));
   box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.1), 0 1px 2px rgb(10 20 60 / 0.12); }
 .thumb::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(circle at 1.2px 1.2px, rgb(255 255 255 / 0.22) 1.1px, transparent 1.7px) 0 0 / 11px 11px; -webkit-mask-image: linear-gradient(215deg, #000 0%, transparent 62%); mask-image: linear-gradient(215deg, #000 0%, transparent 62%); }
-.thumb-frame { position: absolute; left: 17px; top: 17px; width: 122%; overflow: hidden; border-radius: 9px 0 0 0; background: #fff; box-shadow: 0 16px 34px -10px rgb(2 6 23 / 0.62), 0 0 0 1px rgb(2 6 23 / 0.14); transform-origin: 0 0; transition: transform 0.32s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.thumb-frame { position: absolute; left: 17px; top: 17px; width: 99%; overflow: hidden; border-radius: 9px 0 0 0; background: #fff; box-shadow: 0 16px 34px -10px rgb(2 6 23 / 0.62), 0 0 0 1px rgb(2 6 23 / 0.14); transform-origin: 0 0; transition: transform 0.32s cubic-bezier(0.2, 0.7, 0.2, 1); }
 .thumb-frame img { display: block; width: 100%; height: auto; }
 .thumb-bar { display: flex; align-items: center; gap: 4px; height: 16px; padding: 0 9px; border-bottom: 1px solid #dde3ef; background: #edf0f7; }
 .thumb-bar i { width: 5px; height: 5px; border-radius: 50%; background: #bfc7d9; }
@@ -74,7 +74,7 @@ a.m-topic:hover { text-decoration: underline; }
 .card:hover .thumb-mark { transform: rotate(-4deg) scale(1.04); }
 .thumb-kind { position: absolute; left: 14px; top: 13px; padding: 1px 9px; border-radius: 999px; background: rgb(255 255 255 / 0.17); font-size: 0.68rem; font-weight: 700; line-height: 1.7; letter-spacing: 0.01em; }
 .thumb-src { position: absolute; left: 15px; right: 58px; bottom: 13px; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 2; font-size: 0.84rem; font-weight: 800; line-height: 1.32; letter-spacing: -0.02em; text-shadow: 0 1px 8px rgb(2 6 23 / 0.35); }
-.cards-2 .thumb { width: 150px; border-radius: 12px; }
+.cards-2 .thumb { width: 150px; align-self: start; border-radius: 12px; }
 .cards-2 .thumb-frame { left: 13px; top: 13px; }
 .cards-2 .thumb-mark svg { width: 92px; height: 92px; }
 .cards-2 .thumb-kind { left: 11px; top: 10px; }

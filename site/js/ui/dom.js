@@ -21,10 +21,11 @@ export function fill(node, ...children) {
   return node;
 }
 
-// https 주소만 링크로 만든다. 그 밖의 값이면 null.
+// http(s) 주소만 링크로 만든다(이 사이트 안의 주소는 사이트 주소에 이어 붙인다). 그 밖의 값이면 null.
 export function safeLink(url, text, attrs = {}) {
   try {
-    const parsed = new URL(String(url));
+    if (!url) return null;
+    const parsed = new URL(String(url), document.baseURI);
     if (parsed.protocol !== "https:" && parsed.protocol !== "http:") return null;
     return h("a", { href: parsed.href, rel: "noopener", target: "_blank", text, ...attrs });
   } catch (error) {

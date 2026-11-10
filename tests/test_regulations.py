@@ -211,3 +211,33 @@ class ThumbsTest(unittest.TestCase):
             self.assertLess(made.getpixel((240, 110))[0], 90)      # 제목 자리의 색이 보인다
             Image.new("RGB", (960, 600), "white").save(source)
             self.assertEqual(finish.make(source, "page", target), "빈 그림")
+
+
+class FeedTest(unittest.TestCase):
+    def test_news_feed_lists_the_newest_items_and_skips_withdrawn_ones(self):
+        import xml.etree.ElementTree as tree
+        from tools.publish import feed
+        items = [{"id": "a", "title": "A & B", "summary": "요약 <1>", "link": "https://x.example/a?b=1&c=2", "published": "2026-11-01", "topic": "law", "sourceName": "출처"},
+                 {"id": "b", "title": "B", "summary": "내린 것", "link": "https://x.example/b", "published": "2026-11-05", "withdrawn": True},
+                 {"id": "c", "title": "C", "summary": "게시일 없음", "link": "https://x.example/c", "listed": "2026-11-09"}]
+        root = tree.fromstring(feed.news(items, [{"code": "law", "name": "제도·법령"}], "https://site.example/", "2026-11-10T09:00:00+09:00"))
+        space = {"a": "http://www.w3.org/2005/Atom"}
+        titles = [node.findtext("a:title", namespaces=space) for node in root.findall("a:entry", space)]
+        self.assertEqual(titles, ["C", "A & B"])
+        first = root.findall("a:entry", space)[1]
+        self.assertEqual(first.find("a:link", space).get("href"), "https://x.example/a?b=1&c=2")
+        self.assertEqual(first.find("a:category", space).get("term"), "제도·법령")
+        self.assertIn("요약 <1>", first.findtext("a:summary", namespaces=space))
+
+    def test_rules_feed_marks_press_reports(self):
+        import xml.etree.ElementTree as tree
+        from tools.publish import feed
+        body = {"regulations": [{"id": "r1", "name": "규제 하나", "stage": "협상 중", "timeline": [
+            {"date": "2026-10-20", "text": "첫 회의가 열렸다는 보도가 있었습니다.", "source": "매체", "link": "https://m.example/1", "basis": "press"},
+            {"date": "2026-09-15", "text": "의회가 입장을 채택했습니다.", "source": "의회", "link": "https://p.example/2", "basis": "stored"}]}]}
+        root = tree.fromstring(feed.rules(body, "https://site.example/", "2026-11-10T09:00:00+09:00"))
+        space = {"a": "http://www.w3.org/2005/Atom"}
+        entries = root.findall("a:entry", space)
+        self.assertEqual(len(entries), 2)
+        self.assertTrue(entries[0].findtext("a:summary", namespaces=space).startswith("[언론 보도] "))
+        self.assertFalse(entries[1].findtext("a:summary", namespaces=space).startswith("[언론 보도]"))

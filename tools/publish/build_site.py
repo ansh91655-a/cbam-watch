@@ -8,7 +8,7 @@ import shutil
 import sys
 
 from tools.common.jsonio import read_json, write_json
-from tools.publish import derive, regulations, thumbs
+from tools.publish import derive, feed, regulations, thumbs
 
 DATA_FILES = ["items", "events", "digests", "terms", "topics", "prices"]
 LIST_KEY = {"items": "items", "events": "events", "digests": "digests", "terms": "terms", "topics": "topics", "prices": "prices"}
@@ -59,7 +59,15 @@ def main(argv):
             target = data_out / "diffs" / diff_path.split("originals/diffs/", 1)[1]
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(source, target)
-    write_json(data_out / "site.json", derive.site(counts))
+    for source, target in derive.stored_files():  # 문서 사본(원문 대장이 화면에서 보여 주고 내려받게 하는 파일)
+        if pathlib.Path(source).exists():
+            (out / target).parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(source, out / target)
+    config = derive.site(counts)
+    write_json(data_out / "site.json", config)
+    if config.get("url"):  # 구독 피드
+        (out / "feed.xml").write_text(feed.news(bodies["items"]["items"], bodies["topics"].get("topics", []), config["url"], config["builtAt"]), encoding="utf-8")
+        (out / "rules.xml").write_text(feed.rules(rules, config["url"], config["builtAt"]), encoding="utf-8")
     (out / ".nojekyll").write_text("", encoding="utf-8")
 
     for path in data_out.rglob("*.json"):  # 만든 파일이 모두 JSON으로 풀리는지 확인

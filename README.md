@@ -42,7 +42,7 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 | `tools/originals` | 문서 링크 찾기(`discover`), 받을 차례 정하기(`queue`), 판 남기기와 비교(`versions`, `diff`), 본문 뽑기(`textify`), 실행(`run`) |
 | `tools/check` | 국문 글 검사: 용어(`term_check`, `term_lookup`), 표기(`style_check`), 수치와 날짜 대조(`fact_check`), 원문 발췌 확인(`excerpt_check`) |
 | `tools/prices` | 인증서 가격표 읽기: 적용 기간 읽기(`periods`), 표의 행 읽기(`parse`), 가격 자료 만들기(`run`) |
-| `tools/publish` | 게시 데이터에 더하기(`add_items`, `add_digest`), 요약 내리기(`withdraw`), 주제 목록(`topics`), 사이트와 운영 화면의 폴더 만들기(`build_site`, `build_console`) |
+| `tools/publish` | 게시 데이터에 더하기(`add_items`, `add_digest`), 요약 내리기(`withdraw`), 주제 목록(`topics`), 사이트와 운영 화면의 폴더 만들기(`build_site`, `build_console`). 사이트 폴더를 만들 때 규제 자료의 공개용 사본(`regulations`), 소식의 미리보기 그림 주소(`thumbs`), 구독 피드 `feed.xml`과 `rules.xml`(`feed`), 화면에서 바로 보는 문서 사본 `files/`(`derive`)도 함께 만든다 |
 | `tools/notify` | 보고 파일에서 알릴 것을 골라 '운영 보고' 이슈에 적기(`reports`, `messages`, `github`, `run`) |
 | `tools/run` | 예약 실행이 쓰는 보조 도구: 후보 고르기, 검증 대기 고르기, 원문 발췌 자르기, 상태 점검, 하루와 한 주의 요약, 보고 파일 만들기(`write_report`) |
 | `tools/archive` | 공식 기록을 모으는 프로그램. 지난 소식을 한꺼번에 채울 때 손으로 돌리고, 규제 진행 상황에 쓰는 기록은 평일마다 자동으로 돈다: 출처별 모으기(`ecnews`, `newsletter`, `eurlex`, `cellar`, `docs`, `oeil`, `hys`, `presscorner`, `council`, `govuk`, `ukleg`, `fedreg`, `boards`)와 실행(`crawl`), 새 자료를 그날의 후보로 넘기기(`tofeed`), 화면의 짜임 살펴보기(`dump`), 싣기 전 검사(`gate`), 싣기(`publish`) |
@@ -84,7 +84,7 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 | --- | --- | --- |
 | 점 지도(`site/js/ui/heromap.js`) | 나라 경계는 Natural Earth(공개 자료)를 묶은 world-atlas(ISC) | `python3 -m tools.art.dotmap <countries-110m.json>` |
 | 아이콘(`site/js/ui/icons.js`) | Lucide(ISC, 일부는 Feather에서 온 것으로 MIT) | `python3 -m tools.art.icons <lucide-static/icons>` |
-| 글꼴 | Pretendard(SIL OFL). jsDelivr에서 불러 쓰고 저장소에 두지 않는다 | `site/js/theme.js` |
+| 글꼴(`site/assets/fonts/pretendard/`) | Pretendard(SIL OFL) 1.3.9의 가변 글꼴 조각 파일. 사이트에 직접 싣는다 | npm의 `pretendard` 꾸러미에서 `dist/web/variable/`의 CSS와 `woff2-dynamic-subset/`을 복사한다 |
 | 공유 미리보기 그림(`site/assets/og.jpg`) | 사이트의 색과 점 지도로 만든 것 | `tools/art/social.html`을 1200x630 창으로 열어 화면 그림을 찍는다 |
 | 표지(`site/index.html`의 `brand-mark`, `site/assets/favicon.svg`) | 직접 그린 것: 탄소(Carbon)의 C 고리와, 고리의 트인 곳을 지나 오르는 동향선 | 세 곳(사이트 머리글, 파비콘, `tools/art/social.html`)의 SVG를 함께 고친다 |
 | 소식 카드의 미리보기 그림(`site/assets/thumbs/`) | 재이용이 허용된 공식 출처(EU 기관, 영국 정부)의 원문 화면에서 제목부터의 글 부분, 법령 PDF 첫 장의 머리 띠 아래. 화면의 사진과 삽화, 기관 로고는 넣지 않는다. 그 밖의 소식은 사이트가 주제 색과 아이콘으로 그린다(`site/js/ui/thumb.js`) | 워크플로 '썸네일 만들기'가 만든다. 실패는 `collected/thumbs/state.json`에 남고 세 번까지 다시 시도한다 |

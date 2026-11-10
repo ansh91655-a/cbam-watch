@@ -1,4 +1,4 @@
-// 원문 대장. EU 집행위원회가 올린 문서의 목록이다. 문서 이름을 누르면 파일을 내려받는다.
+// 원문 대장. EU 집행위원회가 올린 문서의 목록이다. PDF는 문서 이름을 누르면 화면에서 바로 보고, 그 밖의 파일은 내려받는다.
 // 문서가 바뀌어 판이 둘 이상이면 바뀐 곳과 이전 판을 볼 수 있다.
 import * as data from "../data.js";
 import { band } from "../ui/band.js";
@@ -6,6 +6,7 @@ import { empty, fill, h, pill, safeLink } from "../ui/dom.js";
 import { bytes, count } from "../ui/format.js";
 import { icon } from "../ui/icons.js";
 import { libraryTabs } from "../ui/tabs.js";
+import { canView, openViewer } from "../ui/viewer.js";
 
 const LABEL = { added: "더해짐", removed: "빠짐", changed: "바뀜" };
 
@@ -30,15 +31,28 @@ function meta(doc) {
 
 function row(doc) {
   const detail = h("div", { hidden: true });
-  const main = safeLink(doc.download, "", { class: "doc-main", target: null, download: doc.filename, title: `${doc.filename} 내려받기` });
+  // 사본이 있는 PDF는 누르면 화면에서 바로 본다. 그럴 수 없는 환경(휴대전화 등)에서는 같은 링크가 새 탭으로 열린다.
+  const viewable = Boolean(doc.stored) && doc.format === "PDF";
+  const main = safeLink(doc.download, "", viewable
+    ? { class: "doc-main", title: `${doc.title} 바로 보기` }
+    : { class: "doc-main", target: null, download: doc.filename, title: `${doc.filename} 내려받기` });
   if (main) {
     fill(main,
       h("span", { class: "doc-type", "data-type": doc.format || null, text: doc.format || "파일" }),
       h("span", { class: "doc-title", text: doc.title }),
       h("span", { class: "doc-meta", text: meta(doc) }),
-      h("span", { class: "doc-get" }, [icon("download", 16), h("span", { text: "내려받기" })]),
+      h("span", { class: "doc-get" }, viewable ? [icon("file", 16), h("span", { text: "바로 보기" })] : [icon("download", 16), h("span", { text: "내려받기" })]),
     );
+    if (viewable) {
+      main.addEventListener("click", (event) => {
+        if (!canView() || event.metaKey || event.ctrlKey || event.shiftKey) return; // 새 탭으로 열려는 누름은 그대로 둔다
+        event.preventDefault();
+        openViewer({ title: doc.title, meta: meta(doc), url: main.href, filename: doc.filename });
+      });
+    }
   }
+  const save = viewable ? safeLink(doc.download, "", { class: "doc-save", target: null, download: doc.filename, title: `${doc.filename} 내려받기`, "aria-label": `${doc.title} 내려받기` }) : null;
+  if (save) save.append(icon("download", 18));
   const changed = doc.diff ? h("button", {
     class: "btn", type: "button", text: "바뀐 곳 보기", "aria-expanded": "false",
     onclick: async (event) => {
@@ -58,7 +72,7 @@ function row(doc) {
     doc.linked === false ? pill("원래 화면에서 링크가 사라짐", "warn") : null,
   ].filter(Boolean);
   return h("li", { class: "doc", "data-text": `${doc.title} ${doc.filename}`.toLowerCase() }, [
-    main || h("span", { class: "doc-main" }, h("span", { class: "doc-title", text: doc.title })),
+    h("div", { class: "doc-row" }, [main || h("span", { class: "doc-main" }, h("span", { class: "doc-title", text: doc.title })), save]),
     extra.length ? h("div", { class: "doc-extra" }, extra) : null,
     detail,
   ]);
@@ -66,7 +80,7 @@ function row(doc) {
 
 export async function render(main) {
   const [documents, pageOf, unreachable] = await Promise.all([data.documents(), data.documentPages(), data.unreachableDocuments()]);
-  const head = band("원문 대장", "EU 집행위원회가 올린 CBAM 문서입니다. 문서 이름을 누르면 파일을 내려받습니다. 문서가 바뀌면 바뀐 곳을 함께 보여 줍니다.", libraryTabs("docs"));
+  const head = band("원문 대장", "EU 집행위원회가 올린 CBAM 문서입니다. 문서 이름을 누르면 내려받지 않고 바로 볼 수 있습니다. 문서가 바뀌면 바뀐 곳을 함께 보여 줍니다.", libraryTabs("docs"));
   if (!documents.length) {
     fill(main, head, empty("문서 목록을 준비하고 있습니다."));
     return;

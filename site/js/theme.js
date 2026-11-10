@@ -11,10 +11,5 @@
   var BAR = { navy: "#050b24", white: "#ffffff", midnight: "#060b22" };
   var meta = document.querySelector('meta[name="theme-color"]');
   if (meta) meta.setAttribute("content", BAR[key]);
-  // 글꼴 Pretendard(SIL Open Font License). 못 받으면 기기의 기본 글꼴로 보인다.
-  var link = document.createElement("link");
-  link.rel = "stylesheet";
-  link.href = "https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css";
-  document.head.appendChild(link);
   window.CBAM_THEME = { key: key, name: THEMES[key], preview: Boolean(THEMES[picked]) };
 })();

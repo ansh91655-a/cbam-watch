@@ -137,6 +137,7 @@ main:has(> .showcase:last-child) { padding-bottom: 0; }
 .site-foot a { color: var(--on-deep-2); text-decoration: none; }
 .site-foot a:hover { color: var(--on-deep); text-decoration: underline; }
 .foot-meta { display: grid; gap: 8px; align-content: start; }
+.foot-feeds { display: flex; flex-wrap: wrap; gap: 4px 16px; }
 .foot-base { max-width: var(--maxw); margin-inline: auto; padding: 0 20px 28px; }
 .foot-base p { padding-top: 18px; border-top: 1px solid color-mix(in srgb, var(--on-deep-3) 28%, transparent); color: var(--on-deep-3); }
 .foot-base a { font-weight: 600; }

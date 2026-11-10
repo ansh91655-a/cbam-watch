@@ -4,8 +4,9 @@ import urllib.parse
 
 from tools.common.jsonio import read_json, stamp
 
-# 저장소의 파일을 그대로 내려받는 주소. 원문 대장의 문서 이름을 누르면 이 주소에서 사본을 받는다.
-REPO_RAW = "https://raw.githubusercontent.com/ansh91655-a/cbam-watch/main/"
+# 문서 사본은 사이트 안의 files/ 아래에 싣는다(빌드가 originals/files/에서 복사한다). 원문 대장이 이 주소로 문서를 보여 주고 내려받게 한다.
+STORE = "originals/files/"
+PUBLIC_FILES = "files/"
 
 
 # 화면에 걸린 링크 글이 'Download (1.1 MB - PDF)'처럼 문서를 알려 주지 않는 말이면 파일 이름을 문서 이름으로 쓴다.
@@ -22,9 +23,16 @@ def _title(doc):
 
 def _download(version, doc):
     """내려받는 주소. 사본이 있으면 사본, 없으면(압축 파일, 큰 파일) 원래 올라온 곳."""
-    if version.get("file"):
-        return REPO_RAW + urllib.parse.quote(version["file"])
+    if str(version.get("file", "")).startswith(STORE):
+        return PUBLIC_FILES + urllib.parse.quote(version["file"][len(STORE):])
     return doc.get("url", "")
+
+
+def stored_files():
+    """사이트에 실을 문서 사본의 목록: [(저장소 안의 경로, 사이트 안의 경로)]"""
+    state = read_json("originals/state.json", {"docs": {}})
+    return [(version["file"], PUBLIC_FILES + version["file"][len(STORE):])
+            for doc in state["docs"].values() for version in doc.get("versions", []) if str(version.get("file", "")).startswith(STORE)]
 
 
 def document_pages(codes):
