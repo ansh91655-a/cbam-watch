@@ -1,0 +1,44 @@
+{
+ "targets": [
+  {
+   "code": "ep-doceo",
+   "urls": [
+    "https://www.europarl.europa.eu/doceo/document/TA-10-2026-0276_EN.html",
+    "https://www.europarl.europa.eu/doceo/document/TA-10-2026-0276_EN.pdf",
+    "https://www.europarl.europa.eu/doceo/document/TA-10-2026-0276_EN.docx"
+   ]
+  },
+  {
+   "code": "ep-regdata",
+   "urls": [
+    "https://www.europarl.europa.eu/RegData/seance_pleniere/textes_adoptes/definitif/2026/09-15/0276/P10_TA(2026)0276_EN.pdf",
+    "https://www.europarl.europa.eu/RegData/seance_pleniere/textes_adoptes/definitif/2026/09-15/0276/P10_TA(2026)0276_EN.docx",
+    "https://www.europarl.europa.eu/RegData/seance_pleniere/textes_adoptes/provisoire/2026/09-15/0276/P10_TA-PROV(2026)0276_EN.pdf",
+    "https://www.europarl.europa.eu/RegData/seance_pleniere/textes_adoptes/provisoire/2026/09-15/0276/P10_TA(2026)0276_EN.pdf"
+   ]
+  },
+  {
+   "code": "ep-oeil",
+   "urls": [
+    "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0419(COD)"
+   ]
+  },
+  {
+   "code": "cellar-ap",
+   "urls": [
+    "http://publications.europa.eu/resource/celex/52026AP0276",
+    "https://publications.europa.eu/webapi/rdf/sparql?format=application%2Fsparql-results%2Bjson&query=PREFIX%20cdm%3A%20%3Chttp%3A//publications.europa.eu/ontology/cdm%23%3E%0ASELECT%20DISTINCT%20%3Fcelex%20WHERE%20%7B%20%3Fwork%20cdm%3Aresource_legal_id_celex%20%3Fcelex%20.%20FILTER%28STRSTARTS%28STR%28%3Fcelex%29%2C%20%2252026AP02%22%29%29%20%7D%20ORDER%20BY%20DESC%28%3Fcelex%29%20LIMIT%2040"
+   ],
+   "headers": {
+    "Accept": "application/xhtml+xml, text/html;q=0.9, application/sparql-results+json;q=0.8",
+    "Accept-Language": "eng"
+   }
+  },
+  {
+   "code": "eurlex-ep",
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=EP:P10_TA(2026)0276"
+   ]
+  }
+ ]
+}
