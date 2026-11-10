@@ -23,7 +23,12 @@ TARGETS = [
     ("downstream-commission", "celex", "52025PC0989", "2023/956"),
     ("downstream-council", "council", "ST-10423-2026-INIT", "2023/956"),
     ("downstream-parliament", "parliament", "TA-10-2026-0276", "2023/956"),
+    # 유럽의회 입법 관측소가 절차의 문서마다 붙인 요약(집행위 제안, 위원회 보고서, 본회의 채택 문서)
+    ("downstream-oeil-summary", "oeil", "2025/0419(COD)", "CBAM"),
 ]
+OEIL = "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference={reference}"
+OEIL_SUMMARY = "https://oeil.europarl.europa.eu/oeil/en/document-summary?id={number}"
+SUMMARY_LINK = re.compile(r"document-summary\?id=(\d+)")
 CHOICE = re.compile(r"/resource/cellar/[0-9a-f\-]+\.\d+\.\d+/DOC_(\d+)$")
 
 
@@ -73,7 +78,24 @@ def parliament_parts(code):
     return [("", address, _lines(body, headers, address))], ""
 
 
-READERS = {"celex": celex_parts, "council": council_parts, "parliament": parliament_parts}
+def oeil_parts(reference):
+    address = OEIL.format(reference=reference)
+    status, headers, body, error = fetch(address, timeout=120, retries=1)
+    time.sleep(1)
+    if status != 200 or not body:
+        return [], f"응답 {status} {error[:60]}".strip()
+    numbers = list(dict.fromkeys(SUMMARY_LINK.findall(decode(body, header(headers, "Content-Type")))))
+    parts = []
+    for number in numbers[:10]:
+        page = OEIL_SUMMARY.format(number=number)
+        status, headers, body, error = fetch(page, timeout=120, retries=1)
+        time.sleep(1)
+        if status == 200 and body:
+            parts.append((f"-{number}", page, _lines(body, headers, page)))
+    return parts, "" if parts else "요약 링크를 찾지 못함"
+
+
+READERS = {"celex": celex_parts, "council": council_parts, "parliament": parliament_parts, "oeil": oeil_parts}
 
 
 def crawl():
