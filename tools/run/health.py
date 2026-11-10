@@ -9,7 +9,7 @@ import subprocess
 import sys
 
 from tools.common.jsonio import KST, now_kst, read_json, today
-from tools.run import rules_health
+from tools.run import cn_health, rules_health
 
 FAIL_LIMIT = 3  # 출처를 이만큼 이어서 읽지 못하면 문제로 본다
 
@@ -84,6 +84,7 @@ def report():
 
     rule_problems, rule_counts = rules_health.problems(day, workday)
     problems += rule_problems
+    problems += cn_health.problems()
 
     return {
         "today": day,

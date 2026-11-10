@@ -114,5 +114,32 @@ class CnDataTest(unittest.TestCase):
         self.assertEqual(build.problems(book["current"], [entry for entry in book["current"] if entry["directOnly"]], book["proposed"]), [])
 
 
+class CnHealthTest(unittest.TestCase):
+    CN = {"law": {"celex": "02023R0956-20251020"}, "proposed": [{"codes": ["7318"]}], "council": {"added": ["73181100"]}}
+    RULE = {"id": "cbam-downstream", "path": ["집행위 제안", "의회·이사회 입장", "3자 협상", "채택·공포", "시행"], "at": 2, "positions": {"rows": []}}
+
+    def test_nothing_to_report_while_the_law_and_the_proposal_stand_as_they_are(self):
+        from tools.run import cn_health
+        entries = [{"celex": "02023R0956-20251020"}, {"celex": "02023R0956-20230516"}, {"celex": "02024R3210-20260101"}]
+        self.assertEqual(cn_health.problems(self.CN, entries, [self.RULE]), [])
+
+    def test_a_newer_consolidated_text_asks_for_a_rebuild(self):
+        from tools.run import cn_health
+        entries = [{"celex": "02023R0956-20251020"}, {"celex": "02023R0956-20270301"}]
+        found = cn_health.problems(self.CN, entries, [self.RULE])
+        self.assertEqual(len(found), 1)
+        self.assertIn("02023R0956-20270301", found[0])
+
+    def test_adoption_of_the_amendment_asks_to_retire_the_proposal_notes_and_the_comparison(self):
+        from tools.run import cn_health
+        found = cn_health.problems(self.CN, [], [dict(self.RULE, at=3)])
+        self.assertEqual(len(found), 2)
+        self.assertTrue(any("개정안" in line for line in found) and any("비교표" in line for line in found))
+
+    def test_the_repository_as_it_is_reports_nothing(self):
+        from tools.run import cn_health
+        self.assertEqual(cn_health.problems(), [])
+
+
 if __name__ == "__main__":
     unittest.main()
