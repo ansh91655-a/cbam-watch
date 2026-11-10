@@ -25,7 +25,10 @@ TARGETS = [
     ("me-www", "https://www.me.go.kr/home/web/index.do?menuId=286", {}),
     ("mcee", "https://www.mcee.go.kr/", {}),
     ("mcee-bare", "https://mcee.go.kr/", {}),
-    ("moj", "https://www.moj.go.kr/bbs/moj/177/artclList.do", {}),
+    ("pages-site", "https://ansh91655-a.github.io/cbam-watch/", {}),
+    ("pages-data", "https://ansh91655-a.github.io/cbam-watch/data/site.json", {}),
+    ("mcee-board", "https://mcee.go.kr/home/web/index.do?menuId=286", {}),
+    ("expert-group-meetings", "https://ec.europa.eu/transparency/expert-groups-register/core/api/front/expertGroups/3927/meetings", {"Accept": "application/json"}),
 ]
 
 OUT = pathlib.Path("originals/_probe/result.json")
@@ -80,6 +83,12 @@ def main():
         url = link if link.startswith("http") else "https://taxation-customs.ec.europa.eu" + link
         row, _ = describe(f"ec-document-{index + 1}", url.replace("&amp;", "&"))
         rows.append(row)
+    samples = pathlib.Path("originals/_probe/samples")
+    samples.mkdir(parents=True, exist_ok=True)
+    for name, url, extra in TARGETS:  # JSON으로 답하는 주소는 모양을 보려고 앞부분을 남긴다
+        if "api" in name or "meetings" in name:
+            _, _, body, _ = fetch(url, headers=extra)
+            (samples / f"{name}.json").write_bytes(body[:60000])
     result = {
         "checkedAt": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
         "rows": rows,

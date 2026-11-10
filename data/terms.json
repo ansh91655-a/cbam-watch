@@ -1,0 +1,2399 @@
+{
+"version": "v0.2",
+"terms": [
+{
+"en": "Carbon Border Adjustment Mechanism",
+"abbr": "CBAM",
+"ko": "탄소국경조정제도",
+"alt": "",
+"note": "EU로 수입되는 탄소집약 제품에 EU ETS와 같은 수준의 탄소비용을 물리는 제도. 보도 제목의 '탄소관세'는 비공식 별칭",
+"article": "CBAM 규정 제1조",
+"category": "제도·법령"
+},
+{
+"en": "CBAM Regulation",
+"abbr": "",
+"ko": "CBAM 규정",
+"alt": "",
+"note": "규정(EU) 2023/956. 확정기간 자료는 규정(EU) 2025/2083 개정을 반영한 통합본(2025.10.20) 기준",
+"article": "규정(EU) 2023/956",
+"category": "제도·법령"
+},
+{
+"en": "implementing regulation / implementing act",
+"abbr": "",
+"ko": "이행규정",
+"alt": "이행법",
+"note": "집행위원회가 CBAM 규정의 이행 조건을 정하는 하위 법령. 개별 법령명은 '이행규정'(예: 배출량 산정방법 이행규정 = 이행규정(EU) 2025/2547), 법령 유형을 말할 때는 '이행법'",
+"article": "CBAM 규정 제7조(7)·제8조(3)·제31조(2)",
+"category": "제도·법령"
+},
+{
+"en": "delegated regulation / delegated act",
+"abbr": "",
+"ko": "위임규정",
+"alt": "위임법",
+"note": "집행위원회가 위임받아 CBAM 규정을 보완하는 법령. 예: 인정·검증 요건 위임규정(위임규정(EU) 2025/2551)",
+"article": "CBAM 규정 제18조(3)·제28조",
+"category": "제도·법령"
+},
+{
+"en": "implementing and delegated acts (secondary legislation)",
+"abbr": "",
+"ko": "하위규정",
+"alt": "",
+"note": "2025년 12월 채택된 확정기간 이행·위임규정 묶음을 정부 자료가 부르는 말",
+"article": "",
+"category": "제도·법령"
+},
+{
+"en": "Directive",
+"abbr": "",
+"ko": "지침",
+"alt": "",
+"note": "EU 법령 형식(회원국이 국내법으로 옮겨 적용). 예: EU ETS 지침(지침 2003/87/EC)",
+"article": "",
+"category": "제도·법령"
+},
+{
+"en": "Annex",
+"abbr": "",
+"ko": "부속서",
+"alt": "",
+"note": "규정 본문에 딸린 부속 규정. 번호는 로마 숫자 유지(부속서 I, IV)",
+"article": "",
+"category": "제도·법령"
+},
+{
+"en": "consolidated version",
+"abbr": "",
+"ko": "통합본",
+"alt": "",
+"note": "개정 사항을 반영해 하나로 엮은 법령 본문(EUR-Lex consolidated text)",
+"article": "",
+"category": "제도·법령"
+},
+{
+"en": "Omnibus I simplification package",
+"abbr": "",
+"ko": "옴니버스 패키지 I",
+"alt": "",
+"note": "CBAM 간소화(50톤 면제, 연간 신고 기한 9.30 등)를 담은 EU 옴니버스 개정. CBAM 부분은 규정(EU) 2025/2083으로 2025.10.20 발효",
+"article": "규정(EU) 2025/2083",
+"category": "제도·법령"
+},
+{
+"en": "transitional period",
+"abbr": "",
+"ko": "전환기간",
+"alt": "",
+"note": "2023.10.1~2025.12.31. 분기별 CBAM 보고서만 내고 비용 부담은 없던 기간",
+"article": "CBAM 규정 제32조~제35조",
+"category": "제도·법령"
+},
+{
+"en": "definitive period",
+"abbr": "",
+"ko": "확정기간",
+"alt": "",
+"note": "2026.1.1부터. 연간 CBAM 신고서, 검증, 인증서 구매·제출 의무가 적용되는 기간",
+"article": "",
+"category": "제도·법령"
+},
+{
+"en": "carbon leakage",
+"abbr": "",
+"ko": "탄소누출",
+"alt": "",
+"note": "탄소 규제가 약한 지역으로 생산·배출이 옮겨 가는 현상",
+"article": "CBAM 규정 제1조",
+"category": "제도·법령"
+},
+{
+"en": "European Commission",
+"abbr": "",
+"ko": "EU 집행위원회",
+"alt": "집행위원회",
+"note": "문서별 첫 등장은 'EU 집행위원회', 이후 '집행위원회'. 약칭은 'EU 집행위'",
+"article": "",
+"category": "제도·법령"
+},
+{
+"en": "Directorate-General for Taxation and Customs Union",
+"abbr": "DG TAXUD",
+"ko": "조세총국",
+"alt": "조세·관세동맹 총국",
+"note": "CBAM을 맡은 집행위원회 총국",
+"article": "G1 p.16",
+"category": "제도·법령"
+},
+{
+"en": "Member State",
+"abbr": "MS",
+"ko": "회원국",
+"alt": "",
+"note": "EU 회원국",
+"article": "",
+"category": "제도·법령"
+},
+{
+"en": "Official Journal of the European Union",
+"abbr": "OJ",
+"ko": "유럽연합 관보",
+"alt": "",
+"note": "EU 법령 정본이 게재되는 관보",
+"article": "",
+"category": "제도·법령"
+},
+{
+"en": "Court of Justice of the European Union",
+"abbr": "CJEU",
+"ko": "유럽사법재판소",
+"alt": "유럽연합 사법재판소",
+"note": "EU 법의 유권해석 권한을 가진 법원",
+"article": "G1 p.1",
+"category": "제도·법령"
+},
+{
+"en": "the Union",
+"abbr": "EU",
+"ko": "EU",
+"alt": "",
+"note": "'the Union'은 'EU'로 옮김. 법령·기관 정식 명칭 안에서는 '유럽연합'",
+"article": "",
+"category": "제도·법령"
+},
+{
+"en": "third country / non-EU country",
+"abbr": "",
+"ko": "제3국",
+"alt": "비EU 국가",
+"note": "EU 관세영역 밖의 국가·영역",
+"article": "CBAM 규정 제3조 · G1 p.32",
+"category": "제도·법령"
+},
+{
+"en": "European Parliament",
+"abbr": "EP",
+"ko": "유럽의회",
+"alt": "",
+"note": "이사회와 함께 규정을 채택하는 공동입법기관",
+"article": "",
+"category": "제도·법령"
+},
+{
+"en": "Council of the European Union",
+"abbr": "",
+"ko": "EU 이사회",
+"alt": "이사회",
+"note": "회원국 각료로 구성된 공동입법기관. 정상회의인 '유럽이사회(European Council)'와 다른 기관",
+"article": "",
+"category": "제도·법령"
+},
+{
+"en": "legislative proposal (amendment proposal)",
+"abbr": "",
+"ko": "개정안",
+"alt": "제안",
+"note": "집행위원회가 제출한 법안. 예: 하류제품 확대·우회방지 개정안(COM(2025) 989)",
+"article": "",
+"category": "제도·법령"
+},
+{
+"en": "trilogue",
+"abbr": "",
+"ko": "3자 협상",
+"alt": "3자 협의",
+"note": "집행위원회·유럽의회·이사회가 법안 최종 문안을 조율하는 비공식 협상",
+"article": "",
+"category": "제도·법령"
+},
+{
+"en": "general approach (Council)",
+"abbr": "",
+"ko": "일반적 접근",
+"alt": "이사회 입장",
+"note": "이사회가 3자 협상 전에 정하는 협상 입장",
+"article": "",
+"category": "제도·법령"
+},
+{
+"en": "entry into force / date of application",
+"abbr": "",
+"ko": "발효",
+"alt": "적용(시행)",
+"note": "'enter into force'는 발효, 'apply from'은 적용(시행) 시점. 둘을 구분해 옮김",
+"article": "",
+"category": "제도·법령"
+},
+{
+"en": "provisional agreement",
+"abbr": "",
+"ko": "잠정 합의",
+"alt": "",
+"note": "3자 협상에서 이사회·유럽의회 협상단이 타결한 합의안. 이후 두 기관이 각각 공식 채택",
+"article": "",
+"category": "제도·법령"
+},
+{
+"en": "Fit for 55 package",
+"abbr": "",
+"ko": "Fit for 55 패키지",
+"alt": "",
+"note": "2030년 55% 감축 목표를 위한 EU 기후 입법 묶음. CBAM도 그중 하나",
+"article": "",
+"category": "제도·법령"
+},
+{
+"en": "CBAM goods",
+"abbr": "",
+"ko": "CBAM 대상 품목",
+"alt": "CBAM 대상 제품",
+"note": "CBAM이 적용되는 제품(부속서 I의 CN 코드)",
+"article": "CBAM 규정 부속서 I",
+"category": "적용 범위·면제"
+},
+{
+"en": "aggregated goods category",
+"abbr": "",
+"ko": "품목군",
+"alt": "",
+"note": "시스템 경계를 정하려고 CN 코드 제품을 묶은 그룹(배출량 산정방법 이행규정 부속서 I 제2항 표 1)",
+"article": "배출량 산정방법 이행규정 부속서 I · G1 p.25",
+"category": "적용 범위·면제"
+},
+{
+"en": "exemption",
+"abbr": "",
+"ko": "면제",
+"alt": "",
+"note": "CBAM 적용 제외",
+"article": "CBAM 규정 제2조",
+"category": "적용 범위·면제"
+},
+{
+"en": "electricity (CBAM goods)",
+"abbr": "",
+"ko": "전력",
+"alt": "",
+"note": "CBAM 6개 업종 중 하나. 수입 전력은 직접배출량만 고려",
+"article": "CBAM 규정 부속서 I·II",
+"category": "적용 범위·면제"
+},
+{
+"en": "outermost regions",
+"abbr": "",
+"ko": "최외곽 지역",
+"alt": "",
+"note": "본토에서 멀리 떨어진 EU 영역(카나리아 제도 등)",
+"article": "CBAM 규정 전문(17)",
+"category": "적용 범위·면제"
+},
+{
+"en": "continental shelf / exclusive economic zone",
+"abbr": "",
+"ko": "대륙붕",
+"alt": "배타적 경제수역",
+"note": "회원국의 해양 관할 수역. 그곳 시설로 들어가는 물품에도 CBAM 적용",
+"article": "CBAM 규정 제2조(2)",
+"category": "적용 범위·면제"
+},
+{
+"en": "goods contained in the personal luggage of travellers",
+"abbr": "",
+"ko": "여행자 개인 수하물에 포함된 물품",
+"alt": "",
+"note": "CBAM 적용 제외 대상",
+"article": "CBAM 규정 제2조(3)",
+"category": "적용 범위·면제"
+},
+{
+"en": "authorised CBAM declarant",
+"abbr": "",
+"ko": "승인된 CBAM 신고인",
+"alt": "",
+"note": "관할당국의 승인을 받아 CBAM 대상 제품을 수입할 수 있는 자(수입자 또는 간접 세관 대리인). 문맥상 분명하면 'CBAM 신고인'",
+"article": "CBAM 규정 제5조·제17조 · G1 p.25",
+"category": "신고인·통관"
+},
+{
+"en": "CBAM declarant",
+"abbr": "",
+"ko": "CBAM 신고인",
+"alt": "",
+"note": "CBAM 신고서를 내고 인증서 의무를 지는 자",
+"article": "",
+"category": "신고인·통관"
+},
+{
+"en": "authorisation",
+"abbr": "",
+"ko": "승인",
+"alt": "",
+"note": "관할당국이 CBAM 신고인 지위를 부여하는 것",
+"article": "CBAM 규정 제17조",
+"category": "신고인·통관"
+},
+{
+"en": "application for authorisation",
+"abbr": "",
+"ko": "승인 신청",
+"alt": "승인 신청서",
+"note": "CBAM 등록부로 내는 신고인 지위 신청(이행규정(EU) 2025/486, 2025/2549로 개정)",
+"article": "CBAM 규정 제5조 · G1 p.29",
+"category": "신고인·통관"
+},
+{
+"en": "reporting declarant",
+"abbr": "",
+"ko": "보고 신고인",
+"alt": "",
+"note": "전환기간에 분기별 CBAM 보고서를 내던 자. 확정기간에는 '승인된 CBAM 신고인'으로 바뀜",
+"article": "G1 p.25",
+"category": "신고인·통관"
+},
+{
+"en": "importer",
+"abbr": "",
+"ko": "수입자",
+"alt": "수입업자",
+"note": "자기 명의로 자기를 위하여 세관신고를 하는 자(간접 대리 시에는 그 본인)",
+"article": "CBAM 규정 제3조 · G1 p.29",
+"category": "신고인·통관"
+},
+{
+"en": "competent authority",
+"abbr": "CA",
+"ko": "관할당국",
+"alt": "",
+"note": "각 회원국이 지정한 CBAM 담당 당국(신고인 승인, 신고서 검토, 과징금). 회원국 단위임을 밝힐 때는 '회원국 관할당국'",
+"article": "CBAM 규정 제11조 · G1 p.26",
+"category": "신고인·통관"
+},
+{
+"en": "customs declaration",
+"abbr": "",
+"ko": "세관신고",
+"alt": "수입신고",
+"note": "세관에 내는 신고. 자유유통 반출을 위한 신고는 국내 용어 '수입신고'에 해당",
+"article": "EU 관세법 제5조(12)",
+"category": "신고인·통관"
+},
+{
+"en": "customs declarant",
+"abbr": "",
+"ko": "세관신고인",
+"alt": "신고인",
+"note": "자기 명의로 세관신고를 하는 자 또는 그 명의로 신고서가 제출되는 자",
+"article": "EU 관세법 제5조(15) · G1 p.27",
+"category": "신고인·통관"
+},
+{
+"en": "customs authorities",
+"abbr": "",
+"ko": "세관당국",
+"alt": "",
+"note": "회원국 세관 행정기관",
+"article": "EU 관세법 제5조(1)",
+"category": "신고인·통관"
+},
+{
+"en": "release for free circulation",
+"abbr": "",
+"ko": "자유유통을 위한 반출",
+"alt": "자유유통 반출",
+"note": "비EU 물품에 관세 등을 부과해 EU 물품 지위를 주는 통관 절차. CBAM 의무가 생기는 시점",
+"article": "EU 관세법 제201조 · CBAM 규정 제3조",
+"category": "신고인·통관"
+},
+{
+"en": "importation",
+"abbr": "",
+"ko": "수입",
+"alt": "",
+"note": "CBAM 규정상 '수입'은 자유유통 반출을 뜻함",
+"article": "CBAM 규정 제3조 · G1 p.29",
+"category": "신고인·통관"
+},
+{
+"en": "customs territory of the Union",
+"abbr": "",
+"ko": "EU 관세영역",
+"alt": "",
+"note": "EU 관세법이 적용되는 지역",
+"article": "EU 관세법 제4조",
+"category": "신고인·통관"
+},
+{
+"en": "country of origin",
+"abbr": "",
+"ko": "원산지",
+"alt": "원산지국",
+"note": "제품이 생산된 국가(비특혜원산지 규칙 적용)",
+"article": "",
+"category": "신고인·통관"
+},
+{
+"en": "non-preferential origin",
+"abbr": "",
+"ko": "비특혜원산지",
+"alt": "",
+"note": "FTA 특혜가 아닌 일반 원산지 규칙",
+"article": "CBAM 규정 제2조(5)",
+"category": "신고인·통관"
+},
+{
+"en": "indirect customs representative",
+"abbr": "",
+"ko": "간접 세관 대리인",
+"alt": "간접대리인",
+"note": "자기 명의로 수입자를 위해 세관신고를 하는 대리인. CBAM 신고인이 될 수 있음. 국내 관세법에는 같은 제도가 없음",
+"article": "EU 관세법 제18조 · G1 p.29",
+"category": "신고인·통관"
+},
+{
+"en": "EORI number",
+"abbr": "EORI",
+"ko": "EORI 번호",
+"alt": "",
+"note": "EU 세관 업무용 경제운영자 등록·식별 번호. CBAM 신고인 승인·신고에 필요",
+"article": "G1 약어표",
+"category": "신고인·통관"
+},
+{
+"en": "economic operator",
+"abbr": "",
+"ko": "경제운영자",
+"alt": "",
+"note": "관세 업무를 하는 사업자",
+"article": "EU 관세법 제5조",
+"category": "신고인·통관"
+},
+{
+"en": "inward processing",
+"abbr": "",
+"ko": "역내가공",
+"alt": "",
+"note": "관세를 유예한 채 EU로 들여와 가공하는 특별절차. 자유유통으로 반출될 때 CBAM 적용",
+"article": "EU 관세법 제VII편 제5장 · G1 p.21",
+"category": "신고인·통관"
+},
+{
+"en": "outward processing",
+"abbr": "",
+"ko": "역외가공",
+"alt": "",
+"note": "EU 물품을 역외로 내보내 가공한 뒤 다시 들여오는 절차",
+"article": "EU 관세법 제VII편 제5장",
+"category": "신고인·통관"
+},
+{
+"en": "special procedures",
+"abbr": "",
+"ko": "특별절차",
+"alt": "",
+"note": "보관·통과·특정용도·가공 등 관세 유예 절차의 총칭",
+"article": "EU 관세법 제VII편",
+"category": "신고인·통관"
+},
+{
+"en": "customs warehousing",
+"abbr": "",
+"ko": "관세창고보관",
+"alt": "",
+"note": "비EU 물품을 관세 유예 상태로 창고에 보관하는 특별절차",
+"article": "EU 관세법 제VII편 제3장",
+"category": "신고인·통관"
+},
+{
+"en": "temporary admission",
+"abbr": "",
+"ko": "임시수입",
+"alt": "",
+"note": "재수출 조건으로 관세를 면제·감면받아 일시 사용하는 특별절차",
+"article": "EU 관세법 제VII편 제4장",
+"category": "신고인·통관"
+},
+{
+"en": "end-use",
+"abbr": "",
+"ko": "최종용도",
+"alt": "",
+"note": "특정 용도로 쓰는 조건으로 관세를 면제·감면하는 특별절차",
+"article": "EU 관세법 제VII편 제4장",
+"category": "신고인·통관"
+},
+{
+"en": "Combined Nomenclature",
+"abbr": "CN",
+"ko": "통합품목분류표",
+"alt": "",
+"note": "EU의 8자리 품목분류(HS 기반). 관세·무역통계와 CBAM 대상 판정에 사용",
+"article": "규정(EEC) No 2658/87 · G1 p.26",
+"category": "신고인·통관"
+},
+{
+"en": "CN code",
+"abbr": "",
+"ko": "CN 코드",
+"alt": "",
+"note": "CBAM 대상 여부를 정하는 8자리 품목번호. 국내 자료는 '품목번호'라고도 함",
+"article": "CBAM 규정 부속서 I",
+"category": "신고인·통관"
+},
+{
+"en": "Harmonised System",
+"abbr": "HS",
+"ko": "통일상품명 및 부호체계",
+"alt": "HS 코드",
+"note": "세계관세기구(WCO)의 국제 품목분류(6단위)",
+"article": "G1 약어표",
+"category": "신고인·통관"
+},
+{
+"en": "Union Customs Code",
+"abbr": "UCC",
+"ko": "EU 관세법",
+"alt": "",
+"note": "EU 관세법(규정(EU) No 952/2013)",
+"article": "규정(EU) No 952/2013",
+"category": "신고인·통관"
+},
+{
+"en": "binding tariff information",
+"abbr": "BTI",
+"ko": "품목분류 사전심사",
+"alt": "",
+"note": "세관이 품목분류를 미리 확정해 주는 제도(CBAM 대상 여부 확인에 활용)",
+"article": "EU 관세법 제33조",
+"category": "신고인·통관"
+},
+{
+"en": "customs value",
+"abbr": "",
+"ko": "과세가격",
+"alt": "관세가격",
+"note": "관세 부과 기준 가격. 국내 관세법 용어는 '과세가격'",
+"article": "EU 관세법 제II편 제3장",
+"category": "신고인·통관"
+},
+{
+"en": "guarantee",
+"abbr": "",
+"ko": "담보",
+"alt": "",
+"note": "CBAM 신고인 승인 때 관할당국이 요구할 수 있는 담보",
+"article": "CBAM 규정 제17조",
+"category": "신고인·통관"
+},
+{
+"en": "customs representative",
+"abbr": "",
+"ko": "세관 대리인",
+"alt": "관세대리인",
+"note": "남을 위해 세관 업무를 하는 자. 직접·간접 세관 대리인의 상위어",
+"article": "EU 관세법 제18조",
+"category": "신고인·통관"
+},
+{
+"en": "Authorised Economic Operator",
+"abbr": "AEO",
+"ko": "수출입 안전관리 우수업체",
+"alt": "",
+"note": "세관이 공인한 안전관리 우수 사업자. 알루미늄 업종의 AEO(양극효과 과전압)와 약어가 같아 문맥 주의",
+"article": "",
+"category": "신고인·통관"
+},
+{
+"en": "CBAM certificate",
+"abbr": "",
+"ko": "CBAM 인증서",
+"alt": "",
+"note": "제품 내재배출량 CO₂e 1톤에 해당하는 전자 인증서",
+"article": "CBAM 규정 제3조 · G1 p.26",
+"category": "인증서·신고·등록부"
+},
+{
+"en": "purchase (of CBAM certificates)",
+"abbr": "",
+"ko": "구매",
+"alt": "",
+"note": "신고인이 공통 중앙 플랫폼에서 인증서를 사는 것(판매는 2027.2 개시)",
+"article": "CBAM 규정 제20조",
+"category": "인증서·신고·등록부"
+},
+{
+"en": "sale (of CBAM certificates)",
+"abbr": "",
+"ko": "판매",
+"alt": "",
+"note": "회원국이 공통 중앙 플랫폼에서 인증서를 파는 것",
+"article": "CBAM 규정 제20조",
+"category": "인증서·신고·등록부"
+},
+{
+"en": "price of CBAM certificates",
+"abbr": "",
+"ko": "CBAM 인증서 가격",
+"alt": "",
+"note": "EU ETS 배출권 경매가 평균으로 정함(2026년분은 분기별, 2027년부터 주별). 산식에 쓰는 연평균값은 '기준가격'",
+"article": "CBAM 규정 제21조 · 이행규정(EU) 2025/2548",
+"category": "인증서·신고·등록부"
+},
+{
+"en": "surrender (of CBAM certificates)",
+"abbr": "",
+"ko": "제출",
+"alt": "",
+"note": "신고한 내재배출량만큼 인증서를 내어 의무를 이행하는 것",
+"article": "CBAM 규정 제3조·제22조",
+"category": "인증서·신고·등록부"
+},
+{
+"en": "re-purchase (of CBAM certificates)",
+"abbr": "",
+"ko": "환매",
+"alt": "",
+"note": "초과 구매한 인증서를 되사 주는 것(수량·기한 제한)",
+"article": "CBAM 규정 제23조",
+"category": "인증서·신고·등록부"
+},
+{
+"en": "cancellation (of CBAM certificates)",
+"abbr": "",
+"ko": "말소",
+"alt": "취소",
+"note": "기한 안에 제출·환매되지 않은 인증서를 매년 없애는 것",
+"article": "CBAM 규정 제24조",
+"category": "인증서·신고·등록부"
+},
+{
+"en": "quarterly holding requirement",
+"abbr": "",
+"ko": "분기별 인증서 예치의무",
+"alt": "분기말 인증서 보유의무",
+"note": "매 분기 말 CBAM 계정에 그해 수입분 내재배출량의 일정 비율(옴니버스 후 50%, 2027년부터 적용) 이상 인증서를 보유해야 하는 의무",
+"article": "CBAM 규정 제22조(2)",
+"category": "인증서·신고·등록부"
+},
+{
+"en": "CBAM declaration",
+"abbr": "",
+"ko": "CBAM 신고서",
+"alt": "연간 CBAM 신고서",
+"note": "승인된 신고인이 매년 9월 30일까지 직전 연도 수입분에 대해 CBAM 등록부로 내는 신고서",
+"article": "CBAM 규정 제6조",
+"category": "인증서·신고·등록부"
+},
+{
+"en": "CBAM report",
+"abbr": "",
+"ko": "CBAM 보고서",
+"alt": "",
+"note": "전환기간의 분기별 보고서",
+"article": "CBAM 규정 제35조",
+"category": "인증서·신고·등록부"
+},
+{
+"en": "CBAM Registry",
+"abbr": "",
+"ko": "CBAM 등록부",
+"alt": "",
+"note": "집행위원회가 운영하는 전자 시스템(신고인 승인, 신고서, 인증서 계정, 사업자·사업장 등록)",
+"article": "CBAM 규정 제14조",
+"category": "인증서·신고·등록부"
+},
+{
+"en": "common central platform",
+"abbr": "",
+"ko": "공통 중앙 플랫폼",
+"alt": "",
+"note": "CBAM 인증서 판매·환매용 EU 공통 플랫폼(2027.2 판매 개시)",
+"article": "CBAM 규정 제20조",
+"category": "인증서·신고·등록부"
+},
+{
+"en": "CBAM Transitional Registry",
+"abbr": "",
+"ko": "CBAM 전환 등록부",
+"alt": "",
+"note": "전환기간 보고용 시스템",
+"article": "",
+"category": "인증서·신고·등록부"
+},
+{
+"en": "CBAM Operators and Installations Portal",
+"abbr": "O3CI",
+"ko": "제3국 사업자 포털",
+"alt": "",
+"note": "제3국 사업자가 사업장과 배출량 데이터를 등록하는 CBAM 등록부 포털",
+"article": "CBAM 규정 제10조",
+"category": "인증서·신고·등록부"
+},
+{
+"en": "CBAM obligation",
+"abbr": "",
+"ko": "CBAM 의무",
+"alt": "",
+"note": "신고인이 제출해야 하는 CBAM 인증서 수(내재배출량 − 무상할당 조정 − 실질 지불 탄소가격)",
+"article": "CBAM 규정 제6조(2)(c) · G1 p.13–14",
+"category": "인증서·신고·등록부"
+},
+{
+"en": "communication template / electronic template",
+"abbr": "",
+"ko": "커뮤니케이션 템플릿",
+"alt": "전자 템플릿",
+"note": "사업자가 신고인에게 배출량 데이터를 넘길 때 쓰는 집행위원회 엑셀 양식",
+"article": "G1 p.4",
+"category": "인증서·신고·등록부"
+},
+{
+"en": "embedded emissions",
+"abbr": "",
+"ko": "내재배출량",
+"alt": "",
+"note": "제품 생산 중 배출된 직접배출량과 (해당 제품의) 간접배출량에 전구물질의 내재배출량을 더한 값",
+"article": "CBAM 규정 제3조·제7조·부속서 IV · G1 p.28",
+"category": "내재배출량 산정"
+},
+{
+"en": "specific embedded emissions",
+"abbr": "SEE",
+"ko": "고유 내재배출량",
+"alt": "",
+"note": "제품 1톤(전력은 1MWh)당 내재배출량. 단위 t CO₂e/t(전력은 t CO₂e/MWh)",
+"article": "CBAM 규정 부속서 IV 제1항 · 배출량 산정방법 이행규정 · G1 p.32",
+"category": "내재배출량 산정"
+},
+{
+"en": "direct emissions",
+"abbr": "",
+"ko": "직접배출량",
+"alt": "",
+"note": "제품 생산공정에서 나온 배출량(소비한 열·냉방 생산분 포함)",
+"article": "CBAM 규정 제3조 · G1 p.28",
+"category": "내재배출량 산정"
+},
+{
+"en": "indirect emissions",
+"abbr": "",
+"ko": "간접배출량",
+"alt": "",
+"note": "생산공정에서 소비한 전력의 생산에서 나온 배출량. 확정기간에는 부속서 II에 없는 제품(시멘트·비료)만 산입",
+"article": "CBAM 규정 제3조 · G1 p.29",
+"category": "내재배출량 산정"
+},
+{
+"en": "actual emissions",
+"abbr": "",
+"ko": "실제배출량",
+"alt": "",
+"note": "1차 데이터로 배출량 산정방법 이행규정에 따라 산정한 배출량(기본값의 반대 개념)",
+"article": "배출량 산정방법 이행규정 부속서 IV · G1 p.25",
+"category": "내재배출량 산정"
+},
+{
+"en": "actual values / actual data",
+"abbr": "",
+"ko": "실제값",
+"alt": "실제 데이터",
+"note": "검증받은 사업자 데이터로 정한 값(기본값 대신 사용)",
+"article": "CBAM 규정 제7조",
+"category": "내재배출량 산정"
+},
+{
+"en": "default value",
+"abbr": "",
+"ko": "기본값",
+"alt": "",
+"note": "2차 데이터로 정한 제품 내재배출량 대푯값(기본값 이행규정 = 이행규정(EU) 2025/2621)",
+"article": "CBAM 규정 제7조·부속서 IV · G1 p.28",
+"category": "내재배출량 산정"
+},
+{
+"en": "mark-up",
+"abbr": "",
+"ko": "마크업",
+"alt": "가산치",
+"note": "기본값에 더하는 백분율(2026년 10%, 2027년 20%, 2028년 이후 30%, 비료는 1%)",
+"article": "기본값 이행규정 · G3 p.116",
+"category": "내재배출량 산정"
+},
+{
+"en": "precursor",
+"abbr": "",
+"ko": "전구물질",
+"alt": "",
+"note": "부속서 I 제품으로서 다른 CBAM 대상 제품의 생산공정에 투입되는 것",
+"article": "배출량 산정방법 이행규정 부속서 I · G1 p.31",
+"category": "내재배출량 산정"
+},
+{
+"en": "relevant precursor",
+"abbr": "",
+"ko": "관련 전구물질",
+"alt": "",
+"note": "시스템 경계 안에서 고려해야 하는 전구물질",
+"article": "배출량 산정방법 이행규정 부속서 I",
+"category": "내재배출량 산정"
+},
+{
+"en": "production process",
+"abbr": "",
+"ko": "생산공정",
+"alt": "",
+"note": "품목군에 속하는 제품을 만드는 사업장의 일부와 그 시스템 경계",
+"article": "CBAM 규정 제3조 · G1 p.31",
+"category": "내재배출량 산정"
+},
+{
+"en": "production route",
+"abbr": "",
+"ko": "생산경로",
+"alt": "",
+"note": "생산공정에서 쓰는 특정 기술(예: 고로-전로, 전기로)",
+"article": "CBAM 규정 제3조 · G1 p.31",
+"category": "내재배출량 산정"
+},
+{
+"en": "installation",
+"abbr": "",
+"ko": "사업장",
+"alt": "",
+"note": "생산공정이 수행되는 고정된 기술 단위",
+"article": "CBAM 규정 제3조 · G1 p.30",
+"category": "내재배출량 산정"
+},
+{
+"en": "operator",
+"abbr": "",
+"ko": "사업자",
+"alt": "",
+"note": "제3국에서 사업장을 운영·통제하는 자(모회사 포함)",
+"article": "CBAM 규정 제3조 · G1 p.30",
+"category": "내재배출량 산정"
+},
+{
+"en": "producer",
+"abbr": "",
+"ko": "생산자",
+"alt": "",
+"note": "제품을 생산하는 자",
+"article": "",
+"category": "내재배출량 산정"
+},
+{
+"en": "system boundaries",
+"abbr": "",
+"ko": "시스템 경계",
+"alt": "",
+"note": "내재배출량 산정에 포함하는 공정의 범위",
+"article": "배출량 산정방법 이행규정 부속서 I · G1 p.32",
+"category": "내재배출량 산정"
+},
+{
+"en": "functional unit",
+"abbr": "",
+"ko": "기능단위",
+"alt": "",
+"note": "내재배출량 산정의 기준 단위(대부분 제품 톤, 전력은 MWh)",
+"article": "G1 p.29",
+"category": "내재배출량 산정"
+},
+{
+"en": "activity level",
+"abbr": "AL",
+"ko": "활동수준",
+"alt": "",
+"note": "보고기간에 생산공정에서 생산된 제품량(기능단위 기준). 활동자료(activity data)와 다른 개념",
+"article": "G1 p.25",
+"category": "내재배출량 산정"
+},
+{
+"en": "attribution / attributed emissions",
+"abbr": "",
+"ko": "귀속",
+"alt": "귀속 배출량",
+"note": "사업장 배출량을 생산공정·제품에 나눠 붙이는 것",
+"article": "배출량 산정방법 이행규정 부속서 III",
+"category": "내재배출량 산정"
+},
+{
+"en": "by-product",
+"abbr": "",
+"ko": "부산물",
+"alt": "",
+"note": "주목적이 아닌 생산물",
+"article": "",
+"category": "내재배출량 산정"
+},
+{
+"en": "bubble approach",
+"abbr": "",
+"ko": "버블접근법",
+"alt": "",
+"note": "수직 통합 사업장에서 전구물질과 복합제품을 하나의 공정으로 모니터링하는 간소화 방법",
+"article": "배출량 산정방법 이행규정 제4조(9) · G3 p.40",
+"category": "내재배출량 산정"
+},
+{
+"en": "residue",
+"abbr": "",
+"ko": "잔재물",
+"alt": "",
+"note": "생산공정의 목적물이 아닌 물질",
+"article": "G1 p.32",
+"category": "내재배출량 산정"
+},
+{
+"en": "waste",
+"abbr": "",
+"ko": "폐기물",
+"alt": "",
+"note": "보유자가 버리거나 버려야 하는 물질·물체",
+"article": "G1 p.32",
+"category": "내재배출량 산정"
+},
+{
+"en": "conservative",
+"abbr": "",
+"ko": "보수적",
+"alt": "",
+"note": "배출량이 적게, 생산량이 많게 추정되지 않도록 가정을 세우는 것",
+"article": "G1 p.27",
+"category": "내재배출량 산정"
+},
+{
+"en": "tonne of CO₂e",
+"abbr": "t CO₂e",
+"ko": "CO₂ 환산톤",
+"alt": "",
+"note": "CO₂ 1톤 또는 지구온난화지수가 같은 다른 온실가스의 양",
+"article": "CBAM 규정 제3조 · G1 p.32",
+"category": "내재배출량 산정"
+},
+{
+"en": "CO₂ equivalent",
+"abbr": "CO₂e",
+"ko": "이산화탄소 상당량",
+"alt": "CO₂ 환산량",
+"note": "온실가스를 지구온난화지수로 CO₂ 양으로 바꾼 값",
+"article": "",
+"category": "내재배출량 산정"
+},
+{
+"en": "greenhouse gases",
+"abbr": "GHG",
+"ko": "온실가스",
+"alt": "",
+"note": "부속서 I에 제품별로 정한 온실가스(CO₂, N₂O, PFCs)",
+"article": "CBAM 규정 제3조·부속서 I",
+"category": "내재배출량 산정"
+},
+{
+"en": "emissions",
+"abbr": "",
+"ko": "배출량",
+"alt": "",
+"note": "제품 생산으로 온실가스가 대기로 배출되는 것",
+"article": "CBAM 규정 제3조 · G1 p.28",
+"category": "내재배출량 산정"
+},
+{
+"en": "global warming potential",
+"abbr": "GWP",
+"ko": "지구온난화지수",
+"alt": "",
+"note": "온실가스의 온난화 효과를 CO₂ 기준으로 나타낸 계수",
+"article": "G1 약어표",
+"category": "내재배출량 산정"
+},
+{
+"en": "primary data / secondary data",
+"abbr": "",
+"ko": "1차 데이터",
+"alt": "2차 데이터",
+"note": "1차 = 사업장에서 직접 얻은 데이터, 2차 = 문헌·통계 등 외부 데이터",
+"article": "G1 p.25",
+"category": "내재배출량 산정"
+},
+{
+"en": "monitoring plan",
+"abbr": "MP",
+"ko": "모니터링 계획",
+"alt": "",
+"note": "사업자의 모니터링 방법론 문서. 국내 배출권거래제의 '배출량 산정계획'에 해당",
+"article": "배출량 산정방법 이행규정 부속서 II A.5 · G3 p.52",
+"category": "모니터링·측정"
+},
+{
+"en": "source stream",
+"abbr": "",
+"ko": "소스스트림",
+"alt": "배출원 스트림",
+"note": "배출을 일으키는 특정 연료·원료·제품(계산 기반 방법의 단위). 국내 배출권거래제에는 같은 개념이 없음",
+"article": "배출량 산정방법 이행규정 부속서 I · G1 p.32",
+"category": "모니터링·측정"
+},
+{
+"en": "emission source",
+"abbr": "",
+"ko": "배출원",
+"alt": "",
+"note": "온실가스가 배출되는 사업장의 특정 부분이나 공정",
+"article": "G1 p.28",
+"category": "모니터링·측정"
+},
+{
+"en": "activity data",
+"abbr": "AD",
+"ko": "활동자료",
+"alt": "",
+"note": "계산 기반 방법에서 소비·생산된 연료·물질의 양(TJ, 톤, Nm³)",
+"article": "G1 p.25",
+"category": "모니터링·측정"
+},
+{
+"en": "emission factor",
+"abbr": "EF",
+"ko": "배출계수",
+"alt": "",
+"note": "활동자료 단위당 온실가스 평균 배출률",
+"article": "G1 p.28",
+"category": "모니터링·측정"
+},
+{
+"en": "net calorific value",
+"abbr": "NCV",
+"ko": "순발열량",
+"alt": "",
+"note": "연료가 완전 연소할 때의 열량에서 수증기 잠열을 뺀 값. 국내 지침의 에너지 집계용 '총발열량'과 구분",
+"article": "G1 p.30",
+"category": "모니터링·측정"
+},
+{
+"en": "oxidation factor",
+"abbr": "OF",
+"ko": "산화계수",
+"alt": "",
+"note": "연료 탄소 중 연소로 CO₂가 된 비율. 국내 지침의 정의 조항 용어는 '산화율'",
+"article": "G1 p.30",
+"category": "모니터링·측정"
+},
+{
+"en": "carbon content",
+"abbr": "",
+"ko": "탄소함량",
+"alt": "",
+"note": "연료·물질에 들어 있는 탄소의 비율",
+"article": "G3 p.29",
+"category": "모니터링·측정"
+},
+{
+"en": "standard methodology",
+"abbr": "",
+"ko": "표준방법",
+"alt": "",
+"note": "연소배출은 활동자료×배출계수×산화계수, 공정배출은 활동자료×배출계수×전환계수로 계산",
+"article": "배출량 산정방법 이행규정 부속서 II · G3 p.61",
+"category": "모니터링·측정"
+},
+{
+"en": "mass balance methodology",
+"abbr": "",
+"ko": "물질수지법",
+"alt": "",
+"note": "투입·산출 물질의 탄소 수지로 배출량을 구하는 방법",
+"article": "배출량 산정방법 이행규정 부속서 II · G3 p.61",
+"category": "모니터링·측정"
+},
+{
+"en": "measurement-based approach",
+"abbr": "",
+"ko": "측정 기반 방법",
+"alt": "",
+"note": "배출가스 농도·유량을 연속 측정해 배출량을 정하는 방법",
+"article": "배출량 산정방법 이행규정 부속서 II · G3 p.61",
+"category": "모니터링·측정"
+},
+{
+"en": "continuous emission measurement",
+"abbr": "CEM",
+"ko": "연속측정방법",
+"alt": "연속배출측정",
+"note": "굴뚝에 설치한 기기로 배출가스를 연속 측정하는 일련의 작업",
+"article": "G1 p.27",
+"category": "모니터링·측정"
+},
+{
+"en": "continuous emission measurement system",
+"abbr": "CEMS",
+"ko": "굴뚝자동측정기기",
+"alt": "연속배출측정시스템",
+"note": "연속측정에 쓰는 측정기기 일체. CBAM에서는 CO₂ 이송 배관 측정에도 쓰여 국내 '굴뚝자동측정기기'보다 범위가 넓음",
+"article": "G1 약어표",
+"category": "모니터링·측정"
+},
+{
+"en": "process emissions",
+"abbr": "",
+"ko": "공정배출",
+"alt": "공정배출량",
+"note": "연소 외의 화학반응·물질 변환에서 나오는 온실가스 배출",
+"article": "G1 p.31",
+"category": "모니터링·측정"
+},
+{
+"en": "combustion emissions",
+"abbr": "",
+"ko": "연소배출",
+"alt": "연소배출량",
+"note": "연료와 산소의 발열 반응에서 나오는 온실가스 배출",
+"article": "G1 p.26",
+"category": "모니터링·측정"
+},
+{
+"en": "fugitive emissions",
+"abbr": "",
+"ko": "탈루배출",
+"alt": "탈루배출량",
+"note": "위치를 특정하기 어렵거나 너무 작아 개별 모니터링이 어려운 불규칙·비의도적 배출",
+"article": "G1 p.29",
+"category": "모니터링·측정"
+},
+{
+"en": "uncertainty",
+"abbr": "",
+"ko": "불확도",
+"alt": "",
+"note": "측정·결정 결과에 합리적으로 귀속될 수 있는 값의 분산(95% 신뢰구간, %)",
+"article": "G1 p.32",
+"category": "모니터링·측정"
+},
+{
+"en": "accuracy",
+"abbr": "",
+"ko": "정확도",
+"alt": "",
+"note": "측정 결과와 참값의 일치 정도",
+"article": "G1 p.25",
+"category": "모니터링·측정"
+},
+{
+"en": "calibration",
+"abbr": "",
+"ko": "교정",
+"alt": "",
+"note": "측정기기 지시값과 표준값의 관계를 확립하는 작업. 국내 배출권거래제 실무는 '검·교정'으로도 씀",
+"article": "G1 p.26",
+"category": "모니터링·측정"
+},
+{
+"en": "measuring instrument",
+"abbr": "",
+"ko": "측정기기",
+"alt": "",
+"note": "측정에 쓰는 기기(법정계량기 포함)",
+"article": "G3 p.30",
+"category": "모니터링·측정"
+},
+{
+"en": "measurement point",
+"abbr": "",
+"ko": "측정지점",
+"alt": "",
+"note": "연속측정을 하는 배출원이나 배관 단면",
+"article": "G1 p.30",
+"category": "모니터링·측정"
+},
+{
+"en": "heat meter",
+"abbr": "",
+"ko": "적산열량계",
+"alt": "",
+"note": "유량과 온도로 열에너지량을 측정·기록하는 계량기",
+"article": "G1 p.29",
+"category": "모니터링·측정"
+},
+{
+"en": "data gap",
+"abbr": "",
+"ko": "누락데이터",
+"alt": "결측",
+"note": "측정·기록이 빠진 데이터. 보수적 추정으로 메워야 함",
+"article": "G3 p.113",
+"category": "모니터링·측정"
+},
+{
+"en": "proxy data",
+"abbr": "",
+"ko": "대체 데이터",
+"alt": "",
+"note": "누락된 데이터 세트를 대신하는 근거 있는 연간 값",
+"article": "G1 p.31",
+"category": "모니터링·측정"
+},
+{
+"en": "risk assessment (operator)",
+"abbr": "",
+"ko": "위험평가",
+"alt": "",
+"note": "사업자가 데이터 흐름의 오류 위험을 평가하는 것. 검증기관의 risk analysis는 '리스크 분석'",
+"article": "G3 p.59",
+"category": "모니터링·측정"
+},
+{
+"en": "sampling",
+"abbr": "",
+"ko": "시료채취",
+"alt": "",
+"note": "연료·물질 분석을 위한 시료채취",
+"article": "G3 p.74",
+"category": "모니터링·측정"
+},
+{
+"en": "sampling plan",
+"abbr": "",
+"ko": "시료채취 계획",
+"alt": "",
+"note": "시료채취 방법·빈도를 정한 계획",
+"article": "G3 p.52",
+"category": "모니터링·측정"
+},
+{
+"en": "standard conditions",
+"abbr": "",
+"ko": "표준상태",
+"alt": "",
+"note": "온도 273.15 K, 압력 101,325 Pa(Nm³의 기준 상태)",
+"article": "G1 p.32",
+"category": "모니터링·측정"
+},
+{
+"en": "tier (Korean ETS)",
+"abbr": "",
+"ko": "산정등급(Tier)",
+"alt": "",
+"note": "국내 배출권거래제의 산정 방법 수준. CBAM은 Tier 대신 최소 요건·권장 개선사항 체계",
+"article": "",
+"category": "모니터링·측정"
+},
+{
+"en": "biomass",
+"abbr": "",
+"ko": "바이오매스",
+"alt": "",
+"note": "RED II 정의에 따른 생물 기원 물질(바이오액체·바이오연료·바이오가스 포함)",
+"article": "G1 p.25",
+"category": "모니터링·측정"
+},
+{
+"en": "fossil carbon",
+"abbr": "",
+"ko": "화석탄소",
+"alt": "",
+"note": "바이오매스가 아닌 무기·유기 탄소",
+"article": "G1 p.29",
+"category": "모니터링·측정"
+},
+{
+"en": "monitoring, reporting and verification",
+"abbr": "MRV",
+"ko": "모니터링·보고·검증",
+"alt": "",
+"note": "배출량 모니터링·보고·검증 체계",
+"article": "G1 약어표",
+"category": "모니터링·측정"
+},
+{
+"en": "measurable heat",
+"abbr": "",
+"ko": "측정가능열",
+"alt": "",
+"note": "배관·덕트로 열매체(증기·온수 등)가 운반하는 순 열흐름으로 적산열량계를 달 수 있는 것",
+"article": "G1 p.30",
+"category": "열·전력·폐가스"
+},
+{
+"en": "non-measurable heat",
+"abbr": "",
+"ko": "측정불가능열",
+"alt": "",
+"note": "측정가능열이 아닌 모든 열",
+"article": "G1 p.30",
+"category": "열·전력·폐가스"
+},
+{
+"en": "waste gas",
+"abbr": "",
+"ko": "폐가스",
+"alt": "",
+"note": "공정에서 생긴, 불완전 산화 탄소를 포함한 가스(예: 고로가스). 국내 철강업계는 '부생가스'라 부름",
+"article": "G1 p.33",
+"category": "열·전력·폐가스"
+},
+{
+"en": "by-product gas (industry usage)",
+"abbr": "",
+"ko": "부생가스",
+"alt": "",
+"note": "국내 철강업계의 고로가스·코크스로가스·전로가스 총칭. CBAM 원문의 'waste gas'를 해설할 때 병기",
+"article": "",
+"category": "열·전력·폐가스"
+},
+{
+"en": "emission factor for electricity",
+"abbr": "",
+"ko": "전력배출계수",
+"alt": "",
+"note": "제품 생산에 쓴 전력의 배출집약도(t CO₂/MWh)",
+"article": "G1 p.28",
+"category": "열·전력·폐가스"
+},
+{
+"en": "power purchase agreement",
+"abbr": "PPA",
+"ko": "전력구매계약",
+"alt": "",
+"note": "발전사업자로부터 전력을 직접 사기로 한 계약",
+"article": "CBAM 규정 부속서 IV 제1항 · G1 p.31",
+"category": "열·전력·폐가스"
+},
+{
+"en": "transmission system operator",
+"abbr": "TSO",
+"ko": "송전망 운영자",
+"alt": "송전계통운영자",
+"note": "전력 송전계통을 운영하는 자(지침(EU) 2019/944)",
+"article": "CBAM 규정 부속서 IV 제1항 · G5d p.65",
+"category": "열·전력·폐가스"
+},
+{
+"en": "electricity in transit",
+"abbr": "",
+"ko": "경유 전력",
+"alt": "",
+"note": "EU를 거쳐 역외로 가는 전력(CBAM 신고 대상 아님)",
+"article": "",
+"category": "열·전력·폐가스"
+},
+{
+"en": "market coupling",
+"abbr": "",
+"ko": "시장 커플링",
+"alt": "시장결합",
+"note": "제3국 전력시장이 EU 역내시장과 통합된 상태(전력 수입 면제 조건)",
+"article": "CBAM 규정 제2조(7) · G1 p.24",
+"category": "열·전력·폐가스"
+},
+{
+"en": "interconnector",
+"abbr": "",
+"ko": "연계선",
+"alt": "연계선로",
+"note": "국가 간 송전 연결선",
+"article": "G5f p.9",
+"category": "열·전력·폐가스"
+},
+{
+"en": "combined heat and power",
+"abbr": "CHP",
+"ko": "열병합발전",
+"alt": "",
+"note": "열과 전력을 함께 생산하는 방식 또는 그 발전 시설",
+"article": "G1 약어표",
+"category": "열·전력·폐가스"
+},
+{
+"en": "carbon capture and storage / utilisation",
+"abbr": "CCS / CCU(S)",
+"ko": "탄소 포집·저장",
+"alt": "탄소 포집·활용",
+"note": "CO₂를 포집해 지중 저장하거나 제품에 활용하는 기술",
+"article": "G1 약어표",
+"category": "열·전력·폐가스"
+},
+{
+"en": "verification",
+"abbr": "",
+"ko": "검증",
+"alt": "",
+"note": "인정받은 검증기관이 사업자의 배출량 데이터·보고서를 확인하는 것",
+"article": "CBAM 규정 제8조 · 검증 원칙 이행규정(EU) 2025/2546",
+"category": "검증·인정"
+},
+{
+"en": "verifier",
+"abbr": "",
+"ko": "검증기관",
+"alt": "",
+"note": "CBAM 검증을 수행하는 법인. 개인 심사원은 '검증심사원'(ISO 14065 용어표의 verifier)",
+"article": "CBAM 규정 제18조",
+"category": "검증·인정"
+},
+{
+"en": "accredited verifier",
+"abbr": "",
+"ko": "인정받은 검증기관",
+"alt": "공인 검증기관",
+"note": "EU 회원국 국가인정기구의 인정을 받은 검증기관",
+"article": "CBAM 규정 제8조·제18조 · G1 p.12",
+"category": "검증·인정"
+},
+{
+"en": "verification report",
+"abbr": "",
+"ko": "검증보고서",
+"alt": "",
+"note": "검증기관이 CBAM 등록부에서 작성하는 보고서(핵심은 검증의견)",
+"article": "검증 원칙 이행규정 · G1 p.17",
+"category": "검증·인정"
+},
+{
+"en": "verification opinion / verification statement",
+"abbr": "",
+"ko": "검증의견",
+"alt": "검증의견서",
+"note": "데이터에 대한 검증기관의 결론. 실제값을 쓰려면 긍정적 검증의견이 필요",
+"article": "검증 원칙 이행규정 · G1 p.17",
+"category": "검증·인정"
+},
+{
+"en": "reasonable assurance",
+"abbr": "",
+"ko": "합리적 보증",
+"alt": "",
+"note": "검증 결론을 적극적 형태로 표명하는 높은 수준의 보증",
+"article": "검증 원칙 이행규정",
+"category": "검증·인정"
+},
+{
+"en": "level of assurance",
+"abbr": "",
+"ko": "보증 수준",
+"alt": "",
+"note": "검증기관이 결론에 대해 제공하는 확신의 정도(합리적·제한적)",
+"article": "",
+"category": "검증·인정"
+},
+{
+"en": "materiality",
+"abbr": "",
+"ko": "중요성",
+"alt": "",
+"note": "오류가 의사결정에 영향을 줄 만큼 큰지를 따지는 개념",
+"article": "",
+"category": "검증·인정"
+},
+{
+"en": "materiality level",
+"abbr": "",
+"ko": "중요성 기준",
+"alt": "",
+"note": "오류를 중요한 것으로 보는 양적 기준(백분율)",
+"article": "검증 원칙 이행규정",
+"category": "검증·인정"
+},
+{
+"en": "material misstatement",
+"abbr": "",
+"ko": "중요한 오류",
+"alt": "",
+"note": "중요성 기준을 넘는 오류. 반대는 '중요하지 않은 오류(non-material misstatement)'",
+"article": "검증 원칙 이행규정 · G3 p.60",
+"category": "검증·인정"
+},
+{
+"en": "non-conformity",
+"abbr": "",
+"ko": "부적합",
+"alt": "부적합 사항",
+"note": "모니터링 방법론이 규칙에 맞지 않는 사항",
+"article": "검증 원칙 이행규정 · G1 p.17",
+"category": "검증·인정"
+},
+{
+"en": "site visit",
+"abbr": "",
+"ko": "현장검증",
+"alt": "",
+"note": "검증기관이 현장을 방문해 데이터와 측정 설비를 직접 확인하는 활동. 첫 검증 때는 필수이고, 그 뒤에는 조건에 따라 원격 수행·면제 가능(원칙적으로 2년에 한 번 이상 방문)",
+"article": "검증 원칙 이행규정 · G1 p.16",
+"category": "검증·인정"
+},
+{
+"en": "risk analysis (verifier)",
+"abbr": "",
+"ko": "리스크 분석",
+"alt": "",
+"note": "검증기관이 오류 위험을 분석해 검증 계획을 세우는 단계",
+"article": "G1 p.17",
+"category": "검증·인정"
+},
+{
+"en": "verification plan",
+"abbr": "",
+"ko": "검증계획",
+"alt": "",
+"note": "현장 확인 사항, 질문, 데이터 표본 선정 등을 담은 계획",
+"article": "G1 p.17",
+"category": "검증·인정"
+},
+{
+"en": "accreditation",
+"abbr": "",
+"ko": "인정",
+"alt": "",
+"note": "국가인정기구가 검증기관의 적격성을 공식 확인하는 것",
+"article": "CBAM 규정 제18조 · 인정·검증 요건 위임규정(EU) 2025/2551",
+"category": "검증·인정"
+},
+{
+"en": "national accreditation body",
+"abbr": "NAB",
+"ko": "국가인정기구",
+"alt": "",
+"note": "회원국별 인정기구(EU 역내 기구만 CBAM 인정 가능)",
+"article": "CBAM 규정 제18조 · G2 p.16",
+"category": "검증·인정"
+},
+{
+"en": "accreditation certificate",
+"abbr": "",
+"ko": "인정서",
+"alt": "",
+"note": "인정기구가 발급하는 인정 증명 문서",
+"article": "G1 p.16",
+"category": "검증·인정"
+},
+{
+"en": "lead auditor (team leader)",
+"abbr": "",
+"ko": "검증팀장",
+"alt": "",
+"note": "검증팀을 이끄는 검증심사원",
+"article": "인정·검증 요건 위임규정",
+"category": "검증·인정"
+},
+{
+"en": "technical expert",
+"abbr": "",
+"ko": "기술전문가",
+"alt": "",
+"note": "검증 대상 분야의 전문지식을 제공하는 사람",
+"article": "인정·검증 요건 위임규정",
+"category": "검증·인정"
+},
+{
+"en": "impartiality",
+"abbr": "",
+"ko": "공평성",
+"alt": "",
+"note": "이해상충 없이 객관적으로 검증하는 것",
+"article": "인정·검증 요건 위임규정 · G1 p.17",
+"category": "검증·인정"
+},
+{
+"en": "competence",
+"abbr": "",
+"ko": "적격성",
+"alt": "",
+"note": "지식과 기술을 적용해 의도한 결과를 내는 능력",
+"article": "인정·검증 요건 위임규정",
+"category": "검증·인정"
+},
+{
+"en": "validation",
+"abbr": "",
+"ko": "타당성평가",
+"alt": "",
+"note": "미래 시점 주장(계획)을 평가하는 적합성평가. 이미 일어난 데이터를 확인하는 '검증'과 구분",
+"article": "",
+"category": "검증·인정"
+},
+{
+"en": "ISO/IEC 17029",
+"abbr": "",
+"ko": "적합성평가 — 계획검증 및 결과검증 기관에 대한 일반 원칙과 요구사항(KS Q ISO/IEC 17029)",
+"alt": "",
+"note": "계획검증(타당성평가)·결과검증(검증) 기관 일반 요구사항 표준. 국립환경과학원 고시 표기는 '적합성평가 - 타당성평가 및 검증 기관에 대한 일반 원칙과 요구사항'",
+"article": "",
+"category": "검증·인정"
+},
+{
+"en": "ISO 14065",
+"abbr": "",
+"ko": "환경 정보 계획검증 및 결과검증 기관에 관한 일반원칙 및 요구사항(KS I ISO 14065)",
+"alt": "",
+"note": "환경정보(온실가스 포함) 검증기관 요구사항 표준. 국립환경과학원 고시 표기는 '환경정보 – 환경정보 타당성평가 및 검증 기관에 관한 일반 원칙 및 요구사항'",
+"article": "",
+"category": "검증·인정"
+},
+{
+"en": "ISO 14064-3",
+"abbr": "",
+"ko": "온실가스 – 제3부: 온실가스 성명서에 대한 타당성평가 및 검증을 위한 사용 규칙 및 지침",
+"alt": "",
+"note": "온실가스 성명서 검증 지침 표준",
+"article": "",
+"category": "검증·인정"
+},
+{
+"en": "pre-verification",
+"abbr": "",
+"ko": "사전검증",
+"alt": "",
+"note": "정식 검증 전에 모니터링 계획·데이터를 미리 점검하는 서비스(법령 용어 아님)",
+"article": "",
+"category": "검증·인정"
+},
+{
+"en": "inherent risk / control risk / detection risk",
+"abbr": "",
+"ko": "고유리스크",
+"alt": "통제리스크, 검출리스크",
+"note": "검증기관 리스크 분석의 세 요소",
+"article": "검증 원칙 이행규정",
+"category": "검증·인정"
+},
+{
+"en": "uncorrected misstatement",
+"abbr": "",
+"ko": "미수정된 오류",
+"alt": "",
+"note": "검증이 끝날 때까지 고쳐지지 않은 오류(검증의견 결정에 반영)",
+"article": "검증 원칙 이행규정",
+"category": "검증·인정"
+},
+{
+"en": "data sampling plan (verifier)",
+"abbr": "",
+"ko": "데이터 샘플링 계획",
+"alt": "",
+"note": "검증기관이 확인할 데이터 표본을 뽑는 계획",
+"article": "검증 원칙 이행규정",
+"category": "검증·인정"
+},
+{
+"en": "verification team",
+"abbr": "",
+"ko": "검증팀",
+"alt": "검증심사팀",
+"note": "검증을 수행하는 검증심사원 집단",
+"article": "인정·검증 요건 위임규정",
+"category": "검증·인정"
+},
+{
+"en": "carbon price",
+"abbr": "",
+"ko": "탄소가격",
+"alt": "",
+"note": "제3국 탄소감축 제도에 따라 세금·부과금·배출권 형태로 지불한 금액",
+"article": "CBAM 규정 제3조 · G1 p.26",
+"category": "탄소가격·무상할당"
+},
+{
+"en": "carbon price effectively paid",
+"abbr": "",
+"ko": "실질적으로 지불된 탄소가격",
+"alt": "기지불 탄소가격",
+"note": "원산지 등 제3국에서 환급·보상을 뺀 뒤 실제로 부담한 탄소가격. 인증서 차감 근거",
+"article": "CBAM 규정 제9조 · G1 p.12–13",
+"category": "탄소가격·무상할당"
+},
+{
+"en": "reduction (deduction) of CBAM certificates",
+"abbr": "",
+"ko": "차감",
+"alt": "",
+"note": "무상할당 조정이나 지불 탄소가격만큼 제출할 인증서 수를 줄이는 것",
+"article": "CBAM 규정 제9조·제31조",
+"category": "탄소가격·무상할당"
+},
+{
+"en": "rebate",
+"abbr": "",
+"ko": "환급",
+"alt": "환급금",
+"note": "탄소가격 지불 의무자가 낸(낼) 금액을 줄여 주는 금전 등",
+"article": "CBAM 규정 제3조 · G1 p.31",
+"category": "탄소가격·무상할당"
+},
+{
+"en": "carbon pricing / carbon pricing system",
+"abbr": "",
+"ko": "탄소가격제",
+"alt": "탄소가격제도",
+"note": "탄소 배출에 가격을 매기는 제도(탄소세·배출권거래제)",
+"article": "",
+"category": "탄소가격·무상할당"
+},
+{
+"en": "free allocation",
+"abbr": "",
+"ko": "무상할당",
+"alt": "",
+"note": "EU ETS 배출권을 무상으로 나눠 주는 것. CBAM 도입에 맞춰 단계적으로 폐지",
+"article": "CBAM 규정 제31조",
+"category": "탄소가격·무상할당"
+},
+{
+"en": "free allocation adjustment",
+"abbr": "",
+"ko": "무상할당 조정",
+"alt": "",
+"note": "EU 생산자가 받았을 무상할당만큼 CBAM 의무를 줄이는 조정(무상할당의 조정 이행규정 = 이행규정(EU) 2025/2620)",
+"article": "CBAM 규정 제31조 · G1 p.11",
+"category": "탄소가격·무상할당"
+},
+{
+"en": "CBAM benchmark",
+"abbr": "",
+"ko": "CBAM 벤치마크",
+"alt": "",
+"note": "무상할당 조정에 쓰는 제품별 기준 배출집약도. 공정 관련 CBAM 벤치마크(A열)와 기본 CBAM 벤치마크(B열)가 있음",
+"article": "무상할당의 조정 이행규정 부속서 · G4 p.8–9",
+"category": "탄소가격·무상할당"
+},
+{
+"en": "CBAM factor",
+"abbr": "",
+"ko": "CBAM 계수",
+"alt": "",
+"note": "무상할당 단계적 폐지를 반영하는 연도별 계수(2026년 97.5% → 2034년 0%)",
+"article": "EU ETS 지침 제10a조(1a) · G4 p.7",
+"category": "탄소가격·무상할당"
+},
+{
+"en": "specific embedded free allocation",
+"abbr": "SEFA",
+"ko": "고유 내재무상할당량",
+"alt": "",
+"note": "제품 1톤당 무상할당 조정분. 'embedded free allocation'(내재무상할당량)을 제품 1톤 기준으로 나타낸 값",
+"article": "무상할당의 조정 이행규정 · G1 p.14",
+"category": "탄소가격·무상할당"
+},
+{
+"en": "EU Emissions Trading System",
+"abbr": "EU ETS",
+"ko": "EU 배출권거래제",
+"alt": "",
+"note": "지침 2003/87/EC에 따른 EU 역내 배출권거래제(항공 제외)",
+"article": "지침 2003/87/EC · G1 p.29",
+"category": "탄소가격·무상할당"
+},
+{
+"en": "emissions trading system",
+"abbr": "ETS",
+"ko": "배출권거래제",
+"alt": "",
+"note": "배출 한도 안에서 배출권을 사고파는 제도(일반 명칭)",
+"article": "G1 약어표",
+"category": "탄소가격·무상할당"
+},
+{
+"en": "EU ETS allowance",
+"abbr": "EUA",
+"ko": "EU 배출권",
+"alt": "EU ETS 배출권",
+"note": "EU ETS에서 거래되는 배출권(CO₂e 1톤)",
+"article": "지침 2003/87/EC 제3조(a) · G1 p.29",
+"category": "탄소가격·무상할당"
+},
+{
+"en": "auction / auction clearing price",
+"abbr": "",
+"ko": "경매",
+"alt": "경매 낙찰가격",
+"note": "EU ETS 배출권 경매. CBAM 인증서 가격은 경매 낙찰가 평균으로 정함",
+"article": "",
+"category": "탄소가격·무상할당"
+},
+{
+"en": "weekly average price (quarterly average in 2026)",
+"abbr": "",
+"ko": "주간 평균가격",
+"alt": "분기별 평균가격",
+"note": "인증서 가격 산정 기준. 2026년분은 분기 평균, 2027년부터 주간 평균",
+"article": "CBAM 규정 제21조",
+"category": "탄소가격·무상할당"
+},
+{
+"en": "benchmark",
+"abbr": "BM",
+"ko": "벤치마크",
+"alt": "",
+"note": "EU ETS 무상할당 기준 배출집약도(효율 상위 10% 사업장 평균)",
+"article": "",
+"category": "탄소가격·무상할당"
+},
+{
+"en": "fallback approach (heat · fuel benchmark)",
+"abbr": "",
+"ko": "대체 벤치마크(열·연료 벤치마크)",
+"alt": "대체 접근법",
+"note": "제품 벤치마크가 없을 때 열·연료 소비량으로 할당하는 방식",
+"article": "위임규정(EU) 2019/331 · G4 p.6",
+"category": "탄소가격·무상할당"
+},
+{
+"en": "sub-installation",
+"abbr": "",
+"ko": "하위사업장",
+"alt": "",
+"note": "EU ETS 무상할당 산정을 위해 사업장을 벤치마크별로 나눈 단위",
+"article": "위임규정(EU) 2019/331 · G4 p.7",
+"category": "탄소가격·무상할당"
+},
+{
+"en": "phase-out (of free allocation)",
+"abbr": "",
+"ko": "단계적 폐지",
+"alt": "",
+"note": "2026~2034년에 무상할당을 줄여 없애는 것. 과정을 서술할 때는 '단계적 축소'도 씀",
+"article": "CBAM 규정 제31조 · G1 p.6",
+"category": "탄소가격·무상할당"
+},
+{
+"en": "phase-in (of CBAM)",
+"abbr": "",
+"ko": "단계적 도입",
+"alt": "",
+"note": "무상할당 폐지에 맞춰 CBAM 의무를 늘려 가는 것",
+"article": "G1 p.6",
+"category": "탄소가격·무상할당"
+},
+{
+"en": "linking (of ETS) / linked ETS",
+"abbr": "",
+"ko": "연계",
+"alt": "연계된 배출권거래제",
+"note": "EU ETS와 완전히 연계된 제3국 배출권거래제(예: 스위스). 해당 국가 제품은 CBAM 면제",
+"article": "CBAM 규정 제2조(6) · G1 p.23",
+"category": "탄소가격·무상할당"
+},
+{
+"en": "default carbon price",
+"abbr": "",
+"ko": "기본 탄소가격",
+"alt": "",
+"note": "집행위원회가 국가(·제품)별로 정하는 지불 탄소가격 기본값(2027년부터). 배출량 '기본값'과 다른 개념",
+"article": "CBAM 규정 제9조",
+"category": "탄소가격·무상할당"
+},
+{
+"en": "carbon cost",
+"abbr": "",
+"ko": "탄소비용",
+"alt": "",
+"note": "탄소가격 부담으로 생기는 비용(가격 자체와 구분)",
+"article": "",
+"category": "탄소가격·무상할당"
+},
+{
+"en": "clinker",
+"abbr": "",
+"ko": "클링커",
+"alt": "",
+"note": "시멘트 원료를 소성해 만든 중간제품(회색·백색 클링커)",
+"article": "G5a",
+"category": "업종 기술용어"
+},
+{
+"en": "cement kiln dust",
+"abbr": "CKD",
+"ko": "시멘트 킬른먼지",
+"alt": "",
+"note": "시멘트 소성로에서 배출·회수되는 분진",
+"article": "G5a · G1 약어표",
+"category": "업종 기술용어"
+},
+{
+"en": "aluminous cement",
+"abbr": "",
+"ko": "알루미나 시멘트",
+"alt": "",
+"note": "산화알루미늄 함량이 높은 특수 시멘트",
+"article": "CBAM 규정 부속서 I",
+"category": "업종 기술용어"
+},
+{
+"en": "kiln",
+"abbr": "",
+"ko": "소성로(킬른)",
+"alt": "",
+"note": "원료를 고온에서 굽는 설비(시멘트는 로터리 킬른). 법령의 시설명은 '소성시설'",
+"article": "G5a",
+"category": "업종 기술용어"
+},
+{
+"en": "raw meal",
+"abbr": "",
+"ko": "조합원료",
+"alt": "",
+"note": "소성로에 넣는 분쇄·혼합 원료",
+"article": "G3 p.55",
+"category": "업종 기술용어"
+},
+{
+"en": "blast furnace",
+"abbr": "",
+"ko": "고로",
+"alt": "",
+"note": "철광석을 환원해 선철을 만드는 노(용광로와 같은 뜻)",
+"article": "G5d",
+"category": "업종 기술용어"
+},
+{
+"en": "blast furnace gas",
+"abbr": "BFG",
+"ko": "고로가스",
+"alt": "",
+"note": "고로에서 나오는 부생가스(CBAM의 폐가스)",
+"article": "G5d · G1 약어표",
+"category": "업종 기술용어"
+},
+{
+"en": "basic oxygen furnace",
+"abbr": "BOF",
+"ko": "전로",
+"alt": "순산소 전로",
+"note": "용선에 산소를 불어 강을 만드는 노(LD 전로)",
+"article": "G5d · G1 약어표",
+"category": "업종 기술용어"
+},
+{
+"en": "basic oxygen furnace gas",
+"abbr": "BOFG",
+"ko": "전로가스",
+"alt": "",
+"note": "전로에서 나오는 부생가스. 업계 약칭은 LDG",
+"article": "G5d · G1 약어표",
+"category": "업종 기술용어"
+},
+{
+"en": "coke oven gas",
+"abbr": "COG",
+"ko": "코크스로가스",
+"alt": "",
+"note": "코크스로에서 나오는 부생가스",
+"article": "G5d · G1 약어표",
+"category": "업종 기술용어"
+},
+{
+"en": "coke oven",
+"abbr": "",
+"ko": "코크스로",
+"alt": "",
+"note": "석탄을 건류해 코크스를 만드는 설비",
+"article": "G5d",
+"category": "업종 기술용어"
+},
+{
+"en": "electric arc furnace",
+"abbr": "EAF",
+"ko": "전기로",
+"alt": "",
+"note": "전기 아크로 철스크랩·직접환원철을 녹여 강을 만드는 노. 법령 표기는 '전기아크로'",
+"article": "G5d · G1 약어표",
+"category": "업종 기술용어"
+},
+{
+"en": "direct reduced iron",
+"abbr": "DRI",
+"ko": "직접환원철",
+"alt": "",
+"note": "철광석을 녹이지 않고 환원한 철(전기로 원료)",
+"article": "G5d · G1 약어표",
+"category": "업종 기술용어"
+},
+{
+"en": "hot briquetted iron",
+"abbr": "HBI",
+"ko": "HBI(고온 브리켓 철)",
+"alt": "",
+"note": "직접환원철을 고온에서 압축 성형한 것. 업계는 약어 HBI를 그대로 씀",
+"article": "G5d · G1 약어표",
+"category": "업종 기술용어"
+},
+{
+"en": "pig iron",
+"abbr": "",
+"ko": "선철",
+"alt": "",
+"note": "고로에서 생산된 철(제강 원료)",
+"article": "G5d",
+"category": "업종 기술용어"
+},
+{
+"en": "hot metal",
+"abbr": "",
+"ko": "용선",
+"alt": "",
+"note": "녹은 상태의 선철(쇳물)",
+"article": "G4 p.6",
+"category": "업종 기술용어"
+},
+{
+"en": "nickel pig iron",
+"abbr": "NPI",
+"ko": "니켈선철",
+"alt": "",
+"note": "니켈을 함유한 선철(스테인리스 원료)",
+"article": "G5d · G1 약어표",
+"category": "업종 기술용어"
+},
+{
+"en": "sinter (sintered ore)",
+"abbr": "",
+"ko": "소결광",
+"alt": "",
+"note": "분광을 구워 덩어리로 만든 고로 원료",
+"article": "G4 p.8",
+"category": "업종 기술용어"
+},
+{
+"en": "pellets",
+"abbr": "",
+"ko": "펠렛",
+"alt": "펠릿",
+"note": "분광을 구형으로 만든 고로·직접환원 원료",
+"article": "G5d",
+"category": "업종 기술용어"
+},
+{
+"en": "ferro-alloys",
+"abbr": "",
+"ko": "합금철",
+"alt": "",
+"note": "망간·크롬·니켈 등을 철과 합금한 제강 첨가재",
+"article": "G5d",
+"category": "업종 기술용어"
+},
+{
+"en": "crude steel",
+"abbr": "",
+"ko": "조강",
+"alt": "",
+"note": "제강 공정에서 나온 압연 전 강(통계 기준)",
+"article": "G3 p.39",
+"category": "업종 기술용어"
+},
+{
+"en": "iron and steel scrap",
+"abbr": "",
+"ko": "철스크랩",
+"alt": "",
+"note": "제강 원료로 쓰는 고철",
+"article": "G5d",
+"category": "업종 기술용어"
+},
+{
+"en": "unwrought aluminium",
+"abbr": "",
+"ko": "미가공 알루미늄",
+"alt": "알루미늄괴",
+"note": "가공 전 알루미늄(괴·잉곳, CN 7601)",
+"article": "G3 p.39",
+"category": "업종 기술용어"
+},
+{
+"en": "primary aluminium",
+"abbr": "",
+"ko": "1차 알루미늄",
+"alt": "",
+"note": "알루미나를 전해 환원해 만든 알루미늄",
+"article": "G4 p.6",
+"category": "업종 기술용어"
+},
+{
+"en": "secondary aluminium",
+"abbr": "",
+"ko": "2차 알루미늄",
+"alt": "",
+"note": "스크랩 등을 재용해해 만든 알루미늄",
+"article": "G5e",
+"category": "업종 기술용어"
+},
+{
+"en": "perfluorocarbons",
+"abbr": "PFCs",
+"ko": "과불화탄소",
+"alt": "",
+"note": "알루미늄 생산에서 나오는 CF₄·C₂F₆ 등 온실가스",
+"article": "G1 약어표",
+"category": "업종 기술용어"
+},
+{
+"en": "ammonia",
+"abbr": "",
+"ko": "암모니아",
+"alt": "",
+"note": "비료 업종 CBAM 대상 제품·전구물질",
+"article": "G5c",
+"category": "업종 기술용어"
+},
+{
+"en": "nitric acid",
+"abbr": "",
+"ko": "질산",
+"alt": "",
+"note": "비료 업종 CBAM 대상 제품. 생산 시 N₂O 배출",
+"article": "G5c",
+"category": "업종 기술용어"
+},
+{
+"en": "urea",
+"abbr": "",
+"ko": "요소",
+"alt": "",
+"note": "질소 비료 원료·제품",
+"article": "G5c",
+"category": "업종 기술용어"
+},
+{
+"en": "ammonium nitrate",
+"abbr": "",
+"ko": "질산암모늄",
+"alt": "",
+"note": "질소 비료 제품",
+"article": "G3 p.40",
+"category": "업종 기술용어"
+},
+{
+"en": "nitrous oxide",
+"abbr": "N₂O",
+"ko": "아산화질소",
+"alt": "",
+"note": "질산·비료 생산에서 나오는 온실가스",
+"article": "CBAM 규정 부속서 I",
+"category": "업종 기술용어"
+},
+{
+"en": "steam methane reforming",
+"abbr": "SMR",
+"ko": "스팀개질",
+"alt": "메탄 수증기 개질",
+"note": "천연가스와 수증기로 수소를 만드는 공정",
+"article": "G5b",
+"category": "업종 기술용어"
+},
+{
+"en": "water electrolysis",
+"abbr": "",
+"ko": "수전해",
+"alt": "",
+"note": "물을 전기분해해 수소를 만드는 공정",
+"article": "G3 p.113 · G5b",
+"category": "업종 기술용어"
+},
+{
+"en": "partial oxidation",
+"abbr": "",
+"ko": "부분산화",
+"alt": "",
+"note": "탄화수소를 산소와 일부만 반응시켜 수소를 만드는 공정",
+"article": "G5b",
+"category": "업종 기술용어"
+},
+{
+"en": "best available techniques",
+"abbr": "BAT",
+"ko": "최적가용기법",
+"alt": "",
+"note": "기술·경제적으로 가능한 최선의 환경 기법",
+"article": "G1 약어표",
+"category": "업종 기술용어"
+},
+{
+"en": "BAT reference documents",
+"abbr": "BREFs",
+"ko": "EU 최적가용기법 기준서",
+"alt": "",
+"note": "EU의 업종별 BAT 참조 문서. 국내 통합환경관리제도의 BAT 기준서와 다른 문서",
+"article": "G1 약어표",
+"category": "업종 기술용어"
+},
+{
+"en": "BAT conclusions",
+"abbr": "BATC",
+"ko": "최적가용기법 결정문",
+"alt": "",
+"note": "EU 최적가용기법 기준서(BREF) 가운데 법적 효력이 있는 결론 부분",
+"article": "",
+"category": "업종 기술용어"
+},
+{
+"en": "ferro-silicon / silico-manganese",
+"abbr": "FeSi / SiMn",
+"ko": "페로실리콘",
+"alt": "실리코망가니즈",
+"note": "합금철 품목",
+"article": "CBAM 규정 부속서 I",
+"category": "업종 기술용어"
+},
+{
+"en": "autothermal reforming",
+"abbr": "ATR",
+"ko": "자열개질",
+"alt": "",
+"note": "산소와 수증기를 함께 써 탄화수소를 개질하는 수소 생산 공정",
+"article": "",
+"category": "업종 기술용어"
+},
+{
+"en": "penalty",
+"abbr": "",
+"ko": "과징금",
+"alt": "",
+"note": "CBAM 의무 위반에 회원국이 부과하는 금전 제재(미제출 인증서 1장당 EU ETS 초과배출 과징금 수준)",
+"article": "CBAM 규정 제26조 · G1 p.21",
+"category": "제재·우회 방지"
+},
+{
+"en": "circumvention",
+"abbr": "",
+"ko": "우회",
+"alt": "우회행위",
+"note": "CBAM 의무를 피하려고 거래 형태·제품을 바꾸는 행위",
+"article": "CBAM 규정 제27조",
+"category": "제재·우회 방지"
+},
+{
+"en": "anti-circumvention",
+"abbr": "",
+"ko": "우회방지",
+"alt": "",
+"note": "우회 행위를 막는 규정·조치. 2025.12 개정안에 강화안 포함",
+"article": "CBAM 규정 제27조 · COM(2025) 989",
+"category": "제재·우회 방지"
+},
+{
+"en": "resource shuffling",
+"abbr": "",
+"ko": "셔플링",
+"alt": "",
+"note": "저탄소 생산분만 EU로 보내고 고탄소 생산분은 다른 시장으로 돌리는 우회 행태",
+"article": "",
+"category": "제재·우회 방지"
+},
+{
+"en": "downstream products (scope extension)",
+"abbr": "",
+"ko": "하류제품",
+"alt": "하류재, 다운스트림 제품",
+"note": "철강·알루미늄 가공제품 등으로 CBAM 대상을 넓히는 개정안의 대상(COM(2025) 989). 2026.10 기준 3자 협상 중으로 미확정",
+"article": "COM(2025) 989 · G5f p.7",
+"category": "개정 논의"
+},
+{
+"en": "extension of scope (product scope extension)",
+"abbr": "",
+"ko": "품목 확대",
+"alt": "적용 범위 확대",
+"note": "CBAM 대상 품목을 늘리는 개정",
+"article": "",
+"category": "개정 논의"
+},
+{
+"en": "Carbon footprint of products",
+"abbr": "CFP",
+"ko": "제품 탄소발자국",
+"alt": "",
+"note": "제품 전과정의 온실가스 배출량",
+"article": "G1 약어표",
+"category": "기관·일반 약어"
+},
+{
+"en": "European Economic Area",
+"abbr": "EEA",
+"ko": "유럽경제지역",
+"alt": "",
+"note": "EU 27개국과 아이슬란드·노르웨이·리히텐슈타인",
+"article": "G1 약어표",
+"category": "기관·일반 약어"
+},
+{
+"en": "European Free Trade Association",
+"abbr": "EFTA",
+"ko": "유럽자유무역연합",
+"alt": "",
+"note": "아이슬란드·리히텐슈타인·노르웨이·스위스의 자유무역연합. 국문본 약어표 원문은 'European Free Trade Area'로 오기",
+"article": "G1 약어표",
+"category": "기관·일반 약어"
+},
+{
+"en": "euro",
+"abbr": "EUR",
+"ko": "유로",
+"alt": "",
+"note": "EU 단일 통화",
+"article": "G1 약어표",
+"category": "기관·일반 약어"
+},
+{
+"en": "first-in-first-out principle",
+"abbr": "FIFO",
+"ko": "선입선출 원칙",
+"alt": "",
+"note": "먼저 들어온 재고를 먼저 쓴 것으로 보는 원칙(전구물질 배분 등)",
+"article": "G1 약어표",
+"category": "기관·일반 약어"
+},
+{
+"en": "International Energy Agency",
+"abbr": "IEA",
+"ko": "국제에너지기구",
+"alt": "",
+"note": "전력 기본 배출계수의 데이터 출처",
+"article": "G1 약어표",
+"category": "기관·일반 약어"
+},
+{
+"en": "International Organization for Standardization",
+"abbr": "ISO",
+"ko": "국제표준화기구",
+"alt": "",
+"note": "국제 표준 제정 기구",
+"article": "G1 약어표",
+"category": "기관·일반 약어"
+},
+{
+"en": "land use, land-use change and forestry",
+"abbr": "LULUCF",
+"ko": "토지이용, 토지이용변화 및 임업",
+"alt": "",
+"note": "바이오매스 지속가능성 기준에 쓰이는 토지 부문",
+"article": "G1 약어표",
+"category": "기관·일반 약어"
+},
+{
+"en": "megawatt-hour",
+"abbr": "MWh",
+"ko": "메가와트시",
+"alt": "",
+"note": "전력량 단위(전력 내재배출량의 기능단위)",
+"article": "G1 약어표",
+"category": "기관·일반 약어"
+},
+{
+"en": "Renewable Energy Directive (recast)",
+"abbr": "RED II",
+"ko": "재생에너지 지침",
+"alt": "",
+"note": "지침(EU) 2018/2001. 바이오매스 정의·지속가능성 기준의 근거",
+"article": "G1 약어표",
+"category": "기관·일반 약어"
+},
+{
+"en": "United Nations Code for Trade and Transport Locations",
+"abbr": "UN/LOCODE",
+"ko": "UN/LOCODE(유엔 무역·운송 위치코드)",
+"alt": "",
+"note": "사업장 소재지 등을 표시하는 국제 위치 코드",
+"article": "G1 약어표",
+"category": "기관·일반 약어"
+}
+]
+}

@@ -4,7 +4,7 @@
 """
 import sys
 
-from tools.collect import extract, feed, registry, state
+from tools.collect import extract, feed, pages, registry, state
 from tools.common.htmltext import decode
 from tools.common.jsonio import now_kst, read_json, stamp, today, write_json
 from tools.common.net import fetch, header, sha256_hex
@@ -24,6 +24,8 @@ def check_source(source, keywords, moment):
         return result, []
 
     html = decode(body, header(headers, "Content-Type"))
+    if source.get("tier") == "A":
+        pages.save_source_text(code, html, source["url"])
     found, counts = extract.entries(source, html, keywords)
     result.update({"ok": True, "bytes": len(body), "pageHash": sha256_hex(body)[:16], "counts": counts, "entries": len(found)})
 
@@ -53,6 +55,8 @@ def check_source(source, keywords, moment):
             item = {"id": feed.item_id(code, entry["key"]), "source": code, "kind": entry["kind"], "url": entry["url"], "text": entry["text"], "seenAt": stamp(moment)}
             if "cells" in entry:
                 item["cells"] = entry["cells"]
+            if source.get("tier") == "A":
+                item["textPath"] = pages.save_item_text(item) if entry["kind"] == "link" else pages.source_path(code)
             items.append(item)
     result["new"] = len(items)
     return result, items

@@ -1,0 +1,260 @@
+{
+ "builtAt": "2026-11-10T16:55:00+09:00",
+ "note": "seed-로 시작하는 항목은 2026-11-10에 원문을 두 번 읽고 자동 검증까지 통과시킨 초기 등록분이다.",
+ "items": [
+  {
+   "id": "seed-price-2026q3",
+   "published": "2026-10-05",
+   "listed": "2026-11-10",
+   "title": "2026년 3분기 CBAM 인증서 가격 82.32유로",
+   "summary": "EU 집행위원회는 2026년 3분기 CBAM 인증서 가격 82.32유로를 2026년 10월 5일에 게시했다.",
+   "impact": "",
+   "kind": "가격",
+   "importance": "높음",
+   "topics": [
+    "인증서 가격"
+   ],
+   "sourceCode": "ec-price",
+   "sourceName": "EC Price of CBAM Certificates",
+   "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en",
+   "checkedAt": "2026-11-10T15:05:00+09:00",
+   "authoring": "자동",
+   "price": {
+    "period": "2026년 3분기",
+    "value": "82.32",
+    "unit": "유로"
+   }
+  },
+  {
+   "id": "seed-price-2026q2",
+   "published": "2026-07-06",
+   "listed": "2026-11-10",
+   "title": "2026년 2분기 CBAM 인증서 가격 75.28유로",
+   "summary": "EU 집행위원회는 2026년 2분기 CBAM 인증서 가격 75.28유로를 2026년 7월 6일에 게시했다.",
+   "impact": "",
+   "kind": "가격",
+   "importance": "보통",
+   "topics": [
+    "인증서 가격"
+   ],
+   "sourceCode": "ec-price",
+   "sourceName": "EC Price of CBAM Certificates",
+   "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en",
+   "checkedAt": "2026-11-10T15:05:00+09:00",
+   "authoring": "자동",
+   "price": {
+    "period": "2026년 2분기",
+    "value": "75.28",
+    "unit": "유로"
+   }
+  },
+  {
+   "id": "seed-price-2026q1",
+   "published": "2026-04-07",
+   "listed": "2026-11-10",
+   "title": "2026년 1분기 CBAM 인증서 가격 75.36유로",
+   "summary": "EU 집행위원회는 2026년 1분기 CBAM 인증서 가격 75.36유로를 2026년 4월 7일에 게시했다.",
+   "impact": "",
+   "kind": "가격",
+   "importance": "보통",
+   "topics": [
+    "인증서 가격"
+   ],
+   "sourceCode": "ec-price",
+   "sourceName": "EC Price of CBAM Certificates",
+   "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en",
+   "checkedAt": "2026-11-10T15:05:00+09:00",
+   "authoring": "자동",
+   "price": {
+    "period": "2026년 1분기",
+    "value": "75.36",
+    "unit": "유로"
+   }
+  },
+  {
+   "id": "seed-price-2026q4-date",
+   "published": "",
+   "listed": "2026-11-10",
+   "title": "2026년 4분기 인증서 가격은 2027년 1월 4일 게시 예정",
+   "summary": "2026년 4분기 CBAM 인증서 가격은 아직 공개되지 않았고, 게시일은 2027년 1월 4일로 적혀 있다. EU 집행위원회는 2026년에 분기별 가격 네 개를 산정해 공개하고, 2027년부터는 주간 가격을 산정한다.",
+   "impact": "",
+   "kind": "가격",
+   "importance": "보통",
+   "topics": [
+    "인증서 가격",
+    "일정"
+   ],
+   "sourceCode": "ec-price",
+   "sourceName": "EC Price of CBAM Certificates",
+   "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en",
+   "checkedAt": "2026-11-10T15:05:00+09:00",
+   "authoring": "자동"
+  },
+  {
+   "id": "seed-news-electricity-guidance",
+   "published": "2026-10-22",
+   "listed": "2026-11-10",
+   "title": "수입 통합통관에 따른 전력 수입에 관한 새 가이던스",
+   "summary": "EU 집행위원회는 2026년 10월 22일에 수입 통합통관(Centralised Clearance for Import)에 따른 전력 수입에 관한 새 가이던스 소식을 올렸다.",
+   "impact": "",
+   "kind": "가이던스",
+   "importance": "보통",
+   "topics": [
+    "전력",
+    "가이던스"
+   ],
+   "sourceCode": "ec-news",
+   "sourceName": "EC CBAM Communication and News",
+   "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_en",
+   "checkedAt": "2026-11-10T15:05:00+09:00",
+   "authoring": "자동"
+  },
+  {
+   "id": "seed-guidance-verification",
+   "published": "2026-08-24",
+   "listed": "2026-11-10",
+   "title": "검증기관과 국가인정기구를 위한 CBAM 검증·인정 가이던스",
+   "summary": "검증기관과 국가인정기구를 위한 CBAM 검증·인정 가이던스의 문서 날짜는 2026년 8월 24일이다.",
+   "impact": "",
+   "kind": "가이던스",
+   "importance": "보통",
+   "topics": [
+    "검증",
+    "인정"
+   ],
+   "sourceCode": "ec-guidance",
+   "sourceName": "EC CBAM Legislation and Guidance",
+   "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-legislation-and-guidance_en",
+   "checkedAt": "2026-11-10T15:05:00+09:00",
+   "authoring": "자동"
+  },
+  {
+   "id": "seed-acts-numbers",
+   "published": "",
+   "listed": "2026-11-10",
+   "title": "CBAM 하위규정의 번호",
+   "summary": "기본값 설정에 관한 이행규정은 이행규정(EU) 2025/2621, 무상할당 조정의 산정에 관한 이행규정은 이행규정(EU) 2025/2620, 인정과 검증에 관한 위임규정은 위임규정(EU) 2025/2551이다. 검증 원칙을 정한 이행규정은 이행규정(EU) 2025/2546이다.",
+   "impact": "",
+   "kind": "법령",
+   "importance": "보통",
+   "topics": [
+    "하위규정"
+   ],
+   "sourceCode": "ec-guidance",
+   "sourceName": "EC CBAM Legislation and Guidance",
+   "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-legislation-and-guidance_en",
+   "checkedAt": "2026-11-10T15:05:00+09:00",
+   "authoring": "자동"
+  },
+  {
+   "id": "seed-accreditation-state",
+   "published": "2026-10-21",
+   "listed": "2026-11-10",
+   "title": "CBAM 인정 현황 문서(2026년 10월 21일자)",
+   "summary": "CBAM 인정 현황(State-of-play CBAM accreditation) 문서의 날짜는 2026년 10월 21일이다.",
+   "impact": "",
+   "kind": "가이던스",
+   "importance": "낮음",
+   "topics": [
+    "검증",
+    "인정"
+   ],
+   "sourceCode": "ec-verification",
+   "sourceName": "EC Verification of CBAM Emissions",
+   "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_en",
+   "checkedAt": "2026-11-10T15:05:00+09:00",
+   "authoring": "자동"
+  },
+  {
+   "id": "seed-verification-duty",
+   "published": "",
+   "listed": "2026-11-10",
+   "title": "실제 배출량의 검증과 연간 신고",
+   "summary": "수입자는 연간 신고서를 제출해야 한다. 실제 배출량의 검증은 독립된 검증기관이 수행해야 한다.",
+   "impact": "",
+   "kind": "제도 안내",
+   "importance": "보통",
+   "topics": [
+    "검증",
+    "신고"
+   ],
+   "sourceCode": "ec-verification",
+   "sourceName": "EC Verification of CBAM Emissions",
+   "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_en",
+   "checkedAt": "2026-11-10T15:05:00+09:00",
+   "authoring": "자동"
+  },
+  {
+   "id": "seed-definitive-period",
+   "published": "2026-01-01",
+   "listed": "2026-11-10",
+   "title": "CBAM 확정기간 체제 적용",
+   "summary": "CBAM은 2026년 1월 1일부터 확정기간 체제로 적용되며, 대상은 시멘트, 철강, 알루미늄, 비료, 전력, 수소다.",
+   "impact": "",
+   "kind": "제도 안내",
+   "importance": "보통",
+   "topics": [
+    "적용 범위"
+   ],
+   "sourceCode": "ec-cbam",
+   "sourceName": "European Commission CBAM",
+   "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en",
+   "checkedAt": "2026-11-10T15:05:00+09:00",
+   "authoring": "자동"
+  },
+  {
+   "id": "seed-council-position",
+   "published": "2026-06-12",
+   "listed": "2026-11-10",
+   "title": "EU 이사회, CBAM 강화·확대 제안에 대한 입장 합의",
+   "summary": "EU 이사회는 2026년 6월 12일에 CBAM을 강화하고 확대하는 집행위원회 제안에 대한 입장을 합의했다.",
+   "impact": "",
+   "kind": "입법",
+   "importance": "높음",
+   "topics": [
+    "CBAM 확대"
+   ],
+   "sourceCode": "council-cbam",
+   "sourceName": "Council of the EU CBAM",
+   "link": "https://www.consilium.europa.eu/en/policies/carbon-border-adjustment-mechanism/",
+   "checkedAt": "2026-11-10T15:05:00+09:00",
+   "authoring": "자동"
+  },
+  {
+   "id": "seed-ie-threshold",
+   "published": "",
+   "listed": "2026-11-10",
+   "title": "연 50톤 기준과 승인된 CBAM 신고인(아일랜드 환경청 안내)",
+   "summary": "CBAM 대상 제품의 수입량이 한 해 50톤 기준을 넘는 수입자는 승인된 CBAM 신고인 지위를 얻어야 한다. 승인 신청은 누적 수입량이 50톤 기준을 넘기 전에 제출해야 한다.",
+   "impact": "",
+   "kind": "제도 안내",
+   "importance": "보통",
+   "topics": [
+    "승인된 CBAM 신고인"
+   ],
+   "sourceCode": "epa-ie",
+   "sourceName": "EPA Ireland",
+   "link": "https://www.epa.ie/our-services/licensing/climate-change/eu-carbon-border-adjustment-mechanism/",
+   "checkedAt": "2026-11-10T15:05:00+09:00",
+   "authoring": "자동"
+  },
+  {
+   "id": "seed-uk-cbam",
+   "published": "2026-09-09",
+   "listed": "2026-11-10",
+   "title": "영국 CBAM, 2027년 1월 1일 시행",
+   "summary": "영국 CBAM은 2027년 1월 1일에 시행되며, CBAM 납부 의무가 있는 사업자는 등록해야 한다. 영국 정부의 CBAM 자료 모음은 2026년 9월 9일에 갱신되었고, 'CBAM (Emissions and Verification) Regulations 2026' 정보가 법령 모음에 추가되었다.",
+   "impact": "",
+   "kind": "해외",
+   "importance": "보통",
+   "topics": [
+    "영국 CBAM"
+   ],
+   "sourceCode": "hmrc-cbam",
+   "sourceName": "UK HMRC CBAM 자료 모음",
+   "link": "https://www.gov.uk/government/collections/carbon-border-adjustment-mechanism",
+   "checkedAt": "2026-11-10T15:05:00+09:00",
+   "authoring": "자동"
+  }
+ ]
+}

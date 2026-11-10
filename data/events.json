@@ -1,0 +1,18 @@
+{
+ "events": [
+  {
+   "date": "2027-01-04",
+   "title": "2026년 4분기 CBAM 인증서 가격 게시일",
+   "note": "",
+   "sourceName": "EC Price of CBAM Certificates",
+   "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en"
+  },
+  {
+   "date": "2027-01-01",
+   "title": "영국 CBAM 시행",
+   "note": "",
+   "sourceName": "UK HMRC CBAM 자료 모음",
+   "link": "https://www.gov.uk/government/collections/carbon-border-adjustment-mechanism"
+  }
+ ]
+}

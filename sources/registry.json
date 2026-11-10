@@ -150,8 +150,8 @@
    ],
    "filter": false,
    "minLine": 60,
-   "collector": "github",
-   "note": "진행 상황 문단"
+   "collector": "claude",
+   "note": "진행 상황 문단 자동 수집 환경에서는 막혀 있어 정리 실행이 직접 연다"
   },
   {
    "no": 10,
@@ -166,8 +166,8 @@
    ],
    "filter": false,
    "minLine": 60,
-   "collector": "github",
-   "note": "정책 페이지와 타임라인"
+   "collector": "claude",
+   "note": "정책 페이지와 타임라인 자동 수집 환경에서는 막혀 있어 정리 실행이 직접 연다"
   },
   {
    "no": 11,
@@ -181,8 +181,8 @@
    ],
    "filter": true,
    "minLine": 30,
-   "collector": "github",
-   "note": "CBAM 관련 항목만"
+   "collector": "claude",
+   "note": "CBAM 관련 항목만 자동 수집 환경에서는 막혀 있어 정리 실행이 직접 연다"
   },
   {
    "no": 12,
@@ -234,7 +234,7 @@
    "code": "mcee",
    "name": "기후에너지환경부 보도·설명",
    "group": "국내",
-   "url": "https://me.go.kr/home/web/index.do?menuId=286",
+   "url": "https://mcee.go.kr/home/web/index.do?menuId=286",
    "tier": "B",
    "watch": [
     "links",
@@ -242,8 +242,8 @@
    ],
    "filter": true,
    "minLine": 12,
-   "collector": "off",
-   "note": "자동 실행 환경에서 주소를 찾지 못함. 읽는 방법을 찾는 중"
+   "collector": "github",
+   "note": "환경부에서 이름이 바뀐 부처. 새 주소로 확인"
   },
   {
    "no": 16,
@@ -459,8 +459,8 @@
    ],
    "filter": false,
    "minLine": 100,
-   "collector": "github",
-   "note": "참고용"
+   "collector": "claude",
+   "note": "참고용 자동 수집 환경에서는 막혀 있어 정리 실행이 직접 연다"
   },
   {
    "no": 30,

@@ -1,0 +1,42 @@
+name: 사이트 배포
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - "data/**"
+      - "tools/publish/**"
+      - ".github/workflows/pages.yml"
+  workflow_run:
+    workflows: ["출처 수집과 원문 판 점검"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 사이트 폴더 만들기
+        run: python -m tools.publish.build_site _site
+      - name: 배포 가지에 올리기
+        run: |
+          cd _site
+          git init -q -b gh-pages
+          git config user.name "cbam-watch-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "사이트 배포 $(TZ=Asia/Seoul date '+%F %H:%M')"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" gh-pages

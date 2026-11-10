@@ -1,0 +1,6483 @@
+{
+"version": "v0.2 (2026-10-23 2차안, 검토 전)",
+"note": "국문 표기 기준. status가 confirmed인 것은 정부·공공기관 자료에서 확인된 표기, partial은 일부 확인, candidate는 확인이 더 필요한 후보다. avoid는 쓰지 않는 표기다.",
+"terms": [
+{
+"no": 1,
+"category": "01 제도·법령",
+"core": true,
+"en": [
+"Carbon Border Adjustment Mechanism"
+],
+"abbr": [
+"CBAM"
+],
+"preferred": "탄소국경조정제도",
+"allowed": [],
+"avoid": [
+{
+"form": "탄소국경조정메커니즘"
+},
+{
+"form": "탄소 경계 조정 메커니즘"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 2,
+"category": "01 제도·법령",
+"core": true,
+"en": [
+"CBAM Regulation"
+],
+"abbr": [],
+"preferred": "CBAM 규정",
+"allowed": [],
+"avoid": [
+{
+"form": "CBAM 규칙"
+},
+{
+"form": "CBAM 기본규정"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 3,
+"category": "01 제도·법령",
+"core": true,
+"en": [
+"implementing regulation"
+],
+"abbr": [],
+"preferred": "이행규정",
+"allowed": [],
+"avoid": [
+{
+"form": "시행규정"
+},
+{
+"form": "시행령"
+},
+{
+"form": "이행규칙"
+},
+{
+"form": "집행규정"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 3,
+"category": "01 제도·법령",
+"core": true,
+"en": [
+"implementing act"
+],
+"abbr": [],
+"preferred": "이행법",
+"allowed": [],
+"avoid": [
+{
+"form": "시행규정"
+},
+{
+"form": "시행령"
+},
+{
+"form": "이행규칙"
+},
+{
+"form": "집행규정"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 4,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"delegated regulation"
+],
+"abbr": [],
+"preferred": "위임규정",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 4,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"delegated act"
+],
+"abbr": [],
+"preferred": "위임법",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 5,
+"category": "01 제도·법령",
+"core": true,
+"en": [
+"implementing and delegated acts (secondary legislation)"
+],
+"abbr": [],
+"preferred": "하위규정",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 6,
+"category": "01 제도·법령",
+"core": true,
+"en": [
+"guidance document"
+],
+"abbr": [],
+"preferred": "가이던스",
+"allowed": [
+"가이드 문서"
+],
+"avoid": [
+{
+"form": "지침",
+"note": "Directive의 번역어라 guidance에는 쓰지 않음"
+},
+{
+"form": "지침서"
+}
+],
+"status": "partial"
+},
+{
+"no": 7,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"Directive"
+],
+"abbr": [],
+"preferred": "지침",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 8,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"Annex"
+],
+"abbr": [],
+"preferred": "부속서",
+"allowed": [],
+"avoid": [
+{
+"form": "별표"
+},
+{
+"form": "부록",
+"note": "Annex를 옮길 때"
+},
+{
+"form": "별첨"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 9,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"recital"
+],
+"abbr": [],
+"preferred": "전문(前文)",
+"allowed": [],
+"avoid": [
+{
+"form": "리사이틀"
+},
+{
+"form": "서문"
+}
+],
+"status": "candidate"
+},
+{
+"no": 10,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"consolidated version"
+],
+"abbr": [],
+"preferred": "통합본",
+"allowed": [],
+"avoid": [
+{
+"form": "통합 버전"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 11,
+"category": "01 제도·법령",
+"core": true,
+"en": [
+"Omnibus I simplification package"
+],
+"abbr": [],
+"preferred": "옴니버스 패키지 I",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 12,
+"category": "01 제도·법령",
+"core": true,
+"en": [
+"transitional period"
+],
+"abbr": [],
+"preferred": "전환기간",
+"allowed": [],
+"avoid": [
+{
+"form": "과도기간"
+},
+{
+"form": "시범기간"
+},
+{
+"form": "전환기"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 13,
+"category": "01 제도·법령",
+"core": true,
+"en": [
+"definitive period"
+],
+"abbr": [],
+"preferred": "확정기간",
+"allowed": [],
+"avoid": [
+{
+"form": "확정단계",
+"note": "국문본 일부"
+},
+{
+"form": "최종 단계"
+},
+{
+"form": "정식 이행 단계"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 14,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"compliance cycle"
+],
+"abbr": [],
+"preferred": "이행 주기",
+"allowed": [],
+"avoid": [
+{
+"form": "컴플라이언스 사이클"
+}
+],
+"status": "candidate"
+},
+{
+"no": 15,
+"category": "01 제도·법령",
+"core": true,
+"en": [
+"carbon leakage"
+],
+"abbr": [],
+"preferred": "탄소누출",
+"allowed": [],
+"avoid": [
+{
+"form": "탄소 유출"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 16,
+"category": "01 제도·법령",
+"core": true,
+"en": [
+"European Commission"
+],
+"abbr": [],
+"preferred": "EU 집행위원회",
+"allowed": [
+"집행위원회"
+],
+"avoid": [
+{
+"form": "유럽위원회"
+},
+{
+"form": "EU위원회"
+},
+{
+"form": "유럽집행위원회"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 17,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"Commission services"
+],
+"abbr": [],
+"preferred": "집행위원회 실무부서",
+"allowed": [],
+"avoid": [
+{
+"form": "위원회 서비스"
+}
+],
+"status": "candidate"
+},
+{
+"no": 18,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"Directorate-General for Taxation and Customs Union"
+],
+"abbr": [
+"DG TAXUD"
+],
+"preferred": "조세총국",
+"allowed": [
+"조세·관세동맹 총국"
+],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 19,
+"category": "01 제도·법령",
+"core": true,
+"en": [
+"Member State"
+],
+"abbr": [
+"MS"
+],
+"preferred": "회원국",
+"allowed": [],
+"avoid": [
+{
+"form": "회원 국가"
+},
+{
+"form": "가맹국"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 20,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"Official Journal of the European Union"
+],
+"abbr": [
+"OJ"
+],
+"preferred": "유럽연합 관보",
+"allowed": [],
+"avoid": [
+{
+"form": "EU 공보"
+},
+{
+"form": "공식 저널"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 21,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"Court of Justice of the European Union"
+],
+"abbr": [
+"CJEU"
+],
+"preferred": "유럽사법재판소",
+"allowed": [
+"유럽연합 사법재판소"
+],
+"avoid": [
+{
+"form": "유럽사법법원"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 22,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"the Union"
+],
+"abbr": [
+"EU"
+],
+"preferred": "EU",
+"allowed": [],
+"avoid": [
+{
+"form": "연합",
+"note": "단독 사용"
+},
+{
+"form": "유니온"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 23,
+"category": "01 제도·법령",
+"core": true,
+"en": [
+"third country"
+],
+"abbr": [],
+"preferred": "제3국",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 23,
+"category": "01 제도·법령",
+"core": true,
+"en": [
+"non-EU country"
+],
+"abbr": [],
+"preferred": "비EU 국가",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 24,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"European Parliament"
+],
+"abbr": [
+"EP"
+],
+"preferred": "유럽의회",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 25,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"Council of the European Union"
+],
+"abbr": [],
+"preferred": "EU 이사회",
+"allowed": [
+"이사회"
+],
+"avoid": [
+{
+"form": "유럽이사회",
+"note": "European Council과 혼동"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 26,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"legislative proposal (amendment proposal)"
+],
+"abbr": [],
+"preferred": "개정안",
+"allowed": [
+"제안"
+],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 27,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"trilogue"
+],
+"abbr": [],
+"preferred": "3자 협상",
+"allowed": [
+"3자 협의"
+],
+"avoid": [
+{
+"form": "삼자협상"
+},
+{
+"form": "트릴로그"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 28,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"general approach (Council)"
+],
+"abbr": [],
+"preferred": "일반적 접근",
+"allowed": [
+"이사회 입장"
+],
+"avoid": [
+{
+"form": "일반 접근 방식"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 29,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"entry into force"
+],
+"abbr": [],
+"preferred": "발효",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 29,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"date of application"
+],
+"abbr": [],
+"preferred": "적용(시행)",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 30,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"provisional agreement"
+],
+"abbr": [],
+"preferred": "잠정 합의",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 31,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"Fit for 55 package"
+],
+"abbr": [],
+"preferred": "Fit for 55 패키지",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 32,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"co-legislators"
+],
+"abbr": [],
+"preferred": "공동입법기관",
+"allowed": [],
+"avoid": [
+{
+"form": "공동 입법자"
+}
+],
+"status": "candidate"
+},
+{
+"no": 33,
+"category": "02 적용 범위·면제",
+"core": true,
+"en": [
+"goods"
+],
+"abbr": [],
+"preferred": "제품",
+"allowed": [],
+"avoid": [
+{
+"form": "상품(2023"
+},
+{
+"form": "2025 정부 법률 번역서)"
+},
+{
+"form": "재화"
+}
+],
+"status": "partial"
+},
+{
+"no": 34,
+"category": "02 적용 범위·면제",
+"core": true,
+"en": [
+"CBAM goods"
+],
+"abbr": [],
+"preferred": "CBAM 대상 품목",
+"allowed": [
+"CBAM 대상 제품"
+],
+"avoid": [
+{
+"form": "CBAM 상품"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 35,
+"category": "02 적용 범위·면제",
+"core": false,
+"en": [
+"non-CBAM goods"
+],
+"abbr": [],
+"preferred": "비CBAM 제품",
+"allowed": [],
+"avoid": [
+{
+"form": "비CBAM 상품"
+}
+],
+"status": "candidate"
+},
+{
+"no": 36,
+"category": "02 적용 범위·면제",
+"core": true,
+"en": [
+"simple goods"
+],
+"abbr": [],
+"preferred": "단순제품",
+"allowed": [],
+"avoid": [
+{
+"form": "단순상품",
+"note": "2023 정부 가이드라인"
+},
+{
+"form": "단순재"
+},
+{
+"form": "간단한 CBAM 상품"
+}
+],
+"status": "partial"
+},
+{
+"no": 37,
+"category": "02 적용 범위·면제",
+"core": true,
+"en": [
+"complex goods"
+],
+"abbr": [],
+"preferred": "복합제품",
+"allowed": [],
+"avoid": [
+{
+"form": "복합상품",
+"note": "2023 정부 가이드라인"
+},
+{
+"form": "복합재"
+}
+],
+"status": "partial"
+},
+{
+"no": 38,
+"category": "02 적용 범위·면제",
+"core": true,
+"en": [
+"aggregated goods category"
+],
+"abbr": [],
+"preferred": "품목군",
+"allowed": [],
+"avoid": [
+{
+"form": "통합 제품군",
+"note": "국문본"
+},
+{
+"form": "집계된 상품 카테고리"
+},
+{
+"form": "상품종합범주"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 39,
+"category": "02 적용 범위·면제",
+"core": true,
+"en": [
+"de minimis exemption"
+],
+"abbr": [],
+"preferred": "소량 면제",
+"allowed": [],
+"avoid": [
+{
+"form": "최소 기준 면제"
+},
+{
+"form": "소액 면제",
+"note": "구 150유로 기준과 혼동"
+}
+],
+"status": "partial"
+},
+{
+"no": 39,
+"category": "02 적용 범위·면제",
+"core": true,
+"en": [
+"single mass-based threshold"
+],
+"abbr": [],
+"preferred": "단일 중량 임계값",
+"allowed": [],
+"avoid": [
+{
+"form": "최소 기준 면제"
+},
+{
+"form": "소액 면제",
+"note": "구 150유로 기준과 혼동"
+}
+],
+"status": "partial"
+},
+{
+"no": 40,
+"category": "02 적용 범위·면제",
+"core": false,
+"en": [
+"exemption"
+],
+"abbr": [],
+"preferred": "면제",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 41,
+"category": "02 적용 범위·면제",
+"core": false,
+"en": [
+"military exemption"
+],
+"abbr": [],
+"preferred": "군사용 면제",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 42,
+"category": "02 적용 범위·면제",
+"core": false,
+"en": [
+"electricity (CBAM goods)"
+],
+"abbr": [],
+"preferred": "전력",
+"allowed": [],
+"avoid": [
+{
+"form": "전기"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 43,
+"category": "02 적용 범위·면제",
+"core": true,
+"en": [
+"net mass"
+],
+"abbr": [],
+"preferred": "순중량",
+"allowed": [
+"순질량"
+],
+"avoid": [
+{
+"form": "순무게"
+}
+],
+"status": "partial"
+},
+{
+"no": 44,
+"category": "02 적용 범위·면제",
+"core": false,
+"en": [
+"outermost regions"
+],
+"abbr": [],
+"preferred": "최외곽 지역",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 45,
+"category": "02 적용 범위·면제",
+"core": false,
+"en": [
+"continental shelf"
+],
+"abbr": [],
+"preferred": "대륙붕",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 45,
+"category": "02 적용 범위·면제",
+"core": false,
+"en": [
+"exclusive economic zone"
+],
+"abbr": [],
+"preferred": "배타적 경제수역",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 46,
+"category": "02 적용 범위·면제",
+"core": false,
+"en": [
+"goods contained in the personal luggage of travellers"
+],
+"abbr": [],
+"preferred": "여행자 개인 수하물에 포함된 물품",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 47,
+"category": "03 신고인·통관",
+"core": true,
+"en": [
+"authorised CBAM declarant"
+],
+"abbr": [],
+"preferred": "승인된 CBAM 신고인",
+"allowed": [],
+"avoid": [
+{
+"form": "인가된 CBAM 신고인",
+"note": "국문본 — 공개 자료에서 사용 예 없음"
+},
+{
+"form": "승인된 CBAM 신고자"
+},
+{
+"form": "공인 CBAM 신고자"
+},
+{
+"form": "등록된 CBAM 신고자"
+},
+{
+"form": "수입신고자",
+"note": "세관 수입신고와 혼동"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 48,
+"category": "03 신고인·통관",
+"core": true,
+"en": [
+"CBAM declarant"
+],
+"abbr": [],
+"preferred": "CBAM 신고인",
+"allowed": [],
+"avoid": [
+{
+"form": "신고자"
+},
+{
+"form": "신고 주체"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 49,
+"category": "03 신고인·통관",
+"core": true,
+"en": [
+"authorisation"
+],
+"abbr": [],
+"preferred": "승인",
+"allowed": [],
+"avoid": [
+{
+"form": "인가",
+"note": "국문본"
+},
+{
+"form": "허가"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 50,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"application for authorisation"
+],
+"abbr": [],
+"preferred": "승인 신청",
+"allowed": [
+"승인 신청서"
+],
+"avoid": [
+{
+"form": "인가 신청서",
+"note": "국문본"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 51,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"reporting declarant"
+],
+"abbr": [],
+"preferred": "보고 신고인",
+"allowed": [],
+"avoid": [
+{
+"form": "보고 주체 신고자"
+},
+{
+"form": "보고하는 신고자"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 52,
+"category": "03 신고인·통관",
+"core": true,
+"en": [
+"importer"
+],
+"abbr": [],
+"preferred": "수입자",
+"allowed": [
+"수입업자"
+],
+"avoid": [
+{
+"form": "수입업체"
+},
+{
+"form": "수입기업"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 53,
+"category": "03 신고인·통관",
+"core": true,
+"en": [
+"competent authority"
+],
+"abbr": [
+"CA"
+],
+"preferred": "관할당국",
+"allowed": [],
+"avoid": [
+{
+"form": "권한 있는 당국"
+},
+{
+"form": "관계당국",
+"note": "제도 용어로 쓸 때",
+"conditional": true
+}
+],
+"status": "confirmed"
+},
+{
+"no": 54,
+"category": "03 신고인·통관",
+"core": true,
+"en": [
+"customs declaration"
+],
+"abbr": [],
+"preferred": "세관신고",
+"allowed": [
+"수입신고"
+],
+"avoid": [
+{
+"form": "통관 신고"
+},
+{
+"form": "수입 통관 신고서"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 55,
+"category": "03 신고인·통관",
+"core": true,
+"en": [
+"customs declarant"
+],
+"abbr": [],
+"preferred": "세관신고인",
+"allowed": [
+"신고인"
+],
+"avoid": [
+{
+"form": "통관 신고인(국문본 G5a"
+},
+{
+"form": "5b"
+},
+{
+"form": "5d)"
+},
+{
+"form": "세관신고자"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 56,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"customs authorities"
+],
+"abbr": [],
+"preferred": "세관당국",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 57,
+"category": "03 신고인·통관",
+"core": true,
+"en": [
+"release for free circulation"
+],
+"abbr": [],
+"preferred": "자유유통을 위한 반출",
+"allowed": [
+"자유유통 반출"
+],
+"avoid": [
+{
+"form": "역내 운송 허가",
+"note": "2023 법률 번역서 — 뜻이 다름"
+},
+{
+"form": "자유 유통 단계"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 58,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"importation"
+],
+"abbr": [],
+"preferred": "수입",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 59,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"customs territory of the Union"
+],
+"abbr": [],
+"preferred": "EU 관세영역",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 60,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"country of origin"
+],
+"abbr": [],
+"preferred": "원산지",
+"allowed": [
+"원산지국"
+],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 61,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"non-preferential origin"
+],
+"abbr": [],
+"preferred": "비특혜원산지",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 62,
+"category": "03 신고인·통관",
+"core": true,
+"en": [
+"indirect customs representative"
+],
+"abbr": [],
+"preferred": "간접 세관 대리인",
+"allowed": [
+"간접대리인"
+],
+"avoid": [
+{
+"form": "간접 통관대리인",
+"note": "국문본"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 63,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"direct customs representative"
+],
+"abbr": [],
+"preferred": "직접 세관 대리인",
+"allowed": [
+"직접대리인"
+],
+"avoid": [],
+"status": "partial"
+},
+{
+"no": 64,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"EORI number"
+],
+"abbr": [
+"EORI"
+],
+"preferred": "EORI 번호",
+"allowed": [],
+"avoid": [
+{
+"form": "EU 공동 세관등록번호",
+"note": "옛 KOTRA 표기"
+},
+{
+"form": "경제사업자등록번호"
+},
+{
+"form": "사업자 등록 식별번호",
+"note": "2023 가이드라인"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 65,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"economic operator"
+],
+"abbr": [],
+"preferred": "경제운영자",
+"allowed": [],
+"avoid": [
+{
+"form": "경제사업자"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 66,
+"category": "03 신고인·통관",
+"core": true,
+"en": [
+"inward processing"
+],
+"abbr": [],
+"preferred": "역내가공",
+"allowed": [],
+"avoid": [
+{
+"form": "가공수입"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 67,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"outward processing"
+],
+"abbr": [],
+"preferred": "역외가공",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 68,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"bill of discharge"
+],
+"abbr": [],
+"preferred": "역내가공 종결 명세서",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 69,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"special procedures"
+],
+"abbr": [],
+"preferred": "특별절차",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 70,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"customs warehousing"
+],
+"abbr": [],
+"preferred": "관세창고보관",
+"allowed": [],
+"avoid": [
+{
+"form": "보세창고",
+"note": "국내 제도명 — 같은 제도 아님"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 71,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"temporary admission"
+],
+"abbr": [],
+"preferred": "임시수입",
+"allowed": [],
+"avoid": [
+{
+"form": "일시 반입"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 72,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"end-use"
+],
+"abbr": [],
+"preferred": "최종용도",
+"allowed": [],
+"avoid": [
+{
+"form": "최종사용"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 73,
+"category": "03 신고인·통관",
+"core": true,
+"en": [
+"returned goods"
+],
+"abbr": [],
+"preferred": "재수입 물품",
+"allowed": [],
+"avoid": [
+{
+"form": "반송물품",
+"note": "관세법상 '반송'은 반대 뜻"
+}
+],
+"status": "partial"
+},
+{
+"no": 74,
+"category": "03 신고인·통관",
+"core": true,
+"en": [
+"Combined Nomenclature"
+],
+"abbr": [
+"CN"
+],
+"preferred": "통합품목분류표",
+"allowed": [],
+"avoid": [
+{
+"form": "복합품목분류",
+"note": "국문본"
+},
+{
+"form": "조합 명명법"
+},
+{
+"form": "통합명명법"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 75,
+"category": "03 신고인·통관",
+"core": true,
+"en": [
+"CN code"
+],
+"abbr": [],
+"preferred": "CN 코드",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 76,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"Harmonised System"
+],
+"abbr": [
+"HS"
+],
+"preferred": "통일상품명 및 부호체계",
+"allowed": [
+"HS 코드"
+],
+"avoid": [
+{
+"form": "HS(국제무역용 통일상품명 및 부호체계) 등 국문본 변형 표기",
+"descriptive": true
+}
+],
+"status": "confirmed"
+},
+{
+"no": 77,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"TARIC"
+],
+"abbr": [
+"TARIC"
+],
+"preferred": "TARIC(EU 통합관세)",
+"allowed": [],
+"avoid": [],
+"status": "partial"
+},
+{
+"no": 78,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"Union Customs Code"
+],
+"abbr": [
+"UCC"
+],
+"preferred": "EU 관세법",
+"allowed": [],
+"avoid": [
+{
+"form": "EU 신관세법"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 79,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"binding tariff information"
+],
+"abbr": [
+"BTI"
+],
+"preferred": "품목분류 사전심사",
+"allowed": [],
+"avoid": [
+{
+"form": "구속력 있는 관세정보"
+},
+{
+"form": "사전품목분류"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 80,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"customs value"
+],
+"abbr": [],
+"preferred": "과세가격",
+"allowed": [
+"관세가격"
+],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 81,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"guarantee"
+],
+"abbr": [],
+"preferred": "담보",
+"allowed": [],
+"avoid": [
+{
+"form": "보증금"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 82,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"goods of negligible value (EUR 150 per consignment)"
+],
+"abbr": [],
+"preferred": "소액물품",
+"allowed": [],
+"avoid": [
+{
+"form": "무시할 만한 가치의 상품",
+"note": "2023 법률 번역서 직역"
+}
+],
+"status": "partial"
+},
+{
+"no": 83,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"customs representative"
+],
+"abbr": [],
+"preferred": "세관 대리인",
+"allowed": [
+"관세대리인"
+],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 84,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"Authorised Economic Operator"
+],
+"abbr": [
+"AEO"
+],
+"preferred": "수출입 안전관리 우수업체",
+"allowed": [],
+"avoid": [
+{
+"form": "공인경제운영자"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 85,
+"category": "04 인증서·신고·등록부",
+"core": true,
+"en": [
+"CBAM certificate"
+],
+"abbr": [],
+"preferred": "CBAM 인증서",
+"allowed": [],
+"avoid": [
+{
+"form": "CBAM 증명서"
+},
+{
+"form": "CBAM 증서"
+},
+{
+"form": "배출증명서"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 86,
+"category": "04 인증서·신고·등록부",
+"core": true,
+"en": [
+"purchase (of CBAM certificates)"
+],
+"abbr": [],
+"preferred": "구매",
+"allowed": [],
+"avoid": [
+{
+"form": "구입"
+},
+{
+"form": "매입"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 87,
+"category": "04 인증서·신고·등록부",
+"core": false,
+"en": [
+"sale (of CBAM certificates)"
+],
+"abbr": [],
+"preferred": "판매",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 88,
+"category": "04 인증서·신고·등록부",
+"core": true,
+"en": [
+"price of CBAM certificates"
+],
+"abbr": [],
+"preferred": "CBAM 인증서 가격",
+"allowed": [],
+"avoid": [
+{
+"form": "인증서 단가"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 89,
+"category": "04 인증서·신고·등록부",
+"core": true,
+"en": [
+"surrender (of CBAM certificates)"
+],
+"abbr": [],
+"preferred": "제출",
+"allowed": [],
+"avoid": [
+{
+"form": "반납"
+},
+{
+"form": "포기"
+},
+{
+"form": "납부"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 90,
+"category": "04 인증서·신고·등록부",
+"core": false,
+"en": [
+"re-purchase (of CBAM certificates)"
+],
+"abbr": [],
+"preferred": "환매",
+"allowed": [],
+"avoid": [
+{
+"form": "재매입"
+},
+{
+"form": "재구매"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 91,
+"category": "04 인증서·신고·등록부",
+"core": false,
+"en": [
+"cancellation (of CBAM certificates)"
+],
+"abbr": [],
+"preferred": "말소",
+"allowed": [
+"취소"
+],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 92,
+"category": "04 인증서·신고·등록부",
+"core": true,
+"en": [
+"quarterly holding requirement"
+],
+"abbr": [],
+"preferred": "분기별 인증서 예치의무",
+"allowed": [
+"분기말 인증서 보유의무"
+],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 93,
+"category": "04 인증서·신고·등록부",
+"core": true,
+"en": [
+"CBAM declaration"
+],
+"abbr": [],
+"preferred": "CBAM 신고서",
+"allowed": [
+"연간 CBAM 신고서"
+],
+"avoid": [
+{
+"form": "CBAM 선언서"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 94,
+"category": "04 인증서·신고·등록부",
+"core": false,
+"en": [
+"CBAM report"
+],
+"abbr": [],
+"preferred": "CBAM 보고서",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 95,
+"category": "04 인증서·신고·등록부",
+"core": true,
+"en": [
+"CBAM Registry"
+],
+"abbr": [],
+"preferred": "CBAM 등록부",
+"allowed": [],
+"avoid": [
+{
+"form": "CBAM 레지스트리"
+},
+{
+"form": "중앙등록처"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 96,
+"category": "04 인증서·신고·등록부",
+"core": false,
+"en": [
+"CBAM account"
+],
+"abbr": [],
+"preferred": "CBAM 계정",
+"allowed": [],
+"avoid": [
+{
+"form": "CBAM 계좌번호"
+}
+],
+"status": "partial"
+},
+{
+"no": 96,
+"category": "04 인증서·신고·등록부",
+"core": false,
+"en": [
+"CBAM account number"
+],
+"abbr": [],
+"preferred": "CBAM 계정 번호",
+"allowed": [],
+"avoid": [
+{
+"form": "CBAM 계좌번호"
+}
+],
+"status": "partial"
+},
+{
+"no": 97,
+"category": "04 인증서·신고·등록부",
+"core": false,
+"en": [
+"common central platform"
+],
+"abbr": [],
+"preferred": "공통 중앙 플랫폼",
+"allowed": [],
+"avoid": [
+{
+"form": "공동 중앙 플랫폼"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 98,
+"category": "04 인증서·신고·등록부",
+"core": false,
+"en": [
+"CBAM Transitional Registry"
+],
+"abbr": [],
+"preferred": "CBAM 전환 등록부",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 99,
+"category": "04 인증서·신고·등록부",
+"core": false,
+"en": [
+"CBAM Operators and Installations Portal"
+],
+"abbr": [
+"O3CI"
+],
+"preferred": "제3국 사업자 포털",
+"allowed": [],
+"avoid": [
+{
+"form": "운영자 포털"
+},
+{
+"form": "생산자 포털"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 100,
+"category": "04 인증서·신고·등록부",
+"core": true,
+"en": [
+"CBAM obligation"
+],
+"abbr": [],
+"preferred": "CBAM 의무",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 101,
+"category": "04 인증서·신고·등록부",
+"core": false,
+"en": [
+"communication template"
+],
+"abbr": [],
+"preferred": "커뮤니케이션 템플릿",
+"allowed": [],
+"avoid": [
+{
+"form": "소통 템플릿"
+},
+{
+"form": "통지서 양식"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 101,
+"category": "04 인증서·신고·등록부",
+"core": false,
+"en": [
+"electronic template"
+],
+"abbr": [],
+"preferred": "전자 템플릿",
+"allowed": [],
+"avoid": [
+{
+"form": "소통 템플릿"
+},
+{
+"form": "통지서 양식"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 102,
+"category": "04 인증서·신고·등록부",
+"core": true,
+"en": [
+"operator's emissions report"
+],
+"abbr": [],
+"preferred": "사업자 배출량 보고서",
+"allowed": [],
+"avoid": [
+{
+"form": "운영자 배출량 보고서",
+"note": "국문본 — operator 표기 통일"
+}
+],
+"status": "partial"
+},
+{
+"no": 103,
+"category": "04 인증서·신고·등록부",
+"core": false,
+"en": [
+"declarant-specific addendum"
+],
+"abbr": [],
+"preferred": "신고인별 부록",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 104,
+"category": "04 인증서·신고·등록부",
+"core": true,
+"en": [
+"summary emissions report"
+],
+"abbr": [],
+"preferred": "요약 배출량 보고서",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 105,
+"category": "04 인증서·신고·등록부",
+"core": false,
+"en": [
+"review"
+],
+"abbr": [],
+"preferred": "신고서 검토",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 105,
+"category": "04 인증서·신고·등록부",
+"core": false,
+"en": [
+"correction of CBAM declarations"
+],
+"abbr": [],
+"preferred": "정정",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 106,
+"category": "04 인증서·신고·등록부",
+"core": false,
+"en": [
+"revocation of authorisation"
+],
+"abbr": [],
+"preferred": "승인 취소",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 107,
+"category": "05 내재배출량 산정",
+"core": true,
+"en": [
+"embedded emissions"
+],
+"abbr": [],
+"preferred": "내재배출량",
+"allowed": [],
+"avoid": [
+{
+"form": "내재 탄소배출량"
+},
+{
+"form": "임베디드 배출량"
+},
+{
+"form": "내장 배출량"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 108,
+"category": "05 내재배출량 산정",
+"core": true,
+"en": [
+"specific embedded emissions"
+],
+"abbr": [
+"SEE"
+],
+"preferred": "고유 내재배출량",
+"allowed": [],
+"avoid": [
+{
+"form": "단위 내재배출량",
+"note": "국문본"
+},
+{
+"form": "특정 내재 배출량"
+},
+{
+"form": "제품 고유배출량"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 109,
+"category": "05 내재배출량 산정",
+"core": true,
+"en": [
+"direct emissions"
+],
+"abbr": [],
+"preferred": "직접배출량",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 110,
+"category": "05 내재배출량 산정",
+"core": true,
+"en": [
+"indirect emissions"
+],
+"abbr": [],
+"preferred": "간접배출량",
+"allowed": [],
+"avoid": [
+{
+"form": "간접 전력 배출량"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 111,
+"category": "05 내재배출량 산정",
+"core": true,
+"en": [
+"actual emissions"
+],
+"abbr": [],
+"preferred": "실제배출량",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 112,
+"category": "05 내재배출량 산정",
+"core": true,
+"en": [
+"actual values"
+],
+"abbr": [],
+"preferred": "실제값",
+"allowed": [],
+"avoid": [
+{
+"form": "실제 측정값"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 112,
+"category": "05 내재배출량 산정",
+"core": true,
+"en": [
+"actual data"
+],
+"abbr": [],
+"preferred": "실제 데이터",
+"allowed": [],
+"avoid": [
+{
+"form": "실제 측정값"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 113,
+"category": "05 내재배출량 산정",
+"core": true,
+"en": [
+"default value"
+],
+"abbr": [],
+"preferred": "기본값",
+"allowed": [],
+"avoid": [
+{
+"form": "디폴트값"
+},
+{
+"form": "default 값"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 114,
+"category": "05 내재배출량 산정",
+"core": true,
+"en": [
+"mark-up"
+],
+"abbr": [],
+"preferred": "마크업",
+"allowed": [
+"가산치"
+],
+"avoid": [
+{
+"form": "가중치",
+"note": "다른 개념"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 115,
+"category": "05 내재배출량 산정",
+"core": false,
+"en": [
+"country-specific default value"
+],
+"abbr": [],
+"preferred": "국가별 기본값",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 116,
+"category": "05 내재배출량 산정",
+"core": false,
+"en": [
+"alternative default value"
+],
+"abbr": [],
+"preferred": "대체 기본값",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 117,
+"category": "05 내재배출량 산정",
+"core": true,
+"en": [
+"precursor"
+],
+"abbr": [],
+"preferred": "전구물질",
+"allowed": [],
+"avoid": [
+{
+"form": "원료물질",
+"note": "2023 법률 번역서"
+},
+{
+"form": "전구체"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 118,
+"category": "05 내재배출량 산정",
+"core": false,
+"en": [
+"relevant precursor"
+],
+"abbr": [],
+"preferred": "관련 전구물질",
+"allowed": [],
+"avoid": [
+{
+"form": "관련 전구체"
+},
+{
+"form": "원료물질(2023"
+},
+{
+"form": "2025 법률 번역서)"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 119,
+"category": "05 내재배출량 산정",
+"core": true,
+"en": [
+"production process"
+],
+"abbr": [],
+"preferred": "생산공정",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 120,
+"category": "05 내재배출량 산정",
+"core": true,
+"en": [
+"production route"
+],
+"abbr": [],
+"preferred": "생산경로",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 121,
+"category": "05 내재배출량 산정",
+"core": true,
+"en": [
+"installation"
+],
+"abbr": [],
+"preferred": "사업장",
+"allowed": [],
+"avoid": [
+{
+"form": "설비",
+"note": "국문본 — 장비와 혼동"
+},
+{
+"form": "시설군"
+},
+{
+"form": "설치"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 122,
+"category": "05 내재배출량 산정",
+"core": true,
+"en": [
+"operator"
+],
+"abbr": [],
+"preferred": "사업자",
+"allowed": [],
+"avoid": [
+{
+"form": "운영자",
+"note": "제3국 사업자를 가리킬 때",
+"conditional": true
+},
+{
+"form": "오퍼레이터"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 123,
+"category": "05 내재배출량 산정",
+"core": false,
+"en": [
+"producer"
+],
+"abbr": [],
+"preferred": "생산자",
+"allowed": [],
+"avoid": [
+{
+"form": "생산업자"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 124,
+"category": "05 내재배출량 산정",
+"core": true,
+"en": [
+"system boundaries"
+],
+"abbr": [],
+"preferred": "시스템 경계",
+"allowed": [],
+"avoid": [
+{
+"form": "산정경계"
+},
+{
+"form": "설치 경계"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 125,
+"category": "05 내재배출량 산정",
+"core": false,
+"en": [
+"functional unit"
+],
+"abbr": [],
+"preferred": "기능단위",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 126,
+"category": "05 내재배출량 산정",
+"core": false,
+"en": [
+"activity level"
+],
+"abbr": [
+"AL"
+],
+"preferred": "활동수준",
+"allowed": [],
+"avoid": [
+{
+"form": "활동 레벨"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 127,
+"category": "05 내재배출량 산정",
+"core": false,
+"en": [
+"attribution"
+],
+"abbr": [],
+"preferred": "귀속",
+"allowed": [],
+"avoid": [
+{
+"form": "배분",
+"note": "allocation과 혼동"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 127,
+"category": "05 내재배출량 산정",
+"core": false,
+"en": [
+"attributed emissions"
+],
+"abbr": [],
+"preferred": "귀속 배출량",
+"allowed": [],
+"avoid": [
+{
+"form": "배분",
+"note": "allocation과 혼동"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 128,
+"category": "05 내재배출량 산정",
+"core": false,
+"en": [
+"related emissions"
+],
+"abbr": [],
+"preferred": "관련 배출량",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 129,
+"category": "05 내재배출량 산정",
+"core": false,
+"en": [
+"co-product"
+],
+"abbr": [],
+"preferred": "공동생산물",
+"allowed": [],
+"avoid": [
+{
+"form": "부산물",
+"note": "by-product 번역어 — 국내 LCA 표준은 co-product에도 씀"
+}
+],
+"status": "candidate"
+},
+{
+"no": 130,
+"category": "05 내재배출량 산정",
+"core": false,
+"en": [
+"by-product"
+],
+"abbr": [],
+"preferred": "부산물",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 131,
+"category": "05 내재배출량 산정",
+"core": false,
+"en": [
+"multifunctional process"
+],
+"abbr": [],
+"preferred": "다기능 공정",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 132,
+"category": "05 내재배출량 산정",
+"core": false,
+"en": [
+"bubble approach"
+],
+"abbr": [],
+"preferred": "버블접근법",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 133,
+"category": "05 내재배출량 산정",
+"core": false,
+"en": [
+"residue"
+],
+"abbr": [],
+"preferred": "잔재물",
+"allowed": [],
+"avoid": [
+{
+"form": "잔류물",
+"note": "국문본 G5d"
+},
+{
+"form": "잔여물"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 134,
+"category": "05 내재배출량 산정",
+"core": false,
+"en": [
+"waste"
+],
+"abbr": [],
+"preferred": "폐기물",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 135,
+"category": "05 내재배출량 산정",
+"core": false,
+"en": [
+"agricultural, aquaculture, fisheries and forestry residues"
+],
+"abbr": [],
+"preferred": "농업·양식업·어업·임업 잔재물",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 136,
+"category": "05 내재배출량 산정",
+"core": true,
+"en": [
+"reporting period"
+],
+"abbr": [],
+"preferred": "보고기간",
+"allowed": [],
+"avoid": [],
+"status": "partial"
+},
+{
+"no": 137,
+"category": "05 내재배출량 산정",
+"core": false,
+"en": [
+"conservative"
+],
+"abbr": [],
+"preferred": "보수적",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 138,
+"category": "05 내재배출량 산정",
+"core": true,
+"en": [
+"tonne of CO₂e"
+],
+"abbr": [
+"t CO₂e"
+],
+"preferred": "CO₂ 환산톤",
+"allowed": [],
+"avoid": [
+{
+"form": "CO₂",
+"note": "e) 1톤(국문본"
+},
+{
+"form": "CO2 동등 배출량"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 139,
+"category": "05 내재배출량 산정",
+"core": false,
+"en": [
+"CO₂ equivalent"
+],
+"abbr": [
+"CO₂e"
+],
+"preferred": "이산화탄소 상당량",
+"allowed": [
+"CO₂ 환산량"
+],
+"avoid": [
+{
+"form": "CO2 동등"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 140,
+"category": "05 내재배출량 산정",
+"core": false,
+"en": [
+"greenhouse gases"
+],
+"abbr": [
+"GHG"
+],
+"preferred": "온실가스",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 141,
+"category": "05 내재배출량 산정",
+"core": false,
+"en": [
+"emissions"
+],
+"abbr": [],
+"preferred": "배출량",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 142,
+"category": "05 내재배출량 산정",
+"core": false,
+"en": [
+"global warming potential"
+],
+"abbr": [
+"GWP"
+],
+"preferred": "지구온난화지수",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 143,
+"category": "05 내재배출량 산정",
+"core": false,
+"en": [
+"primary data"
+],
+"abbr": [],
+"preferred": "1차 데이터",
+"allowed": [],
+"avoid": [
+{
+"form": "현장 데이터"
+},
+{
+"form": "일반 데이터(국내 EPD"
+},
+{
+"form": "청정수소 고시 체계로 개념이 다름)"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 143,
+"category": "05 내재배출량 산정",
+"core": false,
+"en": [
+"secondary data"
+],
+"abbr": [],
+"preferred": "2차 데이터",
+"allowed": [],
+"avoid": [
+{
+"form": "현장 데이터"
+},
+{
+"form": "일반 데이터(국내 EPD"
+},
+{
+"form": "청정수소 고시 체계로 개념이 다름)"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 144,
+"category": "05 내재배출량 산정",
+"core": false,
+"en": [
+"emission intensity"
+],
+"abbr": [],
+"preferred": "배출집약도",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 144,
+"category": "05 내재배출량 산정",
+"core": false,
+"en": [
+"carbon intensity"
+],
+"abbr": [],
+"preferred": "탄소집약도",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 145,
+"category": "05 내재배출량 산정",
+"core": false,
+"en": [
+"calendar year"
+],
+"abbr": [],
+"preferred": "역년",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 146,
+"category": "06 모니터링·측정",
+"core": true,
+"en": [
+"monitoring plan"
+],
+"abbr": [
+"MP"
+],
+"preferred": "모니터링 계획",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 147,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"monitoring methodology"
+],
+"abbr": [],
+"preferred": "모니터링 방법론",
+"allowed": [],
+"avoid": [],
+"status": "partial"
+},
+{
+"no": 148,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"minimum requirements"
+],
+"abbr": [],
+"preferred": "최소 요건",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 149,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"recommended improvements"
+],
+"abbr": [],
+"preferred": "권장 개선사항",
+"allowed": [],
+"avoid": [
+{
+"form": "개선권고사항",
+"note": "검증 발견사항 용어와 혼동"
+}
+],
+"status": "candidate"
+},
+{
+"no": 150,
+"category": "06 모니터링·측정",
+"core": true,
+"en": [
+"source stream"
+],
+"abbr": [],
+"preferred": "소스스트림",
+"allowed": [
+"배출원 스트림"
+],
+"avoid": [
+{
+"form": "배출원 흐름",
+"note": "국문본"
+},
+{
+"form": "소스 흐름"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 151,
+"category": "06 모니터링·측정",
+"core": true,
+"en": [
+"emission source"
+],
+"abbr": [],
+"preferred": "배출원",
+"allowed": [],
+"avoid": [
+{
+"form": "배출시설",
+"note": "국내 배출권거래제의 다른 단위"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 152,
+"category": "06 모니터링·측정",
+"core": true,
+"en": [
+"activity data"
+],
+"abbr": [
+"AD"
+],
+"preferred": "활동자료",
+"allowed": [],
+"avoid": [
+{
+"form": "활동 데이터"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 153,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"calculation factors"
+],
+"abbr": [],
+"preferred": "산정계수",
+"allowed": [],
+"avoid": [
+{
+"form": "계산 요소"
+}
+],
+"status": "candidate"
+},
+{
+"no": 154,
+"category": "06 모니터링·측정",
+"core": true,
+"en": [
+"emission factor"
+],
+"abbr": [
+"EF"
+],
+"preferred": "배출계수",
+"allowed": [],
+"avoid": [
+{
+"form": "방출 계수"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 155,
+"category": "06 모니터링·측정",
+"core": true,
+"en": [
+"net calorific value"
+],
+"abbr": [
+"NCV"
+],
+"preferred": "순발열량",
+"allowed": [],
+"avoid": [
+{
+"form": "총발열량",
+"note": "다른 개념"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 156,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"oxidation factor"
+],
+"abbr": [
+"OF"
+],
+"preferred": "산화계수",
+"allowed": [],
+"avoid": [
+{
+"form": "산화 인자"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 157,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"conversion factor"
+],
+"abbr": [
+"CF"
+],
+"preferred": "전환계수",
+"allowed": [
+"전환율"
+],
+"avoid": [
+{
+"form": "변환계수",
+"note": "단위 환산 상수와 혼동"
+}
+],
+"status": "partial"
+},
+{
+"no": 158,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"carbon content"
+],
+"abbr": [],
+"preferred": "탄소함량",
+"allowed": [],
+"avoid": [
+{
+"form": "탄소 함유량"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 159,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"biomass fraction"
+],
+"abbr": [
+"BF"
+],
+"preferred": "바이오매스 비율",
+"allowed": [
+"바이오매스 함량"
+],
+"avoid": [
+{
+"form": "바이오매스 분율"
+}
+],
+"status": "partial"
+},
+{
+"no": 160,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"fossil fraction"
+],
+"abbr": [],
+"preferred": "화석 비율",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 161,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"preliminary emission factor"
+],
+"abbr": [],
+"preferred": "예비 배출계수",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 162,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"standard value (type I · type II)"
+],
+"abbr": [],
+"preferred": "표준값",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 163,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"calculation-based approach"
+],
+"abbr": [],
+"preferred": "계산 기반 방법",
+"allowed": [
+"계산법"
+],
+"avoid": [
+{
+"form": "계산 기반 접근법",
+"note": "국문본 일부"
+}
+],
+"status": "partial"
+},
+{
+"no": 164,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"standard methodology"
+],
+"abbr": [],
+"preferred": "표준방법",
+"allowed": [],
+"avoid": [
+{
+"form": "표준 방법론",
+"note": "국문본"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 165,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"mass balance methodology"
+],
+"abbr": [],
+"preferred": "물질수지법",
+"allowed": [],
+"avoid": [
+{
+"form": "물질수지 방법론",
+"note": "국문본"
+},
+{
+"form": "물질 수지 방법"
+},
+{
+"form": "질량수지"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 166,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"measurement-based approach"
+],
+"abbr": [],
+"preferred": "측정 기반 방법",
+"allowed": [],
+"avoid": [
+{
+"form": "측정 기반 접근법",
+"note": "국문본"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 167,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"continuous emission measurement"
+],
+"abbr": [
+"CEM"
+],
+"preferred": "연속측정방법",
+"allowed": [
+"연속배출측정"
+],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 168,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"continuous emission measurement system"
+],
+"abbr": [
+"CEMS"
+],
+"preferred": "굴뚝자동측정기기",
+"allowed": [
+"연속배출측정시스템"
+],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 169,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"predictive emission monitoring system"
+],
+"abbr": [
+"PEMS"
+],
+"preferred": "예측배출모니터링시스템",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 170,
+"category": "06 모니터링·측정",
+"core": true,
+"en": [
+"process emissions"
+],
+"abbr": [],
+"preferred": "공정배출",
+"allowed": [
+"공정배출량"
+],
+"avoid": [
+{
+"form": "프로세스 배출"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 171,
+"category": "06 모니터링·측정",
+"core": true,
+"en": [
+"combustion emissions"
+],
+"abbr": [],
+"preferred": "연소배출",
+"allowed": [
+"연소배출량"
+],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 172,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"fugitive emissions"
+],
+"abbr": [],
+"preferred": "탈루배출",
+"allowed": [
+"탈루배출량"
+],
+"avoid": [
+{
+"form": "비산배출",
+"note": "대기오염 용어"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 173,
+"category": "06 모니터링·측정",
+"core": true,
+"en": [
+"uncertainty"
+],
+"abbr": [],
+"preferred": "불확도",
+"allowed": [],
+"avoid": [
+{
+"form": "불확실성(측정"
+},
+{
+"form": "산정 문맥에 한함)"
+},
+{
+"form": "불확정성"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 174,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"accuracy"
+],
+"abbr": [],
+"preferred": "정확도",
+"allowed": [],
+"avoid": [
+{
+"form": "정밀도",
+"note": "precision과 혼동"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 175,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"calibration"
+],
+"abbr": [],
+"preferred": "교정",
+"allowed": [],
+"avoid": [
+{
+"form": "보정",
+"note": "calibration을 옮길 때"
+},
+{
+"form": "캘리브레이션"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 176,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"measuring instrument"
+],
+"abbr": [],
+"preferred": "측정기기",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 177,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"measurement system"
+],
+"abbr": [],
+"preferred": "측정 시스템",
+"allowed": [],
+"avoid": [],
+"status": "partial"
+},
+{
+"no": 178,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"measurement point"
+],
+"abbr": [],
+"preferred": "측정지점",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 179,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"legal metrological control"
+],
+"abbr": [],
+"preferred": "법정계량 관리",
+"allowed": [],
+"avoid": [
+{
+"form": "법정 계량 통제"
+}
+],
+"status": "partial"
+},
+{
+"no": 180,
+"category": "06 모니터링·측정",
+"core": true,
+"en": [
+"heat meter"
+],
+"abbr": [],
+"preferred": "적산열량계",
+"allowed": [],
+"avoid": [
+{
+"form": "열량계",
+"note": "국문본 — 실험용 calorimeter와 혼동"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 181,
+"category": "06 모니터링·측정",
+"core": true,
+"en": [
+"data gap"
+],
+"abbr": [],
+"preferred": "누락데이터",
+"allowed": [
+"결측"
+],
+"avoid": [
+{
+"form": "데이터 공백",
+"note": "국문본"
+},
+{
+"form": "데이터 갭"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 182,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"proxy data"
+],
+"abbr": [],
+"preferred": "대체 데이터",
+"allowed": [],
+"avoid": [
+{
+"form": "대리 데이터"
+},
+{
+"form": "프록시 데이터"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 183,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"data set"
+],
+"abbr": [],
+"preferred": "데이터 세트",
+"allowed": [],
+"avoid": [],
+"status": "partial"
+},
+{
+"no": 184,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"data flow activities"
+],
+"abbr": [],
+"preferred": "데이터 흐름 활동",
+"allowed": [],
+"avoid": [],
+"status": "partial"
+},
+{
+"no": 185,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"control system"
+],
+"abbr": [],
+"preferred": "통제 시스템",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 186,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"control activities"
+],
+"abbr": [],
+"preferred": "통제 활동",
+"allowed": [
+"내부 통제 활동"
+],
+"avoid": [],
+"status": "partial"
+},
+{
+"no": 187,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"risk assessment (operator)"
+],
+"abbr": [],
+"preferred": "위험평가",
+"allowed": [],
+"avoid": [
+{
+"form": "리스크 평가",
+"note": "검증기관 용어와 구분"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 188,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"sampling"
+],
+"abbr": [],
+"preferred": "시료채취",
+"allowed": [],
+"avoid": [
+{
+"form": "샘플링",
+"note": "검증기관 데이터 샘플링과 구분"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 189,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"sampling plan"
+],
+"abbr": [],
+"preferred": "시료채취 계획",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 190,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"batch"
+],
+"abbr": [],
+"preferred": "배치",
+"allowed": [],
+"avoid": [],
+"status": "partial"
+},
+{
+"no": 191,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"standard conditions"
+],
+"abbr": [],
+"preferred": "표준상태",
+"allowed": [],
+"avoid": [
+{
+"form": "표준 조건",
+"note": "국문본"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 192,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"tier (Korean ETS)"
+],
+"abbr": [],
+"preferred": "산정등급(Tier)",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 193,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"best available data sources"
+],
+"abbr": [],
+"preferred": "최적 가용 데이터 출처",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 194,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"unreasonable costs"
+],
+"abbr": [],
+"preferred": "불합리한 비용",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 195,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"mixed fuel"
+],
+"abbr": [],
+"preferred": "혼합 연료",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 195,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"mixed material"
+],
+"abbr": [],
+"preferred": "혼합 물질",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 196,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"biomass"
+],
+"abbr": [],
+"preferred": "바이오매스",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 197,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"fossil carbon"
+],
+"abbr": [],
+"preferred": "화석탄소",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 198,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"Monitoring and Reporting Regulation"
+],
+"abbr": [
+"MRR"
+],
+"preferred": "모니터링·보고 규정",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 199,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"monitoring, reporting and verification"
+],
+"abbr": [
+"MRV"
+],
+"preferred": "모니터링·보고·검증",
+"allowed": [],
+"avoid": [
+{
+"form": "측정"
+},
+{
+"form": "검증"
+},
+{
+"form": "보고"
+},
+{
+"form": "측정"
+},
+{
+"form": "검인증"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 200,
+"category": "07 열·전력·폐가스",
+"core": true,
+"en": [
+"measurable heat"
+],
+"abbr": [],
+"preferred": "측정가능열",
+"allowed": [],
+"avoid": [
+{
+"form": "측정가능한 열",
+"note": "국문본"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 201,
+"category": "07 열·전력·폐가스",
+"core": false,
+"en": [
+"non-measurable heat"
+],
+"abbr": [],
+"preferred": "측정불가능열",
+"allowed": [],
+"avoid": [
+{
+"form": "측정불가능한 열",
+"note": "국문본"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 202,
+"category": "07 열·전력·폐가스",
+"core": true,
+"en": [
+"waste gas"
+],
+"abbr": [],
+"preferred": "폐가스",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 203,
+"category": "07 열·전력·폐가스",
+"core": false,
+"en": [
+"by-product gas (industry usage)"
+],
+"abbr": [],
+"preferred": "부생가스",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 204,
+"category": "07 열·전력·폐가스",
+"core": true,
+"en": [
+"emission factor for electricity"
+],
+"abbr": [],
+"preferred": "전력배출계수",
+"allowed": [],
+"avoid": [
+{
+"form": "전력에 대한 '배출계수'",
+"note": "국문본"
+},
+{
+"form": "전력의 '배출계수'",
+"note": "국문본"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 205,
+"category": "07 열·전력·폐가스",
+"core": false,
+"en": [
+"CO₂ emission factor"
+],
+"abbr": [],
+"preferred": "CO₂ 배출계수",
+"allowed": [],
+"avoid": [
+{
+"form": "전력배출계수",
+"note": "국내 계통 평균이라 다른 개념"
+}
+],
+"status": "candidate"
+},
+{
+"no": 205,
+"category": "07 열·전력·폐가스",
+"core": false,
+"en": [
+"default grid emission factor"
+],
+"abbr": [],
+"preferred": "계통 기본 배출계수",
+"allowed": [],
+"avoid": [
+{
+"form": "전력배출계수",
+"note": "국내 계통 평균이라 다른 개념"
+}
+],
+"status": "candidate"
+},
+{
+"no": 206,
+"category": "07 열·전력·폐가스",
+"core": false,
+"en": [
+"power purchase agreement"
+],
+"abbr": [
+"PPA"
+],
+"preferred": "전력구매계약",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 207,
+"category": "07 열·전력·폐가스",
+"core": false,
+"en": [
+"transmission system operator"
+],
+"abbr": [
+"TSO"
+],
+"preferred": "송전망 운영자",
+"allowed": [
+"송전계통운영자"
+],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 208,
+"category": "07 열·전력·폐가스",
+"core": false,
+"en": [
+"electricity in transit"
+],
+"abbr": [],
+"preferred": "경유 전력",
+"allowed": [],
+"avoid": [
+{
+"form": "통과 전력"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 209,
+"category": "07 열·전력·폐가스",
+"core": false,
+"en": [
+"direct technical connection"
+],
+"abbr": [],
+"preferred": "직접 기술적 연결",
+"allowed": [],
+"avoid": [
+{
+"form": "직접적인 기술 링크"
+}
+],
+"status": "candidate"
+},
+{
+"no": 210,
+"category": "07 열·전력·폐가스",
+"core": false,
+"en": [
+"market coupling"
+],
+"abbr": [],
+"preferred": "시장 커플링",
+"allowed": [
+"시장결합"
+],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 211,
+"category": "07 열·전력·폐가스",
+"core": false,
+"en": [
+"interconnector"
+],
+"abbr": [],
+"preferred": "연계선",
+"allowed": [
+"연계선로"
+],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 212,
+"category": "07 열·전력·폐가스",
+"core": false,
+"en": [
+"combined heat and power"
+],
+"abbr": [
+"CHP"
+],
+"preferred": "열병합발전",
+"allowed": [],
+"avoid": [
+{
+"form": "코제너레이션"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 213,
+"category": "07 열·전력·폐가스",
+"core": false,
+"en": [
+"inherent CO₂"
+],
+"abbr": [],
+"preferred": "고유 CO₂",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 214,
+"category": "07 열·전력·폐가스",
+"core": false,
+"en": [
+"transferred CO₂"
+],
+"abbr": [],
+"preferred": "이전된 CO₂",
+"allowed": [
+"이동된 CO₂"
+],
+"avoid": [],
+"status": "partial"
+},
+{
+"no": 215,
+"category": "07 열·전력·폐가스",
+"core": false,
+"en": [
+"CCUS system"
+],
+"abbr": [],
+"preferred": "CCUS 시스템",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 216,
+"category": "07 열·전력·폐가스",
+"core": false,
+"en": [
+"carbon capture and storage"
+],
+"abbr": [
+"CCS",
+"CCU(S)"
+],
+"preferred": "탄소 포집·저장",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 216,
+"category": "07 열·전력·폐가스",
+"core": false,
+"en": [
+"utilisation"
+],
+"abbr": [
+"CCS",
+"CCU(S)"
+],
+"preferred": "탄소 포집·활용",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 217,
+"category": "08 검증·인정",
+"core": true,
+"en": [
+"verification"
+],
+"abbr": [],
+"preferred": "검증",
+"allowed": [],
+"avoid": [
+{
+"form": "인증",
+"note": "certification과 혼동"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 218,
+"category": "08 검증·인정",
+"core": true,
+"en": [
+"verifier"
+],
+"abbr": [],
+"preferred": "검증기관",
+"allowed": [],
+"avoid": [
+{
+"form": "검증인",
+"note": "하위규정 정식 명칭을 인용할 때는 예외",
+"conditional": true
+},
+{
+"form": "검증자"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 219,
+"category": "08 검증·인정",
+"core": true,
+"en": [
+"accredited verifier"
+],
+"abbr": [],
+"preferred": "인정받은 검증기관",
+"allowed": [
+"공인 검증기관"
+],
+"avoid": [
+{
+"form": "공인 검증인",
+"note": "2023 법률 번역서"
+},
+{
+"form": "인증기관"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 220,
+"category": "08 검증·인정",
+"core": true,
+"en": [
+"verification report"
+],
+"abbr": [],
+"preferred": "검증보고서",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 221,
+"category": "08 검증·인정",
+"core": true,
+"en": [
+"verification opinion"
+],
+"abbr": [],
+"preferred": "검증의견",
+"allowed": [],
+"avoid": [
+{
+"form": "검증 진술"
+},
+{
+"form": "검증 성명서",
+"note": "CBAM 문맥 — ISO 표준명의 '성명서'는 예외",
+"conditional": true
+}
+],
+"status": "confirmed"
+},
+{
+"no": 221,
+"category": "08 검증·인정",
+"core": true,
+"en": [
+"verification statement"
+],
+"abbr": [],
+"preferred": "검증의견서",
+"allowed": [],
+"avoid": [
+{
+"form": "검증 진술"
+},
+{
+"form": "검증 성명서",
+"note": "CBAM 문맥 — ISO 표준명의 '성명서'는 예외",
+"conditional": true
+}
+],
+"status": "confirmed"
+},
+{
+"no": 222,
+"category": "08 검증·인정",
+"core": true,
+"en": [
+"reasonable assurance"
+],
+"abbr": [],
+"preferred": "합리적 보증",
+"allowed": [],
+"avoid": [
+{
+"form": "합리적 확신"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 223,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"level of assurance"
+],
+"abbr": [],
+"preferred": "보증 수준",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 224,
+"category": "08 검증·인정",
+"core": true,
+"en": [
+"materiality"
+],
+"abbr": [],
+"preferred": "중요성",
+"allowed": [],
+"avoid": [
+{
+"form": "중대성"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 225,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"materiality level"
+],
+"abbr": [],
+"preferred": "중요성 기준",
+"allowed": [],
+"avoid": [
+{
+"form": "중대성 기준"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 226,
+"category": "08 검증·인정",
+"core": true,
+"en": [
+"misstatement"
+],
+"abbr": [],
+"preferred": "오류",
+"allowed": [],
+"avoid": [
+{
+"form": "허위 진술",
+"note": "폐지 KS I 7007 표기"
+},
+{
+"form": "왜곡표시"
+}
+],
+"status": "partial"
+},
+{
+"no": 227,
+"category": "08 검증·인정",
+"core": true,
+"en": [
+"material misstatement"
+],
+"abbr": [],
+"preferred": "중요한 오류",
+"allowed": [],
+"avoid": [
+{
+"form": "중대한 오류",
+"note": "국문본 — materiality는 「중요성」"
+},
+{
+"form": "중대하지 않은 오류",
+"note": "국문본"
+},
+{
+"form": "중대한 허위 진술",
+"note": "폐지 KS"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 228,
+"category": "08 검증·인정",
+"core": true,
+"en": [
+"non-conformity"
+],
+"abbr": [],
+"preferred": "부적합",
+"allowed": [
+"부적합 사항"
+],
+"avoid": [
+{
+"form": "불일치 사항"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 229,
+"category": "08 검증·인정",
+"core": true,
+"en": [
+"site visit"
+],
+"abbr": [],
+"preferred": "현장검증",
+"allowed": [],
+"avoid": [
+{
+"form": "현장 방문",
+"note": "국문본"
+},
+{
+"form": "현장 실사"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 230,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"virtual site visit"
+],
+"abbr": [],
+"preferred": "원격 현장검증",
+"allowed": [],
+"avoid": [
+{
+"form": "가상 현장 방문"
+}
+],
+"status": "candidate"
+},
+{
+"no": 231,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"strategic analysis"
+],
+"abbr": [],
+"preferred": "전략 분석",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 232,
+"category": "08 검증·인정",
+"core": true,
+"en": [
+"risk analysis (verifier)"
+],
+"abbr": [],
+"preferred": "리스크 분석",
+"allowed": [],
+"avoid": [
+{
+"form": "위험 분석",
+"note": "국문본"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 233,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"verification plan"
+],
+"abbr": [],
+"preferred": "검증계획",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 234,
+"category": "08 검증·인정",
+"core": true,
+"en": [
+"accreditation"
+],
+"abbr": [],
+"preferred": "인정",
+"allowed": [],
+"avoid": [
+{
+"form": "인증"
+},
+{
+"form": "지정",
+"note": "국내 배출권거래제 검증기관 지정과 혼동"
+},
+{
+"form": "공인",
+"note": "accreditation만 따로 옮길 때. KOLAS '공인검증기관' 같은 기관명은 예외",
+"conditional": true
+}
+],
+"status": "confirmed"
+},
+{
+"no": 235,
+"category": "08 검증·인정",
+"core": true,
+"en": [
+"national accreditation body"
+],
+"abbr": [
+"NAB"
+],
+"preferred": "국가인정기구",
+"allowed": [],
+"avoid": [
+{
+"form": "국가 인증기관"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 236,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"accreditation certificate"
+],
+"abbr": [],
+"preferred": "인정서",
+"allowed": [],
+"avoid": [
+{
+"form": "인증서",
+"note": "CBAM 인증서와 혼동"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 237,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"European co-operation for Accreditation"
+],
+"abbr": [
+"EA"
+],
+"preferred": "유럽인정협력기구",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 238,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"lead auditor (team leader)"
+],
+"abbr": [],
+"preferred": "검증팀장",
+"allowed": [],
+"avoid": [
+{
+"form": "선임 감사원"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 239,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"technical expert"
+],
+"abbr": [],
+"preferred": "기술전문가",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 240,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"independent reviewer"
+],
+"abbr": [],
+"preferred": "독립 검토자",
+"allowed": [],
+"avoid": [
+{
+"form": "독립적 평가자"
+}
+],
+"status": "partial"
+},
+{
+"no": 240,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"independent review"
+],
+"abbr": [],
+"preferred": "독립 검토",
+"allowed": [],
+"avoid": [
+{
+"form": "독립적 평가자"
+}
+],
+"status": "partial"
+},
+{
+"no": 241,
+"category": "08 검증·인정",
+"core": true,
+"en": [
+"impartiality"
+],
+"abbr": [],
+"preferred": "공평성",
+"allowed": [],
+"avoid": [
+{
+"form": "공정성",
+"note": "국문본"
+},
+{
+"form": "중립성"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 242,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"competence"
+],
+"abbr": [],
+"preferred": "적격성",
+"allowed": [],
+"avoid": [
+{
+"form": "능력"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 243,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"validation"
+],
+"abbr": [],
+"preferred": "타당성평가",
+"allowed": [],
+"avoid": [
+{
+"form": "유효성 확인"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 244,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"ISO/IEC 17029"
+],
+"abbr": [],
+"preferred": "적합성평가 — 계획검증 및 결과검증 기관에 대한 일반 원칙과 요구사항(KS Q ISO/IEC 17029)",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 245,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"ISO 14065"
+],
+"abbr": [],
+"preferred": "환경 정보 계획검증 및 결과검증 기관에 관한 일반원칙 및 요구사항(KS I ISO 14065)",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 246,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"ISO 14064-3"
+],
+"abbr": [],
+"preferred": "온실가스 – 제3부: 온실가스 성명서에 대한 타당성평가 및 검증을 위한 사용 규칙 및 지침",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 247,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"pre-verification"
+],
+"abbr": [],
+"preferred": "사전검증",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 248,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"independent person (carbon price certifier)"
+],
+"abbr": [],
+"preferred": "독립적 확인자",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 249,
+"category": "08 검증·인정",
+"core": true,
+"en": [
+"limited assurance"
+],
+"abbr": [],
+"preferred": "제한적 보증",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 250,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"inherent risk"
+],
+"abbr": [],
+"preferred": "고유리스크",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 250,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"control risk"
+],
+"abbr": [],
+"preferred": "통제리스크",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 250,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"detection risk"
+],
+"abbr": [],
+"preferred": "검출리스크",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 251,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"uncorrected misstatement"
+],
+"abbr": [],
+"preferred": "미수정된 오류",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 252,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"data sampling plan (verifier)"
+],
+"abbr": [],
+"preferred": "데이터 샘플링 계획",
+"allowed": [],
+"avoid": [
+{
+"form": "시료채취 계획",
+"note": "검증기관의 표본 계획을 가리킬 때",
+"conditional": true
+}
+],
+"status": "confirmed"
+},
+{
+"no": 253,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"verification team"
+],
+"abbr": [],
+"preferred": "검증팀",
+"allowed": [
+"검증심사팀"
+],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 254,
+"category": "09 탄소가격·무상할당",
+"core": true,
+"en": [
+"carbon price"
+],
+"abbr": [],
+"preferred": "탄소가격",
+"allowed": [],
+"avoid": [
+{
+"form": "이산화탄소 가격"
+},
+{
+"form": "탄소비용",
+"note": "carbon cost와 혼동"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 255,
+"category": "09 탄소가격·무상할당",
+"core": true,
+"en": [
+"carbon price effectively paid"
+],
+"abbr": [],
+"preferred": "실질적으로 지불된 탄소가격",
+"allowed": [
+"기지불 탄소가격"
+],
+"avoid": [
+{
+"form": "실제로 지불된 탄소가격",
+"note": "국문본"
+},
+{
+"form": "기납부 탄소가격"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 256,
+"category": "09 탄소가격·무상할당",
+"core": true,
+"en": [
+"reduction (deduction) of CBAM certificates"
+],
+"abbr": [],
+"preferred": "차감",
+"allowed": [],
+"avoid": [
+{
+"form": "감면"
+},
+{
+"form": "공제"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 257,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"rebate"
+],
+"abbr": [],
+"preferred": "환급",
+"allowed": [
+"환급금"
+],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 258,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"other form of compensation"
+],
+"abbr": [],
+"preferred": "보상",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 259,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"carbon pricing"
+],
+"abbr": [],
+"preferred": "탄소가격제",
+"allowed": [],
+"avoid": [
+{
+"form": "탄소가격메커니즘"
+},
+{
+"form": "탄소 가격 책정"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 259,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"carbon pricing system"
+],
+"abbr": [],
+"preferred": "탄소가격제도",
+"allowed": [],
+"avoid": [
+{
+"form": "탄소가격메커니즘"
+},
+{
+"form": "탄소 가격 책정"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 260,
+"category": "09 탄소가격·무상할당",
+"core": true,
+"en": [
+"free allocation"
+],
+"abbr": [],
+"preferred": "무상할당",
+"allowed": [],
+"avoid": [
+{
+"form": "무료할당"
+},
+{
+"form": "무료 허용량"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 261,
+"category": "09 탄소가격·무상할당",
+"core": true,
+"en": [
+"free allocation adjustment"
+],
+"abbr": [],
+"preferred": "무상할당 조정",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 262,
+"category": "09 탄소가격·무상할당",
+"core": true,
+"en": [
+"CBAM benchmark"
+],
+"abbr": [],
+"preferred": "CBAM 벤치마크",
+"allowed": [],
+"avoid": [
+{
+"form": "CBAM 기준치"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 263,
+"category": "09 탄소가격·무상할당",
+"core": true,
+"en": [
+"CBAM factor"
+],
+"abbr": [],
+"preferred": "CBAM 계수",
+"allowed": [],
+"avoid": [
+{
+"form": "CBAM 지수"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 264,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"cross-sectoral correction factor"
+],
+"abbr": [
+"CSCF"
+],
+"preferred": "부문 간 보정계수",
+"allowed": [
+"전부문 조정계수"
+],
+"avoid": [
+{
+"form": "교차부문 조정계수"
+}
+],
+"status": "partial"
+},
+{
+"no": 265,
+"category": "09 탄소가격·무상할당",
+"core": true,
+"en": [
+"specific embedded free allocation"
+],
+"abbr": [
+"SEFA"
+],
+"preferred": "고유 내재무상할당량",
+"allowed": [],
+"avoid": [
+{
+"form": "단위 내재 무상할당량",
+"note": "국문본"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 266,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"specific embedded carbon price paid"
+],
+"abbr": [
+"SECPP"
+],
+"preferred": "지불된 고유 내재탄소가격",
+"allowed": [],
+"avoid": [
+{
+"form": "지불된 단위 내재 탄소가격",
+"note": "국문본"
+}
+],
+"status": "candidate"
+},
+{
+"no": 267,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"reference price (RP_CBAM)"
+],
+"abbr": [],
+"preferred": "기준가격",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 268,
+"category": "09 탄소가격·무상할당",
+"core": true,
+"en": [
+"EU Emissions Trading System"
+],
+"abbr": [
+"EU ETS"
+],
+"preferred": "EU 배출권거래제",
+"allowed": [],
+"avoid": [
+{
+"form": "EU 탄소배출권거래제"
+},
+{
+"form": "EU 온실가스 배출권 거래제",
+"note": "2023 법률 번역서"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 269,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"emissions trading system"
+],
+"abbr": [
+"ETS"
+],
+"preferred": "배출권거래제",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 270,
+"category": "09 탄소가격·무상할당",
+"core": true,
+"en": [
+"EU ETS allowance"
+],
+"abbr": [
+"EUA"
+],
+"preferred": "EU 배출권",
+"allowed": [
+"EU ETS 배출권"
+],
+"avoid": [
+{
+"form": "무료 허용량"
+},
+{
+"form": "허가량"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 271,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"auction"
+],
+"abbr": [],
+"preferred": "경매",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 271,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"auction clearing price"
+],
+"abbr": [],
+"preferred": "경매 낙찰가격",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 272,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"weekly average price (quarterly average in 2026)"
+],
+"abbr": [],
+"preferred": "주간 평균가격",
+"allowed": [
+"분기별 평균가격"
+],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 273,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"benchmark"
+],
+"abbr": [
+"BM"
+],
+"preferred": "벤치마크",
+"allowed": [],
+"avoid": [
+{
+"form": "기준치"
+},
+{
+"form": "유럽기준"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 274,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"fallback approach (heat · fuel benchmark)"
+],
+"abbr": [],
+"preferred": "대체 벤치마크(열·연료 벤치마크)",
+"allowed": [
+"대체 접근법"
+],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 275,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"sub-installation"
+],
+"abbr": [],
+"preferred": "하위사업장",
+"allowed": [],
+"avoid": [
+{
+"form": "하위설비",
+"note": "국문본"
+},
+{
+"form": "하위시설"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 276,
+"category": "09 탄소가격·무상할당",
+"core": true,
+"en": [
+"phase-out (of free allocation)"
+],
+"abbr": [],
+"preferred": "단계적 폐지",
+"allowed": [],
+"avoid": [
+{
+"form": "페이즈아웃"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 277,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"phase-in (of CBAM)"
+],
+"abbr": [],
+"preferred": "단계적 도입",
+"allowed": [],
+"avoid": [
+{
+"form": "페이즈인"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 278,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"linking (of ETS)"
+],
+"abbr": [],
+"preferred": "연계",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 278,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"linked ETS"
+],
+"abbr": [],
+"preferred": "연계된 배출권거래제",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 279,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"Free Allocation Rules"
+],
+"abbr": [
+"FAR"
+],
+"preferred": "무상할당 규칙",
+"allowed": [],
+"avoid": [],
+"status": "partial"
+},
+{
+"no": 280,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"default carbon price"
+],
+"abbr": [],
+"preferred": "기본 탄소가격",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 281,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"carbon cost"
+],
+"abbr": [],
+"preferred": "탄소비용",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 282,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"clinker"
+],
+"abbr": [],
+"preferred": "클링커",
+"allowed": [],
+"avoid": [
+{
+"form": "크링커",
+"note": "구 법령 표기"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 283,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"cement kiln dust"
+],
+"abbr": [
+"CKD"
+],
+"preferred": "시멘트 킬른먼지",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 284,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"clinker-to-cement ratio"
+],
+"abbr": [
+"CCR"
+],
+"preferred": "클링커-시멘트 비율",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 285,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"calcined clay"
+],
+"abbr": [],
+"preferred": "소성점토",
+"allowed": [],
+"avoid": [],
+"status": "partial"
+},
+{
+"no": 286,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"aluminous cement"
+],
+"abbr": [],
+"preferred": "알루미나 시멘트",
+"allowed": [],
+"avoid": [
+{
+"form": "알루미늄 시멘트",
+"note": "EU e-러닝 직역"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 287,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"kiln"
+],
+"abbr": [],
+"preferred": "소성로(킬른)",
+"allowed": [],
+"avoid": [
+{
+"form": "가마"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 288,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"raw meal"
+],
+"abbr": [],
+"preferred": "조합원료",
+"allowed": [],
+"avoid": [
+{
+"form": "원료 믹스",
+"note": "국문본"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 289,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"blast furnace"
+],
+"abbr": [],
+"preferred": "고로",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 290,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"blast furnace gas"
+],
+"abbr": [
+"BFG"
+],
+"preferred": "고로가스",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 291,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"basic oxygen furnace"
+],
+"abbr": [
+"BOF"
+],
+"preferred": "전로",
+"allowed": [
+"순산소 전로"
+],
+"avoid": [
+{
+"form": "기본 산소 변환기"
+},
+{
+"form": "산소 변환기"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 292,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"basic oxygen furnace gas"
+],
+"abbr": [
+"BOFG"
+],
+"preferred": "전로가스",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 293,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"coke oven gas"
+],
+"abbr": [
+"COG"
+],
+"preferred": "코크스로가스",
+"allowed": [],
+"avoid": [
+{
+"form": "코크스 오븐 가스"
+},
+{
+"form": "코크스오븐가스"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 294,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"coke oven"
+],
+"abbr": [],
+"preferred": "코크스로",
+"allowed": [],
+"avoid": [
+{
+"form": "코크스 오븐"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 295,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"electric arc furnace"
+],
+"abbr": [
+"EAF"
+],
+"preferred": "전기로",
+"allowed": [],
+"avoid": [
+{
+"form": "전기 가마"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 296,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"direct reduced iron"
+],
+"abbr": [
+"DRI"
+],
+"preferred": "직접환원철",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 297,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"hot briquetted iron"
+],
+"abbr": [
+"HBI"
+],
+"preferred": "HBI(고온 브리켓 철)",
+"allowed": [],
+"avoid": [
+{
+"form": "열간성형환원철",
+"note": "공개 자료에 없음"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 298,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"pig iron"
+],
+"abbr": [],
+"preferred": "선철",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 299,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"hot metal"
+],
+"abbr": [],
+"preferred": "용선",
+"allowed": [],
+"avoid": [
+{
+"form": "고온 금속"
+},
+{
+"form": "액체 선철"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 300,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"nickel pig iron"
+],
+"abbr": [
+"NPI"
+],
+"preferred": "니켈선철",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 301,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"sinter (sintered ore)"
+],
+"abbr": [],
+"preferred": "소결광",
+"allowed": [],
+"avoid": [
+{
+"form": "소결물"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 302,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"pellets"
+],
+"abbr": [],
+"preferred": "펠렛",
+"allowed": [
+"펠릿"
+],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 303,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"agglomerated iron ore"
+],
+"abbr": [],
+"preferred": "괴성화 철광석",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 304,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"ferro-alloys"
+],
+"abbr": [],
+"preferred": "합금철",
+"allowed": [],
+"avoid": [
+{
+"form": "철합금"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 305,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"ferro-manganese"
+],
+"abbr": [
+"FeMn",
+"FeCr",
+"FeNi"
+],
+"preferred": "페로망간",
+"allowed": [],
+"avoid": [],
+"status": "partial"
+},
+{
+"no": 305,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"ferro-chromium"
+],
+"abbr": [
+"FeMn",
+"FeCr",
+"FeNi"
+],
+"preferred": "페로크롬",
+"allowed": [],
+"avoid": [],
+"status": "partial"
+},
+{
+"no": 305,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"ferro-nickel"
+],
+"abbr": [
+"FeMn",
+"FeCr",
+"FeNi"
+],
+"preferred": "페로니켈",
+"allowed": [],
+"avoid": [],
+"status": "partial"
+},
+{
+"no": 306,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"crude steel"
+],
+"abbr": [],
+"preferred": "조강",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 307,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"argon oxygen decarburisation"
+],
+"abbr": [
+"AOD",
+"VOD"
+],
+"preferred": "AOD(아르곤산소탈탄)",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 307,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"vacuum oxygen decarburisation"
+],
+"abbr": [
+"AOD",
+"VOD"
+],
+"preferred": "VOD(진공산소탈탄)",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 308,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"pulverised coal injection"
+],
+"abbr": [
+"PCI"
+],
+"preferred": "미분탄 취입",
+"allowed": [],
+"avoid": [],
+"status": "partial"
+},
+{
+"no": 309,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"iron and steel scrap"
+],
+"abbr": [],
+"preferred": "철스크랩",
+"allowed": [],
+"avoid": [
+{
+"form": "철설"
+},
+{
+"form": "폐철"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 310,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"unwrought aluminium"
+],
+"abbr": [],
+"preferred": "미가공 알루미늄",
+"allowed": [
+"알루미늄괴"
+],
+"avoid": [
+{
+"form": "비가공 알루미늄",
+"note": "국문본"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 311,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"primary aluminium"
+],
+"abbr": [],
+"preferred": "1차 알루미늄",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 312,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"secondary aluminium"
+],
+"abbr": [],
+"preferred": "2차 알루미늄",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 313,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"anode effect"
+],
+"abbr": [],
+"preferred": "양극효과",
+"allowed": [],
+"avoid": [],
+"status": "partial"
+},
+{
+"no": 314,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"anode effect minutes"
+],
+"abbr": [
+"AEM",
+"AEO"
+],
+"preferred": "양극효과 시간",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 314,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"anode effect overvoltage"
+],
+"abbr": [
+"AEM",
+"AEO"
+],
+"preferred": "양극효과 과전압",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 315,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"perfluorocarbons"
+],
+"abbr": [
+"PFCs"
+],
+"preferred": "과불화탄소",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 316,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"ammonia"
+],
+"abbr": [],
+"preferred": "암모니아",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 317,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"nitric acid"
+],
+"abbr": [],
+"preferred": "질산",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 318,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"urea"
+],
+"abbr": [],
+"preferred": "요소",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 319,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"ammonium nitrate"
+],
+"abbr": [],
+"preferred": "질산암모늄",
+"allowed": [],
+"avoid": [
+{
+"form": "초안",
+"note": "법령 병기 구용어"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 320,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"mixed fertilisers"
+],
+"abbr": [],
+"preferred": "복합비료",
+"allowed": [],
+"avoid": [],
+"status": "partial"
+},
+{
+"no": 321,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"nitrous oxide"
+],
+"abbr": [
+"N₂O"
+],
+"preferred": "아산화질소",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 322,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"steam methane reforming"
+],
+"abbr": [
+"SMR"
+],
+"preferred": "스팀개질",
+"allowed": [
+"메탄 수증기 개질"
+],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 323,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"water electrolysis"
+],
+"abbr": [],
+"preferred": "수전해",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 324,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"partial oxidation"
+],
+"abbr": [],
+"preferred": "부분산화",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 325,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"best available techniques"
+],
+"abbr": [
+"BAT"
+],
+"preferred": "최적가용기법",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 326,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"BAT reference documents"
+],
+"abbr": [
+"BREFs"
+],
+"preferred": "EU 최적가용기법 기준서",
+"allowed": [],
+"avoid": [
+{
+"form": "최적가용기법 참조문서",
+"note": "국문본"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 327,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"BAT conclusions"
+],
+"abbr": [
+"BATC"
+],
+"preferred": "최적가용기법 결정문",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 328,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"ferro-silicon"
+],
+"abbr": [
+"FeSi",
+"SiMn"
+],
+"preferred": "페로실리콘",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 328,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"silico-manganese"
+],
+"abbr": [
+"FeSi",
+"SiMn"
+],
+"preferred": "실리코망가니즈",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 329,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"autothermal reforming"
+],
+"abbr": [
+"ATR"
+],
+"preferred": "자열개질",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 330,
+"category": "11 제재·우회 방지",
+"core": true,
+"en": [
+"penalty"
+],
+"abbr": [],
+"preferred": "과징금",
+"allowed": [],
+"avoid": [
+{
+"form": "벌금"
+},
+{
+"form": "벌칙"
+},
+{
+"form": "과태료"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 331,
+"category": "11 제재·우회 방지",
+"core": true,
+"en": [
+"circumvention"
+],
+"abbr": [],
+"preferred": "우회",
+"allowed": [
+"우회행위"
+],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 332,
+"category": "11 제재·우회 방지",
+"core": false,
+"en": [
+"anti-circumvention"
+],
+"abbr": [],
+"preferred": "우회방지",
+"allowed": [],
+"avoid": [
+{
+"form": "우회덤핑 방지",
+"note": "무역구제 용어와 혼동"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 333,
+"category": "11 제재·우회 방지",
+"core": false,
+"en": [
+"resource shuffling"
+],
+"abbr": [],
+"preferred": "셔플링",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 334,
+"category": "11 제재·우회 방지",
+"core": false,
+"en": [
+"excess emissions penalty (EU ETS)"
+],
+"abbr": [],
+"preferred": "초과배출 과징금",
+"allowed": [],
+"avoid": [
+{
+"form": "초과배출 벌금"
+}
+],
+"status": "candidate"
+},
+{
+"no": 335,
+"category": "12 개정 논의",
+"core": true,
+"en": [
+"downstream products (scope extension)"
+],
+"abbr": [],
+"preferred": "하류제품",
+"allowed": [
+"하류재",
+"다운스트림 제품"
+],
+"avoid": [
+{
+"form": "하위공정 제품",
+"note": "국문본 G5f"
+},
+{
+"form": "후방 제품"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 336,
+"category": "12 개정 논의",
+"core": false,
+"en": [
+"extension of scope (product scope extension)"
+],
+"abbr": [],
+"preferred": "품목 확대",
+"allowed": [
+"적용 범위 확대"
+],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 337,
+"category": "12 개정 논의",
+"core": false,
+"en": [
+"Temporary Decarbonisation Fund"
+],
+"abbr": [
+"TDF"
+],
+"preferred": "임시 탈탄소화 기금",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 338,
+"category": "12 개정 논의",
+"core": false,
+"en": [
+"proposal on downstream extension and anti-circumvention"
+],
+"abbr": [],
+"preferred": "하류제품 확대·우회방지 개정안",
+"allowed": [],
+"avoid": [],
+"status": "partial"
+},
+{
+"no": 339,
+"category": "12 개정 논의",
+"core": false,
+"en": [
+"own resources (of the EU budget)"
+],
+"abbr": [],
+"preferred": "자체 재원",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 340,
+"category": "13 기관·일반 약어",
+"core": false,
+"en": [
+"Carbon footprint of products"
+],
+"abbr": [
+"CFP"
+],
+"preferred": "제품 탄소발자국",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 341,
+"category": "13 기관·일반 약어",
+"core": false,
+"en": [
+"European Economic Area"
+],
+"abbr": [
+"EEA"
+],
+"preferred": "유럽경제지역",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 342,
+"category": "13 기관·일반 약어",
+"core": false,
+"en": [
+"European Free Trade Association"
+],
+"abbr": [
+"EFTA"
+],
+"preferred": "유럽자유무역연합",
+"allowed": [],
+"avoid": [
+{
+"form": "유럽자유무역지역",
+"note": "국문본 G3"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 343,
+"category": "13 기관·일반 약어",
+"core": false,
+"en": [
+"euro"
+],
+"abbr": [
+"EUR"
+],
+"preferred": "유로",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 344,
+"category": "13 기관·일반 약어",
+"core": false,
+"en": [
+"first-in-first-out principle"
+],
+"abbr": [
+"FIFO"
+],
+"preferred": "선입선출 원칙",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 345,
+"category": "13 기관·일반 약어",
+"core": false,
+"en": [
+"International Energy Agency"
+],
+"abbr": [
+"IEA"
+],
+"preferred": "국제에너지기구",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 346,
+"category": "13 기관·일반 약어",
+"core": false,
+"en": [
+"International Organization for Standardization"
+],
+"abbr": [
+"ISO"
+],
+"preferred": "국제표준화기구",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 347,
+"category": "13 기관·일반 약어",
+"core": false,
+"en": [
+"land use, land-use change and forestry"
+],
+"abbr": [
+"LULUCF"
+],
+"preferred": "토지이용, 토지이용변화 및 임업",
+"allowed": [],
+"avoid": [
+{
+"form": "토지이용, 토지 변화 및 임업",
+"note": "국문본 G3"
+}
+],
+"status": "confirmed"
+},
+{
+"no": 348,
+"category": "13 기관·일반 약어",
+"core": false,
+"en": [
+"megawatt-hour"
+],
+"abbr": [
+"MWh"
+],
+"preferred": "메가와트시",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+},
+{
+"no": 349,
+"category": "13 기관·일반 약어",
+"core": false,
+"en": [
+"Proofs of Sustainability"
+],
+"abbr": [
+"PoS"
+],
+"preferred": "지속가능성 증빙",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 350,
+"category": "13 기관·일반 약어",
+"core": false,
+"en": [
+"Renewable Energy Directive (recast)"
+],
+"abbr": [
+"RED II"
+],
+"preferred": "재생에너지 지침",
+"allowed": [],
+"avoid": [
+{
+"form": "국문본의 다섯 가지 변형 표기",
+"descriptive": true
+}
+],
+"status": "confirmed"
+},
+{
+"no": 351,
+"category": "13 기관·일반 약어",
+"core": false,
+"en": [
+"terajoule"
+],
+"abbr": [
+"TJ"
+],
+"preferred": "테라줄",
+"allowed": [],
+"avoid": [],
+"status": "candidate"
+},
+{
+"no": 352,
+"category": "13 기관·일반 약어",
+"core": false,
+"en": [
+"United Nations Code for Trade and Transport Locations"
+],
+"abbr": [
+"UN/LOCODE"
+],
+"preferred": "UN/LOCODE(유엔 무역·운송 위치코드)",
+"allowed": [],
+"avoid": [],
+"status": "confirmed"
+}
+]
+}
