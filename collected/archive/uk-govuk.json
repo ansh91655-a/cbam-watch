@@ -1,13 +1,25 @@
 {
  "source": "uk-govuk",
- "fetchedAt": "2026-11-10T20:37:43+09:00",
+ "fetchedAt": "2026-11-10T22:56:28+09:00",
  "since": "2025-01-01",
  "report": {
   "documents": 19,
-  "changes": 235,
+  "searched": 10,
+  "changes": 247,
   "failures": []
  },
  "entries": [
+  {
+   "date": "2026-11-10",
+   "title": "Check if you’ll need to register for Carbon Border Adjustment Mechanism (CBAM)",
+   "note": "Information has been updated to confirm that from 1 January 2027 you'll need to keep records for the Carbon Border Adjustment Mechanism (CBAM), ahead of registration opening on 1 January 2028.",
+   "url": "https://www.gov.uk/government/collections/check-if-youll-need-to-register-for-carbon-border-adjustment-mechanism-cbam",
+   "type": "document_collection",
+   "firstPublished": "2026-07-16",
+   "via": "collection",
+   "key": "/government/collections/check-if-youll-need-to-register-for-carbon-border-adjustment-mechanism-cbam@2026-11-10",
+   "textPath": "collected/archive/pages/uk-govuk/changes.txt"
+  },
   {
    "date": "2026-11-10",
    "title": "Prepare for the Carbon Border Adjustment Mechanism (CBAM)",
@@ -15,6 +27,8 @@
    "url": "https://www.gov.uk/government/collections/carbon-border-adjustment-mechanism",
    "type": "document_collection",
    "firstPublished": "2026-02-10",
+   "via": "collection",
+   "key": "/government/collections/carbon-border-adjustment-mechanism@2026-11-10",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -24,6 +38,8 @@
    "url": "https://www.gov.uk/guidance/keeping-records-for-carbon-border-adjustment-mechanism-cbam",
    "type": "detailed_guide",
    "firstPublished": "2026-07-16",
+   "via": "collection",
+   "key": "/guidance/keeping-records-for-carbon-border-adjustment-mechanism-cbam@2026-11-03",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -33,6 +49,8 @@
    "url": "https://www.gov.uk/government/publications/carbon-border-adjustment-mechanism-cbam-policy-summary",
    "type": "policy_paper",
    "firstPublished": "2026-02-10",
+   "via": "collection",
+   "key": "/government/publications/carbon-border-adjustment-mechanism-cbam-policy-summary@2026-11-02",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -42,6 +60,21 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2026-10-29",
+   "textPath": "collected/archive/pages/uk-govuk/changes.txt"
+  },
+  {
+   "date": "2026-10-28",
+   "title": "Carbon Border Adjustment Mechanism (CBAM): a consultation on sectoral scope expansion to include refinery products",
+   "note": "First published.",
+   "url": "https://www.gov.uk/government/consultations/carbon-border-adjustment-mechanism-cbam-a-consultation-on-sectoral-scope-expansion-to-include-refinery-products",
+   "type": "open_consultation",
+   "firstPublished": "2026-10-28",
+   "via": "search",
+   "opens": "2026-10-28",
+   "closes": "2027-01-20",
+   "key": "/government/consultations/carbon-border-adjustment-mechanism-cbam-a-consultation-on-sectoral-scope-expansion-to-include-refinery-products@2026-10-28",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -51,6 +84,8 @@
    "url": "https://www.gov.uk/guidance/send-hmrc-questions-about-the-carbon-border-adjustment-mechanism-cbam",
    "type": "detailed_guide",
    "firstPublished": "2026-10-20",
+   "via": "collection",
+   "key": "/guidance/send-hmrc-questions-about-the-carbon-border-adjustment-mechanism-cbam@2026-10-21",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -60,6 +95,8 @@
    "url": "https://www.gov.uk/guidance/send-hmrc-questions-about-the-carbon-border-adjustment-mechanism-cbam",
    "type": "detailed_guide",
    "firstPublished": "2026-10-20",
+   "via": "collection",
+   "key": "/guidance/send-hmrc-questions-about-the-carbon-border-adjustment-mechanism-cbam@2026-10-20",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -69,6 +106,19 @@
    "url": "https://www.gov.uk/guidance/verifyingemissions-data-for-carbon-border-adjustment-mechanismcbamgoods",
    "type": "detailed_guide",
    "firstPublished": "2026-10-16",
+   "via": "collection",
+   "key": "/guidance/verifyingemissions-data-for-carbon-border-adjustment-mechanismcbamgoods@2026-10-16",
+   "textPath": "collected/archive/pages/uk-govuk/changes.txt"
+  },
+  {
+   "date": "2026-10-16",
+   "title": "Responsibilities if you accredit verifiers for Carbon Border Adjustment Mechanism (CBAM) goods",
+   "note": "First published.",
+   "url": "https://www.gov.uk/guidance/responsibilities-if-you-accredit-verifiers-for-carbon-border-adjustment-mechanism-cbam-goods",
+   "type": "detailed_guide",
+   "firstPublished": "2026-10-16",
+   "via": "search",
+   "key": "/guidance/responsibilities-if-you-accredit-verifiers-for-carbon-border-adjustment-mechanism-cbam-goods@2026-10-16",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -78,6 +128,8 @@
    "url": "https://www.gov.uk/guidance/rates-for-the-carbon-border-adjustment-mechanism-cbam",
    "type": "detailed_guide",
    "firstPublished": "2026-10-16",
+   "via": "collection",
+   "key": "/guidance/rates-for-the-carbon-border-adjustment-mechanism-cbam@2026-10-16",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -87,6 +139,8 @@
    "url": "https://www.gov.uk/guidance/monitoring-emissions-asan-overseas-installation-producing-carbon-border-adjustment-mechanism-cbam-goods-exported-to-the-uk",
    "type": "detailed_guide",
    "firstPublished": "2026-10-16",
+   "via": "collection",
+   "key": "/guidance/monitoring-emissions-asan-overseas-installation-producing-carbon-border-adjustment-mechanism-cbam-goods-exported-to-the-uk@2026-10-16",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -96,6 +150,8 @@
    "url": "https://www.gov.uk/guidance/keeping-records-for-carbon-border-adjustment-mechanism-cbam",
    "type": "detailed_guide",
    "firstPublished": "2026-07-16",
+   "via": "collection",
+   "key": "/guidance/keeping-records-for-carbon-border-adjustment-mechanism-cbam@2026-10-16",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -105,6 +161,8 @@
    "url": "https://www.gov.uk/guidance/getting-the-emissions-intensity-when-importing-carbon-border-adjustment-mechanism-cbam-goods",
    "type": "detailed_guide",
    "firstPublished": "2026-10-16",
+   "via": "collection",
+   "key": "/guidance/getting-the-emissions-intensity-when-importing-carbon-border-adjustment-mechanism-cbam-goods@2026-10-16",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -114,6 +172,8 @@
    "url": "https://www.gov.uk/government/publications/illustrative-cbam-rates-and-worked-example-for-carbon-border-adjustment-mechanism-cbam",
    "type": "guidance",
    "firstPublished": "2026-10-16",
+   "via": "collection",
+   "key": "/government/publications/illustrative-cbam-rates-and-worked-example-for-carbon-border-adjustment-mechanism-cbam@2026-10-16",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -123,6 +183,8 @@
    "url": "https://www.gov.uk/government/publications/check-the-default-values-for-the-carbon-border-adjustment-mechanism-cbam",
    "type": "guidance",
    "firstPublished": "2026-10-16",
+   "via": "collection",
+   "key": "/government/publications/check-the-default-values-for-the-carbon-border-adjustment-mechanism-cbam@2026-10-16",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -132,6 +194,8 @@
    "url": "https://www.gov.uk/government/publications/carbon-border-adjustment-mechanism-force-of-law-notice-and-reference-document",
    "type": "regulation",
    "firstPublished": "2026-07-13",
+   "via": "collection",
+   "key": "/government/publications/carbon-border-adjustment-mechanism-force-of-law-notice-and-reference-document@2026-10-16",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -141,6 +205,8 @@
    "url": "https://www.gov.uk/government/publications/carbon-border-adjustment-mechanism-cbam-technical-guidance-for-monitoring-verifying-and-reporting-emissions",
    "type": "guidance",
    "firstPublished": "2026-10-16",
+   "via": "collection",
+   "key": "/government/publications/carbon-border-adjustment-mechanism-cbam-technical-guidance-for-monitoring-verifying-and-reporting-emissions@2026-10-16",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -150,6 +216,8 @@
    "url": "https://www.gov.uk/government/publications/carbon-border-adjustment-mechanism-cbam-policy-summary",
    "type": "policy_paper",
    "firstPublished": "2026-02-10",
+   "via": "collection",
+   "key": "/government/publications/carbon-border-adjustment-mechanism-cbam-policy-summary@2026-10-16",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -159,6 +227,8 @@
    "url": "https://www.gov.uk/government/publications/carbon-border-adjustment-mechanism-force-of-law-notice-and-reference-document",
    "type": "regulation",
    "firstPublished": "2026-07-13",
+   "via": "collection",
+   "key": "/government/publications/carbon-border-adjustment-mechanism-force-of-law-notice-and-reference-document@2026-10-09",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -168,6 +238,19 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2026-09-18",
+   "textPath": "collected/archive/pages/uk-govuk/changes.txt"
+  },
+  {
+   "date": "2026-09-09",
+   "title": "Introduction of Carbon Border Adjustment Mechanism",
+   "note": "The TIIN has been updated to reflect revised estimates of one-off costs to business and ongoing administrative burdens.",
+   "url": "https://www.gov.uk/government/publications/introduction-of-carbon-border-adjustment-mechanism",
+   "type": "policy_paper",
+   "firstPublished": "2025-11-26",
+   "via": "search",
+   "key": "/government/publications/introduction-of-carbon-border-adjustment-mechanism@2026-09-09",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -177,6 +260,8 @@
    "url": "https://www.gov.uk/government/publications/carbon-border-adjustment-mechanism-cbam-policy-summary",
    "type": "policy_paper",
    "firstPublished": "2026-02-10",
+   "via": "collection",
+   "key": "/government/publications/carbon-border-adjustment-mechanism-cbam-policy-summary@2026-09-09",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -186,6 +271,8 @@
    "url": "https://www.gov.uk/government/collections/carbon-border-adjustment-mechanism",
    "type": "document_collection",
    "firstPublished": "2026-02-10",
+   "via": "collection",
+   "key": "/government/collections/carbon-border-adjustment-mechanism@2026-09-09",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -195,6 +282,8 @@
    "url": "https://www.gov.uk/government/collections/carbon-border-adjustment-mechanism",
    "type": "document_collection",
    "firstPublished": "2026-02-10",
+   "via": "collection",
+   "key": "/government/collections/carbon-border-adjustment-mechanism@2026-09-09",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -204,6 +293,8 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2026-09-04",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -213,6 +304,8 @@
    "url": "https://www.gov.uk/government/publications/uk-cbam-current-qualifying-carbon-pricing-schemes",
    "type": "guidance",
    "firstPublished": "2026-08-27",
+   "via": "collection",
+   "key": "/government/publications/uk-cbam-current-qualifying-carbon-pricing-schemes@2026-08-27",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -222,6 +315,30 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2026-08-12",
+   "textPath": "collected/archive/pages/uk-govuk/changes.txt"
+  },
+  {
+   "date": "2026-07-31",
+   "title": "Criminal Bills Assessment Manual (CBAM) and Supervisor Guidance",
+   "note": "First published.",
+   "url": "https://www.gov.uk/government/news/criminal-bills-assessment-manual-cbam-and-supervisor-guidance",
+   "type": "news_story",
+   "firstPublished": "2026-07-31",
+   "via": "search",
+   "key": "/government/news/criminal-bills-assessment-manual-cbam-and-supervisor-guidance@2026-07-31",
+   "textPath": "collected/archive/pages/uk-govuk/changes.txt"
+  },
+  {
+   "date": "2026-07-16",
+   "title": "Work out the date you’ll need to register for Carbon Border Adjustment Mechanism (CBAM)",
+   "note": "First published.",
+   "url": "https://www.gov.uk/guidance/work-out-the-date-youll-need-to-register-for-carbon-border-adjustment-mechanism-cbam",
+   "type": "detailed_guide",
+   "firstPublished": "2026-07-16",
+   "via": "search",
+   "key": "/guidance/work-out-the-date-youll-need-to-register-for-carbon-border-adjustment-mechanism-cbam@2026-07-16",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -231,6 +348,41 @@
    "url": "https://www.gov.uk/guidance/keeping-records-for-carbon-border-adjustment-mechanism-cbam",
    "type": "detailed_guide",
    "firstPublished": "2026-07-16",
+   "via": "collection",
+   "key": "/guidance/keeping-records-for-carbon-border-adjustment-mechanism-cbam@2026-07-16",
+   "textPath": "collected/archive/pages/uk-govuk/changes.txt"
+  },
+  {
+   "date": "2026-07-16",
+   "title": "Imported Carbon Border Adjustment (CBAM) goods that may not contribute towards the registration threshold",
+   "note": "First published.",
+   "url": "https://www.gov.uk/guidance/imported-carbon-border-adjustment-cbam-goods-that-may-not-contribute-towards-the-registration-threshold",
+   "type": "detailed_guide",
+   "firstPublished": "2026-07-16",
+   "via": "search",
+   "key": "/guidance/imported-carbon-border-adjustment-cbam-goods-that-may-not-contribute-towards-the-registration-threshold@2026-07-16",
+   "textPath": "collected/archive/pages/uk-govuk/changes.txt"
+  },
+  {
+   "date": "2026-07-16",
+   "title": "Check if you’re classed as the importer for Carbon Border Adjustment Mechanism (CBAM)",
+   "note": "First published.",
+   "url": "https://www.gov.uk/guidance/check-if-youre-classed-as-the-importer-for-carbon-border-adjustment-mechanism-cbam",
+   "type": "detailed_guide",
+   "firstPublished": "2026-07-16",
+   "via": "search",
+   "key": "/guidance/check-if-youre-classed-as-the-importer-for-carbon-border-adjustment-mechanism-cbam@2026-07-16",
+   "textPath": "collected/archive/pages/uk-govuk/changes.txt"
+  },
+  {
+   "date": "2026-07-16",
+   "title": "Check which goods are in scope of Carbon Border Adjustment Mechanism (CBAM)",
+   "note": "First published.",
+   "url": "https://www.gov.uk/government/publications/check-which-goods-are-in-scope-of-carbon-border-adjustment-mechanism-cbam",
+   "type": "guidance",
+   "firstPublished": "2026-07-16",
+   "via": "search",
+   "key": "/government/publications/check-which-goods-are-in-scope-of-carbon-border-adjustment-mechanism-cbam@2026-07-16",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -240,6 +392,8 @@
    "url": "https://www.gov.uk/government/publications/carbon-border-adjustment-mechanism-cbam-policy-summary",
    "type": "policy_paper",
    "firstPublished": "2026-02-10",
+   "via": "collection",
+   "key": "/government/publications/carbon-border-adjustment-mechanism-cbam-policy-summary@2026-07-16",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -249,6 +403,8 @@
    "url": "https://www.gov.uk/government/collections/claiming-carbon-price-relief-for-carbon-border-adjustment-mechanism-cbam",
    "type": "document_collection",
    "firstPublished": "2026-07-16",
+   "via": "collection",
+   "key": "/government/collections/claiming-carbon-price-relief-for-carbon-border-adjustment-mechanism-cbam@2026-07-16",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -258,6 +414,8 @@
    "url": "https://www.gov.uk/government/collections/check-if-youll-need-to-register-for-carbon-border-adjustment-mechanism-cbam",
    "type": "document_collection",
    "firstPublished": "2026-07-16",
+   "via": "collection",
+   "key": "/government/collections/check-if-youll-need-to-register-for-carbon-border-adjustment-mechanism-cbam@2026-07-16",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -267,6 +425,8 @@
    "url": "https://www.gov.uk/government/collections/check-if-youll-need-to-register-for-carbon-border-adjustment-mechanism-cbam",
    "type": "document_collection",
    "firstPublished": "2026-07-16",
+   "via": "collection",
+   "key": "/government/collections/check-if-youll-need-to-register-for-carbon-border-adjustment-mechanism-cbam@2026-07-16",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -276,6 +436,8 @@
    "url": "https://www.gov.uk/government/collections/carbon-border-adjustment-mechanism",
    "type": "document_collection",
    "firstPublished": "2026-02-10",
+   "via": "collection",
+   "key": "/government/collections/carbon-border-adjustment-mechanism@2026-07-16",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -285,6 +447,8 @@
    "url": "https://www.gov.uk/government/collections/carbon-border-adjustment-mechanism",
    "type": "document_collection",
    "firstPublished": "2026-02-10",
+   "via": "collection",
+   "key": "/government/collections/carbon-border-adjustment-mechanism@2026-07-16",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -294,6 +458,8 @@
    "url": "https://www.gov.uk/government/publications/carbon-border-adjustment-mechanism-force-of-law-notice-and-reference-document",
    "type": "regulation",
    "firstPublished": "2026-07-13",
+   "via": "collection",
+   "key": "/government/publications/carbon-border-adjustment-mechanism-force-of-law-notice-and-reference-document@2026-07-13",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -303,6 +469,8 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2026-06-22",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -312,6 +480,8 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2026-05-13",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -321,6 +491,8 @@
    "url": "https://www.gov.uk/government/publications/carbon-border-adjustment-mechanism-cbam-policy-summary",
    "type": "policy_paper",
    "firstPublished": "2026-02-10",
+   "via": "collection",
+   "key": "/government/publications/carbon-border-adjustment-mechanism-cbam-policy-summary@2026-04-09",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -330,6 +502,8 @@
    "url": "https://www.gov.uk/government/publications/carbon-border-adjustment-mechanism-cbam-communications-resources",
    "type": "promotional",
    "firstPublished": "2026-04-09",
+   "via": "collection",
+   "key": "/government/publications/carbon-border-adjustment-mechanism-cbam-communications-resources@2026-04-09",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -339,6 +513,10 @@
    "url": "https://www.gov.uk/government/consultations/draft-regulations-carbon-border-adjustment-mechanism-cbam-emissions-and-verification",
    "type": "closed_consultation",
    "firstPublished": "2026-04-09",
+   "via": "collection",
+   "opens": "2026-04-09",
+   "closes": "2026-05-21",
+   "key": "/government/consultations/draft-regulations-carbon-border-adjustment-mechanism-cbam-emissions-and-verification@2026-04-09",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -348,6 +526,8 @@
    "url": "https://www.gov.uk/government/collections/carbon-border-adjustment-mechanism",
    "type": "document_collection",
    "firstPublished": "2026-02-10",
+   "via": "collection",
+   "key": "/government/collections/carbon-border-adjustment-mechanism@2026-04-09",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -357,6 +537,8 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2026-03-31",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -366,6 +548,8 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2026-03-26",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -375,6 +559,21 @@
    "url": "https://www.gov.uk/government/publications/carbon-border-adjustment-mechanism-cbam-policy-summary",
    "type": "policy_paper",
    "firstPublished": "2026-02-10",
+   "via": "collection",
+   "key": "/government/publications/carbon-border-adjustment-mechanism-cbam-policy-summary@2026-02-10",
+   "textPath": "collected/archive/pages/uk-govuk/changes.txt"
+  },
+  {
+   "date": "2026-02-10",
+   "title": "Draft regulations: Carbon Border Adjustment Mechanism (CBAM)",
+   "note": "First published.",
+   "url": "https://www.gov.uk/government/consultations/draft-regulations-carbon-border-adjustment-mechanism-cbam",
+   "type": "closed_consultation",
+   "firstPublished": "2026-02-10",
+   "via": "search",
+   "opens": "2026-02-10",
+   "closes": "2026-03-24",
+   "key": "/government/consultations/draft-regulations-carbon-border-adjustment-mechanism-cbam@2026-02-10",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -384,6 +583,8 @@
    "url": "https://www.gov.uk/government/collections/carbon-border-adjustment-mechanism",
    "type": "document_collection",
    "firstPublished": "2026-02-10",
+   "via": "collection",
+   "key": "/government/collections/carbon-border-adjustment-mechanism@2026-02-10",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -393,6 +594,8 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2026-02-03",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -402,6 +605,8 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2026-01-08",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -411,6 +616,8 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2025-12-05",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -420,6 +627,8 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2025-11-28",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -429,6 +638,19 @@
    "url": "https://www.gov.uk/government/publications/factsheet-carbon-border-adjustment-mechanism-cbam",
    "type": "guidance",
    "firstPublished": "2025-04-24",
+   "via": "collection",
+   "key": "/government/publications/factsheet-carbon-border-adjustment-mechanism-cbam@2025-11-28",
+   "textPath": "collected/archive/pages/uk-govuk/changes.txt"
+  },
+  {
+   "date": "2025-11-26",
+   "title": "Introduction of Carbon Border Adjustment Mechanism",
+   "note": "First published.",
+   "url": "https://www.gov.uk/government/publications/introduction-of-carbon-border-adjustment-mechanism",
+   "type": "policy_paper",
+   "firstPublished": "2025-11-26",
+   "via": "search",
+   "key": "/government/publications/introduction-of-carbon-border-adjustment-mechanism@2025-11-26",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -438,6 +660,8 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2025-10-21",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -447,6 +671,8 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2025-10-03",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -456,6 +682,8 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2025-09-16",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -465,6 +693,8 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2025-08-21",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -474,6 +704,8 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2025-07-30",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -483,6 +715,8 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2025-07-07",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -492,6 +726,8 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2025-06-05",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -501,6 +737,8 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2025-05-12",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -510,6 +748,8 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2025-04-29",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -519,6 +759,8 @@
    "url": "https://www.gov.uk/government/publications/factsheet-carbon-border-adjustment-mechanism-cbam",
    "type": "guidance",
    "firstPublished": "2025-04-24",
+   "via": "collection",
+   "key": "/government/publications/factsheet-carbon-border-adjustment-mechanism-cbam@2025-04-24",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -528,6 +770,8 @@
    "url": "https://www.gov.uk/government/publications/factsheet-carbon-border-adjustment-mechanism-cbam",
    "type": "guidance",
    "firstPublished": "2025-04-24",
+   "via": "collection",
+   "key": "/government/publications/factsheet-carbon-border-adjustment-mechanism-cbam@2025-04-23",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -537,6 +781,8 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2025-04-14",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -546,6 +792,8 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2025-04-04",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -555,6 +803,8 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2025-03-25",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -564,6 +814,8 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2025-03-07",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -573,6 +825,8 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2025-03-03",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -582,6 +836,19 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2025-02-13",
+   "textPath": "collected/archive/pages/uk-govuk/changes.txt"
+  },
+  {
+   "date": "2025-02-11",
+   "title": "UK CBAM International Group",
+   "note": "First published.",
+   "url": "https://www.gov.uk/government/publications/uk-cbam-international-group",
+   "type": "policy_paper",
+   "firstPublished": "2025-02-11",
+   "via": "search",
+   "key": "/government/publications/uk-cbam-international-group@2025-02-11",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -591,6 +858,8 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2025-01-29",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -600,6 +869,8 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2025-01-24",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -609,6 +880,8 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2025-01-17",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   },
   {
@@ -618,6 +891,8 @@
    "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
    "type": "detailed_guide",
    "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2025-01-03",
    "textPath": "collected/archive/pages/uk-govuk/changes.txt"
   }
  ]

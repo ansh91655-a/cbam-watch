@@ -1,0 +1,10 @@
+{
+ "ranAt": "2026-11-10T22:56:28+09:00",
+ "since": "2025-01-01",
+ "result": {
+  "documents": 19,
+  "searched": 10,
+  "kept": 80,
+  "failures": 0
+ }
+}
