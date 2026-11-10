@@ -7,8 +7,8 @@ import puppeteer from "puppeteer-core";
 const [, , todoPath, outDir] = process.argv;
 const jobs = JSON.parse(fs.readFileSync(todoPath, "utf8")).filter((job) => job.kind === "page");
 const CHROME = process.env.CHROME_BIN || ["/usr/bin/google-chrome", "/usr/bin/google-chrome-stable", "/usr/bin/chromium-browser", "/usr/bin/chromium"].find((path) => fs.existsSync(path));
-const VIEW = { width: 480, height: 1200, deviceScaleFactor: 2 }; // 좁은 화면으로 열어 글자가 그림에서 크게 보이게 한다
-const CLIP = { width: 480, height: 300 };
+const VIEW = { width: 390, height: 1200, deviceScaleFactor: 2 }; // 휴대전화 너비로 열어 제목이 그림에서 읽힐 만큼 크게 나오게 한다
+const CLIP = { width: 390, height: 244 };
 const AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36";
 const ROBOT = /captcha|automated scraping|flagged as potentially automated|unusual traffic|enable javascript and cookies/i; // 본문에 이런 말이 있으면 막힌 화면이다
 const REFUSED = /access denied|forbidden|not found|just a moment|are you a robot|verify you are|error \d{3}|request blocked/i;

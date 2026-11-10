@@ -1,7 +1,7 @@
 """찍은 그림을 줄여 site/assets/thumbs/에 쓰고, 실패한 것은 기록해 둔다.
 
 쓰는 법: python -m tools.thumbs.finish <할 일 파일> <그림을 둔 폴더>
-화면 그림(가로 960)은 그대로 줄이고, PDF 첫 장은 머리 띠(기관 이름과 로고가 있는 맨 위 덩어리)를 찾아 그 아래부터 가로 16 : 세로 10으로 잘라 줄인다.
+화면 그림은 그대로 줄이고, PDF 첫 장은 머리 띠(기관 이름과 로고가 있는 맨 위 덩어리)를 찾아 그 아래부터, 양쪽 여백을 빼고 가로 16 : 세로 10으로 잘라 줄인다.
 거의 비어 있는 그림은 쓰지 않는다. 실패는 collected/thumbs/state.json에 횟수와 사유를 적고, 세 번 실패한 원문은 다시 시도하지 않는다.
 """
 import pathlib
@@ -38,11 +38,26 @@ def letterhead_end(image):
     return PDF_TOP
 
 
-def window(image, kind):
-    """그림에서 쓸 부분(가로 16 : 세로 10)을 잘라 낸다. PDF 첫 장은 머리 띠 아래부터 쓴다."""
+def text_span(image, top):
+    """PDF 첫 장의 머리 띠 아래에서 글이 있는 가로 범위(양쪽 여백을 뺀 것)를 돌려준다. 글자가 그림에서 크게 보이게 하려는 것이다."""
     width, height = image.size
-    top = int(height * letterhead_end(image)) if kind == "pdf" else 0
-    return image.crop((0, top, width, min(height, top + int(width * SIZE[1] / SIZE[0]))))
+    gray = image.convert("L").crop((0, top, width, min(height, top + int(width * 0.7)))).resize((400, 100))
+    inked = [x for x in range(400) if any(gray.getpixel((x, y)) < 225 for y in range(100))]
+    if not inked:
+        return 0, width
+    left = max(0, int((inked[0] / 400 - 0.035) * width))
+    right = min(width, int(((inked[-1] + 1) / 400 + 0.035) * width))
+    return (left, right) if right - left > width * 0.5 else (0, width)
+
+
+def window(image, kind):
+    """그림에서 쓸 부분(가로 16 : 세로 10)을 잘라 낸다. PDF 첫 장은 머리 띠 아래부터, 양쪽 여백을 빼고 쓴다."""
+    width, height = image.size
+    if kind != "pdf":
+        return image.crop((0, 0, width, min(height, int(width * SIZE[1] / SIZE[0]))))
+    top = int(height * letterhead_end(image))
+    left, right = text_span(image, top)
+    return image.crop((left, top, right, min(height, top + int((right - left) * SIZE[1] / SIZE[0]))))
 
 
 def blank(image):

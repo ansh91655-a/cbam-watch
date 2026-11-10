@@ -5,9 +5,27 @@
 """
 import hashlib
 import pathlib
+import re
+import urllib.parse
 
 FOLDER = pathlib.Path("site/assets/thumbs")
 PUBLIC = "assets/thumbs"
+
+
+CELEX = re.compile(r"[?&]uri=CELEX(?::|%3A)([0-9A-Z()]+)", re.I)
+
+
+def celex_of(link):
+    """EU 법령 데이터베이스(EUR-Lex)의 문서 주소면 CELEX 번호를, 아니면 빈 글을 돌려준다."""
+    if urllib.parse.urlparse(str(link)).netloc.lower() != "eur-lex.europa.eu":
+        return ""
+    match = CELEX.search(str(link))
+    return match.group(1).upper() if match else ""
+
+
+def kind_of(link):
+    """그림을 무엇으로 만드는지: 법령 데이터베이스의 문서는 PDF 첫 장("pdf"), 그 밖은 원문 화면("page")."""
+    return "pdf" if celex_of(link) else "page"
 
 
 def name_of(link):
@@ -20,10 +38,11 @@ def path_of(name):
 
 
 def attach(items):
-    """그림이 있는 소식에 thumb 값을 붙인 새 목록을 돌려준다. 내린 소식에는 붙이지 않는다."""
+    """그림이 있는 소식에 thumb(주소)와 thumbKind(종류) 값을 붙인 새 목록을 돌려준다. 내린 소식에는 붙이지 않는다."""
     rows = []
     for item in items:
         link = item.get("link", "")
         name = name_of(link) if link else ""
-        rows.append({**item, "thumb": f"{PUBLIC}/{name}.webp"} if name and not item.get("withdrawn") and path_of(name).exists() else item)
+        found = name and not item.get("withdrawn") and path_of(name).exists()
+        rows.append({**item, "thumb": f"{PUBLIC}/{name}.webp", "thumbKind": kind_of(link)} if found else item)
     return rows

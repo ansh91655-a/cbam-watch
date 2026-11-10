@@ -53,26 +53,44 @@ a.m-topic:hover { text-decoration: underline; }
 .card-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 16px; margin-top: auto; padding-top: 4px; font-size: var(--fs-s); color: var(--ink-3); }
 .card-foot a { display: inline-flex; align-items: center; gap: 4px; font-weight: 700; text-decoration: none; }
 .card-foot a:hover { text-decoration: underline; }
-/* 카드의 미리보기 그림: 원문 화면을 줄인 것(thumb-shot)은 주제 색 바탕에 종이처럼 얹고, 없으면 주제 아이콘으로 그린다(thumb-art) */
-.thumb { position: relative; display: grid; place-items: center; flex: none; width: 184px; aspect-ratio: 16 / 10; overflow: hidden; border: 1px solid color-mix(in srgb, var(--t, var(--brand-bright)) 18%, var(--line-2)); border-radius: 14px; color: var(--t, var(--brand-bright)); text-decoration: none;
+/* 카드의 미리보기 그림. 바탕은 주제 색을 짙은 남색에 섞은 것이고, 오른쪽 위에서 점 무늬가 옅게 들어온다.
+   thumb-shot: 원문 화면을 창처럼 얹는다(오른쪽과 아래로 넘친다). 법령 PDF의 첫 장은 종이처럼 살짝 기울여 얹는다.
+   thumb-art: 주제 아이콘을 크게 깔고 종류와 출처 이름을 적는다. */
+.thumb { position: relative; display: block; flex: none; width: 208px; aspect-ratio: 16 / 10; overflow: hidden; isolation: isolate; border-radius: 14px; color: #fff; text-decoration: none;
   background:
-    radial-gradient(circle at 1.2px 1.2px, color-mix(in srgb, var(--t, var(--brand-bright)) 24%, transparent) 1.1px, transparent 1.7px) 0 0 / 11px 11px,
-    linear-gradient(135deg, color-mix(in srgb, var(--t, var(--brand-bright)) 19%, var(--surface)), color-mix(in srgb, var(--t, var(--brand-bright)) 6%, var(--surface))); }
-.thumb-art svg { width: 38px; height: 38px; margin-bottom: 12px; padding: 9px; box-sizing: content-box; border-radius: 16px; background: color-mix(in srgb, var(--surface) 78%, transparent); box-shadow: 0 6px 16px -8px color-mix(in srgb, var(--t, var(--brand-bright)) 55%, transparent); }
-.thumb-src { position: absolute; left: 12px; right: 12px; bottom: 9px; overflow: hidden; font-size: 0.7rem; font-weight: 700; letter-spacing: -0.01em; text-align: center; white-space: nowrap; text-overflow: ellipsis; color: color-mix(in srgb, var(--t, var(--brand-bright)) 62%, var(--ink)); }
-.thumb-shot img { position: absolute; left: 13px; top: 13px; width: calc(100% - 26px); height: auto; border-radius: 6px 6px 0 0; background: #fff; box-shadow: 0 10px 24px -10px rgb(10 20 60 / 0.45), 0 0 0 1px rgb(10 20 60 / 0.08); transition: transform 0.25s cubic-bezier(0.2, 0.7, 0.2, 1); }
-.card:hover .thumb-shot img { transform: translateY(-3px); }
-.cards-2 .thumb { width: 132px; border-radius: 12px; }
-.cards-2 .thumb-art svg { width: 30px; height: 30px; padding: 7px; margin-bottom: 10px; }
-.cards-2 .thumb-shot img { left: 10px; top: 10px; width: calc(100% - 20px); }
+    radial-gradient(110% 95% at 100% 0%, color-mix(in srgb, var(--t, var(--brand-bright)) 62%, #2a3a80) 0%, transparent 62%),
+    linear-gradient(150deg, color-mix(in srgb, var(--t, var(--brand-bright)) 66%, #0b1437), color-mix(in srgb, var(--t, var(--brand-bright)) 30%, #050b24));
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.1), 0 1px 2px rgb(10 20 60 / 0.12); }
+.thumb::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(circle at 1.2px 1.2px, rgb(255 255 255 / 0.22) 1.1px, transparent 1.7px) 0 0 / 11px 11px; -webkit-mask-image: linear-gradient(215deg, #000 0%, transparent 62%); mask-image: linear-gradient(215deg, #000 0%, transparent 62%); }
+.thumb-frame { position: absolute; left: 17px; top: 17px; width: 122%; overflow: hidden; border-radius: 9px 0 0 0; background: #fff; box-shadow: 0 16px 34px -10px rgb(2 6 23 / 0.62), 0 0 0 1px rgb(2 6 23 / 0.14); transform-origin: 0 0; transition: transform 0.32s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.thumb-frame img { display: block; width: 100%; height: auto; }
+.thumb-bar { display: flex; align-items: center; gap: 4px; height: 16px; padding: 0 9px; border-bottom: 1px solid #dde3ef; background: #edf0f7; }
+.thumb-bar i { width: 5px; height: 5px; border-radius: 50%; background: #bfc7d9; }
+.card:hover .thumb-frame { transform: translate(-4px, -4px); }
+.thumb-shot[data-kind="pdf"] .thumb-frame { left: 50%; top: 16px; width: 84%; padding: 10px 10px 0; border-radius: 3px 3px 0 0; transform: translateX(-50%) rotate(-2.4deg); transform-origin: 50% 0; }
+.card:hover .thumb-shot[data-kind="pdf"] .thumb-frame { transform: translateX(-50%) translateY(-4px) rotate(-0.8deg); }
+.thumb-mark { position: absolute; right: -16px; bottom: -22px; color: rgb(255 255 255 / 0.2); transform: rotate(-9deg); transition: transform 0.32s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.thumb-mark svg { display: block; width: 118px; height: 118px; stroke-width: 1.35; }
+.card:hover .thumb-mark { transform: rotate(-4deg) scale(1.04); }
+.thumb-kind { position: absolute; left: 14px; top: 13px; padding: 1px 9px; border-radius: 999px; background: rgb(255 255 255 / 0.17); font-size: 0.68rem; font-weight: 700; line-height: 1.7; letter-spacing: 0.01em; }
+.thumb-src { position: absolute; left: 15px; right: 58px; bottom: 13px; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 2; font-size: 0.84rem; font-weight: 800; line-height: 1.32; letter-spacing: -0.02em; text-shadow: 0 1px 8px rgb(2 6 23 / 0.35); }
+.cards-2 .thumb { width: 150px; border-radius: 12px; }
+.cards-2 .thumb-frame { left: 13px; top: 13px; }
+.cards-2 .thumb-mark svg { width: 92px; height: 92px; }
+.cards-2 .thumb-kind { left: 11px; top: 10px; }
+.cards-2 .thumb-src { left: 12px; right: 40px; bottom: 10px; font-size: 0.76rem; }
 @media (max-width: 560px) {
   /* 좁은 화면: 그림은 날짜·제목 옆에 작게 두고, 요약부터는 카드 너비를 다 쓴다 */
   .card, .cards-2 .card { grid-template-columns: 76px minmax(0, 1fr); gap: 8px 14px; padding: 18px; }
   .card-body { display: contents; }
   .card .thumb, .cards-2 .thumb { grid-column: 1; grid-row: 1 / span 2; align-self: start; width: 76px; aspect-ratio: 1; border-radius: 12px; }
-  .card .thumb-art svg, .cards-2 .thumb-art svg { width: 28px; height: 28px; padding: 7px; margin-bottom: 0; }
-  .card .thumb-src { display: none; }
-  .card .thumb-shot img, .cards-2 .thumb-shot img { left: 8px; top: 8px; width: 150%; }
+  .card .thumb-frame, .cards-2 .thumb-frame { left: 9px; top: 9px; width: 230%; border-radius: 6px 0 0 0; }
+  .card .thumb-bar { height: 10px; padding: 0 5px; gap: 3px; }
+  .card .thumb-bar i { width: 3px; height: 3px; }
+  .card .thumb-shot[data-kind="pdf"] .thumb-frame { left: 9px; top: 9px; width: 190%; transform: rotate(-2deg); transform-origin: 0 0; }
+  .card .thumb-mark, .cards-2 .thumb-mark { right: 50%; bottom: 50%; color: rgb(255 255 255 / 0.92); transform: translate(50%, 50%); }
+  .card .thumb-mark svg, .cards-2 .thumb-mark svg { width: 34px; height: 34px; stroke-width: 1.8; }
+  .card .thumb-kind, .card .thumb-src { display: none; }
   .card-meta, .card-title { grid-column: 2; }
   .card-body > :not(.card-meta):not(.card-title) { grid-column: 1 / -1; }
 }

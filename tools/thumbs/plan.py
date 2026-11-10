@@ -5,7 +5,6 @@
 법령 데이터베이스(EUR-Lex)의 문서는 PDF 첫 장으로(kind "pdf"), 그 밖은 원문 화면으로(kind "page") 만든다.
 """
 import argparse
-import re
 import sys
 import urllib.parse
 
@@ -18,8 +17,6 @@ MAX_TRIES = 3
 ALLOWED_ENDS = (".europa.eu", ".gov.uk")
 ALLOWED_HOSTS = set()
 BLOCKED_HOSTS = {"www.consilium.europa.eu"}  # 자동 실행에서 열리지 않는 곳
-CELEX = re.compile(r"[?&]uri=CELEX(?::|%3A)([0-9A-Z()]+)", re.I)
-
 
 def allowed(link):
     host = urllib.parse.urlparse(str(link)).netloc.lower()
@@ -27,11 +24,9 @@ def allowed(link):
 
 
 def job_of(link):
-    host = urllib.parse.urlparse(link).netloc.lower()
-    match = CELEX.search(link) if host == "eur-lex.europa.eu" else None
-    job = {"name": thumbs.name_of(link), "url": link, "kind": "pdf" if match else "page"}
-    if match:
-        job["celex"] = match.group(1).upper()
+    job = {"name": thumbs.name_of(link), "url": link, "kind": thumbs.kind_of(link)}
+    if job["kind"] == "pdf":
+        job["celex"] = thumbs.celex_of(link)
     return job
 
 

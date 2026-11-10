@@ -187,6 +187,8 @@ class ThumbsTest(unittest.TestCase):
             finally:
                 thumbs.FOLDER = keep
         self.assertTrue(rows[0]["thumb"].startswith("assets/thumbs/") and rows[0]["thumb"].endswith(".webp"))
+        self.assertEqual(rows[0]["thumbKind"], "page")
+        self.assertEqual(thumbs.kind_of("https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2083"), "pdf")
         self.assertNotIn("thumb", rows[1])
         self.assertNotIn("thumb", rows[2])
 
