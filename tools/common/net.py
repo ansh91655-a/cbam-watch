@@ -20,13 +20,16 @@ DEFAULT_HEADERS = {
 _opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
 
 
-def fetch(url, timeout=60, retries=2, pause=5, headers=None, method="GET"):
-    """주소를 열어 (상태 코드, 머리글, 본문 바이트, 오류 글)을 돌려준다. 예외를 던지지 않는다."""
+def fetch(url, timeout=60, retries=2, pause=5, headers=None, method="GET", data=None):
+    """주소를 열어 (상태 코드, 머리글, 본문 바이트, 오류 글)을 돌려준다. 예외를 던지지 않는다.
+
+    data(바이트)를 주면 그 내용을 본문으로 보낸다(양식으로 쪽을 넘기는 게시판을 읽을 때 쓴다).
+    """
     merged = dict(DEFAULT_HEADERS)
     merged.update(headers or {})
     last_error = ""
     for attempt in range(retries + 1):
-        request = urllib.request.Request(url, headers=merged, method=method)
+        request = urllib.request.Request(url, headers=merged, method=method, data=data)
         try:
             with _opener.open(request, timeout=timeout) as response:
                 body = b"" if method == "HEAD" else response.read()
