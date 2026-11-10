@@ -22,7 +22,7 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 | 폴더 | 내용 |
 | --- | --- |
 | `sources/registry.json` | 출처 대장. 어디를 어떤 방법으로 보는지 적혀 있다 |
-| `collected/` | 수집 결과. `feed/`(그날 새로 보인 것), `state/`(이미 본 것의 열쇠), `pages/`(EU 공식 화면의 글), `status.json`(출처별 확인 결과) |
+| `collected/` | 수집 결과. `feed/`(그날 새로 보인 것), `state/`(이미 본 것의 열쇠), `pages/`(EU 공식 화면의 글), `status.json`(출처별 확인 결과), `archive/`(지난 소식을 한꺼번에 모은 것. 아래 '지난 소식 채우기' 참조) |
 | `originals/` | EU 집행위원회 문서의 사본(`files/<문서 id>/<해시>/<원래 파일 이름>`), 뽑아 낸 본문(`text/`), 판 사이의 비교 결과(`diffs/`), 대장(`state.json`) |
 | `data/` | 사이트에 게시한 데이터. 소식(`items.json`), 주제 목록(`topics.json`), 인증서 가격(`prices.json`, 프로그램이 가격표에서 만든다), 일정(`events.json`), 주간 요약(`digests.json`), 용어집(`terms.json`) |
 | `reports/` | 보고 실행이 올리는 그날과 그 주의 보고 파일. 알림의 근거다 |
@@ -44,9 +44,22 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 | `tools/publish` | 게시 데이터에 더하기(`add_items`, `add_digest`), 요약 내리기(`withdraw`), 주제 목록(`topics`), 사이트와 운영 화면의 폴더 만들기(`build_site`, `build_console`) |
 | `tools/notify` | 보고 파일에서 알릴 것을 골라 '운영 보고' 이슈에 적기(`reports`, `messages`, `github`, `run`) |
 | `tools/run` | 예약 실행이 쓰는 보조 도구: 후보 고르기, 검증 대기 고르기, 원문 발췌 자르기, 상태 점검, 하루와 한 주의 요약, 보고 파일 만들기(`write_report`) |
+| `tools/archive` | 지난 소식을 한꺼번에 채우는 프로그램. 손으로 돌린다: 출처별 모으기(`ecnews`, `oeil`, `hys`, `govuk`, `boards`, `wayback`)와 실행(`crawl`), 화면의 짜임 살펴보기(`dump`), 싣기 전 검사(`gate`), 싣기(`publish`) |
 | `tools/art` | 사이트의 그림을 만드는 프로그램. 손으로 돌린다: 점 지도(`dotmap`), 아이콘(`icons`), 라이선스 고지(`notices`), 공유 미리보기 그림의 원본(`social.html`) |
 
 프로그램은 저장소 맨 위에서 `python3 -m tools.<묶음>.<이름>` 꼴로 돌립니다. 표준 라이브러리만 쓰고, PDF 본문을 뽑을 때만 `pdftotext`가 필요합니다. 시험은 `python3 -m unittest discover -s tests -t .`로 돌립니다.
+
+## 지난 소식 채우기
+
+사이트를 연 날보다 앞선 소식(2025년 1월부터)은 평소의 자동 실행과 따로 한 번에 채웠습니다. 같은 일을 다시 할 때의 차례입니다.
+
+1. 모으기. 워크플로 '소급 수집'(`.github/workflows/archive.yml`)을 손으로 돌립니다. `mode`를 `crawl`로 두고 `steps`에 출처 이름을 띄어 적으면 그 출처만 돕니다(비우면 모두). 결과는 `collected/archive/`에 쌓입니다. 출처마다 목록(`<출처>.json`), 재이용이 허용된 자료의 원문 글(`pages/`), 실행 결과(`report/`)가 있습니다.
+   - `ec-news`: EU 집행위원회 조세·관세총국 소식. 사이트 지도에서 소식 주소를 얻어 본문에 CBAM이 나오는 것만 남깁니다.
+   - `ec-latest`: CBAM 화면의 '최신 소식' 목록이 지난날에 보여 주던 내용. 인터넷 아카이브의 사본에서 읽습니다. 시간 한도에서 멈추고, 다시 돌리면 이어서 읽습니다.
+   - `ep-oeil`: 유럽의회 입법 관측소의 절차 기록. `ec-hys`: 의견수렴 목록. `uk-govuk`: 영국 정부 CBAM 문서의 변경 기록.
+   - `kr-boards`: 국내 기관 게시판의 제목, 날짜, 주소. 본문은 받아 두지 않습니다(산업통상부 보도자료만 부제와 첫 문단을 짧게 남깁니다).
+2. 쓰기. 모아 둔 글을 읽고 국문 초안을 만듭니다. 초안 파일은 저장소에 올리지 않습니다.
+3. 싣기. `python3 -m tools.archive.publish --drafts <초안 파일> [--dry-run]`. 형식, 문체, 용어, 원문 대조(수치와 날짜, 게시일), 링크, 원문 발췌를 검사해 통과한 것만 `data/items.json`에 더하고 `backfill` 표시를 붙입니다. 이 표시가 있는 소식은 주간 요약의 대상에서 빠지고, 주간 작업이 주마다 10건씩 원문과 다시 대조합니다.
 
 ## 사이트의 디자인
 

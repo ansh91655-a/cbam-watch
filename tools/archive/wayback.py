@@ -19,9 +19,11 @@ PAGES = [
 ]
 CDX = "https://web.archive.org/cdx/search/cdx?url={url}&from=20250101&output=json&filter=statuscode:200&collapse=timestamp:8&fl=timestamp,original"
 SNAPSHOT = "https://web.archive.org/web/{stamp}id_/{url}"
-GAP_DAYS = 5        # 사본을 이만큼 건너뛰며 읽는다
+GAP_DAYS = 10        # 사본을 이만큼 건너뛰며 읽는다
 SECTION_LINES = 170  # 목록 부분으로 남기는 줄 수
-PAUSE = 2.5
+PAUSE = 12           # 인터넷 아카이브는 잦은 요청을 막으므로(429) 천천히 읽는다
+BUSY_WAIT = 80       # 막혔을 때 쉬는 시간(초)
+GIVE_UP_AFTER = 6    # 연달아 이만큼 실패하면 그 화면은 그만 읽는다(다음에 이어서 읽는다)
 LIMIT = 150
 
 
@@ -53,6 +55,18 @@ def section(lines):
     return []
 
 
+def _polite(url, deadline):
+    """사본 하나를 천천히 받는다. 요청이 많다고 막히면(429) 쉬었다가 두 번까지 다시 받는다."""
+    result = (0, {}, b"", "")
+    for attempt in range(3):
+        result = fetch(url, timeout=60, retries=0)
+        time.sleep(PAUSE)
+        if result[0] != 429 or (deadline is not None and time.monotonic() + BUSY_WAIT > deadline):
+            break
+        time.sleep(BUSY_WAIT)
+    return result
+
+
 def crawl(deadline=None):
     """사본을 읽어 목록 부분을 저장한다. 앞서 읽어 둔 사본은 다시 읽지 않는다. deadline(time.monotonic 값)을 넘기면 거기서 멈춘다."""
     before = read_json(ROOT / "ec-latest.json", {"entries": []})["entries"]
@@ -71,6 +85,7 @@ def crawl(deadline=None):
         report["pages"][page] = {"snapshots": len(stamps), "chosen": len(chosen), "cdx": status, "error": error[:80]}
         name = "main" if page.endswith("mechanism_en") else "news"
         last_hash = next((row["hash"] for row in reversed(before) if row["page"] == page), "")
+        failed_in_a_row = 0
         for count, stamp in enumerate(chosen):
             if (page, stamp) in done:
                 continue
@@ -78,13 +93,17 @@ def crawl(deadline=None):
                 report["stoppedEarly"] = True
                 break
             url = SNAPSHOT.format(stamp=stamp, url=page)
-            status, headers, body, error = fetch(url, timeout=45, retries=1, pause=6)
-            time.sleep(PAUSE)
-            if count % 10 == 9:
+            status, headers, body, error = _polite(url, deadline)
+            if count % 5 == 4:
                 save_index("ec-latest", snapshots, report)  # 중간에 끊겨도 읽은 데까지 남긴다
             if status != 200 or not body:
                 report["failures"].append(f"{stamp} {name} ({status} {error[:50]})")
+                failed_in_a_row += 1
+                if failed_in_a_row >= GIVE_UP_AFTER:
+                    report["stoppedEarly"] = True
+                    break
                 continue
+            failed_in_a_row = 0
             _, lines, _ = parse(decode(body, header(headers, "Content-Type")), page)
             part = section(lines)
             digest = hashlib.sha1("\n".join(part).encode("utf-8")).hexdigest()[:16]
