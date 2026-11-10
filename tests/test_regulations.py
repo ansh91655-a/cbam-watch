@@ -300,6 +300,7 @@ class ReviseTest(unittest.TestCase):
         {"id": "g", "kind": "국내", "published": "2026-11-05", "link": "https://k.example/view?id=7", "title": "이미 요약한 것", "summary": "요약이 있습니다."},
         {"id": "h", "brief": True, "briefTries": 2, "kind": "국내", "published": "2026-11-06", "link": "https://k.example/view?id=8", "title": "두 번 실패한 것", "summary": "자료입니다."},
         {"id": "i", "brief": True, "briefTries": 1, "kind": "국내", "published": "2026-09-01", "link": "https://k.example/view?id=9", "title": "한 번 실패한 것", "summary": "자료입니다."},
+        {"id": "j", "brief": True, "sourceCode": "compass", "kind": "국내", "published": "2026-11-08", "link": "https://c.example/view?idx=1", "title": "자동 읽기를 막아 둔 곳의 글", "summary": "자료입니다."},
     ]
 
     def test_candidates_put_materials_first_and_skip_what_cannot_or_need_not_be_redone(self):

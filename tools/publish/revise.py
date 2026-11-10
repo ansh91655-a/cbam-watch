@@ -3,7 +3,8 @@
 쓰는 법:
   python -m tools.publish.revise --list 12
       다시 쓸 대상을 JSON으로 찍는다. 자료와 동향을 먼저, 날짜가 가까운 것부터 고른다.
-      지난 행사 안내(60일 넘은 것), 글 하나를 가리키지 않는 링크(여러 소식이 같은 주소를 쓰는 것), 이미 살펴보고 그대로 두기로 한 것은 뺀다.
+      지난 행사 안내(60일 넘은 것), 글 하나를 가리키지 않는 링크(여러 소식이 같은 주소를 쓰는 것), 이미 살펴보고 그대로 두기로 한 것,
+      사이트가 자동 읽기를 막아 둔 출처의 소식은 뺀다.
   python -m tools.publish.revise --id <소식 id> --summary-file <새 요약 파일> --source-file <본문에서 뽑은 글 파일> [--impact "<실무 영향 한 문장>"]
       새 요약을 검사하고(문체, 용어, 길이, 수치와 날짜가 뽑은 글에 있는지) 통과하면 data/items.json의 그 소식을 고친다.
       brief 표시를 떼고 고친 날(revised)을 적는다.
@@ -28,6 +29,8 @@ ITEMS = "data/items.json"
 OLD_EVENT_DAYS = 60
 SHORT, LONG = 60, 600  # 새 요약의 길이(글자)
 MAX_TRIES = 2  # 이만큼 실패한 소식은 다시 고르지 않는다
+# 사이트가 자동 읽기를 막아 둔 출처(robots.txt). 글을 열어 볼 수 없으므로 고르지 않는다. 이 출처의 소식은 한 줄로 남는다.
+NO_AUTO_READ = {"compass"}
 
 
 def candidates(items, limit, now=None):
@@ -36,7 +39,7 @@ def candidates(items, limit, now=None):
     shared = {link for link, count in collections.Counter(item.get("link", "") for item in items).items() if count > 1}
     cutoff = (datetime.date.fromisoformat(now) - datetime.timedelta(days=OLD_EVENT_DAYS)).isoformat()
     rows = [item for item in items if item.get("brief") and not item.get("briefChecked") and not item.get("withdrawn")
-            and int(item.get("briefTries", 0) or 0) < MAX_TRIES and item.get("link") not in shared and not (item.get("kind") == "행사" and str(item.get("published", "")) < cutoff)]
+            and int(item.get("briefTries", 0) or 0) < MAX_TRIES and item.get("sourceCode") not in NO_AUTO_READ and item.get("link") not in shared and not (item.get("kind") == "행사" and str(item.get("published", "")) < cutoff)]
     rows.sort(key=lambda item: str(item.get("published", "")), reverse=True)
     rows.sort(key=lambda item: item.get("kind") == "행사")  # 자료와 동향을 먼저
     return [{key: item.get(key, "") for key in ("id", "published", "title", "summary", "kind", "sourceCode", "sourceName", "link")} for item in rows[:limit]]
