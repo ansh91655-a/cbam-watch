@@ -103,8 +103,24 @@
    "url": "https://www.gov.uk/government/collections/carbon-border-adjustment-mechanism",
    "text": "If you’re liable for CBAM, you will need to register, when registration opens on 1 January 2028.",
    "seenAt": "2026-11-10T18:40:11+09:00"
+  },
+  {
+   "id": "819471973442",
+   "source": "ep-oeil-2026-0212",
+   "kind": "row",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0212(COD)",
+   "text": "Contribution | PT_PARLIAMENT | COM(2026)0616 | 09/11/2026 |",
+   "seenAt": "2026-11-10T20:02:24+09:00",
+   "cells": [
+    "Contribution",
+    "PT_PARLIAMENT",
+    "COM(2026)0616",
+    "09/11/2026",
+    ""
+   ],
+   "textPath": "collected/pages/ep-oeil-2026-0212.txt"
   }
  ],
- "generatedAt": "2026-11-10T18:40:11+09:00",
- "count": 11
+ "generatedAt": "2026-11-10T20:02:24+09:00",
+ "count": 12
 }
