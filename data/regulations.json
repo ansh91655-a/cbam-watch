@@ -2205,7 +2205,7 @@
    "stage": "협상 중",
    "tone": "progress",
    "summary": "EU와 영국의 배출권거래제를 잇는 협정을 맺기 위한 협상입니다. CBAM 규정은 EU와 배출권거래제를 완전히 연계한 나라의 제품에는 CBAM을 적용하지 않도록 하고 있어, 협정이 발효되고 조건이 갖춰지면 영국산 제품이 EU CBAM의 대상에서 빠질 수 있습니다.",
-   "status": "EU 이사회가 2025년 11월 13일에 협상 개시를 승인했습니다. 2026년 11월 20일의 EU·영국 정상회의에서 협상 타결이 발표될 것이라는 보도가 있으나, 공식 발표는 아직 확인되지 않았습니다(2026년 11월 10일 기준).",
+   "status": "EU 이사회가 2025년 11월 13일에 협상 개시를 승인했습니다. 2026년 11월 20일의 EU·영국 정상회의에서 협상 타결이 발표될 것이라는 보도가 있으나, 공식 발표는 아직 확인되지 않았습니다(2026년 11월 10일 기준). 보도에 따르면 타결되더라도 CBAM 적용 제외는 자동으로 이루어지지 않고, 연계가 완전히 이루어지는 등의 조건이 충족된 뒤 EU가 위임규정으로 영국을 적용 제외 국가 목록에 넣어야 합니다.",
    "next": "EU·영국 정상회의가 열릴 예정이라는 보도가 있습니다. 타결되더라도 서명과 비준, 발효를 거쳐야 CBAM 적용 제외로 이어집니다.",
    "nextDate": "2026-11-20",
    "nextTitle": "EU·영국 정상회의(배출권거래제 연계 협상 타결 발표 예상, 보도 기준)",
@@ -2253,10 +2253,26 @@
      }
     },
     {
+     "date": "2026-10-12",
+     "text": "영국 총리가 하원에서 EU·영국 정상회의가 2026년 11월 20일 브뤼셀에서 열리고 배출권거래 합의가 의제에 올라 있다고 밝혔다는 보도가 있었습니다.",
+     "source": "cbamguide.com 보도(영국 하원 발언 인용)",
+     "link": "https://cbamguide.com/news/2026-10-12-uk-eu-summit-november-20-ets-link-uk-cbam/",
+     "basis": "press",
+     "checkedOn": "2026-11-10"
+    },
+    {
      "date": "2026-11-06",
      "text": "EU와 영국이 2026년 11월 20일 브뤼셀 정상회의에서 협상 타결을 발표할 예정이라는 보도가 있었습니다. 보도가 인용한 초안에는 양쪽 CBAM의 상호 적용 제외가 들어 있다고 합니다.",
      "source": "Euronews 보도",
      "link": "https://www.euronews.com/2026/11/06/eu-and-uk-set-to-link-carbon-markets-in-major-post-brexit-deal",
+     "basis": "press",
+     "checkedOn": "2026-11-10"
+    },
+    {
+     "date": "2026-11-08",
+     "text": "연계에 합의하더라도 양쪽 CBAM의 적용 제외가 자동으로 따라오지는 않으며, 조건이 충족된 뒤 EU가 위임규정으로 영국을 적용 제외 국가 목록에 넣게 된다는 보도가 있었습니다.",
+     "source": "Business Standard 보도",
+     "link": "https://www.business-standard.com/world-news/eu-close-to-deal-to-link-uk-carbon-market-nearly-six-years-after-brexit-126110800338_1.html",
      "basis": "press",
      "checkedOn": "2026-11-10"
     }
