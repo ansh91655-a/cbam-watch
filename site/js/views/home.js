@@ -1,4 +1,4 @@
-// 첫 화면. 중요한 소식과 최근 소식을 왼쪽에, 가격과 일정과 주간 요약을 오른쪽에 둔다.
+// 첫 화면. 중요한 소식과 이 사이트에 새로 오른 소식을 왼쪽에, 가격과 일정과 주간 요약을 오른쪽에 둔다.
 import * as data from "../data.js";
 import { card } from "../ui/card.js";
 import { empty, h, safeLink } from "../ui/dom.js";
@@ -52,12 +52,12 @@ export async function render(main) {
   const items = data.newestFirst(all).filter((item) => !item.withdrawn);
   const important = items.filter((item) => item.importance === "높음" && (daysSince(item.published || item.listed) ?? 999) <= IMPORTANT_DAYS).slice(0, 5);
   const importantIds = new Set(important.map((item) => item.id));
-  const recent = items.filter((item) => !importantIds.has(item.id)).slice(0, RECENT_COUNT);
+  const recent = data.newestListedFirst(items).filter((item) => !importantIds.has(item.id)).slice(0, RECENT_COUNT);
 
   const left = h("div", { class: "stack-lg" }, [
     important.length ? h("section", { class: "stack", "aria-labelledby": "h-important" }, [h("h2", { id: "h-important", text: "중요 소식" }), ...important.map(card)]) : null,
     h("section", { class: "stack", "aria-labelledby": "h-recent" }, [
-      h("h2", { id: "h-recent", text: "최근 소식" }),
+      h("h2", { id: "h-recent", text: "새로 오른 소식" }),
       ...(recent.length ? recent.map(card) : [empty(items.length ? "다른 최근 소식이 없습니다." : "아직 게시된 소식이 없습니다. 자동 수집이 새 소식을 찾으면 여기에 나타납니다.")]),
       items.length > recent.length + important.length ? h("p", {}, h("a", { href: "#news", text: `전체 소식 ${items.length}건 보기` })) : null,
     ]),

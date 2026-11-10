@@ -33,3 +33,10 @@ export function newestFirst(list) {
     String(b.published || b.listed || "").localeCompare(String(a.published || a.listed || "")) ||
     String(b.listed || "").localeCompare(String(a.listed || "")));
 }
+
+// 이 사이트에 늦게 오른 것부터. 오른 날이 같으면 게시일이 늦은 것부터. 첫 화면의 '최근 소식'에 쓴다.
+export function newestListedFirst(list) {
+  return [...list].sort((a, b) =>
+    String(b.listed || "").localeCompare(String(a.listed || "")) ||
+    String(b.published || "").localeCompare(String(a.published || "")));
+}

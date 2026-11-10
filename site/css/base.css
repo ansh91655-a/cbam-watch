@@ -99,3 +99,6 @@ button, input, select {
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; transition: none !important; }
 }
+
+/* 국문은 낱말 가운데에서 줄을 바꾸지 않는다. 아주 긴 영문 낱말이나 주소는 칸을 넘지 않게 끊는다. */
+body { word-break: keep-all; overflow-wrap: anywhere; }
