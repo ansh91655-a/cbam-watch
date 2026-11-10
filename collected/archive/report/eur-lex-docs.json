@@ -1,11 +1,18 @@
 {
- "ranAt": "2026-11-11T02:00:59+09:00",
+ "ranAt": "2026-11-11T02:08:15+09:00",
  "since": "2025-01-01",
  "result": {
-  "targets": 8,
-  "stored": 0,
-  "kept": 8,
+  "targets": 20,
+  "stored": 15,
+  "kept": 5,
   "failures": [],
-  "notes": []
+  "notes": [
+   "52026PC0616: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/757bd24a-8413-11f1-bf5e-01aa75ed71a1.0001.03/DOC_1",
+   "52025PC0989: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/a837cf93-db4d-11f0-8da2-01aa75ed71a1.0001.03/DOC_1",
+   "52025DC0783: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/05f0b7f5-da86-11f0-8da2-01aa75ed71a1.0001.03/DOC_1",
+   "52025PC0574: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/176f6907-626d-11f0-bf4e-01aa75ed71a1.0001.03/DOC_1",
+   "52025PC0408: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/56c7c27f-6221-11f0-bf4e-01aa75ed71a1.0001.03/DOC_1",
+   "52025PC0087: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/731e787f-f4fb-11ef-b7db-01aa75ed71a1.0001.03/DOC_1"
+  ]
  }
 }

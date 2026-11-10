@@ -1,5 +1,5 @@
 {
- "ranAt": "2026-11-11T02:01:16+09:00",
+ "ranAt": "2026-11-11T02:08:29+09:00",
  "since": "2025-01-01",
  "result": {
   "procedures": {
@@ -42,6 +42,13 @@
     "status": "Awaiting committee decision",
     "forecasts": [],
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0574(CNS)"
+   },
+   "2026/0211(COD)": {
+    "title": "EU Emissions Trading System: heat and fuel benchmark values for 2026–2030",
+    "events": 8,
+    "status": "Awaiting Parliament's position in 1st reading",
+    "forecasts": [],
+    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0211(COD)"
    }
   }
  }

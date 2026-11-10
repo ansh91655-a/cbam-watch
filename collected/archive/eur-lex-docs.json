@@ -1,20 +1,165 @@
 {
  "source": "eur-lex-docs",
- "fetchedAt": "2026-11-11T02:00:59+09:00",
+ "fetchedAt": "2026-11-11T02:08:15+09:00",
  "since": "2025-01-01",
  "report": {
-  "targets": 8,
-  "stored": 0,
-  "kept": 8,
+  "targets": 20,
+  "stored": 15,
+  "kept": 5,
   "failures": [],
-  "notes": []
+  "notes": [
+   "52026PC0616: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/757bd24a-8413-11f1-bf5e-01aa75ed71a1.0001.03/DOC_1",
+   "52025PC0989: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/a837cf93-db4d-11f0-8da2-01aa75ed71a1.0001.03/DOC_1",
+   "52025DC0783: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/05f0b7f5-da86-11f0-8da2-01aa75ed71a1.0001.03/DOC_1",
+   "52025PC0574: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/176f6907-626d-11f0-bf4e-01aa75ed71a1.0001.03/DOC_1",
+   "52025PC0408: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/56c7c27f-6221-11f0-bf4e-01aa75ed71a1.0001.03/DOC_1",
+   "52025PC0087: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/731e787f-f4fb-11ef-b7db-01aa75ed71a1.0001.03/DOC_1"
+  ]
  },
  "entries": [
+  {
+   "date": "2025-02-26",
+   "celex": "52025PC0087",
+   "title": "Proposal for a REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL amending Regulation (EU) 2023/956 as regards simplifying and strengthening the carbon border adjustment mechanism",
+   "relations": [
+    "resource_legal_proposes_to_amend_resource_legal:32023R0956",
+    "title-match"
+   ],
+   "procedures": [
+    "2025/0039(COD)"
+   ],
+   "lines": 1598,
+   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025PC0087",
+   "textPath": "collected/archive/pages/eur-lex-docs/52025PC0087.txt"
+  },
+  {
+   "date": "2025-04-29",
+   "celex": "52025AE1360",
+   "title": "Opinion of the European Economic and Social Committee – Proposal for a Regulation of the European Parliament and of the Council amending Regulation (EU) 2023/956 as regards simplifying and strengthening the carbon border adjustment mechanism (COM(2025) 87 final – 2025/0039 (COD))",
+   "relations": [
+    "title-match"
+   ],
+   "procedures": [
+    "2025/0039(COD)"
+   ],
+   "lines": 32,
+   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025AE1360",
+   "textPath": "collected/archive/pages/eur-lex-docs/52025AE1360.txt"
+  },
+  {
+   "date": "2025-05-22",
+   "celex": "52025AP0108",
+   "title": "P10_TA(2025)0108 – Amending Regulation (EU) 2023/956 as regards simplifying and strengthening the carbon border adjustment mechanism – Amendments adopted by the European Parliament on 22 May 2025 on the proposal for a regulation of the European Parliament and of the Council amending Regulation (EU) 2023/956 as regards simplifying and strengthening the carbon border adjustment mechanism (COM(2025)0087 – C10-0035/2025 – 2025/0039(COD)) (Ordinary legislative procedure: first reading)",
+   "relations": [
+    "work_cites_work:32023R0956",
+    "title-match"
+   ],
+   "procedures": [
+    "2025/0039(COD)"
+   ],
+   "lines": 45,
+   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025AP0108",
+   "textPath": "collected/archive/pages/eur-lex-docs/52025AP0108.txt"
+  },
+  {
+   "date": "2025-07-16",
+   "celex": "52025PC0408",
+   "title": "Recommendation for a COUNCIL DECISION authorising the opening of negotiations between the European Union and the United Kingdom of Great Britain and Northern Ireland on a common sanitary and phytosanitary area between the European Union and the United Kingdom in respect of Great Britain and to link the United Kingdom and the Union’s greenhouse emissions trading systems",
+   "relations": [
+    "work_cites_work:32023R0956"
+   ],
+   "procedures": [],
+   "lines": 145,
+   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025PC0408",
+   "textPath": "collected/archive/pages/eur-lex-docs/52025PC0408.txt"
+  },
+  {
+   "date": "2025-07-16",
+   "celex": "52025PC0574",
+   "title": "Proposal for a COUNCIL DECISION on the system of own resources of the European Union and repealing Decision (EU, Euratom) 2020/2053",
+   "relations": [
+    "work_cites_work:32023R0956"
+   ],
+   "procedures": [
+    "2025/0574(CNS)"
+   ],
+   "lines": 229,
+   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025PC0574",
+   "textPath": "collected/archive/pages/eur-lex-docs/52025PC0574.txt"
+  },
+  {
+   "date": "2025-09-10",
+   "celex": "52025AP0178",
+   "title": "P10_TA(2025)0178 – Carbon Border Adjustment Mechanism: simplification and strengthening – European Parliament legislative resolution of 10 September 2025 on the proposal for a regulation of the European Parliament and of the Council amending Regulation (EU) 2023/956 as regards simplifying and strengthening the carbon border adjustment mechanism (COM(2025)0087 – C10-0035/2025 – 2025/0039(COD)) (Ordinary legislative procedure: first reading)",
+   "relations": [
+    "work_cites_work:32025R2083",
+    "title-match"
+   ],
+   "procedures": [
+    "2025/0039(COD)"
+   ],
+   "lines": 46,
+   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025AP0178",
+   "textPath": "collected/archive/pages/eur-lex-docs/52025AP0178.txt"
+  },
+  {
+   "date": "2025-10-09",
+   "celex": "62024CC0519",
+   "title": "Opinion of Advocate General Ćapeta delivered on 9 October 2025.#Nitrogénművek Vegyipari Zrt. v Nemzeti Adó- és Vámhivatal Fellebbviteli Igazgatósága.#Request for a preliminary ruling from the Veszprémi Törvényszék.#Reference for a preliminary ruling – Environment – Air pollution – System for greenhouse gas emission allowance trading – Directive 2003/87/EC – Transitional rules for harmonised free allocation – Article 10a – National legislation imposing a tax on carbon dioxide (CO2) emissions on operators receiving a significant quantity of allowances allocated free of charge.#Case C-519/24.",
+   "relations": [
+    "work_cites_work:32023R0956"
+   ],
+   "procedures": [],
+   "lines": 262,
+   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:62024CC0519",
+   "textPath": "collected/archive/pages/eur-lex-docs/62024CC0519.txt"
+  },
+  {
+   "date": "2025-11-13",
+   "celex": "32025D2468",
+   "title": "Council Decision (EU) 2025/2468 of 13 November 2025 authorising the opening of negotiations between the European Union and the United Kingdom of Great Britain and Northern Ireland on a common sanitary and phytosanitary area between the European Union and the United Kingdom in respect of Great Britain and to link the United Kingdom’s and the Union’s greenhouse gas emissions trading systems",
+   "relations": [
+    "work_cites_work:32023R0956"
+   ],
+   "procedures": [],
+   "lines": 61,
+   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32025D2468",
+   "textPath": "collected/archive/pages/eur-lex-docs/32025D2468.txt"
+  },
+  {
+   "date": "2025-12-09",
+   "celex": "42026A02787",
+   "title": "Joint Procurement Agreement to procure the Carbon Border Adjustment Mechanism Common Central Platform",
+   "relations": [
+    "resource_legal_based_on_resource_legal:32023R0956",
+    "work_cites_work:32025R2083",
+    "title-match"
+   ],
+   "procedures": [],
+   "lines": 570,
+   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:42026A02787",
+   "textPath": "collected/archive/pages/eur-lex-docs/42026A02787.txt"
+  },
+  {
+   "date": "2025-12-16",
+   "celex": "52025DC0783",
+   "title": "REPORT FROM THE COMMISSION TO THE EUROPEAN PARLIAMENT AND THE COUNCIL on the application of the Regulation on the Carbon Border Adjustment Mechanism",
+   "relations": [
+    "resource_legal_based_on_resource_legal:32023R0956",
+    "work_cites_work:32025R2083",
+    "title-match"
+   ],
+   "procedures": [],
+   "lines": 715,
+   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025DC0783",
+   "textPath": "collected/archive/pages/eur-lex-docs/52025DC0783.txt"
+  },
   {
    "date": "2025-12-16",
    "celex": "52025DP0329",
    "title": "P10_TA(2025)0329 – Non-objection to a delegated act: CBAM: conditions for granting accreditation – European Parliament decision to raise no objections to the Commission delegated regulation of 20 November 2025 supplementing Regulation (EU) 2023/956 of the European Parliament and of the Council by specifying the conditions for granting accreditation to verifiers, for the control and oversight of accredited verifiers, for the withdrawal of accreditation and for mutual recognition and peer evaluation of accreditation bodies (C(2025)07845 – 2025/2997(DEA))",
    "relations": [
+    "resource_legal_based_on_resource_legal:32023R0956",
     "title-match"
    ],
    "procedures": [],
@@ -24,47 +169,25 @@
   },
   {
    "date": "2025-12-17",
-   "celex": "52025PC0990",
-   "title": "Proposal for a REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL establishing the Temporary Decarbonisation Fund",
+   "celex": "52025PC0989",
+   "title": "Proposal for a REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL amending Regulation (EU) 2023/956 as regards the extension of its scope to downstream goods and anti-circumvention measures",
    "relations": [
-    "title-match"
+    "resource_legal_proposes_to_amend_resource_legal:32023R0956",
+    "work_cites_work:32025R2083"
    ],
    "procedures": [
-    "2025/0418(COD)"
+    "2025/0419(COD)"
    ],
-   "lines": 1417,
-   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025PC0990",
-   "textPath": "collected/archive/pages/eur-lex-docs/52025PC0990.txt"
-  },
-  {
-   "date": "2026-03-19",
-   "celex": "52025AE4390",
-   "title": "Opinion of the European Economic and Social Committee – Proposal for a Regulation of the European Parliament and of the Council amending Regulation (EU) 2023/956 as regards the extension of its scope to downstream goods and anti-circumvention measures (COM(2025) 989 final) – Proposal for a Regulation of the European Parliament and of the Council establishing the Temporary Decarbonisation Fund (COM(2025) 990 final)",
-   "relations": [
-    "title-match"
-   ],
-   "procedures": [],
-   "lines": 119,
-   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025AE4390",
-   "textPath": "collected/archive/pages/eur-lex-docs/52025AE4390.txt"
-  },
-  {
-   "date": "2026-03-25",
-   "celex": "52026AA0013",
-   "title": "Opinion 13/2026: concerning the proposal for a regulation of the European Parliament and of the Council establishing the Temporary Decarbonisation Fund – COM (2025) 990 final",
-   "relations": [
-    "title-match"
-   ],
-   "procedures": [],
-   "lines": 14,
-   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52026AA0013",
-   "textPath": "collected/archive/pages/eur-lex-docs/52026AA0013.txt"
+   "lines": 1578,
+   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025PC0989",
+   "textPath": "collected/archive/pages/eur-lex-docs/52025PC0989.txt"
   },
   {
    "date": "2026-07-01",
    "celex": "52026PC0335",
    "title": "Proposal for a COUNCIL DECISION on the position to be adopted, on behalf of the European Union, within the EEA Joint Committee concerning an amendment to Annex XX (Environment) to the EEA Agreement (CBAM)",
    "relations": [
+    "work_cites_work:32023R0956",
     "work_cites_work:32025R2083",
     "title-match"
    ],
@@ -76,10 +199,39 @@
    "textPath": "collected/archive/pages/eur-lex-docs/52026PC0335.txt"
   },
   {
+   "date": "2026-07-17",
+   "celex": "52026PC0616",
+   "title": "Proposal for a DIRECTIVE OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL amending Directive 2003/87/EC and Decision (EU) 2015/1814 as regards driving competitiveness and cost-effective decarbonisation",
+   "relations": [
+    "work_cites_work:32023R0956"
+   ],
+   "procedures": [
+    "2026/0212(COD)"
+   ],
+   "lines": 3186,
+   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52026PC0616",
+   "textPath": "collected/archive/pages/eur-lex-docs/52026PC0616.txt"
+  },
+  {
+   "date": "2026-07-17",
+   "celex": "52026PC0619",
+   "title": "Proposal for a REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL amending Directive 2003/87/EC as regards revised benchmark values for the heat and fuel benchmarks for the period from 2026 to 2030",
+   "relations": [
+    "work_cites_work:32023R0956"
+   ],
+   "procedures": [
+    "2026/0211(COD)"
+   ],
+   "lines": 100,
+   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52026PC0619",
+   "textPath": "collected/archive/pages/eur-lex-docs/52026PC0619.txt"
+  },
+  {
    "date": "2026-07-27",
    "celex": "52026PC0402",
    "title": "Proposal for a COUNCIL DECISION on the position to be adopted, on behalf of the European Union, within the EEA Joint Committee concerning an amendment to Protocol 10 to the EEA Agreement, on simplification of inspections and formalities in respect of carriage of goods, and Protocol 31 to the EEA Agreement, on cooperation in specific fields outside the four freedoms (CBAM Financial Contribution)",
    "relations": [
+    "work_cites_work:32023R0956",
     "work_cites_work:32025R2083",
     "title-match"
    ],
@@ -91,10 +243,24 @@
    "textPath": "collected/archive/pages/eur-lex-docs/52026PC0402.txt"
   },
   {
+   "date": "2026-07-31",
+   "celex": "52026XC04231",
+   "title": "List of the competent authorities designated by Member States which are empowered to carry out the functions and duties, published in accordance with Article 11 of Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023 establishing a carbon border adjustment mechanism",
+   "relations": [
+    "resource_legal_based_on_resource_legal:32023R0956",
+    "title-match"
+   ],
+   "procedures": [],
+   "lines": 147,
+   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52026XC04231",
+   "textPath": "collected/archive/pages/eur-lex-docs/52026XC04231.txt"
+  },
+  {
    "date": "2026-09-24",
    "celex": "32026D2240",
    "title": "Council Decision (EU) 2026/2240 of 24 September 2026 on the position to be adopted, on behalf of the European Union, within the EEA Joint Committee concerning an amendment to Annex XX (Environment) to the EEA Agreement (CBAM) (Text with EEA relevance)",
    "relations": [
+    "work_cites_work:32023R0956",
     "work_cites_work:32025R2083",
     "title-match"
    ],
@@ -114,6 +280,18 @@
    "lines": 269,
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32026D2256",
    "textPath": "collected/archive/pages/eur-lex-docs/32026D2256.txt"
+  },
+  {
+   "date": "2026-11-09",
+   "celex": "52026DC0596",
+   "title": "REPORT FROM THE COMMISSION TO THE EUROPEAN PARLIAMENT AND THE COUNCIL on the functioning of the European carbon market in 2025",
+   "relations": [
+    "work_cites_work:32023R0956"
+   ],
+   "procedures": [],
+   "lines": 870,
+   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52026DC0596",
+   "textPath": "collected/archive/pages/eur-lex-docs/52026DC0596.txt"
   }
  ]
 }
