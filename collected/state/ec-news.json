@@ -1,7 +1,7 @@
 {
  "code": "ec-news",
  "baseline": "2026-11-10",
- "checkedAt": "2026-11-10T16:39:21+09:00",
+ "checkedAt": "2026-11-10T16:45:16+09:00",
  "seen": {
   "u:https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_en": "2026-11-10",
   "u:https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_es": "2026-11-10",
@@ -128,6 +128,23 @@
   "u:https://commission.europa.eu/cookies-policy_en": "2026-11-10",
   "u:https://commission.europa.eu/privacy-policy-websites-managed-european-commission_en": "2026-11-10",
   "u:https://commission.europa.eu/legal-notice_en": "2026-11-10",
-  "u:https://taxation-customs.ec.europa.eu/accessibility-statement_en": "2026-11-10"
+  "u:https://taxation-customs.ec.europa.eu/accessibility-statement_en": "2026-11-10",
+  "d:75def0348fdff217": "2026-11-10",
+  "d:aa4911e08aa6806f": "2026-11-10",
+  "d:dddebd1922f0f860": "2026-11-10",
+  "d:54ab8788f002c5c0": "2026-11-10",
+  "d:1baddbcda59f4899": "2026-11-10",
+  "d:c02709a4d546ba1c": "2026-11-10",
+  "d:307139d8a4b6afdc": "2026-11-10",
+  "d:9cfb83a8ad3e9fc6": "2026-11-10",
+  "d:e68976df2183ad04": "2026-11-10",
+  "d:42d765fb140e3845": "2026-11-10",
+  "d:2d6e591a7e46a042": "2026-11-10",
+  "d:a15e2638135e6628": "2026-11-10",
+  "d:0ff756d8ab8c6687": "2026-11-10",
+  "d:c16f9cb735fd4d2e": "2026-11-10",
+  "d:747b79e618bbf48c": "2026-11-10",
+  "d:d34da6b4b501c414": "2026-11-10",
+  "d:e3a1323a5a743946": "2026-11-10"
  }
 }
