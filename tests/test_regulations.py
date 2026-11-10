@@ -287,3 +287,31 @@ class PositionsTest(unittest.TestCase):
         cell = rule["positions"]["rows"][0]["council"]["text"]
         self.assertIn(f"{len(council['added'])}개를 더하고", cell)
         self.assertIn(f"{len(council['removed'])}개를 뺌", cell)
+
+
+class ReviseTest(unittest.TestCase):
+    ITEMS = [
+        {"id": "a", "brief": True, "kind": "국내", "published": "2026-10-01", "link": "https://k.example/view?id=1", "title": "자료 1", "summary": "올라온 자료입니다."},
+        {"id": "b", "brief": True, "kind": "행사", "published": "2026-11-01", "link": "https://k.example/view?id=2", "title": "교육 안내", "summary": "안내입니다."},
+        {"id": "c", "brief": True, "kind": "행사", "published": "2025-03-01", "link": "https://k.example/view?id=3", "title": "지난 교육", "summary": "안내입니다."},
+        {"id": "d", "brief": True, "kind": "국내", "published": "2026-10-20", "link": "https://k.example/list", "title": "공지 1", "summary": "공지입니다."},
+        {"id": "e", "brief": True, "kind": "국내", "published": "2026-10-21", "link": "https://k.example/list", "title": "공지 2", "summary": "공지입니다."},
+        {"id": "f", "brief": True, "briefChecked": "2026-11-10", "kind": "국내", "published": "2026-10-25", "link": "https://k.example/view?id=6", "title": "살펴본 것", "summary": "자료입니다."},
+        {"id": "g", "kind": "국내", "published": "2026-11-05", "link": "https://k.example/view?id=7", "title": "이미 요약한 것", "summary": "요약이 있습니다."},
+    ]
+
+    def test_candidates_put_materials_first_and_skip_what_cannot_or_need_not_be_redone(self):
+        from tools.publish import revise
+        picked = [row["id"] for row in revise.candidates(self.ITEMS, 10, now="2026-11-11")]
+        self.assertEqual(picked, ["a", "b"])  # 자료 먼저, 그다음 아직 지나지 않은 행사. 같은 주소를 쓰는 것, 지난 행사, 살펴본 것, 요약이 있는 것은 빠진다
+
+    def test_a_new_summary_must_be_polite_long_enough_and_backed_by_the_page(self):
+        from tools.publish import revise
+        old = self.ITEMS[0]
+        source = "2026년 10월 1일 게시. 철강 제품의 내재배출량 산정 사례 12건을 담은 안내서."
+        good = "한국환경공단이 철강 제품의 내재배출량 산정 사례 12건을 담은 안내서를 2026년 10월 1일에 올렸습니다. 사업장이 산정 보고서를 쓸 때 참고할 수 있는 자료입니다."
+        self.assertEqual(revise.problems(old, good, "", source), [])
+        self.assertTrue(any("사실 대조" in line for line in revise.problems(old, good.replace("12건", "15건"), "", source)))
+        self.assertTrue(any("문체" in line for line in revise.problems(old, good.replace("올렸습니다.", "올렸다."), "", source)))
+        self.assertTrue(any("길이" in line for line in revise.problems(old, "짧은 글입니다.", "", source)))
+        self.assertTrue(any("비어" in line for line in revise.problems(old, good, "", "  ")))

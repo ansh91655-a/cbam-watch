@@ -26,6 +26,15 @@ export function card(item) {
     item.sourceName ? h("span", { class: "m-src", text: item.sourceName }) : null,
   ]);
   const title = safeLink(item.link, item.title || "원문") || h("span", { text: item.title || "" });
+  // 제목이 곧 내용인 소식(국내 기관의 공지와 자료 가운데 본문 요약이 아직 없는 것)은 한 줄로 짧게 보여 준다.
+  if (item.brief && !item.withdrawn) {
+    const link = title.tagName === "A" ? title : null;
+    if (link) link.append(icon("out", 14));
+    return h("article", { class: "card card-brief", "data-topic": topic, id: item.id ? `item-${item.id}` : null }, [
+      h("span", { class: "chipicon" }, icon(topic, 18)),
+      h("div", { class: "card-body" }, [meta, h("h3", { class: "card-title" }, title)]),
+    ]);
+  }
   const source = safeLink(item.link, "원문 보기");
   if (source) source.append(icon("out", 15));
   return h("article", { class: "card", "data-importance": item.importance || null, "data-topic": topic, id: item.id ? `item-${item.id}` : null }, [
