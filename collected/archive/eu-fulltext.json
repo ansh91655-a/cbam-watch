@@ -1,6 +1,6 @@
 {
  "source": "eu-fulltext",
- "fetchedAt": "2026-11-11T00:58:24+09:00",
+ "fetchedAt": "2026-11-11T01:09:39+09:00",
  "since": "2025-01-01",
  "report": {
   "targets": 6,
@@ -41,7 +41,7 @@
    "name": "downstream-fourcolumn",
    "code": "WK-14239-2026-INIT",
    "url": "https://data.consilium.europa.eu/doc/document/WK-14239-2026-INIT/en/pdf",
-   "lines": 10291,
+   "lines": 1624,
    "textPath": "collected/archive/pages/eu-fulltext/downstream-fourcolumn.txt"
   },
   {
