@@ -9,7 +9,7 @@ import tempfile
 import unittest
 
 from tools.publish import add_digest, add_items, withdraw
-from tools.run import claude_status, week_items
+from tools.run import claude_status, holds_to_fix, week_items
 
 
 def _write(path, value):
@@ -105,6 +105,20 @@ class PublishTest(unittest.TestCase):
         _, result = _run(add_items.main, ["--db-dir", "db"])
         self.assertEqual(result["added"], ["20261110-keco-cbam-aaaa01"])
         self.assertNotIn("excerpt", _read("data/items.json")["items"][-1])
+
+    def test_held_drafts_get_one_rewrite(self):
+        self._draft("20261110-ec-news-hold01")
+        _write("db/verdicts/20261110-ec-news-hold01.json", {"id": "20261110-ec-news-hold01", "result": "hold", "gate": "근거", "why": "제목의 '자료 게시'는 원문에 없음"})
+        self._draft("20261110-ec-news-hold02")
+        _write("db/verdicts/20261110-ec-news-hold02.json", {"id": "20261110-ec-news-hold02", "result": "hold", "gate": "확인 불가", "why": "원문을 열지 못함"})
+        _run(holds_to_fix.main, ["--db-dir", "db", "--out", "fix.json"])
+        fix = _read("fix.json")["fix"]
+        self.assertEqual([(row["item"]["id"], row["newId"]) for row in fix], [("20261110-ec-news-hold01", "20261110-ec-news-hold01-r2")])
+        # 다시 쓴 초안이 있으면 더 고르지 않고, 다시 쓴 것이 또 보류돼도 고르지 않는다
+        self._draft("20261110-ec-news-hold01-r2", revises="20261110-ec-news-hold01")
+        _write("db/verdicts/20261110-ec-news-hold01-r2.json", {"id": "20261110-ec-news-hold01-r2", "result": "hold", "gate": "근거", "why": "여전히 근거 없음"})
+        _run(holds_to_fix.main, ["--db-dir", "db", "--out", "fix.json"])
+        self.assertEqual(_read("fix.json")["fix"], [])
 
     def test_digest_is_validated_and_replaced(self):
         _write("digest.json", {"from": "2026-11-09", "to": "2026-11-15", "title": "가격과 가이던스", "paragraphs": ["한 문단"], "itemIds": ["seed-one"]})
