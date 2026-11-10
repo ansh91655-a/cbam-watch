@@ -31,7 +31,10 @@ function row(doc, detailCell) {
     h("td", { class: "num", text: latest.pages ? `${count(latest.pages)}쪽` : "" }),
     h("td", { class: "num", text: bytes(latest.bytes) }),
     h("td", { class: "num", text: `${versions.length}` }),
-    h("td", {}, [safeLink(latest.file, "사본"), latest.text ? h("span", { text: " · " }) : null, safeLink(latest.text, "본문"), button ? h("p", {}, button) : null]),
+    h("td", {}, [
+      safeLink(latest.file, "사본") || h("span", { class: "count", text: "사본 없이 변경 여부만 확인" }),
+      latest.text ? h("span", { text: " · " }) : null, safeLink(latest.text, "본문"), button ? h("p", {}, button) : null,
+    ]),
   ]);
 }
 

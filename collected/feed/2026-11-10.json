@@ -74,87 +74,6 @@
    "textPath": "collected/pages/ec-news.txt"
   },
   {
-   "id": "6e5b304b4dc6",
-   "source": "ec-news",
-   "kind": "dated",
-   "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_en",
-   "text": "30 September 2026 | English | Download (430.01 KB - HTML) español",
-   "seenAt": "2026-11-10T16:45:16+09:00",
-   "textPath": "collected/pages/ec-news.txt"
-  },
-  {
-   "id": "796b4bf99f97",
-   "source": "ec-news",
-   "kind": "dated",
-   "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_en",
-   "text": "20 March 2026 | English | Download (408.17 KB - HTML) CBAM - Actual vs default values in your declaration",
-   "seenAt": "2026-11-10T16:45:16+09:00",
-   "textPath": "collected/pages/ec-news.txt"
-  },
-  {
-   "id": "e6b120d9ec45",
-   "source": "ec-news",
-   "kind": "dated",
-   "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_en",
-   "text": "23 June 2026 | English | Download (HTML) Frequently asked questions (FAQs)",
-   "seenAt": "2026-11-10T16:45:16+09:00",
-   "textPath": "collected/pages/ec-news.txt"
-  },
-  {
-   "id": "58d9f6c4a68f",
-   "source": "ec-news",
-   "kind": "dated",
-   "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_en",
-   "text": "15 October 2026 | English | Download (604.21 KB - PDF) Q&A on new Article 27A",
-   "seenAt": "2026-11-10T16:45:16+09:00",
-   "textPath": "collected/pages/ec-news.txt"
-  },
-  {
-   "id": "34a5431b14a7",
-   "source": "ec-news",
-   "kind": "dated",
-   "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_en",
-   "text": "8 January 2026 | English | Download (116.05 KB - PDF) Q&A on CBAM and Electricity",
-   "seenAt": "2026-11-10T16:45:16+09:00",
-   "textPath": "collected/pages/ec-news.txt"
-  },
-  {
-   "id": "97131e42a3c2",
-   "source": "ec-news",
-   "kind": "dated",
-   "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_en",
-   "text": "25 March 2026 | English | Download (237.93 KB - PDF) Communication",
-   "seenAt": "2026-11-10T16:45:16+09:00",
-   "textPath": "collected/pages/ec-news.txt"
-  },
-  {
-   "id": "c9025d515cb6",
-   "source": "ec-news",
-   "kind": "dated",
-   "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_en",
-   "text": "18 December 2024 | English | Download (1.27 MB - XLSX) CBAM Communication template - Examples",
-   "seenAt": "2026-11-10T16:45:16+09:00",
-   "textPath": "collected/pages/ec-news.txt"
-  },
-  {
-   "id": "19582ea59e42",
-   "source": "ec-news",
-   "kind": "dated",
-   "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_en",
-   "text": "20 June 2024 | English | Download (7.77 MB - ZIP) The following elearning course has been developed to help economic operators transmit their data correctly using the CBAM communication template.",
-   "seenAt": "2026-11-10T16:45:16+09:00",
-   "textPath": "collected/pages/ec-news.txt"
-  },
-  {
-   "id": "a77449840a6b",
-   "source": "ec-news",
-   "kind": "dated",
-   "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_en",
-   "text": "24 June 2026 | English | Download (18.8 MB - ZIP) CBAM newsletter",
-   "seenAt": "2026-11-10T16:45:16+09:00",
-   "textPath": "collected/pages/ec-news.txt"
-  },
-  {
    "id": "c7a33e2f4a19",
    "source": "ep-oeil-2025-0419",
    "kind": "row",
@@ -179,5 +98,5 @@
   }
  ],
  "generatedAt": "2026-11-10T16:45:16+09:00",
- "count": 19
+ "count": 10
 }

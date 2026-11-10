@@ -33,14 +33,14 @@ def compare(old_text, new_text):
         elif tag == "delete":
             stats["removed"] += a1 - a0
             pairs = [("removed", text, "") for text in old[a0:a1]]
-        else:
-            count = max(a1 - a0, b1 - b0)
-            stats["changed"] += count
+        else:  # 바뀐 구간: 짝이 맞는 문단은 '바뀜', 남는 문단은 '더해짐'이나 '빠짐'으로 센다
             pairs = []
-            for index in range(count):
+            for index in range(max(a1 - a0, b1 - b0)):
                 before = old[a0 + index] if a0 + index < a1 else ""
                 after = new[b0 + index] if b0 + index < b1 else ""
-                pairs.append(("changed" if before and after else ("added" if after else "removed"), before, after))
+                op = "changed" if before and after else ("added" if after else "removed")
+                stats[op] += 1
+                pairs.append((op, before, after))
         for op, before, after in pairs:
             if len(blocks) < MAX_BLOCKS:
                 blocks.append({"op": op, "old": before[:MAX_CHARS], "new": after[:MAX_CHARS]})

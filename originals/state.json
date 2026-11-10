@@ -384,30 +384,6 @@
    ],
    "replaces": ""
   },
-  "bc15e68d-566d-4419-88ec-b8f5c6823eb2": {
-   "id": "bc15e68d-566d-4419-88ec-b8f5c6823eb2",
-   "filename": "TAXUD-2023-01189-01-00-SV-TRA-00.pdf",
-   "label": "Download",
-   "url": "https://taxation-customs.ec.europa.eu/document/download/bc15e68d-566d-4419-88ec-b8f5c6823eb2_sv?filename=TAXUD-2023-01189-01-00-SV-TRA-00.pdf",
-   "lang": "sv",
-   "page": "ec-guidance",
-   "firstSeen": "2026-11-10",
-   "lastSeen": "2026-11-10",
-   "lastChecked": "2026-11-10T16:28:56+09:00",
-   "linked": true,
-   "versions": [
-    {
-     "sha256": "d66acc89902263179d7829a538daa5aa080bb27c07a6e8d068a585e7b8dbef28",
-     "date": "2026-11-10",
-     "bytes": 1355967,
-     "pages": 99,
-     "file": "originals/files/bc15e68d-566d-4419-88ec-b8f5c6823eb2/d66acc899022.pdf",
-     "text": "originals/text/bc15e68d-566d-4419-88ec-b8f5c6823eb2/d66acc899022.txt",
-     "chars": 208579
-    }
-   ],
-   "replaces": ""
-  },
   "a782dacf-ab68-44cc-986c-28fd1b4daa94": {
    "id": "a782dacf-ab68-44cc-986c-28fd1b4daa94",
    "filename": "State-of-play CBAM accreditation.pdf",
@@ -437,5 +413,5 @@
  "checkedAt": "2026-11-10T16:49:01+09:00",
  "full": false,
  "notes": [],
- "docCount": 18
+ "docCount": 17
 }

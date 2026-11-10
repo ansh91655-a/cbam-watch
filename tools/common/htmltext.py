@@ -64,8 +64,10 @@ class _Collector(HTMLParser):
         self._skip = 0
         self._anchor = None
         self._anchor_text = []
-        self.rows = []
+        self.table_rows = []  # {"table": 표 번호, "head": 머리 행 여부, "cells": 칸 글자}
+        self._table = -1
         self._row = None
+        self._row_head = True
         self._cell = None
 
     def _flush(self):
@@ -80,10 +82,15 @@ class _Collector(HTMLParser):
             return
         if tag in BLOCK_TAGS:
             self._flush()
-        if tag == "tr":
+        if tag == "table":
+            self._table += 1
+        elif tag == "tr":
             self._row = []
+            self._row_head = True
         elif tag in ("td", "th") and self._row is not None:
             self._cell = []
+            if tag == "td":
+                self._row_head = False
         if tag == "a":
             href = dict(attrs).get("href", "")
             self._anchor = clean_url(self.base, href)
@@ -103,7 +110,7 @@ class _Collector(HTMLParser):
             self._cell = None
         elif tag == "tr" and self._row is not None:
             if any(self._row):
-                self.rows.append(self._row)
+                self.table_rows.append({"table": self._table, "head": self._row_head, "cells": self._row})
             self._row = None
         if tag in BLOCK_TAGS:
             self._flush()
@@ -122,19 +129,48 @@ class _Collector(HTMLParser):
         self._flush()
 
 
-def parse(html, base):
-    """(링크 목록, 보이는 글의 줄 목록, 표의 행 목록)을 돌려준다.
-
-    링크는 (주소, 글자) 쌍이고 주소가 같은 것은 긴 글자를 남긴다. 표의 행은 칸 글자의 목록이다.
-    """
+def _collect(html, base):
     collector = _Collector(base)
     try:
         collector.feed(html)
         collector.close()
     except Exception:
         pass
+    return collector
+
+
+def _best_links(collector):
     best = {}
     for url, text in collector.links:
         if url not in best or len(text) > len(best[url]):
             best[url] = text
-    return list(best.items()), collector.lines, collector.rows
+    return list(best.items())
+
+
+def _group_tables(table_rows):
+    """행을 표 단위로 묶는다. 머리 행은 th만으로 된 첫 행이고, 그런 행이 없으면 표의 첫 행이다."""
+    tables = {}
+    for row in table_rows:
+        table = tables.setdefault(row["table"], {"head": None, "rows": []})
+        if row["head"] and table["head"] is None and not table["rows"]:
+            table["head"] = row["cells"]
+        table["rows"].append(row["cells"])
+    for table in tables.values():
+        if table["head"] is None and table["rows"]:
+            table["head"] = table["rows"][0]
+    return list(tables.values())
+
+
+def parse(html, base):
+    """(링크 목록, 보이는 글의 줄 목록, 표의 행 목록)을 돌려준다.
+
+    링크는 (주소, 글자) 쌍이고 주소가 같은 것은 긴 글자를 남긴다. 표의 행은 칸 글자의 목록이다.
+    """
+    collector = _collect(html, base)
+    return _best_links(collector), collector.lines, [row["cells"] for row in collector.table_rows]
+
+
+def parse_tables(html, base):
+    """parse와 같되 표의 행을 표 단위로 묶어 돌려준다: (링크, 줄, [{"head": 머리 행, "rows": 행들}])."""
+    collector = _collect(html, base)
+    return _best_links(collector), collector.lines, _group_tables(collector.table_rows)

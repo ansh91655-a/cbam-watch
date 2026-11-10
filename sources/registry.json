@@ -45,7 +45,8 @@
    "filter": false,
    "minLine": 40,
    "collector": "github",
-   "note": "법령과 가이던스 문서. 문서 파일은 originals에서 따로 추적"
+   "note": "법령과 가이던스 문서. 문서 파일은 originals에서 따로 추적",
+   "documents": true
   },
   {
    "no": 3,
@@ -61,7 +62,8 @@
    "filter": false,
    "minLine": 30,
    "collector": "github",
-   "note": "최신 소식 목록(날짜, 제목, 본문 첫머리)"
+   "note": "최신 소식 목록(날짜, 제목, 본문 첫머리). 화면에 걸린 FAQ와 설명 자료는 원문 대장이 추적",
+   "documents": true
   },
   {
    "no": 4,
@@ -92,7 +94,8 @@
    "filter": false,
    "minLine": 40,
    "collector": "github",
-   "note": "검증기관 관련 문서와 공지"
+   "note": "검증기관 관련 문서와 공지",
+   "documents": true
   },
   {
    "no": 6,
@@ -115,13 +118,15 @@
    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0419(COD)",
    "tier": "A",
    "watch": [
-    "rows",
-    "lines"
+    "rows"
    ],
    "filter": false,
    "minLine": 30,
    "collector": "github",
-   "note": "CBAM 확대 법안의 주요 사건 표"
+   "note": "CBAM 확대 법안의 주요 사건 표",
+   "skipTables": [
+    "Interest representatives"
+   ]
   },
   {
    "no": 8,
@@ -131,13 +136,15 @@
    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0212(COD)",
    "tier": "A",
    "watch": [
-    "rows",
-    "lines"
+    "rows"
    ],
    "filter": false,
    "minLine": 30,
    "collector": "github",
-   "note": "EU ETS 개정 법안의 주요 사건 표"
+   "note": "EU ETS 개정 법안의 주요 사건 표",
+   "skipTables": [
+    "Interest representatives"
+   ]
   },
   {
    "no": 9,
@@ -507,6 +514,57 @@
    "minLine": 30,
    "collector": "github",
    "note": "제목만. 유료 본문은 열지 않음"
+  },
+  {
+   "no": 33,
+   "code": "ec-definitive",
+   "name": "EC CBAM Definitive Regime",
+   "group": "EU 공식",
+   "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en",
+   "tier": "A",
+   "watch": [
+    "links",
+    "lines"
+   ],
+   "filter": false,
+   "minLine": 30,
+   "collector": "github",
+   "documents": true,
+   "note": "확정기간 제도 안내 화면. 2026-11-10에 더함"
+  },
+  {
+   "no": 34,
+   "code": "ec-registry",
+   "name": "EC CBAM Registry",
+   "group": "EU 공식",
+   "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-registry_en",
+   "tier": "A",
+   "watch": [
+    "links",
+    "lines"
+   ],
+   "filter": false,
+   "minLine": 30,
+   "collector": "github",
+   "documents": true,
+   "note": "CBAM 등록부 안내와 사용 문서. 2026-11-10에 더함"
+  },
+  {
+   "no": 35,
+   "code": "ec-sectors",
+   "name": "EC CBAM Sectors",
+   "group": "EU 공식",
+   "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-sectors_en",
+   "tier": "A",
+   "watch": [
+    "links",
+    "lines"
+   ],
+   "filter": false,
+   "minLine": 30,
+   "collector": "github",
+   "documents": true,
+   "note": "대상 부문 안내 화면. 2026-11-10에 더함"
   }
  ]
 }
