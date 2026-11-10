@@ -1,6 +1,6 @@
 {
  "source": "ep-oeil",
- "fetchedAt": "2026-11-11T01:10:11+09:00",
+ "fetchedAt": "2026-11-11T02:01:16+09:00",
  "since": "2025-01-01",
  "report": {
   "procedures": {
@@ -43,13 +43,6 @@
     "status": "Awaiting committee decision",
     "forecasts": [],
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0574(CNS)"
-   },
-   "2026/0211(COD)": {
-    "title": "EU Emissions Trading System: heat and fuel benchmark values for 2026–2030",
-    "events": 8,
-    "status": "Awaiting Parliament's position in 1st reading",
-    "forecasts": [],
-    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0211(COD)"
    }
   }
  },
@@ -282,29 +275,11 @@
   {
    "date": "2026-07-17",
    "event": "Legislative proposal published",
-   "reference": "COM(2026)0619",
-   "procedure": "2026/0211(COD)",
-   "procedureTitle": "EU Emissions Trading System: heat and fuel benchmark values for 2026–2030",
-   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0211(COD)",
-   "textPath": "collected/archive/pages/ep-oeil/2026-0211-COD.txt"
-  },
-  {
-   "date": "2026-07-17",
-   "event": "Legislative proposal published",
    "reference": "COM(2026)0616",
    "procedure": "2026/0212(COD)",
    "procedureTitle": "EU Emissions Trading System and market stability reserve: competitiveness and cost-effective decarbonisation",
    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0212(COD)",
    "textPath": "collected/archive/pages/ep-oeil/2026-0212-COD.txt"
-  },
-  {
-   "date": "2026-09-04",
-   "event": "Urgent procedure requested by a committee",
-   "reference": "",
-   "procedure": "2026/0211(COD)",
-   "procedureTitle": "EU Emissions Trading System: heat and fuel benchmark values for 2026–2030",
-   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0211(COD)",
-   "textPath": "collected/archive/pages/ep-oeil/2026-0211-COD.txt"
   },
   {
    "date": "2026-09-14",
@@ -323,15 +298,6 @@
    "procedureTitle": "Carbon Border Adjustment Mechanism: extension of its scope to downstream goods and anti-circumvention measures",
    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0419(COD)",
    "textPath": "collected/archive/pages/ep-oeil/2025-0419-COD.txt"
-  },
-  {
-   "date": "2026-09-14",
-   "event": "Committee referral announced in Parliament, 1st reading",
-   "reference": "",
-   "procedure": "2026/0211(COD)",
-   "procedureTitle": "EU Emissions Trading System: heat and fuel benchmark values for 2026–2030",
-   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0211(COD)",
-   "textPath": "collected/archive/pages/ep-oeil/2026-0211-COD.txt"
   },
   {
    "date": "2026-09-15",
@@ -395,51 +361,6 @@
    "procedureTitle": "EU Emissions Trading System and market stability reserve: competitiveness and cost-effective decarbonisation",
    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0212(COD)",
    "textPath": "collected/archive/pages/ep-oeil/2026-0212-COD.txt"
-  },
-  {
-   "date": "2026-10-19",
-   "event": "Vote in committee, 1st reading",
-   "reference": "",
-   "procedure": "2026/0211(COD)",
-   "procedureTitle": "EU Emissions Trading System: heat and fuel benchmark values for 2026–2030",
-   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0211(COD)",
-   "textPath": "collected/archive/pages/ep-oeil/2026-0211-COD.txt"
-  },
-  {
-   "date": "2026-10-19",
-   "event": "Committee report tabled for plenary, 1st reading",
-   "reference": "A10-0276/2026",
-   "procedure": "2026/0211(COD)",
-   "procedureTitle": "EU Emissions Trading System: heat and fuel benchmark values for 2026–2030",
-   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0211(COD)",
-   "textPath": "collected/archive/pages/ep-oeil/2026-0211-COD.txt"
-  },
-  {
-   "date": "2026-10-22",
-   "event": "Decision by Parliament, 1st reading",
-   "reference": "T10-0363/2026",
-   "procedure": "2026/0211(COD)",
-   "procedureTitle": "EU Emissions Trading System: heat and fuel benchmark values for 2026–2030",
-   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0211(COD)",
-   "textPath": "collected/archive/pages/ep-oeil/2026-0211-COD.txt"
-  },
-  {
-   "date": "2026-10-22",
-   "event": "Results of vote in Parliament",
-   "reference": "",
-   "procedure": "2026/0211(COD)",
-   "procedureTitle": "EU Emissions Trading System: heat and fuel benchmark values for 2026–2030",
-   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0211(COD)",
-   "textPath": "collected/archive/pages/ep-oeil/2026-0211-COD.txt"
-  },
-  {
-   "date": "2026-10-22",
-   "event": "Matter referred back to the committee responsible for interinstitutional negotiations",
-   "reference": "",
-   "procedure": "2026/0211(COD)",
-   "procedureTitle": "EU Emissions Trading System: heat and fuel benchmark values for 2026–2030",
-   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0211(COD)",
-   "textPath": "collected/archive/pages/ep-oeil/2026-0211-COD.txt"
   }
  ]
 }

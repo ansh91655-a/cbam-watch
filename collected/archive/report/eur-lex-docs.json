@@ -1,10 +1,10 @@
 {
- "ranAt": "2026-11-11T01:09:53+09:00",
+ "ranAt": "2026-11-11T02:00:59+09:00",
  "since": "2025-01-01",
  "result": {
-  "targets": 23,
+  "targets": 8,
   "stored": 0,
-  "kept": 23,
+  "kept": 8,
   "failures": [],
   "notes": []
  }
