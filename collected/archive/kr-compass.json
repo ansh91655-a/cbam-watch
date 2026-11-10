@@ -1,0 +1,380 @@
+{
+ "source": "kr-compass",
+ "fetchedAt": "2026-11-10T20:38:36+09:00",
+ "since": "2025-01-01",
+ "report": {
+  "rows": 66,
+  "found": 66,
+  "kept": 46
+ },
+ "entries": [
+  {
+   "date": "2026-10-25",
+   "title": "EU CBAM 하류재 확산 설명회 발표자료집",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "설명회 자료"
+   ]
+  },
+  {
+   "date": "2026-09-03",
+   "title": "2026년 EU 탄소국경조정제도 대응 제3차 정부 합동 설명회 발표자료집",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "설명회 자료"
+   ]
+  },
+  {
+   "date": "2026-08-17",
+   "title": "EU CBAM Guidance 자료",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "EU집행위원회 자료"
+   ]
+  },
+  {
+   "date": "2026-08-12",
+   "title": "기본값 이행규정(EU) 2026/1740 (2026.07.31 관보게재)",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "EU집행위원회 자료"
+   ]
+  },
+  {
+   "date": "2026-07-20",
+   "title": "EU 하류재 확대대상 집행위원회안, 이사회안, 의회안 비교('26.9.15 수정)",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "정부지원 자료"
+   ]
+  },
+  {
+   "date": "2026-06-25",
+   "title": "관세청, EU 품목분류 사전심사(BTI) 가이드북",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "정부지원 자료"
+   ]
+  },
+  {
+   "date": "2026-06-22",
+   "title": "2026년 EU 탄소국경조정제도 대응 제2차 정부 합동 설명회 발표자료집",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "설명회 자료"
+   ]
+  },
+  {
+   "date": "2026-06-01",
+   "title": "EU 집행위 Q&A 업데이트('26.5.27)",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "EU집행위원회 자료"
+   ]
+  },
+  {
+   "date": "2026-04-20",
+   "title": "2026년 EU 탄소국경조정제도 대응 제1차 정부 합동 설명회 발표자료집",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "설명회 자료"
+   ]
+  },
+  {
+   "date": "2026-04-06",
+   "title": "제3국 사업자 포털(CBAM Operator Portal, O3CI) 직원 권한 위임 및 보안 가이드",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "EU집행위원회 자료"
+   ]
+  },
+  {
+   "date": "2026-03-29",
+   "title": "EU CBAM 확정기간 실무 매뉴얼(배산인수) ('26.03.30 발행)",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "정부지원 자료"
+   ]
+  },
+  {
+   "date": "2026-03-24",
+   "title": "EU 집행위원회 개최 CBAM 웨비나 녹화본 및 자료 공유",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "EU집행위원회 자료"
+   ]
+  },
+  {
+   "date": "2026-03-02",
+   "title": "제3국 사업자 포털(CBAM Operator Portal, O3CI) 접근 권한 신청 가이드",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "EU집행위원회 자료"
+   ]
+  },
+  {
+   "date": "2026-02-18",
+   "title": "기본값 및 무상할당 벤치마크 엑셀 파일",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "EU집행위원회 자료"
+   ]
+  },
+  {
+   "date": "2026-02-10",
+   "title": "2026년 정부 탄소국경조정제도 대응 지원",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "정부지원 자료"
+   ]
+  },
+  {
+   "date": "2026-02-09",
+   "title": "EU CBAM 대상 확대 품목 한-EU 품목번호 연계표 (관세청 제공)",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "정부지원 자료"
+   ]
+  },
+  {
+   "date": "2026-02-03",
+   "title": "EU 탄소국경조정제도 법률 번역서 버전5.0 ('26.02.04 발행)",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "정부지원 자료"
+   ]
+  },
+  {
+   "date": "2026-01-13",
+   "title": "EU 집행위의 확정기간 CBAM 신고인 의무 요약자료",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "EU집행위원회 자료"
+   ]
+  },
+  {
+   "date": "2026-01-01",
+   "title": "기본값 이행규정(EU) 2025/2621 (2025.12.31 관보게재)",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "EU집행위원회 자료"
+   ]
+  },
+  {
+   "date": "2025-12-21",
+   "title": "CBAM 등록부 개정 이행규정(EU) 2025/2550 (2025.12.22 관보게재)",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "EU집행위원회 자료"
+   ]
+  },
+  {
+   "date": "2025-12-21",
+   "title": "세관당국 정보전달 이행규정(EU) 2025/2619 (2025.12.22 관보게재)",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "EU집행위원회 자료"
+   ]
+  },
+  {
+   "date": "2025-12-21",
+   "title": "검증원칙 이행규정(EU) 2025/2546 (2025.12.22 관보게재)",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "EU집행위원회 자료"
+   ]
+  },
+  {
+   "date": "2025-12-21",
+   "title": "CBAM 신고인 승인 개정 이행규정(EU) 2025/2549 (2025.12.22 관보게재)",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "EU집행위원회 자료"
+   ]
+  },
+  {
+   "date": "2025-12-21",
+   "title": "CBAM 인증서 가격 이행규정(EU) 2025/2548 (2025.12.22 관보게재)",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "EU집행위원회 자료"
+   ]
+  },
+  {
+   "date": "2025-12-21",
+   "title": "확정기간 배출량 산정방법 이행규정(EU) 2025/2547 (2025.12.22 관보게재)",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "EU집행위원회 자료"
+   ]
+  },
+  {
+   "date": "2025-12-21",
+   "title": "무상할당 조정량 이행규정(EU) 2025/2620 (2025.12.22 관보게재)",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "EU집행위원회 자료"
+   ]
+  },
+  {
+   "date": "2025-12-21",
+   "title": "인정조건 위임규정(EU) 2025/2551 (2025.11.20 관보게재)",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "EU집행위원회 자료"
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "title": "EU집행위 하위스트림 확대안 발표대상CN코드",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "정부지원 자료"
+   ]
+  },
+  {
+   "date": "2025-12-17",
+   "title": "EU 탄소국경조정제도 확정기간 이행 가이드라인 (버전 1.0)",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "정부지원 자료"
+   ]
+  },
+  {
+   "date": "2025-12-11",
+   "title": "2025년 제6차 EU CBAM대응 정부 합동 설명회 발표자료집",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "정부지원 자료"
+   ]
+  },
+  {
+   "date": "2025-12-04",
+   "title": "2025년 제5차 EU CBAM대응 정부 합동 설명회 발표자료집",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "정부지원 자료"
+   ]
+  },
+  {
+   "date": "2025-11-06",
+   "title": "EU 탄소국경조정제도 법률 번역서 버전4.0 ('25.11.07 발행)",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "정부지원 자료"
+   ]
+  },
+  {
+   "date": "2025-11-02",
+   "title": "대륙붕과 EEZ 이행규정(EU) 2025/2210 (2025.11.3 관보게재)",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "EU집행위원회 자료"
+   ]
+  },
+  {
+   "date": "2025-10-19",
+   "title": "2025년 제4차 EU CBAM대응 유관기관 합동 설명회 발표자료집",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "정부지원 자료"
+   ]
+  },
+  {
+   "date": "2025-10-16",
+   "title": "CBAM 개정 규정(EU) 2025/2083 (2025.10.17 관보게재)",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "EU집행위원회 자료"
+   ]
+  },
+  {
+   "date": "2025-07-08",
+   "title": "2025년 EU CBAM 대응 제3차 정부합동설명회 발표자료집",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "정부지원 자료"
+   ]
+  },
+  {
+   "date": "2025-07-02",
+   "title": "UK CBAM 기본법률 초안('25.4.24) 분석보고서",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "기타자료"
+   ]
+  },
+  {
+   "date": "2025-06-22",
+   "title": "2025년 EU CBAM 대응 제2차 정부합동설명회 발표자료집",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "정부지원 자료"
+   ]
+  },
+  {
+   "date": "2025-05-18",
+   "title": "EU 탄소국경조정제도 전환기간 이행 가이드라인(버전 3.0.0)",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "정부지원 자료"
+   ]
+  },
+  {
+   "date": "2025-05-13",
+   "title": "EU 탄소국경조정제도 중소∙중견기업 대응 매뉴얼 ('25.5.13 발행)",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "정부지원 자료"
+   ]
+  },
+  {
+   "date": "2025-05-13",
+   "title": "EU 탄소국경조정제도 중소∙중견기업 대응매뉴얼_예시 엑셀파일(알루미늄)",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "정부지원 자료"
+   ]
+  },
+  {
+   "date": "2025-04-09",
+   "title": "EU 탄소국경조정제도 법률 번역서 버전3.1 ('25.4.10 발행)",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "정부지원 자료"
+   ]
+  },
+  {
+   "date": "2025-03-16",
+   "title": "2025년 EU CBAM 대응 제1차 정부 합동설명회 발표자료집",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "설명회 자료"
+   ]
+  },
+  {
+   "date": "2025-03-12",
+   "title": "EU CBAM 개정안(EU 집행위 '25.2.26발표) 분석보고서",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "기타자료"
+   ]
+  },
+  {
+   "date": "2025-03-10",
+   "title": "EU 탄소국경조정제도 법률 번역서 버전3.0 ('25.3.11 발행)",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "정부지원 자료"
+   ]
+  },
+  {
+   "date": "2025-03-04",
+   "title": "EU CBAM 개정안(EU 집행위 '25.2.26 발표) 분석자료",
+   "url": "https://www.compass.or.kr/eucbam/data/list",
+   "cells": [
+    "기타자료"
+   ]
+  }
+ ]
+}

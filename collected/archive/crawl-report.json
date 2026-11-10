@@ -1,0 +1,76 @@
+{
+ "ranAt": "2026-11-10T20:36:50+09:00",
+ "since": "2025-01-01",
+ "steps": {
+  "ec-news": {
+   "listPages": 1,
+   "foundPages": 0,
+   "listTotal": 717,
+   "foundTotal": -1,
+   "stoppedAt": "전체 목록 1쪽을 읽지 못함",
+   "articles": 0,
+   "articleFailures": []
+  },
+  "ep-oeil": {
+   "procedures": {
+    "2025/0039(COD)": {
+     "title": "Carbon Border Adjustment Mechanism: simplification and strengthening (Omnibus I)",
+     "events": 15
+    },
+    "2025/0419(COD)": {
+     "title": "Carbon Border Adjustment Mechanism: extension of its scope to downstream goods and anti-circumvention measures",
+     "events": 8
+    },
+    "2026/0212(COD)": {
+     "title": "EU Emissions Trading System and market stability reserve: competitiveness and cost-effective decarbonisation",
+     "events": 2
+    }
+   }
+  },
+  "ec-hys": {
+   "rows": 15
+  },
+  "uk-govuk": {
+   "documents": 19,
+   "kept": 68,
+   "failures": 0
+  },
+  "kr-boards": {
+   "keco-cbam": {
+    "pages": 6,
+    "found": 59,
+    "kept": 51
+   },
+   "kosmes-esg": {
+    "pages": 6,
+    "all": 60,
+    "found": 27,
+    "kept": 26
+   },
+   "motir": {
+    "탄소국경": {
+     "pages": 2,
+     "lastPageRows": 10
+    },
+    "CBAM": {
+     "pages": 1,
+     "lastPageRows": 10
+    },
+    "all": 21,
+    "found": 21,
+    "kept": 14
+   },
+   "moj": {
+    "pages": 0,
+    "error": "307 HTTP Error 307: Temporary Redirect",
+    "found": 0,
+    "kept": 0
+   },
+   "compass": {
+    "rows": 66,
+    "found": 66,
+    "kept": 46
+   }
+  }
+ }
+}

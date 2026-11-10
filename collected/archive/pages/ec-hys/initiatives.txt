@@ -1,0 +1,92 @@
+[주소] https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives_en?text=CBAM
+
+번호: 16932
+제목: CBAM declarations
+문서 번호: Ares(2026)1634728
+예정 법령 유형: REG_IMPL
+단계: INIT_PLANNED | 의견수렴 상태: DISABLED | 시작: 2026/02/19 11:08:31 | 마감: 
+
+번호: 16933
+제목: Rules on the adjustment of CBAM certificates to reflect the EU ETS free allocation
+문서 번호: Ares(2026)1634857
+예정 법령 유형: REG_IMPL
+단계: INIT_PLANNED | 의견수렴 상태: DISABLED | 시작: 2026/02/19 11:08:59 | 마감: 
+
+번호: 14123
+제목: Qualifications for accreditation of verifiers and verification principles for CBAM purposes
+문서 번호: Ares(2024)230164
+예정 법령 유형: REG_IMPL
+단계: INIT_PLANNED | 의견수렴 상태: DISABLED | 시작: 2024/01/18 17:32:01 | 마감: 
+
+번호: 15132
+제목: Amendment of the Implementing Act on the CBAM Registry
+문서 번호: Ares(2025)8363580
+예정 법령 유형: REG_IMPL
+단계: INIT_PLANNED | 의견수렴 상태: DISABLED | 시작: 2025/10/09 09:56:00 | 마감: 
+
+번호: 14115
+제목: Rules for customs procedures for CBAM purposes
+문서 번호: Ares(2024)184631
+예정 법령 유형: REG_IMPL
+단계: INIT_PLANNED | 의견수렴 상태: DISABLED | 시작: 2024/01/17 15:32:00 | 마감: 
+
+번호: 14829
+제목: Adjustment of the obligation to surrender CBAM certificates to take account of ETS free allowances phase-out
+문서 번호: Ares(2025)6809917
+예정 법령 유형: REG_IMPL
+단계: PLANNING_WORKFLOW | 의견수렴 상태: CLOSED | 시작: 2025/08/28 12:48:32 | 마감: 2025/09/25 23:59:59
+
+번호: 14748
+제목: Extension of the scope of the carbon border adjustment mechanism to downstream products and anti-circumvention measures
+문서 번호: Ares(2025)5215671
+예정 법령 유형: PROP_REG
+단계: OPC_LAUNCHED | 의견수렴 상태: CLOSED | 시작: 2025/07/01 11:34:05 | 마감: 2025/08/26 23:59:59
+
+번호: 14132
+제목: Sale and repurchase of CBAM certificates
+문서 번호: Ares(2024)546926
+예정 법령 유형: REG_DEL
+단계: ISC_WORKFLOW | 의견수렴 상태: CLOSED | 시작: 2026/07/09 11:08:21 | 마감: 2026/08/06 23:59:59
+
+번호: 14828
+제목: Carbon border adjustment mechanism (CBAM) methodology for the definitive period
+문서 번호: Ares(2025)6809916
+예정 법령 유형: REG_IMPL
+단계: PLANNING_WORKFLOW | 의견수렴 상태: CLOSED | 시작: 2025/08/28 12:49:03 | 마감: 2025/09/25 23:59:59
+
+번호: 14830
+제목: Carbon price paid in a third country under the carbon border adjustment mechanism (CBAM)
+문서 번호: Ares(2025)6809938
+예정 법령 유형: REG_IMPL
+단계: ISC_WORKFLOW | 의견수렴 상태: CLOSED | 시작: 2026/05/13 13:24:00 | 마감: 2026/06/10 23:59:59
+
+번호: 12228
+제목: Carbon Border Adjustment Mechanism
+문서 번호: Ares(2020)1300866
+예정 법령 유형: PROP_REG
+단계: ADOPTION_WORKFLOW | 의견수렴 상태: CLOSED | 시작: 2021/07/15 13:13:56 | 마감: 2021/11/18 23:59:59
+
+번호: 14117
+제목: Establishment of the CBAM Registry
+문서 번호: Ares(2024)184701
+예정 법령 유형: REG_IMPL
+단계: ADOPTION_WORKFLOW | 의견수렴 상태: DISABLED | 시작: 2025/01/03 14:48:10 | 마감: 
+
+번호: 14116
+제목: Authorisation of CBAM declarants
+문서 번호: Ares(2024)184676
+예정 법령 유형: REG_IMPL
+단계: ADOPTION_WORKFLOW | 의견수렴 상태: DISABLED | 시작: 2025/03/28 08:24:00 | 마감: 
+
+번호: 14133
+제목: Conditions for granting accreditation for CBAM purposes
+문서 번호: Ares(2024)546976
+예정 법령 유형: REG_DEL
+단계: ADOPTION_WORKFLOW | 의견수렴 상태: DISABLED | 시작: 2025/11/20 11:08:32 | 마감: 
+
+번호: 14759
+제목: Commission Implementing Regulation for goods brought to the exclusive economic zone of Member States
+문서 번호: Ares(2025)5318878
+예정 법령 유형: REG_IMPL
+단계: ADOPTION_WORKFLOW | 의견수렴 상태: DISABLED | 시작: 2025/11/30 23:32:20 | 마감: 
+

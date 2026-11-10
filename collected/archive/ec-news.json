@@ -1,0 +1,15 @@
+{
+ "source": "ec-news",
+ "fetchedAt": "2026-11-10T20:37:07+09:00",
+ "since": "2025-01-01",
+ "report": {
+  "listPages": 1,
+  "foundPages": 0,
+  "listTotal": 717,
+  "foundTotal": -1,
+  "stoppedAt": "전체 목록 1쪽을 읽지 못함",
+  "articles": 0,
+  "articleFailures": []
+ },
+ "entries": []
+}

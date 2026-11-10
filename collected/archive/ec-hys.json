@@ -1,0 +1,264 @@
+{
+ "source": "ec-hys",
+ "fetchedAt": "2026-11-10T20:37:18+09:00",
+ "since": "2025-01-01",
+ "report": {
+  "rows": 15,
+  "labels": {
+   "REG_IMPL": "이행규정",
+   "REG_DEL": "위임규정",
+   "PROP_REG": "규정 제안",
+   "INIT_PLANNED": "준비 단계",
+   "PLANNING_WORKFLOW": "근거 수집(Call for evidence) 단계",
+   "OPC_LAUNCHED": "공개 의견수렴(Public consultation) 단계",
+   "ISC_WORKFLOW": "법령 초안(Draft act) 의견수렴 단계",
+   "ADOPTION_WORKFLOW": "집행위원회 채택(Commission adoption) 단계",
+   "OPEN": "의견 받는 중",
+   "CLOSED": "의견수렴 마감",
+   "DISABLED": "의견수렴 없음",
+   "UPCOMING": "의견수렴 예정"
+  }
+ },
+ "entries": [
+  {
+   "id": "16932",
+   "title": "CBAM declarations",
+   "reference": "Ares(2026)1634728",
+   "actType": "REG_IMPL",
+   "statuses": [
+    {
+     "stage": "INIT_PLANNED",
+     "feedback": "DISABLED",
+     "start": "2026/02/19 11:08:31",
+     "end": ""
+    }
+   ],
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/16932_en",
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
+  },
+  {
+   "id": "16933",
+   "title": "Rules on the adjustment of CBAM certificates to reflect the EU ETS free allocation",
+   "reference": "Ares(2026)1634857",
+   "actType": "REG_IMPL",
+   "statuses": [
+    {
+     "stage": "INIT_PLANNED",
+     "feedback": "DISABLED",
+     "start": "2026/02/19 11:08:59",
+     "end": ""
+    }
+   ],
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/16933_en",
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
+  },
+  {
+   "id": "14123",
+   "title": "Qualifications for accreditation of verifiers and verification principles for CBAM purposes",
+   "reference": "Ares(2024)230164",
+   "actType": "REG_IMPL",
+   "statuses": [
+    {
+     "stage": "INIT_PLANNED",
+     "feedback": "DISABLED",
+     "start": "2024/01/18 17:32:01",
+     "end": ""
+    }
+   ],
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14123_en",
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
+  },
+  {
+   "id": "15132",
+   "title": "Amendment of the Implementing Act on the CBAM Registry",
+   "reference": "Ares(2025)8363580",
+   "actType": "REG_IMPL",
+   "statuses": [
+    {
+     "stage": "INIT_PLANNED",
+     "feedback": "DISABLED",
+     "start": "2025/10/09 09:56:00",
+     "end": ""
+    }
+   ],
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/15132_en",
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
+  },
+  {
+   "id": "14115",
+   "title": "Rules for customs procedures for CBAM purposes",
+   "reference": "Ares(2024)184631",
+   "actType": "REG_IMPL",
+   "statuses": [
+    {
+     "stage": "INIT_PLANNED",
+     "feedback": "DISABLED",
+     "start": "2024/01/17 15:32:00",
+     "end": ""
+    }
+   ],
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14115_en",
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
+  },
+  {
+   "id": "14829",
+   "title": "Adjustment of the obligation to surrender CBAM certificates to take account of ETS free allowances phase-out",
+   "reference": "Ares(2025)6809917",
+   "actType": "REG_IMPL",
+   "statuses": [
+    {
+     "stage": "PLANNING_WORKFLOW",
+     "feedback": "CLOSED",
+     "start": "2025/08/28 12:48:32",
+     "end": "2025/09/25 23:59:59"
+    }
+   ],
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14829_en",
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
+  },
+  {
+   "id": "14748",
+   "title": "Extension of the scope of the carbon border adjustment mechanism to downstream products and anti-circumvention measures",
+   "reference": "Ares(2025)5215671",
+   "actType": "PROP_REG",
+   "statuses": [
+    {
+     "stage": "OPC_LAUNCHED",
+     "feedback": "CLOSED",
+     "start": "2025/07/01 11:34:05",
+     "end": "2025/08/26 23:59:59"
+    }
+   ],
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14748_en",
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
+  },
+  {
+   "id": "14132",
+   "title": "Sale and repurchase of CBAM certificates",
+   "reference": "Ares(2024)546926",
+   "actType": "REG_DEL",
+   "statuses": [
+    {
+     "stage": "ISC_WORKFLOW",
+     "feedback": "CLOSED",
+     "start": "2026/07/09 11:08:21",
+     "end": "2026/08/06 23:59:59"
+    }
+   ],
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14132_en",
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
+  },
+  {
+   "id": "14828",
+   "title": "Carbon border adjustment mechanism (CBAM) methodology for the definitive period",
+   "reference": "Ares(2025)6809916",
+   "actType": "REG_IMPL",
+   "statuses": [
+    {
+     "stage": "PLANNING_WORKFLOW",
+     "feedback": "CLOSED",
+     "start": "2025/08/28 12:49:03",
+     "end": "2025/09/25 23:59:59"
+    }
+   ],
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14828_en",
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
+  },
+  {
+   "id": "14830",
+   "title": "Carbon price paid in a third country under the carbon border adjustment mechanism (CBAM)",
+   "reference": "Ares(2025)6809938",
+   "actType": "REG_IMPL",
+   "statuses": [
+    {
+     "stage": "ISC_WORKFLOW",
+     "feedback": "CLOSED",
+     "start": "2026/05/13 13:24:00",
+     "end": "2026/06/10 23:59:59"
+    }
+   ],
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14830_en",
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
+  },
+  {
+   "id": "12228",
+   "title": "Carbon Border Adjustment Mechanism",
+   "reference": "Ares(2020)1300866",
+   "actType": "PROP_REG",
+   "statuses": [
+    {
+     "stage": "ADOPTION_WORKFLOW",
+     "feedback": "CLOSED",
+     "start": "2021/07/15 13:13:56",
+     "end": "2021/11/18 23:59:59"
+    }
+   ],
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/12228_en",
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
+  },
+  {
+   "id": "14117",
+   "title": "Establishment of the CBAM Registry",
+   "reference": "Ares(2024)184701",
+   "actType": "REG_IMPL",
+   "statuses": [
+    {
+     "stage": "ADOPTION_WORKFLOW",
+     "feedback": "DISABLED",
+     "start": "2025/01/03 14:48:10",
+     "end": ""
+    }
+   ],
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14117_en",
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
+  },
+  {
+   "id": "14116",
+   "title": "Authorisation of CBAM declarants",
+   "reference": "Ares(2024)184676",
+   "actType": "REG_IMPL",
+   "statuses": [
+    {
+     "stage": "ADOPTION_WORKFLOW",
+     "feedback": "DISABLED",
+     "start": "2025/03/28 08:24:00",
+     "end": ""
+    }
+   ],
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14116_en",
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
+  },
+  {
+   "id": "14133",
+   "title": "Conditions for granting accreditation for CBAM purposes",
+   "reference": "Ares(2024)546976",
+   "actType": "REG_DEL",
+   "statuses": [
+    {
+     "stage": "ADOPTION_WORKFLOW",
+     "feedback": "DISABLED",
+     "start": "2025/11/20 11:08:32",
+     "end": ""
+    }
+   ],
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14133_en",
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
+  },
+  {
+   "id": "14759",
+   "title": "Commission Implementing Regulation for goods brought to the exclusive economic zone of Member States",
+   "reference": "Ares(2025)5318878",
+   "actType": "REG_IMPL",
+   "statuses": [
+    {
+     "stage": "ADOPTION_WORKFLOW",
+     "feedback": "DISABLED",
+     "start": "2025/11/30 23:32:20",
+     "end": ""
+    }
+   ],
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14759_en",
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
+  }
+ ]
+}
