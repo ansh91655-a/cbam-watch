@@ -10,9 +10,6 @@ import { topicAbout, topicList, topicName, topicOf } from "../ui/topics.js";
 const PAGE = 20;
 const PER_TOPIC = 3;
 
-// 소식의 날짜: 원문의 게시일, 없으면 이 사이트에 실린 날
-const dateOf = (item) => String(item.published || item.listed || "");
-
 function select(id, label, options, onChange) {
   return h("label", { class: "field", for: id }, [
     h("span", { text: label }),
@@ -26,7 +23,7 @@ export async function render(main, arg) {
   const topics = topicList();
   const picked = topics.some((topic) => topic.code === arg) ? arg : "";
   const kinds = [...new Set(items.map((item) => item.kind).filter(Boolean))].sort();
-  const years = [...new Set(items.map((item) => dateOf(item).slice(0, 4)).filter(Boolean))].sort().reverse();
+  const years = [...new Set(items.map((item) => data.dateOf(item).slice(0, 4)).filter(Boolean))].sort().reverse();
   const state = { text: "", kind: "", importance: "", year: "", latest: false, shown: PAGE };
   const body = h("div", { class: "stack-l" });
   const count = h("p", { class: "count", role: "status" });
@@ -36,7 +33,7 @@ export async function render(main, arg) {
     if (picked && topicOf(item) !== picked) return false;
     if (state.kind && item.kind !== state.kind) return false;
     if (state.importance && item.importance !== state.importance) return false;
-    if (state.year && dateOf(item).slice(0, 4) !== state.year) return false;
+    if (state.year && data.dateOf(item).slice(0, 4) !== state.year) return false;
     if (!state.text) return true;
     const haystack = `${item.title} ${item.summary} ${item.sourceName} ${topicName(topicOf(item))} ${(item.topics || []).join(" ")}`.toLowerCase();
     return state.text.toLowerCase().split(/\s+/).filter(Boolean).every((word) => haystack.includes(word));
@@ -62,7 +59,7 @@ export async function render(main, arg) {
     const nodes = [];
     let month = null;
     for (const item of found.slice(0, state.shown)) {
-      const key = dateOf(item).slice(0, 7);
+      const key = data.dateOf(item).slice(0, 7);
       if (key !== month) {
         month = key;
         nodes.push(h("h2", { class: "month-head", text: key ? `${key.slice(0, 4)}년 ${Number(key.slice(5, 7))}월` : "날짜 없음" }));

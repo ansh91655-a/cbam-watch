@@ -29,9 +29,13 @@ export function diff(path) {
   return fetch(path, { cache: "no-store" }).then((response) => (response.ok ? response.json() : null)).catch(() => null);
 }
 
-// 게시일이 늦은 것부터. 게시일이 같으면 목록에 오른 날이 늦은 것부터.
+// 소식의 날짜: 원문의 게시일. 게시일이 없으면 이 사이트에 실린 날을 쓴다.
+// 다만 처음에 한꺼번에 채운 소식(backfill) 가운데 게시일이 없는 것은 날짜가 없는 것으로 본다(실린 날이 소식의 날짜가 아니다).
+export function dateOf(item) {
+  return String(item.published || (item.backfill ? "" : item.listed) || "");
+}
+
+// 날짜가 늦은 것부터. 날짜가 같으면 목록에 오른 날이 늦은 것부터. 날짜가 없는 것은 맨 뒤로 간다.
 export function newestFirst(list) {
-  return [...list].sort((a, b) =>
-    String(b.published || b.listed || "").localeCompare(String(a.published || a.listed || "")) ||
-    String(b.listed || "").localeCompare(String(a.listed || "")));
+  return [...list].sort((a, b) => dateOf(b).localeCompare(dateOf(a)) || String(b.listed || "").localeCompare(String(a.listed || "")));
 }
