@@ -65,6 +65,13 @@ function positions(rule) {
     if (link) link.append(icon("out", 13));
     return h("li", {}, [h("strong", { text: party.name }), h("time", { datetime: party.date, text: day(party.date) }), link]);
   }));
+  // 표를 만들 때 함께 대조한 문서(예: 기관 간 협상용 대조 문서)
+  for (const extra of book.also || []) {
+    const link = safeLink(extra.link, extra.text);
+    if (!link) continue;
+    link.append(icon("out", 13));
+    sources.append(h("li", {}, [h("strong", { text: "함께 대조한 문서" }), extra.date ? h("time", { datetime: extra.date, text: day(extra.date) }) : null, link]));
+  }
   return h("section", { class: "stack", "aria-labelledby": "h-pos" }, [
     h("div", { class: "sec-head" }, [h("h2", { id: "h-pos", text: "기관별 입장 비교" }), h("span", { class: "count", text: `${day(book.asOf)} 기준` })]),
     wrap,

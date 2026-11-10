@@ -79,6 +79,9 @@ def position_problems(rule, term_index, kinds):
         if not party.get("name") or not party.get("source") or not str(party.get("link", "")).startswith("https://"):
             found.append((where, f"기관의 이름, 문서 이름, 주소(https)가 온전하지 않음: {party.get('key')}"))
     found += [(where, problem) for problem in text_problems(str(table.get("note", "")), term_index)]
+    for extra in table.get("also", []) or []:  # 함께 대조한 문서
+        if not str(extra.get("text", "")).strip() or not str(extra.get("link", "")).startswith("https://"):
+            found.append((where, "함께 대조한 문서(also)의 이름이나 주소(https)가 온전하지 않음"))
     if not table.get("rows"):
         found.append((where, "줄이 없음"))
     for row in table.get("rows", []):

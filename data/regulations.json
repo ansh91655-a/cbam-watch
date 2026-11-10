@@ -598,7 +598,7 @@
    },
    "positions": {
     "asOf": "2026-11-11",
-    "note": "집행위원회와 이사회의 칸은 문서 원문에서, 유럽의회의 칸은 유럽의회 입법 관측소가 낸 채택 문서의 요약에서 확인한 내용입니다. 유럽의회 채택 문서의 원문은 아직 대조하지 못했습니다. 빈칸은 그 문서에서 해당 내용을 확인하지 못한 것입니다. 세 안은 협상의 출발점이며, 최종 법령은 3자 협상의 결과에 따라 달라집니다.",
+    "note": "집행위원회와 이사회의 칸은 각 기관의 문서 원문에서 확인했습니다. 유럽의회의 칸은 EU 이사회 문서 등록부에 공개된 기관 간 협상용 대조 문서(WK 14239/26, 2026년 9월 18일)에 실린 유럽의회 수정안에서 확인했습니다. 유럽의회 누리집의 채택 문서는 자동으로 받을 수 없어 링크만 걸었습니다. 대상 품목의 표는 대조 문서에 실려 있지 않습니다. 빈칸은 그 문서에서 해당 내용을 확인하지 못한 것입니다. 세 안은 협상의 출발점이며, 최종 법령은 3자 협상의 결과에 따라 달라집니다.",
     "parties": [
      {
       "key": "commission",
@@ -618,8 +618,8 @@
       "key": "parliament",
       "name": "유럽의회 제1독회 입장",
       "date": "2026-09-15",
-      "source": "유럽의회 입법 관측소의 채택 문서 요약",
-      "link": "https://oeil.europarl.europa.eu/oeil/en/document-summary?id=1914940"
+      "source": "유럽의회 채택 문서 P10_TA(2026)0276",
+      "link": "https://www.europarl.europa.eu/doceo/document/TA-10-2026-0276_EN.html"
      }
     ],
     "rows": [
@@ -645,7 +645,7 @@
        }
       },
       "parliament": {
-       "text": "집행위원회의 제안보다 더 넓힘(요약에 개수는 없음)",
+       "text": "집행위원회의 제안보다 더 넓힘(품목 표가 공개된 문서에 실려 있지 않아 개수는 확인하지 못함)",
        "evidence": {
         "path": "collected/archive/pages/eu-fulltext/downstream-oeil-summary-1914940.txt",
         "contains": [
@@ -677,7 +677,17 @@
        }
       },
       "parliament": {
-       "text": ""
+       "text": "2028년 1월 1일(집행위원회 제안과 같음)",
+       "evidence": {
+        "path": "collected/archive/pages/eu-fulltext/downstream-fourcolumn.txt",
+        "lines": [
+         [
+          "[의회 215]",
+          "Article 1(21)",
+          "shall apply from 1 January 2028"
+         ]
+        ]
+       }
       }
      },
      {
@@ -705,12 +715,18 @@
        }
       },
       "parliament": {
-       "text": "삭제. 대신 그 품목에서 걷은 CBAM 수입을 피해를 본 부문으로 한시적으로 돌리는 장치를 넣음",
+       "text": "삭제. 대신 그 품목에서 걷은 CBAM 수입을 피해를 본 부문으로 한시적으로 돌리는 조항(제30조(8a))을 넣음",
        "evidence": {
-        "path": "collected/archive/pages/eu-fulltext/downstream-oeil-summary-1914940.txt",
-        "contains": [
-         "Members rejected the Commission's proposed safeguard",
-         "temporarily redirect CBAM revenues"
+        "path": "collected/archive/pages/eu-fulltext/downstream-fourcolumn.txt",
+        "lines": [
+         [
+          "[의회 171]",
+          "deleted"
+         ],
+         [
+          "[의회 204d]",
+          "redirect the CBAM revenues generated from those goods to the sectors affected"
+         ]
         ]
        }
       }
@@ -736,11 +752,14 @@
        }
       },
       "parliament": {
-       "text": "크레딧을 CBAM 의무에 반영하는 선택지를 삭제",
+       "text": "그 전문을 삭제",
        "evidence": {
-        "path": "collected/archive/pages/eu-fulltext/downstream-oeil-summary-1914940.txt",
-        "contains": [
-         "removed the Commission's option to count Paris Agreement Article 6 carbon credits"
+        "path": "collected/archive/pages/eu-fulltext/downstream-fourcolumn.txt",
+        "lines": [
+         [
+          "[의회 34]",
+          "deleted"
+         ]
         ]
        }
       }
@@ -769,12 +788,23 @@
        }
       },
       "parliament": {
-       "text": "남용 위험이 큰 국가·품목 조합에는 국가별 기본값을 미리 일괄 적용하고, 정해 둔 기준을 충족한 사업자만 실제 값을 쓰게 함",
+       "text": "남용 위험이 큰 품목·원산지 조합에 국가별 기본값을 미리 적용하고, 남용이 없었다는 증빙을 낸 승인된 CBAM 신고인만 실제 배출량을 쓰게 함. 자원 재배치(resource shuffling)의 정의를 넣음",
        "evidence": {
-        "path": "collected/archive/pages/eu-fulltext/downstream-oeil-summary-1914940.txt",
-        "contains": [
-         "country-level default values should be applied systematically and ex ante",
-         "retain the possibility to use actual values"
+        "path": "collected/archive/pages/eu-fulltext/downstream-fourcolumn.txt",
+        "lines": [
+         [
+          "[의회 27]",
+          "country-level default values should be applied systematically and ex ante"
+         ],
+         [
+          "[의회 97]",
+          "evidence demonstrating that no abusive practices have occurred"
+         ],
+         [
+          "[의회 86n]",
+          "resource shuffling",
+          "means any reorganisation of production"
+         ]
         ]
        }
       }
@@ -801,11 +831,22 @@
        }
       },
       "parliament": {
-       "text": "제품에 든 스크랩의 양과 종류(공정 스크랩인지 사용 후 스크랩인지)를 밝히게 함",
+       "text": "집행위원회 제안의 틀(새 부속서 VIII)을 유지하고, 제품에 든 스크랩의 양과 종류(공정 스크랩인지 사용 후 스크랩인지)를 밝히게 함. 가공하지 않은 알루미늄에는 스크랩 함량과 관계없이 기본값 하나를 쓰자는 전문을 더함",
        "evidence": {
-        "path": "collected/archive/pages/eu-fulltext/downstream-oeil-summary-1914940.txt",
-        "contains": [
-         "details of the quantity of scrap contained in the good"
+        "path": "collected/archive/pages/eu-fulltext/downstream-fourcolumn.txt",
+        "lines": [
+         [
+          "[의회 94d]",
+          "details of the quantity of scrap contained in the good"
+         ],
+         [
+          "[의회 27b]",
+          "a single default value should be applied to all unwrought aluminium"
+         ],
+         [
+          "[의회 266]",
+          "ANNEX VIII"
+         ]
         ]
        }
       }
@@ -832,11 +873,16 @@
        }
       },
       "parliament": {
-       "text": "공급망 접근이 제한된 최외곽 지역의 사업자에게 품목별 한시 예외를 줄 수 있게 함",
+       "text": "회원국이 통보하면, 최외곽 지역에서 현지 소비나 현지 가공에만 쓰일 대상 품목에 이 규정의 적용을 4년 동안 한시적으로 제외할 수 있게 함",
        "evidence": {
-        "path": "collected/archive/pages/eu-fulltext/downstream-oeil-summary-1914940.txt",
-        "contains": [
-         "operators established in outermost regions"
+        "path": "collected/archive/pages/eu-fulltext/downstream-fourcolumn.txt",
+        "lines": [
+         [
+          "[의회 84b]",
+          "temporary derogation from the application of this Regulation",
+          "destined exclusively for local consumption or local processing",
+          "for a period of four years"
+         ]
         ]
        }
       }
@@ -850,17 +896,41 @@
        "text": ""
       },
       "parliament": {
-       "text": "계통 안정에 쓰는 제3국 전력 흐름은 적용 제외, 최빈개도국의 간소화 보고, 원격 판매 수입자의 임계값 감시, EU 배출권거래제와 연계하는 협정이 아니면 CBAM 의무를 면제하지 않는다는 원칙",
+       "text": "송전망 운영자의 계통 안정 조치에서 생긴 제3국 전력 흐름은 적용 제외, 알루미늄 제품의 단일 중량 임계값을 5톤으로, 원격 판매 수입자의 임계값 합산과 감시, 최빈개도국의 간소화 보고, EU 배출권거래제와 연계하는 협정이 아니면 CBAM 의무를 면제하거나 낮추지 않는다는 조항",
        "evidence": {
-        "path": "collected/archive/pages/eu-fulltext/downstream-oeil-summary-1914940.txt",
-        "contains": [
-         "electricity flows from non-EU countries used by grid operators",
-         "simplified reporting for least-developed countries",
-         "distance sales",
-         "unless specifically providing for linking with the EU ETS"
+        "path": "collected/archive/pages/eu-fulltext/downstream-fourcolumn.txt",
+        "lines": [
+         [
+          "[의회 74b]",
+          "electricity flows originating from third countries",
+          "transmission system operators"
+         ],
+         [
+          "[의회 263c]",
+          "shall be set at 5 tonnes of net mass for aluminium products"
+         ],
+         [
+          "[의회 167b]",
+          "threshold for importers for distance sales"
+         ],
+         [
+          "[의회 86f]",
+          "simplified reporting obligations are to be applied to LDCs"
+         ],
+         [
+          "[의회 121b]",
+          "unless specifically providing for linking with the EU ETS"
+         ]
         ]
        }
       }
+     }
+    ],
+    "also": [
+     {
+      "text": "기관 간 협상용 대조 문서(EU 이사회 문서 WK 14239/26)",
+      "date": "2026-09-18",
+      "link": "https://data.consilium.europa.eu/doc/document/WK-14239-2026-INIT/en/pdf"
      }
     ]
    }
