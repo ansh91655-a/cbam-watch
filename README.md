@@ -16,6 +16,7 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 | 소식이 더해질 때 | 이 저장소의 자동 실행(`.github/workflows/thumbs.yml`) | 그림이 없는 소식의 미리보기 그림을 만들어 `site/assets/thumbs/`에 싣는다. 끝나면 사이트가 다시 배포된다 |
 | 평일 10:05 | 예약된 보고 실행 | 그날의 실행과 사이트 상태를 확인하고 보고 파일을 `reports/`에 올린다 |
 | 보고 파일이 올라올 때, 평일 11:10 | 이 저장소의 자동 실행(`.github/workflows/notify.yml`) | 문제가 있는 보고와 주간 보고를 '운영 보고' 이슈에 댓글로 적는다(GitHub가 저장소 주인에게 메일로 알린다). 11:10까지 그날의 보고 파일이 없으면 그것도 알린다 |
+| 손으로 돌릴 때 | 예약된 임시 실행 | 제목만 옮겨 실은 국내 소식의 요약을 원문을 읽고 다시 쓴다(한 번에 12건) |
 | 월요일 09:10 | 예약된 주간 실행 | 주간 요약을 쓰고, 게시한 항목 일부를 지금의 원문과 다시 대조한다. 어긋나면 그 항목의 요약을 내린다. 규제별 진행 상황에서 날짜가 지난 일정과 언론 보도에 기댄 줄을 다시 확인한다 |
 
 ## 폴더
@@ -42,9 +43,9 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 | `tools/originals` | 문서 링크 찾기(`discover`), 받을 차례 정하기(`queue`), 판 남기기와 비교(`versions`, `diff`), 본문 뽑기(`textify`), 실행(`run`) |
 | `tools/check` | 국문 글 검사: 용어(`term_check`, `term_lookup`), 표기(`style_check`), 수치와 날짜 대조(`fact_check`), 원문 발췌 확인(`excerpt_check`) |
 | `tools/prices` | 인증서 가격표 읽기: 적용 기간 읽기(`periods`), 표의 행 읽기(`parse`), 가격 자료 만들기(`run`) |
-| `tools/publish` | 게시 데이터에 더하기(`add_items`, `add_digest`), 요약 내리기(`withdraw`), 주제 목록(`topics`), 사이트와 운영 화면의 폴더 만들기(`build_site`, `build_console`). 사이트 폴더를 만들 때 규제 자료의 공개용 사본(`regulations`), 소식의 미리보기 그림 주소(`thumbs`), 구독 피드 `feed.xml`과 `rules.xml`(`feed`), 화면에서 바로 보는 문서 사본 `files/`(`derive`)도 함께 만든다 |
+| `tools/publish` | 게시 데이터에 더하기(`add_items`, `add_digest`), 요약 내리기(`withdraw`), 주제 목록(`topics`), 사이트와 운영 화면의 폴더 만들기(`build_site`, `build_console`). 사이트 폴더를 만들 때 규제 자료의 공개용 사본(`regulations`), 소식의 미리보기 그림 주소(`thumbs`), 구독 피드 `feed.xml`과 `rules.xml`(`feed`), 화면에서 바로 보는 문서 사본 `files/`(`derive`)도 함께 만든다. 규제 자료 고치기(`rule_edit`), 제목만 옮겨 실은 소식의 요약을 원문을 읽고 다시 쓴 것으로 바꾸기(`revise`)도 여기에 있다 |
 | `tools/notify` | 보고 파일에서 알릴 것을 골라 '운영 보고' 이슈에 적기(`reports`, `messages`, `github`, `run`) |
-| `tools/run` | 예약 실행이 쓰는 보조 도구: 후보 고르기, 검증 대기 고르기, 원문 발췌 자르기, 상태 점검, 하루와 한 주의 요약, 보고 파일 만들기(`write_report`) |
+| `tools/run` | 예약 실행이 쓰는 보조 도구: 후보 고르기, 검증 대기 고르기, 원문 발췌 자르기, 상태 점검(`health`, 규제 자료는 `rules_health`, 품목 코드 목록과 기관별 입장 비교표는 `cn_health`), 하루와 한 주의 요약, 보고 파일 만들기(`write_report`) |
 | `tools/archive` | 공식 기록을 모으는 프로그램. 지난 소식을 한꺼번에 채울 때 손으로 돌리고, 규제 진행 상황에 쓰는 기록은 평일마다 자동으로 돈다: 출처별 모으기(`ecnews`, `newsletter`, `eurlex`, `cellar`, `docs`, `oeil`, `hys`, `presscorner`, `council`, `govuk`, `ukleg`, `fedreg`, `boards`)와 실행(`crawl`), 새 자료를 그날의 후보로 넘기기(`tofeed`), 화면의 짜임 살펴보기(`dump`), 싣기 전 검사(`gate`), 싣기(`publish`) |
 | `tools/cn` | 품목 코드 조회의 목록을 법령 원문에서 만드는 프로그램: 부속서의 품목 표 읽기(`annex`), `data/cn.json` 만들기(`build`). 원문은 워크플로 '소급 수집'의 `eu-fulltext` 단계가 `collected/archive/pages/eu-fulltext/`에 받아 둔다. 코드를 견주는 셈은 사이트의 `site/js/cn/match.js`가 한다 |
 | `tools/thumbs` | 소식 카드의 미리보기 그림을 만드는 프로그램: 만들 것 고르기(`plan`), 원문 화면의 제목 부분 찍기(`shots.mjs`), 법령 PDF의 첫 장 받기(`pdfcover`), 줄여서 싣기(`finish`). 재이용이 허용된 공식 출처만 다룬다 |
@@ -59,6 +60,7 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 - 연혁의 근거는 세 가지다. `stored`는 `collected/archive/`에 모아 둔 공식 기록과 맞는 사건이고 프로그램이 실제로 맞춰 본다. `web`은 자동으로 받을 수 없는 공식 화면을 읽고 확인한 사건, `press`는 언론 보도로만 아는 사건이다(화면에 '언론 보도'로 표시된다).
 - 검사: `python -m tools.publish.regulations`(꼴, 높임말, 용어, 근거). 사이트를 만들 때는 꼴과 표기만 막고, 근거가 공식 기록과 달라진 것은 알리기만 한다(공식 기록은 날마다 바뀐다).
 - 고치기: `python -m tools.publish.rule_edit`(연혁에 한 줄 더하기와 빼기, 단계와 설명 고치기, 새 규제 더하기). 고친 뒤 자료 전체를 검사하고, 걸리면 고치지 않는다.
+- 기관별 입장 비교표: 규제에 `positions`가 있으면 화면에 '기관별 입장 비교'가 실린다(지금은 하류제품 확대 개정안). 칸마다 저장소에 받아 둔 원문 글에서 근거를 대고(`contains`, 그 문서에 없는 조항은 `lacks`) 프로그램이 맞춰 본다. `python -m tools.publish.rule_edit positions --id <규제> --file <표 파일>`로 넣고, 공개용 사본에는 칸의 글만 실린다.
 - 달라진 것 찾기: `python -m tools.run.rules_watch`가 모아 둔 공식 기록이 지난번에 본 뒤로 달라졌는지 알려 준다. 본 것은 `data/rules-seen.json`에 적는다.
 - 상태 점검: `tools/run/rules_health.py`가 근거 어긋남, 지난 일정, 반영되지 않은 변화, 기록 갱신 누락을 일일 보고의 문제로 올린다.
 
@@ -73,6 +75,8 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
    - `kr-boards`: 국내 기관 게시판의 제목, 날짜, 주소. 본문은 받아 두지 않습니다(산업통상부 보도자료만 부제와 첫 문단을 짧게 남깁니다).
 2. 쓰기. 모아 둔 글을 읽고 국문 초안을 만듭니다. 초안 파일은 저장소에 올리지 않습니다.
 3. 싣기. `python3 -m tools.archive.publish --drafts <초안 파일> [--dry-run]`. 형식, 문체, 용어, 원문 대조(수치와 날짜, 게시일), 링크, 원문 발췌를 검사해 통과한 것만 `data/items.json`에 더하고 `backfill` 표시를 붙입니다. 이 표시가 있는 소식은 주간 요약의 대상에서 빠지고, 주간 작업이 주마다 10건씩 원문과 다시 대조합니다.
+
+제목만 옮겨 실은 소식. 국내 기관 게시판의 지난 글은 본문을 받아 두지 않아 제목만으로 한 문장을 썼습니다. 이런 소식에는 `brief` 표시가 있고 사이트에서 요약 없이 한 줄로 보입니다. 원문을 읽고 요약을 쓴 뒤 `python3 -m tools.publish.revise`로 바꾸면(문체, 용어, 길이, 수치와 날짜를 검사합니다) 표시가 떨어지고 카드로 보입니다. 쓰는 법은 그 파일 머리에 있습니다.
 
 ## 사이트의 디자인
 
