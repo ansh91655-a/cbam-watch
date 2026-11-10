@@ -1656,7 +1656,7 @@
    "id": "20261109-keco-cbam-609a38",
    "published": "2026-11-09",
    "title": "월간 CBAM 동향 및 주요 Q&A (36호, 2026년 10월)",
-   "summary": "한국환경공단 CBAM 헬프데스크가 2026년 10월의 CBAM 동향과 주요 질의응답을 담은 월간 자료 36호를 2026년 11월 9일에 올렸습니다.",
+   "summary": "한국환경공단 CBAM 헬프데스크가 2026년 10월의 CBAM 동향과 주요 질의응답을 정리한 월간 자료 36호입니다. 주요 내용으로 EU CBAM 적용 범위 확대 관련 삼자협의 진행과 UK CBAM 배출량 MRV 가이던스 및 기본값 초안 공개를 다룹니다.",
    "kind": "국내",
    "topic": "korea",
    "importance": "낮음",
@@ -1671,7 +1671,7 @@
    "checkedAt": "2026-11-10T21:03:30+09:00",
    "authoring": "자동",
    "backfill": true,
-   "brief": true
+   "revised": "2026-11-11"
   },
   {
    "id": "20261014-keco-cbam-23b575",
@@ -1698,7 +1698,7 @@
    "id": "20261006-keco-cbam-e41bc3",
    "published": "2026-10-06",
    "title": "월간 CBAM 동향 및 주요 Q&A (35호, 2026년 9월)",
-   "summary": "한국환경공단 CBAM 헬프데스크가 2026년 9월의 CBAM 동향과 주요 질의응답을 담은 월간 자료 35호를 2026년 10월 6일에 올렸습니다.",
+   "summary": "한국환경공단 CBAM 헬프데스크가 2026년 9월의 CBAM 동향과 주요 질의응답을 정리한 월간 자료 35호입니다. 주요 내용으로 EU CBAM 업무 대응 매뉴얼 발간과 EU CBAM 하류재 확산 설명회 개최를 다룹니다.",
    "kind": "국내",
    "topic": "korea",
    "importance": "낮음",
@@ -1713,13 +1713,13 @@
    "checkedAt": "2026-11-10T21:03:30+09:00",
    "authoring": "자동",
    "backfill": true,
-   "brief": true
+   "revised": "2026-11-11"
   },
   {
    "id": "20261006-keco-cbam-df8974",
    "published": "2026-10-06",
    "title": "EU CBAM 업무 대응 매뉴얼",
-   "summary": "한국환경공단 CBAM 헬프데스크 게시판에 2026년 10월 6일에 올라온 안내 자료입니다.",
+   "summary": "한국환경공단 CBAM 헬프데스크가 기존 EU CBAM 업무 대응 매뉴얼을 추가로 수정·보완해 다시 첨부한 자료입니다. 수정 사항은 문서 전체의 단위 표기를 tCO2e에서 tCO2-eq로 바꾼 것입니다. 매뉴얼은 PDF 파일로 첨부되어 있습니다.",
    "kind": "국내",
    "topic": "korea",
    "importance": "보통",
@@ -1734,7 +1734,7 @@
    "checkedAt": "2026-11-10T21:03:30+09:00",
    "authoring": "자동",
    "backfill": true,
-   "brief": true
+   "revised": "2026-11-11"
   },
   {
    "id": "20260929-keco-cbam-182997",
@@ -1761,7 +1761,7 @@
    "id": "20260907-keco-cbam-df8245",
    "published": "2026-09-07",
    "title": "월간 CBAM 동향 및 주요 Q&A (34호, 2026년 8월)",
-   "summary": "한국환경공단 CBAM 헬프데스크가 2026년 8월의 CBAM 동향과 주요 질의응답을 담은 월간 자료 34호를 2026년 9월 7일에 올렸습니다.",
+   "summary": "한국환경공단 CBAM 헬프데스크가 2026년 8월의 CBAM 동향과 주요 질의응답을 정리한 월간 자료 34호입니다. 주요 내용으로 EU CBAM 기본값 이행규정 업데이트, EU 역외 사업장 운영자를 위한 가이던스 발표, 검증기관 및 인정기관 관련 가이던스 발표를 다룹니다.",
    "kind": "국내",
    "topic": "korea",
    "importance": "낮음",
@@ -1776,13 +1776,13 @@
    "checkedAt": "2026-11-10T21:03:30+09:00",
    "authoring": "자동",
    "backfill": true,
-   "brief": true
+   "revised": "2026-11-11"
   },
   {
    "id": "20260807-keco-cbam-501a71",
    "published": "2026-08-07",
    "title": "월간 CBAM 동향 및 주요 Q&A (33호, 2026년 7월)",
-   "summary": "한국환경공단 CBAM 헬프데스크가 2026년 7월의 CBAM 동향과 주요 질의응답을 담은 월간 자료 33호를 2026년 8월 7일에 올렸습니다.",
+   "summary": "한국환경공단 CBAM 헬프데스크가 2026년 7월의 CBAM 동향과 주요 질의응답을 정리한 월간 자료 33호입니다. 주요 내용으로 찾아가는 EU CBAM 헬프데스크 지원, 국제탄소규제대응 전문인력 교육 모집 안내, EU 배출권거래제(EU-ETS) 개정안 발표(CBAM 계수 변경안 포함)를 다룹니다.",
    "kind": "국내",
    "topic": "korea",
    "importance": "낮음",
@@ -1797,7 +1797,7 @@
    "checkedAt": "2026-11-10T21:03:30+09:00",
    "authoring": "자동",
    "backfill": true,
-   "brief": true
+   "revised": "2026-11-11"
   },
   {
    "id": "20260715-keco-cbam-1e0f8a",
@@ -1866,7 +1866,7 @@
    "id": "20260707-keco-cbam-b57d87",
    "published": "2026-07-07",
    "title": "월간 CBAM 동향 및 주요 Q&A (32호, 2026년 6월)",
-   "summary": "한국환경공단 CBAM 헬프데스크가 2026년 6월의 CBAM 동향과 주요 질의응답을 담은 월간 자료 32호를 2026년 7월 7일에 올렸습니다.",
+   "summary": "한국환경공단 CBAM 헬프데스크가 2026년 6월의 CBAM 동향과 주요 질의응답을 정리한 월간 자료 32호입니다. 주요 내용으로 헬프데스크 배출량산정 실무 핸드북 활용 온라인 교육 공개와, 알기쉽게 풀어쓰는 CBAM 해설서 v4 개정본 및 배출량 실무 핸드북 발간을 다룹니다.",
    "kind": "국내",
    "topic": "korea",
    "importance": "낮음",
@@ -1881,7 +1881,7 @@
    "checkedAt": "2026-11-10T21:03:30+09:00",
    "authoring": "자동",
    "backfill": true,
-   "brief": true
+   "revised": "2026-11-11"
   },
   {
    "id": "20260616-keco-cbam-2abaaa",
@@ -3015,7 +3015,8 @@
    "checkedAt": "2026-11-10T21:03:30+09:00",
    "authoring": "자동",
    "backfill": true,
-   "brief": true
+   "brief": true,
+   "briefTries": 1
   },
   {
    "id": "20260904-compass-cfa23c",
@@ -3036,7 +3037,8 @@
    "checkedAt": "2026-11-10T21:03:30+09:00",
    "authoring": "자동",
    "backfill": true,
-   "brief": true
+   "brief": true,
+   "briefTries": 1
   },
   {
    "id": "20260818-compass-ab32e2",
@@ -3057,7 +3059,8 @@
    "checkedAt": "2026-11-10T21:03:30+09:00",
    "authoring": "자동",
    "backfill": true,
-   "brief": true
+   "brief": true,
+   "briefTries": 1
   },
   {
    "id": "20260813-compass-269f85",
@@ -3078,7 +3081,8 @@
    "checkedAt": "2026-11-10T21:24:54+09:00",
    "authoring": "자동",
    "backfill": true,
-   "brief": true
+   "brief": true,
+   "briefTries": 1
   },
   {
    "id": "20260721-compass-a30351",
@@ -3099,7 +3103,8 @@
    "checkedAt": "2026-11-10T21:03:30+09:00",
    "authoring": "자동",
    "backfill": true,
-   "brief": true
+   "brief": true,
+   "briefTries": 1
   },
   {
    "id": "20260626-compass-e58b5d",
@@ -3120,7 +3125,8 @@
    "checkedAt": "2026-11-10T21:03:30+09:00",
    "authoring": "자동",
    "backfill": true,
-   "brief": true
+   "brief": true,
+   "briefTries": 1
   },
   {
    "id": "20260623-compass-5f028c",
