@@ -27,7 +27,7 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 | `data/` | 사이트에 게시한 데이터. 소식(`items.json`), 주제 목록(`topics.json`), 인증서 가격(`prices.json`, 프로그램이 가격표에서 만든다), 일정(`events.json`), 주간 요약(`digests.json`), 용어집(`terms.json`) |
 | `reports/` | 보고 실행이 올리는 그날과 그 주의 보고 파일. 알림의 근거다 |
 | `language/` | 국문 표기 기준(용어집) |
-| `site/` | 공개 사이트의 화면 파일. 화면마다 모듈 하나(`js/views/`), 그림과 달력 같은 부품(`js/ui/`), 디자인 값(`css/tokens.css`)과 시안(`css/themes.css`) |
+| `site/` | 공개 사이트의 화면 파일. 화면마다 모듈 하나(`js/views/`), 그림과 달력 같은 부품(`js/ui/`), 디자인 값(`css/tokens.css`)과 색 변형(`css/themes.css`), 파비콘과 공유 미리보기 그림과 라이선스 고지(`assets/`). 아래 '사이트의 디자인' 참조 |
 | `console/` | 운영 화면의 파일 |
 | `tools/` | 정해진 일을 하는 프로그램. 아래 표 참조 |
 | `tests/` | 도구의 자동 시험. 올릴 때마다 돈다(`.github/workflows/tests.yml`) |
@@ -44,8 +44,26 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 | `tools/publish` | 게시 데이터에 더하기(`add_items`, `add_digest`), 요약 내리기(`withdraw`), 주제 목록(`topics`), 사이트와 운영 화면의 폴더 만들기(`build_site`, `build_console`) |
 | `tools/notify` | 보고 파일에서 알릴 것을 골라 '운영 보고' 이슈에 적기(`reports`, `messages`, `github`, `run`) |
 | `tools/run` | 예약 실행이 쓰는 보조 도구: 후보 고르기, 검증 대기 고르기, 원문 발췌 자르기, 상태 점검, 하루와 한 주의 요약, 보고 파일 만들기(`write_report`) |
+| `tools/art` | 사이트의 그림을 만드는 프로그램. 손으로 돌린다: 점 지도(`dotmap`), 아이콘(`icons`), 라이선스 고지(`notices`), 공유 미리보기 그림의 원본(`social.html`) |
 
 프로그램은 저장소 맨 위에서 `python3 -m tools.<묶음>.<이름>` 꼴로 돌립니다. 표준 라이브러리만 쓰고, PDF 본문을 뽑을 때만 `pdftotext`가 필요합니다. 시험은 `python3 -m unittest discover -s tests -t .`로 돌립니다.
+
+## 사이트의 디자인
+
+- 색은 EU 깃발의 파랑(#003399)과 노랑(#FFCC00)을 빌렸습니다. 깃발(별 열두 개)과 EU 기관의 로고는 쓰지 않습니다. 개인이 운영하는 비공식 사이트입니다.
+- 색 변형은 세 가지입니다: 네이비(기본), 화이트, 미드나잇. 주소에 `?theme=white`처럼 붙이면 바꿔 볼 수 있고, 기본값은 `site/js/theme.js`의 `DEFAULT`입니다. 변형마다 달라지는 값은 `site/css/themes.css`에만 있습니다.
+- CSS는 쓰임새로 나눴습니다: 값(`tokens`), 바탕(`base`), 틀과 큰 머리와 지도(`layout`), 여러 화면이 함께 쓰는 부품(`components`), 첫 화면(`home`), 화면마다 따로 쓰는 것(`views`), 가격 그림(`chart`), 일정(`calendar`), 색 변형(`themes`).
+- 그림은 사진 없이 직접 만든 것과 자유롭게 쓸 수 있는 것만 씁니다.
+
+| 그림 | 어디서 왔나 | 만드는 법 |
+| --- | --- | --- |
+| 점 지도(`site/js/ui/heromap.js`) | 나라 경계는 Natural Earth(공개 자료)를 묶은 world-atlas(ISC) | `python3 -m tools.art.dotmap <countries-110m.json>` |
+| 아이콘(`site/js/ui/icons.js`) | Lucide(ISC, 일부는 Feather에서 온 것으로 MIT) | `python3 -m tools.art.icons <lucide-static/icons>` |
+| 글꼴 | Pretendard(SIL OFL). jsDelivr에서 불러 쓰고 저장소에 두지 않는다 | `site/js/theme.js` |
+| 공유 미리보기 그림(`site/assets/og.jpg`) | 사이트의 색과 점 지도로 만든 것 | `tools/art/social.html`을 1200x630 창으로 열어 화면 그림을 찍는다 |
+| 라이선스 고지(`site/assets/third-party.txt`) | 위 꾸러미의 LICENSE 파일 | `python3 -m tools.art.notices <node_modules>` |
+
+world-atlas, lucide-static, pretendard는 npm에서 받습니다. 그림을 고칠 때만 필요하고, 평소의 자동 실행은 `tools/art`를 쓰지 않습니다.
 
 ## 게시하기 전에 거치는 것
 

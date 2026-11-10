@@ -1,7 +1,7 @@
 /* 가격 그림. 선 2px, 끝점은 바탕색 고리를 두른 점, 눈금선은 가는 실선. 글은 모두 글자색 이름을 쓴다. */
-.chart-card { display: grid; gap: 10px; padding: 18px 20px 14px; border: 1px solid var(--line); border-radius: var(--radius-l); background: var(--surface); }
+.chart-card { display: grid; gap: 10px; padding: 26px 28px 20px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); }
 .chart-card h2 { font-size: var(--fs-l); }
-.chart-card .sub { font-size: var(--fs-s); color: var(--ink-2); }
+.chart-card .sub { font-size: var(--fs-s); color: var(--ink-3); }
 .chart { position: relative; }
 .chart svg { display: block; width: 100%; overflow: visible; }
 .chart .grid line { stroke: var(--chart-grid); stroke-width: 1; }
@@ -15,8 +15,9 @@
 .chart .hit { fill: transparent; }
 .chart .hit:focus { outline: none; }
 .chart .hit:focus-visible { stroke: var(--accent-strong); stroke-width: 2; }
-.tip { position: absolute; z-index: 5; pointer-events: none; min-width: 150px; padding: 8px 12px; background: var(--ink); color: var(--bg); border-radius: var(--radius-l); font-size: var(--fs-s); line-height: 1.5; transform: translate(-50%, -100%); white-space: nowrap; }
+.tip { position: absolute; z-index: 5; pointer-events: none; min-width: 150px; padding: 9px 14px; border-radius: 12px; background: var(--tip-bg); color: #ffffff; box-shadow: var(--shadow-2); font-size: var(--fs-s); line-height: 1.5; transform: translate(-50%, -100%); white-space: nowrap; }
 .tip b { display: block; font-size: var(--fs-l); font-variant-numeric: tabular-nums; }
 .spark { display: block; }
 .spark .line { fill: none; stroke: var(--chart-line); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.spark .area { fill: var(--chart-fill); }
 .spark .dot { fill: var(--chart-line); stroke: var(--surface); stroke-width: 2; }

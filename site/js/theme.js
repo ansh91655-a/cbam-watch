@@ -1,21 +1,20 @@
-// 디자인 시안 고르기. 주소에 ?theme=1~5를 붙이면 그 시안으로 보여 준다. 없으면 기본 시안이다.
+// 색 변형 고르기. 주소에 ?theme=navy, ?theme=white, ?theme=midnight를 붙이면 그 변형으로 보여 준다. 없으면 기본값이다.
 // 화면이 그려지기 전에 정해야 깜박이지 않으므로 머리에서 먼저 실행한다(모듈이 아닌 보통 스크립트).
 (function () {
-  var THEMES = {
-    "1": { name: "표준형", fonts: "Noto+Sans+KR:wght@400;500;700" },
-    "2": { name: "관보형", fonts: "Noto+Serif+KR:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700" },
-    "3": { name: "깃발형", fonts: "Gothic+A1:wght@400;500;700;800" },
-    "4": { name: "계기판형", fonts: "IBM+Plex+Sans+KR:wght@400;500;600;700" },
-    "5": { name: "통관 서류형", fonts: "Nanum+Gothic:wght@400;700;800" }
-  };
-  var DEFAULT = "3"; // 시안을 정하면 이 값을 바꾼다
+  var THEMES = { navy: "네이비", white: "화이트", midnight: "미드나잇" };
+  var DEFAULT = "navy"; // 변형을 정하면 이 값을 바꾼다
   var picked = null;
   try { picked = new URLSearchParams(location.search).get("theme"); } catch (error) { picked = null; }
   var key = THEMES[picked] ? picked : DEFAULT;
   document.documentElement.setAttribute("data-theme", key);
+  // 브라우저의 주소창 색도 변형의 머리 색에 맞춘다.
+  var BAR = { navy: "#050b24", white: "#ffffff", midnight: "#060b22" };
+  var meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.setAttribute("content", BAR[key]);
+  // 글꼴 Pretendard(SIL Open Font License). 못 받으면 기기의 기본 글꼴로 보인다.
   var link = document.createElement("link");
   link.rel = "stylesheet";
-  link.href = "https://fonts.googleapis.com/css2?family=" + THEMES[key].fonts + "&display=swap";
+  link.href = "https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css";
   document.head.appendChild(link);
-  window.CBAM_THEME = { key: key, name: THEMES[key].name, preview: Boolean(THEMES[picked]), fallback: DEFAULT };
+  window.CBAM_THEME = { key: key, name: THEMES[key], preview: Boolean(THEMES[picked]) };
 })();

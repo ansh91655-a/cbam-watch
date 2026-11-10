@@ -15,7 +15,16 @@ import { render as about } from "./views/about.js";
 import { render as design } from "./views/design.js";
 
 const VIEWS = { home, news, price, calendar, docs, terms, sources, about, design };
-const STALE_DAYS = 5; // 이보다 오래 갱신되지 않으면 머리글에 알린다.
+const STALE_DAYS = 5; // 이보다 오래 갱신되지 않으면 알린다.
+const fresh = { text: "데이터를 읽는 중", state: "ok" };
+
+// 화면마다 있는 '마지막 갱신' 자리를 채운다.
+function stamp() {
+  for (const node of document.querySelectorAll("[data-fresh], #freshness")) {
+    node.textContent = fresh.text;
+    node.dataset.state = fresh.state;
+  }
+}
 
 async function fillChrome() {
   const site = await data.site();
@@ -24,18 +33,18 @@ async function fillChrome() {
     stage.textContent = site.stage;
     stage.hidden = false;
   }
-  const freshness = document.getElementById("freshness");
   if (site.builtAt) {
     const age = daysSince(site.builtAt);
     const stale = age !== null && age > STALE_DAYS;
-    freshness.dataset.state = stale ? "stale" : "ok";
-    freshness.textContent = stale
+    fresh.state = stale ? "stale" : "ok";
+    fresh.text = stale
       ? `마지막 갱신 ${minute(site.builtAt)}. ${age}일 동안 갱신되지 않았습니다. 최신 내용은 원문에서 확인하세요.`
       : `마지막 갱신 ${minute(site.builtAt)}${site.lastCollected ? `, 출처 확인 ${minute(site.lastCollected)}` : ""}`;
   } else {
-    freshness.dataset.state = "bad";
-    freshness.textContent = "게시 데이터를 읽지 못했습니다.";
+    fresh.state = "bad";
+    fresh.text = "게시 데이터를 읽지 못했습니다.";
   }
+  stamp();
   document.getElementById("notice").textContent = site.notice || "";
   document.getElementById("independent").textContent = site.independent || "";
   const operator = document.getElementById("operator");
@@ -45,13 +54,13 @@ async function fillChrome() {
   }
 }
 
-// 시안을 미리 보는 중이면 화면 아래에 어느 시안인지와 돌아갈 길을 보여 준다.
+// 색 변형을 미리 보는 중이면 화면 아래에 어느 변형인지와 돌아갈 길을 보여 준다.
 function previewBar() {
   const theme = window.CBAM_THEME || {};
   if (!theme.preview) return;
   document.body.append(h("div", { class: "preview-bar", role: "note" }, [
-    h("span", { text: `시안 ${theme.key} ${theme.name}을 미리 보는 중입니다.` }),
-    h("a", { href: "#design", text: "다른 시안 보기" }),
+    h("span", { text: `'${theme.name}' 변형을 미리 보는 중입니다.` }),
+    h("a", { href: "#design", text: "다른 변형 보기" }),
   ]));
 }
 
@@ -63,6 +72,7 @@ async function show(route) {
   } catch (error) {
     main.replaceChildren(empty("화면을 그리지 못했습니다. 잠시 뒤에 다시 열어 주세요."));
   }
+  stamp();
   window.scrollTo(0, 0);
 }
 

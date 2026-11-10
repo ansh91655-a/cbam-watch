@@ -1,9 +1,10 @@
 /* 일정: 맨 위에 한 해를 한 줄로 그린 일정선, 그 아래에 달력 */
 .year-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
-.year-nav .year { font-family: var(--font-head); font-weight: var(--w-head); font-size: var(--fs-2xl); letter-spacing: var(--ls-head); font-variant-numeric: tabular-nums; }
+.year-nav .next-hint { font-size: var(--fs-s); font-weight: 600; }
+.year-nav .year { font-weight: 800; font-size: var(--fs-2xl); letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
 
-.yearline-wrap { overflow-x: auto; padding-bottom: 4px; border: 1px solid var(--line); border-radius: var(--radius-l); background: var(--surface); }
-.yearline { position: relative; min-width: 760px; margin: 18px 28px 14px; }
+.yearline-wrap { overflow-x: auto; padding-bottom: 4px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); }
+.yearline { position: relative; min-width: 760px; margin: 26px 32px 14px; }
 .yl-labels { position: relative; }
 .yl-label { position: absolute; z-index: 1; display: grid; align-content: start; gap: 0; width: 164px; height: 56px; padding: 0 0 0 8px; background: var(--surface); border: 0; text-align: left; color: inherit; line-height: 1.35; }
 .yl-label[data-flipped="true"] { padding: 0 8px 0 0; text-align: right; }
@@ -12,8 +13,8 @@
 .yl-label:hover .t { color: var(--link); text-decoration: underline; }
 .yl-stem { position: absolute; width: 1px; background: var(--line); }
 .yl-track { position: relative; height: 22px; }
-.yl-line { position: absolute; left: 0; right: 0; top: 10px; height: 2px; background: var(--line); }
-.yl-done { position: absolute; left: 0; top: 10px; height: 2px; background: var(--brand); }
+.yl-line { position: absolute; left: 0; right: 0; top: 9px; height: 4px; border-radius: 2px; background: var(--line); }
+.yl-done { position: absolute; left: 0; top: 9px; height: 4px; border-radius: 2px; background: linear-gradient(90deg, var(--brand), var(--brand-bright)); }
 .yl-dot { position: absolute; top: 11px; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: var(--brand); border: 2px solid var(--surface); box-shadow: 0 0 0 1px var(--brand); }
 .yl-dot[data-kind="기한"] { background: var(--accent); box-shadow: 0 0 0 1px var(--on-accent); }
 .yl-dot[data-kind="가격"] { background: var(--surface); }
@@ -23,12 +24,12 @@
 .yl-months { display: grid; grid-template-columns: repeat(12, 1fr); margin-top: 4px; }
 .yl-months span { padding-top: 6px; border-left: 1px solid var(--line); font-size: var(--fs-s); color: var(--ink-3); text-align: center; }
 .yl-months span:nth-child(3n + 1) { border-left-color: var(--ink-3); }
-.yl-legend { display: flex; flex-wrap: wrap; gap: 4px 18px; padding: 8px 28px 12px; font-size: var(--fs-s); color: var(--ink-2); }
+.yl-legend { display: flex; flex-wrap: wrap; gap: 4px 18px; padding: 8px 32px 16px; font-size: var(--fs-s); color: var(--ink-2); }
 .yl-legend i { display: inline-block; position: static; margin: 0 6px -2px 0; }
 
-.cal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 14px; }
-.cal-month { display: grid; align-content: start; gap: 10px; padding: 14px 16px 16px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); }
-.cal-month[data-has="true"] { border-color: var(--line); }
+.cal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(256px, 1fr)); gap: 16px; }
+.cal-month { display: grid; align-content: start; gap: 10px; padding: 18px 18px 20px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); }
+.cal-month[data-has="true"] { box-shadow: var(--shadow-1); }
 .cal-month h3 { display: flex; align-items: baseline; justify-content: space-between; font-size: var(--fs-l); }
 .cal-month h3 small { font-size: var(--fs-s); font-weight: 500; color: var(--ink-3); }
 .cal-days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px 0; font-size: var(--fs-s); text-align: center; font-variant-numeric: tabular-nums; }

@@ -1,8 +1,10 @@
 // 원문 대장. EU 집행위원회가 올린 문서의 목록이다. 문서 이름을 누르면 파일을 내려받는다.
 // 문서가 바뀌어 판이 둘 이상이면 바뀐 곳과 이전 판을 볼 수 있다.
 import * as data from "../data.js";
-import { empty, fill, h, pill, safeLink, viewHead } from "../ui/dom.js";
+import { band } from "../ui/band.js";
+import { empty, fill, h, pill, safeLink } from "../ui/dom.js";
 import { bytes, count } from "../ui/format.js";
+import { icon } from "../ui/icons.js";
 
 const LABEL = { added: "더해짐", removed: "빠짐", changed: "바뀜" };
 
@@ -29,11 +31,11 @@ function row(doc) {
   const detail = h("div", { hidden: true });
   const main = safeLink(doc.download, "", { class: "doc-main", target: null, download: doc.filename, title: `${doc.filename} 내려받기` });
   if (main) {
-    fill(main, 
-      h("span", { class: "doc-type", text: doc.format || "파일" }),
+    fill(main,
+      h("span", { class: "doc-type", "data-type": doc.format || null, text: doc.format || "파일" }),
       h("span", { class: "doc-title", text: doc.title }),
       h("span", { class: "doc-meta", text: meta(doc) }),
-      h("span", { class: "doc-get", text: "내려받기" }),
+      h("span", { class: "doc-get" }, [icon("download", 16), h("span", { text: "내려받기" })]),
     );
   }
   const changed = doc.diff ? h("button", {
@@ -63,7 +65,7 @@ function row(doc) {
 
 export async function render(main) {
   const [documents, sources, unreachable] = await Promise.all([data.documents(), data.sources(), data.unreachableDocuments()]);
-  const head = viewHead("원문 대장", "EU 집행위원회가 올린 CBAM 문서입니다. 문서 이름을 누르면 파일을 내려받습니다. 평일마다 다시 확인해 문서가 바뀌면 새 판으로 바꿔 두고, 바뀐 곳을 보여 줍니다.");
+  const head = band("원문 대장", "EU 집행위원회가 올린 CBAM 문서입니다. 문서 이름을 누르면 파일을 내려받습니다. 평일마다 다시 확인해 문서가 바뀌면 새 판으로 바꿔 두고, 바뀐 곳을 보여 줍니다.");
   if (!documents.length) {
     fill(main, head, empty("문서 목록을 준비하고 있습니다."));
     return;
@@ -103,7 +105,7 @@ export async function render(main) {
     none.hidden = shown > 0;
   }
 
-  fill(main, 
+  fill(main,
     head,
     h("div", { class: "filters" }, [
       h("label", { class: "field", for: "doc-q" }, [h("span", { text: "문서 찾기" }), h("input", { id: "doc-q", type: "search", placeholder: "예: guidance, default values, 5d", oninput: (event) => filter(event.target.value) })]),

@@ -1,60 +1,52 @@
-// 디자인 시안 고르기. 시안 다섯 개의 참고 자료와 색, 글꼴을 보여 주고 그 시안으로 사이트를 열어 볼 수 있게 한다.
-// 시안을 정하면 이 화면과 js/theme.js의 기본값을 정리한다.
-import { fill, h, safeLink, viewHead } from "../ui/dom.js";
+// 디자인 안내와 색 변형 고르기. 지금의 디자인이 무엇을 참고했는지와, 색 변형 세 가지를 바꿔 볼 수 있게 한다.
+// 변형을 정하면 js/theme.js의 기본값을 바꾸고 이 화면을 정리한다.
+import { band } from "../ui/band.js";
+import { fill, h, safeLink } from "../ui/dom.js";
 
-const PROPOSALS = [
-  {
-    key: "1", name: "표준형", line: "EU 집행위원회 웹사이트의 색과 질서를 따른, 가장 무난한 안",
-    about: "진한 파랑 머리띠 아래에 노랑 선 하나. 본문은 흰 바탕에 회색 글, 파랑 링크. 모서리는 거의 각지고 장식이 없다. 공공 정보 사이트로 읽힌다.",
-    reference: ["Europa Component Library 색 지침", "https://ec.europa.eu/component-library/ec/guidelines/colours/"],
-    fonts: "Noto Sans KR",
-    colors: [["#004494", "#fff"], ["#FFD617", "#1d1d1b"], ["#262B33", "#fff"], ["#F2F5F9", "#262b33"], ["#FFFFFF", "#262b33"]],
-  },
-  {
-    key: "2", name: "관보형", line: "유럽연합 관보와 EUR-Lex처럼 문서를 읽는 느낌의 안",
-    about: "제목은 명조, 본문은 고딕. 카드 대신 가는 줄로 나누고, 날짜와 주제를 왼쪽 여백에 둔다. 색은 엠블럼 파랑과 형광펜처럼 쓰는 노랑뿐이다. 글을 오래 읽기에 편하다.",
-    reference: ["기관 간 편집 지침(Interinstitutional Style Guide)", "https://style-guide.europa.eu/"],
-    fonts: "Noto Serif KR(제목), Noto Sans KR(본문)",
-    colors: [["#003399", "#fff"], ["#FFCC00", "#14213d"], ["#14213D", "#fff"], ["#F4F6FA", "#14213d"], ["#FFFFFF", "#14213d"]],
-  },
-  {
-    key: "3", name: "깃발형", line: "EU 엠블럼의 파랑과 노랑을 그대로, 크게 쓴 안",
-    about: "머리와 요약 띠를 진한 파랑 면으로 채우고, 숫자와 단추에 노랑을 쓴다. 굵은 고딕 제목과 둥근 모서리. 한눈에 EU 자료임을 알 수 있고 가장 강하다.",
-    reference: ["EU 깃발 안내와 엠블럼 그래픽 가이드의 색(파랑 #003399, 노랑 #FFCC00)", "https://european-union.europa.eu/principles-countries-history/symbols/european-flag_en"],
-    recommended: true,
-    fonts: "Gothic A1",
-    colors: [["#003399", "#fff"], ["#FFCC00", "#0b1533"], ["#0B1533", "#fff"], ["#EAF0FB", "#0b1533"], ["#FFFFFF", "#0b1533"]],
-  },
-  {
-    key: "4", name: "계기판형", line: "통계 포털처럼 수치와 표를 촘촘히 보여 주는 안",
-    about: "연한 회청색 바탕에 흰 판. 글자를 조금 줄이고 간격을 좁히고, 넓은 화면에서는 소식 카드를 두 줄로 나란히 놓아 한 화면에 더 많이 담는다. 자주 들어와 확인하는 사람에게 맞다.",
-    reference: ["Eurostat 시각 지침(Eurostat visual guide)", "https://ec.europa.eu/eurostat/web/user-guides/style-guides"],
-    fonts: "IBM Plex Sans KR",
-    colors: [["#0E47CB", "#fff"], ["#FFD617", "#16213a"], ["#16213A", "#fff"], ["#F1F4F9", "#16213a"], ["#FFFFFF", "#16213a"]],
-  },
-  {
-    key: "5", name: "통관 서류형", line: "EU 세관 신고서의 칸 양식에서 가져온 안",
-    about: "모든 것을 파란 잉크 선의 칸으로 나눈다. 소식 하나가 서류 한 장처럼 날짜, 주제, 종류 칸을 갖는다. 중요한 소식은 형광펜으로 칠한 듯 표시한다. CBAM이 신고와 인증서의 제도라는 점을 모양으로 보여 준다.",
-    reference: ["단일 행정 문서(SAD) 양식 안내, EU 집행위원회", "https://taxation-customs.ec.europa.eu/system/files/2016-09/presentation_and_use_of_the_form_en.pdf"],
-    fonts: "Nanum Gothic",
-    colors: [["#1D3C8F", "#fff"], ["#FFE14D", "#12224f"], ["#12224F", "#fff"], ["#EEF2FA", "#12224f"], ["#FFFFFF", "#12224f"]],
-  },
+const VARIANTS = [
+  { key: "navy", name: "네이비", line: "짙은 남색 머리에 밝은 본문", about: "머리글과 첫 화면의 큰 머리, 화면 머리 띠를 짙은 남색으로 두고 본문은 밝게 둡니다. 숫자와 단추에 노랑을 씁니다.", colors: ["#050b24", "#0a1540", "#003399", "#ffcc00", "#f4f6fb", "#ffffff"] },
+  { key: "white", name: "화이트", line: "전체를 밝게", about: "머리 쪽까지 흰 바탕으로 두고, 지도와 강조만 파랑으로 둡니다. 가볍고 깔끔합니다.", colors: ["#ffffff", "#f1f5ff", "#2b59e0", "#003399", "#ffcc00", "#0b1230"] },
+  { key: "midnight", name: "미드나잇", line: "전체를 어둡게", about: "본문까지 짙은 남색으로 둡니다. 어두운 곳에서 보기 편하고 숫자와 그림이 도드라집니다.", colors: ["#060b22", "#0d1535", "#121c45", "#5b82f5", "#ffcc00", "#eef1fb"] },
+];
+
+// 참고한 것: [이름, 설명, [[링크 글, 주소], ...]]
+const REFERENCES = [
+  ["칸 배치(벤토 그리드)", "첫 화면을 크기가 다른 칸으로 나눈 배치입니다. Apple이 널리 알렸고 Vercel, Linear 같은 제품 사이트가 쓰는 방식을 따랐습니다.",
+    [["벤토 그리드 설명", "https://studiomeyer.io/en/blog/bento-grid-layouts"]]],
+  ["점으로 그린 지도와 흐름선", "땅을 점으로 찍고 두 곳을 선으로 잇는 그림은 GitHub와 Stripe가 첫 화면의 지구본에 쓴 방식입니다. 이 사이트의 지도는 공개 지도 자료로 직접 만든 평면 그림입니다.",
+    [["GitHub의 설명", "https://github.blog/engineering/engineering-principles/how-we-built-the-github-globe/"], ["Stripe의 설명", "https://stripe.com/blog/globe"]]],
+  ["큰 머리, 기능 칸, 마무리 띠", "큰 머리로 시작해 기능을 칸으로 보여 주고 짙은 띠로 마무리하는 짜임은 널리 쓰이는 템플릿 모음의 구획 나누기를 참고했습니다.",
+    [["Tailwind Plus", "https://tailwindcss.com/plus"]]],
+  ["EU의 색", "파랑 #003399와 노랑 #FFCC00은 EU 깃발의 색입니다. 깃발(별 열두 개)과 기관 로고는 쓰지 않았습니다.",
+    [["EU의 깃발 안내", "https://european-union.europa.eu/principles-countries-history/symbols/european-flag_en"]]],
 ];
 
 export async function render(main) {
-  const current = (window.CBAM_THEME || {}).key || "1";
-  fill(main, 
-    viewHead("디자인 시안", "EU의 파랑과 노랑을 바탕으로 한 시안 다섯 개입니다. '이 시안으로 보기'를 누르면 사이트 전체가 그 시안으로 바뀝니다. 화면의 내용과 기능은 모두 같습니다."),
-    h("div", { class: "proposals" }, PROPOSALS.map((proposal) => h("section", { class: "proposal", "data-current": proposal.key === current ? "true" : null, "aria-labelledby": `h-proposal-${proposal.key}` }, [
-      h("h2", { id: `h-proposal-${proposal.key}` }, [h("span", { text: `시안 ${proposal.key}. ${proposal.name} ` }), proposal.recommended ? h("span", { class: "pill", "data-tone": "ok", text: "추천" }) : null]),
-      h("p", {}, h("strong", { text: proposal.line })),
-      h("p", { text: proposal.about }),
-      h("div", { class: "swatches", "aria-hidden": "true" }, proposal.colors.map(([back, ink]) => h("span", { class: "swatch", style: `background:${back}; color:${ink}`, text: back }))),
-      h("p", { class: "count" }, [h("span", { text: `글꼴: ${proposal.fonts}. 참고한 자료: ` }), safeLink(proposal.reference[1], proposal.reference[0])]),
-      h("p", {}, proposal.key === current
-        ? h("span", { class: "pill", "data-tone": "ok", text: "지금 보고 있는 시안" })
-        : h("a", { class: "btn btn-main", href: `?theme=${proposal.key}#home`, text: "이 시안으로 보기" })),
-    ]))),
-    h("p", { class: "count", text: "EU 엠블럼(별 열두 개)과 EU 기관의 로고는 어느 시안에도 쓰지 않았습니다. 이 사이트가 EU의 공식 사이트로 보이지 않게 하려는 것입니다." }),
+  const current = (window.CBAM_THEME || {}).key || "navy";
+  fill(main,
+    band("디자인", "유명 사이트의 배치 방식을 참고해 다시 만든 디자인입니다. 색 변형 세 가지를 바꿔 볼 수 있습니다. 내용과 기능은 모두 같습니다."),
+    h("section", { class: "stack", "aria-labelledby": "h-variants" }, [
+      h("h2", { id: "h-variants", text: "색 변형" }),
+      h("div", { class: "proposals" }, VARIANTS.map((variant) => h("section", { class: "proposal", "data-current": variant.key === current ? "true" : null }, [
+        h("div", { class: "swatches", "aria-hidden": "true" }, variant.colors.map((color) => h("span", { class: "swatch", style: `background:${color}` }))),
+        h("h3", { text: `${variant.name}: ${variant.line}` }),
+        h("p", { text: variant.about }),
+        h("p", {}, variant.key === current
+          ? h("span", { class: "pill", "data-tone": "ok", text: "지금 보고 있는 변형" })
+          : h("a", { class: "btn", href: `?theme=${variant.key}#home`, text: "이 변형으로 보기" })),
+      ]))),
+    ]),
+    h("section", { class: "stack", "aria-labelledby": "h-refs" }, [
+      h("h2", { id: "h-refs", text: "참고한 것" }),
+      h("ul", { class: "refs" }, REFERENCES.map(([name, text, links]) => h("li", {}, [
+        h("strong", { text: `${name}. ` }),
+        h("span", { text: `${text} ` }),
+        ...links.flatMap(([label, url], index) => [index ? " " : null, safeLink(url, label)]),
+      ]))),
+      h("p", { class: "count" }, [
+        "그림은 모두 직접 만들었거나 자유롭게 쓸 수 있는 것입니다. 지도는 Natural Earth의 공개 자료, 아이콘은 Lucide, 글꼴은 Pretendard입니다. 사진은 쓰지 않았습니다. ",
+        h("a", { href: "assets/third-party.txt", text: "쓴 자료의 라이선스 보기" }),
+      ]),
+    ]),
   );
 }

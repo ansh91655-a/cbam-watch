@@ -1,7 +1,9 @@
-// 소식. 주제별로 나눠 보거나(기본), 최신순으로 한 줄로 본다. 주제 단추를 누르면 그 주제만 본다.
+// 소식. 왼쪽에 주제 메뉴, 오른쪽에 소식. 주제를 고르지 않았을 때는 주제별로 나눠 보여 주고(기본) 최신순으로도 볼 수 있다.
 import * as data from "../data.js";
 import { card } from "../ui/card.js";
-import { empty, fill, h, viewHead } from "../ui/dom.js";
+import { band } from "../ui/band.js";
+import { empty, fill, h } from "../ui/dom.js";
+import { icon } from "../ui/icons.js";
 import { topicAbout, topicList, topicName, topicOf } from "../ui/topics.js";
 
 const PAGE = 20;
@@ -37,9 +39,9 @@ export async function render(main, arg) {
     return topics.map((topic) => {
       const mine = found.filter((item) => topicOf(item) === topic.code);
       if (!mine.length) return null;
-      return h("section", { class: "topic-sec", "aria-labelledby": `h-topic-${topic.code}` }, [
+      return h("section", { class: "topic-sec", "aria-labelledby": `h-topic-${topic.code}`, "data-topic": topic.code }, [
         h("div", { class: "sec-head" }, [
-          h("h2", { id: `h-topic-${topic.code}`, text: topic.name }),
+          h("h2", { id: `h-topic-${topic.code}` }, [h("span", { class: "chipicon" }, icon(topic.code, 22)), h("span", { text: topic.name })]),
           mine.length > PER_TOPIC ? h("a", { href: `#news-${topic.code}`, text: `이 주제 ${mine.length}건 모두 보기` }) : h("span", { class: "count", text: `${mine.length}건` }),
         ]),
         h("p", { class: "about", text: topic.about || "" }),
@@ -64,12 +66,13 @@ export async function render(main, arg) {
     }
   }
 
-  const chips = h("nav", { class: "chips", "aria-label": "주제" }, [
-    h("a", { class: "chip", href: "#news", "aria-current": picked ? null : "true" }, [h("span", { text: "전체" }), h("span", { class: "n", text: items.length })]),
+  const side = h("nav", { class: "side-nav", "aria-label": "주제" }, [
+    h("a", { href: "#news", "aria-current": picked ? null : "true" }, [h("span", { class: "chipicon" }, icon("news", 17)), h("span", { text: "전체" }), h("span", { class: "n", text: items.length })]),
     ...topics.map((topic) => {
       const size = items.filter((item) => topicOf(item) === topic.code).length;
       if (!size && topic.code === "etc") return null;
-      return h("a", { class: "chip", href: `#news-${topic.code}`, "aria-current": picked === topic.code ? "true" : null, "data-empty": size ? null : "true" }, [h("span", { text: topic.name }), h("span", { class: "n", text: size })]);
+      return h("a", { href: `#news-${topic.code}`, "data-topic": topic.code, "aria-current": picked === topic.code ? "true" : null, "data-empty": size ? null : "true" },
+        [h("span", { class: "chipicon" }, icon(topic.code, 17)), h("span", { text: topic.name }), h("span", { class: "n", text: size })]);
     }),
   ]);
 
@@ -86,9 +89,9 @@ export async function render(main, arg) {
     select("news-importance", "중요도", ["높음", "보통", "낮음"], reset("importance")),
     count,
   ]);
-  fill(main, 
-    viewHead(picked ? `소식: ${topicName(picked)}` : "소식", picked ? topicAbout(picked) : "주제별로 나눠 보여 줍니다. 제목을 누르면 원문이 열립니다."),
-    chips, filters, body, more,
+  fill(main,
+    band(picked ? `소식: ${topicName(picked)}` : "소식", picked ? topicAbout(picked) : "주제별로 나눠 보여 줍니다. 제목을 누르면 원문이 열립니다."),
+    h("div", { class: "with-side" }, [h("aside", { class: "side" }, side), h("div", { class: "stack-l" }, [filters, body, more])]),
   );
   draw();
 }

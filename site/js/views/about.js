@@ -1,17 +1,28 @@
 // 안내. 사이트가 하는 일, 만드는 방법, 한계를 적는다. 문구는 이 파일 한 곳에서만 정한다.
 import * as data from "../data.js";
-import { fill, h, viewHead } from "../ui/dom.js";
+import { band } from "../ui/band.js";
+import { fill, h } from "../ui/dom.js";
+import { icon } from "../ui/icons.js";
+
+// 소식 하나가 실리기까지 거치는 단계. 아래 '어떻게 만드는가'의 내용을 한눈에 보이게 줄인 것이다.
+const STEPS = [
+  ["collect", "수집", "평일마다 출처를 자동으로 확인해 새로 올라오거나 바뀐 내용을 찾습니다."],
+  ["write", "정리", "찾은 내용을 원문 링크와 함께 국문으로 정리합니다."],
+  ["verify", "검증", "수치, 날짜, 문서 번호, 의무의 강도가 원문과 같은지 원문을 다시 열어 확인합니다."],
+  ["publish", "게시", "확인된 글만 싣습니다. 확인하지 못한 글은 게시하지 않습니다."],
+  ["recheck", "다시 대조", "게시한 뒤에도 매주 일부를 골라 원문과 다시 대조합니다."],
+];
 
 const SECTIONS = [
-  ["누가 운영하는가", [
+  ["who", "누가 운영하는가", [
     "개인이 운영하는 비공식 사이트입니다. 유럽연합(EU)과 그 기관의 공식 사이트가 아니며, 그 기관들과 관계가 없습니다.",
     "화면의 파랑과 노랑은 다루는 내용이 EU의 제도임을 나타내려고 고른 색입니다.",
   ]],
-  ["무엇을 하는 사이트인가", [
+  ["what", "무엇을 하는 사이트인가", [
     "EU 탄소국경조정제도(CBAM)에 관한 법령, 가이던스, 인증서 가격, 입법 진행, 국내외 기관의 안내를 한곳에 모아 국문으로 정리합니다.",
     "모든 소식에는 원문 링크와 원문을 대조한 날짜를 붙입니다. 정리된 글은 원문을 찾아가는 길잡이이며, 원문을 대신하지 않습니다.",
   ]],
-  ["어떻게 만드는가", [
+  ["how", "어떻게 만드는가", [
     "평일마다 출처를 자동으로 확인해 새로 올라오거나 바뀐 내용을 찾고, 국문으로 정리합니다. 사람이 게시 전에 검수하지 않습니다.",
     "정리한 글은 작성과 분리된 자동 검증을 거칩니다. 수치, 날짜, 문서 번호, 의무의 강도가 원문과 같은지 원문을 다시 열어 확인하고, 확인하지 못한 글은 게시하지 않습니다.",
     "게시한 뒤에도 매주 일부를 골라 원문과 다시 대조합니다. 어긋난 곳이 나오면 요약을 내리고 제목과 원문 링크만 남깁니다.",
@@ -19,25 +30,43 @@ const SECTIONS = [
     "인증서 가격의 그림과 표는 EU 집행위원회의 가격표를 프로그램이 그대로 읽어 만듭니다. 사람이나 AI가 값을 옮겨 적지 않습니다.",
     "소식의 주제는 정해 둔 목록에서 하나를 고릅니다. 일정에는 출처에 날짜가 적혀 있는 것만 싣습니다.",
   ]],
-  ["알아 둘 한계", [
+  ["limits", "알아 둘 한계", [
     "자동 검증은 오류를 줄일 뿐 없애지 못합니다. 신고, 산정, 계약처럼 결과에 책임이 따르는 일에는 반드시 원문과 관할 당국의 안내를 확인하세요.",
     "이 사이트의 내용은 법률 자문이 아닙니다.",
     "출처 사이트의 구조가 바뀌거나 접속이 막히면 새 소식을 놓칠 수 있습니다. 출처 화면에서 마지막 확인 시각과 상태를 볼 수 있습니다.",
   ]],
-  ["자료의 재이용", [
+  ["reuse", "자료의 재이용", [
     "EU 기관의 공식 자료는 출처를 밝히고 재이용합니다. 민간·협회 자료는 제목과 링크만 싣습니다.",
     "원문의 저작권과 재이용 조건은 각 출처를 따릅니다.",
   ]],
 ];
 
+function steps() {
+  return h("section", { class: "stack", "aria-labelledby": "h-steps" }, [
+    h("h2", { id: "h-steps", text: "소식이 실리기까지" }),
+    h("ol", { class: "steps" }, STEPS.map(([key, name, text], index) => h("li", { class: "step" }, [
+      h("span", { class: "chipicon" }, icon(key, 22)),
+      h("span", { class: "step-n", text: `${index + 1}단계` }),
+      h("h3", { text: name }),
+      h("p", { text }),
+    ]))),
+  ]);
+}
+
+function section([key, title, paragraphs]) {
+  return h("section", { class: "panel about-card" }, [
+    h("h2", {}, [h("span", { class: "chipicon" }, icon(key, 20)), h("span", { text: title })]),
+    ...paragraphs.map((text) => h("p", { text })),
+  ]);
+}
+
 export async function render(main) {
   const site = await data.site();
-  const prose = h("div", { class: "prose" });
-  for (const [title, paragraphs] of SECTIONS) {
-    prose.append(h("h2", { text: title }), ...paragraphs.map((text) => h("p", { text })));
-  }
-  if (site.stage) {
-    prose.append(h("h2", { text: "지금 단계" }), h("p", { text: `${site.stage} 중입니다. 화면과 내용이 바뀔 수 있습니다.` }));
-  }
-  fill(main, viewHead("안내"), prose);
+  const sections = [...SECTIONS];
+  if (site.stage) sections.push(["stage", "지금 단계", [`${site.stage} 중입니다. 화면과 내용이 바뀔 수 있습니다.`]]);
+  fill(main,
+    band("안내", "이 사이트가 무엇을 하고, 어떻게 만들어지며, 어디까지 믿을 수 있는지 적었습니다."),
+    steps(),
+    h("div", { class: "about-grid" }, sections.map(section)),
+  );
 }

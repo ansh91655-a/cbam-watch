@@ -2,7 +2,8 @@
 // 2026년은 분기 가격, 2027년부터는 주간 가격이다. 가격이 늘어나면 기간을 골라 볼 수 있다.
 import * as data from "../data.js";
 import { priceChart } from "../ui/chart.js";
-import { empty, fill, h, safeLink, table, viewHead } from "../ui/dom.js";
+import { band } from "../ui/band.js";
+import { empty, fill, h, safeLink, table } from "../ui/dom.js";
 import { countdown, koreanDate, price, signed, today } from "../ui/format.js";
 
 const RANGES = [["all", "전체", null], ["year", "최근 1년", 365], ["quarter", "최근 3개월", 92]];
@@ -58,7 +59,7 @@ export async function render(main) {
   const book = await data.prices();
   const rows = book.prices || [];
   const source = book.source || {};
-  const head = viewHead("CBAM 인증서 가격", "EU 집행위원회가 게시한 가격표를 그대로 읽어 보여 줍니다. 가격표가 바뀌면 평일 아침에 따라 바뀝니다.");
+  const head = band("CBAM 인증서 가격", "EU 집행위원회가 게시한 가격표를 그대로 읽어 보여 줍니다. 가격표가 바뀌면 평일 아침에 따라 바뀝니다.");
   if (!rows.length) {
     fill(main, head, empty("가격표를 아직 읽지 못했습니다. 원문에서 확인하세요."), safeLink(source.url, "가격 원문 보기"));
     return;
@@ -73,7 +74,7 @@ export async function render(main) {
     chartHolder.replaceChildren(priceChart(within(rows, days), unit));
   }
   const upcoming = (book.upcoming || []).filter((row) => row.published);
-  fill(main, 
+  fill(main,
     head,
     stats(book),
     rows.length >= RANGE_FROM ? h("div", { class: "filters" }, h("div", { class: "seg", role: "group", "aria-label": "기간" }, buttons)) : null,
