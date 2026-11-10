@@ -1,5 +1,6 @@
 // 연간 일정선. 한 해를 왼쪽 1월 1일에서 오른쪽 12월 31일까지 한 줄로 그리고, 일정을 날짜 자리에 점으로 찍는다.
 // 이름표는 선 위에 겹치지 않게 단을 나눠 놓는다. 자리가 없는 일정은 점만 찍고 아래 달력에서 보게 한다.
+import { caveatMark, splitCaveat } from "./caveat.js";
 import { fill, h } from "./dom.js";
 import { koreanDate } from "./format.js";
 
@@ -67,11 +68,12 @@ export function yearLine(events, year, todayIso, onPick) {
     labels.style.height = `${height}px`;
     fill(labels, placed.flatMap(({ event, center, left, lane, flipped }) => {
       const top = height - (lane + 1) * LANE_HEIGHT;
+      const { name, flag } = splitCaveat(event.title);  // 이름이 두 줄에서 잘려도 '보도 기준' 같은 단서는 날짜 옆에 보인다
       return [
         h("div", { class: "yl-stem", style: `left:${center}px; top:${top}px; height:${height - top + 10}px` }),
         h("button", { class: "yl-label", type: "button", "data-flipped": flipped ? "true" : null, style: `left:${left}px; top:${top}px`, onclick: () => onPick(event) }, [
-          h("span", { class: "d", text: String(event.date).length === 7 ? `${koreanDate(event.date, false)}부터` : koreanDate(event.date, false) }),
-          h("span", { class: "t", text: event.title }),
+          h("span", { class: "d" }, [String(event.date).length === 7 ? `${koreanDate(event.date, false)}부터` : koreanDate(event.date, false), caveatMark(flag)]),
+          h("span", { class: "t", text: name }),
         ]),
       ];
     }));

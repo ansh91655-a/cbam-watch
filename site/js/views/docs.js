@@ -123,7 +123,7 @@ export async function render(main) {
   fill(main,
     head,
     h("div", { class: "filters" }, [
-      h("label", { class: "field", for: "doc-q" }, [h("span", { text: "문서 찾기" }), h("input", { id: "doc-q", type: "search", placeholder: "예: guidance, default values, 5d", oninput: (event) => filter(event.target.value) })]),
+      h("label", { class: "field field-grow", for: "doc-q" }, [h("span", { text: "문서 찾기" }), h("input", { id: "doc-q", type: "search", placeholder: "예: guidance, default values, 5d", oninput: (event) => filter(event.target.value) })]),
       status,
     ]),
     ...sections,

@@ -23,7 +23,7 @@ html[data-theme="white"] .site-nav a[aria-current="page"]::after { background: v
 html[data-theme="white"] .tabs a[aria-current="page"] { border-bottom-color: var(--brand-bright); }
 html[data-theme="white"] .hero, html[data-theme="white"] .view-head { border-bottom: 1px solid var(--line-2); }
 html[data-theme="white"] .hero-kicker strong { color: var(--brand); }
-html[data-theme="white"] .ledger-flag { color: var(--warn); }
+html[data-theme="white"] .ledger-note .caveat { color: var(--warn); }
 html[data-theme="white"] .site-foot { border-top: 1px solid var(--line-2); }
 html[data-theme="white"] .view-head .fresh[data-state="stale"], html[data-theme="white"] .freshness[data-state="stale"], html[data-theme="white"] .hero-fresh[data-state="stale"] { color: var(--warn); }
 

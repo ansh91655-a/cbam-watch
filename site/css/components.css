@@ -135,10 +135,15 @@ a.m-topic:hover { text-decoration: underline; }
 .chip { display: inline-flex; align-items: baseline; gap: 6px; padding: 6px 14px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); color: var(--ink-2); font-size: var(--fs-s); font-weight: 500; text-decoration: none; white-space: nowrap; }
 .chip:hover { border-color: var(--brand-bright); color: var(--brand-bright); }
 .chip[aria-current="true"] { border-color: var(--brand); background: var(--brand); color: var(--on-brand); font-weight: 700; }
+/* 일정 이름에서 떼어 낸 단서("보도 기준", "잠정")의 작은 표시 */
+.caveat { margin-left: 6px; padding: 0 5px; border: 1px solid currentColor; border-radius: 4px; color: var(--warn); font-size: 0.72rem; font-style: normal; font-weight: 700; white-space: nowrap; }
 .filters { display: flex; flex-wrap: wrap; align-items: end; gap: 10px 14px; }
 .field { display: grid; gap: 3px; font-size: 0.8rem; font-weight: 600; color: var(--ink-3); }
 .field input, .field select { box-sizing: border-box; height: 44px; min-width: 118px; padding: 9px 14px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); font-size: var(--fs-m); font-weight: 400; color: var(--ink); }
 .field input[type="search"] { min-width: min(250px, 72vw); }
+/* 검색 칸은 남는 너비를 쓰고, 좁으면 줄어들어 다른 칸과 한 줄에 놓인다 */
+.field-grow { flex: 1 1 200px; min-width: 0; max-width: 420px; }
+.field-grow input[type="search"] { width: 100%; min-width: 0; }
 .field input:focus, .field select:focus { border-color: var(--brand-bright); }
 .seg { display: inline-flex; align-items: center; box-sizing: border-box; height: 44px; padding: 3px; border-radius: 8px; background: var(--surface-2); }
 .filters > .count { padding-bottom: 11px; }

@@ -104,7 +104,7 @@ export async function render(main, arg) {
   byDate.addEventListener("click", setMode(true));
   const filters = h("div", { class: "filters" }, [
     picked ? null : h("div", { class: "seg", role: "group", "aria-label": "보는 방법" }, [byTopic, byDate]),
-    h("label", { class: "field", for: "news-q" }, [h("span", { text: "검색" }), h("input", { id: "news-q", type: "search", placeholder: "제목, 요약, 출처", oninput: reset("text") })]),
+    h("label", { class: "field field-grow", for: "news-q" }, [h("span", { text: "검색" }), h("input", { id: "news-q", type: "search", placeholder: "제목, 요약, 출처", oninput: reset("text") })]),
     years.length > 1 ? select("news-year", "연도", years.map((year) => ({ value: year, text: `${year}년` })), reset("year")) : null,
     select("news-kind", "종류", kinds, reset("kind")),
     select("news-importance", "중요도", ["높음", "보통", "낮음"], reset("importance")),

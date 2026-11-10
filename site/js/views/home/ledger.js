@@ -1,31 +1,19 @@
 // 큰 머리 아래의 지표 줄. 지금 알아 둘 수치 네 개를 한 줄에 놓는다. 칸을 누르면 그 화면으로 간다.
 import * as data from "../../data.js";
+import { caveatMark, splitCaveat } from "../../ui/caveat.js";
 import { h } from "../../ui/dom.js";
 import { countdown, daysSince, koreanDate, price, signed, today } from "../../ui/format.js";
 
 const NEW_DAYS = 30;
 const OPEN_TONES = ["progress", "planned", "dispute"];
 
-const CAVEATS = ["보도 기준", "잠정"];
-
 // flag: 설명 앞에 따로 적는 단서("보도 기준" 같은 것)
 function cell(href, label, value, unit, note, flag = "") {
   return h("a", { class: "ledger-cell", href }, [
     h("span", { class: "ledger-label", text: label }),
     h("span", { class: "ledger-value" }, [h("span", { text: value }), unit ? h("small", { text: unit }) : null]),
-    h("span", { class: "ledger-note" }, [flag ? h("em", { class: "ledger-flag", text: flag }) : null, note]),
+    h("span", { class: "ledger-note" }, [caveatMark(flag), note]),
   ]);
-}
-
-// 일정 이름의 끝 괄호에 든 단서("보도 기준", "잠정")를 떼어 낸다. 칸이 좁아 이름이 잘려도 단서는 보이도록 앞에 따로 적는 데 쓴다.
-export function splitCaveat(title) {
-  const text = String(title || "");
-  const match = text.match(/^(.*)\(([^()]*)\)$/);
-  const parts = match ? match[2].split(",").map((part) => part.trim()) : [];
-  const flag = CAVEATS.find((word) => parts.includes(word)) || "";
-  if (!flag) return { name: text, flag: "" };
-  const rest = parts.filter((part) => part !== flag).join(", ");
-  return { name: rest ? `${match[1]}(${rest})` : match[1].trim(), flag };
 }
 
 function priceCell(book) {
