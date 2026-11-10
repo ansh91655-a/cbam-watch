@@ -1,5 +1,5 @@
 // 첫 화면. 맨 위에 큰 머리(점 지도, 한 줄 소개, 지금 알아 둘 수치 세 개)를 두고,
-// 그 아래에 가장 중요한 소식, 다가오는 일정, 가격 추세, 주제별 소식, 최근 소식, 주간 요약을 칸으로 나눠 놓고, 맨 아래 짙은 띠에 품목별 가이던스를 둔다.
+// 그 아래에 가장 중요한 소식, 다가오는 일정, 가격 추세, 주제별 소식, 규제 진행 상황, 최근 소식, 주간 요약을 칸으로 나눠 놓고, 맨 아래 짙은 띠에 품목별 가이던스를 둔다.
 import * as data from "../data.js";
 import { card } from "../ui/card.js";
 import { priceChart, sparkline } from "../ui/chart.js";
@@ -13,6 +13,7 @@ const IMPORTANT_DAYS = 45;
 const RECENT_COUNT = 6;
 const MORE_IMPORTANT = 2;
 const NEW_DAYS = 30;
+const RULE_ROWS = 5;
 // CBAM 대상 품목과 EU 집행위원회의 품목별 가이던스 번호
 const SECTORS = [["cement", "시멘트", "5a"], ["steel", "철강", "5d"], ["aluminium", "알루미늄", "5e"], ["fertilisers", "비료", "5c"], ["electricity", "전력", "5f"], ["hydrogen", "수소", "5b"]];
 
@@ -184,8 +185,24 @@ function digest(digests) {
   ]);
 }
 
+// 규제 진행 상황: 아직 진행 중인 규제를, 다음 일정이 가까운 것부터 몇 건 보여 준다.
+function rulesPanel(body) {
+  const open = (body.regulations || []).filter((rule) => ["progress", "planned", "dispute"].includes(rule.tone));
+  if (!open.length) return null;
+  const order = (rule) => (rule.nextDate && rule.nextDate >= today() ? `0${rule.nextDate}` : `1${9999 - Number(String(rule.timeline[rule.timeline.length - 1]?.date || "0").slice(0, 4))}`);
+  const rows = [...open].sort((a, b) => order(a).localeCompare(order(b))).slice(0, RULE_ROWS);
+  return h("section", { class: "panel", "aria-labelledby": "h-rules" }, [
+    h("div", { class: "panel-head" }, [h("h2", { id: "h-rules" }, [icon("legis"), h("span", { text: "규제 진행 상황" })]), h("a", { class: "more", href: "#rules", text: `규제 ${(body.regulations || []).length}건 모두 보기` })]),
+    h("ul", { class: "rule-rows" }, rows.map((rule) => h("li", { "data-tone": rule.tone }, [
+      h("a", { href: `#rules-${rule.id}`, text: rule.name }),
+      h("span", { class: "stage-chip", "data-tone": rule.tone, text: rule.stage }),
+      h("small", { text: rule.nextDate && rule.nextDate >= today() ? `${koreanDate(rule.nextDate)}: ${rule.next}` : rule.status }),
+    ]))),
+  ]);
+}
+
 export async function render(main) {
-  const [all, events, digests, book, documents] = await Promise.all([data.items(), data.events(), data.digests(), data.prices(), data.documents()]);
+  const [all, events, digests, book, documents, rules] = await Promise.all([data.items(), data.events(), data.digests(), data.prices(), data.documents(), data.regulations()]);
   // 처음에 한꺼번에 채운 소식 가운데 날짜가 없는 것(제도 안내)은 최근 소식으로 세지 않는다.
   const items = data.newestFirst(all).filter((item) => !item.withdrawn);
   const dated = items.filter((item) => data.dateOf(item));
@@ -198,7 +215,7 @@ export async function render(main) {
 
   fill(main,
     hero(book, events, items, dated),
-    h("div", { class: "bento" }, [lead ? feature(lead, Boolean(important), others) : null, schedule(events), pricePanel(book), topicsPanel(items)]),
+    h("div", { class: "bento" }, [lead ? feature(lead, Boolean(important), others) : null, schedule(events), pricePanel(book), topicsPanel(items), rulesPanel(rules)]),
     h("section", { class: "stack", "aria-labelledby": "h-recent" }, [
       h("div", { class: "sec-head" }, [h("h2", { id: "h-recent", text: "최근 소식" }), h("a", { href: "#news", text: `소식 ${items.length}건 모두 보기` })]),
       recent.length ? h("div", { class: "cards-2" }, recent.map(card)) : empty(items.length ? "다른 최근 소식이 없습니다." : "아직 게시된 소식이 없습니다."),

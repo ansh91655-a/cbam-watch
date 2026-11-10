@@ -8,7 +8,7 @@ import shutil
 import sys
 
 from tools.common.jsonio import read_json, write_json
-from tools.publish import derive
+from tools.publish import derive, regulations
 
 DATA_FILES = ["items", "events", "digests", "terms", "topics", "prices"]
 LIST_KEY = {"items": "items", "events": "events", "digests": "digests", "terms": "terms", "topics": "topics", "prices": "prices"}
@@ -36,6 +36,17 @@ def main(argv):
     counts["events"] = len(bodies["events"]["events"])
     for name, body in bodies.items():
         write_json(data_out / f"{name}.json", body)
+
+    # 규제별 진행 상황: 연혁의 근거를 다시 맞춰 보고, 안에서만 쓰는 값을 뺀 뒤 관련 소식을 붙여 싣는다
+    rules = read_json("data/regulations.json", None)
+    if rules is None:
+        problems.append("data/regulations.json 을 읽지 못함")
+        rules = {"groups": [], "regulations": []}
+    problems += [f"규제 자료: {where}: {what}" for where, what in regulations.problems(rules, kinds=("format",))]
+    for where, what in regulations.problems(rules, kinds=("evidence",)):  # 근거가 달라진 것은 알리기만 한다
+        print(f"규제 자료 점검: {where}: {what}")
+    write_json(data_out / "regulations.json", regulations.public(rules, bodies["items"]["items"]))
+    counts["regulations"] = len(rules.get("regulations", []))
 
     documents, diffs = derive.documents()
     counts.update({"documents": len(documents["documents"])})

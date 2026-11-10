@@ -6,6 +6,7 @@ import { empty, h } from "./ui/dom.js";
 import { loadTopics } from "./ui/topics.js";
 import { render as home } from "./views/home.js";
 import { render as news } from "./views/news.js";
+import { render as rules } from "./views/rules.js";
 import { render as price } from "./views/price.js";
 import { render as calendar } from "./views/calendar.js";
 import { render as docs } from "./views/docs.js";
@@ -13,7 +14,7 @@ import { render as terms } from "./views/terms.js";
 import { render as about } from "./views/about.js";
 import { render as design } from "./views/design.js";
 
-const VIEWS = { home, news, price, calendar, docs, terms, about, design };
+const VIEWS = { home, news, rules, price, calendar, docs, terms, about, design };
 const STALE_DAYS = 5; // 이보다 오래 갱신되지 않으면 알린다.
 const fresh = { text: "데이터를 읽는 중", state: "ok" };
 

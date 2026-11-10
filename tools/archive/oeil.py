@@ -10,7 +10,7 @@ PAGE = "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference={refere
 # CBAM을 고치거나 CBAM과 맞물린 입법 절차. 새 절차가 생기면 여기에 더한다.
 PROCEDURES = ["2025/0039(COD)", "2025/0419(COD)", "2025/0418(COD)", "2026/0212(COD)", "2025/0574(CNS)"]
 # 이 문서들의 글에 적힌 절차 번호도 함께 읽는다(tools/archive/docs.py가 받아 둔 문서)
-FOLLOW = {"52026PC0619", "52026PC0335", "52026PC0402", "52025PC0408"}
+FOLLOW = {"52026PC0619"}
 HEAD = ["Date", "Event", "Reference", "Summary"]
 FORECAST_HEAD = ["Date", "Subject"]
 

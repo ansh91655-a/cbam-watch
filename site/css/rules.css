@@ -1,0 +1,79 @@
+/* 규제 화면: 규제 카드, 단계 표시, 연혁 */
+.rule-grid { display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 760px) { .rule-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.rule-card { display: flex; flex-direction: column; gap: 10px; padding: var(--card-pad); border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); border-top: 3px solid var(--rule-tone, var(--brand-bright)); }
+.rule-card h3 { font-size: 1.12rem; letter-spacing: -0.02em; line-height: 1.35; }
+.rule-card h3 a { color: var(--ink); text-decoration: none; }
+.rule-card h3 a:hover { color: var(--link); text-decoration: underline; }
+.rule-top { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.rule-kind { font-size: 0.8rem; color: var(--ink-3); }
+.rule-official { margin-top: -6px; font-size: var(--fs-s); color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.rule-status { color: var(--ink-2); max-width: 70ch; }
+.rule-next { display: grid; gap: 2px; padding: 10px 14px; border-radius: var(--radius); background: var(--surface-2); font-size: var(--fs-s); color: var(--ink-2); }
+.rule-next strong { color: var(--ink); font-size: 0.8rem; }
+.rule-next time { color: var(--brand); font-weight: 700; font-variant-numeric: tabular-nums; }
+.rule-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px; margin-top: auto; padding-top: 4px; font-size: var(--fs-s); }
+.rule-foot a { font-weight: 600; }
+.rule-note { font-size: var(--fs-s); color: var(--ink-3); max-width: 76ch; }
+
+[data-tone="live"] { --rule-tone: var(--ok); }
+[data-tone="progress"] { --rule-tone: var(--brand-bright); }
+[data-tone="planned"] { --rule-tone: var(--t-price); }
+[data-tone="adopted"] { --rule-tone: var(--t-legis); }
+[data-tone="dispute"] { --rule-tone: var(--t-korea); }
+[data-tone="ended"] { --rule-tone: var(--ink-3); }
+.stage-chip { display: inline-flex; align-items: center; gap: 6px; padding: 2px 11px; border-radius: 999px; background: color-mix(in srgb, var(--rule-tone, var(--brand-bright)) 12%, var(--surface)); color: var(--rule-tone, var(--brand)); font-size: 0.82rem; font-weight: 700; line-height: 1.7; }
+.stage-chip::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+
+/* 단계 표시 */
+.stepper { display: flex; align-items: flex-start; gap: 0; margin: 4px 0; padding: 0; list-style: none; }
+.stepper li { position: relative; flex: 1 1 0; display: grid; justify-items: center; gap: 6px; min-width: 0; text-align: center; font-size: 0.8rem; color: var(--ink-3); }
+.stepper li::before { content: ""; position: absolute; top: 6px; left: -50%; width: 100%; height: 2px; background: var(--line); }
+.stepper li:first-child::before { display: none; }
+.stepper li[data-state="done"]::before, .stepper li[data-state="now"]::before { background: var(--rule-tone, var(--brand-bright)); }
+.stepper .dot { position: relative; z-index: 1; width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--line); background: var(--surface); }
+.stepper li[data-state="done"] .dot { border-color: var(--rule-tone, var(--brand-bright)); background: var(--rule-tone, var(--brand-bright)); }
+.stepper li[data-state="now"] .dot { border-color: var(--rule-tone, var(--brand-bright)); box-shadow: 0 0 0 4px color-mix(in srgb, var(--rule-tone, var(--brand-bright)) 22%, transparent); }
+.stepper li[data-state="now"] { color: var(--ink); font-weight: 700; }
+.stepper .name { padding: 0 2px; overflow-wrap: anywhere; }
+.stepper.compact li[data-state="done"] .name, .stepper.compact li[data-state="todo"] .name { display: none; }
+.stepper.compact { margin-bottom: 0; }
+@media (max-width: 520px) { .stepper:not(.compact) li[data-state="done"] .name, .stepper:not(.compact) li[data-state="todo"] .name { font-size: 0.72rem; } }
+
+/* 한 규제의 자세한 화면 */
+.rule-detail { max-width: 860px; }
+.crumbs { display: flex; flex-wrap: wrap; gap: 8px; font-size: var(--fs-s); color: var(--ink-3); }
+.rule-now { display: grid; gap: 12px; padding: 24px 26px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); border-top: 3px solid var(--rule-tone, var(--brand-bright)); }
+.rule-now h2 { font-size: 1.2rem; }
+.rule-summary { max-width: 72ch; color: var(--ink-2); }
+.rule-links { display: grid; gap: 8px; padding: 0; list-style: none; }
+.rule-links a { display: inline-flex; align-items: center; gap: 5px; font-weight: 600; }
+
+/* 연혁 */
+.tl { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+.tl li { position: relative; display: grid; gap: 4px; padding: 0 0 22px 26px; border-left: 2px solid var(--line); margin-left: 6px; }
+.tl li:last-child { border-left-color: transparent; padding-bottom: 0; }
+.tl li::before { content: ""; position: absolute; left: -7px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: var(--surface); border: 2px solid var(--brand-bright); }
+.tl li[data-press="true"]::before { border-color: var(--warn); }
+.tl time { font-size: var(--fs-s); font-weight: 700; color: var(--brand); font-variant-numeric: tabular-nums; }
+.tl p { max-width: 72ch; }
+.tl-src { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: var(--fs-s); }
+.tl-src a { display: inline-flex; align-items: center; gap: 4px; }
+.tl-press { padding: 0 8px; border: 1px solid currentColor; border-radius: 999px; color: var(--warn); font-size: 0.76rem; font-weight: 700; line-height: 1.6; }
+
+/* 곧 움직일 규제 */
+.rule-soon { display: grid; gap: 12px; padding: 20px 24px; border-radius: var(--radius-l); background: var(--feat-bg); color: var(--on-feat); }
+.rule-soon h2 { font-size: 1.05rem; color: var(--on-feat); }
+.rule-soon ul { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.rule-soon li { display: grid; gap: 2px 14px; grid-template-columns: minmax(0, 1fr); font-size: var(--fs-s); color: var(--on-feat-2); }
+@media (min-width: 720px) { .rule-soon li { grid-template-columns: 150px minmax(0, 240px) minmax(0, 1fr); align-items: baseline; } }
+.rule-soon time { color: var(--on-deep-link); font-weight: 700; font-variant-numeric: tabular-nums; }
+.rule-soon a { color: var(--on-feat); font-weight: 700; }
+
+/* 첫 화면의 규제 진행 상황 */
+.rule-rows { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+.rule-rows li { display: grid; gap: 4px 12px; grid-template-columns: minmax(0, 1fr) auto; align-items: center; padding: 11px 0; border-top: 1px solid var(--line-2); }
+.rule-rows li:first-child { border-top: 0; padding-top: 0; }
+.rule-rows a { color: var(--ink); font-weight: 700; text-decoration: none; }
+.rule-rows a:hover { color: var(--link); text-decoration: underline; }
+.rule-rows small { grid-column: 1 / -1; color: var(--ink-3); font-size: var(--fs-s); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }

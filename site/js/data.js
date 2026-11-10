@@ -23,6 +23,8 @@ export const documentPages = () => load("documents", { documents: [] }).then((bo
 export const unreachableDocuments = () => load("documents", { documents: [] }).then((body) => body.unreachable || {});
 export const terms = () => load("terms", { terms: [] }).then((body) => body.terms || []);
 export const digests = () => load("digests", { digests: [] }).then((body) => body.digests || []);
+// 규제별 진행 상황: 묶음, 규제마다의 단계와 연혁
+export const regulations = () => load("regulations", { groups: [], regulations: [] });
 export const events = () => load("events", { events: [] }).then((body) => body.events || []);
 
 // 판 비교 결과는 문서마다 따로 있어서 필요할 때만 읽는다.
