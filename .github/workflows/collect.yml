@@ -60,7 +60,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add collected originals data/prices.json data/cn.json
           git diff --cached --quiet || git commit -m "수집 결과 $(TZ=Asia/Seoul date '+%F %H:%M')"
-          for attempt in 1 2 3; do
-            git pull --rebase --autostash && git push && break
-            sleep 5
-          done
+          # 올리기가 멈추면 끊고 다시 해 보고, 끝내 안 되면 이 실행이 실패로 남는다
+          sh tools/dev/push.sh

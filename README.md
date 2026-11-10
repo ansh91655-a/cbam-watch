@@ -54,7 +54,7 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 
 자동으로 받는 것은 모두 `tools/common/net.py`를 거치고, 이 함수는 주소를 열기 전에 그 사이트의 robots.txt를 봅니다(`tools/common/robots.py`). 사이트가 자동 읽기를 막은 주소는 받지 않고, 막힌 주소는 `collected/robots.json`에 남아 그날의 상태 점검이 알립니다. 이 수집기의 이름(cbam-watch)을 적은 규칙과 함께 Claude의 수집기 이름을 적은 규칙도 따릅니다(받은 글을 Claude가 읽고 요약하기 때문입니다). 사이트가 확인 요청이나 접근 거부 화면을 내면 넘어서려 하지 않습니다. 주소 하나를 손으로 확인하려면 `python3 -m tools.common.robots <주소>`를 씁니다.
 
-프로그램은 저장소 맨 위에서 `python3 -m tools.<묶음>.<이름>` 꼴로 돌립니다. 표준 라이브러리만 쓰고, PDF 본문을 뽑을 때만 `pdftotext`가 필요합니다. 시험은 `python3 -m unittest discover -s tests -t .`로 돌리고, 올리기 전에는 `sh tools/dev/check.sh`(자동 실행과 같은 꾸러미만 깐 깨끗한 환경에서 시험과 사이트 만들기)를 돌립니다.
+프로그램은 저장소 맨 위에서 `python3 -m tools.<묶음>.<이름>` 꼴로 돌립니다. 표준 라이브러리만 쓰고, PDF 본문을 뽑을 때만 `pdftotext`가 필요합니다. 시험은 `python3 -m unittest discover -s tests -t .`로 돌리고, 올리기 전에는 `sh tools/dev/check.sh`(자동 실행과 같은 꾸러미만 깐 깨끗한 환경에서 시험과 사이트 만들기)를 돌립니다. 자동 실행은 결과를 `sh tools/dev/push.sh`로 올립니다(올리기가 응답 없이 멈추면 끊고 세 번까지 다시 해 보고, 끝내 안 되면 그 실행이 실패로 남습니다).
 
 ## 규제별 진행 상황
 

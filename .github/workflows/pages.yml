@@ -46,8 +46,9 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -q -m "사이트 배포 $(TZ=Asia/Seoul date '+%F %H:%M')"
+          # 올리기가 멈추면 끊고 다시 해 본다(tools/dev/push.sh)
           if [ -n "$SITE_REPO" ] && [ -n "$SITE_TOKEN" ]; then
-            git push -f "https://x-access-token:${SITE_TOKEN}@github.com/${SITE_REPO}" gh-pages
+            sh "$GITHUB_WORKSPACE/tools/dev/push.sh" --force "https://x-access-token:${SITE_TOKEN}@github.com/${SITE_REPO}" gh-pages
           else
-            git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" gh-pages
+            sh "$GITHUB_WORKSPACE/tools/dev/push.sh" --force "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" gh-pages
           fi
