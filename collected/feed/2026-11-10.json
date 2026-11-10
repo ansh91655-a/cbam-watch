@@ -119,8 +119,40 @@
     ""
    ],
    "textPath": "collected/pages/ep-oeil-2026-0212.txt"
+  },
+  {
+   "id": "4e16a49ff7ab",
+   "source": "hmrc-cbam",
+   "kind": "line",
+   "url": "https://www.gov.uk/government/collections/carbon-border-adjustment-mechanism",
+   "text": "10 November 2026 — See all updates",
+   "seenAt": "2026-11-10T21:25:32+09:00"
+  },
+  {
+   "id": "e4e9f0c9210c",
+   "source": "hmrc-cbam",
+   "kind": "line",
+   "url": "https://www.gov.uk/government/collections/carbon-border-adjustment-mechanism",
+   "text": "you’ll have to keep records — from 1 January 2027",
+   "seenAt": "2026-11-10T21:25:32+09:00"
+  },
+  {
+   "id": "69d8a29bc57a",
+   "source": "hmrc-cbam",
+   "kind": "line",
+   "url": "https://www.gov.uk/government/collections/carbon-border-adjustment-mechanism",
+   "text": "you may need to register — registration opens on 1 January 2028",
+   "seenAt": "2026-11-10T21:25:32+09:00"
+  },
+  {
+   "id": "bccdaf212a44",
+   "source": "hmrc-cbam",
+   "kind": "line",
+   "url": "https://www.gov.uk/government/collections/carbon-border-adjustment-mechanism",
+   "text": "Information has been updated to confirm that from 1 January 2027 you'll need to keep records for the Carbon Border Adjustment Mechanism (CBAM), ahead of registration opening on 1 January 2028.",
+   "seenAt": "2026-11-10T21:25:32+09:00"
   }
  ],
- "generatedAt": "2026-11-10T20:02:24+09:00",
- "count": 12
+ "generatedAt": "2026-11-10T21:25:32+09:00",
+ "count": 16
 }
