@@ -1,11 +1,11 @@
 {
  "source": "ec-press",
- "fetchedAt": "2026-11-11T00:59:55+09:00",
+ "fetchedAt": "2026-11-11T01:10:35+09:00",
  "since": "2025-01-01",
  "report": {
   "pages": 8,
   "listed": 400,
-  "opened": 0,
+  "opened": 1,
   "kept": 0,
   "failures": [],
   "oldest": "2025-02-18",
@@ -132,6 +132,7 @@
    "SPEECH/26/2329",
    "SPEECH/26/2357",
    "SPEECH/26/2379",
+   "SPEECH/26/2404",
    "SPEECH/26/986",
    "STATEMENT/25/1267",
    "STATEMENT/25/1704",
