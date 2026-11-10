@@ -1,5 +1,5 @@
 {
- "checkedAt": "2026-11-10T07:28:33+00:00",
+ "checkedAt": "2026-11-10T07:40:11+00:00",
  "rows": [
   {
    "name": "ec-guidance-page",
@@ -63,10 +63,10 @@
    "status": 202,
    "contentType": "text/html; charset=UTF-8",
    "bytes": 2035,
-   "sha256": "8e7e28cc66237cb125ea6a1a2a4ae7406442b01d5a43929384666ad32751d9e2",
+   "sha256": "c0aee99cfce20c76f96ac88891dc9410830910ca7c214d462f29d63b899a7208",
    "isPdf": false,
    "error": "",
-   "head": "<!DOCTYPE html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <title></title> <style> body { font-family: \"Arial\"; } </style> <script type=\"text/javascript\"> window.awsWafCookieDomainList = []; window.gokuProps = { \"key\":\"AQIDAHjcYu/GjX+QlghicBgQ/7bFaQZ+m5FKCMDnO+vTbNg96AHH5weT1HohkpYgAc79+FLjAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMxINZjF2t//W/c2/zAgEQgDvocE7EgAqRZYOvT2sJIsEYYNiyUwexE2xPvukX4FN+3lCQoZaQwDM5NI/pgfibGC+uXXCTr0QPPznr3g==\", \"iv\":\"D54rjwBBiwAAD9PU\", \"context\":\"ggCQgaUm7ltiQkR2uWyfo"
+   "head": "<!DOCTYPE html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <title></title> <style> body { font-family: \"Arial\"; } </style> <script type=\"text/javascript\"> window.awsWafCookieDomainList = []; window.gokuProps = { \"key\":\"AQIDAHjcYu/GjX+QlghicBgQ/7bFaQZ+m5FKCMDnO+vTbNg96AFmK8Z391I7cafdmTujd3EEAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMsWApU6y99OfiWclVAgEQgDuAomvleiVEgbDVbEZxD9yCihsDSfyMjTOdnc0RIfzUdnU5D50LAG4n9cRhuL9cT592eTF0QvA5Nx5qzA==\", \"iv\":\"grAWRQBccAAABWjb\", \"context\":\"1dyEvDHwU1QXovfGk+0QG"
   },
   {
    "name": "eurlex-html",
@@ -74,10 +74,10 @@
    "status": 202,
    "contentType": "text/html; charset=UTF-8",
    "bytes": 2035,
-   "sha256": "79ebc39c89b361dd89a5883cd13615a5104b4709c7f3d78e31297932f075dc18",
+   "sha256": "827577f44922797a3e1a500d876fb44a0655829fd1f53b7e13009518a6ec180a",
    "isPdf": false,
    "error": "",
-   "head": "<!DOCTYPE html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <title></title> <style> body { font-family: \"Arial\"; } </style> <script type=\"text/javascript\"> window.awsWafCookieDomainList = []; window.gokuProps = { \"key\":\"AQIDAHjcYu/GjX+QlghicBgQ/7bFaQZ+m5FKCMDnO+vTbNg96AHH5weT1HohkpYgAc79+FLjAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMxINZjF2t//W/c2/zAgEQgDvocE7EgAqRZYOvT2sJIsEYYNiyUwexE2xPvukX4FN+3lCQoZaQwDM5NI/pgfibGC+uXXCTr0QPPznr3g==\", \"iv\":\"D54rhQBIiAAAD9tN\", \"context\":\"CrQL3ISwi+KU5s7Sh+sfl"
+   "head": "<!DOCTYPE html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <title></title> <style> body { font-family: \"Arial\"; } </style> <script type=\"text/javascript\"> window.awsWafCookieDomainList = []; window.gokuProps = { \"key\":\"AQIDAHjcYu/GjX+QlghicBgQ/7bFaQZ+m5FKCMDnO+vTbNg96AFmK8Z391I7cafdmTujd3EEAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMsWApU6y99OfiWclVAgEQgDuAomvleiVEgbDVbEZxD9yCihsDSfyMjTOdnc0RIfzUdnU5D50LAG4n9cRhuL9cT592eTF0QvA5Nx5qzA==\", \"iv\":\"grAWQQBWDgAABN/b\", \"context\":\"LiVIpGa9gKtwxIQOG4sNe"
   },
   {
    "name": "hys-api",
@@ -135,15 +135,48 @@
    "head": "<!DOCTYPE html> <html> <head> <meta charset=\"utf-8\"> <title>기후에너지환경부</title> <meta property=\"og:site_name\" content=\"기후에너지환경부\"> <link rel=\"canonical\" href=\"https://mcee.go.kr/home/web/main.do\" /> <script type=\"application/ld+json\"> { \"@context\":\"https://schema.org\", \"@type\":\"WebSite\", \"name\":\"기후에너지환경부\", \"alternateName\":[\"기후부\", \"MCEE\"], \"url\":\"https://mcee.go.kr/\" } </script> </head> <script> function isSmartPhone() { return /Mobi|Android|iPhone|iPad|iPod|Winddows Phone|webOS/i.test(navigator.userAgent); } const {hostname} = window.location; let uri = hostname; let mainUri = '/home/web/main.do';"
   },
   {
-   "name": "moj",
-   "url": "https://www.moj.go.kr/bbs/moj/177/artclList.do",
+   "name": "pages-site",
+   "url": "https://ansh91655-a.github.io/cbam-watch/",
    "status": 200,
-   "contentType": "text/html;charset=UTF-8",
-   "bytes": 40188,
-   "sha256": "eaed7d2c7270dd5e219b8a36bb92532387096b182d39a8dcd4588ba0450d30f6",
+   "contentType": "text/html; charset=utf-8",
+   "bytes": 1793,
+   "sha256": "08e6856906e158a47f6c5782a9d6f7641ea5a641d7bcd743f6ff592d8e4f1d97",
    "isPdf": false,
    "error": "",
-   "head": " <script> window.onload=function() { document.title = \"교정본부 홍보 영상\"; } } </script> <!DOCTYPE HTML> <!--[if lt IE 7 ]><html dir=\"ltr\" lang=\"ko\" class=\"no-js ie ie6 lte7 lte8 lte9\"><![endif]--> <!--[if IE 7 ]><html dir=\"ltr\" lang=\"ko\" class=\"no-js ie ie7 lte7 lte8 lte9\"><![endif]--> <!--[if IE 8 ]><html dir=\"ltr\" lang=\"ko\" class=\"no-js ie ie8 lte8 lte9\"><![endif]--> <!--[if IE 9 ]><html dir=\"ltr\" lang=\"ko\" class=\"no-js ie ie9 lte9\"><![endif]--> <!--[if (gt IE 9)|!(IE)]><!--><html dir=\"ltr\" lang=\"ko\" class=\"no-js\"><!--<![endif]--> <head> <meta charset=\"UTF-8\"> <title> 법무부 </title> <meta property=\""
+   "head": "<!DOCTYPE html> <html lang=\"ko\"> <head> <meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <meta name=\"robots\" content=\"noindex, nofollow\"> <meta name=\"description\" content=\"EU 탄소국경조정제도(CBAM)의 법령, 가이던스, 가격, 입법 동향을 원문 링크와 함께 정리합니다.\"> <title>CBAM 규제동향</title> <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"> <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin> <link href=\"https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500;600&amp;family=Noto+Sans+KR:wght@400;500&amp;display=swap\" rel=\"stylesheet\"> <link rel=\"style"
+  },
+  {
+   "name": "pages-data",
+   "url": "https://ansh91655-a.github.io/cbam-watch/data/site.json",
+   "status": 200,
+   "contentType": "application/json; charset=utf-8",
+   "bytes": 659,
+   "sha256": "c25702ff6a3577e27774337e61437eb0316d2d667136ca77f26ac8b2a1994425",
+   "isPdf": false,
+   "error": "",
+   "head": "{ \"name\": \"CBAM 규제동향\", \"tagline\": \"EU 탄소국경조정제도의 규제 동향을 원문과 함께\", \"stage\": \"시범 운영\", \"operator\": \"\", \"notice\": \"이 사이트의 정리와 번역은 자동으로 수집하고 작성한 것이며, 게시 전에 사람이 검수하지 않습니다. 정확한 내용은 반드시 원문에서 확인하세요. 법률 자문이 아닙니다.\", \"repository\": \"https://github.com/ansh91655-a/cbam-watch\", \"builtAt\": \"2026-11-10T16:39:05+09:00\", \"lastCollected\": \"2026-11-10T16:28:19+09:00\", \"counts\": { \"items\": 13, \"events\": 2, \"digests\": 0, \"terms\": 266, \"sources\": 32, \"documents\": 18 } } "
+  },
+  {
+   "name": "mcee-board",
+   "url": "https://mcee.go.kr/home/web/index.do?menuId=286",
+   "status": 404,
+   "contentType": "text/html;charset=UTF-8",
+   "bytes": 1854,
+   "sha256": "95b4ab81729395fb468521544d31b381b2bb1616afba2cf880cc2a6a00a92fbe",
+   "isPdf": false,
+   "error": "HTTP Error 404: Not Found",
+   "head": " <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"> <html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ko\" xml:lang=\"ko\"> <head> <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /> <title>파일을 찾을수없습니다.</title> <style type=\"text/css\"> <!-- body { margin: 0 auto; padding: 0; } p, img, ul, li, div, a {padding:0; margin:0;} img { border:0;} #error_wrap { margin: 120px auto; width: 660px; height:345px; border:4px solid #eee; outline:1px solid #aaa; padding-top:20px; } #error_wrap ul {overflow:hidden; margin-bottom"
+  },
+  {
+   "name": "expert-group-meetings",
+   "url": "https://ec.europa.eu/transparency/expert-groups-register/core/api/front/expertGroups/3927/meetings",
+   "status": 404,
+   "contentType": "application/problem+json",
+   "bytes": 215,
+   "sha256": "d822efa1054f412815c59f5b7620007ea6b427fe2b5701f3f5bf0b88219c9a2a",
+   "isPdf": false,
+   "error": "HTTP Error 404: ",
+   "head": "{\"type\":\"about:blank\",\"title\":\"Not Found\",\"status\":404,\"detail\":\"No static resource api/front/expertGroups/3927/meetings.\",\"instance\":\"/transparency/expert-groups-register/core/api/front/expertGroups/3927/meetings\"}"
   },
   {
    "name": "ec-document-1",
