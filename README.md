@@ -13,6 +13,7 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 | 평일 07:05 | 예약된 작성 실행 | 목록에서 소식을 골라 국문 초안을 쓴다. EU 공식 자료는 근거가 된 원문 대목을 함께 남긴다 |
 | 평일 08:20 | 예약된 검증 실행 | 초안을 원문과 다시 대조하고, 통과한 것만 `data/`에 더한다. 이어서 공식 기록에 새로 생긴 사건을 규제별 진행 상황(`data/regulations.json`)에 반영한다 |
 | 바뀔 때마다 | 이 저장소의 자동 실행(`.github/workflows/pages.yml`) | 사이트를 다시 만들어 배포한다 |
+| 소식이 더해질 때 | 이 저장소의 자동 실행(`.github/workflows/thumbs.yml`) | 그림이 없는 소식의 미리보기 그림을 만들어 `site/assets/thumbs/`에 싣는다. 끝나면 사이트가 다시 배포된다 |
 | 평일 10:05 | 예약된 보고 실행 | 그날의 실행과 사이트 상태를 확인하고 보고 파일을 `reports/`에 올린다 |
 | 보고 파일이 올라올 때, 평일 11:10 | 이 저장소의 자동 실행(`.github/workflows/notify.yml`) | 문제가 있는 보고와 주간 보고를 '운영 보고' 이슈에 댓글로 적는다(GitHub가 저장소 주인에게 메일로 알린다). 11:10까지 그날의 보고 파일이 없으면 그것도 알린다 |
 | 월요일 09:10 | 예약된 주간 실행 | 주간 요약을 쓰고, 게시한 항목 일부를 지금의 원문과 다시 대조한다. 어긋나면 그 항목의 요약을 내린다. 규제별 진행 상황에서 날짜가 지난 일정과 언론 보도에 기댄 줄을 다시 확인한다 |
@@ -45,6 +46,7 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 | `tools/notify` | 보고 파일에서 알릴 것을 골라 '운영 보고' 이슈에 적기(`reports`, `messages`, `github`, `run`) |
 | `tools/run` | 예약 실행이 쓰는 보조 도구: 후보 고르기, 검증 대기 고르기, 원문 발췌 자르기, 상태 점검, 하루와 한 주의 요약, 보고 파일 만들기(`write_report`) |
 | `tools/archive` | 공식 기록을 모으는 프로그램. 지난 소식을 한꺼번에 채울 때 손으로 돌리고, 규제 진행 상황에 쓰는 기록은 평일마다 자동으로 돈다: 출처별 모으기(`ecnews`, `newsletter`, `eurlex`, `cellar`, `docs`, `oeil`, `hys`, `presscorner`, `council`, `govuk`, `ukleg`, `fedreg`, `boards`)와 실행(`crawl`), 새 자료를 그날의 후보로 넘기기(`tofeed`), 화면의 짜임 살펴보기(`dump`), 싣기 전 검사(`gate`), 싣기(`publish`) |
+| `tools/thumbs` | 소식 카드의 미리보기 그림을 만드는 프로그램: 만들 것 고르기(`plan`), 원문 화면의 제목 부분 찍기(`shots.mjs`), 법령 PDF의 첫 장 받기(`pdfcover`), 줄여서 싣기(`finish`). 재이용이 허용된 공식 출처만 다룬다 |
 | `tools/art` | 사이트의 그림을 만드는 프로그램. 손으로 돌린다: 점 지도(`dotmap`), 아이콘(`icons`), 라이선스 고지(`notices`), 공유 미리보기 그림의 원본(`social.html`) |
 
 프로그램은 저장소 맨 위에서 `python3 -m tools.<묶음>.<이름>` 꼴로 돌립니다. 표준 라이브러리만 쓰고, PDF 본문을 뽑을 때만 `pdftotext`가 필요합니다. 시험은 `python3 -m unittest discover -s tests -t .`로 돌립니다.
@@ -84,6 +86,8 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 | 아이콘(`site/js/ui/icons.js`) | Lucide(ISC, 일부는 Feather에서 온 것으로 MIT) | `python3 -m tools.art.icons <lucide-static/icons>` |
 | 글꼴 | Pretendard(SIL OFL). jsDelivr에서 불러 쓰고 저장소에 두지 않는다 | `site/js/theme.js` |
 | 공유 미리보기 그림(`site/assets/og.jpg`) | 사이트의 색과 점 지도로 만든 것 | `tools/art/social.html`을 1200x630 창으로 열어 화면 그림을 찍는다 |
+| 표지(`site/index.html`의 `brand-mark`, `site/assets/favicon.svg`) | 직접 그린 것: 탄소(Carbon)의 C 고리와, 고리의 트인 곳을 지나 오르는 동향선 | 세 곳(사이트 머리글, 파비콘, `tools/art/social.html`)의 SVG를 함께 고친다 |
+| 소식 카드의 미리보기 그림(`site/assets/thumbs/`) | 재이용이 허용된 공식 출처(EU 기관, 영국 정부)의 원문 화면에서 제목부터의 글 부분, 법령 PDF 첫 장의 머리 띠 아래. 화면의 사진과 삽화, 기관 로고는 넣지 않는다. 그 밖의 소식은 사이트가 주제 색과 아이콘으로 그린다(`site/js/ui/thumb.js`) | 워크플로 '썸네일 만들기'가 만든다. 실패는 `collected/thumbs/state.json`에 남고 세 번까지 다시 시도한다 |
 | 라이선스 고지(`site/assets/third-party.txt`) | 위 꾸러미의 LICENSE 파일 | `python3 -m tools.art.notices <node_modules>` |
 
 world-atlas, lucide-static, pretendard는 npm에서 받습니다. 그림을 고칠 때만 필요하고, 평소의 자동 실행은 `tools/art`를 쓰지 않습니다.
@@ -99,4 +103,5 @@ world-atlas, lucide-static, pretendard는 npm에서 받습니다. 그림을 고�
 
 - EU 기관의 공식 자료는 출처를 밝히고 재이용합니다. `originals/`의 사본과 `collected/pages/`의 화면 글이 여기에 해당합니다.
 - 공공기관 자료는 짧게 요약하고, 민간 기업과 협회와 유료 매체의 자료는 제목이 알려 주는 사실과 링크만 다룹니다. 본문을 저장하지 않습니다.
+- 소식 카드의 미리보기 그림은 EU 기관과 영국 정부(Open Government Licence v3.0)의 자료만 줄여 싣습니다. 재이용 조건을 확인하지 못한 출처의 화면은 그림으로 만들지 않습니다.
 - 원문의 저작권과 재이용 조건은 각 출처를 따릅니다.

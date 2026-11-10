@@ -13,24 +13,33 @@ from tools.common.jsonio import read_json, write_json
 from tools.common.net import fetch
 
 CELLAR = "http://publications.europa.eu/resource/celex/{celex}"
-ACCEPT = {"Accept": "application/pdf", "Accept-Language": "eng"}
+# 자료 창구는 문서마다 가진 PDF의 종류가 다르다. 있는 것을 찾을 때까지 차례로 묻는다.
+ACCEPTS = ["application/pdf;type=pdfa2a", "application/pdf;type=pdfa1a", "application/pdf;type=pdfa1b", "application/pdf;type=pdfx", "application/pdf"]
 CHOICE = re.compile(rb"https?://publications\.europa\.eu/resource/cellar/[0-9a-f\-]+\.\d+\.\d+/DOC_\d+")
 
 
-def pdf_of(celex):
-    """(PDF 바이트, 사유). 받지 못하면 (b"", 사유)."""
-    status, _, body, error = fetch(CELLAR.format(celex=celex), timeout=120, retries=1, headers=ACCEPT)
-    time.sleep(1)
-    if status == 300 and body:
+def _ask(celex, accept):
+    headers = {"Accept": accept, "Accept-Language": "eng"}
+    status, _, body, error = fetch(CELLAR.format(celex=celex), timeout=120, retries=1, headers=headers)
+    time.sleep(0.8)
+    if status == 300 and body:  # 파일이 여럿이면 첫 파일(본문)을 받는다
         choices = sorted({match.decode() for match in CHOICE.findall(body)}, key=lambda url: (not url.endswith("DOC_1"), url))
         for choice in choices[:3]:
-            status, _, body, error = fetch(choice, timeout=120, retries=1, headers=ACCEPT)
-            time.sleep(1)
+            status, _, body, error = fetch(choice, timeout=120, retries=1, headers=headers)
+            time.sleep(0.8)
             if status == 200 and body[:5] == b"%PDF-":
                 break
-    if status == 200 and body[:5] == b"%PDF-":
-        return body, ""
-    return b"", f"응답 {status} {error[:60]}".strip()
+    return (body, "") if status == 200 and body[:5] == b"%PDF-" else (b"", f"응답 {status} {error[:40]}".strip())
+
+
+def pdf_of(celex):
+    """(PDF 바이트, 사유). 받지 못하면 (b"", 마지막 사유)."""
+    why = ""
+    for accept in ACCEPTS:
+        body, why = _ask(celex, accept)
+        if body:
+            return body, ""
+    return b"", why
 
 
 def first_page(pdf, target):

@@ -10,6 +10,7 @@ const CHROME = process.env.CHROME_BIN || ["/usr/bin/google-chrome", "/usr/bin/go
 const VIEW = { width: 480, height: 1200, deviceScaleFactor: 2 }; // 좁은 화면으로 열어 글자가 그림에서 크게 보이게 한다
 const CLIP = { width: 480, height: 300 };
 const AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36";
+const ROBOT = /captcha|automated scraping|flagged as potentially automated|unusual traffic|enable javascript and cookies/i; // 본문에 이런 말이 있으면 막힌 화면이다
 const REFUSED = /access denied|forbidden|not found|just a moment|are you a robot|verify you are|error \d{3}|request blocked/i;
 
 // 화면 안에서 돈다: 떠 있는 것과 그림을 치우고 제목의 자리를 돌려준다.
@@ -22,16 +23,18 @@ function prepare() {
   for (const node of document.querySelectorAll("img, picture, video, iframe, figure, canvas, svg, object, embed")) {
     node.style.setProperty("display", "none", "important");
   }
-  const heads = [...document.querySelectorAll("main h1, article h1, [role=main] h1, #content h1, h1")]
-    .filter((node) => node.getBoundingClientRect().height > 0 && node.textContent.trim().length >= 2);
+  const shown = (list) => [...document.querySelectorAll(list)].filter((node) => node.getBoundingClientRect().height > 0 && node.textContent.trim().length >= 2);
+  let heads = shown("main h1, article h1, [role=main] h1, #content h1, h1");
+  if (!heads.length) heads = shown("main h2, article h2, [role=main] h2, h2"); // 큰 제목이 없는 화면은 그다음 제목부터
   if (!heads.length) return null;
+  const words = document.body.innerText.slice(0, 3000);
   const top = heads[0].getBoundingClientRect().top;
   // 제목보다 위에 있는 것(머리글, 경로 표시, 작은 머리말)은 보이지 않게 한다. 자리는 그대로 두어 제목이 움직이지 않는다.
   for (const node of document.querySelectorAll("body *")) {
     const box = node.getBoundingClientRect();
     if (box.height > 0 && box.bottom <= top + 1) node.style.setProperty("visibility", "hidden", "important");
   }
-  return { top: top + window.scrollY, text: heads[0].textContent.trim().replace(/\s+/g, " ").slice(0, 140) };
+  return { top: top + window.scrollY, text: heads[0].textContent.trim().replace(/\s+/g, " ").slice(0, 140), words };
 }
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -47,7 +50,7 @@ async function shoot(browser, job) {
     const found = await page.evaluate(prepare);
     if (status >= 400 || status === 202) return { name: job.name, ok: false, why: `응답 ${status}` };
     if (!found) return { name: job.name, ok: false, why: "제목을 찾지 못함" };
-    if (REFUSED.test(found.text)) return { name: job.name, ok: false, why: `막힌 화면: ${found.text.slice(0, 60)}` };
+    if (REFUSED.test(found.text) || ROBOT.test(found.words)) return { name: job.name, ok: false, why: `막힌 화면: ${found.text.slice(0, 60)}` };
     await page.screenshot({ path: `${outDir}/${job.name}.png`, clip: { x: 0, y: Math.max(0, found.top - 14), ...CLIP } });
     return { name: job.name, ok: true, title: found.text };
   } catch (error) {

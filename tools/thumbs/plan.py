@@ -14,9 +14,9 @@ from tools.publish import thumbs
 
 STATE = "collected/thumbs/state.json"
 MAX_TRIES = 3
-# 재이용을 허용한 곳: EU 기관(europa.eu), 영국 정부(gov.uk, Open Government Licence), 미국 연방관보(공공 저작물)
+# 재이용을 허용한 곳: EU 기관(europa.eu), 영국 정부(gov.uk, Open Government Licence)
 ALLOWED_ENDS = (".europa.eu", ".gov.uk")
-ALLOWED_HOSTS = {"www.federalregister.gov"}
+ALLOWED_HOSTS = set()
 BLOCKED_HOSTS = {"www.consilium.europa.eu"}  # 자동 실행에서 열리지 않는 곳
 CELEX = re.compile(r"[?&]uri=CELEX(?::|%3A)([0-9A-Z()]+)", re.I)
 
