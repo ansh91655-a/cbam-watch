@@ -9,7 +9,7 @@ import tempfile
 import unittest
 
 from tools.publish import add_digest, add_items, withdraw
-from tools.run import claude_status, holds_to_fix, week_items
+from tools.run import claude_status, day_summary, holds_to_fix, week_items
 
 
 def _write(path, value):
@@ -153,6 +153,31 @@ class PublishTest(unittest.TestCase):
         self.assertEqual((book["council-cbam"]["ok"], book["op-europa"]["failCount"], book["op-europa"]["lastOk"]), (True, 2, ""))
         _run(claude_status.main, ["op-europa=ok"])
         self.assertEqual(_read("collected/claude-status.json")["sources"]["op-europa"]["failCount"], 0)
+
+
+class DaySummaryTest(unittest.TestCase):
+    DAY = "2026-11-10"  # 화요일
+
+    def test_normal_day(self):
+        runs = [
+            {"kind": "collect", "startedAt": "2026-11-10T07:05:00+09:00", "counts": {"written": 5, "rewritten": 1}, "problems": []},
+            {"kind": "verify", "startedAt": "2026-11-10T08:20:00+09:00", "counts": {"pass": 5, "hold": 1, "published": 5}, "pushed": True, "problems": [],
+             "holds": [{"id": "a", "gate": "근거", "why": "제목이 원문과 다름"}]},
+            {"kind": "collect", "startedAt": "2026-11-09T07:05:00+09:00", "counts": {"written": 9}, "problems": ["어제의 문제"]},
+        ]
+        result = day_summary.summarize(runs, self.DAY)
+        self.assertEqual((result["problems"], result["finalHolds"], result["retryHolds"]), ([], [], 1))
+        self.assertEqual(result["counts"], {"written": 6, "pass": 5, "hold": 1, "published": 5})
+
+    def test_missing_runs_and_final_holds(self):
+        runs = [{"kind": "verify", "startedAt": "2026-11-10T08:20:00+09:00", "counts": {}, "pushed": False, "problems": ["x: 게시 단계에서 막힘(사실 대조)"],
+                 "holds": [{"id": "b", "gate": "확인 불가", "why": "원문을 열지 못함"}, {"id": "c-r2", "gate": "근거", "why": "다시 쓴 초안도 보류: 근거 없음"}]}]
+        result = day_summary.summarize(runs, self.DAY)
+        self.assertEqual(result["problems"], ["수집·작성 실행 기록이 없음", "x: 게시 단계에서 막힘(사실 대조)", "게시 데이터를 저장소에 올리지 못함"])
+        self.assertEqual([hold["id"] for hold in result["finalHolds"]], ["b", "c-r2"])
+
+    def test_weekend_has_no_missing_run_problem(self):
+        self.assertEqual(day_summary.summarize([], "2026-11-14")["problems"], [])
 
 
 if __name__ == "__main__":
