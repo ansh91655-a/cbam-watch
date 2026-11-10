@@ -8,7 +8,7 @@ import pathlib
 import tempfile
 import unittest
 
-from tools.publish import add_digest, add_items, withdraw
+from tools.publish import add_digest, add_items, merge, withdraw
 from tools.run import claude_status, day_summary, holds_to_fix, week_items
 
 
@@ -145,12 +145,49 @@ class PublishTest(unittest.TestCase):
         self.assertEqual(code, 1)
         self.assertEqual(len(result["problems"]), 3)
 
+    def test_digest_can_take_the_place_of_another(self):
+        _write("first.json", {"from": "2026-11-09", "to": "2026-11-15", "title": "첫 요약", "paragraphs": ["문단"], "itemIds": ["seed-one"]})
+        _write("wide.json", {"from": "2026-10-12", "to": "2026-11-11", "title": "긴 기간의 요약", "paragraphs": ["문단"], "itemIds": ["seed-one"]})
+        _run(add_digest.main, ["--file", "first.json"])
+        _write("bad.json", {"from": "2026-10-12", "to": "2026-11-11", "title": "", "paragraphs": ["문단"], "itemIds": []})
+        self.assertEqual(_run(add_digest.main, ["--file", "bad.json", "--drop", "2026-11-09_2026-11-15"])[0], 1)
+        self.assertEqual([row["id"] for row in _read("data/digests.json")["digests"]], ["2026-11-09_2026-11-15"])  # 검사에 걸리면 빼지도 않는다
+        _run(add_digest.main, ["--file", "wide.json", "--drop", "2026-11-09_2026-11-15"])
+        self.assertEqual([row["id"] for row in _read("data/digests.json")["digests"]], ["2026-10-12_2026-11-11"])
+
     def test_withdraw_keeps_the_item(self):
         code, _ = _run(withdraw.main, ["--id", "seed-one", "--reason", "수치가 원문과 다름"])
         self.assertEqual(code, 0)
         item = _read("data/items.json")["items"][0]
         self.assertEqual(item["withdrawn"]["reason"], "수치가 원문과 다름")
         self.assertEqual(_run(withdraw.main, ["--id", "none", "--reason", "x"])[0], 1)
+
+    def test_merge_moves_the_item_aside_and_repoints_digests(self):
+        items = _read("data/items.json")
+        items["items"].append({"id": "kept", "title": "남길 소식", "summary": "EU 집행위원회는 2026년 11월 6일에 새 가이던스를 알렸습니다.", "published": "2026-11-06", "listed": "2026-11-10"})
+        _write("data/items.json", items)
+        _write("data/digests.json", {"digests": [{"id": "w", "from": "2026-11-09", "to": "2026-11-15", "title": "t", "paragraphs": ["p"], "itemIds": ["seed-one", "kept"]}]})
+        self.assertEqual(_run(merge.main, ["--id", "seed-one", "--into", "nope", "--reason", "같은 일"])[0], 1)
+        self.assertEqual(len(_read("data/items.json")["items"]), 2)
+        # 새 요약의 날짜가 근거 글에 없으면 묶지 않는다
+        _write("language/glossary.json", {"terms": []})
+        _write("source.txt", "New guidance. 6 November 2026.")
+        pathlib.Path("summary.txt").write_text("EU 집행위원회는 2026년 11월 6일에 새 가이던스를 알렸습니다. CBAM 소식 화면에는 이 소식이 2026년 10월 22일자로 올라 있습니다.", encoding="utf-8")
+        self.assertEqual(_run(merge.main, ["--id", "seed-one", "--into", "kept", "--reason", "같은 일", "--summary-file", "summary.txt", "--source-file", "source.txt"])[0], 1)
+        self.assertEqual(len(_read("data/items.json")["items"]), 2)
+        pathlib.Path("source.txt").write_text("New guidance. 6 November 2026.\n22Oct2026\nNew guidance", encoding="utf-8")
+        code, result = _run(merge.main, ["--id", "seed-one", "--into", "kept", "--reason", "같은 일", "--summary-file", "summary.txt", "--source-file", "source.txt"])
+        self.assertEqual((code, result["merged"], result["digests"], result["left"]), (0, True, 1, 1))
+        kept = _read("data/items.json")["items"][0]
+        self.assertEqual(kept["id"], "kept")
+        self.assertIn("10월 22일", kept["summary"])
+        self.assertEqual(_read("data/digests.json")["digests"][0]["itemIds"], ["kept"])
+        record = _read("data/merged.json")["merged"][0]
+        self.assertEqual((record["id"], record["into"], record["item"]["title"]), ("seed-one", "kept", "기존 항목"))
+
+    def test_moved_table_follows_chains_to_a_live_item(self):
+        records = [{"id": "a", "into": "b"}, {"id": "b", "into": "c"}, {"id": "x", "into": "gone"}]
+        self.assertEqual(merge.moved(records, {"c"}), {"a": "c", "b": "c"})
 
     def test_last_week_and_sample(self):
         self.assertEqual(week_items.last_week(datetime.date(2026, 11, 16)), (datetime.date(2026, 11, 9), datetime.date(2026, 11, 15)))
@@ -159,6 +196,21 @@ class PublishTest(unittest.TestCase):
         week = _read("week.json")
         self.assertEqual((week["id"], len(week["items"]), week["audit"]), ("2026-11-09_2026-11-15", 1, ["seed-one"]))
         self.assertIn("기존 항목", pathlib.Path("week.txt").read_text(encoding="utf-8"))
+
+    def test_week_takes_backfill_by_its_own_date_and_marks_late_items(self):
+        start, end = datetime.date(2026, 11, 9), datetime.date(2026, 11, 15)
+        rows = [
+            {"id": "old-news-listed-now", "published": "2026-08-28", "listed": "2026-11-10"},
+            {"id": "weekend-news", "published": "2026-11-07", "listed": "2026-11-09"},
+            {"id": "this-week", "published": "2026-11-12", "listed": "2026-11-13"},
+            {"id": "filled-this-week", "published": "2026-11-10", "listed": "2026-11-10", "backfill": True},
+            {"id": "filled-long-ago", "published": "2026-06-12", "listed": "2026-11-10", "backfill": True},
+            {"id": "filled-no-date", "listed": "2026-11-10", "backfill": True},
+            {"id": "next-week", "published": "2026-11-16", "listed": "2026-11-16"},
+        ]
+        found = week_items.of_week(rows, start, end)
+        self.assertEqual([(row["id"], row["late"]) for row in found],
+                         [("this-week", False), ("filled-this-week", False), ("weekend-news", False), ("old-news-listed-now", True)])
 
     def test_claude_status_counts_failures(self):
         _run(claude_status.main, ["council-cbam=ok", "op-europa=fail:403으로 막힘"])

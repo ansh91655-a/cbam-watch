@@ -1,0 +1,31 @@
+{
+ "merged": [
+  {
+   "id": "seed-news-electricity-guidance",
+   "into": "20261106-ec-news-139ae7",
+   "reason": "같은 가이던스의 소식. CBAM 소식 화면의 목록(10월 22일자)과 조세총국 기사(11월 6일자)를 따로 실었던 것",
+   "at": "2026-11-11T02:35:22+09:00",
+   "item": {
+    "id": "seed-news-electricity-guidance",
+    "published": "2026-10-22",
+    "title": "수입 통합통관에 따른 전력 수입에 관한 새 가이던스",
+    "summary": "EU 집행위원회는 2026년 10월 22일에 수입 통합통관(Centralised Clearance for Import)에 따른 전력 수입에 관한 새 가이던스 소식을 올렸습니다.",
+    "impact": "",
+    "kind": "가이던스",
+    "topic": "declare",
+    "importance": "보통",
+    "topics": [
+     "전력",
+     "가이던스"
+    ],
+    "listed": "2026-11-10",
+    "sourceCode": "ec-news",
+    "sourceName": "EC CBAM Communication and News",
+    "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_en",
+    "checkedAt": "2026-11-10T15:05:00+09:00",
+    "authoring": "자동",
+    "backfill": true
+   }
+  }
+ ]
+}

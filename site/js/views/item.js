@@ -77,6 +77,11 @@ export async function render(main, id) {
   const items = data.newestFirst(await data.items());
   const item = items.find((entry) => entry.id === id);
   if (!item) {
+    const target = (await data.moved())[id];  // 다른 소식과 하나로 묶인 소식이면 남긴 소식으로 넘긴다
+    if (target) {
+      window.location.replace(`#item-${target}`);
+      return "소식";
+    }
     fill(main,
       h("div", { class: "view-head bleed" }, h("div", { class: "band-inner" }, [h("h1", { text: "소식을 찾지 못했습니다" })])),
       empty("주소가 바뀌었거나 내린 소식일 수 있습니다."),

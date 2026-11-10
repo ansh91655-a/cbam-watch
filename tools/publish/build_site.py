@@ -8,7 +8,7 @@ import shutil
 import sys
 
 from tools.common.jsonio import read_json, write_json
-from tools.publish import derive, feed, regulations, thumbs
+from tools.publish import derive, feed, merge, regulations, thumbs
 
 DATA_FILES = ["items", "events", "digests", "terms", "topics", "prices"]
 LIST_KEY = {"items": "items", "events": "events", "digests": "digests", "terms": "terms", "topics": "topics", "prices": "prices"}
@@ -49,6 +49,9 @@ def main(argv):
     bodies["items"] = {**bodies["items"], "items": thumbs.attach(bodies["items"]["items"])}
     for name, body in bodies.items():
         write_json(data_out / f"{name}.json", body)
+    # 하나로 묶은 소식의 옛 번호가 어디로 갔는지(옛 주소로 온 사람을 남긴 소식으로 넘긴다)
+    records = read_json(merge.MERGED, {"merged": []}).get("merged", [])
+    write_json(data_out / "moved.json", {"moved": merge.moved(records, {item["id"] for item in bodies["items"]["items"]})})
 
     codes = read_json("data/cn.json", None)  # 품목 코드 조회의 목록(법령 원문에서 뽑은 것)
     if codes is None or not codes.get("current"):

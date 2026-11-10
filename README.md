@@ -26,7 +26,7 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 | `sources/registry.json` | 출처 대장. 어디를 어떤 방법으로 보는지 적혀 있다 |
 | `collected/` | 수집 결과. `feed/`(그날 새로 보인 것), `state/`(이미 본 것의 열쇠), `pages/`(EU 공식 화면의 글), `status.json`(출처별 확인 결과), `archive/`(지난 소식을 한꺼번에 모은 것. 아래 '지난 소식 채우기' 참조) |
 | `originals/` | EU 집행위원회 문서의 사본(`files/<문서 id>/<해시>/<원래 파일 이름>`), 뽑아 낸 본문(`text/`), 판 사이의 비교 결과(`diffs/`), 대장(`state.json`) |
-| `data/` | 사이트에 게시한 데이터. 소식(`items.json`), 주제 목록(`topics.json`), 인증서 가격(`prices.json`, 프로그램이 가격표에서 만든다), 일정(`events.json`), 주간 요약(`digests.json`), 용어집(`terms.json`) |
+| `data/` | 사이트에 게시한 데이터. 소식(`items.json`), 주제 목록(`topics.json`), 인증서 가격(`prices.json`, 프로그램이 가격표에서 만든다), 일정(`events.json`), 주간 요약(`digests.json`), 용어집(`terms.json`), 하나로 묶은 소식의 기록(`merged.json`) |
 | `reports/` | 보고 실행이 올리는 그날과 그 주의 보고 파일. 알림의 근거다 |
 | `language/` | 국문 표기 기준(용어집) |
 | `site/` | 공개 사이트의 화면 파일. 화면마다 모듈 하나(`js/views/`), 그림과 달력 같은 부품(`js/ui/`), 디자인 값(`css/tokens.css`)과 색 변형(`css/themes.css`), 파비콘과 공유 미리보기 그림과 라이선스 고지(`assets/`). 아래 '사이트의 디자인' 참조 |
@@ -43,7 +43,7 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 | `tools/originals` | 문서 링크 찾기(`discover`), 받을 차례 정하기(`queue`), 판 남기기와 비교(`versions`, `diff`), 본문 뽑기(`textify`), 실행(`run`) |
 | `tools/check` | 국문 글 검사: 용어(`term_check`, `term_lookup`), 표기(`style_check`), 수치와 날짜 대조(`fact_check`), 원문 발췌 확인(`excerpt_check`) |
 | `tools/prices` | 인증서 가격표 읽기: 적용 기간 읽기(`periods`), 표의 행 읽기(`parse`), 가격 자료 만들기(`run`) |
-| `tools/publish` | 게시 데이터에 더하기(`add_items`, `add_digest`), 요약 내리기(`withdraw`), 주제 목록(`topics`), 사이트와 운영 화면의 폴더 만들기(`build_site`, `build_console`). 사이트 폴더를 만들 때 규제 자료의 공개용 사본(`regulations`), 소식의 미리보기 그림 주소(`thumbs`), 구독 피드 `feed.xml`과 `rules.xml`(`feed`), 화면에서 바로 보는 문서 사본 `files/`(`derive`)도 함께 만든다. 규제 자료 고치기(`rule_edit`), 제목만 옮겨 실은 소식의 요약을 원문을 읽고 다시 쓴 것으로 바꾸기(`revise`)도 여기에 있다 |
+| `tools/publish` | 게시 데이터에 더하기(`add_items`, `add_digest`), 요약 내리기(`withdraw`), 같은 일을 두 번 실은 소식을 하나로 묶기(`merge`: 묶인 소식은 `data/merged.json`에 남고, 옛 주소는 남긴 소식으로 넘어간다), 주제 목록(`topics`), 사이트와 운영 화면의 폴더 만들기(`build_site`, `build_console`). 사이트 폴더를 만들 때 규제 자료의 공개용 사본(`regulations`), 소식의 미리보기 그림 주소(`thumbs`), 구독 피드 `feed.xml`과 `rules.xml`(`feed`), 화면에서 바로 보는 문서 사본 `files/`(`derive`)도 함께 만든다. 규제 자료 고치기(`rule_edit`), 제목만 옮겨 실은 소식의 요약을 원문을 읽고 다시 쓴 것으로 바꾸기(`revise`)도 여기에 있다 |
 | `tools/notify` | 보고 파일에서 알릴 것을 골라 '운영 보고' 이슈에 적기(`reports`, `messages`, `github`, `run`) |
 | `tools/run` | 예약 실행이 쓰는 보조 도구: 후보 고르기, 검증 대기 고르기, 원문 발췌 자르기, 상태 점검(`health`, 규제 자료는 `rules_health`, 품목 코드 목록과 기관별 입장 비교표는 `cn_health`), 하루와 한 주의 요약, 보고 파일 만들기(`write_report`) |
 | `tools/archive` | 공식 기록을 모으는 프로그램. 지난 소식을 한꺼번에 채울 때 손으로 돌리고, 규제 진행 상황에 쓰는 기록은 평일마다 자동으로 돈다: 출처별 모으기(`ecnews`, `newsletter`, `eurlex`, `cellar`, `docs`, `oeil`, `hys`, `presscorner`, `council`, `govuk`, `ukleg`, `fedreg`, `boards`)와 실행(`crawl`), 새 자료를 그날의 후보로 넘기기(`tofeed`), 화면의 짜임 살펴보기(`dump`), 싣기 전 검사(`gate`), 싣기(`publish`) |
@@ -77,7 +77,7 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
    - `ep-oeil`: 유럽의회 입법 관측소의 절차 기록. `ec-hys`: 의견수렴 목록. `uk-govuk`: 영국 정부 CBAM 문서의 변경 기록.
    - `kr-boards`: 국내 기관 게시판의 제목, 날짜, 주소. 본문은 받아 두지 않습니다(산업통상부 보도자료만 부제와 첫 문단을 짧게 남깁니다).
 2. 쓰기. 모아 둔 글을 읽고 국문 초안을 만듭니다. 초안 파일은 저장소에 올리지 않습니다.
-3. 싣기. `python3 -m tools.archive.publish --drafts <초안 파일> [--dry-run]`. 형식, 문체, 용어, 원문 대조(수치와 날짜, 게시일), 링크, 원문 발췌를 검사해 통과한 것만 `data/items.json`에 더하고 `backfill` 표시를 붙입니다. 이 표시가 있는 소식은 주간 요약의 대상에서 빠지고, 주간 작업이 주마다 10건씩 원문과 다시 대조합니다.
+3. 싣기. `python3 -m tools.archive.publish --drafts <초안 파일> [--dry-run]`. 형식, 문체, 용어, 원문 대조(수치와 날짜, 게시일), 링크, 원문 발췌를 검사해 통과한 것만 `data/items.json`에 더하고 `backfill` 표시를 붙입니다. 이 표시가 있는 소식은 원문이 그 주에 나온 것이 아니면 주간 요약의 대상에서 빠지고(`tools/run/week_items.py`), 주간 작업이 주마다 10건씩 원문과 다시 대조합니다.
 
 제목만 옮겨 실은 소식. 국내 기관 게시판의 지난 글은 본문을 받아 두지 않아 제목만으로 한 문장을 썼습니다. 이런 소식에는 `brief` 표시가 있고 사이트에서 요약 없이 한 줄로 보입니다. 원문을 읽고 요약을 쓴 뒤 `python3 -m tools.publish.revise`로 바꾸면(문체, 용어, 길이, 수치와 날짜를 검사합니다) 표시가 떨어지고 카드로 보입니다. 쓰는 법은 그 파일 머리에 있습니다.
 
@@ -87,7 +87,7 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 - 색은 EU 깃발의 파랑(#003399)과 노랑(#FFCC00)을 빌렸습니다. 깃발(별 열두 개)과 EU 기관의 로고는 쓰지 않습니다. 개인이 운영하는 비공식 사이트입니다.
 - 글꼴은 두 가지입니다. 화면의 글자는 Pretendard, 큰 제목(화면 제목, 주간 요약의 제목, 중요 소식의 제목)은 Noto Serif KR 700입니다. 제목의 글꼴을 바꾸려면 `site/css/tokens.css`의 `--font-display` 한 줄을 고칩니다.
 - 이름표는 글자입니다: 'CBAM' 뒤에 노란 세로선(국경선)과 '규제동향'. 네모난 표지(`site/assets/favicon.svg`, CB와 AM 사이에 노란 선)는 탭 아이콘에만 씁니다.
-- 첫 화면은 큰 머리의 이번 주 요약과 지도(한국에서 EU로 가는 길 하나), 지표 줄, 품목 코드 조회, 중요 소식과 최근 소식(옆에 일정·가격·규제), 주제별 찾아보기, 품목별 가이던스 표의 차례입니다. 칸마다의 모듈은 `site/js/views/home/`에 있습니다.
+- 첫 화면은 큰 머리의 가장 최근 요약(기간에 따라 '이번 주 요약', '지난주 요약', '주간 요약'으로 부르고, 여러 주를 묶은 요약은 '최근 동향 요약'이라고 부릅니다. `site/js/views/home/hero.js`)과 지도(한국에서 EU로 가는 길 하나), 지표 줄, 품목 코드 조회, 중요 소식과 최근 소식(옆에 일정·가격·규제), 주제별 찾아보기, 품목별 가이던스 표의 차례입니다. 칸마다의 모듈은 `site/js/views/home/`에 있습니다.
 - 소식의 제목을 누르면 원문으로 가기 전에 국문 요약 화면(`#item-<소식 번호>`, `site/js/views/item.js`)을 먼저 보여 줍니다. 제목이 곧 내용인 한 줄 소식만 원문으로 바로 갑니다(`site/js/ui/itemlink.js`). 구독 피드의 링크도 같은 기준입니다(`tools/publish/feed.py`). 뒤로 가면 보던 자리로 돌아옵니다(`site/js/router.js`).
 - 의견 보내기(`site/js/ui/feedback.js`): 넓은 화면에서는 오른쪽 여백의 탭, 그 밖에는 바닥글의 단추로 창을 엽니다. 메일 제목에 `[CBAM 규제동향 의견]`을 붙여서 받은 편지함에서 의견만 골라 찾을 수 있게 합니다. 구독 안내 창은 `site/js/ui/subscribe.js`입니다.
 - 색 변형은 세 가지입니다: 네이비(기본), 화이트, 미드나잇. 주소에 `?theme=white`처럼 붙이면 바꿔 볼 수 있고, 기본값은 `site/js/theme.js`의 `DEFAULT`입니다. 변형마다 달라지는 값은 `site/css/themes.css`에만 있습니다.
