@@ -1,0 +1,423 @@
+[주소] https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025PC0990
+[받은 곳] http://publications.europa.eu/resource/celex/52025PC0990
+
+IMMC.COM%282025%29990%20final.ENG.xhtml.1_EN_ACT_part1_v7.docx
+EUROPEAN COMMISSION
+Brussels, 17.12.2025
+COM(2025) 990 final
+2025/0418(COD)
+Proposal for a
+REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL
+establishing the Temporary Decarbonisation Fund
+(Text with EEA relevance)
+EXPLANATORY MEMORANDUM
+1.CONTEXT OF THE PROPOSAL
+•Reasons for and objectives of the proposal
+The European Green Deal sets out the objective of making the European Union climate-neutral by 2050. In 2025, the European Commission proposed a target of a 90% reduction in net greenhouse gas (GHG) emissions by 2040, compared to 1990 levels. This proposed target takes full account of the current economic, security and geopolitical landscape in alignment with the EU Competitiveness Compass3, and the Clean Industrial Deal4. It aims to provide the necessary predictability and stability for investments in the EU's clean energy transition and for driving industrial competitiveness.
+Directive 2003/87/EC of the European Parliament and of the Council of 13 October 2003 establishing a system for greenhouse gas emission allowance trading within the Union and amending Council Directive 96/61/EC (‘EU-ETS Directive’) continues to be a central instrument for reducing industrial greenhouse gas emissions through carbon pricing and the gradual reduction of the Union-wide emissions cap. Regulation (EU) 2023/956 establishing a Carbon Border Adjustment Mechanism (‘CBAM’) complements this framework by addressing the risk of carbon leakage related to imports of certain high-intensive goods into the Union.
+As the phase-out of free allocation under the EU ETS progresses between 2026 and 2034, risks of carbon leakage may remain in certain cases and for certain goods. This remaining risk of carbon leakage could reduce the environmental effectiveness of Union climate policy if emissions decreases in the Union would lead to higher emission increase outside the Union.
+This legislative proposal establishes a Union fund providing targeted financial support to energy-intensive industries exposed to a heightened remaining risk of carbon leakage. The Fund supports the transition of Union industry towards climate-neutral production processes, thereby reducing its exposure to carbon leakage, helping to maintain the environmental integrity of the EU ETS by ensuring that carbon pricing effectively delivers real emission reductions. Support granted by the Fund will be conditional on decarbonisation investments.
+The Fund thereby contributes to the objectives of Article 191 TFEU, in particular the prevention of environmental damage and the promotion of measures at Union level to deal with cross-border environmental problems such as climate change.
+•Consistency with existing policy provisions in the policy area
+The proposal complements the EU ETS and CBAM frameworks. It does not alter but complements the mechanisms established by those instruments by providing a transitional, targeted financial measure addressing certain risks pending the long-term solution which will be found in the proposal for a revision of the EU ETS in 2026. The proposal is limited in scope and time to prevent overlap with the proposal for revising the EU-ETS planned for 2026, and to ensure budgetary discipline.
+It is also consistent with the objectives of other Union funds, such as the Innovation Fund and the Social Climate Fund, which support decarbonisation of production in the Union.
+•Consistency with other Union policies
+Administrative requirements, including reporting requirements, play a key role in ensuring correct enforcement and proper monitoring of legislation. Generally, their costs are largely offset by the benefits they bring. However, reporting requirements can also impose disproportionate burdens on stakeholders, particularly affecting small and medium-sized enterprises and micro-companies.
+The Commission set out a simplification agenda in several of its Communications in 2025 1 following the publication of the Draghi Report. The Commission has been delivering an unprecedented simplification effort to achieve the agreed policy objectives in the simplest, most targeted, most effective and least burdensome way.
+The present proposal is consistent with the Union’s simplification agenda and the commitment to reduce unnecessary administrative burden for public authorities and beneficiaries. The governance and management structure of the Fund is designed to minimise duplication with existing Union instruments, notably the EU ETS, and to make full use of existing administrative capacities at Union and national level. It also streamlines procedures by relying on a single call for applications.
+Finally, the proposal is designed to ensure the protection of the Union’s financial interests in accordance with Regulation (EU, Euratom) 2024/2509 (‘Financial Regulation’) 2 . The Commission, the European Anti-Fraud Office (OLAF), the European Court of Auditors (ECA), and, where applicable, the European Public Prosecutor’s Office (EPPO) will have the powers to exercise their respective investigative and prosecuting competences with regard to the use of the Fund’s resources.
+2.LEGAL BASIS, SUBSIDIARITY AND PROPORTIONALITY
+•Legal basis
+The proposal is based on Article 192(1) of the Treaty on the Functioning of the European Union (‘TFEU’) in the area of environment protection. In accordance with this Article, the Union contributes to the pursuit, inter alia, of the following objectives: preserving, protecting and improving the quality of the environment, promoting measures at international level to deal with regional or worldwide environmental problems, and in particular combating climate change. The proposal pursues these environmental objectives by promoting decarbonisation, preventing carbon leakage and thereby ensuring the environmental effectiveness of Union climate policy.
+The proposal is also based on Article 322(1) TFEU, which provides the legal basis for the adoption of financial rules determining the procedure for establishing and implementing the Union budget and for the control of budgetary implementation. As the proposal lays down rules on the financing, management and control of a Union fund, the inclusion of Article 322(1) TFEU is appropriate.
+•Subsidiarity (for non-exclusive competence)
+Action at Union level is necessary to address the abovementioned risks in a consistent manner across Member States. Measures at national level could lead to uncoordinated support across the Union, thus leading to distortions in the internal market and weakening the overall effectiveness of the EU ETS.
+•Proportionality
+Given the cross-border nature of climate action and the need for a consistent Union response, the proposal is proportionate to the objective it pursues. It introduces a Union targeted, limited support mechanism designed solely to pursue the abovementioned objectives. It does not go beyond what is necessary to safeguard the environmental integrity of Union climate policy and to ensure that emission reductions achieved within the Union are not offset by increases in third countries. The scope is restricted to sectors covered by the CBAM Regulation. The support is conditioned upon projects demonstrating a clear contribution to industrial decarbonisation. The financial envelope is capped and tie
+•Choice of the instrument
+A regulation is the most appropriate instrument to ensure uniform implementation of the support scheme across all Member States and prevent divergent national approaches that could undermine the coherent functioning of the EU ETS. A Regulation establishes directly applicable rules on eligibility, financing, governance and monitoring, thereby ensuring legal certainty for both Member States as beneficiaries and operators as final beneficiaires, while alternative instruments such as recommendations or directives would not provide the required level of harmonisation or timeliness.
+In addition, the goals pursued by this proposal cannot be reached through the adoption of implementing measures in the absence of an appropriate legal base to act.
+3.RESULTS OF EX-POST EVALUATIONS, STAKEHOLDER CONSULTATIONS AND IMPACT ASSESSMENTS
+•Ex-post evaluations/fitness checks of existing legislation
+The proposal relies on the experience gained in implementing the EU ETS and CBAM instruments.
+•Stakeholder consultations
+The Commission has consulted industry representatives on the plan for a support measure in advance of the proposal, including through a high-level dialogue. Through the consultation activities, the Commission informed stakeholders about the planned support measure, including plans for its overall design and reflections about the eligibility for support and the conditions that would need to be fulfilled to receive it.
+•Collection and use of expertise
+The proposal has been elaborated following a process of internal scrutiny of existing provisions and instruments. It is based on experience in implementing the Union environmental legislation, in particular the EU ETS.
+•Impact assessment
+This proposal is accompanied by an analytical document, the Commission Staff Working Document (SWD) accompanying the proposal 3 . This analytical document describes how the eligibility for the proposed temporary decarbonisation investment support has been precisely targeted to production of goods with heightened level of remaining carbon leakage risks, in order to be proportionate and in order to avoid market distortions. In addition, the SWD analyses decarbonisation conditions that limit the administrative burden of the new measure, including by capitalising on already existing administrative infrastructure and data reported for the purpose of free allocation under the EU-ETS.
+•Regulatory fitness and simplification
+As mentioned above, the proposal is fully aligned with the Commission’s simplification agenda. By avoiding unnecessary burden, the proposal reflects the temporary nature and limited scope of the support. It therefore contributes to more efficient implementation, increased legal clarity and reduced compliance costs, in line with the principles set out in the Interinstitutional Agreement on Better Law-Making and the Commission’s Better Regulation Guidelines.
+The proposal is consistent with the objectives of the Commission’s Regulatory Fitness and Performance Programme (REFIT). It has been designed to minimise regulatory burden by using existing structures wherever possible, including those of the EU ETS. It does not create any new permanent administrative structures or bodies. The proposal therefore enhances regulatory coherence, strengthens environmental effectiveness, and limits administrative costs for public authorities and beneficiaries.
+•Fundamental rights
+The proposal respects the fundamental rights and observes the principles recognised in particular by the Charter of Fundamental Rights of the Union. In particular, it contributes to the objective of a high level of environmental protection in accordance with the principle of sustainable development as laid down in Article 37 of the Charter.
+4.BUDGETARY IMPLICATIONS
+The Fund will be financed by contributions by Member States. Each contribution will correspond to 25% of the revenues that the Member State has collected from the sale of CBAM certificates to the authorised CBAM declarants established in its territory as from 1 February 2027. This matches the share which Member States will retain and is without prejudice to the Commission’s proposal to treat 75% of CBAM revenues as a new Own Resource of the Union budget 4 . This arrangement is therefore compatible with the ongoing Own Resources legislative process.
+The Fund will be implemented in direct management by the Commission in close cooperation with Member States. The resources from the Member States’ contributions will cover the costs of implementing the Fund. The impact of this proposal on the Union budget is assessed in the legislative financial and digital statement accompanying this proposal.
+5.OTHER ELEMENTS
+•Implementation plans and monitoring, evaluation and reporting arrangements
+The implementation of the Fund will be subject to monitoring to ensure that it delivers its intended environmental objectives and operates in accordance with the principles of sound financial management. The Commission will collect and analyse data provided by Member States and the beneficiaries on the applications and disbursement of funds per Member State, sector, goods and installations, as well as compliance with the requirements for decarbonisation measures. The Commission will adopt implementing acts laying down the rules on monitoring to ensure consistency across the Union. In line with the Financial Regulation and the Union’s better-regulation principles, monitoring results will feed
+•Explanatory documents (for directives)
+Not applicable.
+•Detailed explanation of the specific provisions of the proposal
+This section provides a concise overview of each of the main provisions of the proposal.
+Article 1 establishes the Fund and specifies the period for which it will provide financial support.
+Article 2 lays down the relevant definitions used in the Regulation for legal certainty and to ensure consistency.
+Article 3 specifies that the Fund is to be financed by contributions from Member States, and that these contributions will correspond to 25% of CBAM revenues collected by Member States when they sell the CBAM certificates to authorised CBAM declarants pursuant to Article 20 of the CBAM Regulation. A haircut clause limits the use of revenues to the actual financing needs of the Fund.
+Article 4 lays down the governance structure of the Fund. It provides that the Commission shall implement the Fund, ensuring consistent application across the Union. It also outlines the content and sets the deadline of the review of the Fund by the Commission.
+Article 5 provides for the designation of the Member States’ authorities responsible in implementing the measure at national level.
+Article 6 defines which goods are to benefit from support. It limits eligibility to the production of specific goods subject to heightened remaining risk of carbon leakage. It also sets out conditions under which Member States can request the production of further goods to be eligible for support.
+Article 7 describes the types of decarbonisation activities that an eligible operator will need to carry out in order to receive support, such as investments in low-carbon technologies.
+Articles 8 and 9 provide for the rules and procedures under which support will be granted. It also lays down the duties and rules to be applied by national competent authorities in the processing of applications, including how to calculate the support for each final beneficiary.
+Article 10 and 11 provide for the duties and rules to be applied by the Commission in the review of information and calculations provided by national competent authorities, including on the decision to disburse support.
+Article 12 ensures that the Fund is subject to the safeguards laid down in the Financial Regulation. It confirms the competences of the Commission, OLAF, the Court of Auditors and, where applicable, the EPPO to conduct audits, investigations and prosecutions.
+Article 13 provides for the rules to be applied by beneficiaries of the support.
+Article 14 empowers the Commission to adopt delegated acts to supplement or amend non-essential elements of the Regulation, notably regarding detailed eligibility rules, technical methodologies, and monitoring and verification requirements, in accordance with Article 290 TFEU.
+Article 15 empowers the Commission to adopt implementing acts pursuant to Regulation (EU) No 182/2011. These acts will define detailed rules on implementation and governance of the Fund, evaluation, monitoring, reporting, and control.
+Article 16 sets out the date of entry into force and the time of application of the provisions.
+2025/0418 (COD)
+Proposal for a
+REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL
+establishing the Temporary Decarbonisation Fund
+(Text with EEA relevance)
+THE EUROPEAN PARLIAMENT AND THE COUNCIL OF THE EUROPEAN UNION,
+Having regard to the Treaty on the Functioning of the European Union, and in particular Article 192(1) and Article 322(1), point (a), thereof,
+Having regard to the proposal from the European Commission,
+After transmission of the draft legislative act to the national parliaments,
+Having regard to the opinion of the European Economic and Social Committee 5 ,
+Having regard to the opinion of the Committee of the Regions 6 ,
+Having regard to the opinion of the Court of Auditors,
+Acting in accordance with the ordinary legislative procedure 7 ,
+Whereas:
+(1)The Union is committed to achieving climate neutrality by 2050 and reducing net greenhouse gas emissions by at least 55% by 2030, in line with the European Green Deal 8 and the European Climate Law 9 . The Clean Industrial Deal, as set out in the Commission Communication of 26 February 2025 10 , underscores the need to align industrial competitiveness with climate ambition, ensuring that the transition to a climate-neutral economy is both just and economically resilient.
+(2)The Union’s environmental objectives, as set out in Article 191 of the Treaty, include preserving and improving the quality of the environment and promoting measures at international level to address global environmental challenges. They are pursued among other things through carbon pricing instruments, such as the Union’s Emission Trading System (‘EU-ETS’) established by Directive 2003/87/EC 11 . Where the Union’s international partners have policy approaches that are significantly below the level of the Union’s climate ambition, production in third countries is not subject to comparable carbon constraints. This asymmetry risks incentivising the relocation of production of carbon-intensi
+(3)The Clean Industrial Deal emphasises the need for financial support, regulatory predictability, and innovation to enable energy-intensive industries to decarbonise without compromising their competitiveness, particularly in sectors exposed to the risk of carbon leakage. The prevention of carbon leakage constitutes an environmental objective directly linked to the effectiveness of emission-reduction instruments on which Union climate policy relies. Targeted financial support can help ensure that emission reductions are achieved within the Union through decarbonisation of industrial activity, rather than the relocation to jurisdictions with lower environmental requirements giving rise to a 
+(4)Energy-intensive industries covered by Directive 2003/87/EC progressively internalise the cost of their greenhouse gas emissions. The reduced Union-wide emissions cap, combined with the gradual phase-out of free allocation provided for in that Directive, requires cost-intensive and rapid adaptations by the industries covered by Directive 2003/87/EC, thereby increasing the short-term risk of carbon leakage. That remaining risk of carbon leakage is not fully prevented by Regulation (EU) 2023/956 of the European Parliament and of the Council 12 and should therefore be addressed through additional measures supporting the transition and promoting the decarbonisation of industrial sectors.
+(5)To incentivise industrial decarbonisation action, it is appropriate to establish a Union funding instrument, the Temporary Decarbonisation Fund (the ‘Fund’), providing temporary financial support to operators in carbon intensive sectors that are subject to the remaining risk of carbon leakage, ensuring that decarbonisation efforts within the Union are preserved and that emissions reduction incentives remain effective. Such support should be strictly limited to what is necessary to mitigate that remaining risk of carbon leakage, be proportionate, and be conditional upon demonstrable progress in reducing greenhouse gas emissions.
+(6)Revenues generated from the sales of CBAM certificates pursuant to Regulation (EU) 2023/956 will be collected by Member States. As part of its proposal for a new Own Resources Decision 13 , the Commission has proposed for the next Multiannual Financial Framework 2028-2034 that 75% of the revenue from the sale of CBAM certificates should accrue to the EU budget as an own resource 14 . In order to ensure the necessary funding, the Fund should be financed from the remaining 25% of the revenues from the sale of certificates, which should constitute external assigned revenue for the purpose of covering the commitments to pay financial support to final beneficiaries of the Fund, and the Commiss
+(7)The Fund’s resources should only be used to cover the commitments to pay financial support to the final beneficiaries and the administrative costs of the Fund. Any unused revenue should be returned to the Member States in proportion to their contribution to the Fund. For this purpose, it is necessary to provide for a derogation from Article 12(4), point (c), of Regulation (EU, Euratom) 2024/2509.
+(8)The Fund should provide financial support in the years 2028 and 2029 to the final beneficiaries to address their exposure to the remaining risk of carbon leakage, determinable based on the two-year production reference period 2026–2027. Given the need to ensure continuity of decarbonisation efforts and address the remaining risks of carbon leakage and the fact that CBAM revenue will only become available in 2028, it is appropriate to allow support under this Regulation to cover actions before the entry into force of this Regulation, in accordance with Article 3(2) of Regulation 2024/2509. Such retroactive eligibility is strictly limited to actions that contribute to the environmental obje
+(9)By limiting the initial support period to two years, the Fund should provide short-term support pending a comprehensive review of how best to address the issue of the remaining risk of carbon leakage from 2028 onwards, in the context of the scheduled review of the EU ETS. The transitory character of the Fund precludes any interpretation that it may constitute a precedent, a model or a reference point for the EU ETS review. Accordingly, the existence, operation or cessation of the Fund shall not create any expectation, legal or otherwise, regarding the EU ETS review.
+(10)Given the temporary nature of the Fund, its governance should be cost-efficient and minimise to the extent possible the administrative burden for both the final beneficiaries of the financial support and the Member States’ competent authorities. Therefore, a single call for applications in 2028 for the production reference period 2026-2027 should be provided for.
+(11)In order to enable a streamlined and efficient procedure, the Fund should be implemented in direct management mode by the Commission, in close cooperation with the Member States, in accordance with Regulation (EU, Euratom) 2020/2092 of the European Parliament and of the Council 16 . This approach should leverage the established relationships between Member States and operators, taking into account local specificities and existing arrangements, to ensure both the timely assessment of applications and the efficient payment of financial support to the final beneficiaries. Moreover, the application deadline as well as documents to be submitted should be aligned with the obligations that oper
+(12)The Fund should in particular contribute to the decarbonisation objective by providing support to operators of EU-ETS installations which produce goods exposed to the highest remaining risk of carbon leakage in the short term. Those goods should be selected taking into account both their emissions and carbon leakage exposure, using the approach followed to determine the carbon leakage list for the EU-ETS as a starting point and targeting the measure to those goods which remain most at risk of carbon leakage based on an objective indicator.
+(13)The risk exposure of goods with a low ratio of value to weight might differ significantly between Member States. To account for the specific characteristics of goods with a low ratio of value to weight with regards to the remaining risk of carbon leakage, an opt-in mechanism should be established. While the goods set out in the Annex demonstrate a particularly high Union-wide exposure, this opt-in mechanism should consider national circumstances. There should be an opt-in mechanism to allow Member States to subject certain Combined Nomenclature codes (‘CN codes’) in accordance with Council Regulation (EEC) No 2658/87 19 to the proposed measure provided that they can demonstrate that the 
+(14)To ensure that the effect of the financial support is to incentivise the reduction of greenhouse gas emissions, that support should be subject to objective, non-discriminatory and pre-established conditions. To reduce administrative burden, the conditions should build on the existing administrative framework established for free allocation under the EU-ETS. To align the conditions with the existing procedure of application for free allocation, financial support should be contingent on the demonstration of the implementation of recommendations included in energy audits or equivalent measures or a legal commitment made for investments to achieve the targets and milestones referred to in a 
+(15)Following the submission of applications, the methodology for calculating the financial support by the competent authorities designated by the Member States should be laid down. That calculation should take into account the annual average of the closing prices of EU-ETS allowances on the auction platform for the years 2026 and 2027 as those years are the reference years for which the support is awarded and better reflect the cost of addressing the remaining risk of carbon leakage. Following the calculations, the competent authorities should provide the Commission with a list identifying all beneficiaries and their respective calculated financial support.
+(16)Once it has verified the calculations provided by the national competent authorities, the Commission should take a decision setting out the amount allocated to each Member State specifying the amounts payable to each final beneficiary in the Member State. That decision should constitute a legal commitment in relation to the final beneficiaries within the meaning of Regulation (EU, Euratom) 2024/2590 of the European Parliament and of the Council 20 . The Commission should disburse to the national competent authorities the amount allocated to each Member State, corresponding to the financial support given to final beneficiaries in that Member State. The competent authorities should then ti
+(17)To ensure the prevention, detection and tackling of fraud, corruption, conflicts of interest and other irregularities affecting the Union’s financial interests, the Commission, the European Court of Auditors and the European Anti-Fraud Office (OLAF) should have the powers conferred on them by Regulation (EU, Euratom) No 883/2013 of the European Parliament and of the Council 21 and Regulation (EU, Euratom) 2024/2509 to carry out audits and investigations concerning the use of Union funds under this Regulation. For the Member States participating in the enhanced cooperation in accordance with Council Regulation (EU) 2017/1939 22 , the European Public Prosecutor’s Office (EPPO) should inves
+(18)In order to supplement non-essential elements of this Regulation, the power to adopt acts in accordance with Article 290 of the Treaty should be delegated to the Commission to lay down rules in respect of the calculation and collection of each Member State’s contribution to the resources assigned to the Fund, the implementation of the Fund, including reporting and monitoring requirements, and the conditions of eligibility of the goods which have a low ratio of value to weight and are subject to a heightened remaining risk of carbon leakage at national level. It is of particular importance that the Commission carry out appropriate consultations during its preparatory work, including at ex
+(19)In order to ensure uniform conditions for the implementation of this Regulation, implementing powers should be conferred on the Commission to lay down rules as regards the procedural requirements and the evidence to be submitted by applicants, the application procedure and the responsibilities and monitoring and reporting obligations of the final beneficiaries.
+(20)The powers concerning the procedural requirements and the evidence to be submitted by applicants, the application procedure and the responsibilities and monitoring obligations of the final beneficiaries should be exercised in accordance with Regulation (EU) No 182/2011 of the European Parliament and of the Council 24 . The examination procedure should be used for the adoption of those implementing acts.
+(21)Since the objectives of this Regulation to address remaining carbon leakage risks cannot be sufficiently achieved by the Member States in a consistent manner but can be better achieved at Union level to avoid uncoordinated support across the Union, and thereby distortions in the internal market and a weakening the overall effectiveness of the EU ETS, the Union may adopt measures, in accordance with the principle of subsidiarity as set out in Article 5 of the Treaty on European Union. In accordance with the principle of proportionality as set out in that Article, this Regulation does not go beyond what is necessary in order to achieve those objectives.
+HAVE ADOPTED THIS REGULATION:
+Article 1
+Subject matter
+1.This Regulation establishes the Temporary Decarbonisation Fund (the ‘Fund’) and lays down its governance, the financial rules for its implementation, its resources, and the scope of its support.
+2.The Fund shall provide financial support in the period 2028-2029 to address the remaining risk of carbon leakage associated with carbon intensive goods produced by eligible operators of installations in the period 2026-2027.
+Article 2
+Definitions
+For the purposes of this Regulation, the following definitions shall apply:
+(a)‘installation’ means an installation as defined in Article 3, point (e), of Directive 2003/87/EC;
+(b)‘operator’ means any person as defined in Article 3, point (f), of Directive 2003/87/EC carrying out one or more activities listed in Annex I to the same Directive and producing goods as referred to in Annex I to Regulation (EU) 2023/956;
+(c)‘eligible good’ means any of the goods listed in the Annex;
+(d)‘competent authority’ means the authority designated by a Member State in accordance with Article 18 of Directive 2003/87/EC;
+(e)‘final beneficiary’ means an operator receiving financial support under this Regulation.
+Article 3
+Resources of the Fund
+1.The Fund shall be financed by contributions from Member States.
+2.Those contributions shall correspond to 25% of the revenues that each Member State has collected from the sale of CBAM certificates pursuant to Article 20 of Regulation (EU) 2023/956 in relation to embedded emissions declared for 2026 and 2027.
+3.Each Member State shall communicate to the Commission the exact annual amounts to contribute to the Fund for the years 2026 and 2027 respectively by 31 December 2027 and 31 December 2028. Member States shall transfer to the Fund a monetary amount that corresponds to the amount referred to in paragraph 2 of this Article respectively by 31 March 2028 and 31 March 2029. The amounts contributed shall be assigned revenue to the Fund in accordance with Article 21(5) of Regulation (EU, Euratom) 2024/2509. By way of derogation from that provision, the amounts contributed shall constitute external assigned revenue.
+4.Revenues remaining after the full disbursement of funding to final beneficiaries and payment of administrative costs of the Fund shall not be automatically carried over to be used by the Fund. By derogation from Article 12(4), point (c), of Regulation (EU, Euratom) 2024/2509, the Commission shall return the excess revenues to the Member States in proportion to their financial contribution to the Fund.
+5.The administrative costs incurred by the Commission for the implementation of the Fund shall be covered by the resources mentioned in paragraph 1.
+6.The Commission is empowered to adopt delegated acts in accordance with Article 14 to supplement this Regulation by laying down the provisions and arrangements necessary for the calculation and collection of each Member State’s contribution to the resources assigned to the Fund in accordance with this Article, including any relevant reporting requirements.
+Article 4
+Implementation of the Fund
+1.The Fund shall be implemented by the Commission under direct management within the meaning of Article 62(1), first subparagraph, point (a), of Regulation (EU, Euratom) 2024/2509, and in accordance with the other relevant rules adopted pursuant to Article 322 TFEU, including Regulation (EU, Euratom) 2020/2092.
+2.The Commission is empowered to adopt delegated acts in accordance with Article 14 to supplement this Regulation by laying down the provisions and arrangements concerning the implementation of the Fund, including the reporting and monitoring requirements.
+3.By 31 December 2030, the Commission shall present a report to the European Parliament and the Council on the expenditure financed by the Fund. This report shall contain at least a detailed breakdown of funds disbursed by the Fund and applications per Member State, sector, goods and installations, and an evaluation of the Fund.
+Article 5
+Competent authorities
+Each Member State shall designate the competent authority to carry out the functions and duties under this Regulation and inform the Commission thereof.
+The Commission shall make a list of all competent authorities available to the public.
+Article 6
+Eligibility
+1.The operator of an installation producing goods as listed in the Annex, which goods fall under the Combined Nomenclature (‘CN’) codes in Regulation (EEC) No 2658/87, shall be eligible to receive financial support in accordance with Article 9 and subject to the conditions set out in Article 7.
+2.The operator of an installation producing goods not listed in the Annex, which have a low ratio of value to weight and are subject to a heightened remaining risk of carbon leakage at national level as defined in the delegated act adopted in accordance with paragraph 3, shall, upon decision of the Commission following a reasoned request of a Member State, be eligible to receive financial support in accordance with Article 9 and be subject to the conditions set out in Article 7.
+3.The Commission is empowered to adopt delegated acts in accordance with Article 14 to supplement this Regulation by establishing an indicator determining the heightened remaining risk of carbon leakage provided for in paragraph 2 and a list of goods determined on the basis of that indicator, the conditions that the operators need to fulfil to receive financial support, in addition to the ones set out in Article 7, and the procedure to make the request referred to in the first subparagraph.
+Article 7
+Conditionality
+1.Where an operator is subject to the obligation to conduct an energy audit as a stand-alone energy audit or within the framework of a certified Energy Management System or Environmental Management System, the operator shall receive financial support from the Fund provided that the operator demonstrates to the satisfaction of the competent authority that one of the following conditions is fulfilled:
+(a)all recommendations under Article 11 of Directive 2023/1791/EC of the European Parliament and of the Council 25 have been implemented;
+(b)the pay-back time for any remaining relevant investments exceeds five years;
+(c)the cost of implementing the recommendations referred to in (a) is disproportionate and the operator demonstrates a legal commitment within the meaning of Article 3d of Implementing Regulation (EU) 2019/1842 for investments implementing other measures which will lead to greenhouse gas emission reductions equivalent to those recommended by the audit report or by the certified Energy Management System for the installation concerned.
+2.The conditions set out in paragraph 1, points (a), (b) and (c), shall apply also to operators that are not subject to the obligation to conduct an energy audit provided that their energy audit is compliant with the minimum criteria set out in Annex VI to Directive (EU) 2023/1791.
+3.Alternatively to paragraphs 1 and 2, an operator shall receive financial support from the Fund provided that the operator demonstrates a legal commitment within the meaning of Article 3d of Implementing Regulation (EU) 2019/1842 made for investments to achieve the targets and milestones referred to in a climate neutrality plan and which is at least equivalent to the support amount applied for under this Regulation.
+Article 8
+Application for support, processing of applications and competent authority assessments
+1.The operator of an installation producing goods that are eligible for financial support may submit an application for such support from the Fund by 31 March 2028. That application shall be submitted to the competent authority of the Member State where the operator of the installation is established and cover the two years of application of the Fund.
+2.An application submitted pursuant to paragraph 1 shall be accompanied by the following specific elements:
+(a)for all operators, a production data report complementing the verified activity level reports for 2026 and 2027 submitted pursuant to Article 3 of Implementing Regulation (EU) 2019/1842, providing the necessary production data to verify the eligibility for financial support;
+(b)for operators seeking to meet the conditionality requirements set out in Article 7(1) or (2):
+(i) a verification report confirming during the verification of the annual activity level reports for the years 2026 and 2027 in accordance with Article 3 of Implementing Regulation (EU) 2019/1842 that the conditions set out in Article 7(1) or (2) have been met;
+(ii) if applicable, documentary evidence of the legal commitment within the meaning of Article 3d of Implementing Regulation (EU) 2019/1842 for the investment referred to in Article 7(1), point (c), and the documentary evidence that the investment will lead to greenhouse gas emission reductions equivalent to those recommended by the audit report or by the certified Energy Management System for the installation concerned.
+(c)for operators seeking to meet the conditionality requirements of Article 7(3) both of the following:
+(i) a verified climate-neutrality report in accordance with Article 3b of Implementing Regulation (EU) 2019/1842 that has been verified as satisfactory in accordance with Commission Implementing Regulation (EU) 2018/2067 26 ; or for operators submitting a climate neutrality plan for the first time, a climate neutrality plan for their activities covered by Directive 2003/87/EC in accordance with Implementing Regulation (EU) 2023/2441;
+(ii) documentary evidence of the legal commitment within the meaning of Article 3d of Implementing Regulation (EU) 2019/1842 for the investment referred to in Article 7(3), and the documentary evidence that the investment leads to the achievement of the targets and milestones referred to in the most recent climate neutrality plan in accordance with Implementing Regulation (EU) 2023/2441.
+3.The Commission is empowered to adopt implementing acts to further define details related to procedural requirements, the documents and evidence submitted as part of the application procedure to be eligible for financial support by the Fund, particularly the minimum contents to be submitted as part of the production data report and the documentary evidence of the legal commitment within the meaning of Article 3d of Implementing Regulation (EU) 2019/1842. Those implementing acts shall be adopted in accordance with the examination procedure referred to in Article 15(2).
+4.A competent authority shall assess the documentation provided in accordance with paragraph 2. Based on that assessment, the competent authority shall decide whether the conditions set out in Articles 6 and 7 have been met. It shall recover funds if the conditions were not met and bring legal proceedings where necessary in that regard.
+5.By 30 June 2028, a competent authority shall provide to the Commission a list identifying all the applicants that meet the conditions as determined in accordance with paragraph 4, their respective installations and the level of support calculated in accordance with Article 9.
+Article 9
+Calculation of support by the competent authorities
+1.The competent authorities shall assess and calculate the amount of financial support to be provided to eligible operators, for the production of each of the goods listed in the Annex, based on the amount of free allocation phased out. That amount of allowances shall be calculated in accordance with Article 16(8) of Delegated Regulation (EU) 2019/331 and take into account the Decision the Commission has adopted in accordance with Article 23(4) of that Regulation. To obtain the financial value of the support, the amount of free allowances shall be adjusted to the share of production (in volume) of goods listed in the Annex, and multiplied with the annual average of the closing prices of EU E
+2.The total financial support granted by the Fund to all final beneficiaries shall not exceed the resources of the Fund referred to in Article 3(2), reduced by the administrative costs incurred by the Commission pursuant to Article 3(5).
+Article 10
+Disbursement decision by the Commission
+1.Upon receipt of the list referred to in Article 8(5), the Commission shall perform the following actions:
+(a)review the calculation performed by the competent authorities pursuant to Article 9(1);
+(b)assess the inclusion of each operator and installation in the list;
+(c)assess the information submitted in accordance with Article 8(2);
+(d)determine the individual amounts of financial support to be awarded to each final beneficiary.
+2.The Commission shall proportionally reduce the amount of support to be awarded to each final beneficiary in accordance with Article 9(1) where it is needed to comply with Article 9(2).
+3.Based on its assessment in accordance with paragraph 1, the Commission shall adopt an implementing decision on the financial support to the operators upon availability of the resources of the Fund. That decision shall constitute a financing decision within the meaning of Article 110 of Regulation (EU, Euratom) 2024/2509. The notification of that decision to the competent authority concerned shall constitute an individual legal commitment within the meaning of Regulation (EU, Euratom) 2024/2509.
+4.The decision referred to in paragraph 3 shall set out the total amount to be transferred to the respective Member State, the list of the final beneficiaries of financial support and the amount for each recipient.
+Article 11
+Disbursement of financial support
+1.Following the adoption of the decision referred to in Article 10(3), the Commission shall disburse the total amount set out in that decision to the competent authorities. By derogation from Article 196(3) of Regulation (EU, Euratom) 2024/2509, the Commission may also pay support with respect to investments and productions even if already completed.
+2.Within one month upon receipt of the funding from the Commission and at the latest on 31 December 2029, the competent authorities shall disburse the financial support awarded by the Commission under the decisions referred to in Article 10(3) to the final beneficiaries and shall inform the Commission immediately after the disbursements are made.
+Article 12
+Protection of the financial interests of the Union
+1.Member States, as beneficiaries of funds under the Fund, shall take all the appropriate measures to protect the financial interests of the Union and to ensure that the use of the financial allocations complies with applicable Union and national law, in particular regarding the prevention, detection and tackling of fraud, corruption, conflicts of interests and all other irregularities affecting the financial interests of the Union. To that effect, Member States shall take any necessary measures for the recovery of amounts wrongly paid. Member States shall rely on their national budget management, control and recovery systems.
+2.The decision referred to in Article 10(3) shall provide for the following obligations on the Member States:
+(a)that Member States take appropriate measures to prevent, detect and tackle fraud, corruption, conflicts of interests and all other irregularities affecting the financial interest of the Union within the meaning of Article 61 of Regulation (EU, Euratom) 2024/2509 and to take legal action to recover funds that have been unduly spent or misappropriated;
+(b)that Member States maintain data as regards the name of all final beneficiaries of the financial allocations, their VAT registration numbers or tax identification numbers and amount of the financial allocations from the Fund;
+(c)to expressly authorise that the Commission, OLAF, the Court of Auditors and, in respect of those Member States participating in enhanced cooperation pursuant to Regulation (EU) 2017/1939, the EPPO can exert their rights as provided for in Article 129(1) of Regulation (EU, Euratom) 2024/2059 and to impose obligations on all final beneficiaries of the financial support to expressly authorise the Commission, OLAF, the Court of Auditors and, where applicable, EPPO to exert their rights as provided for in Article 129(1) of Regulation (EU, Euratom) 2024/2059 and to impose similar obligations on all final beneficiaries of funds disbursed;
+(d)that Member States shall keep records in accordance with Article 133 of Regulation (EU, Euratom) 2024/2509;
+(e)to expressly authorise that the Commission has the right to reduce the financial support under the Fund proportionately and recover any amount due to the Union budget, in cases of fraud, corruption, conflict of interests or any other irregularity affecting the financial interests of the Union.
+3.When deciding on the amount of the recovery and reduction the Commission shall respect the principle of proportionality and shall take into account the seriousness of the concerned fraud, corruption, conflict of interests and other irregularity affecting the financial interests of the Union, or of a breach of an obligation. The Commission shall give the Member State the opportunity to present its observations before the reduction is made.
+Article 13
+Obligations of final beneficiaries
+1.The final beneficiaries shall be responsible of the data submitted under this Regulation by them and keep complete and accurate records of the activities referred to in Article 7 substantiating their submissions.
+2.To this end, the Commission is empowered to adopt implementing acts to specify the responsibilities and monitoring obligations of the final beneficiaries, including by specifying the data retention period. Those implementing acts shall be adopted in accordance with the examination procedure referred to in Article 15(2).
+3.The final beneficiaries shall cooperate with the Commission or the relevant competent authority when they perform audits, evaluations, and monitoring activities. Upon request, the final beneficiaries shall timely provide the information and documents referred to in paragraph 1 to the competent authorities and to the Commission.
+Article 14
+Exercise of the delegation
+1.The power to adopt delegated acts is conferred on the Commission subject to the conditions laid down in this Article.
+2.The power to adopt delegated acts referred to in Article 3(6), Article 4(2) and Article 6(3) shall be conferred on the Commission for a period of five years ending on [OP please insert the date: five years after the entry into force of this Regulation].
+3.The delegation of power referred to in Article 3(6), Article 4(2) and Article 6(3) may be revoked at any time by the European Parliament or by the Council. A decision to revoke shall put an end to the delegation of the power specified in that decision. It shall take effect on the day following the publication of the decision in the Official Journal of the European Union or at a later date specified therein. It shall not affect the validity of any delegated acts already in force.
+4.Before adopting a delegated act, the Commission shall consult experts designated by each Member State in accordance with the principles laid down in the Interinstitutional Agreement of 13 April 2016 on Better Law-Making.
+5.As soon as it adopts a delegated act, the Commission shall notify it simultaneously to the European Parliament and to the Council.
+6.A delegated act adopted pursuant to Article 3(6), Article 4(2) and Article 6(3) shall enter into force only if no objection has been expressed either by the European Parliament or by the Council within a period of one month of notification of that act to the European Parliament and the Council or if, before the expiry of that period, the European Parliament and the Council have both informed the Commission that they will not object. That period shall be extended by one month at the initiative of the European Parliament or of the Council.
+Article 15
+Implementing powers
+1.The Commission shall be assisted by the Committee established by Article 44 of Regulation (EU) No 2018/1999 of the European Parliament and of the Council 27 . That committee shall be a committee within the meaning of Regulation (EU) No 182/2011.
+2.Where reference is made to this paragraph, Article 5 of Regulation (EU) No 182/2011 shall apply.
+Article 16
+Entry into force
+This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.
+This Regulation shall be binding in its entirety and directly applicable in all Member States.
+Done at Brussels,
+For the European Parliament For the Council
+The President The President
+LEGISLATIVE FINANCIAL AND DIGITAL STATEMENT
+1.FRAMEWORK OF THE PROPOSAL/INITIATIVE3
+1.1.Title of the proposal/initiative3
+1.2.Policy area(s) concerned3
+1.3.Objective(s)3
+1.3.1.General objective(s)3
+1.3.2.Specific objective(s)3
+1.3.3.Expected result(s) and impact3
+1.3.4.Indicators of performance3
+1.4.The proposal/initiative relates to:4
+1.5.Grounds for the proposal/initiative4
+1.5.1.Requirement(s) to be met in the short or long term including a detailed timeline for roll-out of the implementation of the initiative4
+1.5.2.Added value of EU involvement (it may result from different factors, e.g. coordination gains, legal certainty, greater effectiveness or complementarities). For the purposes of this section 'added value of EU involvement' is the value resulting from EU action, that is additional to the value that would have been otherwise created by Member States alone.4
+1.5.3.Lessons learned from similar experiences in the past4
+1.5.4.Compatibility with the multiannual financial framework and possible synergies with other appropriate instruments5
+1.5.5.Assessment of the different available financing options, including scope for redeployment5
+1.6.Duration of the proposal/initiative and of its financial impact6
+1.7.Method(s) of budget implementation planned6
+2.MANAGEMENT MEASURES8
+2.1.Monitoring and reporting rules8
+2.2.Management and control system(s)8
+2.2.1.Justification of the budget implementation method(s), the funding implementation mechanism(s), the payment modalities and the control strategy proposed8
+2.2.2.Information concerning the risks identified and the internal control system(s) set up to mitigate them8
+2.2.3.Estimation and justification of the cost-effectiveness of the controls (ratio between the control costs and the value of the related funds managed), and assessment of the expected levels of risk of error (at payment & at closure)8
+2.3.Measures to prevent fraud and irregularities9
+3.ESTIMATED FINANCIAL IMPACT OF THE PROPOSAL/INITIATIVE10
+3.1.Heading(s) of the multiannual financial framework and expenditure budget line(s) affected10
+3.2.Estimated financial impact of the proposal on appropriations12
+3.2.1.Summary of estimated impact on operational appropriations12
+3.2.1.1.Appropriations from voted budget12
+3.2.1.2.Appropriations from external assigned revenues17
+3.2.2.Estimated output funded from operational appropriations22
+3.2.3.Summary of estimated impact on administrative appropriations24
+3.2.3.1. Appropriations from voted budget24
+3.2.3.2.Appropriations from external assigned revenues24
+3.2.3.3.Total appropriations24
+3.2.4.Estimated requirements of human resources25
+3.2.4.1.Financed from voted budget25
+3.2.4.2.Financed from external assigned revenues26
+3.2.4.3.Total requirements of human resources26
+3.2.5.Overview of estimated impact on digital technology-related investments28
+3.2.6.Compatibility with the current multiannual financial framework28
+3.2.7.Third-party contributions28
+3.3.Estimated impact on revenue29
+4.Digital dimensions29
+4.1.Requirements of digital relevance30
+4.2.Data30
+4.3.Digital solutions31
+4.4.Interoperability assessment31
+4.5.Measures to support digital implementation32
+1.FRAMEWORK OF THE PROPOSAL/INITIATIVE
+1.1.Title of the proposal/initiative
+Proposal for a Regulation of the European Parliament and of the Temporary Decarbonisation Fund
+1.2.Policy area(s) concerned
+Climate Action
+1.3.Objective(s)
+1.3.1.General objective(s)
+Regulation (EU) 2021/1119 of the European Parliament and of the Council (‘the European Climate Law’) sets a legally binding economy-wide target of net zero greenhouse gas emissions at the latest by 2050, and an intermediate target of reducing net greenhouse gas emissions by at least 55% by 2030, compared to 1990 levels.
+In July 2025 the European Commission proposed a target of a 90% reduction in net greenhouse gas (GHG) emissions by 2040, compared to 1990 levels. This proposed target takes full account of the current economic, security and geopolitical landscape in alignment with the EU Competitiveness Compass, Clean Industrial Deal and Affordable Energy Action Plan. It aims to provide the necessary predictability and stability for investments in the EU's clean energy transition and for driving industrial competitiveness.
+1.3.2.Specific objective(s)
+Specific objective
+The Carbon Border Adjustment Mechanism (CBAM) addresses carbon leakage risks for the sectors covered by the mechanism. However, there is a risk that the production of some goods might bear a particularly elevated remaining carbon leakage risk. Decarbonisation investments can help reduce the exposure of these operators to such remaining carbon leakage risks in the mid- and long-term.
+The objective of the present proposal is to temporarily support, during the production years 2026 and 2027, operators producing goods associated with a particularly elevated remaining carbon leakage risk to effectively invest in decarbonisation measures.
+1.3.3.Expected result(s) and impact
+Specify the effects which the proposal/initiative should have on the beneficiaries/groups targeted.
+Effective carbon costs for ETS operators are expected to increase as free allocation is reduced, notably for operators covered by the CBAM factor. This increased price signal for decarbonisation is expected to promote cost-effective GHG emission reductions. However, the production of some goods might bear an increased remaining risk of carbon leakage. which is not fully prevented by the CBAM.
+The proposed initiative will provide temporary financial support to operators facing a remaining carbon leakage risk for accelerating investments in decarbonisation measures. It will thereby address this remaining carbon leakage risk.
+1.3.4.Indicators of performance
+Specify the indicators for monitoring progress and achievements.
+Financial support for decarbonisation provided to operators facing a remaining carbon leakage risk
+Demonstration of implementations of recommendations of an energy audit
+Decarbonisation investments confirmed
+1.4.The proposal/initiative relates to:
+ a new action
+ a new action following a pilot project / preparatory action 28
+ the extension of an existing action
+ a merger or redirection of one or more actions towards another/a new action
+1.5.Grounds for the proposal/initiative
+1.5.1.Requirement(s) to be met in the short, medium or long term including a detailed timeline for roll-out of the implementation of the initiative
+The decrease in emissions under the EU ETS in recent years was largely driven by the electricity sector. Emissions in the energy intensive industries, on the other hand, experienced only slight decreases, which were also partly explained by decreases in output. The availability and affordability of abatement options in these sectors is not yet at the level of the power sector. This points to a need for investment into decarbonisation measures in these sectors because these investments are needed to achieve EU climate targets and reduce the risk of carbon leakage.
+Planned timeline for implementation:
+- by 31 March 2028, operators of an installation producing eligible goods may submit an application for support from the Fund. The application is to include relevant production data for the years 2026 and 2027;
+- by 31 March 2028, Member States transfer an amount corresponding to 25% of their CBAM revenues for 2026 to the Commission;
+- by 30 June 2028, competent authorities provide to the Commission a list of all applicants meeting the eligibility and conditionality requirements, their respective installations, and the level of support calculated, together with relevant documentation on all these aspects;
+- by 31 March 2029, Member States transfer an amount corresponding to 25% of their CBAM revenues for 2027 to the Commission;
+- the Commission reviews calculations and information submitted by Member States’ competent authorities, issues a disbursement decision, and transfers applicable monetary amounts to the competent authorities;
+- by 31 December 2029, competent authorities disburse support to the final beneficiaries;
+- by 31 December 2030, the Commission present a report on the Fund implementation and support provided to the European Parliament and Council.
+1.5.2.Added value of EU involvement (it may result from different factors, e.g. coordination gains, legal certainty, greater effectiveness or complementarities). For the purposes of this section 'added value of EU involvement' is the value resulting from EU action, that is additional to the value that would have been otherwise created by Member States alone.
+Reasons for action at EU level (ex-ante):
+This initiative is strongly linked to the pricing of carbon applied at EU level via the EU Emissions Trading System (EU-ETS) which applies to the production of carbon-intensive products in the EU. The proposed fund would support operators covered by the EU Emissions Trading System that face a remaining risk of carbon leakage risk due to the reduction of free allocation of EU-ETS emission allowances over the coming years. For all these reasons, it is for the EU to take action.
+Expected generated EU added value (ex-post):
+The proposed temporary decarbonisation investment support will apply to operators across the EU based on objective criteria. This will enable the fund to precisely target the production of goods with an increased level of remaining carbon leakage risk in relation to the EU-ETS. Such targeted support will ensure the effectiveness of the measure.
+1.5.3.Lessons learned from similar experiences in the past
+The proposed mechanism for disbursement of the fund builds on positive experiences from other existing EU funding instruments, notably the Modernisation Fund (MF), which are built on a two-step system for the disbursal, i.e. in which the Commission (or another implementing EU level implementing agency) first transfers the amounts corresponding to approved investments to the national competent authorities. The latter then further disburse amounts to the final beneficiaries. In the MF, this disbursement system has proven successful, since (a) it brings a low level of administrative burden at the EU level, and (b) national competent authorities can follow applicable national rules for the disbu
+1.5.4.Compatibility with the multiannual financial framework and possible synergies with other appropriate instruments
+This proposal is outside the multiannual financial framework (MFF). The possible good practice is looked for in the Modernisation Fund model, however it is proposed that this fund is channelled via the EU budget structure.
+1.5.5.Assessment of the different available financing options, including scope for redeployment
+Taking into consideration that the fund will have its own budget (revenue from the fund) and that part of it is foreseen to cover the administrative costs, the current proposed model seems the most appropriate, but the preparation phase. For this part the staff costs should be covered from redeployment under heading 7 within the implementing services until the revenue inflow.
+1.6.Duration of the proposal/initiative and of its financial impact
+ limited duration
+– in effect from 2026 to 2031
+– financial impact from 2026 to 2030 for commitment appropriations and from 2026 to 2031 for payment appropriations.
+ unlimited duration
+–Implementation with a start-up period from YYYY to YYYY,
+–followed by full-scale operation.
+1.7.Method(s) of budget implementation planned [Details of budget implementation methods and references to the Financial Regulation may be found on the BUDGpedia site: https://myintracomm.ec.europa.eu/corp/budget/financial-rules/budget-implementation/Pages/implementation-methods.aspx ]
+ Direct management by the Commission
+– by its departments, including by its staff in the Union delegations;
+– by the executive agencies
+ Shared management with the Member States
+ Indirect management by entrusting budget implementation tasks to:
+– third countries or the bodies they have designated
+– international organisations and their agencies (to be specified)
+– the European Investment Bank and the European Investment Fund
+– bodies referred to in Articles 70 and 71 of the Financial Regulation
+– public law bodies
+– bodies governed by private law with a public service mission to the extent that they are provided with adequate financial guarantees
+– bodies governed by the private law of a Member State that are entrusted with the implementation of a public-private partnership and that are provided with adequate financial guarantees
+– bodies or persons entrusted with the implementation of specific actions in the common foreign and security policy pursuant to Title V of the Treaty on European Union, and identified in the relevant basic act
+–bodies established in a Member State, governed by the private law of a Member State or Union law and eligible to be entrusted, in accordance with sector-specific rules, with the implementation of Union funds or budgetary guarantees, to the extent that such bodies are controlled by public law bodies or by bodies governed by private law with a public service mission, and are provided with adequate financial guarantees in the form of joint and several liability by the controlling bodies or equivalent financial guarantees and which may be, for each action, limited to the maximum amount of the Union support.
+If more than one budget implementation method is indicated, please provide details in the ‘Comments’ section.
+Comments
+N/A
+2.MANAGEMENT MEASURES
+2.1.Monitoring and reporting rules
+Specify frequency and conditions.
+The monitoring and reporting rules at the operational level of implementation of the regulation are described in Article 4 of the regulation.
+As to the administrative/budget monitoring and reporting rules, the usual direct management obligations under Financial Regulation will apply, e.g. establishment of the recovery orders.
+2.2.Management and control system(s)
+2.2.1.Justification of the budget implementation method(s), the funding implementation mechanism(s), the payment modalities and the control strategy proposed
+The operational budget implementation mechanism, payment modalities are described in Article 3 and 4 of the regulation.
+The control strategy will apply the set of controls stemming from the Financial Regulation for the direct management.
+2.2.2.Information concerning the risks identified and the internal control system(s) set up to mitigate them
+This proposal does not bring about new significant controls/risks that would not be covered by an existing internal control framework. No specific measures beyond the application of the Financial Regulation have been envisaged.
+2.2.3.Estimation and justification of the cost-effectiveness of the controls (ratio between the control costs and the value of the related funds managed), and assessment of the expected levels of risk of error (at payment & at closure)
+It is expected that the cost of controls as to the part implemented by the Commission should remain stable, mostly because of the ratio of relatively low involved resources and high amounts to redistribute.
+The levels of risk of error (at payment & at closure) are also estimated at not more than 2%. As such there is no ex-post control foreseen, but rather the enforced ex-ante verification.
+2.3.Measures to prevent fraud and irregularities
+Specify existing or envisaged prevention and protection measures, e.g. from the anti-fraud strategy.
+DG CLIMA’s and DG TAXUD’s fraud prevention and detection strategy will apply.
+More details, specific to this legal act, are provided in Article 12 of the regulation.
+3.ESTIMATED FINANCIAL IMPACT OF THE PROPOSAL/INITIATIVE
+3.1.Heading(s) of the multiannual financial framework and expenditure budget line(s) affected
+Please insert as many budget lines as needed in the two tables below.
+·Existing budget lines
+In order of multiannual financial framework headings and budget lines.
+Heading of multiannual financial framework
+Budget line
+Type of expenditure
+Contribution
+Number
+Diff./Non-diff. 29
+from EFTA countries 30
+from candidate countries and potential candidates 31
+From other third countries
+other assigned revenue
+20 02 01 01 Contract Staff
+Non-diff.
+NO
+NO
+NO
+NO
+20 02 06 04 Studies and consultations
+Non-diff.
+NO
+NO
+NO
+NO
+·New budget lines requested
+In order of multiannual financial framework headings and budget lines.
+Heading of multiannual financial framework
+Budget line
+Type of expenditure
+Contribution
+Number
+Diff./Non-diff.
+from EFTA countries
+from candidate countries and potential candidates
+from other third countries
+other assigned revenue
+Temporary Decarbonisation Fund [budget line to be defined in the next MFF nomenclature]
+Diff.
+NO
+NO
+NO
+YES
+Temporary Decarbonisation Fund – administrative expenditure [budget line to be defined in the next MFF nomenclature]
+Non-diff.
+NO
+NO
+NO
+YES
+3.2.Estimated financial impact of the proposal on appropriations
+3.2.1.Summary of estimated impact on operational appropriations
+– The proposal/initiative does not require the use of operational appropriations
+– The proposal/initiative requires the use of operational appropriations, as explained below
+3.2.1.1.Appropriations from voted budget
+EUR million (to three decimal places)
+Heading of multiannual financial framework
+7
+‘Administrative expenditure’

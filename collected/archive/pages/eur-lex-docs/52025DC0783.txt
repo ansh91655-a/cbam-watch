@@ -1,0 +1,423 @@
+[주소] https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025DC0783
+[받은 곳] http://publications.europa.eu/resource/celex/52025DC0783
+
+IMMC.COM%282025%29783%20final.ENG.xhtml.1_EN_ACT_part1_v3.docx
+EUROPEAN COMMISSION
+Brussels, 16.12.2025
+COM(2025) 783 final
+REPORT FROM THE COMMISSION TO THE EUROPEAN PARLIAMENT AND THE COUNCIL
+on the application of the Regulation on the Carbon Border Adjustment Mechanism
+List of abbreviations
+CBAM
+Carbon Border Adjustment Mechanism
+CCP
+Common Central Platform
+CN code
+Combined Nomenclature code
+CO2-eq
+Carbon dioxide equivalent
+COP
+Conference of the Parties (of the UNFCCC)
+EEA
+European Economic Area
+EF
+Emission factor
+EU ETS
+EU Emissions Trading System
+GHG
+Greenhouse gas
+ICC
+Indirect cost compensation
+IFCMA
+Inclusive Forum on Carbon Mitigation Approaches (OECD flagship initiative)
+LDCs
+Least Developed Countries
+MRV
+Monitoring, Reporting and Verification
+NCA
+National Competent Authority
+PPA
+Power Purchase Agreement
+SEE
+Specific Embedded Emissions
+SME
+Small and Medium-sized Enterprise
+UNFCCC
+United Nations Framework Convention on Climate Change
+WTO
+World Trade Organization
+Contents
+List of abbreviations
+Executive summary
+1. Introduction
+2. State of play: the CBAM at the end of the transitional period
+2.1. The CBAM, carbon pricing and fora
+2.2. CBAM Transitional Period
+3. Working with our partners
+3.1 Engaging with non-EU countries
+3.2 Impact of the CBAM on non-EU countries
+3.3. Facilitating CBAM Implementation for third country producers
+3.4. Applying the CBAM in the European Economic Area (EEA)
+4. Making the CBAM more effective and efficient
+4.1 Introduction
+4.2. Downstream goods
+4.3 CBAM avoidance: circumvention & other practices to unduly lower the CBAM liability
+4.4 Electricity
+4.4.1 Electricity imports from Western Balkan countries and Ukraine
+4.4.2 Electricity imports from the UK
+4.5 Carbon leakage
+4.6 Default carbon prices
+4.7 Methodology to calculate embedded indirect emissions
+4.8 Free allocation adjustment
+4.9 Streamlining administrative processes
+5 Outlook: Extending and completing the CBAM: Step 2
+5.1 Indirect emissions
+5.2 Transport emissions
+5.3 Extension of the CBAM scope to other sectors
+5.3.1 Precursor goods
+5.3.2 Additional goods
+5.3.3 Downstream goods
+6 Conclusions, next steps
+Executive summary
+This report reviews the application of the EU Carbon Border Adjustment Mechanism (CBAM) during the transitional period from 1 October 2023 to the end of 2025. It evaluates the CBAM’s contribution to addressing carbon leakage and fostering global carbon pricing, and examines its governance, administration, enforcement and its international dimension. The report also sets out the implementation roadmap and accompanying measures required to secure an efficient and effective regime for the definitive application of the CBAM from 2026 onwards.
+During its transitional period in the years 2023-2025, the CBAM has promoted the monitoring and reporting of embedded emissions in imported goods from all over the world.
+The prospect of the definitive period of the CBAM starting on 1 January 2026 has started to incentivise a decrease in embedded emissions imported into the EU. It has also been a catalyst for carbon pricing through its design, which includes the deduction of a carbon price effectively paid from the CBAM financial adjustment. This has promoted a growing trend worldwide in the introduction of enhanced emission trading systems and carbon taxes. The CBAM has also provided a unique opportunity worldwide for greater political debate on climate action.
+During this transitional period, the Commission has actively engaged in working towards coordinated action on carbon border measures in relevant multilateral fora working on carbon clubs and coalitions of like-minded actors. It has also engaged with our trading partners, and international organisations (including the WTO) and in international fora to present and explain the CBAM's objectives, design and implementation features.
+There are now some 80 carbon pricing instruments implemented in 95 jurisdictions, with their coverage reaching about 28% of global greenhouse gas emissions in 2025 1 . To account for the carbon price effectively paid in the CBAM sectors under these carbon pricing instruments, the Commission will seek feedback from stakeholders on the Implementing Act setting the rules for the deduction of a carbon price in Q1 2026 before its adoption.
+Worldwide, more and more voluntary carbon pricing schemes are being developed. This sends a strong positive signal to both private and public sectors on the benefits of carbon pricing to reach climate objectives. The EU is also increasing the stringency of its climate policies. In July 2025, the Commission proposed an amendment to the European Climate Law to set an EU climate target for 2040 to reduce the EU’s net greenhouse gas (GHG) emissions by 90% relative to 1990 by 2040, as set out in the Commission Political Guidelines for 2024-2029. In November 2025, Member States agreed on a general approach in the Environment Council to a legally binding headline 2040 target of 90%, with a domestic
+The EU engages regularly with international partners and stakeholders who have an interest in the functioning of the EU's CBAM or have expressed concerns about its design or practical aspects of its implementation. It also actively promotes and finances decarbonisation projects in third countries. Spurred by the lessons learned during the CBAM’s transitional period, the Commission will continue its support to countries in their decarbonisation efforts, including on CBAM implementation, as outlined in the EU global climate and energy vision as well as on the Global Europe proposal. The modelling results presented in this report show that the impact of CBAM on least developed countries (LDCs),
+The CBAM will be introduced gradually over a period of 8 years from 2026 to 2034 in parallel with the phasing out of the free allowances under the EU ETS. This will also give time to producers of CBAM goods inside and outside the EU to continue with their decarbonisation and to third countries to deploy carbon pricing systems.
+Based on the lessons learned during the transitional period and the feedback gathered from stakeholders, the Commission has also decided to employ a two-step approach for strengthening and extending the CBAM over the coming years.
+Step 1 in 2026–2027, with proposals at the end of 2025 on downstream extension, strengthening CBAM through anti-circumvention rules, amendment to rules for calculating embedded emissions of electricity and a temporary support mechanism for the decarbonisation of sectors at high remaining risk of carbon leakage, and in 2026 an implementing act on setting the rules for the deduction of a carbon price effectively paid in third countries This package aims to make the CBAM more effective by mitigating the risk of downstream carbon leakage, strengthening the enforcement of the mechanism, deterring avoidance practices, and incentivising decarbonisation of electricity grids in third countries.
+Step 2 provides for a report to follow (in 2027) with an evaluation of ways to extend the scope further (i) to indirect emissions from further CBAM goods (iron and steel, aluminium and hydrogen) and (ii) to other sectors.
+1.Introduction
+Context and purpose of this report
+The analysis included in this report reviews the delivery during the transitional period, evaluates the CBAM’s contribution to addressing carbon leakage and fostering global carbon pricing, and examines its governance, administration, enforcement and its international dimension. The report also sets out the implementation roadmap and accompanying measures required to secure an efficient and effective definitive regime for the application of the CBAM from 2026 onwards.
+The report thereby also responds to the requirements of Article 30(2) of the CBAM Regulation 2 to assess relevant aspects related to the Regulation, such as:
+·extending the scope of the Regulation to (i) embedded indirect emissions from further CBAM goods (see Chapter 5.1), (ii) embedded emissions in the transport of CBAM goods and transportation services (see Chapter 5.2), (iii) additional goods (see Chapter 5.3.2), and (iv) other input materials (precursors) for CBAM goods (see Chapter 5.3.1);
+·the relevant criteria to be applied in the context of the extended scope;
+·technical requirements for calculating embedded emissions for other potential CBAM goods;
+·international discussions regarding climate action (see Chapters 2.1 and 3.1) and the impact of the CBAM on developing countries, in particular on the least developed countries (see Chapter 3.2);
+·the governance of the CBAM (see Chapter 2);
+·the methodology for the calculation of indirect emissions (see Chapter 4.6).
+During the transitional period, importers have been required to report quarterly the greenhouse gas emissions embedded in CBAM goods placed on the EU market, without any financial obligations. The objective has been to generate reliable data, refine methodologies, build administrative capacity and prepare the definitive system for the CBAM.
+Based on the CBAM data collected in the transitional registry, we have identified a substantial increase in compliance with the CBAM reporting rules. 95% of all importers importing over 50 tonnes of CBAM goods annually have been reporting actual embedded emissions in Q3 2025 instead of default values.
+This is a huge increase from Q3 2023 when the CBAM’s transitional rules entered into force and only 11% of importers reported actual emissions. Even for smaller quantity imports that have by now been exempted (following the omnibus legislation adopted by the European Parliament and the European Council), over 50% of importers have been reporting the actual embedded emissions.
+Now it is time to move to stage two to verify these emissions properly.
+The CBAM has contributed to a trend in the uptake of carbon pricing and emissions monitoring systems worldwide. Since the CBAM entered into application on 1 October 2023, the number of carbon pricing instruments in operation worldwide has risen to 80 instruments implemented in 95 jurisdictions, with their coverage reaching about 28% of global greenhouse gas emissions in 2025 3 . This also shows that countries take fight against climate change more seriously.
+Moreover, an increasing number of countries recognise that carbon leakage is a risk for all energy-intensive industries and several jurisdictions are exploring or implementing carbon border measures. These range from developed economies (like Australia, Canada, Taiwan and the UK, ) to middle income countries and developing countries, like Brazil and Türkiye.
+There are also several multilateral initiatives focusing on this issue. The Open Coalition on Compliance Carbon Markets that Brazil proposed at COP30 Club is the latest, following the G7 Climate Club and the OECD’s Inclusive Forum on Carbon Mitigation Approaches (IFCMA).
+The CBAM’s potential to incentivise emission reductions for products placed in the EU market will only fully unfold when the mechanism applies definitively as of 2026. Nonetheless, there are already many signs that in the period since the introduction of CBAM, firms with cleaner production have sustained or improved their market positions even before its entry into application, while more carbon-intensive producers are facing pressure to adapt 4 . Such results illustrate that the CBAM contributes to incentives for industrial decarbonisation and competitiveness gains for cleaner operators.
+Based on the lessons learned during the transitional period, in 2025 the EU adopted a targeted simplification package to streamline the CBAM governance and reduce the administrative burden while preserving environmental integrity. Its key elements include:
+·a 50-tonne de minimis threshold that exempts roughly 90% of importers yet maintains coverage of 99% of embedded emissions;
+·smoother first-year compliance (including adjusted certificate-holding requirements);
+·clarified authorisation and representation; and
+·reinforced customs-CBAM data integration.
+Taken together, these measures are expected to strongly reduce the administrative burden associated with the CBAM and simplify its application.
+From 2026, the financial obligations under CBAM will be phased in gradually – in parallel with and proportionate to – the phaseout of free allocation under the EU ETS. This will ensure a predictable and balanced transition for operators and administrations. In line with the CBAM Regulation, the Commission intends to proceed in two steps going forward:
+Step 1 in 2026–2027, with proposals at the end of 2025 on the following aspects: downstream extension, anti-circumvention rules and rules for calculating the embedded emissions of electricity, and a temporary solution to support sectors at carbon leakage, as well as, in 2026, an implementing act on setting the rules for the deduction of a carbon price effectively paid in third countries
+Step 2: in 2027 the Commission will consider the possibility to provide for further extensions to other downstream products and other ETS sectors such as chemicals, indirect emissions.
+2.State of play: the CBAM at the end of the transitional period
+This section highlights how the CBAM’s guidance, discussion and outreach created a mutual-learning dynamic, in parallel to the global uptake of carbon pricing and improved embedded emissions measurement. It also documents deeper cooperation with third countries, broader awareness of carbon leakage risks, and the emergence of plans in several jurisdictions to design their own carbon border measures.
+2.1. The CBAM, carbon pricing and fora
+The CBAM has promoted and facilitated the monitoring and reporting of embedded emissions in goods worldwide as well as started to incentivise a decrease in embedded emissions imported into the EU through numerous channels.
+Firstly, to facilitate compliance with the reporting rules, the CBAM moves from an installation-based emissions accounting system (as used in the EU Emissions Trading System - EU ETS) to a product-level methodology.
+Under the EU ETS, emissions are monitored and verified at the level of an installation – typically a plant or production site – focusing on the total direct emissions generated within its boundaries. This approach is suitable for domestic operators subject to EU law, but it could not be directly applied to imports, where the EU has no jurisdiction over entire industrial facilities.
+The CBAM therefore required a different methodology that could assign embedded emissions to specific goods (such as a tonne of steel, aluminium, or cement) placed on the EU market. The Commission developed a product-based emissions accounting framework that mirrors international practices like product carbon footprinting and lifecycle assessment methodologies but adapts them to ensure equivalence with the production routes and emissions coverage of the EU ETS. Rather than calculating full lifecycle impacts (from raw material extraction to disposal), the CBAM method focuses on the product's emissions from energy use and industrial processes up to the point the product leaves the production fa
+To make this practical, the CBAM methodology (i) defines clear system boundaries for each product covered based on its production route (e.g. blast furnace steel, clinker-to-cement), (ii) establishes default emission factors, (iii) permits the use of actual measured data where robust monitoring exists (while also providing the possibility to use default values), and (iv) requires third-party verification with a progressive alignment to the EU ETS monitoring, reporting and verification (MRV) standards over time. In short, this method of CBAM reporting allows for the calculation of a comparable, product-based carbon metric. This enables equal treatment between EU and foreign producers of CBAM 
+Additionally, to support relevant stakeholders in complying with the CBAM, the Commission has put in place outreach and communication campaigns as of 2023 (see below).
+These efforts have borne results in compliance with the CBAM, leading to an increase in the reporting of actual emissions.
+At the start of the transitional period (Q4 2023–Q2 2024), almost all importers were reporting default values. Only about 8-11% of importers reported actual emission values. The remaining 89-92% were reporting ‘other’ – meaning default values (or ‘actual values not available’) 5 .
+We then observed a shift in Q3 2024. The share of imports reported with actual values jumped to 46%. It stayed at 46% in Q4 2024 and climbed further to 52% in Q1 2025 and 53% in Q2 2025. In other words, in less than a year the system went from mostly default values to about half of all entries being declared with actual, product-level numbers.
+The effect is even clearer when looking at large consignments (>1 000 tonnes). These are the traders and groups who can more easily get data from their suppliers. For them, actual-value reporting started low at 25-31% in Q4 2023 to Q2 2024. Then, from Q3 2024 onward, it increased to 90-93%. So the bigger the import, the higher the compliance with actual values in full alignment with the CBAM objectives.
+In other words, the tonnes that matter most for emissions are the ones being reported with actual values. See Figure 1 for more details on the shift in reporting from the CBAM transitional registry:
+Figure 1: % of imports reporting actual values and other (default values) in the CBAM transitional period, by quarter.
+Preliminary analysis suggests that statistically there might be a percentage reduction of outliers by more than half from Q4 2023 to Q2 2025. Potential reasons for the improvement of data quality over time include the following.
+1.The non-EU producer provides installation data measured according to the CBAM implementing rules (aligned with EU ETS-style MRV: activity data + emission factors/process emissions).
+2.The producer can allocate emissions to the CBAM product (e.g. to a specific steel product, cement, aluminium) using the CBAM product-level methodology and system boundaries.
+3.Documentation is available (production data, fuel/energy use, process emissions, calculation sheets) so the importer can upload it in the CBAM registry.
+The CBAM has therefore encouraged and facilitated emissions monitoring worldwide, which is the first necessary step in developing measures to reduce emissions.
+The CBAM isc a catalyst for the development of carbon pricing through its design and the application of a deduction of a carbon price effectively paid from the CBAM financial adjustment. The CBAM internalises the environmental externalities of the production of energy-intensive goods when they enter the EU single market. The financial obligation enters into force from 2026. Accordingly, importers must then buy CBAM certificates equal to the embedded emissions of the goods covered. This ensures equivalence with the scope and carbon price of the EU ETS, with a deduction for any carbon price effectively paid in the country of origin.
+This policy design rewards producers who can measure and reduce product-level emissions. It gives governments a clear incentive to adopt domestic carbon pricing and keep the revenue, rather than have it collected by the EU Member States through the common central platform.
+Since the CBAM’s launch, more jurisdictions have moved toward pricing and monitoring, reporting and verification. Coverage has risen worldwide and producers have shifted from reporting default values to reporting their actual emissions. This sends third countries the price signal needed for the uptake of carbon price measures.
+By ensuring equivalence between emission costs on imports and EU production, the CBAM tackles carbon leakage and incentivises importing cleaner products. Lower-emission goods will require fewer CBAM certificates, lowering the environmental costs and making efficient production routes (like electric arc furnaces using low-carbon power to produce steel, low-clinker cement, modern aluminium) more competitive. As free ETS allocation is phased out, this advantage will intensify, becoming fully fledged in 2032.
+The recently adopted Clean Trade and Investment Partnership with South Africa is further proof of the trend driven by the EU, anchoring trade and investment to verifiable carbon performance and steering capital toward cleaner, more competitive supply chains.
+The CBAM has provided a unique opportunity worldwide to promote more political alignment on climate action. During this transitional period, the Commission has actively engaged in relevant multilateral fora and different coalitions of like-minded actors towards a coordinated action on carbon border measures, addressing carbon leakage and interoperability of carbon accounting.
+The United Nations Framework Convention on Climate Change (UNFCCC) Conferences of the Parties (COP), the EU’s developing country trading partners have voiced concerns and uncertainties about the CBAM, including on its possible impact on third countries and on the fact that CBAM does not exempt or otherwise differentiate in favour of products from developing countries. , The Commission has discussed these and other CBAM-related matters with third-country delegations, business associations and civil society organisations during side events, bilaterally and in other negotiations. Those discussions contributed to a better understanding of the CBAM as an environmental measure addressing carbon le
+At the COP30 conference in 2025, the EU reiterated that it welcomes continued dialogue with global partners to enhance cooperation on policy measures to combat climate change with a trade impact, including measures preventing carbon leakage. The Commission will contribute to the ‘Global Mutirão’ mobilisation process agreed by COP parties for a new dialogue in the subsidiary bodies of the UNFCCC with the participation of the parties and other stakeholders (including the International Trade Centre, the United Nations Conference on Trade and Development, and the World Trade Organization). The aim of this dialogue is to consider opportunities, challenges and barriers for enhancing international 
+At COP30 the EU also backed several plurilateral initiatives including a leaders’ ‘Declaration on the Open Coalition on Compliance Carbon Markets’. The declaration recognises the relevance of carbon pricing and market mechanisms as key tools to advance climate action globally.
+The EU has engaged actively in the OECD’s Inclusive Forum on Carbon Mitigation Approaches (IFCMA), working alongside 60 member countries to support more coherent approaches to global mitigation efforts. In particular, the European Commission made a voluntary contribution to increase the interoperability of carbon intensity data and monitoring, reporting and verification systems, which led to two IFCMA papers published on 30 June 2025 6 . Interoperability allows data to be used across a wide variety of cases. This lowers firms’ reporting costs and makes it easier to report actual emissions under the CBAM.
+Since 2023 the Commission has also supported the work of the Climate Club 7 in fostering international cooperation on industrial decarbonisation. In September 2025, the Climate Club issued joint voluntary principles on action to address carbon leakage 8 .
+In 2025 the Commission also actively contributed to the joint Climate Club statement for COP30 and the Global Pledge to grow near-zero and low-emissions steel and cement markets. Both the statement and pledge were launched on 6 November in the context of COP30 9 .
+The EU has closely engaged with other WTO members on the implementation of the CBAM, through several sessions to inform on the state of play of the mechanism’s implementation and to get feedback from WTO members. The CBAM was the object of regular discussions in the Committee on Trade and Environment . The EU also informed WTO Members about the launch of calls for evidence and draft acts that it published for feedback. It also took advantage of opportunities in other multilateral fora to provide updates on the implementation of the CBAM to EU partners.
+Third countries are now also preparing to introduce or considering introducing CBAMs of their own. For instance, the UK will introduce a UK CBAM on 1 January 2027. The UK CBAM will be introduced directly (without a transition period) and will cover goods from five of the sectors covered by the EU CBAM. In other words, it will cover aluminium, cement, fertiliser, hydrogen, and iron & steel, but not electricity.
+The UK CBAM will be applied to direct and indirect emissions for all sectors and to a selected number of precursors. Its sectoral scope will be reviewed beyond 2027 to reflect possible changes to the carbon leakage risks.
+Other trading partners, including Australia, Brazil, , Canada and Taiwan have announced that they too are considering similar instruments.
+The EU is aware about the concerns of trading partners as regards the CBAM’s possible impacts and has been addressing them as much as possible to make the mechanism even more effective and easier to implement for involved stakeholders. Feedback received from partner countries and their industries has been valuable also in the simplification efforts of the CBAM.
+2.2. CBAM Transitional Period
+Data overview
+The data overview below is detailed in Annex IV.
+Between Q4 2023 and Q2 2025, CBAM data showed imports of around 156 million tonnes of CBAM goods, of which around 69% were iron and steel, 15% fertilisers, 11% cement and 5% aluminium. The biggest exporters of CBAM goods to the EU in that period were Ukraine and Türkiye, responsible for roughly 14% and 12% of overall mass volume, respectively.
+Estimated embedded emissions accumulated in 2024 from the CBAM transitional registry, shows a total of 167 million tonnes of CO2-eq, 102.5 million tonnes CO2-eq for iron and steel, 38.4 million tonnes CO2-eq for aluminium, 18 million tonnes of CO2-eq for fertilisers and 8 million tonnes of CO2-eq of cement.
+Based on the reporting by declarants, the use of actual values has increased significantly over time: from just 8% in Q4 2023 to about 53% by Q2 2025, showing that more and more importers managed to meaningfully engage with their supply chain to obtain and report the required data.
+Regarding electricity as a CBAM good, the Registry data – as reported by declarants – show a total amount of 96 million MWh declared between Q4 2023 and Q2 2025. The main exporters are the United Kingdom (65% of total electricity imports declared in the CBAM Registry), Serbia (15%) and North Macedonia (5.2%).
+Overall embedded emissions for CN code 27 160 000 represented 86 million tonnes of CO2-eq. It is important to note that the main mechanism for calculating embedded emissions for electricity as a CBAM good is the use of a default values based on fossil fuel-based electricity production. This approach reflects the price-setting mechanism of electricity within the EU but limits the recognition of decarbonised sources of electricity, leading to a potential overestimation of the real embedded emissions.
+Default values from the transitional period rely on one global average default value per CN code. The Commission is therefore committed to ensuring that the CBAM Registry data for the definitive period will then feed into the determination of the default values for the CBAM (where a review is planned in 2027, once the first reporting period is completed and relevant data can feed into these revised values).
+Administration and governance of CBAM
+The governance of CBAM relies on a hybrid, multi-level framework involving the Commission and Member State bodies (appointed National Competent Authorities, NCAs).
+The Commission oversees the implementation of CBAM at EU level. In addition to the central oversight, the Commission establishes and manages the systems which are necessary for CBAM to apply. It may also review the CBAM declarations submitted by declarants.
+The Commission has established and managed the CBAM transitional registry during the transitional period (1 October 2023 – 31 December 2025). The Registry serves as the central platform for importers to submit quarterly emissions reports and for non-EU operators to share emissions data.
+The Commission has also been preparing the CBAM Registry which will replace the transitional registry for the definitive period. The Authorisation Management Module (AMM) has been rolled out in 2025 to streamline importers’ applications as authorised CBAM declarants, which NCAs manage both directly and through the CBAM Registry. The CBAM Registry has been interconnected with the EU Customs Single Window Certificate Exchange system (EU CSW-CERTEX) for automated controls of CBAM authorisations at import by EU customs authorities.
+To reduce administrative burden, the Commission has rolled out the portal for non-EU based installation operators to upload emissions data to the CBAM Registry. Once uploaded, this data can be (re)used by different importers and for different importations.
+The Commission will also establish and manage the common central platform (CCP), following a joint procurement procedure between the Member States and the Commission, and the interface between the CCP and the CBAM Registry. Sales and repurchases of CBAM certificates will take place on the CCP from February 2027. The two platforms will handle the reporting and financial obligations of CBAM declarants.
+Secondary legislation
+The Commission has been empowered to adopt several acts to set out the rules that will be applied as from the start of the definitive phase and ensure uniform application of CBAM across the EU, notably to define :
+1.rules for calculating and publishing the price of CBAM certificates
+2.methods for calculating emissions embedded in goods and default values per country of origin and CN code
+3.rules for verifying emissions
+4.the conditions under which national accreditation bodies will grant accreditation to verifiers for CBAM purposes
+5.the scope of information and the periodicity, timing and means for communicating with customs authorities
+6.how the free allocation adjustment that would reduce the number of CBAM certificates to be surrendered is calculated, to reflect the extent to which EU ETS allowances are allocated free of charge
+7.rules for the definitive CBAM Registry
+8.the conditions and procedures related to the status of ‘authorised CBAM declarant’
+The CBAM Committee meets regularly to discuss policy and legal issues with Member State representatives, and has voted in favour of the acts mentioned above in time for the start of the definitive period. Those acts will be published before the end of 2025 and will be applicable as of 1 January 2026.
+To promote and account for carbon prices in third countries, the Commission will adopt an Implementing Act setting the rules for the deduction of a carbon price effectively paid in third countries in Q1 2026.
+Member States’ national competent authorities (NCAs)
+As per Article 11 of the CBAM Regulation, each Member State has appointed a dedicated body for implementing the CBAM at national level. NCAs are in charge of contacts with the importers established in their Member State, including processing applications for and granting the status of authorised CBAM declarant to importers. NCAs also enforce compliance with CBAM obligations by concluding the review of CBAM declarations based on the preliminary assessment provided by the Commission, and deciding whether penalties should be applied or not within the framework set out by the CBAM Regulation. The Commission keeps an up-‑to-‑date provisional list of NCAs on its CBAM web portal. When the list is c
+22 Member States have appointed an environmental authority (their NCA for the EU ETS) as the NCA for CBAM as well, while seven Member States have appointed their customs authority. Two Member States have appointed both as the NCA, while in one Member State the customs authority also is the NCA for the ETS. In one Member State the NCA is neither the ETS NCA nor the customs authority.
+Member States’ customs authorities work alongside NCAs to integrate CBAM into existing customs procedures. As and when the effective implementation of the CBAM at national level relies on different authorities, coordination challenges may arise in some Member States.
+Implementing a new mechanism
+The effective implementation of CBAM requires close cooperation between the Commission and the Member States. Despite these efforts, some challenges have persisted in the preparation of the CBAM’s definitive phase. Operational readiness varies among NCAs, with some Member States processing applications efficiently while others face delays and enforcement challenges. In addition to these, it will also be key to ensure that CBAM rules are interpreted consistently across Member State authorities.
+Operators and importers have only slowly started using the existing tools to prepare for the definitive period: only 78 operators of third country installations have registered in the dedicated Operators Portal of the CBAM Registry, despite the single-upload system introduced at the end of December 2024. 5 902 importers have applied to become authorised CBAM declarants, a prerequisite to continue importing CBAM goods into the EU as from 1 January 2026.
+The current governance challenges also stem from the fact that the CBAM is a completely novel mechanism, including for national authorities, importers, and third country producers. It requires designing and implementing new administrative processes, IT systems, and compliance frameworks, and therefore naturally involves operational uncertainties and a learning curve at the start for the Commission, NCAs, customs authorities and businesses.
+In light of the significant challenges, the rapid progress made since 2023 represents a significant achievement for the EU, its Member States and international partners.
+To enhance the cooperation between Member States’ NCAs, the Commission and the NCAs regularly organise informal workshops to exchange views and best practice. Closer cooperation reinforces national expertise and administrative capacity. It also ensures that CBAM NCAs can implement CBAM consistently across the EU.
+Administrative costs
+Assessing the administrative costs of CBAM for Member States authorities is particularly challenging because the CBAM is a completely novel instrument. Hence, Member States and the Commission have had to build up capacity from scratch and could not anticipate all possible implementation needs in detail in advance. NCAs have not yet put in place all necessary administrative processes to fully implement the mechanism. For instance, some NCAs are still developing their administrative capacity to handle tasks such as processing authorisation requests and enforcing compliance.
+In early 2025, the Commission launched an EU-wide survey to gather qualitative and quantitative feedback from all Member States on their administrative costs related to CBAM implementation. The results showed significant diversity in situations across Member States, for instance regarding their degree of preparation for the definitive phase and the existence of budget forecasts for the coming period.
+The value of importations and number of importers also differ significantly between Member States:
+·The two Member States with the highest value of CBAM goods imported in 2024 saw imports of more than EUR 10 billion each, whereas the two with the lowest value only saw less than EUR 0.10 billion of CBAM goods imports each.
+·The number of CBAM importers also varies widely: of the 200 000 importers in 2024, about 37 000 and 21 000, respectively, were registered in the Member State with the most and second-most importers. Only 1 200 and 400 importers respectively were registered in the two Member States with the least importers.
+These large differences across Member States will also apply in the CBAM definitive period that starts in 2026, with the exemption for importers of up to 50 tonnes per year: among the 18 000 importers expected to be in the scope of CBAM as of 2026, the Member State with the most importers registered is expected to have 2 700 importers (2 200 for the Member State with the second-highest amount of importers), whereas the two Member States with the least amount of importers are expected to have each less than 70 importers.
+Finally, Member States have opted for different administrative configurations to implement the CBAM, notably appointing different bodies as their National Competent Authority, such as environmental/EU ETS authorities or customs authorities. This can involve different challenges and costs, for instance when coordinating the implementation of the CBAM with customs activities.
+In addition, many detailed rules and procedures which are necessary for CBAM to apply as of 2026 were still being finalised in Q4 2025 through secondary legislation (e.g. implementing and delegated acts), even if the Commission and Member States have already rolled out key components of CBAM, such as the Registry, authorisation processes and reporting requirements.
+Administrative costs for Member State administrations and the Commission continue to evolve as the CBAM is implemented, and will continue to do so as the mechanism enters the definitive period in 2026, including the major modifications introduced by the simplification package, as certificate sales start in 2027, and as changes to the CBAM enter into force, for instance the first downstream extension to be proposed by the Commission.
+Joint Procurement Agreement and CCP
+The Commission has been working towards setting up the Common Central Platform (CCP), which will operate the sales and repurchases of CBAM certificates from 1 February 2027. On 1 December 2025, the Commission adopted a decision to approve the signing of the draft Joint Procurement Agreement (JPA) which had been agreed with Member States on 17 November 2025. Once this JPA is signed by all Member States and the Commission and enters into force, the Commission will launch the joint procurement procedure on behalf of all parties to procure the services related to the CCP in the course of 2026.
+Lessons learned during the transitional period
+One key lesson learned during the first year of the transitional phase was the administrative challenges faced by businesses, especially small and medium-sized companies, and public authorities in getting familiar with a new, complex instrument. This lesson underscored the critical and urgent need for simplifying CBAM.
+Based on extensive consultations with stakeholder and public authorities and operational data from the first reporting period, the Commission’s analysis highlighted disproportionate compliance costs for SMEs, delays in processing authorisation applications by NCAs and the risk of inconsistent enforcement of complex rules across the EU. The complexity of some reporting requirements coupled with the diverse level of preparedness among both NCAs and businesses showed that targeted changes were needed to safeguard the CBAM’s effectiveness.
+2025 simplification package
+With this in mind, the Commission adopted a legislative proposal on 26 February 2025 to simplify and strengthen CBAM ahead of the definitive phase, and in line with the Competitiveness Compass for the EU. Following the swift agreement by the Parliament and Council on the Commission’s proposal, the Regulation was adopted on 8 October 2025.
+This swift adoption has allowed the Commission and Member States to take into account the simplification measures adopted by the EU for the start of the definitive period on 1 January 2026, notably when it comes to relevant secondary legislation for the definitive period. This joint achievement demonstrates the EU’s ability to adapt quickly and the commitment to make CBAM both effective and business-friendly.
+This Regulation aims at ensuring administrative efficiency, so that CBAM remains practical and business-friendly without compromising its climate objectives. The introduction of a de minimis threshold plays a critical role in reducing administrative burdens for small-scale importers. By focusing CBAM requirements on larger importers, the threshold exempts around 90% of importers, primarily SMEs, from CBAM obligations, while 99% of embedded emissions remain covered, thus fully preserving the environmental effectiveness of CBAM.
+For importers covered by the CBAM, the Regulation provides for simplified reporting requirements to facilitate declarants’ compliance, such as in the case of complex goods. Also, to give stakeholders time to prepare for their reporting and financial obligations, the sale of CBAM certificates on the common central platform will only start on 1 February 2027 and the annual reporting deadlines have been moved to a later date.
+Another major improvement is that the Commission may determine, as from 2027, default carbon prices for the countries where a carbon pricing instrument is applied. Declarants will have the possibility of relying on these values to claim a reduction of their CBAM financial obligation, as an alternative to providing certified evidence of the effective payment of the carbon price.
+Further simplifications were made regarding the calculation of authorised CBAM declarants’ financial liability to ease their burden. These simplifications include streamlined rules on the lifecycle of CBAM certificates from 2027, such as a simplified repurchase limit and a reduction in the amount of mandatory quarterly CBAM certificate purchases during the year of importation (reduced from certificates covering 80% of emissions embedded in goods imported since the beginning of the year, to 50%).
+The simplifications adopted are also an important prerequisite for potentially extending the scope of the CBAM in the future.
+Finally, the Regulation strengthens CBAM by introducing enhanced centralised monitoring by the Commission, in particular regarding the de minimis threshold, thus reinforcing the mechanism’s effectiveness and consistency. The consolidated oversight at EU level in the CBAM Registry will ensure uniform data collection, validation and enforcement across all Member States, reducing discrepancies in national implementation.
+Simplifications and flexibilities beyond the 2025 simplification package
+Next to the simplifications introduced by the revision of the CBAM regulation, the Commission has been working on significant simplifications and flexibilities under the implementing and delegated acts. These will facilitate the implementation of CBAM, including for third countries operators and SMEs.
+Under the planned implementing act setting rules for the deduction of a carbon price paid in a third country and its accompanying guidance, the European Commission will work on the principle of equivalence and will clarify how claims for carbon credits purchased under compliance schemes can be taken into account, including carbon credits under Article 6 of the Paris Agreement.
+The rules will also specify how carbon taxes levied on fuels used in the production of CBAM goods can be deducted. Building on exchanges with partner countries and analysis conducted during the transitional period, the Commission will thereby ensure that carbon prices effectively paid under different compliance schemes can effectively be deducted from the CBAM obligation, by taking into account their specific features, while ensuring the environmental integrity of the CBAM.
+As concerns accreditation and verification, several flexibilities have been developed. National accreditation bodies will be able to take into account proven competence from applicants for CBAM accreditation in applying the relevant international standards. As a result, the CBAM accreditation assessment will focus on the knowledge and competence to apply CBAM methodology rules.
+In addition, the annual surveillance activity carried out by the national accreditation body on the CBAM verifier may be carried out virtually and not necessarily on-site, as is the case under the EU ETS. Finally, during verification, the conditions under which a CBAM verifier may carry out a virtual site visit or waive the obligation to carry out a physical visit are more flexible than under the EU ETS, while nevertheless ensuring the integrity of the verification.
+Regarding the methodology for calculating embedded emissions, a range of simplifications have been introduced. First, the revised methodology allows operators, in certain cases, to differentiate the calculation of emissions for goods within a given CN code, where significant variability in emission intensities exist. Operators will, for instance, be able to differentiate the calculation of emissions for certain types of cement depending on their clinker content, or for certain types of fertiliser depending on their nitrogen content.
+Second, the revised methodology introduces a rule that, where different production routes are used to produce a type of good within the same installation, the embedded emissions of those goods are to be calculated as the average of emissions produced in the various production routes. This measure will reduce the risk of circumvention practices. In addition, the revised methodology includes various novelties of clarificatory nature, which will increase the consistency of the overall framework and ease its application by operators.
+Conclusion
+Despite the complexity of rolling out a novel instrument, the EU has managed to establish a functional governance framework for CBAM in an unprecedentedly short period. Member States, the Commission and stakeholders have used the transitional period to gather data and experience, swiftly draw conclusions and put in place a mechanism that is not only operational but also continuously improving.
+The successful launch of the necessary administrative processes and IT systems, the development of comprehensive guidance and training materials, and the adoption of simplification measures all within two and a half years reflect the EU’s ability to innovate, adapt, and continue to take the lead in global climate policy, while providing protection from undesired effects such as carbon leakage.
+The strength of the current governance framework has been reinforced by the CBAM simplification regulation, which has strengthened the oversight role of the Commission in CBAM implementation via the centralised CBAM Registry. The Commission’s ability to process data and exchange relevant information with NCAs ensures that the information reported by declarants and operators is as useful as possible. It also enables the Commission to better detect risks and equips the NCAs better to take appropriate action where needed.
+Key operational improvements regarding data quality in the CBAM transitional registry
+One of the most frequent errors encountered concerned the input of numerical data, for instance due to declarants from different Member States using dots and commas for decimal and thousands separator differently. Similarly, the earlier possibility for declarants to choose between kg or tonnes led to errors identified by comparing transitional registry data with customs and trade data. By removing redundant fields, standardising formats and introducing warning labels, errors caused by inconsistent use of decimals and measurement units were reduced.
+In the first reported quarters, there was wider number of CN codes reported than required under the CBAM Regulation. The introduction of rigid validation rules led to a significant reduction of entries with incorrect CN codes (see Annex IV).
+Another area of difficulties related to the country codes used for installations outside the EU, where different abbreviations were used for the same country (e.g. TR and TC for Türkiye, UK and GB for the United Kingdom). The integration of the Operators Portal into the CBAM transitional registry enabled operators of third country installations to input their data once and then share this data with importers of CBAM goods directly via the transitional registry. This centralisation of operator and installation information in third countries provides better consistency of country codes. See more details below and in Annex IV.
+CBAM transitional registry data for the indicated time period (reporting until 31 August 2025)
+Quarterly monitoring from Q4 2023 to Q2 2025 shows a consistent improvement in two of the issues identified above: After an initial phase with high incidence, there was a sharp decline in Q2 2024, followed by stabilisation at residual levels from Q2 2024 onwards, where errors virtually disappeared.
+The downward trend in incorrect country codes has been more modest, as the error rate was relatively low from the beginning (Q4 2023), with only about 0.5% of declarations affected in the early periods, and gradually decreasing further over time.
+As a result of corrective action and continuous collaboration, the transitional registry has become a more reliable, user-friendly, and efficient tool. These experiences showed the clear added value of the CBAM transitional period to prepare for the definitive system. The transitional registry was continuously improved, with frequent and concrete new releases that benefited from the input of importers, industries, and NCAs to ensure that solutions were practical and applicable to day-to-day operations.
+The Operators Portal
+The Operators Portal (O3CI) introduced on 31 December 2024 allows operators of 3rd country installations to upload relevant information on their installations and emissions data for CBAM goods they produce directly into the CBAM registry (both the transitional and in the future the definitive registry).
+This streamlines the process for installation operators outside the EU to upload and share their installation and emissions data with reporting declarants.
+Between December 2024 and August 2025, 573 requests for access to the operators portal were processed. Especially in the beginning, large numbers of applications had to be rejected. To support applicants, the Commission provided a wide range of resources, including an updated business guidance (March 2025), a factsheet (July 2025), manuals and video tutorials. These resources proved crucial in reducing errors and building trust. Following the publication of clearer guidance, eligibility errors and duplicate applications decreased significantly.
+Outcome for the definitive period
+the experience with operators portal shows that the transitional period offered important and necessary opportunities to improve the system ahead of the definitive period.
+Beyond the improvements detailed, the process highlighted the importance of data-driven monitoring. By analysing monthly rejection trends and the reasons behind them, it was possible to quickly identify where interventions were most needed – whether clarifying eligibility rules, simplifying procedures or reinforcing document requirements. This proactive use of evidence ensured that guidance was not generic, but rather targeted and effective.
+Another lesson was the value of progressive adaptation. Early rejections exposed weak points in the system but also generated a culture of responsiveness. Each update – whether new guidance, a factsheet or improved validation checks – was a direct reaction to real issues, and applicants responded positively by adjusting their behaviour.
+Finally, the process confirmed that a collaborative and iterative approach works. The combination of clear guidance, consistent feedback and active user engagement strengthened the Registry, reduced errors and built confidence. Instead of focusing on rejections, the system shifted towards continuous improvement and successful participation. This approach ensures the sustainability of the process as volumes increase in 2026 and beyond.
+CBAM communication campaign
+To support relevant stakeholders in complying with the CBAM, the Commission put in place several outreach and communication campaigns, starting in 2023. This included inter alia guidance for EU importers on the concepts to be used for CBAM reporting; guidance for third country producers on the concepts to be used for monitoring emissions generated by producing installations; general and sector-specific webinars and e-learning modules to support importers, national authorities, and non-EU operators in understanding and applying CBAM requirements; and, based on questions and feedback received by stakeholders, a set of regularly updated FAQs to further clarify any outstanding issues.
+Chapter 3.1 provides a more detailed overview of outreach activities. The Commission has also a dedicated web portal where all relevant information can be found.
+Since the adoption of the CBAM Regulation in May 2023, DG TAXUD has been carrying out a targeted CBAM communication campaign to (a) inform stakeholders about CBAM (b) explain how CBAM works, provide stakeholders with detailed, actionable knowledge to comply with CBAM in the transitional period and prepare for CBAM implementation in the CBAM definitive phase from 2026 and (c) activate stakeholders and multipliers to further disseminate information to relevant stakeholders.
+The main target audience for the CBAM communication campaign included EU importers of CBAM goods and producers of CBAM goods in non-EU countries. Particular focus was placed on Member States with higher percentages of importers of CBAM goods, the main third countries of origin of CBAM goods, as well as informing SMEs.
+The communication campaign also identified and engaged a network of multipliers to further disseminate information about CBAM. These included relevant industry associations, chambers of commerce and EU delegations. A summary of the main elements and activities of the CBAM communication campaign, as well as participation data from public CBAM webinars held in 2023 and 2024, is provided in Annex I.
+DG TAXUD has been preparing a second CBAM communication campaign, to be implemented from Q4 2025 to Q4 2026, building on the results of the first. This campaign will continue to inform importers, producers outside the EU and accredited verifiers about obligations and practical implementation aspects, as CBAM starts its definitive period.
+3.Working with our partners
+3.1Engaging with non-EU countries
+The EU engages on a regular basis with international partners and stakeholders who have an interest in the functioning of the EU CBAM or have expressed concerns about its design or specific aspects of its operation.
+In an effort to obtain relevant input and establish a constructive dialogue with EU industry, Member States and non-EU countries, the CBAM expert group was set up to include several non-member countries as observers 10 . Together with stakeholder representatives, observers provide key input in the expert group’s role of assisting the Commission in developing and implementing the CBAM.
+The Commission also maintains a close dialogue with non-EU-country authorities through high-level dialogues, bilateral meetings, dedicated missions to partner countries and exchanges in various committees. CBAM-related dialogues were held under the EU-China High-Level Environment and Climate Dialogue, the EU-India Trade and Technology Council, the EU-Japan Green Alliance, the EU-Korea Green Partnership, the EU-Türkiye High-Level Dialogue on Trade, the EU-Türkiye High-Level Dialogue on Climate and the EU-Türkiye Customs Union Joint Committee 11 . The Commission also regularly met non-EU-country representations in Brussels to exchange views on implementation of the CBAM. Several missions to pa
+Through the EU delegations, the Commission informs non-EU countries and their businesses of the opening of public consultations or calls for evidence allowing stakeholders, including in non-EU countries, to provide feedback on relevant CBAM initiatives, such as CBAM implementation measures or amendments to the CBAM Regulation 12 .
+The bilateral engagement on the CBAM is closely linked to the work of the Commission’s Task Force for International Carbon Pricing and Markets Diplomacy. Launched in February 2024, the task force works with over 40 partner countries to scale up carbon markets and pricing. 13 .
+As underlined in the joint communication on the EU global climate and energy vision 14 , the EU is committed to assisting its partners in developing their own ambitious climate and energy policies, fostering carbon pricing and promoting standards for a fair transition. The CBAM provides a transparent, rules-based carbon price signal for imports to the EU market, avoiding carbon leakage and incentivising decarbonisation outside the EU.
+The Commission will continue providing financial support to countries in their decarbonisation efforts to maximise the contribution of Global Europe to developing countries' decarbonisation and adaptation needs, in line with the instrument’s 30% climate and environment spending target.
+Overview of outreach and technical assistance activities
+The Commission’s cooperation with partner countries aims to strengthen decarbonisation policies, in particular by promoting carbon pricing, emissions trading, carbon taxes and monitoring, reporting and verification (MRV) systems. Where relevant, technical exchanges related to the CBAM are provided in close coordination with the outreach of the Commission’s Task Force for International Carbon Pricing and Markets Diplomacy.
+TAIEX (the Technical Assistance and Information Exchange) is an EU instrument for institutional capacity-building, providing targeted and rapid support to public administrations in EU candidate countries and beyond. For instance, TAIEX actively supports neighbourhood countries in their decarbonisation efforts by providing technical assistance in the areas of the Carbon Border Adjustment Mechanism (CBAM), monitoring, reporting and verification (MRV) and the emissions trading system (EU ETS). Annex II provides a detailed overview of the relevant workshops and events organised.
+Since 2021, the EU Global Support Facility for Nationally Determined Contributions (NDCs) has provided on-demand assistance to increase the ambition of NDCs under the Paris Agreement, design MRV systems and develop carbon pricing mechanisms and fiscal policies that incentivise low-carbon production. Examples include: the MRV roadmaps in Mozambique and Zambia; the legal review of Viet Nam’s Emissions Trading System (ETS) Decree, supporting domestic ETS development in EU ETS sectors; and the pre-feasibility study on a carbon tax in Suriname.
+Decarbonisation projects in non-EU countries
+Table 1 below shows the economic and investment plan allocations which have been made available to countries of the Eastern Neighbourhood in the energy sector since 2019, helping them make the investments needed to accelerate the green transition and decarbonise.
+Table 1: Support to energy transition and industrial decarbonisation through Global Gateway
+Country
+Total EU funding committed in million EUR
+Expected investment mobilised in million EUR
+Western Balkans (regional programme)
+103.12
+541.25
+Albania
+165.70
+383.36
+Bosnia and Herzegovina
+115.85
+351.39
+Kosovo
+103.13
+233.52
+Montenegro
+30
+58
+North Macedonia
+103.48
+277.79
+Serbia
+196.64
+736.48
+Ukraine
+439.99
+1 567.55
+Moldova
+300.02
+836.62
+Georgia
+25.85
+161.10
+Armenia
+17.74
+389.99
+Azerbaijan
+10
+22.8
+Total
+1 612
+5 568.85
+The EU’s Global Gateway supports energy transition and green industrialisation in partner countries, with energy representing over one quarter of its flagship projects.
+Global Gateway investments prioritise renewable energy, grid extension, clean energy access and regulatory reforms. By reducing electricity emissions, Global Gateway increases industrial competitiveness and mitigates CBAM exposure.A few examples of deliverables under Global Gateway in each region include:
+Africa
+The Africa-Europe Green Energy Initiative (AEGEI) aims to support the deployment of at least 50 GW of renewable electricity in Africa by 2030, providing access to electricity for at least 100 million people by that year.
+Asia-Pacific
+The Team Europe Initiative on Green Energy Transition in Bangladesh supports Bangladesh’s green transition through investments in renewable energy generation and energy efficiency.
+Latin America and the Caribbean
+Support for the wind energy sector in Trinidad and Tobago: the EU is providing technical assistance to support the development of the wind energy sector in Trinidad and Tobago, reducing its dependence on fossil fuels.
+Euroclima, a flagship EU programme under the Global Gateway strategy, builds partnerships between the European Union (EU) and the Latin America and Caribbean (LAC) regions on climate governance, policies and investments. Implemented by EU and Member State agencies with multilateral partners, Euroclima builds capacity for Article 6 of the Paris Agreement, carbon market development and MRV.
+A few examples of initiatives under the EU funded programme Euroclima, that are implemented through delegated cooperation include:
+2023-2025: United Nations Economic Commission for Latin America and the Caribbean (ECLAC): promoting social carbon prices and integrating climate criteria into public investment;
+·2024-2025: United Nations Environment Programme (UNEP): establishing a Regional Carbon Markets Observatory for Latin America and the Caribbean;
+·2024-2025: Gesellschaft für Internationale Zusammenarbeit (GIZ): supporting Brazil’s ETS law through studies on emissions inventories, MRV rules and decarbonisation strategies;
+·2024-2025: United Nations Development Programme (UNDP), Expertise France and GIZ: strengthening Belize’s climate change and carbon market initiatives and mechanisms;
+·2024: UNEP: building capacity for implementation of Article 6 across Central America.
+Investment in green hydrogen
+Decarbonising CBAM-related industries requires renewable hydrogen.
+Global Gateway prioritises investments in hydrogen value chains in partner countries to promote green growth and reduce emissions. Such initiatives include:
+·green hydrogen in Namibia: in 2022 Namibia was the first country in Africa to set up a strategic partnership with the EU on sustainable raw material value chains and renewable hydrogen;
+·the Team Europe initiative to develop green hydrogen in Mauritania: support infrastructure, job creation, training and legal/fiscal frameworks for hydrogen development;
+·development of the port of Lumut in Malaysia: maritime industrial city project to develop Port Lumut as a green industrial hub specialising in hydrogen and renewable energy.
+As an example of a European partnership with an individual country to develop low-carbon, climate-resilient and sustainable infrastructure, Team Europe invests in the green transition in Mozambique under the Multi-Annual Indicative Programme (MIP) Neighbourhood, Development and International Cooperation Instrument Global Europe (NDICI-Global Europe) with the goal of a decarbonised energy mix, enhanced access to on-grid and off-grid renewable energy and improved energy efficiency of the electricity network.
+Enhanced support for the decarbonisation of developing countries’ economies
+Global Gateway, as the vehicle for supporting the clean and resilient transition in emerging and developing economies, will further enhance the decarbonisation of developing countries' economies. Such support will generate a triple dividend: helping combat climate change globally; supporting development in partner countries; and tangibly demonstrate EU’s solidarity. By supporting decarbonisation efforts, it will also contribute to reduce the carbon content of exported goods from these countries and therefore increase industrial competitiveness and mitigate CBAM exposure.
+3.2Impact of the CBAM on non-EU countries
+As required by the CBAM Regulation, the Commission has assessed the impact of the CBAM on developing countries and, in particular, least developed countries (LDCs) 15 . This chapter also discusses the impact of the CBAM on the EU’s neighbourhood countries 16 .
+The degree to which the CBAM impacts on non-EU countries depends on two main factors. First, the total volume of CBAM goods exported to the EU relative to the overall economic activity – i.e. the trade exposure – of a non-EU country is a general indicator of that country’s potential exposure to the carbon pricing introduced through the CBAM. Second, the emission intensity of a non-EU country’s export mix is important, as higher emission intensity means a higher carbon price to be paid by EU importers. Countries and sectors with relatively low emission intensity are expected to experience an increase in demand, while products with relatively high emission intensity are expected to see reduced
+In terms of trade exposure, Mozambique stands out among the LDCs. Its total exports to the EU of CBAM goods amounted to EUR 1.2 billion in 2024, most of which was aluminium. This corresponds to around 5.5% of Mozambique’s GDP. As shown in Table 2, other LDCs have very limited exposure, with the second and third largest exporters (Cambodia and Zambia) exporting only small amounts of CBAM goods.
+The EU’s neighbourhood countries generally export more CBAM goods to the EU. The largest exporters to the EU in EUR billions are Ukraine, Egypt and Morocco. Countries close to the EU are among the most impacted third countries. They are typically small economies, so absolute export volumes from these countries are naturally small, but for them these exports may represent important shares. For example, North Macedonia’s exports to the EU of CBAM goods amount to around 4.1% of GDP in 2024 17 .
+Table 2: Trade exposure of largest exporters among LDCs and neighbourhood countries
+Exports of CBAM goods to the EU in EUR billion (2024)
+Exports of CBAM goods to the EU as % of GDP (2024)
+LDCs (three largest exporters)
+Mozambique
+1.2
+5.5
+Cambodia
+0.014
+0.03
+Zambia
+0.015
+0.02
+Neighbourhood countries (three largest exporters)
+Ukraine
+3.3
+1.8
+Egypt
+1.6
+0.4
+Morocco
+1.0
+0.7
+Source: Comext (2024) for trade and World Bank data (2024) for GDP
+The impact of the introduction of the CBAM was analysed by the Commission’s Joint Research Centre (JRC) using the computable general equilibrium (CGE) JRC-GEM-E3 model and the GTAP 11 circular economy database. The introduction of the CBAM was compared to a baseline scenario without the CBAM but with a continuation of other EU climate policies 18 . The phaseout of free allowances in the EU’s ETS was not included in the baseline but was assumed for the CBAM scenario. The introduction of the CBAM was modelled together with a phaseout of free allowances, as the former replaces the latter as the main EU policy instrument aimed at addressing the risk of carbon leakage. The model considered the im
+Overall, the model results show that the expected impact of the CBAM on the GDP of LDCs in aggregate is negligible, at less than 0.01% by 2035. The CBAM was designed with a focus on energy- and emission-intensive sectors and therefore primarily affects more industrialised and developed economies. In addition, most LDCs export only a very limited amount of CBAM goods to the EU. The impact on the GDP of other developing and neighbourhood countries in aggregate is similarly small.
+The macroeconomic impact of the CBAM on individual countries is also negligible, as shown in Figure 2 below. The five most affected LDCs and other developing countries will all see a very limited change in GDP (around − 0.01%) compared to the baseline. Among the EU’s neighbourhood countries, the modelling shows only a minor decrease compared to the baseline in GDP (0.01%) for Ukraine, Algeria and Tunisia, whereas Morocco and Jordan will see a minor increase (0.02% and 0.01% respectively).
+Figure 2: Impact of the CBAM on GDP (% change compared to the baseline, 2035) of the five most affected developing countries* (left) and neighbourhood countries (right)
+Source: JRC-GEM-E3 model. *Includes LDCs and other developing countries. Mozambique discussed separately below.
+Mozambique is unique among the countries assessed, as it produces and exports mainly one type of CBAM good – unwrought aluminium 20 – originating from one company. This is a product with relatively low value added compared to more processed aluminium products and, in Mozambique’s case, with relatively moderate embedded emissions. External studies have found that Mozambique’s aluminium production is relatively clean and consider that the effect of the introduction of carbon pricing on it would probably be limited 21 .
+Due to these characteristics, a more granular approach was taken to model the potential impact on Mozambique’s aluminium sector. First, physical emission intensities (kg CO2-eq/tonne of output) were calculated for the main aluminium-producing countries, allowing emissions to be compared on a product-by-product basis. Figure 3 shows that Mozambique is among the cleanest non-EU-country producers, with an emission intensity only 1.04 times that of the EU average. Second, these emission intensities were used to simulate the impact of the introduction of the CBAM. Note that the standard modelling used for the rest of this section is based on emissions expressed relative to the total value of a se
+Figure 3: Trade-weighted physical emission intensity (kg CO2-eq/tonne) of main aluminium producers relative to the EU’s average emission intensity (‘lower is better’)
+Source: Commission calculations based on Comext data for 2023 and Vidovic et al. (2023) 22
+On the basis of this approach, the results for 2035 show a very limited expected decrease in output in Mozambique’s aluminium sector, of − 0.4% relative to the baseline. In addition, the macroeconomic impact is negligible, with a change in Mozambique’s GDP by 2035 of − 0.01% relative to the baseline.
+In terms of the sectoral impact on the main country aggregations, Figure 4 shows the (percentage) change in output per sector for LDCs, other developing countries and emerging economies (see Annex III for the countries included in this category) and the EU’s neighbourhood countries in aggregate.
+Figure 4: Sectoral impact (% change in output compared to the baseline, 2035) in country aggregations: LDCs, other developing countries and neighbourhood countries
+Source: JRC-GEM-E3 model. Modelling for Mozambique (included in the LDC aggregation) is based on physical emission intensities.
+Sectoral changes in individual LDCs, besides Mozambique, are generally very small in both percentages and absolute values and therefore not broken down further. Sectoral impacts for individual countries in the ‘’other developing countries and emerging economies’’ aggregation are not broken down further as this concerns a wide group of countries for which an individual analysis is outside of the scope of the analysis. Given the larger exposure of neighbourhood countries, the sectoral impacts there are more substantial, especially in the fertiliser sector. For this sector, there is a significant impact for Morocco, Algeria and Egypt. Among the goods in scope of CBAM, Morocco mainly produces fe
+As stated above, the introduction of CBAM is expected to reduce global emissions of CO2 equivalents (CO2‑eq). Figure 5 shows the change, in millions of tonnes (Mt) of CO2‑eq, for three country aggregations. In absolute terms, compared the baseline, emissions decrease the most in neighbourhood countries: by 11.4 Mt of CO2‑eq. For LDCs the reduction in absolute emissions is much more limited, at − 0.8 Mt of CO2‑eq. In relative terms this comes down to a change in emissions of − 0.9% in neighbourhood countries and − 0.2% in LDCs. The ‘other developing countries and emerging economies’ aggregation shows a significant reduction in emissions: − 7.8 Mt of CO2‑eq. However, given the large size of th
+Figure 6: Change in Mt of CO2‑eq (compared to the baseline, 2035)
+Source: JRC-GEM-E3 model
+Overall, based on the modelling results, it can be concluded that the impact on LDCs, developing countries and neighbourhood countries is relatively minor in aggregate. As the analysis is focussed on economic impacts in aggregate (at country or broad sectoral level), more granularity in the assessment would be needed to have conclusive results regarding the impact on sectors at a more disaggregate level.
+Only a limited number of other studies have modelled the impact of CBAM on developing countries specifically. Their underlying assumptions and scope differ significantly from this analysis, and they arrive at different conclusions. A 2023 study focusing on the impact on Africa found that the GDP of African countries would decrease in aggregate by between 0.33% and 1.12%, depending on the scenario 24 . However, this is largely based on scenarios that assume CBAM applies to all goods imported by the EU and/or that there is no phaseout of free allowances for the production of CBAM goods under the EU ETS. For that reason this study greatly overestimates the impact of introducing CBAM, which is b
+Box: Impact of the CBAM on Ukraine’s economy in the exceptional circumstances of Russia’s war of aggression against Ukraine
+The exceptional circumstances of Russia’s war of aggression against Ukraine
+Article 30(7) of the CBAM Regulation provides that ‘where an unforeseeable, exceptional and unprovoked event has occurred that is outside the control of one or more third countries subject to the CBAM, and that event has destructive consequences on the economic and industrial infrastructure of such country or countries concerned, the Commission shall assess the situation and submit to the European Parliament and to the Council a report, accompanied, where appropriate, by a legislative proposal, to amend this Regulation by setting out the necessary provisional measures to address those exceptional circumstances.’
+While the exceptional circumstances of Russia’s war of aggression against Ukraine are fully recognised, the assessment below indicates that, at this stage, these circumstances do not justify the granting of a force majeure exemption under Article 30(7) of the CBAM Regulation.
+At the same time, the CBAM framework allows for a range of facilitative and supportive measures that can help mitigate administrative and financial burdens, promote compliance, and reinforce Ukraine’s economic resilience and decarbonisation pathway, without derogating from the Regulation. These measures should be actively explored in order to mitigate potential administrative and financial impacts of CBAM and to support Ukraine’s economic recovery and decarbonisation.
+Since the beginning of the unprovoked Russian war of aggression on Ukraine on 24 February 2022, Ukraine has suffered significant damage to its industrial infrastructure and its wider economy. By the end of 2024, the damage to infrastructure exceeded EUR 150 billion, including EUR 30 billion of damage to commerce and industry 27 . Throughout 2024 the energy sector – in particular electricity generation and transmission – was increasingly targeted.
+The invasion has caused economic disruption, job losses and low investor confidence, which all affect public and private financing. Approximately one third of the territory of the country is under occupation, with its producing capacities destroyed or seized by the invader. 90% of the damage to infrastructure has been concentrated in ten frontline regions (of the 27 that make up the country), and Ukraine’s economy has demonstrated resilience. After a contraction of 28.8% in GDP in 2022, Ukraine’s economy grew in 2023 and 2024 although output remains far below pre-war levels due to the occupation, destruction and the flight of refugees. The reopening of the Black Sea corridor in late 2023 has
+From the outset the European Union has offered unwavering support to Ukraine. The Ukraine Facility is the flagship programme providing assistance for recovery, reconstruction and EU accession 28 . The Facility consists of three pillars and will allocate up to EUR 50 billion between 2024 and 2027 to help Ukraine withstand external threats, accelerate its recovery and tread a path towards sustainable development and EU membership. The Ukraine Investment Framework, part of the Ukraine Facility, is designed to attract public and private investment in the recovery and reconstruction of Ukraine. Backed by EUR 9.3 billion, comprising EUR 7.8 billion in guarantees and EUR 1.5 billion in a combinatio
+At least 20% of investments made under the Ukraine Facility and the Ukraine Investment Framework are expected to contribute to climate change mitigation and adaptation and to the broader green transition.
+Ukrainian exports of CBAM goods and CBAM reporting under the war of aggression
+In the second quarter of 2025 almost 15% of all CBAM goods imported by the EU (calculated by volume in tonnes; see table below) were imported from Ukraine. In that period, 18.4% of the EU’s imports of iron and steel, and 17.4% of its imports of cement, were from Ukraine, supported by the good access to the EU market due to our free trade agreement (DCFTA) and the suspension of steel safeguards that were agreed for Ukraine at the beginning of the war.. In absolute terms, these imports were still lower than the pre-war levels.
+.
+Table 2: Ukraine’s market share of imports to the EU of CBAM goods between Q4 2023 and Q2 2025
+Year and quarter
+Iron and Steel
+Cement
+Fertilisers
+Aluminium
+Total
+Q4 2023
+15.4%
+13.6%
+1.7%
+0.4%
+12.2%
+Q1 2024
+19.0%
+10.8%
+0.6%
+0.4%
+14.7%
+Q2 2024
+16.9%
+11.2%
+0.2%
+0.4%
+13.7%
+Q3 2024
+16.1%
