@@ -9,7 +9,7 @@ const HOW = { github: "자동 수집", claude: "자동 열람", off: "준비 중
 function statusPill(source) {
   if (source.collector === "off") return pill("준비 중", "warn");
   if (source.ok === true) return pill("정상", "accent");
-  if (source.ok === false) return pill("확인 못 함", "bad");
+  if (source.ok === false) return source.failCount >= 3 ? pill("확인 못 함", "bad") : pill("확인 지연", "warn");
   return pill("확인 전");
 }
 
@@ -27,7 +27,7 @@ export async function render(main) {
     ]))),
   ]));
   main.replaceChildren(
-    viewHead("출처", "평일마다 아래 출처를 확인해 새로 올라오거나 바뀐 내용을 찾습니다. 민간·협회 자료는 제목과 링크만 다루고 본문을 옮기지 않습니다."),
+    viewHead("출처", "평일마다 아래 출처를 확인해 새로 올라오거나 바뀐 내용을 찾습니다. 민간·협회 자료는 제목과 링크만 다루고 본문을 옮기지 않습니다. 확인이 세 번 이어서 실패하면 '확인 못 함'으로 표시합니다."),
     ...sections,
   );
 }

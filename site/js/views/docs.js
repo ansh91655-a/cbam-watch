@@ -17,13 +17,18 @@ function diffView(result) {
   return h("div", { class: "diff" }, [head, ...blocks]);
 }
 
-function row(doc, detailCell) {
+function row(doc, detailRow) {
+  const detailCell = detailRow.firstChild;
   const versions = doc.versions || [];
   const latest = versions[versions.length - 1] || {};
   const withDiff = [...versions].reverse().find((version) => version.diff);
   const button = withDiff ? h("button", {
     class: "btn", type: "button", text: "바뀐 곳 보기",
-    onclick: async () => { detailCell.replaceChildren(h("p", { class: "count", text: "읽는 중" })); detailCell.replaceChildren(diffView(await data.diff(withDiff.diff))); },
+    onclick: async () => {
+      detailRow.hidden = false;
+      detailCell.replaceChildren(h("p", { class: "count", text: "읽는 중" }));
+      detailCell.replaceChildren(diffView(await data.diff(withDiff.diff)));
+    },
   }) : null;
   return h("tr", {}, [
     h("td", {}, [safeLink(doc.url, doc.title) || h("span", { text: doc.title }), doc.linked === false ? h("p", {}, pill("원문 화면에서 링크가 사라짐", "warn")) : null]),
@@ -31,8 +36,8 @@ function row(doc, detailCell) {
     h("td", { class: "num", text: latest.pages ? `${count(latest.pages)}쪽` : "" }),
     h("td", { class: "num", text: bytes(latest.bytes) }),
     h("td", { class: "num", text: `${versions.length}` }),
-    h("td", {}, [
-      safeLink(latest.file, "사본") || h("span", { class: "count", text: "사본 없이 변경 여부만 확인" }),
+    h("td", { class: "keep" }, [
+      safeLink(latest.file, "사본") || h("span", { class: "count", text: "변경 여부만 확인" }),
       latest.text ? h("span", { text: " · " }) : null, safeLink(latest.text, "본문"), button ? h("p", {}, button) : null,
     ]),
   ]);
@@ -46,12 +51,12 @@ export async function render(main) {
   }
   const body = [];
   for (const doc of [...documents].sort((a, b) => String(a.title).localeCompare(String(b.title)))) {
-    const detailCell = h("td", { colspan: "6" });
-    body.push(row(doc, detailCell), h("tr", {}, detailCell));
+    const detailRow = h("tr", { hidden: true }, h("td", { colspan: "6" }));
+    body.push(row(doc, detailRow), detailRow);
   }
   main.replaceChildren(
-    viewHead("원문 대장", "EU 집행위원회가 올린 법령 관련 문서와 가이던스의 사본을 보관하고, 문서가 바뀌면 이전 판과 비교합니다. 문서 이름을 누르면 원래 올라온 곳이 열립니다."),
+    viewHead("원문 대장", "EU 집행위원회가 올린 법령 관련 문서와 가이던스의 사본을 보관하고, 문서가 바뀌면 이전 판과 비교합니다. 문서 이름을 누르면 원래 올라온 곳이 열립니다. '판 확인일'은 이 사이트가 그 판을 처음 확인한 날입니다."),
     h("p", { class: "count", text: `문서 ${documents.length}건. 판 수가 2 이상이면 바뀐 곳을 볼 수 있습니다.` }),
-    table(["문서", { text: "최근 판", num: true }, { text: "쪽수", num: true }, { text: "크기", num: true }, { text: "판 수", num: true }, "보관본"], body),
+    table(["문서", { text: "판 확인일", num: true }, { text: "쪽수", num: true }, { text: "크기", num: true }, { text: "판 수", num: true }, "보관본"], body),
   );
 }

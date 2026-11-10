@@ -10,11 +10,13 @@ def sources():
     claude = read_json("collected/claude-status.json", {"sources": {}}).get("sources", {})
     rows = []
     for source in registry["sources"]:
-        state = status.get(source["code"]) or claude.get(source["code"]) or {}
+        # 확인 방법에 맞는 기록만 쓴다: 자동 수집은 수집 실행의 기록, 자동 열람은 정리 실행의 기록
+        book = {"github": status, "claude": claude}.get(source["collector"], {})
+        state = book.get(source["code"]) or {}
         rows.append({
             "no": source["no"], "code": source["code"], "name": source["name"], "group": source["group"], "url": source["url"],
             "tier": source["tier"], "collector": source["collector"], "note": source.get("note", ""),
-            "lastChecked": state.get("lastOk") or state.get("checkedAt", ""), "ok": state.get("ok") if state else None,
+            "lastChecked": state.get("lastOk") or "", "ok": state.get("ok") if state else None, "failCount": int(state.get("failCount", 0) or 0),
         })
     return {"builtAt": stamp(), "sources": rows}
 

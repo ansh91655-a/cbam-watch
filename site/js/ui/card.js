@@ -6,7 +6,7 @@ const TONE = { "높음": "bad", "보통": "accent" };
 
 export function card(item) {
   const meta = [
-    item.published ? h("span", { text: day(item.published) }) : null,
+    item.published ? h("span", { text: day(item.published) }) : (item.listed ? h("span", { text: `등재 ${day(item.listed)}` }) : null),
     item.kind ? pill(item.kind) : null,
     item.importance ? pill(`중요도 ${item.importance}`, TONE[item.importance]) : null,
     item.sourceName ? h("span", { text: item.sourceName }) : null,
