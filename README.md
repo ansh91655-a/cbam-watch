@@ -66,6 +66,7 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 - 기관별 입장 비교표: 규제에 `positions`가 있으면 화면에 '기관별 입장 비교'가 실린다(지금은 하류제품 확대 개정안). 칸마다 저장소에 받아 둔 원문 글에서 근거를 대고(`contains`, 그 문서에 없는 조항은 `lacks`) 프로그램이 맞춰 본다. `python -m tools.publish.rule_edit positions --id <규제> --file <표 파일>`로 넣고, 공개용 사본에는 칸의 글만 실린다.
 - 달라진 것 찾기: `python -m tools.run.rules_watch`가 모아 둔 공식 기록이 지난번에 본 뒤로 달라졌는지 알려 준다. 본 것은 `data/rules-seen.json`에 적는다.
 - 상태 점검: `tools/run/rules_health.py`가 근거 어긋남, 지난 일정, 반영되지 않은 변화, 기록 갱신 누락을 일일 보고의 문제로 올린다.
+- 공식 기록을 읽지 못한 날: 사이트가 점검 중이거나 답이 끊겨도 모아 둔 목록은 줄어들지 않는다. 읽지 못한 것이 있는 실행은 앞의 목록에서 빠진 기록을 그대로 남기고(`tools/archive/store.py`의 `save_index`), EU 법령 데이터베이스의 연관 문서는 빠진 문서와 관계를 되살린다(`tools/archive/cellar.py`의 `restore`). 무엇을 읽지 못했는지는 `collected/archive/report/`에 남는다.
 
 ## 지난 소식 채우기
 
