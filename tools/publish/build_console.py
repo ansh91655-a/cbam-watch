@@ -1,13 +1,14 @@
 """운영 콘솔(Claude 아티팩트에 올리는 화면)의 폴더를 만든다.
 
-콘솔은 사이트와 같은 모양(css)과 화면 도우미(dom.js, format.js)를 쓴다. 저장소에 두 벌 두지 않고 여기서 복사한다.
+콘솔은 사이트의 화면 도우미(dom.js, format.js)를 함께 쓴다. 저장소에 두 벌 두지 않고 여기서 복사한다.
+모양(css)은 콘솔 폴더에 따로 둔다(공개 사이트의 디자인이 바뀌어도 운영 화면은 그대로 둔다).
 쓰는 법: python -m tools.publish.build_console [출력 폴더]
 """
 import pathlib
 import shutil
 import sys
 
-SHARED = [("site/css", "css"), ("site/js/ui/dom.js", "js/ui/dom.js"), ("site/js/ui/format.js", "js/ui/format-base.js")]
+SHARED = [("site/js/ui/dom.js", "js/ui/dom.js"), ("site/js/ui/format.js", "js/ui/format-base.js")]
 
 
 def main(argv):

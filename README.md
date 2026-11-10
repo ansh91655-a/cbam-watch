@@ -9,11 +9,12 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 
 | 때(한국 시각) | 누가 | 하는 일 |
 | --- | --- | --- |
-| 평일 06:10 | 이 저장소의 자동 실행(`.github/workflows/collect.yml`) | 출처 화면을 받아 새로 보인 링크, 날짜로 시작하는 소식, 표의 행, 문장을 `collected/feed/`에 적는다. EU 집행위원회 문서를 다시 받아 판이 바뀌었는지 보고, 바뀌면 이전 판과 문단 단위로 비교한다 |
+| 평일 06:10 | 이 저장소의 자동 실행(`.github/workflows/collect.yml`) | 출처 화면을 받아 새로 보인 링크, 날짜로 시작하는 소식, 표의 행, 문장을 `collected/feed/`에 적는다. 인증서 가격표를 읽어 `data/prices.json`을 만든다. EU 집행위원회 문서를 다시 받아 판이 바뀌었는지 보고, 바뀌면 이전 판과 문단 단위로 비교한다 |
 | 평일 07:05 | 예약된 작성 실행 | 목록에서 소식을 골라 국문 초안을 쓴다. EU 공식 자료는 근거가 된 원문 대목을 함께 남긴다 |
 | 평일 08:20 | 예약된 검증 실행 | 초안을 원문과 다시 대조하고, 통과한 것만 `data/`에 더한다 |
 | 바뀔 때마다 | 이 저장소의 자동 실행(`.github/workflows/pages.yml`) | 사이트를 다시 만들어 배포한다 |
-| 평일 10:05 | 예약된 보고 실행 | 그날의 실행과 사이트 상태를 확인한다 |
+| 평일 10:05 | 예약된 보고 실행 | 그날의 실행과 사이트 상태를 확인하고 보고 파일을 `reports/`에 올린다 |
+| 보고 파일이 올라올 때, 평일 11:10 | 이 저장소의 자동 실행(`.github/workflows/notify.yml`) | 문제가 있는 보고와 주간 보고를 '운영 보고' 이슈에 댓글로 적는다(GitHub가 저장소 주인에게 메일로 알린다). 11:10까지 그날의 보고 파일이 없으면 그것도 알린다 |
 | 월요일 09:10 | 예약된 주간 실행 | 주간 요약을 쓰고, 게시한 항목 일부를 지금의 원문과 다시 대조한다. 어긋나면 그 항목의 요약을 내린다 |
 
 ## 폴더
@@ -22,11 +23,12 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 | --- | --- |
 | `sources/registry.json` | 출처 대장. 어디를 어떤 방법으로 보는지 적혀 있다 |
 | `collected/` | 수집 결과. `feed/`(그날 새로 보인 것), `state/`(이미 본 것의 열쇠), `pages/`(EU 공식 화면의 글), `status.json`(출처별 확인 결과) |
-| `originals/` | EU 집행위원회 문서의 사본(`files/`), 뽑아 낸 본문(`text/`), 판 사이의 비교 결과(`diffs/`), 대장(`state.json`) |
-| `data/` | 사이트에 게시한 데이터. 소식(`items.json`), 일정(`events.json`), 주간 요약(`digests.json`), 용어집(`terms.json`) |
+| `originals/` | EU 집행위원회 문서의 사본(`files/<문서 id>/<해시>/<원래 파일 이름>`), 뽑아 낸 본문(`text/`), 판 사이의 비교 결과(`diffs/`), 대장(`state.json`) |
+| `data/` | 사이트에 게시한 데이터. 소식(`items.json`), 주제 목록(`topics.json`), 인증서 가격(`prices.json`, 프로그램이 가격표에서 만든다), 일정(`events.json`), 주간 요약(`digests.json`), 용어집(`terms.json`) |
+| `reports/` | 보고 실행이 올리는 그날과 그 주의 보고 파일. 알림의 근거다 |
 | `language/` | 국문 표기 기준(용어집) |
-| `site/` | 공개 사이트의 화면 파일. 화면마다 모듈 하나(`js/views/`) |
-| `console/` | 운영 화면의 파일(공개 사이트와 모양을 함께 쓴다) |
+| `site/` | 공개 사이트의 화면 파일. 화면마다 모듈 하나(`js/views/`), 그림과 달력 같은 부품(`js/ui/`), 디자인 값(`css/tokens.css`)과 시안(`css/themes.css`) |
+| `console/` | 운영 화면의 파일 |
 | `tools/` | 정해진 일을 하는 프로그램. 아래 표 참조 |
 | `tests/` | 도구의 자동 시험. 올릴 때마다 돈다(`.github/workflows/tests.yml`) |
 
@@ -38,8 +40,10 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 | `tools/collect` | 출처 화면에서 새 항목 찾기(`extract`), JSON 목록 보기(`jsonwatch`), 그날 목록 만들기(`feed`), 실행(`run`) |
 | `tools/originals` | 문서 링크 찾기(`discover`), 받을 차례 정하기(`queue`), 판 남기기와 비교(`versions`, `diff`), 본문 뽑기(`textify`), 실행(`run`) |
 | `tools/check` | 국문 글 검사: 용어(`term_check`, `term_lookup`), 표기(`style_check`), 수치와 날짜 대조(`fact_check`), 원문 발췌 확인(`excerpt_check`) |
-| `tools/publish` | 게시 데이터에 더하기(`add_items`, `add_digest`), 요약 내리기(`withdraw`), 사이트와 운영 화면의 폴더 만들기(`build_site`, `build_console`) |
-| `tools/run` | 예약 실행이 쓰는 보조 도구: 후보 고르기, 검증 대기 고르기, 원문 발췌 자르기, 상태 점검, 하루와 한 주의 요약 |
+| `tools/prices` | 인증서 가격표 읽기: 적용 기간 읽기(`periods`), 표의 행 읽기(`parse`), 가격 자료 만들기(`run`) |
+| `tools/publish` | 게시 데이터에 더하기(`add_items`, `add_digest`), 요약 내리기(`withdraw`), 주제 목록(`topics`), 사이트와 운영 화면의 폴더 만들기(`build_site`, `build_console`) |
+| `tools/notify` | 보고 파일에서 알릴 것을 골라 '운영 보고' 이슈에 적기(`reports`, `messages`, `github`, `run`) |
+| `tools/run` | 예약 실행이 쓰는 보조 도구: 후보 고르기, 검증 대기 고르기, 원문 발췌 자르기, 상태 점검, 하루와 한 주의 요약, 보고 파일 만들기(`write_report`) |
 
 프로그램은 저장소 맨 위에서 `python3 -m tools.<묶음>.<이름>` 꼴로 돌립니다. 표준 라이브러리만 쓰고, PDF 본문을 뽑을 때만 `pdftotext`가 필요합니다. 시험은 `python3 -m unittest discover -s tests -t .`로 돌립니다.
 

@@ -1,25 +1,39 @@
 {
  "events": [
   {
-   "date": "2027-01-04",
-   "title": "2026년 4분기 CBAM 인증서 가격 게시일",
+   "date": "2026-01-01",
+   "title": "CBAM 확정기간 체제 적용 시작",
+   "kind": "시행",
    "note": "",
-   "sourceName": "EC Price of CBAM Certificates",
-   "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en"
+   "sourceName": "European Commission CBAM",
+   "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en",
+   "basis": "As of 1 January 2026, CBAM is applicable under its definitive regime."
   },
   {
    "date": "2027-01-01",
    "title": "영국 CBAM 시행",
+   "kind": "시행",
    "note": "",
    "sourceName": "UK HMRC CBAM 자료 모음",
    "link": "https://www.gov.uk/government/collections/carbon-border-adjustment-mechanism"
   },
   {
+   "date": "2027-02",
+   "title": "CBAM 인증서를 공통 중앙 플랫폼에서 구매하기 시작",
+   "kind": "시행",
+   "note": "원문에는 달까지만 적혀 있다.",
+   "sourceName": "EC Price of CBAM Certificates",
+   "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en",
+   "basis": "purchased on the common central platform from February 2027 onwards"
+  },
+  {
    "date": "2027-09-30",
    "title": "첫 CBAM 신고서 제출과 CBAM 인증서 제출 기한",
-   "note": "",
+   "kind": "기한",
+   "note": "2026년 수입분이 대상이다.",
    "sourceName": "EC CBAM Communication and News",
-   "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_en"
+   "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_en",
+   "basis": "the first compliance deadline of 30 September 2027"
   }
  ]
 }

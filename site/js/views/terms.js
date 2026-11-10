@@ -1,6 +1,6 @@
 // 용어집. 영문, 약어, 국문 어느 쪽으로도 찾는다.
 import * as data from "../data.js";
-import { empty, h, table, viewHead } from "../ui/dom.js";
+import { empty, fill, h, table, viewHead } from "../ui/dom.js";
 
 export async function render(main) {
   const terms = await data.terms();
@@ -22,7 +22,7 @@ export async function render(main) {
     ]))) : empty("찾는 용어가 없습니다. 다른 낱말로 찾아보세요."));
   }
 
-  main.replaceChildren(
+  fill(main, 
     viewHead("용어집", "이 사이트의 국문 정리에 쓰는 표기 기준입니다. 정부와 공공기관의 국문 자료에서 확인된 표기만 싣습니다."),
     h("div", { class: "filters" }, [
       h("label", { class: "field", for: "term-q" }, [h("span", { text: "검색" }), h("input", { id: "term-q", type: "search", placeholder: "예: embedded emissions, 내재배출량", oninput: (event) => draw(event.target.value) })]),

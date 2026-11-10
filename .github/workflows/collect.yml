@@ -14,6 +14,7 @@ on:
       - ".github/workflows/collect.yml"
       - "tools/collect/**"
       - "tools/originals/**"
+      - "tools/prices/**"
       - "tools/common/**"
       - "sources/registry.json"
 
@@ -37,13 +38,15 @@ jobs:
         run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
       - name: 출처 수집
         run: python -m tools.collect.run
+      - name: 인증서 가격표 읽기
+        run: python -m tools.prices.run
       - name: 원문 판 점검
         run: python -m tools.originals.run ${{ (github.event_name == 'workflow_dispatch' && inputs.full) && '--full' || '' }}
       - name: 결과 올리기
         run: |
           git config user.name "cbam-watch-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add collected originals
+          git add collected originals data/prices.json
           git diff --cached --quiet || git commit -m "수집 결과 $(TZ=Asia/Seoul date '+%F %H:%M')"
           for attempt in 1 2 3; do
             git pull --rebase --autostash && git push && break

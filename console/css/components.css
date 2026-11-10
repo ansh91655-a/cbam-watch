@@ -1,0 +1,216 @@
+/* 카드, 배지, 표, 필터, 타일 */
+.card {
+  display: grid;
+  gap: 8px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--line);
+  border-radius: 6px;
+  padding: 14px 18px 14px 16px;
+}
+
+.card[data-importance="높음"] { border-left-color: var(--bad); }
+.card[data-importance="보통"] { border-left-color: var(--accent); }
+
+.card h3 a { color: var(--ink); text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  color: var(--muted);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+
+.summary { max-width: 72ch; }
+.summary.withdrawn { color: var(--muted); }
+
+.impact {
+  max-width: 72ch;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.impact strong { color: var(--ink); font-weight: 500; }
+
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.pill {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 0 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.pill[data-tone="accent"] { color: var(--accent); border-color: var(--accent); }
+.pill[data-tone="bad"] { color: var(--bad); border-color: var(--bad); }
+.pill[data-tone="warn"] { color: var(--warn); border-color: var(--warn); }
+
+.panel {
+  display: grid;
+  gap: 10px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 14px 16px;
+}
+
+.panel h2 { font-size: 15px; }
+
+.figure {
+  display: grid;
+  gap: 2px;
+}
+
+.figure .value {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+}
+
+.figure .value small { font-size: 15px; font-weight: 500; color: var(--muted); }
+.figure .label { color: var(--muted); font-size: 13px; }
+
+.plain-list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+}
+
+.plain-list time, .plain-list .when {
+  display: block;
+  color: var(--muted);
+  font-size: 12.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  align-items: end;
+}
+
+.field { display: grid; gap: 2px; font-size: 12.5px; color: var(--muted); }
+
+.field input, .field select {
+  min-height: 36px;
+  padding: 5px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+  font-size: 14.5px;
+}
+
+.field input[type="search"] { min-width: min(280px, 70vw); }
+
+.count { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+
+.btn {
+  min-height: 36px;
+  padding: 5px 14px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn:hover { border-color: var(--accent); color: var(--accent); }
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+th {
+  font-weight: 500;
+  color: var(--muted);
+  font-size: 13px;
+  white-space: nowrap;
+  background: var(--paper);
+}
+
+tbody tr:last-child td { border-bottom: 0; }
+
+td.num, th.num { text-align: right; white-space: nowrap; width: 1%; }
+td.keep { white-space: nowrap; width: 1%; }
+tr[hidden] { display: none; }
+
+.empty {
+  padding: 14px;
+  border: 1px dashed var(--line);
+  border-radius: 6px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.prose { display: grid; gap: 10px; max-width: 72ch; }
+.prose h2 { margin-top: 10px; }
+.prose ul { margin: 0; padding-left: 20px; display: grid; gap: 4px; }
+
+.diff { display: grid; gap: 8px; padding: 10px 12px; }
+
+.diff-block {
+  display: grid;
+  gap: 4px;
+  font-size: 13.5px;
+  border-left: 3px solid var(--line);
+  padding-left: 10px;
+}
+
+.diff-block[data-op="added"] { border-left-color: var(--accent); }
+.diff-block[data-op="removed"] { border-left-color: var(--bad); }
+.diff-block[data-op="changed"] { border-left-color: var(--warn); }
+
+.diff-old { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--bad); }
+.diff-label { font-size: 12px; color: var(--muted); }
+
+/* 원문 대조: 요약 아래에 접어 두는 원문 대목 */
+.excerpt { max-width: 72ch; font-size: 13.5px; }
+.excerpt summary { cursor: pointer; color: var(--accent); width: fit-content; }
+.excerpt summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.excerpt blockquote {
+  margin: 8px 0 4px;
+  padding: 8px 12px;
+  border-left: 3px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+  display: grid;
+  gap: 6px;
+}
+.excerpt blockquote p { margin: 0; }

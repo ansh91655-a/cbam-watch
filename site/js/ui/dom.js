@@ -15,6 +15,12 @@ export function h(tag, attrs = {}, children = []) {
   return node;
 }
 
+// 요소의 자식을 통째로 바꾼다. 빈 값(null, false)은 건너뛴다(그냥 넣으면 "null"이라는 글자가 찍힌다).
+export function fill(node, ...children) {
+  node.replaceChildren(...children.flat().filter(Boolean));
+  return node;
+}
+
 // https 주소만 링크로 만든다. 그 밖의 값이면 null.
 export function safeLink(url, text, attrs = {}) {
   try {

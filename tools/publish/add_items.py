@@ -5,6 +5,8 @@
 
 판정과 별도로 이 프로그램이 한 번 더 막는 것
 - 형식: id, 제목, 요약, 종류, 중요도, 링크, 게시일의 꼴
+- 주제(topic)는 data/topics.json의 code 가운데 하나여야 한다. 비었거나 목록에 없으면 막지 않고 '기타'(etc)로 싣고,
+  결과의 topicDefaulted에 적는다(주제가 틀렸다고 검증을 통과한 소식을 묵히지 않는다).
 - 사실: 저장소에 원문 글(sourceTextPath)이 있으면, 제목·요약·실무 영향에 나온 수치와 날짜가 그 글에 있어야 한다.
   검증 실행이 표기 차이라고 사유(factNote)를 적은 경우에만 넘어간다.
 원문 발췌(excerpt)는 EU 공식 출처(등급 A)이고 원문 글에 그대로 있을 때만 싣는다. 아니면 발췌만 빼고 싣는다.
@@ -18,13 +20,16 @@ import sys
 
 from tools.check import excerpt_check, fact_check
 from tools.common.jsonio import read_json, stamp, today, write_json
+from tools.publish import topics
 from tools.run import dbdump
 
 KINDS = {"법령", "가이던스", "가격", "입법", "제도 안내", "국내", "해외", "행사", "원문 변경", "소식"}
 LEVELS = {"높음", "보통", "낮음"}
 ID = re.compile(r"^[a-z0-9][a-z0-9-]{5,79}$")
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
-PUBLIC_FIELDS = ["id", "published", "title", "summary", "impact", "kind", "importance", "topics", "sourceCode", "sourceName", "link", "price"]
+DATE_OR_MONTH = re.compile(r"^\d{4}-\d{2}(-\d{2})?$")
+EVENT_KINDS = {"기한", "시행", "가격", "행사"}
+PUBLIC_FIELDS = ["id", "published", "title", "summary", "impact", "kind", "topic", "importance", "topics", "sourceCode", "sourceName", "link", "price"]
 
 
 def format_problems(item):
@@ -85,7 +90,8 @@ def main(argv):
     events = read_json("data/events.json", {"events": []})
     event_keys = {(event["date"], event["title"]) for event in events["events"]}
 
-    added, rejected, without_excerpt, with_note = [], [], [], []
+    added, rejected, without_excerpt, with_note, topic_defaulted = [], [], [], [], []
+    known_topics = topics.codes()
     for item_id, verdict in sorted(verdicts.items()):
         item = items.get(item_id)
         if verdict.get("result") != "pass" or item is None or item_id in published:
@@ -98,6 +104,9 @@ def main(argv):
         row = {field: item[field] for field in PUBLIC_FIELDS if field in item and item[field] not in (None, "")}
         row.setdefault("published", "")
         row.setdefault("impact", "")
+        if row.get("topic") not in known_topics:
+            row["topic"] = topics.OTHER
+            topic_defaulted.append(item_id)
         excerpt = checked_excerpt(item, source)
         if excerpt:
             row["excerpt"] = excerpt
@@ -110,14 +119,17 @@ def main(argv):
             with_note.append(item_id)
         for event in item.get("events", []) or []:
             key = (str(event.get("date", "")), str(event.get("title", "")))
-            if DATE.match(key[0]) and key[1] and key not in event_keys:
-                events["events"].append({"date": key[0], "title": key[1], "note": str(event.get("note", "")), "sourceName": item.get("sourceName", ""), "link": item.get("link", "")})
+            if DATE_OR_MONTH.match(key[0]) and key[1] and key not in event_keys:
+                row = {"date": key[0], "title": key[1], "note": str(event.get("note", "")), "sourceName": item.get("sourceName", ""), "link": item.get("link", "")}
+                if event.get("kind") in EVENT_KINDS:
+                    row["kind"] = event["kind"]
+                events["events"].append(row)
                 event_keys.add(key)
     if added:
         data["builtAt"] = stamp()
         write_json("data/items.json", data)
         write_json("data/events.json", events)
-    print(json.dumps({"added": added, "rejected": rejected, "withoutExcerpt": without_excerpt, "withFactNote": with_note, "total": len(data["items"])}, ensure_ascii=False))
+    print(json.dumps({"added": added, "rejected": rejected, "withoutExcerpt": without_excerpt, "withFactNote": with_note, "topicDefaulted": topic_defaulted, "total": len(data["items"])}, ensure_ascii=False))
     return 0
 
 

@@ -2,9 +2,12 @@
 
 보관 기준
 - 본문을 뽑을 수 있거나 흔한 문서 형식이고 크기가 KEEP_LIMIT 이하면 사본을 저장소에 둔다.
+  사본의 자리는 originals/files/<문서 id>/<해시 앞 12자>/<원래 파일 이름>이다. 사이트의 원문 대장이 이 파일을 바로 내려받게 하므로
+  내려받은 파일이 원래 이름을 갖도록 파일 이름을 그대로 둔다.
 - 그 밖의 것(압축 파일, 아주 큰 파일)은 사본을 두지 않고 해시와 크기만 적는다. 바뀌었는지는 알 수 있다.
 """
 import pathlib
+import re
 
 from tools.common.jsonio import today, write_json
 from tools.common.net import sha256_hex
@@ -13,6 +16,23 @@ from tools.originals import diff, textify
 KEEP_TYPES = {"pdf", "docx", "xlsx", "html", "htm", "txt", "doc", "xls", "xlsm", "ppt", "pptx", "csv", "json", "xml", "odt", "ods", "rtf"}
 KEEP_LIMIT = 30 * 1024 * 1024
 MAX_SAME_TEXT = 8
+
+
+UNSAFE = re.compile(r'[\\/:*?"<>|#%\x00-\x1f]')
+NAME_LIMIT = 140
+
+
+def safe_name(filename):
+    """파일 이름에서 경로나 주소에 쓸 수 없는 글자를 밑줄로 바꾼다. 너무 길면 확장자를 남기고 줄인다."""
+    name = " ".join(UNSAFE.sub("_", str(filename)).split()).strip(". ") or "document"
+    if len(name) > NAME_LIMIT and "." in name:
+        stem, ext = name.rsplit(".", 1)
+        name = stem[: NAME_LIMIT - len(ext) - 1].rstrip() + "." + ext
+    return name[:NAME_LIMIT]
+
+
+def file_path(doc, digest):
+    return pathlib.Path(f"originals/files/{doc['id']}/{digest[:12]}/{safe_name(doc['filename'])}")
 
 
 def suffix(filename):
@@ -31,11 +51,11 @@ def store(doc, body, moment):
         version["kept"] = False
         return version
     short = digest[:12]
-    file_path = pathlib.Path(f"originals/files/{doc['id']}/{short}.{suffix(doc['filename'])}")
-    file_path.parent.mkdir(parents=True, exist_ok=True)
-    file_path.write_bytes(body)
-    text, pages = textify.extract(file_path)
-    version.update({"file": str(file_path), "pages": pages})
+    path = file_path(doc, digest)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(body)
+    text, pages = textify.extract(path)
+    version.update({"file": str(path), "pages": pages})
     if text is not None:
         text_path = pathlib.Path(f"originals/text/{doc['id']}/{short}.txt")
         text_path.parent.mkdir(parents=True, exist_ok=True)
@@ -49,6 +69,11 @@ def discard(version):
     for key in ("file", "text"):
         if version.get(key):
             pathlib.Path(version[key]).unlink(missing_ok=True)
+    if version.get("file"):
+        try:
+            pathlib.Path(version["file"]).parent.rmdir()  # 해시 폴더가 비었으면 지운다
+        except OSError:
+            pass
 
 
 def read_text(version):

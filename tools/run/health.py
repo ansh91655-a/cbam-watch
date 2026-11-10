@@ -52,6 +52,11 @@ def _originals_problems(originals, day):
     return problems
 
 
+def _price_problems(prices):
+    rows = prices.get("unparsed", []) or []
+    return [f"인증서 가격표에서 읽지 못한 행 {len(rows)}건(표의 꼴이 바뀐 것으로 보임): {str(rows[0])[:80]}"] if rows else []
+
+
 def report():
     """저장소의 상태를 사전으로 돌려준다. problems가 사람에게 알릴 문제다."""
     day = today()
@@ -69,6 +74,8 @@ def report():
     if workday and not collect_today:
         problems.append(f"출처 자동 수집이 오늘 돌지 않음(마지막 {status.get('checkedAt', '없음')})")
     problems += _source_problems(status, claude)
+    prices = read_json("data/prices.json", {}) or {}
+    problems += _price_problems(prices)
     if workday:
         problems += _originals_problems(originals, day)
         if not deployed_today:
@@ -86,6 +93,7 @@ def report():
         "originalsUnreachable": int(originals.get("unreachableCount", 0) or 0),
         "siteDeployedAt": deployed,
         "siteDeployedToday": deployed_today,
+        "prices": len(prices.get("prices", [])),
         "publishedItems": len(items),
         "listedToday": sum(1 for item in items if item.get("listed") == day),
         "withdrawn": sum(1 for item in items if item.get("withdrawn")),

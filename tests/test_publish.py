@@ -42,20 +42,34 @@ class PublishTest(unittest.TestCase):
         _write("data/items.json", {"items": [{"id": "seed-one", "title": "기존 항목", "summary": "요약", "kind": "소식", "importance": "보통",
                                               "link": "https://example.org/a", "published": "2026-11-09", "listed": "2026-11-10", "authoring": "자동"}]})
         _write("data/events.json", {"events": []})
+        _write("data/topics.json", {"topics": [{"code": "law", "name": "제도·법령"}, {"code": "price", "name": "인증서·가격"}, {"code": "etc", "name": "기타"}]})
 
     def tearDown(self):
         os.chdir(self.previous)
         self.folder.cleanup()
 
     def _draft(self, item_id, **extra):
-        item = {"id": item_id, "title": "새 가이던스 공개", "summary": "EU 집행위원회가 가이던스를 공개했다.", "impact": "", "kind": "가이던스", "importance": "보통",
+        item = {"id": item_id, "title": "새 가이던스 공개", "summary": "EU 집행위원회가 가이던스를 공개했다.", "impact": "", "kind": "가이던스", "topic": "law", "importance": "보통",
                 "link": "https://example.org/b", "published": "2026-11-10", "sourceCode": "ec-news", "sourceName": "EC", "facts": [{"label": "x", "value": "y"}],
-                "events": [{"date": "2027-01-04", "title": "가격 게시"}]}
+                "events": [{"date": "2027-01-04", "title": "가격 게시", "kind": "가격"}, {"date": "2027-02", "title": "판매 시작"}, {"date": "2027", "title": "꼴이 틀린 일정"}]}
         item.update(extra)
         _write(f"db/items/{item_id}.json", item)
 
     def _verdict(self, item_id, result):
         _write(f"db/verdicts/{item_id}.json", {"id": item_id, "result": result, "at": "2026-11-10T08:30:00+09:00"})
+
+    def test_unknown_topic_becomes_other(self):
+        self._draft("20261110-ec-news-topic1", topic="없는주제")
+        self._verdict("20261110-ec-news-topic1", "pass")
+        self._draft("20261110-ec-news-topic2", topic="price")
+        self._verdict("20261110-ec-news-topic2", "pass")
+        code, result = _run(add_items.main, ["--db-dir", "db"])
+        self.assertEqual(result["added"], ["20261110-ec-news-topic1", "20261110-ec-news-topic2"])
+        self.assertEqual(result["topicDefaulted"], ["20261110-ec-news-topic1"])
+        saved = {item["id"]: item["topic"] for item in _read("data/items.json")["items"] if item["id"].startswith("2026")}
+        self.assertEqual(saved, {"20261110-ec-news-topic1": "etc", "20261110-ec-news-topic2": "price"})
+        events = _read("data/events.json")["events"]
+        self.assertEqual([(event["date"], event.get("kind")) for event in events], [("2027-01-04", "가격"), ("2027-02", None)])
 
     def test_only_passed_and_well_formed_items_are_added(self):
         self._draft("20261110-ec-news-aaaaaa")

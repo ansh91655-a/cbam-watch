@@ -2,16 +2,19 @@
 import * as data from "./data.js";
 import { markNav, onRoute } from "./router.js";
 import { daysSince, minute } from "./ui/format.js";
-import { empty } from "./ui/dom.js";
+import { empty, h } from "./ui/dom.js";
+import { loadTopics } from "./ui/topics.js";
 import { render as home } from "./views/home.js";
 import { render as news } from "./views/news.js";
-import { render as docs } from "./views/docs.js";
+import { render as price } from "./views/price.js";
 import { render as calendar } from "./views/calendar.js";
+import { render as docs } from "./views/docs.js";
 import { render as terms } from "./views/terms.js";
 import { render as sources } from "./views/sources.js";
 import { render as about } from "./views/about.js";
+import { render as design } from "./views/design.js";
 
-const VIEWS = { home, news, docs, calendar, terms, sources, about };
+const VIEWS = { home, news, price, calendar, docs, terms, sources, about, design };
 const STALE_DAYS = 5; // 이보다 오래 갱신되지 않으면 머리글에 알린다.
 
 async function fillChrome() {
@@ -27,13 +30,14 @@ async function fillChrome() {
     const stale = age !== null && age > STALE_DAYS;
     freshness.dataset.state = stale ? "stale" : "ok";
     freshness.textContent = stale
-      ? `마지막 갱신 ${minute(site.builtAt)} · ${age}일 동안 갱신되지 않았습니다. 최신 내용은 원문에서 확인하세요.`
-      : `마지막 갱신 ${minute(site.builtAt)}${site.lastCollected ? ` · 출처 확인 ${minute(site.lastCollected)}` : ""}`;
+      ? `마지막 갱신 ${minute(site.builtAt)}. ${age}일 동안 갱신되지 않았습니다. 최신 내용은 원문에서 확인하세요.`
+      : `마지막 갱신 ${minute(site.builtAt)}${site.lastCollected ? `, 출처 확인 ${minute(site.lastCollected)}` : ""}`;
   } else {
     freshness.dataset.state = "bad";
     freshness.textContent = "게시 데이터를 읽지 못했습니다.";
   }
   document.getElementById("notice").textContent = site.notice || "";
+  document.getElementById("independent").textContent = site.independent || "";
   const operator = document.getElementById("operator");
   if (site.operator) {
     operator.textContent = `운영 ${site.operator}`;
@@ -41,11 +45,21 @@ async function fillChrome() {
   }
 }
 
-async function show(name) {
-  markNav(name);
+// 시안을 미리 보는 중이면 화면 아래에 어느 시안인지와 돌아갈 길을 보여 준다.
+function previewBar() {
+  const theme = window.CBAM_THEME || {};
+  if (!theme.preview) return;
+  document.body.append(h("div", { class: "preview-bar", role: "note" }, [
+    h("span", { text: `시안 ${theme.key} ${theme.name}을 미리 보는 중입니다.` }),
+    h("a", { href: "#design", text: "다른 시안 보기" }),
+  ]));
+}
+
+async function show(route) {
+  markNav(route.name);
   const main = document.getElementById("main");
   try {
-    await VIEWS[name](main);
+    await VIEWS[route.name](main, route.arg);
   } catch (error) {
     main.replaceChildren(empty("화면을 그리지 못했습니다. 잠시 뒤에 다시 열어 주세요."));
   }
@@ -53,4 +67,5 @@ async function show(name) {
 }
 
 fillChrome();
-onRoute(show);
+previewBar();
+loadTopics().then(() => onRoute(show));

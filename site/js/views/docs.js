@@ -1,6 +1,7 @@
-// 원문 대장. 추적하는 원문 문서와 판 이력, 판 사이에 바뀐 곳을 보여 준다.
+// 원문 대장. EU 집행위원회가 올린 문서의 목록이다. 문서 이름을 누르면 파일을 내려받는다.
+// 문서가 바뀌어 판이 둘 이상이면 바뀐 곳과 이전 판을 볼 수 있다.
 import * as data from "../data.js";
-import { empty, h, pill, safeLink, table, viewHead } from "../ui/dom.js";
+import { empty, fill, h, pill, safeLink, viewHead } from "../ui/dom.js";
 import { bytes, count } from "../ui/format.js";
 
 const LABEL = { added: "더해짐", removed: "빠짐", changed: "바뀜" };
@@ -8,67 +9,107 @@ const LABEL = { added: "더해짐", removed: "빠짐", changed: "바뀜" };
 function diffView(result) {
   if (!result) return empty("비교 결과를 읽지 못했습니다.");
   const stats = result.stats || {};
-  const head = h("p", { class: "count", text: `${result.fromDate} 판과 ${result.toDate} 판의 비교: 바뀜 ${stats.changed || 0}, 더해짐 ${stats.added || 0}, 빠짐 ${stats.removed || 0}${result.truncated ? " (앞부분만 표시)" : ""}` });
-  const blocks = (result.blocks || []).map((block) => h("div", { class: "diff-block", "data-op": block.op }, [
-    h("span", { class: "diff-label", text: LABEL[block.op] || block.op }),
-    block.old ? h("p", { class: "diff-old", text: block.old }) : null,
-    block.new ? h("p", { text: block.new }) : null,
-  ]));
-  return h("div", { class: "diff" }, [head, ...blocks]);
+  return h("div", { class: "diff" }, [
+    h("p", { class: "count", text: `${result.fromDate} 판과 ${result.toDate} 판의 비교: 바뀜 ${stats.changed || 0}, 더해짐 ${stats.added || 0}, 빠짐 ${stats.removed || 0}${result.truncated ? " (앞부분만 표시)" : ""}` }),
+    ...(result.blocks || []).map((block) => h("div", { class: "diff-block", "data-op": block.op }, [
+      h("span", { class: "diff-label", text: LABEL[block.op] || block.op }),
+      block.old ? h("p", { class: "diff-old", text: block.old }) : null,
+      block.new ? h("p", { text: block.new }) : null,
+    ])),
+  ]);
 }
 
-function row(doc, detailRow) {
-  const detailCell = detailRow.firstChild;
-  const versions = doc.versions || [];
-  const latest = versions[versions.length - 1] || {};
-  const withDiff = [...versions].reverse().find((version) => version.diff);
-  const button = withDiff ? h("button", {
-    class: "btn", type: "button", text: "바뀐 곳 보기",
-    onclick: async () => {
-      detailRow.hidden = false;
-      detailCell.replaceChildren(h("p", { class: "count", text: "읽는 중" }));
-      detailCell.replaceChildren(diffView(await data.diff(withDiff.diff)));
+// 문서 이름 아래의 한 줄. 문서 이름이 파일 이름에서 온 것이면 파일 이름을 되풀이하지 않는다.
+function meta(doc) {
+  const stem = String(doc.filename).replace(/\.[^.]+$/, "").replace(/_/g, " ").replace(/\s+/g, " ").trim();
+  return [stem === doc.title ? "" : doc.filename, doc.pages ? `${count(doc.pages)}쪽` : "", doc.bytes ? bytes(doc.bytes) : "", doc.date ? `${doc.date} 확인` : "", doc.stored ? "" : "EU 사이트에서 받음"].filter(Boolean).join(", ");
+}
+
+function row(doc) {
+  const detail = h("div", { hidden: true });
+  const main = safeLink(doc.download, "", { class: "doc-main", target: null, download: doc.filename, title: `${doc.filename} 내려받기` });
+  if (main) {
+    fill(main, 
+      h("span", { class: "doc-type", text: doc.format || "파일" }),
+      h("span", { class: "doc-title", text: doc.title }),
+      h("span", { class: "doc-meta", text: meta(doc) }),
+      h("span", { class: "doc-get", text: "내려받기" }),
+    );
+  }
+  const changed = doc.diff ? h("button", {
+    class: "btn", type: "button", text: "바뀐 곳 보기", "aria-expanded": "false",
+    onclick: async (event) => {
+      const open = detail.hidden;
+      detail.hidden = !open;
+      event.target.setAttribute("aria-expanded", String(open));
+      if (open && !detail.childNodes.length) {
+        detail.replaceChildren(h("p", { class: "count", text: "읽는 중" }));
+        detail.replaceChildren(diffView(await data.diff(doc.diff)));
+      }
     },
   }) : null;
-  return h("tr", {}, [
-    h("td", {}, [safeLink(doc.url, doc.title) || h("span", { text: doc.title }), doc.linked === false ? h("p", {}, pill("원문 화면에서 링크가 사라짐", "warn")) : null]),
-    h("td", { class: "num", text: latest.date || "" }),
-    h("td", { class: "num", text: latest.pages ? `${count(latest.pages)}쪽` : "" }),
-    h("td", { class: "num", text: bytes(latest.bytes) }),
-    h("td", { class: "num", text: `${versions.length}` }),
-    h("td", { class: "keep" }, [
-      safeLink(latest.file, "사본") || h("span", { class: "count", text: "변경 여부만 확인" }),
-      latest.text ? h("span", { text: " · " }) : null, safeLink(latest.text, "본문"), button ? h("p", {}, button) : null,
-    ]),
+  const extra = [
+    doc.versions > 1 ? h("span", { text: `${doc.versions}번째 판` }) : null,
+    changed,
+    ...(doc.earlier || []).map((version) => safeLink(version.download, `${version.date} 판 내려받기`, { target: null })),
+    doc.linked === false ? pill("원래 화면에서 링크가 사라짐", "warn") : null,
+  ].filter(Boolean);
+  return h("li", { class: "doc", "data-text": `${doc.title} ${doc.filename}`.toLowerCase() }, [
+    main || h("span", { class: "doc-main" }, h("span", { class: "doc-title", text: doc.title })),
+    extra.length ? h("div", { class: "doc-extra" }, extra) : null,
+    detail,
   ]);
 }
 
 export async function render(main) {
   const [documents, sources, unreachable] = await Promise.all([data.documents(), data.sources(), data.unreachableDocuments()]);
+  const head = viewHead("원문 대장", "EU 집행위원회가 올린 CBAM 문서입니다. 문서 이름을 누르면 파일을 내려받습니다. 평일마다 다시 확인해 문서가 바뀌면 새 판으로 바꿔 두고, 바뀐 곳을 보여 줍니다.");
   if (!documents.length) {
-    main.replaceChildren(viewHead("원문 대장", "추적하는 원문 문서가 아직 등록되지 않았습니다."), empty("원문 문서 목록을 준비하고 있습니다."));
+    fill(main, head, empty("문서 목록을 준비하고 있습니다."));
     return;
   }
   // 문서가 걸려 있는 화면별로 묶는다. 화면의 차례는 출처 목록의 차례를 따른다.
   const sourceOf = new Map(sources.map((source, index) => [source.code, { ...source, index }]));
-  const pages = [...new Set(documents.map((doc) => doc.page || ""))]
-    .sort((a, b) => (sourceOf.get(a)?.index ?? 999) - (sourceOf.get(b)?.index ?? 999));
+  const pages = [...new Set(documents.map((doc) => doc.page || ""))].sort((a, b) => (sourceOf.get(a)?.index ?? 999) - (sourceOf.get(b)?.index ?? 999));
+  const status = h("p", { class: "count", role: "status", text: `문서 ${documents.length}건` });
   const sections = pages.map((page) => {
     const source = sourceOf.get(page);
-    const body = [];
-    for (const doc of documents.filter((item) => (item.page || "") === page).sort((a, b) => String(a.title).localeCompare(String(b.title)))) {
-      const detailRow = h("tr", { hidden: true }, h("td", { colspan: "6" }));
-      body.push(row(doc, detailRow), detailRow);
-    }
-    return h("section", { class: "stack" }, [
-      h("h2", {}, source ? safeLink(source.url, source.name) || h("span", { text: source.name }) : h("span", { text: "그 밖의 문서" })),
-      table(["문서", { text: "판 확인일", num: true }, { text: "쪽수", num: true }, { text: "크기", num: true }, { text: "판 수", num: true }, "보관본"], body),
-      unreachable[page] ? h("p", { class: "count", text: `이 화면의 문서 링크 가운데 ${unreachable[page]}건은 자동으로 받지 못해 사본이 없습니다. 위 화면 이름을 눌러 직접 확인하세요.` }) : null,
+    const mine = documents.filter((doc) => (doc.page || "") === page).sort((a, b) => String(a.title).localeCompare(String(b.title), "en", { numeric: true }));
+    return h("section", { class: "stack", "data-group": "true" }, [
+      h("div", { class: "sec-head" }, [
+        h("h2", { text: source ? source.name : "그 밖의 문서" }),
+        source ? safeLink(source.url, "이 문서들이 올라온 화면 열기") : null,
+      ]),
+      h("ul", { class: "doc-list" }, mine.map(row)),
+      unreachable[page] ? h("p", { class: "count", text: `이 화면의 문서 링크 가운데 ${unreachable[page]}건은 자동으로 받지 못했습니다. 위의 화면 링크에서 직접 받으세요.` }) : null,
     ]);
   });
-  main.replaceChildren(
-    viewHead("원문 대장", "EU 집행위원회가 올린 법령 관련 문서와 가이던스의 사본을 보관하고, 문서가 바뀌면 이전 판과 비교합니다. 문서 이름을 누르면 원래 올라온 곳이 열립니다. '판 확인일'은 이 사이트가 그 판을 처음 확인한 날입니다."),
-    h("p", { class: "count", text: `문서 ${documents.length}건. 판 수가 2 이상이면 바뀐 곳을 볼 수 있습니다.` }),
+  const none = h("div", { hidden: true }, empty("찾는 문서가 없습니다. 다른 낱말로 찾아보세요."));
+
+  function filter(text) {
+    const words = text.toLowerCase().split(/\s+/).filter(Boolean);
+    let shown = 0;
+    for (const section of sections) {
+      let inGroup = 0;
+      for (const item of section.querySelectorAll(".doc")) {
+        const hit = words.every((word) => item.dataset.text.includes(word));
+        item.hidden = !hit;
+        if (hit) inGroup += 1;
+      }
+      section.hidden = inGroup === 0;
+      shown += inGroup;
+    }
+    status.textContent = words.length ? `문서 ${documents.length}건 가운데 ${shown}건` : `문서 ${documents.length}건`;
+    none.hidden = shown > 0;
+  }
+
+  fill(main, 
+    head,
+    h("div", { class: "filters" }, [
+      h("label", { class: "field", for: "doc-q" }, [h("span", { text: "문서 찾기" }), h("input", { id: "doc-q", type: "search", placeholder: "예: guidance, default values, 5d", oninput: (event) => filter(event.target.value) })]),
+      status,
+    ]),
     ...sections,
+    none,
   );
 }

@@ -1,104 +1,33 @@
-/* 배치: 머리글과 메뉴, 그 아래 한 단 본문(최대 1080px). 첫 화면만 본문과 곁단 두 단. 표만 가로로 스크롤한다. */
-:root {
-  --paper: #f4f6f4;
-  --surface: #ffffff;
-  --ink: #16201a;
-  --muted: #58675e;
-  --line: #d3dbd5;
-  --accent: #1d6a44;
-  --accent-soft: #e2efe7;
-  --warn: #8a5a00;
-  --bad: #b3261e;
-  --font-display: "IBM Plex Sans KR", "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-  --font-body: "Noto Sans KR", "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-  color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --paper: #0f1512;
-    --surface: #171f1a;
-    --ink: #e4ebe6;
-    --muted: #9aa89f;
-    --line: #2a352f;
-    --accent: #70cf99;
-    --accent-soft: #1c2b23;
-    --warn: #e2b458;
-    --bad: #ff8d83;
-    color-scheme: dark;
-  }
-}
-
-:root[data-theme="dark"] {
-  --paper: #0f1512;
-  --surface: #171f1a;
-  --ink: #e4ebe6;
-  --muted: #9aa89f;
-  --line: #2a352f;
-  --accent: #70cf99;
-  --accent-soft: #1c2b23;
-  --warn: #e2b458;
-  --bad: #ff8d83;
-  color-scheme: dark;
-}
-
+/* 바탕: 글, 링크, 제목, 입력 요소의 기본 모양 */
 * { box-sizing: border-box; }
-
+html { font-size: var(--fs-base); -webkit-text-size-adjust: 100%; }
 html, body { margin: 0; }
-
 body {
-  background: var(--paper);
+  background: var(--bg);
   color: var(--ink);
   font-family: var(--font-body);
-  font-size: 15px;
-  line-height: 1.65;
-  -webkit-text-size-adjust: 100%;
+  line-height: 1.68;
+  /* 국문은 낱말 가운데에서 줄을 바꾸지 않는다. 아주 긴 영문 낱말이나 주소는 칸을 넘지 않게 끊는다. */
+  word-break: keep-all;
+  overflow-wrap: anywhere;
 }
-
-h1, h2, h3 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  margin: 0;
-  text-wrap: balance;
-  line-height: 1.35;
-}
-
-h1 { font-size: 23px; }
-h2 { font-size: 17px; }
-h3 { font-size: 15.5px; }
-
-p { margin: 0; }
-
-a { color: var(--accent); text-underline-offset: 2px; }
-
-button, input, select {
-  font: inherit;
-  color: inherit;
-}
-
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
-
-.skip {
-  position: absolute;
-  left: -9999px;
-}
-
-.skip:focus {
-  left: 16px;
-  top: 8px;
-  background: var(--surface);
-  padding: 6px 10px;
-  z-index: 10;
-}
-
-.num { font-variant-numeric: tabular-nums; }
-
+h1, h2, h3 { font-family: var(--font-head); font-weight: var(--w-head); letter-spacing: var(--ls-head); line-height: 1.35; margin: 0; text-wrap: balance; }
+h1 { font-size: var(--fs-2xl); }
+h2 { font-size: var(--fs-xl); }
+h3 { font-size: var(--fs-l); }
+p, ul, ol, dl, dd, figure, blockquote { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+a { color: var(--link); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+button, input, select { font: inherit; color: inherit; }
+button { cursor: pointer; }
+strong { font-weight: 700; }
+time, .num { font-variant-numeric: tabular-nums; }
+:focus-visible { outline: 3px solid var(--accent-strong); outline-offset: 2px; }
+.skip { position: absolute; left: -9999px; }
+.skip:focus { left: 16px; top: 8px; z-index: 20; background: var(--surface); color: var(--ink); padding: 6px 12px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+[hidden] { display: none !important; }
 @media (prefers-reduced-motion: reduce) {
-  * { scroll-behavior: auto !important; transition: none !important; }
+  * { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
 }
-
-/* 국문은 낱말 가운데에서 줄을 바꾸지 않는다. 아주 긴 영문 낱말이나 주소는 칸을 넘지 않게 끊는다. */
-body { word-break: keep-all; overflow-wrap: anywhere; }

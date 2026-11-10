@@ -10,8 +10,8 @@ import sys
 from tools.common.jsonio import read_json, write_json
 from tools.publish import derive
 
-DATA_FILES = ["items", "events", "digests", "terms"]
-LIST_KEY = {"items": "items", "events": "events", "digests": "digests", "terms": "terms"}
+DATA_FILES = ["items", "events", "digests", "terms", "topics", "prices"]
+LIST_KEY = {"items": "items", "events": "events", "digests": "digests", "terms": "terms", "topics": "topics", "prices": "prices"}
 
 
 def main(argv):
@@ -22,7 +22,7 @@ def main(argv):
     data_out = out / "data"
     data_out.mkdir(parents=True, exist_ok=True)
 
-    counts, problems = {}, []
+    counts, problems, bodies = {}, [], {}
     for name in DATA_FILES:
         source = pathlib.Path(f"data/{name}.json")
         body = read_json(source, None) if source.exists() else {LIST_KEY[name]: []}
@@ -30,6 +30,11 @@ def main(argv):
             problems.append(f"data/{name}.json 을 읽지 못함")
             body = {LIST_KEY[name]: []}
         counts[name] = len(body[LIST_KEY[name]])
+        bodies[name] = body
+    # 일정에는 가격표에 적힌 게시일을 더한다(가격표가 바뀌면 일정도 따라 바뀐다)
+    bodies["events"] = {**bodies["events"], "events": derive.events(bodies["events"]["events"], bodies["prices"])}
+    counts["events"] = len(bodies["events"]["events"])
+    for name, body in bodies.items():
         write_json(data_out / f"{name}.json", body)
 
     sources = derive.sources()

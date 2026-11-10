@@ -1,0 +1,62 @@
+/* 디자인 값. 화면의 색, 글꼴, 간격은 모두 여기의 이름을 거친다. 시안별 값은 themes.css가 덮어쓴다.
+   기본값은 시안 1(표준형): Europa Component Library의 EC Blue #004494, EC Yellow #FFD617, EC Grey #404040. */
+:root {
+  color-scheme: light;
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f2f5f9;
+  --ink: #262b33;
+  --ink-2: #4a5059;
+  --ink-3: #626871;
+  --line: #cfd4dc;
+  --line-2: #e6e9ee;
+  --brand: #004494;
+  --brand-strong: #003776;
+  --brand-soft: #eef3f9;
+  --on-brand: #ffffff;
+  --accent: #ffd617;
+  --accent-strong: #f8ae21;
+  --accent-soft: #fff7cc;
+  --on-accent: #1d1d1b;
+  --link: #004494;
+  --ok: #3b6b30;
+  --warn: #8a5200;
+  --bad: #c0202d;
+  --head-bg: #004494;
+  --head-ink: #ffffff;
+  --head-ink-2: #d6e2f1;
+  --head-rule: #ffd617;
+  --foot-bg: #f2f5f9;
+  --foot-ink: var(--ink-2);
+  --status-bg: var(--surface-2);
+  --status-ink: var(--ink-3);
+
+  --font-body: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", Arial, sans-serif;
+  --font-head: var(--font-body);
+  --w-head: 700;
+  --ls-head: -0.01em;
+  --fs-base: 15px;
+  --fs-s: 0.8667rem;
+  --fs-m: 1rem;
+  --fs-l: 1.1333rem;
+  --fs-xl: 1.4rem;
+  --fs-2xl: 1.8667rem;
+  --fs-hero: 3.2rem;
+
+  --gap-1: 4px;
+  --gap-2: 8px;
+  --gap-3: 12px;
+  --gap-4: 16px;
+  --gap-5: 24px;
+  --gap-6: 36px;
+  --maxw: 1120px;
+  --radius: 2px;
+  --radius-l: 4px;
+  --radius-pill: 2px;
+  --card-pad: 18px 20px;
+  --shadow: none;
+
+  --chart-line: #4073af; /* EC Blue 75. 그림의 선은 본문 글자보다 한 단 밝은 파랑을 쓴다(밝기 검사를 통과한 값) */
+  --chart-fill: color-mix(in srgb, var(--chart-line) 10%, transparent);
+  --chart-grid: var(--line-2);
+}

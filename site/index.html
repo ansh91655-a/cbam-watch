@@ -1,42 +1,53 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" data-theme="3">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<meta name="description" content="EU 탄소국경조정제도(CBAM)의 법령, 가이던스, 가격, 입법 동향을 원문 링크와 함께 정리합니다.">
+<meta name="description" content="EU 탄소국경조정제도(CBAM)의 법령, 가이던스, 인증서 가격, 일정을 원문과 함께 국문으로 정리합니다. 개인이 운영하는 비공식 사이트입니다.">
 <title>CBAM 규제동향</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500;600&amp;family=Noto+Sans+KR:wght@400;500&amp;display=swap" rel="stylesheet">
+<script src="js/theme.js"></script>
+<link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/layout.css">
 <link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/chart.css">
+<link rel="stylesheet" href="css/calendar.css">
+<link rel="stylesheet" href="css/themes.css">
 </head>
 <body>
 <a class="skip" href="#main">본문으로 건너뛰기</a>
 <header class="site-head">
-  <div class="brand">
-    <a class="brand-name" href="#home">CBAM 규제동향</a>
-    <span id="stage" class="stage" hidden></span>
+  <div class="head-inner">
+    <div class="brand">
+      <a class="brand-name" href="#home">CBAM 규제동향</a>
+      <span class="brand-sub">EU 탄소국경조정제도 소식을 원문과 함께</span>
+      <span id="stage" class="stage" hidden></span>
+    </div>
+    <nav class="site-nav" aria-label="주 메뉴">
+      <a href="#home" data-view="home">최신 동향</a>
+      <a href="#news" data-view="news">소식</a>
+      <a href="#price" data-view="price">가격</a>
+      <a href="#calendar" data-view="calendar">일정</a>
+      <a href="#docs" data-view="docs">원문 대장</a>
+      <a href="#terms" data-view="terms">용어집</a>
+      <a href="#sources" data-view="sources">출처</a>
+      <a href="#about" data-view="about">안내</a>
+    </nav>
   </div>
-  <nav class="site-nav" aria-label="주 메뉴">
-    <a href="#home" data-view="home">최신 동향</a>
-    <a href="#news" data-view="news">전체 소식</a>
-    <a href="#docs" data-view="docs">원문 대장</a>
-    <a href="#calendar" data-view="calendar">일정</a>
-    <a href="#terms" data-view="terms">용어집</a>
-    <a href="#sources" data-view="sources">출처</a>
-    <a href="#about" data-view="about">안내</a>
-  </nav>
 </header>
 <div class="status-bar">
   <p id="freshness" class="freshness" role="status">데이터를 읽는 중</p>
 </div>
 <main id="main" tabindex="-1"></main>
 <footer class="site-foot">
-  <p id="notice"></p>
-  <p id="operator" hidden></p>
+  <div class="foot-inner">
+    <p id="independent" class="independent"></p>
+    <p id="notice"></p>
+    <p id="operator" hidden></p>
+  </div>
 </footer>
 <script type="module" src="js/app.js"></script>
 </body>

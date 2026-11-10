@@ -1,0 +1,186 @@
+/* 디자인 시안. 시안 1(표준형)의 값은 tokens.css에 있고, 여기에는 시안 2~5가 덮어쓰는 값과 배치를 적는다.
+   어느 시안도 EU 엠블럼(별 열두 개)이나 기관 로고를 쓰지 않는다. 색만 빌린다. */
+
+/* ── 시안 2 관보형: 유럽연합 관보와 EUR-Lex처럼 문서를 읽는 화면. 명조 제목, 가는 줄, 왼쪽 여백의 날짜 ── */
+html[data-theme="2"] {
+  --bg: #ffffff; --surface: #ffffff; --surface-2: #f4f6fa;
+  --ink: #14213d; --ink-2: #3b4763; --ink-3: #66708a; --line: #c5cddc; --line-2: #e2e6ee;
+  --brand: #003399; --brand-strong: #00267a; --brand-soft: #eef2fb;
+  --accent: #ffcc00; --accent-strong: #dea600; --accent-soft: #fff4c2; --on-accent: #14213d;
+  --link: #003399;
+  --head-bg: #ffffff; --head-ink: #14213d; --head-ink-2: #3b4763; --head-rule: #14213d;
+  --foot-bg: #ffffff; --status-bg: #ffffff;
+  --font-head: "Noto Serif KR", "Nanum Myeongjo", "Batang", serif; --w-head: 600; --ls-head: -0.02em;
+  --radius: 0px; --radius-l: 0px; --radius-pill: 0px; --maxw: 1060px;
+  --chart-line: #1f52cc;
+}
+html[data-theme="2"] .site-head { border-top: 8px solid var(--brand); border-bottom: 1px solid var(--ink); }
+html[data-theme="2"] .head-inner { padding-top: 22px; }
+html[data-theme="2"] .brand-name { font-size: 2rem; }
+html[data-theme="2"] .site-nav a { border-bottom-width: 3px; margin-bottom: -1px; }
+html[data-theme="2"] .site-nav a[aria-current="page"] { border-bottom-color: var(--brand); color: var(--brand); }
+html[data-theme="2"] .status-bar { border-bottom: 3px double var(--line); }
+html[data-theme="2"] .now, html[data-theme="2"] .stats { border: 0; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--ink); }
+html[data-theme="2"] .fact:first-child, html[data-theme="2"] .stat:first-child { padding-left: 0; }
+html[data-theme="2"] .card { border: 0; border-top: 1px solid var(--line); padding: 18px 0 22px; }
+html[data-theme="2"] .card[data-importance="높음"] { border-top: 3px solid var(--ink); }
+html[data-theme="2"] .card[data-importance="높음"] .card-title a { background: linear-gradient(transparent 64%, var(--accent) 64%); }
+html[data-theme="2"] .card-title { font-size: 1.3rem; }
+html[data-theme="2"] .m-imp { background: none; padding: 0; color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 4px; text-underline-offset: 2px; }
+@media (min-width: 720px) {
+  html[data-theme="2"] .card { grid-template-columns: 138px minmax(0, 1fr); column-gap: 28px; }
+  html[data-theme="2"] .card > * { grid-column: 2; }
+  html[data-theme="2"] .card-meta { grid-column: 1; grid-row: 1 / span 6; flex-direction: column; align-items: flex-start; gap: 1px; padding-top: 4px; }
+}
+html[data-theme="2"] .panel { background: none; padding: 14px 0 0; border-top: 2px solid var(--ink); }
+html[data-theme="2"] .topic-sec { border-top: 2px solid var(--ink); }
+html[data-theme="2"] .topic-sec .card:first-of-type { border-top: 0; }
+html[data-theme="2"] th { background: none; border-bottom: 2px solid var(--ink); color: var(--ink); }
+html[data-theme="2"] .table-wrap { border: 0; border-top: 1px solid var(--ink); }
+html[data-theme="2"] .chip[aria-current="true"] { background: var(--ink); border-color: var(--ink); }
+
+/* ── 시안 3 깃발형: EU 엠블럼의 파랑과 노랑을 큰 면으로. 굵은 고딕, 둥근 모서리 ── */
+html[data-theme="3"] {
+  --bg: #eaf0fb; --surface: #ffffff; --surface-2: #f3f6fd;
+  --ink: #0b1533; --ink-2: #33406b; --ink-3: #5b6791; --line: #c3cfee; --line-2: #dbe3f6;
+  --brand: #003399; --brand-strong: #00226b; --brand-soft: #e6ecfb;
+  --accent: #ffcc00; --accent-strong: #f0b400; --accent-soft: #fff3bf; --on-accent: #0b1533;
+  --link: #003399;
+  --head-bg: #003399; --head-ink: #ffffff; --head-ink-2: #cdd9f8; --head-rule: #003399;
+  --foot-bg: #0b1533; --foot-ink: #cdd9f8; --status-bg: #00226b; --status-ink: #cdd9f8;
+  --font-body: "Gothic A1", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; --w-head: 800; --ls-head: -0.025em;
+  --fs-2xl: 2.1rem; --fs-hero: 3.8rem;
+  --radius: 8px; --radius-l: 16px; --radius-pill: 999px; --card-pad: 22px 26px;
+  --chart-line: #2a5bd7;
+}
+html[data-theme="3"] .site-head { border-bottom: 0; }
+html[data-theme="3"] .head-inner { align-items: center; padding-block: 16px 14px; }
+html[data-theme="3"] .brand { padding-bottom: 0; }
+html[data-theme="3"] .brand-name { font-size: 1.7rem; }
+html[data-theme="3"] .site-nav a { padding: 7px 14px; border-bottom: 0; margin-bottom: 0; border-radius: 999px; font-weight: 500; }
+html[data-theme="3"] .site-nav a[aria-current="page"] { background: var(--accent); color: var(--on-accent); font-weight: 800; }
+html[data-theme="3"] .status-bar { border-bottom: 0; }
+html[data-theme="3"] main > .now:first-child { margin-top: -28px; border-radius: 0 0 var(--radius-l) var(--radius-l); }
+html[data-theme="3"] .now { --chart-line: var(--accent); background: var(--brand); border: 0; color: #ffffff; }
+html[data-theme="3"] .now .fact { padding: 24px 28px 26px; border-color: rgba(255, 255, 255, 0.22); }
+html[data-theme="3"] .now .fact:hover { background: var(--brand-strong); }
+html[data-theme="3"] .now .fact-label, html[data-theme="3"] .now .fact-note, html[data-theme="3"] .now .fact-value small { color: #dce5ff; }
+html[data-theme="3"] .now .fact-value { color: var(--accent); font-size: 2.7rem; }
+html[data-theme="3"] .now .spark .dot { stroke: var(--brand); }
+html[data-theme="3"] .stats { border: 0; background: none; gap: 14px; overflow: visible; }
+html[data-theme="3"] .stat { margin: 0; border: 0; border-radius: var(--radius-l); background: var(--surface); padding: 22px 26px; }
+html[data-theme="3"] .stat-hero { background: var(--brand); }
+html[data-theme="3"] .stat-hero .stat-value { color: var(--accent); }
+html[data-theme="3"] .stat-hero .stat-label, html[data-theme="3"] .stat-hero .stat-note, html[data-theme="3"] .stat-hero .stat-value small { color: #dce5ff; }
+html[data-theme="3"] .card { border: 0; }
+html[data-theme="3"] .card[data-importance="높음"] { border-top: 0; box-shadow: inset 8px 0 0 var(--accent); }
+html[data-theme="3"] .m-topic { padding: 1px 11px; border-radius: 999px; background: var(--brand-soft); }
+html[data-theme="3"] .m-imp { border-radius: 999px; padding: 1px 11px; }
+html[data-theme="3"] .panel, html[data-theme="3"] .chart-card, html[data-theme="3"] .cal-month, html[data-theme="3"] .yearline-wrap, html[data-theme="3"] .doc-main, html[data-theme="3"] .table-wrap, html[data-theme="3"] .proposal { border-color: transparent; }
+html[data-theme="3"] .panel { background: var(--surface); padding: 22px 24px; }
+html[data-theme="3"] .yl-line { height: 4px; top: 9px; border-radius: 2px; }
+html[data-theme="3"] .yl-done { height: 4px; top: 9px; border-radius: 2px; }
+html[data-theme="3"] .topic-sec { border-top: 4px solid var(--brand); }
+html[data-theme="3"] .site-foot { border-top: 0; }
+
+/* ── 시안 4 계기판형: 통계 포털처럼 촘촘하게. 작은 글자, 좁은 간격, 두 줄로 놓는 카드 ── */
+html[data-theme="4"] {
+  --fs-base: 14px;
+  --bg: #f1f4f9; --surface: #ffffff; --surface-2: #f5f7fb;
+  --ink: #16213a; --ink-2: #45526e; --ink-3: #5a6680; --line: #d3dae7; --line-2: #e6eaf2;
+  --brand: #0e47cb; --brand-strong: #0a328e; --brand-soft: #e7edfa;
+  --accent: #ffd617; --accent-strong: #eeb600; --accent-soft: #fff6c7; --on-accent: #16213a;
+  --link: #0e47cb;
+  --head-bg: #ffffff; --head-ink: #16213a; --head-ink-2: #45526e; --head-rule: var(--line);
+  --foot-bg: #ffffff; --status-bg: #ffffff;
+  --font-body: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; --w-head: 600; --ls-head: -0.01em;
+  --fs-2xl: 1.7rem; --fs-xl: 1.25rem; --fs-hero: 3rem;
+  --gap-6: 26px; --maxw: 1260px;
+  --radius: 4px; --radius-l: 6px; --radius-pill: 4px; --card-pad: 14px 16px;
+  --chart-line: #0e47cb;
+}
+html[data-theme="4"] .site-head { border-bottom-width: 1px; }
+html[data-theme="4"] .head-inner { padding-top: 12px; }
+html[data-theme="4"] .brand { padding-bottom: 10px; }
+html[data-theme="4"] .brand-name { font-size: 1.3rem; }
+html[data-theme="4"] .brand-name::before { content: ""; display: inline-block; width: 12px; height: 12px; margin-right: 9px; background: var(--brand); box-shadow: 5px 5px 0 var(--accent); }
+html[data-theme="4"] .site-nav a { padding: 7px 11px 9px; border-bottom-width: 2px; margin-bottom: -1px; }
+html[data-theme="4"] .site-nav a[aria-current="page"] { color: var(--brand); border-bottom-color: var(--brand); }
+html[data-theme="4"] main { padding-top: 20px; }
+html[data-theme="4"] .now, html[data-theme="4"] .stats { gap: 12px; border: 0; background: none; overflow: visible; }
+html[data-theme="4"] .fact, html[data-theme="4"] .stat { margin: 0; padding: 12px 16px 14px; border: 1px solid var(--line); border-top: 3px solid var(--brand); border-radius: var(--radius-l); background: var(--surface); }
+html[data-theme="4"] .fact-value, html[data-theme="4"] .stat-value { color: var(--ink); font-variant-numeric: tabular-nums; }
+html[data-theme="4"] .stat-hero .stat-value { color: var(--brand); }
+html[data-theme="4"] .card { gap: 5px; }
+html[data-theme="4"] .card[data-importance="높음"] { border-top-width: 3px; }
+html[data-theme="4"] .card-title { font-size: 1.07rem; }
+html[data-theme="4"] .m-topic { padding: 0 7px; border-radius: var(--radius); background: var(--brand-soft); }
+html[data-theme="4"] .panel { background: var(--surface); border: 1px solid var(--line); padding: 14px 16px 16px; }
+html[data-theme="4"] .panel h2 { font-size: 1.07rem; }
+html[data-theme="4"] th, html[data-theme="4"] td { padding: 7px 12px; }
+html[data-theme="4"] .cols { gap: 26px 26px; }
+@media (min-width: 1100px) {
+  html[data-theme="4"] .cols > .stack-l > .stack, html[data-theme="4"] .topic-sec, html[data-theme="4"] main > .stack-l > .stack { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  html[data-theme="4"] .cols > .stack-l > .stack > :not(.card), html[data-theme="4"] .topic-sec > :not(.card), html[data-theme="4"] main > .stack-l > .stack > :not(.card) { grid-column: 1 / -1; }
+}
+
+/* ── 시안 5 통관 서류형: EU 세관 신고서의 칸 양식. 파란 잉크 선, 칸마다 작은 이름표, 형광펜 ── */
+html[data-theme="5"] {
+  --bg: #eef2fa; --surface: #ffffff; --surface-2: #f4f6fc;
+  --ink: #12224f; --ink-2: #33427a; --ink-3: #5a6798; --line: #1d3c8f; --line-2: #aab7de;
+  --brand: #1d3c8f; --brand-strong: #142c6e; --brand-soft: #e9eefb;
+  --accent: #ffe14d; --accent-strong: #f0c000; --accent-soft: #fff7c9; --on-accent: #12224f;
+  --link: #1d3c8f;
+  --head-bg: #ffffff; --head-ink: #12224f; --head-ink-2: #33427a; --head-rule: #1d3c8f;
+  --foot-bg: #ffffff; --status-bg: #ffffff;
+  --font-body: "Nanum Gothic", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; --w-head: 800; --ls-head: -0.01em;
+  --radius: 0px; --radius-l: 0px; --radius-pill: 0px; --card-pad: 0px;
+  --chart-line: #2f55b8;
+}
+html[data-theme="5"] .site-head { border-bottom-width: 2px; }
+html[data-theme="5"] .head-inner { padding-top: 14px; }
+html[data-theme="5"] .brand { padding-bottom: 12px; }
+html[data-theme="5"] .brand-name { padding: 2px 12px 3px; border: 2px solid var(--line); font-size: 1.4rem; }
+html[data-theme="5"] .site-nav { gap: 0; margin-inline: 0; border: 1px solid var(--line); border-bottom: 0; }
+html[data-theme="5"] .site-nav a { padding: 8px 13px; border-bottom: 0; margin-bottom: 0; border-left: 1px solid var(--line-2); }
+html[data-theme="5"] .site-nav a:first-child { border-left: 0; }
+html[data-theme="5"] .site-nav a[aria-current="page"] { background: var(--brand); color: #ffffff; }
+html[data-theme="5"] .status-bar { border-bottom: 1px solid var(--line-2); }
+html[data-theme="5"] main h2 { padding-bottom: 5px; border-bottom: 2px solid var(--line); }
+html[data-theme="5"] .sec-head h2 { flex: 1; }
+html[data-theme="5"] .now, html[data-theme="5"] .stats { border: 2px solid var(--line); }
+html[data-theme="5"] .fact, html[data-theme="5"] .stat { border-color: var(--line); }
+html[data-theme="5"] .fact-label, html[data-theme="5"] .stat-label { font-size: 0.78rem; font-weight: 700; color: var(--ink-3); }
+html[data-theme="5"] .card { gap: 0; border: 1.5px solid var(--line); }
+html[data-theme="5"] .card[data-importance="높음"] { border-top-width: 1.5px; border-top-color: var(--line); }
+html[data-theme="5"] .card[data-importance="높음"] .card-title a { background: var(--accent); box-decoration-break: clone; -webkit-box-decoration-break: clone; padding: 1px 4px; margin-left: -4px; }
+html[data-theme="5"] .card-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(96px, max-content)); gap: 0; border-bottom: 1px solid var(--line); color: var(--ink); font-weight: 700; }
+html[data-theme="5"] .card-meta > * { display: grid; padding: 5px 14px 6px 12px; border-right: 1px solid var(--line-2); border-radius: 0; background: none; }
+html[data-theme="5"] .card-meta > *::before { font-size: 0.72rem; font-weight: 400; color: var(--ink-3); }
+html[data-theme="5"] .m-date::before { content: "게시일"; }
+html[data-theme="5"] .m-topic::before { content: "주제"; }
+html[data-theme="5"] .m-kind::before { content: "종류"; }
+html[data-theme="5"] .m-src::before { content: "출처"; }
+html[data-theme="5"] .m-imp { background: var(--accent); }
+html[data-theme="5"] .m-imp::before { content: "표시"; }
+html[data-theme="5"] .card-title { padding: 13px 16px 4px; }
+html[data-theme="5"] .card-summary { padding: 0 16px; }
+html[data-theme="5"] .card-impact { margin: 10px 16px 0; padding: 7px 12px; border: 1px solid var(--line-2); }
+html[data-theme="5"] .excerpt { padding: 8px 16px 0; }
+html[data-theme="5"] .card-foot { margin-top: 13px; padding: 7px 16px; border-top: 1px solid var(--line-2); background: var(--surface-2); }
+html[data-theme="5"] .pill { border: 1.5px solid currentColor; border-radius: 3px; color: var(--brand); font-weight: 800; transform: rotate(-2deg); }
+html[data-theme="5"] .panel { gap: 0; padding: 0; border: 1.5px solid var(--line); background: var(--surface); }
+html[data-theme="5"] .panel h2 { padding: 6px 14px 7px; border-bottom: 0; background: var(--brand); color: #ffffff; font-size: 1rem; }
+html[data-theme="5"] .panel > :not(h2) { margin: 10px 14px 0; }
+html[data-theme="5"] .panel > :last-child { margin-bottom: 14px; }
+html[data-theme="5"] .panel .plain-list li, html[data-theme="5"] .topic-list a { border-top-color: var(--line-2); }
+html[data-theme="5"] .table-wrap { border: 1.5px solid var(--line); }
+html[data-theme="5"] th, html[data-theme="5"] td { border-bottom-color: var(--line-2); border-right: 1px solid var(--line-2); }
+html[data-theme="5"] th { color: var(--ink); border-bottom: 1px solid var(--line); }
+html[data-theme="5"] .chart-card, html[data-theme="5"] .yearline-wrap, html[data-theme="5"] .cal-month, html[data-theme="5"] .proposal { border: 1.5px solid var(--line); }
+html[data-theme="5"] .cal-month:not([data-has="true"]) { border-color: var(--line-2); }
+html[data-theme="5"] .cal-month h3 { margin: -14px -16px 0; padding: 5px 14px; border-bottom: 1px solid var(--line-2); background: var(--surface-2); }
+html[data-theme="5"] .doc-main { border-color: var(--line-2); }
+html[data-theme="5"] .topic-sec { padding-top: 0; border-top: 0; }
+html[data-theme="5"] .chip { border-color: var(--line-2); }
+html[data-theme="5"] .field input, html[data-theme="5"] .field select { border-color: var(--line); }

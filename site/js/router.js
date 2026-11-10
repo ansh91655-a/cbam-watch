@@ -1,10 +1,10 @@
-// 주소의 #이름으로 화면을 고른다. 이름은 영문 소문자만 쓴다.
+// 주소의 #이름으로 화면을 고른다. 이름 뒤에 -값을 붙여 화면에 값을 넘긴다(예: #news-price, #calendar-2027).
 
-const VIEWS = ["home", "news", "docs", "calendar", "terms", "sources", "about"];
+const VIEWS = ["home", "news", "price", "calendar", "docs", "terms", "sources", "about", "design"];
 
-export function currentView() {
-  const name = location.hash.replace(/^#/, "");
-  return VIEWS.includes(name) ? name : "home";
+export function current() {
+  const [name, ...rest] = location.hash.replace(/^#/, "").split("-");
+  return VIEWS.includes(name) ? { name, arg: rest.join("-") } : { name: "home", arg: "" };
 }
 
 export function markNav(name) {
@@ -15,6 +15,6 @@ export function markNav(name) {
 }
 
 export function onRoute(handler) {
-  window.addEventListener("hashchange", () => handler(currentView()));
-  handler(currentView());
+  window.addEventListener("hashchange", () => handler(current()));
+  handler(current());
 }
