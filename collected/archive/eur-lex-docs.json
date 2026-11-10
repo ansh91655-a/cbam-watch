@@ -1,15 +1,12 @@
 {
  "source": "eur-lex-docs",
- "fetchedAt": "2026-11-10T22:44:44+09:00",
+ "fetchedAt": "2026-11-10T22:53:12+09:00",
  "since": "2025-01-01",
  "report": {
-  "targets": 26,
+  "targets": 23,
   "stored": 0,
-  "kept": 24,
-  "failures": [
-   "32025R2083R(01) (404 HTTP Error 404: )",
-   "32023R0956R(04) (404 HTTP Error 404: )"
-  ],
+  "kept": 23,
+  "failures": [],
   "notes": []
  },
  "entries": [
@@ -192,20 +189,6 @@
    "lines": 1417,
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025PC0990",
    "textPath": "collected/archive/pages/eur-lex-docs/52025PC0990.txt"
-  },
-  {
-   "date": "2026-03-16",
-   "celex": "52025PC0990R(01)",
-   "title": "Proposal for a REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL establishing the Temporary Decarbonisation Fund",
-   "relations": [
-    "title-match"
-   ],
-   "procedures": [
-    "2025/0418(COD)"
-   ],
-   "lines": 1423,
-   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025PC0990R(01)",
-   "textPath": "collected/archive/pages/eur-lex-docs/52025PC0990R-01.txt"
   },
   {
    "date": "2026-03-19",

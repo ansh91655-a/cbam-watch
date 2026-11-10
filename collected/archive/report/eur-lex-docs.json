@@ -1,14 +1,11 @@
 {
- "ranAt": "2026-11-10T22:44:44+09:00",
+ "ranAt": "2026-11-10T22:53:12+09:00",
  "since": "2025-01-01",
  "result": {
-  "targets": 26,
+  "targets": 23,
   "stored": 0,
-  "kept": 24,
-  "failures": [
-   "32025R2083R(01) (404 HTTP Error 404: )",
-   "32023R0956R(04) (404 HTTP Error 404: )"
-  ],
+  "kept": 23,
+  "failures": [],
   "notes": []
  }
 }
