@@ -1,19 +1,14 @@
 {
  "source": "eur-lex-docs",
- "fetchedAt": "2026-11-11T02:08:15+09:00",
+ "fetchedAt": "2026-11-11T02:14:03+09:00",
  "since": "2025-01-01",
  "report": {
-  "targets": 20,
-  "stored": 15,
-  "kept": 5,
+  "targets": 23,
+  "stored": 3,
+  "kept": 20,
   "failures": [],
   "notes": [
-   "52026PC0616: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/757bd24a-8413-11f1-bf5e-01aa75ed71a1.0001.03/DOC_1",
-   "52025PC0989: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/a837cf93-db4d-11f0-8da2-01aa75ed71a1.0001.03/DOC_1",
-   "52025DC0783: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/05f0b7f5-da86-11f0-8da2-01aa75ed71a1.0001.03/DOC_1",
-   "52025PC0574: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/176f6907-626d-11f0-bf4e-01aa75ed71a1.0001.03/DOC_1",
-   "52025PC0408: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/56c7c27f-6221-11f0-bf4e-01aa75ed71a1.0001.03/DOC_1",
-   "52025PC0087: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/731e787f-f4fb-11ef-b7db-01aa75ed71a1.0001.03/DOC_1"
+   "52025PC0990: 고를 파일 2개, 첫째 http://publications.europa.eu/resource/cellar/95ee45d7-db37-11f0-8da2-01aa75ed71a1.0001.03/DOC_1"
   ]
  },
  "entries": [
@@ -181,6 +176,45 @@
    "lines": 1578,
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025PC0989",
    "textPath": "collected/archive/pages/eur-lex-docs/52025PC0989.txt"
+  },
+  {
+   "date": "2025-12-17",
+   "celex": "52025PC0990",
+   "title": "Proposal for a REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL establishing the Temporary Decarbonisation Fund",
+   "relations": [
+    "work_cites_work:32023R0956",
+    "title-match"
+   ],
+   "procedures": [
+    "2025/0418(COD)"
+   ],
+   "lines": 1417,
+   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025PC0990",
+   "textPath": "collected/archive/pages/eur-lex-docs/52025PC0990.txt"
+  },
+  {
+   "date": "2026-03-19",
+   "celex": "52025AE4390",
+   "title": "Opinion of the European Economic and Social Committee – Proposal for a Regulation of the European Parliament and of the Council amending Regulation (EU) 2023/956 as regards the extension of its scope to downstream goods and anti-circumvention measures (COM(2025) 989 final) – Proposal for a Regulation of the European Parliament and of the Council establishing the Temporary Decarbonisation Fund (COM(2025) 990 final)",
+   "relations": [
+    "title-match"
+   ],
+   "procedures": [],
+   "lines": 119,
+   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025AE4390",
+   "textPath": "collected/archive/pages/eur-lex-docs/52025AE4390.txt"
+  },
+  {
+   "date": "2026-03-25",
+   "celex": "52026AA0013",
+   "title": "Opinion 13/2026: concerning the proposal for a regulation of the European Parliament and of the Council establishing the Temporary Decarbonisation Fund – COM (2025) 990 final",
+   "relations": [
+    "title-match"
+   ],
+   "procedures": [],
+   "lines": 14,
+   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52026AA0013",
+   "textPath": "collected/archive/pages/eur-lex-docs/52026AA0013.txt"
   },
   {
    "date": "2026-07-01",
