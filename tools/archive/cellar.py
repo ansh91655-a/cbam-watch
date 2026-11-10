@@ -37,6 +37,13 @@ TITLES = PREFIX + """SELECT DISTINCT ?celex ?date ?title WHERE {{
 }} LIMIT 2000"""
 
 WORDS = ["'carbon border adjustment'", "CBAM", "'Temporary Decarbonisation Fund'"]
+# CBAM 규정을 다투는 EU 법원 사건의 문서 번호(판결 CJ, 법무관 의견 CC, 명령 CO, 제소 공고 CN). 데이터베이스에 있는지만 묻는다.
+CASES = ["62023CJ0512", "62023CC0512", "62023CO0512", "62023CN0512", "62024CJ0519", "62024CC0519", "62024CO0519"]
+KNOWN = PREFIX + """SELECT DISTINCT ?celex ?date WHERE {{
+  VALUES ?celex {{ {values} }}
+  ?work cdm:resource_legal_id_celex ?celex .
+  OPTIONAL {{ ?work cdm:work_date_document ?date }}
+}}"""
 
 
 def ask(query):
@@ -77,6 +84,10 @@ def crawl():
             entry["title"] = entry["title"] or row.get("title", "")
             if "title-match" not in entry["relations"]:
                 entry["relations"].append("title-match")
+    rows, error = ask(KNOWN.format(values=" ".join(f'"{celex}"^^xsd:string' for celex in CASES)))
+    if error:
+        report["failures"].append(f"법원 사건: {error}")
+    report["cases"] = {celex: next((row.get("date", "")[:10] or "날짜 없음" for row in rows if row.get("celex") == celex), "없음") for celex in CASES}
     entries = sorted(found.values(), key=lambda entry: (entry["date"], entry["celex"]), reverse=True)
     for entry in entries:
         entry["url"] = f"https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:{entry['celex']}"

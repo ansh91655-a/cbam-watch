@@ -9,16 +9,17 @@ import argparse
 import sys
 import time
 
-from tools.archive import boards, cellar, ecnews, eurlex, govuk, hys, newsletter, oeil
+from tools.archive import boards, cellar, council, docs, ecnews, efta, eurlex, fedreg, govuk, hys, newsletter, oeil, presscorner, ukleg
 from tools.archive.store import ROOT, SINCE
 from tools.common.jsonio import stamp, write_json
 
 STEPS = [("ec-news", ecnews.crawl), ("ec-newsletter", newsletter.crawl), ("eur-lex", eurlex.crawl), ("eur-lex-related", cellar.crawl),
-         ("ep-oeil", oeil.crawl), ("ec-hys", hys.crawl),
-         ("uk-govuk", govuk.crawl), ("kr-boards", boards.crawl)]
+         ("eur-lex-docs", docs.crawl), ("ep-oeil", oeil.crawl), ("ec-hys", hys.crawl), ("ec-press", presscorner.crawl),
+         ("eu-council", council.crawl), ("efta-eea-lex", efta.crawl),
+         ("uk-govuk", govuk.crawl), ("uk-legislation", ukleg.crawl), ("us-fedreg", fedreg.crawl), ("kr-boards", boards.crawl)]
 
 
-TIMED = {"ec-news"}  # 시간 한도를 넘기면 거기서 멈추는 출처
+TIMED = {"ec-news", "eur-lex-docs", "ec-press"}  # 시간 한도를 넘기면 거기서 멈추는 출처
 
 
 def main(argv):

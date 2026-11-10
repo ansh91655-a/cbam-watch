@@ -50,7 +50,9 @@ jobs:
         timeout-minutes: 40
         env:
           STEPS: ${{ inputs.steps }}
-        run: python -m tools.archive.crawl --budget-minutes 30 $STEPS
+        run: |
+          pip install -q pypdf
+          python -m tools.archive.crawl --budget-minutes 30 $STEPS
       - name: 모은 것 올리기
         if: always() && inputs.mode == 'crawl'
         run: |

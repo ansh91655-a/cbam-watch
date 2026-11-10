@@ -122,6 +122,51 @@ class LawAndNewsletterTest(unittest.TestCase):
         self.assertEqual(newsletter.body_of(lines, "CBAM Newsletter #4"), ["CBAM Newsletter #4", "Dear CBAM Insiders", "New webinar available"])
 
 
+class MoreReadersTest(unittest.TestCase):
+    def test_related_documents_are_chosen_by_how_they_are_linked(self):
+        from tools.archive import docs
+        rows = [
+            {"celex": "52025PC0990", "date": "2025-12-17", "relations": ["http://x#work_cites_work:32023R0956", "title-match"]},
+            {"celex": "52025SC0988", "date": "2025-12-17", "relations": ["http://x#work_cites_work:32023R0956"]},
+            {"celex": "52026PC0616", "date": "2026-07-17", "relations": ["http://x#work_cites_work:32023R0956"]},
+            {"celex": "32025R2546", "date": "2025-12-10", "relations": ["http://x#resource_legal_based_on_resource_legal:32023R0956"]},
+            {"celex": "02023R0956-20251020", "date": "2025-10-20", "relations": ["title-match"]},
+            {"celex": "32023R1773", "date": "2023-08-17", "relations": ["http://x#resource_legal_based_on_resource_legal:32023R0956"]},
+            {"celex": "52026SC0067", "date": "2026-03-16", "relations": ["title-match"]},
+        ]
+        self.assertEqual([row["celex"] for row in docs.wanted(rows)], ["52025PC0990", "52026PC0616"])
+
+    def test_procedure_numbers_in_a_proposal(self):
+        from tools.archive import docs
+        self.assertEqual(docs.procedures_in(["COM(2025) 990 final", "2025/0418 (COD)", "Proposal for a", "see also 2025/0419(COD)"]),
+                         ["2025/0418(COD)", "2025/0419(COD)"])
+
+    def test_procedure_status_and_forecasts(self):
+        from tools.archive import oeil
+        self.assertEqual(oeil.status_of(["Subject", "Status", "Awaiting committee decision", "Key players"]), "Awaiting committee decision")
+        rows = [["Date", "Event", "Reference", "Summary"], ["16/12/2025", "Legislative proposal published", "COM(2025)0995", "Summary"],
+                ["Date", "Subject"], ["14/12/2026", "Indicative plenary sitting date, 1st reading"], ["Procedure reference", "2025/0420(COD)"]]
+        self.assertEqual(oeil.forecasts_of(rows), [{"date": "2026-12-14", "subject": "Indicative plenary sitting date, 1st reading"}])
+        title, events = oeil.events_of(["Full procedure", "A title"], rows, "2025/0420(COD)")
+        self.assertEqual((title, [event["date"] for event in events]), ("A title", ["2025-12-16"]))
+
+    def test_daily_news_keeps_only_the_passages_about_cbam(self):
+        from tools.archive import presscorner
+        lines = ["Daily News", "Farm item", "The Commission published the CBAM certificate price.", "It is EUR 82.32.", "Other item", "More"]
+        self.assertEqual(presscorner.around(lines), ["Farm item", "The Commission published the CBAM certificate price.", "It is EUR 82.32."])
+        self.assertTrue(presscorner.TITLE.search("Commission proposes ETS review"))
+        self.assertFalse(presscorner.TITLE.search("Commission approves State aid for offshore wind"))
+
+    def test_uk_instrument_dates(self):
+        from tools.archive import ukleg
+        lines = ["Statutory Instruments", "2026 No. 995", "CARBON BORDER ADJUSTMENT MECHANISM", "Made", "8th September 2026",
+                 "Laid before the House of Commons", "9th September 2026", "Coming into force", "1st January 2027"]
+        self.assertEqual(ukleg.dates_of(lines), {"Made": "8th September 2026", "Laid before the House of Commons": "9th September 2026",
+                                                  "Coming into force": "1st January 2027"})
+        self.assertTrue(ukleg.ITEM.match("https://www.legislation.gov.uk/uksi/2026/995/contents/made"))
+        self.assertFalse(ukleg.ITEM.match("https://www.legislation.gov.uk/search?type=uksi"))
+
+
 class StoreTest(unittest.TestCase):
     def test_dates(self):
         self.assertEqual(store.iso_from_long("30 September 2026"), "2026-09-30")
