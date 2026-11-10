@@ -1,7 +1,7 @@
 // 소식 하나의 국문 요약. 원문으로 가기 전에 이 화면에서 요약, 실무 영향, 원문 발췌를 먼저 읽는다.
 // 주소는 #item-<소식 번호>이고, 새 소식 구독(RSS)의 링크도 이 화면으로 온다.
 import * as data from "../data.js";
-import { empty, fill, h, safeLink } from "../ui/dom.js";
+import { empty, fill, h, safeLink, unsplit } from "../ui/dom.js";
 import { day } from "../ui/format.js";
 import { icon } from "../ui/icons.js";
 import { itemRows } from "../ui/rows.js";
@@ -22,7 +22,7 @@ function head(item, topic) {
   const date = data.dateOf(item);
   return h("div", { class: "view-head bleed item-head" }, h("div", { class: "band-inner" }, [
     h("a", { class: "back", href: `#news-${topic}` }, [icon("back", 16), h("span", { text: `${topicName(topic)} 소식 목록` })]),
-    h("h1", { text: item.title || "" }),
+    h("h1", {}, unsplit(item.title)),
     h("p", { class: "item-meta" }, [
       date ? h("time", { datetime: day(date), text: day(date) }) : null,
       item.kind ? h("span", { text: item.kind }) : null,

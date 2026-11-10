@@ -14,6 +14,8 @@ body {
   overflow-wrap: anywhere;
 }
 h1, h2, h3 { margin: 0; font-weight: 750; letter-spacing: -0.022em; line-height: 1.3; text-wrap: balance; }
+/* 가운뎃점으로 이어진 낱말은 줄이 바뀌어도 갈라지지 않는다(ui/dom.js의 unsplit) */
+.nb { white-space: nowrap; }
 h1 { font-size: var(--fs-2xl); font-weight: 800; }
 h2 { font-size: var(--fs-xl); }
 h3 { font-size: var(--fs-l); font-weight: 700; }

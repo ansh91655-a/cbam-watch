@@ -1,6 +1,6 @@
 // 첫 화면의 옆 칸: 다가오는 일정, 인증서 가격, 규제 진행 상황
 import { priceChart } from "../../ui/chart.js";
-import { h } from "../../ui/dom.js";
+import { h, unsplit } from "../../ui/dom.js";
 import { countdown, koreanDate, price, signed, today } from "../../ui/format.js";
 
 const EVENT_ROWS = 4;
@@ -64,7 +64,7 @@ export function rulesPanel(body) {
   return h("section", { class: "panel", "aria-labelledby": "h-rules" }, [
     head("h-rules", "규제 진행 상황", "#rules", `${all.length}건 모두 보기`),
     h("ul", { class: "rule-rows" }, rows.map((rule) => h("li", { "data-tone": rule.tone }, [
-      h("a", { href: `#rules-${rule.id}`, text: rule.name }),
+      h("a", { href: `#rules-${rule.id}` }, unsplit(rule.name)),
       h("span", { class: "stage-chip", "data-tone": rule.tone, text: rule.stage }),
       h("small", { text: rule.nextDate && rule.nextDate >= today() ? `${koreanDate(rule.nextDate)}: ${rule.next}` : rule.status }),
     ]))),

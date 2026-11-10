@@ -4,7 +4,7 @@ import { adopted } from "../cn/stage.js";
 import * as data from "../data.js";
 import { band } from "../ui/band.js";
 import { card } from "../ui/card.js";
-import { empty, fill, h, safeLink, table } from "../ui/dom.js";
+import { empty, fill, h, safeLink, table, unsplit } from "../ui/dom.js";
 import { countdown, day, koreanDate } from "../ui/format.js";
 import { icon } from "../ui/icons.js";
 import { stackable } from "../ui/stack.js";
@@ -24,7 +24,7 @@ function ruleCard(rule) {
   const last = rule.timeline[rule.timeline.length - 1];
   return h("article", { class: "rule-card", "data-tone": rule.tone || "progress" }, [
     h("div", { class: "rule-top" }, [stageChip(rule), h("span", { class: "rule-kind", text: rule.kind })]),
-    h("h3", {}, h("a", { href: `#rules-${rule.id}`, text: rule.name })),
+    h("h3", {}, h("a", { href: `#rules-${rule.id}` }, unsplit(rule.name))),
     h("p", { class: "rule-official", text: rule.official }),
     rule.path && rule.path.length ? stepper(rule.path, rule.at, true) : null,
     h("p", { class: "rule-status", text: rule.status }),
@@ -143,7 +143,7 @@ export async function render(main, arg) {
     h("h2", { id: "h-soon", text: "곧 움직일 규제" }),
     h("ul", {}, upcoming.map((rule) => h("li", {}, [
       h("time", { datetime: rule.nextDate, text: koreanDate(rule.nextDate) }),
-      h("a", { href: `#rules-${rule.id}`, text: rule.name }),
+      h("a", { href: `#rules-${rule.id}` }, unsplit(rule.name)),
       h("span", { text: rule.next }),
     ]))),
   ]) : null;

@@ -1,5 +1,5 @@
 // 첫 화면의 큰 머리. 왼쪽에 가장 최근의 요약(제목과 첫 문단, 나머지는 펼쳐서 읽는다), 오른쪽에 한국에서 EU로 가는 길을 그린 지도와 사이트 소개.
-import { h } from "../../ui/dom.js";
+import { h, unsplit } from "../../ui/dom.js";
 import { koreanDate, today } from "../../ui/format.js";
 import { heroMap } from "../../ui/heromap.js";
 
@@ -54,7 +54,7 @@ function copy(digest, byId) {
       h("strong", { text: digestName(digest) }),
       h("span", { text: `${koreanDate(digest.from)} ~ ${koreanDate(digest.to, digest.to.slice(0, 4) !== digest.from.slice(0, 4))}` }),
     ]),
-    h("h1", { id: "h-hero", text: digest.title }),
+    h("h1", { id: "h-hero" }, unsplit(digest.title)),
     ...shown.map((text) => h("p", { class: "hero-lead", text })),
     rest.length || refs ? h("details", { class: "hero-rest" }, [
       h("summary", { text: "요약 이어서 읽기" }),

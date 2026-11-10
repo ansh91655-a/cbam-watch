@@ -91,6 +91,7 @@ export function yearLine(events, year, todayIso, onPick) {
     h("span", {}, [h("i", { class: "yl-dot", "data-month": "true" }), "달만 정해진 일정"]),
     todayIso.startsWith(`${year}-`) ? h("span", { text: `세로선은 오늘(${koreanDate(todayIso, false)})` }) : null,
   ]);
-  wrap.append(root, legend, hidden);
-  return wrap;
+  // 옆으로 미는 것은 일정선뿐이다. 범례와 안내 글은 밀리지 않게 그 밖에 둔다.
+  wrap.append(root);
+  return h("div", { class: "yearline-card" }, [wrap, legend, hidden]);
 }
