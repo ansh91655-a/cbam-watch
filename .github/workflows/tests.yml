@@ -7,6 +7,13 @@ on:
       - "tests/**"
       - "requirements.txt"
       - ".github/workflows/tests.yml"
+      # 시험이 직접 읽는 화면의 셈과 법령에서 옮겨 온 참고 자료
+      - "site/js/calc/**"
+      - "site/js/cn/**"
+      - "data/calc.json"
+      - "data/calc-goods.json"
+      - "data/factor.json"
+      - "data/duties.json"
   workflow_dispatch:
 
 permissions:

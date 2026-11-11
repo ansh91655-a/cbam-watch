@@ -3,6 +3,7 @@ from tools.common.siteinfo import site_url
 
 SITE = site_url()
 CONSOLE_NOTE = "자세한 내용(보류 사유, 실행 기록)은 운영 콘솔에서 봅니다."
+SITECHECK_LINES = 8  # 화면 점검의 문제를 이슈에 적는 줄 수
 
 
 def marker(kind, key):
@@ -94,3 +95,28 @@ def tests_failed(sha, url, owner):
         lines += ["", f"실행 기록: {url}"]
     return "\n".join(lines)
 
+
+def sitecheck_failed(sha, url, owner, report=None):
+    """화면 점검(넘침, 화면 오류, 접근성)이 실패했을 때의 글. 어느 화면이 왜 걸렸는지를 몇 줄 적는다.
+
+    사이트는 이 검사와 상관없이 이미 배포되므로, 걸린 화면이 그대로 보이고 있을 수 있다.
+    """
+    report = report if isinstance(report, dict) else {}
+    failures = [row for row in report.get("failures", []) if isinstance(row, dict)]
+    lines = [
+        f"{_hello(owner)}**문제 보고: 화면 점검이 실패했습니다**",
+        "",
+        f"커밋 `{sha[:7] or '알 수 없음'}`의 사이트를 브라우저로 열어 본 검사에서 문제가 나왔습니다. 사이트는 이 검사와 상관없이 배포되므로, 아래 화면이 지금 그대로 보이고 있을 수 있습니다.",
+    ]
+    if failures:
+        lines += ["", f"- 문제 {len(failures)}건"]
+        lines += [f"  - {str(row.get('where', ''))[:80]}: {str(row.get('why', ''))[:200]}" for row in failures[:SITECHECK_LINES]]
+        if len(failures) > SITECHECK_LINES:
+            lines.append(f"  - 이 밖에 {len(failures) - SITECHECK_LINES}건")
+    elif report.get("crashed"):
+        lines += ["", "- 검사가 끝까지 돌지 못했습니다(검사 도구나 브라우저의 문제일 수 있습니다)."]
+    else:
+        lines += ["", "- 어느 화면인지는 실행 기록에서 확인해야 합니다(결과 파일을 읽지 못했습니다)."]
+    if str(url).startswith("https://"):
+        lines += ["", f"실행 기록: {url}"]
+    return "\n".join(lines)

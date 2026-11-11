@@ -103,6 +103,26 @@ class TestsFailedNoticeTest(unittest.TestCase):
         self.assertIn("`0832b3d`", text)
         self.assertIn("https://github.com/o/r/actions/runs/1", text)
 
+    def test_a_failed_site_check_names_the_screens_and_is_reported_once_per_commit(self):
+        import json
+        import tempfile
+        from tools.notify import run
+        report = {"ok": False, "failures": [{"check": "layout", "where": f"#news (너비 {width})", "why": "가로로 넘침(402px > 360px, p.title)"} for width in range(360, 372)]}
+        with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as file:
+            json.dump(report, file, ensure_ascii=False)
+        mark, text = run.pending("sitecheck", "", "owner", sha="0832b3d4c5e6f7a8", url="https://github.com/o/r/actions/runs/2", report=file.name)[0]
+        self.assertIn("sitecheck:0832b3d4c5e6", mark)
+        self.assertIn("화면 점검이 실패", text)
+        self.assertIn("문제 12건", text)
+        self.assertIn("#news (너비 360): 가로로 넘침", text)
+        self.assertIn("이 밖에 4건", text)
+        self.assertIn("https://github.com/o/r/actions/runs/2", text)
+        # 결과 파일이 없어도 알림은 간다
+        _, bare = run.pending("sitecheck", "", "owner", sha="0832b3d4c5e6f7a8", url="", report="/no/such/file.json")[0]
+        self.assertIn("결과 파일을 읽지 못했습니다", bare)
+        _, stopped = run.pending("sitecheck", "", "", sha="", url="")[0]
+        self.assertIn("알 수 없음", stopped)
+
 
 if __name__ == "__main__":
     unittest.main()

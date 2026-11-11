@@ -1,0 +1,61 @@
+name: 화면 점검
+
+# 사이트를 만들어 브라우저로 열고 가로 넘침, 화면 오류, 접근성을 검사한다(tools/sitecheck).
+# 화면 파일이나 게시 데이터가 바뀌면 돈다. 사이트 배포(pages.yml)는 이 검사를 기다리지 않는다:
+# 날마다의 게시가 검사 도구의 사정으로 멈추지 않게 하려는 것이고, 문제가 나오면 '운영 보고' 이슈에 어느 화면인지 적어 알린다.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - "data/**"
+      - "tools/publish/**"
+      - "tools/sitecheck/**"
+      - ".github/workflows/sitecheck.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+# 새 커밋이 오면 앞의 검사는 그만둔다(가장 새 모습만 보면 된다).
+concurrency:
+  group: sitecheck
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: tools/sitecheck/package-lock.json
+      - name: 사이트 만들기
+        run: |
+          pip install -q -r requirements.txt
+          python -m tools.publish.build_site _site
+      - name: 검사 도구 받기
+        run: npm ci --prefix tools/sitecheck --no-audit --no-fund
+      - name: 화면 점검
+        run: node tools/sitecheck/run.mjs _site --report sitecheck-report.json
+      - name: 문제를 운영 보고 이슈에 알리기
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: python -m tools.notify.run --event sitecheck --sha "$GITHUB_SHA" --url "$RUN_URL" --report sitecheck-report.json
+      - name: 결과 파일 남기기
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sitecheck-report
+          path: sitecheck-report.json
+          if-no-files-found: ignore
+          retention-days: 14

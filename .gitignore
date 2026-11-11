@@ -4,3 +4,4 @@ __pycache__/
 /tmp/
 _site/
 _console/
+node_modules/

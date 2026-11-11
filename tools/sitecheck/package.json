@@ -1,0 +1,13 @@
+{
+  "name": "cbam-watch-sitecheck",
+  "private": true,
+  "type": "module",
+  "description": "만든 사이트를 브라우저로 열어 가로 넘침, 화면 오류, 접근성을 검사한다.",
+  "scripts": {
+    "check": "node run.mjs"
+  },
+  "dependencies": {
+    "axe-core": "4.14.0",
+    "puppeteer-core": "23.11.1"
+  }
+}
