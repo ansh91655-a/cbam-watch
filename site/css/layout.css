@@ -56,7 +56,7 @@ main:has(> .showcase:last-child) { padding-bottom: 0; }
 .hero-fresh[data-state="stale"]::before, .hero-fresh[data-state="bad"]::before { background: var(--accent); box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.22); }
 .hero h1 { font-size: var(--fs-hero); font-weight: 800; letter-spacing: -0.035em; line-height: 1.16; }
 .hero h1 .hl { background: linear-gradient(90deg, var(--hl-from), var(--hl-to)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.hero-lead { max-width: 30em; font-size: 1.08rem; color: var(--on-deep-2); }
+.hero-lead { max-width: 30em; font-size: 1.08rem; color: var(--on-deep-2); text-wrap: balance; word-break: keep-all; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
 .hero-map { position: absolute; z-index: 1; top: 34px; right: -84px; width: min(62%, 720px); aspect-ratio: 1117 / 488; pointer-events: none; -webkit-mask-image: linear-gradient(90deg, transparent, #000 14%, #000 88%, transparent); mask-image: linear-gradient(90deg, transparent, #000 14%, #000 88%, transparent); }
 .hero-map .map { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
