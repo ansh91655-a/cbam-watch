@@ -82,3 +82,5 @@ html[data-theme="midnight"] {
 html[data-theme="midnight"] .date-list li[data-kind="기한"] .date-box { color: var(--accent); }
 html[data-theme="midnight"] .cal-event[data-flash="true"] { background: var(--accent-soft); }
 html[data-theme="midnight"] .quote { background: var(--surface-2); }
+/* 이 변형의 대표색은 밝은 파랑이라 단추의 흰 글자가 묻힌다. 글자를 어둡게 한다. */
+html[data-theme="midnight"] .btn-primary { color: #0b1230; }

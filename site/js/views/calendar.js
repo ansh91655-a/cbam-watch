@@ -33,7 +33,7 @@ export async function render(main, arg) {
   fill(main,
     band("일정", "출처에 날짜가 적혀 있는 일정만 싣습니다. 언론 보도로만 알려진 날짜에는 '보도 기준'이라고 적었습니다. 날짜는 바뀔 수 있으니 원문에서 다시 확인하세요."),
     h("div", { class: "year-nav" }, [
-      h("span", { class: "year", text: `${year}년` }),
+      h("h2", { class: "year", text: `${year}년` }),
       h("nav", { class: "chips", "aria-label": "연도" }, years.map((value) => h("a", { class: "chip", href: `#calendar-${value}`, "aria-current": value === year ? "true" : null, text: `${value}년` }))),
       h("span", { class: "count", text: `일정 ${mine.length}건${year >= thisYear ? `, 앞으로 ${ahead}건` : ""}` }),
       !ahead && next && nextYear !== year ? h("a", { class: "next-hint", href: `#calendar-${nextYear}`, text: `다음 일정은 ${koreanDate(next.date)} ${next.title}` }) : null,

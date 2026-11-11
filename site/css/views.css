@@ -24,7 +24,7 @@
 .doc-main { display: grid; grid-template-columns: 54px minmax(0, 1fr) auto; align-items: center; gap: 0 16px; padding: 13px 18px 13px 14px; border: 1px solid var(--line-2); border-radius: 14px; background: var(--surface); color: inherit; text-decoration: none; transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s; }
 .doc-main:hover { border-color: var(--brand-bright); box-shadow: var(--shadow-1); transform: translateY(-1px); }
 .doc-type { grid-row: 1 / span 2; padding: 5px 0; border-radius: 9px; background: var(--brand-soft); color: var(--brand); font-size: 0.72rem; font-weight: 800; text-align: center; letter-spacing: 0.02em; }
-.doc-type[data-type="XLSX"] { background: color-mix(in srgb, var(--t-verify) 13%, var(--surface)); color: var(--t-verify); }
+.doc-type[data-type="XLSX"] { background: color-mix(in srgb, var(--t-verify) 13%, var(--surface)); color: color-mix(in srgb, var(--t-verify) 80%, var(--ink)); }
 .doc-type[data-type="ZIP"] { background: var(--surface-2); color: var(--ink-2); }
 .doc-title { font-weight: 600; color: var(--ink); }
 .doc-main:hover .doc-title { color: var(--link); }

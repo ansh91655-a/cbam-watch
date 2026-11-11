@@ -52,7 +52,7 @@ function priceTable(rows, unit) {
       h("td", { class: "num" }, h("strong", { text: price(row.value) })),
       h("td", { class: "num", text: before ? signed(row.value - before.value) : "" }),
     ]);
-  }));
+  }), "기간별 CBAM 인증서 가격");
 }
 
 export async function render(main) {

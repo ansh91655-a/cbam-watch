@@ -121,7 +121,7 @@ function wireSkip() {
 function previewBar() {
   const theme = window.CBAM_THEME || {};
   if (!theme.preview) return;
-  document.body.append(h("div", { class: "preview-bar", role: "note" }, [
+  document.body.append(h("aside", { class: "preview-bar", "aria-label": "색 변형 미리 보기" }, [
     h("span", { text: `'${theme.name}' 색으로 보는 중입니다.` }),
     h("a", { href: "#design", text: "다른 색 보기" }),
   ]));

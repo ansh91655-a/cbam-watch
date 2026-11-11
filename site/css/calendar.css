@@ -1,7 +1,7 @@
 /* 일정: 맨 위에 한 해를 한 줄로 그린 일정선, 그 아래에 달력 */
 .year-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
 .year-nav .next-hint { font-size: var(--fs-s); font-weight: 600; }
-.year-nav .year { font-weight: 800; font-size: var(--fs-2xl); letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.year-nav .year { font-weight: 800; font-size: var(--fs-2xl); line-height: inherit; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
 
 /* 칸 안에서만 옆으로 밀어 본다. min-width가 없으면 본문 폭이 일정선의 너비만큼 늘어난다 */
 .yearline-card { min-width: 0; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); }

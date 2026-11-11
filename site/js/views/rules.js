@@ -60,7 +60,7 @@ function positions(rule) {
       return h("td", { class: text ? null : "blank", text: text || "확인된 내용 없음" });
     }),
   ]));
-  const wrap = stackable(table(["쟁점", ...book.parties.map((party) => party.name)], rows));
+  const wrap = stackable(table(["쟁점", ...book.parties.map((party) => party.name)], rows, "기관별 입장 비교"));
   wrap.classList.add("pos-table");
   const sources = h("ul", { class: "pos-sources" }, book.parties.map((party) => {
     const link = safeLink(party.link, party.source);

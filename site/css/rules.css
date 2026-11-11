@@ -22,8 +22,8 @@
 [data-tone="adopted"] { --rule-tone: var(--t-legis); }
 [data-tone="dispute"] { --rule-tone: var(--t-korea); }
 [data-tone="ended"] { --rule-tone: var(--ink-3); }
-.stage-chip { display: inline-flex; align-items: center; gap: 6px; padding: 2px 11px; border-radius: 999px; background: color-mix(in srgb, var(--rule-tone, var(--brand-bright)) 12%, var(--surface)); color: var(--rule-tone, var(--brand)); font-size: 0.82rem; font-weight: 700; line-height: 1.7; }
-.stage-chip::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.stage-chip { display: inline-flex; align-items: center; gap: 6px; padding: 2px 11px; border-radius: 999px; background: color-mix(in srgb, var(--rule-tone, var(--brand-bright)) 12%, var(--surface)); color: color-mix(in srgb, var(--rule-tone, var(--brand)) 80%, var(--ink)); font-size: 0.82rem; font-weight: 700; line-height: 1.7; }
+.stage-chip::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--rule-tone, var(--brand)); }
 
 /* 단계 표시 */
 .stepper { display: flex; align-items: flex-start; gap: 0; margin: 4px 0; padding: 0; list-style: none; }

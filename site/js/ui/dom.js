@@ -50,8 +50,18 @@ export function empty(text) {
   return h("p", { class: "empty", text });
 }
 
-export function table(headers, rows) {
+// 좁은 화면에서는 표가 옆으로 넘어가 감싼 칸을 옆으로 밀어 본다. 자판으로도 밀 수 있게, 넘칠 때에는 그 칸에 초점이 가도록 한다.
+// 넘치지 않을 때에는 초점이 멈출 까닭이 없으므로 뺀다.
+function focusWhenScrollable(node) {
+  const set = () => { if (node.scrollWidth > node.clientWidth + 1) node.tabIndex = 0; else node.removeAttribute("tabindex"); };
+  if (typeof ResizeObserver === "function") new ResizeObserver(set).observe(node);
+  else node.tabIndex = 0;
+}
+
+export function table(headers, rows, name) {
   const head = h("thead", {}, h("tr", {}, headers.map((header) =>
     h("th", { scope: "col", class: header.num ? "num" : null, text: header.text || header }))));
-  return h("div", { class: "table-wrap" }, h("table", {}, [head, h("tbody", {}, rows)]));
+  const wrap = h("div", { class: "table-wrap", role: "group", "aria-label": name || "표" }, h("table", {}, [head, h("tbody", {}, rows)]));
+  focusWhenScrollable(wrap);
+  return wrap;
 }

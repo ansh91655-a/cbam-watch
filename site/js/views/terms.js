@@ -31,7 +31,7 @@ export async function render(main) {
     });
     count.textContent = `${found.length}건`;
     holder.replaceChildren(found.length
-      ? stackable(table(["영문", "약어", "국문 표기", "설명"], found.slice(0, state.shown).map(row)), { wideLast: true })
+      ? stackable(table(["영문", "약어", "국문 표기", "설명"], found.slice(0, state.shown).map(row), "용어 목록"), { wideLast: true })
       : empty("찾는 용어가 없습니다. 다른 낱말로 찾아보세요."));
     more.hidden = found.length <= state.shown;
     more.textContent = `더 보기 (남은 ${found.length - state.shown}건)`;
