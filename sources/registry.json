@@ -766,6 +766,22 @@
    "collector": "archive",
    "note": "제목에 CBAM이 든 영국 정부 문서(재무부 협의 문서처럼 국세청 자료 모음 밖에 있는 것 포함)와 문서별 갱신 기록",
    "ops": "tools/archive/govuk.py가 평일마다 국세청 자료 모음과 정부 검색의 첫 쪽을 보고, 처음 보는 문서와 고쳐진 문서만 다시 읽음. 새 기록은 tools.run.rules_watch가 알려 주고 그날의 후보로도 넘어감"
+  },
+  {
+   "no": 45,
+   "code": "motir-policy",
+   "name": "산업통상부 정책게시판(통상·FTA)",
+   "group": "국내",
+   "url": "https://www.motir.go.kr/kor/article/ATCLf724eb567?mno=&pageIndex=1&rowPageC=0&displayAuthor=&searchCategory=3&startDtD=&endDtD=&searchCondition=1&searchKeyword=",
+   "tier": "B",
+   "watch": [
+    "links"
+   ],
+   "filter": true,
+   "minLine": 12,
+   "collector": "github",
+   "note": "통상·FTA 분류의 정책 자료 가운데 CBAM을 다룬 것(안내서, 매뉴얼)",
+   "ops": "COMPASS 자료실(자동 읽기를 막음)에 실리는 정부 안내서가 이 게시판에도 실린다(산업통상부 2026-03-30 보도자료). 주소의 searchCategory=3이 통상·FTA 분류다(2026-11-11 출처 접속 점검으로 확인: 그 분류의 글만 답함). 한 쪽에 10건이 보이고 이 분류에는 일곱 주에 10건쯤 올라온다"
   }
  ]
 }

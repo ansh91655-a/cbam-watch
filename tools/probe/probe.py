@@ -30,11 +30,9 @@ TARGETS = [
     ("pages-data", "https://ansh91655-a.github.io/cbam-watch/data/site.json", {}),
     ("mcee-board", "https://mcee.go.kr/home/web/index.do?menuId=286", {}),
     ("expert-group-meetings", "https://ec.europa.eu/transparency/expert-groups-register/core/api/front/expertGroups/3927/meetings", {"Accept": "application/json"}),
-    ("motir-policy-board", "https://www.motir.go.kr/kor/article/ATCLf724eb567", {}),
-    ("motir-policy-trade", "https://www.motir.go.kr/kor/article/ATCLf724eb567?mno=&pageIndex=1&rowPageC=0&displayAuthor=&searchCategory=3&startDtD=&endDtD=&searchCondition=1&searchKeyword=", {}),
 ]
 # 걸러 보기 양식(분류, 한 쪽에 보이는 건수)을 읽어 둘 목록 화면. 게시판을 출처로 더할 때 주소를 정하는 데 쓴다.
-FORM_TARGETS = {"motir-policy-board", "motir-policy-trade"}
+FORM_TARGETS = set()
 
 OUT = pathlib.Path("originals/_probe/result.json")
 

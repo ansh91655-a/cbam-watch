@@ -1,7 +1,7 @@
 """소급 수집과 소급 게시 도구를 확인한다."""
 import unittest
 
-from tools.archive import boards, ecnews, eurlex, gate, newsletter, store
+from tools.archive import acts, boards, ecnews, eurlex, gate, newsletter, store
 from tools.check import term_check
 
 TOPICS = {"law", "legis", "etc"}
@@ -346,6 +346,23 @@ class DatabaseOutageTest(unittest.TestCase):
         fetching.assert_not_called()
         self.assertEqual([entry["celex"] for entry in read_json(docs.ROOT / "eur-lex-docs.json", {})["entries"]], ["52025PC0989"])
         self.assertEqual((report["kept"], report["stoppedAt"]), (1, "52026PC0001"))
+
+
+class ActsTest(unittest.TestCase):
+    """법령 본문 받아 두기: 전문과 조문은 모두 남기고 부속서는 앞부분만 남긴다."""
+
+    def test_the_body_is_kept_whole_and_each_annex_is_cut(self):
+        lines = ["Article 1", "Subject matter", "Article 2", "ANNEX I", "a", "b", "c", "d", "ANNEX II", "e", "f"]
+        self.assertEqual(acts.trim(lines, keep=2), ["Article 1", "Subject matter", "Article 2", "ANNEX I", "a", "b", "[이 부속서의 나머지 2줄은 싣지 않음]", "ANNEX II", "e", "f"])
+
+    def test_a_text_without_annexes_is_unchanged(self):
+        lines = ["Article 1", "The word ANNEX in a sentence is not a heading", "Article 2"]
+        self.assertEqual(acts.trim(lines, keep=1), lines)
+
+    def test_every_act_is_listed_once(self):
+        numbers = [celex for celex, _ in acts.ACTS]
+        self.assertEqual(len(numbers), len(set(numbers)))
+        self.assertTrue(all(len(celex) == 10 and celex.startswith("3") for celex in numbers))
 
 
 if __name__ == "__main__":
