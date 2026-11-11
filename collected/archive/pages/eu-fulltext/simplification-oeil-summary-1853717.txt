@@ -1,0 +1,100 @@
+[주소] https://oeil.europarl.europa.eu/oeil/en/document-summary?id=1853717
+
+Document summary | Legislative Observatory | European Parliament
+Access to page content (press "Enter")
+Direct access to language menu (press "Enter")
+Direct access to search menu (press "Enter")
+EN - English
+FR - français
+EN - English
+News
+Topics
+MEPs
+About Parliament
+Plenary
+Committees
+Delegations
+EU budget
+Other websites View other websites
+News
+Topics
+MEPs
+About Parliament
+Plenary
+Committees
+Delegations
+EU budget
+Multimedia Centre
+Presidency
+Secretariat-general
+Elections
+Thinktank
+EP Newshub
+At your service
+Visits
+Legislative Observatory
+Legislative train
+Contracts and Grants
+Register
+Open Data Portal
+Liaison offices
+Legislative Observatory
+European Parliament
+Find a procedure
+Please fill in this field to find a procedure
+European Parliament
+Search Menu
+Home
+Search
+Legislative priorities
+Find out more
+Contact us
+Carbon Border Adjustment Mechanism: simplification and strengthening (Omnibus I)
+2025/0039(COD) 17/10/2025
+PURPOSE: to simplify certain obligations and strengthen the carbon border adjustment mechanism (CBAM) that the EU has adopted to prevent the risk of carbon leakage and thus reduce carbon emissions globally.
+LEGISLATIVE ACT: Regulation (EU) 2025/2083 of the European Parliament and of the Council amending Regulation (EU) 2023/956 as regards simplifying and strengthening the carbon border adjustment mechanism.
+CONTENT: this regulation aims to simplify and strengthen the EU Carbon Border Adjustment Mechanism (CBAM), as part of the Omnibus I legislative package presented on 26 February 2025, which aims to simplify existing legislation in the areas of sustainability and investment. It also aims to improve compliance with the CBAM Regulation in an efficient and cost-effective manner. The main objective is to reduce the regulatory and administrative burden, as well as the compliance costs, for EU companies, particularly SMEs.
+De minimis exemption
+The amendments establish a new single mass-based threshold (de minimis threshold), under which imports of up to 50 tonnes per importer per year will not be subject to the CBAM rules. The measure is expected to exempt from CBAM mainly SMEs and individuals, which import small or negligible quantities of goods covered by the CBAM regulation.
+The establishment of the single mass-based threshold that reflects the average emissions intensity of the quantity of the imported goods pursues the objective of ensuring that at least 99 % of emissions embedded in imported goods remain within the scope of the CBAM and that therefore the de minimis exemption applies to no more than 1 % of emissions embedded in imported goods.
+Each year, the Commission will assess, based on import data for the preceding twelve calendar months, whether there has been a substantial change in the average emission intensities of goods or in the configuration of trade in goods, including circumvention practices. The Commission will adopt delegated acts to amend the single threshold based on mass when the threshold value obtained deviates from the applicable threshold by more than 15 tonnes.
+Avoid any disruption for importers at the beginning of 2026
+An importer that expects to exceed the annual single mass-based threshold should submit an application for an authorisation. Such an importer should obtain the status of authorised CBAM declarant before the single mass-based threshold is exceeded.
+The obligation to obtain the status of authorised CBAM declarant before the single mass-based threshold is exceeded could result in a high number of applications being lodged at the beginning of 2026 and avoid potential import disruptions, it is appropriate to allow importers and indirect customs representatives that have submitted an application for an authorisation by 31 March 2026 to continue importing the goods in 2026 even after exceeding the single mass-based threshold pending the decision on granting of the authorisation.
+Other simplification measures
+The amended regulation provides for several other simplification measures for all importers of CBAM goods regarding, for example:
+- the authorisation procedure,
+- data collection processes,
+- the calculation of emissions,
+- the verification rules and
+- the financial liability calculation of authorised CBAM declarants. Finally, the amended regulation contains adjustments of provisions on penalties and on the rules regarding indirect customs representatives.
+The amended regulation also provides for an adjustment of the provisions on penalties and rules concerning indirect customs representatives.
+Carbon price paid in a third country
+Where the embedded emissions are determined on the basis of actual emissions, an authorised CBAM declarant may claim in the CBAM declaration a reduction in the number of CBAM certificates to be surrendered in order to take into account the carbon price paid in a third country for the declared embedded emissions. The reduction may be claimed only if the carbon price has been effectively paid in a third country.
+The Commission will, upon request by an operator of an installation located in a third country, register the information on that operator and on its installation in the CBAM registry.
+The CBAM registry will contain, in a separate section of the registry, the information about the registered operators and installations in third countries and the information about the accredited verifiers registered.
+ENTRY INTO FORCE: 20.10.2025.
+Final act
+Share this page
+Facebook
+X
+LinkedIn
+Whatsapp
+Data Protection Notice
+Legislative Observatory
+Tools
+Press Service Ordinary legislative procedure Parliament register EUR-Lex Council register Delegated acts register
+Committees
+Home Meetings Documents Events Supporting analyses
+Plenary
+Plenary sitting Around plenary Questions and declarations Legislative texts adopted Plenary calendar
+Delegations
+Delegations calendar Home
+MEPs
+Search
+At your service
+Home
+European Parliament
+News Topics MEPs About Parliament Plenary Committees Delegations EU budget
+Facebook Twitter Flickr LinkedIn YouTube Instagram Pinterest Reddit
+Contact Sitemap Legal notice Privacy policy Accessibility

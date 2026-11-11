@@ -1,9 +1,9 @@
 {
  "source": "eu-fulltext",
- "fetchedAt": "2026-11-11T01:09:39+09:00",
+ "fetchedAt": "2026-11-11T10:45:40+09:00",
  "since": "2025-01-01",
  "report": {
-  "targets": 6,
+  "targets": 11,
   "failures": [
    "downstream-parliament TA-10-2026-0276: 응답 202"
   ]
@@ -57,6 +57,76 @@
    "url": "https://oeil.europarl.europa.eu/oeil/en/document-summary?id=1914940",
    "lines": 101,
    "textPath": "collected/archive/pages/eu-fulltext/downstream-oeil-summary-1914940.txt"
+  },
+  {
+   "name": "simplification-oeil-summary-1805355",
+   "code": "2025/0039(COD)",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/document-summary?id=1805355",
+   "lines": 86,
+   "textPath": "collected/archive/pages/eu-fulltext/simplification-oeil-summary-1805355.txt"
+  },
+  {
+   "name": "simplification-oeil-summary-1816390",
+   "code": "2025/0039(COD)",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/document-summary?id=1816390",
+   "lines": 81,
+   "textPath": "collected/archive/pages/eu-fulltext/simplification-oeil-summary-1816390.txt"
+  },
+  {
+   "name": "simplification-oeil-summary-1842750",
+   "code": "2025/0039(COD)",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/document-summary?id=1842750",
+   "lines": 88,
+   "textPath": "collected/archive/pages/eu-fulltext/simplification-oeil-summary-1842750.txt"
+  },
+  {
+   "name": "simplification-oeil-summary-1853717",
+   "code": "2025/0039(COD)",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/document-summary?id=1853717",
+   "lines": 98,
+   "textPath": "collected/archive/pages/eu-fulltext/simplification-oeil-summary-1853717.txt"
+  },
+  {
+   "name": "tdf-oeil-summary-1879959",
+   "code": "2025/0418(COD)",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/document-summary?id=1879959",
+   "lines": 96,
+   "textPath": "collected/archive/pages/eu-fulltext/tdf-oeil-summary-1879959.txt"
+  },
+  {
+   "name": "tdf-oeil-summary-1914946",
+   "code": "2025/0418(COD)",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/document-summary?id=1914946",
+   "lines": 98,
+   "textPath": "collected/archive/pages/eu-fulltext/tdf-oeil-summary-1914946.txt"
+  },
+  {
+   "name": "ets-review-oeil-summary-1910281",
+   "code": "2026/0212(COD)",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/document-summary?id=1910281",
+   "lines": 100,
+   "textPath": "collected/archive/pages/eu-fulltext/ets-review-oeil-summary-1910281.txt"
+  },
+  {
+   "name": "ets-benchmarks-oeil-summary-1910288",
+   "code": "2026/0211(COD)",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/document-summary?id=1910288",
+   "lines": 84,
+   "textPath": "collected/archive/pages/eu-fulltext/ets-benchmarks-oeil-summary-1910288.txt"
+  },
+  {
+   "name": "ets-benchmarks-oeil-summary-1920913",
+   "code": "2026/0211(COD)",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/document-summary?id=1920913",
+   "lines": 84,
+   "textPath": "collected/archive/pages/eu-fulltext/ets-benchmarks-oeil-summary-1920913.txt"
+  },
+  {
+   "name": "own-resources-oeil-summary-1830552",
+   "code": "2025/0574(CNS)",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/document-summary?id=1830552",
+   "lines": 94,
+   "textPath": "collected/archive/pages/eu-fulltext/own-resources-oeil-summary-1830552.txt"
   }
  ]
 }
