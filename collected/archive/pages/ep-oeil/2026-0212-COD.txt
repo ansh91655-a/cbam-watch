@@ -324,6 +324,12 @@ Other Members
 Name
 Date
 Interest representatives
+HAIDER Roman
+11/11/2026
+Vereinigung der österreichischen Industrie - Industriellenvereinigung
+NAGYOVÁ Jana
+10/11/2026
+The European SME Cement Association
 POLFJÄRD Jessica
 09/11/2026
 Jernkontoret
@@ -339,21 +345,15 @@ EDANA
 ZĪLE Roberts
 03/11/2026
 International Air Transport Association
+BONTE Barbara
+03/11/2026
+Südzucker
 HANSEN Niels Flemming
 29/10/2026
 Confederation of Danish Industry
 HANSEN Niels Flemming
 29/10/2026
 Danish Shipping
-ARIMONT Pascal
-28/10/2026
-Solvay SA
-HANSEN Niels Flemming
-28/10/2026
-Vattenfall
-HANSEN Niels Flemming
-26/10/2026
-Cleantech for Europe
 Load more
 Procedure file
 Basic information
@@ -454,13 +454,13 @@ RATAS Jüri | Rapporteur for opinion | ITRE | 21/10/2026 | Association des grand
 TOBBACK Bruno | Shadow rapporteur for opinion | ITRE | 21/10/2026 | NG Nordic AS
 TOBBACK Bruno | Shadow rapporteur for opinion | ITRE | 21/10/2026 | FuelsEurope
 Name | Date | Interest representatives
+HAIDER Roman | 11/11/2026 | Vereinigung der österreichischen Industrie - Industriellenvereinigung
+NAGYOVÁ Jana | 10/11/2026 | The European SME Cement Association
 POLFJÄRD Jessica | 09/11/2026 | Jernkontoret
 POLFJÄRD Jessica | 05/11/2026 | Confederation of Swedish Enterprise
 FERENC Viktória | 05/11/2026 | BUSINESSEUROPE
 POLFJÄRD Jessica | 04/11/2026 | EDANA
 ZĪLE Roberts | 03/11/2026 | International Air Transport Association
+BONTE Barbara | 03/11/2026 | Südzucker
 HANSEN Niels Flemming | 29/10/2026 | Confederation of Danish Industry
 HANSEN Niels Flemming | 29/10/2026 | Danish Shipping
-ARIMONT Pascal | 28/10/2026 | Solvay SA
-HANSEN Niels Flemming | 28/10/2026 | Vattenfall
-HANSEN Niels Flemming | 26/10/2026 | Cleantech for Europe
