@@ -1,0 +1,14 @@
+{
+ "kind": "daily",
+ "date": "2026-11-11",
+ "writtenAt": "2026-11-11T10:06:05+09:00",
+ "status": "정상",
+ "problems": [],
+ "runProblems": 0,
+ "holds": [],
+ "counts": {
+  "published": 0,
+  "total": 229,
+  "retryHolds": 0
+ }
+}
