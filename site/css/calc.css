@@ -27,7 +27,8 @@
 .calc-split { display: grid; gap: 10px; }
 /* 막대의 두 몫 사이는 바탕색으로 2px 띄운다. 색은 선이 둘인 그림과 같은 짝(색 검사로 확인한 것)을 쓴다. */
 .calc-bar { display: flex; gap: 2px; height: 22px; }
-.calc-seg { min-width: 3px; flex: 0 0 0; background: var(--chart-line); }
+.calc-seg { min-width: 3px; flex: 0 0 0; }
+.calc-seg-pay { background: var(--chart-line); }
 .calc-seg-free { background: var(--chart-line-2); }
 .calc-seg:first-child { border-radius: 4px 0 0 4px; }
 .calc-seg:last-child { border-radius: 0 4px 4px 0; }
