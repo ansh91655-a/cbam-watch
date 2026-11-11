@@ -212,6 +212,18 @@ class PublishTest(unittest.TestCase):
         self.assertEqual([(row["id"], row["late"]) for row in found],
                          [("this-week", False), ("filled-this-week", False), ("weekend-news", False), ("old-news-listed-now", True)])
 
+    def test_health_reports_a_missing_web_approval_on_the_first_day(self):
+        from tools.run import health
+        blocked = {"sources": {"op-europa": {"ok": False, "failCount": 1, "note": "403으로 막힘"},
+                               "council-cbam": {"ok": False, "failCount": 1, "note": "웹 읽기 승인 대기 시간 초과"},
+                               "ep-train": {"ok": False, "failCount": 1, "note": "웹 읽기 승인 대기 시간 초과"},
+                               "oecd-blog": {"ok": True, "failCount": 0, "note": ""}}}
+        found = health._source_problems({"sources": {}}, blocked)
+        self.assertEqual(len(found), 1)  # 사이트 쪽 사정으로 한 번 못 읽은 것은 아직 알리지 않는다
+        self.assertTrue(found[0].startswith("예약 실행이 웹 읽기 승인을 받지 못해 출처 2곳을 열지 못함(council-cbam, ep-train)"))
+        blocked["sources"]["op-europa"]["failCount"] = 3
+        self.assertIn("출처 op-europa: 직접 열람이 3회 연속 실패", health._source_problems({"sources": {}}, blocked))
+
     def test_claude_status_counts_failures(self):
         _run(claude_status.main, ["council-cbam=ok", "op-europa=fail:403으로 막힘"])
         _run(claude_status.main, ["op-europa=fail:403으로 막힘"])

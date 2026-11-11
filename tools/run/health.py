@@ -40,9 +40,18 @@ def _source_problems(status, claude):
             problems.append(f"출처 {code}: {row['failCount']}회 연속 읽지 못함({str(row.get('note', ''))[:60]})")
         if "구조가 바뀐" in str(row.get("note", "")):
             problems.append(f"출처 {code}: 화면 구조가 바뀐 것으로 보임")
+    # 예약 실행이 직접 여는 출처. 사이트 쪽의 사정으로 못 읽은 것은 몇 번 이어질 때 알리지만,
+    # 실행의 웹 읽기 권한이 승인되지 않아 못 읽은 것은 날마다 되풀이될 일이므로 첫날에 한 줄로 묶어 알린다.
+    unapproved = []
     for code, row in sorted(claude.get("sources", {}).items()):
-        if row.get("ok") is False and int(row.get("failCount", 0) or 0) >= FAIL_LIMIT:
+        if row.get("ok") is not False:
+            continue
+        if "승인" in str(row.get("note", "")):
+            unapproved.append(code)
+        elif int(row.get("failCount", 0) or 0) >= FAIL_LIMIT:
             problems.append(f"출처 {code}: 직접 열람이 {row['failCount']}회 연속 실패")
+    if unapproved:
+        problems.append(f"예약 실행이 웹 읽기 승인을 받지 못해 출처 {len(unapproved)}곳을 열지 못함({', '.join(unapproved)}). 예약 작업의 자동 승인 설정을 확인해야 함")
     return problems
 
 
