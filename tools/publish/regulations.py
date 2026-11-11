@@ -21,6 +21,7 @@ DATE = re.compile(r"^\d{4}(-\d{2}(-\d{2})?)?$")
 BASES = {"stored", "web", "press"}
 TEXT_FIELDS = ["summary", "status", "next", "nextTitle"]
 RELATED_LIMIT = 8
+FIGURES = {"cbam-factor"}  # 규제 화면에 붙일 수 있는 그림(site/js/views/rules/figure.js와 같은 이름)
 
 
 def evidence_problem(evidence, date):
@@ -162,6 +163,8 @@ def problems(body, term_index=None, kinds=("format", "evidence")):
         for link in rule.get("links", []):
             if not str(link.get("url", "")).startswith("https://") or not link.get("text"):
                 found.append((where, f"링크가 온전하지 않음: {link}"))
+        if rule.get("figure") and rule["figure"] not in FIGURES:
+            found.append((where, f"모르는 그림 이름: {rule['figure']}"))
         found += position_problems(rule, term_index, kinds)
         found += analysis.problems(rule, lambda text: text_problems(text, term_index), kinds)
     return found if "format" in kinds else [row for row in found if row[1].startswith("근거 어긋남")]

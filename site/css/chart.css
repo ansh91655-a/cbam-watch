@@ -23,3 +23,25 @@
 .spark .line { fill: none; stroke: var(--chart-line); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
 .spark .area { fill: var(--chart-fill); }
 .spark .dot { fill: var(--chart-line); stroke: var(--surface); stroke-width: 2; }
+
+/* 선이 둘인 그림(CBAM 계수). 둘째 선은 첫째와 색각 이상에서도 갈리는 색을 쓴다(검사한 짝: tokens.css의 --chart-line-2). */
+.chart .line-2 { stroke: var(--chart-line-2); }
+.factor-card { gap: 14px; }
+.chart-legend { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 0; padding: 0; list-style: none; font-size: var(--fs-s); color: var(--ink-2); }
+.chart-legend li { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; }
+.chart-legend li > span:not(.key) { font-weight: 700; color: var(--ink); }
+.chart-legend small { color: var(--ink-3); font-size: 0.8rem; }
+.key { flex: none; display: inline-block; width: 18px; height: 3px; border-radius: 2px; background: var(--chart-line); }
+.key-2 { background: var(--chart-line-2); }
+.tip-rows { display: grid; gap: 3px; text-align: left; }
+.tip-rows .tip-head { font-weight: 700; opacity: 0.85; }
+.tip-rows .tip-row { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+.tip-rows .tip-row b { display: inline; min-width: 3.4em; font-size: var(--fs-m); }
+.chart-unit { font-size: 0.8rem; color: var(--ink-3); }
+.chart-table summary { width: fit-content; cursor: pointer; font-size: var(--fs-s); font-weight: 700; color: var(--brand); }
+.chart-table[open] summary { margin-bottom: 10px; }
+.chart-table .table-wrap { box-shadow: none; }
+.chart-sources { display: grid; gap: 4px; margin: 0; padding: 12px 0 0; border-top: 1px solid var(--line-2); list-style: none; font-size: var(--fs-s); }
+.chart-sources li { display: flex; flex-wrap: wrap; gap: 4px 10px; }
+.chart-sources strong { color: var(--ink-2); font-weight: 700; }
+.chart-sources a { display: inline-flex; align-items: center; gap: 4px; }

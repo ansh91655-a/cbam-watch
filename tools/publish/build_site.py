@@ -8,7 +8,7 @@ import shutil
 import sys
 
 from tools.common.jsonio import read_json, write_json
-from tools.publish import derive, feed, merge, regulations, thumbs
+from tools.publish import derive, factor, feed, merge, regulations, thumbs
 
 DATA_FILES = ["items", "events", "digests", "terms", "topics", "prices"]
 LIST_KEY = {"items": "items", "events": "events", "digests": "digests", "terms": "terms", "topics": "topics", "prices": "prices"}
@@ -52,6 +52,16 @@ def main(argv):
     # 하나로 묶은 소식의 옛 번호가 어디로 갔는지(옛 주소로 온 사람을 남긴 소식으로 넘긴다)
     records = read_json(merge.MERGED, {"merged": []}).get("merged", [])
     write_json(data_out / "moved.json", {"moved": merge.moved(records, {item["id"] for item in bodies["items"]["items"]})})
+
+    # CBAM 계수(그림과 비용 추정이 쓴다). 꼴이 깨졌으면 멈추고, 법령 글과 달라진 것은 알리기만 한다
+    book = read_json(factor.SOURCE, None)
+    drift = [row for row in factor.problems(book) if row[1].startswith("근거 어긋남")]
+    broken = [row for row in factor.problems(book) if not row[1].startswith("근거 어긋남")]
+    problems += [f"CBAM 계수: {where}: {what}" for where, what in broken]
+    for where, what in drift:
+        print(f"알림: CBAM 계수: {where}: {what}")
+    if not broken:
+        write_json(data_out / "factor.json", factor.public(book))
 
     codes = read_json("data/cn.json", None)  # 품목 코드 조회의 목록(법령 원문에서 뽑은 것)
     if codes is None or not codes.get("current"):

@@ -6,7 +6,7 @@
   (모아 둔 글에서 근거를 찾을 때는 --path collected/archive/pages/… --contains "1 December 2026")
   (공식 화면을 읽고 확인했으면 --basis web, 언론 보도면 --basis press. 이때는 근거 대신 확인한 날이 오늘로 적힌다)
 연혁에서 한 줄 빼기:   python -m tools.publish.rule_edit drop-event --id <규제> --date <날짜> --starts "<글의 앞부분>"
-단계와 설명 고치기:    python -m tools.publish.rule_edit set --id <규제> [--stage "…"] [--at 2] [--tone progress] [--status "…"] [--summary "…"] [--next "…"] [--next-date 2026-12-14] [--next-title "…"]
+단계와 설명 고치기:    python -m tools.publish.rule_edit set --id <규제> [--stage "…"] [--at 2] [--tone progress] [--status "…"] [--summary "…"] [--figure cbam-factor] [--next "…"] [--next-date 2026-12-14] [--next-title "…"]
                       (--next "", --next-date "", --next-title ""는 그 값을 지운다. --next-title은 일정 화면에 보일 이름으로, 그 날 있을 일을 적은 짧은 구다)
 새 규제 더하기:        python -m tools.publish.rule_edit add-rule --file rule.json   (rule.json은 규제 하나의 JSON)
 분석 글 넣기와 바꾸기: python -m tools.publish.rule_edit analysis --id <규제> --file analysis.json
@@ -73,7 +73,13 @@ def set_fields(body, args):
             rule.pop(field, None)
         elif value is not None:
             rule[field] = value
-    rule["changedOn"] = today()
+    figure = getattr(args, "figure", None)  # 규제 화면에 붙이는 그림. 그림을 붙이거나 떼는 것은 규제가 바뀐 것이 아니다
+    if figure == "":
+        rule.pop("figure", None)
+    elif figure is not None:
+        rule["figure"] = figure
+    if any(value is not None for value in (args.stage, args.tone, args.status, getattr(args, "summary", None), args.at, args.next, args.next_date, args.next_title)):
+        rule["changedOn"] = today()
 
 
 def add_rule(body, args):
@@ -151,6 +157,7 @@ def main(argv):
     change.add_argument("--tone", choices=TONES)
     change.add_argument("--status")
     change.add_argument("--summary")
+    change.add_argument("--figure")
     change.add_argument("--next")
     change.add_argument("--next-date")
     change.add_argument("--next-title")

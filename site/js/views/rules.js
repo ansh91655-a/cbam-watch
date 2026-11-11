@@ -10,6 +10,7 @@ import { icon } from "../ui/icons.js";
 import { stackable } from "../ui/stack.js";
 import { stepper } from "../ui/stepper.js";
 import { analysis } from "./rules/analysis.js";
+import { figure } from "./rules/figure.js";
 
 function stageChip(rule) {
   return h("span", { class: "stage-chip", "data-tone": rule.tone || "progress", text: rule.stage });
@@ -85,7 +86,7 @@ function positions(rule) {
   ]);
 }
 
-function detail(main, rule, group, items) {
+function detail(main, rule, group, items, drawing) {
   const related = (rule.relatedItems || []).map((id) => items.find((item) => item.id === id)).filter(Boolean);
   const links = (rule.links || []).map((link) => {
     const node = safeLink(link.url, link.text);
@@ -108,6 +109,7 @@ function detail(main, rule, group, items) {
         h("p", { class: "rule-summary", text: rule.summary }),
         analysis(rule),  // 배경, 주요 내용, 쟁점과 정세, 실무에서 볼 점(분석 글이 있는 규제만)
       ]),
+      drawing,  // 규제에 딸린 그림(있는 규제만)
       positions(rule),
       h("section", { class: "stack", "aria-labelledby": "h-tl" }, [
         h("div", { class: "sec-head" }, [h("h2", { id: "h-tl", text: "연혁" }), h("span", { class: "count", text: `${rule.timeline.length}건, 새 일부터` })]),
@@ -132,7 +134,7 @@ export async function render(main, arg) {
   }
   const one = rules.find((rule) => rule.id === arg);
   if (one) {
-    detail(main, one, groups.find((group) => group.code === one.group) || { code: "", name: "" }, items);
+    detail(main, one, groups.find((group) => group.code === one.group) || { code: "", name: "" }, items, await figure(one));
     return;
   }
   const picked = groups.some((group) => group.code === arg) ? arg : "";

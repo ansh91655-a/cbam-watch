@@ -90,6 +90,7 @@
   --shadow-2: 0 2px 6px rgba(11, 18, 48, 0.06), 0 26px 56px -22px rgba(11, 18, 48, 0.32);
 
   --chart-line: #2a5bd7;
+  --chart-line-2: #cf6327;  /* 선이 둘인 그림의 둘째 선. 첫째 선과의 짝을 색 검사로 확인했다(밝은 바탕) */
   --chart-fill: color-mix(in srgb, var(--chart-line) 12%, transparent);
   --chart-grid: var(--line-2);
 }

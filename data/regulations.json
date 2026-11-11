@@ -2417,7 +2417,8 @@
       "path": "collected/archive/pages/eu-fulltext/tdf-commission-DOC_1.txt"
      }
     ]
-   }
+   },
+   "figure": "cbam-factor"
   },
   {
    "id": "own-resources",
@@ -4647,7 +4648,8 @@
       "checkedOn": "2026-11-10"
      }
     ]
-   }
+   },
+   "figure": "cbam-factor"
   },
   {
    "id": "ir-default-values",

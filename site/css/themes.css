@@ -78,6 +78,7 @@ html[data-theme="midnight"] {
   --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.4), 0 10px 28px -14px rgba(0, 0, 0, 0.7);
   --shadow-2: 0 2px 6px rgba(0, 0, 0, 0.45), 0 26px 56px -22px rgba(0, 0, 0, 0.8);
   --chart-line: #5b82f5;
+  --chart-line-2: #dd7435;
 }
 html[data-theme="midnight"] .date-list li[data-kind="기한"] .date-box { color: var(--accent); }
 html[data-theme="midnight"] .cal-event[data-flash="true"] { background: var(--accent-soft); }
