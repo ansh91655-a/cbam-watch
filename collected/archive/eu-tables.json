@@ -1,0 +1,29 @@
+{
+ "source": "eu-tables",
+ "fetchedAt": "2026-11-11T12:52:39+09:00",
+ "since": "2025-01-01",
+ "report": {
+  "targets": 2,
+  "failures": []
+ },
+ "entries": [
+  {
+   "name": "benchmarks",
+   "celex": "32025R2620",
+   "title": "무상할당 조정 이행규정 (EU) 2025/2620 부속서 5의 CBAM 벤치마크 표",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2620",
+   "tables": 1,
+   "rows": 576,
+   "textPath": "collected/archive/pages/eu-tables/benchmarks.txt"
+  },
+  {
+   "name": "defaults",
+   "celex": "32026R1740",
+   "title": "기본값 이행규정 (EU) 2025/2621의 부속서 I(정정 규정 (EU) 2026/1740이 갈아 끼운 글) 가운데 대한민국과 '그 밖의 나라와 지역'의 표",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R1740",
+   "tables": 2,
+   "rows": 578,
+   "textPath": "collected/archive/pages/eu-tables/defaults.txt"
+  }
+ ]
+}

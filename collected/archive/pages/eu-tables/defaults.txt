@@ -1,0 +1,587 @@
+[주소] https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R1740
+[받은 곳] http://publications.europa.eu/resource/celex/32026R1740
+[무엇] 기본값 이행규정 (EU) 2025/2621의 부속서 I(정정 규정 (EU) 2026/1740이 갈아 끼운 글) 가운데 대한민국과 '그 밖의 나라와 지역'의 표
+[읽는 법] 표마다 '[표 번호] 표 바로 앞의 글' 줄 다음에 행을 한 줄씩 적었다. 칸은 ' | '로 나눴고 빈 칸은 비워 두었다. 여러 행이나 열에 걸친 칸은 걸친 자리마다 같은 글을 적었다.
+[나라 목록] Albania; Algeria; Angola; Argentina; Armenia; Australia; Azerbaijan; Bahrain; Bangladesh; Belarus; Benin; Bolivia; Bosnia and Herzegovina; Brazil; Brunei; Cambodia; Cameroon; Canada; Chile; China; Colombia; Congo; Congo, Democratic Republic of; Costa Rica; Cuba; Curaçao; Dominican Republic; Ecuador; Egypt; El Salvador; Equatorial Guinea; Eritrea; Eswatini; Ethiopia; Gabon; Georgia; Ghana; Guatemala; Haiti; Honduras; Hong Kong; India; Indonesia; Iran, Islamic Republic of; Iraq; Israel; Ivory Coast; Jamaica; Japan; Jordan; Kazakhstan; Kenya; Korea, Republic of (South Korea); Kuwait; Kyrgyzstan; Laos; Lebanon; Liberia; Libya; Madagascar; Malaysia; Mali; Mauritania; Mauritius; Mexico; Moldova, Republic of; Mongolia; Montenegro; Morocco; Mozambique; Myanmar; Namibia; Nepal; New Caledonia and dependencies; New Zealand; Nicaragua; Niger; Nigeria; North Korea (Democratic People’s Republic of Korea); North Macedonia; Oman; Pakistan; Panama; Papua New Guinea; Paraguay; Peru; Philippines; Qatar; Russian Federation; Rwanda; Saudi Arabia; Senegal; Serbia; Sierra Leone; Singapore; South Africa; Sri Lanka; Sudan; Suriname; Syria; Taiwan; Tajikistan; Tanzania, United Republic of; Thailand; Togo; Trinidad and Tobago; Tunisia; Türkiye; Turkmenistan; Uganda; Ukraine; United Arab Emirates; United Kingdom; United States; Uruguay; Uzbekistan; Venezuela; Viet Nam; Yemen; Zambia; Zimbabwe; Other Countries and Territories; If a production route is indicated for a group of CN codes at HS code level (i.e. with 4 or 6 digits) and the CBAM BM as defined in Implementing Regulation (EU) 2025/2620 for one or more of the CN codes at 8-digit level in that group has no production route, the CBAM BM for the concerned CN code is independent of the production route.
+
+[표 81] Korea, Republic of (South Korea)
+| Product CN Code / TARIC Code | Description | Default Value (direct emissions) (tCO2eq/tonne of good) | Default Value (indirect emissions) (tCO2eq/tonne of good) | Default Value (total emissions) (tCO2eq/tonne of good) | Underlying production route determining CBAM BM |
+| Cement |  |  |  |  |  |
+| 2507008080 | Calcined clay | - | - | - |  |
+| 2523100010 | White clinker | 1,190 | 0,040 | 1,230 | (B) |
+| 2523100090 | Other clinker including grey clinker | 0,880 | 0,030 | 0,920 | (A) |
+| 2523 21 00 | White Portland cement | 1,230 | 0,130 | 1,360 |  |
+| 2523 29 00 | Grey Portland cement | 0,890 | 0,060 | 0,940 |  |
+| 2523 30 00 | Aluminous cement | - | - | - |  |
+| 2523900010 | White hydraulic cement | 1,260 | 0,160 | 1,420 | (B) |
+| 2523900090 | Other hydraulic cements including grey hydraulic cements | 0,840 | 0,060 | 0,910 | (A) |
+| Fertilisers |  |  |  |  |  |
+| 2808 00 00 | Nitric acid; sulphonitric acids | 2,130 | 0,060 | 2,190 |  |
+| 2814 10 00 | Anhydrous ammonia | - | - | - |  |
+| 2814 20 00 | Ammonia in aqueous solution | 0,620 | 0,060 | 0,670 |  |
+| 2834 21 00 | Nitrate of potassium | 1,790 | 0,080 | 1,880 |  |
+| 3102 | Mineral or chemical fertilizers, nitrogenous | see below | see below | see below |  |
+| 3102 10 12 | Urea in aqueous solution, containing >45% nitrogen in relation to the weight of the dry product and containing =>31,8 % but <=33,2 % by weight of urea (excl. that in packages with a gross weight of <= 10 kg) | 0,470 | 0,040 | 0,510 |  |
+| 3102 10 15 | Urea in aqueous solution, containing >45% nitrogen in relation to the weight of the dry product and containing >33,2 % but <=55% by weight of urea (excl. that in packages with a gross weight of <= 10 kg) | 0,770 | 0,040 | 0,820 |  |
+| 3102 10 19 | Urea, whether or not in aqueous solution, containing >45% nitrogen in relation to the weight of the dry product (excl. that in tablets or similar forms, or in packages with a gross weight of <= 10 kg, or in aqueous solution containing =>31,8 % but <=55% by weight of urea) | 1,410 | 0,140 | 1,540 |  |
+| 3102 10 90 | Urea, whether or not in aqueous solution, containing <= 45 % by weight of nitrogen on the dry anhydrous product (excl. goods of this chapter in tablets or similar forms or in packages of a gross weight of <= 10 kg) | 1,380 | 0,130 | 1,510 |  |
+| 3102 21 00 | Ammonium sulphate (excl. that in tablets or similar forms, or in packages with a gross weight of <= 10 kg) | 0,610 | 0,090 | 0,700 |  |
+| 3102 29 00 | Double salts and mixtures of ammonium sulphate and ammonium nitrate | 1,210 | 0,100 | 1,310 |  |
+| 3102 30 10 | Ammonium nitrate in aqueous solution (excl. that in packages with a gross weight of <= 10 kg) | 1,360 | 0,080 | 1,440 |  |
+| 3102 30 90 | Ammonium nitrate (excl. that in aqueous solution, in tablets or similar forms, or in packages with a gross weight of <= 10 kg) | 2,090 | 0,130 | 2,220 |  |
+| 3102 40 10 | Mixtures of ammonium nitrate with calcium carbonate or other inorganic non-fertilising substances, for use as fertilisers, containing <= 28 % nitrogen by weight (excl. those in tablets or similar forms, or in packages with a gross weight of <= 10 kg) | 1,800 | 0,110 | 1,920 |  |
+| 3102 40 90 | Mixtures of ammonium nitrate with calcium carbonate or other inorganic non-fertilising substances, for use as fertilisers, containing > 28 % nitrogen by weight (excl. those in tablets or similar forms, or in packages with a gross weight of <= 10 kg) | 1,800 | 0,110 | 1,920 |  |
+| 3102 50 00 | Sodium nitrate (excl. that in tablets or similar forms, or in packages with a gross weight of <= 10 kg) | 3,320 | 0,090 | 3,420 |  |
+| 3102 60 00 | Double salts and mixtures of calcium nitrate and ammonium nitrate (excl. those in tablets or similar forms, or in packages with a gross weight of <= 10 kg) | 1,760 | 0,110 | 1,860 |  |
+| 3102 80 00 | Mixtures of urea and ammonium nitrate in aqueous or ammoniacal solution (excl. those in packages with a gross weight of <= 10 kg) | 1,380 | 0,100 | 1,480 |  |
+| 3102 90 00 | Mineral or chemical nitrogen fertilisers (excl. urea; ammonium sulphate; ammonium nitrate; sodium nitrate; double salts and mixtures of ammonium nitrate with ammonium sulphate or calcium; mixtures of urea and ammonium nitrate in aqueous or ammoniacal solution; mixtures of ammonium nitrate and calcium carbonate or other non-fertilising inorganic elements; in tablets or similar in packages <= 10 kg) | 1,470 | 0,120 | 1,590 |  |
+| 3105 | Mineral or chemical fertilisers containing two or three of the fertilising elements nitrogen, phosphorus and potassium | see below | see below | see below |  |
+| 3105 10 00 | Mineral or chemical fertilisers of animal or vegetable origin, in tablets or similar forms, or in packages with a gross weight of <= 10 kg | 0,710 | 0,090 | 0,800 |  |
+| 3105 20 10 | Mineral or chemical fertilisers containing phosphorus and potassium, with a nitrogen content > 10 % by weight on the dry anhydrous product (excl. those in tablets or similar forms, or in packages with a gross weight of <= 10 kg) | 0,900 | 0,100 | 1,000 |  |
+| 3105 20 90 | Mineral or chemical fertilisers containing nitrogen, phosphorus and potassium, with a nitrogen content <= 10 % by weight on the dry anhydrous product (excl. those in tablets or similar forms, or in packages with a gross weight of <= 10 kg) | 0,610 | 0,080 | 0,690 |  |
+| 3105 30 00 | Diammonium hydrogenorthophosphate "diammonium phosphate" (excl. that in tablets or similar forms, or in packages with a gross weight of <= 10 kg) | 0,480 | 0,070 | 0,550 |  |
+| 3105 40 00 | Ammonium dihydrogenorthophosphate "monoammonium phosphate", whether or not mixed with diammonium hydrogenorthophosphate "diammonium phosphate" (excl. that in tablets or similar forms, or in packages with a gross weight of <= 10 kg) | 0,310 | 0,050 | 0,360 |  |
+| 3105 51 00 | Other mineral or chemical fertilisers containing the two fertilising elements nitrogen and phosphorus (nitrates and phosphates) | 1,230 | 0,130 | 1,360 |  |
+| 3105 59 00 | Other mineral or chemical fertilisers containing the two fertilising elements nitrogen and phosphorus (excl. nitrates and phosphates) | 0,560 | 0,110 | 0,670 |  |
+| 3105 90 20 | Mineral or chemical fertilisers containing the two fertilising elements nitrogen and potassium, or one principal fertilising substance only, incl. mixtures of animal or vegetable fertilisers with chemical or mineral fertilisers, containing > 10 % nitrogen by weight (excl. in tablets or similar forms, or in packages with a gross weight of <= 10 kg) | 1,190 | 0,080 | 1,280 |  |
+| 3105 90 80 | Mineral or chemical fertilisers containing the two fertilising elements nitrogen and potassium, or one main fertilising element, incl. mixtures of animal or vegetable fertilisers with chemical or mineral fertilisers, not containing nitrogen or with a nitrogen content, by weight, of <= 10 % (excl. in tablets or similar forms or in packages of a gross weight of <= 10 kg) | 0,610 | 0,060 | 0,670 |  |
+| Aluminium |  |  |  |  |  |
+| 7601 | Unwrought aluminium | 0,360 | N/A | 0,360 | (L) |
+| 7603 | Aluminium powders and flakes | 1,260 | N/A | 1,260 | (L) |
+| 7604 10 10 | Bars and rods | 1,490 | N/A | 1,490 | (L) |
+| 7604 10 90 | Profiles | 1,500 | N/A | 1,500 | (L) |
+| 7604 21 00 | Hollow profiles | 1,500 | N/A | 1,500 | (L) |
+| 7604 29 10 | Bars and rods | 1,490 | N/A | 1,490 | (L) |
+| 7604 29 90 | Profiles | 1,500 | N/A | 1,500 | (L) |
+| 7605 | Aluminium wire | 1,490 | N/A | 1,490 | (L) |
+| 7606 | Aluminium plates, sheets and strip, of a thickness exceeding 0,2 mm | 1,950 | N/A | 1,950 | (L) |
+| 7607 | Aluminium foil (whether or not printed or backed with paper, paperboard, plastics or similar backing materials) of a thickness (excluding any backing) not exceeding 0,2 mm | 1,950 | N/A | 1,950 | (L) |
+| 7608 | Aluminium tubes and pipes | 1,500 | N/A | 1,500 | (L) |
+| 7609 00 00 | Aluminium tube or pipe fittings (for example, couplings, elbows, sleeves) | 1,500 | N/A | 1,500 | (L) |
+| 7610 10 00 | Doors, windows and their frames and thresholds for doors | 1,500 | N/A | 1,500 | (L) |
+| 7610 90 | Other | 1,500 | N/A | 1,500 | (L) |
+| 7610 90 10 | Bridges and bridge-sections, towers and lattice masts | 1,500 | N/A | 1,500 | (L) |
+| 7610 90 90 | Other | 1,500 | N/A | 1,500 | (L) |
+| 7611 00 00 | Aluminium reservoirs, tanks, vats and similar containers, for any material (other than compressed or liquefied gas), of a capacity exceeding 300 litres, whether or not lined or heat-insulated, but not fitted with mechanical or thermal equipment | 1,950 | N/A | 1,950 | (L) |
+| 7612 | Aluminium casks, drums, cans, boxes and similar containers (including rigid or collapsible tubular containers), for any material (other than compressed or liquefied gas), of a capacity not exceeding 300 litres, whether or not lined or heat-insulated, but not fitted with mechanical or thermal equipment | 1,950 | N/A | 1,950 | (L) |
+| 7613 00 00 | Aluminium containers for compressed or liquefied gas | 1,950 | N/A | 1,950 | (L) |
+| 7614 | Stranded wire, cables, plaited bands and the like, of aluminium, not electrically insulated | 1,490 | N/A | 1,490 | (L) |
+| 7616 10 00 | Nails, tacks, staples (other than those of heading 8305), screws, bolts, nuts, screw hooks, rivets, cotters, cotter pins, washers and similar articles | 1,950 | N/A | 1,950 | (L) |
+| 7616 91 00 | Cloth, grill, netting and fencing, of aluminium wire | 1,950 | N/A | 1,950 | (L) |
+| 7616 99 10 | Cast | 1,260 | N/A | 1,260 | (L) |
+| 7616 99 90 | Other | 1,950 | N/A | 1,950 | (L) |
+| Hydrogen |  |  |  |  |  |
+| 2804 10 00 | Hydrogen | 14,030 | N/A | 14,030 |  |
+| Iron and steel |  |  |  |  |  |
+| 2601 12 00 | Agglomerated iron ores and concentrates (excl. roasted iron pyrites) | 0,100 | 0,040 | 0,130 |  |
+| 7201 | Pig iron and spiegeleisen, in pigs, blocks or other primary forms | 1,540 | N/A | 1,540 |  |
+| 7202 11 | Ferro-manganese, containing by weight > 2 % of carbon | 1,690 | N/A | 1,690 |  |
+| 7202 19 | Ferro-manganese, containing by weight <= 2 % carbon | 5,590 | N/A | 5,590 |  |
+| 7202 41 | Ferro-chromium, containing by weight > 4 % of carbon | 2,350 | N/A | 2,350 |  |
+| 7202 49 | Ferro-chromium, containing by weight <= 4 % of carbon | - | N/A | - |  |
+| 7202 60 00 | Ferro-nickel | 3,480 | N/A | 3,480 |  |
+| 7203 | Ferrous products obtained by direct reduction of iron ore and other spongy ferrous products, in lumps, pellets or similar forms; iron having a minimum purity by weight of 99,94 %, in lumps, pellets or similar forms | - | N/A | - |  |
+| 7205 | Granules and powders of pig iron, spiegeleisen, iron or steel (excl. granules and powders of ferro-alloys, turnings and filings of iron or steel, radioactive iron powders "isotopes" and certain low-calibre, substandard balls for ballbearings) | 1,580 | N/A | 1,580 | (C)/(F) |
+| 7206 | Iron and non-alloy steel in ingots or other primary forms (excl. remelting scrap ingots, products obtained by continuous casting and iron of heading 7203) | see below | see below | see below |  |
+| 7206 10 00 | Ingots, of iron and non-alloy steel (excl. remelted scrap ingots, continuous cast products, iron of heading 7203) | 1,640 | N/A | 1,640 | (C) |
+| 7206 90 00 | Iron and non-alloy steel, in puddled bars or other primary forms (excl. ingots, remelted scrap ingots, continuous cast products, iron of heading 7203) | 1,640 | N/A | 1,640 | (C) |
+| 7207 | Semi-finished products of iron or non-alloy steel | see below | see below | see below |  |
+| 7207 11 11 | Semi-finished products, of non-alloy free-cutting steel, containing by weight < 0,25 % carbon, of square or rectangular cross-section, the width < twice the thickness, rolled or obtained by continuous casting | 2,118 | N/A | 2,118 | (C) |
+| 7207 11 14 | Semi-finished products, of iron or non-alloy steel, containing by weight < 0,25 % carbon, of square or rectangular cross-section, the width < twice the thickness of <= 130 mm, rolled or obtained by continuous casting (excl. free-cutting steel) | 2,118 | N/A | 2,118 | (C) |
+| 7207 11 16 | Semi-finished products, of iron or non-alloy steel, containing by weight < 0,25 % carbon, of square or rectangular cross-section, the width < twice the thickness of > 130 mm, rolled or obtained by continuous casting (excl. free-cutting steel) | 2,118 | N/A | 2,118 | (C) |
+| 7207 11 90 | Semi-finished products of iron or non-alloy steel, containing by weight < 0,25 % carbon, of rectangular cross-section, the width < twice the thickness, forged | 2,310 | N/A | 2,310 | (C) |
+| 7207 12 10 | Semi-finished products of iron or non-alloy steel, containing by weight < 0,25 of carbon, of rectangular "other than square" cross-section, the width measuring >= twice the thickness, rolled or obtained by continuous casting | 2,118 | N/A | 2,118 | (C) |
+| 7207 12 90 | Semi-finished products of iron or non-alloy steel, containing by weight < 0,25 % carbon, of rectangular "other than square" cross-section, the width >= twice the thickness, forged | 2,310 | N/A | 2,310 | (C) |
+| 7207 19 12 | Semi-finished products, of iron or non-alloy steel, containing by weight < 0,25 % carbon, of circular or polygonal cross-section, rolled or obtained by continuous casting | 2,118 | N/A | 2,118 | (C) |
+| 7207 19 19 | Semi-finished products of iron or non-alloy steel, containing by weight < 0,25 % carbon, of circular or polygonal cross-section, forged | 2,310 | N/A | 2,310 | (C) |
+| 7207 19 80 | Semi-finished products of iron or non-alloy steel, containing by weight < 0,25 % carbon (excl. semi-products, of square, rectangular, circular or polygonal cross-section) | 2,118 | N/A | 2,118 | (C) |
+| 7207 20 11 | Semi-finished products, of non-alloy free-cutting steel, containing by weight >= 0,25 % carbon, of square or rectangular cross-section, the width < twice the thickness, rolled or obtained by continuous casting | 2,118 | N/A | 2,118 | (C) |
+| 7207 20 15 | Semi-finished products of iron or non-alloy steel, containing by weight >= 0,25 % but < 0,6 % carbon, of square or rectangular cross-section, the width < twice the thickness, rolled or obtained by continuous casting (excl. free-cutting steel) | 2,118 | N/A | 2,118 | (C) |
+| 7207 20 17 | Semi-finished products of iron or non-alloy steel, containing by weight >= 0,6 % carbon, of square or rectangular cross-section, the width < twice the thickness, rolled or obtained by continuous casting (excl. free-cutting steel) | 2,118 | N/A | 2,118 | (C) |
+| 7207 20 19 | Semi-finished products of iron or non-alloy steel, containing by weight >= 0,25 % carbon, of square or rectangular cross-section, the width < twice the thickness, forged | 2,310 | N/A | 2,310 | (C) |
+| 7207 20 32 | Semi-finished products of iron or non-alloy steel, containing by weight >= 0,25 of carbon, of rectangular "other than square" cross-section, the width measuring >= twice the thickness, rolled or obtained by continuous casting | 2,118 | N/A | 2,118 | (C) |
+| 7207 20 39 | Semi-finished products of iron or non-alloy steel, containing by weight >= 0,25 % carbon, of rectangular "other than square" cross-section and the width >= twice the thickness, forged | 2,310 | N/A | 2,310 | (C) |
+| 7207 20 52 | Semi-finished products of iron or non-alloy steel, containing by weight >= 0,25 % carbon, of circular or polygonal cross-section, rolled or obtained by continuous casting | 2,118 | N/A | 2,118 | (C) |
+| 7207 20 59 | Semi-finished products of iron or non-alloy steel, containing by weight >= 0,6 % carbon, of circular or polygonal cross-section, forged | 2,310 | N/A | 2,310 | (C) |
+| 7207 20 80 | Semi-finished products of iron or non-alloy steel, containing by weight >= 0,25 % carbon (excl. those of square, rectangular, circular or polygonal cross-section) | 2,118 | N/A | 2,118 | (C) |
+| 7208 | Flat-rolled products of iron or non-alloy steel, of a width >= 600 mm, hot-rolled, not clad, plated or coated | 2,118 | N/A | 2,118 | (C) |
+| 7209 | Flat-rolled products of iron or non-alloy steel, of a width of >= 600 mm, cold-rolled "cold-reduced", not clad, plated or coated | 2,144 | N/A | 2,144 | (C) |
+| 7210 | Flat-rolled products of iron or non-alloy steel, of a width >= 600 mm, hot-rolled or cold-rolled "cold-reduced", clad, plated or coated | 2,144 | N/A | 2,144 | (C) |
+| 7211 | Flat-rolled products of iron or non-alloy steel, of a width of < 600 mm, hot-rolled or cold-rolled "cold-reduced", not clad, plated or coated | see below | see below | see below |  |
+| 7211 13 00 | Flat-rolled products of iron or non-alloy steel, simply hot-rolled on four faces or in a closed box pass, not clad, plated or coated, of a width of > 150 mm but < 600 mm and a thickness of >= 4 mm, not in coils, without patterns in relief, commonly known as "wide flats" | 2,118 | N/A | 2,118 | (C) |
+| 7211 14 00 | Flat-rolled products of iron or non-alloy steel, of a width < 600 mm, not further worked than hot-rolled, not clad, plated or coated, of a thickness of >= 4,75 mm (excl. "wide flats") | 2,118 | N/A | 2,118 | (C) |
+| 7211 19 00 | Flat-rolled products of iron or non-alloy steel, of a width < 600 mm, simply hot-rolled, not clad, plated or coated, of a thickness < 4,75 mm (excl. "wide flats") | 2,118 | N/A | 2,118 | (C) |
+| 7211 23 | Flat-rolled products of iron or non-alloy steel, of a width of < 600 mm, simply cold-rolled "cold-reduced", not clad, plated or coated, containing by weight < 0,25 % of carbon | 2,144 | N/A | 2,144 | (C) |
+| 7211 29 00 | Flat-rolled products of iron or non-alloy steel, of a width of < 600 mm, simply cold-rolled "cold-reduced", not clad, plated or coated, containing by weight >= 0,25 % of carbon | 2,144 | N/A | 2,144 | (C) |
+| 7211 90 | Flat-rolled products of iron or non-alloy steel, of a width of < 600 mm, hot-rolled or cold-rolled "cold-reduced" and further worked, but not clad, plated or coated | 2,144 | N/A | 2,144 | (C) |
+| 7212 | Flat-rolled products of iron or non-alloy steel, of a width of < 600 mm, hot-rolled or cold-rolled "cold-reduced", clad, plated or coated | 2,144 | N/A | 2,144 | (C) |
+| 7213 | Bars and rods of iron or non-alloy steel, hot-rolled, in irregularly wound coils | 2,118 | N/A | 2,118 | (C) |
+| 7214 | Bars and rods, of iron or non-alloy steel, not further worked than forged, hot-rolled, hot-drawn or hot-extruded, but incl. those twisted after rolling (excl. in irregularly wound coils) | see below | see below | see below |  |
+| 7214 10 00 | Bars and rods, of iron or non-alloy steel, not further worked than forged (excl. in irregularly wound coils) | 2,310 | N/A | 2,310 | (C) |
+| 7214 20 00 | Bars and rods, of iron or non-alloy steel, with indentations, ribs, groves or other deformations produced during the rolling process | 2,118 | N/A | 2,118 | (C) |
+| 7214 30 00 | Bars and rods, of non-alloy free-cutting steel, not further worked than hot-rolled, hot-drawn or hot-extruded (excl. containing indentations, ribs, grooves or other deformations produced during the rolling process or twisted after rolling) | 2,118 | N/A | 2,118 | (C) |
+| 7214 91 | Bars and rods, of iron or non-alloy steel, not further worked than hot-rolled, hot-drawn or hot-extruded, of rectangular "other than square" cross-section (excl. containing indentations, ribs, grooves or other deformations produced during the rolling process, bars and rods twisted after rolling and free-cutting steel) | 2,118 | N/A | 2,118 | (C) |
+| 7214 99 | Bars and rods, of iron or non-alloy steel, only hot-rolled, only hot-drawn or only hot-extruded (excl. of rectangular [other than square] cross-section and those containing indentations, ribs, grooves or other deformations produced during the rolling process, and of non-alloy free-cutting steel) | 2,118 | N/A | 2,118 | (C) |
+| 7215 | Bars and rods, of iron or non-alloy steel, cold-formed or cold-finished, whether or not further worked, or hot-formed and further worked, n.e.s. | 2,118 | N/A | 2,118 | (C) |
+| 7216 | Angles, shapes and sections of iron or non-alloy steel, n.e.s. | 2,118 | N/A | 2,118 | (C) |
+| 7217 | Wire of iron or non-alloy steel, in coils (excl. bars and rods) | see below | see below | see below |  |
+| 7217 10 | Wire of iron or non-alloy steel, in coils, not plated or coated, whether or not polished (excl. bars and rods) | 2,118 | N/A | 2,118 | (C) |
+| 7217 20 | Wire of iron or non-alloy steel, in coils, plated or coated with zinc (excl. bars and rods) | 2,118 | N/A | 2,118 | (C) |
+| 7217 30 | Wire of iron or non-alloy steel, in coils, plated or coated with base metals (excl. plated or coated with zinc, and bars and rods) | 2,118 | N/A | 2,118 | (C) |
+| 7217 90 | Wire of iron or non-alloy steel, in coils, plated or coated (excl. plated or coated with base metals, and bars and rods) | 2,118 | N/A | 2,118 | (C) |
+| 7218 | Stainless steel in ingots or other primary forms (excl. remelting scrap ingots and products obtained by continuous casting); semi-finished products of stainless steel | see below | see below | see below |  |
+| 7218 10 00 | Steel, stainless, in ingots and other primary forms (excl. waste and scrap in ingot form, and products obtained by continuous casting) | 3,760 | N/A | 3,760 |  |
+| 7218 91 | Semi-finished products of stainless steel, of rectangular "other than square" cross-section | 3,630 | N/A | 3,630 |  |
+| 7218 99 11 | Semi-finished products of stainless steel, of square cross-section, rolled or obtained by continuous casting | 3,630 | N/A | 3,630 |  |
+| 7218 99 19 | Semi-finished products of stainless steel, of square cross-section, forged | 3,760 | N/A | 3,760 |  |
+| 7218 99 20 | Semi-finished products of stainless steel, of circular cross-section or of cross-section other than square or rectangular, rolled or obtained by continuous casting | 3,630 | N/A | 3,630 |  |
+| 7218 99 80 | Semi-finished products of stainless steel, forged (excl. products of square or rectangular cross-section) | 3,760 | N/A | 3,760 |  |
+| 7219 | Flat-rolled products of stainless steel, of a width of >= 600 mm, hot-rolled or cold-rolled "cold-reduced" | see below | see below | see below |  |
+| 7219 11 00 | Flat-rolled products of stainless steel, of a width of >= 600 mm, not further worked than hot-rolled, in coils, of a thickness of > 10 mm | 3,630 | N/A | 3,630 |  |
+| 7219 12 | Flat-rolled products of stainless steel, of a width of>= 600 mm, not further worked than hot-rolled, in coils, of a thickness of >= 4,7 mm and <= 10 mm | 3,630 | N/A | 3,630 |  |
+| 7219 13 | Flat-rolled products of stainless steel, of a width of >= 600 mm, not further worked than hot-rolled, in coils, of a thickness of >= 3 mm and < 4,75 mm | 3,630 | N/A | 3,630 |  |
+| 7219 14 | Flat-rolled products of stainless steel, of a width of >= 600 mm, not further worked than hot-rolled, in coils, of a thickness of < 3 mm | 3,630 | N/A | 3,630 |  |
+| 7219 21 | Flat-rolled products of stainless steel, of a width of >= 600 mm, not further worked than hot-rolled, not in coils, of a thickness of > 10 mm | 3,630 | N/A | 3,630 |  |
+| 7219 22 | Flat-rolled products of stainless steel, of a width of >= 600 mm, not further worked than hot-rolled, not in coils, of a thickness of >= 4,75 mm and <= 10 mm | 3,630 | N/A | 3,630 |  |
+| 7219 23 00 | Flat-rolled products of stainless steel, of a width of >= 600 mm, not further worked than hot-rolled, not in coils, of a thickness of >= 3 mm and < 4,75 mm | 3,630 | N/A | 3,630 |  |
+| 7219 24 00 | Flat-rolled products of stainless steel, of a width of >= 600 mm, not further worked than hot-rolled, not in coils, of a thickness of < 3 mm | 3,630 | N/A | 3,630 |  |
+| 7219 31 00 | Flat-rolled products of stainless steel, of a width of >= 600 mm, not further worked than cold-rolled "cold-reduced", of a thickness of >= 4,75 mm | 3,650 | N/A | 3,650 |  |
+| 7219 32 | Flat-rolled products of stainless steel, of a width of >= 600 mm, not further worked than cold-rolled "cold-reduced", of a thickness of >= 3 mm but < 4,75 mm | 3,650 | N/A | 3,650 |  |
+| 7219 33 | Flat-rolled products of stainless steel, of a width of >= 600 mm, not further worked than cold-rolled "cold-reduced", of a thickness of > 1 mm but < 3 mm | 3,650 | N/A | 3,650 |  |
+| 7219 34 | Flat-rolled products of stainless steel, of a width of >= 600 mm, not further worked than cold-rolled "cold-reduced", of a thickness of >= 0,5 mm but <= 1 mm | 3,650 | N/A | 3,650 |  |
+| 7219 35 | Flat-rolled products of stainless steel, of a width of >= 600 mm, not further worked than cold-rolled "cold-reduced", of a thickness of < 0,5 mm | 3,650 | N/A | 3,650 |  |
+| 7219 90 | Flat-rolled products of stainless steel, of a width of >= 600 mm, hot-rolled or cold-rolled "cold-reduced" and further worked | 3,650 | N/A | 3,650 |  |
+| 7220 | Flat-rolled products of stainless steel, of a width of < 600 mm, hot-rolled or cold-rolled "cold-reduced" | see below | see below | see below |  |
+| 7220 11 00 | Flat-rolled products of stainless steel, of a width of < 600 mm, not further worked than hot-rolled, of a thickness of >= 4,75 mm | 3,630 | N/A | 3,630 |  |
+| 7220 12 00 | Flat-rolled products of stainless steel, of a width of < 600 mm, not further worked than hot-rolled, of a thickness of < 4,75 mm | 3,630 | N/A | 3,630 |  |
+| 7220 20 | Flat-rolled products of stainless steel, of a width of < 600 mm, not further worked than cold-rolled "cold-reduced" | 3,650 | N/A | 3,650 |  |
+| 7220 90 | Flat-rolled products of stainless steel, of a width of < 600 mm, hot-rolled or cold-rolled "cold-reduced" and further worked | 3,650 | N/A | 3,650 |  |
+| 7221 | Bars and rods of stainless steel, hot-rolled, in irregularly wound coils | 3,650 | N/A | 3,650 |  |
+| 7222 | Other bars and rods of stainless steel; angles, shapes and sections of stainless steel, n.e.s. | see below | see below | see below |  |
+| 7222 11 | Bars and rods of stainless steel, only hot-rolled, only hot-drawn or only hot-extruded, of circular cross-section | 3,650 | N/A | 3,650 |  |
+| 7222 19 | Bars and rods of stainless steel, only hot-rolled, only hot-drawn or only extruded (excl. of circular cross-section) | 3,650 | N/A | 3,650 |  |
+| 7222 20 | Other bars and rods of stainless steel, not further worked than cold-formed or cold-finished | 3,650 | N/A | 3,650 |  |
+| 7222 30 | Other bars and rods of stainless steel, cold-formed or cold-finished and further worked, or not further worked than forged, or forged, or hot-formed by other means and further worked, n.e.s. | 3,760 | N/A | 3,760 |  |
+| 7222 40 | Angles, shapes and sections of stainless steel, n.e.s. | 3,650 | N/A | 3,650 |  |
+| 7223 | Wire of stainless steel, in coils (excl. bars and rods) | see below | see below | see below |  |
+| 7223 00 | Wire of stainless steel, in coils (excl. bars and rods) | 3,650 | N/A | 3,650 |  |
+| 7224 | Steel, alloy, other than stainless, in ingots or other primary forms, semi-finished products of alloy steel other than stainless (excl. waste and scrap in ingot form, and products obtained by continuous casting) | see below | see below | see below |  |
+| 7224 10 | Steel, alloy, other than stainless, in ingots or other primary forms (excl. waste and scrap in ingot form, and products obtained by continuous casting) | 4,150 | N/A | 4,150 | (F) |
+| 7224 90 02 | Semi-finished products of tool steel | 4,030 | N/A | 4,030 | (F) |
+| 7224 90 03 | Semi-finished products of high-speed steel, of square or rectangular cross-section, hot-rolled or obtained by continuous casting the width measuring < twice the thickness | 4,030 | N/A | 4,030 | (F) |
+| 7224 90 05 | Semi-finished products of steel containing by weight <= 0,7 % of carbon, 0,5 % to 1,2 % of manganese, 0,6 % to 2,3 % of silicon, or of steel containing by weight >= 0,0008 % of boron with any other element < the minimum content referred to in Note 1 f to chapter 72, of square or rectangular cross-section, hot rolled or obtained by continuous casting, the width measuring < twice the thickness | 4,030 | N/A | 4,030 | (F) |
+| 7224 90 07 | Semi-finished products of alloy steel other than stainless steel, of square or rectangular cross-section, hot-rolled or obtained by continuous casting, the width measuring < twice the thickness (excl. of tool steel, high-speed steel and articles of subheading 7224.90.05) | 4,030 | N/A | 4,030 | (F) |
+| 7224 90 14 | Semi-finished products of alloy steel other than stainless steel, of square or rectangular cross-section, hot-rolled or obtained by continuous casting, the width measuring >= twice the thickness (excl. of tool steel) | 4,030 | N/A | 4,030 | (F) |
+| 7224 90 18 | Semi-finished products of alloy steel other than stainless steel, of square or rectangular cross-section, forged (excl. of tool steel) | 4,150 | N/A | 4,150 | (F) |
+| 7224 90 31 | Semi-finished products of steel containing by weight 0,9 % to 1,15 % carbon, 0,5 % to 2 % of chromium and, if present, <= 0,5 % of molybdenum, cut into shapes other than square or rectangular, hot-rolled or obtained by continuous casting | 4,030 | N/A | 4,030 | (F) |
+| 7224 90 38 | Semi-finished products of alloy steel, other than stainless steel, cut into shapes other than square or rectangular, hot-rolled or obtained by continuous casting (excl. of tool steel and products containing by weight 0,9 % to 1,15 % of carbon, 0,5 % to 2 % of chromium and, if present, <= 0,5 % of molybdenum) | 4,030 | N/A | 4,030 | (F) |
+| 7224 90 90 | Semi-finished products of alloy steel, other than stainless steel, forged (excl. of tool steel and products of square or rectangular, circular or polygamol cross-section) | 4,150 | N/A | 4,150 | (F) |
+| 7225 | Flat-rolled products of alloy steel other than stainless, of a width of >= 600 mm, hot-rolled or cold-rolled "cold-reduced" | see below | see below | see below |  |
+| 7225 11 00 | Flat-rolled products of silicon-electrical steel, of a width of >= 600 mm, grain-oriented | 5,320 | N/A | 5,320 | (C) |
+| 7225 19 10 | Flat-rolled products of silicon-electrical steel, of a width of >= 600 mm, hot-rolled | 4,030 | N/A | 4,030 | (C) |
+| 7225 19 90 | Flat-rolled products of silicon-electrical steel, of a width of >= 600 mm, cold-rolled "cold-reduced", non-grain-oriented | 4,050 | N/A | 4,050 | (C) |
+| 7225 30 | Flat-rolled products of alloy steel other than stainless, of a width of >= 600 mm, not further worked than hot-rolled, in coils (excl. products of silicon-electrical steel) | 4,030 | N/A | 4,030 | (F) |
+| 7225 40 | Flat-rolled products of alloy steel other than stainless, of a width of >= 600 mm, not further worked than hot-rolled, not in coils (excl. products of silicon-electrical steel) | 4,030 | N/A | 4,030 | (F) |
+| 7225 50 | Flat-rolled products of alloy steel other than stainless, of a width of >= 600 mm, not further worked than cold-rolled "cold-reduced" (excl. products of silicon-electrical steel) | 4,050 | N/A | 4,050 | (F) |
+| 7225 91 00 | Flat-rolled products of alloy steel other than stainless, of a width of >= 600 mm, hot-rolled or cold-rolled "cold-reduced" and electrolytically plated or coated with zinc (excl. products of silicon-electrical steel) | 4,050 | N/A | 4,050 | (F) |
+| 7225 92 00 | Flat-rolled products of alloy steel other than stainless, of a width of >= 600 mm, hot-rolled or cold-rolled "cold-reduced" and plated or coated with zinc (excl. electrolytically plated or coated and products of silicon-electrical steel) | 4,050 | N/A | 4,050 | (F) |
+| 7225 99 00 | Flat-rolled products of alloy steel other than stainless, of a width of >= 600 mm, hot-rolled or cold-rolled "cold-reduced" and further worked (excl. plated or coated with zinc and products of silicon-electrical steel) | 4,050 | N/A | 4,050 | (F) |
+| 7226 | Flat-rolled products of alloy steel other than stainless, of a width of < 600 mm, hot-rolled or cold-rolled "cold-reduced" | see below | see below | see below |  |
+| 7226 11 00 | Flat-rolled products of silicon-electrical steel, of a width of < 600 mm, hot-rolled or cold-rolled "cold-reduced", grain-oriented | 5,320 | N/A | 5,320 | (C) |
+| 7226 19 10 | Flat-rolled products of silicon-electrical steel, of a width of < 600 mm, not further worked than hot-rolled | 4,030 | N/A | 4,030 | (C) |
+| 7226 19 80 | Flat-rolled products of silicon-electrical steel, of a width of < 600 mm, cold-rolled "cold-reduced", whether or not further worked, or hot-rolled and further worked, non-grain-oriented | 4,050 | N/A | 4,050 | (C) |
+| 7226 20 00 | Flat-rolled products of high-speed steel, of a width of <= 600 mm, hot-rolled or cold-rolled "cold-reduced" | 4,030 | N/A | 4,030 | (F) |
+| 7226 91 | Flat-rolled products of alloy steel other than stainless, of a width of < 600 mm, not further worked than hot-rolled (excl. products of high-speed steel or silicon-electrical steel) | 4,030 | N/A | 4,030 | (F) |
+| 7226 92 00 | Flat-rolled products of alloy steel other than stainless, of a width of < 600 mm, not further worked than cold-rolled "cold-reduced" (excl. products of high-speed steel or silicon-electrical steel) | 4,050 | N/A | 4,050 | (F) |
+| 7226 99 | Flat-rolled products of alloy steel other than stainless, of a width of < 600 mm, hot-rolled or cold-rolled "cold-reduced" and further worked (excl. products of high-speed steel or silicon-electrical steel) | 4,050 | N/A | 4,050 | (F) |
+| 7227 | Bars and rods of alloy steel other than stainless, hot-rolled, in irregularly wound coils | 4,050 | N/A | 4,050 | (C)/(F) |
+| 7228 | Other bars and rods of alloy steel other than stainless, angles, shapes and sections of alloy steel other than stainless, n.e.s.; hollow drill bars and rods, of alloy or non-alloy steel | see below | see below | see below |  |
+| 7228 10 20 | Bars and rods of high-speed steel, not further worked than hot-rolled, hot-drawn or extruded, and hot-rolled, hot-drawn or extruded, not further worked than clad (excl. semi-finished products, flat-rolled products and hot-rolled bars and rods in irregularly wound coils) | 4,050 | N/A | 4,050 | (F) |
+| 7228 10 50 | Bars and rods of high-speed steel, forged (excl. semi-finished products, flat-rolled products and hot-rolled bars and rods in irregularly wound coils) | 4,150 | N/A | 4,150 | (F) |
+| 7228 10 90 | Bars and rods of high-speed steel, not further worked than cold-formed or cold-finished, whether or not further worked, or hot-formed and further worked (excl. forged products, semi-finished products, flat-rolled products and hot-rolled bars and rods in irregularly wound coils) | 4,050 | N/A | 4,050 | (F) |
+| 7228 20 | Bars and rods of silico-manganese steel (excl. semi-finished products, flat-rolled products and hot-rolled bars and rods in irregularly wound coils) | 4,050 | N/A | 4,050 | (F) |
+| 7228 30 | Bars and rods of alloy steel other than stainless, not further worked than hot-rolled, hot-drawn or extruded (excl. products of high-speed steel or silico-manganese steel, semi-finished products, flat-rolled products and hot-rolled bars and rods in irregularly wound coils) | 4,050 | N/A | 4,050 | (C)/(F) |
+| 7228 40 | Bars and rods of alloy steel other than stainless, not further worked than forged (excl. products of high-speed steel or silico-manganese steel, semi-finished products, flat-rolled products and hot-rolled bars and rods in irregularly wound coils) | 4,150 | N/A | 4,150 | (F) |
+| 7228 50 | Bars and rods of alloy steel other than stainless, not further worked than cold-formed or cold-finished (excl. products of high-speed steel or silico-manganese steel, semi-finished products, flat-rolled products and hot-rolled bars and rods in irregularly wound coils) | 4,050 | N/A | 4,050 | (C)/(F) |
+| 7228 60 | Bars and rods of alloy steel other than stainless, cold-formed or cold-finished and further worked or hot-formed and further worked, n.e.s. (excl. products of high-speed steel or silico-manganese steel, semi-finished products, flat-rolled products and hot-rolled bars and rods in irregularly wound coils) | 4,050 | N/A | 4,050 | (F) |
+| 7228 70 | Angles, shapes and sections of alloy steel other than stainless, n.e.s. | 4,050 | N/A | 4,050 | (F) |
+| 7228 80 00 | Hollow drill bars and rods, of alloy or non-alloy steel | 4,050 | N/A | 4,050 | (F) |
+| 7229 | Wire of alloy steel other than stainless, in coils (excl. bars and rods) | 4,050 | N/A | 4,050 | (C)/(F) |
+| 7301 | Sheet piling of iron or steel, whether or not drilled, punched or made from assembled elements; welded angles, shapes and sections, of iron or steel | 2,144 | N/A | 2,144 | (C) |
+| 7302 | Railway or tramway track construction material of iron or steel, the following : rails, check-rails and rack rails, switch blades, crossing frogs, point rods and other crossing pieces, sleepers "cross-ties", fish-plates, chairs, chair wedges, sole plates "base plates", rail clips, bedplates, ties and other material specialised for jointing or fixing rails | 3,674 | N/A | 3,674 | (C) |
+| 7303 | Tubes, pipes and hollow profiles, of cast iron | see below | see below | see below |  |
+| 7303 00 | Tubes, pipes and hollow profiles, of cast iron | 2,154 | N/A | 2,154 |  |
+| 7304 | Tubes, pipes and hollow profiles, seamless, of iron or steel (excl. products of cast iron) | see below | see below | see below |  |
+| 7304 11 00 | Line pipe of a kind used for oil or gas pipelines, seamless, of stainless steel | 4,084 | N/A | 4,084 |  |
+| 7304 19 | Line pipe of a kind used for oil or gas pipelines, seamless, of iron or steel (excl. products of stainless steel or of cast iron) | 2,154 | N/A | 2,154 | (C) |
+| 7304 22 00 | Drill pipe, seamless, of stainless steel, of a kind used in drilling for oil or gas | 4,084 | N/A | 4,084 |  |
+| 7304 23 00 | Drill pipe, seamless, of a kind used in drilling for oil or gas, of iron or steel (excl. products of stainless steel or of cast iron) | 2,154 | N/A | 2,154 | (C) |
+| 7304 24 00 | Casing and tubing, seamless, of a kind used for drilling for oil or gas, of stainless steel | 4,084 | N/A | 4,084 |  |
+| 7304 29 | Casing and tubing, seamless, of iron or steel, of a kind used in drilling for oil or gas (excl. products of cast iron) | 2,154 | N/A | 2,154 | (C) |
+| 7304 31 | Tubes, pipes and hollow profiles, seamless, of circular cross-section, of iron or non-alloy steel, cold-drawn or cold-rolled "cold-reduced" (excl. cast iron products and line pipe of a kind used for oil or gas pipelines or casing and tubing of a kind used for drilling for oil or gas) | 2,154 | N/A | 2,154 | (C) |
+| 7304 39 | Tubes, pipes and hollow profiles, seamless, of circular cross-section, of iron or non-alloy steel, not cold-drawn or cold-rolled "cold-reduced" (excl. cast iron products, line pipe of a kind used for oil or gas pipelines, casing and tubing of a kind used for drilling for oil or gas) | 2,154 | N/A | 2,154 | (C) |
+| 7304 41 00 | Tubes, pipes and hollow profiles, seamless, of circular cross-section, of stainless steel, cold-drawn or cold-rolled "cold-reduced" (excl. line pipe of a kind used for oil or gas pipelines, casing and tubing of a kind used for drilling for oil or gas) | 4,084 | N/A | 4,084 |  |
+| 7304 49 | Tubes, pipes and hollow profiles, seamless, of circular cross-section, of stainless steel, not cold-drawn or cold-rolled "cold-reduced" (excl. line pipe of a kind used for oil or gas pipelines or of a kind used for drilling for oil or gas) | 4,084 | N/A | 4,084 |  |
+| 7304 51 | Tubes, pipes and hollow profiles, seamless, of circular cross-section, of alloy steel other than stainless, cold-drawn or cold-rolled "cold-reduced" (excl. line pipe of a kind used for oil or gas pipelines, casing and tubing of a kind used for drilling for oil) | 2,144 | N/A | 2,144 | (F) |
+| 7304 59 | Tubes, pipes and hollow profiles, seamless, of circular cross-section, of alloy steel other than stainless, not cold-drawn or cold-rolled "cold-reduced" (excl. line pipe of a kind used for oil or gas pipelines, casing and tubing of a kind used for drilling for oil) | 2,144 | N/A | 2,144 | (C)/(F) |
+| 7304 90 00 | Tubes, pipes and hollow profiles, seamless, of non-circular cross-section, of iron or steel (excl. products of cast iron) | 2,154 | N/A | 2,154 | (C) |
+| 7305 | Tubes and pipes, having circular cross-sections and an external diameter of > 406,4 mm, of flat-rolled products of iron or steel "e.g., welded, riveted or similarly closed" | 2,154 | N/A | 2,154 | (C) |
+| 7306 | Tubes, pipes and hollow profiles "e.g., open seam or welded, riveted or similarly closed", of iron or steel (excl. of cast iron, seamless tubes and pipes and tubes having internal and external circular cross-sections and an external diameter of > 406,4 mm) | see below | see below | see below |  |
+| 7306 11 00 | Line pipe of a kind used for oil or gas pipelines, welded, of flat-rolled products of stainless steel, of an external diameter of <= 406,4 mm | 4,114 | N/A | 4,114 |  |
+| 7306 19 00 | Line pipe of a kind used for oil or gas pipelines, welded, of flat-rolled products of iron or steel, of an external diameter of <= 406,4 mm (excl. products of stainless steel or of cast iron) | 2,164 | N/A | 2,164 | (C) |
+| 7306 21 00 | Casing and tubing of a kind used in drilling for oil or gas, welded, of flat-rolled products of stainless steel, of an external diameter of <= 406,4 mm | 4,114 | N/A | 4,114 |  |
+| 7306 29 00 | Casing and tubing of a kind used in drilling for oil or gas, welded, of flat-rolled products of iron or steel, of an external diameter of <= 406,4 mm (excl. products of stainless steel or of cast iron) | 2,164 | N/A | 2,164 | (C) |
+| 7306 30 12 | Precision tubes, welded, of circular cross-section, of iron or non-alloy steel, cold-drawn or cold-rolled "cold-reduced" | 2,164 | N/A | 2,164 | (C) |
+| 7306 30 18 | Precision tubes, welded, of circular cross-section, of iron or non-alloy steel (excl. cold-drawn or cold-rolled) | 2,144 | N/A | 2,144 | (C) |
+| 7306 30 41 | Threaded or threadable tubes "gas pipe", welded, of circular cross-section, of iron or non-alloy steel, plated or coated with zinc | 2,164 | N/A | 2,164 | (C) |
+| 7306 30 49 | Threaded or threadable tubes "gas pipe", welded, of circular cross-section, of iron or non-alloy steel (excl. products plated or coated with zinc) | 2,164 | N/A | 2,164 | (C) |
+| 7306 30 72 | Other tubes, pipes and hollow profiles, welded, of circular cross-section, of iron or non-alloy steel, of an external diameter of <= 168,3 mm, plated or coated with zinc (excl. line pipe of a kind used for oil or gas pipelines or casing and tubingof a kind used in drilling for oil or gas) | 2,164 | N/A | 2,164 | (C) |
+| 7306 30 77 | Other tubes, pipes and hollow profiles, welded, of circular cross-section, of iron or non-alloy steel of an external diameter of <= 168,3 mm (excl. plated or coated with zinc and line pipe of a kind used for oil or gas pipelines, casing and tubing of a kind used in drilling for oil or gas, precision tubes and threaded or threadable tubes "gas pipe") | 2,164 | N/A | 2,164 | (C) |
+| 7306 30 80 | Tubes, pipes and hollow profiles, welded, having a circular cross-section, of iron or steel, of an external diameter of > 168,3 mm but <= 406,4 mm (excl. line pipe of a kind used for oil or gas pipelines or casing and tubing of a kind used in drilling for oil or gas, or precision steel tubes, electrical conduit tubes or threaded or threadable tubes "gas pipe") | 2,164 | N/A | 2,164 | (C) |
+| 7306 40 20 | Tubes, pipes and hollow profiles, welded, of circular cross-section, of stainless steel, cold-drawn or cold-rolled "cold-reduced" (excl. products having internal and external circular cross-sections and an external diameter of > 406,4 mm, and line pipe of a kind used for oil or gas pipelines or casing and tubing of a kind used in drilling for oil or gas) | 4,114 | N/A | 4,114 |  |
+| 7306 40 80 | Tubes, pipes and hollow profiles, welded, of circular cross-section, of stainless steel (excl. products cold-drawn or cold-rolled "cold-reduced", tubes and pipes having internal and external circular cross-sections and an external diameter of > 406,4 mm, and line pipe of a kind used for oil or gas pipelines or casing and tubing of a kind used in drilling for oil or gas) | 4,094 | N/A | 4,094 |  |
+| 7306 50 21 | Precision steel tubes, welded, of circular cross-section, of alloy steel other than stainless, cold-drawn or cold-rolled "cold-reduced" | 2,184 | N/A | 2,184 | (F) |
+| 7306 50 29 | Precision steel tubes, welded, of circular cross-section, of alloy steel other than stainless (excl. cold-drawn or cold-rolled) | 2,164 | N/A | 2,164 | (F) |
+| 7306 50 80 | Tubes, pipes and hollow profiles, welded, of circular cross-section, of alloy steel other than stainless (excl. tubes and pipes having internal and external circular cross-sections and an external diameter of > 406,4 mm, and line pipe of a kind used for oil or gas pipelines or casing and tubing of a kind used in drilling for oil or gas, and precision steel tubes) | 2,184 | N/A | 2,184 | (F) |
+| 7306 61 10 | Tubes and pipes and hollow profiles, welded, of square or rectangular cross-section, of stainless steel | 4,114 | N/A | 4,114 |  |
+| 7306 61 92 | Tubes and pipes and hollow profiles, welded, of square or rectangular cross-section, of iron or steel other than stainless steel, with a wall thickness of <= 2 mm | 2,164 | N/A | 2,164 | (C) |
+| 7306 61 99 | Tubes and pipes and hollow profiles, welded, of square or rectangular cross-section, of iron or steel other than stainless steel, with a wall thickness of > 2 mm | 2,164 | N/A | 2,164 | (C) |
+| 7306 69 10 | Tubes, pipes and hollow profiles, welded, of non-circular cross-section, of stainless steel (excl. tubes and pipes having internal and external circular cross-sections and an external diameter of > 406,4 mm, line pipe of a kind used for oil or gas pipelines or casing and tubing of a kind used in drilling for oil or gas, and tubes and pipes and hollow profiles of square or rectangular cross-section) | 4,114 | N/A | 4,114 |  |
+| 7306 69 90 | Tubes, pipes and hollow profiles, welded, of non-circular cross-section, of iron or steel other than stainless steel (excl. tubes and pipes having internal and external circular cross-sections and an external diameter of > 406,4 mm, line pipe of a kind used for oil or gas pipelines or casing and tubing of a kind used in drilling for oil or gas, and tubes and pipes and hollow profiles of square or rectangular cross-section) | 2,164 | N/A | 2,164 | (C) |
+| 7306 90 00 | Tubes, pipes and hollow profiles "e.g., open seam, riveted or similarly closed", of iron or steel (excl. of cast iron, seamless or welded tubes and pipes and tubes and pipes having internal and external circular cross-sections and an external diameter of > 406,4 mm) | 2,164 | N/A | 2,164 | (C) |
+| 7307 | Tube or pipe fittings "e.g. couplings, elbows, sleeves", of iron or steel | see below | see below | see below |  |
+| 7307 11 | Tube or pipe fittings of non-malleable cast iron | 2,194 | N/A | 2,194 |  |
+| 7307 19 10 | Tube or pipe fittings of cast iron (excl. of non-malleable) | 2,194 | N/A | 2,194 |  |
+| 7307 19 90 | Cast tube or pipe fittings of steel | 2,274 | N/A | 2,274 | (C) |
+| 7307 21 00 | Flanges of stainless steel (excl. cast products) | 3,774 | N/A | 3,774 |  |
+| 7307 22 | Threaded elbows, bends and sleeves of stainless steel (excl. cast products) | 3,774 | N/A | 3,774 |  |
+| 7307 23 | Butt welding tube or pipe fittings of stainless steel (excl. cast products) | 3,774 | N/A | 3,774 |  |
+| 7307 29 | Tube or pipe fittings of stainless steel (excl. cast products, flanges, threaded elbows, bends and sleeves and butt weldings fittings) | 3,774 | N/A | 3,774 |  |
+| 7307 91 00 | Flanges of iron or steel (excl. cast or stainless products) | 2,134 | N/A | 2,134 | (C) |
+| 7307 92 | Threaded elbows, bends and sleeves, of stainless steel (excl. cast or stainless products) | 2,134 | N/A | 2,134 | (C) |
+| 7307 93 | Butt welding fittings of iron or steel (excl. cast iron or stainless steel products, and flanges) | 2,134 | N/A | 2,134 | (C) |
+| 7307 99 | Tube or pipe fittings, of iron or steel (excl. cast iron or stainless steel products; flanges; threaded elbows, bends and sleeves; butt welding fittings) | 2,134 | N/A | 2,134 | (C) |
+| 7308 | Structures and parts of structures "e.g., bridges and bridge-sections, lock-gates, towers, lattice masts, roofs, roofing frameworks, doors and windows and their frames and thresholds for doors, shutters, balustrades, pillars and columns", of iron or steel; plates, rods, angles, shapes, sections, tubes and the like, prepared for use in structures, of iron or steel (excl. prefabricated buildings of heading 9406) | 3,864 | N/A | 3,864 | (C) |
+| 7309 | Reservoirs, tanks, vats and similar containers, of iron or steel, for any material "other than compressed or liquefied gas", of a capacity of > 300 l, not fitted with mechanical or thermal equipment, whether or not lined or heat-insulated (excl. containers specifically constructed or equipped for one or more types of transport) | 4,124 | N/A | 4,124 | (C) |
+| 7310 | Tanks, casks, drums, cans, boxes and similar containers, of iron or steel, for any material "other than compressed or liquefied gas", of a capacity of <= 300 l, not fitted with mechanical or thermal equipment, whether or not lined or heat-insulated, n.e.s. | 2,164 | N/A | 2,164 | (C) |
+| 7311 | Containers of iron or steel, for compressed or liquefied gas (excl. containers specifically constructed or equipped for one or more types of transport) | see below | see below | see below |  |
+| 7311 00 | Containers of iron or steel, for compressed or liquefied gas (excl. containers specifically constructed or equipped for one or more types of transport) | 4,104 | N/A | 4,104 | (C) |
+| 7318 | Screws, bolts, nuts, coach screws, screw hooks, rivets, cotters, cotter pins, washers, incl. spring washers, and similar articles, of iron or steel (excl. lag screws, stoppers, plugs and the like, threaded) | see below | see below | see below |  |
+| 7318 11 00 | Coach screws of iron or steel | 2,124 | N/A | 2,124 | (C) |
+| 7318 12 10 | Wood screws of stainless steel (excl. coach screws) | 4,074 | N/A | 4,074 |  |
+| 7318 12 90 | Wood screws of iron or steel other than stainless (excl. coach screws) | 2,124 | N/A | 2,124 | (C) |
+| 7318 13 00 | Screw hooks and screw rings, of iron or steel | 2,124 | N/A | 2,124 | (C) |
+| 7318 14 10 | Self-tapping screws, of stainless steel (excl. wood screws) | 4,074 | N/A | 4,074 |  |
+| 7318 14 91 | Spaced-thread screws of iron or steel other than stainless | 2,124 | N/A | 2,124 | (C) |
+| 7318 14 99 | Self-tapping screws of iron or steel other than stainless (excl. spaced-thread screws and wood screws) | 2,124 | N/A | 2,124 | (C) |
+| 7318 15 | Threaded screws and bolts, of iron or steel, whether or not with their nuts and washers (excl. coach screws and other wood screws, screw hooks and screw rings, self-tapping screws, lag screws, stoppers, plugs and the like, threaded) | 3,474 | N/A | 3,474 | (C) |
+| 7318 16 | Nuts of iron or steel | 4,104 | N/A | 4,104 | (C) |
+| 7318 19 00 | Threaded articles, of iron or steel, n.e.s. | 2,124 | N/A | 2,124 | (C) |
+| 7318 21 00 | Spring washers and other lock washers, of iron or steel | 2,124 | N/A | 2,124 | (C) |
+| 7318 22 00 | Washers of iron or steel (excl. spring washers and other lock washers) | 2,484 | N/A | 2,484 | (C) |
+| 7318 23 00 | Rivets of iron or steel (excl. tubular and bifurcated rivets for particular uses) | 2,344 | N/A | 2,344 | (C) |
+| 7318 24 00 | Cotters and cotter pins, of iron or steel | 2,124 | N/A | 2,124 | (C) |
+| 7318 29 00 | Non-threaded articles, of iron or steel | 2,124 | N/A | 2,124 | (C) |
+| 7326 | Articles of iron or steel, n.e.s. (excl. cast articles) | see below | see below | see below |  |
+| 7326 11 00 | Grinding balls and similar articles for mills, of iron or steel, forged or stamped, but not further worked | 2,274 | N/A | 2,274 | (C) |
+| 7326 19 | Articles of iron or steel, forged or stamped, but not further worked, n.e.s. (excl. grinding balls and similar articles for mills) | 2,274 | N/A | 2,274 | (C) |
+| 7326 20 00 | Articles of iron or steel wire, n.e.s. | 2,124 | N/A | 2,124 | (C) |
+| 7326 90 30 | Ladders and steps, of iron or steel | 2,124 | N/A | 2,124 | (C) |
+| 7326 90 40 | Pallets and similar platforms for handling goods, of iron or steel | 2,124 | N/A | 2,124 | (C) |
+| 7326 90 50 | Reels for cables, piping and the like, of iron or steel | 2,124 | N/A | 2,124 | (C) |
+| 7326 90 60 | Ventilators, non-mechanical, guttering, hooks and like articles used in the building industry, n.e.s., of iron or steel | 2,124 | N/A | 2,124 | (C) |
+| 7326 90 92 | Articles of iron or steel, open-die forged, n.e.s. | 2,274 | N/A | 2,274 | (C) |
+| 7326 90 94 | Articles of iron or steel, closed-die forged, n.e.s. | 2,274 | N/A | 2,274 | (C) |
+| 7326 90 96 | Sintered articles of iron or steel, n.e.s. | 2,274 | N/A | 2,274 | (C) |
+| 7326 90 98 | Articles of iron or steel, n.e.s. | 2,144 | N/A | 2,144 | (C) |
+
+[표 150] Other Countries and Territories
+| Product CN Code / TARIC Code | Description | Default Value (direct emissions) (tCO2eq/tonne of good) | Default Value (indirect emissions) (tCO2eq/tonne of good) | Default Value (total emissions) (tCO2eq/tonne of good) | Underlying production route determining CBAM BM |
+| Cement |  |  |  |  |  |
+| 2507008080 | Calcined clay | 0,210 | 0,070 | 0,280 |  |
+| 2523100010 | White clinker | 1,320 | 0,060 | 1,370 | (B) |
+| 2523100090 | Other clinker including grey clinker | 1,370 | 0,050 | 1,410 | (A) |
+| 2523 21 00 | White Portland cement | 1,300 | 0,140 | 1,450 |  |
+| 2523 29 00 | Grey Portland cement | 1,360 | 0,080 | 1,440 |  |
+| 2523 30 00 | Aluminous cement | 1,890 | 0,140 | 2,030 |  |
+| 2523900010 | White hydraulic cement | 1,310 | 0,180 | 1,490 | (B) |
+| 2523900090 | Other hydraulic cements including grey hydraulic cements | 1,280 | 0,090 | 1,370 | (A) |
+| Fertilisers |  |  |  |  |  |
+| 2808 00 00 | Nitric acid; sulphonitric acids | 2,770 | 0,040 | 2,810 |  |
+| 2814 10 00 | Anhydrous ammonia | 2,970 | 0,150 | 3,130 |  |
+| 2814 20 00 | Ammonia in aqueous solution | 0,910 | 0,050 | 0,960 |  |
+| 2834 21 00 | Nitrate of potassium | 2,260 | 0,070 | 2,330 |  |
+| 3102 | Mineral or chemical fertilizers, nitrogenous | see below | see below | see below |  |
+| 3102 10 12 | Urea in aqueous solution, containing >45% nitrogen in relation to the weight of the dry product and containing =>31,8 % but <=33,2 % by weight of urea (excl. that in packages with a gross weight of <= 10 kg) | 0,860 | 0,040 | 0,900 |  |
+| 3102 10 15 | Urea in aqueous solution, containing >45% nitrogen in relation to the weight of the dry product and containing >33,2 % but <=55% by weight of urea (excl. that in packages with a gross weight of <= 10 kg) | 1,430 | 0,040 | 1,470 |  |
+| 3102 10 19 | Urea, whether or not in aqueous solution, containing >45% nitrogen in relation to the weight of the dry product (excl. that in tablets or similar forms, or in packages with a gross weight of <= 10 kg, or in aqueous solution containing =>31,8 % but <=55% by weight of urea) | 2,600 | 0,120 | 2,720 |  |
+| 3102 10 90 | Urea, whether or not in aqueous solution, containing <= 45 % by weight of nitrogen on the dry anhydrous product (excl. goods of this chapter in tablets or similar forms or in packages of a gross weight of <= 10 kg) | 2,540 | 0,120 | 2,660 |  |
+| 3102 21 00 | Ammonium sulphate (excl. that in tablets or similar forms, or in packages with a gross weight of <= 10 kg) | 0,870 | 0,100 | 0,970 |  |
+| 3102 29 00 | Double salts and mixtures of ammonium sulphate and ammonium nitrate | 1,510 | 0,110 | 1,620 |  |
+| 3102 30 10 | Ammonium nitrate in aqueous solution (excl. that in packages with a gross weight of <= 10 kg) | 1,710 | 0,080 | 1,790 |  |
+| 3102 30 90 | Ammonium nitrate (excl. that in aqueous solution, in tablets or similar forms, or in packages with a gross weight of <= 10 kg) | 2,640 | 0,110 | 2,750 |  |
+| 3102 40 10 | Mixtures of ammonium nitrate with calcium carbonate or other inorganic non-fertilising substances, for use as fertilisers, containing <= 28 % nitrogen by weight (excl. those in tablets or similar forms, or in packages with a gross weight of <= 10 kg) | 2,260 | 0,100 | 2,360 |  |
+| 3102 40 90 | Mixtures of ammonium nitrate with calcium carbonate or other inorganic non-fertilising substances, for use as fertilisers, containing > 28 % nitrogen by weight (excl. those in tablets or similar forms, or in packages with a gross weight of <= 10 kg) | 2,260 | 0,100 | 2,360 |  |
+| 3102 50 00 | Sodium nitrate (excl. that in tablets or similar forms, or in packages with a gross weight of <= 10 kg) | 4,320 | 0,070 | 4,390 |  |
+| 3102 60 00 | Double salts and mixtures of calcium nitrate and ammonium nitrate (excl. those in tablets or similar forms, or in packages with a gross weight of <= 10 kg) | 2,210 | 0,100 | 2,310 |  |
+| 3102 80 00 | Mixtures of urea and ammonium nitrate in aqueous or ammoniacal solution (excl. those in packages with a gross weight of <= 10 kg) | 1,850 | 0,100 | 1,960 |  |
+| 3102 90 00 | Mineral or chemical nitrogen fertilisers (excl. urea; ammonium sulphate; ammonium nitrate; sodium nitrate; double salts and mixtures of ammonium nitrate with ammonium sulphate or calcium; mixtures of urea and ammonium nitrate in aqueous or ammoniacal solution; mixtures of ammonium nitrate and calcium carbonate or other non-fertilising inorganic elements; in tablets or similar in packages <= 10 kg) | 2,160 | 0,110 | 2,280 |  |
+| 3105 | Mineral or chemical fertilisers containing two or three of the fertilising elements nitrogen, phosphorus and potassium | see below | see below | see below |  |
+| 3105 10 00 | Mineral or chemical fertilisers of animal or vegetable origin, in tablets or similar forms, or in packages with a gross weight of <= 10 kg | 0,900 | 0,100 | 1,000 |  |
+| 3105 20 10 | Mineral or chemical fertilisers containing phosphorus and potassium, with a nitrogen content > 10 % by weight on the dry anhydrous product (excl. those in tablets or similar forms, or in packages with a gross weight of <= 10 kg) | 1,100 | 0,120 | 1,230 |  |
+| 3105 20 90 | Mineral or chemical fertilisers containing nitrogen, phosphorus and potassium, with a nitrogen content <= 10 % by weight on the dry anhydrous product (excl. those in tablets or similar forms, or in packages with a gross weight of <= 10 kg) | 0,750 | 0,090 | 0,840 |  |
+| 3105 30 00 | Diammonium hydrogenorthophosphate "diammonium phosphate" (excl. that in tablets or similar forms, or in packages with a gross weight of <= 10 kg) | 0,710 | 0,080 | 0,780 |  |
+| 3105 40 00 | Ammonium dihydrogenorthophosphate "monoammonium phosphate", whether or not mixed with diammonium hydrogenorthophosphate "diammonium phosphate" (excl. that in tablets or similar forms, or in packages with a gross weight of <= 10 kg) | 0,450 | 0,060 | 0,510 |  |
+| 3105 51 00 | Other mineral or chemical fertilisers containing the two fertilising elements nitrogen and phosphorus (nitrates and phosphates) | 1,520 | 0,150 | 1,660 |  |
+| 3105 59 00 | Other mineral or chemical fertilisers containing the two fertilising elements nitrogen and phosphorus (excl. nitrates and phosphates) | 0,800 | 0,130 | 0,930 |  |
+| 3105 90 20 | Mineral or chemical fertilisers containing the two fertilising elements nitrogen and potassium, or one principal fertilising substance only, incl. mixtures of animal or vegetable fertilisers with chemical or mineral fertilisers, containing > 10 % nitrogen by weight (excl. in tablets or similar forms, or in packages with a gross weight of <= 10 kg) | 1,500 | 0,080 | 1,570 |  |
+| 3105 90 80 | Mineral or chemical fertilisers containing the two fertilising elements nitrogen and potassium, or one main fertilising element, incl. mixtures of animal or vegetable fertilisers with chemical or mineral fertilisers, not containing nitrogen or with a nitrogen content, by weight, of <= 10 % (excl. in tablets or similar forms or in packages of a gross weight of <= 10 kg) | 0,760 | 0,060 | 0,820 |  |
+| Aluminium |  |  |  |  |  |
+| 7601 | Unwrought aluminium | 2,203 | N/A | 2,203 | (K) |
+| 7603 | Aluminium powders and flakes | 2,945 | N/A | 2,945 | (K) |
+| 7604 10 10 | Bars and rods | 3,233 | N/A | 3,233 | (K) |
+| 7604 10 90 | Profiles | 3,251 | N/A | 3,251 | (K) |
+| 7604 21 00 | Hollow profiles | 3,251 | N/A | 3,251 | (K) |
+| 7604 29 10 | Bars and rods | 3,233 | N/A | 3,233 | (K) |
+| 7604 29 90 | Profiles | 3,251 | N/A | 3,251 | (K) |
+| 7605 | Aluminium wire | 3,184 | N/A | 3,184 | (K) |
+| 7606 | Aluminium plates, sheets and strip, of a thickness exceeding 0,2 mm | 3,717 | N/A | 3,717 | (K) |
+| 7607 | Aluminium foil (whether or not printed or backed with paper, paperboard, plastics or similar backing materials) of a thickness (excluding any backing) not exceeding 0,2 mm | 3,893 | N/A | 3,893 | (K) |
+| 7608 | Aluminium tubes and pipes | 3,220 | N/A | 3,220 | (K) |
+| 7609 00 00 | Aluminium tube or pipe fittings (for example, couplings, elbows, sleeves) | 3,322 | N/A | 3,322 | (K) |
+| 7610 10 00 | Doors, windows and their frames and thresholds for doors | 3,212 | N/A | 3,212 | (K) |
+| 7610 90 | Other | 3,212 | N/A | 3,212 | (K) |
+| 7610 90 10 | Bridges and bridge-sections, towers and lattice masts | 3,212 | N/A | 3,212 | (K) |
+| 7610 90 90 | Other | 3,212 | N/A | 3,212 | (K) |
+| 7611 00 00 | Aluminium reservoirs, tanks, vats and similar containers, for any material (other than compressed or liquefied gas), of a capacity exceeding 300 litres, whether or not lined or heat-insulated, but not fitted with mechanical or thermal equipment | 4,037 | N/A | 4,037 | (K) |
+| 7612 | Aluminium casks, drums, cans, boxes and similar containers (including rigid or collapsible tubular containers), for any material (other than compressed or liquefied gas), of a capacity not exceeding 300 litres, whether or not lined or heat-insulated, but not fitted with mechanical or thermal equipment | 3,944 | N/A | 3,944 | (K) |
+| 7613 00 00 | Aluminium containers for compressed or liquefied gas | 4,037 | N/A | 4,037 | (K) |
+| 7614 | Stranded wire, cables, plaited bands and the like, of aluminium, not electrically insulated | 3,297 | N/A | 3,297 | (K) |
+| 7616 10 00 | Nails, tacks, staples (other than those of heading 8305), screws, bolts, nuts, screw hooks, rivets, cotters, cotter pins, washers and similar articles | 3,891 | N/A | 3,891 | (K) |
+| 7616 91 00 | Cloth, grill, netting and fencing, of aluminium wire | 3,891 | N/A | 3,891 | (K) |
+| 7616 99 10 | Cast | 2,953 | N/A | 2,953 | (K) |
+| 7616 99 90 | Other | 3,891 | N/A | 3,891 | (K) |
+| Hydrogen |  |  |  |  |  |
+| 2804 10 00 | Hydrogen | 17,740 | N/A | 17,740 |  |
+| Iron and steel |  |  |  |  |  |
+| 2601 12 00 | Agglomerated iron ores and concentrates (excl. roasted iron pyrites) | 0,617 | 0,070 | 0,686 |  |
+| 7201 | Pig iron and spiegeleisen, in pigs, blocks or other primary forms | 3,480 | N/A | 3,480 |  |
+| 7202 11 | Ferro-manganese, containing by weight > 2 % of carbon | 1,690 | N/A | 1,690 |  |
+| 7202 19 | Ferro-manganese, containing by weight <= 2 % carbon | 5,590 | N/A | 5,590 |  |
+| 7202 41 | Ferro-chromium, containing by weight > 4 % of carbon | 2,350 | N/A | 2,350 |  |
+| 7202 49 | Ferro-chromium, containing by weight <= 4 % of carbon | 2,870 | N/A | 2,870 |  |
+| 7202 60 00 | Ferro-nickel | 4,014 | N/A | 4,014 |  |
+| 7203 | Ferrous products obtained by direct reduction of iron ore and other spongy ferrous products, in lumps, pellets or similar forms; iron having a minimum purity by weight of 99,94 %, in lumps, pellets or similar forms | 1,325 | N/A | 1,325 |  |
+| 7205 | Granules and powders of pig iron, spiegeleisen, iron or steel (excl. granules and powders of ferro-alloys, turnings and filings of iron or steel, radioactive iron powders "isotopes" and certain low-calibre, substandard balls for ballbearings) | 3,715 | N/A | 3,715 | (C)/(F) |
+| 7206 | Iron and non-alloy steel in ingots or other primary forms (excl. remelting scrap ingots, products obtained by continuous casting and iron of heading 7203) | see below | see below | see below |  |
+| 7206 10 00 | Ingots, of iron and non-alloy steel (excl. remelted scrap ingots, continuous cast products, iron of heading 7203) | 3,750 | N/A | 3,750 | (C) |
+| 7206 90 00 | Iron and non-alloy steel, in puddled bars or other primary forms (excl. ingots, remelted scrap ingots, continuous cast products, iron of heading 7203) | 3,750 | N/A | 3,750 | (C) |
+| 7207 | Semi-finished products of iron or non-alloy steel | see below | see below | see below |  |
+| 7207 11 11 | Semi-finished products, of non-alloy free-cutting steel, containing by weight < 0,25 % carbon, of square or rectangular cross-section, the width < twice the thickness, rolled or obtained by continuous casting | 3,996 | N/A | 3,996 | (C) |
+| 7207 11 14 | Semi-finished products, of iron or non-alloy steel, containing by weight < 0,25 % carbon, of square or rectangular cross-section, the width < twice the thickness of <= 130 mm, rolled or obtained by continuous casting (excl. free-cutting steel) | 3,996 | N/A | 3,996 | (C) |
+| 7207 11 16 | Semi-finished products, of iron or non-alloy steel, containing by weight < 0,25 % carbon, of square or rectangular cross-section, the width < twice the thickness of > 130 mm, rolled or obtained by continuous casting (excl. free-cutting steel) | 3,996 | N/A | 3,996 | (C) |
+| 7207 11 90 | Semi-finished products of iron or non-alloy steel, containing by weight < 0,25 % carbon, of rectangular cross-section, the width < twice the thickness, forged | 4,053 | N/A | 4,053 | (C) |
+| 7207 12 10 | Semi-finished products of iron or non-alloy steel, containing by weight < 0,25 of carbon, of rectangular "other than square" cross-section, the width measuring >= twice the thickness, rolled or obtained by continuous casting | 3,996 | N/A | 3,996 | (C) |
+| 7207 12 90 | Semi-finished products of iron or non-alloy steel, containing by weight < 0,25 % carbon, of rectangular "other than square" cross-section, the width >= twice the thickness, forged | 4,053 | N/A | 4,053 | (C) |
+| 7207 19 12 | Semi-finished products, of iron or non-alloy steel, containing by weight < 0,25 % carbon, of circular or polygonal cross-section, rolled or obtained by continuous casting | 3,996 | N/A | 3,996 | (C) |
+| 7207 19 19 | Semi-finished products of iron or non-alloy steel, containing by weight < 0,25 % carbon, of circular or polygonal cross-section, forged | 4,053 | N/A | 4,053 | (C) |
+| 7207 19 80 | Semi-finished products of iron or non-alloy steel, containing by weight < 0,25 % carbon (excl. semi-products, of square, rectangular, circular or polygonal cross-section) | 3,996 | N/A | 3,996 | (C) |
+| 7207 20 11 | Semi-finished products, of non-alloy free-cutting steel, containing by weight >= 0,25 % carbon, of square or rectangular cross-section, the width < twice the thickness, rolled or obtained by continuous casting | 3,996 | N/A | 3,996 | (C) |
+| 7207 20 15 | Semi-finished products of iron or non-alloy steel, containing by weight >= 0,25 % but < 0,6 % carbon, of square or rectangular cross-section, the width < twice the thickness, rolled or obtained by continuous casting (excl. free-cutting steel) | 3,996 | N/A | 3,996 | (C) |
+| 7207 20 17 | Semi-finished products of iron or non-alloy steel, containing by weight >= 0,6 % carbon, of square or rectangular cross-section, the width < twice the thickness, rolled or obtained by continuous casting (excl. free-cutting steel) | 3,996 | N/A | 3,996 | (C) |
+| 7207 20 19 | Semi-finished products of iron or non-alloy steel, containing by weight >= 0,25 % carbon, of square or rectangular cross-section, the width < twice the thickness, forged | 4,053 | N/A | 4,053 | (C) |
+| 7207 20 32 | Semi-finished products of iron or non-alloy steel, containing by weight >= 0,25 of carbon, of rectangular "other than square" cross-section, the width measuring >= twice the thickness, rolled or obtained by continuous casting | 3,996 | N/A | 3,996 | (C) |
+| 7207 20 39 | Semi-finished products of iron or non-alloy steel, containing by weight >= 0,25 % carbon, of rectangular "other than square" cross-section and the width >= twice the thickness, forged | 4,053 | N/A | 4,053 | (C) |
+| 7207 20 52 | Semi-finished products of iron or non-alloy steel, containing by weight >= 0,25 % carbon, of circular or polygonal cross-section, rolled or obtained by continuous casting | 3,996 | N/A | 3,996 | (C) |
+| 7207 20 59 | Semi-finished products of iron or non-alloy steel, containing by weight >= 0,6 % carbon, of circular or polygonal cross-section, forged | 4,053 | N/A | 4,053 | (C) |
+| 7207 20 80 | Semi-finished products of iron or non-alloy steel, containing by weight >= 0,25 % carbon (excl. those of square, rectangular, circular or polygonal cross-section) | 3,996 | N/A | 3,996 | (C) |
+| 7208 | Flat-rolled products of iron or non-alloy steel, of a width >= 600 mm, hot-rolled, not clad, plated or coated | 4,049 | N/A | 4,049 | (C) |
+| 7209 | Flat-rolled products of iron or non-alloy steel, of a width of >= 600 mm, cold-rolled "cold-reduced", not clad, plated or coated | 4,101 | N/A | 4,101 | (C) |
+| 7210 | Flat-rolled products of iron or non-alloy steel, of a width >= 600 mm, hot-rolled or cold-rolled "cold-reduced", clad, plated or coated | 4,101 | N/A | 4,101 | (C) |
+| 7211 | Flat-rolled products of iron or non-alloy steel, of a width of < 600 mm, hot-rolled or cold-rolled "cold-reduced", not clad, plated or coated | see below | see below | see below |  |
+| 7211 13 00 | Flat-rolled products of iron or non-alloy steel, simply hot-rolled on four faces or in a closed box pass, not clad, plated or coated, of a width of > 150 mm but < 600 mm and a thickness of >= 4 mm, not in coils, without patterns in relief, commonly known as "wide flats" | 4,049 | N/A | 4,049 | (C) |
+| 7211 14 00 | Flat-rolled products of iron or non-alloy steel, of a width < 600 mm, not further worked than hot-rolled, not clad, plated or coated, of a thickness of >= 4,75 mm (excl. "wide flats") | 4,049 | N/A | 4,049 | (C) |
+| 7211 19 00 | Flat-rolled products of iron or non-alloy steel, of a width < 600 mm, simply hot-rolled, not clad, plated or coated, of a thickness < 4,75 mm (excl. "wide flats") | 4,049 | N/A | 4,049 | (C) |
+| 7211 23 | Flat-rolled products of iron or non-alloy steel, of a width of < 600 mm, simply cold-rolled "cold-reduced", not clad, plated or coated, containing by weight < 0,25 % of carbon | 4,101 | N/A | 4,101 | (C) |
+| 7211 29 00 | Flat-rolled products of iron or non-alloy steel, of a width of < 600 mm, simply cold-rolled "cold-reduced", not clad, plated or coated, containing by weight >= 0,25 % of carbon | 4,101 | N/A | 4,101 | (C) |
+| 7211 90 | Flat-rolled products of iron or non-alloy steel, of a width of < 600 mm, hot-rolled or cold-rolled "cold-reduced" and further worked, but not clad, plated or coated | 4,101 | N/A | 4,101 | (C) |
+| 7212 | Flat-rolled products of iron or non-alloy steel, of a width of < 600 mm, hot-rolled or cold-rolled "cold-reduced", clad, plated or coated | 4,101 | N/A | 4,101 | (C) |
+| 7213 | Bars and rods of iron or non-alloy steel, hot-rolled, in irregularly wound coils | 3,996 | N/A | 3,996 | (C) |
+| 7214 | Bars and rods, of iron or non-alloy steel, not further worked than forged, hot-rolled, hot-drawn or hot-extruded, but incl. those twisted after rolling (excl. in irregularly wound coils) | see below | see below | see below |  |
+| 7214 10 00 | Bars and rods, of iron or non-alloy steel, not further worked than forged (excl. in irregularly wound coils) | 4,053 | N/A | 4,053 | (C) |
+| 7214 20 00 | Bars and rods, of iron or non-alloy steel, with indentations, ribs, groves or other deformations produced during the rolling process | 3,996 | N/A | 3,996 | (C) |
+| 7214 30 00 | Bars and rods, of non-alloy free-cutting steel, not further worked than hot-rolled, hot-drawn or hot-extruded (excl. containing indentations, ribs, grooves or other deformations produced during the rolling process or twisted after rolling) | 3,996 | N/A | 3,996 | (C) |
+| 7214 91 | Bars and rods, of iron or non-alloy steel, not further worked than hot-rolled, hot-drawn or hot-extruded, of rectangular "other than square" cross-section (excl. containing indentations, ribs, grooves or other deformations produced during the rolling process, bars and rods twisted after rolling and free-cutting steel) | 3,996 | N/A | 3,996 | (C) |
+| 7214 99 | Bars and rods, of iron or non-alloy steel, only hot-rolled, only hot-drawn or only hot-extruded (excl. of rectangular [other than square] cross-section and those containing indentations, ribs, grooves or other deformations produced during the rolling process, and of non-alloy free-cutting steel) | 3,996 | N/A | 3,996 | (C) |
+| 7215 | Bars and rods, of iron or non-alloy steel, cold-formed or cold-finished, whether or not further worked, or hot-formed and further worked, n.e.s. | 3,996 | N/A | 3,996 | (C) |
+| 7216 | Angles, shapes and sections of iron or non-alloy steel, n.e.s. | 3,996 | N/A | 3,996 | (C) |
+| 7217 | Wire of iron or non-alloy steel, in coils (excl. bars and rods) | see below | see below | see below |  |
+| 7217 10 | Wire of iron or non-alloy steel, in coils, not plated or coated, whether or not polished (excl. bars and rods) | 3,996 | N/A | 3,996 | (C) |
+| 7217 20 | Wire of iron or non-alloy steel, in coils, plated or coated with zinc (excl. bars and rods) | 3,996 | N/A | 3,996 | (C) |
+| 7217 30 | Wire of iron or non-alloy steel, in coils, plated or coated with base metals (excl. plated or coated with zinc, and bars and rods) | 3,996 | N/A | 3,996 | (C) |
+| 7217 90 | Wire of iron or non-alloy steel, in coils, plated or coated (excl. plated or coated with base metals, and bars and rods) | 3,996 | N/A | 3,996 | (C) |
+| 7218 | Stainless steel in ingots or other primary forms (excl. remelting scrap ingots and products obtained by continuous casting); semi-finished products of stainless steel | see below | see below | see below |  |
+| 7218 10 00 | Steel, stainless, in ingots and other primary forms (excl. waste and scrap in ingot form, and products obtained by continuous casting) | 5,006 | N/A | 5,006 |  |
+| 7218 91 | Semi-finished products of stainless steel, of rectangular "other than square" cross-section | 4,940 | N/A | 4,940 |  |
+| 7218 99 11 | Semi-finished products of stainless steel, of square cross-section, rolled or obtained by continuous casting | 4,940 | N/A | 4,940 |  |
+| 7218 99 19 | Semi-finished products of stainless steel, of square cross-section, forged | 5,006 | N/A | 5,006 |  |
+| 7218 99 20 | Semi-finished products of stainless steel, of circular cross-section or of cross-section other than square or rectangular, rolled or obtained by continuous casting | 4,940 | N/A | 4,940 |  |
+| 7218 99 80 | Semi-finished products of stainless steel, forged (excl. products of square or rectangular cross-section) | 5,006 | N/A | 5,006 |  |
+| 7219 | Flat-rolled products of stainless steel, of a width of >= 600 mm, hot-rolled or cold-rolled "cold-reduced" | see below | see below | see below |  |
+| 7219 11 00 | Flat-rolled products of stainless steel, of a width of >= 600 mm, not further worked than hot-rolled, in coils, of a thickness of > 10 mm | 4,940 | N/A | 4,940 |  |
+| 7219 12 | Flat-rolled products of stainless steel, of a width of>= 600 mm, not further worked than hot-rolled, in coils, of a thickness of >= 4,7 mm and <= 10 mm | 4,940 | N/A | 4,940 |  |
+| 7219 13 | Flat-rolled products of stainless steel, of a width of >= 600 mm, not further worked than hot-rolled, in coils, of a thickness of >= 3 mm and < 4,75 mm | 4,940 | N/A | 4,940 |  |
+| 7219 14 | Flat-rolled products of stainless steel, of a width of >= 600 mm, not further worked than hot-rolled, in coils, of a thickness of < 3 mm | 4,940 | N/A | 4,940 |  |
+| 7219 21 | Flat-rolled products of stainless steel, of a width of >= 600 mm, not further worked than hot-rolled, not in coils, of a thickness of > 10 mm | 4,940 | N/A | 4,940 |  |
+| 7219 22 | Flat-rolled products of stainless steel, of a width of >= 600 mm, not further worked than hot-rolled, not in coils, of a thickness of >= 4,75 mm and <= 10 mm | 4,940 | N/A | 4,940 |  |
+| 7219 23 00 | Flat-rolled products of stainless steel, of a width of >= 600 mm, not further worked than hot-rolled, not in coils, of a thickness of >= 3 mm and < 4,75 mm | 4,940 | N/A | 4,940 |  |
+| 7219 24 00 | Flat-rolled products of stainless steel, of a width of >= 600 mm, not further worked than hot-rolled, not in coils, of a thickness of < 3 mm | 4,940 | N/A | 4,940 |  |
+| 7219 31 00 | Flat-rolled products of stainless steel, of a width of >= 600 mm, not further worked than cold-rolled "cold-reduced", of a thickness of >= 4,75 mm | 5,020 | N/A | 5,020 |  |
+| 7219 32 | Flat-rolled products of stainless steel, of a width of >= 600 mm, not further worked than cold-rolled "cold-reduced", of a thickness of >= 3 mm but < 4,75 mm | 5,020 | N/A | 5,020 |  |
+| 7219 33 | Flat-rolled products of stainless steel, of a width of >= 600 mm, not further worked than cold-rolled "cold-reduced", of a thickness of > 1 mm but < 3 mm | 5,020 | N/A | 5,020 |  |
+| 7219 34 | Flat-rolled products of stainless steel, of a width of >= 600 mm, not further worked than cold-rolled "cold-reduced", of a thickness of >= 0,5 mm but <= 1 mm | 5,020 | N/A | 5,020 |  |
+| 7219 35 | Flat-rolled products of stainless steel, of a width of >= 600 mm, not further worked than cold-rolled "cold-reduced", of a thickness of < 0,5 mm | 5,020 | N/A | 5,020 |  |
+| 7219 90 | Flat-rolled products of stainless steel, of a width of >= 600 mm, hot-rolled or cold-rolled "cold-reduced" and further worked | 5,020 | N/A | 5,020 |  |
+| 7220 | Flat-rolled products of stainless steel, of a width of < 600 mm, hot-rolled or cold-rolled "cold-reduced" | see below | see below | see below |  |
+| 7220 11 00 | Flat-rolled products of stainless steel, of a width of < 600 mm, not further worked than hot-rolled, of a thickness of >= 4,75 mm | 4,940 | N/A | 4,940 |  |
+| 7220 12 00 | Flat-rolled products of stainless steel, of a width of < 600 mm, not further worked than hot-rolled, of a thickness of < 4,75 mm | 4,940 | N/A | 4,940 |  |
+| 7220 20 | Flat-rolled products of stainless steel, of a width of < 600 mm, not further worked than cold-rolled "cold-reduced" | 5,020 | N/A | 5,020 |  |
+| 7220 90 | Flat-rolled products of stainless steel, of a width of < 600 mm, hot-rolled or cold-rolled "cold-reduced" and further worked | 5,020 | N/A | 5,020 |  |
+| 7221 | Bars and rods of stainless steel, hot-rolled, in irregularly wound coils | 4,820 | N/A | 4,820 |  |
+| 7222 | Other bars and rods of stainless steel; angles, shapes and sections of stainless steel, n.e.s. | see below | see below | see below |  |
+| 7222 11 | Bars and rods of stainless steel, only hot-rolled, only hot-drawn or only hot-extruded, of circular cross-section | 4,820 | N/A | 4,820 |  |
+| 7222 19 | Bars and rods of stainless steel, only hot-rolled, only hot-drawn or only extruded (excl. of circular cross-section) | 4,820 | N/A | 4,820 |  |
+| 7222 20 | Other bars and rods of stainless steel, not further worked than cold-formed or cold-finished | 4,820 | N/A | 4,820 |  |
+| 7222 30 | Other bars and rods of stainless steel, cold-formed or cold-finished and further worked, or not further worked than forged, or forged, or hot-formed by other means and further worked, n.e.s. | 5,006 | N/A | 5,006 |  |
+| 7222 40 | Angles, shapes and sections of stainless steel, n.e.s. | 4,820 | N/A | 4,820 |  |
+| 7223 | Wire of stainless steel, in coils (excl. bars and rods) | see below | see below | see below |  |
+| 7223 00 | Wire of stainless steel, in coils (excl. bars and rods) | 4,820 | N/A | 4,820 |  |
+| 7224 | Steel, alloy, other than stainless, in ingots or other primary forms, semi-finished products of alloy steel other than stainless (excl. waste and scrap in ingot form, and products obtained by continuous casting) | see below | see below | see below |  |
+| 7224 10 | Steel, alloy, other than stainless, in ingots or other primary forms (excl. waste and scrap in ingot form, and products obtained by continuous casting) | 5,589 | N/A | 5,589 | (F) |
+| 7224 90 02 | Semi-finished products of tool steel | 5,500 | N/A | 5,500 | (F) |
+| 7224 90 03 | Semi-finished products of high-speed steel, of square or rectangular cross-section, hot-rolled or obtained by continuous casting the width measuring < twice the thickness | 5,500 | N/A | 5,500 | (F) |
+| 7224 90 05 | Semi-finished products of steel containing by weight <= 0,7 % of carbon, 0,5 % to 1,2 % of manganese, 0,6 % to 2,3 % of silicon, or of steel containing by weight >= 0,0008 % of boron with any other element < the minimum content referred to in Note 1 f to chapter 72, of square or rectangular cross-section, hot rolled or obtained by continuous casting, the width measuring < twice the thickness | 5,500 | N/A | 5,500 | (F) |
+| 7224 90 07 | Semi-finished products of alloy steel other than stainless steel, of square or rectangular cross-section, hot-rolled or obtained by continuous casting, the width measuring < twice the thickness (excl. of tool steel, high-speed steel and articles of subheading 7224.90.05) | 5,500 | N/A | 5,500 | (F) |
+| 7224 90 14 | Semi-finished products of alloy steel other than stainless steel, of square or rectangular cross-section, hot-rolled or obtained by continuous casting, the width measuring >= twice the thickness (excl. of tool steel) | 5,500 | N/A | 5,500 | (F) |
+| 7224 90 18 | Semi-finished products of alloy steel other than stainless steel, of square or rectangular cross-section, forged (excl. of tool steel) | 5,589 | N/A | 5,589 | (F) |
+| 7224 90 31 | Semi-finished products of steel containing by weight 0,9 % to 1,15 % carbon, 0,5 % to 2 % of chromium and, if present, <= 0,5 % of molybdenum, cut into shapes other than square or rectangular, hot-rolled or obtained by continuous casting | 5,500 | N/A | 5,500 | (F) |
+| 7224 90 38 | Semi-finished products of alloy steel, other than stainless steel, cut into shapes other than square or rectangular, hot-rolled or obtained by continuous casting (excl. of tool steel and products containing by weight 0,9 % to 1,15 % of carbon, 0,5 % to 2 % of chromium and, if present, <= 0,5 % of molybdenum) | 5,500 | N/A | 5,500 | (F) |
+| 7224 90 90 | Semi-finished products of alloy steel, other than stainless steel, forged (excl. of tool steel and products of square or rectangular, circular or polygamol cross-section) | 5,589 | N/A | 5,589 | (F) |
+| 7225 | Flat-rolled products of alloy steel other than stainless, of a width of >= 600 mm, hot-rolled or cold-rolled "cold-reduced" | see below | see below | see below |  |
+| 7225 11 00 | Flat-rolled products of silicon-electrical steel, of a width of >= 600 mm, grain-oriented | 7,100 | N/A | 7,100 | (C) |
+| 7225 19 10 | Flat-rolled products of silicon-electrical steel, of a width of >= 600 mm, hot-rolled | 5,500 | N/A | 5,500 | (C) |
+| 7225 19 90 | Flat-rolled products of silicon-electrical steel, of a width of >= 600 mm, cold-rolled "cold-reduced", non-grain-oriented | 5,588 | N/A | 5,588 | (C) |
+| 7225 30 | Flat-rolled products of alloy steel other than stainless, of a width of >= 600 mm, not further worked than hot-rolled, in coils (excl. products of silicon-electrical steel) | 5,500 | N/A | 5,500 | (F) |
+| 7225 40 | Flat-rolled products of alloy steel other than stainless, of a width of >= 600 mm, not further worked than hot-rolled, not in coils (excl. products of silicon-electrical steel) | 5,500 | N/A | 5,500 | (F) |
+| 7225 50 | Flat-rolled products of alloy steel other than stainless, of a width of >= 600 mm, not further worked than cold-rolled "cold-reduced" (excl. products of silicon-electrical steel) | 5,588 | N/A | 5,588 | (F) |
+| 7225 91 00 | Flat-rolled products of alloy steel other than stainless, of a width of >= 600 mm, hot-rolled or cold-rolled "cold-reduced" and electrolytically plated or coated with zinc (excl. products of silicon-electrical steel) | 5,588 | N/A | 5,588 | (F) |
+| 7225 92 00 | Flat-rolled products of alloy steel other than stainless, of a width of >= 600 mm, hot-rolled or cold-rolled "cold-reduced" and plated or coated with zinc (excl. electrolytically plated or coated and products of silicon-electrical steel) | 5,588 | N/A | 5,588 | (F) |
+| 7225 99 00 | Flat-rolled products of alloy steel other than stainless, of a width of >= 600 mm, hot-rolled or cold-rolled "cold-reduced" and further worked (excl. plated or coated with zinc and products of silicon-electrical steel) | 5,588 | N/A | 5,588 | (F) |
+| 7226 | Flat-rolled products of alloy steel other than stainless, of a width of < 600 mm, hot-rolled or cold-rolled "cold-reduced" | see below | see below | see below |  |
+| 7226 11 00 | Flat-rolled products of silicon-electrical steel, of a width of < 600 mm, hot-rolled or cold-rolled "cold-reduced", grain-oriented | 7,100 | N/A | 7,100 | (C) |
+| 7226 19 10 | Flat-rolled products of silicon-electrical steel, of a width of < 600 mm, not further worked than hot-rolled | 5,500 | N/A | 5,500 | (C) |
+| 7226 19 80 | Flat-rolled products of silicon-electrical steel, of a width of < 600 mm, cold-rolled "cold-reduced", whether or not further worked, or hot-rolled and further worked, non-grain-oriented | 5,588 | N/A | 5,588 | (C) |
+| 7226 20 00 | Flat-rolled products of high-speed steel, of a width of <= 600 mm, hot-rolled or cold-rolled "cold-reduced" | 5,500 | N/A | 5,500 | (F) |
+| 7226 91 | Flat-rolled products of alloy steel other than stainless, of a width of < 600 mm, not further worked than hot-rolled (excl. products of high-speed steel or silicon-electrical steel) | 5,500 | N/A | 5,500 | (F) |
+| 7226 92 00 | Flat-rolled products of alloy steel other than stainless, of a width of < 600 mm, not further worked than cold-rolled "cold-reduced" (excl. products of high-speed steel or silicon-electrical steel) | 5,590 | N/A | 5,590 | (F) |
+| 7226 99 | Flat-rolled products of alloy steel other than stainless, of a width of < 600 mm, hot-rolled or cold-rolled "cold-reduced" and further worked (excl. products of high-speed steel or silicon-electrical steel) | 5,588 | N/A | 5,588 | (F) |
+| 7227 | Bars and rods of alloy steel other than stainless, hot-rolled, in irregularly wound coils | 5,400 | N/A | 5,400 | (C)/(F) |
+| 7228 | Other bars and rods of alloy steel other than stainless, angles, shapes and sections of alloy steel other than stainless, n.e.s.; hollow drill bars and rods, of alloy or non-alloy steel | see below | see below | see below |  |
+| 7228 10 20 | Bars and rods of high-speed steel, not further worked than hot-rolled, hot-drawn or extruded, and hot-rolled, hot-drawn or extruded, not further worked than clad (excl. semi-finished products, flat-rolled products and hot-rolled bars and rods in irregularly wound coils) | 5,400 | N/A | 5,400 | (F) |
+| 7228 10 50 | Bars and rods of high-speed steel, forged (excl. semi-finished products, flat-rolled products and hot-rolled bars and rods in irregularly wound coils) | 5,589 | N/A | 5,589 | (F) |
+| 7228 10 90 | Bars and rods of high-speed steel, not further worked than cold-formed or cold-finished, whether or not further worked, or hot-formed and further worked (excl. forged products, semi-finished products, flat-rolled products and hot-rolled bars and rods in irregularly wound coils) | 5,400 | N/A | 5,400 | (F) |
+| 7228 20 | Bars and rods of silico-manganese steel (excl. semi-finished products, flat-rolled products and hot-rolled bars and rods in irregularly wound coils) | 5,400 | N/A | 5,400 | (F) |
+| 7228 30 | Bars and rods of alloy steel other than stainless, not further worked than hot-rolled, hot-drawn or extruded (excl. products of high-speed steel or silico-manganese steel, semi-finished products, flat-rolled products and hot-rolled bars and rods in irregularly wound coils) | 5,400 | N/A | 5,400 | (C)/(F) |
+| 7228 40 | Bars and rods of alloy steel other than stainless, not further worked than forged (excl. products of high-speed steel or silico-manganese steel, semi-finished products, flat-rolled products and hot-rolled bars and rods in irregularly wound coils) | 5,589 | N/A | 5,589 | (F) |
+| 7228 50 | Bars and rods of alloy steel other than stainless, not further worked than cold-formed or cold-finished (excl. products of high-speed steel or silico-manganese steel, semi-finished products, flat-rolled products and hot-rolled bars and rods in irregularly wound coils) | 5,400 | N/A | 5,400 | (C)/(F) |
+| 7228 60 | Bars and rods of alloy steel other than stainless, cold-formed or cold-finished and further worked or hot-formed and further worked, n.e.s. (excl. products of high-speed steel or silico-manganese steel, semi-finished products, flat-rolled products and hot-rolled bars and rods in irregularly wound coils) | 5,400 | N/A | 5,400 | (F) |
+| 7228 70 | Angles, shapes and sections of alloy steel other than stainless, n.e.s. | 5,400 | N/A | 5,400 | (F) |
+| 7228 80 00 | Hollow drill bars and rods, of alloy or non-alloy steel | 5,400 | N/A | 5,400 | (F) |
+| 7229 | Wire of alloy steel other than stainless, in coils (excl. bars and rods) | 5,400 | N/A | 5,400 | (C)/(F) |
+| 7301 | Sheet piling of iron or steel, whether or not drilled, punched or made from assembled elements; welded angles, shapes and sections, of iron or steel | 4,063 | N/A | 4,063 | (C) |
+| 7302 | Railway or tramway track construction material of iron or steel, the following : rails, check-rails and rack rails, switch blades, crossing frogs, point rods and other crossing pieces, sleepers "cross-ties", fish-plates, chairs, chair wedges, sole plates "base plates", rail clips, bedplates, ties and other material specialised for jointing or fixing rails | 4,887 | N/A | 4,887 | (C) |
+| 7303 | Tubes, pipes and hollow profiles, of cast iron | see below | see below | see below |  |
+| 7303 00 | Tubes, pipes and hollow profiles, of cast iron | 4,150 | N/A | 4,150 |  |
+| 7304 | Tubes, pipes and hollow profiles, seamless, of iron or steel (excl. products of cast iron) | see below | see below | see below |  |
+| 7304 11 00 | Line pipe of a kind used for oil or gas pipelines, seamless, of stainless steel | 5,184 | N/A | 5,184 |  |
+| 7304 19 | Line pipe of a kind used for oil or gas pipelines, seamless, of iron or steel (excl. products of stainless steel or of cast iron) | 3,981 | N/A | 3,981 | (C) |
+| 7304 22 00 | Drill pipe, seamless, of stainless steel, of a kind used in drilling for oil or gas | 5,184 | N/A | 5,184 |  |
+| 7304 23 00 | Drill pipe, seamless, of a kind used in drilling for oil or gas, of iron or steel (excl. products of stainless steel or of cast iron) | 3,981 | N/A | 3,981 | (C) |
+| 7304 24 00 | Casing and tubing, seamless, of a kind used for drilling for oil or gas, of stainless steel | 5,184 | N/A | 5,184 |  |
+| 7304 29 | Casing and tubing, seamless, of iron or steel, of a kind used in drilling for oil or gas (excl. products of cast iron) | 3,981 | N/A | 3,981 | (C) |
+| 7304 31 | Tubes, pipes and hollow profiles, seamless, of circular cross-section, of iron or non-alloy steel, cold-drawn or cold-rolled "cold-reduced" (excl. cast iron products and line pipe of a kind used for oil or gas pipelines or casing and tubing of a kind used for drilling for oil or gas) | 3,981 | N/A | 3,981 | (C) |
+| 7304 39 | Tubes, pipes and hollow profiles, seamless, of circular cross-section, of iron or non-alloy steel, not cold-drawn or cold-rolled "cold-reduced" (excl. cast iron products, line pipe of a kind used for oil or gas pipelines, casing and tubing of a kind used for drilling for oil or gas) | 3,981 | N/A | 3,981 | (C) |
+| 7304 41 00 | Tubes, pipes and hollow profiles, seamless, of circular cross-section, of stainless steel, cold-drawn or cold-rolled "cold-reduced" (excl. line pipe of a kind used for oil or gas pipelines, casing and tubing of a kind used for drilling for oil or gas) | 5,184 | N/A | 5,184 |  |
+| 7304 49 | Tubes, pipes and hollow profiles, seamless, of circular cross-section, of stainless steel, not cold-drawn or cold-rolled "cold-reduced" (excl. line pipe of a kind used for oil or gas pipelines or of a kind used for drilling for oil or gas) | 5,184 | N/A | 5,184 |  |
+| 7304 51 | Tubes, pipes and hollow profiles, seamless, of circular cross-section, of alloy steel other than stainless, cold-drawn or cold-rolled "cold-reduced" (excl. line pipe of a kind used for oil or gas pipelines, casing and tubing of a kind used for drilling for oil) | 3,878 | N/A | 3,878 | (F) |
+| 7304 59 | Tubes, pipes and hollow profiles, seamless, of circular cross-section, of alloy steel other than stainless, not cold-drawn or cold-rolled "cold-reduced" (excl. line pipe of a kind used for oil or gas pipelines, casing and tubing of a kind used for drilling for oil) | 3,878 | N/A | 3,878 | (C)/(F) |
+| 7304 90 00 | Tubes, pipes and hollow profiles, seamless, of non-circular cross-section, of iron or steel (excl. products of cast iron) | 3,981 | N/A | 3,981 | (C) |
+| 7305 | Tubes and pipes, having circular cross-sections and an external diameter of > 406,4 mm, of flat-rolled products of iron or steel "e.g., welded, riveted or similarly closed" | 4,060 | N/A | 4,060 | (C) |
+| 7306 | Tubes, pipes and hollow profiles "e.g., open seam or welded, riveted or similarly closed", of iron or steel (excl. of cast iron, seamless tubes and pipes and tubes having internal and external circular cross-sections and an external diameter of > 406,4 mm) | see below | see below | see below |  |
+| 7306 11 00 | Line pipe of a kind used for oil or gas pipelines, welded, of flat-rolled products of stainless steel, of an external diameter of <= 406,4 mm | 5,369 | N/A | 5,369 |  |
+| 7306 19 00 | Line pipe of a kind used for oil or gas pipelines, welded, of flat-rolled products of iron or steel, of an external diameter of <= 406,4 mm (excl. products of stainless steel or of cast iron) | 4,141 | N/A | 4,141 | (C) |
+| 7306 21 00 | Casing and tubing of a kind used in drilling for oil or gas, welded, of flat-rolled products of stainless steel, of an external diameter of <= 406,4 mm | 5,369 | N/A | 5,369 |  |
+| 7306 29 00 | Casing and tubing of a kind used in drilling for oil or gas, welded, of flat-rolled products of iron or steel, of an external diameter of <= 406,4 mm (excl. products of stainless steel or of cast iron) | 4,141 | N/A | 4,141 | (C) |
+| 7306 30 12 | Precision tubes, welded, of circular cross-section, of iron or non-alloy steel, cold-drawn or cold-rolled "cold-reduced" | 4,141 | N/A | 4,141 | (C) |
+| 7306 30 18 | Precision tubes, welded, of circular cross-section, of iron or non-alloy steel (excl. cold-drawn or cold-rolled) | 4,090 | N/A | 4,090 | (C) |
+| 7306 30 41 | Threaded or threadable tubes "gas pipe", welded, of circular cross-section, of iron or non-alloy steel, plated or coated with zinc | 4,141 | N/A | 4,141 | (C) |
+| 7306 30 49 | Threaded or threadable tubes "gas pipe", welded, of circular cross-section, of iron or non-alloy steel (excl. products plated or coated with zinc) | 4,141 | N/A | 4,141 | (C) |
+| 7306 30 72 | Other tubes, pipes and hollow profiles, welded, of circular cross-section, of iron or non-alloy steel, of an external diameter of <= 168,3 mm, plated or coated with zinc (excl. line pipe of a kind used for oil or gas pipelines or casing and tubingof a kind used in drilling for oil or gas) | 4,141 | N/A | 4,141 | (C) |
+| 7306 30 77 | Other tubes, pipes and hollow profiles, welded, of circular cross-section, of iron or non-alloy steel of an external diameter of <= 168,3 mm (excl. plated or coated with zinc and line pipe of a kind used for oil or gas pipelines, casing and tubing of a kind used in drilling for oil or gas, precision tubes and threaded or threadable tubes "gas pipe") | 4,141 | N/A | 4,141 | (C) |
+| 7306 30 80 | Tubes, pipes and hollow profiles, welded, having a circular cross-section, of iron or steel, of an external diameter of > 168,3 mm but <= 406,4 mm (excl. line pipe of a kind used for oil or gas pipelines or casing and tubing of a kind used in drilling for oil or gas, or precision steel tubes, electrical conduit tubes or threaded or threadable tubes "gas pipe") | 4,141 | N/A | 4,141 | (C) |
+| 7306 40 20 | Tubes, pipes and hollow profiles, welded, of circular cross-section, of stainless steel, cold-drawn or cold-rolled "cold-reduced" (excl. products having internal and external circular cross-sections and an external diameter of > 406,4 mm, and line pipe of a kind used for oil or gas pipelines or casing and tubing of a kind used in drilling for oil or gas) | 5,369 | N/A | 5,369 |  |
+| 7306 40 80 | Tubes, pipes and hollow profiles, welded, of circular cross-section, of stainless steel (excl. products cold-drawn or cold-rolled "cold-reduced", tubes and pipes having internal and external circular cross-sections and an external diameter of > 406,4 mm, and line pipe of a kind used for oil or gas pipelines or casing and tubing of a kind used in drilling for oil or gas) | 5,296 | N/A | 5,296 |  |
+| 7306 50 21 | Precision steel tubes, welded, of circular cross-section, of alloy steel other than stainless, cold-drawn or cold-rolled "cold-reduced" | 4,128 | N/A | 4,128 | (F) |
+| 7306 50 29 | Precision steel tubes, welded, of circular cross-section, of alloy steel other than stainless (excl. cold-drawn or cold-rolled) | 4,056 | N/A | 4,056 | (F) |
+| 7306 50 80 | Tubes, pipes and hollow profiles, welded, of circular cross-section, of alloy steel other than stainless (excl. tubes and pipes having internal and external circular cross-sections and an external diameter of > 406,4 mm, and line pipe of a kind used for oil or gas pipelines or casing and tubing of a kind used in drilling for oil or gas, and precision steel tubes) | 4,128 | N/A | 4,128 | (F) |
+| 7306 61 10 | Tubes and pipes and hollow profiles, welded, of square or rectangular cross-section, of stainless steel | 5,369 | N/A | 5,369 |  |
+| 7306 61 92 | Tubes and pipes and hollow profiles, welded, of square or rectangular cross-section, of iron or steel other than stainless steel, with a wall thickness of <= 2 mm | 4,141 | N/A | 4,141 | (C) |
+| 7306 61 99 | Tubes and pipes and hollow profiles, welded, of square or rectangular cross-section, of iron or steel other than stainless steel, with a wall thickness of > 2 mm | 4,141 | N/A | 4,141 | (C) |
+| 7306 69 10 | Tubes, pipes and hollow profiles, welded, of non-circular cross-section, of stainless steel (excl. tubes and pipes having internal and external circular cross-sections and an external diameter of > 406,4 mm, line pipe of a kind used for oil or gas pipelines or casing and tubing of a kind used in drilling for oil or gas, and tubes and pipes and hollow profiles of square or rectangular cross-section) | 5,369 | N/A | 5,369 |  |
+| 7306 69 90 | Tubes, pipes and hollow profiles, welded, of non-circular cross-section, of iron or steel other than stainless steel (excl. tubes and pipes having internal and external circular cross-sections and an external diameter of > 406,4 mm, line pipe of a kind used for oil or gas pipelines or casing and tubing of a kind used in drilling for oil or gas, and tubes and pipes and hollow profiles of square or rectangular cross-section) | 4,141 | N/A | 4,141 | (C) |
+| 7306 90 00 | Tubes, pipes and hollow profiles "e.g., open seam, riveted or similarly closed", of iron or steel (excl. of cast iron, seamless or welded tubes and pipes and tubes and pipes having internal and external circular cross-sections and an external diameter of > 406,4 mm) | 4,141 | N/A | 4,141 | (C) |
+| 7307 | Tube or pipe fittings "e.g. couplings, elbows, sleeves", of iron or steel | see below | see below | see below |  |
+| 7307 11 | Tube or pipe fittings of non-malleable cast iron | 3,929 | N/A | 3,929 |  |
+| 7307 19 10 | Tube or pipe fittings of cast iron (excl. of non-malleable) | 3,929 | N/A | 3,929 |  |
+| 7307 19 90 | Cast tube or pipe fittings of steel | 4,053 | N/A | 4,053 | (C) |
+| 7307 21 00 | Flanges of stainless steel (excl. cast products) | 4,498 | N/A | 4,498 |  |
+| 7307 22 | Threaded elbows, bends and sleeves of stainless steel (excl. cast products) | 4,498 | N/A | 4,498 |  |
+| 7307 23 | Butt welding tube or pipe fittings of stainless steel (excl. cast products) | 4,498 | N/A | 4,498 |  |
+| 7307 29 | Tube or pipe fittings of stainless steel (excl. cast products, flanges, threaded elbows, bends and sleeves and butt weldings fittings) | 4,498 | N/A | 4,498 |  |
+| 7307 91 00 | Flanges of iron or steel (excl. cast or stainless products) | 4,072 | N/A | 4,072 | (C) |
+| 7307 92 | Threaded elbows, bends and sleeves, of stainless steel (excl. cast or stainless products) | 4,072 | N/A | 4,072 | (C) |
+| 7307 93 | Butt welding fittings of iron or steel (excl. cast iron or stainless steel products, and flanges) | 4,072 | N/A | 4,072 | (C) |
+| 7307 99 | Tube or pipe fittings, of iron or steel (excl. cast iron or stainless steel products; flanges; threaded elbows, bends and sleeves; butt welding fittings) | 4,072 | N/A | 4,072 | (C) |
+| 7308 | Structures and parts of structures "e.g., bridges and bridge-sections, lock-gates, towers, lattice masts, roofs, roofing frameworks, doors and windows and their frames and thresholds for doors, shutters, balustrades, pillars and columns", of iron or steel; plates, rods, angles, shapes, sections, tubes and the like, prepared for use in structures, of iron or steel (excl. prefabricated buildings of heading 9406) | 5,064 | N/A | 5,064 | (C) |
+| 7309 | Reservoirs, tanks, vats and similar containers, of iron or steel, for any material "other than compressed or liquefied gas", of a capacity of > 300 l, not fitted with mechanical or thermal equipment, whether or not lined or heat-insulated (excl. containers specifically constructed or equipped for one or more types of transport) | 5,468 | N/A | 5,468 | (C) |
+| 7310 | Tanks, casks, drums, cans, boxes and similar containers, of iron or steel, for any material "other than compressed or liquefied gas", of a capacity of <= 300 l, not fitted with mechanical or thermal equipment, whether or not lined or heat-insulated, n.e.s. | 4,228 | N/A | 4,228 | (C) |
+| 7311 | Containers of iron or steel, for compressed or liquefied gas (excl. containers specifically constructed or equipped for one or more types of transport) | see below | see below | see below |  |
+| 7311 00 | Containers of iron or steel, for compressed or liquefied gas (excl. containers specifically constructed or equipped for one or more types of transport) | 5,385 | N/A | 5,385 | (C) |
+| 7318 | Screws, bolts, nuts, coach screws, screw hooks, rivets, cotters, cotter pins, washers, incl. spring washers, and similar articles, of iron or steel (excl. lag screws, stoppers, plugs and the like, threaded) | see below | see below | see below |  |
+| 7318 11 00 | Coach screws of iron or steel | 3,962 | N/A | 3,962 | (C) |
+| 7318 12 10 | Wood screws of stainless steel (excl. coach screws) | 5,119 | N/A | 5,119 |  |
+| 7318 12 90 | Wood screws of iron or steel other than stainless (excl. coach screws) | 3,962 | N/A | 3,962 | (C) |
+| 7318 13 00 | Screw hooks and screw rings, of iron or steel | 3,962 | N/A | 3,962 | (C) |
+| 7318 14 10 | Self-tapping screws, of stainless steel (excl. wood screws) | 5,119 | N/A | 5,119 |  |
+| 7318 14 91 | Spaced-thread screws of iron or steel other than stainless | 3,962 | N/A | 3,962 | (C) |
+| 7318 14 99 | Self-tapping screws of iron or steel other than stainless (excl. spaced-thread screws and wood screws) | 3,962 | N/A | 3,962 | (C) |
+| 7318 15 | Threaded screws and bolts, of iron or steel, whether or not with their nuts and washers (excl. coach screws and other wood screws, screw hooks and screw rings, self-tapping screws, lag screws, stoppers, plugs and the like, threaded) | 4,801 | N/A | 4,801 | (C) |
+| 7318 16 | Nuts of iron or steel | 4,693 | N/A | 4,693 | (C) |
+| 7318 19 00 | Threaded articles, of iron or steel, n.e.s. | 3,962 | N/A | 3,962 | (C) |
+| 7318 21 00 | Spring washers and other lock washers, of iron or steel | 3,962 | N/A | 3,962 | (C) |
+| 7318 22 00 | Washers of iron or steel (excl. spring washers and other lock washers) | 4,322 | N/A | 4,322 | (C) |
+| 7318 23 00 | Rivets of iron or steel (excl. tubular and bifurcated rivets for particular uses) | 3,963 | N/A | 3,963 | (C) |
+| 7318 24 00 | Cotters and cotter pins, of iron or steel | 3,962 | N/A | 3,962 | (C) |
+| 7318 29 00 | Non-threaded articles, of iron or steel | 3,962 | N/A | 3,962 | (C) |
+| 7326 | Articles of iron or steel, n.e.s. (excl. cast articles) | see below | see below | see below |  |
+| 7326 11 00 | Grinding balls and similar articles for mills, of iron or steel, forged or stamped, but not further worked | 4,080 | N/A | 4,080 | (C) |
+| 7326 19 | Articles of iron or steel, forged or stamped, but not further worked, n.e.s. (excl. grinding balls and similar articles for mills) | 4,080 | N/A | 4,080 | (C) |
+| 7326 20 00 | Articles of iron or steel wire, n.e.s. | 4,051 | N/A | 4,051 | (C) |
+| 7326 90 30 | Ladders and steps, of iron or steel | 4,051 | N/A | 4,051 | (C) |
+| 7326 90 40 | Pallets and similar platforms for handling goods, of iron or steel | 4,051 | N/A | 4,051 | (C) |
+| 7326 90 50 | Reels for cables, piping and the like, of iron or steel | 4,051 | N/A | 4,051 | (C) |
+| 7326 90 60 | Ventilators, non-mechanical, guttering, hooks and like articles used in the building industry, n.e.s., of iron or steel | 4,051 | N/A | 4,051 | (C) |
+| 7326 90 92 | Articles of iron or steel, open-die forged, n.e.s. | 4,080 | N/A | 4,080 | (C) |
+| 7326 90 94 | Articles of iron or steel, closed-die forged, n.e.s. | 4,080 | N/A | 4,080 | (C) |
+| 7326 90 96 | Sintered articles of iron or steel, n.e.s. | 4,080 | N/A | 4,080 | (C) |
+| 7326 90 98 | Articles of iron or steel, n.e.s. | 4,151 | N/A | 4,151 | (C) |
