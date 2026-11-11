@@ -79,7 +79,7 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 - 실무 달력(`data/duties.json`, 검사 `python -m tools.publish.duties`): 법령에 날짜가 적힌 EU CBAM과 영국 CBAM의 의무. 일정 화면의 '의무 일정'에 실리고 일정에도 합쳐진다(같은 일을 가리키는 게시 데이터의 일정은 의무 쪽을 남긴다).
 - 인증서 비용 추정(`data/calc.json`과 `data/calc-goods.json`, 검사 `python -m tools.publish.calc`): 사이트의 '가격 > 비용 추정' 화면(`#calc`)이 쓴다.
   - `calc-goods.json`은 손으로 고치지 않는다. 받아 둔 법령의 표(`collected/archive/pages/eu-tables/`)에서 `python -m tools.calc.build`가 만든다: 무상할당 조정 이행규정 (EU) 2025/2620 부속서 5의 CBAM 벤치마크(품목 570개)와, 기본값 이행규정 (EU) 2025/2621 부속서 I(정정 규정 (EU) 2026/1740이 갈아 끼운 표)의 대한민국 표, 대한민국의 값이 없는 품목에 쓰는 '그 밖의 나라와 지역' 표. 법령이 정하지 않은 경우를 만나면 어림하지 않고 멈춘다.
-  - `calc.json`은 손으로 적는 규칙이다: 마크업, 부문 간 보정계수, 벤치마크의 연도 구간, 생산경로의 이름, 계산식, 화면에 싣는 설명 글. 수식은 받아 둔 글에 그림으로만 있어 유럽연합 관보의 PDF에서 확인했고(확인한 날을 적어 둔다), 식의 항이 무엇인지는 받아 둔 글과 대조한다.
+  - `calc.json`은 손으로 적는 규칙이다: 마크업, 부문 간 보정계수, 벤치마크의 연도 구간, 생산경로의 이름, 계산식, 화면에 싣는 설명 글. 근거는 모아 둔 공식 기록(`collected/archive/`)이나 EU 집행위원회 문서에서 뽑은 본문(`originals/text/`)의 대목이다. 수식은 법령의 받아 둔 글에 그림으로만 있어, 식은 집행위원회 가이던스 4의 글과 대조하고 식의 항이 무엇인지는 법령의 글과 대조한다.
   - 셈은 `site/js/calc/compute.js`가 한다(시험은 `tests/test_calc.py`가 node로 돌린다). 정해지지 않아 가정한 값(2031년 이후의 벤치마크와 부문 간 보정계수)과 참고용인 값(2027년 수입분부터 갱신될 벤치마크)은 화면이 그렇다고 밝힌다.
   - 근거 법령을 고치거나 바로잡는 새 문서가 법령 데이터베이스 목록에 보이면 상태 점검이 알린다(`calc.json`의 `watch`). 그때는 `tools/archive/tables.py`의 대상을 새 법령으로 바꿔 표를 다시 받고(워크플로 '소급 수집', `steps`에 `eu-tables`), `python -m tools.calc.build`로 자료를 다시 만들어 달라진 것을 확인한 뒤, 반영한 문서를 `watch.known`에 적는다.
 - 규제 화면에서 추정 화면으로 이어 주려면 규제 자료에 `tool: calc`를 적는다(`python -m tools.publish.rule_edit set --id <규제> --tool calc`).

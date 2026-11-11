@@ -11,9 +11,9 @@ function sourceLink(source) {
 export function notes(book, factorBook) {
   return h("section", { class: "panel calc-notes", "aria-labelledby": "h-calc-notes" }, [
     h("h2", { id: "h-calc-notes", text: "계산 근거와 가정" }),
-    h("p", { class: "calc-formula" }, [h("span", { text: book.formula.text }), sourceLink(book.formula.source)]),
+    h("p", { class: "calc-formula" }, [h("span", { text: book.formula.text }), ...book.formula.sources.map(sourceLink)]),
     h("ul", {}, [
-      ...book.notes.map((note) => h("li", {}, [h("span", { text: note.text }), sourceLink(note.source)])),
+      ...book.notes.map((note) => h("li", {}, [h("span", { text: note.text }), ...note.sources.map(sourceLink)])),
       h("li", {}, [
         h("span", { text: "CBAM 계수는 현행 지침의 값과 개정안의 값을 골라 볼 수 있습니다. 개정안은 심의 중이어서 바뀔 수 있습니다." }),
         ...factorBook.paths.map((path) => sourceLink(path.source)),

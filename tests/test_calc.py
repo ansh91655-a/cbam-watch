@@ -144,10 +144,25 @@ class PublishTest(unittest.TestCase):
         body = calc.public(self.terms, self.goods)
         text = calc.dump(body)
         self.assertNotIn("collected/", text)
+        self.assertNotIn("originals/", text)
         self.assertNotIn("evidence", text)
         self.assertEqual(len(body["goods"]), 570)
         self.assertEqual(body["goods"][0][0], self.goods["goods"][0]["code"])
-        self.assertTrue(all(note["source"]["url"].startswith("https://") for note in body["notes"]))
+        self.assertTrue(all(note["sources"] and all(source["url"].startswith("https://") for source in note["sources"]) for note in body["notes"]))
+        self.assertEqual(len(body["formula"]["sources"]), 2)   # 법령과, 식이 글로 적힌 집행위 가이던스
+
+    def test_evidence_must_be_a_stored_text_and_every_block_of_a_list_is_checked(self):
+        terms = copy.deepcopy(self.terms)
+        terms["notes"][0]["evidence"] = {"path": "README.md", "contains": ["cbam-watch"]}
+        found = calc.problems(terms, self.goods)
+        self.assertEqual([where for where, _ in found], ["설명 글 certificate"])
+        self.assertIn("근거 글이 없음", found[0][1])
+        terms = copy.deepcopy(self.terms)
+        terms["formula"]["evidence"][1]["contains"].append("𝑆𝐸𝐹𝐴 = 𝐵𝑀 + 1")
+        self.assertEqual([where for where, _ in calc.problems(terms, self.goods)], ["계산식"])
+        terms = copy.deepcopy(self.terms)
+        terms["formula"]["sources"] = ["faa", "nowhere"]
+        self.assertEqual([where for where, _ in calc.blocking(calc.problems(terms, self.goods))], ["계산식"])
 
 
 class ReferenceHealthTest(unittest.TestCase):

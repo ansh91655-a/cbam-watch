@@ -18,7 +18,7 @@ from tools.common.jsonio import read_json
 
 SOURCE = "data/calc.json"
 GOODS = build.TARGET
-ARCHIVE = pathlib.Path("collected/archive")
+STORED = (pathlib.Path("collected/archive"), pathlib.Path("originals/text"))  # 근거로 삼을 수 있는 받아 둔 글: 모아 둔 공식 기록, EU 집행위원회 문서에서 뽑은 본문
 SECTORS = ("cement", "fertilisers", "steel", "aluminium", "hydrogen")
 DRIFT = "근거 어긋남"
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -28,7 +28,7 @@ _texts = {}
 def _text(path):
     """받아 둔 글을 빈칸을 하나로 줄여 돌려준다. 저장소의 받아 둔 자료 폴더 밖이거나 없으면 None."""
     file = pathlib.Path(str(path))
-    if ARCHIVE not in file.parents or not file.exists():
+    if not any(folder in file.parents for folder in STORED) or ".." in file.parts or not file.exists():
         return None
     if str(file) not in _texts:
         _texts[str(file)] = " ".join(file.read_text(encoding="utf-8").split())
@@ -41,7 +41,9 @@ def _phrases(evidence):
 
 
 def evidence_problems(where, evidence, values=()):
-    """근거 대목이 받아 둔 글에 있는지, 값들이 그 대목 안에 '10 %' 꼴로 들어 있는지 본다."""
+    """근거 대목이 받아 둔 글에 있는지, 값들이 그 대목 안에 '10 %' 꼴로 들어 있는지 본다. 근거가 여럿이면(목록) 하나씩 본다."""
+    if isinstance(evidence, list):
+        return [row for one in evidence for row in evidence_problems(where, one, values)] if evidence else [(where, "근거 글의 경로나 대목이 없음")]
     phrases = _phrases(evidence)
     if not isinstance(evidence, dict) or not evidence.get("path") or not phrases:
         return [(where, "근거 글의 경로나 대목이 없음")]
@@ -52,6 +54,13 @@ def evidence_problems(where, evidence, values=()):
     joined = " ".join(phrases)
     found += [(where, f"{DRIFT}: 대목에 값 {value:g} %가 없음") for value in values if not re.search(rf"(?<![\d.,]){value:g}\s?%", joined)]
     return found
+
+
+def _keys(entry):
+    """항목이 가리키는 근거 자료의 열쇠들: source(하나)나 sources(여럿)로 적는다."""
+    if isinstance(entry.get("sources"), list):
+        return [key for key in entry["sources"] if isinstance(key, str)]
+    return [entry["source"]] if isinstance(entry.get("source"), str) else []
 
 
 def _years(values, low=0, high=100):
@@ -114,10 +123,8 @@ def terms_problems(terms):
     if any(not source.get("key") or not source.get("text") or not str(source.get("url", "")).startswith("https://") for source in terms.get("sources") or []) or not sources:
         found.append(("근거 자료", "열쇠, 이름, 주소 가운데 빠진 것이 있음"))
     formula = terms.get("formula") or {}
-    if not formula.get("text") or formula.get("source") not in sources:
+    if not formula.get("text") or not _keys(formula) or not set(_keys(formula)) <= sources:
         found.append(("계산식", "글이 없거나 근거 자료를 가리키지 않음"))
-    elif formula.get("basis") == "web" and (not str(formula.get("url", "")).startswith("https://") or not DATE.match(str(formula.get("checkedOn", "")))):
-        found.append(("계산식", "웹에서 확인한 식인데 주소나 확인한 날이 없음"))
     else:
         found += evidence_problems("계산식", formula.get("evidence"))
     watch = terms.get("watch") or {}
@@ -128,7 +135,7 @@ def terms_problems(terms):
         found.append(("설명 글", "글이 없거나 열쇠가 겹침"))
     for note in notes:
         where = f"설명 글 {note.get('key', '?')}"
-        if not note.get("text") or note.get("source") not in sources:
+        if not note.get("text") or not _keys(note) or not set(_keys(note)) <= sources:
             found.append((where, "글이 없거나 근거 자료를 가리키지 않음"))
         else:
             found += evidence_problems(where, note.get("evidence"))
@@ -198,8 +205,8 @@ def public(terms, goods):
         "cscf": terms["cscf"]["values"],
         "periods": [{"key": period["key"], "from": period["from"], "to": period["to"]} for period in terms["periods"]],
         "routes": [{"key": route["key"], "name": route["name"]} for route in terms["routes"]],
-        "formula": {"text": terms["formula"]["text"], "source": sources[terms["formula"]["source"]]},
-        "notes": [{"key": note["key"], "text": note["text"], "source": sources[note["source"]]} for note in terms["notes"]],
+        "formula": {"text": terms["formula"]["text"], "sources": [sources[key] for key in _keys(terms["formula"])]},
+        "notes": [{"key": note["key"], "text": note["text"], "sources": [sources[key] for key in _keys(note)]} for note in terms["notes"]],
         "sources": list(sources.values()),
         "korea": goods["builtFrom"]["defaults"]["korea"]["caption"],
         "rows": [[row["shown"], row["text"], row["origin"], row["direct"], row["indirect"], row["total"]] for row in goods["rows"]],
