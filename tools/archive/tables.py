@@ -13,7 +13,7 @@ import re
 
 from tools.archive import fulltext
 from tools.archive.store import save_index, save_text
-from tools.common.htmlgrid import grids
+from tools.common import htmlgrid
 from tools.common.rowtext import format_row
 
 KOREA = re.compile(r"korea", re.I)
@@ -32,14 +32,36 @@ def titled(table):
     return table
 
 
+def is_data(table):
+    """값 표로 볼 만한 것: 열이 셋 이상이고 행이 둘 이상인 표. 문서 전체를 감싼 표(한 칸에 글이 몰린 것)는 아니다."""
+    rows = table["rows"]
+    return len(rows) >= MIN_ROWS and len(rows[0]) >= MIN_COLUMNS and max(len(cell) for row in rows for cell in row) < 4000
+
+
 def data_tables(html):
-    """값 표로 볼 만한 것만: 열이 셋 이상이고 행이 둘 이상인 표. 문서 전체를 감싼 표(한 칸에 글이 몰린 것)는 빠진다."""
-    found = []
-    for number, table in enumerate(grids(html), start=1):
-        rows = table["rows"]
-        if len(rows) >= MIN_ROWS and len(rows[0]) >= MIN_COLUMNS and max(len(cell) for row in rows for cell in row) < 4000:
-            found.append({"number": number, **table})
-    return found
+    """값 표만 골라 번호(문서 안의 차례, 1부터)를 붙여 돌려준다."""
+    return [{**table, "number": table["id"] + 1} for table in htmlgrid.grids(html) if is_data(table)]
+
+
+def outside_text(html, start):
+    """start가 든 글 덩이부터 문서 끝까지, 값 표의 밖에 있는 글을 차례대로 돌려준다. 값 표가 있던 자리에는 '[여기에 표 번호]'를 적는다.
+
+    표의 앞뒤에 적힌 규칙과 주석(표의 값에 붙은 표시가 무슨 뜻인지)을 표와 함께 받아 두려는 것이다.
+    """
+    tables, blocks = htmlgrid.read(html)
+    inside = {table["id"] for table in tables if is_data(table)}
+    lines, started, marked = [], False, set()
+    for text, open_ids in blocks:
+        started = started or start in text
+        if not started:
+            continue
+        held = [number for number in open_ids if number in inside]
+        if not held:
+            lines.append(text)
+        elif held[0] not in marked:
+            marked.add(held[0])
+            lines.append(f"[여기에 표 {held[0] + 1}]")
+    return lines
 
 
 def is_defaults(table):
@@ -81,11 +103,16 @@ def text_lines(tables):
     return lines
 
 
+NOTES_FROM = "CBAM BENCHMARKS"  # 무상할당 조정 이행규정 부속서의 5번 제목. 여기부터의 글에 값을 고르는 규칙과 표의 주석이 있다.
+
+
 def read(name, celex):
     """(줄 목록, 받은 곳, 표의 수, 행의 수, 사유)."""
     pages, why = fulltext.celex_pages(celex)
     if why:
         return [], "", 0, 0, why
+    if len(pages) > 1 and name == "benchmarks":
+        return [], "", 0, 0, f"파일이 {len(pages)}개로 나뉘어 있어 표 밖의 글을 이을 수 없음"
     tables, offset = [], 0
     for _, _, html in pages:  # 파일이 여럿이면 표 번호를 이어서 매긴다
         found = data_tables(html)
@@ -97,6 +124,10 @@ def read(name, celex):
         extra = [f"[나라 목록] {'; '.join(names)}"]
     else:
         tables, why = pick_benchmarks(tables)
+        notes = outside_text(pages[0][2], NOTES_FROM)
+        if not why and len(notes) < 5:
+            why = f"표 밖의 글(제목 '{NOTES_FROM}'부터)을 찾지 못함"
+        extra = ["", "[표 밖의 글] 부속서 5번의 글 가운데 표 밖에 있는 것을 차례대로 적었다."] + notes
     if why:
         return [], "", 0, 0, why
     return extra + text_lines(tables), pages[0][1], len(tables), sum(len(table["rows"]) for table in tables), ""

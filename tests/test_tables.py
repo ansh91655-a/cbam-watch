@@ -82,6 +82,16 @@ class PickTest(unittest.TestCase):
         self.assertEqual(kept, [])
         self.assertIn("벤치마크 표로 볼 만한 행", why)
 
+    def test_the_words_around_a_value_table_are_kept_in_order_with_a_mark_where_the_table_was(self):
+        page = ("<p>4. EARLIER PART</p><p>5. CBAM BENCHMARKS</p><p>5.1. Rules</p>"
+                "<table><tr><td>(a)</td><td>first rule</td></tr></table>"
+                + COUNTRY.format(name="5.3. Table") +
+                "<table><tr><td>(1)</td><td>applies in 2026 and 2027</td></tr></table><p>last words</p>")
+        lines = tables.outside_text(page, "CBAM BENCHMARKS")
+        self.assertEqual(lines[:5], ["5. CBAM BENCHMARKS", "5.1. Rules", "(a)", "first rule", "5.3. Table"])
+        self.assertEqual(lines[5:], ["[여기에 표 2]", "(1)", "applies in 2026 and 2027", "last words"])
+        self.assertEqual(tables.outside_text(page, "NO SUCH HEADING"), [])
+
     def test_the_stored_text_lists_each_table_under_its_number_and_caption(self):
         kept, _, _ = tables.pick_defaults(tables.data_tables(PAGE))
         back = read_tables(tables.text_lines(kept))
