@@ -4,6 +4,7 @@
 - EU 출판국 자료 창구: CBAM 규정 통합본, 집행위 제안(본문과 부속서). 한 문서에 파일이 여럿이면 모두 받는다.
 - EU 이사회 문서 등록부: 이사회 일반적 접근의 본문(PDF, pypdf가 필요하다).
 - 유럽의회: 본회의가 채택한 문서.
+- 유럽의회 입법 관측소: 지켜보는 입법 절차마다, 문서별 요약.
 """
 import io
 import re
@@ -31,9 +32,18 @@ TARGETS = [
     # 유럽의회 누리집은 자동 실행에 문서를 내주지 않아, 유럽의회가 채택한 수정안의 문안은 이 문서에서 확인한다.
     # 칸이 섞이지 않게 낱말의 자리로 칸을 가려 받는다(tools/archive/fourcolumn.py).
     ("downstream-fourcolumn", "fourcolumn", "WK-14239-2026-INIT", "2025/0419"),
-    # 유럽의회 입법 관측소가 절차의 문서마다 붙인 요약(집행위 제안, 위원회 보고서, 본회의 채택 문서)
-    ("downstream-oeil-summary", "oeil", "2025/0419(COD)", "CBAM"),
 ]
+# 유럽의회 입법 관측소가 절차의 문서마다 붙인 요약(집행위 제안, 위원회 보고서, 본회의 채택 문서).
+# 규제 분석 글에서 기관별 입장을 적을 때 근거로 쓴다. (이름, 절차 번호, 받은 글에 꼭 있어야 하는 말)
+SUMMARIES = [
+    ("downstream-oeil-summary", "2025/0419(COD)", "CBAM"),
+    ("simplification-oeil-summary", "2025/0039(COD)", "CBAM"),
+    ("tdf-oeil-summary", "2025/0418(COD)", "Decarbonisation"),
+    ("ets-review-oeil-summary", "2026/0212(COD)", "Emissions Trading"),
+    ("ets-benchmarks-oeil-summary", "2026/0211(COD)", "benchmark"),
+    ("own-resources-oeil-summary", "2025/0574(CNS)", "own resources"),
+]
+TARGETS += [(name, "oeil", reference, must) for name, reference, must in SUMMARIES]
 OEIL = "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference={reference}"
 OEIL_SUMMARY = "https://oeil.europarl.europa.eu/oeil/en/document-summary?id={number}"
 SUMMARY_LINK = re.compile(r"document-summary\?id=(\d+)")
