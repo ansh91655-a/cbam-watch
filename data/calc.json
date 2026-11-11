@@ -158,14 +158,25 @@
   {
    "key": "certificate",
    "text": "CBAM 인증서 한 개는 내재배출량 1톤(tCO2e)에 해당합니다. 제출할 인증서 수는 신고한 내재배출량에서 무상할당 조정을 뺀 값이며, 0보다 작아지면 0으로 보았습니다.",
-   "source": "cbam",
-   "evidence": {
-    "path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt",
-    "contains": [
-     "‘CBAM certificate’ means a certificate in electronic format corresponding to one tonne of CO2e of embedded emissions in goods",
-     "The CBAM certificates to be surrendered in accordance with Article 22 of this Regulation shall be adjusted to reflect the extent to which EU ETS allowances are allocated free of charge"
-    ]
-   }
+   "evidence": [
+    {
+     "path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt",
+     "contains": [
+      "‘CBAM certificate’ means a certificate in electronic format corresponding to one tonne of CO2e of embedded emissions in goods",
+      "The CBAM certificates to be surrendered in accordance with Article 22 of this Regulation shall be adjusted to reflect the extent to which EU ETS allowances are allocated free of charge"
+     ]
+    },
+    {
+     "path": "originals/text/3aa2c730-4f1b-4524-8f71-d9cfe4880ac7/6854641617e7.txt",
+     "contains": [
+      "authorised CBAM declarants can deduct from the embedded emissions to determine the"
+     ]
+    }
+   ],
+   "sources": [
+    "cbam",
+    "guidance4"
+   ]
   },
   {
    "key": "defaults",

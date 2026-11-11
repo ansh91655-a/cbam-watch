@@ -109,8 +109,9 @@ class PublishTest(unittest.TestCase):
         terms["routes"][2]["en"] = "Carbon Steel based on hydrogen"
         self.assertEqual([where for where, _ in calc.problems(terms, self.goods)], ["생산경로 C"])
         terms = copy.deepcopy(self.terms)
-        terms["notes"][0]["evidence"]["contains"].append("a sentence the law does not have")
-        self.assertEqual([where for where, _ in calc.problems(terms, self.goods)], ["설명 글 certificate"])
+        note = next(one for one in terms["notes"] if one["key"] == "cscf")
+        note["evidence"]["contains"].append("a sentence the law does not have")
+        self.assertEqual([where for where, _ in calc.problems(terms, self.goods)], ["설명 글 cscf"])
 
     def test_a_broken_shape_blocks_the_build(self):
         terms = copy.deepcopy(self.terms)
