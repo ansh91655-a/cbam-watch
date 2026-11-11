@@ -1,0 +1,399 @@
+[주소] https://www.legislation.gov.uk/ukpga/2026/11/part/5/data.htm
+
+Finance Act 2026
+Skip to main content
+Skip to navigation
+legislation.gov.uk
+https://www.nationalarchives.gov.uk
+Cymraeg
+Home
+Explore our collections
+Research tools
+Help and guidance
+What's new
+About us
+Search Legislation
+Search Legislation
+Title: (or keywords in the title)
+Year:
+Number:
+Type:All UK Legislation (excluding originating from the EU)--------------------------------------------All Legislation (including originating from EU)--------------------------------------------All Legislation originating from the EU that is amended by the UK--------------------------------------------All Primary Legislation UK Public General Acts UK Local Acts UK Private and Personal Acts Acts of the Scottish Parliament Acts of Senedd Cymru Acts of the National Assembly for Wales Measures of the National Assembly for Wales Church Measures Acts of the Northern Ireland Assembly Acts of the Old Scottish Parliament Acts of the English Parliament Acts of the Old Irish Parliament Acts of the Parliament of Great Britain Local Acts of the Parliament of Great Britain Private and Personal Acts of the Parliament of Great Britain Northern Ireland Orders in Council Measures of the Northern Ireland Assembly Acts of the Northern Ireland Parliament--------------------------------------------All Secondary Legislation UK Statutory Instruments Welsh Statutory Instruments Scottish Statutory Instruments Northern Ireland Statutory Rules Church Instruments UK Ministerial Directions UK Ministerial Orders UK Statutory Rules and Orders Northern Ireland Statutory Rules and Orders--------------------------------------------All Legislation originating from the EU Regulations originating from the EU Regulations originating from the EU that are amended by the UK Decisions originating from the EU Decisions originating from the EU that are amended by the UK Directives originating from the EU European Union Treaties--------------------------------------------All Draft Legislation UK Draft Statutory Instruments Scottish Draft Statutory Instruments Northern Ireland Draft Statutory Rules--------------------------------------------All Impact Assessments UK Impact Assessments
+Search
+Advanced Search
+Finance Act 2026
+You are here:
+UK Public General Acts
+2026 c. 11
+Part 5
+Table of Contents
+Content
+More Resources
+Previous: Part
+Next: Part
+Plain View
+Print Options
+What Version
+Latest available (Revised)
+Original (As enacted)
+Advanced Features
+Show Geographical Extent(e.g. England, Wales, Scotland and Northern Ireland)
+Show Timeline of Changes
+Opening Options
+Open whole Act
+Open Act without Schedules
+Open Schedules only
+More Resources
+Original: King's Printer Version
+View more
+Changes over time for: Part 5
+Alternative versions:
+18/03/2026- Amendment
+Changes to legislation:
+There are currently no known outstanding effects for the Finance Act 2026, Part 5.
+Changes to Legislation
+Revised legislation carried on this site may not be fully up to date. At the current time any known changes or effects made by subsequent legislation have been applied to the text of the legislation you are viewing by the editorial team. Please see ‘Frequently Asked Questions’ for details regarding the timescales for which new effects are identified and recorded on this site.
+Part 5U.K.Carbon border adjustment mechanism
+IntroductionU.K.
+142Introduction to CBAMU.K.
+(1)A tax called the carbon border adjustment mechanism (“CBAM”) is to be charged in accordance with this Part.
+(2)In this Part—
+(a)sections 143 to 150 and Schedule 16 set out the charge to CBAM (and include exemptions and relief);
+(b)section 151 and Schedule 17 provide for the administration and enforcement of CBAM;
+(c)section 152 and Schedule 18 provide for criminal offences relating to CBAM;
+(d)sections 153 to 158 and Schedule 19 make general provision.
+The chargeU.K.
+143Charge to CBAMU.K.
+(1)CBAM is charged on the emissions embodied in a CBAM good when the good is imported into the United Kingdom.
+(2)In this Part, “CBAM good” means a good specified by Schedule 16 (but see section 145(3)).
+(3)Schedule 16 specifies the following kinds of goods—
+(a)aluminium goods;
+(b)cement;
+(c)fertilisers;
+(d)hydrogen;
+(e)iron and steel goods.
+144ImportationU.K.
+(1)For the purposes of this Part, a reference to a good being imported into the United Kingdom is a reference to—
+(a)the first time a good is imported as described in this section, and
+(b)if a good is imported as described in this section and subsequently exported from the United Kingdom, the next time the good is imported as described in this section.
+(2)If a CBAM good is chargeable to import duty under section 1 of TCTA 2018, it is imported when liability to import duty is incurred in respect of the good.
+(3)If a CBAM good is chargeable to duty under section 30C of TCTA 2018, it is imported when liability to that duty is incurred in respect of the good.
+(4)If a CBAM good is chargeable to duty under section 30A(3) or 40A(1)(a) of TCTA 2018 (or would be so chargeable but for regulations within section 30B(1)(a) or 40B(1)(a) of that Act), it is imported when liability to that duty is incurred in respect of the good (or would be incurred but for the regulations).
+(5)If a CBAM good is—
+(a)a Union good that is imported into the United Kingdom as a result of its entry into Northern Ireland and not excluded by regulations made by the Treasury,
+(b)a good that is imported into the United Kingdom from the Isle of Man and not excluded by regulations made by the Treasury,
+(c)a domestic good by virtue of regulations made under section 33(8) of TCTA 2018 relating to goods declared for an outward processing procedure, or
+(d)a domestic good by virtue of subsection (6) of section 36 of TCTA 2018 or regulations made under that section,
+it is imported at the time of importation for the purposes of the customs and excise Acts.
+(6)If a CBAM good would be chargeable to duty under section 30C of TCTA 2018 but for regulations within subsection (6)(a) of that section, it is imported at the time of entry of the good in Great Britain in the course of the removal of the good to Great Britain from Northern Ireland.
+(7)The reference in subsection (4) to when liability to duty under section 30A(3) or 40A(1)(a) of TCTA 2018 is incurred in respect of a good is to when, for the purpose of the duty, a customs debt on import is incurred under UCC 2013.
+(8)For the purposes of determining, in accordance with subsection (5), when a CBAM good is imported into the United Kingdom from the Isle of Man, section 8 of the Isle of Man Act 1979 (removal of goods from the Isle of Man) has effect as if, in subsection (2) of that Act, at the end of paragraph (c), there were inserted “; or
+(d)goods which are CBAM goods.”
+(9)Section 5 of CEMA 1979 applies for the purpose of subsection (6) to determine the time of entry of a CBAM good in Great Britain in the course of the removal of the good to Great Britain from Northern Ireland as it applies for the purpose of the customs and excise Acts to determine the time of importation of goods—
+(a)reading references in that section to the time of importation of goods as the time of entry of the CBAM good in Great Britain, and
+(b)reading references in subsections (2) and (6) of that section to the United Kingdom as Great Britain.
+(10)Regulations made by the Treasury may exclude from subsection (4) or (6) (as the case may be) goods that would be chargeable to duty under section 30A(3), 30C or 40A(1)(a) of TCTA 2018 but for regulations within section 30B(1)(a), 30C(6)(a) or 40B(1)(a) of that Act.
+145Goods processed under a special customs procedureU.K.
+(1)Subsection (2) applies where—
+(a)a CBAM good has been declared for a special customs procedure,
+(b)the CBAM good is processed under the procedure,
+(c)the processing produces a good that is not a CBAM good, and
+(d)that good is imported into the United Kingdom.
+(2)When the good that is not a CBAM good is first imported as described in section 144, CBAM is charged on so much of the emissions embodied in that good as were embodied in the CBAM good when it was declared for the special customs procedure.
+(3)References in this Part to a CBAM good include a reference to a good imported in the circumstances described in subsection (1).
+(4)In this section, “special customs procedure” means—
+(a)a special Customs procedure (within the meaning of section 3(4) of TCTA 2018);
+(b)a special procedure provided for by Title 7 of UCC 2013, other than the outward processing procedure.
+146Person liable: the importerU.K.
+(1)The person liable to CBAM on the emissions embodied in a CBAM good is the importer.
+(2)If a CBAM good is imported as described in section 144(2), (3) or (6), the importer is—
+(a)if liability to import duty, or duty under section 30C of TCTA 2018, is incurred when a declaration for a Customs procedure is accepted, or when there is a breach of a requirement relating to the procedure—
+(i)the person in whose name the declaration for the procedure was made, or
+(ii)if the declaration was made on behalf of another person, the person on whose behalf the declaration was made, or
+(b)if paragraph (a) does not apply, the person on whose behalf the good is imported.
+(3)If a CBAM good is imported as described in section 144(4), the importer is—
+(a)if liability to duty under section 30A(3) or 40A(1)(a) of TCTA 2018 is incurred when a Union customs declaration in respect of the good is accepted, or when there is a breach of a requirement relating to the procedure for which it is accepted—
+(i)the declarant, or
+(ii)if the declaration was made on behalf of another person, the person on whose behalf the declaration was made, or
+(b)if paragraph (a) does not apply, the person on whose behalf the good is imported.
+(4)If a CBAM good is imported as described in section 144(5), the importer is the person on whose behalf the good is imported.
+(5)In this section—
+“Customs procedure” means a procedure set out in section 3(3) of TCTA 2018;
+“declarant”, in relation to a Union customs declaration, has the meaning given by Article 5(15) of UCC 2013;
+“Union customs declaration” means a customs declaration for the purposes of UCC 2013.
+147ExemptionsU.K.
+(1)CBAM is not charged on the emissions embodied in a CBAM good if the importer—
+(a)is, at the time the good is imported, neither registrable nor registered (see Part 2 of Schedule 17), or
+(b)is importing the good otherwise than in the course of a business.
+(2)CBAM is not charged on the emissions embodied in a CBAM good if—
+(a)the place of origin of the good is the United Kingdom, determined in accordance with provision applicable in relation to the customs tariff in its standard form (see section 17(1) to (6) of TCTA 2018);
+(b)the good is imported as described in section 144(2) or (3) and returned goods relief is available in respect of the good;
+(c)the good is imported as described in section 144(4) and relief under Article 203 of UCC 2013 (returned goods) is available in respect of the good;
+(d)the good is within section 144(5)(a) and was—
+(i)exported from the United Kingdom as a Union good as a result of its removal from Northern Ireland, and
+(ii)imported into the United Kingdom as described in section 144(5)(a) not more than 3 years later, in the state in which it was exported (see Article 203(5) of UCC 2013);
+(e)the good is imported as described in section 144(5)(b) and returned goods relief would be available in respect of it if liability to import duty were incurred by reference to its importation into the United Kingdom.
+(3)CBAM is not charged on so much of the emissions embodied in a CBAM good (“the chargeable good”) as are attributable to the production of another CBAM good which—
+(a)originated from the United Kingdom, determined in accordance with provision applicable in relation to the customs tariff in its standard form (see section 17(1) to (6) of TCTA 2018), and
+(b)was processed to produce the chargeable good.
+(4)If, but for this subsection, a liability to duty would have been incurred for the purposes of section 144(2) or (3) in circumstances where—
+(a)liability to duty was incurred in accordance with section 4(4)(a) of TCTA 2018,
+(b)liability to duty was incurred by virtue of HMRC accepting a declaration of the good for a temporary admission procedure, and
+(c)full relief was given from the liability to duty incurred,
+the liability to duty is treated as not having been incurred on that occasion for the purposes of section 144(2) or (3) (and, accordingly, the good is treated as not having been imported as described in section 144(2) or (3) on that occasion).
+(5)But subsection (4) does not apply if—
+(a)there was no entitlement to make the declaration mentioned in subsection (4)(b), or
+(b)the full relief given, mentioned in subsection (4)(c), was not available.
+(6)The Treasury may by regulations specify other circumstances in which CBAM is not charged on emissions, or certain emissions, embodied in a CBAM good.
+(7)Regulations under subsection (6) may also treat an importation into the United Kingdom, for any purpose of this Part, of a CBAM good in respect of which the regulations apply as not having occurred (including by virtue of provision similar to subsection (4)).
+(8)In this section—
+“customs tariff in its standard form” means the customs tariff, as defined in section 8 of TCTA 2018, as it has effect without regard to any provision made under sections 9 to 15 or section 19(4) of that Act;
+“returned goods relief” means relief for import duty available—
+(a)
+by virtue of the UK Reliefs document, and
+(b)
+by reference to the fact the good is being returned to the United Kingdom, or Great Britain, having previously been exported;
+“temporary admission procedure” has the meaning given by paragraph 15 of Schedule 2 to TCTA 2018;
+“UK Reliefs document” has the meaning given by regulations under section 19 of TCTA 2018.
+148Embodied emissionsU.K.
+(1)In this Part, “emissions embodied in a CBAM good” means emissions that are attributable to the production of a CBAM good.
+(2)The Treasury may by regulations make provision about what it means for emissions to be attributable to the production of a CBAM good.
+(3)Regulations under subsection (2) may (among other things) make provision about emissions that are emitted in the course of an activity carried out in connection with the production of—
+(a)a CBAM good, or
+(b)materials used (including goods processed) to produce a CBAM good.
+(4)See paragraphs 10 and 11 of Schedule 17 for provision about how to determine and evidence emissions embodied in a CBAM good.
+149RateU.K.
+(1)CBAM is charged at an amount equal to the sectoral domestic price applicable in respect of the CBAM good multiplied by the number of tonnes of carbon dioxide equivalent emissions embodied in the CBAM good.
+(2)The “sectoral domestic price” applicable in respect of a CBAM good is the price calculated and published by the Treasury for—
+(a)the CBAM sector in which the good falls, and
+(b)the quarter in which the liability to CBAM is incurred in respect of the good.
+(3)The Treasury must calculate and publish the sectoral domestic price for each CBAM sector for each quarter (“quarter Q”) as follows—
+Step 1
+Calculate the average price per tonne of specified emissions under the UK Emissions Trading Scheme in the quarter preceding quarter Q—
+(a)
+by reference to auction clearing prices for UK ETS allowances at auctions during the quarter preceding quarter Q, or
+(b)
+if no allowances were sold at auction during that quarter, as provided in regulations under subsection (6).
+Step 2
+Reduce that price by a percentage equal to the baseline free allocation percentage for the CBAM sector, as adjusted by a factor specified by regulations under subsection (6)—
+(a)
+for the CBAM sector for the year in which quarter Q falls, and
+(b)
+in light of reduction factors applicable in determining, under the UK Emissions Trading Scheme, the allocation in that year of free UK ETS allowances in respect of sub-installations that have a process that serves production of goods falling within the CBAM sector.
+(4)In this section—
+“auction” means an auction under the Greenhouse Gas Emissions Trading Scheme Auctioning Regulations 2021 (S.I. 2021/484);
+“auction clearing price”, in relation to a UK ETS allowance, has the same meaning as in those Regulations (see regulation 7);
+“baseline free allocation percentage” means, in relation to a CBAM sector, the average percentage of sectoral emissions that were covered—
+(a)
+in the 2019 scheme year, by free EU ETS allowances, and
+(b)
+in the 2022 and 2023 scheme years, by free UK ETS allowances,
+allocated in the scheme years mentioned here in respect of sub-installations that have a process that serves the production of goods falling within the CBAM sector;
+“CBAM sector” means the commodity codes set out under a single heading in the Table in Schedule 16 other than the commodity codes that the Table indicates are excepted;
+“the ETS Regulations” means the Greenhouse Gas Emissions Trading Scheme Regulations 2012 (S.I. 2012/3038);
+“free EU ETS allowance” means an allowance allocated free of charge in accordance with Directive 2003/87/EC of the European Parliament and of the Council establishing a scheme for greenhouse gas emissions allowance trading within the Community and amending Council Directive 96/61/EC;
+“free UK ETS allowance” means an allowance allocated free of charge under Part 4A of the UK ETS Order;
+“quarter” means a period of 3 months ending at the end of March, June, September or December;
+“regulated activity” and “specified emissions” have the meaning given by paragraph 3 of Schedule 2 to the UK ETS Order (or, in relation the 2019 scheme year, given by regulation 3 of the ETS Regulations as it had effect during that year);
+“scheme year” has the meaning—
+(a)
+in relation to the 2019 scheme year, given by regulation 3 of the ETS Regulations;
+(b)
+in relation to the 2022 and 2023 scheme years, given by article 4 of the UK ETS order;
+“sectoral emissions” means, in relation to a CBAM sector, the specified emissions that were emitted in the course of regulated activities carried out at sub-installations in the United Kingdom that have a process that serves the production of goods falling within the CBAM sector;
+“sub-installation” means each kind of sub-installation defined by Article 2 of Commission Delegated Regulation (EU) 2019/331 determining transitional Union-wide rules for harmonised free allocation of emission allowances pursuant to Article 10a of Directive 2003/87/EC of the European Parliament and of the Council (or, in relation to the 2019 scheme year, has the meaning given by regulation 3 of the ETS Regulations as it had effect during that year);
+“UK ETS allowance” means an allowance created under the UK ETS Order (see article 18);
+“UK ETS Order” means the Greenhouse Gas Emissions Trading Scheme Order 2020 (S.I. 2020/1265).
+(5)In determining the “baseline free allocation percentage” in relation to a CBAM sector, ignore any scheme year in which there were no sectoral emissions.
+(6)The Treasury may by regulations make further provision about the calculation of the sectoral domestic price.
+(7)In this section—
+(a)references to a good falling within a CBAM sector are references to the good falling within one of the commodity codes comprising the sector;
+(b)references to emissions are references to tonnes of carbon dioxide equivalent emissions;
+(c)references to regulated activities carried out to produce goods include regulated activities consisting in the production of heating and cooling consumed during the regulated activities.
+150Carbon price reliefU.K.
+(1)The amount of CBAM charged on emissions may be reduced under this section if another monetary amount is payable in relation to the emissions, whether the amount is—
+(a)in the form of taxation,
+(b)in exchange for allowances (however expressed) under an emissions trading scheme, or
+(c)required to be paid under the law of a country or territory in connection with the importation of goods into the country or territory.
+(2)The Treasury may by regulations make provision about relief under this section, including provision—
+(a)describing which monetary amounts may generate relief,
+(b)about when a monetary amount is to be treated as being payable in relation to emissions, and how the emissions are to be identified, and
+(c)about determining the amount of relief.
+(3)In this Part, “carbon price” means a monetary amount of a kind described in regulations under subsection (2)(a).
+(4)Regulations under subsection (2) may (among other things) make provision—
+(a)for the amount of relief to be determined by reference to averages, estimates, assumptions or by reference to information provided by a third party;
+(b)to take account of other reliefs, allowances, offsets or similar relating to a carbon price;
+(c)about cases where two or more carbon prices are payable in relation to the same emissions;
+(d)for the amount of relief to differ depending on where the carbon price is payable;
+(e)specifying periods by reference to which calculations or measurements are to be made.
+(5)In this section, references to an amount being payable in relation to emissions includes a reference to—
+(a)an amount that indirectly relates to emissions, and
+(b)an amount having been payable, or that is going to become payable, in relation to emissions.
+Administration and enforcementU.K.
+151Administration and enforcementU.K.
+Schedule 17 makes provision for the administration and enforcement of CBAM.
+152Criminal offencesU.K.
+Schedule 18 makes provision for criminal offences relating to CBAM and about proceedings for those offences.
+GeneralU.K.
+153Supplementary amendmentsU.K.
+Schedule 19 contains supplementary amendments of other legislation.
+154Emissions: meaning etcU.K.
+(1)In this Part, “emissions” means emissions of greenhouse gases (within the meaning of section 92 of the Climate Change Act 2008) into the atmosphere that are attributable to human activity.
+(2)For the purposes of this Part, “emissions” are determined or expressed in tonnes of carbon dioxide equivalent.
+(3)In this Part, a “tonne of carbon dioxide equivalent” means one metric tonne of carbon dioxide or an amount of any other greenhouse gas with an equivalent global warming potential.
+(4)The Commissioners may by regulations make provision setting, or about the determination of, such amounts.
+155InterpretationU.K.
+(1)In this Part—
+“business” includes any activity of a government department or other public authority, or of a charity, that is carried out for commercial purposes;
+“CBAM good”: see section 143;
+“the Commissioners” means the Commissioners for His Majesty’s Revenue and Customs;
+“the customs and excise Acts” has the meaning given by section 1 of CEMA 1979;
+“emissions”: see section 154;
+“HMRC” means His Majesty’s Revenue and Customs;
+“import”: see section 144;
+“import duty” has the meaning given by section 1 of TCTA 2018;
+“importer”: see section 146;
+“registered person” and “registrable person”: see paragraph 2(10) of Schedule 17;
+“tonne of carbon dioxide equivalent” see section 154;
+“UCC 2013” means Regulation (EU) No 952/2013 of the European Parliament and of the Council of 9 October 2013 laying down the Union Customs Code, as it has effect by virtue of section 7A of the European Union (Withdrawal) Act 2018;
+“UK Emissions Trading Scheme” has the meaning given in Article 16 of the Greenhouse Gas Emissions Trading Order 2020 (S.I. 2020/1265);
+“Union good” has the meaning given by Article 5(23) of UCC 2013;
+“working day” means any day other than—
+(a)
+a Saturday or Sunday, or
+(b)
+a day that is a bank holiday in any part of the United Kingdom under the Banking and Financial Dealings Act 1971.
+(2)In this Part—
+(a)a person imports a CBAM good only if the person is “the importer” of the good (within the meaning of section 146);
+(b)references to the production of goods include the manufacture of goods;
+(c)references to the processing of goods have the same meaning as in TCTA 2018 (see section 37(4) of that Act).
+(3)The Treasury may by regulations make such amendments to this Part as they consider appropriate in consequence of UCC 2013, or any legislation replacing it, being amended or replaced.
+156Power to make provision for linked emissions trading schemesU.K.
+(1)The Treasury may by regulations amend this Part for the purpose of—
+(a)excluding emissions embodied in goods that originate from a country or territory with a linked emissions trading scheme from the charge to CBAM;
+(b)providing that such goods are to be disregarded when calculating the aggregate value of imports for the purposes of Part 2 of Schedule 2 (registration).
+(2)In this section, “a country or territory with a linked emissions trading scheme” means—
+(a)a country or territory that has entered into arrangements with the United Kingdom for the purpose of linking its emissions trading scheme with the UK Emissions Trading Scheme, or
+(b)a country or territory that has entered into arrangements with a country or territory of a kind referred to in paragraph (a) for the purpose of linking its emissions trading scheme with that country or territory’s emissions trading scheme.
+157Regulations and noticesU.K.
+(1)Regulations under this Part—
+(a)may make different provision for different purposes;
+(b)may include incidental, consequential, supplementary or transitional provision.
+(2)Regulations under this Part may make provision by reference to things specified in a notice that is—
+(a)published by the Treasury or the Commissioners in accordance with the regulations, and
+(b)not withdrawn by a further notice.
+(3)Regulations under this Part are to be made by statutory instrument.
+(4)A statutory instrument containing regulations under section 156(1) (linked emission trading schemes) is subject to the affirmative procedure.
+(5)A statutory instrument containing regulations under any of the following provisions is subject to the made affirmative procedure—
+(a)section 149(6) (rate of CBAM);
+(b)section 150(2) (carbon price relief);
+(c)paragraph 47 of Schedule 17 (amount of penalties).
+(6)A statutory instrument containing regulations under paragraph 2(3) of Schedule 16 and under section 8 of TCTA 2018 is subject to the procedure under section 32 of TCTA 2018 that applies by virtue of the instrument containing regulations section 8 of TCTA 2018.
+(7)A statutory instrument containing regulations under this Part, other than regulations in respect of which subsection (4), (5) or (6) applies, is subject to the negative procedure.
+(8)Subsection (7) does not apply to a statutory instrument containing only regulations under section 158 (transitory provision).
+(9)Where a statutory instrument is subject to the affirmative procedure, it may not be made unless a draft of the instrument has been laid before and approved by a resolution of the House of Commons.
+(10)Where a statutory instrument is subject to the made affirmative procedure—
+(a)it must be laid before the House of Commons after being made, and
+(b)it ceases to have effect at the end of the period of 28 days beginning with the day on which the instrument is made, unless within that period the instrument is approved by a resolution of the House of Commons.
+(11)Where a statutory instrument is subject to the negative procedure, it is subject to annulment in pursuance of a resolution of the House of Commons.
+(12)Where a statutory instrument ceases to have effect as a result of subsection (10), that does not—
+(a)affect the validity of anything previously done under the instrument, or
+(b)prevent the making of a new statutory instrument.
+(13)In calculating the period of 28 days for the purposes of subsection (10), no account is to be taken of any whole days that fall within a period during which—
+(a)Parliament is dissolved or prorogued, or
+(b)the House of Commons is adjourned for more than 4 days.
+(14)Any provision that may be included in regulations in a statutory instrument under this Part subject to the negative procedure may be included in regulations in a statutory instrument subject to the affirmative procedure or the made affirmative procedure.
+(15)Any provision that may be included in regulations in a statutory instrument under this Part subject to the made affirmative procedure may be included in regulations in a statutory instrument subject to the affirmative procedure.
+(16)A notice published by the Treasury or the Commissioners under this Part—
+(a)may be amended or withdrawn by a further notice;
+(b)may include provision mentioned in subsection (1)(a) and (b).
+158Commencement and transitory provisionU.K.
+(1)This Part has effect in relation to goods imported into the United Kingdom on or after 1 January 2027.
+(2)The Treasury may by regulations modify the effect of—
+(a)paragraph 2(4) of Schedule 17 as regards any person who triggers registration in 2027 or 2028;
+(b)paragraph 6(2) or (3) or 7(2) for the purposes of any accounting period in respect of CBAM falling in 2027 or 2028.
+(3)Provision included in regulations under this section by virtue of section 157(1)(b) may modify the effect of any enactment.
+Previous: Part
+Next: Part
+Back to top
+Options/Help
+Print Options
+PrintThe Whole Act
+PDF The Whole Act
+Web page The Whole Act
+PrintThis Part only
+PDF This Part only
+Web page This Part only
+You have chosen to open The Whole Act
+The Whole Act you have selected contains over 200 provisions and might take some time to download. You may also experience some issues with your browser, such as an alert box that a script is taking a long time to run.
+Would you like to continue?
+Continue to open
+You have chosen to open The Whole Act as a PDF
+The Whole Act you have selected contains over 200 provisions and might take some time to download.
+Would you like to continue?
+Continue to open
+You have chosen to open The Whole Act without Schedules
+The Whole Act without Schedules you have selected contains over 200 provisions and might take some time to download. You may also experience some issues with your browser, such as an alert box that a script is taking a long time to run.
+Would you like to continue?
+Continue to open
+You have chosen to open The Whole Act without Schedules as a PDF
+The Whole Act without Schedules you have selected contains over 200 provisions and might take some time to download.
+Would you like to continue?
+Continue to open
+You have chosen to open the Whole Act
+The Whole Act you have selected contains over 200 provisions and might take some time to download. You may also experience some issues with your browser, such as an alert box that a script is taking a long time to run.
+Would you like to continue?
+Continue to open
+You have chosen to open the Whole Act without Schedules
+The Whole Act without Schedules you have selected contains over 200 provisions and might take some time to download. You may also experience some issues with your browser, such as an alert box that a script is taking a long time to run.
+Would you like to continue?
+Continue to open
+You have chosen to open Schedules only
+The Schedules you have selected contains over 200 provisions and might take some time to download. You may also experience some issues with your browser, such as an alert box that a script is taking a long time to run.
+Would you like to continue?
+Continue to open
+Legislation is available in different versions:
+Latest Available (revised):The latest available updated version of the legislation incorporating changes made by subsequent legislation and applied by our editorial team. Changes we have not yet applied to the text, can be found in the ‘Changes to Legislation’ area.
+Original (As Enacted or Made): The original version of the legislation as it stood when it was enacted or made. No changes have been applied to the text.
+See additional information alongside the content
+Geographical Extent: Indicates the geographical area that this provision applies to. For further information see ‘Frequently Asked Questions’.
+Show Timeline of Changes: See how this legislation has or could change over time. Turning this feature on will show extra navigation options to go to these specific points in time. Return to the latest available version by using the controls above in the What Version box.
+Opening Options
+Different options to open legislation in order to view more content on screen at once
+More Resources
+Access essential accompanying documents and information for this legislation item from this tab. Dependent on the legislation item being viewed this may include:
+the original print PDF of the as enacted version that was used for the print copy
+lists of changes made by and/or affecting this legislation item
+confers power and blanket amendment details
+all formats of all associated documents
+correction slips
+links to related legislation and further information resources
+Timeline of Changes
+This timeline shows the different points in time where a change occurred. The dates will coincide with the earliest date on which the change (e.g an insertion, a repeal or a substitution) that was applied came into force. The first date in the timeline will usually be the earliest date when the provision came into force. In some cases the first date is 01/02/1991 (or for Northern Ireland legislation 01/01/2006). This date is our basedate. No versions before this date are available. For further information see the Editorial Practice Guide and Glossary under Help.
+More Resources
+Use this menu to access essential accompanying documents and information for this legislation item. Dependent on the legislation item being viewed this may include:
+the original print PDF of the as enacted version that was used for the print copy
+correction slips
+Click 'View More' or select 'More Resources' tab for additional information including:
+lists of changes made by and/or affecting this legislation item
+confers power and blanket amendment details
+all formats of all associated documents
+links to related legislation and further information resources
+The data on this page is available in the alternative data formats listed:
+HTML5 alternative version
+HTML snippet alternative version
+PDF alternative version
+XML alternative version
+Akoma Ntoso alternative version
+HTML RDFa alternative version
+RDF/XML alternative version
+New site design
+Help
+About us
+Site map
+Accessibility
+Contact us
+Privacy notice
+Cookies
+Fair use policy
+All content is available under the Open Government Licence v3.0 except where otherwise stated. This site additionally contains content derived from EUR-Lex, reused under the terms of the Commission Decision 2011/833/EU on the reuse of documents from the EU institutions. For more information see the EUR-Lex public statement on re-use.
+© Crown and database right

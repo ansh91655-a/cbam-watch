@@ -1,0 +1,697 @@
+[주소] https://www.legislation.gov.uk/ukpga/2026/11/schedule/17/data.htm
+
+Finance Act 2026
+Skip to main content
+Skip to navigation
+legislation.gov.uk
+https://www.nationalarchives.gov.uk
+Cymraeg
+Home
+Explore our collections
+Research tools
+Help and guidance
+What's new
+About us
+Search Legislation
+Search Legislation
+Title: (or keywords in the title)
+Year:
+Number:
+Type:All UK Legislation (excluding originating from the EU)--------------------------------------------All Legislation (including originating from EU)--------------------------------------------All Legislation originating from the EU that is amended by the UK--------------------------------------------All Primary Legislation UK Public General Acts UK Local Acts UK Private and Personal Acts Acts of the Scottish Parliament Acts of Senedd Cymru Acts of the National Assembly for Wales Measures of the National Assembly for Wales Church Measures Acts of the Northern Ireland Assembly Acts of the Old Scottish Parliament Acts of the English Parliament Acts of the Old Irish Parliament Acts of the Parliament of Great Britain Local Acts of the Parliament of Great Britain Private and Personal Acts of the Parliament of Great Britain Northern Ireland Orders in Council Measures of the Northern Ireland Assembly Acts of the Northern Ireland Parliament--------------------------------------------All Secondary Legislation UK Statutory Instruments Welsh Statutory Instruments Scottish Statutory Instruments Northern Ireland Statutory Rules Church Instruments UK Ministerial Directions UK Ministerial Orders UK Statutory Rules and Orders Northern Ireland Statutory Rules and Orders--------------------------------------------All Legislation originating from the EU Regulations originating from the EU Regulations originating from the EU that are amended by the UK Decisions originating from the EU Decisions originating from the EU that are amended by the UK Directives originating from the EU European Union Treaties--------------------------------------------All Draft Legislation UK Draft Statutory Instruments Scottish Draft Statutory Instruments Northern Ireland Draft Statutory Rules--------------------------------------------All Impact Assessments UK Impact Assessments
+Search
+Advanced Search
+Finance Act 2026
+You are here:
+UK Public General Acts
+2026 c. 11
+Schedule 17
+Table of Contents
+Content
+More Resources
+Previous: Schedule
+Next: Schedule
+Plain View
+Print Options
+What Version
+Latest available (Revised)
+Original (As enacted)
+Advanced Features
+Show Geographical Extent(e.g. England, Wales, Scotland and Northern Ireland)
+Show Timeline of Changes
+Opening Options
+Open whole Act
+Open Act without Schedules
+Open Schedules only
+More Resources
+Original: King's Printer Version
+View more
+Changes over time for: Schedule 17
+Alternative versions:
+18/03/2026- Amendment
+Changes to legislation:
+Finance Act 2026, Schedule 17 is up to date with all changes known to be in force on or before 11 November 2026. There are changes that may be brought into force at a future date. Changes that have been made appear in the content and are referenced with annotations.
+Changes to Legislation
+Revised legislation carried on this site may not be fully up to date. Changes and effects are recorded by our editorial team in lists which can be found in the ‘Changes to Legislation’ area. Where those effects have yet to be applied to the text of the legislation by the editorial team they are also listed alongside the legislation in the affected provisions. Use the ‘more’ link to open the changes and effects relevant to the provision you are viewing.
+View outstanding changes
+Changes and effects yet to be applied to Schedule 17:
+Sch. 17 para. 2 modified by S.I. 2026/830 reg. 2(2)
+Sch. 17 para. 6 modified by S.I. 2026/830 reg. 2(3)
+Sch. 17 para. 7 modified by S.I. 2026/830 reg. 2(4)
+Section 151
+Schedule 17U.K.Administration of CBAM
+Part 1U.K.Introduction
+1(1)The Commissioners are responsible for the collection and management of CBAM.U.K.
+(2)In this Schedule—
+(a)Part 2—
+(i)requires a person to register with HMRC for the purposes of CBAM if the person triggers registration, and
+(ii)makes further provision relating to registration and de-registration;
+(b)Part 3 makes provision about the payment of CBAM, accounting periods and returns;
+(c)Part 4 makes provision about the determination and evidencing of emissions embodied in a CBAM good and relief under section 150;
+(d)Part 5 confers power to make regulations about the measurement of weight;
+(e)Part 6 makes provision about records;
+(f)Part 7 makes provision about the artificial separation of business activities;
+(g)Part 8 makes provision about death, incapacity and insolvency;
+(h)Parts 9 and 10 make provision about the recovery of CBAM and repayments;
+(i)Parts 11 and 12 make provision about penalties, reviews and appeals relating to CBAM.
+Part 2U.K.Registration
+Duty to register with HMRCU.K.
+2(1)A person must register with HMRC if the person triggers registration.
+(2)A person triggers registration if—
+(a)it is the first day of the month and, during the preceding 12 months, the person imported into the United Kingdom CBAM goods with an aggregate value of £50,000 or more in the course of a business, or
+(b)the person is expected to import into the United Kingdom, in the course of a business, CBAM goods with an aggregate value of £50,000 or more before the end of a period of 30 days.
+(3)For the purposes of sub-paragraph (2)—
+(a)disregard any CBAM good—
+(i)in respect of which section 147(2) applies (goods originating in the United Kingdom and returned goods), or
+(ii)that has been subject to the charge to CBAM by operation of section 145 (special customs procedures) and subsequently exported from the United Kingdom;
+(b)if a good is, or would be, subject to the charge to CBAM by operation of section 145 (special customs procedures) the value of the good is taken to be the amount of its value that is attributable to the CBAM good that entered, or would enter, the special customs procedure.
+(4)A person who triggers registration must register before the end of the period of 30 days beginning with the day on which the person first triggered registration.
+(5)When registering, a person must provide—
+(a)information specified by the Commissioners in regulations, and
+(b)a declaration that the person believes the information provided to be complete and correct.
+(6)An officer of Revenue and Customs may require a person to—
+(a)provide such information as the officer considers necessary in order to determine whether the person is required to register under this paragraph, and
+(b)provide that information within such period as the officer considers reasonable.
+(7)If it appears to an officer of Revenue and Customs that a person has triggered registration under this paragraph and has failed to register before the end of the period of 30 days in sub-paragraph (4), the officer may register the person.
+(8)If an officer of Revenue and Customs registers a person under sub-paragraph (7), the officer must notify the person of this.
+(9)The Commissioners may specify in a notice published by them the way in which a person is to register, provide information and make a declaration under this paragraph.
+(10)For the purposes of this Part of this Act—
+(a)a person is a “registered person” if the person—
+(i)has registered, or been registered by an officer of Revenue and Customs, under this paragraph, and
+(ii)has not been deregistered (see paragraph 3);
+(b)a person is a “registrable person” if the person—
+(i)has triggered registration under this paragraph, but
+(ii)has not registered, or been registered by an officer of Revenue and Customs, under this paragraph;
+(c)references to registering or a registration are to registering or a registration under this paragraph.
+DeregistrationU.K.
+3(1)An officer of Revenue and Customs must deregister a registered person if the officer is satisfied that—
+(a)the person is not required to be registered and either—
+(i)the person has requested that they be deregistered, or
+(ii)the person has not been required to be registered at any time in the period of 12 months ending with the day on which the officer of Revenue and Customs deregisters the person, or
+(b)the person was not required to be registered on the day on which they registered and has not been required to be registered since,
+but this is subject to sub-paragraph (2).
+(2)An officer of Revenue and Customs may decide not to deregister a person if—
+(a)there are outstanding amounts of CBAM, or amounts recoverable on the basis that they are amounts of CBAM, due from the person,
+(b)there are one or more outstanding returns under Part 3 of this Schedule due from the person, or
+(c)the officer considers that the person will be required to be registered before the end of the period of 12 months beginning with the day on which the person would otherwise be deregistered.
+(3)For the purposes of this paragraph, a person is “required to be registered” on a day if—
+(a)the person triggers registration on the day, or
+(b)on the first day of the month in which the day falls, the person triggered registration under paragraph 2(2)(a).
+(4)An officer of Revenue and Customs deregisters a person by issuing the person with a notice of deregistration.
+(5)A notice of deregistration must specify when the de-registration takes effect (which may be in the past).
+(6)A request under sub-paragraph (1)(a) must be made in the way specified in a notice published by the Commissioners.
+(7)If a person has requested under sub-paragraph (1)(a) that they be deregistered and the request is rejected, an officer of Revenue and Customs must issue the person with a notice—
+(a)informing them that their request has been rejected, and
+(b)giving reasons.
+Notification of changed or incorrect informationU.K.
+4(1)A registered person must notify HMRC if—
+(a)information they provided under paragraph 2 changes, or
+(b)they discover that such provided information is incorrect.
+(2)The notification must be given before the end of the period of 30 days beginning with the day on which the information changed or they discovered that the information is incorrect.
+(3)The notification must be given in the way specified in a notice published by the Commissioners.
+Value of CBAM goodsU.K.
+5The Commissioners may by regulations make provision about determining the value of CBAM goods for the purposes of this Part of this Schedule.
+Part 3U.K.Payment, accounting periods and returns
+Payment and accounting periodsU.K.
+6(1)A registered or registrable person must account for and pay CBAM in respect of each accounting period.
+(2)The accounting periods are the periods of 3 months ending at the end of March, June, September and December.
+(3)Payment in respect of an accounting period must be made before the end of the last working day of the second month after the end of the accounting period.
+(4)Payment must be made by a method specified in a notice published by the Commissioners.
+ReturnsU.K.
+7(1)A registered or registrable person must make a return to HMRC for each accounting period.
+(2)A return under this paragraph must be made before the end of the last working day of the second month after the end of the accounting period to which it relates.
+(3)The Commissioners may by regulations make provision about what is to be included in a return under this paragraph.
+(4)The Commissioners may specify in a notice published by them—
+(a)the way in which the return is to be made;
+(b)that a digital facility provided by HMRC must be used to calculate the amount of CBAM shown in the return, subject to such exceptions as may be specified in the notice.
+8(1)A person who has made a return under paragraph 7 may amend the return by notice to HMRC (and may further amend the return by further notice to HMRC) only in order to correct an error.
+(2)No amendment may be made to replace information on the emissions embodied in CBAM goods determined using default values set under paragraph 11 with such information determined in accordance with regulations under paragraph 10.
+(3)The Commissioners may specify in a notice published by them—
+(a)the way in which an amendment is to be made, and
+(b)by when it must be made.
+Power to change accounting periods and deadlinesU.K.
+9The Commissioners may by regulations amend—
+(a)paragraph 6(2) or (3) or 7(2);
+(b)item 5 in the table in paragraph 2(1) of Schedule 24 to FA 2021 (which relates to penalties for a failure to make returns under paragraph 7 of this Schedule) in consequence of an amendment under this paragraph of paragraph 6(2).
+Part 4U.K.Determination and evidence of emissions and carbon price relief
+10(1)The Commissioners may by regulations make provision about how emissions embodied in CBAM goods are to be determined and evidenced.U.K.
+(2)Regulations under this paragraph may (among other things)—
+(a)make different provision in relation to different goods, sectors, places, circumstances or activities;
+(b)make provision for methods of calculating figures;
+(c)make provision about measurement, sampling or analysis;
+(d)make provision by reference to information or technical standards published by a third party (including by an international organisation);
+(e)make provision about the treatment of gaps in data or measurement;
+(f)provide for the use of estimates or standard values or factors (including how estimates are to be made or standard values or factors are to be determined);
+(g)make provision about the treatment of anything used or done in the course of activities in the course of which the emissions were emitted;
+(h)make provision requiring information to be verified by a specified person or body.
+11(1)The Treasury may by notice set default values that may be used for determining the emissions embodied in CBAM goods.U.K.
+(2)Default values set under this paragraph may (among other things)—
+(a)vary depending on where the emissions embodied in a CBAM good were emitted;
+(b)be in respect of any portion of the emissions embodied in a CBAM good.
+(3)A default value may be set at a level that ensures that there would not be an advantage to any person liable to CBAM in using the value instead of determining the emissions embodied in a CBAM good in accordance with regulations under paragraph 10.
+(4)In sub-paragraph (3), “advantage” includes an advantage arising from—
+(a)the emissions embodied in a CBAM good being lower if determined using default values;
+(b)not bearing the cost of determining or verifying emissions in accordance with regulations under paragraph 10.
+12(1)The Commissioners may by regulations make provision about how relief under section 150 (carbon price relief) is to be determined and evidenced.U.K.
+(2)Regulations under sub-paragraph (1) may (among other things)—
+(a)make provision for methods of calculating the relief in accordance with principles for determining the amount of relief set out in regulations made under section 150;
+(b)make provision otherwise supplementing regulations made under section 150 about how relief under that section is to be determined;
+(c)make different provision in relation to different goods, sectors, places, circumstances or activities or by reference to where a carbon price is payable;
+(d)make provision requiring information to be verified by a specified person or body or by reference to information provided by a third party;
+(e)make provision about currency conversion.
+Part 5U.K.Measurement of weight
+13(1)The Commissioners may by regulations make provision about the measurement of weight for the purposes of CBAM.U.K.
+(2)Regulations under this paragraph may (among other things) include provision about—
+(a)how weight is to be measured;
+(b)the time at which weight is to be measured;
+(c)how weight is to be evidenced;
+(d)agreements between HMRC and particular persons about how weight is to be measured or evidenced, including provision for HMRC to disregard the terms of an agreement in circumstances set out in the regulations;
+(e)an officer of Revenue and Customs making their own assessment or best judgement of weight in relation to CBAM goods and substituting that assessment or judgement for the assessment or judgement of any other person;
+(f)an officer of Revenue and Customs inspecting or weighing CBAM goods or samples;
+(g)the assessment of weight by an officer of Revenue and Customs being based on estimates or assumptions.
+Part 6U.K.Records
+General requirementsU.K.
+14(1)The Commissioners may by regulations require specified persons—
+(a)to keep, for purposes connected with CBAM, records of specified matters, and
+(b)to preserve records for a specified period.
+(2)Regulations under sub-paragraph (1) may provide that a duty to preserve records under the regulations may be discharged by preserving them, or the information contained in them, in any form and by any means, subject to any conditions or exceptions specified in the regulations.
+(3)The period specified in regulations under sub-paragraph (1) may not exceed—
+(a)in a case where the records relate to an accounting period, 6 years beginning with the day after the end of the accounting period to which the records relate, or
+(b)in any other case, 6 years beginning with the day on which the records are created.
+DirectionsU.K.
+15(1)An officer of Revenue and Customs may direct a registered or registrable person—
+(a)to keep such records as are specified in the direction;
+(b)to preserve those records for a specified period.
+(2)The officer may not give a direction under sub-paragraph (1) unless they have reasonable grounds for believing that the records specified in the direction might assist in identifying CBAM goods in respect of which CBAM might not be paid.
+(3)A direction under sub-paragraph (1)—
+(a)must be in writing,
+(b)must specify the consequences under Part 11 of this Schedule of a failure to comply with a requirement imposed by the direction, and
+(c)may be revoked or replaced by a further direction.
+(4)The period specified in a direction under sub-paragraph (1)(b) may not exceed 6 years.
+Part 7U.K.Artificial separation of business activities
+16(1)This paragraph applies for the purpose of preventing the maintenance or creation of any artificial separation of business activities carried on by two or more persons resulting in an avoidance of CBAM.U.K.
+(2)An officer of Revenue and Customs may make a direction naming any person if they are satisfied that—
+(a)the person is importing CBAM goods into the United Kingdom in the course of a business,
+(b)the activities in the course of which the person does so form only part of certain activities, the other activities being carried on concurrently or previously (or both) by one or more other persons,
+(c)the activities carried on by those persons have been, or are, artificially separated, having regard to whether the persons carrying on those activities are connected within the meaning of section 1122 of CTA 2010 (“connected” persons), and
+(d)if all the activities of those persons were taken into account, a single person carrying on that business would at the time of the direction be required to register under paragraph 2.
+(3)The effect of a direction under sub-paragraph (2) is that for the purposes of this Part of this Act—
+(a)the persons named in the direction are to be treated as a single taxable person (“the taxable person”) carrying on the activities of a business described in the direction,
+(b)the taxable person is deemed to have registered on the date of the direction or on such earlier or later date as may be specified in the direction—
+(i)in the name of one of the persons named in the direction nominated jointly by them in writing to the officer of Revenue and Customs who made the direction within the period of 14 days beginning with the date of the direction, or
+(ii)if no such name is nominated, in such name as may be determined by the officer;
+(c)the importation of CBAM goods by, or on behalf of, a person named in the direction in the course of the activities carried on by the taxable person is to be treated as the importation of CBAM goods in the course of a business by the taxable person;
+(d)each person named in the direction is jointly and severally liable for any CBAM due from the taxable person;
+(e)any failure by the taxable person to comply with any requirement imposed by or under this Part of this Act is to be treated as a failure by each person named in the direction severally.
+(4)The earliest date a direction may specify under sub-paragraph (3)(b) is the date on which the persons named in the direction would, if they were treated as a single taxable person on that date, have first triggered registration under paragraph 2.
+(5)Sub-paragraph (6) applies where, after a direction is made under sub-paragraph (2), it appears to an officer of Revenue and Customs that—
+(a)a person who was not named in the direction is importing CBAM goods in the course of activities which should be regarded as part of the activities of the business described in the direction, or
+(b)a person who is named in the direction should no longer be named in the direction.
+(6)The officer of Revenue and Customs may by direction modify the earlier direction so that—
+(a)it names the person mentioned in sub-paragraph (5)(a), or
+(b)the person mentioned in sub-paragraph (5)(b) is removed from the earlier direction (as the case may be).
+(7)A modification under sub-paragraph (6)(a) comes into force on—
+(a)the date on which the person began to import CBAM goods in the course of activities which should be regarded as part of the activities of the business described in the direction, or
+(b)if later, the date on which the single taxable person referred to in the earlier direction is deemed to have registered.
+(8)A modification under sub-paragraph (6)(b) comes into force on the date specified in the direction.
+(9)A direction under sub-paragraph (2), and any determination under sub-paragraph (3)(b)(ii), must be given to each person named in the direction.
+(10)A direction under sub-paragraph (6)(a) must be given to each person named in the earlier direction as modified.
+(11)A direction under sub-paragraph (6)(b) must be given to—
+(a)each person named in the earlier direction as modified, and
+(b)the person being removed from the earlier direction.
+(12)A registered person is to be treated as no longer being a registered person in their own right from such time as they begin to form part of a single taxable person under a direction under this paragraph.
+Part 8U.K.Death, incapacity and insolvency
+17(1)This paragraph applies where a registered person, who is an individual, is deceased or incapacitated and another person (P) carries on the business to which the registered person’s registration relates.U.K.
+(2)Where this paragraph applies, P must notify HMRC of their carrying on of the business before the end of the period of 21 days beginning with the day on which they began to carry on the business.
+(3)The notification must—
+(a)be accompanied by evidence of P’s authority to carry on the business;
+(b)include information, and be accompanied by evidence about, the death or incapacitation of the registered person.
+(4)The Commissioners may specify in a notice published by them—
+(a)the particular items of information to be included in, and evidence to accompany, the notification;
+(b)the way in which the notification is to be given.
+(5)Where this paragraph applies, HMRC may treat P as if they were the registered person for the purposes of CBAM for a period of up to 6 months beginning with the day on which the period under sub-paragraph (2) ends.
+(6)An officer of Revenue and Customs may extend the period under sub-paragraph (5) as they think fit by notice in writing to P.
+18(1)This paragraph applies where a registered person is subject to an insolvency procedure and a person (P) acts as an insolvency office holder in relation to that registered person.U.K.
+(2)Where this paragraph applies, HMRC may treat P as if they were the registered person for the purposes of CBAM.
+(3)Where P is treated under sub-paragraph (2) as if they were the registered person—
+(a)any liability of the registered person to pay CBAM which arose at a time before the date on which the insolvency procedure began continues to be payable by the registered person;
+(b)any liability of the registered person to pay CBAM which arises at a time on or after the date on which the insolvency procedure began is to be regarded as an expense of that procedure (unless the procedure is within sub-paragraph (4)(b)(vii)).
+(4)In this paragraph—
+(a)“insolvency office holder” means—
+(i)an administrative receiver;
+(ii)an administrator;
+(iii)a liquidator;
+(iv)a receiver appointed by the courts or by a mortgagee;
+(v)a trustee in bankruptcy;
+(vi)a trustee (or interim trustee) in the sequestration of an estate;
+(vii)a person acting in an equivalent capacity under the law of a country or territory outside the United Kingdom;
+(b)“insolvency procedure” means—
+(i)administration;
+(ii)administrative receivership;
+(iii)bankruptcy;
+(iv)receivership;
+(v)sequestration;
+(vi)winding up;
+(vii)an equivalent procedure under the law of a country or territory outside the United Kingdom.
+Part 9U.K.Recovery
+Recovery as a debt dueU.K.
+19CBAM is recoverable as a debt due to the Crown.
+Assessments of amounts of CBAMU.K.
+20(1)Sub-paragraph (2) applies where it appears to an officer of Revenue and Customs that—
+(a)any period is an accounting period by reference to which a registered or registrable person is liable to CBAM,
+(b)an amount of CBAM for which the person is liable to account by reference to that period has become due, and
+(c)there has been a relevant default by the person (see sub-paragraph (3)).
+(2)The officer of Revenue and Customs—
+(a)may—
+(i)in a case where the amount of CBAM due from the person for that period cannot be ascertained, assess the amount due from the person for that period to the best of their judgement;
+(ii)in any other case, assess the amount due from the person for that period, and
+(b)where such an assessment is made, must notify the person of that amount.
+(3)The following are “relevant defaults”—
+(a)a failure to comply with a requirement of paragraph 2 (registration) or paragraph 4 (updating or correcting registration information);
+(b)the provision, in purported compliance with paragraph 2 or 4, of incomplete or incorrect information;
+(c)a failure to make a return required by paragraph 7;
+(d)a failure to keep documents, or provide facilities, necessary to verify returns required by paragraph 7;
+(e)the submitting, in purported compliance with paragraph 7, of an incomplete or incorrect return;
+(f)a failure to comply with a requirement imposed under paragraph 14 or by paragraph 15 (keeping and preserving records);
+(g)a failure to provide HMRC with complete or accurate information in complying with any requirement imposed by or under this Part of this Act;
+(h)an unreasonable delay in complying with a requirement, where the failure to comply would be a default within any of paragraphs (a) to (g).
+21(1)Sub-paragraph (2) applies where—
+(a)an officer of Revenue and Customs has made an assessment under paragraph 20(2) for an accounting period as a result of a person’s failure to submit a return for that period,
+(b)the CBAM assessed has been paid but no proper return has been made for that period, and
+(c)as a result of a failure to make a return for a later accounting period, an officer of Revenue and Customs makes another assessment (“the later assessment”) under paragraph 20(2) in relation to the later period.
+(2)The officer of Revenue and Customs may, if the officer considers it appropriate in light of the absence of a proper return for the earlier period, specify in the later assessment an amount of CBAM due that is greater than the amount that they would have considered to be appropriate had they had regard only to the later period.
+Supplementary assessmentsU.K.
+22(1)Sub-paragraph (2) applies where—
+(a)an assessment has been notified to a person under paragraph 20(2), and
+(b)it appears to an officer of Revenue and Customs that the amount which ought to have been assessed as due exceeds the amount that has already been assessed.
+(2)The officer of Revenue and Customs—
+(a)may make a supplementary assessment of the amount of CBAM due from the person to the best of their judgement, and
+(b)where such an assessment is made, must notify the person of that amount.
+Further provision about assessments under paragraphs 20 and 22U.K.
+23(1)An amount assessed and notified to a person under paragraph 20 or 22 is recoverable on the basis that it is an amount of CBAM due from that person.
+(2)But sub-paragraph (1) does not apply if, or to the extent that, the assessment has been withdrawn or reduced.
+Time limits for assessmentsU.K.
+24(1)An assessment under paragraph 20 or 22 may not be made after the relevant time.
+(2)Except in a case within sub-paragraph (3) the relevant time is the earlier of—
+(a)the end of the period of 4 years from the end of the accounting period to which the assessment relates, or
+(b)the end of the period of 1 year beginning with the day on which evidence of facts, sufficient in the opinion of the officer of Revenue and Customs making the assessment to justify making it, comes to the knowledge of any officer of Revenue and Customs.
+(3)Where an assessment of an amount due from a person is made in a case involving loss of CBAM—
+(a)brought about deliberately by the person, or
+(b)attributable to a failure by the person to comply with a requirement of paragraph 2 or 4,
+the relevant time is the end of the period of 20 years from the end of the accounting period to which the assessment relates.
+(4)In sub-paragraph (3) the reference to a loss brought about by a person includes a reference to a loss brought about by another person acting on behalf of that person.
+Part 10U.K.Repayments
+Repayments of overpaid taxU.K.
+25(1)This paragraph applies where a person (P) has paid an amount to the Commissioners by way of CBAM which was not tax due.
+(2)The Commissioners are liable, on the making of a claim by P, to repay the amount.
+(3)A claim under this paragraph must be made in the way, and be supported by the information, specified in a notice published by the Commissioners.
+(4)Except as provided by this paragraph, the Commissioners are not liable to repay any amount paid by way of CBAM by reason of the fact that it was not tax due.
+(5)This paragraph is subject to paragraph 26.
+Supplementary provision about repayment etcU.K.
+26(1)The Commissioners are not liable, on any claim for a repayment of CBAM, to repay any amount paid more than 3 years before the making of the claim.
+(2)It is a defence to any claim for repayment of an amount of CBAM that the repayment of that amount would unjustly enrich the claimant.
+27(1)This paragraph applies where—
+(a)an amount has been paid by way of CBAM which (apart from paragraph 26(2)) would fall to be repaid to a person (P), and
+(b)the whole or a part of the cost of the payment of that amount to the Commissioners has, for practical purposes, been borne by a person other than P.
+(2)Where loss or damage has been, or may be, incurred by P as a result of mistaken assumptions made in P’s case about the operation of any provisions relating to CBAM, that loss or damage is to be disregarded, except to the extent of the quantified amount, in the making of a relevant determination.
+(3)In sub-paragraph (2)—
+(a)“the quantified amount” means the amount (if any) which is shown by P to constitute the amount that would appropriately compensate P for loss or damage shown by P to have resulted, for any business carried on by P, from the making of the mistaken assumptions;
+(b)a “relevant determination” means a determination for the purposes of paragraph 26(2) as to—
+(i)whether or to what extent the repayment of an amount would enrich P, or
+(ii)whether or to what extent any enrichment of P would be unjust.
+(4)The reference in sub-paragraph (2) to provisions relating to CBAM is a reference to—
+(a)any provision made by or under any enactment which relates to the tax or to any matter connected with it, or
+(b)any notice published by the Commissioners under or for the purposes of any such provision.
+Reimbursement arrangementsU.K.
+28(1)The Commissioners may by regulations provide for reimbursement arrangements to be disregarded for the purposes of paragraph 26(2) except where the arrangements—
+(a)contain such provision as may be required by the regulations, and
+(b)are supported by such undertakings to comply with the provisions of the arrangements as may be required by the regulations to be given to the Commissioners.
+(2)In this paragraph “reimbursement arrangements” means arrangements for the purposes of a claim to a repayment of CBAM which—
+(a)are made by a person for the purpose of securing that the person is not unjustly enriched by the repayment of any amount in pursuance of the claim, and
+(b)provide for the reimbursement of a person who has for practical purposes borne the whole or any part of the cost of the original payment of that amount to the Commissioners.
+(3)Regulations under this paragraph may (among other things) make provision requiring reimbursement arrangements to contain provision—
+(a)requiring a reimbursement for which the arrangements provide to be made within a specified period after the repayment to which it relates;
+(b)for the repayment of amounts to the Commissioners where those amounts are not reimbursed in accordance with the arrangements;
+(c)requiring interest paid by the Commissioners on any amount repaid by them to be treated in the same way as that amount for the purposes of any requirement under the arrangements to make reimbursement or to repay the Commissioners;
+(d)requiring records of a specified description relating to the arrangements to be kept and produced to the Commissioners, or to an officer of Revenue and Customs;
+(e)imposing obligations on specified persons for the purposes of provision made under paragraphs (a) to (d).
+(4)Regulations under this paragraph may—
+(a)make provision about the form, manner and timing of undertakings given to the Commissioners in accordance with the regulations;
+(b)provide for those matters to be determined by the Commissioners in accordance with the regulations.
+Assessment for excessive repaymentU.K.
+29(1)Sub-paragraph (3) applies where—
+(a)an amount has been paid at any time to a person by way of a repayment of CBAM, and
+(b)the amount paid exceeded the amount which the Commissioners were liable at that time to repay to that person.
+(2)Sub-paragraph (3) also applies where a person is liable to pay any amount to the Commissioners in pursuance of an obligation imposed by regulations under paragraph 28(3)(b), (c) or (e).
+(3)The Commissioners may—
+(a)to the best of their judgement, assess the amount of the excess (in a case within sub-paragraph (1)) or the amount due (in a case within sub-paragraph (2)), and
+(b)where such an assessment is made, notify the amount to the person.
+(4)Subject to sub-paragraph (5), where—
+(a)an assessment is made on any person under this paragraph in respect of a repayment of CBAM, and
+(b)the Commissioners have power under Part 9 of this Schedule to make an assessment on that person as to an amount of CBAM due from that person,
+the assessments may be combined and notified to the person as one assessment.
+(5)A notice of a combined assessment under sub-paragraph (4) must separately identify the amount being assessed in respect of repayments of CBAM.
+Supplementary assessmentsU.K.
+30(1)Sub-paragraph (2) applies where—
+(a)an assessment has been notified to a person under paragraph 29, and
+(b)it appears to an officer of Revenue and Customs that the amount which ought to have been assessed as due exceeds the amount that has already been assessed.
+(2)The officer of Revenue and Customs may—
+(a)on or before the last day on which the assessment under paragraph 29 could have been made (see paragraph 32), make a supplementary assessment of the amount of CBAM due from the person, and
+(b)where such a supplementary assessment is made, notify the amount to that person.
+Further provision about assessments under paragraphs 29 and 30U.K.
+31(1)Where an amount has been assessed and notified to a person under paragraph 29 or 30, it is recoverable on the basis that it is an amount of CBAM due from that person.
+(2)But sub-paragraph (1) does not have effect if, or to the extent that, the assessment has been withdrawn or reduced.
+Time limit for assessmentsU.K.
+32An assessment under paragraph 29 or 30 may not be made more than 2 years after evidence of facts, sufficient in the opinion of the officer of Revenue and Customs making the assessment to justify making it, comes to the knowledge of any officer of Revenue and Customs.
+Part 11U.K.Penalties
+Penalties payable in connection with this ScheduleU.K.
+33This Part of this Schedule provides for penalties payable in connection with this Schedule, as follows—
+(a)paragraph 34 amends Schedule 41 to FA 2008 to impose a penalty for a failure to register with, or provide information to, HMRC under paragraph 2 of this Schedule;
+(b)paragraph 35 amends Schedule 24 to FA 2021 to impose a penalty for a failure to make a return under paragraph 7 of this Schedule;
+(c)paragraph 36 amends Schedule 24 to FA 2007 to impose a penalty for errors in returns under paragraph 7 of this Schedule and in other documents;
+(d)paragraph 37 amends Schedule 26 to FA 2021 to impose a penalty for a failure to pay CBAM;
+(e)paragraph 38 imposes a penalty for failing to make a notification under—
+(i)paragraph 4 (changed or incorrect registration information);
+(ii)Part 8 (death, incapacity or insolvency);
+(f)paragraph 39 imposes a penalty for failing to keep or preserve records under Part 6 of this Schedule or regulations under that Part.
+34(1)Schedule 41 to FA 2008 (penalties: failure to notify and certain VAT and excise wrongdoing) is amended in accordance with sub-paragraphs (2) and (3).
+(2)In the table in paragraph 1 (failure to notify etc), after the entry related to climate change levy, insert—
+“Carbon border adjustment mechanism
+Obligation of a person under paragraph 2 of Schedule 17 to FA 2026.”
+(3)In paragraph 7, after sub-paragraph (9) insert—
+“(10)In the case of a relevant obligation under paragraph 2 of Schedule 17 to FA 2026 (which relates to the carbon border adjustment mechanism), the potential lost revenue is the amount of the tax (if any) for which P is liable for the period—
+(a)beginning with the end of the period specified in paragraph 2(4) of Schedule 17 of FA 2026, and
+(b)ending with the day on which P registers under paragraph 2 of Schedule 17 to FA 2026 or HMRC otherwise becomes fully aware of P’s obligation to register.”
+(4)No failure to comply with an obligation under paragraph 2 of this Schedule “involves an offshore matter” for the purposes of Schedule 41 to FA 2008 (see paragraph 6A of that Schedule).
+(5)Paragraph 16(1) of Schedule 41 to FA 2008 (penalties: failure to notify etc) has effect in its application to CBAM as if for “shall” there were substituted “may”.
+35In Schedule 24 to FA 2021 (penalties for failure to make returns etc), in the Table in paragraph 2(1), after item 5 (inserted by paragraph 1(3) of Schedule 15 to this Act) insert—
+“6
+Carbon border adjustment mechanism
+-
+Return under paragraph 7 of Schedule 17 to FA 2026
+-”.
+36(1)In the table in paragraph 1 of Schedule 24 to FA 2007 (penalties for errors), after the entry relating to climate change levy, insert—
+“Carbon border adjustment mechanism
+Return under paragraph 7 of Schedule 17 to FA 2026.”
+(2)No inaccuracy in a return under paragraph 7 of this Schedule “involves an offshore matter” for the purposes of Schedule 24 to FA 2007 (see paragraph 4A of that Schedule).
+(3)Paragraph 13(1) of Schedule 24 to FA 2007 (penalties for errors) has effect in its application to CBAM as if for “shall” there were substituted “may”.
+37In Schedule 26 to FA 2021 (penalties for failure to pay tax), in paragraph 1(1), after the table relating to value added tax insert—
+“Carbon border adjustment mechanism
+1
+Amount of CBAM payable under paragraph 6 of Schedule 17 to FA 2026 (except an amount within item 2, 3 or 4)
+The date determined by paragraph 6 of Schedule 17 to FA 2026 as the date by which the amount must be paid
+2
+Amount of CBAM shown in an assessment made by HMRC in default of a return (see paragraph 3)
+The date by which the amount would have been required to be paid if it had been shown in the return in question
+3
+Amount of CBAM shown in an amendment of a return
+The date falling 30 days after the date on which the amendment is made
+4
+Amount of CBAM shown in an assessment made by HMRC otherwise than in default of a return (see paragraph 3)
+The date falling 30 days after the date on which the assessment is made”.
+38(1)A person (P) is liable to a penalty if P fails to comply with a requirement to make a notification under—
+(a)paragraph 4 (changed or incorrect registration information);
+(b)paragraph 17 (death or incapacity).
+(2)The penalty is—
+(a)a fixed penalty of £500, and
+(b)a daily penalty of £40 for each day on which P continues to fail to make the required notification after the last day on which P was permitted to do so.
+39A person (P) is liable to a penalty of £500 if P fails to comply with a requirement to keep or preserve a record under Part 6 of this Schedule or regulations under that Part.
+40(1)But a penalty is not payable under paragraph 38 or 39 if—
+(a)P satisfies an officer of Revenue and Customs or, on appeal, the tribunal that there is a reasonable excuse for the failure, or
+(b)the penalty would subject P to double jeopardy.
+(2)For the purpose of sub-paragraph (1)(a)—
+(a)an insufficiency of funds is not a reasonable excuse,
+(b)where P relies on any other person to do anything, that is not a reasonable excuse unless P took reasonable care to avoid the failure, and
+(c)where P had a reasonable excuse for the failure but the excuse has ceased, P is to be treated as having continued to have the excuse only if the failure is remedied without unreasonable delay after the excuse ceased.
+(3)For the purpose of sub-paragraph (1)(b), the penalty would subject P to double jeopardy if, by reason of the conduct constituting the failure, P has been—
+(a)convicted of an offence, or
+(b)assessed to a penalty other than under paragraph 38 or 39.
+Penalties under paragraphs 38 or 39: administration and supplementary provisionU.K.
+41The following paragraphs of this Part of this Schedule apply in relation to a penalty under paragraph 38 or 39.
+42(1)Where a person is liable to a penalty, an officer of Revenue and Customs—
+(a)may assess the amount of the penalty, and
+(b)where such an assessment is made, must notify the person of the amount.
+(2)Sub-paragraph (3) applies where—
+(a)an officer of Revenue and Customs has made an assessment of a penalty, and
+(b)it appears to the officer that the amount which ought to have been assessed exceeds the amount that has already been assessed.
+(3)The officer may—
+(a)may make a supplementary assessment of the amount of the penalty, and
+(b)where such an assessment is made, must notify the person of that amount.
+(4)An amount assessed and notified to a person under sub-paragraph (1) or (3) is recoverable on the basis that it is an amount of CBAM due from that person.
+(5)But sub-paragraph (4) does not apply if, or to the extent that, the assessment has been withdrawn or reduced.
+(6)The fact that conduct giving rise to a penalty has ended before an assessment is made under sub-paragraph (1) or (3) does not affect the power of an officer of Revenue and Customs to make such an assessment.
+43(1)Sub-paragraph (2) applies where—
+(a)an officer of Revenue and Customs assesses a person to an amount of penalty under paragraph 42(1) or (3), and
+(b)the person is also assessed under Part 9 of this Schedule for an accounting period to which the conduct attracting the penalty relates.
+(2)The assessments under paragraph 42(1) or (3) and under Part 9 of this Schedule may be combined and notified to the person as one assessment.
+(3)A notice of a combined assessment under sub-paragraph (2) must separately identify the penalty being assessed.
+44(1)Where an assessment is made under paragraph 42(1) or (3) to an amount of daily penalty under paragraph 38(2)(b), the notification of that amount must specify a date, not later than the day on which the notification is given, to which the amount is assessed.
+(2)If the failure attracting the penalty continues after that date, a further assessment or further assessments may be made under paragraph 42(1) or (3) in respect of the continued failure.
+(3)Sub-paragraph (4) applies where—
+(a)a notification of an amount of a penalty specifies a date under sub-paragraph (1), and
+(b)the failure in question is remedied within such period as may for the purpose of this sub-paragraph be specified in the notification.
+(4)The failure is to be deemed to be remedied on the date specified under sub-paragraph (1).
+45(1)An officer of Revenue and Customs assessing a penalty or, on appeal, the tribunal may reduce the penalty to such amount (including nil) as they think proper.
+(2)On an appeal relating to a penalty reduced by an officer of Revenue and Customs under sub-paragraph (1), the tribunal may cancel the whole or any part of the officer’s reduction.
+46(1)An assessment under paragraph 42(1) or (3) may not be made after the end of the relevant period.
+(2)Except in a case within sub-paragraph (3), the relevant period is the period of 4 years beginning with the day on which the failure attracting the penalty began.
+(3)Where an assessment under paragraph 42(1) or (3) is made in a case involving loss of CBAM—
+(a)brought about deliberately by the person liable to the penalty, or
+(b)attributable to a failure by that person to comply with a requirement under Part 2 of this Schedule,
+the relevant period is the period of 20 years beginning with the day on which the failure attracting the penalty began.
+(4)In sub-paragraph (3) the reference to a loss brought about by a person includes a reference to a loss brought about by another person acting on behalf of that person.
+Penalties under paragraphs 38 and 39: power to amend in light of inflationU.K.
+47The Treasury may by regulations amend paragraph 38 or 39 so as to substitute for an amount for the time being specified there another amount that takes account of inflation.
+Part 12U.K.Reviews and appeals
+Appealable decisionsU.K.
+48(1)A person may appeal against a decision of the Commissioners or an officer of Revenue and Customs in respect of any of the following matters—
+(a)where a person has made a return under paragraph 7 (returns) in respect of an accounting period—
+(i)whether or not the person is liable to pay an amount of CBAM for that period;
+(ii)the amount of CBAM payable by the person for that period;
+(b)the registration, or de-registration, of a person under Part 2 of this Schedule;
+(c)whether to treat a person as if they were a registered person for the purposes of CBAM under paragraph 17(5) or 18(2);
+(d)whether to extend such treatment under paragraph 17(6);
+(e)whether the Commissioners are liable to repay an amount to a person under paragraph 25(2) or the amount of such a repayment;
+(f)whether or not the repayment of an amount under paragraph 25(2) is excessive (see paragraph 29);
+(g)the amount that a person is liable to pay the Commissioners to comply with an obligation under paragraph 28(3)(b), (c) or (e);
+(h)whether a person is liable to a penalty under paragraph 38 or 39 or the amount of such a penalty;
+(i)the period by reference to which payments of CBAM are to be made.
+(2)A person may also appeal against the following directions of the Commissioners or an officer of Revenue and Customs—
+(a)a direction under paragraph 15;
+(b)a direction under paragraph 16(2) or (6).
+(3)In sub-paragraph (1), “amount of CBAM” includes an amount recoverable on the basis that it is an amount of CBAM.
+(4)In the following provisions of this Part of this Schedule—
+(a)“decision” means a decision, determination or direction within sub-paragraph (1) or (2);
+(b)references to appealing against a decision are to appealing against the decision under paragraph 48
+Offer of a review to a person notified of a decisionU.K.
+49(1)HMRC must offer a person (P) who has been notified of a decision that they may appeal against a review of the decision.
+(2)The offer of a review must be made by notice given to P at the same time as the decision is notified to P.
+(3)P has a period of 30 days, beginning with the date of the document notifying P of the decision, to accept the offer (if P chooses to) by notifying HMRC.
+(4)The offer is to be treated as withdrawn if P has appealed against the decision.
+(5)This paragraph does not apply in relation to a decision consisting of a conclusion of a review.
+Right of other persons to require reviewU.K.
+50(1)A person, other than P, who has the right to appeal against a decision may require a review of the decision by notifying HMRC.
+(2)But that right to require a review ceases if the person appeals against the decision.
+(3)A notification under sub-paragraph (1) must be made within the period of 30 days beginning with the day on which the person becomes aware of the decision.
+Duty to reviewU.K.
+51(1)An officer of Revenue and Customs must review a decision if—
+(a)P has notified HMRC under paragraph 49 accepting the offer of a review, or
+(b)a person other than P has notified HMRC under paragraph 50 that they require a review.
+(2)But the officer must not review the decision if any person who has the right to appeal against the decision has done so before HMRC has been notified as described in sub-paragraph (1).
+Extension of time to accept or require reviewU.K.
+52(1)An officer of Revenue and Customs may by notice extend (or further extend) the period mentioned in paragraph 49(3) or 50(3).
+(2)The period is extended to the end of the period of 30 days beginning with—
+(a)the date of the notice, or
+(b)any other date set out in the notice or a further notice.
+Review out of timeU.K.
+53(1)This paragraph applies if—
+(a)P has not accepted the offer of a review of a decision within the period mentioned in paragraph 49(3) (including as extended under paragraph 52) and makes a request to HMRC in writing for a review out of time, or
+(b)a person other than P who may require a review of a decision has not done so within the period mentioned in paragraph 50(3) (including as extended under paragraph 52) and makes a request to HMRC in writing for a review out of time.
+(2)An officer of Revenue and Customs must review the decision if the officer is satisfied that the person—
+(a)had a reasonable excuse for not accepting the offer of a review or requiring the review within the applicable period, and
+(b)made the request without unreasonable delay after the excuse had ceased to apply.
+(3)But the officer must not review the decision if any person who has the right to appeal against the decision has done so before the request was made.
+The reviewU.K.
+54(1)This paragraph applies if an officer of Revenue and Customs is required to undertake a review under paragraph 51 or 53.
+(2)The nature and extent of the review are to be such as appear appropriate to the officer in the circumstances.
+(3)For the purposes of sub-paragraph (2), the officer must have regard to steps taken before the beginning of the review by—
+(a)the decision-maker in reaching the decision, and
+(b)any person in seeking to resolve disagreement about the decision.
+(4)The review must take account of any representations made by the person requiring the review, at a stage which gives the officer a reasonable opportunity to consider them.
+(5)The review may conclude that the decision is to be—
+(a)upheld,
+(b)varied, or
+(c)cancelled.
+(6)The officer must give the person who required the review notice of the conclusions of the review and their reasoning before the end of—
+(a)the period of 45 days beginning with the relevant date, or
+(b)such other period as the officer and the person who required the review may agree.
+(7)In sub-paragraph (6), “the relevant date” means—
+(a)in a case falling within paragraph 49, the date HMRC received the person’s notification accepting the offer of a review,
+(b)in a case falling within paragraph 50, the date HMRC received notification from the person requiring a review, or
+(c)in a case falling within paragraph 53, the date on which the officer decided they were under a duty to undertake the review.
+(8)Where an officer of Revenue and Customs is required to undertake a review but does not give notice of the conclusions within the period specified in sub-paragraph (6), the review is to be treated as having concluded that the decision is upheld.
+(9)If sub-paragraph (8) applies, the officer must notify the person who required the review of the conclusion which the review is treated as having reached.
+The review: penalties under Schedule 24 to FA 2021U.K.
+55(1)This paragraph applies if HMRC are required, by virtue of paragraph 23(1) of Schedule 24 to FA 2021, to undertake a review under paragraph 51 or 53 of a penalty decision in respect of which an appeal lies under paragraph 22(b) of that Schedule.
+(2)The review may also conclude that HMRC’s decision that the person requiring the review was liable to any of the penalty points by virtue of which they were liable to the penalty in respect of which the appeal lies is to be—
+(a)upheld, or
+(b)cancelled.
+(3)Sub-paragraph (2) applies in relation to a penalty point even if the time limit for appealing against it expired before the relevant date.
+(4)Sub-paragraph (2) does not apply in relation to a penalty point if—
+(a)it was concluded on an earlier review required to be undertaken under paragraph 51 or 53 that HMRC’s decision that the person who required the review was liable to the penalty point was to be upheld, or
+(b)HMRC's decision that the person who required the review was liable to the penalty point has been affirmed on appeal.
+(5)In sub-paragraph (3) “relevant date” has the same meaning as in paragraph 54(6) (see paragraph 54(7)).
+56(1)If the conclusions of a review include conclusions reached by virtue of paragraph 55 and the conclusions of the review are final, sub-paragraphs (4) and (5) of paragraph 24 of Schedule 24 to FA 2021 apply but with the following modifications—
+(a)references to the appeal under paragraph 22(b) of that Schedule are to be read as references to the review required to be undertaken under paragraph 51 or 53 (as the case may be),
+(b)references to the tribunal are to be read as references to HMRC, and
+(c)references to cancelling a decision are to be read as references to concluding that HMRC’s decision is to be cancelled.
+(2)For the purposes of sub-paragraph (1), the conclusions of a review are to be treated as final only if the period specified in paragraph 57(3)(b), (4)(b) or (5) for appealing the reviewed decision has ended and no appeal has been made within that period.
+Bringing of appealsU.K.
+57(1)An appeal under paragraph 48 is to be made to the tribunal before—
+(a)the end of the period of 30 days beginning with—
+(i)in a case where P is the appellant, the date of the document notifying P of the decision to which the appeal relates, or
+(ii)in a case where a person other than P is the appellant, the day on which that person becomes aware of the decision, or
+(b)if later, the end of the period in which the appellant may accept or require a review (see paragraph 49(3) or 50(3)), including as extended under paragraph 52.
+(2)But this is subject to sub-paragraphs (3) to (5).
+(3)In a case where a review of the decision has been required under paragraph 51—
+(a)an appeal may not be made until the conclusion date, and
+(b)any appeal is to be made within the period of 30 days beginning with that date.
+(4)In a case where a review of the decision has been requested under paragraph 53—
+(a)an appeal may not be made—
+(i)unless an officer of Revenue and Customs has notified the person who requested the review as to whether or not a review will be undertaken, and
+(ii)if an officer of Revenue and Customs has notified that person that a review will be undertaken, before the conclusion date;
+(b)any appeal where paragraph (a)(ii) applies is to be made within the period of 30 days beginning with the conclusion date;
+(c)if an officer of Revenue and Customs has notified the person who requested the review that a review will not be undertaken, an appeal may be made only if the tribunal gives permission to do so.
+(5)In a case where paragraph 54(8) applies, any appeal is to be made at any time in the period beginning with the end of the applicable period in paragraph 54(6) and ending with the date 30 days after the conclusion date.
+(6)An appeal may be made after the end of any period specified by this paragraph if the tribunal gives permission to do so.
+(7)In this paragraph, “conclusion date” means the date of the document notifying the conclusions of the review.
+Further provision about appealsU.K.
+58(1)An appeal under paragraph 48 relating to a decision that an amount is due from a person may not be entertained by the tribunal unless the amount which HMRC have determined to be due has been paid to or deposited with the Commissioners.
+(2)But sub-paragraph (1) does not apply if—
+(a)HMRC are satisfied or, if HMRC are not satisfied but the tribunal has decided, on the application of the appellant, that the requirement to pay or deposit the amount would cause the appellant to suffer hardship, and
+(b)the appellant has—
+(i)paid or deposited such other amount (if any) by way of security, or
+(ii)provided such other security,
+as HMRC or, as the case may be, the tribunal consider appropriate.
+(3)Notwithstanding sections 11 and 13 of the Tribunals, Courts and Enforcement Act 2007, the decision of the tribunal as to the issue of hardship is final.
+Determination on appealU.K.
+59(1)Where, on an appeal under paragraph 48—
+(a)it is found that an assessment in respect of the appellant is an assessment for an amount that is less than it ought to have been, and
+(b)the tribunal give a direction specifying the correct amount,
+the assessment has effect as an assessment of the amount specified in the direction and (without prejudice to any power under this Schedule to reduce the amount of interest payable on the amount of an assessment) as if it were an assessment notified to the appellant in that amount at the same time as the original assessment.
+(2)Where the tribunal allows an appeal under paragraph 48(1)(c), (d) or (i) or (2) on the ground that the decision-maker could not reasonably have arrived at the decision, the tribunal may—
+(a)direct that the decision, so far as it remains in force, is to cease to have effect from such time as the tribunal may direct, or
+(b)require an officer of Revenue and Customs to conduct, in accordance with the directions of the tribunal, a review or a further review of the original decision as appropriate.
+(3)Where, on an appeal under paragraph 48, the tribunal find that a liability to a penalty or to an amount of interest arises, the tribunal must not give any direction for the modification of the amount payable in respect of that liability except—
+(a)in exercise of a power conferred on the tribunal by Part 11 of this Schedule (penalties), or
+(b)for the purpose of making the amount payable conform to the amount due in accordance with this Part of this Act.
+(4)Sections 85 and 85B of VATA 1994 (settling of appeals by agreement and payment of tax where there is a further appeal) apply in relation to an appeal under paragraph 48 of this Schedule as they apply to an appeal under section 83 of VATA 1994, reading—
+(a)references to section 83 of that Act as references to paragraph 48 of this Schedule, and
+(b)the references to value added tax as references to CBAM.
+Part 13U.K.Service
+60(1)Anything that may or must be given, notified or issued to a person (P) under this Part of this Act, or provision made under this Part of this Act, may be given, notified or issued by sending it to P or to P’s representative by post, addressed to P’s, or (as the case may be) P’s representative’s, last known address.U.K.
+(2)Anything given to P’s representative is to be treated as having been given to P.
+(3)In this section, “representative”, in relation to P, means—
+(a)any of P’s personal representatives;
+(b)any person holding office as receiver in relation to P or any of P’s property;
+(c)P’s trustee in bankruptcy or liquidator;
+(d)a trustee (or interim trustee) in a sequestration of P’s estate under the Bankruptcy (Scotland) Act 2016;
+(e)any other person acting in a representative capacity in relation to P.
+Part 14U.K.Interpretation
+61U.K.In this Schedule, “the tribunal” means the First-tier Tribunal or, where determined by or under Tribunal Procedure Rules, the Upper Tribunal.
+Previous: Schedule
+Next: Schedule
+Back to top
+Options/Help
+Print Options
+PrintThe Whole Act
+PDF The Whole Act
+Web page The Whole Act
+PrintThis Schedule only
+PDF This Schedule only
+Web page This Schedule only
+You have chosen to open The Whole Act
+The Whole Act you have selected contains over 200 provisions and might take some time to download. You may also experience some issues with your browser, such as an alert box that a script is taking a long time to run.
+Would you like to continue?
+Continue to open
+You have chosen to open The Whole Act as a PDF
+The Whole Act you have selected contains over 200 provisions and might take some time to download.
+Would you like to continue?
+Continue to open
+You have chosen to open the Whole Act
+The Whole Act you have selected contains over 200 provisions and might take some time to download. You may also experience some issues with your browser, such as an alert box that a script is taking a long time to run.
+Would you like to continue?
+Continue to open
+You have chosen to open the Whole Act without Schedules
+The Whole Act without Schedules you have selected contains over 200 provisions and might take some time to download. You may also experience some issues with your browser, such as an alert box that a script is taking a long time to run.
+Would you like to continue?
+Continue to open
+You have chosen to open Schedules only
+The Schedules you have selected contains over 200 provisions and might take some time to download. You may also experience some issues with your browser, such as an alert box that a script is taking a long time to run.
+Would you like to continue?
+Continue to open
+Legislation is available in different versions:
+Latest Available (revised):The latest available updated version of the legislation incorporating changes made by subsequent legislation and applied by our editorial team. Changes we have not yet applied to the text, can be found in the ‘Changes to Legislation’ area.
+Original (As Enacted or Made): The original version of the legislation as it stood when it was enacted or made. No changes have been applied to the text.
+See additional information alongside the content
+Geographical Extent: Indicates the geographical area that this provision applies to. For further information see ‘Frequently Asked Questions’.
+Show Timeline of Changes: See how this legislation has or could change over time. Turning this feature on will show extra navigation options to go to these specific points in time. Return to the latest available version by using the controls above in the What Version box.
+Opening Options
+Different options to open legislation in order to view more content on screen at once
+More Resources
+Access essential accompanying documents and information for this legislation item from this tab. Dependent on the legislation item being viewed this may include:
+the original print PDF of the as enacted version that was used for the print copy
+lists of changes made by and/or affecting this legislation item
+confers power and blanket amendment details
+all formats of all associated documents
+correction slips
+links to related legislation and further information resources
+Timeline of Changes
+This timeline shows the different points in time where a change occurred. The dates will coincide with the earliest date on which the change (e.g an insertion, a repeal or a substitution) that was applied came into force. The first date in the timeline will usually be the earliest date when the provision came into force. In some cases the first date is 01/02/1991 (or for Northern Ireland legislation 01/01/2006). This date is our basedate. No versions before this date are available. For further information see the Editorial Practice Guide and Glossary under Help.
+More Resources
+Use this menu to access essential accompanying documents and information for this legislation item. Dependent on the legislation item being viewed this may include:
+the original print PDF of the as enacted version that was used for the print copy
+correction slips
+Click 'View More' or select 'More Resources' tab for additional information including:
+lists of changes made by and/or affecting this legislation item
+confers power and blanket amendment details
+all formats of all associated documents
+links to related legislation and further information resources
+The data on this page is available in the alternative data formats listed:
+HTML5 alternative version
+HTML snippet alternative version
+PDF alternative version
+XML alternative version
+Akoma Ntoso alternative version
+HTML RDFa alternative version
+RDF/XML alternative version
+New site design
+Help
+About us
+Site map
+Accessibility
+Contact us
+Privacy notice
+Cookies
+Fair use policy
+All content is available under the Open Government Licence v3.0 except where otherwise stated. This site additionally contains content derived from EUR-Lex, reused under the terms of the Commission Decision 2011/833/EU on the reuse of documents from the EU institutions. For more information see the EUR-Lex public statement on re-use.
+© Crown and database right

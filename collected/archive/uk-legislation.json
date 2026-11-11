@@ -1,6 +1,6 @@
 {
  "source": "uk-legislation",
- "fetchedAt": "2026-11-11T10:58:43+09:00",
+ "fetchedAt": "2026-11-11T11:09:32+09:00",
  "since": "2025-01-01",
  "report": {
   "found": 5,
@@ -17,7 +17,8 @@
     "Coming into force": "1st January 2027"
    },
    "url": "https://www.legislation.gov.uk/uksi/2026/995/made",
-   "textPath": "collected/archive/pages/uk-legislation/uksi-2026-995.txt"
+   "textPath": "collected/archive/pages/uk-legislation/uksi-2026-995.txt",
+   "fullTextPath": "collected/archive/pages/uk-legislation/uksi-2026-995-full.txt"
   },
   {
    "title": "The Finance Act 2009, Sections 101 and 102 (Carbon Border Adjustment Mechanism) (Interest) (Appointed Day) Order 2026",
@@ -26,7 +27,8 @@
     "Made": "8th September 2026"
    },
    "url": "https://www.legislation.gov.uk/uksi/2026/994/made",
-   "textPath": "collected/archive/pages/uk-legislation/uksi-2026-994.txt"
+   "textPath": "collected/archive/pages/uk-legislation/uksi-2026-994.txt",
+   "fullTextPath": "collected/archive/pages/uk-legislation/uksi-2026-994-full.txt"
   },
   {
    "title": "The Carbon Border Adjustment Mechanism (Transitory Provision) Regulations 2026",
@@ -36,7 +38,8 @@
     "Coming into force": "1st January 2027"
    },
    "url": "https://www.legislation.gov.uk/uksi/2026/830/made",
-   "textPath": "collected/archive/pages/uk-legislation/uksi-2026-830.txt"
+   "textPath": "collected/archive/pages/uk-legislation/uksi-2026-830.txt",
+   "fullTextPath": "collected/archive/pages/uk-legislation/uksi-2026-830-full.txt"
   },
   {
    "title": "The Carbon Border Adjustment Mechanism (Calculation of CBAM Rate and Determination of Carbon Price Relief) Regulations 2026",
@@ -47,7 +50,8 @@
     "Coming into force": "1st January 2027"
    },
    "url": "https://www.legislation.gov.uk/uksi/2026/809/made",
-   "textPath": "collected/archive/pages/uk-legislation/uksi-2026-809.txt"
+   "textPath": "collected/archive/pages/uk-legislation/uksi-2026-809.txt",
+   "fullTextPath": "collected/archive/pages/uk-legislation/uksi-2026-809-full.txt"
   },
   {
    "title": "The Carbon Border Adjustment Mechanism (Administrative Provisions) Regulations 2026",
@@ -58,14 +62,21 @@
     "Coming into force": "1st January 2027"
    },
    "url": "https://www.legislation.gov.uk/uksi/2026/802/made",
-   "textPath": "collected/archive/pages/uk-legislation/uksi-2026-802.txt"
+   "textPath": "collected/archive/pages/uk-legislation/uksi-2026-802.txt",
+   "fullTextPath": "collected/archive/pages/uk-legislation/uksi-2026-802-full.txt"
   },
   {
    "title": "Finance Act 2026",
    "number": "2026 c. 11",
    "dates": {},
    "url": "https://www.legislation.gov.uk/ukpga/2026/11/contents",
-   "textPath": "collected/archive/pages/uk-legislation/ukpga-2026-11.txt"
+   "textPath": "collected/archive/pages/uk-legislation/ukpga-2026-11.txt",
+   "fullTextPaths": [
+    "collected/archive/pages/uk-legislation/ukpga-2026-11-part-5.txt",
+    "collected/archive/pages/uk-legislation/ukpga-2026-11-schedule-17.txt",
+    "collected/archive/pages/uk-legislation/ukpga-2026-11-schedule-18.txt",
+    "collected/archive/pages/uk-legislation/ukpga-2026-11-schedule-19.txt"
+   ]
   }
  ]
 }
