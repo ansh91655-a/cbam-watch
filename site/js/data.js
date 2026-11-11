@@ -28,6 +28,8 @@ export const regulations = () => load("regulations", { groups: [], regulations: 
 // 품목 코드 조회에 쓰는 목록: 현행 부속서(current)와 확대 개정안의 부속서(proposed)
 export const cn = () => load("cn", { current: [], proposed: [], council: { added: [], removed: [] } });
 export const events = () => load("events", { events: [] }).then((body) => body.events || []);
+// 실무 달력: 법령에 날짜가 적힌 의무 일정
+export const duties = () => load("duties", { duties: [] }).then((body) => ({ duties: [], ...body }));
 // CBAM 계수(무상할당을 줄여 가는 비율)의 현행 값과 개정안 값
 export const factor = () => load("factor", { paths: [] }).then((body) => ({ paths: [], ...body }));
 // 하나로 묶은 소식의 옛 번호 → 남긴 소식의 번호

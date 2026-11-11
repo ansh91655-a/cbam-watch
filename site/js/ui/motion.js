@@ -14,7 +14,7 @@ const RISE = [
   ".quote", ".feature", ".panel", ".cn-bar", ".card", ".sec-head", ".month-head", ".sector",
   ".rule-card", ".rule-now", ".rule-summary", ".rule-analysis", ".rule-soon", ".tl > li", ".rule-links > li",
   ".stat", ".chart-card", ".table-wrap", ".yearline-card", ".cal-month", ".doc", ".step",
-  ".date-list > li", ".rule-rows > li", ".tile", ".item-cols > *", ".cn-result", ".cn-box", ".filters", ".side-nav",
+  ".date-list > li", ".rule-rows > li", ".tile", ".item-cols > *", ".cn-result", ".cn-box", ".filters", ".side-nav", ".duty",
 ].join(", ");
 const DRAW = ".chart, .stepper, .spark, .yl-track";
 const COUNT = "[data-count]";

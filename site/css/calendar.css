@@ -53,3 +53,31 @@
 .cal-event .t { font-weight: 700; }
 .cal-event .n, .cal-event .b, .cal-event .s { font-size: var(--fs-s); color: var(--ink-3); }
 .cal-event .b { font-style: normal; }
+
+/* 실무 달력: 법령에 날짜가 적힌 의무. 날짜 칸, 할 일, 누가, 생산자가 준비할 것, 근거의 차례다. */
+.duty-sec { gap: 12px; }
+.duty-note { max-width: 62em; font-size: var(--fs-s); color: var(--ink-3); }
+.duty-list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.duty { display: grid; grid-template-columns: 58px minmax(0, 1fr); align-items: start; gap: 0 18px; padding: 18px 22px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); }
+.duty .date-box { grid-row: auto; }
+.duty[data-kind="기한"] .date-box { background: var(--accent-soft); color: var(--on-accent); }
+.duty[data-past="true"] { box-shadow: none; background: var(--surface-2); }
+.duty[data-past="true"] .date-box { opacity: 0.7; }
+.duty-body { display: grid; gap: 6px; min-width: 0; }
+.duty-head { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+.duty-head strong { font-size: var(--fs-l); font-weight: 750; letter-spacing: -0.015em; }
+.duty-when { display: flex; flex-wrap: wrap; gap: 2px 12px; font-size: var(--fs-s); color: var(--ink-3); }
+.duty-when time { font-variant-numeric: tabular-nums; }
+.duty-text { max-width: 60em; color: var(--ink-2); }
+.duty-supplier { display: grid; gap: 2px; max-width: 60em; padding: 10px 14px; border-radius: 12px; background: var(--brand-soft); font-size: var(--fs-s); color: var(--ink-2); }
+.duty-supplier b { color: var(--brand); font-weight: 750; }
+.duty-basis { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; font-size: var(--fs-s); }
+.duty-basis > span:first-child { color: var(--ink-3); font-weight: 600; }
+.duty-basis a { display: inline-flex; align-items: center; gap: 4px; }
+html[data-theme="midnight"] .duty[data-kind="기한"] .date-box { color: var(--accent); }
+@media (max-width: 640px) {
+  .duty { grid-template-columns: minmax(0, 1fr); gap: 10px; padding: 16px 16px 14px; }
+  .duty .date-box { justify-self: start; grid-auto-flow: column; align-items: baseline; gap: 6px; padding: 4px 12px; }
+}
+.duty .pill[data-tone="due"] { border-color: transparent; background: var(--accent-soft); color: var(--on-accent); font-weight: 700; }
+html[data-theme="midnight"] .duty .pill[data-tone="due"] { color: var(--accent); }

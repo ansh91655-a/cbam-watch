@@ -5,6 +5,7 @@ import { fill, h } from "../ui/dom.js";
 import { koreanDate, today } from "../ui/format.js";
 import { eventId, monthGrid } from "../ui/monthgrid.js";
 import { yearLine } from "../ui/yearline.js";
+import { dutyList } from "./calendar/duties.js";
 
 // 달력에서 그 일정이 적힌 곳으로 옮겨 가 잠깐 표시한다.
 function show(event) {
@@ -18,7 +19,7 @@ function show(event) {
 }
 
 export async function render(main, arg) {
-  const events = await data.events();
+  const [events, duties] = await Promise.all([data.events(), data.duties()]);
   const now = today();
   const thisYear = Number(now.slice(0, 4));
   const years = [...new Set([thisYear, ...events.map((event) => Number(String(event.date).slice(0, 4)))])].filter(Boolean).sort();
@@ -39,6 +40,7 @@ export async function render(main, arg) {
       !ahead && next && nextYear !== year ? h("a", { class: "next-hint", href: `#calendar-${nextYear}`, text: `다음 일정은 ${koreanDate(next.date)} ${next.title}` }) : null,
     ]),
     h("section", { class: "stack", "aria-label": `${year}년 일정선` }, yearLine(events, year, now, show)),
+    dutyList(duties, year, now),  // 법령에 날짜가 적힌 의무(실무 달력)
     h("section", { class: "stack", "aria-label": `${year}년 달력` }, monthGrid(events, year, now, show)),
   );
 }

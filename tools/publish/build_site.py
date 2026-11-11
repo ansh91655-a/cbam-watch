@@ -8,7 +8,7 @@ import shutil
 import sys
 
 from tools.common.jsonio import read_json, write_json
-from tools.publish import derive, factor, feed, merge, regulations, thumbs
+from tools.publish import derive, duties, factor, feed, merge, regulations, thumbs
 
 DATA_FILES = ["items", "events", "digests", "terms", "topics", "prices"]
 LIST_KEY = {"items": "items", "events": "events", "digests": "digests", "terms": "terms", "topics": "topics", "prices": "prices"}
@@ -44,6 +44,19 @@ def main(argv):
 
     # 일정에는 가격표에 적힌 게시일과 규제의 다음 일정을 더한다(가격표나 규제 자료가 바뀌면 일정도 따라 바뀐다)
     bodies["events"] = {**bodies["events"], "events": derive.events(bodies["events"]["events"], bodies["prices"], rules)}
+    # 실무 달력(법령에 날짜가 적힌 의무)을 일정에 더한다. 같은 일을 가리키는 게시 데이터의 일정은 의무 쪽을 남긴다.
+    # 꼴이 깨졌으면 멈추고, 법령 글과 달라진 것은 알리기만 한다
+    duty_book = read_json(duties.SOURCE, None)
+    duty_found = duties.problems(duty_book)
+    duty_broken = [row for row in duty_found if not row[1].startswith("근거 어긋남")]
+    problems += [f"실무 달력: {where}: {what}" for where, what in duty_broken]
+    for where, what in duty_found:
+        if what.startswith("근거 어긋남"):
+            print(f"알림: 실무 달력: {where}: {what}")
+    if not duty_broken:
+        kept = [event for event in bodies["events"]["events"] if not duties.superseded(event, duty_book)]
+        bodies["events"] = {**bodies["events"], "events": sorted(kept + duties.events(duty_book), key=lambda row: (str(row.get("date", "")), str(row.get("title", ""))))}
+        write_json(data_out / "duties.json", duties.public(duty_book))
     counts["events"] = len(bodies["events"]["events"])
     # 미리보기 그림이 있는 소식에는 그림의 주소를 붙인다
     bodies["items"] = {**bodies["items"], "items": thumbs.attach(bodies["items"]["items"])}

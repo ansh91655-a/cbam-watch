@@ -1,0 +1,125 @@
+{
+ "asOf": "2026-11-11",
+ "note": "법령에 날짜가 적힌 의무만 실었습니다. 심의 중인 개정안의 일정은 넣지 않았습니다. 날짜는 법령이 바뀌면 달라질 수 있으니 근거 조문에서 다시 확인해 주세요.",
+ "schemes": [
+  {"key": "eu", "name": "EU CBAM"},
+  {"key": "uk", "name": "영국 CBAM"}
+ ],
+ "duties": [
+  {
+   "id": "eu-authorisation-interim", "scheme": "eu", "date": "2026-03-31", "kind": "기한",
+   "title": "승인 신청을 마친 수입자의 잠정 수입 허용 기준일",
+   "who": "EU 수입자, 간접 세관 대리인",
+   "text": "이날까지 승인된 CBAM 신고인 자격을 신청한 수입자나 간접 세관 대리인은 관할당국의 결정이 날 때까지 잠정적으로 계속 수입할 수 있습니다.",
+   "basis": "CBAM 규정 제17조(7a)",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020",
+   "evidence": {"path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt", "contains": ["has submitted an application in accordance with Article 5 by 31 March 2026", "may provisionally continue to import goods"]}
+  },
+  {
+   "id": "eu-quarterly-holding", "scheme": "eu", "date": "2027-01-01", "kind": "시행",
+   "title": "분기말 인증서 보유의무 적용 시작",
+   "who": "승인된 CBAM 신고인",
+   "text": "2027년부터 분기 말마다, 그해 들어 수입한 제품의 내재배출량의 50% 이상에 해당하는 CBAM 인증서를 CBAM 등록부 계정에 두어야 합니다. 단일 중량 임계값을 넘은 신고인은 넘은 분기의 다음 분기 말까지 이 의무를 지키면 됩니다.",
+   "supplier": "수입자는 이 수를 기본값이나 지난해에 제출한 인증서 수로 계산합니다. 생산자가 따로 낼 자료는 없습니다.",
+   "basis": "CBAM 규정 제22조(2), 제36조",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020",
+   "evidence": {"path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt", "contains": ["Article 22(2) shall apply from 1 January 2027", "at the end of each quarter corresponds to at least 50 % of the embedded emissions"]}
+  },
+  {
+   "id": "eu-certificate-sale", "scheme": "eu", "date": "2027-02-01", "kind": "시행",
+   "title": "CBAM 인증서 판매 시작",
+   "who": "승인된 CBAM 신고인",
+   "text": "회원국이 공통 중앙 플랫폼에서 자기 나라에 설립된 승인된 CBAM 신고인에게 인증서를 팔기 시작합니다. 2026년 수입분의 인증서도 이때부터 삽니다.",
+   "basis": "CBAM 규정 제20조(1), 제36조",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020",
+   "evidence": {"path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt", "contains": ["From 1 February 2027, a Member State shall sell CBAM certificates on a common central platform", "CBAM certificates purchased in respect of the embedded emissions for the year 2026"]},
+   "covers": {"dates": ["2027-02", "2027-02-01"], "word": "인증서"}
+  },
+  {
+   "id": "eu-first-declaration", "scheme": "eu", "date": "2027-09-30", "kind": "기한",
+   "title": "첫 CBAM 신고서 제출과 인증서 제출",
+   "who": "승인된 CBAM 신고인",
+   "text": "2026년 수입분에 대한 CBAM 신고서를 CBAM 등록부로 내고, 신고한 내재배출량에 해당하는 인증서를 제출합니다. 그 뒤로도 해마다 9월 30일이 기한입니다.",
+   "supplier": "신고서에는 실제배출량으로 정한 내재배출량의 검증보고서 사본이 붙습니다. 한국 생산자가 2026년 생산분의 배출량 자료와 검증을 그 전에 마쳐 EU 수입자에게 넘겨야 실제배출량으로 신고할 수 있습니다.",
+   "basis": "CBAM 규정 제6조(1), 제22조(1)",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020",
+   "evidence": {"path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt", "contains": ["By 30 September of each year, and for the first time in 2027 for the year 2026, each authorised CBAM declarant shall use the CBAM registry", "the authorised CBAM declarant shall surrender via the CBAM registry"]},
+   "covers": {"dates": ["2027-09-30"], "word": "신고서"}
+  },
+  {
+   "id": "eu-repurchase-request", "scheme": "eu", "date": "2027-10-31", "kind": "기한",
+   "title": "남은 인증서의 환매 요청",
+   "who": "승인된 CBAM 신고인",
+   "text": "제출하고 남은 인증서를 환매받으려면 인증서를 제출한 해의 10월 31일까지 요청해야 합니다. 첫 제출이 2027년이므로 첫 기한도 2027년입니다. 환매 가격은 그 인증서를 산 값입니다.",
+   "basis": "CBAM 규정 제23조",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020",
+   "evidence": {"path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt", "contains": ["shall submit the repurchase request by 31 October of each year during which CBAM certificates were surrendered", "for the first time in 2027 for the year 2026, the authorised CBAM declarant shall surrender"]}
+  },
+  {
+   "id": "eu-cancellation-2026", "scheme": "eu", "date": "2027-11-01", "kind": "기한",
+   "title": "2026년분 CBAM 인증서 말소",
+   "who": "승인된 CBAM 신고인",
+   "text": "2026년 내재배출량에 대해 산 인증서 가운데 계정에 남아 있는 것은 이날 보상 없이 말소됩니다.",
+   "basis": "CBAM 규정 제24조(2)",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020",
+   "evidence": {"path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt", "contains": ["on 1 November 2027, the Commission shall cancel any CBAM certificates purchased in respect of the embedded emissions for the year 2026", "cancelled without any compensation"]}
+  },
+  {
+   "id": "uk-start", "scheme": "uk", "date": "2027-01-01", "kind": "시행",
+   "title": "영국 CBAM 적용 시작",
+   "who": "영국 수입자",
+   "text": "이날 이후 영국으로 수입되는 CBAM 대상 제품(알루미늄, 시멘트, 비료, 수소, 철강)의 내재배출량에 영국 CBAM이 부과됩니다.",
+   "supplier": "2027년 선적분부터 내재배출량 자료가 필요합니다. 영국 수입자와 기본값을 쓸지 실제 자료를 쓸지 먼저 정해 두어야 합니다.",
+   "basis": "Finance Act 2026 제143조, 제158조",
+   "link": "https://www.legislation.gov.uk/ukpga/2026/11/part/5",
+   "evidence": {"path": "collected/archive/pages/uk-legislation/ukpga-2026-11-part-5.txt", "contains": ["This Part has effect in relation to goods imported into the United Kingdom on or after 1 January 2027", "Schedule 16 specifies the following kinds of goods", "(a)aluminium goods;", "(e)iron and steel goods."]},
+   "covers": {"dates": ["2027-01-01"], "word": "영국"}
+  },
+  {
+   "id": "uk-registration-opens", "scheme": "uk", "date": "2028-01-01", "kind": "시행",
+   "title": "영국 CBAM 등록 개시",
+   "who": "영국 수입자",
+   "text": "영국 국세청의 안내에 따르면 2027년 1월 1일부터 기록을 보관해야 하고, 등록은 2028년 1월 1일에 열립니다.",
+   "basis": "영국 국세청 CBAM 안내",
+   "link": "https://www.gov.uk/government/collections/carbon-border-adjustment-mechanism",
+   "evidence": {"path": "collected/archive/pages/uk-govuk/changes.txt", "contains": ["from 1 January 2027 you'll need to keep records", "ahead of registration opening on 1 January 2028"]}
+  },
+  {
+   "id": "uk-registration-deadline", "scheme": "uk", "date": "2028-01-31", "kind": "기한",
+   "title": "2027년에 등록 요건에 해당한 영국 수입자의 등록",
+   "who": "영국 수입자",
+   "text": "2027년에 등록 요건(12개월 동안 수입한 CBAM 대상 제품의 가액 5만 파운드 이상)에 해당하게 된 수입자는 이날까지 영국 국세청에 등록하면 됩니다.",
+   "basis": "경과 규정(SI 2026/830) 제2조",
+   "link": "https://www.legislation.gov.uk/uksi/2026/830/made",
+   "evidence": {"path": "collected/archive/pages/uk-legislation/uksi-2026-830-full.txt", "contains": ["“31st January 2028” is treated as substituted", "any person who triggers registration"]}
+  },
+  {
+   "id": "uk-first-return", "scheme": "uk", "date": "2028-05-31", "kind": "기한",
+   "title": "2027년분 영국 CBAM 신고와 납부",
+   "who": "영국 수입자",
+   "text": "2027년 한 해를 하나의 과세 기간으로 보고, 그 기간의 신고와 납부를 이날까지 합니다.",
+   "supplier": "신고에는 2027년 수입분의 내재배출량이 들어갑니다. 기본값으로 신고한 값은 나중에 실제 자료로 바꿔 신고할 수 없습니다.",
+   "basis": "경과 규정(SI 2026/830) 제2조",
+   "link": "https://www.legislation.gov.uk/uksi/2026/830/made",
+   "evidence": {"path": "collected/archive/pages/uk-legislation/uksi-2026-830-full.txt", "contains": ["in respect of the accounting period ending with 31st December 2027, before the end of 31st May 2028"]}
+  },
+  {
+   "id": "uk-return-2028-q1", "scheme": "uk", "date": "2028-07-31", "kind": "기한",
+   "title": "2028년 1~3월분 영국 CBAM 신고와 납부",
+   "who": "영국 수입자",
+   "text": "2028년 1월 1일부터 3월 31일까지의 과세 기간에 대한 신고와 납부 기한입니다.",
+   "basis": "경과 규정(SI 2026/830) 제2조",
+   "link": "https://www.legislation.gov.uk/uksi/2026/830/made",
+   "evidence": {"path": "collected/archive/pages/uk-legislation/uksi-2026-830-full.txt", "contains": ["in respect of the accounting period ending with 31st March 2028, before the end of 31st July 2028"]}
+  },
+  {
+   "id": "uk-return-2028-q2", "scheme": "uk", "date": "2028-09-29", "kind": "기한",
+   "title": "2028년 4~6월분 영국 CBAM 신고와 납부",
+   "who": "영국 수입자",
+   "text": "2028년 4월 1일부터 6월 30일까지의 과세 기간에 대한 신고와 납부 기한입니다.",
+   "basis": "경과 규정(SI 2026/830) 제2조",
+   "link": "https://www.legislation.gov.uk/uksi/2026/830/made",
+   "evidence": {"path": "collected/archive/pages/uk-legislation/uksi-2026-830-full.txt", "contains": ["in respect of the accounting period ending with 30th June 2028, before the end of 29th September 2028"]}
+  }
+ ]
+}
