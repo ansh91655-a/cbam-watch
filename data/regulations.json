@@ -2089,6 +2089,221 @@
      "제3국에서 지불한 탄소가격",
      "제3국 탄소가격"
     ]
+   },
+   "analysis": {
+    "asOf": "2026-11-11",
+    "basedOn": {
+     "stage": "채택 보도(공식 확인 전)",
+     "events": 5
+    },
+    "sections": [
+     {
+      "key": "background",
+      "items": [
+       {
+        "text": "같은 배출량에 탄소가격을 두 번 물리지 않으려는 장치입니다. CBAM 규정 제9조는 제품을 만든 제3국에서 탄소가격이 실질적으로 지불되었으면 그만큼 제출할 CBAM 인증서 수를 줄여 달라고 청구할 수 있게 했습니다. 그 나라에서 환급이나 다른 보상을 받았다면 그만큼은 빼고 계산합니다.",
+        "refs": [
+         "law"
+        ]
+       },
+       {
+        "text": "전환기간에 드러난 문제는 증빙이었습니다. 보고 신고인이 제3국에서 실질적으로 지불된 탄소가격에 관한 정보를 구하기 어려웠습니다. 그래서 간소화 개정 규정은 EU 집행위원회가 나라별 기본 탄소가격을 정해 그것으로도 차감을 청구할 수 있는 길을 열었습니다.",
+        "refs": [
+         "simplification"
+        ]
+       },
+       {
+        "text": "남은 일은 계산과 증빙의 세부 규칙을 이행규정으로 정하는 것입니다. EU 집행위원회는 2025년 8월 28일에 근거 수집을 시작했고, 2026년 5월 13일에 이행규정 초안을 공개해 2026년 6월 10일까지 의견을 받았습니다.",
+        "refs": [
+         "news",
+         "consult"
+        ]
+       }
+      ]
+     },
+     {
+      "key": "content",
+      "items": [
+       {
+        "label": "실제로 지불한 값으로 청구",
+        "text": "내재배출량을 실제배출량으로 신고한 경우에 쓸 수 있습니다. 승인된 CBAM 신고인은 탄소가격이 실질적으로 지불되었음을 보여 주는 서류를 갖춰야 하고, 그 서류의 내용은 독립적 확인자가 인증해야 합니다. 서류는 신고서를 낸 해의 다음 해부터 네 번째 해가 끝날 때까지 보관합니다.",
+        "refs": [
+         "law"
+        ]
+       },
+       {
+        "label": "기본 탄소가격으로 청구",
+        "text": "EU 집행위원회는 2027년부터 탄소가격 제도가 있는 제3국의 기본 탄소가격을 정해 CBAM 등록부에서 제공하고 계산 방법을 공개할 수 있습니다. 내재배출량을 기본값으로 신고했다면 이 기본 탄소가격으로만 차감을 청구할 수 있습니다.",
+        "refs": [
+         "law"
+        ]
+       },
+       {
+        "label": "환급과 보상",
+        "text": "어느 길로 청구하든 그 나라에서 받을 수 있는 환급이나 다른 보상은 탄소가격에서 빼고 계산합니다.",
+        "refs": [
+         "law"
+        ]
+       },
+       {
+        "label": "이행규정이 정할 것",
+        "text": "지불한 탄소가격과 기본 탄소가격을 차감할 인증서 수로 바꾸는 방법, 외화로 낸 가격을 연평균 환율로 유로로 바꾸는 방법, 지불을 입증하는 증빙, 환급과 보상의 예시, 독립적 확인자의 자격과 독립성을 확인하는 조건입니다.",
+        "refs": [
+         "law"
+        ]
+       },
+       {
+        "label": "다른 나라에서 낸 가격",
+        "text": "원산지가 아닌 다른 제3국에서 지불한 탄소가격도 차감 대상이 됩니다.",
+        "refs": [
+         "simplification"
+        ]
+       }
+      ]
+     },
+     {
+      "key": "situation",
+      "items": [
+       {
+        "label": "채택 여부",
+        "text": "EU 집행위원회가 2026년 11월 5일에 이 이행규정을 채택했다는 보도가 한 건 있습니다. 보도는 회원국 위원회에서 과반의 지지를 얻지 못한 채 채택되었고 법령 데이터베이스에는 아직 본문이 올라오지 않았다고 전합니다. 공식 기록으로는 확인되지 않았습니다. 그에 앞서 2026년 10월에는 EU 집행위원회가 11월에 이행규정을 채택하고 기본 탄소가격의 목록도 공개할 것이라는 보도가 있었습니다.",
+        "refs": [
+         "adopted",
+         "plan"
+        ]
+       },
+       {
+        "label": "늦어진 일정",
+        "text": "EU 집행위원회는 보고서에서 이 이행규정을 2026년 1분기에 채택하겠다고 했습니다. 실제로는 초안의 의견수렴이 2026년 5월과 6월에 이루어졌습니다.",
+        "refs": [
+         "report",
+         "consult"
+        ]
+       },
+       {
+        "label": "탄소크레딧",
+        "text": "EU 집행위원회는 이행규정과 그 가이던스에서 동등성의 원칙에 따라, 의무 제도에서 산 탄소크레딧(파리협정 제6조의 크레딧 포함)을 어떻게 반영할지와 연료에 매긴 탄소세를 어떻게 차감할지를 밝히겠다고 했습니다. 다만 하류제품 확대 개정안의 협상에서는 EU 이사회와 유럽의회가 모두 제6조 크레딧을 고려할 수 있다는 전문을 지웠습니다.",
+        "refs": [
+         "report",
+         "council",
+         "parliament"
+        ]
+       },
+       {
+        "label": "독립적 확인자",
+        "text": "탄소가격 서류를 인증하는 독립적 확인자는 CBAM 등록부에 접근해 인증 보고서를 등록부에서 만들 수 있게 됩니다. 이 접근은 2026년 12월 1일 이후에 주어집니다.",
+        "refs": [
+         "registry"
+        ]
+       }
+      ]
+     },
+     {
+      "key": "practice",
+      "items": [
+       {
+        "label": "신고 방식과의 연결",
+        "text": "실제로 지불한 값으로 차감을 청구하려면 내재배출량도 실제배출량으로 신고해야 합니다. 기본값으로 신고하면 기본 탄소가격이 정해진 나라에 한해, 그 값으로만 청구할 수 있습니다.",
+        "refs": [
+         "law"
+        ]
+       },
+       {
+        "label": "갖춰 둘 서류",
+        "text": "탄소가격을 실제로 지불했다는 증거와, 환급이나 보상을 받았다면 그 내역이 필요합니다. 수입자가 이 서류를 네 해 동안 보관해야 하므로 생산자에게 요청이 올 수 있습니다.",
+        "refs": [
+         "law"
+        ]
+       },
+       {
+        "label": "사업자 등록부의 활용",
+        "text": "CBAM 등록부에 등록한 제3국 사업자는 제3국에서 지불한 탄소가격을 정하고 그 서류와 증빙을 등록부에 올려 승인된 CBAM 신고인에게 공개할 수 있습니다.",
+        "refs": [
+         "law"
+        ]
+       },
+       {
+        "label": "본문을 확인한 뒤에",
+        "text": "채택되었다고 보도된 이행규정의 본문은 아직 공식으로 공개되지 않았습니다. 계산식과 증빙의 세부는 유럽연합 관보에 실린 본문으로 확인해야 합니다.",
+        "refs": [
+         "adopted"
+        ]
+       }
+      ]
+     }
+    ],
+    "sources": [
+     {
+      "key": "law",
+      "text": "CBAM 규정 통합본(2025년 10월 20일자), EUR-Lex",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020",
+      "basis": "stored",
+      "path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt"
+     },
+     {
+      "key": "simplification",
+      "text": "규정 (EU) 2025/2083(간소화·강화 개정) 원문, EUR-Lex",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2083",
+      "basis": "stored",
+      "path": "collected/archive/pages/eu-acts/32025R2083.txt"
+     },
+     {
+      "key": "news",
+      "text": "EU 집행위원회 CBAM 소식(2026년 5월 13일): 제3국에서 지불한 탄소가격",
+      "url": "https://taxation-customs.ec.europa.eu/news/carbon-price-paid-third-countries-2026-05-13_en",
+      "basis": "stored",
+      "path": "collected/archive/pages/ec-news/carbon-price-paid-third-countries-2026-05-13_en.txt"
+     },
+     {
+      "key": "consult",
+      "text": "EU 집행위원회 의견수렴 14830",
+      "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14830_en",
+      "basis": "stored",
+      "path": "collected/archive/pages/ec-hys/initiatives.txt"
+     },
+     {
+      "key": "report",
+      "text": "EU 집행위원회, CBAM 규정 적용 보고서(COM(2025) 783)",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025DC0783",
+      "basis": "stored",
+      "path": "collected/archive/pages/eur-lex-docs/52025DC0783.txt"
+     },
+     {
+      "key": "council",
+      "text": "EU 이사회 일반적 접근 본문(문서 10423/26)",
+      "url": "https://data.consilium.europa.eu/doc/document/ST-10423-2026-INIT/en/pdf",
+      "basis": "stored",
+      "path": "collected/archive/pages/eu-fulltext/downstream-council.txt"
+     },
+     {
+      "key": "parliament",
+      "text": "유럽의회 입법 관측소: 하류제품 확대 개정안의 제1독회 입장 요약",
+      "url": "https://oeil.europarl.europa.eu/oeil/en/document-summary?id=1914940",
+      "basis": "stored",
+      "path": "collected/archive/pages/eu-fulltext/downstream-oeil-summary-1914940.txt"
+     },
+     {
+      "key": "registry",
+      "text": "개정·정정 이행규정 (EU) 2025/2550(CBAM 등록부) 원문, EUR-Lex",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2550",
+      "basis": "stored",
+      "path": "collected/archive/pages/eu-acts/32025R2550.txt"
+     },
+     {
+      "key": "adopted",
+      "text": "steelnews.biz 보도(Gerber Group), 2026년 11월 5일",
+      "url": "https://steelnews.biz/cbam-rules-for-crediting-3rd-country-carbon-prices/",
+      "basis": "press",
+      "checkedOn": "2026-11-10"
+     },
+     {
+      "key": "plan",
+      "text": "Carbon Pulse 보도, 2026년 10월 23일",
+      "url": "https://carbon-pulse.com/563955/",
+      "basis": "press",
+      "checkedOn": "2026-11-10"
+     }
+    ]
    }
   },
   {
@@ -2169,6 +2384,174 @@
      "판매·환매",
      "공통 중앙 플랫폼"
     ]
+   },
+   "analysis": {
+    "asOf": "2026-11-11",
+    "basedOn": {
+     "stage": "채택 대기",
+     "events": 3
+    },
+    "sections": [
+     {
+      "key": "background",
+      "items": [
+       {
+        "text": "CBAM 인증서는 시장에서 거래되는 것이 아니라 회원국이 정해진 가격에 팔고, 남으면 환매해 주는 증서입니다. CBAM 규정은 회원국이 2027년 2월 1일부터 공통 중앙 플랫폼에서 인증서를 팔도록 했고, 판매와 환매를 관리하는 시기, 운영, 수수료의 구조와 수준은 위임규정으로 정하도록 EU 집행위원회에 맡겼습니다. 이 위임규정(안)이 그것입니다.",
+        "refs": [
+         "law"
+        ]
+       },
+       {
+        "text": "판매가 2027년에 시작되는 것은 간소화 개정 규정의 결과입니다. 승인된 CBAM 신고인이 바뀐 의무에 대비할 시간을 주려고, 2026년 수입분의 인증서를 2027년부터 팔도록 했습니다.",
+        "refs": [
+         "simplification"
+        ]
+       }
+      ]
+     },
+     {
+      "key": "content",
+      "items": [
+       {
+        "label": "판매",
+        "text": "회원국은 자기 나라에 설립된 승인된 CBAM 신고인에게 인증서를 팝니다. 인증서마다 고유 번호가 붙고, 산 값과 산 날이 신고인의 CBAM 등록부 계정에 기록됩니다.",
+        "refs": [
+         "law"
+        ]
+       },
+       {
+        "label": "수수료",
+        "text": "플랫폼을 만들고 운영하는 비용은 승인된 CBAM 신고인이 내는 수수료로 충당합니다. 첫 조달 계약 기간에는 EU 예산이 먼저 부담하고 수수료 수입을 그 비용에 돌리며, 그다음 계약부터는 수수료가 비용을 직접 대도록 위임규정으로 정합니다.",
+        "refs": [
+         "law"
+        ]
+       },
+       {
+        "label": "환매",
+        "text": "인증서를 제출하고 남은 것은 신고인이 요청하면 산 값으로 환매합니다. 요청 기한은 인증서를 제출한 해의 10월 31일입니다. 환매하는 수는 그 인증서를 산 해에 분기말 인증서 보유의무에 따라 사야 했던 수를 넘지 못합니다.",
+        "refs": [
+         "law"
+        ]
+       },
+       {
+        "label": "임계값을 넘지 않은 경우",
+        "text": "단일 중량 임계값(50톤)을 넘을 것으로 보고 인증서를 샀는데 넘지 않았다면, 요청에 따라 그 인증서를 모두 환매합니다.",
+        "refs": [
+         "law"
+        ]
+       },
+       {
+        "label": "말소",
+        "text": "해마다 11월 1일에, 전전해에 산 인증서 가운데 계정에 남은 것은 보상 없이 말소됩니다.",
+        "refs": [
+         "law"
+        ]
+       },
+       {
+        "label": "2026년 수입분의 특례",
+        "text": "2027년에 2026년 수입분으로 산 인증서는 2027년에만 환매할 수 있고, 남은 것은 2027년 11월 1일에 말소됩니다.",
+        "refs": [
+         "law"
+        ]
+       }
+      ]
+     },
+     {
+      "key": "situation",
+      "items": [
+       {
+        "text": "플랫폼은 만드는 중입니다. EU 집행위원회와 회원국은 공동조달협정을 맺었고(협정문에 적힌 체결일은 2025년 12월 16일이며, EU 집행위원회의 소식은 서명일을 12월 15일로 적었습니다), 2026년 3월 2일에는 플랫폼을 구축하고 운영할 계약자를 찾는 입찰을 알렸습니다. 이 소식에 따르면 계약자는 2026년 8월 31일까지 시험할 수 있는 운영 전 단계의 플랫폼을 갖추고, 2027년 2월 1일부터 운영을 시작해야 합니다.",
+        "refs": [
+         "jpa",
+         "tender"
+        ]
+       },
+       {
+        "text": "위임규정은 아직 채택되지 않았습니다. 초안의 의견수렴은 2026년 7월 9일부터 8월 6일까지 이루어졌습니다. 인증서 판매가 시작되는 2027년 2월 1일까지는 석 달이 채 남지 않았습니다.",
+        "refs": [
+         "consult",
+         "law"
+        ]
+       },
+       {
+        "text": "절차는 더 바뀔 수 있습니다. 하류제품 확대 개정안에는 남은 인증서를 공통 중앙 플랫폼에서 바로 환매하도록 하여 환매 절차에서 EU 집행위원회의 관여를 없애는 내용과, 2028년부터는 분기말 인증서 보유의무를 계산할 때 그해에 산 인증서만 넣도록 하는 내용이 들어 있습니다.",
+        "refs": [
+         "downstream"
+        ]
+       }
+      ]
+     },
+     {
+      "key": "practice",
+      "items": [
+       {
+        "label": "2027년의 날짜",
+        "text": "2026년 수입분의 인증서는 2027년 2월 1일부터 살 수 있습니다. 환매 요청은 10월 31일까지이고, 2026년분으로 산 인증서는 2027년 11월 1일에 말소됩니다.",
+        "refs": [
+         "law"
+        ]
+       },
+       {
+        "label": "분기말 인증서 보유의무",
+        "text": "2027년부터는 분기 말마다 그해 수입한 제품의 내재배출량의 50% 이상에 해당하는 인증서를 계정에 두어야 합니다. 환매 한도도 이 의무로 사야 했던 수에 묶여 있어, 필요보다 많이 사 두면 남는 것을 모두 환매받지 못할 수 있습니다.",
+        "refs": [
+         "law"
+        ]
+       },
+       {
+        "label": "인증서를 사는 사람",
+        "text": "인증서를 사고 제출하는 사람은 EU의 승인된 CBAM 신고인입니다. 제3국의 생산자는 플랫폼에서 직접 사지 않습니다.",
+        "refs": [
+         "law"
+        ]
+       }
+      ]
+     }
+    ],
+    "sources": [
+     {
+      "key": "law",
+      "text": "CBAM 규정 통합본(2025년 10월 20일자), EUR-Lex",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020",
+      "basis": "stored",
+      "path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt"
+     },
+     {
+      "key": "simplification",
+      "text": "규정 (EU) 2025/2083(간소화·강화 개정) 원문, EUR-Lex",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2083",
+      "basis": "stored",
+      "path": "collected/archive/pages/eu-acts/32025R2083.txt"
+     },
+     {
+      "key": "jpa",
+      "text": "공통 중앙 플랫폼 공동조달협정(C/2026/2787), EUR-Lex",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:42026A02787",
+      "basis": "stored",
+      "path": "collected/archive/pages/eur-lex-docs/42026A02787.txt"
+     },
+     {
+      "key": "tender",
+      "text": "EU 집행위원회 CBAM 소식(2026년 3월 2일): 공통 중앙 플랫폼 입찰",
+      "url": "https://taxation-customs.ec.europa.eu/news/cbam-call-tender-establish-common-central-platform-ccp-2026-03-02_en",
+      "basis": "stored",
+      "path": "collected/archive/pages/ec-news/cbam-call-tender-establish-common-central-platform-ccp-2026-03-02_en.txt"
+     },
+     {
+      "key": "consult",
+      "text": "EU 집행위원회 의견수렴 14132",
+      "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14132_en",
+      "basis": "stored",
+      "path": "collected/archive/pages/ec-hys/initiatives.txt"
+     },
+     {
+      "key": "downstream",
+      "text": "EU 집행위원회, 하류제품 확대·우회방지 개정안(COM(2025) 989)",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025PC0989",
+      "basis": "stored",
+      "path": "collected/archive/pages/eu-fulltext/downstream-commission-DOC_1.txt"
+     }
+    ]
    }
   },
   {
@@ -2214,6 +2597,157 @@
    "related": {
     "words": [
      "CBAM 신고서 이행규정"
+    ]
+   },
+   "analysis": {
+    "asOf": "2026-11-11",
+    "basedOn": {
+     "stage": "준비 단계",
+     "events": 1
+    },
+    "sections": [
+     {
+      "key": "background",
+      "items": [
+       {
+        "text": "CBAM 신고서는 확정기간의 중심이 되는 문서입니다. 승인된 CBAM 신고인은 해마다 9월 30일까지 CBAM 등록부로 지난해 수입분의 신고서를 내며, 첫 신고는 2027년에 2026년 수입분에 대해 합니다. CBAM 규정은 신고서의 표준 양식, 등록부로 내는 절차, 인증서를 제출하는 방식을 이행규정으로 정하도록 EU 집행위원회에 맡겼습니다. 이 이행규정(계획)이 그것입니다.",
+        "refs": [
+         "law"
+        ]
+       },
+       {
+        "text": "기한을 9월 30일로 둔 것은 간소화 개정 규정입니다. 이 규정은 신고인이 자료를 모으고, 인정받은 검증기관의 검증을 받고, 인증서를 살 시간을 더 주려는 것이라고 밝혔습니다.",
+        "refs": [
+         "simplification"
+        ]
+       }
+      ]
+     },
+     {
+      "key": "content",
+      "items": [
+       {
+        "label": "신고서에 담는 것",
+        "text": "지난해에 수입한 제품의 종류별 총량(전력은 메가와트시, 그 밖의 제품은 톤), 그 제품의 총 내재배출량, 제출할 인증서의 총수를 적습니다. 실제배출량으로 내재배출량을 정했다면 검증보고서 사본을 붙입니다. 수입량에는 단일 중량 임계값 아래로 들여온 제품도 넣습니다.",
+        "refs": [
+         "law"
+        ]
+       },
+       {
+        "label": "인증서 수의 계산",
+        "text": "제출할 인증서의 수는 총 내재배출량에서 제3국에서 지불된 탄소가격에 따른 차감과 무상할당 조정을 반영한 값입니다.",
+        "refs": [
+         "law"
+        ]
+       },
+       {
+        "label": "이행규정이 정할 것",
+        "text": "표준 양식에는 신고서의 합계를 뒷받침하는 세부 정보가 들어갑니다. 사업장별, 원산지국별, 제품 종류별로 내재배출량, 지불된 탄소가격, 기본 탄소가격을 적는 방식입니다. 등록부로 신고서를 내는 절차와, 제출할 인증서를 신고인이 고르는 절차도 이 이행규정으로 정합니다.",
+        "refs": [
+         "law"
+        ]
+       },
+       {
+        "label": "가공 절차를 거친 제품",
+        "text": "역내가공을 거친 가공품을 수입하면, 그 가공품이 CBAM 대상 제품이 아니어도 역내가공에 들어간 제품의 내재배출량을 신고합니다. 역외가공을 거쳐 들어오는 제품은 EU 밖에서 한 가공의 배출량만 신고하고, 재수입 물품은 내재배출량을 '0'으로 따로 적습니다.",
+        "refs": [
+         "law"
+        ]
+       },
+       {
+        "label": "제출의 위임",
+        "text": "승인된 CBAM 신고인은 신고서 제출을 자기 이름으로 대신할 사람에게 맡길 수 있습니다. 이때에도 의무를 지킬 책임은 신고인에게 남습니다.",
+        "refs": [
+         "law"
+        ]
+       }
+      ]
+     },
+     {
+      "key": "situation",
+      "items": [
+       {
+        "text": "이 이행규정은 아직 계획 단계입니다. EU 집행위원회는 2026년 2월 19일에 이 계획을 의견수렴 목록에 올렸고, 초안과 의견수렴 일정은 공개되지 않았습니다.",
+        "refs": [
+         "consult"
+        ]
+       },
+       {
+        "text": "시간은 정해져 있습니다. 하류제품 확대 개정안은 첫 CBAM 신고서의 제출 기한을 2027년 9월 30일로 적고 있습니다. 신고서 양식은 그 전에 확정되어야 합니다.",
+        "refs": [
+         "downstream"
+        ]
+       },
+       {
+        "text": "신고서에 담을 내용은 늘어날 수 있습니다. 같은 개정안은 공급망을 추적하기 어려워 생기는 잘못된 신고의 리스크에 대응하려고, 수입한 제품이 신고한 사업장에서 신고한 생산 시기에 만들어졌다는 증빙을 신고서에 넣도록 하는 내용을 담고 있습니다. 어떤 제품과 원산지의 조합에 이 증빙이 필요한지는 별도의 이행규정으로 정하도록 했습니다. 신고서 이행규정이 정할 사항에는 신고서 검토 절차를 더했습니다.",
+        "refs": [
+         "downstream"
+        ]
+       },
+       {
+        "text": "신고서에 쓰는 정보의 출처도 바뀔 수 있습니다. 이 개정안에는 제3국 사업자가 CBAM 등록부에 올린 정보의 요약만 신고인에게 공개할 수 있게 하고, 신고인이 그 정보로 신고서를 내더라도 인증서를 정확한 수만큼 제출할 책임은 신고인에게 남는다는 내용이 들어 있습니다.",
+        "refs": [
+         "downstream"
+        ]
+       }
+      ]
+     },
+     {
+      "key": "practice",
+      "items": [
+       {
+        "label": "생산자가 건네는 자료",
+        "text": "신고서는 EU의 승인된 CBAM 신고인이 냅니다. 다만 표준 양식에 사업장별 세부 정보가 들어가므로, 제3국 생산자가 EU 수입자에게 건네는 자료의 항목도 이 양식에 맞추어질 것으로 보입니다.",
+        "refs": [
+         "law"
+        ]
+       },
+       {
+        "label": "검증 일정",
+        "text": "실제배출량으로 신고하려면 검증보고서 사본이 신고서에 붙어야 합니다. 검증은 9월 30일 전에 끝나야 합니다.",
+        "refs": [
+         "law"
+        ]
+       },
+       {
+        "label": "신고서 검토 기간",
+        "text": "EU 집행위원회와 회원국 관할당국은 신고서를 내야 했던 해의 다음 네 번째 해가 끝날 때까지 신고서를 검토할 수 있습니다. 신고의 근거 자료를 그동안 보관해 둘 필요가 있습니다.",
+        "refs": [
+         "law"
+        ]
+       }
+      ]
+     }
+    ],
+    "sources": [
+     {
+      "key": "law",
+      "text": "CBAM 규정 통합본(2025년 10월 20일자), EUR-Lex",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020",
+      "basis": "stored",
+      "path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt"
+     },
+     {
+      "key": "simplification",
+      "text": "규정 (EU) 2025/2083(간소화·강화 개정) 원문, EUR-Lex",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2083",
+      "basis": "stored",
+      "path": "collected/archive/pages/eu-acts/32025R2083.txt"
+     },
+     {
+      "key": "consult",
+      "text": "EU 집행위원회 의견수렴 16932",
+      "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/16932_en",
+      "basis": "stored",
+      "path": "collected/archive/pages/ec-hys/initiatives.txt"
+     },
+     {
+      "key": "downstream",
+      "text": "EU 집행위원회, 하류제품 확대·우회방지 개정안(COM(2025) 989)",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025PC0989",
+      "basis": "stored",
+      "path": "collected/archive/pages/eu-fulltext/downstream-commission-DOC_1.txt"
+     }
     ]
    }
   },
@@ -4582,6 +5116,140 @@
     "words": [
      "2025/2210"
     ]
+   },
+   "analysis": {
+    "asOf": "2026-11-11",
+    "basedOn": {
+     "stage": "시행 중",
+     "events": 2
+    },
+    "sections": [
+     {
+      "key": "background",
+      "items": [
+       {
+        "text": "CBAM은 EU 관세영역으로 수입되는 제품에 적용합니다. 그런데 회원국의 대륙붕이나 배타적 경제수역에 있는 인공섬과 고정식·부유식 구조물은 관세영역 밖이어서, 제3국산 철강이나 시멘트를 그곳으로 바로 가져가면 통상의 수입 절차를 거치지 않습니다. CBAM 규정은 이런 반입에도 제도를 적용하도록 정해 두었습니다.",
+        "refs": [
+         "law",
+         "act"
+        ]
+       },
+       {
+        "text": "이 이행규정은 그 경우에 누가 수입자이고 무엇이 수입인지, 어떤 신고를 해야 하는지를 정합니다. 2025년 10월 31일에 채택되었습니다.",
+        "refs": [
+         "act"
+        ]
+       }
+      ]
+     },
+     {
+      "key": "content",
+      "items": [
+       {
+        "label": "제3국에서 바로 들여올 때",
+        "text": "제품을 받는 사람을 수입자로 보고, 받는 것을 수입으로 봅니다. 받는 사람은 그 대륙붕이나 배타적 경제수역에서 상업 활동을 할 허가를 가진 사람입니다.",
+        "refs": [
+         "act"
+        ]
+       },
+       {
+        "label": "수령 신고",
+        "text": "받는 사람은 제품을 받은 날부터 30일 안에 수령 신고서를 전자 방식으로 냅니다. 내는 곳은 그 대륙붕이나 배타적 경제수역이 속한 회원국의 세관당국입니다.",
+        "refs": [
+         "act"
+        ]
+       },
+       {
+        "label": "역내가공을 거친 가공 제품",
+        "text": "역내가공 절차에서 나온 가공 제품을 관세영역에서 그곳으로 가져갈 때는 재수출 신고를 하는 사람(간접 세관 대리인이 신고하면 그 대리인에게 맡긴 사람)을 수입자로 보고, 재수출을 수입으로 봅니다.",
+        "refs": [
+         "act"
+        ]
+       },
+       {
+        "label": "서류에 적는 것",
+        "text": "재수출 신고서에는 가져갈 대륙붕이나 배타적 경제수역과 원산지를 적습니다. 역내가공 종결 명세서에는 CBAM 계정 번호와 원산지를 적습니다.",
+        "refs": [
+         "act"
+        ]
+       },
+       {
+        "label": "CBAM 신고서",
+        "text": "이런 제품의 CBAM 신고서에는 수령 신고서의 사본을, 가공 제품이면 역내가공 종결 명세서의 사본을 붙입니다.",
+        "refs": [
+         "act"
+        ]
+       },
+       {
+        "label": "세관의 확인",
+        "text": "세관당국은 제품을 검사하고 견본을 뜰 수 있으며, 신고서와 증빙 서류가 정확하고 진짜인지 확인할 수 있습니다.",
+        "refs": [
+         "act"
+        ]
+       }
+      ]
+     },
+     {
+      "key": "situation",
+      "items": [
+       {
+        "text": "적용 대상이 좁은 규정입니다. 해상 구조물에 쓰는 제품을 제3국에서 관세영역을 거치지 않고 바로 들여오는 경우와, 역내가공을 거친 가공 제품을 관세영역에서 그곳으로 가져가는 경우를 다룹니다.",
+        "refs": [
+         "act"
+        ]
+       },
+       {
+        "text": "간소화 개정 규정은 이와 맞닿은 원산지 규칙을 함께 정했습니다. 회원국이나 제3국의 대륙붕, 배타적 경제수역에서 만든 전력과 수소는 그 회원국이나 제3국에서 난 것으로 봅니다.",
+        "refs": [
+         "simplification"
+        ]
+       }
+      ]
+     },
+     {
+      "key": "practice",
+      "items": [
+       {
+        "label": "해상 구조물로 직접 납품할 때",
+        "text": "EU 회원국 해역의 구조물로 철강 구조물 같은 대상 제품을 직접 납품하면, 그 제품을 받는 허가 보유자가 CBAM의 수입자가 됩니다. 받는 쪽이 30일 안에 수령 신고를 해야 하므로 인도 시점과 서류를 미리 맞춰 둘 필요가 있습니다.",
+        "refs": [
+         "act"
+        ]
+       },
+       {
+        "label": "수입자의 의무",
+        "text": "받는 사람은 CBAM 규정의 수입자로 봅니다. 승인, CBAM 신고서, 인증서 제출 같은 수입자의 의무가 이 경우에도 적용됩니다.",
+        "refs": [
+         "act",
+         "law"
+        ]
+       }
+      ]
+     }
+    ],
+    "sources": [
+     {
+      "key": "act",
+      "text": "이행규정 (EU) 2025/2210 원문, EUR-Lex",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2210",
+      "basis": "stored",
+      "path": "collected/archive/pages/eu-acts/32025R2210.txt"
+     },
+     {
+      "key": "law",
+      "text": "CBAM 규정 통합본(2025년 10월 20일자), EUR-Lex",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020",
+      "basis": "stored",
+      "path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt"
+     },
+     {
+      "key": "simplification",
+      "text": "규정 (EU) 2025/2083(간소화·강화 개정) 원문, EUR-Lex",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2083",
+      "basis": "stored",
+      "path": "collected/archive/pages/eu-acts/32025R2083.txt"
+     }
+    ]
    }
   },
   {
@@ -4638,6 +5306,162 @@
    "related": {
     "words": [
      "전환기간 보고"
+    ]
+   },
+   "analysis": {
+    "asOf": "2026-11-11",
+    "basedOn": {
+     "stage": "전환기간 종료",
+     "events": 2
+    },
+    "sections": [
+     {
+      "key": "background",
+      "items": [
+       {
+        "text": "CBAM은 비용을 물리기 전에 보고만 하는 기간을 먼저 두었습니다. 2023년 10월 1일부터 2025년 12월 31일까지의 전환기간입니다. 이 기간에 수입자는 수입한 대상 제품의 양, 그 제품의 직접·간접 내재배출량, 원산지에서 낸 탄소가격을 분기마다 보고했고, 인증서를 사거나 제출하지는 않았습니다.",
+        "refs": [
+         "act",
+         "law"
+        ]
+       },
+       {
+        "text": "이 이행규정은 그 보고의 내용과 방법을 정했습니다. 부담을 필요한 만큼으로 줄이면서 전환기간 뒤의 CBAM 신고가 매끄럽게 시작되도록 준비하는 것이 목적이었습니다. 2023년 8월 17일에 채택되었습니다.",
+        "refs": [
+         "act"
+        ]
+       }
+      ]
+     },
+     {
+      "key": "content",
+      "items": [
+       {
+        "label": "보고하는 사람",
+        "text": "보고 신고인은 자유유통을 위한 반출을 신고하는 수입자이거나 그 수입자의 간접 세관 대리인입니다.",
+        "refs": [
+         "act"
+        ]
+       },
+       {
+        "label": "분기별 CBAM 보고서",
+        "text": "분기가 끝난 뒤 한 달 안에 CBAM 임시 등록부로 보고서를 냈습니다. 첫 보고서(2023년 4분기분)의 기한은 2024년 1월 31일, 마지막 보고서(2025년 4분기분)의 기한은 2026년 1월 31일이었습니다.",
+        "refs": [
+         "act"
+        ]
+       },
+       {
+        "label": "산정 방법의 유예",
+        "text": "처음에는 정식 방법을 쓰기 어려운 사정을 봐주었습니다. 제3국의 다른 모니터링·보고 제도에 따른 방법은 2024년 말까지 쓸 수 있었고, 사업자에게서 자료를 다 받지 못한 보고 신고인은 2024년 7월 31일까지 대체 방법을 쓸 수 있었습니다. 복합제품은 총 내재배출량의 20%까지 추정값을 쓸 수 있었습니다.",
+        "refs": [
+         "act"
+        ]
+       },
+       {
+        "label": "보고서의 수정",
+        "text": "낸 보고서는 해당 분기가 끝난 뒤 두 달까지 고칠 수 있었습니다. 그 뒤에는 사유를 밝혀 관할당국의 허락을 받으면 분기가 끝난 뒤 1년 안에 다시 내거나 고칠 수 있습니다.",
+        "refs": [
+         "act"
+        ]
+       },
+       {
+        "label": "과징금",
+        "text": "보고서를 내지 않거나 틀리거나 빠진 보고서를 고치지 않으면 회원국이 과징금을 매깁니다. 보고하지 않은 배출량 1톤에 10유로에서 50유로 사이입니다. 틀린 보고서를 두 번 넘게 잇달아 내거나 보고하지 않은 기간이 여섯 달을 넘으면 더 높은 과징금이 적용됩니다.",
+        "refs": [
+         "act"
+        ]
+       }
+      ]
+     },
+     {
+      "key": "situation",
+      "items": [
+       {
+        "text": "전환기간은 2025년 12월 31일에 끝났고, 2026년부터는 확정기간의 규칙이 적용됩니다. 이 이행규정이 정한 산정 방법도 2025년 12월 31일까지의 기간에 쓰는 것이며, 그 뒤의 방법은 새 이행규정 (EU) 2025/2547이 정합니다.",
+        "refs": [
+         "act",
+         "method"
+        ]
+       },
+       {
+        "text": "EU 집행위원회는 전환기간을 긍정적으로 평가했습니다. 보고서에 따르면 연간 50톤 넘게 수입하는 수입자 가운데 실제배출량으로 보고한 비율이 2023년 3분기 11%에서 2025년 3분기 95%로 올랐습니다. 전환기간에 모은 자료는 50톤 임계값을 정하고 기본값을 만드는 데 쓰였습니다.",
+        "refs": [
+         "report",
+         "simplification"
+        ]
+       },
+       {
+        "text": "끝난 기간이지만 뒷일이 남아 있을 수 있습니다. 2025년 4분기 보고서는 관할당국의 허락을 받으면 분기가 끝난 뒤 1년 안에 고칠 수 있고, 보고 의무를 지키지 않은 데 대한 과징금은 회원국이 매깁니다.",
+        "refs": [
+         "act"
+        ]
+       }
+      ]
+     },
+     {
+      "key": "practice",
+      "items": [
+       {
+        "label": "전환기간 자료를 다시 쓸 때",
+        "text": "전환기간에 만든 배출량 자료와 계산 틀을 확정기간에 그대로 쓸 수는 없습니다. 새 이행규정은 전환기간의 경험을 바탕으로 방법을 고쳤다고 밝히고 있고, 기능단위와 생산공정을 묶는 방식이 달라졌습니다.",
+        "refs": [
+         "method"
+        ]
+       },
+       {
+        "label": "검증의 유무",
+        "text": "전환기간에는 보고만 하면 되었습니다. 확정기간에 실제배출량으로 신고하려면 인정받은 검증기관의 검증을 받아야 합니다. EU 집행위원회 보고서는 이제 배출량을 제대로 검증하는 단계로 넘어갈 때라고 적었습니다.",
+        "refs": [
+         "law",
+         "report"
+        ]
+       },
+       {
+        "label": "거래처의 문의",
+        "text": "EU 수입자가 전환기간 보고서를 고치려고 지난 분기의 자료를 다시 요청할 수 있습니다. 2025년 4분기분은 그 분기가 끝난 뒤 1년까지 고칠 길이 열려 있습니다.",
+        "refs": [
+         "act"
+        ]
+       }
+      ]
+     }
+    ],
+    "sources": [
+     {
+      "key": "act",
+      "text": "이행규정 (EU) 2023/1773 원문, EUR-Lex",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32023R1773",
+      "basis": "stored",
+      "path": "collected/archive/pages/eu-acts/32023R1773.txt"
+     },
+     {
+      "key": "law",
+      "text": "CBAM 규정 통합본(2025년 10월 20일자), EUR-Lex",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020",
+      "basis": "stored",
+      "path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt"
+     },
+     {
+      "key": "method",
+      "text": "이행규정 (EU) 2025/2547(내재배출량 산정 방법) 원문, EUR-Lex",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2547",
+      "basis": "stored",
+      "path": "collected/archive/pages/eu-acts/32025R2547.txt"
+     },
+     {
+      "key": "report",
+      "text": "EU 집행위원회, CBAM 규정 적용 보고서(COM(2025) 783)",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025DC0783",
+      "basis": "stored",
+      "path": "collected/archive/pages/eur-lex-docs/52025DC0783.txt"
+     },
+     {
+      "key": "simplification",
+      "text": "규정 (EU) 2025/2083(간소화·강화 개정) 원문, EUR-Lex",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2083",
+      "basis": "stored",
+      "path": "collected/archive/pages/eu-acts/32025R2083.txt"
+     }
     ]
    }
   },
