@@ -134,6 +134,14 @@ class MoreReadersTest(unittest.TestCase):
         ]
         self.assertEqual([row["celex"] for row in docs.wanted(rows)], ["52025PC0990", "52026PC0616"])
 
+    def test_an_older_document_is_kept_only_when_it_is_named(self):
+        from tools.archive import docs
+        rows = [
+            {"celex": "62023CN0512", "date": "2023-08-08", "relations": ["communication_case_new_requests_annulment_of_resource_legal:32023R0956"]},
+            {"celex": "52021PC0564", "date": "2021-07-14", "relations": ["http://x#resource_legal_based_on_resource_legal:32023R0956"]},
+        ]
+        self.assertEqual([row["celex"] for row in docs.wanted(rows)], ["62023CN0512"])
+
     def test_procedure_numbers_in_a_proposal(self):
         from tools.archive import docs
         self.assertEqual(docs.procedures_in(["COM(2025) 990 final", "2025/0418 (COD)", "Proposal for a", "see also 2025/0419(COD)"]),

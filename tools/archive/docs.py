@@ -22,6 +22,8 @@ ALSO = ["52025PC0408", "32025D2468", "52025PC0574", "52026PC0616", "52026PC0619"
 ACTS = {"32025R0486", "32025R2083", "32025R2210", "32025R2546", "32025R2547", "32025R2548", "32025R2549", "32025R2550", "32025R2551",
         "32025R2619", "32025R2620", "32025R2621", "32026R1740"}
 LONG = {"52025DC0783", "52026AA0013", "52025AE4390", "52025PC0990", "52025PC0989", "52026PC0616"}
+# 모으기 시작한 날(SINCE)보다 앞서 나왔지만 지금도 진행 중인 일의 근거가 되는 문서(예: 계류 중인 소송의 공고)
+OLDER = {"62023CN0512"}
 HEAD_LINES, LONG_LINES, LINE_LIMIT = 120, 420, 700
 PROCEDURE = re.compile(r"\b(20\d\d)/(\d{4}) ?\((COD|CNS|NLE|APP)\)")
 PAUSE = 2.0
@@ -33,7 +35,8 @@ def wanted(entries):
     for entry in entries:
         celex = entry.get("celex", "")
         # 정오표(번호에 괄호가 든 것)는 자료 창구가 이 주소로 내어 주지 않는다. 날짜와 제목은 조회 결과에 있다.
-        if celex in ACTS or celex.startswith(("0", "C/")) or "(" in celex or (entry.get("date") or "9999") < SINCE:
+        too_old = (entry.get("date") or "9999") < SINCE and celex not in OLDER
+        if celex in ACTS or celex.startswith(("0", "C/")) or "(" in celex or too_old:
             continue
         linked = any(not relation.split(":")[0].endswith("work_cites_work") for relation in entry.get("relations", []))
         if celex in ALSO or (linked and celex[5:7] != "SC"):

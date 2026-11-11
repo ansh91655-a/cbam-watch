@@ -6491,6 +6491,193 @@
      "배출권거래제 연계",
      "ETS 연계"
     ]
+   },
+   "analysis": {
+    "asOf": "2026-11-11",
+    "basedOn": {
+     "stage": "협상 중",
+     "events": 6
+    },
+    "sections": [
+     {
+      "key": "background",
+      "items": [
+       {
+        "text": "영국이 EU를 떠난 뒤 2021년 1월 1일부터 EU와 영국은 배출권거래제를 따로 운영해 왔습니다. 북아일랜드의 전력 도매시장만 예외입니다. 무역협력협정은 두 제도를 잇는 방안을 진지하게 검토하도록 정해 두었습니다.",
+        "refs": [
+         "decision"
+        ]
+       },
+       {
+        "text": "두 제도는 뼈대가 비슷하지만 2021년부터 벌어지기 시작했습니다. EU 집행위원회의 권고는 적용 범위(EU는 2024년부터 해운을 포함)와 배출권의 양이 달라졌고, 그 결과 탄소가격이 다르다고 적었습니다.",
+        "refs": [
+         "reco"
+        ]
+       },
+       {
+        "text": "CBAM과 이어지는 고리는 CBAM 규정 제2조입니다. EU 배출권거래제와 완전히 연계하는 협정을 맺은 제3국의 제품에는, 조건을 갖추면 CBAM을 적용하지 않습니다. 2025년 5월 19일 정상회의에서 EU 집행위원회와 영국은 연계를 향해 일하기로 합의하면서, 연계 협정이 양쪽 CBAM을 서로 적용하지 않기 위한 조건을 만든다고 밝혔습니다.",
+        "refs": [
+         "law",
+         "qanda"
+        ]
+       }
+      ]
+     },
+     {
+      "key": "content",
+      "items": [
+       {
+        "label": "협상 권한",
+        "text": "EU 이사회는 2025년 11월 13일에 결정 (EU) 2025/2468로 협상 개시를 승인했습니다. 위생·식물위생 공동 구역 협정과 배출권거래제 연계 협정을 따로 맺는 것이 목표이고, EU 집행위원회가 협상을 맡습니다.",
+        "refs": [
+         "decision"
+        ]
+       },
+       {
+        "label": "협정이 갖출 것",
+        "text": "EU 집행위원회의 권고에 따르면 협정은 관련 EU 규범에 대한 동적 정합(영국이 EU 규범의 변화를 따라가는 것)과 통일된 해석을 보장해야 합니다. 분쟁은 독립 중재 재판부가 다루되, EU 법의 문제에는 EU 사법재판소가 최종 권한을 가집니다.",
+        "refs": [
+         "reco"
+        ]
+       },
+       {
+        "label": "감축 수준과 범위",
+        "text": "권고는 연계 협정이 적어도 같은 수준의 탈탄소화 목표와 같은 적용 범위(주택의 개별 난방은 제외)를 보장해야 한다고 적었습니다.",
+        "refs": [
+         "reco"
+        ]
+       },
+       {
+        "label": "CBAM 적용 제외의 조건",
+        "text": "CBAM 규정은 두 가지를 요구합니다. EU 배출권거래제와 완전히 연계하는 협정이 체결되어 있을 것, 그리고 원산지국에서 지불된 탄소가격이 EU 배출권거래제에서도 적용되는 것 이상의 환급 없이 내재배출량에 실제로 부과될 것입니다. 조건을 갖추었는지에 따라 EU 집행위원회가 위임규정으로 부속서 III의 적용 제외국 목록에 그 나라를 넣거나 뺍니다.",
+        "refs": [
+         "law"
+        ]
+       }
+      ]
+     },
+     {
+      "key": "situation",
+      "items": [
+       {
+        "label": "타결 임박 보도",
+        "text": "EU와 영국이 2026년 11월 20일 브뤼셀 정상회의에서 협상 타결을 발표할 예정이라는 보도가 있었습니다. 보도가 인용한 초안에는 양쪽 CBAM의 상호 적용 제외가 들어 있다고 합니다. 공식 발표는 아직 확인되지 않았습니다(2026년 11월 10일 기준).",
+        "refs": [
+         "press-euronews",
+         "press-cbamguide"
+        ]
+       },
+       {
+        "label": "자동으로 빠지지는 않음",
+        "text": "연계에 합의하더라도 CBAM 적용 제외가 곧바로 따라오지는 않는다는 보도가 있었습니다. 이는 CBAM 규정의 구조와 맞습니다. 협정이 체결되고 조건이 충족된 뒤에 EU 집행위원회가 위임규정으로 영국을 적용 제외국 목록에 넣어야 합니다.",
+        "refs": [
+         "press-bs",
+         "law"
+        ]
+       },
+       {
+        "label": "영국 CBAM의 시행 시기",
+        "text": "영국 CBAM의 하위 법령은 2027년 1월 1일에 시행됩니다. 영국의 2026년 재정법에는 연계된 배출권거래제에 관한 규정을 둘 권한이 따로 들어 있습니다. 연계 협정이 그때까지 발효되지 않으면 양쪽 CBAM이 한동안 서로의 제품에 적용될 수 있습니다.",
+        "refs": [
+         "uk-si",
+         "uk-act"
+        ]
+       }
+      ]
+     },
+     {
+      "key": "practice",
+      "items": [
+       {
+        "label": "한국 기업에 미치는 영향",
+        "text": "이 협정은 한국 기업의 CBAM 의무를 직접 바꾸지 않습니다. 다만 영국산 제품이 EU CBAM에서 빠지면 EU 시장에서 영국 생산자와의 경쟁 조건이 달라질 수 있어 지켜볼 필요가 있습니다.",
+        "refs": [
+         "law"
+        ]
+       },
+       {
+        "label": "기준은 원산지",
+        "text": "적용 제외는 그 나라를 원산지로 하는 제품에 주어지고, 원산지는 비특혜원산지 규칙으로 정합니다. 영국을 거쳐 EU로 들어가는 제품이라도 원산지가 영국이 아니면 적용 제외 대상이 아닙니다.",
+        "refs": [
+         "law"
+        ]
+       },
+       {
+        "label": "지켜볼 일정",
+        "text": "정상회의의 공식 발표, 협정의 서명과 발효, 그리고 EU의 위임규정이 차례로 이어져야 합니다. 보도만으로는 확정된 것이 없습니다.",
+        "refs": [
+         "press-euronews",
+         "law"
+        ]
+       }
+      ]
+     }
+    ],
+    "sources": [
+     {
+      "key": "decision",
+      "text": "이사회 결정 (EU) 2025/2468(협상 개시 승인), EUR-Lex",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32025D2468",
+      "basis": "stored",
+      "path": "collected/archive/pages/eur-lex-docs/32025D2468.txt"
+     },
+     {
+      "key": "reco",
+      "text": "EU 집행위원회 권고 COM(2025) 408, EUR-Lex",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025PC0408",
+      "basis": "stored",
+      "path": "collected/archive/pages/eur-lex-docs/52025PC0408.txt"
+     },
+     {
+      "key": "qanda",
+      "text": "EU 집행위원회 문답 자료(2025년 5월 19일 EU·영국 정상회의)",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_25_1268",
+      "basis": "stored",
+      "path": "collected/archive/pages/ec-press/qanda_25_1268.txt"
+     },
+     {
+      "key": "law",
+      "text": "CBAM 규정 통합본(2025년 10월 20일자), EUR-Lex",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020",
+      "basis": "stored",
+      "path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt"
+     },
+     {
+      "key": "uk-si",
+      "text": "영국 CBAM 요율·탄소가격 경감 규정(SI 2026/809), 영국 법령 누리집",
+      "url": "https://www.legislation.gov.uk/uksi/2026/809/made",
+      "basis": "stored",
+      "path": "collected/archive/pages/uk-legislation/uksi-2026-809.txt"
+     },
+     {
+      "key": "uk-act",
+      "text": "Finance Act 2026 제5편 차례, 영국 법령 누리집",
+      "url": "https://www.legislation.gov.uk/ukpga/2026/11/contents",
+      "basis": "stored",
+      "path": "collected/archive/pages/uk-legislation/ukpga-2026-11.txt"
+     },
+     {
+      "key": "press-cbamguide",
+      "text": "cbamguide.com 보도(2026년 10월 12일, 영국 하원 발언 인용)",
+      "url": "https://cbamguide.com/news/2026-10-12-uk-eu-summit-november-20-ets-link-uk-cbam/",
+      "basis": "press",
+      "checkedOn": "2026-11-10"
+     },
+     {
+      "key": "press-euronews",
+      "text": "Euronews 보도(2026년 11월 6일)",
+      "url": "https://www.euronews.com/2026/11/06/eu-and-uk-set-to-link-carbon-markets-in-major-post-brexit-deal",
+      "basis": "press",
+      "checkedOn": "2026-11-10"
+     },
+     {
+      "key": "press-bs",
+      "text": "Business Standard 보도(2026년 11월 8일)",
+      "url": "https://www.business-standard.com/world-news/eu-close-to-deal-to-link-uk-carbon-market-nearly-six-years-after-brexit-126110800338_1.html",
+      "basis": "press",
+      "checkedOn": "2026-11-10"
+     }
+    ]
    }
   },
   {
@@ -6631,6 +6818,244 @@
      "영국 CBAM",
      "영국 탄소국경조정제도"
     ]
+   },
+   "analysis": {
+    "asOf": "2026-11-11",
+    "basedOn": {
+     "stage": "2027년 1월 1일 시행 예정",
+     "events": 7
+    },
+    "sections": [
+     {
+      "key": "background",
+      "items": [
+       {
+        "text": "영국 CBAM은 EU CBAM과 이름이 같지만 별개의 제도입니다. 근거는 2026년 3월 18일에 제정된 2026년 재정법(Finance Act 2026) 제5편이고, 법은 CBAM을 세금으로 규정합니다. 영국으로 수입되는 CBAM 대상 제품의 내재배출량에 매기는 세금입니다.",
+        "refs": [
+         "act-head",
+         "act"
+        ]
+       },
+       {
+        "text": "영국은 EU를 떠난 뒤 자체 배출권거래제를 운영하고 있습니다. 영국 CBAM의 요율은 이 영국 배출권거래제의 경매 가격에서 나옵니다. 영국 안의 생산자가 내는 탄소가격만큼을 수입품에도 매기려는 것입니다.",
+        "refs": [
+         "act"
+        ]
+       }
+      ]
+     },
+     {
+      "key": "content",
+      "items": [
+       {
+        "label": "대상 제품",
+        "text": "알루미늄, 시멘트, 비료, 수소, 철강 제품입니다. EU CBAM과 달리 전력은 들어 있지 않습니다.",
+        "refs": [
+         "act",
+         "law"
+        ]
+       },
+       {
+        "label": "납세 의무자",
+        "text": "수입자가 세금을 냅니다. 사업 목적이 아닌 수입과 등록 대상이 아닌 수입자의 수입에는 부과하지 않습니다. 원산지가 영국인 제품도 대상이 아닙니다.",
+        "refs": [
+         "act"
+        ]
+       },
+       {
+        "label": "등록 기준",
+        "text": "지난 12개월 동안 사업상 수입한 CBAM 대상 제품의 가액이 5만 파운드(£50,000) 이상이거나, 앞으로 30일 안에 그 금액에 이를 것으로 예상되면 영국 국세청에 등록해야 합니다. EU CBAM의 면제 기준이 무게(단일 중량 임계값)인 것과 달리 금액이 기준입니다.",
+        "refs": [
+         "sch17",
+         "law"
+        ]
+       },
+       {
+        "label": "요율",
+        "text": "세액은 부문별 국내 가격에 제품의 내재배출량(이산화탄소 환산 톤)을 곱한 값입니다. 부문별 국내 가격은 영국 재무부가 분기마다 계산해 공표합니다. 직전 분기 영국 배출권거래제 경매 낙찰가격의 평균을 구한 뒤, 그 부문의 무상할당 비율만큼 낮추는 방식입니다.",
+        "refs": [
+         "act"
+        ]
+       },
+       {
+        "label": "내재배출량의 산정과 검증",
+        "text": "기본값을 쓰면 제품의 무게에 기본값을 곱합니다. 기본값은 영국 재무부가 고시로 정합니다. 기본값을 쓰지 않으면 생산 사업장의 검증된 배출량 자료로 계산해야 하고, 그 자료는 수입자와 생산 사업장에서 독립되어 있으며 인정기구의 인정을 받은 검증기관이 검증해야 합니다.",
+        "refs": [
+         "si-emis",
+         "sch17"
+        ]
+       },
+       {
+        "label": "탄소가격 경감",
+        "text": "같은 배출량에 대해 다른 나라에서 세금이나 배출권 구입 같은 형태로 낸 금액이 있으면 세액을 줄일 수 있습니다. 경감받을 수 있는 금액은 그 제품의 CBAM 세액을 넘지 못합니다.",
+        "refs": [
+         "act",
+         "si-rate"
+        ]
+       },
+       {
+        "label": "신고와 납부",
+        "text": "원칙은 3개월 단위의 과세 기간마다 신고하고 납부하는 것입니다. EU CBAM처럼 인증서를 사서 제출하는 절차는 없습니다.",
+        "refs": [
+         "sch17",
+         "law"
+        ]
+       }
+      ]
+     },
+     {
+      "key": "situation",
+      "items": [
+       {
+        "label": "시행 일정",
+        "text": "제5편은 2027년 1월 1일 이후 영국으로 수입되는 제품에 적용됩니다. 행정 절차, 요율과 탄소가격 경감, 경과 조치, 배출량 산정과 검증을 다루는 하위 법령이 2026년 7월과 9월에 제정되었고, 모두 2027년 1월 1일에 시행됩니다.",
+        "refs": [
+         "act",
+         "si-admin",
+         "si-rate",
+         "si-trans",
+         "si-emis"
+        ]
+       },
+       {
+        "label": "첫해의 경과 조치",
+        "text": "경과 규정은 첫해의 부담을 늦춥니다. 2027년에 등록 요건에 해당하게 된 수입자는 2028년 1월 31일까지 등록하면 됩니다. 2027년은 한 해 전체를 하나의 과세 기간으로 보고, 이 기간의 신고와 납부 기한은 2028년 5월 31일입니다.",
+        "refs": [
+         "si-trans"
+        ]
+       },
+       {
+        "label": "영국 국세청의 안내",
+        "text": "영국 국세청은 2027년 1월 1일부터 기록을 보관해야 하고, 등록은 2028년 1월 1일에 열린다고 안내하고 있습니다.",
+        "refs": [
+         "hmrc"
+        ]
+       },
+       {
+        "label": "대상 확대 논의",
+        "text": "영국 정부는 2026년 10월 28일에 대상 부문을 정유 제품으로 넓히는 방안에 대한 협의를 시작했고, 2027년 1월 20일까지 의견을 받습니다.",
+        "refs": [
+         "hmrc"
+        ]
+       },
+       {
+        "label": "EU와의 연계",
+        "text": "재정법 제156조는 영국 배출권거래제와 연계된 배출권거래제를 가진 나라의 제품을 CBAM 과세에서 빼도록 영국 재무부가 규정을 고칠 수 있게 했습니다. EU와 영국은 배출권거래제 연계 협정을 협상하고 있습니다.",
+        "refs": [
+         "act",
+         "eu-decision"
+        ]
+       }
+      ]
+     },
+     {
+      "key": "practice",
+      "items": [
+       {
+        "label": "2027년 선적분부터",
+        "text": "2027년 1월 1일 이후 영국으로 들어가는 제품이 과세 대상입니다. 첫 신고와 납부는 2028년 5월 31일까지이지만, 그때 필요한 배출량 자료는 2027년 생산분의 것입니다.",
+        "refs": [
+         "act",
+         "si-trans"
+        ]
+       },
+       {
+        "label": "기본값을 쓸지 먼저 정하기",
+        "text": "기본값으로 신고한 내재배출량은 나중에 실제 자료로 산정한 값으로 바꿔 신고할 수 없습니다. 실제 자료를 쓰려면 독립된 검증기관의 검증이 필요하므로, 영국 수입자와 어느 방식을 쓸지 미리 정해 둘 필요가 있습니다.",
+        "refs": [
+         "sch17",
+         "si-emis"
+        ]
+       },
+       {
+        "label": "EU CBAM 자료와의 차이",
+        "text": "영국은 무엇이 제품의 배출량에 들어가는지를 자체 문서(시스템 경계 문서)로 정합니다. EU CBAM을 위해 만든 자료를 그대로 쓸 수 있는지는 이 문서와 영국 국세청의 고시를 놓고 확인하셔야 합니다.",
+        "refs": [
+         "si-emis"
+        ]
+       },
+       {
+        "label": "한국에서 낸 탄소가격",
+        "text": "탄소가격 경감은 규정이 정한 요건을 갖춘 탄소가격 제도에서 낸 금액에 주어집니다. 한국 배출권거래제에서 부담한 금액이 여기에 해당하는지는 요건에 비추어 따져 보아야 하며, 이 글에서는 판단하지 않았습니다.",
+        "refs": [
+         "si-rate"
+        ]
+       }
+      ]
+     }
+    ],
+    "sources": [
+     {
+      "key": "act",
+      "text": "Finance Act 2026 제5편(CBAM), 영국 법령 누리집",
+      "url": "https://www.legislation.gov.uk/ukpga/2026/11/part/5",
+      "basis": "stored",
+      "path": "collected/archive/pages/uk-legislation/ukpga-2026-11-part-5.txt"
+     },
+     {
+      "key": "act-head",
+      "text": "Finance Act 2026 머리글과 차례, 영국 법령 누리집",
+      "url": "https://www.legislation.gov.uk/ukpga/2026/11/contents",
+      "basis": "stored",
+      "path": "collected/archive/pages/uk-legislation/ukpga-2026-11.txt"
+     },
+     {
+      "key": "sch17",
+      "text": "Finance Act 2026 부칙 17(행정과 집행), 영국 법령 누리집",
+      "url": "https://www.legislation.gov.uk/ukpga/2026/11/schedule/17",
+      "basis": "stored",
+      "path": "collected/archive/pages/uk-legislation/ukpga-2026-11-schedule-17.txt"
+     },
+     {
+      "key": "si-admin",
+      "text": "행정 규정(SI 2026/802), 영국 법령 누리집",
+      "url": "https://www.legislation.gov.uk/uksi/2026/802/made",
+      "basis": "stored",
+      "path": "collected/archive/pages/uk-legislation/uksi-2026-802.txt"
+     },
+     {
+      "key": "si-rate",
+      "text": "요율·탄소가격 경감 규정(SI 2026/809), 영국 법령 누리집",
+      "url": "https://www.legislation.gov.uk/uksi/2026/809/made",
+      "basis": "stored",
+      "path": "collected/archive/pages/uk-legislation/uksi-2026-809-full.txt"
+     },
+     {
+      "key": "si-trans",
+      "text": "경과 규정(SI 2026/830), 영국 법령 누리집",
+      "url": "https://www.legislation.gov.uk/uksi/2026/830/made",
+      "basis": "stored",
+      "path": "collected/archive/pages/uk-legislation/uksi-2026-830-full.txt"
+     },
+     {
+      "key": "si-emis",
+      "text": "배출량·검증 규정(SI 2026/995), 영국 법령 누리집",
+      "url": "https://www.legislation.gov.uk/uksi/2026/995/made",
+      "basis": "stored",
+      "path": "collected/archive/pages/uk-legislation/uksi-2026-995-full.txt"
+     },
+     {
+      "key": "hmrc",
+      "text": "영국 국세청 CBAM 안내의 바뀐 내용 기록(GOV.UK)",
+      "url": "https://www.gov.uk/government/collections/carbon-border-adjustment-mechanism",
+      "basis": "stored",
+      "path": "collected/archive/pages/uk-govuk/changes.txt"
+     },
+     {
+      "key": "law",
+      "text": "EU CBAM 규정 통합본(2025년 10월 20일자), EUR-Lex",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020",
+      "basis": "stored",
+      "path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt"
+     },
+     {
+      "key": "eu-decision",
+      "text": "이사회 결정 (EU) 2025/2468(EU·영국 연계 협상 개시 승인), EUR-Lex",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32025D2468",
+      "basis": "stored",
+      "path": "collected/archive/pages/eur-lex-docs/32025D2468.txt"
+     }
+    ]
    }
   },
   {
@@ -6706,6 +7131,150 @@
    "related": {
     "words": [
      "WTO"
+    ]
+   },
+   "analysis": {
+    "asOf": "2026-11-11",
+    "basedOn": {
+     "stage": "패널 설치",
+     "events": 5
+    },
+    "sections": [
+     {
+      "key": "background",
+      "items": [
+       {
+        "text": "CBAM이 세계무역기구(WTO) 협정에 맞는지는 제도를 설계할 때부터 따라다닌 물음입니다. DS639는 이 물음이 WTO 분쟁해결절차에 처음 올라간 사건입니다. WTO 분쟁 기록에 따르면 러시아는 2025년 5월 12일에 EU와 회원국을 상대로 협의를 요청했습니다.",
+        "refs": [
+         "wto"
+        ]
+       },
+       {
+        "text": "러시아가 문제 삼는 것은 두 가지입니다. CBAM 제도 전반과, EU 배출권거래제에서 EU 생산자에게 주는 무상할당입니다. 러시아는 둘 다 WTO 협정에 어긋난다고 주장합니다. 러시아가 든 협정 조항과 구체적인 논거는 이 글에 옮기지 못했습니다. WTO 분쟁 기록의 협의 요청서와 패널 설치 요청서에서 확인하실 수 있습니다.",
+        "refs": [
+         "wto"
+        ]
+       }
+      ]
+     },
+     {
+      "key": "content",
+      "items": [
+       {
+        "label": "지금까지의 절차",
+        "text": "WTO 분쟁 기록에 따르면 EU는 2025년 5월 22일에 협의 요청을 받아들이지 않았습니다. 러시아는 2026년 7월 10일에 패널 설치를 요청했고, 분쟁해결기구는 2026년 7월 24일 회의에서 설치를 미룬 뒤 2026년 9월 25일에 패널을 설치했습니다.",
+        "refs": [
+         "wto"
+        ]
+       },
+       {
+        "label": "제3자",
+        "text": "한국을 포함한 27개 회원국이 제3자로 참여할 권리를 유보했습니다. 제3자는 당사자가 아니지만 패널에 의견을 낼 수 있습니다.",
+        "refs": [
+         "wto"
+        ]
+       },
+       {
+        "label": "EU의 입장",
+        "text": "EU 집행위원회는 2025년 12월 17일 문답 자료에서 CBAM이 통상 수단이나 EU 산업을 보호하는 장치가 아니라 기후를 위한 환경 정책 수단이며, WTO 규범에 맞게 차별 없이 적용된다고 밝혔습니다. 근거로는 세 가지 설계를 들었습니다. EU로 수출하는 기업이 배출을 줄이면 CBAM 부담이 줄고, 인증서 가격이 EU 생산자가 내는 탄소가격과 같으며, EU 밖에서 실제로 낸 탄소가격은 차감된다는 점입니다.",
+        "refs": [
+         "qanda"
+        ]
+       }
+      ]
+     },
+     {
+      "key": "situation",
+      "items": [
+       {
+        "label": "패널 구성",
+        "text": "패널 위원의 구성은 WTO 분쟁 기록에 아직 나와 있지 않습니다(2026년 11월 10일 확인). 위원이 정해져야 서면 제출과 심리가 시작됩니다.",
+        "refs": [
+         "wto"
+        ]
+       },
+       {
+        "label": "입법에 드리운 그림자",
+        "text": "WTO 규범과의 정합성은 지금 진행 중인 입법에서도 되풀이해 나옵니다. CBAM 규정은 수출품의 탄소누출 위험에 대응하는 입법 제안을 WTO 법에 맞는 방식으로 내도록 EU 집행위원회에 요구합니다. EU 배출권거래제 개정안은 CBAM 부문의 무상할당을 더 주는 일을 국제 통상 규범에 맞게 하려고 폐지 속도를 늦추는 길을 택했다고 적었습니다. 무상할당은 이 분쟁에서 러시아가 문제 삼은 대상이기도 합니다.",
+        "refs": [
+         "law",
+         "ets",
+         "wto"
+        ]
+       },
+       {
+        "label": "EU 안의 논의",
+        "text": "유럽경제사회위원회는 수출 기업을 위한 장기 해법을 요구하면서 그것이 WTO 규범에 맞아야 한다고 못박았습니다. EU 집행위원회는 임시 탈탄소화 기금도 WTO 규범에 맞는다고 설명합니다.",
+        "refs": [
+         "eesc",
+         "qanda"
+        ]
+       }
+      ]
+     },
+     {
+      "key": "practice",
+      "items": [
+       {
+        "label": "의무는 그대로",
+        "text": "패널이 설치되었다고 CBAM의 적용이 멈추지는 않습니다. CBAM 규정과 이행규정은 그대로 시행되고 있고, 2026년 수입분에 대한 첫 신고 기한도 달라지지 않았습니다.",
+        "refs": [
+         "law"
+        ]
+       },
+       {
+        "label": "지켜볼 대목",
+        "text": "패널 위원의 구성, 당사자와 제3자의 서면 제출, 그리고 한국 정부가 제3자로서 어떤 의견을 내는지가 다음에 볼 대목입니다.",
+        "refs": [
+         "wto"
+        ]
+       },
+       {
+        "label": "판단의 범위",
+        "text": "이 분쟁은 CBAM 전반과 무상할당을 함께 다룹니다. 결과에 따라 CBAM의 설계뿐 아니라 무상할당을 줄여 가는 일정에 관한 논의에도 영향을 줄 수 있습니다. 다만 결론이 나오기 전까지는 어느 쪽으로도 단정할 수 없습니다.",
+        "refs": [
+         "wto"
+        ]
+       }
+      ]
+     }
+    ],
+    "sources": [
+     {
+      "key": "wto",
+      "text": "WTO 분쟁 기록: DS639",
+      "url": "https://www.wto.org/english/tratop_e/dispu_e/cases_e/ds639_e.htm",
+      "basis": "web",
+      "checkedOn": "2026-11-10"
+     },
+     {
+      "key": "qanda",
+      "text": "EU 집행위원회 CBAM 문답 자료(2025년 12월 17일)",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_25_3089",
+      "basis": "stored",
+      "path": "collected/archive/pages/ec-press/qanda_25_3089.txt"
+     },
+     {
+      "key": "law",
+      "text": "CBAM 규정 통합본(2025년 10월 20일자), EUR-Lex",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020",
+      "basis": "stored",
+      "path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt"
+     },
+     {
+      "key": "ets",
+      "text": "EU 집행위원회, EU 배출권거래제 지침 개정안(COM(2026) 616)",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52026PC0616",
+      "basis": "stored",
+      "path": "collected/archive/pages/eu-fulltext/ets-review-commission-DOC_1.txt"
+     },
+     {
+      "key": "eesc",
+      "text": "유럽경제사회위원회 의견(C/2026/3243)",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025AE4390",
+      "basis": "stored",
+      "path": "collected/archive/pages/eur-lex-docs/52025AE4390.txt"
+     }
     ]
    }
   },
