@@ -23,6 +23,12 @@ class FactCheckTest(unittest.TestCase):
         result = fact_check.check("2026년 9월 28일에 공개했다. 50톤 기준으로 0.87%가 면제된다. 이행규정(EU) 2025/2621. 2026년 10월 5일 가격 82.32유로. 신고인 1,234명.", self.SOURCE)
         self.assertTrue(result["ok"], result)
 
+    def test_decimal_comma_in_the_source_matches_a_decimal_point(self):
+        source = "The CBAM factor shall be equal to 97,5 % in 2026 and 37,5% in 2032."
+        self.assertTrue(fact_check.check("CBAM 계수는 2026년 97.5%, 2032년 37.5%입니다.", source)["ok"])
+        result = fact_check.check("CBAM 계수는 2026년 97.4%입니다.", source)
+        self.assertEqual(result["missingNumbers"], ["97.4"])
+
     def test_changed_number_and_date_fail(self):
         result = fact_check.check("2026년 9월 29일에 공개했다. 0.78%가 면제된다.", self.SOURCE)
         self.assertFalse(result["ok"])
