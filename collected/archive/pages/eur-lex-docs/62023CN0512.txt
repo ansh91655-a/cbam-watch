@@ -1,0 +1,25 @@
+[주소] https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:62023CN0512
+[받은 곳] http://publications.europa.eu/resource/celex/62023CN0512
+
+C_2023338EN.01001401.xml
+25.9.2023
+EN
+Official Journal of the European Union
+C 338/14
+Action brought on 8 August 2023 — Republic of Poland v European Parliament and Council of the European Union
+(Case C-512/23)
+(2023/C 338/19)
+Language of the case: Polish
+Parties
+Applicant: Republic of Poland (represented by: B. Majczyna, acting as Agent)
+Defendant: European Parliament, Council of the European Union
+Form of order sought
+The applicant claims that the Court should:
+—
+annul in its entirety Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023 establishing a carbon border adjustment mechanism (1)
+—
+order the European Parliament and the Council of the European Union to pay the costs.
+Pleas in law and main arguments
+Poland invokes against the contested Regulation 2023/956 a plea in law alleging infringement of point (a) of the first subparagraph of Article 192(2) TFEU in so far as that regulation is incorrectly based on Article 192(1) TFEU, whereas the measures it lays down establishing a carbon border adjustment mechanism (‘CBAM’) are provisions of a primarily fiscal nature.
+The contested regulation lays down taxation rules, and in any event fiscal provisions. Both the objective and nature of the provisions introducing the CBAM are above all fiscal. The provisions of the contested regulation establish a new public charge and set out all the conditions for its collection. The fiscal function of the CBAM takes precedence over the environmental function of that measure. In addition, unlike the Emission Trading System (ETS) of the European Union, the CBAM is not a market-based measure and, therefore, the conditions set out in the Court’s case-law, which preclude a measure which forms part of the EU ETS from being regarded as a fiscal measure, are not satisfied.
+(1) OJ 2023 L 130, p. 52
