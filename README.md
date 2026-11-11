@@ -26,13 +26,13 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 | `sources/registry.json` | 출처 대장. 어디를 어떤 방법으로 보는지 적혀 있다 |
 | `collected/` | 수집 결과. `feed/`(그날 새로 보인 것), `state/`(이미 본 것의 열쇠), `pages/`(EU 공식 화면의 글), `status.json`(출처별 확인 결과), `archive/`(지난 소식을 한꺼번에 모은 것. 아래 '지난 소식 채우기' 참조) |
 | `originals/` | EU 집행위원회 문서의 사본(`files/<문서 id>/<해시>/<원래 파일 이름>`), 뽑아 낸 본문(`text/`), 판 사이의 비교 결과(`diffs/`), 대장(`state.json`) |
-| `data/` | 사이트에 게시한 데이터. 소식(`items.json`), 주제 목록(`topics.json`), 인증서 가격(`prices.json`, 프로그램이 가격표에서 만든다), 일정(`events.json`), 주간 요약(`digests.json`), 용어집(`terms.json`), 하나로 묶은 소식의 기록(`merged.json`) |
+| `data/` | 사이트에 게시한 데이터. 소식(`items.json`), 주제 목록(`topics.json`), 인증서 가격(`prices.json`, 프로그램이 가격표에서 만든다), 일정(`events.json`), 주간 요약(`digests.json`), 용어집(`terms.json`), 하나로 묶은 소식의 기록(`merged.json`), 규제별 진행 상황(`regulations.json`), 품목 코드 조회의 목록(`cn.json`), 법령에서 옮겨 온 참고 자료(`factor.json`, `duties.json`, `calc.json`, `calc-goods.json`) |
 | `reports/` | 보고 실행이 올리는 그날과 그 주의 보고 파일. 알림의 근거다 |
 | `language/` | 국문 표기 기준(용어집) |
 | `site/` | 공개 사이트의 화면 파일. 화면마다 모듈 하나(`js/views/`), 그림과 달력 같은 부품(`js/ui/`), 디자인 값(`css/tokens.css`)과 색 변형(`css/themes.css`), 파비콘과 공유 미리보기 그림과 라이선스 고지(`assets/`). 아래 '사이트의 디자인' 참조 |
 | `console/` | 운영 화면의 파일 |
 | `tools/` | 정해진 일을 하는 프로그램. 아래 표 참조 |
-| `tests/` | 도구의 자동 시험. 올릴 때마다 돈다(`.github/workflows/tests.yml`) |
+| `tests/` | 도구의 자동 시험. 도구나 시험, 시험이 읽는 화면의 셈과 참고 자료가 바뀌면 돈다(`.github/workflows/tests.yml`) |
 
 ### tools
 
@@ -50,6 +50,8 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 | `tools/cn` | 품목 코드 조회의 목록을 법령 원문에서 만드는 프로그램: 부속서의 품목 표 읽기(`annex`), `data/cn.json` 만들기(`build`), 통합본의 판 다루기(`versions`), 새 통합본이 나오면 본문을 받아 목록을 다시 만들기(`refresh`, 평일 수집이 돌린다. 부속서를 제대로 읽었는지의 확인에 걸리면 아무것도 바꾸지 않고 사유를 `collected/cn/refresh.json`에 남긴다). 원문은 `collected/archive/pages/eu-fulltext/`에 있다. 코드를 견주는 셈은 사이트의 `site/js/cn/match.js`, 개정안의 단계에 따라 안내의 말을 바꾸는 기준은 `site/js/cn/stage.js`에 있다 |
 | `tools/thumbs` | 소식 카드의 미리보기 그림을 만드는 프로그램: 만들 것 고르기(`plan`), 원문 화면의 제목 부분 찍기(`shots.mjs`), 법령 PDF의 첫 장 받기(`pdfcover`), 줄여서 싣기(`finish`). 재이용이 허용된 공식 출처만 다루고, 화면을 여는 브라우저는 자동으로 여는 것임을 숨기지 않는다 |
 | `tools/common` | 여러 프로그램이 함께 쓰는 것: 웹에서 받기(`net`), robots.txt 지키기(`robots`), 화면의 글 뽑기(`htmltext`), JSON 읽고 쓰기(`jsonio`), 사이트 주소와 배포 저장소(`siteinfo`) |
+| `tools/calc` | 인증서 비용 추정의 품목 자료를 법령의 표에서 만드는 프로그램: 받아 둔 표 읽기(`source`), 품목마다 기본값과 벤치마크를 짝지어 `data/calc-goods.json` 만들기(`build`) |
+| `tools/sitecheck` | 만든 사이트를 브라우저로 열어 가로 넘침, 화면 오류, 접근성을 검사하는 프로그램(Node). 아래 '화면 점검' 참조 |
 | `tools/art` | 사이트의 그림을 만드는 프로그램. 손으로 돌린다: 점 지도(`dotmap`, 나라 경계 읽기는 `world`), 아이콘(`icons`), 라이선스 고지(`notices`), 공유 미리보기 그림의 원본(`social.html`) |
 
 자동으로 받는 것은 모두 `tools/common/net.py`를 거치고, 이 함수는 주소를 열기 전에 그 사이트의 robots.txt를 봅니다(`tools/common/robots.py`). 사이트가 자동 읽기를 막은 주소는 받지 않고, 막힌 주소는 `collected/robots.json`에 남아 그날의 상태 점검이 알립니다. 이 수집기의 이름(cbam-watch)을 적은 규칙과 함께 Claude의 수집기 이름을 적은 규칙도 따릅니다(받은 글을 Claude가 읽고 요약하기 때문입니다). 사이트가 확인 요청이나 접근 거부 화면을 내면 넘어서려 하지 않습니다. 주소 하나를 손으로 확인하려면 `python3 -m tools.common.robots <주소>`를 씁니다.
@@ -63,11 +65,34 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 - 연혁의 근거는 세 가지다. `stored`는 `collected/archive/`에 모아 둔 공식 기록과 맞는 사건이고 프로그램이 실제로 맞춰 본다. `web`은 자동으로 받을 수 없는 공식 화면을 읽고 확인한 사건, `press`는 언론 보도로만 아는 사건이다(화면에 '언론 보도'로 표시된다).
 - 검사: `python -m tools.publish.regulations`(꼴, 높임말, 용어, 근거). 사이트를 만들 때는 꼴과 표기만 막고, 근거가 공식 기록과 달라진 것은 알리기만 한다(공식 기록은 날마다 바뀐다).
 - 고치기: `python -m tools.publish.rule_edit`(연혁에 한 줄 더하기와 빼기, 단계와 설명 고치기, 새 규제 더하기). 고친 뒤 자료 전체를 검사하고, 걸리면 고치지 않는다.
-- 기관별 입장 비교표: 규제에 `positions`가 있으면 화면에 '기관별 입장 비교'가 실린다(지금은 하류제품 확대 개정안). 칸마다 저장소에 받아 둔 원문 글에서 근거를 대고(`contains`, 그 문서에 없는 조항은 `lacks`) 프로그램이 맞춰 본다. `python -m tools.publish.rule_edit positions --id <규제> --file <표 파일>`로 넣고, 공개용 사본에는 칸의 글만 실린다.
-- 분석 글: 규제에 `analysis`가 있으면 '무엇을 정하는 규제인가요' 아래에 배경, 주요 내용, 쟁점과 정세, 실무에서 볼 점이 실린다(검사와 변환은 `tools/publish/analysis.py`, 화면은 `site/js/views/rules/analysis.js`). 문단마다 근거 자료를 가리켜야 하고, 모아 둔 공식 자료만 가리키는 문단은 그 안의 날짜와 수를 자료의 글과 프로그램이 대조한다. 언론 보도에 기댄 문단은 글에서 그렇다고 밝혀야 한다. `python -m tools.publish.rule_edit analysis --id <규제> --file <분석 파일>`로 넣고 `analysis-show`로 꺼낸다. 규제의 단계나 연혁이 달라지면 화면이 '분석을 쓴 뒤에 달라졌다'고 스스로 밝히고, 사흘이 지나도록 그대로면 상태 점검이 알린다. 근거로 쓰는 글은 워크플로 '소급 수집'으로 받아 둔다. `steps`에 `eu-acts`를 적으면 시행 중인 법령의 본문을, `eu-fulltext`를 적으면 심의 중인 제안의 본문과 부속서, EU 배출권거래제 지침 통합본, 유럽의회 입법 관측소의 문서별 요약을, `uk-legislation`을 적으면 영국 CBAM 법령의 온전한 글을, `eur-lex-docs`를 적으면 CBAM 규정과 이어진 문서(계류 중인 소송의 공고 포함)를 받는다. 규제를 고칠 때 다른 규제의 근거가 받아 둔 글과 달라진 것은 알리기만 하고 막지 않으며(`rule_edit.blocking`), 그 어긋남은 상태 점검이 따로 알린다.
+- 기관별 입장 비교표: 규제에 `positions`가 있으면 화면에 '기관별 입장 비교'가 실린다(지금은 하류제품 확대 개정안과 임시 탈탄소화 기금 규정안). 칸마다 저장소에 받아 둔 원문 글에서 근거를 대고(`contains`, 그 문서에 없는 조항은 `lacks`) 프로그램이 맞춰 본다. `python -m tools.publish.rule_edit positions --id <규제> --file <표 파일>`로 넣고, 공개용 사본에는 칸의 글만 실린다.
+- 분석 글: 규제에 `analysis`가 있으면 '무엇을 정하는 규제인가요' 아래에 배경, 주요 내용, 쟁점과 정세, 실무에서 볼 점이 실린다(검사와 변환은 `tools/publish/analysis.py`, 화면은 `site/js/views/rules/analysis.js`). 문단마다 근거 자료를 가리켜야 하고, 모아 둔 공식 자료만 가리키는 문단은 그 안의 날짜와 수를 자료의 글과 프로그램이 대조한다. 언론 보도에 기댄 문단은 글에서 그렇다고 밝혀야 한다. `python -m tools.publish.rule_edit analysis --id <규제> --file <분석 파일>`로 넣고 `analysis-show`로 꺼낸다. 규제의 단계나 연혁이 달라지면 화면이 '분석을 쓴 뒤에 달라졌다'고 스스로 밝히고, 사흘이 지나도록 그대로면 상태 점검이 알린다. 근거로 쓰는 글은 워크플로 '소급 수집'으로 받아 둔다. `steps`에 `eu-acts`를 적으면 시행 중인 법령의 본문을, `eu-fulltext`를 적으면 심의 중인 제안의 본문과 부속서, EU 배출권거래제 지침 통합본, 유럽의회 입법 관측소의 문서별 요약을, `uk-legislation`을 적으면 영국 CBAM 법령의 온전한 글을, `eur-lex-docs`를 적으면 CBAM 규정과 이어진 문서(계류 중인 소송의 공고 포함)를 받는다. `eu-tables`를 적으면 법령 부속서의 값 표를 칸의 자리를 살려 받는다(인증서 비용 추정의 자료). 규제를 고칠 때 다른 규제의 근거가 받아 둔 글과 달라진 것은 알리기만 하고 막지 않으며(`rule_edit.blocking`), 그 어긋남은 상태 점검이 따로 알린다.
 - 달라진 것 찾기: `python -m tools.run.rules_watch`가 모아 둔 공식 기록이 지난번에 본 뒤로 달라졌는지 알려 준다. 본 것은 `data/rules-seen.json`에 적는다.
 - 상태 점검: `tools/run/rules_health.py`가 근거 어긋남, 지난 일정, 반영되지 않은 변화, 기록 갱신 누락을 일일 보고의 문제로 올린다.
 - 공식 기록을 읽지 못한 날: 사이트가 점검 중이거나 답이 끊겨도 모아 둔 목록은 줄어들지 않는다. 읽지 못한 것이 있는 실행은 앞의 목록에서 빠진 기록을 그대로 남기고(`tools/archive/store.py`의 `save_index`), EU 법령 데이터베이스의 연관 문서는 빠진 문서와 관계를 되살린다(`tools/archive/cellar.py`의 `restore`). 무엇을 읽지 못했는지는 `collected/archive/report/`에 남는다.
+
+## 법령에서 옮겨 온 참고 자료
+
+소식이나 규제의 연혁과 달리, 법령에 적힌 값을 그대로 옮겨 화면의 그림과 계산에 쓰는 자료가 있다. 모두 같은 틀을 따른다: 원본은 `data/`에 있고 항목마다 그 값이 적힌 법령 글(`collected/archive/pages/` 아래)을 가리키며, 검사 프로그램(`tools/publish/`)이 값과 대목을 그 글과 대조한다. 꼴이 깨지면 사이트 만들기가 멈추고, 받아 둔 글과 달라진 것('근거 어긋남')은 알리기만 한다. 공개용 사본에서는 저장소 안의 경로와 대조용 대목을 뺀다. 어긋남은 상태 점검(`tools/run/reference_health.py`)이 일일 보고의 문제로 올린다.
+
+- CBAM 계수(`data/factor.json`, 검사 `python -m tools.publish.factor`): 현행 지침과 개정안의 해마다의 값. 규제 자료에 `figure: cbam-factor`가 적힌 규제의 화면에 그림으로 실리고(`site/js/ui/factorchart.js`), 인증서 비용 추정이 쓴다.
+- 실무 달력(`data/duties.json`, 검사 `python -m tools.publish.duties`): 법령에 날짜가 적힌 EU CBAM과 영국 CBAM의 의무. 일정 화면의 '의무 일정'에 실리고 일정에도 합쳐진다(같은 일을 가리키는 게시 데이터의 일정은 의무 쪽을 남긴다).
+- 인증서 비용 추정(`data/calc.json`과 `data/calc-goods.json`, 검사 `python -m tools.publish.calc`): 사이트의 '가격 > 비용 추정' 화면(`#calc`)이 쓴다.
+  - `calc-goods.json`은 손으로 고치지 않는다. 받아 둔 법령의 표(`collected/archive/pages/eu-tables/`)에서 `python -m tools.calc.build`가 만든다: 무상할당 조정 이행규정 (EU) 2025/2620 부속서 5의 CBAM 벤치마크(품목 570개)와, 기본값 이행규정 (EU) 2025/2621 부속서 I(정정 규정 (EU) 2026/1740이 갈아 끼운 표)의 대한민국 표, 대한민국의 값이 없는 품목에 쓰는 '그 밖의 나라와 지역' 표. 법령이 정하지 않은 경우를 만나면 어림하지 않고 멈춘다.
+  - `calc.json`은 손으로 적는 규칙이다: 마크업, 부문 간 보정계수, 벤치마크의 연도 구간, 생산경로의 이름, 계산식, 화면에 싣는 설명 글. 수식은 받아 둔 글에 그림으로만 있어 유럽연합 관보의 PDF에서 확인했고(확인한 날을 적어 둔다), 식의 항이 무엇인지는 받아 둔 글과 대조한다.
+  - 셈은 `site/js/calc/compute.js`가 한다(시험은 `tests/test_calc.py`가 node로 돌린다). 정해지지 않아 가정한 값(2031년 이후의 벤치마크와 부문 간 보정계수)과 참고용인 값(2027년 수입분부터 갱신될 벤치마크)은 화면이 그렇다고 밝힌다.
+  - 근거 법령을 고치거나 바로잡는 새 문서가 법령 데이터베이스 목록에 보이면 상태 점검이 알린다(`calc.json`의 `watch`). 그때는 `tools/archive/tables.py`의 대상을 새 법령으로 바꿔 표를 다시 받고(워크플로 '소급 수집', `steps`에 `eu-tables`), `python -m tools.calc.build`로 자료를 다시 만들어 달라진 것을 확인한 뒤, 반영한 문서를 `watch.known`에 적는다.
+- 규제 화면에서 추정 화면으로 이어 주려면 규제 자료에 `tool: calc`를 적는다(`python -m tools.publish.rule_edit set --id <규제> --tool calc`).
+
+## 화면 점검
+
+`tools/sitecheck`는 만든 사이트를 브라우저(이미 깔려 있는 크롬)로 열어 검사한다. 화면 파일이나 게시 데이터가 바뀌면 워크플로 '화면 점검'(`.github/workflows/sitecheck.yml`)이 돌린다. 사이트 배포는 이 검사를 기다리지 않고, 문제가 나오면 '운영 보고' 이슈에 어느 화면이 왜 걸렸는지 적힌다(`python -m tools.notify.run --event sitecheck`).
+
+- `layout`: 모든 화면을 다섯 너비(360~1440)로, 규제 화면을 규제마다 세 너비로 열어 가로 넘침, 화면 밖으로 나간 글, 그려지지 않은 화면, 본문에 찍힌 깨진 값(undefined, NaN), 화면 오류와 받지 못한 파일을 본다.
+- `axe`: 주요 화면에 접근성 자동 검사(axe-core)를 색 변형 셋, 너비 둘로 돌린다.
+- `calc`: 인증서 비용 추정 화면을 실제로 다뤄 본다(품목 찾기와 고르기, 신고 방법과 연도 바꾸기, 초점이 제자리로 가는지, 결과에 깨진 값이 없는지).
+- 화면의 목록은 만든 사이트의 데이터에서 뽑으므로(`plan.mjs`) 규제나 주제가 늘어도 따라간다.
+- 손으로 돌리기: `python3 -m tools.publish.build_site /tmp/_site && npm ci --prefix tools/sitecheck && node tools/sitecheck/run.mjs /tmp/_site` (일부만 돌리려면 `--only layout,axe,calc`, 결과 파일은 `--report <파일>`). 크롬이 다른 곳에 있으면 `CHROME_PATH`에 적는다.
 
 ## 지난 소식 채우기
 

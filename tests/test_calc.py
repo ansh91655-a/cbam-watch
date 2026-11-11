@@ -134,6 +134,12 @@ class PublishTest(unittest.TestCase):
         self.assertIn("다시 만든 것과 다름(품목 1개", found[0][1])
         self.assertEqual(calc.blocking(found), [])
 
+    def test_a_renumbered_table_is_not_drift_while_the_values_stay_the_same(self):
+        goods = copy.deepcopy(self.goods)
+        goods["builtFrom"]["benchmarks"]["table"] += 7
+        goods["builtFrom"]["defaults"]["korea"]["table"] += 7
+        self.assertEqual(calc.problems(self.terms, goods), [])
+
     def test_the_public_shape_carries_no_repository_paths(self):
         body = calc.public(self.terms, self.goods)
         text = calc.dump(body)

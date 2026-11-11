@@ -166,7 +166,8 @@ def goods_problems(terms, goods):
         fresh = build.build()
     except Unreadable as problem:
         return [("품목 자료", f"{DRIFT}: 받아 둔 표를 읽지 못함: {problem}")]
-    if fresh != goods:
+    # 표의 번호나 표 앞의 글 같은 겉모습(builtFrom)은 견주지 않는다. 다시 받으면 번호가 달라질 수 있고, 값이 같으면 자료는 그대로다.
+    if fresh["rows"] != goods["rows"] or fresh["goods"] != goods["goods"]:
         changed = sum(1 for old, new in zip(goods["goods"], fresh["goods"]) if old != new) + abs(len(goods["goods"]) - len(fresh["goods"]))
         return [("품목 자료", f"{DRIFT}: 받아 둔 표로 다시 만든 것과 다름(품목 {changed}개가 다름). python -m tools.calc.build 로 다시 만들고 달라진 것을 확인할 것")]
     return []
