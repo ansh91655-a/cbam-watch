@@ -180,6 +180,14 @@ class AnalysisEditTest(unittest.TestCase):
             rule_edit.show_analysis(self.body, argparse.Namespace(id="sample-rule", out=""))
         self.assertEqual(json.loads(printed.getvalue()), again)
 
+    def test_drift_in_another_rule_does_not_stop_an_edit(self):
+        found = [("규제 other-rule 분석 배경 1", "근거 어긋남: 자료에서 찾지 못한 날짜 ['2026-11-11'], 수 []"),
+                 ("규제 sample-rule 2026-01-08", "근거 어긋남: 기록에 없음"),
+                 ("규제 other-rule", "이름이 없음"),
+                 ("규제 sample-rule-2 분석 배경 1", "근거 어긋남: 자료에서 찾지 못한 날짜 [], 수 ['12']")]
+        self.assertEqual(rule_edit.blocking(found, "sample-rule"), [found[1], found[2]])
+        self.assertEqual(rule_edit.blocking(found, "other-rule"), [found[0], found[2]])
+
     def test_editing_the_rule_marks_the_day_it_changed(self):
         with mock.patch.object(rule_edit, "today", return_value="2026-11-12"):
             rule_edit.add_event(self.body, argparse.Namespace(id="sample-rule", date="2026-01-08", text="설명자료가 나왔다는 보도가 있었습니다.", source="신문",

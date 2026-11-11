@@ -117,6 +117,18 @@ def show_analysis(body, args):
         print(text)
 
 
+def blocking(found, edited):
+    """찾은 문제 가운데 고치기를 막는 것만 고른다.
+
+    꼴이나 표기 문제는 어느 규제의 것이든 막는다. 근거가 공식 기록과 달라진 것은 지금 고치는 규제의 것만 막는다.
+    받아 둔 글은 다시 받을 때 바뀔 수 있다. 다른 규제의 근거가 달라졌다고 이 규제를 고치지 못하면 자동 실행이 멈춘다.
+    그런 어긋남은 상태 점검(tools.run.rules_health)이 따로 알린다.
+    """
+    mine = f"규제 {edited}"
+    return [(where, what) for where, what in found
+            if not what.startswith("근거 어긋남") or where == mine or where.startswith(mine + " ")]
+
+
 def main(argv):
     parser = argparse.ArgumentParser()
     commands = parser.add_subparsers(dest="command", required=True)
@@ -163,9 +175,10 @@ def main(argv):
     {"add-event": add_event, "drop-event": drop_event, "set": set_fields, "add-rule": add_rule, "positions": set_positions, "analysis": set_analysis}[args.command](body, args)
     body["asOf"] = today()
     found = regulations.problems(body)
+    stop = blocking(found, getattr(args, "id", ""))
     for where, what in found:
-        print(f"문제: {where}: {what}")
-    if found:
+        print(("문제" if (where, what) in stop else "알림(고치기를 막지 않음)") + f": {where}: {what}")
+    if stop:
         print("문제가 있어 고치지 않았습니다.")
         return 1
     write_json(regulations.SOURCE, body)
