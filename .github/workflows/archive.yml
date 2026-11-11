@@ -17,9 +17,11 @@ on:
 permissions:
   contents: write
 
-# 출처가 다른 실행은 함께 돌 수 있다(같은 출처를 두 번 돌리면 뒤의 것이 기다린다).
+# 모으기(crawl)는 평일 수집(collect.yml)과 같은 파일(collected/)을 고친다. 둘이 함께 돌면 올릴 때 부딪쳐 한쪽이 실패하므로
+# 같은 줄(collect)에 세워 앞의 것이 끝난 뒤에 돈다. 줄에서 기다리는 실행은 하나뿐이다(새로 기다리는 것이 오면 앞서 기다리던 것은 취소된다).
+# 여러 출처를 다시 받을 때는 한 번의 실행에 steps를 띄어 적어 함께 돌린다.
 concurrency:
-  group: archive-${{ inputs.mode }}-${{ inputs.steps }}
+  group: ${{ inputs.mode == 'crawl' && 'collect' || format('archive-{0}', inputs.mode) }}
   cancel-in-progress: false
 
 jobs:
