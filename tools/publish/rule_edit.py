@@ -9,6 +9,10 @@
 단계와 설명 고치기:    python -m tools.publish.rule_edit set --id <규제> [--stage "…"] [--at 2] [--tone progress] [--status "…"] [--next "…"] [--next-date 2026-12-14] [--next-title "…"]
                       (--next "", --next-date "", --next-title ""는 그 값을 지운다. --next-title은 일정 화면에 보일 이름으로, 그 날 있을 일을 적은 짧은 구다)
 새 규제 더하기:        python -m tools.publish.rule_edit add-rule --file rule.json   (rule.json은 규제 하나의 JSON)
+분석 글 넣기와 바꾸기: python -m tools.publish.rule_edit analysis --id <규제> --file analysis.json
+                      (analysis.json은 sections와 sources를 담은 JSON. 꼴은 tools/publish/analysis.py의 머리글에 있다. 쓴 날과 그때의 규제 모습은 스스로 적힌다)
+분석 글 꺼내 보기:     python -m tools.publish.rule_edit analysis-show --id <규제> [--out analysis.json]   (고칠 때는 꺼내서 고친 뒤 다시 넣는다)
+연혁이나 단계를 고치면 그 규제에 고친 날(changedOn)이 적힌다. 분석 글이 그 뒤로 그대로이면 사이트가 그렇다고 밝히고, 상태 점검이 알린다.
 고칠 때마다 기준일(asOf)이 오늘로 바뀌고, 연혁은 날짜순으로 다시 놓인다. 끝에 자료 전체를 검사해 문제를 찍는다(문제가 있으면 1로 끝난다).
 """
 import argparse
@@ -16,7 +20,7 @@ import json
 import sys
 
 from tools.common.jsonio import read_json, today, write_json
-from tools.publish import regulations
+from tools.publish import analysis, regulations
 
 TONES = ["live", "progress", "planned", "adopted", "dispute", "ended"]
 
@@ -41,6 +45,7 @@ def add_event(body, args):
     if any(old["date"] == event["date"] and old["text"] == event["text"] for old in rule["timeline"]):
         raise SystemExit("같은 줄이 이미 있음")
     rule["timeline"] = sorted(rule["timeline"] + [event], key=lambda row: row["date"])
+    rule["changedOn"] = today()
 
 
 def drop_event(body, args):
@@ -49,6 +54,7 @@ def drop_event(body, args):
     if len(kept) != len(rule["timeline"]) - 1:
         raise SystemExit(f"뺄 줄이 하나로 정해지지 않음(맞는 줄 {len(rule['timeline']) - len(kept)}개)")
     rule["timeline"] = kept
+    rule["changedOn"] = today()
 
 
 def set_fields(body, args):
@@ -66,6 +72,7 @@ def set_fields(body, args):
             rule.pop(field, None)
         elif value is not None:
             rule[field] = value
+    rule["changedOn"] = today()
 
 
 def add_rule(body, args):
@@ -87,6 +94,27 @@ def set_positions(body, args):
     rule["positions"] = read_json(args.file, None)
     if rule["positions"] is None:
         raise SystemExit(f"파일을 읽지 못함: {args.file}")
+    rule["changedOn"] = today()
+
+
+def set_analysis(body, args):
+    """분석 글을 파일의 것으로 바꾼다. 쓴 날은 오늘로, 쓸 때의 규제 모습은 지금의 단계와 연혁 줄 수로 적는다."""
+    rule = find(body, args.id)
+    written = read_json(args.file, None)
+    if not isinstance(written, dict) or not written.get("sections"):
+        raise SystemExit(f"분석 파일을 읽지 못함: {args.file}")
+    rule["analysis"] = {"asOf": today(), "basedOn": analysis.based_on(rule), "sections": written["sections"], "sources": written.get("sources", [])}
+
+
+def show_analysis(body, args):
+    """분석 글을 꺼내 보여 준다(파일로도 쓴다). 자료는 바꾸지 않는다."""
+    current = find(body, args.id).get("analysis") or {}
+    text = json.dumps({"sections": current.get("sections", []), "sources": current.get("sources", [])}, ensure_ascii=False, indent=1)
+    if args.out:
+        with open(args.out, "w", encoding="utf-8") as handle:
+            handle.write(text + "\n")
+    else:
+        print(text)
 
 
 def main(argv):
@@ -117,13 +145,22 @@ def main(argv):
     table = commands.add_parser("positions")
     table.add_argument("--id", required=True)
     table.add_argument("--file", required=True)
+    written = commands.add_parser("analysis")
+    written.add_argument("--id", required=True)
+    written.add_argument("--file", required=True)
+    shown = commands.add_parser("analysis-show")
+    shown.add_argument("--id", required=True)
+    shown.add_argument("--out", default="")
     args = parser.parse_args(argv)
 
     body = read_json(regulations.SOURCE, None)
     if body is None:
         print("자료를 읽지 못함")
         return 1
-    {"add-event": add_event, "drop-event": drop_event, "set": set_fields, "add-rule": add_rule, "positions": set_positions}[args.command](body, args)
+    if args.command == "analysis-show":
+        show_analysis(body, args)
+        return 0
+    {"add-event": add_event, "drop-event": drop_event, "set": set_fields, "add-rule": add_rule, "positions": set_positions, "analysis": set_analysis}[args.command](body, args)
     body["asOf"] = today()
     found = regulations.problems(body)
     for where, what in found:

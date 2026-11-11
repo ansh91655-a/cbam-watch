@@ -46,7 +46,41 @@
 .crumbs { display: flex; flex-wrap: wrap; gap: 8px; font-size: var(--fs-s); color: var(--ink-3); }
 .rule-now { display: grid; gap: 12px; padding: 24px 26px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); border-top: 3px solid var(--rule-tone, var(--brand-bright)); }
 .rule-now h2 { font-size: 1.2rem; }
-.rule-summary { max-width: 72ch; color: var(--ink-2); }
+.rule-summary { max-width: 72ch; }
+/* 분석 글: 배경, 주요 내용, 쟁점과 정세, 실무에서 볼 점 */
+.rule-summary { font-size: 1.06rem; color: var(--ink); }
+.rule-analysis { display: grid; gap: 0; margin-top: 6px; padding: 8px 30px 22px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); }
+.an-stale { display: flex; align-items: flex-start; gap: 8px; margin: 14px 0 0; padding: 10px 14px; border-radius: var(--radius); background: var(--accent-soft); color: var(--on-accent); font-size: var(--fs-s); }
+.an-stale svg { flex: none; margin-top: 3px; }
+.an-nav { display: flex; flex-wrap: wrap; gap: 6px; padding: 16px 0 4px; }
+.an-nav button { padding: 5px 14px; border: 1px solid var(--line); border-radius: var(--radius-pill); background: var(--surface); color: var(--ink-2); font-size: var(--fs-s); font-weight: 600; transition: border-color 0.15s, color 0.15s; }
+.an-nav button:hover { border-color: var(--brand-bright); color: var(--brand-bright); }
+.an-sec { display: grid; gap: 12px; padding: 22px 0; border-top: 1px solid var(--line-2); }
+.an-nav + .an-sec { border-top: 0; padding-top: 14px; }
+.an-sec h3 { display: flex; align-items: center; gap: 10px; font-size: 1.1rem; scroll-margin-top: 96px; }
+.an-sec h3::before { content: ""; width: 4px; height: 1.05em; border-radius: 2px; background: var(--accent); }
+.an-sec h3[data-flash="true"] { color: var(--brand-bright); }
+.an-prose { display: grid; gap: 12px; }
+.an-prose p, .an-point p { max-width: 72ch; color: var(--ink-2); line-height: 1.8; }
+.an-points { display: grid; gap: 0; }
+.an-point { display: grid; gap: 4px 24px; padding: 13px 0; border-top: 1px dashed var(--line); }
+.an-point:first-child { border-top: 0; padding-top: 2px; }
+.an-point h4 { margin: 0; font-size: 0.95rem; font-weight: 700; line-height: 1.6; color: var(--ink); }
+@media (min-width: 720px) { .an-point { grid-template-columns: 168px minmax(0, 1fr); align-items: start; } .an-point.an-lead { grid-template-columns: minmax(0, 1fr); } .an-point h4 { padding-top: 2px; } }
+/* 근거 번호. 글 속의 작은 단추이고, 누르면 아래 자료 목록의 그 줄로 간다 */
+.an-refs { margin-left: 5px; white-space: nowrap; }
+.an-ref { min-width: 19px; height: 19px; margin-left: 2px; padding: 0 5px; border: 0; border-radius: 6px; background: var(--brand-soft); color: var(--brand); font-size: 0.72rem; font-weight: 700; line-height: 19px; vertical-align: 2px; font-variant-numeric: tabular-nums; }
+.an-ref:hover { background: var(--brand); color: var(--on-brand); }
+.an-src ol { display: grid; gap: 7px; margin: 0; padding: 0; list-style: none; counter-reset: source; font-size: var(--fs-s); }
+.an-src li { position: relative; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; padding: 3px 8px 3px 34px; border-radius: 8px; counter-increment: source; transition: background 0.3s; }
+.an-src li::before { content: counter(source); position: absolute; left: 6px; top: 4px; min-width: 19px; height: 19px; padding: 0 5px; border-radius: 6px; background: var(--brand-soft); color: var(--brand); font-size: 0.72rem; font-weight: 700; line-height: 19px; text-align: center; font-variant-numeric: tabular-nums; }
+.an-src li[data-flash="true"] { background: var(--accent-soft); }
+.an-src a { display: inline; overflow-wrap: anywhere; }
+.an-src a svg { margin-left: 4px; vertical-align: -1px; }
+.an-foot { padding-top: 14px; border-top: 1px solid var(--line-2); font-size: var(--fs-s); color: var(--ink-3); }
+@media (max-width: 640px) { .rule-analysis { padding: 4px 18px 18px; } }
+html[data-theme="midnight"] .an-stale { color: var(--accent); }
+@media print { .an-nav { display: none; } }
 .rule-links { display: grid; gap: 8px; padding: 0; list-style: none; }
 .rule-links a { display: inline-flex; align-items: center; gap: 5px; font-weight: 600; }
 

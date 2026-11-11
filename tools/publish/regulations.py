@@ -1,6 +1,7 @@
 """규제별 진행 상황(data/regulations.json)을 검사하고, 사이트에 실을 모양으로 바꾼다.
 
 검사: python -m tools.publish.regulations            (문제가 있으면 0이 아닌 값으로 끝난다)
+규제에는 분석 글(analysis: 배경, 주요 내용, 쟁점과 정세, 실무에서 볼 점)을 둘 수 있다. 그 꼴과 근거의 검사는 tools/publish/analysis.py가 한다.
 한 규제의 연혁은 사건마다 근거를 가진다.
  - basis "stored": 모아 둔 공식 자료와 맞춰 본 것. evidence에 어느 자료의 무엇과 맞추는지 적으며, 이 도구가 실제로 맞춰 본다.
  - basis "web":    공식 화면을 읽고 확인한 것(자동으로 받을 수 없는 화면). checkedOn에 확인한 날을 적는다.
@@ -12,6 +13,7 @@ import sys
 
 from tools.check import style_check, term_check
 from tools.common.jsonio import read_json
+from tools.publish import analysis
 
 SOURCE = "data/regulations.json"
 ARCHIVE = pathlib.Path("collected/archive")
@@ -161,6 +163,7 @@ def problems(body, term_index=None, kinds=("format", "evidence")):
             if not str(link.get("url", "")).startswith("https://") or not link.get("text"):
                 found.append((where, f"링크가 온전하지 않음: {link}"))
         found += position_problems(rule, term_index, kinds)
+        found += analysis.problems(rule, lambda text: text_problems(text, term_index), kinds)
     return found if "format" in kinds else [row for row in found if row[1].startswith("근거 어긋남")]
 
 
@@ -181,13 +184,15 @@ def public(body, items):
     """사이트에 실을 모양. 안에서만 쓰는 값(근거, 확인한 날, 소식 고르는 조건)은 뺀다."""
     rules = []
     for rule in body.get("regulations", []):
-        row = {key: value for key, value in rule.items() if key not in ("related", "timeline")}
+        row = {key: value for key, value in rule.items() if key not in ("related", "timeline", "analysis", "changedOn")}
         row["timeline"] = [{"date": event["date"], "text": event["text"], "source": event["source"], "link": event["link"],
                             **({"press": True} if event.get("basis") == "press" else {})} for event in rule.get("timeline", [])]
         if rule.get("positions"):  # 비교표: 칸의 근거는 빼고 글만 싣는다
             keys = [party.get("key") for party in rule["positions"].get("parties", [])]
             row["positions"] = {**rule["positions"], "rows": [{"topic": line.get("topic", ""), **{key: {"text": (line.get(key) or {}).get("text", "")} for key in keys}}
                                                              for line in rule["positions"].get("rows", [])]}
+        if rule.get("analysis"):  # 분석 글: 자료의 파일 경로는 빼고, 규제가 그 뒤에 달라졌는지를 함께 싣는다
+            row["analysis"] = analysis.public(rule)
         row["relatedItems"] = related_items(rule, items)
         rules.append(row)
     return {"asOf": body.get("asOf", ""), "groups": body.get("groups", []), "regulations": rules}
@@ -205,7 +210,8 @@ def main(argv):
     for rule in body.get("regulations", []):
         for event in rule.get("timeline", []):
             kinds[event.get("basis")] = kinds.get(event.get("basis"), 0) + 1
-    print(f"규제 {len(body.get('regulations', []))}건, 연혁 {sum(kinds.values())}줄(근거별 {kinds}), 문제 {len(found)}건")
+    written = [rule for rule in body.get("regulations", []) if rule.get("analysis")]
+    print(f"규제 {len(body.get('regulations', []))}건, 연혁 {sum(kinds.values())}줄(근거별 {kinds}), 분석 {len(written)}건(규제가 바뀐 뒤 그대로인 것 {sum(analysis.stale(rule) for rule in written)}건), 문제 {len(found)}건")
     return 1 if found else 0
 
 

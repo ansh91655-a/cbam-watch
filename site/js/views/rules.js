@@ -9,6 +9,7 @@ import { countdown, day, koreanDate } from "../ui/format.js";
 import { icon } from "../ui/icons.js";
 import { stackable } from "../ui/stack.js";
 import { stepper } from "../ui/stepper.js";
+import { analysis } from "./rules/analysis.js";
 
 function stageChip(rule) {
   return h("span", { class: "stage-chip", "data-tone": rule.tone || "progress", text: rule.stage });
@@ -102,7 +103,11 @@ function detail(main, rule, group, items) {
         h("p", { class: "rule-status", text: rule.status }),
         nextLine(rule),
       ]),
-      h("section", { class: "stack", "aria-labelledby": "h-what" }, [h("h2", { id: "h-what", text: "무엇을 정하는 규제인가요" }), h("p", { class: "rule-summary", text: rule.summary })]),
+      h("section", { class: "stack", "aria-labelledby": "h-what" }, [
+        h("h2", { id: "h-what", text: "무엇을 정하는 규제인가요" }),
+        h("p", { class: "rule-summary", text: rule.summary }),
+        analysis(rule),  // 배경, 주요 내용, 쟁점과 정세, 실무에서 볼 점(분석 글이 있는 규제만)
+      ]),
       positions(rule),
       h("section", { class: "stack", "aria-labelledby": "h-tl" }, [
         h("div", { class: "sec-head" }, [h("h2", { id: "h-tl", text: "연혁" }), h("span", { class: "count", text: `${rule.timeline.length}건, 새 일부터` })]),
