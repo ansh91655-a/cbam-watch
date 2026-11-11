@@ -1,0 +1,710 @@
+[주소] https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2547
+[받은 곳] http://publications.europa.eu/resource/celex/32025R2547
+[무엇] 내재배출량 산정 방법 이행규정
+
+L_202502547EN.000101.fmx.xml
+Official Journal
+of the European Union
+EN
+L series
+2025/2547
+22.12.2025
+COMMISSION IMPLEMENTING REGULATION (EU) 2025/2547
+of 10 December 2025
+laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and the Council as regards the methods for the calculation of emissions embedded in goods
+(Text with EEA relevance)
+THE EUROPEAN COMMISSION,
+Having regard to the Treaty on the Functioning of the European Union,
+Having regard to Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023 establishing a carbon border adjustment mechanism (1), and in particular Article 7(7) thereof,
+Whereas:
+(1)
+Pursuant to Regulation (EU) 2023/956, embedded emissions in goods imported into the customs territory of the Union from 2026, whether they are determined based on actual or default values, are to be calculated in accordance with the methods set out in Annex IV to that Regulation. Such calculation methods are to build upon the methodology applicable under the Emission Trading Scheme for installations located in the Union (EU ETS), as specified in Commission Implementing Regulation (EU) 2018/2066 (2).
+(2)
+The applicable methodology for the calculation of embedded emissions during the period lasting from 1 October 2023 until 31 December 2025 is laid down in Commission Implementing Regulation (EU) 2023/1773 (3). During that transitional period, the Commission gathered valuable experience and information from stakeholders, experts, and reporting declarants. In parallel with technical consultations with the Member States, including at expert level, the Commission carried out extensive consultations with relevant stakeholders, including industry representatives, to gather input in its preparatory work on the rules laid down in this Regulation.
+(3)
+Based on the experience gained during the transitional period, it is necessary to adjust the calculation methodology to ensure the effectiveness of the Carbon Border Adjustment Mechanism (CBAM). Such changes should aim at enhancing accuracy of calculations of embedded emissions of goods, decreasing the risk of circumvention of CBAM obligations, ensuring that compliance with monitoring and calculation rules can be adequately verified, and maintaining consistency with the EU ETS, while limiting the administrative burden for operators, authorised CBAM declarants, competent authorities and the Commission.
+(4)
+In order to quantify and calculate the embedded emissions of goods, system boundaries should be laid down. The system boundaries should be aligned with those covered under the EU ETS.
+(5)
+In order to quantify and calculate the specific embedded emissions of goods, operators should monitor emissions at installation level, determine which of those emissions are to be attributed to a production process, and then attribute those emissions to goods covered by that production process.
+(6)
+In order to determine the installation-level emissions which are attributable to goods, production processes should be defined for goods to which the same functional unit applies. The functional unit should be, as the general rule, the tonnes of goods under the same CN code listed in Annex I to Regulation (EU) 2023/956. However, since for cement and fertilisers, the emissions are dependent on the clinker content and nitrogen content in the goods respectively, the functional units should be the tonnes of clinker and tonnes of nitrogen contained in those goods. For some fertilisers, a supplementary unit measuring aspects other than the weight of goods, as laid down in the Annexes to Council Regulation (EEC) No 2658/87 (4), is available to account for differences in composition between goods covered by the same CN code. For those cases, that supplementary unit should constitute the functional unit. The functional units for iron and steel should be determined following the general rule, since the CN codes are already allowing differentiation in the calculation of embedded emissions. For aluminium and hydrogen, the general rule is sufficient to define a functional unit that covers goods which are sufficiently similar in their quality and composition so as to justify the definition of a unique production process for the purpose of the calculation of embedded emissions.
+(7)
+For the purpose of avoiding deviations in the calculation of emissions of goods to which the same functional unit applies, where such goods are produced using different production routes within an installation, the production process should, for such goods, not be different for each production route but should encompass all production routes, which means that the emissions attributable to goods to which the same functional unit applies should be the weighted average of the emissions of all the production routes used within the installation to produce goods to which the same functional unit applies.
+(8)
+In order to ensure accuracy in the process of monitoring emissions, dedicated monitoring rules should be laid down, including rules applicable to precursors. Those rules should align with the relevant EU ETS monitoring rules.
+(9)
+In order to support the calculation and the verification of actual embedded emissions pursuant to Article 8 of Regulation (EU) 2023/956, as well as the review of the CBAM declarations pursuant to Article 19(2) of that Regulation, operators should set out the main methodological criteria underpinning the collection of data at the installation throughout the year and the calculation of emissions in a monitoring plan. To ensure that the monitoring plan contains the necessary elements for verification, a template with the minimum requirements should be set out. To ensure an efficient verification process and review process of CBAM declarations by the Commission and competent authorities, the monitoring plans should be submitted in a language commonly used and understood for the purpose of monitoring, calculating and verifying emissions.
+(10)
+In order to quantify and calculate specific embedded emissions of goods covered by a production process, rules should be laid down for attributing emissions of a production process to goods.
+(11)
+The elements of evidence required to allow authorised CBAM declarants to report actual values for electricity and for electricity consumed in the production process of goods in accordance with Article 7(3) and (4) of Regulation (EU) 2023/956 should provide sufficient assurance as to the fulfilment of the criteria laid down in points 5 and 6 of Annex IV to that Regulation.
+(12)
+To allow the accredited verifier to check whether the criteria for using actual values for indirect emissions are fulfilled, the operator of the installation producing electricity and the operator of the installation using that electricity to produce a good should include the necessary information in their emissions reports. Since the operators should be required to demonstrate, for the fulfilment of the criteria referred to in point 6 of Annex IV to Regulation (EU) 2023/956, that electricity for which the actual emissions are claimed is actually flowing from the installation where it is produced to the installation where that electricity is used for the production of goods, and since the flow of electricity should be measured through smart metering systems at both installations for this purpose, the data from the smart metering systems should be provided by each operator to the respective verifier.
+(13)
+To allow the accredited verifier to check whether the criteria for using actual values for electricity imported into the customs territory of the Union are fulfilled, operators of installations producing electricity in a third country should include the necessary information in the emissions report. For this purpose, since operators might not have direct access to the relevant elements of evidence, they may need to receive certain elements of evidence, including for the demonstration of the lack of physical network congestion in accordance with point 5(b) of Annex IV to Regulation (EU) 2023/956, or for the demonstration of the occurred nomination of capacity for the import of electricity at the interconnector in accordance with point 5(d) of Annex IV to that Regulation, from other persons, including the authorised CBAM declarant, the importer and the transmission system operator.
+(14)
+To ensure simplicity for the operators in the calculation of embedded emissions, where an installation producing goods listed in Annex I to Regulation (EU) 2023/956 and not listed in Annex II to that Regulation, receives, during a reporting period, electricity from different installations or sources, the indirect embedded emissions of the goods should by default be determined as the weighted average of the embedded emissions of the electricity received from different installations. To ensure proportionality with respect to this default method, where the operators can provide evidence demonstrating that the installation producing goods not listed in Annex II to Regulation (EU) 2023/956 used, for a production process, only electricity from a given source or installation, or from a subset of sources or installations, the indirect embedded emissions of goods to which that production process applies may be determined separately.
+(15)
+To enable the verifier to conclude with reasonable assurance that the operator’s emissions report is free from material misstatements and to allow the Commission and competent authorities to review the CBAM declaration, to perform risk assessments and to prevent practices of circumvention of the rules laid down in this Regulation, the operator’s emissions report should contain information on the installation and the goods produced, including their specific embedded emissions, as well as other information facilitating checks on the accuracy of the calculation of the specific embedded emissions. Since the calculation of the adjustment for free allocation depends on data from the installation, the emissions report should also contain information relevant for the calculation of the adjustment for free allocation in accordance with Article 31 of Regulation (EU) 2023/956. To ensure an efficient verification process and review process of CBAM declarations by the Commission and competent authorities, the operator’s emission reports should be submitted in a language commonly used and understood for the purpose of monitoring, calculating and verifying emissions.
+(16)
+Due to the commercially sensitive and personal nature of some data related to the demonstration of the fulfilment of the criteria laid down in point 5 of Annex IV to Regulation (EU) 2023/956, operators should, where relevant, prepare a declarant-specific addendum to the operator’s emissions report, which is not to be disclosed to authorised CBAM declarants other than the one to which it refers.
+(17)
+Due to the commercially sensitive nature of some data elements contained in the operator’s emissions report, operators should prepare a summary version of that report to be included in the verification report and to be made accessible to authorised CBAM declarants. Where operators are registered in the CBAM Registry in accordance with Article 10 of Regulation (EU) 2023/956, the operators should be able to choose to disclose to the authorised CBAM declarant only the summary version of the operator’s emissions report and, where applicable, the relevant declarant-specific addendum to the operator’s emissions report.
+(18)
+To ensure compliance with the rules on monitoring and calculation of emissions as laid down in this Regulation, operators should correct, in the monitoring plan and operator’s emissions report, any misstatements, non-conformities or non-compliance notified by the verifier as part of the verification activity. Following any such correction, operators should provide the verifier with the final version of the document. To ensure completeness of information required to calculate and verify embedded emissions in complex goods, where the operator’s emissions report includes actual embedded emissions of precursors which were not produced at the installation, operators should also provide the verifier with the verification report of the producing installation.
+(19)
+The default values should be set for each third country and for each of the goods on the basis of a methodology which is based on the most recent and reliable information, and which takes into consideration the availability of reliable data in third countries. Where the Commission receives alternative reliable data demonstrating that the default values are too high or too low, it should revise the relevant default values.
+(20)
+For indirect emissions, the default value should be calculated based on the average of the emission factor of the country of origin electricity grid. Such method of calculation is the most suitable to achieve both the prevention of carbon leakage as well as the preservation of the environmental integrity of CBAM, given that it reflects to the largest possible degree decarbonisation efforts of third countries’ electricity grids while maintaining a high level of protection against the risk of carbon leakage. In order to reflect the impact of decarbonisation policies of third countries, such as the increase in renewable energy production, as well as climatic conditions on the yearly electricity supply in the countries concerned, whilst avoiding an excessive volatility of the emission factor due to anomalous years, including attributable to exceptional climatic conditions or other unforeseeable events, the emission factor should be calculated on the basis of the simple average of the emission factor for the most recent five-years period before the reporting for which reliable data is available.
+(21)
+For electricity imported into the customs territory of the Union, in order to reflect the impact of decarbonisation policies in the third country or group of third countries, on the emission intensity of the electricity production in the countries concerned, whilst avoiding an excessive volatility of the emission factor due to anomalous years, including attributable to exceptional climatic conditions or other unforeseeable events, the CO2 emission factor should be calculated on the basis of the average of the yearly CO2 emission factors for the most recent five-year period for which reliable data is available.
+(22)
+To allow authorised CBAM declarants to use alternative default values pursuant to point 4.2.2, point 4.3 and point 7 of Annex IV to Regulation (EU) 2023/956, it is necessary to lay down the detailed conditions to be complied with for that purpose. To provide clarity on when alternative default values can be used, rules should be laid down on the modality and timeline for providing alternative official data to the Commission, on the method of calculation of the alternative default values, and on the modality of making the alternative default values available for use by the authorised CBAM declarants. To ensure legal certainty for authorised CBAM declarants, it is necessary that the alternative default values are formally adopted and made available.
+(23)
+For the determination of embedded emissions of goods on the basis of actual values, in accordance with Regulation (EU) 2023/956, operators are to calculate the emissions occurring at the installation for the production of these goods during a given reporting period. To simplify the use of the correct reporting period during which the goods were produced, the reporting period used for such determination should correspond to a calendar year.
+(24)
+To simplify the identification of the reporting period for goods imported into the customs territory of the Union, and in order to alleviate the administrative burden on authorised CBAM declarants, a presumption should be established that such goods were produced during the calendar year of import. Authorised CBAM declarants should be given the possibility to rebut the presumption by providing evidence demonstrating the actual period during which the goods were produced. Since the monitoring, calculation and verification methodology laid down in this Regulation is to start applying only from 2026, the reporting period cannot be any period before 2026.
+(25)
+For precursors used in the production of a complex good, operators of the complex good should, for the purpose of determining embedded emissions on the basis of actual emissions, identify the applicable reporting period during which the precursor was produced and use the corresponding verified actual values. To simplify this identification and in order to alleviate the administrative burden on operators, a presumption should be established that precursors used in the production of a complex good were produced during the reporting period during which that complex good was produced. Operators should be given the possibility to rebut the presumption by providing evidence to the verifier demonstrating the actual period during which the precursor was produced. Since the monitoring, calculation and verification methodology laid down in this Regulation is to start applying only from 2026, the reporting period cannot be before 2026.
+(26)
+To ensure consistency, the reporting period applicable to the determination of embedded emissions on the basis of actual values should be the same as the reporting period applicable to the calculation of the adjustment for free allocation and as the reporting period applicable to the determination of the carbon price paid in accordance with Article 9 of Regulation (EU) 2023/956.
+(27)
+To ensure simplicity for the operators in the calculation of embedded emissions, where an installation producing complex goods receives precursors under a given CN code produced in an installation during different reporting periods, the embedded emissions of the complex goods should, for the part of the emissions embedded in those precursors, be determined as the weighted average of emissions embedded in the precursors under that CN code produced during different reporting periods.
+(28)
+To ensure simplicity for the operators in the calculation of embedded emissions, where an installation producing complex goods receives precursors under a given CN code from different installations, the embedded emissions of the complex goods should be determined by default, for the part of the emissions embedded in those precursors, as the weighted average of emissions embedded in the relevant precursors received from the different installations. To ensure proportionality with respect to this default method, where the operators can provide evidence demonstrating that the installation producing the complex goods used, for a given production process, only precursors from a given installation, or from a subset of installations, the embedded emissions of precursors used in that production process may be determined separately.
+(29)
+To ensure flexibility for operators in their choice of using actual values or default values, where the embedded emissions of complex goods are determined based on actual values, operators should be allowed to use default values for one or more precursors. In such case, operators should be able to combine the use of actual values for one or more precursors with the use of default values for other precursors.
+(30)
+Where the Commission proceeds to revise this Implementing Act, it should conduct a public consultation to uphold transparency and to ensure a meaningful participation of all relevant stakeholders, in accordance with the Commission’s Better Regulation Guidelines.
+(31)
+The measures provided for in this Regulation are in accordance with the opinion of the CBAM Committee,
+HAS ADOPTED THIS REGULATION:
+CHAPTER 1
+GENERAL PROVISION
+Article 1
+Definitions
+For the purposes of this Regulation, the definitions laid down in Article 1 of Commission Implementing Regulation (EU) 2025/2546 (5) and Article 1 of Commission Delegated Regulation (EU) 2025/2551 (6) apply.
+The following definitions also apply:
+(1)
+‘functional unit’ means the reference unit used for the calculation of embedded emissions in goods;
+(2)
+‘activity level’ means the quantity of goods to which the same functional unit applies that are produced within the system boundaries of a production process during a reporting period;
+(3)
+‘system boundary’ means the group of chemical or physical processes included in the calculation of embedded emissions of goods under the same aggregated goods category;
+(4)
+‘aggregated goods categories’ means aggregated goods categories pursuant to Table 1 of point 2 of Annex I;
+(5)
+‘reporting period’ means the period corresponding to the calendar year during which the good was produced and used by the authorised CBAM declarant as reference for the determination of embedded emissions;
+(6)
+‘production route’ means a specific technology used in a production process to produce goods;
+(7)
+‘precursor’ means any input material into a production process included in the list of goods set out in Annex I to Regulation (EU) 2023/956;
+(8)
+‘source stream’ means either of the following:
+(a)
+a specific fuel type, raw material or product giving rise to emissions of relevant greenhouse gases at one or more emission sources as a result of its consumption or production;
+(b)
+a specific fuel type, raw material or product containing carbon and included in the calculation of greenhouse gas emissions using a mass balance method;
+(9)
+‘emission source’ means a separately identifiable part of an installation or a process within an installation, from which relevant greenhouse gases are emitted;
+(10)
+‘calculation factors’ means net calorific value, emission factor, preliminary emission factor, oxidation factor, conversion factor, carbon content or biomass fraction;
+(11)
+‘measurement system’ means a complete set of measuring instruments and other equipment used to determine variables for the monitoring and calculation of emissions;
+(12)
+‘activity data’ means the amount of fuels or materials consumed or produced by a process relevant for the calculation-based methodology, expressed in terajoules, mass in tonnes or, for gases, volume in normal cubic metres, as appropriate.
+CHAPTER 2
+USE OF ACTUAL VALUES
+Article 2
+Actual values
+Where the embedded emissions are determined based on actual emissions in accordance with Article 7(2), point (a), of Regulation (EU) 2023/956, the rules laid down in this Chapter shall apply.
+Article 3
+System boundaries
+1. In order to quantify and calculate specific embedded emissions of goods, the processes within an installation that occur within the system boundaries, defined per aggregated goods category in accordance with Annex I, shall be taken into account.
+2. The system boundaries shall cover direct emissions, indirect emissions for goods not listed in Annex II to Regulation (EU) 2023/956, and the embedded emissions of any precursor.
+Article 4
+Production processes and functional unit
+1. Operators of an installation shall identify, within the system boundaries of an installation, the production process of goods to which the same functional unit applies. The identification of the production process shall ensure that relevant inputs, outputs and emissions can be monitored in accordance with Annex II and that direct and indirect emissions, where relevant, can be attributed to goods to which a functional unit applies.
+2. The quantities of goods produced in tonnes classified under the same CN code shall constitute the functional unit, except for the goods referred to in paragraphs 3, 4 and 5.
+3. For electricity, the kWh shall constitute the functional unit.
+4. For fertilisers, the following shall constitute the functional unit:
+(a)
+for CN codes 2808 00 00 , 2814 , 3105 , the kilograms of nitrogen contained in the goods produced under the respective CN codes;
+(b)
+for the CN codes of fertilisers other than the ones listed in point (a), the supplementary units as laid down in Regulation (EEC) No 2658/87 of the goods produced under the respective CN codes.
+5. For CN codes 2523 10 00 , 2523 21 00 , 2523 29 00 , 2523 90 00 , the tonnes of clinker contained in the goods produced under the respective CN codes shall constitute the functional unit.
+6. Where goods to which the same functional unit applies are produced using different production routes within an installation, a single production process shall be used encompassing all production routes.
+7. Splitting an installation into different installations, with the result that production routes otherwise pertaining to a single production process are carried out in separate installations, shall only be allowed where the operators demonstrate valid commercial reasons for this split that are related to their economic activity. Commercial reasons shall be considered as valid where circumventing Regulation (EU) 2023/956 is not their main purpose or one of their main purposes.
+8. Where goods to which different functional units apply are produced through the same processes, the operators may determine a single multifunctional production process. In that case, attribution rules in accordance with point A.2 of Annex III shall apply. In situations specified in point A.4 of that Annex, the determination of a single multifunctional production process shall be mandatory.
+9. Where precursors relevant for complex goods are produced in the same installation as the complex goods, and where the respective precursors are not transferred out for sale or use in other production processes, the production of precursors and complex goods may be covered by a joint production process. In that case, monitoring and calculation of embedded emissions of the precursors and complex goods shall be carried out jointly.
+Article 5
+Monitoring methodology at installation level
+1. Direct emissions of a production process shall be determined in accordance with the monitoring principles and methods laid down in points A and B of Annex II, and by using the monitoring methodologies and rules determined in accordance with point B of that Annex.
+2. Where heat flows are involved in the production of a functional unit, the monitoring and calculation rules laid down in point C of Annex II shall be applied.
+3. For complex goods, the emissions of the precursors shall be monitored in accordance with the rules set out in point E of Annex II.
+4. Indirect emissions shall be determined by monitoring the consumption of electricity in the relevant production process, in accordance with point D of Annex II.
+5. For the purpose of paragraphs 1 to 4, operators shall design and implement a monitoring plan containing at least the elements outlined in point A.5 of Annex II.
+6. The monitoring plan shall be submitted in English.
+Article 6
+Attribution of emissions to goods
+The specific embedded emissions of goods shall be determined by attributing direct and, where relevant, indirect emissions of the production processes to the specific goods in accordance with Annex III.
+Article 7
+Identification of the reporting period
+1. For the purpose of determining the actual embedded emissions in a good, the reporting period during which the good was produced shall be determined in accordance with the second subparagraph.
+Where a good was imported during the year 2026, the reporting period shall be the year 2026. Where the good was imported during another year than 2026, the reporting period shall by default be the calendar year during which the good was imported. However, if there is sufficient evidence to identify the actual time of production, the reporting period shall be the period during which the good was produced.
+2. By way of derogation from paragraph 1, the reporting period for electricity imported into the customs territory of the Union shall be the year of import.
+Article 8
+Use of actual values for electricity and indirect emissions
+1. The elements of evidence demonstrating the fulfilment of the criteria listed in point 5 of Annex IV to Regulation (EU) 2023/956 are provided in point D.2.4 of Annex II to this Regulation.
+2. The elements of evidence demonstrating the fulfilment of the criteria listed in point 6 of Annex IV to Regulation (EU) 2023/956 are provided in point D.4.3 of Annex II to this Regulation.
+3. For the purpose of demonstrating the fulfilment of the criteria referred to in paragraph 1 of this Article, operators shall indicate in the operator’s emissions report that the criteria laid down in point 5, first subparagraph, point (c), of Annex IV to Regulation (EU) 2023/956 and, where relevant, point 5, first subparagraph, point (b) of that Annex in relation to the direct connection between the installation producing electricity and the Union transmission system, are met. Operators shall provide the verifier with the elements of evidence listed in point D.2.4 of Annex II to this Regulation supporting that indication.
+4. For the purpose of demonstrating the fulfilment of the criteria referred to in paragraph 1 of this Article, the operator shall also, in an addendum to the operator’s emissions report created separately for each authorised CBAM declarant who imported electricity from the installation of that operator and who wants to use actual values for that electricity, indicate, for each of those authorised CBAM declarants, that the criteria laid down in point 5, first subparagraph, points (a) and (d), of Annex IV to Regulation (EU) 2023/956, as well as, where relevant, in point 5, first subparagraph, point (b), of that Annex in relation to the lack of physical network congestion, are met. In the addendum for each authorised CBAM declarant, the operator shall also indicate the quantity of electricity imported by the relevant authorised CBAM declarant for which the criteria laid down in point 5 of Annex IV to Regulation (EU) 2023/956 are met, and shall provide the verifier with the relevant elements of evidence listed in point D.2.4 of Annex II to this Regulation supporting that indication.
+5. For the purpose of demonstrating the fulfilment of the criteria referred to in paragraph 2 of this Article, operators shall indicate in the operator’s emissions report that the criteria laid down in point 6 of Annex IV to Regulation (EU) 2023/956 are met, and shall provide the verifier with the elements of evidence listed in points D.4.3 of Annex II to this Regulation supporting that indication.
+6. The actual embedded emissions of electricity and the actual embedded indirect emissions shall be calculated using the rules laid down in point D of Annex II.
+Article 9
+Indirect emissions where installations use electricity from different sources
+1. Where an installation producing goods listed in Annex I to Regulation (EU) 2023/956 and not listed in Annex II to that Regulation, receives, during a reporting period, electricity from multiple sources, and where actual emissions are reported for such goods, the embedded indirect emissions of the goods shall be determined by default. The default shall be the average of the emission factors of each electricity source, weighted by the share of total electricity consumed in that installation that the electricity received from each source represents.
+2. However, where operators provide the verifier with sufficient evidence demonstrating that the installation producing goods not listed in Annex II to Regulation (EU) 2023/956 used, for a given production process, only electricity from one single source, or from a subset of sources, the embedded indirect emissions of goods produced through that production process shall be determined, respectively, based on the emission factor of that single source, or as the average of the emission factors of each relevant electricity source part of the subset, weighted by the share of total electricity consumed in the production of such goods that the electricity received from each source represents.
+Article 10
+Operator’s emissions report
+1. Where the embedded emissions are calculated based on actual emissions, the operators shall prepare an emissions report (‘operator’s emissions report’) and a summary thereof containing at least the information listed in the templates in points 1.1 and 1.2 of Annex IV. Where the embedded emissions of electricity are calculated based on actual emissions, operators shall, in addition, prepare a declarant-specific addendum to the operator’s emissions report containing the information listed in point 1.1.1 of that Annex.
+2. Where operators are registered in the CBAM registry pursuant to Article 10 of Regulation (EU) 2023/956, they shall transmit the operator’s emissions report, its summary and, if applicable, the declarant-specific addendum to the verifier via the CBAM registry.
+3. Where the operators are not registered in the CBAM registry, they shall transmit the operator’s emissions report, its summary and, if applicable, the declarant-specific addendum to the verifier by means other than via the CBAM registry.
+4. The operator’s emissions report shall be submitted in English.
+CHAPTER 3
+USE OF DEFAULT VALUES
+Article 11
+Default values
+1. Where the embedded emissions in imported goods are determined on the basis of default values in accordance with Article 7(2), point (b), of Regulation (EU) 2023/956, default values laid down in accordance with Annex IV to that Regulation shall be used.
+2. Where the embedded emissions of complex goods are determined on the basis of actual values, and the embedded emissions of precursors used in the production of those complex goods are determined on the basis of default values in accordance with Article 15, default values laid down in accordance with Annex IV to Regulation (EU) 2023/956 shall be used for those precursors.
+3. For the determination of specific indirect emissions, default values laid down in accordance with Annex IV to Regulation (EU) 2023/956 shall be used, except where actual values can be used in accordance with Article 8.
+4. For the determination of embedded direct emissions for electricity imported into the customs territory of the Union, default values laid down in accordance with Annex IV to Regulation (EU) 2023/956 shall be used, except where actual values can be used in accordance with Article 8.
+5. The Commission shall conduct a review of the default values by December 2027 at the latest.
+Article 12
+Alternative default values
+The authorised CBAM declarant may use alternative default values in accordance with point 4.2.2, point 4.3 and point 7 of Annex IV to Regulation (EU) 2023/956 where the conditions referred to in point D.2.3 or point D.4.4 of Annex II to this Regulation, or in Annex V to this Regulation, are met.
+CHAPTER 4
+SPECIFIC RULES APPLICABLE TO COMPLEX GOODS
+Article 13
+Reporting period of precursors
+The default reporting period of a precursor shall be the year of production of the complex good. However, where operators provide the verifier with sufficient evidence to identify the actual time of production, the reporting period shall be the period during which the precursor was produced.
+Article 14
+Precursors produced during different reporting periods or in different installations
+1. Where an installation producing complex goods receives, from another installation, precursors under a given CN code produced during different reporting periods, the embedded emissions of the complex goods shall, for the part of the emissions embedded in the precursors under that CN code, be determined as the weighted average of emissions embedded in the precursors under that CN code produced during those different reporting periods.
+2. Where an installation producing complex goods receives precursors under a given CN code from multiple installations, the embedded emissions of the complex goods shall, for the part of the emissions embedded in the precursors under that CN code, by default be determined as the weighted average of emissions embedded in the precursors under that CN code received from the different installations.
+3. Where operators provide the verifier with sufficient evidence demonstrating that, out of the precursors under a given CN code received from multiple installations, the installation producing the complex goods used, for a given production process, only precursors from a single installation, or from a subset of installations, the embedded emissions of those precursors used in goods produced through that production process shall be determined, respectively, based on the embedded emissions of the precursors obtained from that single installation, or as the weighted average of emissions embedded in the precursors received from that subset of installations.
+Article 15
+Combined use of actual and default values
+The specific embedded emissions for complex goods may be calculated by determining actual emissions for the production processes within the installation producing the complex goods, and default values for one or more precursors of the complex goods.
+CHAPTER 5
+FINAL PROVISION
+Article 16
+Entry into force
+This Regulation shall enter into force on the third day following that of its publication in the Official Journal of the European Union.
+This Regulation shall be binding in its entirety and directly applicable in all Member States.
+Done at Brussels, 10 December 2025.
+For the Commission
+The President
+Ursula VON DER LEYEN
+(1) OJ L 130, 16.5.2023, p. 52, ELI: http://data.europa.eu/eli/reg/2023/956/oj.
+(2) Commission Implementing Regulation (EU) 2018/2066 of 19 December 2018 on the monitoring and reporting of greenhouse gas emissions pursuant to Directive 2003/87/EC of the European Parliament and of the Council and amending Commission Regulation (EU) No 601/2012 (OJ L 334, 31.12.2018, p. 1, ELI: http://data.europa.eu/eli/reg_impl/2018/2066/oj).
+(3) Commission Implementing Regulation (EU) 2023/1773 of 17 August 2023 laying down the rules for the application of Regulation (EU) 2023/956 of the European Parliament and of the Council as regards reporting obligations for the purposes of the carbon border adjustment mechanism during the transitional period (OJ L 228, 15.9.2023, p. 94, ELI: http://data.europa.eu/eli/reg_impl/2023/1773/oj).
+(4) Council Regulation (EEC) No 2658/87 of 23 July 1987 on the tariff and statistical nomenclature and on the Common Customs Tariff (OJ L 256, 7.9.1987, p. 1, ELI: http://data.europa.eu/eli/reg/1987/2658/oj).
+(5) Commission Implementing Regulation (EU) 2025/2546 of 10 December 2025 on the application of the principles for verification of declared embedded emissions pursuant to Regulation (EU) 2023/956 of the European Parliament and of the Council (OJ L, 2025/2546, 22.12.2025, ELI: http://data.europa.eu/eli/reg_impl/2025/2546/oj).
+(6) Commission Delegated Regulation (EU) 2025/2551 of 20 November 2025 supplementing Regulation (EU) 2023/956 of the European Parliament and of the Council by specifying the conditions for granting accreditation to verifiers, for the control and oversight of accredited verifiers, for the withdrawal of accreditation and for mutual recognition and peer evaluation of accreditation bodies (OJ L, 2025/2551, 22.12.2025, ELI: http://data.europa.eu/eli/reg_del/2025/2551/oj).
+ANNEX I
+Definitions, functional unit and system boundaries
+1. DEFINITIONS
+For the purpose of this Annex and of Annexes II to VII the following definitions apply:
+(1)
+‘uncertainty’ means a parameter, associated with the result of the determination of a quantity, that characterises the dispersion of the values that could reasonably be attributed to the particular quantity, including the effects of systematic as well as of random factors, expressed in per cent, and describes a confidence interval around the mean value comprising 95 % of inferred values taking into account any asymmetry of the distribution of values;
+(2)
+‘combustion emissions’ means greenhouse gas emissions occurring during the exothermic reaction of a fuel with oxygen;
+(3)
+‘emission factor’ means the average emission rate of a greenhouse gas relative to the activity data of a source stream assuming complete oxidation for combustion and complete conversion for all other chemical reactions;
+(4)
+‘oxidation factor’ means the ratio of carbon oxidised to CO2 as a consequence of combustion to the total carbon contained in the fuel, expressed as a fraction, considering carbon monoxide (CO) emitted to the atmosphere as the molar equivalent amount of carbon dioxide (CO2);
+(5)
+‘conversion factor’ means the ratio of carbon emitted as CO2 to the total carbon contained in the source stream before the emitting process takes place, expressed as a fraction, considering CO emitted to the atmosphere as the molar equivalent amount of CO2;
+(6)
+‘accuracy’ means the closeness of the agreement between the result of a measurement and the true value of the particular quantity or a reference value determined empirically using internationally accepted and traceable calibration materials and standard methods, taking into account both random and systematic factors;
+(7)
+‘calibration’ means the set of operations, which establishes, under specified conditions, the relations between values indicated by a measuring instrument or measuring system, or values represented by a material measure or a reference material and the corresponding values of a quantity realised by a reference standard;
+(8)
+‘conservative’ means that a set of assumptions is defined in order to ensure that no under-estimation of reported emissions or over-estimation of production of heat, electricity or goods occurs;
+(9)
+‘biomass’ means biomass as defined in Article 2, point (24) of Directive (EU) 2018/2001 of the European Parliament and of the Council (1); it includes bioliquids and biofuels as defined in Article 2, point (32) and (33), biomass fuels as defined in Article 2, point (27) and biogas as defined in Article 2 point (28) of Directive (EU) 2018/2001;
+(10)
+‘waste’ means any substance or object which the holder discards or intends or is required to discard, excluding substances that have been intentionally modified or contaminated in order to meet this definition;
+(11)
+‘residue’ means a substance that is not the end product that a production process directly seeks to produce; it is not a primary aim of the production process and the process has not been deliberately modified to produce it;
+(12)
+‘agricultural, aquaculture, fisheries and forestry residues’ means residues that are directly generated by agriculture, aquaculture, fisheries and forestry and that do not include residues from related industries or processing;
+(13)
+‘legal metrological control’ means the control exercised by a public authority or regulator of the measurement tasks intended for the field of application of a measuring instrument, for reasons of public interest, public health, public safety, public order, protection of the environment, the levying of taxes and duties, the protection of consumers and fair trading;
+(14)
+‘data flow activities’ mean activities related to the acquisition, processing and handling of data that are needed to draft an emissions report from primary source data;
+(15)
+‘net calorific value’ (NCV) means the specific amount of energy released as heat when a fuel or material undergoes complete combustion with oxygen under standard conditions, less the heat of vaporisation of any water formed;
+(16)
+‘process emissions’ means greenhouse gas emissions other than combustion emissions occurring as a result of intentional and unintentional reactions between substances or their transformation, for a primary purpose other than the generation of heat, including from the following processes:
+(a)
+the chemical, electrolytic or pyrometallurgical reduction of metal compounds in ores, concentrates and secondary materials;
+(b)
+the removal of impurities from metals and metal compounds;
+(c)
+the decomposition of carbonates, including those used for flue gas cleaning;
+(d)
+chemical syntheses of products and intermediate products where the carbon bearing material participates in the reaction;
+(e)
+the use of carbon containing additives or raw materials;
+(f)
+the chemical or electrolytic reduction of metalloid oxides or non-metal oxides such as silicon oxides and phosphates;
+(17)
+‘batch’ means an amount of fuel or material representatively sampled and characterised, and transferred as one shipment or continuously over a specific period of time;
+(18)
+‘mixed material’ means a material which contains both biomass and fossil carbon;
+(19)
+‘preliminary emission factor’ means the assumed total emission factor of a fuel or material based on the carbon content of its biomass fraction and its fossil fraction before multiplying it by the fossil fraction to produce the emission factor;
+(20)
+‘fossil fraction’ means the ratio of fossil carbon to the total carbon content of a fuel or material, expressed as a fraction;
+(21)
+‘biomass fraction’ means the ratio of carbon stemming from biomass to the total carbon content of a fuel or material, expressed as a fraction;
+(22)
+‘continuous emission measurement’ means a set of operations having the objective of determining the value of a quantity by means of periodic measurements, applying either measurements in the stack or extractive procedures with a measuring instrument located close to the stack, whilst excluding measurement methodologies based on the collection of individual samples from the stack;
+(23)
+‘inherent CO2’ means CO2 which is part of a source stream;
+(24)
+‘fossil carbon’ means inorganic and organic carbon that is not biomass;
+(25)
+‘measurement point’ means the emission source for which continuous emission measurement systems (CEMS) are used for emission measurement, or the cross-section of a pipeline system for which the CO2 flow is determined using continuous measurement systems;
+(26)
+‘fugitive emissions’ means irregular or unintended emissions from sources that are not localised, or too diverse or too small to be monitored individually;
+(27)
+‘standard conditions’ means temperature of 273,15 K and pressure conditions of 101 325 Pa defining normal cubic metres (Nm3);
+(28)
+‘proxy data’ means annual values which are empirically substantiated or derived from accepted sources and which an operator uses to substitute a data set for the purpose of ensuring complete reporting;
+(29)
+‘measurable heat’ means a net heat flow transported through identifiable pipelines or ducts using a heat transfer medium, such as, in particular, steam, hot air, water, oil, liquid metals and salts, for which a heat meter is or could be installed;
+(30)
+‘heat meter’ means a thermal energy meter or any other device to measure and record the amount of thermal energy produced based upon flow volumes and temperatures;
+(31)
+‘non-measurable heat’ means all heat other than measurable heat;
+(32)
+‘waste gas’ means a gas containing incompletely oxidised carbon in a gaseous state under standard conditions which is a result of any of the processes listed in point (16);
+(33)
+‘multifunctional process’ means a process that delivers multiple outputs or whose outputs feed into several production processes;
+(34)
+‘co-product’ means any of two or more products resulting from the same production process;
+(35)
+‘non-CBAM good’ means any good produced in the installation that is not included in Annex I to Regulation (EU) 2023/956;
+(36)
+‘data set’ means one type of data, either at installation level or production process level as relevant in the circumstances, as any of the following:
+(a)
+the amount of fuels or materials consumed or produced by a production process as relevant for the calculation-based methodology, expressed in terajoules, mass in tonnes, or for gases as volume in normal cubic metres, as appropriate, including for waste gases;
+(b)
+a calculation factor;
+(c)
+net quantity of measurable heat, and the relevant parameters required for determining this quantity, in particular:
+—
+mass flow of heat transfer medium, and
+—
+enthalpy of transmitted and returned heat transfer medium, as specified by composition, temperature, pressure and saturation;
+(d)
+quantities of non-measurable heat, specified by the relevant quantities of fuels used for producing the heat, and the NCV of the fuel mix;
+(e)
+quantities of electricity;
+(f)
+quantities of CO2 transferred between installations;
+(g)
+quantities of precursors received from outside the production process, and their relevant parameters, such as country of origin, used production route, specific direct and indirect emissions;
+(37)
+‘minimum requirements’ means monitoring methods using the minimum efforts allowed for determining data in order to result in emission data acceptable for the purpose of Regulation (EU) 2023/956;
+(38)
+‘recommended improvements’ means monitoring methods which are proven means to ensure that data are more accurate or less prone to mistakes than by mere application of minimum requirements;
+(39)
+‘control system’ means the operator’s risk assessment and entire set of control activities, including the continuous management thereof, that an operator has established, documented, implemented and maintained pursuant to point A.2 of Annex II.
+2. MAPPING OF CN CODES TO AGGREGATED GOODS CATEGORIES
+Table 1 in this point defines aggregated goods categories for each CN code listed in Annex I to Regulation (EU) 2023/956. Those categories are used for the purpose of defining system boundaries of production processes of the goods listed in Annex I to that Regulation.
+Table 1
+Mapping of CN codes to aggregated goods categories
+CN code
+Aggregated goods category
+Greenhouse gas
+Cement
+2507 00 80 – Other kaolinic clays
+[이 부속서의 나머지 363줄은 싣지 않음]
+ANNEX II
+Rules for determining data set of production processes at installation level
+A. PRINCIPLES AND GENERAL REQUIREMENTS
+A.1. Overall approach
+1.
+For the purpose of determining embedded emissions of goodsthe following activities shall be performed:
+(a)
+the production processes relating to the functional units produced in the installation shall be identified, taking into account the rules for setting system boundaries of production processes in accordance with point A.4 of this Annex;
+(b)
+at the level of the installation producing the goods, the direct emissions of the greenhouse gases specified in Annex II for those goods shall be monitored in line with the methods provided in point B of this Annex;
+(c)
+where measurable heat is imported to, produced in, consumed in or exported from the installation, net heat flows shall be monitored in line with the methods provided in point C of this Annex;
+(d)
+if the installation produces goods listed in Annex I to Regulation (EU) 2023/956, but not in Annex II to that Regulation, for the purpose of monitoring indirect emissions embedded in these goods, the consumption of electricity in the relevant production processes shall be monitored in line with the methods provided in point D.1 of this Annex. Where a direct technical link or a power purchase agreement is in place with the produceer of electricity in accordance with point 6, of Annex IV of that Regulation , the emissions associated with that electricity production shall be monitored in order to determine the emission factor for that electricity. Any quantities of electricity transferred between production processes or exported from the installation shall be monitored as well;
+(e)
+the direct emissions at the installations, with heat production and consumption, electricity production and consumption, and any relevant waste gas streams shall be attributed to the production processes associated with the goods produced by applying the rules provided in Annex III. Those attributed emissions shall be used to calculate the specific direct and, where relevant, indirect embedded emissions of the goods produced, applying the point B, of Annex III;
+(f)
+for those goods whose production processes include precursors, making those goods ‘complex goods’, the embedded emissions of the precursor shall be determined in accordance with point E, of this Annex, and shall be added to the embedded emissions of the complex goods produced, by applying the rules provided in point B, of Annex III. Where precursors are themselves complex goods, that process shall be repeated recursively until no more precursors are at stake.
+2.
+An operator can either determine actual values of embedded emissions, or make use of the default values made available in accordance with Annex IV of Regulation (EU) 2023/956, or combine actual values and default values.
+3.
+The embedded emissions of goods shall be calculated as average of the reporting period chosen.
+4.
+For precursors produced outside the installation and originating in third countries and territories that are not exempted pursuant to point 1 of Annex III to Regulation (EU) 2023/956, actual data obtained from the operator of the installation producing the precursor shall be used only if the following conditions are met:
+(a)
+the data must be taken from a verification report that has been issued by a verifier having an accreditation in accordance with Article 18 of Delegated Regulation (EU) 2025/2551 valid at the time of issuing the verification report and for the sectoral scope required for the aggregated goods category of the precursor under consideration; and
+(b)
+the verification report must cover the reporting period during which the precursor was produced.
+5.
+Where the operator does not have a verification report meeting conditions (a) and (b), the relevant default values, made available in accordance with Annex IV of Regulation (EU) 2023/956, for the precursor shall be used.
+6.
+Emissions data over a full reporting period shall be expressed in tonnes CO2e rounded to full tonnes.
+7.
+All parameters used to calculate the emissions shall be rounded to include all significant digits for the purpose of calculating and reporting emissions.
+8.
+Specific direct and indirect embedded emissions shall be expressed in tonnes of CO2e per tonne of goods, rounded to include all significant digits, with a maximum of 5 digits after the comma.
+A.2. Monitoring principles
+For the monitoring of actual data at installation level, and for data sets necessary for attributing emissions to goods, the following principles shall apply:
+1.
+Completeness: The monitoring methodology shall cover all parameters necessary to determine the embedded emissions of the goods listed in Annex I to Regulation (EU) 2023/956 in accordance with the methods and formulae contained in this Annex. For this purpose, the following guiding principles shall apply:
+(a)
+direct emissions at installation level include combustion and process emissions;
+(b)
+direct embedded emissions include the attributed emissions of the relevant production process in accordance with Article 4 and Annex III, based on direct emissions at the installation, emissions related to relevant heat flows and to material flows between process system boundaries, including waste gases, if relevant. Direct embedded emissions furthermore include the direct embedded emissions of precursors;
+(c)
+indirect emissions, if relevant, at the installation level cover the emissions related to electricity consumption within the installation;
+(d)
+indirect embedded emissions, if relevant, include the indirect emissions of the goods produced within the installation, and the indirect embedded emissions of precursors;
+(e)
+for each parameter, an appropriate method in accordance with point A.3 of this Annex shall be selected, ensuring that neither double counting nor data gaps occur.
+2.
+Consistency and comparability: Monitoring and reporting shall be consistent and comparable over time. To that end, the selected methods shall be laid down in a monitoring plan so that the methods are used consistently. The methodology shall be changed only if objectively justified. Relevant reasons include:
+(a)
+changes in the configuration of the installation in the technology used, in the input materials and fuels, or in the goods produced;
+(b)
+new data sources or monitoring methods have to be introduced because of changes of trade partners responsible for data used in the monitoring methodology;
+(c)
+the accuracy of the data can be improved, data flows can be simplified or the control system can be improved.
+3.
+Transparency: Monitoring data including assumptions, references, activity data, emission factors, calculation factors, data on embedded emissions of purchased precursors, measurable heat and electricity, default values of embedded emissions, and any other data relevant for the purpose of this Annex, shall be obtained, recorded, compiled, analysed and documented in a transparent manner that enables a verifier accredited in accordance with Article 18 of Regulation (EU) 2023/956 to verify with reasonable assurance that the data is free of material misstatements. Documentation shall include a record of all changes in the functioning of the installation, of the monitoring methodology and control system applied as documented in the monitoring plan.
+4.
+Complete and transparent records shall be kept at the installation of all data relevant for determining embedded emissions of the goods produced, including necessary supporting documents, for at least six years after the reporting period.
+5.
+Accuracy: The chosen monitoring methodology shall ensure that emission determination is neither systematically nor knowingly inaccurate. Any source of inaccuracies shall be identififed and reduced as far as possible. Due diligence shall be exercised to ensure that the calculation and measurement of emissions exhibit the highest achievable accuracy.
+Where data gaps have occurred or are expected to be unavoidable, substitute data shall consist of conservative estimates. Further cases where emissions data shall be based on conservative estimates include:
+(a)
+carbon monoxide (CO) emitted to the atmosphere shall be calculated as the molar equivalent amount of CO2;
+(b)
+all biomass emissions should be treated like fossil emission, unless evidence for meeting the criteria for zero rating in accordance with point B.3.3 of this Annex is provided.
+6.
+Integrity of methodology: The chosen monitoring methodology shall enable reasonable assurance of the integrity of emission data to be reported. Emissions shall be determined using the appropriate monitoring methodologies set out in this Annex. Reported emission data shall be free from material misstatement, avoid bias in the selection and presentation of information, and provide a credible and balanced account of the embedded emissions of installation’s produced goods.
+7.
+Data quality: a control system to ensure the quality of the data to be reported shall be applied.
+8.
+Cost-effectiveness: In selecting a monitoring methodology, the improvements from greater accuracy shall be balanced against additional costs. Monitoring and reporting of emissions shall aim for the highest achievable accuracy, unless that is technically not feasible or incurs unreasonable costs.
+9.
+Continuous improvement: Operators shall regularly check if the monitoring plan and its monitoring methodologies can be improved. If the verifier provides any recommendations for improvement in the verification report, the operator shall consider them for implementation within a reasonable timeframe, unless the improvement would incur unreasonable costs or would be technically not feasible.
+A.3. Methods representing the best available data source
+1.
+For the determination of embedded emissions of goods, and for underlying data sets, such as emissions related to individual source streams or emission sources, quantities of measurable heat and electricity, the overarching principle shall be to always select the best available data source. For this purpose, the following guiding principles shall apply:
+(a)
+if for a specific data set there is no monitoring method referred to in this Annex, or it would incur unreasonable costs or is technically not feasible, default values in made available in accordance with Annex IV of Regulation (EU) 2023/956 shall be used;
+(b)
+for direct or indirect determination methods, a method is deemed suitable where it is ensured that any metering, analyses, sampling, calibrations, and validations for the determination of the specific data set are carried out by applying methods defined in relevant EN or ISO standards. Where such standards are not available, national standards may be used. Where no applicable published standards exist, suitable draft standards, industry best practice or other scientifically proven methodologies shall be used, limiting sampling and measurement bias;
+(c)
+measuring instruments shall be selected such that they exhibit the lowest uncertainty in use without incurring unreasonable costs. Instruments under legal metrological control are preferred, except where other instruments with significantly lower uncertainty in use are available. Instruments shall be used only in environments appropriate to their use specification;
+(d)
+where laboratory analyses are used, or where laboratories carry out sample treatment, calibrations, method validations, or activities relating to continuous emissions measurements, the requirements of point B.5.4.3.
+2.
+Indirect determination methods: Where no direct determination method is available for a required data set, in particular for cases where net measurable heat going into different production processes needs to be determined, an indirect determination method may be used, such as:
+(a)
+calculation based on a known chemical or physical process, using appropriate accepted literature values for the chemical and physical properties of substances involved, appropriate stoichiometric factors and thermodynamic properties such as reaction enthalpies, as appropriate;
+(b)
+calculation based on the installation’s design data such as the energy efficiencies of technical units or calculated energy consumption per unit of product;
+(c)
+correlations based on empirical tests for determining estimation values for the required data set from non-calibrated equipment or data documented in production protocols.
+For the purpose of point (c) it shall be ensured that the correlation satisfies the requirements of good engineering practice and that it is applied only to determine values which fall into the range for which it was established. The validity of such correlations shall be evaluated at least once a year.
+3.
+To determine the best available data sources, the data source highest in the ranking presented under point 1 and already available at the installation shall be selected. However, where it is technically feasible to apply a data source higher in the ranking without incurring unreasonable costs, such better data source shall be applied without undue delay. Where different data sources are available for the same data set at the same level in the ranking presented under point 1, the data source which ensures the clearest data flow with lowest inherent risk and control risk regarding misstatements shall be chosen.
+4.
+The data sources chosen under point 3 shall be defined in the monitoring plan for use for the determination and reporting of embedded emissions.
+5.
+To the extent feasible without incurring unreasonable costs, for the purpose of the control system in accordance with point A.5, additional data sources or methods for determining data sets shall be identified to allow corroboration of data sources under point 3. The selected data sources, if any, shall be laid down in the monitoring plan.
+6.
+Recommended improvements: It shall be checked regularly, but at least once per year, whether new data sources have become available, for the purpose of improving the monitoring methods. In the case that such new data sources are considered more accurate in accordance with the ranking presented under point 1, they shall be laid down in the monitoring plan and be applied from the earliest date possible.
+7.
+Technical feasibility: Where a claim is made that applying a specific determination methodology is technically not feasible, a justification for this fact shall be laid down in the monitoring plan. It shall be re-assessed during the regular checks in line with point 6. That justification shall be based on whether the installation has technical resources capable of meeting the needs of a proposed data source or monitoring method that can be implemented in the required time for the purposes of this Annex. Those technical resources shall include availability of required techniques and technology.
+8.
+Unreasonable costs: Where a claim is made that applying a specific determination methodology for a data set incurs unreasonable costs, a justification for this fact shall be laid down in the monitoring plan. It shall be re-assessed during the regular checks in line with point 6. The unreasonable nature of the costs shall be determined as follows.
+(a)
+Costs for determining a specific data set is considered unreasonable where the operator's cost estimation exceeds the benefit of a specific determination methodology. To that end, the benefit shall be calculated by multiplying an improvement factor with a reference price of EUR 80 per tonne of CO2e and costs shall include an appropriate depreciation period based on the economic lifetime of the equipment, where applicable.
+(b)
+The improvement factor shall be:
+—
+the improvement of estimated uncertainty in a measurement, expressed in per cent, multiplied with the estimated related emissions over the reporting period;
+—
+1 % of the related emissions, where no improvement of measuring uncertainty is involved;
+—
+related emissions means:
+—
+the direct emissions caused by the source stream or emission source concerned;
+[이 부속서의 나머지 1166줄은 싣지 않음]
+ANNEX III
+Rules for attributing emissions to goods
+A. PRINCIPLES FOR ATTRIBUTING DATA TO PRODUCTION PROCESSES
+A.1. Attribution if data is available
+The methods for monitoring data per each production process shall be laid down in the monitoring plan in accordance with Annex II . They shall be regularly reviewed in order to improve the data quality, where possible, in line with point A of this Annex.
+Where several measuring instruments of different quality are contributing to measurement results, and the sum of the production process data is different from the data determined separately for the installation, a uniform ‘reconciliation factor’ is applied for uniform correction to meet the total figure of the installation as follows:
+RecF = DInst/Σ DPP
+(Equation 41)
+Where:
+RecF is the reconciliation factor;
+DInst is the data value determined for the installation as a whole; and
+DPP are the data values for the different production processes.
+The data for each production process are then corrected as follows, with DPP,corr being the corrected value of DPP :
+DPP,corr = DPP × RecF
+(Equation 42)
+Where data for a specific data set are not available for each production process, inputs, outputs, and corresponding emissions shall be attributed based on the rules set in point A.2
+A.2. Attribution in case of lack of data or multi-functional processes.
+In case of lack of data as referred to in point A.1 or in case of multi-functional processes, attribution will be based on a relevant underlying physical relationship, which refers to partitioning the input and output flows of a multi-functional process or facility in line with a relevant, quantifiable physical relationship between the process inputs and co-product outputs.
+With the exception of the rules specified in points A.2.1, A.2.2 and A.2.3 of this Annex, inputs, outputs, and corresponding emissions shall be attributed based on the functional unit of individual goods produced.
+The same attribution rule will be used to attribute both emissions and captured and stored emissions to goods.
+In the case that a production process requires the application of different attribution rules, they must be applied in the following order:
+(1)
+attribution of emissions to heat flows;
+(2)
+attribution of emissions to waste gases;
+(3)
+functional unit attribution or molar ratio attribution, as applicable.
+A.2.1. Chemicals and fertilisers
+If a chemical substance under the aggregated goods categories chemicals or fertilisers is produced as co-product of a multi-functional process, the attribution among the chemical substances shall be based on molar ratio.
+The emissions of the production process shall be attributed to hydrogen based on molar proportions using the following equation:
+(Equation 43)
+Where:
+Em i are either the direct or indirect emissions attributed to each co-product i produced over the reporting period, expressed in tonnes of CO2;
+Em total are either the direct or indirect emissions of the whole production process over the reporting period, expressed in tonnes of CO2;
+m i,prod is the mass of each co-product i produced in the installation over the reporting period, expressed in tonnes;
+M i is the molar mass of each co-product i;
+If the molar mass of one of the co-products is not known, the emissions will be attributed based on mass of the co-products.
+A.2.2. Heat flows and cogeneration
+Measurable heat from processes other than combustion or partial oxidation of fuels
+Measurable heat produced from exothermic chemical processes other than combustion and partial oxidation of fuels, such as in ammonia or nitric acid production, shall be assigned zero CO2e emissions.
+Measurable heat produced in the installation other than by cogeneration
+For measurable heat produced from the combustion of fuels within the installation except heat produced by cogeneration, the emission factor of the relevant fuel mix shall be determined and the emissions attributable to the production process shall be calculated as:
+EmHeat = EFmix × Qconsumed/η
+(Equation 44)
+Where:
+EmHeat is the heat-related emissions of the production process in t CO2;
+EFmix is the emission factor of the respective fuel mix expressed in t CO2/TJ including emissions from flue gas cleaning, where applicable;
+Qconsumed is the amount of measurable heat consumed in the production process expressed in TJ; and
+η is the efficiency of the heat production process.
+EFmix shall be calculated as:
+EFmix = (Σ ADi × NCVi × EFi + EmFGC)/(Σ ADi × NCVi)
+(Equation 45)
+Where:
+ADi are the annual activity data (i.e. quantities consumed) of the fuels i used for the measurable heat production expressed in tonnes or Nm3;
+NCVi are the net calorific values of the fuels i expressed in TJ/t or TJ/Nm3;
+EFi are the emission factors of the fuels i expressed in t CO2/TJ; and
+EmFGC are the process emissions from flue gas cleaning expressed in t CO2.
+Measurable heat produced in the installation by cogeneration
+Where measurable heat and electricity are produced by cogeneration (i.e. by combined heat and power (CHP)), the relevant emissions attributed to measurable heat and electricity shall be determined as required by this point. The rules regarding electricity shall also apply to the production of mechanical energy, if relevant.
+The emissions of a cogeneration unit shall be determined as follows:
+(Equation 46)
+Where:
+EmCHP are the emissions of the cogeneration unit during the reporting period expressed in t CO2;
+ADi are the annual activity data (i.e. quantities consumed) of the fuels i used for the CHP unit expressed in tonnes or Nm3;
+NCVi are the net calorific values of the fuels i expressed in TJ/t or TJ/Nm3;
+EFi are the emission factors of the fuels i expressed in t CO2/TJ; and
+EmFGC are the process emissions from flue gas cleaning expressed in t CO2.
+The energy input to the CHP unit shall be calculated in accordance with Equation 33. The respective average efficiencies over the reporting period of heat production and electricity (or mechanical energy, if applicable) production shall be calculated as follows:
+(Equation 47)
+(Equation 48)
+Where:
+ηheat is the average efficiency of heat production during the reporting period (dimensionless);
+Qnet is the net amount of heat produced during the reporting period by the cogeneration unit expressed in TJ as determined in accordance with point C.1.2;
+EIn is the energy input of fuels expressed in TJ;
+ηel is the average efficiency of electricity production during the reporting period (dimensionless); and
+Eel is the net electricity production of the cogeneration unit during the reporting period, expressed in TJ.
+Where the determination of the efficiencies ηheat and ηel is technically not feasible or would incur unreasonable costs, values based on technical documentation (design values) of the installation shall be used. If no such values are available, conservative standard values of ηheat = 0,55 and ηel = 0,25 shall be used.
+The attribution factors for heat and electricity from CHP shall be calculated as follows:
+(Equation 49)
+(Equation 50)
+Where:
+FCHP,Heat is the attribution factor for heat (dimensionless);
+FCHP,El is the attribution factor for electricity (or mechanical energy, if applicable) (dimensionless);
+ηref, heat is the reference efficiency for heat production in a stand-alone boiler (dimensionless); and
+ηref,el is the reference efficiency of electricity production without cogeneration (dimensionless).
+The appropriate fuel-specific reference efficiencies are given in point G of Annex II.
+The specific emission factor of the CHP-related measurable heat to be used for the attribution of heat-related emissions to production processes shall be calculated as:
+EFCHP,Heat = EmCHP × FCHP,Heat/Qnet
+(Equation 51)
+Where:
+EFCHP, heat is the emission factor for the production of measurable heat in the cogeneration unit expressed in t CO2/TJ and
+Qnet is the net heat produced by the cogeneration unit expressed in TJ.
+The emissions from heat produced in the cogeneration attributable to the production process shall be calculated as:
+EmHeat = EFCHP, heat × Qconsumed
+Where:
+Qconsumed is the amount of measurable heat consumed in the production process expressed in TJ.
+The specific emission factor of the CHP-related electricity to be used for the attribution of indirect emissions to production processes shall be calculated as:
+EFCHP,El = EmCHP × FCHP,El/EEl,prod
+(Equation 52)
+Where:
+EEl,prod is the electricity produced by the CHP unit.
+Where a waste gas is part of the fuel mix used, and where the emission factor of the waste gas is higher than the standard emission factor of natural gas given in Table 1 of point G of Annex II, that standard emission factor is used to calculate EFmix instead of the emission factor of the waste gas.
+Measurable heat produced outside the installation
+Where a production process consumes measurable heat produced outside the installation, the heat-related emissions are to be included independently on whether the heat stems from the production process of a good listed in Annex I to Regulation (EU) 2023/956 or not. In this case, the heat related emissions shall be determined using one of the following methods.
+(1)
+Where the installation producing the heat carries out emission monitoring in line with this Regulation and verification of the emission sources and the quantities of measurable heat exported in line with Delegated Regulation (EU) 2025/2551, the emission factor of measurable heat shall be determined using relevant equations of previous points, based on emission data provided by the operator of the installation producing the measurable heat.
+(2)
+Where the method pursuant to point 1 is not available, a standard value is used, based on the standard emission factor of the fuel most commonly used in the industrial sector of the country, assuming a boiler efficiency of 90 %.
+Further rules for the attribution of emissions from measurable heat
+Where losses of measurable heat are determined separately from the amounts used in production processes, emissions related to these heat losses shall be added proportionally to the emissions of all production processes in which measurable heat produced in the installation is used, in order to ensure that 100 % of the quantity of net measurable heat produced within the installation, or imported or exported by the installation, as well as quantities transferred between production processes, are attributed to production processes without any omission or double counting.
+A.2.3. Waste gases
+If waste gases from a different production process are consumed in the production process of the good, the emissions are attributed on the basis of Equation 53.
+(Equation 53)
+Where:
+VWG is the volume of the waste gas imported;
+NCVWG is the net calorific value of the waste gas imported; and
+EFNG is the standard emission factor of natural gas as given in point G of Annex II.
+If waste gases from the production process of the good are consumed in a different production process, the emissions are attributed according to the Equation 54, if the installation operator can provide sufficient evidence for verification.
+(Equation 54)
+Where:
+VWG,exported is the volume of waste gas exported from the production process;
+[이 부속서의 나머지 305줄은 싣지 않음]
+ANNEX IV
+Template of the operator’s emissions report
+1. OUTLINE OF THE OPERATOR’S EMISSIONS REPORT
+1.1. Template containing the minimum elements to be contained in the operator’s emissions report as compared to the summary emissions report
+1.
+Identification of the operator and the installation:
+(a)
+name of the operator;
+(b)
+corporate or activity registration number of the operator;
+(c)
+full address in English;
+(d)
+the installation under verification, identified by the following data:
+—
+name of the installation;
+—
+unique installation identifier in the CBAM Registry;
+—
+applicable United Nations Code for Trade and Transport Location (UN/LOCODE) of the location;
+—
+full address in English transcript;
+—
+and geographical coordinates of the installation’s main emission source.
+2.
+Summary of the installation’s monitoring plan, containing at least the following information:
+(a)
+list of all CBAM production processes and routes carried out at the installation;
+(b)
+list of non-CBAM production processes carried out at the installation;
+(c)
+list of the five most important (by mass) goods produced per production process, identified by CN code;
+(d)
+list of the five most important (by energy content provided) fuels used at the installation;
+(e)
+list of the five most important (by emissions) materials used at the installation leading to process emissions;
+(f)
+if continuous emissions measurement is used at the installation, the relevant greenhouse gases and the five biggest emissions sources, to which it is applied;
+(g)
+whether any zero-rated fuels are used and how the operator demonstrates the applicability of zero-rating of the fuels;
+(h)
+whether measurable heat is imported from or exported to other installations, and an identification of those installations.
+3.
+For indirect emissions, whether electricity is consumed from different sources and in which quantities. If the sources include other installations, the name and country of origin of the suppliers.
+4.
+For indirect emissions, where electricity is produced inside the installation, whether electricity is:
+(a)
+produced by co-generation;
+(b)
+produced by separate generation;
+(c)
+produced from fossil or renewable sources;
+(d)
+exported from the system boundaries of a production process.
+5.
+Whether waste gases are produced and used in the installation, or imported from or exported to other installations, and an identification of those installations.
+6.
+Whether CO2 transfer applies, and the identity and contact data of a responsible person of the receiving installations or transport infrastructure or entities to which it is transferred.
+7.
+The total direct emissions of the installation during the reporting period.
+8.
+If applicable, for new installations, time period (in months) used for the monitoring of emissions.
+9.
+Where an installation produces goods listed in Annex I to Regulation (EU) 2023/956 but not in Annex II to that Regulation, the total quantity of electricity consumed in the installation.
+10.
+Where an installation produces goods listed in Annex I to Regulation (EU) 2023/956 but not in Annex II of that Regulation, the quantity of electricity consumed in the installation for the production of these goods.
+11.
+Where an installation produces goods listed in Annex I to Regulation (EU) 2023/956 but not in Annex II to that Regulation, the identification of the installations from which the electricity is obtained.
+12.
+Where relevant, if the installation consumes electricity from different sources, the quantity of electricity consumed per source, the country of origin of the electricity per source, the emission factor per source, and the emission factor calculated for the purpose of determining embedded indirect emissions pursuant to Article 9.
+13.
+Total goods produced at the installation and per production process, and the quantity produced.
+14.
+If relevant, non-CBAM goods produced per production process and the quantity produced.
+15.
+For each of the goods:
+(a)
+the specific direct embedded emissions of each of the goods, expressed in tonnes of CO2 per functional unit;
+(b)
+the specific direct embedded emissions of each of the compositions of the goods, where applicable;
+(c)
+information on the data quality and methods used, in particular if the embedded emissions have been completely determined based on monitoring, or whether any of the default values made available in accordance with Annex IV of Regulation (EU) 2023/956 have been used;
+(d)
+the share of embedded emissions for which default values were used;
+(e)
+for goods that are not listed in Annex II to Regulation (EU) 2023/956:
+—
+the share of indirect emissions determined on the basis of actual values in accordance with Article 9 of this Regulation;
+—
+the share of indirect emissions determined on the basis of default values in accordance with Article 9 of this Regulation;
+—
+for the share of indirect emissions determined on the basis of actual values, confirmation that the criteria for the use of actual values laid down in point 6 of Annex IV to Regulation (EU) 2023/956 are met, and confirmation that the related elements of evidence laid down in point D.4.3 of Annex II were submitted to the verifier;
+—
+the specific indirect emissions calculated pursuant to Article 9 of this Regulation for each good produced;
+(f)
+for electricity imported into the customs territory of the Union:
+—
+confirmation, where relevant, that the criterion for the use of actual values laid down in point 5(b) of Annex IV to Regulation (EU) 2023/956, related to the direct connection between the installation producing electricity and the Union transmission system, is met, and a confirmation that the related elements of evidence laid down in point D.2.4 of Annex II were submitted to the verifier;
+—
+confirmation that the criterion for the use of actual values laid down in point 5(c) of Annex IV to Regulation (EU) 2023/956 is met, and a confirmation that the related elements of evidence laid down in point D.2.4 of Annex II were submitted to the verifier;
+—
+an indication that the relevant declarant-specific addenda containing the elements laid down in point 1.1.1 of this Annex were sent to the verifier;
+—
+the emission factor for the imported electricity determined on the basis of actual emissions.
+16.
+Total emissions of the installation, including:
+(a)
+activity data per production process and calculation factors for each source stream used;
+(b)
+emissions of each emission source monitored using a measurement-based methodology;
+(c)
+emissions determined by other methods;
+(d)
+quantities of CO2 received from other installations or exported to other installations, for the purpose of geological storage or as input to products in which the CO2 is permanently chemically bound;
+(e)
+information about data gaps and estimates used.
+17.
+A balance of imported, produced, consumed, and exported measurable heat, waste gases and electricity per production process.
+18.
+The quantity of each type of precursor, produced at the installation and used by that installation, excluding precursors produced in the production process in accordance with Article 4(9).
+19.
+[이 부속서의 나머지 265줄은 싣지 않음]
+ANNEX V
+Region-specific adaptations of default values
+For the purpose of point 7 of Annex IV to Regulation (EU) 2023/956, alternative region-specific adaptations of default values may be used for a good imported during a given year, where the authorised CBAM declarant demonstrates to the Commission, by 30 June of that year, based on datasets from reliable alternative official sources, including national statistics, covering one calendar year, that alternative region-specific adaptations of default values are lower than the default values laid down in accordance with Annex IV of Regulation (EU) 2023/956.
+Where the Commission considers the provided alternative official sources reliable, it shall modify, where feasible by 30 June of the following year, the relevant default values laid down in accordance with Annex IV of Regulation (EU) 2023/956. The modified default values shall be applicable to goods imported during the year in which the datasets from alternative official sources were provided.
+Where an authorised CBAM declarant provides the datasets from alternative official sources after 30 June of the year of import of a good, and where the Commission considers them reliable, it shall modify, where feasible by 30 June of the second year following the year during which the datasets from alternative official sources were provided, the relevant default values laid down in accordance with Annex IV of Regulation (EU) 2023/956. The modified default values shall be applicable to goods imported during the year following the year in which the datasets from alternative official sources were provided. Where the Commission manages to modify the relevant default values in the year following the year during which the datasets from alternative official sources were provided and before the deadline for submitting CBAM declarations in accordance with Article 6 of Regulation (EU) 2023/956, the modified default values shall be applicable to goods imported during the year in which the datasets from alternative official sources were provided.
+ELI: http://data.europa.eu/eli/reg_impl/2025/2547/oj
+ISSN 1977-0677 (electronic edition)

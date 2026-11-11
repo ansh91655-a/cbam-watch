@@ -1,0 +1,470 @@
+[주소] https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2621
+[받은 곳] http://publications.europa.eu/resource/celex/32025R2621
+[무엇] 기본값 이행규정
+
+L_202502621EN.000101.fmx.xml
+Official Journal
+of the European Union
+EN
+L series
+2025/2621
+31.12.2025
+COMMISSION IMPLEMENTING REGULATION (EU) 2025/2621
+of 16 December 2025
+laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and the Council as regards the establishment of default values
+(Text with EEA relevance)
+THE EUROPEAN COMMISSION,
+Having regard to the Treaty on the Functioning of the European Union,
+Having regard to Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023 establishing a carbon border adjustment mechanism (1), and in particular Article 7(7) thereof,
+Whereas:
+(1)
+Article 7 of Regulation (EU) 2023/956 requires the use of default values for determining embedded emissions in goods other than electricity and in imported electricity , and for determining indirect embedded emissions .
+(2)
+In accordance with Article 7 of Regulation (EU) 2023/956 default values are to be determined on the basis of the methodology set out in Annex IV to that Regulation, which is to be based on the most up-to-date and reliable information. In the event that neither data obtained by the Joint Research Centre nor data collected during the transitional period is considered sufficiently reliable, the default values should be based on the average of the ten exporting countries with the highest emission intensities for which reliable data can be applied for that type of goods.
+(3)
+The environmental objective of the carbon border adjustment mechanism (‘the CBAM’) is to prevent carbon leakage. This objective would be compromised if importers of goods other than electricity were allowed to apply default values that are lower than the actual emissions embedded in those goods. At the same time, the default values including mark-ups need to be proportionate and necessary to contribute to achieving the CBAM objectives. Therefore, the default values including mark-ups should be determined using a conservative approach that ensures that embedded emissions are not underestimated when applying default values.
+(4)
+To ensure the environmental integrity of the CBAM, default values for embedded emissions of goods other than electricity should include a mark-up to account for the deviations of an individual installation with emission levels higher than the relevant average emission intensity of the producer country. Given the difficulties to verify that installation-specific data from third countries is of a sufficiently high quality, a suitable proxy should be applied to estimate the variations of individual installations compared to the average. Therefore, the proposed mark-up is based on existing deviations of Union installations with respect to Union average altogether.
+(5)
+To avoid immediate disproportionate impacts on prices of goods, and to give economic operators time to adapt, the mark-up should be gradually phased-in. This phase-in, is also necessary as the number of verifiers may increase in the first years following the end of the transition period, in particular in 2026. and hence CBAM declarants should therefore be able to use default values in those first years, and rely on actual emissions subsequently.
+(6)
+Specific considerations apply to the fertilisers sector where a lower mark-up should be applied.
+(7)
+For indirect embedded emissions, the default value should be calculated based on the average of the emission factor of the country-of-origin electricity grid. Such method of calculation is the most suitable to achieve both the prevention of carbon leakage as well as the preservation of the environmental integrity of the CBAM, given that it reflects to the largest possible degree decarbonisation efforts of third countries’ electricity grids while maintaining a high level of protection against the risk of carbon leakage. In order to reflect the impact of decarbonisation policies of third countries, such as the increase in renewable energy production, as well as climatic conditions on the yearly electricity supply in the countries concerned, whilst avoiding an excessive volatility of the emission factor due to anomalous years, including attributable to exceptional climatic conditions or other unforeseeable events, the emission factor should be calculated on the basis of the simple average of the emission factor for the most recent five-year period before the reporting for which reliable data is available.
+(8)
+For electricity imported into the customs territory of the Union, in order to reflect the impact of decarbonisation policies in the third country or group of third countries, on the emission intensity of the electricity production in the countries concerned, whilst avoiding an excessive volatility of the emission factor due to anomalous years, including attributable to exceptional climatic conditions or other unforeseeable events, the CO2 emission factor should be calculated on the basis of the average of the yearly CO2 emission factors for the most recent five-years period for which reliable data is available.
+(9)
+To provide certainty on the default values to be used for precursors for which the country of production is not known, such default values should be laid down. To prevent operators that use a precursor produced in a third country for which a high default has been set from claiming that the country of production of a precursor is unknown in order to avoid being subject to that high default value, where the country of production of a precursor cannot be identified, the default value to be used for that precursor should be the default value of the third country with the highest emission intensities for that precursor.
+(10)
+Where the Commission proceeds to revise this Implementing Act, it should conduct a public consultation to uphold transparency and to ensure a meaningful participation of all relevant stakeholders, in accordance with the Commission’s Better Regulation Guidelines.
+(11)
+The default values and mark-ups shall be revised by December 2027 at the latest. The Commission should make all necessary efforts, in close collaboration with the Member States and based on a systematic and holistic review, to ensure that a revision of the default values can already be carried out in 2026.
+(12)
+The measures provided for in this Regulation are in accordance with the opinion of the CBAM Committee,
+HAS ADOPTED THIS REGULATION:
+Article 1
+Default values
+1. Where the embedded emissions in imported goods are determined on the basis of default values in accordance with Article 7(2), point (b), of Regulation (EU) 2023/956, the default values laid down in Annex I to this Regulation shall be used.
+2. Where the embedded emissions of complex goods are determined on the basis of actual values, and the embedded emissions of precursors used in the production of those complex goods are determined on the basis of default values in accordance with Article 15 of Commission Implementing Regulation (EU) 2025/2547 (2), the default values laid down in Annex I shall be used for those precursors.
+3. Where the specific indirect embedded emissions are determined on the basis of default values in accordance with Article 7(4) of Regulation (EU) 2023/956, the default values laid down in Annex II to this Regulation shall be used.
+4. Where the embedded direct emissions in electricity imported into the customs territory of the Union are determined on the basis of default values in accordance with Article 7(3) of Regulation (EU) 2023/956, the default values laid down in Annex III to this Regulation shall be used.
+5. By way of derogation from paragraph 2, where a country of production cannot be identified for a precursor, the default values laid down in Annex IV shall be used.
+Article 2
+This Regulation shall enter into force on the third day following that of its publication in the Official Journal of the European Union.
+It shall apply from 1 January 2026.
+It shall be revised in 2027 at the latest.
+This Regulation shall be binding in its entirety and directly applicable in all Member States.
+Done at Brussels, 16 December 2025.
+For the Commission
+The President
+Ursula VON DER LEYEN
+(1) OJ L 130, 16.5.2023, p. 52, ELI: http://data.europa.eu/eli/reg/2023/956/oj.
+(2) Commission Implementing Regulation (EU) 2025/2547 of 10 December 2025 laying down the rules for the application of Regulation (EU) 2023/956 of the European Parliament and the Council on the methods for the calculation of emissions embedded in goods (OJ L, 2025/2547, 22.12.2025, ELI:. http://data.europa.eu/eli/reg_impl/2025/2547/oj).
+ANNEX I
+Default values for goods imported into the customs territory of the Union, except for electricity
+Where a country or territory is not explicitly listed, the default value for the respective good from the table ‘Other countries and territories’ needs to be selected. Where a country or territory is explicitly listed but no value is provided or the relevant field shows ‘–’, the default value for the respective good from the table ‘Other countries and territories’ needs to be selected.
+Where default values are used to determine the specific embedded emissions of a final good or of a precursor, the specific embedded free allocation shall be based on the corresponding underlying production route determining the CBAM benchmark (BM) as defined in Commission Implementing Regulation (EU) 2025/2620 (1) on the calculation of the free allocation adjustment to the number of CBAM certificates to be surrendered. The meaning of the indicators is as follows:
+(A)
+grey clinker / cement
+(B)
+white clinker / cement
+(C)
+Carbon Steel based on BF/BOF
+(D)
+Carbon Steel based on DRI/EAF
+(E)
+Carbon Steel based on Scrap/EAF
+(F)
+Low alloy Steel based on BF/BOF
+(G)
+Low alloy Steel based on DRI/EAF
+(H)
+Low alloy Steel based on scrap/EAF
+(J)
+High alloy Steel (based on EAF)
+(K)
+primary Aluminium
+(L)
+secondary Aluminium
+If no production route is indicated for a CN code, the CBAM benchmark (BM) is independent of the production route.
+Albania
+Product CN Code
+Description
+Default Value
+(direct emissions)
+Default Value
+(indirect emissions)
+Default Value
+(total emissions)
+2026
+Default Value
+(including mark-up)
+2027
+Default Value
+(including mark-up)
+2028 and onwards
+Default Value
+(including mark-up)
+Underlying production route determining CBAM BM
+Cement
+10 % mark-up
+20 % mark-up
+30 % mark-up
+2507 00 80
+Calcined clay
+–
+–
+–
+–
+–
+–
+2523 10 00
+White clinker
+–
+–
+–
+–
+–
+–
+2523 10 00
+Grey clinker
+0,870
+0
+0,870
+0,957
+1,044
+1,131
+(A)
+2523 21 00
+White Portland cement
+–
+–
+–
+1,230
+0,140
+1,370
+2523 29 00
+Grey Portland cement
+0,900
+0,030
+0,930
+1,023
+1,116
+1,209
+2523 90 00
+White hydraulic cements
+–
+–
+–
+–
+–
+–
+(B)
+2523 90 00
+Grey hydraulic cements
+0,860
+0,030
+0,890
+0,979
+1,068
+1,157
+(A)
+2523 30 00
+Aluminous cement
+–
+–
+–
+–
+–
+–
+Fertilisers
+1 % mark-up
+1 % mark-up
+1 % mark-up
+[이 부속서의 나머지 110400줄은 싣지 않음]
+ANNEX II
+Default values for indirect emissions of goods listed in Annex I of Regulation (EU) 2023/956 and not listed in Annex II of that Regulation
+Disclaimer: The data provided are based on data sourced from the International Energy Agency (IEA) and is subject to a Creative Commons Non-Commercial Share-Alike 4.0 CC BY NC SA licence ( https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en ). These data are intended for the purpose of determining embedded emissions of CBAM goods under the CBAM Regulation. Any further use or redistribution of the data is permitted for non-commercial purposes only. Anyone wishing to use emissions factors data for commercial purposes is invited to contact the IEA to acquire an appropriate licence.
+Country or territory
+Emission factor (tCO2eq/MWh)
+Albania
+0
+Algeria
+0,498
+Angola
+0,216
+Argentina
+0,287
+Armenia
+0,183
+Australia
+0,645
+Azerbaijan
+0,431
+Bahrain
+0,697
+Bangladesh
+0,567
+Belarus
+0,325
+Benin
+0,518
+Bolivia
+0,319
+Bosnia and Herzegovina
+0,734
+Botswana
+1,324
+Brazil
+0,096
+Brunei
+0,758
+Burkina Faso
+0,567
+Cambodia
+0,470
+Cameroon
+0,234
+Canada
+0,119
+Chad
+1,536
+Chile
+0,356
+China
+0,605
+Colombia
+0,183
+Congo
+0,640
+Congo, Democratic Republic of
+0
+Costa Rica
+0,011
+Cuba
+0,555
+Curaçao
+0,555
+Dominican Republic
+0,548
+Ecuador
+0,159
+Egypt
+0,387
+El Salvador
+0,139
+Equatorial Guinea
+0,410
+Eritrea
+0,754
+Eswatini
+0,089
+Ethiopia
+0
+Gabon
+0,457
+Georgia
+0,102
+Ghana
+0,307
+Gibraltar
+0,535
+Greenland
+0,068
+Guatemala
+0,299
+Guyana
+0,820
+Haiti
+0,691
+Honduras
+0,314
+Hong Kong
+0,663
+India
+0,726
+Indonesia
+0,791
+Iran, Islamic Republic of
+0,529
+Iraq
+0,653
+Israel
+0,443
+Ivory Coast
+0,343
+Jamaica
+0,518
+Japan
+0,469
+Jordan
+0,410
+Kazakhstan
+0,568
+Kenya
+0,095
+[이 부속서의 나머지 138줄은 싣지 않음]
+ANNEX III
+Default values for electricity imported into the customs territory of the Union
+Disclaimer: The data provided are based on data sourced from the International Energy Agency (IEA) and is subject to a Creative Commons Non-Commercial Share-Alike 4.0 CC BY NC SA licence ( https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en ). These data are intended for the purpose of determining embedded emissions of CBAM goods under the CBAM Regulation. Any further use or redistribution of the data is permitted for non-commercial purposes only. Anyone wishing to use emissions factors data for commercial purposes is invited to contact the IEA to acquire an appropriate licence.
+Country or territory
+Emission factor
+(tCO2eq/MWh)
+Albania
+0
+Belarus
+0,383
+Bosnia and Herzegovina
+1,148
+Egypt
+0,442
+Georgia
+0,440
+Israel
+0,480
+Kosovo
+0,984
+Moldova, Republic of
+0,530
+Montenegro
+0,979
+Morocco
+0,907
+North Macedonia
+0,887
+Russian Federation
+0,585
+Serbia
+1,041
+Tunisia
+0,436
+Türkiye
+0,718
+Ukraine
+0,907
+United Kingdom
+0,430
+European Union
+0,612
+ANNEX IV
+Default values for precursor for which the country of production cannot be identified
+Where default values are used to determine the specific embedded emissions of a final good or of a precursor, the specific embedded free allocation shall be based on the corresponding underlying production route determining the CBAM benchmark (BM) as defined in Implementing Regulation (EU) 2025/2620 on the calculation of the free allocation adjustment to the number of CBAM certificates to be surrendered. The meaning of the indicators is as follows:
+(A)
+grey clinker / cement
+(B)
+white clinker / cement
+(C)
+Carbon Steel based on BF/BOF
+(D)
+Carbon Steel based on DRI/EAF
+(E)
+Carbon Steel based on Scrap/EAF
+(F)
+Low alloy Steel based on BF/BOF
+(G)
+Low alloy Steel based on DRI/EAF
+(H)
+Low alloy Steel based on scrap/EAF
+(J)
+High alloy Steel (based on EAF)
+(K)
+primary Aluminium
+(L)
+secondary Aluminium
+If no production route is indicated for a CN code, the CBAM benchmark (BM) is independent of the production route.
+Product CN Code
+Description
+Highest default value
+2026
+Default Value
+(including mark-up)
+2027
+Default Value
+(including mark-up)
+2028 and onwards
+Default Value
+(including mark-up)
+Underlying production route determining CBAM BM
+Cement
+10 % mark-up
+20 % mark-up
+30 % mark-up
+2507 00 80
+Calcined clay
+0,320
+0,352
+0,384
+0,416
+2523 10 00
+White clinker
+1,410
+1,551
+1,692
+1,833
+(B)
+2523 10 00
+Grey clinker
+1,440
+1,584
+1,728
+1,872
+(A)
+2523 21 00
+White Portland cement
+1,480
+1,628
+1,776
+1,924
+2523 29 00
+Grey Portland cement
+1,490
+1,639
+1,788
+1,937
+2523 90 00
+White hydraulic cements
+1,530
+1,683
+1,836
+1,989
+(B)
+2523 90 00
+Grey hydraulic cements
+1,420
+1,562
+1,704
+1,846
+(A)
+2523 30 00
+Aluminous cement
+2,290
+2,519
+2,748
+2,977
+Fertilisers
+1 % mark-up
+1 % mark-up
+1 % mark-up
+2808 00 00
+Nitric acid; sulphonitric acids
+3,080
+3,111
+3,111
+3,111
+2814 10 00
+Anhydrous ammonia
+4,360
+4,404
+4,404
+4,404
+2814 20 00
+Ammonia in aqueous solution
+1,310
+1,323
+1,323
+1,323
+2834 21 00
+Nitrate of potassium
+2,850
+2,879
+[이 부속서의 나머지 1808줄은 싣지 않음]

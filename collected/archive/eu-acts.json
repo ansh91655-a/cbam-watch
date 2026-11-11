@@ -1,0 +1,131 @@
+{
+ "source": "eu-acts",
+ "fetchedAt": "2026-11-11T09:24:05+09:00",
+ "since": "2025-01-01",
+ "report": {
+  "targets": 15,
+  "failures": []
+ },
+ "entries": [
+  {
+   "celex": "32025R2083",
+   "title": "CBAM 간소화·강화 개정 규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2083",
+   "lines": 606,
+   "fullLines": 606,
+   "textPath": "collected/archive/pages/eu-acts/32025R2083.txt"
+  },
+  {
+   "celex": "32025R2547",
+   "title": "내재배출량 산정 방법 이행규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2547",
+   "lines": 706,
+   "fullLines": 2801,
+   "textPath": "collected/archive/pages/eu-acts/32025R2547.txt"
+  },
+  {
+   "celex": "32025R2546",
+   "title": "내재배출량 검증 원칙 이행규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2546",
+   "lines": 267,
+   "fullLines": 362,
+   "textPath": "collected/archive/pages/eu-acts/32025R2546.txt"
+  },
+  {
+   "celex": "32025R2551",
+   "title": "검증기관 인정 조건 위임규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2551",
+   "lines": 560,
+   "fullLines": 912,
+   "textPath": "collected/archive/pages/eu-acts/32025R2551.txt"
+  },
+  {
+   "celex": "32025R2548",
+   "title": "CBAM 인증서 가격 산정·공개 이행규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2548",
+   "lines": 99,
+   "fullLines": 99,
+   "textPath": "collected/archive/pages/eu-acts/32025R2548.txt"
+  },
+  {
+   "celex": "32025R2620",
+   "title": "무상할당 조정 이행규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2620",
+   "lines": 204,
+   "fullLines": 3853,
+   "textPath": "collected/archive/pages/eu-acts/32025R2620.txt"
+  },
+  {
+   "celex": "32025R2621",
+   "title": "기본값 이행규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2621",
+   "lines": 466,
+   "fullLines": 112809,
+   "textPath": "collected/archive/pages/eu-acts/32025R2621.txt"
+  },
+  {
+   "celex": "32026R1740",
+   "title": "기본값 이행규정의 정정 규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R1740",
+   "lines": 310,
+   "fullLines": 71606,
+   "textPath": "collected/archive/pages/eu-acts/32026R1740.txt"
+  },
+  {
+   "celex": "32025R0486",
+   "title": "승인된 CBAM 신고인 지위 이행규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0486",
+   "lines": 368,
+   "fullLines": 368,
+   "textPath": "collected/archive/pages/eu-acts/32025R0486.txt"
+  },
+  {
+   "celex": "32025R2549",
+   "title": "승인된 CBAM 신고인 지위 이행규정의 개정·정정 규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2549",
+   "lines": 124,
+   "fullLines": 124,
+   "textPath": "collected/archive/pages/eu-acts/32025R2549.txt"
+  },
+  {
+   "celex": "32024R3210",
+   "title": "CBAM 등록부 이행규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R3210",
+   "lines": 335,
+   "fullLines": 335,
+   "textPath": "collected/archive/pages/eu-acts/32024R3210.txt"
+  },
+  {
+   "celex": "32025R2550",
+   "title": "CBAM 등록부 이행규정의 개정·정정 규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2550",
+   "lines": 192,
+   "fullLines": 192,
+   "textPath": "collected/archive/pages/eu-acts/32025R2550.txt"
+  },
+  {
+   "celex": "32025R2619",
+   "title": "세관당국 정보 전달 이행규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2619",
+   "lines": 148,
+   "fullLines": 148,
+   "textPath": "collected/archive/pages/eu-acts/32025R2619.txt"
+  },
+  {
+   "celex": "32025R2210",
+   "title": "대륙붕·배타적 경제수역 반입 제품 이행규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2210",
+   "lines": 291,
+   "fullLines": 543,
+   "textPath": "collected/archive/pages/eu-acts/32025R2210.txt"
+  },
+  {
+   "celex": "32023R1773",
+   "title": "전환기간 보고 의무 이행규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R1773",
+   "lines": 1313,
+   "fullLines": 3517,
+   "textPath": "collected/archive/pages/eu-acts/32023R1773.txt"
+  }
+ ]
+}

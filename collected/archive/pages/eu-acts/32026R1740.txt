@@ -1,0 +1,314 @@
+[주소] https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R1740
+[받은 곳] http://publications.europa.eu/resource/celex/32026R1740
+[무엇] 기본값 이행규정의 정정 규정
+
+L_202601740EN.000101.fmx.xml
+Official Journal
+of the European Union
+EN
+L series
+2026/1740
+31.7.2026
+COMMISSION IMPLEMENTING REGULATION (EU) 2026/1740
+of 20 July 2026
+correcting Implementing Regulation (EU) 2025/2621 as regards Annexes I and IV thereto
+(Text with EEA relevance)
+THE EUROPEAN COMMISSION,
+Having regard to the Treaty on the Functioning of the European Union,
+Having regard to Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023 establishing a carbon border adjustment mechanism (1), and in particular Article 7(7) thereof,
+Whereas:
+(1)
+Commission Implementing Regulation (EU) 2025/2621 (2) lays down rules for the application of Regulation (EU) 2023/956 as regards the establishment of default values in the field of the carbon border adjustment mechanism (‘CBAM’).
+(2)
+Some production route indicators in some of the tables in Annexes I and IV to Implementing Regulation (EU) 2025/2621 are missing or incorrect. This makes it impossible to correctly calculate the free allocation adjustment in accordance with the rules laid down in Commission Implementing Regulation (EU) 2025/2620 (3). Those missing or incorrect production route indicators should therefore be added or corrected.
+(3)
+While Annexes I and IV to Implementing Regulation (EU) 2025/2621 provide some default values for a group of Combined Nomenclature (CN) codes at Harmonised System (HS) code level (that is, with 4 or 6 digits) with an underlying production route indicator to determine the CBAM benchmark, as defined in Implementing Regulation (EU) 2025/2620, Implementing Regulation (EU) 2025/2620 does not define any production route for the benchmark of one or more of the CN codes at 8-digit level in that group. It should therefore be clarified that, in such case, the CBAM benchmark for the concerned CN code at 8-digit level is independent of the production route.
+(4)
+To ensure legal clarity, the units of the default values in Annexes I and IV to Implementing Regulation (EU) 2025/2621 should be specified.
+(5)
+As regards CN code 2523 10 00 in all the tables in Annexes I and IV to Implementing Regulation (EU) 2025/2621, different default values apply to white clinker and grey clinker. The same applies to the default values for white hydraulic cement and grey hydraulic cements under CN code 2523 90 00 in those Annexes. In order to reflect those differences more clearly, TARIC codes should be used to distinguish between those goods.
+(6)
+As regards CN code 2507 00 80 in all the tables in Annexes I and IV to Implementing Regulation (EU) 2025/2621, Regulation (EU) 2023/956 was amended by Regulation (EU) 2025/2083 of the European Parliament and of the Council (4), with the result that only calcined kaolinic clay now falls within the scope of the CBAM. To ensure alignment with the scope of the CBAM, CN code 2507 00 80 should be replaced with TARIC code 2507 00 80 80.
+(7)
+Some default values in some of the tables in Annex I to Implementing Regulation (EU) 2025/2621 are erroneous as a result of transcription mistakes that were made when the tables were consolidated within a short time frame to ensure that Implementing Regulation (EU) 2025/2621 could apply from 1 January 2026. This is the case for the default values of Taiwan – CN codes 7218 to 7223 , and for ‘Other countries and territories’ – CN code 7226 20 00 . Those erroneous default values should be corrected.
+(8)
+The default value for indirect emissions for CN code 2601 12 00 for Angola in one of the tables in Annex I to Implementing Regulation (EU) 2025/2621 is stated as being not applicable as a result of a transcription mistake. However, it is clear that indirect emissions for this CN code are within the CBAM’s scope, in accordance with Article 7(1) of Regulation (EU) 2023/956. Moreover, the default values provided for direct and total emissions for CN code 2601 12 00 for Angola are the result of a transcription mistake, as they are the numerical values of the default values in the table ‘Other countries and territories’. Those errors should be corrected.
+(9)
+Some default values in some of the tables in Annex I to Implementing Regulation (EU) 2025/2621 have been inadvertently omitted as a result of transcription mistakes that were made when the tables were consolidated. This has resulted in the application of the default values in the table ‘Other countries and territories’ which are higher than or equal to the missing default values. This is the case for the default values of Albania – CN code 7202 41 , Gabon – CN code 2804 10 00 , Guatemala – CN code 7202 60 00 , Liberia – CN code 2804 10 00 , New Caledonia – CN code 7202 60 00 , Zambia – CN code 7202 11 and Zimbabwe – CN codes 7202 11 and 7202 41 . Those missing default values should be added.
+(10)
+Rounding rules have been applied when determining the default values. In order to avoid potential inconsistencies as a result of rounding, the columns with default values that include mark-ups in all the tables for 2026, 2027 and 2028 in Annexes I and IV to Implementing Regulation (EU) 2025/2621 should be deleted. The methodology for calculating the default values with the mark-ups should be stated separately in opening paragraphs in Annexes I and IV. The final default values that include the mark-ups should then be calculated within the CBAM Registry and this calculation should be based on the default values for total emissions as provided for in Annex I. The default values for direct emissions and indirect emissions in Annex I have only been provided for information.
+(11)
+Some CN codes in one of the tables in Annex I to Implementing Regulation (EU) 2025/2621 are erroneous as a result of transcription mistakes that were made when the tables were consolidated. This is the case for CN codes 7615 10 10 , 7615 10 30 , 7615 10 80 and 7615 20 00 for Tunisia. Those erroneous CN codes should be corrected.
+(12)
+The names of some countries listed in some of the tables set out in Annex I to Implementing Regulation (EU) 2025/2621 are not consistent with the names used in Annexes II and III to that Regulation, which use the nomenclature of Commission Implementing Regulation (EU) 2020/1470 (5). To ensure consistency, the names of those countries in Annex I should be corrected.
+(13)
+The default values for precursors in Annex IV to Implementing Regulation (EU) 2025/2621 for CN codes 7616 99 10 and 7616 99 90 do not correspond to the default values of the third country with the highest emission intensity given in Annex I to Implementing Regulation (EU) 2025/2621. This is due to a transcription mistake. Those erroneous default values should be corrected so that they correspond to the default values of the third country with the highest emission intensity.
+(14)
+To ensure legal certainty with respect to the accurate calculation of the CBAM number of certificates to be surrendered, this Regulation should apply retroactively from the date of entry into force of Implementing Regulation (EU) 2025/2621. Furthermore, in the interests of legal clarity and legal certainty, the corrections set out in this Regulation should enter into force quickly. This Regulation should therefore enter into force on the third day following that of its publication in the Official Journal of the European Union.
+(15)
+The measures provided for in this Regulation are in accordance with the opinion of the CBAM Committee,
+HAS ADOPTED THIS REGULATION:
+Article 1
+1. Annex I to Implementing Regulation (EU) 2025/2621 is replaced by the text in Annex I to this Regulation.
+2. Annex IV to Implementing Regulation (EU) 2025/2621 is replaced by the text in Annex II to this Regulation.
+Article 2
+This Regulation shall enter into force on the third day following that of its publication in the Official Journal of the European Union.
+It shall apply from 1 January 2026.
+This Regulation shall be binding in its entirety and directly applicable in all Member States.
+Done at Brussels, 20 July 2026.
+For the Commission
+The President
+Ursula VON DER LEYEN
+(1) OJ L 130, 16.5.2023, p. 52, ELI: http://data.europa.eu/eli/reg/2023/956/oj.
+(2) Commission Implementing Regulation (EU) 2025/2621 of 16 December 2025 laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and the Council as regards the establishment of default values (OJ L, 2025/2621, 31.12.2025, ELI: http://data.europa.eu/eli/reg_impl/2025/2621/oj).
+(3) Commission Implementing Regulation (EU) 2025/2620 of 16 December 2025 laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and of the Council as regards the calculation of the free allocation adjustment to the number of CBAM certificates to be surrendered (OJ L, 2025/2620, 22.12.2025, ELI: http://data.europa.eu/eli/reg_impl/2025/2620/oj).
+(4) Regulation (EU) 2025/2083 of the European Parliament and of the Council of 8 October 2025 amending Regulation (EU) 2023/956 as regards simplifying and strengthening the carbon border adjustment mechanism (OJ L, 2025/2083, 17.10.2025, ELI: http://data.europa.eu/eli/reg/2025/2083/oj).
+(5) Commission Implementing Regulation (EU) 2020/1470 of 12 October 2020 on the nomenclature of countries and territories for the European statistics on international trade in goods and on the geographical breakdown for other business statistics (OJ L 334, 13.10.2020, p. 2, ELI: http://data.europa.eu/eli/reg_impl/2020/1470/oj).
+ANNEX I
+‘
+ANNEX I
+Default values for goods imported into the customs territory of the Union, except for electricity
+For the calculation of the number of CBAM certificates, the default values of the column ‘total emissions’ shall be selected and increased as follows:
+For goods in the cement, iron and steel, aluminium and hydrogen sectors, the mark-up shall be 10 % for the year 2026, 20 % for the year 2027 and 30 % for the year 2028 and onwards.
+For goods in the fertiliser sector, the mark-up shall be 1 % for the year 2026 and onwards.
+Where a country or territory is not explicitly listed, the default value for the respective good from the table “Other countries and territories” needs to be selected. Where a country or territory is explicitly listed but no value is provided or the relevant field shows “–”, the default value for the respective good from the table “Other countries and territories” needs to be selected.
+Where default values are used to determine the specific embedded emissions of a final good or of a precursor, the specific embedded free allocation shall be based on the corresponding underlying production route determining the CBAM benchmark (BM) as defined in Commission Implementing Regulation (EU) 2025/2620. The meaning of the indicators is as follows:
+(A)
+grey clinker / cementw
+(B)
+white clinker / cement
+(C)
+Carbon Steel based on BF/BOF
+(D)
+Carbon Steel based on DRI/EAF
+(E)
+Carbon Steel based on Scrap/EAF
+(F)
+Low alloy Steel based on BF/BOF
+(G)
+Low alloy Steel based on DRI/EAF
+(H)
+Low alloy Steel based on scrap/EAF
+(J)
+High alloy Steel (based on EAF)
+(K)
+primary Aluminium
+(L)
+secondary Aluminium
+If no production route is indicated for a CN code, the CBAM benchmark (BM) is independent of the production route.
+If a production route is indicated for a group of CN codes at HS code level (i.e. with 4 or 6 digits) and the CBAM BM as defined in Implementing Regulation (EU) 2025/2620 for one or more of the CN codes at 8-digit level in that group has no production route, the CBAM BM for the concerned CN code is independent of the production route.
+Albania
+Product CN Code / TARIC Code
+Description
+Default Value (direct emissions) (tCO2eq/tonne of good)
+Default Value (indirect emissions) (tCO2eq/tonne of good)
+Default Value (total emissions) (tCO2eq/tonne of good)
+Underlying production route determining CBAM BM
+Cement
+2507008080
+Calcined clay
+-
+-
+-
+2523100010
+White clinker
+-
+-
+-
+2523100090
+Other clinker including grey clinker
+0,870
+0,000
+0,870
+(A)
+2523 21 00
+White Portland cement
+-
+-
+-
+2523 29 00
+Grey Portland cement
+0,900
+0,030
+0,930
+2523 30 00
+Aluminous cement
+-
+-
+-
+2523900010
+White hydraulic cement
+-
+-
+-
+2523900090
+Other hydraulic cements including grey hydraulic cements
+0,860
+0,030
+0,890
+(A)
+Fertilisers
+2808 00 00
+Nitric acid; sulphonitric acids
+2,730
+0,040
+2,760
+2814 10 00
+Anhydrous ammonia
+-
+-
+-
+2814 20 00
+Ammonia in aqueous solution
+0,650
+0,030
+0,680
+2834 21 00
+Nitrate of potassium
+2,190
+0,050
+2,240
+3102
+Mineral or chemical fertilizers, nitrogenous
+see below
+see below
+see below
+3102 10 12
+Urea in aqueous solution, containing >45% nitrogen in relation to the weight of the dry product and containing =>31,8 % but <=33,2 % by weight of urea (excl. that in packages with a gross weight of <= 10 kg)
+0,440
+0,030
+0,470
+3102 10 15
+Urea in aqueous solution, containing >45% nitrogen in relation to the weight of the dry product and containing >33,2 % but <=55% by weight of urea (excl. that in packages with a gross weight of <= 10 kg)
+0,730
+0,030
+0,760
+3102 10 19
+Urea, whether or not in aqueous solution, containing >45% nitrogen in relation to the weight of the dry product (excl. that in tablets or similar forms, or in packages with a gross weight of <= 10 kg, or in aqueous solution containing =>31,8 % but <=55% by weight of urea)
+1,330
+0,080
+[이 부속서의 나머지 70361줄은 싣지 않음]
+ANNEX II
+‘
+ANNEX IV
+Default values for precursors for which the country of production cannot be identified
+The ‘highest default values’ in this Annex shall be increased by the mark-ups laid down in the introductory part of Annex I.
+Where default values are used to determine the specific embedded emissions of a final good or of a precursor, the specific embedded free allocation shall be based on the corresponding underlying production route determining the CBAM BM as defined in Commission Implementing Regulation (EU) 2025/2620. The meaning of the indicators is as follows:
+(A)
+grey clinker / cement
+(B)
+white clinker / cement
+(C)
+Carbon Steel based on BF/BOF
+(D)
+Carbon Steel based on DRI/EAF
+(E)
+Carbon Steel based on Scrap/EAF
+(F)
+Low alloy Steel based on BF/BOF
+(G)
+Low alloy Steel based on DRI/EAF
+(H)
+Low alloy Steel based on scrap/EAF
+(J)
+High alloy Steel (based on EAF)
+(K)
+primary Aluminium
+(L)
+secondary Aluminium
+If no production route is indicated for a CN code, the CBAM benchmark (BM) is independent of the production route.
+If a production route is indicated for a group of CN codes at HS code level (i.e. with 4 or 6 digits) and the CBAM BM as defined in Implementing Regulation (EU) 2025/2620 for one or more of the CN codes at 8-digit level in that group has no production route, the CBAM BM for the concerned CN code is independent of the production route.
+Product CN Code / TARIC Code
+Description
+Highest default value (tCO2eq/tonne of good)
+Underlying production route determining CBAM BM
+Cement
+2507008080
+Calcined clay
+0,320
+2523100010
+White clinker
+1,410
+(B)
+2523100090
+Other clinker including grey clinker
+1,440
+(A)
+2523 21 00
+White Portland cement
+1,480
+2523 29 00
+Grey Portland cement
+1,490
+2523 30 00
+Aluminous cement
+2,290
+2523900010
+White hydraulic cement
+1,530
+(B)
+2523900090
+Other hydraulic cements including grey hydraulic cements
+1,420
+(A)
+Fertilisers
+2808 00 00
+Nitric acid; sulphonitric acids
+3,080
+2814 10 00
+Anhydrous ammonia
+4,360
+2814 20 00
+Ammonia in aqueous solution
+1,310
+2834 21 00
+Nitrate of potassium
+2,850
+3102
+Mineral or chemical fertilizers, nitrogenous
+see below
+3102 10 12
+Urea in aqueous solution, containing >45% nitrogen in relation to the weight of the dry product and containing =>31,8 % but <=33,2 % by weight of urea (excl. that in packages with a gross weight of <= 10 kg)
+1,540
+3102 10 15
+Urea in aqueous solution, containing >45% nitrogen in relation to the weight of the dry product and containing >33,2 % but <=55% by weight of urea (excl. that in packages with a gross weight of <= 10 kg)
+2,530
+3102 10 19
+Urea, whether or not in aqueous solution, containing >45% nitrogen in relation to the weight of the dry product (excl. that in tablets or similar forms, or in packages with a gross weight of <= 10 kg, or in aqueous solution containing =>31,8 % but <=55% by weight of urea)
+4,640
+3102 10 90
+Urea, whether or not in aqueous solution, containing <= 45 % by weight of nitrogen on the dry anhydrous product (excl. goods of this chapter in tablets or similar forms or in packages of a gross weight of <= 10 kg)
+4,530
+3102 21 00
+Ammonium sulphate (excl. that in tablets or similar forms, or in packages with a gross weight of <= 10 kg)
+1,290
+3102 29 00
+Double salts and mixtures of ammonium sulphate and ammonium nitrate
+2,130
+3102 30 10
+Ammonium nitrate in aqueous solution (excl. that in packages with a gross weight of <= 10 kg)
+2,190
+3102 30 90
+Ammonium nitrate (excl. that in aqueous solution, in tablets or similar forms, or in packages with a gross weight of <= 10 kg)
+3,370
+3102 40 10
+Mixtures of ammonium nitrate with calcium carbonate or other inorganic non-fertilising substances, for use as fertilisers, containing <= 28 % nitrogen by weight (excl. those in tablets or similar forms, or in packages with a gross weight of <= 10 kg)
+2,900
+3102 40 90
+Mixtures of ammonium nitrate with calcium carbonate or other inorganic non-fertilising substances, for use as fertilisers, containing > 28 % nitrogen by weight (excl. those in tablets or similar forms, or in packages with a gross weight of <= 10 kg)
+2,900
+3102 50 00
+Sodium nitrate (excl. that in tablets or similar forms, or in packages with a gross weight of <= 10 kg)
+4,810
+3102 60 00
+Double salts and mixtures of calcium nitrate and ammonium nitrate (excl. those in tablets or similar forms, or in packages with a gross weight of <= 10 kg)
+2,830
+3102 80 00
+Mixtures of urea and ammonium nitrate in aqueous or ammoniacal solution (excl. those in packages with a gross weight of <= 10 kg)
+2,410
+3102 90 00
+Mineral or chemical nitrogen fertilisers (excl. urea; ammonium sulphate; ammonium nitrate; sodium nitrate; double salts and mixtures of ammonium nitrate with ammonium sulphate or calcium; mixtures of urea and ammonium nitrate in aqueous or ammoniacal solution; mixtures of ammonium nitrate and calcium carbonate or other non-fertilising inorganic elements; in tablets or similar in packages <= 10 kg)
+3,110
+3105
+Mineral or chemical fertilisers containing two or three of the fertilising elements nitrogen, phosphorus and potassium
+[이 부속서의 나머지 937줄은 싣지 않음]
