@@ -1,6 +1,6 @@
 [주소] https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026D1862
 [받은 곳] http://publications.europa.eu/resource/celex/32026D1862
-[무엇] 교차부문 조정계수 이행결정(2026~2030년)
+[무엇] 부문 간 보정계수 이행결정(2026~2030년)
 
 L_202601862EN.000101.fmx.xml
 Official Journal

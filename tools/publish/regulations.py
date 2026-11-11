@@ -22,6 +22,7 @@ BASES = {"stored", "web", "press"}
 TEXT_FIELDS = ["summary", "status", "next", "nextTitle"]
 RELATED_LIMIT = 8
 FIGURES = {"cbam-factor"}  # 규제 화면에 붙일 수 있는 그림(site/js/views/rules/figure.js와 같은 이름)
+TOOLS = {"calc"}           # 규제 화면에서 이어 줄 수 있는 도구(site/js/views/rules/tool.js와 같은 이름)
 
 
 def evidence_problem(evidence, date):
@@ -165,6 +166,8 @@ def problems(body, term_index=None, kinds=("format", "evidence")):
                 found.append((where, f"링크가 온전하지 않음: {link}"))
         if rule.get("figure") and rule["figure"] not in FIGURES:
             found.append((where, f"모르는 그림 이름: {rule['figure']}"))
+        if rule.get("tool") and rule["tool"] not in TOOLS:
+            found.append((where, f"모르는 도구 이름: {rule['tool']}"))
         found += position_problems(rule, term_index, kinds)
         found += analysis.problems(rule, lambda text: text_problems(text, term_index), kinds)
     return found if "format" in kinds else [row for row in found if row[1].startswith("근거 어긋남")]

@@ -1,0 +1,282 @@
+{
+ "asOf": "2026-11-11",
+ "years": {
+  "from": 2026,
+  "to": 2034
+ },
+ "markups": [
+  {
+   "sectors": [
+    "cement",
+    "steel",
+    "aluminium",
+    "hydrogen"
+   ],
+   "values": {
+    "2026": 10,
+    "2027": 20,
+    "2028": 30
+   },
+   "evidence": {
+    "path": "collected/archive/pages/eu-acts/32026R1740.txt",
+    "contains": "For goods in the cement, iron and steel, aluminium and hydrogen sectors, the mark-up shall be 10 % for the year 2026, 20 % for the year 2027 and 30 % for the year 2028 and onwards."
+   }
+  },
+  {
+   "sectors": [
+    "fertilisers"
+   ],
+   "values": {
+    "2026": 1
+   },
+   "evidence": {
+    "path": "collected/archive/pages/eu-acts/32026R1740.txt",
+    "contains": "For goods in the fertiliser sector, the mark-up shall be 1 % for the year 2026 and onwards."
+   }
+  }
+ ],
+ "cscf": {
+  "values": {
+   "2026": 100,
+   "2027": 100,
+   "2028": 100,
+   "2029": 100,
+   "2030": 100
+  },
+  "evidence": {
+   "path": "collected/archive/pages/eu-acts/32026D1862.txt",
+   "contains": "For each year in the allocation period 2026 to 2030, the uniform cross-sectoral correction factor for the adjustment of free allocations of emission allowances in accordance with Article 10a(5) and (5a) of Directive 2003/87/EC shall be 100 %."
+  }
+ },
+ "periods": [
+  {
+   "key": 1,
+   "from": 2026,
+   "to": 2027,
+   "evidence": {
+    "path": "collected/archive/pages/eu-tables/benchmarks.txt",
+    "contains": "(1) Value is to be used for production years 2026-27"
+   }
+  },
+  {
+   "key": 2,
+   "from": 2028,
+   "to": 2030,
+   "evidence": {
+    "path": "collected/archive/pages/eu-tables/benchmarks.txt",
+    "contains": "(2) Value is to be used for production years 2028-30"
+   }
+  }
+ ],
+ "routes": [
+  {
+   "key": "A",
+   "name": "회색 클링커·시멘트",
+   "en": "grey clinker / cement"
+  },
+  {
+   "key": "B",
+   "name": "백색 클링커·시멘트",
+   "en": "white clinker / cement"
+  },
+  {
+   "key": "C",
+   "name": "탄소강, 고로·전로",
+   "en": "Carbon Steel based on BF/BOF"
+  },
+  {
+   "key": "D",
+   "name": "탄소강, 직접환원철·전기로",
+   "en": "Carbon Steel based on DRI/EAF"
+  },
+  {
+   "key": "E",
+   "name": "탄소강, 철스크랩·전기로",
+   "en": "Carbon Steel based on Scrap/EAF"
+  },
+  {
+   "key": "F",
+   "name": "저합금강, 고로·전로",
+   "en": "Low alloy Steel based on BF/BOF"
+  },
+  {
+   "key": "G",
+   "name": "저합금강, 직접환원철·전기로",
+   "en": "Low alloy Steel based on DRI/EAF"
+  },
+  {
+   "key": "H",
+   "name": "저합금강, 철스크랩·전기로",
+   "en": "Low alloy Steel based on scrap/EAF"
+  },
+  {
+   "key": "J",
+   "name": "고합금강(전기로)",
+   "en": "High alloy Steel (based on EAF)"
+  },
+  {
+   "key": "K",
+   "name": "1차 알루미늄",
+   "en": "primary Aluminium"
+  },
+  {
+   "key": "L",
+   "name": "2차 알루미늄",
+   "en": "secondary Aluminium"
+  }
+ ],
+ "routesEvidence": {
+  "path": "collected/archive/pages/eu-tables/benchmarks.txt"
+ },
+ "formula": {
+  "text": "무상할당 조정 = 고유 내재무상할당량 × 수입 물량. 기본값으로 신고할 때의 고유 내재무상할당량 = CBAM 계수 × 부문 간 보정계수 × CBAM 벤치마크(B열).",
+  "source": "faa",
+  "basis": "web",
+  "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202502620",
+  "checkedOn": "2026-11-11",
+  "why": "받아 둔 글에는 수식이 그림이라 빠져 있어, 유럽연합 관보의 PDF에서 식 1과 식 6을 확인했다. 식의 항이 무엇인지는 받아 둔 글과 대조한다.",
+  "evidence": {
+   "path": "collected/archive/pages/eu-acts/32025R2620.txt",
+   "contains": [
+    "Where default values are used, the SEFA is calculated using the following equation",
+    "is the CBAM factor referred to in Article 10a(1a) of Directive 2003/87/EC for the year y (dimensionless)",
+    "is the default CBAM benchmark set out in point 5, Column B, of this Annex",
+    "is the mass of good g imported during the year to which the CBAM declaration applies"
+   ]
+  }
+ },
+ "notes": [
+  {
+   "key": "certificate",
+   "text": "CBAM 인증서 한 개는 내재배출량 1톤(tCO2e)에 해당합니다. 제출할 인증서 수는 신고한 내재배출량에서 무상할당 조정을 뺀 값이며, 0보다 작아지면 0으로 보았습니다.",
+   "source": "cbam",
+   "evidence": {
+    "path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt",
+    "contains": [
+     "‘CBAM certificate’ means a certificate in electronic format corresponding to one tonne of CO2e of embedded emissions in goods",
+     "The CBAM certificates to be surrendered in accordance with Article 22 of this Regulation shall be adjusted to reflect the extent to which EU ETS allowances are allocated free of charge"
+    ]
+   }
+  },
+  {
+   "key": "defaults",
+   "text": "기본값은 대한민국의 값입니다. 대한민국의 값이 없는 품목은 법령이 정한 대로 '그 밖의 나라와 지역'의 값을 썼습니다. 기본값으로 신고할 때에는 총배출량 값에 마크업을 더합니다(2026년 10%, 2027년 20%, 2028년부터 30%, 비료는 1%).",
+   "source": "defaults",
+   "evidence": {
+    "path": "collected/archive/pages/eu-acts/32026R1740.txt",
+    "contains": [
+     "the default values of the column ‘total emissions’ shall be selected and increased as follows",
+     "Where a country or territory is explicitly listed but no value is provided or the relevant field shows “–”, the default value for the respective good from the table “Other countries and territories” needs to be selected."
+    ]
+   }
+  },
+  {
+   "key": "benchmark",
+   "text": "기본값으로 신고할 때의 CBAM 벤치마크는 B열에서, 기본값 표에 적힌 생산경로의 값을 씁니다. 같은 품목에 합금 등급이 여럿이면 그 가운데 큰 값을 씁니다. 2026~2027년과 2028~2030년의 값이 다른 품목이 있으며, 2031년 이후의 값은 아직 정해지지 않아 2028~2030년의 값을 그대로 썼습니다.",
+   "source": "faa",
+   "evidence": {
+    "path": "collected/archive/pages/eu-tables/benchmarks.txt",
+    "contains": [
+     "the same production route shall be used as indicated in Annex I to Commission Implementing Regulation (EU) 2025/2621",
+     "Where different alloy grades for steel are given in the table for the same CN code, the highest benchmark value given for the relevant production year is used.",
+     "(2) Value is to be used for production years 2028-30"
+    ]
+   }
+  },
+  {
+   "key": "update",
+   "text": "지금의 CBAM 벤치마크는 EU 배출권거래제 벤치마크의 추정치로 만든 값입니다. 2027년 수입분부터는 확정된 벤치마크에 맞춰 갱신된 값이 적용될 예정이므로, 2027년 이후의 추정은 참고용으로만 보아 주세요.",
+   "source": "faa",
+   "evidence": {
+    "path": "collected/archive/pages/eu-acts/32025R2620.txt",
+    "contains": [
+     "the CBAM benchmarks in 2026 should be based on the estimated ETS benchmarks to be applied in the period from 2026 to 2030 and apply from 1 January 2026",
+     "The updated CBAM benchmarks based on the final ETS benchmarks for the period 2026 to 2030 should apply to goods imported from 1 January 2027."
+    ]
+   }
+  },
+  {
+   "key": "cscf",
+   "text": "부문 간 보정계수는 2026~2030년에 100%로 정해져 있습니다. 2031년 이후는 정해지지 않아 100%로 가정했습니다.",
+   "source": "cscf",
+   "evidence": {
+    "path": "collected/archive/pages/eu-acts/32026D1862.txt",
+    "contains": [
+     "For each year in the allocation period 2026 to 2030, the uniform cross-sectoral correction factor"
+    ]
+   }
+  },
+  {
+   "key": "actual",
+   "text": "실제 배출량으로 신고할 때의 무상할당 조정은 그 제품을 만드는 공정의 벤치마크(A열)에 전구물질에 내재된 무상할당을 더해 구합니다. 이 추정은 전구물질 자료 없이 어림할 수 있도록, 고른 생산경로의 기본 벤치마크(B열)를 대신 썼으므로 실제 신고 값과 다를 수 있습니다.",
+   "source": "faa",
+   "evidence": {
+    "path": "collected/archive/pages/eu-acts/32025R2620.txt",
+    "contains": [
+     "is the process-related CBAM benchmark for the production process which yields good g",
+     "For a complex good, the calculation of the SEFA shall take into account the production process as well as the SEFA of each precursor"
+    ]
+   }
+  },
+  {
+   "key": "carbon-price",
+   "text": "원산지에서 실제로 낸 탄소 가격이 있으면 제출할 인증서 수를 더 줄일 수 있습니다(CBAM 규정 제9조). 이 추정에는 그 공제를 넣지 않았습니다.",
+   "source": "cbam",
+   "evidence": {
+    "path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt",
+    "contains": [
+     "an authorised CBAM declarant may claim in the CBAM declaration a reduction in the number of CBAM certificates to be surrendered in order to take into account the carbon price paid in a third country for the declared embedded emissions"
+    ]
+   }
+  },
+  {
+   "key": "who",
+   "text": "인증서는 EU의 승인된 CBAM 신고인이 사서 제출합니다. 이 추정은 그 신고인이 부담할 비용을 어림한 것이며, 한 해에 수입한 대상 품목의 순중량 합계가 50톤을 넘지 않는 수입자는 CBAM 의무가 면제됩니다(전력과 수소 제외).",
+   "source": "cbam",
+   "evidence": {
+    "path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt",
+    "contains": [
+     "the authorised CBAM declarant shall surrender via the CBAM registry a number of CBAM certificates that corresponds to the embedded emissions declared",
+     "The single mass-based threshold referred to in Article 2a shall be set at 50 tonnes of net mass.",
+     "This Article shall not apply to imports of electricity or hydrogen."
+    ]
+   }
+  }
+ ],
+ "sources": [
+  {
+   "key": "defaults",
+   "text": "기본값 이행규정 (EU) 2025/2621 부속서 I(정정 규정 (EU) 2026/1740이 갈아 끼운 표)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R1740"
+  },
+  {
+   "key": "faa",
+   "text": "무상할당 조정 이행규정 (EU) 2025/2620 부속서",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2620"
+  },
+  {
+   "key": "cscf",
+   "text": "부문 간 보정계수 이행결정 (EU) 2026/1862",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026D1862"
+  },
+  {
+   "key": "cbam",
+   "text": "CBAM 규정 (EU) 2023/956",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0956"
+  }
+ ],
+ "watch": {
+  "about": "이 법령들을 고치거나 바로잡는 새 문서가 법령 데이터베이스 목록에 보이면 상태 점검이 알린다. 이미 반영한 문서는 known에 적는다.",
+  "mentions": [
+   "2025/2620",
+   "2025/2621",
+   "2026/1862"
+  ],
+  "known": [
+   "32025R2620",
+   "32025R2621",
+   "32026R1740",
+   "32026D1862"
+  ]
+ }
+}

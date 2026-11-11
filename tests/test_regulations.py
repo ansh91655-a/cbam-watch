@@ -25,6 +25,12 @@ class RegulationsTest(unittest.TestCase):
     def test_good_body_passes(self):
         self.assertEqual(self.whats(body()), [])
 
+    def test_a_figure_or_a_tool_must_be_one_the_site_knows(self):
+        self.assertEqual(self.whats(body(figure="cbam-factor", tool="calc")), [])
+        found = self.whats(body(figure="pie", tool="abacus"))
+        self.assertTrue(any("모르는 그림 이름" in what for what in found))
+        self.assertTrue(any("모르는 도구 이름" in what for what in found))
+
     def test_plain_ending_and_avoided_term_are_caught(self):
         found = self.whats(body(status="제안 단계이다.", summary="수입업체가 대상입니다."))
         self.assertTrue(any("plain-ending" in what for what in found))
@@ -115,6 +121,15 @@ class RuleEditTest(unittest.TestCase):
         self.assertEqual((rule["nextDate"], rule.get("nextTitle")), ("2026-12-08", None))
         self.edit.set_fields(self.body, self.args(id="sample-rule", stage=None, tone=None, status=None, at=None, next=None, next_date="2026-12-09", next_title="본회의 표결"))
         self.assertEqual(rule["nextTitle"], "본회의 표결")
+
+    def test_a_tool_link_is_set_and_cleared_without_marking_the_rule_as_changed(self):
+        blank = dict(id="sample-rule", stage=None, tone=None, status=None, at=None, next=None, next_date=None, next_title=None)
+        self.edit.set_fields(self.body, self.args(**blank, tool="calc"))
+        rule = self.body["regulations"][0]
+        self.assertEqual(rule["tool"], "calc")
+        self.assertNotIn("changedOn", rule)
+        self.edit.set_fields(self.body, self.args(**blank, tool=""))
+        self.assertNotIn("tool", rule)
 
     def test_drop_event_needs_exactly_one_match(self):
         with self.assertRaises(SystemExit):

@@ -8,7 +8,7 @@ import shutil
 import sys
 
 from tools.common.jsonio import read_json, write_json
-from tools.publish import derive, duties, factor, feed, merge, regulations, thumbs
+from tools.publish import calc, derive, duties, factor, feed, merge, regulations, thumbs
 
 DATA_FILES = ["items", "events", "digests", "terms", "topics", "prices"]
 LIST_KEY = {"items": "items", "events": "events", "digests": "digests", "terms": "terms", "topics": "topics", "prices": "prices"}
@@ -75,6 +75,17 @@ def main(argv):
         print(f"알림: CBAM 계수: {where}: {what}")
     if not broken:
         write_json(data_out / "factor.json", factor.public(book))
+
+    # 인증서 비용 추정의 자료(법령의 표에서 만든 품목별 벤치마크와 기본값). 꼴이 깨졌으면 멈추고, 받아 둔 글과 달라진 것은 알리기만 한다
+    terms, goods = read_json(calc.SOURCE, None), read_json(calc.GOODS, None)
+    calc_found = calc.problems(terms, goods)
+    problems += [f"비용 추정: {where}: {what}" for where, what in calc.blocking(calc_found)]
+    for where, what in calc_found:
+        if what.startswith(calc.DRIFT):
+            print(f"알림: 비용 추정: {where}: {what}")
+    if not calc.blocking(calc_found):
+        (data_out / "calc.json").write_text(calc.dump(calc.public(terms, goods)), encoding="utf-8")
+        counts["calc"] = len(goods["goods"])
 
     codes = read_json("data/cn.json", None)  # 품목 코드 조회의 목록(법령 원문에서 뽑은 것)
     if codes is None or not codes.get("current"):

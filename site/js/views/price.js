@@ -5,6 +5,7 @@ import { priceChart } from "../ui/chart.js";
 import { band } from "../ui/band.js";
 import { empty, fill, h, safeLink, table } from "../ui/dom.js";
 import { countdown, koreanDate, price, signed, today } from "../ui/format.js";
+import { priceTabs } from "../ui/tabs.js";
 
 const RANGES = [["all", "전체", null], ["year", "최근 1년", 365], ["quarter", "최근 3개월", 92]];
 const RANGE_FROM = 9; // 가격이 이만큼 쌓이면 기간 고르기를 보여 준다.
@@ -59,7 +60,7 @@ export async function render(main) {
   const book = await data.prices();
   const rows = book.prices || [];
   const source = book.source || {};
-  const head = band("CBAM 인증서 가격", "EU 집행위원회가 게시한 CBAM 인증서 가격과 그 추세입니다.");
+  const head = band("CBAM 인증서 가격", "EU 집행위원회가 게시한 CBAM 인증서 가격과 그 추세입니다.", priceTabs("price"));
   if (!rows.length) {
     fill(main, head, empty("가격표를 아직 읽지 못했습니다. 원문에서 확인하세요."), safeLink(source.url, "가격 원문 보기"));
     return;

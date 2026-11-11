@@ -4841,7 +4841,8 @@
      }
     ]
    },
-   "figure": "cbam-factor"
+   "figure": "cbam-factor",
+   "tool": "calc"
   },
   {
    "id": "ir-default-values",
@@ -5139,7 +5140,8 @@
       "checkedOn": "2026-11-10"
      }
     ]
-   }
+   },
+   "tool": "calc"
   },
   {
    "id": "ir-declarant",

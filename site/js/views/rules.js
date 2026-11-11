@@ -11,6 +11,7 @@ import { stackable } from "../ui/stack.js";
 import { stepper } from "../ui/stepper.js";
 import { analysis } from "./rules/analysis.js";
 import { figure } from "./rules/figure.js";
+import { tool } from "./rules/tool.js";
 
 function stageChip(rule) {
   return h("span", { class: "stage-chip", "data-tone": rule.tone || "progress", text: rule.stage });
@@ -110,6 +111,7 @@ function detail(main, rule, group, items, drawing) {
         analysis(rule),  // 배경, 주요 내용, 쟁점과 정세, 실무에서 볼 점(분석 글이 있는 규제만)
       ]),
       drawing,  // 규제에 딸린 그림(있는 규제만)
+      tool(rule),  // 이 규제의 값으로 계산해 보는 도구(있는 규제만)
       positions(rule),
       h("section", { class: "stack", "aria-labelledby": "h-tl" }, [
         h("div", { class: "sec-head" }, [h("h2", { id: "h-tl", text: "연혁" }), h("span", { class: "count", text: `${rule.timeline.length}건, 새 일부터` })]),

@@ -9,3 +9,11 @@ export function libraryTabs(current) {
   return h("nav", { class: "tabs", "aria-label": "자료·안내에서 볼 것 고르기" }, LIBRARY.map(([view, name, key]) =>
     h("a", { href: `#${view}`, "aria-current": view === current ? "page" : null }, [icon(key, 16), h("span", { text: name })])));
 }
+
+// '가격' 아래의 화면: 인증서 가격과 비용 추정.
+const PRICE = [["price", "인증서 가격", "price"], ["calc", "비용 추정", "emissions"]];
+
+export function priceTabs(current) {
+  return h("nav", { class: "tabs", "aria-label": "가격에서 볼 것 고르기" }, PRICE.map(([view, name, key]) =>
+    h("a", { href: `#${view}`, "aria-current": view === current ? "page" : null }, [icon(key, 16), h("span", { text: name })])));
+}

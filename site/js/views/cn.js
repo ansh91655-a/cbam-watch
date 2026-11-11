@@ -118,6 +118,9 @@ function result(text, book, rule) {
     ]),
     now.rows.length ? h("div", { class: "cn-entries" }, now.rows.map((hit) => entryCard(hit, false))) : null,
     basis(book.law, "근거: "),
+    // 대상 품목이면 인증서 비용 추정으로 이어 준다(전력은 벤치마크와 기본값 표가 따로 없어 추정하지 않는다)
+    ["in", "part"].includes(now.state) && !now.rows.some((hit) => hit.entry.sector === "electricity")
+      ? h("p", { class: "cn-basis" }, h("a", { href: `#calc-${now.query.slice(0, 8)}`, text: "이 품목의 인증서 비용 추정하기" })) : null,
     ...blocks,
   ]);
 }

@@ -12,7 +12,7 @@ import urllib.parse
 from tools.common import robots
 from tools.common.jsonio import KST, now_kst, read_json, today
 from tools.common.siteinfo import deploy_remote
-from tools.run import cn_health, rules_health
+from tools.run import cn_health, reference_health, rules_health
 
 FAIL_LIMIT = 3  # 출처를 이만큼 이어서 읽지 못하면 문제로 본다
 
@@ -107,6 +107,7 @@ def report():
     rule_problems, rule_counts = rules_health.problems(day, workday)
     problems += rule_problems
     problems += cn_health.problems()
+    problems += reference_health.problems()
 
     return {
         "today": day,

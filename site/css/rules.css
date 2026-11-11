@@ -143,3 +143,11 @@ html[data-theme="midnight"] .an-stale { color: var(--accent); }
   .pos-table.table-stack tbody th { display: block; padding: 0 0 2px; border: 0; background: none; font-size: 1.04rem; }
   .pos-table.table-stack td.blank { display: none; }
 }
+
+/* 규제에 이어 주는 도구(인증서 비용 추정). 한 줄짜리 링크 칸이다. */
+.rule-tool { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 4px 16px; padding: 16px 20px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); color: var(--ink); text-decoration: none; }
+.rule-tool:hover { border-color: var(--brand-bright); }
+.rule-tool-body { display: grid; gap: 1px; min-width: 0; }
+.rule-tool-body strong { font-size: var(--fs-l); }
+.rule-tool-body span { font-size: var(--fs-s); color: var(--ink-2); }
+.rule-tool > .icon:last-child { color: var(--ink-3); }

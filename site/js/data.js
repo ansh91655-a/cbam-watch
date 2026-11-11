@@ -32,6 +32,8 @@ export const events = () => load("events", { events: [] }).then((body) => body.e
 export const duties = () => load("duties", { duties: [] }).then((body) => ({ duties: [], ...body }));
 // CBAM 계수(무상할당을 줄여 가는 비율)의 현행 값과 개정안 값
 export const factor = () => load("factor", { paths: [] }).then((body) => ({ paths: [], ...body }));
+// 인증서 비용 추정의 자료(법령의 표에서 만든 품목별 CBAM 벤치마크와 기본값, 마크업 등). 품목이 많아 짧은 꼴로 실려 있다(js/calc/compute.js의 unpack이 편다).
+export const calc = () => load("calc", { goods: [] });
 // 하나로 묶은 소식의 옛 번호 → 남긴 소식의 번호
 export const moved = () => load("moved", { moved: {} }).then((body) => body.moved || {});
 
