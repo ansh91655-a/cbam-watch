@@ -50,7 +50,7 @@ export function pricePanel(book) {
   return h("section", { class: "panel b-5", "aria-labelledby": "h-price" }, [
     head("h-price", "trend", "인증서 가격 추세", "#price", "가격표 보기"),
     h("p", { class: "panel-fig" }, [
-      h("b", { text: price(latest.value) }),
+      h("b", { text: price(latest.value), "data-count": "", "data-count-from": before.value }),
       h("small", { text: `${book.unit || "유로"}, ${latest.label}` }),
       h("span", { class: "delta", text: `직전보다 ${signed(latest.value - before.value)}` }),
     ]),

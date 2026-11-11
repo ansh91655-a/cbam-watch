@@ -32,8 +32,8 @@ main { display: grid; gap: var(--gap-6); padding-block: 0 var(--gap-7); min-heig
 main:focus { outline: none; }
 /* 맨 아래가 짙은 띠로 끝나는 화면은 바닥글과 붙인다 */
 main:has(> .showcase:last-child) { padding-bottom: 0; }
-/* 움직임은 첫 화면의 큰 머리에서 한 번만 쓴다: 글과 수치 칸이 차례로 올라오고 지도의 선이 그려진다.
-   화면을 옮길 때마다 본문이 올라오게 하지는 않는다(읽으려는 글이 움직이면 방해가 된다). */
+/* 첫 화면 큰 머리의 움직임: 글과 수치 칸이 차례로 올라오고 지도의 선이 그려진다.
+   본문의 칸들이 화면에 들어올 때 나타나는 것과 그 밖의 움직임은 motion.css에 모아 두었다. */
 @media (prefers-reduced-motion: no-preference) {
   .hero-copy > *, .hero-stats > * { animation: rise 0.55s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
   .hero-copy > :nth-child(2) { animation-delay: 0.07s; }
@@ -60,14 +60,14 @@ main:has(> .showcase:last-child) { padding-bottom: 0; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
 .hero-map { position: absolute; z-index: 1; top: 34px; right: -84px; width: min(62%, 720px); aspect-ratio: 1117 / 488; pointer-events: none; -webkit-mask-image: linear-gradient(90deg, transparent, #000 14%, #000 88%, transparent); mask-image: linear-gradient(90deg, transparent, #000 14%, #000 88%, transparent); }
 .hero-map .map { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
-.hero-legend { position: relative; z-index: 2; justify-self: end; margin-top: -8px; font-size: 0.78rem; color: var(--on-deep-3); }
-.hero-legend i.route { display: inline-block; width: 22px; height: 2px; margin-right: 8px; border-radius: 1px; background: linear-gradient(90deg, var(--map-arc-to), var(--map-arc-from)); vertical-align: 3px; }
+/* 수치 칸 위의 한 줄: 새 소식 한 줄(home.css의 ticker) */
+.hero-strip { position: relative; z-index: 2; display: flex; margin-top: -4px; }
 .hero-stats { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 @media (max-width: 900px) {
   .hero-inner { padding-block: 36px 32px; }
   .hero-copy { order: 1; }
   .hero-map { order: 2; position: relative; top: auto; right: auto; width: auto; margin: -6px -20px -10px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 95%, transparent); mask-image: linear-gradient(90deg, transparent, #000 7%, #000 95%, transparent); }
-  .hero-legend { order: 3; justify-self: start; margin-top: 0; }
+  .hero-strip { order: 3; margin-top: 0; }
   .hero-stats { order: 4; }
   .hero-stats { grid-template-columns: 1fr; }
 }
@@ -100,9 +100,6 @@ main:has(> .showcase:last-child) { padding-bottom: 0; }
 .map-home-pulse { fill: none; stroke: var(--map-kr); stroke-width: 1.5; transform-box: fill-box; transform-origin: center; opacity: 0; animation: home-pulse 3.2s ease-out 2s infinite; }
 @keyframes home-pulse { 0% { transform: scale(0.45); opacity: 0.85; } 75%, 100% { transform: scale(2.1); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .map-arc { stroke-dashoffset: 0; } .map-light, .map-home-pulse { display: none; } }
-/* 지도 위의 글 */
-.map-tag { position: absolute; transform: translate(-50%, -50%); padding: 1px 9px; border: 1px solid var(--glass-line); border-radius: 999px; background: var(--map-tag-bg); color: var(--on-deep); font-size: 0.72rem; font-weight: 700; line-height: 1.6; white-space: nowrap; }
-.map-tag-kr { border-color: color-mix(in srgb, var(--map-kr) 55%, transparent); }
 
 /* 화면 머리 띠(첫 화면이 아닌 화면). 오른쪽에 점 지도를 옅게 깐다. */
 .view-head { position: relative; background: var(--band-bg); color: var(--on-deep); overflow: clip; }

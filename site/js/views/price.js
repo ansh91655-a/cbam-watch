@@ -26,17 +26,17 @@ function stats(book) {
   return h("div", { class: "stats" }, [
     h("div", { class: "stat stat-hero" }, [
       h("span", { class: "stat-label", text: `${latest.label} 가격` }),
-      h("span", { class: "stat-value" }, [h("span", { text: price(latest.value) }), h("small", { text: unit })]),
+      h("span", { class: "stat-value" }, [h("span", { text: price(latest.value), "data-count": "", "data-count-from": before ? before.value : null }), h("small", { text: unit })]),
       h("span", { class: "stat-note", text: latest.published ? `${koreanDate(latest.published)} 게시` : "" }),
     ]),
     change === null ? null : h("div", { class: "stat" }, [
       h("span", { class: "stat-label", text: `${before.label}보다` }),
-      h("span", { class: "stat-value" }, [h("span", { text: signed(change) }), h("small", { text: unit })]),
+      h("span", { class: "stat-value" }, [h("span", { text: signed(change), "data-count": "" }), h("small", { text: unit })]),
       h("span", { class: "stat-note", text: `${signed((change / before.value) * 100, 1)}%. 이 사이트가 계산한 값입니다.` }),
     ]),
     next ? h("div", { class: "stat" }, [
       h("span", { class: "stat-label", text: "다음 게시 예정" }),
-      h("span", { class: "stat-value", text: countdown(next.published) }),
+      h("span", { class: "stat-value", text: countdown(next.published), "data-count": "" }),
       h("span", { class: "stat-note", text: `${koreanDate(next.published)}, ${next.label} 가격` }),
     ]) : null,
   ]);

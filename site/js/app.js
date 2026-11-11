@@ -3,6 +3,9 @@ import * as data from "./data.js";
 import { markNav, onRoute } from "./router.js";
 import { daysSince, minute } from "./ui/format.js";
 import { empty, h } from "./ui/dom.js";
+import { watch } from "./ui/motion.js";
+import { navInk } from "./ui/navink.js";
+import { scrollCue } from "./ui/scrollcue.js";
 import { loadTopics } from "./ui/topics.js";
 import { render as home } from "./views/home.js";
 import { render as news } from "./views/news.js";
@@ -124,8 +127,13 @@ function previewBar() {
   ]));
 }
 
+// 주 메뉴의 밑줄을 옮기는 것과, 스크롤에 따라 바뀌는 것(머리글 그림자, 읽는 자리 표시, 맨 위로 가는 단추)
+const placeInk = navInk(document.querySelector(".site-nav"));
+const cueView = scrollCue();
+
 async function show(route) {
   markNav(route.name);
+  placeInk();
   const main = document.getElementById("main");
   let title = "";
   try {
@@ -135,6 +143,8 @@ async function show(route) {
   }
   document.title = [typeof title === "string" && title ? title : NAMES[route.name], SITE_NAME].filter(Boolean).join(" - ");
   stamp();
+  watch(main);  // 새로 그린 것들이 화면에 들어올 때 차례로 나타나게 한다(ui/motion.js)
+  cueView();
 }
 
 fillChrome();

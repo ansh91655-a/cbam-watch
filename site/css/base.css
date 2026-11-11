@@ -1,6 +1,7 @@
 /* 바탕: 글, 링크, 제목, 입력 요소의 기본 모양 */
 * { box-sizing: border-box; }
-html { font-size: 16px; -webkit-text-size-adjust: 100%; scroll-padding-top: 84px; }
+/* 머리글이 위에 붙어 있으므로, 화면 안의 자리로 옮겨 갈 때 그 높이만큼 띄운다(--head-h는 js/ui/scrollcue.js가 잰다) */
+html { font-size: 16px; -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--head-h, 64px) + 20px); }
 html, body { margin: 0; }
 body {
   background: var(--bg);

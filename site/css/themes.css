@@ -20,7 +20,6 @@ html[data-theme="white"] {
   --map-arc-to: #2b59e0;
   --map-glow: rgba(43, 89, 224, 0.16);
   --map-light: #003399;
-  --map-tag-bg: rgba(255, 255, 255, 0.86);
   --spark-ring: #ffffff;
   --on-deep-link: var(--link);
   --hl-from: #003399;

@@ -54,7 +54,6 @@
   --map-glow: rgba(72, 120, 255, 0.5);
   --map-light: #fff6cf;
   --map-port: #ffffff;
-  --map-tag-bg: rgba(5, 11, 36, 0.62);
 
   /* 주제마다의 색. 아이콘과 그 바탕에만 쓰고 글자에는 쓰지 않는다. */
   --t-law: #2b59e0;

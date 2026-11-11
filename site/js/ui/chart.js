@@ -1,5 +1,7 @@
 // 가격 그림. 가격은 적용 기간 동안 같은 값이므로 계단 모양의 선으로 그린다.
 // 값은 그림을 가리키지 않아도 아래 표에서 모두 볼 수 있다(그림 위의 풍선은 보조 수단이다).
+// 선에는 길이를 1로 적어 둔다(pathLength). 화면에 들어올 때 선이 왼쪽에서 그려지게 하는 데 쓴다(motion.css).
+// 마지막 점의 둘레(halo)는 지금 값이라는 뜻으로 천천히 번진다.
 import { fill, h } from "./dom.js";
 import { price } from "./format.js";
 import { s } from "./svg.js";
@@ -127,8 +129,9 @@ export function priceChart(rows, unit = "유로") {
         ...timeTicks(from, to).map((tick) => s("text", { x: x(tick.at), y: floor + 20, "text-anchor": x(tick.at) < box.left + 30 ? "start" : "middle", text: tick.label })),
       ]),
       s("path", { class: "area", d: areaPath(list, x, y, floor) }),
-      s("path", { class: "line", d: linePath(list, x, y) }),
+      s("path", { class: "line", d: linePath(list, x, y), pathLength: 1 }),
       cross,
+      s("circle", { class: "halo", cx: x(last.end), cy: y(last.value), r: 5 }),
       s("circle", { class: "dot", cx: x(last.end), cy: y(last.value), r: 5 }),
       s("g", {}, list.map((step, index) => {
         if (!marks.has(index)) return null;
@@ -173,7 +176,8 @@ export function sparkline(rows, width = 112, height = 36) {
   const y = (value) => Math.round((6 + (1 - (value - low) / ((high - low) || 1)) * (height - 12)) * 10) / 10;
   const last = list[list.length - 1];
   return s("svg", { class: "spark", width, height, viewBox: `0 0 ${width} ${height}`, "aria-hidden": "true" }, [
-    s("path", { class: "line", d: linePath(list, x, y) }),
+    s("path", { class: "line", d: linePath(list, x, y), pathLength: 1 }),
+    s("circle", { class: "halo", cx: x(last.end), cy: y(last.value), r: 4 }),
     s("circle", { class: "dot", cx: x(last.end), cy: y(last.value), r: 4 }),
   ]);
 }

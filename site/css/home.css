@@ -11,6 +11,19 @@
 .fact .spark { align-self: center; --chart-line: var(--accent); }
 .fact .spark .dot { stroke: var(--spark-ring, #0a1540); }
 
+/* 새 소식 한 줄: 가장 최근 소식의 제목이 한 줄씩 아래에서 올라와 바뀐다(js/ui/ticker.js) */
+.ticker { display: flex; align-items: center; gap: 12px; flex: 1 1 320px; min-width: 0; max-width: 640px; height: 40px; padding: 0 16px 0 6px; border: 1px solid var(--glass-line); border-radius: var(--radius-pill); background: var(--glass); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); font-size: var(--fs-s); }
+.ticker-tag { flex: none; display: inline-flex; align-items: center; gap: 7px; padding: 3px 11px 3px 10px; border-radius: var(--radius-pill); background: var(--accent); color: var(--on-accent); font-size: 0.76rem; font-weight: 800; line-height: 1.5; }
+.ticker-tag i { position: relative; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.ticker-view { position: relative; flex: 1; min-width: 0; height: 100%; overflow: hidden; }
+.ticker-line { position: absolute; inset: 0; display: flex; align-items: center; gap: 10px; color: var(--on-deep); text-decoration: none; opacity: 0; visibility: hidden; transform: translateY(100%); transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1), opacity 0.4s, visibility 0s 0.5s; }
+.ticker-line[data-on] { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+.ticker-line[data-off] { transform: translateY(-100%); }
+.ticker-line time { flex: none; color: var(--on-deep-3); font-variant-numeric: tabular-nums; }
+.ticker-line span { overflow: hidden; font-weight: 600; white-space: nowrap; text-overflow: ellipsis; }
+.ticker-line:hover span { text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 900px) { .ticker { flex: 1 1 100%; max-width: none; } }
+
 /* 첫 화면의 칸 배치 */
 .bento { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 18px; }
 .bento > * { grid-column: span 12; }

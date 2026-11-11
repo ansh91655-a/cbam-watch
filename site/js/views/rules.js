@@ -94,7 +94,7 @@ function detail(main, rule, group, items) {
   });
   fill(main,
     band(rule.name, rule.official),
-    h("div", { class: "stack-l rule-detail" }, [
+    h("div", { class: "stack-l rule-detail", "data-reading": "" }, [  // 긴 글 화면: 머리글에 읽는 자리 표시가 보인다(ui/scrollcue.js)
       h("p", { class: "crumbs" }, [h("a", { href: "#rules", text: "규제" }), h("span", { text: "›" }), h("a", { href: `#rules-${group.code}`, text: group.name })]),
       h("section", { class: "rule-now", "data-tone": rule.tone || "progress", "aria-labelledby": "h-now" }, [
         h("div", { class: "rule-top" }, [stageChip(rule), h("span", { class: "rule-kind", text: rule.kind })]),

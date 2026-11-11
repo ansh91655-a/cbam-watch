@@ -1,6 +1,7 @@
-// 첫 화면의 큰 머리: 한 줄 소개와 단추, 한국에서 EU의 항구로 가는 길을 그린 점 지도, 지금 알아 둘 수치 세 칸.
+// 첫 화면의 큰 머리: 한 줄 소개와 단추, 한국에서 EU의 항구로 가는 길을 그린 점 지도, 새 소식 한 줄, 지금 알아 둘 수치 세 칸.
 import { h } from "../../ui/dom.js";
 import { heroMap } from "../../ui/heromap.js";
+import { ticker } from "../../ui/ticker.js";
 import { facts } from "./facts.js";
 
 export function hero(book, events, items, dated) {
@@ -15,8 +16,8 @@ export function hero(book, events, items, dated) {
         h("a", { class: "btn btn-ghost", href: "#price", text: "인증서 가격 보기" }),
       ]),
     ]),
-    // EU 회원국과 한국의 이름은 지도 위에 적혀 있다(ui/heromap.js). 여기에는 선의 뜻만 적는다.
-    h("p", { class: "hero-legend", "aria-hidden": "true" }, [h("i", { class: "route" }), "한국에서 EU 주요 항구로 가는 길을 나타낸 그림"]),
+    // 가장 최근 소식의 제목이 한 줄씩 돌아간다. 지도에는 이름이나 설명글을 붙이지 않는다(그림의 설명은 화면 낭독기용 글에만 있다).
+    h("div", { class: "hero-strip" }, ticker(dated)),
     facts(book, events, items, dated),
   ]));
 }

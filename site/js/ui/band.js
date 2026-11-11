@@ -5,7 +5,7 @@ import { heroMap } from "./heromap.js";
 
 // extra에는 머리 띠 안에 함께 둘 것(묶인 화면을 고르는 탭)을 넘긴다.
 export function band(title, lead, extra) {
-  const art = heroMap({ tags: false });
+  const art = heroMap();
   art.className = "band-map";
   art.setAttribute("aria-hidden", "true");
   return h("div", { class: "view-head bleed" }, h("div", { class: "band-inner" }, [

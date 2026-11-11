@@ -25,8 +25,6 @@ HOME = (129.0, 35.1)  # 흐름선이 떠나는 곳(부산)
 PORTS = [("로테르담", 4.14, 51.95, 0.28), ("르아브르", 0.11, 49.49, 0.25), ("코페르", 13.73, 45.55, 0.25),
          ("발렌시아", -0.32, 39.44, 0.25), ("피레우스", 23.63, 37.94, 0.25)]
 GLOW = (11.0, 49.0)   # EU 한가운데쯤. 뒤에 은은한 빛을 둔다.
-# 지도 위에 얹는 글(경도, 위도, 글, 종류). 글자 크기가 지도와 함께 줄지 않게 그림 밖의 글자로 얹는다.
-TAGS = [(13.0, 66.5, "EU 회원국", "eu"), (129.0, 29.0, "한국", "kr")]
 
 
 def mercator(lat):
@@ -145,35 +143,20 @@ def pictures(countries):
         f'<g class="map-lights">{lights}</g>{ports}{start}'
         '</svg>'
     )
-    tags = []
-    for lon, lat, text, kind in TAGS:
-        x, y = project(lon, lat)
-        tags.append({"left": round(100 * x / WIDTH, 1), "top": round(100 * y / HEIGHT, 1), "text": text, "kind": kind})
-    return base, over, tags, {"eu": len(eu), "korea": len(korea), "land": len(land)}
+    return base, over, {"eu": len(eu), "korea": len(korea), "land": len(land)}
 
 
 MODULE = """// 첫 화면의 점 지도. tools/art/dotmap.py가 만든 파일이므로 손으로 고치지 않는다.
 // 나라 경계: Natural Earth(공개 자료), world-atlas(ISC)의 countries-110m.
 const BASE = %s;
 const OVER = %s;
-const TAGS = %s;
 
 // 아래 장은 점 지도, 위 장은 흐름선과 그 위를 지나가는 빛이다. 둘 다 이 파일에 든 고정된 그림이고 데이터가 아니다.
-// 지도 위의 글은 그림 밖의 글자로 얹는다. 그림이 줄어도 글자 크기가 그대로이게 하려는 것이다.
-export function heroMap({ tags = true } = {}) {
+// 지도 위에는 글을 얹지 않는다. 무엇을 그린 것인지는 그림의 설명글(aria-label)에만 적혀 있다.
+export function heroMap() {
   const holder = document.createElement("div");
   holder.className = "hero-map";
   holder.innerHTML = BASE + OVER;
-  if (!tags) return holder;
-  for (const tag of TAGS) {
-    const label = document.createElement("span");
-    label.className = `map-tag map-tag-${tag.kind}`;
-    label.style.left = `${tag.left}%%`;
-    label.style.top = `${tag.top}%%`;
-    label.textContent = tag.text;
-    label.setAttribute("aria-hidden", "true"); // 그림의 설명글에 이미 들어 있다
-    holder.append(label);
-  }
   return holder;
 }
 """
@@ -184,8 +167,8 @@ def main(argv):
         print("쓰는 법: python -m tools.art.dotmap <countries-110m.json> [출력 파일]")
         return 1
     out = pathlib.Path(argv[1] if len(argv) > 1 else "site/js/ui/heromap.js")
-    base, over, tags, counts = pictures(world.countries(argv[0]))
-    module = MODULE % (json.dumps(base, ensure_ascii=False), json.dumps(over, ensure_ascii=False), json.dumps(tags, ensure_ascii=False))
+    base, over, counts = pictures(world.countries(argv[0]))
+    module = MODULE % (json.dumps(base, ensure_ascii=False), json.dumps(over, ensure_ascii=False))
     out.write_text(module, encoding="utf-8")
     print(json.dumps({"out": str(out), "bytes": len(module), **counts, "size": [round(WIDTH), round(HEIGHT)]}, ensure_ascii=False))
     return 0

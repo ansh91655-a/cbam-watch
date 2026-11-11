@@ -10,6 +10,8 @@
 .chart .area { fill: var(--chart-fill); }
 .chart .line { fill: none; stroke: var(--chart-line); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
 .chart .dot { fill: var(--chart-line); stroke: var(--surface); stroke-width: 2; }
+/* 마지막 점의 둘레. 지금 값이라는 뜻으로 천천히 번진다(motion.css). 움직임을 끈 화면에서는 보이지 않는다. */
+.chart .halo, .spark .halo { fill: var(--chart-line); opacity: 0; pointer-events: none; }
 .chart .label { fill: var(--ink); font-size: 12.5px; font-weight: 700; font-variant-numeric: tabular-nums; }
 .chart .cross { stroke: var(--ink-3); stroke-width: 1; }
 .chart .hit { fill: transparent; }
