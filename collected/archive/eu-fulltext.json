@@ -1,9 +1,9 @@
 {
  "source": "eu-fulltext",
- "fetchedAt": "2026-11-11T10:45:40+09:00",
+ "fetchedAt": "2026-11-11T10:58:04+09:00",
  "since": "2025-01-01",
  "report": {
-  "targets": 11,
+  "targets": 13,
   "failures": [
    "downstream-parliament TA-10-2026-0276: 응답 202"
   ]
@@ -43,6 +43,34 @@
    "url": "https://data.consilium.europa.eu/doc/document/WK-14239-2026-INIT/en/pdf",
    "lines": 1624,
    "textPath": "collected/archive/pages/eu-fulltext/downstream-fourcolumn.txt"
+  },
+  {
+   "name": "ets-review-commission-DOC_1",
+   "code": "52026PC0616",
+   "url": "http://publications.europa.eu/resource/cellar/757bd24a-8413-11f1-bf5e-01aa75ed71a1.0001.03/DOC_1",
+   "lines": 3186,
+   "textPath": "collected/archive/pages/eu-fulltext/ets-review-commission-DOC_1.txt"
+  },
+  {
+   "name": "ets-review-commission-DOC_2",
+   "code": "52026PC0616",
+   "url": "http://publications.europa.eu/resource/cellar/757bd24a-8413-11f1-bf5e-01aa75ed71a1.0001.03/DOC_2",
+   "lines": 178,
+   "textPath": "collected/archive/pages/eu-fulltext/ets-review-commission-DOC_2.txt"
+  },
+  {
+   "name": "tdf-commission-DOC_1",
+   "code": "52025PC0990",
+   "url": "http://publications.europa.eu/resource/cellar/95ee45d7-db37-11f0-8da2-01aa75ed71a1.0001.03/DOC_1",
+   "lines": 1417,
+   "textPath": "collected/archive/pages/eu-fulltext/tdf-commission-DOC_1.txt"
+  },
+  {
+   "name": "tdf-commission-DOC_2",
+   "code": "52025PC0990",
+   "url": "http://publications.europa.eu/resource/cellar/95ee45d7-db37-11f0-8da2-01aa75ed71a1.0001.03/DOC_2",
+   "lines": 300,
+   "textPath": "collected/archive/pages/eu-fulltext/tdf-commission-DOC_2.txt"
   },
   {
    "name": "downstream-oeil-summary-1879956",

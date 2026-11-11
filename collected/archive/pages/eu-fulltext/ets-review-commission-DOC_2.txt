@@ -1,0 +1,180 @@
+[주소] http://publications.europa.eu/resource/cellar/757bd24a-8413-11f1-bf5e-01aa75ed71a1.0001.03/DOC_2
+
+1_EN_annexe_proposition_part1_v7.docx
+EUROPEAN COMMISSION
+Brussels, 17.7.2026
+COM(2026) 616 final
+ANNEXES
+to the
+Proposal for a
+DIRECTIVE OF THE EUROPEAN PARLIAMENT AND THE COUNCIL amending Directive 2003/87/EC and Decision (EU) 2015/1814 as regards driving competitiveness and cost-effective decarbonisation
+{COM(2026) 619 final} - {COM(2026) 620 final} - {SEC(2026) 616 final} - {SWD(2026) 616 final} - {SWD(2026) 617 final} - {SWD(2026) 618 final}
+ANNEX I
+(1)Annex I to Directive 2003/87/EC is amended as follows:
+(a)The title is replaced by
+ANNEX I
+‘AVIATION, MARITIME TRANSPORT AND INSTALLATIONS’
+(b)in point 5 the following words are deleted: ‘or municipal’
+(c)the table is amended as follows:
+(i) the first row is replaced by the following:
+Combustion of fuels in installations with a total rated thermal input exceeding 20 MW (except in installations for the incineration of hazardous or municipal waste)
+Carbon dioxide
+(ii) the twenty- fourth row is replaced by the following:
+Production of hydrogen (H2), including production of hydrogen as by-product only, and synthesis gas with a production capacity exceeding 5 tonnes per day
+Carbon dioxide
+(iii) the twenty-sixth row is replaced by the following:
+Capture of carbon dioxide from activities covered by this Directive
+Carbon dioxide
+(iv) the twenty-seventh row is replaced by the following:
+Transport of carbon dioxide to an installation performing an activity covered by this Directive, with the exclusion of those emissions covered by another activity under this Directive
+Carbon dioxide
+(v) the following rows are inserted after the twenty-eight row:
+Processing of carbon dioxide from activities covered by this Directive, including purification, liquefaction, gasification, temporary storage or other similar services
+Carbon dioxide
+Utilisation of carbon dioxide from activities covered by this Directive chemically binding it into other carbon-based molecules
+Distribution of synthetic fuels that incorporate carbon from carbon dioxide captured from activities covered by this Directive
+(vi) the following changes are made in the twenty-ninth row on ‘Aviation’:
+(a)a sentence is added after the first sentence:
+‘From 1 January 2029, flights which depart from an aerodrome situated in the territory of a Member State to which the Treaty applies, except for aircraft operators operating flights between two different States with total annual emissions lower than 10 000 tonnes calculated in accordance with this Annex.’
+(b)point (j) is replaced by the following:
+‘(j) flights which, but for this point, would fall within this activity, performed by an aircraft operator operating flights with total annual emissions lower than 1 000 tonnes per year falling under the scope of this Directive as defined before 2029 or under the scope of the ETS of Switzerland or the ETS of the UK.
+Flights referred to in points (l) and (m) or performed exclusively for the transport, on official mission, of reigning Monarchs and their immediate family, Heads of State, Heads of Government and Government Ministers, of a Member State may not be excluded under this point;’;
+(c)point (k) is replaced by the following:
+‘(k) flights which, but for this point, would fall within this activity, performed by an aircraft operator operating flights with total annual emissions subject to surrender obligation pursuant to Article 12(3)(b) lower than 1 000 tonnes per year, not taking into account emissions for which the surrender obligation is considered to be satisfied under Article 3c(8) or Article 28a(1)’;
+(vii) the thirtieth row is replaced by the following:
+Maritime transport
+Maritime transport activities covered by Regulation (EU) 2015/757 with the exception of the maritime transport activities covered by Article 2(1d) points (e) and (f), and until 31 December 2030 the maritime transport activities covered by Article 2(1a), (1aa), (1ba) and (1d) points (a) to (d) of that Regulation, and from 1 January 2031 the maritime transport activities covered by Article 2(1b) of that Regulation.
+Carbon dioxide
+From 1 January 2026, methane and nitrous oxide
+(viii) the following rows are added:
+Waste incineration and waste co-incineration
+From 1 January 2031, disposal or recovery of waste in waste incineration plants or in waste co-incineration plants as defined under Article 3(40) and 3(41) of Directive 2010/75/EU of the European Parliament and of the Council for non-hazardous waste with a capacity exceeding 3 tonnes per hour, excluding chemical recycling.
+Carbon dioxide
+The Commission shall report by 31 July 2029 whether one or both of the following conditions have been met:
+(2)the establishment of landfill register(s) pursuant to Article [X] of Regulation (EU) […./..] [Circular Economy Act to ensure environmental integrity and avoid circumvention; and
+(3)Best Available Techniques for Landfills conclusions have been published in the Official Journal of the European Union pursuant to Article 13 of Directive 2010/75/EU.
+Where both of the conditions referred to are met, Articles 14 and 15 shall apply to landfills where there is the disposal or recovery of non-hazardous waste from 1 January 2031.
+Where one or both of the conditions referred to are not met, Articles 14 and 15 shall apply to landfills where there is the disposal or recovery of non-hazardous waste from 1 January 2034.
+Carbon dioxide
+(2)Annex IIb to Directive 2003/87/EC is replaced by the following:
+ANNEX IIb
+Distribution of funds from the Modernisation Fund corresponding to Article 10(1)
+Bulgaria
+5.44%
+Czechia
+13.02%
+Estonia
+1.62%
+Greece
+8.42%
+Croatia
+2.43%
+Latvia
+1.01%
+Lithuania
+2.17%
+Hungary
+5.78%
+Poland
+38.14%
+Portugal
+7.26%
+Romania
+9.92%
+Slovakia
+4.78%
+(3)Annex IV to Directive 2003/87/EC is amended as follows:
+(a) in the title of Part A, the word ‘stationary’ is deleted;
+(b) in Part A, the section ‘Calculation’ is amended as follows:
+(c) in the third paragraph, the following is added:
+‘Carbon dioxide captured from the atmosphere or from sources with an emission factor of zero, shall have an emissions factor of zero, unless that CO2 is leaked, vented or otherwise released from a permanent geological storage site.’
+(4)Annex V to Directive 2003/87/EC, in the title of Part A, the word ‘stationary’ is deleted.
+ANNEX II
+The following Annex is added to Decision 2015/1814:
+ANNEX
+Dynamic parameters
+Dynamic MSR parameters decreasing at a yearly rate of 4% per year
+Million EUAs
+2028
+2029
+2030
+2031
+2032
+2033
+2034
+2035
+2036
+2037
+2038
+2039
+2040
+Upper buffer
+947
+909
+872
+837
+804
+772
+741
+711
+683
+656
+629
+604
+580
+Upper threshold
+833
+800
+768
+737
+708
+679
+652
+626
+601
+577
+554
+532
+510
+Lower threshold
+400
+384
+369
+354
+340
+326
+313
+301
+289
+277
+266
+255
+245
+Lower buffer
+300
+288
+276
+265
+255
+245
+235
+225
+216
+208
+199
+191
+184
+Release rate
+100
+96
+92
+88
+85
+82
+78
+75
+72
+69
+66
+64
+61

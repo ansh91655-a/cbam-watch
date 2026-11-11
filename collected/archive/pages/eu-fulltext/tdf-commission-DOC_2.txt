@@ -1,0 +1,302 @@
+[주소] http://publications.europa.eu/resource/cellar/95ee45d7-db37-11f0-8da2-01aa75ed71a1.0001.03/DOC_2
+
+IMMC.COM%282025%29990%20final.ENG.xhtml.1_EN_annexe_proposition_part1_v6.docx
+EUROPEAN COMMISSION
+Brussels, 17.12.2025
+COM(2025) 990 final
+ANNEX
+to the
+Proposal for a REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL
+establishing the Temporary Decarbonisation Fund
+ANNEX
+Goods eligible for support by the Fund
+For the purpose of the identification of goods, this Regulation shall apply to goods falling under the Combined Nomenclature (‘CN’) codes set out in the table below. The CN codes shall be those under Regulation (EEC) No 2658/87.
+Aluminium
+CN code
+Description
+76069100
+Plates, sheets and strip, of non-alloy aluminium, of a thickness of > 0,2 mm (other than square or rectangular)
+76072010
+Aluminium foil, backed, of a thickness (excl. any backing) of < 0,021 mm (excl. stamping foils of heading 3212, and foil made up as christmas tree decorating material)
+76051900
+Wire of non-alloy aluminium, with a maximum cross-sectional dimension of <= 7 mm (other than stranded wires, cables, ropes and other articles of heading 7614, electrically insulated wires, strings for musical instruments)
+76071910
+Aluminium foil, not backed, rolled and further worked, of a thickness of < 0,021 mm (excl. stamping foils of heading 3212, and foil made up as christmas tree decorating material)
+76032000
+Powders of aluminium, of lamellar structure, and flakes of aluminium (excl. pellets of aluminium, and spangles)
+76161000
+Nails, tacks, staples, screws, bolts, nuts, screw hooks, rivets, cotters, cotter pins, washers and similar articles, of aluminium (excl. staples in strips, plugs, bungs and the like, threaded)
+76061130
+Aluminium Composite Panel, of non-alloy aluminium, of a thickness of > 0,2 mm
+Fertilisers
+28342100
+Nitrate of potassium
+31026000
+Double salts and mixtures of calcium nitrate and ammonium nitrate (excl. those in tablets or similar forms, or in packages with a gross weight of <= 10 kg)
+31051000
+Mineral or chemical fertilisers of animal or vegetable origin, in tablets or similar forms, or in packages with a gross weight of <= 10 kg
+31052010
+Mineral or chemical fertilisers containing phosphorus and potassium, with a nitrogen content > 10 % by weight on the dry anhydrous product (excl. those in tablets or similar forms, or in packages with a gross weight of <= 10 kg)
+31054000
+Ammonium dihydrogenorthophosphate "monoammonium phosphate", whether or not mixed with diammonium hydrogenorthophosphate "diammonium phosphate" (excl. that in tablets or similar forms, or in packages with a gross weight of <= 10 kg)
+31055100
+Mineral or chemical fertilisers containing nitrates and phosphates (excl. ammonium dihydrogenorthophosphate "Monoammonium phosphate", diammonium hydrogenorthophosphate "Diammonium phosphate", and those in tablets or similar forms, or in packages with a gross weight of <= 10 kg)
+31055900
+Mineral or chemical fertilisers containing the two fertilising elements nitrogen (excl. nitrate) and phosphorus but not nitrates (excl. ammonium dihydrogenorthophosphate "monoammonium phosphate", diammonium hydrogenorthophosphate "diammonium phosphate" in tablets or similar forms, or in packages with a gross weight of <= 10 kg)
+31059080
+Mineral or chemical fertilisers containing the two fertilising elements nitrogen and potassium, or one main fertilising element, incl. mixtures of animal or vegetable fertilisers with chemical or mineral fertilisers, not containing nitrogen or with a nitrogen content, by weight, of <= 10% (excl. in tablets or similar forms or in packages of a gross weight of <= 10 kg)
+Iron & Steel
+26011200
+Agglomerated iron ores and concentrates (excl. roasted iron pyrites)
+72011019
+Non-alloy pig iron in pigs, blocks or other primary forms, containing by weight <= 0,5% phosphorus, >= 0,4% manganese and > 1% silicon
+72012000
+Non-alloy pig iron in pigs, blocks or other primary forms, containing by weight >= 0,5% phosphorus
+72015010
+Alloy pig iron in pigs, blocks or other primary forms, containing by weight >= 0,3% but <= 1% titanium and >= 0,5% but <= 1% vanadium
+72015090
+Alloy pig iron and spiegeleisen, in pigs, blocks or other primary forms (excl. alloy iron containing, by weight, >= 0,3% but <= 1% titanium and >= 0,5% but <= 1% vanadium)
+72021180
+Ferro-manganese, containing by weight > 2% carbon (excl. ferro-manganese with a granulometry of <= 5 mm and containing by weight > 65% manganese)
+72021900
+Ferro-manganese, containing by weight <= 2% carbon
+72024190
+Ferro-chromium, containing by weight > 6% carbon
+72024910
+Ferro-chromium, containing by weight <= 0,05% carbon
+72026000
+Ferro-nickel
+72039000
+Spongy ferrous products, obtained from molten pig iron by atomisation, iron of a purity of >= 99,94%, in lumps, pellets or similar forms
+72052100
+Powders, of alloy steel (excl. powders of ferro-alloys and radioactive iron powders "isotopes")
+72052900
+Powders, of pig iron, spiegeleisen, iron or non-alloy steel (excl. powders of ferro-alloys and radioactive iron powders "isotopes")
+72072039
+Semi-finished products of iron or non-alloy steel, containing by weight >= 0,25% carbon, of rectangular "other than square" cross-section and the width >= twice the thickness, forged
+72081000
+Flat-rolled products of iron or non-alloy steel, of a width of >= 600 mm, in coils, simply hot-rolled, not clad, plated or coated, with patterns in relief directly due to the rolling process
+72099020
+Flat-rolled products of iron or steel, of a width of >= 600 mm, cold-rolled "cold-reduced" and further worked, but not clad, plated or coated, perforated
+72101100
+Flat-rolled products of iron or non-alloy steel, of a width of >= 600 mm, hot-rolled or cold-rolled "cold-reduced", tinned, of a thickness of >= 0,5 mm
+72101220
+Tinplate of iron or non-alloy steel, of a width of >= 600 mm and of a thickness of < 0,5 mm, tinned [coated with a layer of metal containing, by weight, >= 97% of tin], not further worked than surface-treated
+72107010
+Tinplate of a width of >= 600 mm and of a thickness of < 0,5 mm, tinned [coated with a layer of metal containing, by weight, >= 97% of tin], not further worked than varnished, and flat products plated or coated with chromium oxides or with chromium and chromium oxides, of iron or non-alloy steel, of a width of >= 600 mm, hot-rolled or cold-rolled "cold-reduced", varnished
+72109040
+Flat-rolled products of iron or non-alloy steel, tinned and printed, of a width of >= 600 mm, hot-rolled or cold-rolled "cold-reduced"
+72124020
+Tinplate of a width of < 600 mm and of a thickness of < 0,5 mm, tinned [coated with a layer of metal containing, by weight, >= 97% of tin], not further worked than varnished, and flat products plated or coated with chromium oxides or with chromium and chromium oxides, of iron or non-alloy steel, of a width of < 600 mm, hot-rolled or cold-rolled "cold-reduced", varnished
+72124080
+Flat-rolled products of iron or non-alloy steel, of a width of < 600 mm, hot-rolled or cold-rolled "cold-reduced", painted, varnished or plastic coated (excl. tinplate, not further worked than varnished, and products plated or coated with chromium oxides or with chromium and chromium oxides, varnished)
+72139120
+Bars and rods, hot-rolled, of the type used for tyre cord, smooth, of iron or non-alloy steel, in irregularly wound coils
+72189920
+Semi-finished products of stainless steel, of circular cross-section or of cross-section other than square or rectangular, rolled or obtained by continuous casting
+72202089
+Flat-rolled products of stainless steel, of a width of < 600 mm, not further worked than cold-rolled "cold-reduced", of a thickness of <= 0,35 mm and containing by weight < 2,5% nickel
+72209020
+Flat-rolled products of stainless steel, of a width of < 600 mm, hot-rolled or cold-rolled "cold-reduced" and further worked, perforated
+72221189
+Bars and rods of stainless steel, not further worked than hot-rolled, hot-drawn or extruded, of circular cross-section measuring < 80 mm and containing by weight < 2,5% nickel
+72221990
+Bars and rods of stainless steel, not further worked than hot-rolled, hot-drawn or extruded, containing by weight < 2,5% nickel (excl. such products of circular cross-section)
+72222011
+Bars and rods of stainless steel, of circular cross-section of a diameter >= 80 mm, simply cold-formed or cold-finished, containing by weight >= 2,5% nickel
+72222019
+Bars and rods of stainless steel, of circular cross-section of a diameter >= 80 mm, simply cold-formed or cold-finished, containing by weight < 2,5% nickel
+72222021
+Bars and rods of stainless steel, not further worked than cold-formed or cold-finished, of circular cross-section measuring >= 25 mm but < 80 mm and containing by weight >= 2,5% nickel
+72222029
+Bars and rods of stainless steel, not further worked than cold-formed or cold-finished, of circular cross-section measuring >= 25 mm but < 80 mm and containing by weight < 2,5% nickel
+72222031
+Bars and rods of stainless steel, not further worked than cold-formed or cold-finished, of circular cross-section measuring < 25 mm and containing by weight >= 2,5% nickel
+72222039
+Bars and rods of stainless steel, not further worked than cold-formed or cold-finished, of circular cross-section measuring < 25 mm and containing by weight < 2,5% nickel
+72222081
+Bars and rods of stainless steel, not further worked than cold-formed or cold-finished, containing by weight >= 2,5% nickel (excl. such products of circular cross-section)
+72222089
+Bars and rods of stainless steel, not further worked than cold-formed or cold-finished, containing by weight < 2,5% nickel (excl. such products of circular cross-section)
+72224010
+Angles, shapes and sections of stainless steel, only hot-rolled, only hot-drawn or only extruded
+72224090
+Angles, shapes and sections of stainless steel, cold-formed or cold-finished and further worked, or not further worked than forged, or forged, or hot-formed by other means and further worked, n.e.s.
+72230091
+Wire of stainless steel, in coils, containing by weight < 2,5% nickel, 13% to 25% chromium and 3,5% to 6% aluminium (excl. bars and rods)
+72251100
+Flat-rolled products of silicon-electrical steel, of a width of >= 600 mm, grain-oriented
+72254040
+Flat-rolled products of alloy steel other than stainless, of a width of >= 600 mm, not further worked than hot-rolled, not in coils, of a thickness of > 10 mm (excl. products of tool steel, high-speed steel or silicon-electrical steel)
+72254060
+Flat-rolled products of alloy steel other than stainless, of a width of >= 600 mm, not further worked than hot-rolled, not in coils, of a thickness of >= 4,75 mm but <= 10 mm (excl. products of tool steel, high-speed steel or silicon-electrical steel)
+72254090
+Flat-rolled products of alloy steel other than stainless, of a width of >= 600 mm, not further worked than hot-rolled, not in coils, of a thickness of < 4,75 mm (excl. products of tool steel, high-speed steel or silicon-electrical steel)
+72255020
+Flat-rolled products of high-speed steel, of a width of >= 600 mm, not further worked than cold-rolled "cold-reduced"
+72255080
+Flat-rolled products of alloy steel other than stainless, of a width of >= 600 mm, not further worked than cold-rolled "cold-reduced" (excl. products of high-speed steel or silicon-electrical steel)
+72259900
+Flat-rolled products of alloy steel other than stainless, of a width of >= 600 mm, hot-rolled or cold-rolled "cold-reduced" and further worked (excl. plated or coated with zinc and products of silicon-electrical steel)
+72261100
+Flat-rolled products of silicon-electrical steel, of a width of < 600 mm, hot-rolled or cold-rolled "cold-reduced", grain-oriented
+72262000
+Flat-rolled products of high-speed steel, of a width of <= 600 mm, hot-rolled or cold-rolled "cold-reduced"
+72281090
+Bars and rods of high-speed steel, not further worked than cold-formed or cold-finished, whether or not further worked, or hot-formed and further worked (excl. forged products, semi-finished products, flat-rolled products and hot-rolled bars and rods in irregularly wound coils)
+72282099
+Bars and rods of silico-manganese stee, of square or other than rectangular cross-section, only cold-formed or cold-finished, incl. further worked, or hot-rolled and further worked (excl. hot-rolled, hot drawn or extruded, not further worked than clad, semi-finished products, flat-rolled products and hot-rolled bars and rods in irregularly wound coils)
+72283020
+Bars and rods of tool steel, only hot-rolled, only hot-drawn or only extruded (excl. semi-finished products, flat-rolled products and hot-rolled bars and rods in irregularly wound coils)
+72284010
+Bars and rods of tool steel, only forged (excl. semi-finished products, flat-rolled products and hot-rolled bars and rods in irregularly wound coils)
+72285020
+Bars and rods of tool steel, only cold-formed or cold-finished (excl. semi-finished products, flat-rolled products and hot-rolled bars and rods in irregularly wound coils)
+72285069
+Bars and rods of alloy steel, other than stainless steel, not further worked than cold-formed or cold-finished, of circular cross-section, of a diameter of < 80 mm (excl. of high-speed steel, silico-manganese steel, tool steel, articles of subheading 7228.50.40, semi-finished products, flat-rolled products and hot-rolled bars and rods in irregularly wound coils)
+72285080
+Bars and rods of alloy steel, other than stainless steel, not further worked than cold-formed or cold-finished (excl. of circular cross-section and products of high-speed steel, silico-manganese steel, tool steel, articles of subheading 7228.50.40, semi-finished products, flat-rolled products and hot-rolled bars and rods in irregularly wound coils)
+72299050
+Wire of steel containing by weight 0,9% to 1,1% of carbon, 0,5% to 2% of chromium and, if present, <= 0,5% of molybdenum, in coils (excl. rolled bars and rods)
+73011000
+Sheet piling of iron or steel, whether or not drilled, punched or made from assembled elements
+73041910
+Line pipe of a kind used for oil or gas pipelines, seamless, of iron or steel, of an external diameter of <= 168,3 mm (excl. products of stainless steel or of cast iron)
+73041930
+Line pipe of a kind used for oil or gas pipelines, seamless, of iron or steel, of an external diameter of > 168,3 mm but <= 406,4 mm (excl. products of stainless steel or of cast iron)
+73041990
+Line pipe of a kind used for oil or gas pipelines, seamless, of iron or steel, of an external diameter of > 406,4 mm (excl. products of stainless steel or of cast iron)
+73042200
+Drill pipe, seamless, of stainless steel, of a kind used in drilling for oil or gas
+73042400
+Casing and tubing, seamless, of a kind used for drilling for oil or gas, of stainless steel
+73042910
+Casing and tubing of a kind used for drilling for oil or gas, seamless, of iron or steel, of an external diameter <= 168,3 mm (excl. products of cast iron)
+73042930
+Casing and tubing of a kind used for drilling for oil or gas, seamless, of iron or steel, of an external diameter > 168,3 mm, but <= 406,4 mm (excl. products of cast iron)
+73042990
+Casing and tubing of a kind used for drilling for oil or gas, seamless, of iron or steel, of an external diameter > 406,4 mm (excl. products of cast iron)
+73043180
+Tubes, pipes and hollow profiles, seamless, of circular cross-section, of iron or non-alloy steel, cold-drawn or cold-rolled "cold-reduced" (excl. cast iron products, line pipe of a kind used for oil or gas pipelines, casing and tubing of a kind used for drilling for oil or gas and precision tubes)
+73044100
+Tubes, pipes and hollow profiles, seamless, of circular cross-section, of stainless steel, cold-drawn or cold-rolled "cold-reduced" (excl. line pipe of a kind used for oil or gas pipelines, casing and tubing of a kind used for drilling for oil or gas)
+73044983
+Tubes, pipes and hollow profiles, seamless, of circular cross-section, of stainless steel, of an external diameter of <= 168,3 mm (excl. cold-drawn or cold-rolled, line pipe of a kind used for oil or gas pipelines, and casing and tubing of a kind used for drilling for oil or gas and tubes)
+73044985
+Tubes, pipes and hollow profiles, seamless, of circular cross-section, of stainless steel, of an external diameter of > 168,3 mm but <= 406,4 mm (excl. cold-drawn or cold-rolled, line pipe of a kind used for oil or gas pipelines, and casing and tubing of a kind used for drilling for oil or gas and tubes)
+73044989
+Tubes, pipes and hollow profiles, seamless, of circular cross-section, of stainless steel, of an external diameter of > 406,4 mm (excl. cold-drawn or cold-rolled, line pipe of a kind used for oil or gas pipelines, and casing and tubing of a kind used for drilling for oil or gas and tubes)
+73045181
+Precision tubes, seamless, of circular cross-section, of alloy steel other than stainless, cold-drawn or cold-rolled "cold-reduced" (excl. line pipe of a kind used for oil or gas pipelines, casing and tubing of a kind used for drilling for oil and tubes, and pipes and hollow profiles, straight and of uniform wall-thickness, containing by weight >= 0,9% but <= 1,15% carbon and >= 0,5% but <= 2% chrome, whether or not containing by weight <= 0,5% molybdenum)
+73045189
+Tubes, pipes and hollow profiles, seamless, of circular cross-section, of alloy steel other than stainless, not cold-drawn or cold-rolled "cold-reduced" (excl. line pipe of a kind used for oil or gas pipelines, casing and tubing of a kind used for drilling for oil, precision tubes, and , pipes and hollow profiles, straight and of uniform wall-thickness, containing by weight >= 0,9% but <= 1,15% carbon and >= 0,5% but <= 2% chrome, whether or not containing by weight <= 0,5% molybdenum)
+73045930
+Tubes, pipes and hollow profiles of alloy steel (excl. stainless), seamless, of circular cross-section (not cold-drawn or cold-rolled), straight and of uniform wall-thickness, containing by weight >= 0,9% but <= 1,15% carbon and >= 0,5% but <= 2% chromium, whether or not containing by weight <= 0,5% molybdenum (excl. tubes, pipes and hollow profiles of subheadings 7304 19 to 7304 29)
+73045982
+Tubes, pipes and hollow profiles, seamless, of circular cross-section, of alloy steel other than stainless, of an external diameter of <= 168,3 mm (excl. cold-drawn or cold-rolled, line pipe of a kind used for oil or gas pipelines, casing and tubing of a kind used for drilling for oil or gas, and products of subheading 7304 59 30)
+73045983
+Tubes, pipes and hollow profiles, seamless, of circular cross-section, of alloy steel other than stainless, of an external diameter of > 168,3 mm but <= 406,4 mm (excl. cold-drawn or cold-rolled, line pipe of a kind used for oil or gas pipelines, casing and tubing of a kind used for drilling for oil or gas, and products of subheading 7304 59 30)
+73045989
+Tubes, pipes and hollow profiles, seamless, of circular cross-section, of alloy steel other than stainless, of an external diameter of > 406,4 mm (excl. cold-drawn or cold-rolled, line pipe of a kind used for oil or gas pipelines, casing and tubing of a kind used for drilling for oil or gas, and products of subheading 7304 59 30)
+73049000
+Tubes, pipes and hollow profiles, seamless, of non-circular cross-section, of iron or steel (excl. products of cast iron)
+73051100
+Line pipe of a kind used for oil or gas pipelines, having circular cross-sections and an external diameter of > 406,4 mm, of iron or steel, longitudinally submerged arc welded
+73051200
+Line pipe of a kind used for oil or gas pipelines, having circular cross-sections and an external diameter of > 406,4 mm, of iron or steel, longitudinally arc welded (excl. products longitudinally submerged arc welded)
+73052000
+Casing of a kind used in drilling for oil or gas, having circular cross-sections and an external diameter of > 406,4 mm, of flat-rolled products of iron or steel
+73061900
+Line pipe of a kind used for oil or gas pipelines, welded, of flat-rolled products of iron or steel, of an external diameter of <= 406,4 mm (excl. products of stainless steel or of cast iron)
+73062100
+Casing and tubing of a kind used in drilling for oil or gas, welded, of flat-rolled products of stainless steel, of an external diameter of <= 406,4 mm
+73062900
+Casing and tubing of a kind used in drilling for oil or gas, welded, of flat-rolled products of iron or steel, of an external diameter of <= 406,4 mm (excl. products of stainless steel or of cast iron)
+73069000
+Tubes, pipes and hollow profiles "e.g., open seam, riveted or similarly closed", of iron or steel (excl. of cast iron, seamless or welded tubes and pipes and tubes and pipes having internal and external circular cross-sections and an external diameter of > 406,4 mm)
+73071910
+Tube or pipe fittings of cast iron (excl. of non-malleable)
+73071990
+Cast tube or pipe fittings of steel
+73072100
+Flanges of stainless steel (excl. cast products)
+73072210
+Sleeves, of stainless steel, threaded (excl. cast products)
+73072290
+Elbows and bends, of stainless steel, threaded (excl. cast products)
+73072310
+Butt welding elbows and bends of stainless steel (excl. cast products)
+73072910
+Threaded tube or pipe fittings of stainless steel (excl. cast products, flanges, elbows, bends and sleeves)
+73072980
+Tube or pipe fittings of stainless steel (excl. cast, threaded, butt welding fittings and flanges)
+73079100
+Flanges of iron or steel (excl. cast or stainless products)
+73079210
+Sleeves of iron or steel, threaded (excl. cast or of stainless steel)
+73079290
+Elbows and bends, of iron or steel, threaded (excl. cast or of stainless steel)
+73079311
+Butt welding elbows and bends, of iron or steel, with greatest external diameter <= 609,6 mm (excl. cast iron or stainless steel products)
+73079319
+Butt welding fittings of iron or steel, with greatest external diameter <= 609,6 mm (excl. cast iron or stainless steel products, elbows, bends and flanges)
+73079391
+Butt welding elbows and bends, of iron or steel, with greatest external diameter > 609,6 mm (excl. cast iron or stainless steel products)
+73079399
+Butt welding fittings of iron or steel, with greatest external diameter > 609,6 mm (excl. cast iron or stainless steel products, elbows, bends and flanges)
+73079910
+Threaded tube or pipe fittings, of iron or steel (excl. cast iron or stainless steel products, flanges, elbows, bends and sleeves)
+73079980
+Tube or pipe fittings, of iron or steel (excl. of cast iron or stainless steel, threaded, butt welding fittings, and flanges)
+73110013
+Containers of iron or steel, seamless, for compressed or liquefied gas, for a pressure >= 165 bar, of a capacity >= 20 l to <= 50 l (excl. containers specifically constructed or equipped for one or more types of transport)
+73181100
+Coach screws of iron or steel
+73181300
+Screw hooks and screw rings, of iron or steel
+73181410
+Self-tapping screws, of stainless steel (excl. wood screws)
+73181535
+Screws and bolts, of stainless steel "whether or not with their nuts and washers", without heads (excl. screws and bolts for fixing railway track construction material)
+73181548
+Screws and bolts, of iron or steel other than stainless "whether or not with their nuts and washers", without heads, with a tensile strength of >= 800 MPa (excl. screws and bolts for fixing railway track construction material)
+73181568
+Hexagonal-socket head screws and bolts, of iron or steel other than stainless "whether or not with their nuts and washers" (excl. wood screws, self-tapping screws and screws and bolts for fixing railway track construction material)
+73181575
+Hexagon screws and bolts, of stainless steel "whether or not with their nuts and washers" (excl. with socket head, wood screws, self-tapping screws and screws and bolts for fixing railway track construction material)
+73181588
+Hexagon screws and bolts, of iron or steel other than stainless "whether or not with their nuts and washers", with a tensile strength of => 800 MPa (excl. with socket head, wood screws, self-tapping screws and screws and bolts for fixing railway track construction material)
+73181595
+Screws and bolts, of iron or steel "whether or not with their nuts and washers", with heads (excl. with slotted, cross-recessed or hexagonal head; wood screws, self-tapping screws and screws and bolts for fixing railway track construction material, screw hooks and screw rings)
+73181631
+Blind rivet nuts of stainless steel
+73181639
+Nuts of stainless steel (excl. blind rivet nuts)
+73181640
+Blind rivet nuts of iron or steel other than stainless
+73181660
+Self-locking nuts of iron or steel other than stainless
+73181692
+Nuts of iron or steel other than stainless, with an inside diameter <= 12 mm (excl. blind rivet nuts and self-locking nuts)
+73181699
+Nuts of iron or steel other than stainless, with an inside diameter > 12 mm (excl. blind rivet nuts and self-locking nuts)
+73181900
+Threaded articles, of iron or steel, n.e.s.
+73182100
+Spring washers and other lock washers, of iron or steel
+73182200
+Washers of iron or steel (excl. spring washers and other lock washers)
+73182400
+Cotters and cotter pins, of iron or steel
+73182900
+Non-threaded articles, of iron or steel
+73269040
+Pallets and similar platforms for handling goods, of iron or steel
+73269050
+Reels for cables, piping and the like, of iron or steel
+73269092
+Articles of iron or steel, open-die forged, n.e.s.
+73269094
+Articles of iron or steel, closed-die forged, n.e.s.
+73269096
+Sintered articles of iron or steel, n.e.s.
