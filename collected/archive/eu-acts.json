@@ -1,9 +1,9 @@
 {
  "source": "eu-acts",
- "fetchedAt": "2026-11-11T09:24:05+09:00",
+ "fetchedAt": "2026-11-11T12:59:43+09:00",
  "since": "2025-01-01",
  "report": {
-  "targets": 15,
+  "targets": 16,
   "failures": []
  },
  "entries": [
@@ -126,6 +126,14 @@
    "lines": 1313,
    "fullLines": 3517,
    "textPath": "collected/archive/pages/eu-acts/32023R1773.txt"
+  },
+  {
+   "celex": "32026D1862",
+   "title": "교차부문 조정계수 이행결정(2026~2030년)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026D1862",
+   "lines": 52,
+   "fullLines": 52,
+   "textPath": "collected/archive/pages/eu-acts/32026D1862.txt"
   }
  ]
 }

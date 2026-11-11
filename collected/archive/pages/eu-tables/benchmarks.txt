@@ -3,6 +3,58 @@
 [무엇] 무상할당 조정 이행규정 (EU) 2025/2620 부속서 5의 CBAM 벤치마크 표
 [읽는 법] 표마다 '[표 번호] 표 바로 앞의 글' 줄 다음에 행을 한 줄씩 적었다. 칸은 ' | '로 나눴고 빈 칸은 비워 두었다. 여러 행이나 열에 걸친 칸은 걸친 자리마다 같은 글을 적었다.
 
+[표 밖의 글] 부속서 5번의 글 가운데 표 밖에 있는 것을 차례대로 적었다.
+5. CBAM BENCHMARKS
+5.1. Rules for selecting the appropriate CBAM benchmark value when using default values
+Where default values are used to determine SEFA of a final good or of a precursor, the same production route shall be used as indicated in Annex I to Commission Implementing Regulation (EU) 2025/2621 (1) for the country of origin of that good or precursor.
+Where different alloy grades for steel are given in the table for the same CN code, the highest benchmark value given for the relevant production year is used.
+5.2. Rules for selecting the appropriate CBAM benchmark value when using actual data
+5.2.1. Cement
+‘White cement clinker’ means cement clinker for use as main binding component in the formulation of materials such as joint filers, ceramic tile adhesives, insulation, and anchorage mortars, industrial floor mortars, ready mixed plaster, repair mortars, and water- tight coatings with maximum average contents of 0,4 mass-% Fe2O3, 0,003 mass-% Cr2O3 and 0,03 mass-% Mn2O3.
+‘Grey cement clinker’ means other cement clinker than white cement clinker.
+In the case of other hydraulic cements (CN 2523 90 00 ) containing a mixture of white clinker and of grey clinker and/or calcined clay, the CBAM benchmark shall be calculated as a weighted average that reflects the composition.
+5.2.2. Fertilisers
+No specific rules apply.
+5.2.3. Iron and steel
+‘Carbon steel’ means steel other than stainless steel, high alloy or low alloy steel.
+‘Stainless steel’ means alloy steels containing, by weight, 1,2 % or less of carbon and 10,5 % or more of chromium, with or without other elements.
+‘High alloy steel’ means steel containing 8 % [or more metallic alloying elements or where high surface quality and processability is required].
+‘Low alloy steel’ means alloy steel other than high-alloy steel.
+5.2.4. Aluminium
+No specific rules apply.
+5.3. CBAM benchmark values
+Where more than one benchmark value is given for a specific CN code, the meaning of the indicators is as follows:
+(1)
+Value is to be used for production years 2026-27
+(2)
+Value is to be used for production years 2028-30
+(A)
+grey clinker / cement
+(B)
+white clinker / cement
+(C)
+Carbon Steel based on BF/BOF
+(D)
+Carbon Steel based on DRI/EAF
+(E)
+Carbon Steel based on Scrap/EAF
+(F)
+Low alloy Steel based on BF/BOF
+(G)
+Low alloy Steel based on DRI/EAF
+(H)
+Low alloy Steel based on scrap/EAF
+(J)
+High alloy Steel (based on EAF)
+(K)
+primary Aluminium
+(L)
+secondary Aluminium
+[여기에 표 62]
+(1) Commission Implementing Regulation (EU) 2025/2621 of 16 December 2025 laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and the Council as regards the establishment of default values (not yet published in the Official Journal).
+ELI: http://data.europa.eu/eli/reg_impl/2025/2620/oj
+ISSN 1977-0677 (electronic edition)
+
 [표 62] secondary Aluminium
 | CN code | CN Description | Column A BMg* [tCO2e/t] | Column B BMg [tCO2e/t] |
 | Cement |  |  |  |

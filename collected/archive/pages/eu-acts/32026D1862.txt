@@ -1,0 +1,56 @@
+[주소] https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026D1862
+[받은 곳] http://publications.europa.eu/resource/celex/32026D1862
+[무엇] 교차부문 조정계수 이행결정(2026~2030년)
+
+L_202601862EN.000101.fmx.xml
+Official Journal
+of the European Union
+EN
+L series
+2026/1862
+24.7.2026
+COMMISSION IMPLEMENTING DECISION (EU) 2026/1862
+of 23 July 2026
+determining the uniform cross-sectoral correction factor for the adjustment of free allocations of emission allowances for the period 2026 to 2030
+(notified under document C(2026) 5379)
+(Text with EEA relevance)
+THE EUROPEAN COMMISSION,
+Having regard to the Treaty on the Functioning of the European Union,
+Having regard to Commission Delegated Regulation (EU) 2019/331 of 19 December 2018 determining transitional Union-wide rules for harmonised free allocation of emission allowances pursuant to Article 10a of Directive 2003/87/EC of the European Parliament and of the Council (1), and in particular Article 14(6) thereof,
+Whereas:
+(1)
+The maximum annual amount of allowances allocated free of charge is determined in accordance with the auctioning share set out in Article 10(1), second subparagraph and by applying Article 10a(5), (5a), (8) and (8b) of Directive 2003/87/EC of the European Parliament and the Council (2). That maximum annual amount is then used as basis for calculating allowances allocated free of charge to installations in accordance with Articles 16 and 18 of Delegated Regulation (EU) 2019/331.
+(2)
+To respect the auctioning share set out in Article 10(1) of Directive 2003/87/EC, the maximum annual amount of allowances allocated free of charge, reduced by the amounts referred to in Articles 10a(8) and (8b) and, where applied, taking into account the additional amount used to increase the maximum amount of free allocations available in accordance with Article 10a(5a) of Directive 2003/87/EC and the remaining amounts from prior allocation periods in accordance with Article 10a(5) of that Directive, is not to be exceeded.
+(3)
+In order to ensure that that maximum annual amount of allowances allocated free of charge is not exceeded, an adjustment is to be applied in accordance with Article 10a(5) of Directive 2003/87/EC, if necessary, and reducing in a uniform manner the number of free allowances for each installation eligible for free allocation. However, installations whose greenhouse gas emission levels are below the average of the 10 % most efficient installations in a sector or subsector in the Union for the relevant benchmarks in a year when the adjustment applies, are to be exempted from that adjustment.
+(4)
+For the purposes of this adjustment, the Commission, pursuant to Article 14(6) of Delegated Regulation (EU) 2019/331, is to determine a cross-sectoral correction factor for each year of the relevant allocation period once the preliminary annual amounts of free allowances for that period are notified.
+(5)
+The cross-sectoral correction factor, applying each year of the allocation period 2026 to 2030, is to be determined based on the preliminary annual amount of emission allowances allocated free of charge over the allocation period. In this respect, free allowances allocated to activities and gases that are included by Member States in the emission allowance trading in accordance with Article 24 of Directive 2003/87/EC are to be taken into account. However, free allowances allocated to the installations that are excluded by Member States from the emissions trading system within the Union, in accordance with Articles 27 or 27a of that Directive, and reintroduced during the allocation period, are not to be taken into account. The reduction of free allocations resulting from the application of the CBAM factor, as specified under Article 10a(1a), second subparagraph of Directive 2003/87/EC is not to be reflected in the preliminary annual amount of emissions allowances allocated free of charge, as the amount resulting from that reduction is to be made available to the Innovation Fund in accordance with Article 10a(1a), fourth subparagraph of that Directive.
+(6)
+For 2026, the Union-wide quantity of allowances referred to in Article 9 of Directive 2003/87/EC and taking into account Commission Decision (EU) 2023/1575 (3) amounts to 1 185 420 090. Pursuant to Article 3ga(3), second subparagraph of Directive 2003/87/EC, a reduction of 3,5 % of the additional quantity of allowances due to the increase in the cap for maritime transport is to be applied, leading to an adjusted total amount of 1 180 706 960 allowances. In accordance with Article 10(1), first and second subparagraphs of Directive 2003/87/EC, a maximum threshold of 43 % for free allocations applies, which was calculated as 43 % of 1 180 706 960 of the adjusted total amount of allowances for 2026, that is 507 703 993 allowances. From this amount, 35 357 143 allowances are to be deducted in accordance with Article 10a(8) of Directive 2003/87/EC, leading to a maximum amount of 472 346 850 for 2026. In addition, in accordance with Article 10a(8b) of Directive 2003/87/EC and as confirmed by Article 2, third sentence of Regulation (EU) 2026/667 of the European Parliament and of the Council (4), 40 000 000 allowances are to be deducted from the maximum amount for free allocations and to be made available for the Social Climate Fund, leading to a maximum available amount of 432 346 850 allowances that can be allocated free of charge for 2026.
+(7)
+Following the same methodology, the maximum amounts of allowances that can be allocated free of charge in the following years are 434 602 358 for 2027, 395 980 088 for 2028, 357 357 817 for 2029 and 318 735 546 for 2030.
+(8)
+Pursuant to Article 10a(5) of Directive 2003/87/EC, for every year in which the sum of free allocations does not reach the maximum amount of allowances that can be allocated free of charge while respecting the auctioning share, the remaining allowances up to that amount are to be used to prevent or limit reduction of free allocations to respect the auctioning share in later years. 125 586 948 allowances from the maximum amount available for free allocations in the period from 2021 to 2025, and the totality of the 3 % additional amount referred to in Article 10a(5a) of Directive 2003/87/EC for that period, remained unused and may be used to avoid the need of applying the cross-sectoral correction factor to free allocations in the period from 2026 to 2030. Any unused allowances from the maximum available amount of allowances that may be allocated free of charge in the year 2026 will be made available for free allocations in the subsequent year, namely 2027. That logic should continue to apply for subsequent years during the allocation period from 2026 to 2030 within the meaning of Article 2, point 15 of Delegated Regulation (EU) 2019/331.
+(9)
+Pursuant to Article 10a(5a) of Directive 2003/87/EC, an additional amount of up to 3 % of the total quantity of allowances, amounting to 368 419 533 over the ten-year period 2021 to 2030, are to be used, where necessary, to increase the maximum available amount. This applies, when the preliminary annual amounts of free allowances per installation as submitted by the Member States and the EEA EFTA States, and after applying the relevant factor set out in Annex V to Delegated Regulation (EU) 2019/331, exceed that maximum available amount of allowances that may be allocated free of charge. During the 2021 to 2030 period, a total of 289 226 630 allowances coming from the 3 % of the total quantity of allowances would be used. Therefore, the annual cross-sectoral correction factor for the period 2026 to 2030 should be 100 %.
+(10)
+The maximum annual amounts for free allocations determined in accordance with the auctioning share set out in Article 10(1), second subparagraph in conjunction with Article 10a(5), (5a), (8) and (8b), the harmonised allocation rules and the cross-sectoral correction factor are to be applied in the EEA EFTA States (5). It is therefore necessary to take into account the preliminary annual amounts of emission allowances allocated free of charge over the period 2026 to 2030 based on the data accepted by the EFTA Surveillance Authority with regard to Iceland, Liechtenstein and Norway. The calculations referred to in recitals 6 to 9 reflect this necessity,
+HAS ADOPTED THIS DECISION:
+Article 1
+For each year in the allocation period 2026 to 2030, the uniform cross-sectoral correction factor for the adjustment of free allocations of emission allowances in accordance with Article 10a(5) and (5a) of Directive 2003/87/EC shall be 100 %.
+Article 2
+This Decision is addressed to the Member States.
+Done at Brussels, 23 July 2026.
+For the Commission
+Wopke HOEKSTRA
+Member of the Commission
+(1) OJ L 59, 27.2.2019, p. 8, ELI: http://data.europa.eu/eli/reg_del/2019/331/oj.
+(2) Directive 2003/87/EC of the European Parliament and of the Council of 13 October 2003 establishing a system for greenhouse gas emission allowance trading within the Union and amending Council Directive 96/61/EC (OJ L 275, 25.10.2003, p. 32, ELI: http://data.europa.eu/eli/dir/2003/87/oj).
+(3) Commission Decision (EU) 2023/1575 of 27 July 2023 on the Union-wide quantity of allowances to be issued under the EU Emissions Trading System for 2024 (OJ L 192, 31.7.2023, p. 30, ELI: http://data.europa.eu/eli/dec/2023/1575/oj).
+(4) Regulation (EU) 2026/667 of the European Parliament and of the Council of 11 March 2026 amending Regulation (EU) 2021/1119 as regards the setting of a Union intermediate climate target for 2040 (OJ L, 2026/667, 18.3.2026, ELI: http://data.europa.eu/eli/reg/2026/667/oj).
+(5) Decision of the EEA joint Committee No 335/2023 of 8 December 2023 amending Annex XX (Environment) to the EEA Agreement [2024/1420] (OJ L, 2024/1420, 13.6.2024, ELI: http://data.europa.eu/eli/dec/2024/1420/oj).
+ELI: http://data.europa.eu/eli/dec_impl/2026/1862/oj
+ISSN 1977-0677 (electronic edition)
