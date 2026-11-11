@@ -14,6 +14,7 @@
 분석 글 꺼내 보기:     python -m tools.publish.rule_edit analysis-show --id <규제> [--out analysis.json]   (고칠 때는 꺼내서 고친 뒤 다시 넣는다)
 연혁이나 단계를 고치면 그 규제에 고친 날(changedOn)이 적힌다. 분석 글이 그 뒤로 그대로이면 사이트가 그렇다고 밝히고, 상태 점검이 알린다.
 고칠 때마다 기준일(asOf)이 오늘로 바뀌고, 연혁은 날짜순으로 다시 놓인다. 끝에 자료 전체를 검사해 문제를 찍는다(문제가 있으면 1로 끝난다).
+다른 규제의 근거가 공식 기록과 달라진 것은 알리기만 하고 막지 않는다(blocking 참조).
 """
 import argparse
 import json
