@@ -60,24 +60,30 @@ def _lines(body, headers, address):
     return lines
 
 
-def celex_parts(celex):
-    """[(파일 이름 꼬리, 주소, 줄 목록)]과 사유. 파일이 여럿이면(본문과 부속서) 차례대로 모두 받는다."""
+def celex_pages(celex):
+    """[(파일 이름 꼬리, 주소, HTML 글)]과 사유. 파일이 여럿이면(본문과 부속서) 차례대로 모두 받는다."""
     address = CELLAR.format(celex=celex)
     status, headers, body, error = fetch(address, timeout=240, retries=1, headers=ACCEPT)
     time.sleep(1)
     if status == 200 and body:
-        return [("", address, _lines(body, headers, address))], ""
+        return [("", address, decode(body, header(headers, "Content-Type")))], ""
     if status != 300 or not body:
         return [], f"응답 {status} {error[:60]}".strip()
     links, _, _ = parse(decode(body, header(headers, "Content-Type")), address)
     choices = sorted({url for url, _ in links if CHOICE.search(url)}, key=lambda url: int(CHOICE.search(url).group(1)))
-    parts = []
+    pages = []
     for choice in choices[:8]:
         status, headers, body, error = fetch(choice, timeout=240, retries=1, headers=ACCEPT)
         time.sleep(1)
         if status == 200 and body:
-            parts.append((f"-DOC_{CHOICE.search(choice).group(1)}", choice, _lines(body, headers, choice)))
-    return parts, "" if parts else "고를 파일을 받지 못함"
+            pages.append((f"-DOC_{CHOICE.search(choice).group(1)}", choice, decode(body, header(headers, "Content-Type"))))
+    return pages, "" if pages else "고를 파일을 받지 못함"
+
+
+def celex_parts(celex):
+    """[(파일 이름 꼬리, 주소, 줄 목록)]과 사유. celex_pages가 받은 글을 줄로 편 것이다."""
+    pages, why = celex_pages(celex)
+    return [(tail, address, parse(html, address)[1]) for tail, address, html in pages], why
 
 
 def council_parts(code):
