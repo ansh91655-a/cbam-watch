@@ -10,7 +10,7 @@ export function hero(book, events, items, dated) {
     h("div", { class: "hero-copy" }, [
       h("p", { class: "hero-fresh", "data-fresh": "" }),
       h("h1", {}, ["EU 탄소국경조정제도", h("br"), "CBAM ", h("span", { class: "hl", text: "규제 동향" })]),
-      h("p", { class: "hero-lead", text: "법령, 가이던스, 인증서 가격, 일정을 평일마다 확인하여 국문으로 정리해 드립니다." }),
+      h("p", { class: "hero-lead", text: "법령, 가이던스, 인증서 가격, 일정" }),
       h("div", { class: "hero-actions" }, [
         h("a", { class: "btn btn-main", href: "#news", text: "새 소식 보기" }),
         h("a", { class: "btn btn-ghost", href: "#price", text: "인증서 가격 보기" }),
