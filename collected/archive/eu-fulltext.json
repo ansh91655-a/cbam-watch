@@ -1,9 +1,9 @@
 {
  "source": "eu-fulltext",
- "fetchedAt": "2026-11-11T10:58:04+09:00",
+ "fetchedAt": "2026-11-11T11:01:18+09:00",
  "since": "2025-01-01",
  "report": {
-  "targets": 13,
+  "targets": 14,
   "failures": [
    "downstream-parliament TA-10-2026-0276: 응답 202"
   ]
@@ -71,6 +71,13 @@
    "url": "http://publications.europa.eu/resource/cellar/95ee45d7-db37-11f0-8da2-01aa75ed71a1.0001.03/DOC_2",
    "lines": 300,
    "textPath": "collected/archive/pages/eu-fulltext/tdf-commission-DOC_2.txt"
+  },
+  {
+   "name": "ets-directive-consolidated",
+   "code": "02003L0087-20240301",
+   "url": "http://publications.europa.eu/resource/celex/02003L0087-20240301",
+   "lines": 2334,
+   "textPath": "collected/archive/pages/eu-fulltext/ets-directive-consolidated.txt"
   },
   {
    "name": "downstream-oeil-summary-1879956",
