@@ -4026,6 +4026,42 @@
    "ko": "화학 원료",
    "from": "guide-importers",
    "added": "2026-11-13"
+  },
+  {
+   "en": "brine",
+   "ko": "염수",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "mixed fertilizers",
+   "ko": "혼합 비료",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "nitrogenous fertilizer",
+   "ko": "질소 비료",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "primary forms",
+   "ko": "1차 형태",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "angles, shapes and sections",
+   "ko": "형강",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "ferro-alloy",
+   "ko": "합금철",
+   "from": "guide-importers",
+   "added": "2026-11-13"
   }
  ]
 }
