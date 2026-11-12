@@ -3846,6 +3846,30 @@
    "ko": "시계를 멈춤",
    "from": "report-free-allocation",
    "added": "2026-11-13"
+  },
+  {
+   "en": "Product Carbon Footprint",
+   "ko": "제품 탄소발자국",
+   "from": "report-methodology",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "primary legislation",
+   "ko": "1차 입법",
+   "from": "report-methodology",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "energy intensity",
+   "ko": "에너지집약도",
+   "from": "report-methodology",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "waste-derived fuels",
+   "ko": "폐기물 유래 연료",
+   "from": "report-methodology",
+   "added": "2026-11-13"
   }
  ]
 }
