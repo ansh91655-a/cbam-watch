@@ -1182,6 +1182,24 @@
    "ko": "비합금강",
    "from": "guide-3",
    "added": "2026-11-12"
+  },
+  {
+   "en": "written procedures",
+   "ko": "서면 절차",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "four-eyes principle",
+   "ko": "4안 원칙",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "error in use",
+   "ko": "사용 오차",
+   "from": "guide-3",
+   "added": "2026-11-12"
   }
  ]
 }
