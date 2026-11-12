@@ -1,6 +1,6 @@
 {
  "source": "eur-lex-related",
- "fetchedAt": "2026-11-12T06:54:56+09:00",
+ "fetchedAt": "2026-11-12T10:26:09+09:00",
  "since": "2025-01-01",
  "report": {
   "links": {
@@ -414,8 +414,8 @@
    "date": "2025-11-20",
    "title": "Commission Delegated Regulation (EU) 2025/2551 of 20 November 2025 supplementing Regulation (EU) 2023/956 of the European Parliament and of the Council by specifying the conditions for granting accreditation to verifiers, for the control and oversight of accredited verifiers, for the withdrawal of accreditation and for mutual recognition and peer evaluation of accreditation bodies",
    "relations": [
-    "resource_legal_based_on_resource_legal:32023R0956",
-    "resource_legal_completes_resource_legal:32023R0956"
+    "resource_legal_completes_resource_legal:32023R0956",
+    "resource_legal_based_on_resource_legal:32023R0956"
    ],
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32025R2551"
   },
@@ -479,8 +479,8 @@
    "title": "Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023 establishing a carbon border adjustment mechanism (Text with EEA relevance)",
    "relations": [
     "act_consolidated_based_on_resource_legal:32023R0956",
-    "work_is_logical_successor_of_work:32023R0956",
     "act_consolidated_consolidates_resource_legal:32023R0956",
+    "work_is_logical_successor_of_work:32023R0956",
     "act_consolidated_consolidates_resource_legal:32025R2083",
     "title-match"
    ],
