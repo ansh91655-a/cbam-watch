@@ -2130,6 +2130,24 @@
    "ko": "암모니아성 N",
    "from": "guide-verif",
    "added": "2026-11-12"
+  },
+  {
+   "en": "auto-producer",
+   "ko": "자가 생산자",
+   "from": "guide-verif",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "overvoltage",
+   "ko": "과전압",
+   "from": "guide-verif",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "stock taking",
+   "ko": "재고 조사",
+   "from": "guide-verif",
+   "added": "2026-11-12"
   }
  ]
 }
