@@ -1200,6 +1200,60 @@
    "ko": "사용 오차",
    "from": "guide-3",
    "added": "2026-11-12"
+  },
+  {
+   "en": "improvement factor",
+   "ko": "개선 계수",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "CO2e reference price",
+   "ko": "CO2e 기준 가격",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "corroborating data source",
+   "ko": "보강 데이터 출처",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "primary data source",
+   "ko": "주 데이터 출처",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "technical feasibility",
+   "ko": "기술적 실현 가능성",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "technically not feasible",
+   "ko": "기술적으로 실현 가능하지 않은",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "direct determination",
+   "ko": "직접 결정",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "indirect determination",
+   "ko": "간접 결정",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "specific determination methodology",
+   "ko": "특정 결정 방법론",
+   "from": "guide-3",
+   "added": "2026-11-12"
   }
  ]
 }
