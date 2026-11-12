@@ -2736,6 +2736,24 @@
    "ko": "영(0) 처리",
    "from": "32025R2547",
    "added": "2026-11-13"
+  },
+  {
+   "en": "declarant-specific addenda",
+   "ko": "신고인별 부록",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "region-specific adaptations of default values",
+   "ko": "기본값의 지역별 조정",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "separate generation",
+   "ko": "별도 발전",
+   "from": "32025R2547",
+   "added": "2026-11-13"
   }
  ]
 }
