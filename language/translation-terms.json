@@ -3918,6 +3918,12 @@
    "ko": "표준 계수",
    "from": "guide-importers",
    "added": "2026-11-13"
+  },
+  {
+   "en": "power unit",
+   "ko": "발전 설비",
+   "from": "guide-importers",
+   "added": "2026-11-13"
   }
  ]
 }
