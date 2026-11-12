@@ -38,13 +38,23 @@ def entries(path=GLOSSARY):
     return _entries
 
 
+_patterns = {}
+
+
+def _pattern(form):
+    """영문 표기 하나를 찾는 식. 낱말이 수백 개라 문단마다 새로 만들면 느리다(만든 것을 두고 쓴다)."""
+    if form not in _patterns:
+        _patterns[form] = re.compile(r"(?<![a-z])" + re.escape(form) + r"(?:s|es)?(?![a-z])")
+    return _patterns[form]
+
+
 def found(source, path=GLOSSARY):
     """원문 문단에 나온 용어집의 낱말들(긴 것부터). 복수형(-s, -es)도 같은 낱말로 본다."""
     text = str(source).lower()
     hits = []
     for entry in entries(path):
         for form in entry["en"]:
-            pattern = re.compile(r"(?<![a-z])" + re.escape(form) + r"(?:s|es)?(?![a-z])")
+            pattern = _pattern(form)
             if pattern.search(text):
                 text = pattern.sub(lambda match: " " * len(match.group(0)), text)  # 이 자리에 든 짧은 낱말은 다시 세지 않는다
                 hits.append(entry)
