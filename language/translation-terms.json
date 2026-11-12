@@ -1158,6 +1158,30 @@
    "ko": "수직 통합된 사업장",
    "from": "guide-3",
    "added": "2026-11-12"
+  },
+  {
+   "en": "free-cutting steel",
+   "ko": "쾌삭강",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "semi-finished products",
+   "ko": "반제품",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "stainless steel",
+   "ko": "스테인리스강",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "non-alloy steel",
+   "ko": "비합금강",
+   "from": "guide-3",
+   "added": "2026-11-12"
   }
  ]
 }
