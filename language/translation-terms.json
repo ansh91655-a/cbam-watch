@@ -840,6 +840,66 @@
    "ko": "직접환원",
    "from": "guide-5d",
    "added": "2026-11-12"
+  },
+  {
+   "en": "pickling",
+   "ko": "산세",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "annealing",
+   "ko": "소둔",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "coating",
+   "ko": "피복",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "plating",
+   "ko": "도금",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "galvanizing",
+   "ko": "아연도금",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "wire drawing",
+   "ko": "신선",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "coke fines",
+   "ko": "분코크스",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "pre-consumer scrap",
+   "ko": "소비 전 고철",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "rail mill",
+   "ko": "레일 압연기",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "LD converter",
+   "ko": "LD 전로",
+   "from": "guide-5d",
+   "added": "2026-11-12"
   }
  ]
 }
