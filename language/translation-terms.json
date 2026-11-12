@@ -3156,6 +3156,66 @@
    "ko": "전자 데이터 처리 기법",
    "from": "32025R2210",
    "added": "2026-11-13"
+  },
+  {
+   "en": "cardinality",
+   "ko": "기수",
+   "from": "32025R2210",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "code-list",
+   "ko": "코드 목록",
+   "from": "32025R2210",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "data element",
+   "ko": "데이터 요소",
+   "from": "32025R2210",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "electronic receipt declaration",
+   "ko": "전자 수령 신고서",
+   "from": "32025R2210",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "data requirements",
+   "ko": "데이터 요건",
+   "from": "32025R2210",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "auctioning share",
+   "ko": "경매 비율",
+   "from": "32026D1862",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "allocation period",
+   "ko": "할당기간",
+   "from": "32026D1862",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Innovation Fund",
+   "ko": "혁신기금",
+   "from": "32026D1862",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Social Climate Fund",
+   "ko": "사회기후기금",
+   "from": "32026D1862",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "preliminary annual amount",
+   "ko": "잠정 연간량",
+   "from": "32026D1862",
+   "added": "2026-11-13"
   }
  ]
 }
