@@ -48,6 +48,12 @@ class ArticleTextTest(unittest.TestCase):
         self.assertEqual(kept[1], "담당부서 시험과")  # 메뉴에 적힌 같은 제목이 아니라 등록일이 따르는 머리 줄에서 시작한다
         self.assertEqual(kept[-1], BODY[-1])
 
+    def test_contact_lines_under_the_heading_are_left_out(self):
+        lines = [TITLE, "담당자홍길동", "담당부서시험과", "연락처044-000-0000", "등록일2026-11-11", "조회수457", "첨부파일"] + BODY + ["담당자가 설명회를 진행한다고 적은 본문 문장"] * 12
+        kept, _ = article_text.body(lines + ["만족도 조사"], TITLE)
+        self.assertEqual(kept[:4], [TITLE, "담당부서시험과", "등록일2026-11-11", "첨부파일"])
+        self.assertEqual(kept[-1], "담당자가 설명회를 진행한다고 적은 본문 문장")  # 머리에서 멀리 떨어진 본문의 줄은 그대로 둔다
+
     def test_title_is_matched_whatever_the_spacing(self):
         kept, found = article_text.body(["메뉴", "시험용  게시글:탄소국경조정제도 설명회 안내", "등록일 2026-11-11", "본문"], TITLE)
         self.assertTrue(found)

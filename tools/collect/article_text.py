@@ -12,6 +12,8 @@ STOP_LINES = ("목록", "목록으로", "이전글", "다음글", "이전 글", 
 # 제목 줄 바로 뒤에 이런 글자가 나오면 그 줄이 게시글의 머리다(메뉴나 지나온 길에 적힌 같은 제목과 가린다)
 META_MARKS = ("등록일", "작성일", "게시일", "담당부서", "조회수", "첨부파일")
 META_WINDOW = 12
+# 게시글의 머리에 붙는 줄 가운데 싣지 않는 것: 담당자의 이름과 전화번호(요약에 쓰지 않는 개인 연락처), 조회수
+DROP_STARTS = ("담당자", "연락처", "조회수")
 MAX_LINES = 300
 MAX_CHARS = 9000
 MIN_CHARS = 200
@@ -71,15 +73,18 @@ def body(lines, title, stops=()):
     """(본문 줄들, 제목 줄을 찾았는가)를 돌려준다. 제목을 찾지 못하면 화면의 줄을 처음부터 쓴다.
 
     stops는 그 출처에서만 쓰는 끝 표시다(이용 조건을 적은 줄 등). 길이는 MAX_LINES줄, MAX_CHARS자까지다.
+    머리 바로 아래의 담당자, 연락처, 조회수 줄은 싣지 않는다.
     """
     start = _start(lines, title)
     kept = []
     size = 0
-    for line in lines[start or 0:]:
+    for offset, line in enumerate(lines[start or 0:]):
         if kept and _is_stop(line, stops):
             break
         if len(kept) >= MAX_LINES or size + len(line) > MAX_CHARS:
             break
+        if start is not None and 0 < offset <= META_WINDOW and flat(line).startswith(DROP_STARTS):
+            continue
         kept.append(line)
         size += len(line)
     return kept, start is not None
