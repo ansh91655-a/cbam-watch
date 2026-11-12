@@ -306,6 +306,30 @@
    "ko": "안내서",
    "from": "guide-2",
    "added": "2026-11-12"
+  },
+  {
+   "en": "4-eyes principle",
+   "ko": "4개의 눈 원칙",
+   "from": "guide-2",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "embedded free allocation",
+   "ko": "내재무상할당량",
+   "from": "guide-2",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "default CBAM benchmarks",
+   "ko": "기본 CBAM 벤치마크",
+   "from": "guide-2",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "effective carbon price",
+   "ko": "실효 탄소가격",
+   "from": "guide-2",
+   "added": "2026-11-12"
   }
  ]
 }
