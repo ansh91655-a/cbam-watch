@@ -1,5 +1,6 @@
 // 후보. 자동 수집이 찾은 것 가운데 무엇을 쓰고 무엇을 뺐는지 본다.
-import { empty, h, pill, safeLink, table, viewHead } from "../ui/dom.js";
+import { empty, h, pill, safeLink, table } from "../ui/dom.js";
+import { viewHead } from "../ui/head.js";
 import { minute } from "../ui/format.js";
 
 const TONE = { "작성됨": "accent", "제외": null, "묶음": "warn" };

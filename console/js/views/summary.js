@@ -1,5 +1,6 @@
 // 오늘 상태. 사람이 봐야 하는 것을 먼저 보여 준다.
-import { empty, h, pill, table, viewHead } from "../ui/dom.js";
+import { empty, h, pill, table } from "../ui/dom.js";
+import { viewHead } from "../ui/head.js";
 import { countsText, minute } from "../ui/format.js";
 import { isHold, latest, needsEyes, today, willRetry } from "../model.js";
 

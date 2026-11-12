@@ -30,7 +30,7 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 | `reports/` | 보고 실행이 올리는 그날과 그 주의 보고 파일. 알림의 근거다 |
 | `language/` | 국문 표기 기준(용어집) |
 | `site/` | 공개 사이트의 화면 파일. 화면마다 모듈 하나(`js/views/`), 그림과 달력 같은 부품(`js/ui/`), 디자인 값(`css/tokens.css`)과 색 변형(`css/themes.css`), 파비콘과 공유 미리보기 그림과 라이선스 고지(`assets/`). 아래 '사이트의 디자인' 참조 |
-| `console/` | 운영 화면의 파일 |
+| `console/` | 운영 화면의 파일. 올릴 폴더는 `python3 -m tools.publish.build_console`이 만든다(사이트의 화면 도우미 `dom.js`, `format.js`를 복사해 넣는다). 사이트 쪽 도우미가 바뀌어 콘솔의 모듈이 맞물리지 않게 되면 '도구 검사'가 잡는다(`tools/dev/modlink.mjs`) |
 | `tools/` | 정해진 일을 하는 프로그램. 아래 표 참조 |
 | `tests/` | 도구의 자동 시험. 도구나 시험, 시험이 읽는 화면의 셈과 참고 자료가 바뀌면 돈다(`.github/workflows/tests.yml`) |
 

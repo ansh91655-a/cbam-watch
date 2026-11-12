@@ -1,5 +1,6 @@
 // 초안과 판정. 최근 초안이 어떤 판정을 받았는지 본다.
-import { empty, h, pill, safeLink, table, viewHead } from "../ui/dom.js";
+import { empty, h, pill, safeLink, table } from "../ui/dom.js";
+import { viewHead } from "../ui/head.js";
 import { minute } from "../ui/format.js";
 
 const TONE = { "통과": "accent", "검증 대기": "warn", "보류(확인 필요)": "bad", "보류(다시 쓸 예정)": "warn", "보류(다시 낼 예정)": "warn" };

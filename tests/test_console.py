@@ -7,6 +7,7 @@ import contextlib
 import datetime
 import io
 import json
+import os
 import pathlib
 import shutil
 import subprocess
@@ -93,6 +94,46 @@ class ConsoleStateTest(unittest.TestCase):
                   "m.stateOf({ id: 'a' }, null, new Set(), new Set()), m.stateOf({ id: 'a' }, { result: 'pass' }, new Set(), new Set()), m.turnOf('a-r2-c3')])); })")
         done = subprocess.run(["node", "-e", script], capture_output=True, text=True, check=True, cwd=ROOT)
         self.assertEqual(json.loads(done.stdout), ["보류(다시 냄)", "보류(다시 씀)", "검증 대기", "통과", 3])
+
+
+@unittest.skipUnless(shutil.which("node"), "node가 없으면 콘솔의 모듈은 시험하지 않는다")
+class ConsoleBuildTest(unittest.TestCase):
+    """콘솔 폴더를 만들었을 때 화면의 모듈들이 서로 맞물리는가.
+
+    콘솔은 공개 사이트의 화면 도우미(site/js/ui/dom.js, format.js)를 복사해 쓴다.
+    사이트 쪽에서 함수 하나를 빼면 콘솔은 첫 줄에서 멈춰 아무것도 그리지 못한다(2026-11-11에 viewHead가 그렇게 빠졌다).
+    """
+
+    def _link(self, folder):
+        return subprocess.run(["node", "--experimental-vm-modules", "tools/dev/modlink.mjs", str(pathlib.Path(folder) / "js" / "app.js")],
+                              capture_output=True, text=True, cwd=ROOT)
+
+    def _build(self, folder):
+        from tools.publish import build_console
+        here = pathlib.Path.cwd()
+        try:
+            os.chdir(ROOT)
+            with contextlib.redirect_stdout(io.StringIO()):
+                build_console.main([str(folder)])
+        finally:
+            os.chdir(here)
+
+    def test_built_console_modules_link(self):
+        with tempfile.TemporaryDirectory() as folder:
+            out = pathlib.Path(folder) / "console"
+            self._build(out)
+            done = self._link(out)
+        self.assertEqual(done.returncode, 0, done.stdout)
+
+    def test_a_missing_export_is_caught(self):
+        with tempfile.TemporaryDirectory() as folder:
+            out = pathlib.Path(folder) / "console"
+            self._build(out)
+            head = out / "js" / "ui" / "head.js"
+            head.write_text(head.read_text(encoding="utf-8").replace("export function viewHead", "function viewHead"), encoding="utf-8")
+            done = self._link(out)
+        self.assertEqual(done.returncode, 1)
+        self.assertIn("viewHead", done.stdout)
 
 
 if __name__ == "__main__":

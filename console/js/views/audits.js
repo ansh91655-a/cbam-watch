@@ -1,5 +1,6 @@
 // 다시 대조. 게시한 항목을 주마다 골라 원문과 다시 견준 결과.
-import { empty, h, pill, table, viewHead } from "../ui/dom.js";
+import { empty, h, pill, table } from "../ui/dom.js";
+import { viewHead } from "../ui/head.js";
 import { minute } from "../ui/format.js";
 
 const LABEL = { match: "일치", mismatch: "어긋남", unknown: "확인 불가" };

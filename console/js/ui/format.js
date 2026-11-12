@@ -4,7 +4,7 @@ export * from "./format-base.js";
 
 // 실행 기록의 건수를 국문 이름으로 풀어 쓴다.
 const COUNT_LABEL = {
-  candidates: "후보", written: "초안", rewritten: "다시 씀", excluded: "제외", bulk: "묶음", skipped: "건너뜀", waiting: "미룸",
+  candidates: "후보", written: "초안", titleOnly: "제목만", rewritten: "다시 씀", resubmitted: "다시 냄", excluded: "제외", bulk: "묶음", skipped: "건너뜀", waiting: "미룸",
   pending: "검증 대기", pass: "통과", hold: "보류", published: "게시", total: "누적",
   items: "지난주 소식", digest: "주간 요약", audited: "다시 대조", match: "일치", mismatch: "어긋남", unknown: "확인 불가", withdrawn: "요약 내림",
   picked: "고른 것", revised: "요약 다시 씀", kept: "그대로 둠", failed: "실패", left: "남음",

@@ -1,5 +1,6 @@
 // 실행 기록.
-import { empty, h, pill, table, viewHead } from "../ui/dom.js";
+import { empty, h, pill, table } from "../ui/dom.js";
+import { viewHead } from "../ui/head.js";
 import { countsText, minute } from "../ui/format.js";
 
 // 메모는 글 하나로 적는 것이 약속이지만, 목록으로 적힌 기록도 읽을 수 있게 한다.

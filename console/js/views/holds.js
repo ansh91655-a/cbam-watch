@@ -1,5 +1,6 @@
 // 보류함. 검증을 통과하지 못해 게시되지 않은 항목과 그 사유.
-import { empty, h, pill, safeLink, viewHead } from "../ui/dom.js";
+import { empty, h, pill, safeLink } from "../ui/dom.js";
+import { viewHead } from "../ui/head.js";
 import { minute } from "../ui/format.js";
 import { isHold } from "../model.js";
 
