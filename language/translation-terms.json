@@ -1254,6 +1254,36 @@
    "ko": "특정 결정 방법론",
    "from": "guide-3",
    "added": "2026-11-12"
+  },
+  {
+   "en": "like-for-like replacement",
+   "ko": "동종 교체",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "segregation of duties",
+   "ko": "직무 분리",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "outsourced processes",
+   "ko": "외부에 위탁한 공정",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "changes log",
+   "ko": "변경 기록",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "Recommended improvement",
+   "ko": "권장 개선",
+   "from": "guide-3",
+   "added": "2026-11-12"
   }
  ]
 }
