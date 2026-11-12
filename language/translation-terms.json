@@ -2112,6 +2112,24 @@
    "ko": "칼슘 알루미네이트 시멘트",
    "from": "guide-verif",
    "added": "2026-11-12"
+  },
+  {
+   "en": "stoichiometry",
+   "ko": "화학량론",
+   "from": "guide-verif",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "positive verification report",
+   "ko": "적합 검증보고서",
+   "from": "guide-verif",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "ammoniacal N",
+   "ko": "암모니아성 N",
+   "from": "guide-verif",
+   "added": "2026-11-12"
   }
  ]
 }
