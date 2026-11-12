@@ -7605,9 +7605,9 @@
     ]
    },
    "analysis": {
-    "asOf": "2026-11-11",
+    "asOf": "2026-11-13",
     "basedOn": {
-     "stage": "계류 중",
+     "stage": "판결",
      "events": 2
     },
     "sections": [
@@ -7665,10 +7665,10 @@
       "key": "situation",
       "items": [
        {
-        "label": "계류 중",
-        "text": "제소한 지 3년이 넘었지만 결론은 나오지 않았습니다. 이 사이트가 EU 법령 데이터베이스를 조회한 최근 기록에는 이 사건의 판결문, 법무관 의견, 명령이 올라 있지 않습니다.",
+        "label": "판결 선고",
+        "text": "EU 사법재판소 제2재판부는 2026년 11월 12일에 판결을 선고했습니다. 판결문은 잠정본으로 공개되었습니다. 판결의 결론은 이 글에서는 확인하지 못했습니다.",
         "refs": [
-         "lookup"
+         "judgment"
         ]
        },
        {
@@ -7692,24 +7692,26 @@
       "key": "practice",
       "items": [
        {
-        "label": "의무는 그대로",
-        "text": "취소 소송을 냈다는 것만으로 규정의 적용이 멈추지는 않습니다. CBAM 규정은 지금 그대로 적용되고 있습니다.",
+        "label": "규정의 효력",
+        "text": "취소 소송을 냈다는 것만으로 규정의 적용이 멈추지는 않습니다. 판결이 규정의 효력에 어떤 영향을 주는지는 판결의 결론을 확인해야 알 수 있습니다.",
         "refs": [
-         "law"
+         "notice",
+         "judgment"
         ]
        },
        {
-        "label": "판결이 나오면 볼 것",
-        "text": "재판소가 폴란드의 청구를 받아들이는지와 함께, 받아들이더라도 규정의 효력을 한동안 유지하도록 정하는지를 보아야 합니다. 재판소는 취소한 법령의 효력을 유지시킬 수 있습니다. 결론을 미리 짐작할 근거는 이 글에 없습니다.",
+        "label": "판결에서 볼 것",
+        "text": "재판소가 폴란드의 청구를 받아들였는지와 함께, 받아들였더라도 규정의 효력을 한동안 유지하도록 정했는지를 보아야 합니다. 재판소는 취소한 법령의 효력을 유지시킬 수 있습니다. 판결의 결론은 이 글에서는 확인하지 못했습니다.",
         "refs": [
-         "notice"
+         "notice",
+         "judgment"
         ]
        },
        {
         "label": "확인하는 방법",
-        "text": "이 사이트는 EU 법령 데이터베이스에 이 사건의 판결문, 법무관 의견, 명령이 올라오는지를 정기적으로 조회합니다. 올라오면 이 항목에 반영합니다.",
+        "text": "판결문은 EU 법령 데이터베이스에 잠정본(Provisional text)으로 올라 있습니다. 결론은 원문에서 확인해 주세요.",
         "refs": [
-         "lookup"
+         "judgment"
         ]
        }
       ]
@@ -7722,13 +7724,6 @@
       "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:62023CN0512",
       "basis": "stored",
       "path": "collected/archive/pages/eur-lex-docs/62023CN0512.txt"
-     },
-     {
-      "key": "lookup",
-      "text": "EU 법령 데이터베이스 조회 기록(사건 문서의 유무)",
-      "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:62023CN0512",
-      "basis": "stored",
-      "path": "collected/archive/report/eur-lex-related.json"
      },
      {
       "key": "law",
@@ -7750,6 +7745,13 @@
       "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52025PC0574",
       "basis": "stored",
       "path": "collected/archive/pages/eur-lex-docs/52025PC0574.txt"
+     },
+     {
+      "key": "judgment",
+      "text": "판결문: Case C-512/23(2026년 11월 12일, 잠정본), EUR-Lex",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:62023CJ0512",
+      "basis": "stored",
+      "path": "collected/archive/pages/eur-lex-docs/62023CJ0512.txt"
      }
     ]
    },
