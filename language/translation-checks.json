@@ -13,11 +13,11 @@
   },
   {
    "day": "2026-11-13",
-   "batches": 20,
-   "checked": 2522,
+   "batches": 22,
+   "checked": 2786,
    "dropped": 2,
-   "canaries": 132,
-   "caught": 129,
+   "canaries": 146,
+   "caught": 143,
    "discarded": 0,
    "held": 0
   }
