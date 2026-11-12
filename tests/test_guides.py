@@ -7,6 +7,7 @@ import shutil
 import subprocess
 import tempfile
 import unittest
+import unittest.mock
 
 from tools.laws import build, corpus, guide_segment, guides, lock, pdf_blocks, pdf_pages, plan, review, spoil, status, store, todo, trial, verify, wording
 from tools.run import laws_health
@@ -928,6 +929,23 @@ class LockTest(unittest.TestCase):
             self.assertIn(lock.STAMP.split("/")[0] + "/**", paths, name)
         # 번역 파일의 꼴을 보는 자동 시험은 묶음마다 그대로 돈다
         self.assertIn('"' + lock.SHOWN + '/**"', pathlib.Path(".github/workflows/tests.yml").read_text(encoding="utf-8"))
+
+    def test_a_run_with_nothing_to_do_does_not_take_the_lock(self):
+        # 번역이 다 끝난 뒤의 실행이 빈 커밋 한 쌍(시작, 끝)을 남기지 않게 한다
+        before = self.git(self.a, "rev-parse", "HEAD").stdout
+        self.assertEqual(lock.take("run-a", self.a, at=self.noon, work=lambda: False), ("idle", ""))
+        self.assertIsNone(lock.read(self.a))
+        self.assertEqual(self.git(self.a, "rev-parse", "HEAD").stdout, before)
+        self.assertEqual(lock.take("run-a", self.a, at=self.noon, work=lambda: True), ("taken", ""))
+        # 다른 실행이 도는 중이면 할 일을 묻기 전에 물러선다
+        self.assertEqual(lock.take("run-b", self.b, at=self.later(1), work=lambda: False), ("busy", "run-a"))
+        # 할 일: 옮길 문단, 검수할 문단, 청해 둔 견주기 시험 가운데 하나라도 있으면 있다
+        with unittest.mock.patch.object(todo, "pick", return_value=([], {})), unittest.mock.patch.object(verify, "pending", return_value=[]):
+            self.assertEqual(lock.anything_left(), pathlib.Path("trials/request.json").exists())
+        with unittest.mock.patch.object(todo, "pick", return_value=([], {})), unittest.mock.patch.object(verify, "pending", return_value=[{"key": "aaa"}]):
+            self.assertTrue(lock.anything_left())
+        with unittest.mock.patch.object(todo, "pick", return_value=([{"key": "aaa"}], {})), unittest.mock.patch.object(verify, "pending", return_value=[]):
+            self.assertTrue(lock.anything_left())
 
     def test_the_lock_file_is_outside_every_workflow_path(self):
         # 자물쇠만 바뀐 커밋이 검사나 배포를 돌리면 안 된다: 자동 실행들의 paths에 걸리지 않는 곳이어야 한다

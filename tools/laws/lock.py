@@ -11,9 +11,10 @@
   표(STAMP)를 고쳐 같은 커밋에 담고, 사이트 배포와 화면 점검이 그 파일을 보고 돈다(번역 파일만 바뀐 커밋에는 돌지 않는다).
   여러 실행이 15분마다 묶음을 올리면 배포가 한 시간에 스무 번쯤 되는데, GitHub Pages가 권하는 횟수(한 시간에 열 번)를 넘기 때문이다.
   풀지 못하고 멈춘 실행이 올려 둔 번역은 다음에 푸는 실행의 표에 함께 담긴다.
+- 옮길 문단도 검수할 문단도 없으면 잡지 않는다(끝나는 값 3). 번역이 다 끝난 뒤의 실행이 날마다 빈 커밋 한 쌍을 남기지 않게 하려는 것이다.
 
 쓰는 법(저장소 맨 위에서)
-  python3 -m tools.laws.lock take <실행 id>     잡는다. 0: 잡음, 2: 다른 실행이 도는 중(이 실행은 아무것도 하지 않고 끝낸다), 1: 올리지 못함
+  python3 -m tools.laws.lock take <실행 id>     잡는다. 0: 잡음, 2: 다른 실행이 도는 중(이 실행은 아무것도 하지 않고 끝낸다), 3: 할 일 없음(잡지 않는다), 1: 올리지 못함
   python3 -m tools.laws.lock release <실행 id>  푼다(자기가 잡은 것일 때만 지운다)
   python3 -m tools.laws.lock status             누가 언제 잡았는지
 """
@@ -78,9 +79,18 @@ def _sync(root):
     _git(root, "pull", "-q", "--rebase", "--autostash", "origin", "main")
 
 
-def take(run_id, root=".", at=None, between=None):
-    """자물쇠를 잡는다. 돌려주는 값: ("taken", ""), ("busy", 쥐고 있는 실행), ("failed", 까닭).
+def anything_left():
+    """옮길 문단이나 검수할 문단, 청해 둔 견주기 시험이 남았는가(지금 폴더의 저장소에서 본다)."""
+    from tools.laws import plan, todo, verify  # 자물쇠만 쓰는 곳에서 글 전체를 읽지 않게 여기서 들인다
+    if pathlib.Path("trials/request.json").exists():
+        return True
+    return any(todo.pick(runner=name)[0] for name in plan.runners()) or bool(verify.pending())
 
+
+def take(run_id, root=".", at=None, between=None, work=None):
+    """자물쇠를 잡는다. 돌려주는 값: ("taken", ""), ("busy", 쥐고 있는 실행), ("idle", ""), ("failed", 까닭).
+
+    work는 할 일이 남았는지 알려 주는 함수다. 주면 저장소를 받은 뒤에 물어보고, 없다고 하면 잡지 않는다("idle").
     between은 시험에서만 쓴다: 자물쇠를 커밋하고 올리기 전에 부른다(그 사이에 다른 실행이 잡는 경우를 만든다).
     """
     why = ""
@@ -94,6 +104,8 @@ def take(run_id, root=".", at=None, between=None):
         other = holder(read(root), now, _last_work(root))
         if other and other != run_id:
             return "busy", other
+        if work is not None and not work():
+            return "idle", ""
         path = pathlib.Path(root) / PATH
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(json.dumps({"run": run_id, "since": now.isoformat(timespec="seconds")}, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -154,9 +166,9 @@ def main(argv):
     if not args.run:
         parser.error("실행 id를 적어 주세요")
     if args.what == "take":
-        outcome, detail = take(args.run)
-        print({"taken": "잡음", "busy": f"다른 실행이 도는 중: {detail}", "failed": f"잡지 못함: {detail}"}[outcome])
-        return {"taken": 0, "busy": 2, "failed": 1}[outcome]
+        outcome, detail = take(args.run, work=anything_left)
+        print({"taken": "잡음", "busy": f"다른 실행이 도는 중: {detail}", "idle": "할 일 없음: 옮길 문단도 검수할 문단도 없음", "failed": f"잡지 못함: {detail}"}[outcome])
+        return {"taken": 0, "busy": 2, "idle": 3, "failed": 1}[outcome]
     outcome = release(args.run)
     print({"released": "풂", "not-mine": "풀 것이 없음(다른 실행의 것이거나 이미 풀림)", "failed": "풀지 못함"}[outcome])
     return 1 if outcome == "failed" else 0
