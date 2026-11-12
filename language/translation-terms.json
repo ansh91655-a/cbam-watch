@@ -924,6 +924,36 @@
    "ko": "소성 석회",
    "from": "guide-5d",
    "added": "2026-11-12"
+  },
+  {
+   "en": "specific energy consumption",
+   "ko": "에너지 원단위",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "steel grade",
+   "ko": "강종",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "graphite electrodes",
+   "ko": "흑연 전극",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "slabs",
+   "ko": "슬래브",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "steel scrap",
+   "ko": "고철",
+   "from": "guide-5d",
+   "added": "2026-11-12"
   }
  ]
 }
