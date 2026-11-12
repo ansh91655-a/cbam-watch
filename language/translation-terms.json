@@ -3780,6 +3780,30 @@
    "ko": "종합 보고서",
    "from": "report-carbon-price",
    "added": "2026-11-13"
+  },
+  {
+   "en": "alignment factor",
+   "ko": "정합 계수",
+   "from": "report-free-allocation",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "non-ETS heat",
+   "ko": "배출권거래제 비적용 열",
+   "from": "report-free-allocation",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "common but differentiated responsibilities",
+   "ko": "공동의 그러나 차별화된 책임",
+   "from": "report-free-allocation",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "safety margin",
+   "ko": "안전 여유",
+   "from": "report-free-allocation",
+   "added": "2026-11-13"
   }
  ]
 }
