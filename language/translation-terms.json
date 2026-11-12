@@ -1734,6 +1734,42 @@
    "ko": "기준 효율 계수",
    "from": "guide-4",
    "added": "2026-11-12"
+  },
+  {
+   "en": "specific free allocation",
+   "ko": "고유 무상할당",
+   "from": "guide-4",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "process-level specific free allocation",
+   "ko": "공정 수준 고유 무상할당",
+   "from": "guide-4",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "low alloy steel",
+   "ko": "저합금강",
+   "from": "guide-4",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "carbon steel",
+   "ko": "탄소강",
+   "from": "guide-4",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "white cement clinker",
+   "ko": "백색 시멘트 클링커",
+   "from": "guide-4",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "grey cement clinker",
+   "ko": "회색 시멘트 클링커",
+   "from": "guide-4",
+   "added": "2026-11-12"
   }
  ]
 }
