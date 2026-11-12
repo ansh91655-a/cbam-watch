@@ -2898,6 +2898,30 @@
    "ko": "실제 무상할당 조정",
    "from": "32025R2548",
    "added": "2026-11-13"
+  },
+  {
+   "en": "call for evidence",
+   "ko": "증거 요청",
+   "from": "32025R2620",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "polluter pays principle",
+   "ko": "오염자 부담 원칙",
+   "from": "32025R2620",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "specific mass",
+   "ko": "고유 질량",
+   "from": "32025R2620",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "hot metal benchmark",
+   "ko": "용선 벤치마크",
+   "from": "32025R2620",
+   "added": "2026-11-13"
   }
  ]
 }
