@@ -798,6 +798,48 @@
    "ko": "물질수지법",
    "from": "guide-5d",
    "added": "2026-11-12"
+  },
+  {
+   "en": "vacuum degassing",
+   "ko": "진공 탈가스",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "iron sponge",
+   "ko": "해면철",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "ingot casting",
+   "ko": "주괴 주조",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "continuous casting",
+   "ko": "연속주조",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "post-consumer scrap",
+   "ko": "소비 후 고철",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "integrated steel plants",
+   "ko": "일관제철소",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "direct reduction",
+   "ko": "직접환원",
+   "from": "guide-5d",
+   "added": "2026-11-12"
   }
  ]
 }
