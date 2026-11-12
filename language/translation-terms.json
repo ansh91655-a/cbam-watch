@@ -2610,6 +2610,36 @@
    "ko": "실증 데이터 시험",
    "from": "guide-verif",
    "added": "2026-11-13"
+  },
+  {
+   "en": "quality management system",
+   "ko": "품질경영시스템",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "management review",
+   "ko": "경영 검토",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "internal audit",
+   "ko": "내부 심사",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "CBAM lead auditor",
+   "ko": "CBAM 선임 심사원",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "draft verification report",
+   "ko": "검증보고서 초안",
+   "from": "guide-verif",
+   "added": "2026-11-13"
   }
  ]
 }
