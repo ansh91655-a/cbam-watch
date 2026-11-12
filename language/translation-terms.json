@@ -3060,6 +3060,42 @@
    "ko": "시스템 소유자",
    "from": "32024R3210",
    "added": "2026-11-13"
+  },
+  {
+   "en": "service level agreement",
+   "ko": "서비스 수준 협약",
+   "from": "32024R3210",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "contact point",
+   "ko": "연락창구",
+   "from": "32024R3210",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "joint controllers",
+   "ko": "공동 개인정보처리자",
+   "from": "32024R3210",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "CBAM Operators Portal",
+   "ko": "CBAM 사업자 포털",
+   "from": "32024R3210",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "CBAM National Competent Authorities Portal",
+   "ko": "CBAM 회원국 관할당국 포털",
+   "from": "32024R3210",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "national service desk",
+   "ko": "국가 서비스 데스크",
+   "from": "32024R3210",
+   "added": "2026-11-13"
   }
  ]
 }
