@@ -3654,6 +3654,24 @@
    "ko": "단독 개인정보처리자",
    "from": "reg-privacy",
    "added": "2026-11-13"
+  },
+  {
+   "en": "Data Protection Officer",
+   "ko": "개인정보보호책임자",
+   "from": "reg-privacy",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "competent authorities",
+   "ko": "관할당국",
+   "from": "reg-privacy",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "right to data portability",
+   "ko": "데이터 이동권",
+   "from": "reg-privacy",
+   "added": "2026-11-13"
   }
  ]
 }
