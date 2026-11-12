@@ -444,6 +444,30 @@
    "ko": "시장 남용 규칙",
    "from": "qa",
    "added": "2026-11-12"
+  },
+  {
+   "en": "Column A",
+   "ko": "A열",
+   "from": "qa",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "Column B",
+   "ko": "B열",
+   "from": "qa",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "CBAM liability",
+   "ko": "CBAM 부담",
+   "from": "qa",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "closing prices",
+   "ko": "종가",
+   "from": "qa",
+   "added": "2026-11-12"
   }
  ]
 }
