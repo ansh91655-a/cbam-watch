@@ -618,6 +618,30 @@
    "ko": "특혜원산지",
    "from": "qa",
    "added": "2026-11-12"
+  },
+  {
+   "en": "country of production",
+   "ko": "생산국",
+   "from": "qa",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "onboarding form",
+   "ko": "온보딩 양식",
+   "from": "qa",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "Operators of Third Countries Installations",
+   "ko": "제3국 사업장 사업자",
+   "from": "qa",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "Submitted for acceptance",
+   "ko": "승인을 위해 제출됨",
+   "from": "qa",
+   "added": "2026-11-12"
   }
  ]
 }
