@@ -4158,6 +4158,48 @@
    "ko": "주조 공장",
    "from": "guide-importers",
    "added": "2026-11-13"
+  },
+  {
+   "en": "life cycle stages",
+   "ko": "전과정 단계",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "grid electricity",
+   "ko": "전력망 전력",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "guarantees of origin",
+   "ko": "원산지 보증",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "green certificates",
+   "ko": "녹색 인증서",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "market-based instruments",
+   "ko": "시장 기반 수단",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "cross-sectoral rule",
+   "ko": "부문 공통 규칙",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "standard values",
+   "ko": "표준값",
+   "from": "guide-importers",
+   "added": "2026-11-13"
   }
  ]
 }
