@@ -7,6 +7,7 @@ import { card } from "../ui/card.js";
 import { empty, fill, h, safeLink, table, unsplit } from "../ui/dom.js";
 import { countdown, day, koreanDate } from "../ui/format.js";
 import { icon } from "../ui/icons.js";
+import { findPanel } from "../ui/lawfind.js";
 import { stackable } from "../ui/stack.js";
 import { stepper } from "../ui/stepper.js";
 import { analysis } from "./rules/analysis.js";
@@ -87,7 +88,20 @@ function positions(rule) {
   ]);
 }
 
-function detail(main, rule, group, items, drawing) {
+// 오른쪽 칸: 이 규제의 원문과 국문 번역으로 가는 길, 그리고 규정에서 찾기(질문을 적으면 관련 조문의 위치를 알려 준다).
+function aside(rule, acts) {
+  const own = acts.filter((act) => act.rule === rule.id);
+  return h("aside", { class: "rule-aside", "aria-label": "규정 원문" }, [
+    own.length ? h("div", { class: "law-open" }, [
+      h("strong", { text: "원문과 국문 번역" }),
+      h("p", { text: "조문마다 원문과 번역을 나란히 봅니다." }),
+      ...own.map((act) => h("a", { href: `#law-${act.id}` }, [h("span", { text: act.name }), icon("next", 15)])),
+    ]) : null,
+    findPanel({ examples: ["인증서 제출 기한", "내재배출량 검증", "기본값"] }),
+  ]);
+}
+
+function detail(main, rule, group, items, drawing, acts) {
   const related = (rule.relatedItems || []).map((id) => items.find((item) => item.id === id)).filter(Boolean);
   const links = (rule.links || []).map((link) => {
     const node = safeLink(link.url, link.text);
@@ -96,7 +110,7 @@ function detail(main, rule, group, items, drawing) {
   });
   fill(main,
     band(rule.name, rule.official),
-    h("div", { class: "stack-l rule-detail", "data-reading": "" }, [  // 긴 글 화면: 머리글에 읽는 자리 표시가 보인다(ui/scrollcue.js)
+    h("div", { class: "rule-page" }, [h("div", { class: "stack-l rule-detail", "data-reading": "" }, [  // 긴 글 화면: 머리글에 읽는 자리 표시가 보인다(ui/scrollcue.js)
       h("p", { class: "crumbs" }, [h("a", { href: "#rules", text: "규제" }), h("span", { text: "›" }), h("a", { href: `#rules-${group.code}`, text: group.name })]),
       h("section", { class: "rule-now", "data-tone": rule.tone || "progress", "aria-labelledby": "h-now" }, [
         h("div", { class: "rule-top" }, [stageChip(rule), h("span", { class: "rule-kind", text: rule.kind })]),
@@ -122,7 +136,7 @@ function detail(main, rule, group, items, drawing) {
         h("div", { class: "sec-head" }, [h("h2", { id: "h-rel", text: "관련 소식" }), h("a", { href: "#news", text: "소식 전체" })]),
         ...related.map(card),
       ]) : null,
-    ]),
+    ]), aside(rule, acts)]),
   );
 }
 
@@ -136,7 +150,7 @@ export async function render(main, arg) {
   }
   const one = rules.find((rule) => rule.id === arg);
   if (one) {
-    detail(main, one, groups.find((group) => group.code === one.group) || { code: "", name: "" }, items, await figure(one));
+    detail(main, one, groups.find((group) => group.code === one.group) || { code: "", name: "" }, items, await figure(one), await data.laws());
     return;
   }
   const picked = groups.some((group) => group.code === arg) ? arg : "";

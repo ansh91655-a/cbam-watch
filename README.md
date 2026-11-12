@@ -26,7 +26,7 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 | `sources/registry.json` | 출처 대장. 어디를 어떤 방법으로 보는지 적혀 있다 |
 | `collected/` | 수집 결과. `feed/`(그날 새로 보인 것), `state/`(이미 본 것의 열쇠), `pages/`(EU 공식 화면의 글), `status.json`(출처별 확인 결과), `archive/`(지난 소식을 한꺼번에 모은 것. 아래 '지난 소식 채우기' 참조) |
 | `originals/` | EU 집행위원회 문서의 사본(`files/<문서 id>/<해시>/<원래 파일 이름>`), 뽑아 낸 본문(`text/`), 판 사이의 비교 결과(`diffs/`), 대장(`state.json`) |
-| `data/` | 사이트에 게시한 데이터. 소식(`items.json`), 주제 목록(`topics.json`), 인증서 가격(`prices.json`, 프로그램이 가격표에서 만든다), 일정(`events.json`), 주간 요약(`digests.json`), 용어집(`terms.json`), 하나로 묶은 소식의 기록(`merged.json`), 규제별 진행 상황(`regulations.json`), 품목 코드 조회의 목록(`cn.json`), 법령에서 옮겨 온 참고 자료(`factor.json`, `duties.json`, `calc.json`, `calc-goods.json`) |
+| `data/` | 사이트에 게시한 데이터. 소식(`items.json`), 주제 목록(`topics.json`), 인증서 가격(`prices.json`, 프로그램이 가격표에서 만든다), 일정(`events.json`), 주간 요약(`digests.json`), 용어집(`terms.json`), 하나로 묶은 소식의 기록(`merged.json`), 규제별 진행 상황(`regulations.json`), 품목 코드 조회의 목록(`cn.json`), 법령에서 옮겨 온 참고 자료(`factor.json`, `duties.json`, `calc.json`, `calc-goods.json`), 규정 원문의 국문 번역(`laws-ko/`, 법령마다 한 파일) |
 | `reports/` | 보고 실행이 올리는 그날과 그 주의 보고 파일. 알림의 근거다 |
 | `language/` | 국문 표기 기준(용어집) |
 | `site/` | 공개 사이트의 화면 파일. 화면마다 모듈 하나(`js/views/`), 그림과 달력 같은 부품(`js/ui/`), 디자인 값(`css/tokens.css`)과 색 변형(`css/themes.css`), 파비콘과 공유 미리보기 그림과 라이선스 고지(`assets/`). 아래 '사이트의 디자인' 참조 |
@@ -50,6 +50,7 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 | `tools/cn` | 품목 코드 조회의 목록을 법령 원문에서 만드는 프로그램: 부속서의 품목 표 읽기(`annex`), `data/cn.json` 만들기(`build`), 통합본의 판 다루기(`versions`), 새 통합본이 나오면 본문을 받아 목록을 다시 만들기(`refresh`, 평일 수집이 돌린다. 부속서를 제대로 읽었는지의 확인에 걸리면 아무것도 바꾸지 않고 사유를 `collected/cn/refresh.json`에 남긴다). 원문은 `collected/archive/pages/eu-fulltext/`에 있다. 코드를 견주는 셈은 사이트의 `site/js/cn/match.js`, 개정안의 단계에 따라 안내의 말을 바꾸는 기준은 `site/js/cn/stage.js`에 있다 |
 | `tools/thumbs` | 소식 카드의 미리보기 그림을 만드는 프로그램: 만들 것 고르기(`plan`), 원문 화면의 제목 부분 찍기(`shots.mjs`), 법령 PDF의 첫 장 받기(`pdfcover`), 줄여서 싣기(`finish`). 재이용이 허용된 공식 출처만 다루고, 화면을 여는 브라우저는 자동으로 여는 것임을 숨기지 않는다 |
 | `tools/common` | 여러 프로그램이 함께 쓰는 것: 웹에서 받기(`net`), robots.txt 지키기(`robots`), 화면의 글 뽑기(`htmltext`), JSON 읽고 쓰기(`jsonio`), 사이트 주소와 배포 저장소(`siteinfo`) |
+| `tools/laws` | 규정 원문 화면의 자료를 만드는 프로그램: 받아 둔 법령의 글을 조와 문단으로 나누기(`segment`), 싣는 법령의 목록(`catalog`), 번역 자료 읽고 쓰기(`store`), 번역 검사(`check`, 용어는 `terms`), 전문용어의 영문 병기(`gloss`), 사이트 자료 만들기(`build`), 다음에 옮길 문단 고르기(`todo`)와 옮긴 것 넣기(`apply`), 진행 상황(`status`). 아래 '규정 원문과 국문 번역' 참조 |
 | `tools/calc` | 인증서 비용 추정의 품목 자료를 법령의 표에서 만드는 프로그램: 받아 둔 표 읽기(`source`), 품목마다 기본값과 벤치마크를 짝지어 `data/calc-goods.json` 만들기(`build`) |
 | `tools/sitecheck` | 만든 사이트를 브라우저로 열어 가로 넘침, 화면 오류, 접근성을 검사하는 프로그램(Node). 아래 '화면 점검' 참조 |
 | `tools/art` | 사이트의 그림을 만드는 프로그램. 손으로 돌린다: 점 지도(`dotmap`, 나라 경계 읽기는 `world`), 아이콘(`icons`), 라이선스 고지(`notices`), 공유 미리보기 그림의 원본(`social.html`) |
@@ -85,6 +86,18 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
   - 셈은 `site/js/calc/compute.js`가 한다(시험은 `tests/test_calc.py`가 node로 돌린다). 정해지지 않아 가정한 값(2031년 이후의 벤치마크와 부문 간 보정계수)과 참고용인 값(2027년 수입분부터 갱신될 벤치마크)은 화면이 그렇다고 밝힌다.
   - 근거 법령을 고치거나 바로잡는 새 문서가 법령 데이터베이스 목록에 보이면 상태 점검이 알린다(`calc.json`의 `watch`). 그때는 `tools/archive/tables.py`의 대상을 새 법령으로 바꿔 표를 다시 받고(워크플로 '소급 수집', `steps`에 `eu-tables`), `python -m tools.calc.build`로 자료를 다시 만들어 달라진 것을 확인한 뒤, 반영한 문서를 `watch.known`에 적는다.
 - 규제 화면에서 추정 화면으로 이어 주려면 규제 자료에 `tool: calc`를 적는다(`python -m tools.publish.rule_edit set --id <규제> --tool calc`).
+
+## 규정 원문과 국문 번역
+
+사이트의 '자료·안내 > 규정 원문'(`#laws`, `#law-<법령 번호>.<조각>`)은 CBAM 규정(통합본)과 이행·위임규정의 원문을 국문 번역과 문단마다 나란히 보여 주고, 전체 규정에서 낱말이나 질문으로 조문을 찾게 한다. 규제 하나의 화면(`#rules-<규제>`) 오른쪽 칸에도 같은 찾기가 있다.
+
+- 원문은 저장소에 받아 둔 EU 법령의 글이다(`collected/archive/pages/eu-fulltext/cbam-consolidated.txt`, `collected/archive/pages/eu-acts/`). 사이트 폴더를 만들 때 `tools/laws/build.py`가 조와 문단으로 나눠 `data/laws/`(목록 `index.json`, 법령마다의 본문, 검색에 쓰는 `search.json`)를 만든다. 싣는 법령과 차례는 `tools/laws/catalog.py`가 정한다.
+- 번역은 `data/laws-ko/<법령 번호>.json`에 있다. 문단의 자리가 아니라 원문 문단의 글자에서 만든 열쇠에 붙는다. 그래서 통합본이 새로 나와도 글자가 그대로인 문단의 번역은 남고 바뀐 문단만 다시 옮기면 되며, 여러 법령에 똑같이 나오는 문단은 한 번만 옮긴다.
+- 옮기는 차례: `python -m tools.laws.todo [--limit 글자 수] [--act 법령] [--titles]`가 다음 문단과 그 글에 나온 용어집의 낱말을 주고, 옮긴 것을 `{"blocks": {열쇠: 국문}}` 파일로 만들어 `python -m tools.laws.apply <파일>`에 넘긴다. 진행 상황은 `python -m tools.laws.status`.
+- 넣기 전의 검사(`tools/laws/check.py`): 원문의 수(날짜, 조 번호, 금액)가 번역에 모두 있는지, 부속서·장의 로마 숫자가 남아 있는지, 용어집이 쓰지 않기로 한 표기가 없는지, 원문에 핵심 용어(용어집의 `core`)가 나오면 번역에 그 국문 표기가 있는지를 본다. 걸린 문단은 넣지 않는다. 사람의 감수를 대신하는 검사는 아니다.
+- 영문 병기: 번역 자료에는 국문만 두고, 사이트 자료를 만들 때 `tools/laws/gloss.py`가 핵심 용어에 영문을 괄호로 붙인다(조 하나에서 처음 나올 때 한 번, 원문 문단에 그 영문이 있을 때만). 용어집을 고치면 화면의 병기도 따라 바뀐다.
+- 찾기(`site/js/laws/engine.js`): 질문에서 용어집의 낱말을 찾아 그 영문 표기로 원문을, 국문 표기로 번역과 조의 이름을 찾는다(번역이 없는 조문도 국문 질문으로 찾힌다). 문장을 지어 답하지 않고 낱말이 나온 조문의 위치만 알려 준다. 화면의 '찾은 낱말'에 어떤 영문 표기로 찾았는지 보인다.
+- 번역은 비공식이다. 화면이 그렇다고 밝히고 EUR-Lex의 원문으로 이어 준다. 통합본은 EU가 참고용으로 내는 문서라는 것도 함께 밝힌다.
 
 ## 화면 점검
 
@@ -148,6 +161,7 @@ world-atlas, lucide-static, pretendard는 npm에서 받습니다. 그림을 고�
 
 - EU 기관의 공식 자료는 출처를 밝히고 재이용합니다. `originals/`의 사본과 `collected/pages/`의 화면 글이 여기에 해당합니다.
 - 공공기관 자료는 짧게 요약하고, 민간 기업과 협회와 유료 매체의 자료는 제목이 알려 주는 사실과 링크만 다룹니다. 본문을 저장하지 않습니다.
-- 다만 화면이 이용 조건을 스스로 밝힌 공공기관 게시글은 본문을 받아 둡니다(`collected/pages/items/`). 지금은 산업통상부의 보도·참고자료와 정책게시판이 대상이고, 받은 글 화면에 "공공누리 1유형(출처표시)" 표시가 있을 때만 저장합니다. 저장한 글의 머리에 주소, 출처, 화면에 적힌 이용 조건을 적습니다. 대상 출처와 확인할 글귀는 출처 대장의 `articles`에 있습니다.
+- 다만 화면이 이용 조건을 스스로 밝힌 공공기관 게시글은 본문을 받아 둡니다(`collected/pages/items/`). 2026-11-12에 기관마다 확인한 대상은 산업통상부 보도·참고자료(공공누리 1유형), 네덜란드 배출권청(CC0), 영국 GOV.UK(Open Government Licence v3.0), 법무부(글마다의 칸이 공공누리 1유형일 때만)입니다. 받은 화면이나 그 기관의 저작권 안내 화면에 그 글귀가 있을 때만 저장하고, 저장한 글의 머리에 주소, 출처, 화면에 적힌 이용 조건을 적습니다. 게시글 머리의 담당자 이름과 전화번호는 싣지 않습니다. 대상 출처와 확인할 글귀, 받지 않기로 한 기관과 그 까닭은 출처 대장의 `articles`와 `ops`에 있습니다. 새 출처를 넣기 전에는 워크플로 '본문 받기 시험'으로 그 화면이 어떻게 읽히는지 봅니다(`tools/collect/articles_try.py`).
+- 규정 원문 화면은 EU 법령의 글을 문단마다 싣고 국문 번역을 붙입니다(출처 EUR-Lex). 번역은 이 사이트가 옮긴 비공식 번역입니다.
 - 소식 카드의 미리보기 그림은 EU 기관과 영국 정부(Open Government Licence v3.0)의 자료만 줄여 싣습니다. 재이용 조건을 확인하지 못한 출처의 화면은 그림으로 만들지 않습니다.
 - 원문의 저작권과 재이용 조건은 각 출처를 따릅니다.

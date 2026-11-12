@@ -1,5 +1,5 @@
 {
-"version": "v0.2 (2026-10-23 2차안, 검토 전)",
+"version": "v0.3 (2026-11-12 규정 번역에서 쓴 낱말을 후보로 더함, 검토 전)",
 "note": "국문 표기 기준. status가 confirmed인 것은 정부·공공기관 자료에서 확인된 표기, partial은 일부 확인, candidate는 확인이 더 필요한 후보다. avoid는 쓰지 않는 표기다.",
 "terms": [
 {
@@ -6478,6 +6478,318 @@
 "allowed": [],
 "avoid": [],
 "status": "confirmed"
+},
+{
+"no": 353,
+"category": "04 인증서·신고·등록부",
+"core": false,
+"en": [
+"repurchase (of CBAM certificates)"
+],
+"abbr": [],
+"preferred": "환매",
+"allowed": [
+"재매입"
+],
+"avoid": [],
+"status": "candidate",
+"note": "규정 번역(2026-11-12)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 354,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"examination procedure"
+],
+"abbr": [],
+"preferred": "심사 절차",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "규정 번역(2026-11-12)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 355,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"transitional provisions"
+],
+"abbr": [],
+"preferred": "경과 규정",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "규정 번역(2026-11-12)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 356,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"final provisions"
+],
+"abbr": [],
+"preferred": "최종 규정",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "규정 번역(2026-11-12)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 357,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"exercise of the delegation"
+],
+"abbr": [],
+"preferred": "위임 권한의 행사",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "규정 번역(2026-11-12)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 358,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"committee procedure"
+],
+"abbr": [],
+"preferred": "위원회 절차",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "규정 번역(2026-11-12)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 359,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"professional secrecy"
+],
+"abbr": [],
+"preferred": "직무상 비밀 유지",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "규정 번역(2026-11-12)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 360,
+"category": "02 적용 범위·면제",
+"core": false,
+"en": [
+"explicit capacity allocation"
+],
+"abbr": [],
+"preferred": "명시적 용량 할당",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "규정 번역(2026-11-12)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 361,
+"category": "02 적용 범위·면제",
+"core": false,
+"en": [
+"climate neutrality"
+],
+"abbr": [],
+"preferred": "기후중립",
+"allowed": [
+"탄소중립"
+],
+"avoid": [],
+"status": "candidate",
+"note": "규정 번역(2026-11-12)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 362,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"intrinsic value"
+],
+"abbr": [],
+"preferred": "내재가치",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "규정 번역(2026-11-12)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 363,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"processed products"
+],
+"abbr": [],
+"preferred": "가공제품",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "규정 번역(2026-11-12)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 364,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"receipt declaration"
+],
+"abbr": [],
+"preferred": "수령 신고서",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "규정 번역(2026-11-12)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 365,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"re-export declaration"
+],
+"abbr": [],
+"preferred": "재수출 신고서",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "규정 번역(2026-11-12)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 366,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"exit summary declaration"
+],
+"abbr": [],
+"preferred": "출국요약신고서",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "규정 번역(2026-11-12)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 367,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"established in a Member State"
+],
+"abbr": [],
+"preferred": "회원국에 설립된",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "규정 번역(2026-11-12)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 368,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"physical site visit"
+],
+"abbr": [],
+"preferred": "대면 현장검증",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "규정 번역(2026-11-12)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 369,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"annual surveillance"
+],
+"abbr": [],
+"preferred": "연례 사후관리",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "규정 번역(2026-11-12)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 370,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"peer evaluation"
+],
+"abbr": [],
+"preferred": "동료평가",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "규정 번역(2026-11-12)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 371,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"mutual recognition"
+],
+"abbr": [],
+"preferred": "상호 인정",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "규정 번역(2026-11-12)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 372,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"corrective action"
+],
+"abbr": [],
+"preferred": "시정 조치",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "규정 번역(2026-11-12)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 373,
+"category": "13 기관·일반 약어",
+"core": false,
+"en": [
+"controller (personal data)"
+],
+"abbr": [],
+"preferred": "개인정보처리자",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "규정 번역(2026-11-12)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 374,
+"category": "13 기관·일반 약어",
+"core": false,
+"en": [
+"data subject"
+],
+"abbr": [],
+"preferred": "정보주체",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "규정 번역(2026-11-12)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
 }
 ]
 }
