@@ -2,7 +2,7 @@
 
 쓰는 법: python -m tools.laws.status [--group act|guide|manual|paper]
 문서마다 옮길 문단과 옮긴 문단의 수, 원문 글자 수로 본 비율과, 어느 문서에도 붙지 않는 번역의 수를 찍고, 전체의 진행(겹치는 문단은 한 번만 센 것)과
-검수(tools.laws.verify)가 얼마나 되었는지, 갈래마다의 진행을 한 줄씩 간추린다. 갈래의 줄은 문서마다 센 것을 더하므로 여러 문서에 나오는 문단이 겹쳐 셈된다.
+검수(tools.laws.verify)가 얼마나 되었는지, 갈래마다의 진행을 한 줄씩 간추린다. 검사에 거듭 걸려 뒤로 돌린 문단(tools.laws.store의 held)이 있으면 전체의 줄 끝에 그 수를 적는다. 갈래의 줄은 문서마다 센 것을 더하므로 여러 문서에 나오는 문단이 겹쳐 셈된다.
 마지막 줄이 보고에 쓰는 줄이다(갈래를 주지 않으면 법령의 줄이 마지막이다). summary()가 갈래의 한 줄을, whole()이 전체의 한 줄을 돌려준다.
 """
 import argparse
@@ -45,8 +45,17 @@ def whole():
                     sizes.setdefault(store.key(text), len(text))
     done = [size for block_key, size in sizes.items() if block_key in memory]
     total = sum(sizes.values())
+    late = len(held(sizes, memory))
     return (f"전체: 서로 다른 문단 {len(sizes):,}개(원문 {total:,}자) 가운데 {len(done):,}개({sum(done):,}자, "
-            f"{round(100 * sum(done) / total) if total else 100}%)를 옮김")
+            f"{round(100 * sum(done) / total) if total else 100}%)를 옮김" + (f", 검사에 걸려 뒤로 돌린 문단 {late}개" if late else ""))
+
+
+def held(live=None, memory=None, tries=store.HOLD_AFTER):
+    """검사에 tries번 이상 걸려 아직 번역이 없는 문단: {열쇠: {"tries", "why"}}. 지금의 문서에 없는 문단은 세지 않는다."""
+    if live is None or memory is None:
+        documents, memory = corpus.everything()
+        live = {store.key(text) for _, found in documents for part in found for text in corpus.texts(part) if check.needs(text)}
+    return {block_key: row for block_key, row in store.held_all().items() if row["tries"] >= tries and block_key in live and block_key not in memory}
 
 
 def unused():

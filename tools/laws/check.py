@@ -3,6 +3,9 @@
 막는 것(hard): 빈 번역, 옮기지 않은 글, 원문의 수가 빠진 것, 부속서·장의 로마 숫자가 빠진 것, 용어집이 쓰지 않기로 한 표기,
             원문에 핵심 용어(용어집의 core)가 나왔는데 번역에 그 국문 표기가 없는 것(모든 법령에서 같은 낱말을 쓰게 하려는 것).
 알리는 것(soft): 원문에 없는 수가 번역에 있는 것, 길이가 지나치게 다른 것.
+
+웹 주소 안의 낱말은 옮길 말도, 용어집과 견줄 말도 아니다(…/module-for-non-eu-installation-operators 의 installation).
+주소와 번호만 있는 줄(주소 하나만 적은 각주)은 옮기지 않고 그대로 싣는다. 주소 안의 수는 번역에 그대로 남아 있어야 한다.
 """
 import collections
 import re
@@ -15,6 +18,7 @@ HANGUL = re.compile(r"[가-힣]")
 WORD = re.compile(r"(?<![A-Za-z])[a-z]{4,}")  # 소문자로 시작하는 낱말. 사람 이름이나 약어만 있는 줄(Ursula VON DER LEYEN)과 가린다
 LETTERS = re.compile(r"[A-Za-z]{2,}")
 THOUSANDS = re.compile(r"(?<=\d)[   ,](?=\d{3}(?!\d))")
+URL = re.compile(r"(?:https?://|www\.)\S+")
 ROMAN_REF = re.compile(r"\b(?:Annex(?:es)?|ANNEX|Chapter|CHAPTER|Title|Part|Section)\s+([IVXLC]+)\b")
 # 글자로 적힌 수와 달 이름. 번역에서는 숫자로 적히므로 '원문에 없는 수'로 보지 않는다
 SPELLED = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10, "eleven": 11, "twelve": 12,
@@ -26,9 +30,14 @@ RATIO = (0.2, 2.2)  # 번역 길이 ÷ 원문 길이가 이 범위를 벗어나�
 _terms = None
 
 
+def prose(text):
+    """웹 주소를 뺀 글."""
+    return URL.sub(" ", str(text))
+
+
 def needs(text):
-    """옮길 글이 있는 문단인가. 수와 기호만 있는 줄(표의 값, 번호)은 옮기지 않고 그대로 싣는다."""
-    return bool(LETTERS.search(str(text)))
+    """옮길 글이 있는 문단인가. 수와 기호만 있는 줄(표의 값, 번호)과 주소만 있는 줄은 옮기지 않고 그대로 싣는다."""
+    return bool(LETTERS.search(prose(text)))
 
 
 def _numbers(text):
@@ -42,7 +51,8 @@ def problems(source, korean):
     korean = str(korean or "").strip()
     if not korean:
         return {"hard": ["번역이 비어 있음"], "soft": []}
-    if WORD.search(source) and not HANGUL.search(korean):
+    plain = prose(source)
+    if WORD.search(plain) and not HANGUL.search(korean):
         hard.append("국문으로 옮기지 않음")
     wanted, got = _numbers(source), _numbers(korean)
     missing = sorted((wanted - got).elements())
@@ -56,7 +66,7 @@ def problems(source, korean):
     if lost:
         hard.append("부속서·장의 번호가 빠짐: " + ", ".join(lost))
     flat = re.sub(r"\s+", "", korean)
-    for entry in terms.found(source):
+    for entry in terms.found(plain):
         if entry["core"] and not any(re.sub(r"\s+", "", form) in flat for form in entry["ko"]):
             hard.append(f"용어집의 표기가 없음: {entry['show']} → {entry['ko'][0]}")
     if _terms is None:

@@ -1,12 +1,16 @@
 """규정 원문: 법령 글 나누기, 번역의 열쇠와 검사, 영문 병기, 사이트 자료 만들기, 전체 규정에서 찾기."""
+import contextlib
+import io
 import json
 import pathlib
 import shutil
 import subprocess
 import tempfile
 import unittest
+import unittest.mock
 
-from tools.laws import apply, build, catalog, check, corpus, gloss, segment, store, terms, todo
+from tools.laws import apply, build, catalog, check, corpus, gloss, segment, status, store, terms, todo
+from tools.run import laws_health
 
 ACT = """[주소] https://example.org/act
 [무엇] 시험용 법령
@@ -122,6 +126,19 @@ class CheckTest(unittest.TestCase):
         # 더 긴 낱말에 든 낱말은 따로 요구하지 않는다(economic operator의 operator)
         self.assertEqual([entry["show"] for entry in terms.found("an economic operator") if entry["show"] == "operator"], [])
 
+    def test_words_inside_web_addresses_are_not_text_to_translate(self):
+        # 주소만 적은 각주는 옮기지 않고 그대로 싣는다. 주소 밖에 글이 있으면 옮긴다
+        self.assertFalse(check.needs("[13] https://european-accreditation.org/national-accreditation-bodies-for-eu-cbam/"))
+        self.assertFalse(check.needs("www.example.org/installation-operators"))
+        self.assertTrue(check.needs("See https://example.org/guidance for details."))
+        # 주소 안의 낱말은 용어집과 견주지 않는다. 주소 밖의 낱말은 그대로 견준다
+        address = "https://example.org/cbam#module-for-non-eu-installation-operators-o3ci"
+        self.assertEqual(check.problems(f"For registering, please see: {address}", f"등록 방법은 다음을 참고한다: {address}")["hard"], [])
+        outside = check.problems(f"The operator of the installation registers at {address}", f"운영자가 다음에서 등록한다: {address}")["hard"]
+        self.assertTrue(any(why.startswith("용어집의 표기가 없음") for why in outside))
+        # 주소 안의 수는 번역에 그대로 남아 있어야 한다(주소를 빠뜨리거나 고쳐 적지 않게)
+        self.assertIn("원문의 수가 빠짐: 2026", check.problems("See https://example.org/news-2026 for details.", "자세한 내용은 주소를 참고한다.")["hard"])
+
     def test_translations_are_sorted_into_accepted_and_rejected(self):
         known = {"aaa": ("32099R0001", "Annex IV applies from 2030."), "bbb": ("32099R0001", "Scope")}
         accepted, rejected, noted = apply.sort({"aaa": "부속서 IV는 2030년부터 적용한다.", "bbb": "", "zzz": "없는 열쇠"}, known)
@@ -195,6 +212,76 @@ class RepositoryTest(unittest.TestCase):
         self.assertFalse({block["part"] for block in first} & {"closing", "notes"})
         last, _ = todo.pick(limit=10**6, act_id=catalog.BASE_CELEX, memory=body)
         self.assertTrue(last and {block["part"] for block in last} <= {"closing", "notes"})
+
+
+class HoldTest(unittest.TestCase):
+    """검사에 거듭 걸리는 문단이 줄의 앞을 막지 않게 한다(그런 문단이 쌓여 묶음을 채우면 번역이 나아가지 못한다)."""
+
+    def test_rejections_are_counted_and_cleared_when_the_translation_gets_in(self):
+        with tempfile.TemporaryDirectory() as folder, unittest.mock.patch.object(store, "FOLDER", folder):
+            store.save("act-1", {"aaa": "옮긴 문단"}, day="2026-11-01", checked={"aaa"})
+            self.assertEqual(store.hold("act-1", "bbb", "국문으로  옮기지 않음"), 1)
+            self.assertEqual(store.hold("act-1", "bbb", "원문의 수가 빠짐: 3"), 2)
+            self.assertEqual(store.hold("act-2", "ccc", "번역이 비어 있음"), 1)  # 아직 번역이 없는 문서
+            self.assertEqual(store.held_all(), {"bbb": {"tries": 2, "why": "원문의 수가 빠짐: 3"}, "ccc": {"tries": 1, "why": "번역이 비어 있음"}})
+            body = json.loads(pathlib.Path(folder, "act-1.json").read_text(encoding="utf-8"))
+            self.assertEqual((body["updated"], body["blocks"], body["checked"]), ("2026-11-01", {"aaa": "옮긴 문단"}, ["aaa"]))  # 번역, 검수 기록, 날은 그대로
+            self.assertNotIn("updated", json.loads(pathlib.Path(folder, "act-2.json").read_text(encoding="utf-8")))  # 옮긴 적 없는 문서에 날을 적지 않는다
+            self.assertEqual(store.load_all(), {"aaa": "옮긴 문단"})
+            store.save("act-1", {"aaa": "옮긴 문단", "bbb": "이제 들어간 문단"})
+            self.assertEqual(sorted(store.held_all()), ["ccc"])  # 번역이 들어가면 빠진다
+            self.assertEqual(store.load_checked("act-1"), {"aaa"})
+
+    def test_apply_notes_each_rejection_but_not_a_dry_run(self):
+        picked, _ = todo.pick(limit=500, act_id=catalog.BASE_CELEX, memory={})
+        key = picked[0]["key"]
+        with tempfile.TemporaryDirectory() as folder, tempfile.TemporaryDirectory() as inbox, unittest.mock.patch.object(store, "FOLDER", folder):
+            source = pathlib.Path(inbox, "ko.json")
+            source.write_text(json.dumps({"blocks": {key: " ", "없는열쇠": "원문에 없는 문단"}}, ensure_ascii=False), encoding="utf-8")
+            with contextlib.redirect_stdout(io.StringIO()):
+                self.assertEqual(apply.main([str(source), "--dry"]), 1)
+                self.assertEqual(store.held_all(), {})
+                self.assertEqual(apply.main([str(source)]), 1)
+                self.assertEqual(apply.main([str(source)]), 1)
+            self.assertEqual(store.held_all(), {key: {"tries": 2, "why": "번역이 비어 있음"}})  # 원문에 없는 열쇠는 적을 곳이 없다
+
+    def test_paragraphs_that_keep_failing_go_to_the_back_of_the_queue(self):
+        first, _ = todo.pick(limit=3000, act_id=catalog.BASE_CELEX, memory={})
+        stuck = first[0]["key"]
+        tried = lambda count: {stuck: {"tries": count, "why": "원문의 수가 빠짐: 3"}}
+        # 두 번 걸린 문단은 아직 제자리에서 나온다(한 실행이 세 번까지 넣어 본다)
+        same, _ = todo.pick(limit=3000, act_id=catalog.BASE_CELEX, memory={}, held=tried(store.HOLD_AFTER - 1))
+        self.assertEqual(same[0]["key"], stuck)
+        # 세 번 걸리면 뒤로 돌린다: 그 자리를 다음 문단이 채우고, 남은 분량에 따로 센다
+        moved, left = todo.pick(limit=3000, act_id=catalog.BASE_CELEX, memory={}, held=tried(store.HOLD_AFTER))
+        self.assertNotIn(stuck, [block["key"] for block in moved])
+        self.assertEqual((moved[0]["key"], left["held"]), (first[1]["key"], 1))
+        # 조각을 가리켜 달라고 하면 가리지 않는다
+        asked, _ = todo.pick(limit=3000, act_id=catalog.BASE_CELEX, part_id=first[0]["part"], memory={}, held=tried(store.GIVE_UP))
+        self.assertEqual(asked[0]["key"], stuck)
+        # 다른 문단을 모두 옮긴 뒤에 한 번 더 나오고, 그때도 걸려 여섯 번이 되면 더 나오지 않는다
+        parts = next(found for act, found in corpus.everything()[0] if act["id"] == catalog.BASE_CELEX)
+        rest = {store.key(text): "옮긴 문단" for part in parts for text in corpus.texts(part) if store.key(text) != stuck}
+        last, left = todo.pick(limit=3000, act_id=catalog.BASE_CELEX, memory=rest, held=tried(store.HOLD_AFTER))
+        self.assertEqual(([block["key"] for block in last], left["held"]), ([stuck], 0))
+        none, left = todo.pick(limit=3000, act_id=catalog.BASE_CELEX, memory=rest, held=tried(store.GIVE_UP))
+        self.assertEqual((none, left["held"]), ([], 1))
+
+    def test_the_reason_goes_back_to_the_translator_and_what_is_set_aside_is_shown(self):
+        picked, left = todo.pick(limit=500, act_id=catalog.BASE_CELEX, memory={})
+        key = picked[0]["key"]
+        once = {key: {"tries": 1, "why": "원문의 수가 빠짐: 3"}, "없는열쇠": {"tries": 9, "why": "지금의 문서에 없는 문단"}}
+        with unittest.mock.patch.object(store, "held_all", return_value=once):
+            self.assertEqual(todo.answer(picked, left)["remarks"][key], "앞에서 검사에 걸림: 원문의 수가 빠짐: 3")
+            self.assertEqual(status.held({key}, {}), {})  # 아직 뒤로 돌리지 않은 문단
+        late = {key: {"tries": store.GIVE_UP, "why": "원문의 수가 빠짐: 3"}, "없는열쇠": {"tries": 9, "why": "지금의 문서에 없는 문단"}}
+        with unittest.mock.patch.object(store, "held_all", return_value=late):
+            self.assertEqual(sorted(status.held({key}, {})), [key])
+            self.assertEqual(status.held({key}, {key: "옮긴 문단"}), {})  # 번역이 들어간 문단은 세지 않는다
+        with unittest.mock.patch.object(status, "held", return_value={key: late[key]}):
+            self.assertEqual(laws_health._held_problems(), [f"번역: 검사에 거듭 걸려 싣지 못한 문단 1개: {key}(원문의 수가 빠짐: 3)"])
+        with unittest.mock.patch.object(status, "held", return_value={}):
+            self.assertEqual(laws_health._held_problems(), [])
 
 
 ENGINE = """

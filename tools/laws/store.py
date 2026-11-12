@@ -4,8 +4,11 @@
 - 법령이 고쳐져 통합본이 새로 나와도 글자가 그대로인 문단의 번역은 남고, 바뀐 문단만 번역이 없는 상태가 된다.
 - 여러 법령에 똑같이 나오는 문단(맺음말, 표의 머리 글자)은 한 번만 옮기면 모든 곳에 실린다.
 
-파일은 {"act", "updated": 번역이 마지막으로 더해진 날, "blocks": {열쇠: 국문}, "checked": [검수를 마친 열쇠]} 꼴이다.
+파일은 {"act", "updated": 번역이 마지막으로 더해진 날, "blocks": {열쇠: 국문}, "checked": [검수를 마친 열쇠], "held": {열쇠: {"tries", "why"}}} 꼴이다.
 checked는 번역한 실행과 다른 실행이 원문과 견줘 본 문단이다(tools.laws.verify). 번역이 바뀐 문단은 checked에서 빠진다.
+held는 검사(tools.laws.check)에 걸려 넣지 못한 문단과 걸린 횟수, 마지막 까닭이다(tools.laws.apply가 적는다). 번역이 들어가면 빠진다.
+걸린 문단은 번역이 없으므로 줄의 맨 앞에 남아 묶음마다 다시 나온다. 그런 문단이 쌓여 묶음을 채우면 번역이 더 나아가지 못하므로,
+HOLD_AFTER번 걸린 문단은 다른 문단을 모두 옮긴 뒤로 돌리고(tools.laws.todo), 그때도 걸려 GIVE_UP번이 되면 더 주지 않는다(사람이 본다).
 """
 import hashlib
 import pathlib
@@ -14,6 +17,8 @@ import re
 from tools.common.jsonio import read_json, today, write_json
 
 FOLDER = "data/laws-ko"
+HOLD_AFTER = 3  # 한 실행은 한 문단을 세 번까지 넣어 본다(처음과 고쳐서 두 번). 그만큼 걸리면 뒤로 돌린다
+GIVE_UP = 6     # 다른 문단을 모두 옮긴 뒤 한 실행이 더 해 보고도 걸린 문단
 
 
 def key(text):
@@ -52,6 +57,32 @@ def checked_all():
     return found
 
 
+def held_all():
+    """검사에 걸려 넣지 못한 문단: {열쇠: {"tries": 걸린 횟수, "why": 마지막 까닭}}. 여러 문서에 적혀 있으면 많이 걸린 쪽을 본다."""
+    found = {}
+    for path in sorted(pathlib.Path(FOLDER).glob("*.json")):
+        for block_key, row in ((read_json(path, {}) or {}).get("held", {}) or {}).items():
+            if block_key not in found or int(row.get("tries", 0)) > int(found[block_key].get("tries", 0)):
+                found[block_key] = {"tries": int(row.get("tries", 0)), "why": str(row.get("why", ""))}
+    return found
+
+
+def hold(act_id, block_key, why):
+    """검사에 걸린 문단을 적는다(걸린 횟수를 하나 올리고 까닭을 바꿔 적는다). 번역과 검수 기록, 번역이 더해진 날은 그대로 둔다."""
+    current = read_json(path_of(act_id), {}) or {}
+    held = dict(current.get("held", {}) or {})
+    held[block_key] = {"tries": int((held.get(block_key) or {}).get("tries", 0)) + 1, "why": " ".join(str(why).split())[:200]}
+    body = {"act": act_id}
+    if current.get("updated"):
+        body["updated"] = current["updated"]  # 한 번도 옮기지 않은 문서에는 날을 적지 않는다(번역이 멈췄는지 보는 값이다)
+    body["blocks"] = dict(sorted((current.get("blocks", {}) or {}).items()))
+    if current.get("checked"):
+        body["checked"] = sorted(current["checked"])
+    body["held"] = dict(sorted(held.items()))
+    write_json(path_of(act_id), body)
+    return held[block_key]["tries"]
+
+
 def save(act_id, blocks, day=None, checked=None):
     """한 법령의 번역을 쓴다. 열쇠 차례로 적어 바뀐 줄만 달라지게 한다.
 
@@ -65,6 +96,9 @@ def save(act_id, blocks, day=None, checked=None):
     body = {"act": act_id, "updated": day or today(), "blocks": dict(sorted(blocks.items()))}
     if marks:
         body["checked"] = sorted(marks)
+    held = {block_key: row for block_key, row in (current.get("held", {}) or {}).items() if block_key not in blocks}  # 번역이 들어간 문단은 뺀다
+    if held:
+        body["held"] = dict(sorted(held.items()))
     write_json(path_of(act_id), body)
 
 

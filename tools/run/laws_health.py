@@ -4,13 +4,14 @@
 - 안내 문서의 절 나누기가 그 문서의 차례와 크게 어긋나면 알린다(새 판의 꼴이 달라진 것이다).
 - 번역이 남아 있는데 여러 날 늘지 않으면 알린다. 번역을 맡은 실행(sources/translation.json)이 돌지 않는 것이다.
   한 번도 옮기지 않은 갈래는 알리지 않는다(아직 시작하지 않은 것).
+- 검사에 거듭 걸려 끝내 싣지 못한 문단이 있으면 알린다(검사 프로그램이 잘못 막고 있거나 원문이 깨진 것이다. 사람이 봐야 한다).
 - 검수(tools.laws.verify)가 여러 날 늘지 않거나, 일부러 바꿔 섞은 번역을 놓치거나, 묶음을 반영하지 못했거나, 번역과 검수가 맞선 문단이 생기면 알린다.
 """
 import datetime
 import pathlib
 
 from tools.common.jsonio import read_json, today as today_kst
-from tools.laws import corpus, guide_segment, guides, pdf_pages, plan, store, verify
+from tools.laws import corpus, guide_segment, guides, pdf_pages, plan, status, store, verify
 
 STALLED = 5      # 번역이 이만큼의 날 동안 늘지 않으면 알린다(주말과 하루 이틀의 쉼은 넘긴다)
 COVERAGE = 0.8   # 차례에 적힌 절 번호 가운데 찾아낸 비율이 이보다 낮으면 알린다
@@ -74,6 +75,15 @@ def _check_problems(day):
     return found
 
 
+def _held_problems():
+    """검사에 거듭 걸려 더 주지 않게 된 문단."""
+    given_up = status.held(tries=store.GIVE_UP)
+    if not given_up:
+        return []
+    shown = ", ".join(f"{block_key}({row['why'][:40]})" for block_key, row in sorted(given_up.items())[:3])
+    return [f"번역: 검사에 거듭 걸려 싣지 못한 문단 {len(given_up)}개: {shown}"]
+
+
 def problems(today=None):
     day = today or today_kst()
-    return _outline_problems() + _stalled_problems(day) + _check_problems(day)
+    return _outline_problems() + _stalled_problems(day) + _held_problems() + _check_problems(day)

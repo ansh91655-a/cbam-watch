@@ -4,6 +4,7 @@
 번역 파일은 {"blocks": {열쇠: 국문}} 꼴이다. 열쇠는 python -m tools.laws.todo 가 준 것이다.
 문단마다 용어집 낱말의 띄어쓰기를 권장 표기로 맞추고(tools.laws.terms.unify) 문장의 끝맺음을 맞춘 뒤(tools.laws.finish) tools.laws.check로 원문과 견줘, 막는 까닭이 없는 것만 넣는다. 걸린 문단은 까닭과 함께 찍고 넣지 않는다(끝내는 값 1).
 알릴 것(원문에 없는 수, 길이)은 찍기만 하고 넣는다. --dry는 검사만 한다. --terms는 용어집의 권고(막지 않는 것)도 찍는다.
+걸린 문단은 걸린 횟수와 까닭을 번역 자료에 적어 둔다(tools.laws.store.hold). 거듭 걸리는 문단이 줄의 앞을 막지 않게, todo가 그런 문단을 뒤로 돌린다.
 """
 import argparse
 import json
@@ -55,10 +56,14 @@ def main(argv):
     if not isinstance(blocks, dict) or not blocks:
         print("번역 파일에 blocks가 없습니다.")
         return 1
-    accepted, rejected, noted = sort(blocks)
+    known = sources()
+    accepted, rejected, noted = sort(blocks, known)
     if not args.dry:
         for act_id, fresh in accepted.items():
             store.save(act_id, {**store.load(act_id), **fresh})
+        for block_key, why in rejected:
+            if block_key in known:
+                store.hold(known[block_key][0], block_key, "; ".join(why))
     for block_key, why in noted:  # 용어집의 권고(막지 않는 것)는 --terms를 줄 때만 찍는다. 낱말의 일부가 걸리는 일이 많다
         shown = [text for text in why if args.terms or not text.startswith("용어:")]
         if shown:
