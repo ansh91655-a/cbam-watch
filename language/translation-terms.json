@@ -1992,6 +1992,30 @@
    "ko": "팽창 터빈",
    "from": "guide-5c",
    "added": "2026-11-12"
+  },
+  {
+   "en": "Single Super Phosphate",
+   "ko": "과린산석회",
+   "from": "guide-5c",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "pipe reactor",
+   "ko": "파이프 반응기",
+   "from": "guide-5c",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "physical network congestion",
+   "ko": "물리적 망 혼잡",
+   "from": "guide-5c",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "fertiliser grade",
+   "ko": "비료 등급",
+   "from": "guide-5c",
+   "added": "2026-11-12"
   }
  ]
 }
