@@ -2226,6 +2226,18 @@
    "ko": "적격 매개변수",
    "from": "guide-verif",
    "added": "2026-11-12"
+  },
+  {
+   "en": "surrogate data",
+   "ko": "대용 데이터",
+   "from": "guide-verif",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "preliminary analytical procedures",
+   "ko": "예비 분석적 절차",
+   "from": "guide-verif",
+   "added": "2026-11-12"
   }
  ]
 }
