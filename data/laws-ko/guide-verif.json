@@ -3213,23 +3213,23 @@
  ],
  "held": {
   "29b456fe2f1c": {
-   "tries": 3,
+   "tries": 4,
    "why": "용어집의 표기가 없음: material misstatement → 중요한 오류"
   },
   "5d3ae2a7f217": {
-   "tries": 3,
+   "tries": 4,
    "why": "용어집의 표기가 없음: actual emissions → 실제배출량"
   },
   "8d5701534930": {
-   "tries": 3,
+   "tries": 4,
    "why": "용어집의 표기가 없음: material misstatement → 중요한 오류"
   },
   "b2bc3515dd57": {
-   "tries": 3,
+   "tries": 4,
    "why": "용어집의 표기가 없음: material misstatement → 중요한 오류"
   },
   "ea7a3fef4fe7": {
-   "tries": 3,
+   "tries": 4,
    "why": "용어집의 표기가 없음: material misstatement → 중요한 오류"
   }
  }

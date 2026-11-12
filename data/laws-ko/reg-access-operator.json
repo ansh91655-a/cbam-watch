@@ -1,6 +1,6 @@
 {
  "act": "reg-access-operator",
- "updated": "2026-11-12",
+ "updated": "2026-11-13",
  "blocks": {
   "0228f3aa6054": "• 권한을 받은 대리인의 신분증: 대리인의 신분 증명 서류",
   "025031207acc": "• UA [Ukraine]",
@@ -43,6 +43,7 @@
   "221834d16bc5": "사업 제목",
   "2253a96de2e9": "• 도메인 부분(\"@\" 뒤)은 문자, 숫자, 마침표(.) 및 하이픈(-)으로 이루어져야 한다.",
   "233ae5f237ba": "드롭다운에서 회사가 소재한 국가의 2자리 코드를 고른다.",
+  "2396dd860c6f": "VAL748 The attribute [Company Website] has invalid value [xxxxxx], please check the onboarding manual for more details.",
   "245526bddaeb": "업무 프로필 이름",
   "2529b56ed95c": "제3국 사업자",
   "253581437f69": "등록 요청을 제출하면 아래 화면 갈무리와 같이 접근 요청이 성공적으로 생성되었음을 확인하는 전자우편을 받는다.",
@@ -71,6 +72,7 @@
   "3859bdaa8c6f": "문서 제목",
   "3893f830d682": "회사의 신원을 검증할 필수 사유 서류를 첨부한다.",
   "3a8e36254ec5": "회사 식별자는 법인등록번호를 나타낸다.",
+  "3af5c38913aa": "• VAL748 The attribute [Type of Person] has invalid value [Physical Person], please check the onboarding manual for more details.",
   "3dac63ace2cd": "• 회사 식별자 유형의 예: o 중국: 통일사회신용(USC) 번호. o 인도: 법인식별번호(CIN) 또는 유한책임조합 식별번호(LLPIN). o 영국: 회사등록번호(CRN). o 미국: 중앙 색인 키(CIK). o 한국: 사업자등록번호(TIN). o 튀르키예: Vergi Kimlik Numarasi. o 우크라이나: 등록번호(EDRPOU). o 그 밖의 국가: 사업체 또는 상인 등록번호, 납세자 식별번호 또는 법인식별기호(LEI).",
   "3deec29d3506": "제3국 사업자 포털 사용자와 관련하여, 제3국 사업자 포털에 접근할 수 있는 행위자에는 두 가지 유형이 있다. 표 5는 두 가지 유형의 행위자를 제시한다.",
   "3e82e468720f": "참조번호",
@@ -642,15 +644,5 @@
   "fe4f7424271e",
   "febcd547df83",
   "ffeae05b8d0c"
- ],
- "held": {
-  "2396dd860c6f": {
-   "tries": 3,
-   "why": "국문으로 옮기지 않음"
-  },
-  "3af5c38913aa": {
-   "tries": 3,
-   "why": "국문으로 옮기지 않음"
-  }
- }
+ ]
 }
