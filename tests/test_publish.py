@@ -8,8 +8,9 @@ import pathlib
 import tempfile
 import unittest
 
+from tools.common.jsonio import now_kst, stamp
 from tools.publish import add_digest, add_items, merge, withdraw
-from tools.run import claude_status, day_summary, holds_to_fix, week_items
+from tools.run import claude_status, day_summary, holds_to_fix, holds_to_recheck, rechecks, week_items
 
 
 def _write(path, value):
@@ -134,6 +135,44 @@ class PublishTest(unittest.TestCase):
         _run(holds_to_fix.main, ["--db-dir", "db", "--out", "fix.json"])
         self.assertEqual(_read("fix.json")["fix"], [])
 
+    def _unopened(self, item_id, at=None):
+        _write(f"db/verdicts/{item_id}.json", {"id": item_id, "result": "hold", "gate": "확인 불가", "why": "원문을 열지 못함", "at": at or stamp()})
+
+    def _resubmit(self):
+        return _run(holds_to_recheck.main, ["--db-dir", "db", "--out-dir", "out", "--run-id", "collect-test"])[1]["resubmitted"]
+
+    def test_drafts_held_for_an_unopened_source_are_resubmitted_twice(self):
+        first = "20261110-carbon-pulse-aaa001"
+        self._draft(first, tier="C", title="제목만 옮긴 소식")
+        self._unopened(first)
+        self._draft("20261110-ec-news-hold01")  # 글을 고쳐야 풀리는 보류는 이 프로그램이 다루지 않는다
+        _write("db/verdicts/20261110-ec-news-hold01.json", {"id": "20261110-ec-news-hold01", "result": "hold", "gate": "근거", "why": "원문에 없음", "at": stamp()})
+        self.assertEqual(self._resubmit(), [{"id": f"{first}-c2", "rechecks": first, "turn": 2}])
+        copy = _read(f"out/items/{first}-c2.json")
+        self.assertEqual((copy["id"], copy["rechecks"], copy["runId"], copy["title"], copy["tier"]), (f"{first}-c2", first, "collect-test", "제목만 옮긴 소식", "C"))
+        # 이미 다시 낸 것은 또 내지 않는다
+        _write(f"db/items/{first}-c2.json", copy)
+        self.assertEqual(self._resubmit(), [])
+        # 다시 낸 것도 열리지 않으면 한 번 더 내고, 세 번째까지 열리지 않으면 더 내지 않는다
+        self._unopened(f"{first}-c2")
+        self.assertEqual(self._resubmit(), [{"id": f"{first}-c3", "rechecks": f"{first}-c2", "turn": 3}])
+        _write(f"db/items/{first}-c3.json", _read(f"out/items/{first}-c3.json"))
+        self._unopened(f"{first}-c3")
+        self.assertEqual(self._resubmit(), [])
+
+    def test_old_holds_are_not_resubmitted(self):
+        old = (now_kst() - datetime.timedelta(days=30)).isoformat(timespec="seconds")
+        self._draft("20261010-carbon-pulse-old001")
+        self._unopened("20261010-carbon-pulse-old001", at=old)
+        self._draft("20261110-carbon-pulse-nodate")  # 판정 시각을 읽지 못하면 막지 않는다
+        _write("db/verdicts/20261110-carbon-pulse-nodate.json", {"id": "20261110-carbon-pulse-nodate", "result": "hold", "gate": "확인 불가", "why": "원문을 열지 못함"})
+        self.assertEqual([row["id"] for row in self._resubmit()], ["20261110-carbon-pulse-nodate-c2"])
+
+    def test_recheck_marks(self):
+        self.assertEqual([rechecks.attempt(name) for name in ("a", "a-r2", "a-c2", "a-r2-c3")], [1, 1, 2, 3])
+        self.assertEqual([rechecks.next_id(name) for name in ("a", "a-c2", "a-c3", "a-r2")], ["a-c2", "a-c3", "", "a-r2-c2"])
+        self.assertEqual((rechecks.root("a-r2-c3"), rechecks.is_last("a-c2"), rechecks.is_last("a-c3")), ("a-r2", False, True))
+
     def test_digest_is_validated_and_replaced(self):
         _write("digest.json", {"from": "2026-11-09", "to": "2026-11-15", "title": "가격과 가이던스", "paragraphs": ["한 문단"], "itemIds": ["seed-one"]})
         code, result = _run(add_digest.main, ["--file", "digest.json"])
@@ -249,10 +288,14 @@ class DaySummaryTest(unittest.TestCase):
 
     def test_missing_runs_and_final_holds(self):
         runs = [{"kind": "verify", "startedAt": "2026-11-10T08:20:00+09:00", "counts": {}, "pushed": False, "problems": ["x: 게시 단계에서 막힘(사실 대조)"],
-                 "holds": [{"id": "b", "gate": "확인 불가", "why": "원문을 열지 못함"}, {"id": "c-r2", "gate": "근거", "why": "다시 쓴 초안도 보류: 근거 없음"}]}]
+                 "holds": [{"id": "b", "gate": "확인 불가", "why": "원문을 열지 못함"}, {"id": "c-r2", "gate": "근거", "why": "다시 쓴 초안도 보류: 근거 없음"},
+                           {"id": "d-c3", "gate": "확인 불가", "why": "원문을 열지 못함"}, {"id": "e", "gate": "출처", "why": "저장소의 글과 화면이 다름"},
+                           {"id": "f-r2", "gate": "확인 불가", "why": "다시 쓴 초안도 보류: 원문을 열지 못함"}]}]
         result = day_summary.summarize(runs, self.DAY)
         self.assertEqual(result["problems"], ["수집·작성 실행 기록이 없음", "x: 게시 단계에서 막힘(사실 대조)", "게시 데이터를 저장소에 올리지 못함"])
-        self.assertEqual([hold["id"] for hold in result["finalHolds"]], ["b", "c-r2"])
+        # 원문을 열지 못한 보류는 세 번째(-c3)에야 사람이 볼 보류가 된다. 그 전에는 다시 낼 보류로 센다
+        self.assertEqual([hold["id"] for hold in result["finalHolds"]], ["c-r2", "d-c3", "e"])
+        self.assertEqual(result["retryHolds"], 2)
 
     def test_weekend_has_no_missing_run_problem(self):
         self.assertEqual(day_summary.summarize([], "2026-11-14")["problems"], [])

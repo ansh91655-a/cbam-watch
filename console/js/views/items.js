@@ -2,7 +2,7 @@
 import { empty, h, pill, safeLink, table, viewHead } from "../ui/dom.js";
 import { minute } from "../ui/format.js";
 
-const TONE = { "통과": "accent", "검증 대기": "warn", "보류(확인 필요)": "bad", "보류(다시 쓸 예정)": "warn" };
+const TONE = { "통과": "accent", "검증 대기": "warn", "보류(확인 필요)": "bad", "보류(다시 쓸 예정)": "warn", "보류(다시 낼 예정)": "warn" };
 
 export function render(main, model) {
   const rows = model.items.map((item) => h("tr", {}, [

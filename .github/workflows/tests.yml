@@ -7,9 +7,10 @@ on:
       - "tests/**"
       - "requirements.txt"
       - ".github/workflows/tests.yml"
-      # 시험이 직접 읽는 화면의 셈과 법령에서 옮겨 온 참고 자료
+      # 시험이 직접 읽는 화면의 셈, 운영 콘솔의 상태 규칙, 법령에서 옮겨 온 참고 자료
       - "site/js/calc/**"
       - "site/js/cn/**"
+      - "console/js/state.js"
       - "data/calc.json"
       - "data/calc-goods.json"
       - "data/factor.json"

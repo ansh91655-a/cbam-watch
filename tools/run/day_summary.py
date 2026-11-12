@@ -4,8 +4,8 @@
 쓰는 법: python -m tools.run.day_summary --db-dir /tmp/run/db [--date 2026-11-10]
 - problems: 사람에게 알릴 문제(실행 기록이 없음, 각 실행이 적은 문제, 저장소에 올리지 못함).
   수집·작성(collect), 검증·게시(verify), 임시 작업(adhoc) 실행이 적은 문제를 모은다.
-- finalHolds: 사람이 봐야 하는 보류(원문을 확인할 수 없는 것, 다시 쓴 초안이 또 보류된 것)
-- retryHolds: 다음 수집·작성 실행이 한 번 다시 쓸 보류의 수(알리지 않는다)
+- finalHolds: 사람이 봐야 하는 보류(원문과 지금 화면이 다른 것, 세 번째 검증에서도 원문을 열지 못한 것, 다시 쓴 초안이 또 보류된 것)
+- retryHolds: 다음 수집·작성 실행이 다시 쓰거나(글을 고치면 풀리는 사유) 그대로 다시 낼(원문을 열지 못한 것) 보류의 수. 알리지 않는다
 """
 import argparse
 import datetime
@@ -13,15 +13,22 @@ import json
 import sys
 
 from tools.common.jsonio import today
-from tools.run import dbdump
+from tools.run import dbdump, rechecks
 
-NOT_FIXABLE = {"출처", "확인 불가"}
+SOURCE_CHANGED = "출처"  # 저장소의 글과 지금 화면이 다르다. 다시 써도, 다시 내도 풀리지 않는다
 AGAIN = "다시 쓴 초안도 보류"
 NO_COLLECT = "수집·작성 실행 기록이 없음"
 NO_VERIFY = "검증·게시 실행 기록이 없음"
 NOT_PUSHED = "게시 데이터를 저장소에 올리지 못함"
 # 이 프로그램이 정해 둔 문구. 실행이 직접 적은 글과 달리 공개 보고 파일에 그대로 실어도 된다.
 FIXED_PROBLEMS = {NO_COLLECT, NO_VERIFY, NOT_PUSHED}
+
+
+def is_final(hold):
+    """더는 자동으로 풀리지 않아 사람이 봐야 하는 보류인지."""
+    if hold.get("gate") == rechecks.GATE:  # 원문을 열지 못한 것은 세 번째까지 다시 낸다
+        return rechecks.is_last(hold.get("id", ""))
+    return hold.get("gate") == SOURCE_CHANGED or str(hold.get("why", "")).startswith(AGAIN)
 
 
 def summarize(runs, day):
@@ -47,7 +54,7 @@ def summarize(runs, day):
         for hold in run.get("holds", []) or []:
             if not hold.get("id"):
                 continue
-            if hold.get("gate") in NOT_FIXABLE or str(hold.get("why", "")).startswith(AGAIN):
+            if is_final(hold):
                 final_holds.append({"id": hold["id"], "gate": hold.get("gate", ""), "why": str(hold.get("why", ""))[:120]})
             else:
                 retry += 1
