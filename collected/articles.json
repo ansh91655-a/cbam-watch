@@ -1,0 +1,17 @@
+{
+ "checkedAt": "2026-11-12T12:24:12+09:00",
+ "sources": [
+  "motir",
+  "motir-policy"
+ ],
+ "items": {
+  "cdf4542109a6": {
+   "source": "motir",
+   "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172398/view?mno=&pageIndex=1",
+   "tries": 1,
+   "result": "이용 조건 표시를 찾지 못함",
+   "lines": 0,
+   "at": "2026-11-12T12:24:12+09:00"
+  }
+ }
+}
