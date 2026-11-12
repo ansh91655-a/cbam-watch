@@ -3522,6 +3522,24 @@
    "ko": "인정 번호",
    "from": "reg-access-verifier",
    "added": "2026-11-13"
+  },
+  {
+   "en": "validation error message",
+   "ko": "유효성 검사 오류 메시지",
+   "from": "reg-access-verifier",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "technical user access",
+   "ko": "기술적 사용자 접근",
+   "from": "reg-access-verifier",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Accredited Entity Administrator",
+   "ko": "인정받은 기관 관리자",
+   "from": "reg-access-verifier",
+   "added": "2026-11-13"
   }
  ]
 }
