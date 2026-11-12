@@ -2718,6 +2718,24 @@
    "ko": "유효숫자",
    "from": "32025R2547",
    "added": "2026-11-13"
+  },
+  {
+   "en": "indirect determination method",
+   "ko": "간접 결정 방법",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "cogeneration unit",
+   "ko": "열병합발전 설비",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "zero rating",
+   "ko": "영(0) 처리",
+   "from": "32025R2547",
+   "added": "2026-11-13"
   }
  ]
 }
