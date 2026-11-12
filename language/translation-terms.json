@@ -1560,6 +1560,36 @@
    "ko": "조화 효율 기준값",
    "from": "guide-3",
    "added": "2026-11-12"
+  },
+  {
+   "en": "attribution factor",
+   "ko": "귀속계수",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "flaring",
+   "ko": "플레어링",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "flare",
+   "ko": "플레어",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "design efficiency",
+   "ko": "설계 효율",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "stand-alone boiler",
+   "ko": "단독 보일러",
+   "from": "guide-3",
+   "added": "2026-11-12"
   }
  ]
 }
