@@ -1890,6 +1890,36 @@
    "ko": "시멘트 출하량",
    "from": "guide-5a",
    "added": "2026-11-12"
+  },
+  {
+   "en": "CBAM aggregated good",
+   "ko": "CBAM 집계 제품",
+   "from": "guide-5a",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "pre-calciner",
+   "ko": "가소로",
+   "from": "guide-5a",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "kiln dust",
+   "ko": "킬른먼지",
+   "from": "guide-5a",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "cement mill",
+   "ko": "시멘트 분쇄기",
+   "from": "guide-5a",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "High NCV household waste",
+   "ko": "순발열량이 높은 가정 폐기물",
+   "from": "guide-5a",
+   "added": "2026-11-12"
   }
  ]
 }
