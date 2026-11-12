@@ -3216,6 +3216,24 @@
    "ko": "잠정 연간량",
    "from": "32026D1862",
    "added": "2026-11-13"
+  },
+  {
+   "en": "EFTA Surveillance Authority",
+   "ko": "EFTA 감시당국",
+   "from": "32026D1862",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "uniform cross-sectoral correction factor",
+   "ko": "단일 부문 간 보정계수",
+   "from": "32026D1862",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "indicative range of penalties",
+   "ko": "과징금의 지표 범위",
+   "from": "32023R1773",
+   "added": "2026-11-13"
   }
  ]
 }
