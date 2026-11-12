@@ -1698,6 +1698,42 @@
    "ko": "바이오가스",
    "from": "guide-3",
    "added": "2026-11-12"
+  },
+  {
+   "en": "stoichiometric number",
+   "ko": "화학량론 수",
+   "from": "guide-4",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "fallback approach",
+   "ko": "대체 방식",
+   "from": "guide-4",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "product benchmark",
+   "ko": "제품 벤치마크",
+   "from": "guide-4",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "heat benchmark",
+   "ko": "열 벤치마크",
+   "from": "guide-4",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "fuel benchmark",
+   "ko": "연료 벤치마크",
+   "from": "guide-4",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "reference efficiency factors",
+   "ko": "기준 효율 계수",
+   "from": "guide-4",
+   "added": "2026-11-12"
   }
  ]
 }
