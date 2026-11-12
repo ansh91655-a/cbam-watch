@@ -2754,6 +2754,18 @@
    "ko": "별도 발전",
    "from": "32025R2547",
    "added": "2026-11-13"
+  },
+  {
+   "en": "material non-conformity",
+   "ko": "중요한 부적합",
+   "from": "32025R2546",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "European Data Protection Supervisor",
+   "ko": "유럽 개인정보보호감독관",
+   "from": "32025R2546",
+   "added": "2026-11-13"
   }
  ]
 }
