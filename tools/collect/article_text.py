@@ -32,6 +32,12 @@ def license_line(lines, marks):
     return ""
 
 
+def terms_hints(lines, limit=3, width=100):
+    """이용 조건의 글귀를 찾지 못했을 때, 화면이 저작권을 어떻게 적었는지 알 수 있게 그 낱말이 든 줄을 몇 개 돌려준다."""
+    found = [line.strip()[:width] for line in lines if any(word in flat(line) for word in ("공공누리", "KOGL", "저작권", "저작물"))]
+    return found[:limit]
+
+
 def _meta_distance(lines, index):
     """이 줄에서 몇 줄 뒤에 등록일 같은 글자가 처음 나오는가. 가까이에 없으면 None."""
     for offset, line in enumerate(lines[index + 1:index + 1 + META_WINDOW], start=1):

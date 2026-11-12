@@ -115,9 +115,11 @@ class FillTest(unittest.TestCase):
         return {row["id"]: row for row in json.loads(pathlib.Path(f"collected/feed/{date}.json").read_text(encoding="utf-8"))["items"]}
 
     def _fetcher(self, body):
+        """body가 {주소: 화면}이면 주소마다 다른 화면을 주고("*"는 그 밖의 주소), 아니면 모든 주소에 같은 화면을 준다."""
         def fetch(url):
             self.opened.append(url)
-            return body if isinstance(body, tuple) else answer(body)
+            found = body.get(url, body.get("*")) if isinstance(body, dict) else body
+            return found if isinstance(found, tuple) else answer(found)
         return fetch
 
     def _fill(self, body, **more):
@@ -151,6 +153,25 @@ class FillTest(unittest.TestCase):
         self.assertNotIn("textPath", self._feed()["aaa"])
         state = json.loads(pathlib.Path(articles.STATE).read_text(encoding="utf-8"))
         self.assertEqual((state["items"]["aaa"]["result"], state["items"]["aaa"]["tries"]), (articles.NO_LICENSE, 1))
+
+    def test_terms_written_once_on_the_board_page_count_for_its_articles(self):
+        bare = page(license_text="이 글의 화면에는 이용 조건이 적혀 있지 않다.")
+        second = dict(self.rows[0], id="aab", url="https://gov.example/board/2/view")
+        self._write("collected/feed/2026-11-12.json", {"date": "2026-11-12", "items": self.rows + [second]})
+        done = self._fill({"https://gov.example/board": page(title="보도자료 목록"), "*": bare})
+        self.assertEqual(done["saved"], ["aaa", "aab"])
+        self.assertEqual(self.opened.count("https://gov.example/board"), 1)  # 게시판 화면은 한 번만 받는다
+        lines = pathlib.Path("collected/pages/items/aaa.txt").read_text(encoding="utf-8").splitlines()
+        self.assertEqual(lines[2], f"[이용 조건] {LICENSE} (게시판 화면 https://gov.example/board 에 적힌 글)")
+        self.assertEqual(lines[5], TITLE)
+
+    def test_when_no_terms_are_found_the_record_keeps_how_the_page_words_them(self):
+        other = "시험부 저작물은 공공누리 2유형(출처표시+상업적이용금지) 조건에 따라 이용할 수 있습니다."
+        done = self._fill(page(license_text=other))
+        self.assertEqual(done["failed"], ["aaa"])
+        state = json.loads(pathlib.Path(articles.STATE).read_text(encoding="utf-8"))["items"]["aaa"]
+        self.assertEqual(state["result"], articles.NO_LICENSE)
+        self.assertIn(other, state["hints"])
 
     def test_short_pages_files_and_errors_are_not_stored(self):
         for body, expected in ((page(body=["붙임 파일을 참고"]), articles.TOO_SHORT), (answer(b"%PDF" * 400, content_type="application/pdf"), "HTML이 아님"),
