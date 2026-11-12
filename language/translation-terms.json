@@ -1440,6 +1440,42 @@
    "ko": "단선결선도",
    "from": "guide-3",
    "added": "2026-11-12"
+  },
+  {
+   "en": "reconciliation factor",
+   "ko": "조정계수",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "smart metering system",
+   "ko": "스마트 계량 시스템",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "virtual PPA",
+   "ko": "가상 전력구매계약",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "sub-meter",
+   "ko": "보조 계량기",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "net measurable heat",
+   "ko": "순 측정가능열",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "intracompany offtake agreement",
+   "ko": "회사 내부 인수 합의",
+   "from": "guide-3",
+   "added": "2026-11-12"
   }
  ]
 }
