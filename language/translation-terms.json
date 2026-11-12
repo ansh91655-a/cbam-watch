@@ -4254,6 +4254,24 @@
    "ko": "HS 소호 코드",
    "from": "guide-importers",
    "added": "2026-11-13"
+  },
+  {
+   "en": "Interoperable Europe Act",
+   "ko": "상호운용 유럽법",
+   "from": "32024R3210",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "EEA Joint Committee",
+   "ko": "유럽경제지역 공동위원회",
+   "from": "32024R3210",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Member of the Commission",
+   "ko": "집행위원",
+   "from": "32024R3210",
+   "added": "2026-11-13"
   }
  ]
 }
