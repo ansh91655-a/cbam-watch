@@ -684,6 +684,42 @@
    "ko": "사용자 접근 관리",
    "from": "reg-access-operator",
    "added": "2026-11-12"
+  },
+  {
+   "en": "onboarding wizard",
+   "ko": "온보딩 마법사",
+   "from": "reg-access-operator",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "Business Profile",
+   "ko": "업무 프로필",
+   "from": "reg-access-operator",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "attribute",
+   "ko": "속성",
+   "from": "reg-access-operator",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "corporate registration number",
+   "ko": "법인등록번호",
+   "from": "reg-access-operator",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "justification documents",
+   "ko": "사유 서류",
+   "from": "reg-access-operator",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "O3CI Administrator",
+   "ko": "제3국 사업자 포털 관리자",
+   "from": "reg-access-operator",
+   "added": "2026-11-12"
   }
  ]
 }
