@@ -2280,6 +2280,30 @@
    "ko": "검증의견 진술서",
    "from": "guide-verif",
    "added": "2026-11-12"
+  },
+  {
+   "en": "assessment of monitoring plans",
+   "ko": "모니터링 계획의 평가",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "MP assessment",
+   "ko": "MP 평가",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "assessment report",
+   "ko": "평가 보고서",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "four eyes principle",
+   "ko": "이중 확인 원칙",
+   "from": "guide-verif",
+   "added": "2026-11-13"
   }
  ]
 }
