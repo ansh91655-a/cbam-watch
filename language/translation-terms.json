@@ -2652,6 +2652,24 @@
    "ko": "관세 통과 절차",
    "from": "32025R2083",
    "added": "2026-11-13"
+  },
+  {
+   "en": "simplified customs procedure",
+   "ko": "간이 관세 절차",
+   "from": "32025R2083",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "repurchase limit",
+   "ko": "재매입 한도",
+   "from": "32025R2083",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Economic Operators Registration and Identification",
+   "ko": "경제운영자 등록·식별",
+   "from": "32025R2083",
+   "added": "2026-11-13"
   }
  ]
 }
