@@ -29,7 +29,7 @@ PATH = "locks/translating.json"
 STAMP = "stamps/translated.json"  # 번역을 올린 실행이 끝났다는 표. 사이트 배포와 화면 점검이 이 파일이 바뀌면 돈다
 SHOWN = "data/laws-ko"            # 사이트에 보이는 번역
 STALE_MINUTES = 12     # 실행 하나는 이 안에 끝나게 되어 있다(절차서가 10분이 넘으면 새 묶음을 시작하지 않는다)
-QUIET_SECONDS = 180    # 번역이 이 안에 올라왔으면 자물쇠가 낡았어도 아직 도는 것으로 본다(묶음 하나는 90초쯤 걸린다)
+QUIET_SECONDS = 300    # 번역이 이 안에 올라왔으면 자물쇠가 낡았어도 아직 도는 것으로 본다(묶음 하나는 2분 안팎, 길면 3분 넘게 걸리고, 실행은 예정보다 1~2분 늦게 시작하기도 한다)
 TRIES = 3
 WATCHED = ("data/laws-ko", "language/translation-checks.json")  # 번역 실행이 올리는 것
 AUTHOR = ("-c", "user.name=cbam-watch-run", "-c", "user.email=noreply@users.noreply.github.com")
