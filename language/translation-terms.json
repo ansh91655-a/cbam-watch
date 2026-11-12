@@ -1350,6 +1350,54 @@
    "ko": "인증 표준물질",
    "from": "guide-3",
    "added": "2026-11-12"
+  },
+  {
+   "en": "Stationary source emissions",
+   "ko": "고정 배출원 배출",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "automated measuring systems",
+   "ko": "자동 측정 시스템",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "Solid recovered fuels",
+   "ko": "고형 회수 연료",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "balance method",
+   "ko": "수지법",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "flue gas flow",
+   "ko": "배가스 유량",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "sustainability and GHG savings criteria",
+   "ko": "지속가능성 및 온실가스 감축 기준",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "voluntary certification scheme",
+   "ko": "자발적 인증제도",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "Union Database",
+   "ko": "EU 데이터베이스",
+   "from": "guide-3",
+   "added": "2026-11-12"
   }
  ]
 }
