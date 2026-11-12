@@ -984,6 +984,42 @@
    "ko": "단순제품",
    "from": "guide-5d",
    "added": "2026-11-12"
+  },
+  {
+   "en": "pre-baked anodes",
+   "ko": "사전 소성 양극",
+   "from": "guide-5e",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "holding furnaces",
+   "ko": "보온로",
+   "from": "guide-5e",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "skimmings",
+   "ko": "드로스",
+   "from": "guide-5e",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "de-coating",
+   "ko": "도막 제거",
+   "from": "guide-5e",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "cryolite",
+   "ko": "빙정석",
+   "from": "guide-5e",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "electrolytic cell",
+   "ko": "전해조",
+   "from": "guide-5e",
+   "added": "2026-11-12"
   }
  ]
 }
