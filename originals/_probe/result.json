@@ -1,5 +1,5 @@
 {
- "checkedAt": "2026-11-11T00:24:17+00:00",
+ "checkedAt": "2026-11-12T04:25:52+00:00",
  "rows": [
   {
    "name": "ec-guidance-page",
@@ -62,19 +62,19 @@
    "url": "http://data.europa.eu/eli/reg/2023/956/oj",
    "status": 200,
    "contentType": "text/html; charset=UTF-8",
-   "bytes": 757249,
-   "sha256": "7590e678e1a6b056ee505809b0494213bce1eb3fd769792ab2ca09cac8c08209",
+   "bytes": 757248,
+   "sha256": "edbe6ec2ccbd17b4b6f2a919e4c0e594b6420be4bec4dfe649e68e19e38df612",
    "isPdf": false,
    "error": "",
-   "head": " <!DOCTYPE html> <html lang=\"en\" class=\"no-js\" xml:lang=\"en\" prefix=\"eli: http://data.europa.eu/eli/ontology#\" > <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <script type=\"text/javascript\" src=\"/eurlex-frontoffice/ruxitagentjs_ICANVfgqrux_10343260715123811.js\" data-dtconfig=\"app=47d4c64c3b67ec69|agentId=bf6998a103b6f726|srtbv=4|owasp=1|featureHash=ICANVfgqrux|rdnt=1|uxrgce=1|cuc=m097nmfl|mel=100000|mb=null|dpvc=1|iub=null|lastModification=1794334918169|tp=500,50,0|srbbv=3|agentUri=/eurl"
+   "head": " <!DOCTYPE html> <html lang=\"en\" class=\"no-js\" xml:lang=\"en\" prefix=\"eli: http://data.europa.eu/eli/ontology#\" > <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <script type=\"text/javascript\" src=\"/eurlex-frontoffice/ruxitagentjs_ICANVfgqrux_10343260715123811.js\" data-dtconfig=\"app=47d4c64c3b67ec69|agentId=ff732df038ba6095|srtbv=4|owasp=1|featureHash=ICANVfgqrux|rdnt=1|uxrgce=1|cuc=m097nmfl|mel=100000|mb=null|dpvc=1|iub=null|lastModification=1794432114078|tp=500,50,0|srbbv=3|agentUri=/eurl"
   },
   {
    "name": "eurlex-html",
    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02023R0956-20251020",
    "status": 200,
    "contentType": "text/html; charset=UTF-8",
-   "bytes": 509528,
-   "sha256": "22f8e29f3da45a62e3c9f78c0817efec3d438cfdb70045900a8c89ae6eff45d1",
+   "bytes": 509529,
+   "sha256": "a323eaed6bbc371ec0d00fea7f26ed8b38fa9cd0bd52550bee66034061b87b5a",
    "isPdf": false,
    "error": "",
    "head": " <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML//EN\" \"xhtml-strict.dtd\"> <html xmlns=\"http://www.w3.org/1999/xhtml\"> <!-- CONVEX # converter_version:9.17.0 # generated_on:20251204-1702 --> <head><meta name=\"format-detection\" content=\"telephone=no\"/><meta http-equiv='X-UA-Compatible' content='IE=edge'/><meta name='viewport' content='width=device-width, initial-scale=1'><meta name='WT.z_usr_lan' content='EN'> <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/> <title>Consolidated TEXT: 32023R0956 — EN — 20.10.2025</title> <script type=\"text/javascript\" src=\"/eurlex-frontoffice/ruxitag"
@@ -85,7 +85,7 @@
    "status": 200,
    "contentType": "application/json;charset=UTF-8",
    "bytes": 50244,
-   "sha256": "005a7c1a9c61dd4aa5593024314a10312a24964e5f0030c68bc5c9ca48659c38",
+   "sha256": "d07576b2fd477a257dfb8289886f82361f3928ab965a28d1fc492a7c6bd3d3ab",
    "isPdf": false,
    "error": "",
    "head": "{\"exactMatch\":true,\"initiativeResultDtoPage\":{\"content\":[{\"id\":16932.0,\"initiativeStatus\":\"ACTIVE\",\"reference\":\"Ares(2026)1634728\",\"foreseenActType\":\"REG_IMPL\",\"shortTitle\":\"CBAM declarations\",\"snippet\":\"adopt implementing acts as regards to the establishment of the <span class=\\\"highlight\\\">CBAM</span> declarations. This implementing act will set out rules on the standard format of the <span class=\\\"highlight\\\">CBAM</span> declaration, including detailed information, the procedure for submitting the <span class=\\\"highlight\\\">CBAM</span> declaration via the <span class=\\\"highlight\\\">CBAM</span"
@@ -102,45 +102,12 @@
    "head": "{\"codeGroup\":\"E03927 \",\"title\":\"Informal Expert Group on the carbon border adjustment mechanism (CBAM)\",\"status\":{\"code\":\"ACTIVE\",\"label\":\"Active\",\"key\":null},\"abbreviation\":null,\"policyAreas\":[{\"id\":null,\"code\":\"reftable.policy_00038\",\"label\":\"Climate\",\"key\":null},{\"id\":null,\"code\":\"reftable.policy_00013\",\"label\":\"Energy\",\"key\":null},{\"id\":null,\"code\":\"reftable.policy_00018\",\"label\":\"External Trade\",\"key\":null}],\"leadDgs\":[{\"id\":38,\"code\":\"TAXUD\",\"label\":\"TAXUD - DG Taxation and Customs Union\",\"key\":null}],\"associatedDgs\":[],\"types\":[{\"code\":\"reftable.type_00002\",\"label\":\"Informal\",\"key\":null"
   },
   {
-   "name": "me-www",
-   "url": "https://www.me.go.kr/home/web/index.do?menuId=286",
-   "status": 0,
-   "contentType": "",
-   "bytes": 0,
-   "sha256": "",
-   "isPdf": false,
-   "error": "robots.txt를 읽지 못해 받지 않음(응답 0)",
-   "head": ""
-  },
-  {
-   "name": "mcee",
-   "url": "https://www.mcee.go.kr/",
-   "status": 200,
-   "contentType": "text/html; charset=UTF-8",
-   "bytes": 1881,
-   "sha256": "21e714c7875eab93e3818ef64a915bbaa2b3e017d100361f30d017509d70bc3d",
-   "isPdf": false,
-   "error": "",
-   "head": "<!DOCTYPE html> <html> <head> <meta charset=\"utf-8\"> <title>기후에너지환경부</title> <meta property=\"og:site_name\" content=\"기후에너지환경부\"> <link rel=\"canonical\" href=\"https://mcee.go.kr/home/web/main.do\" /> <script type=\"application/ld+json\"> { \"@context\":\"https://schema.org\", \"@type\":\"WebSite\", \"name\":\"기후에너지환경부\", \"alternateName\":[\"기후부\", \"MCEE\"], \"url\":\"https://mcee.go.kr/\" } </script> </head> <script> function isSmartPhone() { return /Mobi|Android|iPhone|iPad|iPod|Winddows Phone|webOS/i.test(navigator.userAgent); } const {hostname} = window.location; let uri = hostname; let mainUri = '/home/web/main.do';"
-  },
-  {
-   "name": "mcee-bare",
-   "url": "https://mcee.go.kr/",
-   "status": 200,
-   "contentType": "text/html; charset=UTF-8",
-   "bytes": 1881,
-   "sha256": "21e714c7875eab93e3818ef64a915bbaa2b3e017d100361f30d017509d70bc3d",
-   "isPdf": false,
-   "error": "",
-   "head": "<!DOCTYPE html> <html> <head> <meta charset=\"utf-8\"> <title>기후에너지환경부</title> <meta property=\"og:site_name\" content=\"기후에너지환경부\"> <link rel=\"canonical\" href=\"https://mcee.go.kr/home/web/main.do\" /> <script type=\"application/ld+json\"> { \"@context\":\"https://schema.org\", \"@type\":\"WebSite\", \"name\":\"기후에너지환경부\", \"alternateName\":[\"기후부\", \"MCEE\"], \"url\":\"https://mcee.go.kr/\" } </script> </head> <script> function isSmartPhone() { return /Mobi|Android|iPhone|iPad|iPod|Winddows Phone|webOS/i.test(navigator.userAgent); } const {hostname} = window.location; let uri = hostname; let mainUri = '/home/web/main.do';"
-  },
-  {
    "name": "pages-site",
    "url": "https://ansh91655-a.github.io/cbam-watch/",
    "status": 200,
    "contentType": "text/html; charset=utf-8",
-   "bytes": 3970,
-   "sha256": "c4aff931e3c9200595d0071d57ee93131c1f99aa9d7e4df772d836e9b968f87c",
+   "bytes": 4084,
+   "sha256": "93067663d9d02ed79e25369b737060fb35378748a59faf8a67d976cda6fa0bbd",
    "isPdf": false,
    "error": "",
    "head": "<!DOCTYPE html> <html lang=\"ko\" data-theme=\"navy\"> <head> <meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <meta name=\"robots\" content=\"noindex, nofollow\"> <meta name=\"theme-color\" content=\"#050b24\"> <meta name=\"description\" content=\"EU 탄소국경조정제도(CBAM)의 법령, 가이던스, 인증서 가격, 일정을 원문과 함께 국문으로 정리합니다. 개인이 운영하는 비공식 사이트입니다.\"> <title>CBAM 규제동향</title> <link rel=\"icon\" type=\"image/svg+xml\" href=\"assets/favicon.svg\"> <meta property=\"og:type\" content=\"website\"> <meta property=\"og:title\" content=\"CBAM 규제동향\"> <meta property=\"og:description\" content=\"EU 탄소국경조정제도(CBAM)의"
@@ -150,22 +117,11 @@
    "url": "https://ansh91655-a.github.io/cbam-watch/data/site.json",
    "status": 200,
    "contentType": "application/json; charset=utf-8",
-   "bytes": 966,
-   "sha256": "c281dff5a09a2bab23442efa07ed1fbf348479bbf85fe6743f4dc015ad8b397e",
+   "bytes": 965,
+   "sha256": "2e01fbda381a403ab74e85e9ed07c368460ec5dc5cabea4224f53abba18433b7",
    "isPdf": false,
    "error": "",
-   "head": "{ \"name\": \"CBAM 규제동향\", \"tagline\": \"EU 탄소국경조정제도의 규제 동향을 원문과 함께\", \"stage\": \"\", \"operator\": \"\", \"notice\": \"이 사이트의 요약과 번역은 참고 자료이며 오류가 있을 수 있습니다. 정확한 내용은 반드시 원문에서 확인해 주세요. 법률 자문이 아닙니다.\", \"independent\": \"개인이 운영하는 비공식 사이트입니다. 유럽연합(EU)과 그 기관의 공식 사이트가 아니며, 그 기관들과 관계가 없습니다.\", \"maker\": { \"name\": \"Ian\", \"user\": \"ansh91655\", \"host\": \"gmail.com\" }, \"features\": { \"subscribe\": false, \"feedback\": false }, \"url\": \"https://ansh91655-a.github.io/cbam-watch/\", \"builtAt\": \"2026-11-11T08:12:47+09:00\", \"lastCollected\": \"2026-11-11T06:47:12+09:00\", \"counts\": { \"items\": 229, \"events\": 11, \"digests\": 1, \"terms\": 266, \""
-  },
-  {
-   "name": "mcee-board",
-   "url": "https://mcee.go.kr/home/web/index.do?menuId=286",
-   "status": 404,
-   "contentType": "text/html;charset=UTF-8",
-   "bytes": 1854,
-   "sha256": "95b4ab81729395fb468521544d31b381b2bb1616afba2cf880cc2a6a00a92fbe",
-   "isPdf": false,
-   "error": "HTTP Error 404: Not Found",
-   "head": " <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"> <html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ko\" xml:lang=\"ko\"> <head> <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /> <title>파일을 찾을수없습니다.</title> <style type=\"text/css\"> <!-- body { margin: 0 auto; padding: 0; } p, img, ul, li, div, a {padding:0; margin:0;} img { border:0;} #error_wrap { margin: 120px auto; width: 660px; height:345px; border:4px solid #eee; outline:1px solid #aaa; padding-top:20px; } #error_wrap ul {overflow:hidden; margin-bottom"
+   "head": "{ \"name\": \"CBAM 규제동향\", \"tagline\": \"EU 탄소국경조정제도(CBAM) 규제 동향\", \"stage\": \"\", \"operator\": \"\", \"notice\": \"이 사이트의 요약과 번역은 참고 자료이며 오류가 있을 수 있습니다. 정확한 내용은 반드시 원문에서 확인해 주세요. 법률 자문이 아닙니다.\", \"independent\": \"개인이 운영하는 비공식 사이트입니다. 유럽연합(EU)과 그 기관의 공식 사이트가 아니며, 그 기관들과 관계가 없습니다.\", \"maker\": { \"name\": \"Iahn\", \"user\": \"ansh91655\", \"host\": \"gmail.com\" }, \"features\": { \"subscribe\": false, \"feedback\": false }, \"url\": \"https://ansh91655-a.github.io/cbam-watch/\", \"builtAt\": \"2026-11-12T13:22:52+09:00\", \"lastCollected\": \"2026-11-12T13:18:22+09:00\", \"counts\": { \"items\": 233, \"events\": 20, \"digests\": 1, \"terms\": 266, \"to"
   },
   {
    "name": "expert-group-meetings",
