@@ -1140,6 +1140,24 @@
    "ko": "귀속 간접배출량",
    "from": "guide-3",
    "added": "2026-11-12"
+  },
+  {
+   "en": "aggregation rule",
+   "ko": "묶기 규칙",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "molar mass",
+   "ko": "몰질량",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "vertically integrated installation",
+   "ko": "수직 통합된 사업장",
+   "from": "guide-3",
+   "added": "2026-11-12"
   }
  ]
 }
