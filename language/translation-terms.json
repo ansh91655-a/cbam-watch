@@ -138,6 +138,30 @@
    "ko": "일(역일)",
    "from": "32023R0956",
    "added": "2026-11-12"
+  },
+  {
+   "en": "calendar week",
+   "ko": "역주",
+   "from": "32023R0956",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "risk analysis",
+   "ko": "리스크 분석",
+   "from": "32023R0956",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "internal assigned revenue",
+   "ko": "내부 지정 수입",
+   "from": "32023R0956",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "preliminary calculation",
+   "ko": "예비 산정",
+   "from": "32023R0956",
+   "added": "2026-11-12"
   }
  ]
 }
