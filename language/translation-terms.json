@@ -3936,6 +3936,36 @@
    "ko": "단계적 도입",
    "from": "guide-importers",
    "added": "2026-11-13"
+  },
+  {
+   "en": "fiscal year",
+   "ko": "회계연도",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "transit flows",
+   "ko": "경유 흐름",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "technical losses",
+   "ko": "기술적 손실",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "input materials",
+   "ko": "투입 물질",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "stock take",
+   "ko": "재고 조사",
+   "from": "guide-importers",
+   "added": "2026-11-13"
   }
  ]
 }
