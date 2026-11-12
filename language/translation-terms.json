@@ -468,6 +468,36 @@
    "ko": "종가",
    "from": "qa",
    "added": "2026-11-12"
+  },
+  {
+   "en": "mass balance chain of custody model",
+   "ko": "물질수지 관리연속성 모델",
+   "from": "qa",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "air separation unit",
+   "ko": "공기 분리 설비",
+   "from": "qa",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "reference period",
+   "ko": "기준 기간",
+   "from": "qa",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "own resource",
+   "ko": "자체 재원",
+   "from": "qa",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "CN subheading",
+   "ko": "CN 소호",
+   "from": "qa",
+   "added": "2026-11-12"
   }
  ]
 }
