@@ -2640,6 +2640,18 @@
    "ko": "검증보고서 초안",
    "from": "guide-verif",
    "added": "2026-11-13"
+  },
+  {
+   "en": "standard authorisation procedure",
+   "ko": "표준 승인 절차",
+   "from": "32025R2083",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "customs transit procedure",
+   "ko": "관세 통과 절차",
+   "from": "32025R2083",
+   "added": "2026-11-13"
   }
  ]
 }
