@@ -120,6 +120,24 @@
    "ko": "등록 말소",
    "from": "32023R0956",
    "added": "2026-11-12"
+  },
+  {
+   "en": "European Public Prosecutor’s Office",
+   "ko": "유럽검찰청",
+   "from": "32023R0956",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "payable at first demand",
+   "ko": "최초 청구 시 지급되는",
+   "from": "32023R0956",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "calendar days",
+   "ko": "일(역일)",
+   "from": "32023R0956",
+   "added": "2026-11-12"
   }
  ]
 }
