@@ -3,7 +3,8 @@
 데이터베이스의 runs 컬렉션을 파일로 받아 둔 폴더를 읽는다.
 쓰는 법: python -m tools.run.day_summary --db-dir /tmp/run/db [--date 2026-11-10]
 - problems: 사람에게 알릴 문제(실행 기록이 없음, 각 실행이 적은 문제, 저장소에 올리지 못함).
-  수집·작성(collect), 검증·게시(verify), 임시 작업(adhoc) 실행이 적은 문제를 모은다.
+  수집·작성(collect), 검증·게시(verify), 임시 작업(adhoc), 번역(translate) 실행이 적은 문제를 모은다.
+  번역 실행은 보고가 나간 뒤에 돌므로 전날 것까지 본다.
 - finalHolds: 사람이 봐야 하는 보류(원문과 지금 화면이 다른 것, 세 번째 검증에서도 원문을 열지 못한 것, 다시 쓴 초안이 또 보류된 것)
 - retryHolds: 다음 수집·작성 실행이 다시 쓰거나(글을 고치면 풀리는 사유) 그대로 다시 낼(원문을 열지 못한 것) 보류의 수. 알리지 않는다
 """
@@ -36,13 +37,15 @@ def summarize(runs, day):
     collect = [run for run in mine if run.get("kind") == "collect"]
     verify = [run for run in mine if run.get("kind") == "verify"]
     adhoc = [run for run in mine if run.get("kind") == "adhoc"]
+    yesterday = (datetime.date.fromisoformat(day) - datetime.timedelta(days=1)).isoformat()
+    translate = [run for run in runs if run.get("kind") == "translate" and str(run.get("startedAt", ""))[:10] in (day, yesterday)]
     problems = []
     if datetime.date.fromisoformat(day).weekday() < 5:
         if not collect:
             problems.append(NO_COLLECT)
         if not verify:
             problems.append(NO_VERIFY)
-    for run in collect + verify + adhoc:
+    for run in collect + verify + adhoc + translate:
         for problem in run.get("problems", []) or []:
             text = str(problem).strip()
             if text and text not in problems:
@@ -65,7 +68,7 @@ def summarize(runs, day):
     return {
         "date": day, "problems": problems, "finalHolds": final_holds, "retryHolds": retry,
         "counts": {"written": total(collect, "written") + total(collect, "rewritten"), "pass": total(verify, "pass"), "hold": total(verify, "hold"), "published": total(verify, "published")},
-        "runs": {"collect": len(collect), "verify": len(verify), "adhoc": len(adhoc)},
+        "runs": {"collect": len(collect), "verify": len(verify), "adhoc": len(adhoc), "translate": len(translate)},
     }
 
 

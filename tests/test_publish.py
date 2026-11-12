@@ -370,7 +370,18 @@ class DaySummaryTest(unittest.TestCase):
         ]
         result = day_summary.summarize(runs, self.DAY)
         self.assertEqual(result["problems"], ["요약 보강: 웹 읽기가 되지 않음"])
-        self.assertEqual(result["runs"], {"collect": 1, "verify": 1, "adhoc": 1})
+        self.assertEqual(result["runs"], {"collect": 1, "verify": 1, "adhoc": 1, "translate": 0})
+
+    def test_problems_of_yesterdays_translation_run_are_reported(self):
+        runs = [
+            {"kind": "collect", "startedAt": "2026-11-10T07:05:00+09:00", "counts": {}, "problems": []},
+            {"kind": "verify", "startedAt": "2026-11-10T08:20:00+09:00", "counts": {}, "pushed": True, "problems": []},
+            {"kind": "translate", "startedAt": "2026-11-09T16:15:00+09:00", "problems": ["번역: 검사를 통과하지 못해 올리지 않음"]},
+            {"kind": "translate", "startedAt": "2026-11-08T16:15:00+09:00", "problems": ["그제의 문제"]},
+        ]
+        result = day_summary.summarize(runs, self.DAY)
+        self.assertEqual(result["problems"], ["번역: 검사를 통과하지 못해 올리지 않음"])
+        self.assertEqual(result["runs"]["translate"], 1)
 
 
 class SiteInfoTest(unittest.TestCase):

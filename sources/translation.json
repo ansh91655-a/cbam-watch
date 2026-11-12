@@ -1,0 +1,7 @@
+{
+  "note": "번역을 하는 실행(runner)마다 무엇을 얼마나 옮기는지 정한다. 절차서는 실행의 이름만 부른다(python3 -m tools.laws.todo --runner <이름>). groups는 옮기는 문서의 갈래(act: EU 법령, guide: 집행위원회 안내 문서)를 옮기는 차례대로 적은 것, limit은 한 묶음의 원문 글자 수, rounds는 한 번의 실행에서 하는 묶음 수다. 갈래를 다른 실행으로 옮길 때는 이 파일만 고친다.",
+  "runners": {
+    "daily": {"groups": ["act"], "limit": 20000, "rounds": 1},
+    "bulk": {"groups": ["guide"], "limit": 15000, "rounds": 4}
+  }
+}

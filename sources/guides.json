@@ -1,0 +1,16 @@
+{
+  "note": "규정 원문 화면에 함께 싣는 EU 집행위원회 안내 문서. 글은 원문 대장(originals/state.json)이 받아 둔 최신 판에서 읽는다. file은 그 대장에 적힌 파일 이름의 앞머리다. documents의 차례가 화면에 보이는 차례이고, turn이 번역하는 차례다.",
+  "documents": [
+    {"id": "guide-1", "file": "Guidance No. 1 -", "short": "가이던스 1", "name": "가이던스 1: CBAM 개념 소개", "en": "Guidance document No. 1: Introduction to CBAM concepts", "turn": 3},
+    {"id": "guide-2", "file": "Guidance No. 2 -", "short": "가이던스 2", "name": "가이던스 2: 비EU 사업자를 위한 CBAM 이행 요약 안내", "en": "Guidance document 2: Quick guide for non-EU operators on CBAM implementation", "turn": 2},
+    {"id": "guide-3", "file": "Guidance No. 3 -", "short": "가이던스 3", "name": "가이던스 3: 제품의 내재배출량 산정 방법", "en": "Guidance document 3: CBAM methods for the calculation of emissions embedded in goods", "turn": 7},
+    {"id": "guide-4", "file": "Guidance No. 4 -", "short": "가이던스 4", "name": "가이던스 4: 무상할당 조정 산정", "en": "Guidance document 4: CBAM calculation of the free allocation adjustment to the number of CBAM certificates to be surrendered", "turn": 8},
+    {"id": "guide-5a", "file": "Guidance No. 5a -", "short": "가이던스 5a", "name": "가이던스 5a: 시멘트", "en": "Guidance document 5a: Sector-specific guidance document on cement", "turn": 9},
+    {"id": "guide-5b", "file": "Guidance No. 5b -", "short": "가이던스 5b", "name": "가이던스 5b: 수소", "en": "Guidance document 5b: Sector-specific guidance document on chemical sector - hydrogen", "turn": 1},
+    {"id": "guide-5c", "file": "Guidance No. 5c -", "short": "가이던스 5c", "name": "가이던스 5c: 비료", "en": "Guidance document 5c: Sector-specific guidance document on fertilisers", "turn": 10},
+    {"id": "guide-5d", "file": "Guidance No. 5d -", "short": "가이던스 5d", "name": "가이던스 5d: 철강", "en": "Guidance document 5d: Sector-specific guidance document on iron and steel", "turn": 5},
+    {"id": "guide-5e", "file": "Guidance No. 5e -", "short": "가이던스 5e", "name": "가이던스 5e: 알루미늄", "en": "Guidance document 5e: Sector-specific guidance document on aluminium", "turn": 6},
+    {"id": "guide-5f", "file": "Guidance No. 5f -", "short": "가이던스 5f", "name": "가이던스 5f: 전력", "en": "Guidance document 5f: Sector-specific guidance document on electricity as a good", "turn": 11},
+    {"id": "qa", "file": "CBAM_Questions and Answers", "short": "질의응답", "name": "CBAM 질의응답(Q&A)", "en": "Carbon Border Adjustment Mechanism (CBAM): Questions and Answers", "turn": 4}
+  ]
+}

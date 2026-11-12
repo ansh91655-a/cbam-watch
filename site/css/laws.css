@@ -75,6 +75,10 @@ body[data-wide] main, body[data-wide] .band-inner, body[data-wide] .head-inner {
 .law-toc a:hover { background: var(--surface); color: var(--ink); }
 .law-toc li[data-kind="division"] a { margin-top: 8px; font-weight: 700; color: var(--ink); }
 .law-toc li[data-kind="front"] a, .law-toc li[data-kind="recitals"] a, .law-toc li[data-kind="closing"] a, .law-toc li[data-kind="notes"] a { color: var(--ink-3); }
+.law-toc li[data-kind="cover"] a { color: var(--ink-3); }
+.law-toc li[data-level="1"] a { margin-top: 6px; font-weight: 700; color: var(--ink); }
+.law-toc li[data-level="3"] a { padding-left: 22px; }
+.law-toc li[data-level="4"] a, .law-toc li[data-level="5"] a { padding-left: 34px; }
 .law-toc-en { display: block; font-size: 0.78rem; color: var(--ink-3); }
 @media (max-width: 999px) { .law-toc { max-height: 220px; overflow-y: auto; padding: 8px; border: 1px solid var(--line-2); border-radius: var(--radius); background: var(--surface); } }
 
@@ -104,3 +108,5 @@ body[data-wide] main, body[data-wide] .band-inner, body[data-wide] .head-inner {
 .law-fold summary { display: flex; align-items: baseline; gap: 10px; padding: 2px 0 8px; font-weight: 700; cursor: pointer; }
 .law-fold:not([open]) summary { padding-bottom: 6px; }
 .law-source { font-size: var(--fs-s); color: var(--ink-3); }
+.find-jump:empty { display: none; }
+.find-jump .chip { display: inline-flex; align-items: center; gap: 6px; }

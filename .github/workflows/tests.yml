@@ -19,6 +19,8 @@ on:
       - "data/duties.json"
       # 규정 원문: 화면의 찾기, 번역 자료와 그 검사가 따르는 용어집
       - "site/js/laws/**"
+      - "sources/guides.json"
+      - "sources/translation.json"
       - "data/laws-ko/**"
       - "language/glossary.json"
   workflow_dispatch:

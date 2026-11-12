@@ -44,7 +44,7 @@ def rule_ids(rules):
 
 
 def acts():
-    """싣는 법령의 목록: {"id", "celex", "name", "url", "path", "consolidated", "rule"}. 받아 둔 글이 없는 것은 뺀다."""
+    """싣는 법령의 목록: {"id", "celex", "name", "url", "path", "consolidated", "rule", "group": "act", "format": "act"}. 받아 둔 글이 없는 것은 뺀다."""
     rules = rule_ids(read_json(RULES, {}))
     found = []
     for entry in (read_json(FULLTEXT, {}) or {}).get("entries", []):
@@ -57,4 +57,4 @@ def acts():
              "path": entry.get("textPath", ""), "consolidated": "", "rule": rules.get(entry["celex"], "")}
             for entry in (read_json(ACTS, {}) or {}).get("entries", []) if entry.get("celex") and entry.get("textPath")]
     rest.sort(key=lambda act: act["id"] in ORDER_LAST)  # 차례는 그대로 두고 지난 법령만 뒤로
-    return found + rest
+    return [{**act, "group": "act", "format": "act"} for act in found + rest]

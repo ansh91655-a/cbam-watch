@@ -36,8 +36,9 @@ export const factor = () => load("factor", { paths: [] }).then((body) => ({ path
 export const calc = () => load("calc", { goods: [] });
 // 규정 원문: 법령의 목록과 차례, 법령 하나의 본문과 번역, 전체 규정 검색에 쓰는 글(크므로 찾을 때만 읽는다)
 export const laws = () => load("laws/index", { acts: [] }).then((body) => body.acts || []);
-export const law = (id) => (/^[0-9A-Z]+$/.test(String(id)) ? load(`laws/${id}`, null) : Promise.resolve(null));
+export const law = (id) => (/^[0-9A-Za-z-]+$/.test(String(id)) ? load(`laws/${id}`, null) : Promise.resolve(null));
 export const lawRows = () => load("laws/search", { rows: [] }).then((body) => body.rows || []);
+export const guideRows = () => load("laws/search-guides", { rows: [] }).then((body) => body.rows || []);
 // 하나로 묶은 소식의 옛 번호 → 남긴 소식의 번호
 export const moved = () => load("moved", { moved: {} }).then((body) => body.moved || {});
 

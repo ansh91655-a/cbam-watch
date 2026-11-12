@@ -9,6 +9,7 @@ on:
       - "tools/publish/**"
       - "tools/laws/**"
       - "language/glossary.json"
+      - "sources/guides.json"
       - "deploy.json"
       - ".github/workflows/pages.yml"
   workflow_run:

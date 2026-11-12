@@ -1,5 +1,5 @@
 {
-"version": "v0.3 (2026-11-12 규정 번역에서 쓴 낱말을 후보로 더함, 검토 전)",
+"version": "v0.4 (2026-11-12 가이던스 번역에서 쓸 낱말을 후보로 더함, 검토 전)",
 "note": "국문 표기 기준. status가 confirmed인 것은 정부·공공기관 자료에서 확인된 표기, partial은 일부 확인, candidate는 확인이 더 필요한 후보다. avoid는 쓰지 않는 표기다.",
 "terms": [
 {
@@ -6790,6 +6790,194 @@
 "avoid": [],
 "status": "candidate",
 "note": "규정 번역(2026-11-12)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 375,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"Methodology Act"
+],
+"abbr": [],
+"preferred": "산정 방법 이행규정",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "가이던스 번역(2026-11-12)에서 쓰기로 한 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 376,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"Default Values Act"
+],
+"abbr": [],
+"preferred": "기본값 이행규정",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "가이던스 번역(2026-11-12)에서 쓰기로 한 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 377,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"Verification Principles Act"
+],
+"abbr": [],
+"preferred": "검증 원칙 이행규정",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "가이던스 번역(2026-11-12)에서 쓰기로 한 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 378,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"Accreditation & Verification Requirements Act"
+],
+"abbr": [],
+"preferred": "인정·검증 요건 위임규정",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "가이던스 번역(2026-11-12)에서 쓰기로 한 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 379,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"Free Allocation Adjustment Act"
+],
+"abbr": [],
+"preferred": "무상할당 조정 이행규정",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "가이던스 번역(2026-11-12)에서 쓰기로 한 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 380,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"sector-specific"
+],
+"abbr": [],
+"preferred": "부문별",
+"allowed": [
+"업종별"
+],
+"avoid": [],
+"status": "candidate",
+"note": "가이던스 번역(2026-11-12)에서 쓰기로 한 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 381,
+"category": "05 내재배출량 산정",
+"core": false,
+"en": [
+"worked example"
+],
+"abbr": [],
+"preferred": "계산 예시",
+"allowed": [
+"산정 예시"
+],
+"avoid": [],
+"status": "candidate",
+"note": "가이던스 번역(2026-11-12)에서 쓰기로 한 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 382,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"mass balance"
+],
+"abbr": [],
+"preferred": "물질수지",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "가이던스 번역(2026-11-12)에서 쓰기로 한 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 383,
+"category": "07 열·전력·폐가스",
+"core": false,
+"en": [
+"cogeneration"
+],
+"abbr": [],
+"preferred": "열병합발전",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "가이던스 번역(2026-11-12)에서 쓰기로 한 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 384,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"steam reforming"
+],
+"abbr": [],
+"preferred": "수증기 개질",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "가이던스 번역(2026-11-12)에서 쓰기로 한 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 385,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"synthesis gas"
+],
+"abbr": [],
+"preferred": "합성가스",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "가이던스 번역(2026-11-12)에서 쓰기로 한 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 386,
+"category": "10 업종 기술용어",
+"core": false,
+"en": [
+"molar ratio"
+],
+"abbr": [],
+"preferred": "몰비",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "가이던스 번역(2026-11-12)에서 쓰기로 한 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 387,
+"category": "13 기관·일반 약어",
+"core": false,
+"en": [
+"national competent authority"
+],
+"abbr": [
+"NCA"
+],
+"preferred": "국가 관할당국",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "가이던스 번역(2026-11-12)에서 쓰기로 한 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
 }
 ]
 }

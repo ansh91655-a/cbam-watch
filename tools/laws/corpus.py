@@ -1,13 +1,30 @@
-"""법령의 목록과 조각, 번역을 한데 묶어 읽는다. 사이트에 싣는 자료(build), 번역할 것 고르기(todo), 진행 상황(status)이 함께 쓴다."""
+"""싣는 문서(법령과 안내 문서)의 목록과 조각, 번역을 한데 묶어 읽는다. 사이트에 싣는 자료(build), 번역할 것 고르기(todo), 진행 상황(status)이 함께 쓴다.
+
+문서의 갈래(group)는 둘이다: act(EU 법령, 조와 부속서로 나눈다)와 guide(EU 집행위원회 안내 문서, PDF의 글을 절로 나눈다).
+"""
+import functools
 import pathlib
 
-from tools.laws import catalog, check, segment, store
+from tools.laws import catalog, check, guide_segment, guides, segment, store
+
+GUIDE_KINDS = ("cover", "section", "appendix")
+
+
+@functools.lru_cache(maxsize=64)
+def _parts(path, form, stamp):
+    text = pathlib.Path(path).read_text(encoding="utf-8")
+    return guide_segment.parts(text) if form == "pdf" else segment.parts(text)
 
 
 def read(act):
-    """법령 하나의 조각들. 받아 둔 글이 없으면 빈 목록."""
+    """문서 하나의 조각들. 받아 둔 글이 없으면 빈 목록. 같은 파일은 한 번만 나눈다(파일이 바뀌면 다시 나눈다)."""
     path = pathlib.Path(act["path"])
-    return segment.parts(path.read_text(encoding="utf-8")) if path.exists() else []
+    return _parts(str(path), act.get("format", "act"), path.stat().st_mtime_ns) if path.is_file() else []
+
+
+def label_ko(part):
+    """조각의 국문 이름: 제7조, 부속서 I, 2.3.1 …"""
+    return guide_segment.label_ko(part) if part["kind"] in GUIDE_KINDS else segment.label_ko(part)
 
 
 def texts(part):
@@ -35,6 +52,11 @@ def progress(found, memory):
     return total
 
 
+def documents():
+    """싣는 문서의 목록: 법령 다음에 안내 문서. 화면에 보이는 차례다."""
+    return catalog.acts() + guides.documents()
+
+
 def everything():
-    """[(법령, 조각들)] 을 싣는 차례대로, 그리고 모든 번역 {열쇠: 국문}."""
-    return [(act, read(act)) for act in catalog.acts()], store.load_all()
+    """[(문서, 조각들)] 을 싣는 차례대로, 그리고 모든 번역 {열쇠: 국문}."""
+    return [(act, read(act)) for act in documents()], store.load_all()

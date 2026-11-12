@@ -10,7 +10,7 @@
 export const BASE_ACT = "32023R0956";
 // 내용이 CBAM 규정 통합본에 이미 반영된 개정 법령과, 전환기간이 끝난 법령은 뒤로 미룬다
 const ACT_FACTOR = { [BASE_ACT]: 1.15, "32025R2083": 0.6, "32025R2549": 0.7, "32025R2550": 0.7, "32026R1740": 0.7, "32023R1773": 0.55 };
-const KIND_FACTOR = { article: 1, annex: 0.8, recitals: 0.5 };
+const KIND_FACTOR = { article: 1, section: 1, annex: 0.8, recitals: 0.5 };
 const STOP = new Set(["무엇", "뭐", "어디", "언제", "어떻게", "어떤", "어느", "왜", "누가", "누구", "얼마", "얼마나", "관련", "관한", "대한", "대해", "대하여", "규정", "규제", "법령", "조문", "조항",
   "내용", "있나요", "있는지", "있습니까", "있어요", "알려", "알려줘", "주세요", "주십시오", "하나요", "되나요", "인가요", "무슨", "경우", "어디에", "무엇인가요", "뜻", "설명",
   "the", "of", "a", "an", "in", "on", "is", "are", "what", "where", "when", "how", "which", "does", "do", "for", "to", "and", "or", "about", "under"]);
@@ -125,7 +125,9 @@ export function find(rows, parsed, options = {}) {
 }
 
 export function kindOf(part) {
-  return part.startsWith("art-") ? "article" : (part.startsWith("annex") ? "annex" : "recitals");
+  if (part.startsWith("art-")) return "article";
+  if (part.startsWith("sec-")) return "section";  // 안내 문서의 절
+  return part.startsWith("annex") ? "annex" : "recitals";
 }
 
 // 걸린 낱말이 처음 나오는 문단을 잘라 돌려준다: { text, lang }. 번역에 나오면 번역을, 아니면 원문을 보여 준다.

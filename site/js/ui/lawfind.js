@@ -18,6 +18,13 @@ export function corpus() {
   return loaded;
 }
 
+// 안내 문서(가이던스, 질의응답)에서 찾을 때 쓰는 글. 법령의 것보다 크므로 따로 두고, 규정 원문 화면에서 찾을 때만 읽는다.
+let guides = null;
+export function guideCorpus() {
+  if (!guides) guides = Promise.all([data.guideRows(), corpus()]).then(([rows, base]) => ({ ...base, rows }));
+  return guides;
+}
+
 // 조각의 이름: "제22조 CBAM 인증서의 제출". 국문 이름이 아직 없으면 영문 이름을 쓴다.
 export function partName(row) {
   const title = row.k || row.t || "";
