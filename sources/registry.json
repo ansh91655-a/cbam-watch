@@ -263,7 +263,8 @@
    "filter": false,
    "minLine": 12,
    "collector": "github",
-   "note": "월간 CBAM 동향 등 게시물"
+   "note": "월간 CBAM 동향 등 게시물",
+   "ops": "저작권정책 화면은 공공누리 표시가 붙은 저작물만 자유이용할 수 있고 표시가 없는 자료는 담당자와 협의하라고 적는다. 헬프데스크 게시글의 화면에는 공공누리 표시가 없다(2026-11-12 '본문 받기 시험'으로 확인). 그래서 본문은 받지 않고 제목과 링크만 다룬다"
   },
   {
    "no": 14,
@@ -291,19 +292,18 @@
   {
    "no": 15,
    "code": "mcee",
-   "name": "기후에너지환경부 보도·설명",
+   "name": "기후에너지환경부 보도자료",
    "group": "국내",
-   "url": "https://mcee.go.kr/home/web/index.do?menuId=286",
+   "url": "https://www.mcee.go.kr/home/web/board/list.do?menuId=10598&boardMasterId=939",
    "tier": "B",
    "watch": [
-    "links",
-    "lines"
+    "links"
    ],
    "filter": true,
    "minLine": 12,
-   "collector": "off",
-   "note": "CBAM 관련 보도자료와 설명자료",
-   "ops": "환경부에서 이름이 바뀐 부처. me.go.kr은 접속 실패, mcee.go.kr의 보도자료 게시판 주소를 확인해야 함"
+   "collector": "github",
+   "note": "CBAM 관련 보도자료",
+   "ops": "환경부에서 이름이 바뀐 부처. 2026-11-12에 보도자료 게시판의 주소를 확인해 수집을 켰다(앞서 적어 둔 index.do?menuId=286은 mcee.go.kr에서 404이고, me.go.kr은 자동 실행 환경에서 robots.txt를 읽지 못해 받지 않는다). 저작권정책 화면(index.do?menuId=345)은 공공누리 제1유형 표시가 붙은 저작물만 자유이용할 수 있다고 적는데, 보도자료 글의 화면에는 그 표시가 없다(2026-11-12 '본문 받기 시험'으로 확인). 그래서 본문은 받지 않고 제목과 링크만 다룬다. 산업통상부와 함께 내는 보도자료는 산업통상부 게시판에서 본문을 받는다"
   },
   {
    "no": 16,
@@ -377,7 +377,7 @@
     }
    },
    "note": "해외규제 모니터링 게시물",
-   "ops": "글마다 '공공누리' 칸에 유형을 적는다(1~4유형이 섞여 있다). 그 칸이 1유형인 글만 본문을 받아 둔다. 화면에는 모든 유형의 안내문이 함께 실려 있어 글귀로는 가릴 수 없다(2026-11-12 확인)"
+   "ops": "글마다 '공공누리' 칸에 유형을 적는다(1~4유형이 섞여 있다). 그 칸이 1유형인 글만 본문을 받아 둔다. 화면에는 모든 유형의 안내문이 함께 실려 있어 글귀로는 가릴 수 없다(2026-11-12 확인). 같은 날 이 게시판(177)의 글 2건은 모두 4유형(출처표시+상업적 이용금지+변경금지)이어서 받지 않았다(2026-11-12 '본문 받기 시험'으로 확인). 1유형으로 올라온 글이 있을 때만 본문이 저장된다"
   },
   {
    "no": 20,
@@ -410,7 +410,8 @@
    "filter": true,
    "minLine": 12,
    "collector": "github",
-   "note": "ESG 통합플랫폼 공지사항"
+   "note": "ESG 통합플랫폼 공지사항",
+   "ops": "중진공 저작권정책 화면은 영리를 목적으로 하지 않는 교육·학술 등 공익 목적에 한해 출처를 밝히고 쓸 수 있다고 적는다(2026-11-12 '본문 받기 시험'으로 확인). 글마다의 주소도 없다(목록 화면 주소 하나뿐이다). 본문은 받지 않는다"
   },
   {
    "no": 22,
@@ -457,7 +458,8 @@
    "filter": false,
    "minLine": 40,
    "collector": "github",
-   "note": "아일랜드 환경청의 CBAM 안내"
+   "note": "아일랜드 환경청의 CBAM 안내",
+   "ops": "화면에는 'Copyright © EPA'만 있고 재이용을 허락하는 글이 없다. 이용 약관(Terms of use)은 사이트와 그 안의 자료에 대한 권리가 EPA에 남는다고 적는다(2026-11-12 '본문 받기 시험'으로 확인). 본문은 받지 않는다"
   },
   {
    "no": 25,
@@ -472,7 +474,8 @@
    "filter": false,
    "minLine": 30,
    "collector": "github",
-   "note": "독일 배출권거래청의 CBAM 안내(독일어)"
+   "note": "독일 배출권거래청의 CBAM 안내(독일어)",
+   "ops": "화면에는 '© Deutsche Emissionshandelsstelle'만 있고 재이용을 허락하는 글이 없다(2026-11-12 '본문 받기 시험'으로 확인). 저작권 안내(Impressum)는 robots.txt가 자동 읽기를 막아 자동 실행으로는 읽지 못한다. 2026-11-12의 웹 검색에서 본 Impressum에는 자체 글에 CC BY-NC-ND 4.0(비영리, 변경 금지)을 적용한다고 적혀 있었다. 본문은 받지 않는다"
   },
   {
    "no": 26,
@@ -491,10 +494,15 @@
     "license": [
      "Creative Commons zero"
     ],
-    "termsUrl": "https://www.emissieautoriteit.nl/copyright"
+    "termsUrl": "https://www.emissieautoriteit.nl/service/copyright",
+    "stop": [
+     "Meer over dit onderwerp",
+     "Andere talen",
+     "Deel deze pagina"
+    ]
    },
    "note": "네덜란드 배출권청의 CBAM 안내(네덜란드어)",
-   "ops": "저작권 안내 화면(/copyright)이 따로 밝히지 않은 내용에는 Creative Commons zero(CC0)가 적용된다고 밝힌다(2026-11-12 확인). 그 화면에 그 글귀가 있을 때 새 글의 본문을 받아 둔다"
+   "ops": "저작권 안내 화면(/service/copyright)이 따로 밝히지 않은 내용에는 Creative Commons zero(CC0)가 적용되고 출처 표시도 의무가 아니라고 밝힌다(2026-11-12 '본문 받기 시험'으로 확인). 그 화면에 그 글귀가 있을 때 새 글의 본문을 받아 둔다. 사진에는 권리자가 따로 적혀 있다(Beeld: ©). 그림은 받지 않는다"
   },
   {
    "no": 27,
@@ -529,10 +537,14 @@
    "articles": {
     "license": [
      "Open Government Licence v3.0"
+    ],
+    "stop": [
+     "Sign up for emails or print this page",
+     "Is this page useful?"
     ]
    },
    "note": "영국 CBAM 자료 모음",
-   "ops": "GOV.UK의 화면은 따로 밝힌 것 말고는 Open Government Licence v3.0으로 쓸 수 있다고 화면 아래에 적는다. 받은 화면에 그 글귀가 있을 때 새 글의 본문을 받아 둔다"
+   "ops": "GOV.UK의 화면은 따로 밝힌 것 말고는 Open Government Licence v3.0으로 쓸 수 있다고 화면 아래에 적는다(2026-11-12 '본문 받기 시험'으로 확인). 받은 화면에 그 글귀가 있을 때 새 글의 본문을 받아 둔다. 본문은 갱신 기록(Updates to this page)까지 싣는다"
   },
   {
    "no": 29,
@@ -741,7 +753,7 @@
    "minLine": 30,
    "collector": "github",
    "note": "제목에 CBAM이 든 영국 법령의 목록",
-   "ops": "새 법령이 생기면 새 링크로 잡힘. 제정일·시행일은 tools/archive/ukleg.py가 법령마다 읽어 collected/archive/uk-legislation.json에 둠"
+   "ops": "새 법령이 생기면 새 링크로 잡힘. 제정일·시행일은 tools/archive/ukleg.py가 법령마다 읽어 collected/archive/uk-legislation.json에 둠. 화면 아래에 Open Government Licence v3.0으로 쓸 수 있다고 적혀 있다(2026-11-12 '본문 받기 시험'으로 확인). 법령의 글은 원문 보관(tools/archive/ukleg.py)이 맡으므로 본문 받기에는 넣지 않는다"
   },
   {
    "no": 41,
@@ -812,14 +824,8 @@
    "filter": true,
    "minLine": 12,
    "collector": "github",
-   "articles": {
-    "license": [
-     "공공누리 1유형",
-     "공공누리 제1유형"
-    ]
-   },
    "note": "통상·FTA 분류의 정책 자료 가운데 CBAM을 다룬 것(안내서, 매뉴얼)",
-   "ops": "COMPASS 자료실(자동 읽기를 막음)에 실리는 정부 안내서가 이 게시판에도 실린다(산업통상부 2026-03-30 보도자료). 주소의 searchCategory=3이 통상·FTA 분류다(2026-11-11 출처 접속 점검으로 확인: 그 분류의 글만 답함). 한 쪽에 10건이 보이고 이 분류에는 일곱 주에 10건쯤 올라온다. 새 글의 본문은 받은 화면에 공공누리 1유형 표시가 있을 때만 저장소가 받아 둔다(이 게시판의 글에 그 표시가 붙는지는 2026-11-12에 확인하지 못했다. 없으면 저장되지 않고 제목만으로 실린다)"
+   "ops": "COMPASS 자료실(자동 읽기를 막음)에 실리는 정부 안내서가 이 게시판에도 실린다(산업통상부 2026-03-30 보도자료). 주소의 searchCategory=3이 통상·FTA 분류다(2026-11-11 출처 접속 점검으로 확인: 그 분류의 글만 답함). 한 쪽에 10건이 보이고 이 분류에는 일곱 주에 10건쯤 올라온다. 이 게시판은 목록 화면에도 글의 화면에도 공공누리 표시가 없다(2026-11-12 '본문 받기 시험'으로 확인, 글 2건). 산업통상부 저작권정책 화면은 공공누리 표시가 붙은 저작물만 자유이용할 수 있고 표시가 없는 자료는 담당자와 협의하라고 적는다. 그래서 본문은 받지 않고 제목과 링크만 다룬다"
   }
  ]
 }

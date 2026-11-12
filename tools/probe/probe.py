@@ -23,12 +23,8 @@ TARGETS = [
     ("eurlex-html", "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02023R0956-20251020", {}),
     ("hys-api", "https://ec.europa.eu/info/law/better-regulation/brpapi/searchInitiatives?text=CBAM&language=EN&page=0&size=10", {"Accept": "application/json"}),
     ("expert-group-api", "https://ec.europa.eu/transparency/expert-groups-register/core/api/front/expertGroups/3927", {"Accept": "application/json"}),
-    ("me-www", "https://www.me.go.kr/home/web/index.do?menuId=286", {}),
-    ("mcee", "https://www.mcee.go.kr/", {}),
-    ("mcee-bare", "https://mcee.go.kr/", {}),
     ("pages-site", "https://ansh91655-a.github.io/cbam-watch/", {}),
     ("pages-data", "https://ansh91655-a.github.io/cbam-watch/data/site.json", {}),
-    ("mcee-board", "https://mcee.go.kr/home/web/index.do?menuId=286", {}),
     ("expert-group-meetings", "https://ec.europa.eu/transparency/expert-groups-register/core/api/front/expertGroups/3927/meetings", {"Accept": "application/json"}),
 ]
 # 걸러 보기 양식(분류, 한 쪽에 보이는 건수)을 읽어 둘 목록 화면. 게시판을 출처로 더할 때 주소를 정하는 데 쓴다.
