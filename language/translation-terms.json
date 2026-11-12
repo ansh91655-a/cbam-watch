@@ -4230,6 +4230,30 @@
    "ko": "배출량 데이터 전달",
    "from": "guide-importers",
    "added": "2026-11-13"
+  },
+  {
+   "en": "emissions communication spreadsheet",
+   "ko": "배출량 커뮤니케이션 스프레드시트",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Transitional Registry",
+   "ko": "전환 등록부",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Type of determination",
+   "ko": "결정 유형",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Harmonized System sub-heading code",
+   "ko": "HS 소호 코드",
+   "from": "guide-importers",
+   "added": "2026-11-13"
   }
  ]
 }
