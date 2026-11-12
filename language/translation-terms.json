@@ -4104,6 +4104,60 @@
    "ko": "전극 페이스트",
    "from": "guide-importers",
    "added": "2026-11-13"
+  },
+  {
+   "en": "primary smelting",
+   "ko": "1차 제련",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "secondary melting",
+   "ko": "2차 용해",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "electrolytic smelting",
+   "ko": "전해 제련",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "unformed aluminium",
+   "ko": "비성형 알루미늄",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "alloying elements",
+   "ko": "합금 원소",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "induction furnaces",
+   "ko": "유도로",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "crude alloy steel",
+   "ko": "합금 조강",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "basic steel products",
+   "ko": "기초 철강 제품",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "casting plant",
+   "ko": "주조 공장",
+   "from": "guide-importers",
+   "added": "2026-11-13"
   }
  ]
 }
