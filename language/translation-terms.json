@@ -1854,6 +1854,42 @@
    "ko": "혼합 시멘트",
    "from": "guide-5a",
    "added": "2026-11-12"
+  },
+  {
+   "en": "bypass dust",
+   "ko": "바이패스 먼지",
+   "from": "guide-5a",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "clinker factor",
+   "ko": "클링커 계수",
+   "from": "guide-5a",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "aluminous clinker",
+   "ko": "알루미나 클링커",
+   "from": "guide-5a",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "composite cement",
+   "ko": "복합 시멘트",
+   "from": "guide-5a",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "mineral additives",
+   "ko": "광물 첨가제",
+   "from": "guide-5a",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "cement deliveries",
+   "ko": "시멘트 출하량",
+   "from": "guide-5a",
+   "added": "2026-11-12"
   }
  ]
 }
