@@ -1626,6 +1626,48 @@
    "ko": "총 고유 내재배출량",
    "from": "guide-3",
    "added": "2026-11-12"
+  },
+  {
+   "en": "bioliquids",
+   "ko": "바이오액체",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "biomass fuels",
+   "ko": "바이오매스 연료",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "biofuels",
+   "ko": "바이오연료",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "municipal waste",
+   "ko": "생활 폐기물",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "decision tree",
+   "ko": "의사결정 나무",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "GHG savings",
+   "ko": "온실가스 감축",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "sustainability criteria",
+   "ko": "지속가능성 기준",
+   "from": "guide-3",
+   "added": "2026-11-12"
   }
  ]
 }
