@@ -4062,6 +4062,48 @@
    "ko": "합금철",
    "from": "guide-importers",
    "added": "2026-11-13"
+  },
+  {
+   "en": "secondary metallurgical processes",
+   "ko": "2차 정련 공정",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "desulphurisation",
+   "ko": "탈황",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "hot-rolling",
+   "ko": "열간압연",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "ironmaking residues",
+   "ko": "제철 잔재물",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "sheet piling",
+   "ko": "널말뚝",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "hollow profiles",
+   "ko": "중공 프로파일",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "electrode pastes",
+   "ko": "전극 페이스트",
+   "from": "guide-importers",
+   "added": "2026-11-13"
   }
  ]
 }
