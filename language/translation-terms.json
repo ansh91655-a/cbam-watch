@@ -3702,6 +3702,36 @@
    "ko": "정의로운 에너지 전환 파트너십",
    "from": "report-carbon-price",
    "added": "2026-11-13"
+  },
+  {
+   "en": "effective price paid",
+   "ko": "실제 지불 가격",
+   "from": "report-carbon-price",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "third-party certifiers",
+   "ko": "제3자 인증자",
+   "from": "report-carbon-price",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "proof of payment",
+   "ko": "지불 증명",
+   "from": "report-carbon-price",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "double charging",
+   "ko": "이중 부과",
+   "from": "report-carbon-price",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "permanence",
+   "ko": "영속성",
+   "from": "report-carbon-price",
+   "added": "2026-11-13"
   }
  ]
 }
