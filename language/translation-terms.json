@@ -900,6 +900,30 @@
    "ko": "LD 전로",
    "from": "guide-5d",
    "added": "2026-11-12"
+  },
+  {
+   "en": "grid emission factor",
+   "ko": "전력망 배출계수",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "self-generated electricity",
+   "ko": "자가 생산 전력",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "electricity mix",
+   "ko": "전력 구성",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "lime calcined",
+   "ko": "소성 석회",
+   "from": "guide-5d",
+   "added": "2026-11-12"
   }
  ]
 }
