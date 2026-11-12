@@ -38,6 +38,10 @@
   "senses": {
     "installation": [
       "설치"
+    ],
+    "penalty": [
+      "행정벌",
+      "형사벌"
     ]
   }
 }

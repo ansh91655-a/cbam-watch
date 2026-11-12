@@ -44,12 +44,16 @@ _patterns = {}
 def _pattern(form):
     """영문 표기 하나를 찾는 식. 낱말이 수백 개라 문단마다 새로 만들면 느리다(만든 것을 두고 쓴다)."""
     if form not in _patterns:
-        _patterns[form] = re.compile(r"(?<![a-z])" + re.escape(form) + r"(?:s|es)?(?![a-z])")
+        if re.search(r"[^aeiou]y$", form):
+            body = re.escape(form[:-1]) + r"(?:y|ies)"  # category → categories, authority → authorities
+        else:
+            body = re.escape(form) + r"(?:s|es)?"
+        _patterns[form] = re.compile(r"(?<![a-z])" + body + r"(?![a-z])")
     return _patterns[form]
 
 
 def found(source, path=GLOSSARY):
-    """원문 문단에 나온 용어집의 낱말들(긴 것부터). 복수형(-s, -es)도 같은 낱말로 본다."""
+    """원문 문단에 나온 용어집의 낱말들(긴 것부터). 복수형(-s, -es, -y가 바뀐 -ies)도 같은 낱말로 본다."""
     text = str(source).lower()
     hits = []
     for entry in entries(path):

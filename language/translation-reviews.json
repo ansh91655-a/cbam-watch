@@ -12,6 +12,30 @@
    "key": "0784fdb60c29",
    "act": "guide-1",
    "why": "주소만 있는 각주인데 원문에 없는 괄호 설명을 보탬"
+  },
+  {
+   "day": "2026-11-12",
+   "key": "16c3b2a2ed67",
+   "act": "guide-1",
+   "why": "penalties를 '벌칙'으로 옮김. 용어집의 표기는 과징금이다"
+  },
+  {
+   "day": "2026-11-12",
+   "key": "7ffb4b4bdf39",
+   "act": "guide-1",
+   "why": "non-EU countries를 'EU 밖 국가'로 옮김. 용어집의 표기는 비EU 국가다"
+  },
+  {
+   "day": "2026-11-12",
+   "key": "addeac8dfc7d",
+   "act": "guide-1",
+   "why": "non-EU countries를 'EU 밖 국가'로 옮김. 용어집의 표기는 비EU 국가다"
+  },
+  {
+   "day": "2026-11-12",
+   "key": "c93291cc4234",
+   "act": "qa",
+   "why": "aggregated goods categories를 '집계된 제품 범주'로 옮김. 용어집의 표기는 품목군이다"
   }
  ]
 }
