@@ -2982,6 +2982,24 @@
    "ko": "범죄경력 기록",
    "from": "32025R0486",
    "added": "2026-11-13"
+  },
+  {
+   "en": "working days",
+   "ko": "근무일",
+   "from": "32025R0486",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "revocation date",
+   "ko": "취소일",
+   "from": "32025R0486",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "revocation procedure",
+   "ko": "취소 절차",
+   "from": "32025R0486",
+   "added": "2026-11-13"
   }
  ]
 }
