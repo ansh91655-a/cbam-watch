@@ -1,0 +1,30 @@
+{
+ "kind": "daily",
+ "date": "2026-11-12",
+ "writtenAt": "2026-11-12T10:06:16+09:00",
+ "status": "문제",
+ "problems": [
+  "예약 실행이 웹 읽기 승인을 받지 못해 출처 4곳을 열지 못함(council-cbam, ep-train, oecd-blog, op-europa). 예약 작업의 자동 승인 설정을 확인해야 함",
+  "robots.txt가 자동 읽기를 막아 받지 않은 주소 1건(dream.kotra.or.kr). 출처 대장에서 빼거나 받는 방법을 바꿔야 함"
+ ],
+ "runProblems": 2,
+ "holds": [
+  {
+   "id": "20261112-carbon-pulse-481b67",
+   "gate": "확인 불가"
+  },
+  {
+   "id": "20261112-carbon-pulse-d54869",
+   "gate": "확인 불가"
+  },
+  {
+   "id": "20261112-carbon-pulse-dfbcab",
+   "gate": "확인 불가"
+  }
+ ],
+ "counts": {
+  "published": 0,
+  "total": 229,
+  "retryHolds": 0
+ }
+}
