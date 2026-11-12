@@ -3750,6 +3750,36 @@
    "ko": "과소 공제",
    "from": "report-carbon-price",
    "added": "2026-11-13"
+  },
+  {
+   "en": "Co-ordinated responses",
+   "ko": "조직적 응답",
+   "from": "report-carbon-price",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Carbon Price Support",
+   "ko": "탄소가격지원제도",
+   "from": "report-carbon-price",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "International Accreditation Forum",
+   "ko": "국제인정포럼",
+   "from": "report-carbon-price",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Transmission System Operators",
+   "ko": "계통 운영 사업자",
+   "from": "report-carbon-price",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Synthesis report",
+   "ko": "종합 보고서",
+   "from": "report-carbon-price",
+   "added": "2026-11-13"
   }
  ]
 }
