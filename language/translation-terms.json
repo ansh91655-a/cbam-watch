@@ -3672,6 +3672,36 @@
    "ko": "데이터 이동권",
    "from": "reg-privacy",
    "added": "2026-11-13"
+  },
+  {
+   "en": "Calls for Evidence",
+   "ko": "증거 요청",
+   "from": "report-carbon-price",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Synopsis report",
+   "ko": "종합 보고서",
+   "from": "report-carbon-price",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "additionality",
+   "ko": "추가성",
+   "from": "report-carbon-price",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "double counting",
+   "ko": "이중 계산",
+   "from": "report-carbon-price",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Just Energy Transition Partnerships",
+   "ko": "정의로운 에너지 전환 파트너십",
+   "from": "report-carbon-price",
+   "added": "2026-11-13"
   }
  ]
 }
