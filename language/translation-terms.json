@@ -4200,6 +4200,36 @@
    "ko": "표준값",
    "from": "guide-importers",
    "added": "2026-11-13"
+  },
+  {
+   "en": "Results-Based Climate Finance",
+   "ko": "성과 기반 기후재원",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "heat balance",
+   "ko": "열 수지",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "emissions sequence number",
+   "ko": "배출량 일련번호",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "tax, levy or fee",
+   "ko": "세금, 부과금 또는 수수료",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "emissions data communication",
+   "ko": "배출량 데이터 전달",
+   "from": "guide-importers",
+   "added": "2026-11-13"
   }
  ]
 }
