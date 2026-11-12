@@ -1,4 +1,41 @@
 {
  "note": "번역 실행들이 정한 낱말. 용어집(glossary.json)에 없는 전문용어를 같은 낱말로 옮기려고 적어 둔다. 확인된 표기가 아니다.",
- "terms": []
+ "terms": [
+  {
+   "en": "Chlor-alkali electrolysis",
+   "ko": "염소-알칼리 전기분해",
+   "from": "guide-5b",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "steam cracking",
+   "ko": "스팀 크래킹",
+   "from": "guide-5b",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "sodium chlorate",
+   "ko": "염소산나트륨",
+   "from": "guide-5b",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "pure hydrogen",
+   "ko": "순수소",
+   "from": "guide-5b",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "production unit",
+   "ko": "생산 단위",
+   "from": "guide-5b",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "averaging rules",
+   "ko": "평균 규칙",
+   "from": "guide-5b",
+   "added": "2026-11-12"
+  }
+ ]
 }
