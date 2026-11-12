@@ -57,6 +57,8 @@ body[data-wide] main, body[data-wide] .band-inner, body[data-wide] .head-inner {
 .law-card h3 a { color: var(--ink); text-decoration: none; }
 .law-card h3 a:hover { color: var(--brand-bright); }
 .law-official { font-size: var(--fs-s); color: var(--ink-3); }
+.law-remark { font-size: var(--fs-s); color: var(--ink-2); font-weight: 600; }
+.law-card .law-remark { font-weight: 400; }
 .law-progress { height: 6px; border-radius: 999px; background: var(--surface-2); overflow: hidden; }
 .law-progress span { display: block; height: 100%; border-radius: inherit; background: var(--brand-bright); }
 .law-card-links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-top: 6px; font-size: var(--fs-s); }

@@ -5,3 +5,4 @@ __pycache__/
 _site/
 _console/
 node_modules/
+.work/

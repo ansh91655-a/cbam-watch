@@ -2499,7 +2499,8 @@
 "category": "05 내재배출량 산정",
 "core": true,
 "en": [
-"co-product"
+"co-product",
+"coproduct"
 ],
 "abbr": [],
 "preferred": "공동생산물",

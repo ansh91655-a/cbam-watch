@@ -1,6 +1,7 @@
 """싣는 문서(법령과 안내 문서)의 목록과 조각, 번역을 한데 묶어 읽는다. 사이트에 싣는 자료(build), 번역할 것 고르기(todo), 진행 상황(status)이 함께 쓴다.
 
-문서의 갈래(group)는 둘이다: act(EU 법령, 조와 부속서로 나눈다)와 guide(EU 집행위원회 안내 문서, PDF의 글을 절로 나눈다).
+문서의 갈래(group)는 넷이다. act는 EU 법령(조와 부속서로 나눈다)이고, 나머지 셋은 EU 집행위원회가 낸 문서(PDF의 글을 절로 나눈다)다:
+guide(가이던스와 질의응답), manual(CBAM 등록부 이용 안내서), paper(보고서와 그 밖의 안내 자료). 어느 문서가 어느 갈래인지는 sources/guides.json이 정한다.
 """
 import functools
 import pathlib
@@ -10,16 +11,16 @@ from tools.laws import catalog, check, guide_segment, guides, segment, store
 GUIDE_KINDS = ("cover", "section", "appendix")
 
 
-@functools.lru_cache(maxsize=64)
-def _parts(path, form, stamp):
+@functools.lru_cache(maxsize=128)
+def _parts(path, form, outline, stamp):
     text = pathlib.Path(path).read_text(encoding="utf-8")
-    return guide_segment.parts(text) if form == "pdf" else segment.parts(text)
+    return guide_segment.parts(text, outline) if form == "pdf" else segment.parts(text)
 
 
 def read(act):
     """문서 하나의 조각들. 받아 둔 글이 없으면 빈 목록. 같은 파일은 한 번만 나눈다(파일이 바뀌면 다시 나눈다)."""
     path = pathlib.Path(act["path"])
-    return _parts(str(path), act.get("format", "act"), path.stat().st_mtime_ns) if path.is_file() else []
+    return _parts(str(path), act.get("format", "act"), act.get("outline", "auto"), path.stat().st_mtime_ns) if path.is_file() else []
 
 
 def label_ko(part):

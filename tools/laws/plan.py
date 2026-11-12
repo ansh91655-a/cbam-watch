@@ -8,6 +8,7 @@ from tools.common.jsonio import read_json
 SOURCE = "sources/translation.json"
 DEFAULT = "daily"
 FALLBACK = {"groups": ["act"], "first": [], "limit": 20000, "rounds": 1}
+CHECKER = {"limit": 30000, "rounds": 4, "canaries": 0.05, "catch": 0.6, "harsh": 0.3}  # 검수의 기본 설정(파일에 verify가 없을 때)
 
 
 def runners():
@@ -22,6 +23,21 @@ def runner(name=DEFAULT):
             return dict(FALLBACK)
         raise KeyError(f"번역 실행 이름을 모름: {name}")
     return {**FALLBACK, **found[name]}
+
+
+def checker():
+    """검수(tools.laws.verify)의 설정: {"limit": 한 묶음의 원문 글자 수, "rounds": 한 번의 실행에서 하는 묶음 수, "canaries": 일부러 틀리게 바꿔 섞는 비율,
+    "catch": 그 가운데 잡아내야 하는 비율, "harsh": 틀렸다고 한 비율이 이보다 높으면 반영하지 않는 값}"""
+    return {**CHECKER, **((read_json(SOURCE, {}) or {}).get("verify") or {})}
+
+
+def everyone():
+    """번역을 하는 모든 실행이 맡은 문서를 한 차례로 늘어놓는 설정(검수가 문서를 훑는 차례로 쓴다): first와 groups를 실행의 차례대로 이은 것."""
+    first, groups = [], []
+    for settings in runners().values():
+        first += [act_id for act_id in settings.get("first", []) if act_id not in first]
+        groups += [group for group in settings.get("groups", []) if group not in groups]
+    return {"first": first, "groups": groups or list(FALLBACK["groups"])}
 
 
 def ordered(documents, settings):

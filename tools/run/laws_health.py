@@ -4,26 +4,32 @@
 - 안내 문서의 절 나누기가 그 문서의 차례와 크게 어긋나면 알린다(새 판의 꼴이 달라진 것이다).
 - 번역이 남아 있는데 여러 날 늘지 않으면 알린다. 번역을 맡은 실행(sources/translation.json)이 돌지 않는 것이다.
   한 번도 옮기지 않은 갈래는 알리지 않는다(아직 시작하지 않은 것).
+- 검수(tools.laws.verify)가 여러 날 늘지 않거나, 일부러 바꿔 섞은 번역을 놓치거나, 묶음을 반영하지 못했거나, 번역과 검수가 맞선 문단이 생기면 알린다.
 """
 import datetime
 import pathlib
 
 from tools.common.jsonio import read_json, today as today_kst
-from tools.laws import corpus, guide_segment, guides, pdf_pages, plan, store
+from tools.laws import corpus, guide_segment, guides, pdf_pages, plan, store, verify
 
 STALLED = 5      # 번역이 이만큼의 날 동안 늘지 않으면 알린다(주말과 하루 이틀의 쉼은 넘긴다)
 COVERAGE = 0.8   # 차례에 적힌 절 번호 가운데 찾아낸 비율이 이보다 낮으면 알린다
-NAMES = {"act": "규정", "guide": "가이던스"}
+NAMES = {"act": "규정", "guide": "가이던스", "manual": "등록부 안내서", "paper": "보고서·안내 자료"}
+UNCHECKED = 3    # 검수할 문단이 남아 있는데 이만큼의 날 동안 검수 기록이 없으면 알린다
+CAUGHT = 0.6     # 일부러 바꾼 번역을 잡아낸 비율(최근 기록)이 이보다 낮으면 알린다
+CANARIES_MIN = 10  # 바꾼 번역이 이만큼은 쌓여야 비율을 본다
 
 
 def _outline_problems():
-    found = [f"가이던스 문서를 원문 대장에서 찾지 못함: {name}" for name in guides.missing()]
+    found = [f"안내 문서를 원문 대장에서 찾지 못함: {name}" for name in guides.missing()]
     for document in guides.documents():
+        if document.get("outline") == "none":
+            continue  # 제목을 찾지 않는 문서
         text = pathlib.Path(document["path"]).read_text(encoding="utf-8")
         listed = {number for number in pdf_pages.read(text)["toc"]["numbers"] if "." in number}
-        cut = {part["label"] for part in guide_segment.parts(text) if part["kind"] == "section"}
+        cut = {part["label"] for part in corpus.read(document) if part["kind"] == "section"}
         if listed and len(listed & cut) < COVERAGE * len(listed):
-            found.append(f"가이던스 문서의 절 나누기가 차례와 맞지 않음: {document['short']}(차례의 {len(listed)}개 가운데 {len(listed & cut)}개)")
+            found.append(f"안내 문서의 절 나누기가 차례와 맞지 않음: {document['short']}(차례의 {len(listed)}개 가운데 {len(listed & cut)}개)")
     return found
 
 
@@ -45,5 +51,29 @@ def _stalled_problems(day):
     return found
 
 
+def _check_problems(day):
+    """검수(tools.laws.verify)가 도는지, 제대로 읽는지."""
+    log = read_json(verify.LOG, {}) or {}
+    days = sorted(log.get("days", []), key=lambda row: row.get("day", ""))
+    found = []
+    state = verify.progress()
+    waiting = state["translated"] - state["checked"]
+    last = next((row["day"] for row in reversed(days) if row.get("checked") or row.get("dropped")), "")
+    if waiting and days and (not last or (datetime.date.fromisoformat(day) - datetime.date.fromisoformat(last)).days > UNCHECKED):
+        found.append(f"번역 검수가 {last or '처음'} 뒤로 늘지 않음(검수할 문단 {waiting:,}개)")
+    recent = days[-7:]
+    seeded, caught = sum(row.get("canaries", 0) for row in recent), sum(row.get("caught", 0) for row in recent)
+    if seeded >= CANARIES_MIN and caught < CAUGHT * seeded:
+        found.append(f"번역 검수가 일부러 바꾼 번역을 놓침(최근 {seeded}개 가운데 {caught}개만 잡음)")
+    held = sum(row.get("held", 0) for row in recent if row.get("day") == day)
+    if held:
+        found.append(f"번역 검수의 묶음 {held}개를 반영하지 않음(틀렸다고 한 비율이 지나치게 높음)")
+    fresh = [row for row in log.get("disputed", []) if row.get("day") == day]
+    if fresh:
+        found.append(f"번역과 검수가 맞선 문단 {len(fresh)}개(두 번 다시 옮기고도 틀렸다고 함): " + ", ".join(row["key"] for row in fresh[:5]))
+    return found
+
+
 def problems(today=None):
-    return _outline_problems() + _stalled_problems(today or today_kst())
+    day = today or today_kst()
+    return _outline_problems() + _stalled_problems(day) + _check_problems(day)

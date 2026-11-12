@@ -1,6 +1,7 @@
 """PDF에서 뽑아 둔 글(쪽마다 \\f로 나뉜 것)을 쪽으로 읽고, 본문이 아닌 것을 가려낸다. 받기와 쓰기는 하지 않는다.
 
 - 되풀이되는 머리말과 꼬리말: 여러 쪽의 첫 줄이나 마지막 줄에 똑같이 나오는 줄(수만 다른 것 포함)은 뺀다.
+  그 줄이 쪽의 가운데에 끼어 있는 것(꼬리말 아래에 각주가 온 쪽)도 함께 뺀다.
 - 쪽 번호: 쪽의 마지막 줄에 수만 적힌 것. (적힌 수 - 쪽의 차례)가 문서에서 가장 흔한 값일 때만 쪽 번호로 본다.
 - 차례 쪽: "CONTENTS", "Outline" 같은 줄에서 시작해 본문의 첫 제목이 나오는 쪽 앞까지. 본문에서 빼고, 제목을 가려내는 데만 쓴다.
 - 각주: 쪽 아래에 번호만 적힌 줄과 그 아래의 글. 번호는 문서 전체에서 이어진다. 본문에 그 번호가 붙어 있는 자리(hydrogen3)를
@@ -17,13 +18,21 @@ DOTTED = re.compile(r"^(\d+(?:\.\d+)*)\.?(?=\s|$)")
 FIRST_HEADING = re.compile(r"^1\.?(?:\s+\S.*)?$")
 INLINE_NOTE = re.compile(r"^(\d{1,3})\s+(\S.*)$")
 ADDRESS = re.compile(r"^Commission européenne/Europese Commissie\b")  # 표지 아래에 적힌 집행위원회의 주소와 대표 전화
+ARROWS = (">", "›", "»")  # 도안으로 된 문서에서 제목 앞에 놓인 화살표가 따로 뽑힌 줄
 TOC_STOP = re.compile(r"^(?:ANNEX|Annex|APPENDIX|Appendix)\b")
 TOC_TAIL = re.compile(r"[\s.]*\d{1,4}\s*$")
+COLUMN_NUMBER = re.compile(r"^(\d+(?:\.\d+)*)\.?$")  # 차례의 번호 단에 적힌 줄("1.", "1.4")
+COLUMN_MIN = 5    # 번호만 있는 줄이 이만큼은 있어야 단이 나뉜 차례로 본다
+LISTS_AFTER = re.compile(r"^(?:List|Table) of (?:tables|figures)$", re.I)  # 차례 다음에 오는 표·그림 목록의 제목
 TOC_SEARCH = 12   # 차례는 문서의 앞쪽 몇 쪽 안에서만 찾는다
 TOC_TOP = 12      # 차례의 제목은 쪽의 위쪽 몇 줄 안에 있다
 TOC_SPAN = 20     # 차례가 이어질 수 있는 쪽 수
 NOTE_JUMP = 5     # 각주 번호가 이만큼까지 건너뛰어도 이어진 것으로 본다(앞쪽의 각주를 놓쳤을 때)
+INVERTED_LINES = 15  # 번호가 글 뒤에 적힌 각주 구역의 줄 수는 이보다 많지 않다
 REPEATED = 0.5    # 이 비율이 넘는 쪽에 똑같이 나오는 첫 줄·마지막 줄은 머리말·꼬리말이다
+REPEATED_MIN = 3  # 적어도 이만큼의 쪽에 나와야 한다(두 쪽짜리 문서에서 우연히 같은 줄을 빼지 않게)
+REPEATED_TURNS = 6    # 머리말·꼬리말이 여러 줄일 수 있어 이만큼 되풀이해 벗긴다
+BOILERPLATE_MIN = 12  # 쪽의 가운데에 낀 머리말·꼬리말은 이보다 긴 줄만 뺀다(짧은 줄은 본문의 줄과 가릴 수 없다)
 
 
 def squash(text):
@@ -41,26 +50,35 @@ def _trim(lines):
 
 
 def split(text):
-    """쪽마다의 줄 목록(앞뒤의 빈 줄은 뺀다). 표지 아래의 기관 주소 줄은 뺀다."""
-    pages = [_trim([line.rstrip() for line in page.split("\n") if not ADDRESS.match(line.strip())]) for page in str(text).split("\f")]
+    """쪽마다의 줄 목록(앞뒤의 빈 줄은 뺀다). 표지 아래의 기관 주소 줄과, 화살표만 있는 줄은 뺀다."""
+    pages = [_trim([line.rstrip() for line in page.split("\n") if not ADDRESS.match(line.strip()) and line.strip() not in ARROWS]) for page in str(text).split("\f")]
     while pages and not pages[-1]:
         pages.pop()
     return pages
 
 
+def _shape(line):
+    """줄의 꼴: 수는 #으로 바꿔 쪽마다 수만 다른 줄을 같은 것으로 본다."""
+    return re.sub(r"\d+", "#", line.strip())
+
+
 def strip_repeated(pages):
-    """여러 쪽의 첫 줄이나 마지막 줄에 되풀이되는 줄(머리말, 꼬리말)을 뺀다."""
-    for _ in range(3):  # 머리말이 두세 줄일 수 있다
+    """여러 쪽의 첫 줄이나 마지막 줄에 되풀이되는 줄(머리말, 꼬리말)을 뺀다. 같은 줄이 쪽의 가운데에 낀 것도 뺀다."""
+    needed = max(REPEATED_MIN, REPEATED * len(pages))
+    boilerplate = set()
+    for _ in range(REPEATED_TURNS):
         changed = False
         for position in (0, -1):
-            seen = collections.Counter(re.sub(r"\d+", "#", lines[position].strip()) for lines in pages if lines)
-            common = {line for line, count in seen.items() if count >= max(4, REPEATED * len(pages)) and re.search(r"[A-Za-z]{3}", line)}
+            seen = collections.Counter(_shape(lines[position]) for lines in pages if lines)
+            common = {line for line, count in seen.items() if count >= needed and re.search(r"[A-Za-z]{3}", line)}
             if common:
-                pages = [_trim(lines[1:] if position == 0 else lines[:-1]) if lines and re.sub(r"\d+", "#", lines[position].strip()) in common else lines
-                         for lines in pages]
+                pages = [_trim(lines[1:] if position == 0 else lines[:-1]) if lines and _shape(lines[position]) in common else lines for lines in pages]
+                boilerplate |= {line for line in common if len(line) >= BOILERPLATE_MIN}
                 changed = True
         if not changed:
             break
+    if boilerplate:
+        pages = [_trim([line for line in lines if _shape(line) not in boilerplate]) for lines in pages]
     return pages
 
 
@@ -128,14 +146,59 @@ def toc_titles(lines):
     return found
 
 
+def toc_columns(lines):
+    """번호의 단과 제목의 단을 따로 늘어놓은 차례에서 번호와 제목을 짝짓는다: {"1.4": "Structure"}.
+
+    번호만 있는 줄들과, 번호 없이 제목만 있는 줄들의 수가 같을 때만 차례대로 짝짓는다(수가 다르면 빈 것을 돌려준다).
+    제목은 점줄이나 쪽 번호로 끝나는 줄까지가 하나다(두 줄에 걸친 제목은 앞줄에 점줄이 없다).
+    번호와 제목이 한 줄에 있는 줄("3.3.1 Authenticate …")은 이미 짝지어져 있으므로 세지 않는다.
+    """
+    numbers, titles, words = [], [], []
+    for raw in lines:
+        line = raw.strip()
+        if not line:
+            continue
+        if LISTS_AFTER.match(line):
+            break  # 차례 다음에 오는 표와 그림의 목록은 세지 않는다
+        alone = COLUMN_NUMBER.match(line)
+        if alone:
+            numbers.append(alone.group(1))
+            continue
+        if DOTTED.match(line):
+            words = []
+            continue
+        words.append(line)
+        if LEADERS.search(line) or re.search(r"(?:\s|\.{2,})\d{1,4}$", line):
+            titles.append(TOC_TAIL.sub("", LEADERS.sub(" ", " ".join(words))).strip())
+            words = []
+    if len(numbers) < COLUMN_MIN or len(numbers) != len(titles) or len(set(numbers)) != len(numbers) or words:
+        return {}
+    return dict(zip(numbers, titles))
+
+
+def toc_lines(lines):
+    """차례의 줄마다 번호와 점줄, 쪽 번호를 떼어 낸 글. 번호와 제목을 따로 늘어놓은 차례(번호의 단과 제목의 단)에서 제목을 찾는 데 쓴다."""
+    found = []
+    for line in lines:
+        text = TOC_TAIL.sub("", LEADERS.sub(" ", DOTTED.sub("", line.strip(), count=1))).strip()
+        if len(text) >= 4 and re.search(r"[A-Za-z]{3}", text) and text not in found:
+            found.append(text)
+    return found
+
+
 def toc_of(pages, found):
-    """차례에서 읽은 것: {"numbers": 줄 머리의 번호들("2.3.1"), "titles": 번호마다의 제목, "text": 차례의 글을 squash한 것}"""
+    """차례에서 읽은 것: {"numbers": 줄 머리의 번호들("2.3.1"), "titles": 번호마다의 제목, "paired": 단이 나뉜 차례에서 제목을 차례대로 짝지은 번호들,
+    "lines": 줄마다의 제목 글, "text": 차례의 글을 squash한 것}"""
     if not found:
-        return {"numbers": set(), "titles": {}, "text": ""}
+        return {"numbers": set(), "titles": {}, "paired": set(), "lines": [], "text": ""}
     start_page, start_line, body = found
     lines = pages[start_page][start_line + 1:] + [""] + [line for page in pages[start_page + 1:body] for line in page + [""]]
     numbers = {hit.group(1) for hit in (DOTTED.match(line.strip()) for line in lines) if hit}
-    return {"numbers": numbers, "titles": toc_titles(lines), "text": squash(" ".join(LEADERS.sub(" ", line) for line in lines))}
+    titles, paired = toc_titles(lines), toc_columns(lines)
+    for number, title in paired.items():  # 단이 나뉜 차례에서는 번호 다음의 글이 제목이 아니다. 차례대로 짝지은 것을 쓴다
+        titles[number] = [title]
+    return {"numbers": numbers, "titles": titles, "paired": set(paired), "lines": toc_lines(lines),
+            "text": squash(" ".join(LEADERS.sub(" ", line) for line in lines))}
 
 
 def _reference(number):
@@ -190,6 +253,60 @@ def _read_notes(zone, first):
     return notes + [(number, " ".join(words))]
 
 
+def _loose_reference(number):
+    """글자나 닫는 괄호에 바로 붙고 띄어쓰기나 문장부호가 뒤따르는 수(UCC3)). 각주 구역을 따로 확인했을 때만 쓴다(CO2 같은 것과 가릴 수 없다)."""
+    return re.compile(rf"(?<=[A-Za-z)\]]){number}(?=[\s).,;:]|$)")
+
+
+def _act_reference(number):
+    """법령 번호 바로 뒤에 붙은 각주 번호(2015/24474 → 2015/2447 뒤의 4). 법령 번호의 뒷마디는 네 자리까지다."""
+    return re.compile(rf"\b((?:19|20)\d{{2}}/\d{{3,4}}){number}(?!\d)")
+
+
+def _mark(body, notes):
+    """본문에 붙은 각주 번호를 [3] 꼴로 바꾼다. 흔한 꼴로 찾지 못한 번호는 법령 번호 뒤에 붙은 것과, 쪽에 하나뿐인 느슨한 꼴을 찾는다."""
+    for number, _ in notes:
+        body = [_reference(number).sub(f"[{number}]", line) for line in body]
+        if any(f"[{number}]" in line for line in body):
+            continue
+        glued = [index for index, line in enumerate(body) if _act_reference(number).search(line)]
+        loose = [(index, hit) for index, line in enumerate(body) for hit in _loose_reference(number).finditer(line)]
+        if glued:
+            body[glued[0]] = _act_reference(number).sub(rf"\g<1>[{number}]", body[glued[0]], count=1)
+        elif len(loose) == 1:
+            index, hit = loose[0]
+            body[index] = body[index][:hit.start()] + f"[{number}]" + body[index][hit.end():]
+    return body
+
+
+def _inverted_notes(lines, first):
+    """각주 번호가 글 뒤에 적힌 꼴을 읽는다: (본문 줄, [(번호, 글)]). 그런 꼴이 아니면 None.
+
+    쪽 아래가 "글1 / 2 / 글2 / 1"처럼 뽑힌 문서가 있다: 쪽의 마지막 줄이 그 쪽 첫 각주의 번호이고, 그 앞에 '글, 다음 번호'가 되풀이된다.
+    각주 구역은 본문과 빈 줄로 나뉜다.
+    """
+    body = _trim(lines)
+    if len(body) < 3 or body[-1].strip() != str(first):
+        return None
+    start = max((index for index, line in enumerate(body[:-1]) if not line.strip()), default=None)
+    if start is None or len(body) - start - 2 > INVERTED_LINES:
+        return None
+    notes, number, words = [], first, []
+    for line in (line.strip() for line in body[start + 1:-1]):
+        if DOTTED.match(line) and "." in DOTTED.match(line).group(1):
+            return None  # 절의 제목이 든 구역은 각주가 아니다(본문과 각주 사이에 빈 줄이 없는 쪽)
+        if line == str(number + 1) and words:
+            notes.append((number, " ".join(words)))
+            number, words = number + 1, []
+        elif NUMBER.match(line):
+            return None
+        else:
+            words.append(line)
+    if not words:
+        return None
+    return _trim(body[:start]), notes + [(number, " ".join(words))]
+
+
 def take_notes(lines, expected):
     """쪽 아래의 각주를 떼어 낸다: (본문 줄, [(번호, 글)], 다음에 올 각주 번호). 각주가 없으면 줄을 그대로 돌려준다."""
     for first in range(expected, expected + NOTE_JUMP + 1):
@@ -199,9 +316,11 @@ def take_notes(lines, expected):
         notes = _read_notes(lines[start:], first)
         body = _trim(lines[:start])
         if notes and _mentioned(body, first):
-            for number, _ in notes:
-                body = [_reference(number).sub(f"[{number}]", line) for line in body]
-            return body, notes, notes[-1][0] + 1
+            return _mark(body, notes), notes, notes[-1][0] + 1
+    inverted = _inverted_notes(lines, expected)
+    if inverted and (_mentioned(inverted[0], expected) or any(_loose_reference(expected).search(line) for line in inverted[0])):
+        body, notes = inverted
+        return _mark(body, notes), notes, notes[-1][0] + 1
     return lines, [], expected
 
 

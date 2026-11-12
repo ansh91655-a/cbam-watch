@@ -2,8 +2,9 @@
 
 - laws/index.json: 문서(법령과 안내 문서)의 목록과 차례(조와 부속서, 절의 이름), 번역 진행 상황
 - laws/<문서 id>.json: 조각마다의 원문 문단과 국문 번역(아직 옮기지 않은 문단은 빈 글). 번역문의 전문용어에는 영문을 병기한다(tools.laws.gloss)
-- laws/search.json: 법령 검색에 쓰는 글(조각마다 원문과 번역을 이은 것). 안내 문서의 것은 laws/search-guides.json에 따로 둔다(화면이 필요할 때만 받게)
-원문은 저장소에 받아 둔 EU 법령의 글(collected/archive/pages/)과 집행위원회 안내 문서의 글(originals/text/)이고, 번역은 data/laws-ko/에 있다.
+- laws/search.json: 법령 검색에 쓰는 글(조각마다 원문과 번역을 이은 것). 안내 문서(가이던스, 등록부 안내서, 보고서)의 것은 laws/search-guides.json에 따로 둔다(화면이 필요할 때만 받게)
+원문은 저장소에 받아 둔 EU 법령의 글(collected/archive/pages/)과 집행위원회 문서의 글(originals/text/)이고, 번역은 data/laws-ko/에 있다.
+번역 자료의 검수 표시(checked)와 일부러 바꾼 번역(tools.laws.spoil)은 사이트에 싣지 않는다.
 """
 import json
 import pathlib
@@ -15,7 +16,7 @@ LISTED = ("recitals", "division", "article", "annex", "section", "appendix")  # 
 HEADS = ("front", "cover")                                                   # 문서의 머리(제목, 근거, 표지)
 NOTICE = "This text is meant purely as a documentation tool"  # 통합본이 스스로 적어 둔 알림의 첫머리
 DISCLAIMER = "Disclaimer:"                                    # 안내 문서가 표지에 적어 둔 일러두기의 첫머리
-SEARCH_FILES = {"act": "search.json", "guide": "search-guides.json"}
+SEARCH_FILES = {"search.json": ("act",), "search-guides.json": ("guide", "manual", "paper")}  # 검색에 쓰는 글의 파일과 거기에 싣는 갈래
 
 
 def _dump(path, value):
@@ -29,7 +30,7 @@ def body(act, found, memory):
     return {
         "id": act["id"], "group": act.get("group", "act"), "name": act["name"], "short": act.get("short", act["name"]),
         "official": act.get("official") or catalog.official(act["celex"], front), "url": act["url"],
-        "consolidated": act["consolidated"], "received": act.get("received", ""), "pages": act.get("pages", 0), "rule": act["rule"],
+        "consolidated": act["consolidated"], "received": act.get("received", ""), "pages": act.get("pages", 0), "rule": act["rule"], "remark": act.get("remark", ""),
         "notice": next((line for line in front if line.startswith((NOTICE, DISCLAIMER))), ""),
         "progress": corpus.progress(found, memory),
         "parts": [{"id": part["id"], "kind": part["kind"], "level": part.get("level", 0), "label": part["label"], "ko": corpus.label_ko(part), "title": part["title"],
@@ -41,7 +42,7 @@ def body(act, found, memory):
 def listing(act_body):
     """목록에 싣는 한 줄: 본문을 뺀 값과 차례."""
     parts = act_body["parts"]
-    return {**{name: act_body[name] for name in ("id", "group", "name", "short", "official", "url", "consolidated", "received", "pages", "rule", "progress")},
+    return {**{name: act_body[name] for name in ("id", "group", "name", "short", "official", "url", "consolidated", "received", "pages", "rule", "remark", "progress")},
             "articles": sum(part["kind"] == "article" for part in parts), "annexes": sum(part["kind"] in ("annex", "appendix") for part in parts),
             "sections": sum(part["kind"] == "section" for part in parts),
             "toc": [{"id": part["id"], "kind": part["kind"], "level": part["level"], "ko": part["ko"], "title": part["title"], "titleKo": part["titleKo"]}
@@ -69,6 +70,6 @@ def write(data_out):
     for act_body in bodies:
         _dump(folder / f"{act_body['id']}.json", act_body)
     _dump(folder / "index.json", {"acts": [listing(act_body) for act_body in bodies]})
-    for group, name in SEARCH_FILES.items():
-        _dump(folder / name, {"rows": [row for act, found in documents if act.get("group", "act") == group for row in search_rows(act["id"], found, memory)]})
+    for name, groups in SEARCH_FILES.items():
+        _dump(folder / name, {"rows": [row for act, found in documents if act.get("group", "act") in groups for row in search_rows(act["id"], found, memory)]})
     return len(bodies)

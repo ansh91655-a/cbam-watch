@@ -1,7 +1,8 @@
 {
-  "note": "번역을 하는 실행(runner)마다 무엇을 얼마나 옮기는지 정한다. 절차서는 실행의 이름만 부른다(python3 -m tools.laws.todo --runner <이름>). first는 먼저 옮기는 문서를 차례대로 적은 것, groups는 그다음에 옮기는 문서의 갈래(act: EU 법령, guide: 집행위원회 안내 문서)를 차례대로 적은 것, limit은 한 묶음의 원문 글자 수, rounds는 한 번의 실행에서 하는 묶음 수다. 갈래를 다른 실행으로 옮길 때는 이 파일만 고친다. 2026-11-12부터 번역은 모두 bulk(「번역」 실행, Opus 5.5)가 한다.",
+  "note": "번역을 하는 실행(runner)마다 무엇을 얼마나 옮기는지 정한다. 절차서는 실행의 이름만 부른다(python3 -m tools.laws.todo --runner <이름>). first는 먼저 옮기는 문서를 차례대로 적은 것, groups는 그다음에 옮기는 문서의 갈래를 차례대로 적은 것(act: EU 법령, guide: 가이던스와 질의응답, manual: 등록부 이용 안내서, paper: 보고서와 안내 자료), limit은 한 묶음의 원문 글자 수, rounds는 한 번의 실행에서 하는 묶음 수다. 갈래를 다른 실행으로 옮길 때는 이 파일만 고친다. 2026-11-12부터 번역은 모두 bulk(「번역」 실행, Opus 5.5)가 한다. verify는 검수(실린 번역을 원문과 견주는 일, python3 -m tools.laws.verify)의 설정이다: limit은 한 묶음의 원문 글자 수, rounds는 한 번의 실행에서 하는 묶음 수, canaries는 검수가 제대로 보는지 재려고 일부러 틀리게 바꿔 섞어 넣는 번역의 비율, catch는 그 가운데 잡아내야 하는 비율(이보다 낮으면 그 묶음의 검수를 버린다), harsh는 한 묶음에서 틀렸다고 한 번역의 비율이 이보다 높으면 그 묶음을 반영하지 않고 알리는 값이다.",
   "runners": {
     "daily": {"groups": [], "limit": 20000, "rounds": 1},
-    "bulk": {"groups": ["guide", "act"], "first": ["guide-5b", "32023R0956", "guide-2", "guide-1", "qa"], "limit": 15000, "rounds": 8}
-  }
+    "bulk": {"groups": ["guide", "act", "manual", "paper"], "first": ["guide-5b", "32023R0956", "guide-2", "guide-1", "qa", "qa-27a", "reg-factsheet", "reg-form-guide", "reg-access-operator"], "limit": 15000, "rounds": 8}
+  },
+  "verify": {"limit": 30000, "rounds": 8, "canaries": 0.05, "catch": 0.6, "harsh": 0.3}
 }

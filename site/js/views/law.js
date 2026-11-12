@@ -1,4 +1,4 @@
-// 문서 하나(법령이나 EU 집행위원회 안내 문서)의 원문과 국문 번역을 문단마다 나란히 보는 화면.
+// 문서 하나(법령이나 EU 집행위원회가 낸 문서)의 원문과 국문 번역을 문단마다 나란히 보는 화면.
 // #law-<문서 id>.<조각> 꼴의 주소로 조문이나 절 하나를 바로 가리킬 수 있다.
 // 보는 방식은 셋이다: 나란히, 원문만, 국문만. 아직 옮기지 않은 문단은 원문만 보인다.
 import * as data from "../data.js";
@@ -12,23 +12,30 @@ import { libraryTabs } from "../ui/tabs.js";
 
 const MODES = [["both", "나란히"], ["en", "원문"], ["ko", "국문"]];
 const FOLDED = { front: "제목과 근거", recitals: "전문", closing: "맺음", notes: "각주", cover: "표지와 일러두기" };  // 접어 두는 조각
-// 갈래마다 다른 말: 법령과, EU 집행위원회 안내 문서(가이던스, 질의응답)
+// 갈래마다 다른 말: 법령과, EU 집행위원회가 낸 문서(가이던스와 질의응답, 등록부 이용 안내서, 보고서와 안내 자료)
 const WORDS = {
   act: { piece: "조문", toc: "이 법령의 차례", source: "EUR-Lex에서 원문 보기",
     credit: "원문: © European Union, EUR-Lex. 출처를 밝히고 재이용합니다. 번역: 이 사이트(용어집의 표기를 따릅니다)." },
-  guide: { piece: "부분", toc: "이 문서의 차례", source: "원문 PDF 보기",
-    credit: "원문: © European Union, EU 집행위원회 조세·관세총국. 출처를 밝히고 재이용합니다. 번역: 이 사이트(용어집의 표기를 따릅니다)." },
+  doc: { piece: "부분", toc: "이 문서의 차례", source: "원문 PDF 보기",
+    credit: "원문: © European Union, EU 집행위원회 조세·관세동맹 총국. 출처를 밝히고 재이용합니다. 번역: 이 사이트(용어집의 표기를 따릅니다)." },
 };
-const PICK_GROUPS = [["act", "법령"], ["guide", "가이던스와 질의응답"]];
+const PICK_GROUPS = [["act", "법령"], ["guide", "가이던스와 질의응답"], ["manual", "등록부 이용 안내서"], ["paper", "보고서와 안내 자료"]];
+// 문서의 성격을 알리는 말(갈래마다)
+const NATURE = {
+  guide: "이 문서는 EU 집행위원회가 낸 설명 자료로 법적 구속력이 없습니다. PDF의 글만 옮겨 실었으므로 표와 식, 그림은 원문 PDF에서 확인해 주십시오.",
+  manual: "이 문서는 EU 집행위원회가 낸 등록부 이용 안내서입니다. PDF의 글만 옮겨 실었으므로 화면 그림과 표는 원문 PDF에서 확인해 주십시오.",
+  paper: "이 문서는 EU 집행위원회가 낸 자료로 법적 구속력이 없습니다. PDF의 글만 옮겨 실었으므로 표와 그림은 원문 PDF에서 확인해 주십시오.",
+};
+const isAct = (act) => (act.group || "act") === "act";
 
 function note(act, done) {
   const lead = `국문은 이 사이트가 옮긴 비공식 번역입니다(지금 ${done}%).`;
-  if (act.group === "guide") return `${lead} 이 문서는 EU 집행위원회가 낸 설명 자료로 법적 구속력이 없습니다. PDF의 글만 옮겨 실었으므로 표와 식, 그림은 원문 PDF에서 확인해 주십시오.`;
+  if (!isAct(act)) return `${lead} ${NATURE[act.group] || NATURE.guide}`;
   return `${lead} 법적 효력은 유럽연합 관보에 실린 원문에 있습니다.${act.consolidated ? " 통합본은 여러 개정을 한데 모은 참고용 문서입니다." : ""}`;
 }
 
 function about(act) {
-  if (act.group === "guide") return [act.official, act.pages ? `${count(act.pages)}쪽` : "", act.received ? `${act.received}에 받은 판` : ""].filter(Boolean).join(", ");
+  if (!isAct(act)) return [act.official, act.pages ? `${count(act.pages)}쪽` : "", act.received ? `${act.received}에 받은 판` : ""].filter(Boolean).join(", ");
   return `${act.official}${act.consolidated ? `, ${act.consolidated} 통합본` : ""}`;
 }
 
@@ -92,7 +99,7 @@ export async function render(main, arg) {
   }
   document.body.dataset.wide = "";
   const needles = target ? recent.needles : [];
-  const words = WORDS[act.group] || WORDS.act;
+  const words = isAct(act) ? WORDS.act : WORDS.doc;
   const body = h("div", { class: "law-body", "data-mode": recent.mode }, act.parts.map((part) => section(part, target, needles, words.piece)));
   const buttons = MODES.map(([key, text]) => h("button", { type: "button", text, "aria-pressed": String(key === recent.mode), onclick: () => {
     recent.mode = key;
@@ -113,6 +120,7 @@ export async function render(main, arg) {
       ]),
     ]),
     h("div", { class: "law-note" }, [
+      act.remark ? h("p", { class: "law-remark", text: act.remark }) : null,
       h("p", { text: note(act, done) }),
       h("p", { class: "law-note-links" }, [
         safeLink(act.url, words.source),

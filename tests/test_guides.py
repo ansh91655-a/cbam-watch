@@ -1,11 +1,12 @@
-"""안내 문서(PDF에서 뽑은 글): 쪽 읽기, 문단 묶기, 절 나누기, 문서 목록, 번역 실행의 갈래, 견주기 시험, 사이트 자료."""
+"""안내 문서(PDF에서 뽑은 글): 쪽 읽기, 문단 묶기, 절 나누기, 문서 목록, 번역 실행의 갈래, 견주기 시험, 검수, 사이트 자료."""
 import json
 import pathlib
+import random
 import shutil
 import tempfile
 import unittest
 
-from tools.laws import build, corpus, guide_segment, guides, pdf_blocks, pdf_pages, plan, review, status, store, todo, trial, wording
+from tools.laws import build, corpus, guide_segment, guides, pdf_blocks, pdf_pages, plan, review, spoil, status, store, todo, trial, verify, wording
 from tools.run import laws_health
 
 COVER = """EUROPEAN TEST OFFICE
@@ -139,6 +140,178 @@ It starts in 2026.
 """
 
 
+# 부속서 번호가 로마 숫자이고, 제목이 따옴표로 시작하고, 표의 칸에 "Annex II"가 나오는 문서
+ROMAN = "\f".join(["""A TEST GUIDANCE
+""", """CONTENTS
+1
+
+FIRST CHAPTER
+
+2
+
+1.1
+
+“Averaging” of data
+
+2
+
+ANNEX I - INTERNAL DOCUMENTS
+
+3
+
+ANNEX II – TEAMS
+
+3
+""", """1
+
+FIRST CHAPTER
+
+The chapter starts here with a full sentence that runs on.
+
+1.1. “Averaging” of data
+Averaging is explained in this section.
+The table refers to
+
+Annex II
+
+Team rules
+
+and the text goes on after the table cell.
+""", """ANNEX I - INTERNAL DOCUMENTS
+The documents are listed here.
+""", """ANNEX II – TEAMS
+The teams are described here.
+"""])
+
+# 번호 줄 둘이 잇달아 오고("2" / "2.1"), 제목 줄이 번호 줄의 앞으로 밀린("Chemicals sector" / "2.2") 문서
+SHIFTED = "\f".join(["""A TEST DOCUMENT
+""", """CONTENTS
+1
+
+OPENING
+
+2
+
+2
+
+GOODS AND ROUTES
+
+2
+
+2.1
+
+Foreword to the sections
+
+2
+
+2.2
+
+Chemicals sector
+
+3
+""", """1
+
+OPENING
+
+The opening says what the document is about.
+
+2
+2.1
+
+GOODS AND ROUTES
+Foreword to the sections
+
+The foreword explains the sections that follow in this chapter.
+
+Chemicals sector
+
+2.2
+
+The textbox below points to the rules,
+which are relevant for this sector.
+"""])
+
+# 차례가 번호의 단과 제목의 단으로 나뉜 문서(등록부 안내서의 꼴)
+COLUMNS = "\f".join(["""A MANUAL
+""", """Table of contents
+1.
+1.1
+1.2
+1.3
+2.
+2.1
+
+INTRODUCTION ............................................ 3
+Purpose ................................................. 3
+Audience ................................................ 3
+Structure................................................ 3
+USING THE SYSTEM ........................................ 4
+Access .................................................. 4
+
+List of tables
+Table 1: Documents ...................................... 3
+""", """1 INTRODUCTION
+1.1 PURPOSE
+The purpose is to explain.
+
+1.2
+
+AUDIENCE
+
+The audience includes:
+
+1.3
+
+•
+
+Operators;
+
+STRUCTURE
+
+The document has two chapters.
+""", """2 USING THE SYSTEM
+2.1 ACCESS
+Access is requested online.
+"""])
+
+# 차례가 없는 문서. 쪽 아래의 각주 번호("3")가 제목처럼 보인다
+BARE = """Synopsis report on a test
+
+1.
+
+SUMMARY
+
+The summary is short. It says what the report found in the answers.
+
+2.
+
+ANALYSIS
+
+2.1 Co-ordinated responses
+The position paper was attached without change by five other respondents and it was long.
+More text follows here.
+
+3
+
+Union of Test Industries
+
+The analysis ends here.
+"""
+
+LOOSE = """Privacy statement
+
+1. Introduction
+The Commission is committed to protect your personal data and to respect your privacy at all times.
+
+2. Why do we process your data?
+2.1. Controllership
+The Commission acts as controller.
+
+2.2. Purpose of the processing operation:
+The purpose is the management of the registry.
+"""
+
+
 class PagesTest(unittest.TestCase):
     def test_page_numbers_and_the_address_line_are_dropped(self):
         pages = pdf_pages.strip_page_numbers(pdf_pages.split(GUIDE))
@@ -172,6 +345,42 @@ class PagesTest(unittest.TestCase):
     def test_a_number_at_the_foot_without_a_mark_in_the_text_is_left_alone(self):
         lines = ["A table follows.", "", "1", "", "First row of the table"]
         self.assertEqual(pdf_pages.take_notes(lines, 1), (lines, [], 1))
+
+    def test_footnotes_whose_numbers_come_after_their_text_are_read_too(self):
+        lines = ["Questions on CBAM1 and electricity are answered here in a long line of text.", "The code (UCC-DA)2 applies.", "",
+                 "Regulation (EU) 2023/956, as amended.", "2", "Delegated Regulation (EU) 2015/2446.", "1"]
+        body, notes, following = pdf_pages.take_notes(lines, 1)
+        self.assertEqual(notes, [(1, "Regulation (EU) 2023/956, as amended."), (2, "Delegated Regulation (EU) 2015/2446.")])
+        self.assertEqual(body, ["Questions on CBAM[1] and electricity are answered here in a long line of text.", "The code (UCC-DA)[2] applies."])
+        self.assertEqual(following, 3)
+
+    def test_a_mark_stuck_to_an_act_number_is_cut_off_the_number(self):
+        lines = ["See Article 321 of Regulation (EU) 2015/24474) and the code UCC3) for the rule in a long line.", "",
+                 "Regulation (EU) No 952/2013.", "4", "Implementing Regulation (EU) 2015/2447.", "3"]
+        body, notes, _ = pdf_pages.take_notes(lines, 3)
+        self.assertEqual([number for number, _ in notes], [3, 4])
+        self.assertEqual(body, ["See Article 321 of Regulation (EU) 2015/2447[4]) and the code UCC[3]) for the rule in a long line."])
+
+    def test_a_page_that_only_ends_with_a_number_keeps_its_text(self):
+        lines = ["1.4. A heading on this page", "The text of the page ends with a table.", "", "1.5. Another heading", "Its text.", "1"]
+        self.assertEqual(pdf_pages.take_notes(lines, 1), (lines, [], 1))  # 제목이 든 구역은 각주가 아니다
+
+    def test_a_footer_caught_in_the_middle_of_a_page_is_dropped_too(self):
+        goods = ["cement", "steel", "aluminium", "hydrogen", "fertilisers", "electricity", "iron", "clinker"]
+        pages = [["Manual of the portal", f"This page is about {name}.", "Manual footer – version 3.00 EN", f"Page {number + 1} / 8"] for number, name in enumerate(goods)]
+        pages[2] = pages[2][:3] + ["A note under the footer.", pages[2][3]]
+        self.assertEqual(pdf_pages.strip_repeated(pages)[2], ["This page is about aluminium.", "A note under the footer."])
+        self.assertEqual(pdf_pages.strip_repeated(pages)[5], ["This page is about electricity."])
+
+    def test_a_line_that_is_only_an_arrow_is_dropped(self):
+        self.assertEqual(pdf_pages.split("A LEAFLET\n>\n\nWhat is it?"), [["A LEAFLET", "", "What is it?"]])
+
+    def test_a_contents_page_in_two_columns_is_paired_in_order(self):
+        toc = pdf_pages.read(COLUMNS)["toc"]
+        self.assertEqual(toc["titles"]["1.3"], ["Structure"])
+        self.assertEqual(toc["titles"]["2"], ["USING THE SYSTEM"])
+        self.assertEqual(toc["paired"], {"1", "1.1", "1.2", "1.3", "2", "2.1"})
+        self.assertEqual(pdf_pages.toc_columns(["1.", "1.1", "Only one title ..... 3"]), {})  # 수가 맞지 않으면 짝짓지 않는다
 
     def test_units_formulas_and_decimals_are_not_footnote_marks(self):
         mark = pdf_pages._reference(2)
@@ -246,6 +455,48 @@ class SegmentTest(unittest.TestCase):
         self.assertEqual(found[3]["blocks"][-1], "3. Once the payment is completed, the certificates are available.")
 
 
+class OutlineTest(unittest.TestCase):
+    """문서마다 다른 꼴: 로마 숫자 부속서, 자리가 밀린 제목, 단이 나뉜 차례, 차례가 없는 문서, 제목을 찾지 않는 문서."""
+
+    def test_annexes_with_roman_numbers_are_cut_and_a_table_cell_is_not(self):
+        found = guide_segment.parts(ROMAN)
+        self.assertEqual([part["id"] for part in found], ["cover", "sec-1", "sec-1-1", "annex-i", "annex-ii"])
+        self.assertEqual([part["title"] for part in found[2:]], ["“Averaging” of data", "INTERNAL DOCUMENTS", "TEAMS"])
+        self.assertIn("Annex II", found[2]["blocks"])
+        self.assertEqual(guide_segment.label_ko(found[4]), "부속서 II")
+
+    def test_two_number_lines_in_a_row_and_a_title_above_its_number_are_put_right(self):
+        found = {part["id"]: part for part in guide_segment.parts(SHIFTED)}
+        self.assertEqual(list(found), ["cover", "sec-1", "sec-2", "sec-2-1", "sec-2-2"])
+        self.assertEqual([found[key]["title"] for key in ("sec-2", "sec-2-1", "sec-2-2")], ["GOODS AND ROUTES", "Foreword to the sections", "Chemicals sector"])
+        self.assertEqual(found["sec-2-1"]["blocks"], ["The foreword explains the sections that follow in this chapter."])
+        self.assertEqual(found["sec-2-2"]["blocks"], ["The textbox below points to the rules, which are relevant for this sector."])
+
+    def test_a_title_lost_among_list_items_is_taken_from_the_paired_contents(self):
+        found = {part["id"]: part for part in guide_segment.parts(COLUMNS)}
+        self.assertEqual(list(found), ["cover", "sec-1", "sec-1-1", "sec-1-2", "sec-1-3", "sec-2", "sec-2-1"])
+        self.assertEqual(found["sec-1-3"]["title"], "Structure")
+        self.assertEqual(found["sec-1-3"]["blocks"], ["• Operators;", "The document has two chapters."])  # 본문에 따로 적힌 제목 줄은 지운다
+
+    def test_without_contents_a_footnote_number_is_not_a_heading(self):
+        found = guide_segment.parts(BARE)
+        self.assertEqual([part["id"] for part in found], ["cover", "sec-1", "sec-2", "sec-2-1"])
+        self.assertEqual(found[3]["title"], "Co-ordinated responses")
+        self.assertEqual(found[3]["blocks"][-3:], ["3", "Union of Test Industries", "The analysis ends here."])
+
+    def test_a_document_can_be_kept_whole_or_read_loosely(self):
+        whole = guide_segment.parts(BARE, "none")
+        self.assertEqual([(part["id"], part["kind"], part["label"], part["title"]) for part in whole], [(guide_segment.BODY_ID, "section", "본문", "")])
+        self.assertEqual(whole[0]["blocks"][0], "Synopsis report on a test")
+        self.assertEqual(guide_segment.label_ko(whole[0]), "본문")
+        self.assertEqual([part["id"] for part in guide_segment.parts(LOOSE)], ["cover"])
+        loose = guide_segment.parts(LOOSE, "loose")
+        self.assertEqual([part["id"] for part in loose], ["cover", "sec-1", "sec-2", "sec-2-1", "sec-2-2"])
+        self.assertEqual(loose[4]["title"], "Purpose of the processing operation")
+        with self.assertRaises(ValueError):
+            guide_segment.parts(BARE, "sometimes")
+
+
 class PlanTest(unittest.TestCase):
     DOCUMENTS = [({"id": "a1", "group": "act"}, []), ({"id": "a2", "group": "act"}, []),
                  ({"id": "g1", "group": "guide", "turn": 2}, []), ({"id": "g2", "group": "guide", "turn": 1}, [])]
@@ -276,10 +527,18 @@ class RepositoryTest(unittest.TestCase):
     def test_every_listed_document_is_found_and_cut_along_its_contents(self):
         self.assertEqual(guides.missing(), [])
         for document in guides.documents():
+            self.assertIn(document["group"], guides.GROUPS, document["id"])
+            found = corpus.read(document)
+            self.assertTrue(found, document["id"])
+            if document["outline"] == "none":
+                self.assertEqual([part["id"] for part in found], [guide_segment.BODY_ID], document["id"])
+                continue
             text = pathlib.Path(document["path"]).read_text(encoding="utf-8")
             listed = {number for number in pdf_pages.read(text)["toc"]["numbers"] if "." in number}
-            found = {part["label"] for part in guide_segment.parts(text) if part["kind"] == "section"}
-            self.assertGreaterEqual(len(listed & found), 0.9 * len(listed), document["id"])
+            cut = {part["label"] for part in found if part["kind"] == "section"}
+            self.assertGreaterEqual(len(listed & cut), 0.9 * len(listed), document["id"])
+            self.assertFalse([part["title"] for part in found if len(part["title"]) > guide_segment.TITLE_MAX and not part["title"].endswith("?")], document["id"])
+        self.assertEqual(len({document["id"] for document in guides.documents()}), len(guides.documents()))
         self.assertEqual(laws_health.problems(today="2026-11-12"), [])
 
     def test_each_runner_takes_only_its_own_documents(self):
@@ -298,12 +557,15 @@ class RepositoryTest(unittest.TestCase):
         try:
             build.write(folder)
             index = json.loads((pathlib.Path(folder) / "laws/index.json").read_text(encoding="utf-8"))
-            listed = [act for act in index["acts"] if act["group"] == "guide"]
+            listed = [act for act in index["acts"] if act["group"] != "act"]
             self.assertEqual([act["id"] for act in listed], [document["id"] for document in guides.documents()])
+            self.assertEqual({act["group"] for act in listed}, set(guides.GROUPS))
             self.assertTrue(all(act["sections"] and act["toc"] and act["official"] for act in listed))
+            self.assertTrue(any(act["remark"] for act in listed))  # 전환기간용 자료 같은 알림이 실린다
             body = json.loads((pathlib.Path(folder) / f"laws/{listed[0]['id']}.json").read_text(encoding="utf-8"))
             self.assertEqual(body["parts"][0]["kind"], "cover")
             self.assertTrue(body["notice"].startswith("Disclaimer:"))
+            self.assertNotIn("checked", body)  # 검수 표시는 사이트에 싣지 않는다
             rows = json.loads((pathlib.Path(folder) / "laws/search-guides.json").read_text(encoding="utf-8"))["rows"]
             self.assertTrue(rows and {row["a"] for row in rows} <= {act["id"] for act in listed})
             acts = json.loads((pathlib.Path(folder) / "laws/search.json").read_text(encoding="utf-8"))["rows"]
@@ -313,7 +575,10 @@ class RepositoryTest(unittest.TestCase):
 
     def test_progress_is_summed_for_each_group(self):
         self.assertTrue(status.summary(group="guide").startswith("가이던스 번역: 원문 "))
+        self.assertTrue(status.summary(group="manual").startswith("등록부 안내서 번역: 원문 "))
+        self.assertTrue(status.summary(group="paper").startswith("보고서·안내 자료 번역: 원문 "))
         self.assertTrue(status.summary().startswith("규정 번역: 원문 "))
+        self.assertEqual(set(status.NAMES), {"act", *guides.GROUPS})
 
 
 class TrialTest(unittest.TestCase):
@@ -393,6 +658,138 @@ class ReviewTest(unittest.TestCase):
         picked, left = todo.pick(10**6, self.act)
         self.assertEqual(todo.answer([block for block in picked if block["key"] == self.key], left)["remarks"], {self.key: "의무가 권고로 옮겨짐"})
         self.assertEqual(review.drop("000000000000", "없는 열쇠"), [])
+
+
+class FinishTest(unittest.TestCase):
+    def test_sentence_endings_get_one_shape(self):
+        from tools.laws import finish
+        self.assertEqual(finish.finish("‘기본값’이란 제품의 내재배출량을 나타내는 값을 말한다"), "‘기본값’이란 제품의 내재배출량을 나타내는 값을 말한다.")
+        self.assertEqual(finish.finish("기준은 다음과 같다:"), "기준은 다음과 같다.")
+        self.assertEqual(finish.finish("다음을 포함하여야 한다; "), "다음을 포함하여야 한다.")
+        for kept in ("이미 마침표가 있다.", "(a) 대륙붕에서 생산된 전력", "예:", "CBAM 인증서의 제출", "언제부터 적용되는가?"):
+            self.assertEqual(finish.finish(kept), kept)
+
+    def test_endings_are_set_when_a_translation_is_stored(self):
+        from tools.laws import apply
+        source = "The declarant shall submit 3 reports by 31 May 2027;"
+        accepted, rejected, _ = apply.sort({store.key(source): "신고인은 2027년 5월 31일까지 보고서 3건을 제출하여야 한다"}, {store.key(source): ("act", source)})
+        self.assertEqual((accepted, rejected), ({"act": {store.key(source): "신고인은 2027년 5월 31일까지 보고서 3건을 제출하여야 한다."}}, []))
+
+
+class CheckedTest(unittest.TestCase):
+    """번역 자료의 검수 표시."""
+
+    def setUp(self):
+        self.folder, self.kept = tempfile.mkdtemp(), store.FOLDER
+        store.FOLDER = self.folder
+
+    def tearDown(self):
+        store.FOLDER = self.kept
+        shutil.rmtree(self.folder)
+
+    def test_marks_stay_until_the_translation_changes(self):
+        store.save("x", {"a": "가", "b": "나"}, "2026-11-10")
+        self.assertEqual(store.mark("x", ["a", "none"]), 1)
+        self.assertEqual(store.load_checked("x"), {"a"})
+        self.assertEqual(json.loads(pathlib.Path(store.path_of("x")).read_text(encoding="utf-8"))["updated"], "2026-11-10")  # 검수는 번역이 더해진 날을 바꾸지 않는다
+        store.save("x", {"a": "가", "b": "다", "c": "라"}, "2026-11-12")
+        self.assertEqual(store.load_checked("x"), {"a"})
+        store.save("x", {"a": "가를 고침", "b": "다"}, "2026-11-13")
+        self.assertEqual(store.load_checked("x"), set())  # 번역이 바뀐 문단은 다시 견줘 보게 한다
+        self.assertEqual(store.checked_all(), set())
+
+
+class SpoilTest(unittest.TestCase):
+    def test_a_translation_is_changed_into_something_wrong(self):
+        text = "운영자는 매년 배출량 보고서를 제출하여야 한다. 관할당국은 이를 검토할 수 있다."
+        found = spoil.choices(text)
+        self.assertIn(("운영자는 매년 배출량 보고서를 제출할 수 있다. 관할당국은 이를 검토할 수 있다.", "flip"), found)
+        self.assertIn(("운영자는 매년 배출량 보고서를 제출하여야 한다.", "omission"), found)
+        self.assertTrue(all(changed != text for changed, _ in found))
+        self.assertIn(spoil.spoil(text, random.Random(1)), found)
+        self.assertIn(("이 규정은 전력의 수입에는 적용된다는 점에 유의하여야 하는 경우가 있다.", "negation"),
+                      spoil.choices("이 규정은 전력의 수입에는 적용되지 않는다는 점에 유의하여야 하는 경우가 있다."))
+
+    def test_short_lines_are_left_alone(self):
+        self.assertIsNone(spoil.spoil("제3장 정의", random.Random(1)))
+
+
+class VerifyTest(unittest.TestCase):
+    """검수: 번역 자료와 기록을 임시 폴더에 두고 본다. 원문은 저장소의 문서에서 가져온다."""
+    KOREAN = "이 문단은 시험용 번역이며 운영자는 해마다 보고서를 제출하여야 한다. 관할당국은 그 보고서를 검토할 수 있다."
+
+    def setUp(self):
+        self.folder = tempfile.mkdtemp()
+        self.kept = (store.FOLDER, review.LOG, verify.LOG, verify.WORK)
+        store.FOLDER, review.LOG = self.folder, str(pathlib.Path(self.folder) / "reviews.log.json")
+        verify.LOG, verify.WORK = str(pathlib.Path(self.folder) / "checks.log.json"), str(pathlib.Path(self.folder) / "work.json")
+        document = next(document for document in guides.documents() if document["id"] == "guide-5b")
+        self.act = document["id"]
+        texts = []
+        for part in corpus.read(document):
+            for text in corpus.texts(part):
+                if len(text) >= 80 and store.key(text) not in {store.key(other) for other in texts}:
+                    texts.append(text)
+        self.texts = texts[:24]
+        self.keys = [store.key(text) for text in self.texts]
+        store.save(self.act, {block_key: self.KOREAN for block_key in self.keys}, "2026-11-10")
+
+    def tearDown(self):
+        store.FOLDER, review.LOG, verify.LOG, verify.WORK = self.kept
+        shutil.rmtree(self.folder)
+
+    def batch(self):
+        picked, work, left = verify.batch(10**6, seed="test")
+        self.assertEqual((len(picked), left), (24, {"blocks": 0, "chars": 0}))
+        return picked, work
+
+    def test_a_batch_hides_a_few_spoiled_translations(self):
+        self.assertEqual([block["key"] for block in verify.pending()], self.keys)
+        picked, work = self.batch()
+        self.assertEqual(len(work["canaries"]), verify.CANARY_MIN)
+        self.assertEqual(sorted(work["keys"] + list(work["canaries"])), sorted(self.keys))
+        for block in picked:
+            self.assertEqual(block["korean"] != self.KOREAN, block["key"] in work["canaries"])
+        self.assertEqual(store.load(self.act), {block_key: self.KOREAN for block_key in self.keys})  # 바꾼 번역은 번역 자료에 들어가지 않는다
+        small, work, _ = verify.batch(len(self.texts[0]) + 1, seed="test")
+        self.assertEqual((len(small), work["canaries"]), (1, {}))  # 작은 묶음에는 섞지 않는다
+
+    def test_caught_canaries_let_the_marks_and_the_drops_through(self):
+        _, work = self.batch()
+        wrong = {**{block_key: "뜻이 뒤집힘" for block_key in work["canaries"]}, work["keys"][0]: "빠진 문장이 있음", "ffffffffffff": "모르는 열쇠"}
+        done = verify.settle(wrong, work, "2026-11-12")
+        self.assertEqual((done["outcome"], done["checked"], done["dropped"], done["caught"], done["unknown"]), ("applied", 20, 1, 3, ["ffffffffffff"]))
+        self.assertEqual(store.load_checked(self.act), set(work["keys"][1:]))
+        self.assertNotIn(work["keys"][0], store.load(self.act))
+        self.assertEqual(review.remarks(), {work["keys"][0]: "빠진 문장이 있음"})
+        self.assertEqual(sorted(block["key"] for block in verify.pending()), sorted(work["canaries"]))  # 바꿔 보였던 문단은 다음에 제 번역으로 다시 읽는다
+        self.assertEqual(verify.progress()["checked"], 20)
+        self.assertTrue(verify.summary().startswith("검수: 옮긴 문단 23개 가운데 20개(87%)를 원문과 견줌, 일부러 바꾼 번역 3개 가운데 3개를 잡음"))
+
+    def test_missed_canaries_throw_the_batch_away(self):
+        _, work = self.batch()
+        done = verify.settle({work["keys"][0]: "틀림"}, work, "2026-11-12")
+        self.assertEqual((done["outcome"], done["checked"], done["dropped"]), ("discarded", 0, 0))
+        self.assertEqual(store.load_checked(self.act), set())
+        self.assertEqual(len(store.load(self.act)), 24)
+        self.assertEqual(json.loads(pathlib.Path(verify.LOG).read_text(encoding="utf-8"))["days"][0]["discarded"], 1)
+
+    def test_a_batch_called_wrong_too_often_is_held_back(self):
+        _, work = self.batch()
+        wrong = {block_key: "틀림" for block_key in list(work["canaries"]) + work["keys"][:10]}
+        done = verify.settle(wrong, work, "2026-11-12")
+        self.assertEqual((done["outcome"], done["dropped"]), ("held", 0))
+        self.assertEqual(len(store.load(self.act)), 24)
+
+    def test_a_paragraph_dropped_twice_is_left_for_a_person(self):
+        _, work = self.batch()
+        stubborn = work["keys"][0]
+        pathlib.Path(review.LOG).write_text(json.dumps({"reviews": [{"day": "2026-11-10", "key": stubborn, "act": self.act, "why": "하나"},
+                                                                    {"day": "2026-11-11", "key": stubborn, "act": self.act, "why": "둘"}]}, ensure_ascii=False), encoding="utf-8")
+        done = verify.settle({**{block_key: "뒤집힘" for block_key in work["canaries"]}, stubborn: "또 틀림"}, work, "2026-11-12")
+        self.assertEqual((done["outcome"], done["dropped"], done["disputed"], done["checked"]), ("applied", 0, 1, 21))
+        self.assertIn(stubborn, store.load(self.act))
+        self.assertEqual(json.loads(pathlib.Path(verify.LOG).read_text(encoding="utf-8"))["disputed"], [{"day": "2026-11-12", "key": stubborn, "why": "또 틀림"}])
 
 
 if __name__ == "__main__":

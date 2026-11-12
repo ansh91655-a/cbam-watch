@@ -23,8 +23,11 @@ export function plan(site) {
   const acts = read(site, "laws/index.json", { acts: [] }).acts || [];
   const law = acts[0] ? `#law-${acts[0].id}` : null;
   const guide = acts.find((act) => act.group === "guide");  // EU 집행위원회 안내 문서(절로 나뉜다)
+  const manual = acts.find((act) => act.group === "manual");  // 등록부 이용 안내서
+  const single = acts.find((act) => act.group !== "act" && act.toc.length === 1);  // 조각이 하나뿐인 짧은 문서(알림이 붙는 것이 많다)
   const laws = acts.length ? ["#laws", `#laws-${encodeURIComponent("내재배출량 검증")}`, law, acts[1] ? `#law-${acts[1].id}.art-1` : null,
-    guide ? `#law-${guide.id}.${(guide.toc.find((part) => part.kind === "section") || {}).id || "cover"}` : null] : [];
+    guide ? `#law-${guide.id}.${(guide.toc.find((part) => part.kind === "section") || {}).id || "cover"}` : null,
+    manual ? `#law-${manual.id}` : null, single ? `#law-${single.id}` : null] : [];
   return {
     // 가로 넘침과 화면 오류: 모든 화면을 다섯 너비로
     widths: [360, 390, 768, 1024, 1440],

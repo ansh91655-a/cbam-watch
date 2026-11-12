@@ -1,16 +1,17 @@
 """번역의 진행 상황을 본다.
 
-쓰는 법: python -m tools.laws.status [--group act|guide]
-문서마다 옮길 문단과 옮긴 문단의 수, 원문 글자 수로 본 비율과, 어느 문서에도 붙지 않는 번역의 수를 찍고, 갈래마다 한 줄로 간추린다. 마지막 줄이 보고에 쓰는 줄이다
-(갈래를 주지 않으면 법령의 줄이 마지막이다). summary()가 그 한 줄을 돌려준다.
+쓰는 법: python -m tools.laws.status [--group act|guide|manual|paper]
+문서마다 옮길 문단과 옮긴 문단의 수, 원문 글자 수로 본 비율과, 어느 문서에도 붙지 않는 번역의 수를 찍고, 검수(tools.laws.verify)가 얼마나 되었는지와
+갈래마다의 진행을 한 줄씩 간추린다. 마지막 줄이 보고에 쓰는 줄이다(갈래를 주지 않으면 법령의 줄이 마지막이다). summary()가 갈래의 한 줄을 돌려준다.
 """
 import argparse
 import sys
 
-from tools.laws import corpus, store
+from tools.laws import corpus, store, verify
 
-NAMES = {"act": "규정 번역", "guide": "가이던스 번역"}
-UNITS = {"act": "법령", "guide": "문서"}
+NAMES = {"act": "규정 번역", "guide": "가이던스 번역", "manual": "등록부 안내서 번역", "paper": "보고서·안내 자료 번역"}
+UNITS = {"act": "법령", "guide": "문서", "manual": "문서", "paper": "문서"}
+ORDER = ("paper", "manual", "guide", "act")  # 간추린 줄을 찍는 차례(법령이 마지막 줄)
 
 
 def rows(group=""):
@@ -41,13 +42,14 @@ def unused():
 
 def main(argv):
     parser = argparse.ArgumentParser()
-    parser.add_argument("--group", default="", choices=["", "act", "guide"])
+    parser.add_argument("--group", default="", choices=["", *NAMES])
     args = parser.parse_args(argv)
     found = rows(args.group)
     for act, progress in found:
-        print(f"{act['id']:<11} {percent(progress):>3}%  문단 {progress['done']:>4}/{progress['blocks']:<4}  원문 {progress['chars']:>7,}자  {act['name']}")
+        print(f"{act['id']:<22} {percent(progress):>3}%  문단 {progress['done']:>4}/{progress['blocks']:<4}  원문 {progress['chars']:>7,}자  {act['name']}")
     print(f"쓰이지 않는 번역: {unused()}개")
-    for group in ([args.group] if args.group else ["guide", "act"]):
+    print(verify.summary())
+    for group in ([args.group] if args.group else ORDER):
         print(summary(found, group))
     return 0
 

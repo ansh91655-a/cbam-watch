@@ -2,7 +2,7 @@
 
 쓰는 법: python -m tools.laws.apply <번역 파일> [--dry] [--terms]
 번역 파일은 {"blocks": {열쇠: 국문}} 꼴이다. 열쇠는 python -m tools.laws.todo 가 준 것이다.
-문단마다 용어집 낱말의 띄어쓰기를 권장 표기로 맞춘 뒤(tools.laws.terms.unify) tools.laws.check로 원문과 견줘, 막는 까닭이 없는 것만 넣는다. 걸린 문단은 까닭과 함께 찍고 넣지 않는다(끝내는 값 1).
+문단마다 용어집 낱말의 띄어쓰기를 권장 표기로 맞추고(tools.laws.terms.unify) 문장의 끝맺음을 맞춘 뒤(tools.laws.finish) tools.laws.check로 원문과 견줘, 막는 까닭이 없는 것만 넣는다. 걸린 문단은 까닭과 함께 찍고 넣지 않는다(끝내는 값 1).
 알릴 것(원문에 없는 수, 길이)은 찍기만 하고 넣는다. --dry는 검사만 한다. --terms는 용어집의 권고(막지 않는 것)도 찍는다.
 """
 import argparse
@@ -10,7 +10,7 @@ import json
 import sys
 
 from tools.common.jsonio import read_json
-from tools.laws import check, corpus, store, terms
+from tools.laws import check, corpus, finish, store, terms
 
 
 def sources():
@@ -34,7 +34,7 @@ def sort(blocks, known=None):
             rejected.append((block_key, ["원문에 없는 열쇠(원문이 바뀌었거나 잘못 적음)"]))
             continue
         act_id, source = known[block_key]
-        korean = terms.unify(source, korean)  # 용어집 낱말의 띄어쓰기를 권장 표기로 맞춘다
+        korean = finish.finish(terms.unify(source, korean))  # 용어집 낱말의 띄어쓰기를 권장 표기로, 문장의 끝맺음을 한 가지 꼴로 맞춘다
         found = check.problems(source, korean)
         if found["hard"]:
             rejected.append((block_key, found["hard"]))
