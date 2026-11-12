@@ -2148,6 +2148,12 @@
    "ko": "재고 조사",
    "from": "guide-verif",
    "added": "2026-11-12"
+  },
+  {
+   "en": "weighing belt",
+   "ko": "계량 벨트",
+   "from": "guide-verif",
+   "added": "2026-11-12"
   }
  ]
 }
