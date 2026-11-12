@@ -4,13 +4,18 @@
 이용 조건이 어디에서 찾아지는지, 화면이 저작권을 어떻게 적었는지, 본문이 어디서 시작해 어디서 끝나는지.
 
 쓰는 법:
-  python -m tools.collect.articles_try <출처 코드>=<글 주소> [...] [--license "<글귀>"] [--terms-url <주소>] [--stop "<끝 표시>"]
-출처 코드는 출처 대장에 있는 것이어야 한다. --license, --terms-url, --stop을 주면 대장의 articles 대신 그 값으로 시험한다
-(대장에 아직 적지 않은 출처를 알아볼 때 쓴다). 글의 제목은 그 출처의 목록 화면에서 그 주소로 가는 링크의 글자로 삼는다.
-워크플로 '출처 접속 점검'을 손으로 돌릴 때 articles 칸에 "<출처 코드>=<글 주소>"를 띄어 적으면 이 프로그램이 돈다.
+  python -m tools.collect.articles_try <출처 코드>=<글 주소> [...] [--license "<글귀>"] [--terms-url <주소>] [--stop "<끝 표시>"] [--dump]
+- 출처 코드는 출처 대장에 있는 것이어야 한다(수집을 꺼 둔 출처도 된다).
+- 글 주소 자리에 first:<건수>@<주소에 든 글자>를 적으면 그 출처의 목록 화면에서 그런 주소의 링크를 앞에서부터 골라 시험한다
+  (예: moj=first:2@artclView.do). 목록에 어떤 글이 있는지 모를 때 쓴다.
+- --license, --terms-url, --stop을 주면 대장의 articles 대신 그 값으로 시험한다(대장에 아직 적지 않은 출처를 알아볼 때 쓴다).
+- --dump를 주면 본문으로 고른 줄을 모두, 그 화면의 링크를 앞에서부터 80개까지 찍는다(끝 표시를 정하거나 글 주소의 꼴을 알아볼 때 쓴다).
+글의 제목은 그 출처의 목록 화면에서 그 주소로 가는 링크의 글자로 삼는다(수집 프로그램이 제목으로 적는 글자다).
+워크플로 '본문 받기 시험'이 이 프로그램을 돌린다.
 """
 import argparse
 import json
+import re
 import sys
 from urllib.parse import urlsplit
 
@@ -18,6 +23,12 @@ from tools.collect import article_terms, article_text, articles, registry
 from tools.common.net import fetch
 
 CUT = 80
+DUMP_CUT = 110
+DUMP_LINKS = 80
+PICK = re.compile(r"^first:(\d+)@(.+)$")
+NOT_PICKED = "목록 화면에서 그런 주소의 링크를 찾지 못함"
+# 이용 조건을 적어 둔 화면으로 가는 링크를 알아보는 낱말(띄어쓰기를 빼고 소문자로 견준다)
+TERMS_LINK_WORDS = ("저작권", "이용안내", "copyright", "licence", "license", "impressum", "legalnotice", "disclaimer", "termsandconditions")
 
 
 def _same_page(left, right):
@@ -26,43 +37,72 @@ def _same_page(left, right):
     return (a.netloc, a.path.rstrip("/")) == (b.netloc, b.path.rstrip("/"))
 
 
-def title_from_board(source, url, fetcher=fetch):
-    """그 출처의 목록 화면에서 이 글로 가는 링크의 글자(수집 프로그램이 제목으로 적는 글자). 없으면 빈 글."""
+def board_links(source, fetcher=fetch):
+    """그 출처의 목록 화면에 있는 (주소, 글자) 쌍들. 받지 못하면 빈 목록이다."""
     board, _ = articles.read_page(source["url"], fetcher)
-    for address, text in (board or {}).get("links", []):
+    return (board or {}).get("links", [])
+
+
+def title_of(links, url):
+    """목록 화면에서 이 글로 가는 링크의 글자. 없으면 빈 글."""
+    for address, text in links:
         if address == url or _same_page(address, url):
             return text
     return ""
 
 
-def look(source, url, fetcher=fetch):
+def picked(source, links, count, part):
+    """목록 화면의 링크 가운데 주소에 part가 든 글의 주소를 앞에서부터 count건 고른다(같은 사이트의 화면만, 첨부 파일은 빼고)."""
+    found = []
+    for address, _ in links:
+        if part in address and articles.same_site(address, source) and not articles.is_file(address) and address not in found:
+            found.append(address)
+    return found[:count]
+
+
+def terms_links(links, limit=6):
+    """이용 조건을 적어 둔 화면으로 보이는 링크의 (글자, 주소)들."""
+    found = []
+    for address, text in links:
+        squeezed = article_text.flat(text).lower()
+        if any(word in squeezed for word in TERMS_LINK_WORDS) and [text[:30], address] not in found:
+            found.append([text[:30], address])
+    return found[:limit]
+
+
+def look(source, url, title, fetcher=fetch, dump=False):
     """글 하나를 받아 본 것을 값으로 돌려준다."""
     seen = {"code": source["code"], "url": url, "rules": articles.rules_of(source)}
     page, why = articles.read_page(url, fetcher)
     if page is None:
         return dict(seen, opened=False, why=why)
-    title = title_from_board(source, url, fetcher)
     shown, why = articles.terms(source, page, fetcher, {})
     rules = articles.rules_of(source)
-    kept, found = article_text.body(page["lines"], title, list(rules.get("stop", [])) + list(rules.get("license", [])))
-    return dict(
+    kept, found, cut = article_text.body(page["lines"], title, list(rules.get("stop", [])) + list(rules.get("license", [])))
+    result = dict(
         seen, opened=True, pageLines=len(page["lines"]), title=title, titleFound=found, terms=shown, why=why,
         fieldValues=article_terms.field_values(page["lines"], (rules.get("field") or {}).get("label", "")) if rules.get("field") else [],
-        hints=article_terms.hints(page["lines"] + page["alts"], limit=8),
-        bodyLines=len(kept), bodyChars=sum(len(line) for line in kept), longEnough=article_text.long_enough(kept),
+        hints=article_terms.hints(page["lines"] + page["alts"], limit=8), termsLinks=terms_links(page["links"]),
+        bodyLines=len(kept), bodyChars=sum(len(line) for line in kept), cut=cut, longEnough=article_text.long_enough(kept),
         head=[line[:CUT] for line in kept[:10]], tail=[line[:CUT] for line in kept[-4:]],
         pageTail=[line[:CUT] for line in page["lines"][-12:]],
     )
+    if dump:
+        result["body"] = [line[:DUMP_CUT] for line in kept]
+        result["links"] = [[text[:40], address] for address, text in page["links"][:DUMP_LINKS]]
+    return result
 
 
 def main(argv):
     parser = argparse.ArgumentParser()
-    parser.add_argument("targets", nargs="+", help="<출처 코드>=<글 주소>")
+    parser.add_argument("targets", nargs="+", help="<출처 코드>=<글 주소> 또는 <출처 코드>=first:<건수>@<주소에 든 글자>")
     parser.add_argument("--license", action="append", default=[])
     parser.add_argument("--terms-url", default="")
     parser.add_argument("--stop", action="append", default=[])
+    parser.add_argument("--dump", action="store_true")
     args = parser.parse_args(argv)
     by_code = {source["code"]: source for source in registry.load()[0]}
+    boards = {}
     for target in args.targets:
         code, _, url = target.partition("=")
         source = by_code.get(code)
@@ -78,7 +118,14 @@ def main(argv):
             if args.stop:
                 rules["stop"] = args.stop
             source = dict(source, articles=rules)
-        print(json.dumps(look(source, url), ensure_ascii=False, indent=1))
+        if code not in boards:
+            boards[code] = board_links(source)
+        pick = PICK.match(url)
+        urls = picked(source, boards[code], int(pick.group(1)), pick.group(2)) if pick else [url]
+        if not urls:
+            print(json.dumps({"code": code, "url": url, "why": NOT_PICKED, "boardLinks": len(boards[code])}, ensure_ascii=False))
+        for address in urls:
+            print(json.dumps(look(source, address, title_of(boards[code], address), dump=args.dump), ensure_ascii=False, indent=1))
     return 0
 
 

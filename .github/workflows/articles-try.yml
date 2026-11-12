@@ -6,17 +6,25 @@ on:
   workflow_dispatch:
     inputs:
       targets:
-        description: "'<출처 코드>=<글 주소>'를 띄어 적는다"
+        description: "'<출처 코드>=<글 주소>'를 띄어 적는다. 주소 자리에 first:<건수>@<주소에 든 글자>를 적으면 목록 화면에서 고른다"
         required: true
         type: string
       license:
-        description: "(대장에 규칙이 없는 출처) 화면에 있어야 하는 이용 조건의 글귀"
+        description: "(대장의 규칙 대신 시험할 때) 화면에 있어야 하는 이용 조건의 글귀"
         type: string
         default: ""
       terms_url:
-        description: "(대장에 규칙이 없는 출처) 이용 조건을 적어 둔 화면의 주소"
+        description: "(대장의 규칙 대신 시험할 때) 이용 조건을 적어 둔 화면의 주소"
         type: string
         default: ""
+      stop:
+        description: "(대장의 규칙 대신 시험할 때) 본문이 끝나는 자리를 알리는 글귀"
+        type: string
+        default: ""
+      dump:
+        description: "본문으로 고른 줄을 모두 찍는다"
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -35,9 +43,13 @@ jobs:
           TARGETS: ${{ inputs.targets }}
           LICENSE: ${{ inputs.license }}
           TERMS_URL: ${{ inputs.terms_url }}
+          STOP: ${{ inputs.stop }}
+          DUMP: ${{ inputs.dump }}
         run: |
           set -f
           set -- $TARGETS
           if [ -n "$LICENSE" ]; then set -- "$@" --license "$LICENSE"; fi
           if [ -n "$TERMS_URL" ]; then set -- "$@" --terms-url "$TERMS_URL"; fi
+          if [ -n "$STOP" ]; then set -- "$@" --stop "$STOP"; fi
+          if [ "$DUMP" = "true" ]; then set -- "$@" --dump; fi
           python -m tools.collect.articles_try "$@"

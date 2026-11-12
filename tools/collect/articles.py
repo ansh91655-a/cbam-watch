@@ -10,6 +10,8 @@
   저장소는 공개이므로, 출처를 밝히면 누구나 쓸 수 있다고 화면이 스스로 밝힌 글만 둔다.
 - 그 출처와 같은 사이트의 주소만 연다. 첨부 파일은 받지 않는다. robots.txt가 막은 주소는 열지 않는다(tools.common.net).
 - 한 번 실행에 LIMIT건까지, 한 글은 MAX_TRIES번까지 해 본다. 지난 DAYS일의 수집 기록을 본다(그날 못 받은 글을 다음 날 다시 해 본다).
+  받기로 한 이용 조건이 아닌 글(예: 공공누리 2유형으로 올라온 글)은 한 번만 보고 다시 해 보지 않는다.
+- 게시글 머리의 담당자·작성자 이름, 전화번호, 조회수는 싣지 않는다. 긴 글은 앞부분만 싣고 잘랐다고 적는다(tools.collect.article_text).
 
 쓰는 법: python -m tools.collect.articles [--days 7] [--limit 8]
 받은 글은 collected/pages/items/<기록 id>.txt, 해 본 기록은 collected/articles.json 에 남는다.
@@ -41,7 +43,10 @@ FILE_ENDINGS = (".pdf", ".hwp", ".hwpx", ".zip", ".xlsx", ".xls", ".docx", ".doc
 SAVED = "받음"
 NO_LICENSE = "이용 조건 표시를 찾지 못함"
 MIXED = "이용 조건의 유형이 여러 개 적혀 있어 가릴 수 없음"
+OTHER_TERMS = "받기로 한 이용 조건이 아님"
 TOO_SHORT = "본문이 너무 짧음"
+# 다시 해 보아도 달라지지 않는 결과. 한 번만 해 보고, 받지 못한 일로 세지 않는다(tools.run.articles_health)
+FINAL = (OTHER_TERMS,)
 
 
 def rules_of(source):
@@ -119,6 +124,8 @@ def terms(source, page, fetcher=fetch, seen=None):
         value = article_terms.field_terms(page["lines"], rules["field"])
         if value:
             return f"{rules['field']['label']}: {value} (글의 화면에 적힌 칸)", ""
+        if not rules.get("license") and article_terms.field_values(page["lines"], rules["field"]["label"]):
+            return "", OTHER_TERMS  # 칸에 값이 적혀 있으나 받기로 한 값이 아니다(예: 공공누리 2유형)
     if rules.get("license"):
         line, mixed = article_terms.marked(page["lines"] + page["alts"], rules["license"])
         if line:
@@ -137,12 +144,14 @@ def compose(row, source, page, shown, moment):
     shown은 terms가 찾은 이용 조건의 글이다.
     """
     rules = rules_of(source)
-    kept, found = article_text.body(page["lines"], row.get("text", ""), list(rules.get("stop", [])) + list(rules.get("license", [])))
+    kept, found, cut = article_text.body(page["lines"], row.get("text", ""), list(rules.get("stop", [])) + list(rules.get("license", [])))
     if not article_text.long_enough(kept):
         return None, TOO_SHORT, len(kept)
     head = [f"[주소] {row['url']}", f"[출처] {source.get('name', source['code'])}", f"[이용 조건] {shown}", f"[받은 때] {stamp(moment)}"]
     if not found:
         head.append("[알림] 화면에서 제목이 적힌 줄을 찾지 못해 화면의 글을 처음부터 실었다")
+    if cut:
+        head.append("[알림] 글이 길어 앞부분만 실었다. 뒷부분에 적힌 내용은 여기에 없다")
     return head + [""] + kept, SAVED, len(kept)
 
 
@@ -197,7 +206,8 @@ def fill(days=DAYS, limit=LIMIT, moment=None, fetcher=fetch, pause=PAUSE_SECONDS
                     time.sleep(pause)
                 got = take(row, sources[row["source"]], moment, fetcher, boards)
                 before = tried.get(row["id"]) or {}
-                tried[row["id"]] = {"source": row["source"], "url": row["url"], "tries": int(before.get("tries", 0)) + 1,
+                tries = MAX_TRIES if got["result"] in FINAL else int(before.get("tries", 0)) + 1
+                tried[row["id"]] = {"source": row["source"], "url": row["url"], "tries": tries,
                                     "result": got["result"], "lines": got["lines"], "at": stamp(moment)}
                 if got["hints"]:
                     tried[row["id"]]["hints"] = got["hints"]

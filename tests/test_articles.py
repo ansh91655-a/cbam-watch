@@ -42,7 +42,7 @@ def answer(body, status=200, content_type="text/html; charset=utf-8"):
 class ArticleTextTest(unittest.TestCase):
     def test_body_starts_at_the_heading_and_stops_before_the_survey(self):
         lines = ["알림·소식", "보도자료", TITLE, "다른 메뉴", TITLE, "담당부서 시험과", "등록일 2026-11-11"] + BODY + ["만족도 조사", "바닥글"]
-        kept, found = article_text.body(lines, TITLE)
+        kept, found, _ = article_text.body(lines, TITLE)
         self.assertTrue(found)
         self.assertEqual(kept[0], TITLE)
         self.assertEqual(kept[1], "담당부서 시험과")  # 메뉴에 적힌 같은 제목이 아니라 등록일이 따르는 머리 줄에서 시작한다
@@ -50,30 +50,59 @@ class ArticleTextTest(unittest.TestCase):
 
     def test_contact_lines_under_the_heading_are_left_out(self):
         lines = [TITLE, "담당자홍길동", "담당부서시험과", "연락처044-000-0000", "등록일2026-11-11", "조회수457", "첨부파일"] + BODY + ["담당자가 설명회를 진행한다고 적은 본문 문장"] * 12
-        kept, _ = article_text.body(lines + ["만족도 조사"], TITLE)
+        kept, _, _ = article_text.body(lines + ["만족도 조사"], TITLE)
         self.assertEqual(kept[:4], [TITLE, "담당부서시험과", "등록일2026-11-11", "첨부파일"])
         self.assertEqual(kept[-1], "담당자가 설명회를 진행한다고 적은 본문 문장")  # 머리에서 멀리 떨어진 본문의 줄은 그대로 둔다
 
     def test_title_is_matched_whatever_the_spacing(self):
-        kept, found = article_text.body(["메뉴", "시험용  게시글:탄소국경조정제도 설명회 안내", "등록일 2026-11-11", "본문"], TITLE)
+        kept, found, _ = article_text.body(["메뉴", "시험용  게시글:탄소국경조정제도 설명회 안내", "등록일 2026-11-11", "본문"], TITLE)
         self.assertTrue(found)
         self.assertEqual(kept, ["시험용  게시글:탄소국경조정제도 설명회 안내", "등록일 2026-11-11", "본문"])
 
     def test_without_the_title_the_whole_page_is_kept_and_reported(self):
-        kept, found = article_text.body(["메뉴", "본문 한 줄", "목록", "바닥글"], TITLE)
+        kept, found, _ = article_text.body(["메뉴", "본문 한 줄", "목록", "바닥글"], TITLE)
         self.assertFalse(found)
         self.assertEqual(kept, ["메뉴", "본문 한 줄"])
 
     def test_a_stop_word_inside_a_sentence_does_not_end_the_body(self):
-        kept, _ = article_text.body([TITLE, "등록일 2026-11-11", "대상 품목의 목록은 붙임과 같다.", "다음 글에서 이어진다고 적은 문장", "목록", "바닥글"], TITLE)
+        kept, _, _ = article_text.body([TITLE, "등록일 2026-11-11", "대상 품목의 목록은 붙임과 같다.", "다음 글에서 이어진다고 적은 문장", "목록", "바닥글"], TITLE)
         self.assertEqual(kept[-1], "다음 글에서 이어진다고 적은 문장")
 
     def test_source_specific_stop_and_length_limits(self):
-        kept, _ = article_text.body([TITLE, "등록일 2026-11-11", "본문", LICENSE, "뒤따르는 글"], TITLE, ["공공누리 1유형"])
-        self.assertEqual(kept[-1], "본문")
-        many, _ = article_text.body([TITLE, "등록일 2026-11-11"] + ["가" * 100] * 500, TITLE)
+        kept, _, cut = article_text.body([TITLE, "등록일 2026-11-11", "본문", LICENSE, "뒤따르는 글"], TITLE, ["공공누리 1유형"])
+        self.assertEqual((kept[-1], cut), ("본문", False))
+        many, _, cut = article_text.body([TITLE, "등록일 2026-11-11"] + ["가" * 100] * 500, TITLE)
         self.assertLessEqual(sum(len(line) for line in many), article_text.MAX_CHARS)
         self.assertLessEqual(len(many), article_text.MAX_LINES)
+        self.assertTrue(cut)  # 길어서 자른 글은 잘랐다고 알린다
+
+    def test_a_field_whose_value_is_on_the_next_line_is_left_out_with_its_value(self):
+        lines = [TITLE, "작성일", "2026.11.11", "조회수", "7807", "담당부서", "시험과", "담당자", "홍길동", "연락처", "02-000-0000"] + BODY
+        kept, _, _ = article_text.body(lines, TITLE)
+        self.assertEqual(kept, [TITLE, "작성일", "2026.11.11", "담당부서", "시험과"] + BODY)
+        # 값이 비어 다음 칸의 이름이 바로 오면 그 칸부터 다시 본다
+        kept, _, _ = article_text.body([TITLE, "담당자", "연락처", "02-000-0000", "등록일 2026-11-11", "작성자 홍길동", "본문"], TITLE)
+        self.assertEqual(kept, [TITLE, "등록일 2026-11-11", "본문"])
+
+    def test_bare_counts_and_phone_numbers_under_the_heading_are_left_out(self):
+        kept, _, _ = article_text.body([TITLE, "등록일", "2026.11.11", "첨부파일", "81", "044-123-4567", "(02) 123-4567", "본문"] + BODY * 4 + ["12,000"], TITLE)
+        self.assertEqual(kept[:5], [TITLE, "등록일", "2026.11.11", "첨부파일", "본문"])  # 날짜는 남긴다
+        self.assertEqual(kept[-1], "12,000")  # 머리에서 멀리 떨어진 숫자 줄은 그대로 둔다
+
+    def test_without_the_title_contact_fields_are_left_out_anywhere(self):
+        kept, found, _ = article_text.body(["메뉴", "작성일 2026-11-11"] + BODY * 4 + ["담당자", "홍길동", "전화번호 02-000-0000", "02-000-0000", "맺음말"], "화면에 없는 제목")
+        self.assertFalse(found)
+        self.assertEqual(kept, ["메뉴", "작성일 2026-11-11"] + BODY * 4 + ["맺음말"])
+
+    def test_a_heading_inside_a_longer_link_text_is_taken_as_the_title(self):
+        heading = "Standaardwaarden leiden vanaf 1 januari vaak tot hoge kosten"
+        link_text = heading + "Nieuwsbericht 19-11-2025Beeld: © Naam | MakerLees verder"
+        lines = [heading + " | Voorbeeldautoriteit", "Home", "Nieuws", heading, "Nieuwsbericht19-11-2025 | 14:34", "Eerste alinea van het bericht."]
+        kept, found, _ = article_text.body(lines, link_text)
+        self.assertTrue(found)
+        self.assertEqual(kept, [heading, "Nieuwsbericht19-11-2025 | 14:34", "Eerste alinea van het bericht."])
+        # 짧은 줄(메뉴의 낱말)이 링크 글자 안에 들어 있다고 제목으로 보지는 않는다
+        self.assertFalse(article_text.body(["Nieuws", "Home"], "Nieuws van vandaag: Home")[1])
 
     def test_length(self):
         self.assertTrue(article_text.long_enough(BODY))
@@ -246,6 +275,10 @@ class FillTest(unittest.TestCase):
         done = self._fill(post("4유형"))
         self.assertEqual(done["failed"], ["aaa"])
         self.assertFalse(pathlib.Path("collected/pages/items/aaa.txt").exists())
+        state = json.loads(pathlib.Path(articles.STATE).read_text(encoding="utf-8"))["items"]["aaa"]
+        self.assertEqual((state["result"], state["tries"]), (articles.OTHER_TERMS, articles.MAX_TRIES))
+        self.assertEqual(self._fill(post("4유형"))["failed"], [])  # 받기로 한 유형이 아닌 글은 다시 해 보지 않는다
+        pathlib.Path(articles.STATE).unlink()
         done = self._fill(post("1유형"))
         self.assertEqual(done["saved"], ["aaa"])
         self.assertEqual(pathlib.Path("collected/pages/items/aaa.txt").read_text(encoding="utf-8").splitlines()[2], "[이용 조건] 공공누리: 1유형 (글의 화면에 적힌 칸)")
@@ -263,13 +296,32 @@ class FillTest(unittest.TestCase):
         board = page(title="보도자료 목록", body=['<a href="/board/1/view?page=1">' + TITLE + "</a>"] + BODY)
         fetch = self._fetcher({"https://gov.example/board": board, "*": page(license_text="")})
         source = json.loads(pathlib.Path("sources/registry.json").read_text(encoding="utf-8"))["sources"][0]
-        seen = articles_try.look(source, "https://gov.example/board/1/view", fetch)
-        self.assertEqual((seen["opened"], seen["title"], seen["titleFound"], seen["longEnough"]), (True, TITLE, True, True))
+        links = articles_try.board_links(source, fetch)
+        title = articles_try.title_of(links, "https://gov.example/board/1/view")
+        seen = articles_try.look(source, "https://gov.example/board/1/view", title, fetch, dump=True)
+        self.assertEqual((seen["opened"], seen["title"], seen["titleFound"], seen["longEnough"], seen["cut"]), (True, TITLE, True, True, False))
         self.assertIn("(https://gov.example/board 에 적힌 글)", seen["terms"])
-        self.assertEqual(seen["head"][0], TITLE)
+        self.assertEqual((seen["head"][0], seen["body"][0], len(seen["body"])), (TITLE, TITLE, seen["bodyLines"]))
+        self.assertNotIn("body", articles_try.look(source, "https://gov.example/board/1/view", title, fetch))
         self.assertFalse(pathlib.Path("collected/pages/items").exists())
-        missing = articles_try.look(source, "https://gov.example/board/9/view", self._fetcher((404, {}, b"", "HTTP Error 404")))
+        missing = articles_try.look(source, "https://gov.example/board/9/view", "", self._fetcher((404, {}, b"", "HTTP Error 404")))
         self.assertEqual((missing["opened"], missing["why"]), (False, "HTTP Error 404"))
+
+    def test_trial_targets_can_be_picked_from_the_board_page(self):
+        source = json.loads(pathlib.Path("sources/registry.json").read_text(encoding="utf-8"))["sources"][0]
+        links = [("https://gov.example/news", "알림·소식"), ("https://gov.example/board/7/view?page=1", "첫 글"), ("https://gov.example/attach/7/view", "붙임"),
+                 ("https://elsewhere.example/board/1/view", "다른 사이트"), ("https://gov.example/board/7/view?page=1", "첫 글"),
+                 ("https://gov.example/board/6/view", "둘째 글"), ("https://gov.example/board/5/view", "셋째 글"), ("https://gov.example/copyright", "저작권 정책")]
+        self.assertEqual(articles_try.picked(source, links, 2, "/view"), ["https://gov.example/board/7/view?page=1", "https://gov.example/board/6/view"])
+        self.assertEqual(articles_try.picked(source, links, 2, "/없는 글자"), [])
+        self.assertEqual(articles_try.terms_links(links), [["저작권 정책", "https://gov.example/copyright"]])
+
+    def test_a_long_article_is_stored_with_a_note_that_it_was_cut(self):
+        self._fill(page(body=["가나다라마바사아자차" * 10] * 300))
+        lines = pathlib.Path("collected/pages/items/aaa.txt").read_text(encoding="utf-8").splitlines()
+        self.assertTrue(lines[4].startswith("[알림] 글이 길어 앞부분만 실었다"))
+        self.assertEqual(lines[5], "")
+        self.assertLessEqual(sum(len(line) for line in lines[6:]), article_text.MAX_CHARS)
 
     def test_short_pages_files_and_errors_are_not_stored(self):
         for body, expected in ((page(body=["붙임 파일을 참고"]), articles.TOO_SHORT), (answer(b"%PDF" * 400, content_type="application/pdf"), "HTML이 아님"),
@@ -337,6 +389,10 @@ class HealthTest(unittest.TestCase):
         mixed = [dict(old, at="2026-11-12T05:21:00+09:00", result=why) for why in (articles.NO_LICENSE, articles.TOO_SHORT, "열리지 않음(상태 503)")]
         self.assertEqual(self._problems(dict(zip("abc", mixed))), [])
         self.assertEqual(articles_health.problems(NOW, "/nonexistent/articles.json"), [])
+
+    def test_posts_left_out_by_design_are_not_counted_as_misses(self):
+        other = {"source": "ministry", "result": articles.OTHER_TERMS, "tries": 3, "at": "2026-11-12T05:21:00+09:00"}
+        self.assertEqual(self._problems({"a": other, "b": other, "c": other, "d": other}), [])
 
 
 if __name__ == "__main__":
