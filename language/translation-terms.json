@@ -3108,6 +3108,24 @@
    "ko": "세관 고객 정보",
    "from": "32025R2550",
    "added": "2026-11-13"
+  },
+  {
+   "en": "alternative means of communication",
+   "ko": "대체 통보 수단",
+   "from": "32025R2619",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "surveillance mechanism",
+   "ko": "감시 체계",
+   "from": "32025R2619",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "customs procedure code",
+   "ko": "세관 절차 코드",
+   "from": "32025R2619",
+   "added": "2026-11-13"
   }
  ]
 }
