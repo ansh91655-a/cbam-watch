@@ -2166,6 +2166,18 @@
    "ko": "보증 업무",
    "from": "guide-verif",
    "added": "2026-11-12"
+  },
+  {
+   "en": "pre-contract stage",
+   "ko": "계약 전 단계",
+   "from": "guide-verif",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "person-days",
+   "ko": "인일",
+   "from": "guide-verif",
+   "added": "2026-11-12"
   }
  ]
 }
