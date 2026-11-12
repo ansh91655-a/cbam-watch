@@ -201,12 +201,27 @@ def toc_of(pages, found):
             "text": squash(" ".join(LEADERS.sub(" ", line) for line in lines))}
 
 
+STRONG_MARK = r"(?:(?<=[a-z]{3})|(?<=[A-Z]{4})|(?<=[)\]”’\"]))"               # 낱말(hydrogen3, BREF1)이나 닫는 괄호·따옴표에 바로 붙은 자리
+WEAK_MARK = r"(?<=[^\d\s][.,;:%])(?<![^A-Za-z][A-Z]\.)(?<!^[A-Z]\.)"            # 문장부호 바로 뒤(period.5). 절 번호(D.1, B.3)는 뺀다
+MARK_END = r"(?!\w)(?!\.\d)"
+
+
+def _strong_reference(number):
+    """낱말이나 닫는 괄호·따옴표에 바로 붙은 각주 번호를 찾는 식."""
+    return re.compile(rf"{STRONG_MARK}{number}{MARK_END}")
+
+
+def _weak_reference(number):
+    """문장부호 바로 뒤에 붙은 각주 번호를 찾는 식. 낱말에 붙은 것보다 잘못 걸리기 쉬워, 낱말에 붙은 자리가 없을 때만 쓴다."""
+    return re.compile(rf"{WEAK_MARK}{number}{MARK_END}")
+
+
 def _reference(number):
     """본문에 붙어 있는 각주 번호를 찾는 식: 낱말 바로 뒤(hydrogen3, BREF1), 닫는 괄호나 따옴표 바로 뒤, 문장부호 바로 뒤(period.5)의 수.
 
     단위와 화학식(m3, tCO2), 소수(0.5)는 걸리지 않게 한다: 소문자 세 글자나 대문자 네 글자 뒤, 수가 아닌 글자에 붙은 문장부호 뒤만 본다.
     """
-    return re.compile(rf"(?:(?<=[a-z]{{3}})|(?<=[A-Z]{{4}})|(?<=[)\]”’\"])|(?<=[^\d\s][.,;:%])){number}(?!\w)(?!\.\d)")
+    return re.compile(rf"(?:{STRONG_MARK}|{WEAK_MARK}){number}{MARK_END}")
 
 
 def _mentioned(lines, number):
@@ -214,14 +229,19 @@ def _mentioned(lines, number):
     return any(_reference(number).search(line) or re.search(rf"\s\({number}\)", line) for line in lines)
 
 
-def _note_zone(lines, number):
-    """번호가 number인 각주가 시작하는 줄의 자리. 쪽의 아래쪽에서부터 찾는다. 없으면 None."""
+def _note_zone(lines, number, tight=False):
+    """번호가 number인 각주가 시작하는 줄의 자리. 쪽의 아래쪽에서부터 찾는다. 없으면 None.
+
+    각주 번호의 앞줄은 비어 있다. tight이면 앞줄이 비어 있지 않아도 받는다: 본문의 마지막 문장이 다음 쪽으로 넘어가는 쪽에서는
+    본문과 각주 사이에 빈 줄이 없다. 그때는 번호만 있는 줄이고 그 뒤가 빈 줄일 때만 받는다(본문의 줄 머리에 온 수와 가리려는 것).
+    """
     for index in range(len(lines) - 1, -1, -1):
         line = lines[index].strip()
-        if index and lines[index - 1].strip():
-            continue  # 각주 번호의 앞줄은 비어 있다
+        open_above = bool(index and lines[index - 1].strip())
+        if open_above and not (tight and line == str(number) and index + 1 < len(lines) and not lines[index + 1].strip()):
+            continue
         inline = INLINE_NOTE.match(line)
-        if line == str(number) or (inline and int(inline.group(1)) == number and inline.group(2)[:1].isupper()):
+        if line == str(number) or (not open_above and inline and int(inline.group(1)) == number and inline.group(2)[:1].isupper()):
             return index
     return None
 
@@ -266,7 +286,10 @@ def _act_reference(number):
 def _mark(body, notes):
     """본문에 붙은 각주 번호를 [3] 꼴로 바꾼다. 흔한 꼴로 찾지 못한 번호는 법령 번호 뒤에 붙은 것과, 쪽에 하나뿐인 느슨한 꼴을 찾는다."""
     for number, _ in notes:
-        body = [_reference(number).sub(f"[{number}]", line) for line in body]
+        for pattern in (_strong_reference(number), _weak_reference(number)):  # 낱말에 붙은 자리가 있으면 그것만 바꾼다(절 번호 "D.1" 같은 것을 건드리지 않게)
+            if any(pattern.search(line) for line in body):
+                body = [pattern.sub(f"[{number}]", line) for line in body]
+                break
         if any(f"[{number}]" in line for line in body):
             continue
         glued = [index for index, line in enumerate(body) if _act_reference(number).search(line)]
@@ -309,8 +332,8 @@ def _inverted_notes(lines, first):
 
 def take_notes(lines, expected):
     """쪽 아래의 각주를 떼어 낸다: (본문 줄, [(번호, 글)], 다음에 올 각주 번호). 각주가 없으면 줄을 그대로 돌려준다."""
-    for first in range(expected, expected + NOTE_JUMP + 1):
-        start = _note_zone(lines, first)
+    for first, tight in [(expected, False), (expected, True)] + [(number, False) for number in range(expected + 1, expected + NOTE_JUMP + 1)]:
+        start = _note_zone(lines, first, tight)
         if start is None:
             continue
         notes = _read_notes(lines[start:], first)

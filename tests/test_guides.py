@@ -361,6 +361,23 @@ class PagesTest(unittest.TestCase):
         self.assertEqual([number for number, _ in notes], [3, 4])
         self.assertEqual(body, ["See Article 321 of Regulation (EU) 2015/2447[4]) and the code UCC[3]) for the rule in a long line."])
 
+    def test_a_footnote_right_under_a_sentence_that_runs_on_is_still_a_footnote(self):
+        lines = ["See the “O3CI” Module2 of the registry and write the plan, i.e. the", "2", "", "O3CI = Operators of 3rd country Installations", "",
+                 "3", "", "A second note."]
+        body, notes, following = pdf_pages.take_notes(lines, 2)
+        self.assertEqual(notes, [(2, "O3CI = Operators of 3rd country Installations"), (3, "A second note.")])
+        self.assertEqual(body, ["See the “O3CI” Module[2] of the registry and write the plan, i.e. the"])
+        self.assertEqual(following, 4)
+        table = ["The table has these rows and the text goes on to the next page with the", "2", "", "Steel"]
+        self.assertEqual(pdf_pages.take_notes(table, 2), (table, [], 2))  # 본문에 그 번호가 붙은 자리가 없으면 각주가 아니다
+
+    def test_a_section_number_is_not_marked_when_the_note_sits_on_a_word(self):
+        lines = ["• Annex II, Section D – Electricity, sub-sections D.1 to D.2", "Note: The proposal1 of 17 December 2025 changes the rules.", "", "1", "", "Proposal for a Regulation."]
+        body, notes, _ = pdf_pages.take_notes(lines, 1)
+        self.assertEqual(notes, [(1, "Proposal for a Regulation.")])
+        self.assertEqual(body, ["• Annex II, Section D – Electricity, sub-sections D.1 to D.2", "Note: The proposal[1] of 17 December 2025 changes the rules."])
+        self.assertIsNone(pdf_pages._reference(7).search("sub-section B.7. Requirements for determining emissions"))
+
     def test_a_page_that_only_ends_with_a_number_keeps_its_text(self):
         lines = ["1.4. A heading on this page", "The text of the page ends with a table.", "", "1.5. Another heading", "Its text.", "1"]
         self.assertEqual(pdf_pages.take_notes(lines, 1), (lines, [], 1))  # 제목이 든 구역은 각주가 아니다
@@ -579,6 +596,7 @@ class RepositoryTest(unittest.TestCase):
         self.assertTrue(status.summary(group="paper").startswith("보고서·안내 자료 번역: 원문 "))
         self.assertTrue(status.summary().startswith("규정 번역: 원문 "))
         self.assertEqual(set(status.NAMES), {"act", *guides.GROUPS})
+        self.assertTrue(status.whole().startswith("전체: 서로 다른 문단 "))
 
 
 class TrialTest(unittest.TestCase):
