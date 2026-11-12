@@ -2766,6 +2766,42 @@
    "ko": "유럽 개인정보보호감독관",
    "from": "32025R2546",
    "added": "2026-11-13"
+  },
+  {
+   "en": "co-generation",
+   "ko": "열병합발전",
+   "from": "32025R2551",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "European Committee for Standardisation",
+   "ko": "유럽표준화위원회",
+   "from": "32025R2551",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "assessor",
+   "ko": "평가자",
+   "from": "32025R2551",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "surveillance activities",
+   "ko": "사후관리 활동",
+   "from": "32025R2551",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "CBAM activity group",
+   "ko": "CBAM 활동 그룹",
+   "from": "32025R2551",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "assessment team",
+   "ko": "평가팀",
+   "from": "32025R2551",
+   "added": "2026-11-13"
   }
  ]
 }
