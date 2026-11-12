@@ -1314,6 +1314,42 @@
    "ko": "예비 탄소함량",
    "from": "guide-3",
    "added": "2026-11-12"
+  },
+  {
+   "en": "type I standard values",
+   "ko": "유형 I 표준값",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "type II standard values",
+   "ko": "유형 II 표준값",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "frequency of analyses",
+   "ko": "분석 빈도",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "frequency of sampling",
+   "ko": "시료채취 빈도",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "proficiency testing schemes",
+   "ko": "숙련도 시험 프로그램",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "certified reference materials",
+   "ko": "인증 표준물질",
+   "from": "guide-3",
+   "added": "2026-11-12"
   }
  ]
 }
