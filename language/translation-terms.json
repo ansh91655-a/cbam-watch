@@ -2946,6 +2946,42 @@
    "ko": "소성 고령토질 점토",
    "from": "32026R1740",
    "added": "2026-11-13"
+  },
+  {
+   "en": "declaration of honour",
+   "ko": "서약서",
+   "from": "32025R0486",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "consultation procedure",
+   "ko": "협의 절차",
+   "from": "32025R0486",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "consulted parties",
+   "ko": "협의 당사자",
+   "from": "32025R0486",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "explicit capacity",
+   "ko": "명시적 용량",
+   "from": "32025R0486",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "beneficial owner",
+   "ko": "실소유자",
+   "from": "32025R0486",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "criminal record",
+   "ko": "범죄경력 기록",
+   "from": "32025R0486",
+   "added": "2026-11-13"
   }
  ]
 }
