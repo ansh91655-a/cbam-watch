@@ -3,11 +3,11 @@
  "days": [
   {
    "day": "2026-11-12",
-   "batches": 29,
-   "checked": 4288,
+   "batches": 31,
+   "checked": 4532,
    "dropped": 0,
-   "canaries": 225,
-   "caught": 223,
+   "canaries": 238,
+   "caught": 236,
    "discarded": 0,
    "held": 0
   }
