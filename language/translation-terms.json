@@ -1668,6 +1668,36 @@
    "ko": "지속가능성 기준",
    "from": "guide-3",
    "added": "2026-11-12"
+  },
+  {
+   "en": "fossil fuel comparator",
+   "ko": "화석연료 비교값",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "useful heat",
+   "ko": "유효열",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "life cycle emissions",
+   "ko": "전과정 배출량",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "consignment",
+   "ko": "화물",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "biogas",
+   "ko": "바이오가스",
+   "from": "guide-3",
+   "added": "2026-11-12"
   }
  ]
 }
