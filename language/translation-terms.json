@@ -2370,6 +2370,36 @@
    "ko": "회사 등록 증명서",
    "from": "guide-verif",
    "added": "2026-11-13"
+  },
+  {
+   "en": "physical marker",
+   "ko": "물리적 표지",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "digital product passport",
+   "ko": "디지털 제품 여권",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "delivery note",
+   "ko": "인도증",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "smart metering",
+   "ko": "스마트 계량",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "aggregated precursor",
+   "ko": "집계된 전구물질",
+   "from": "guide-verif",
+   "added": "2026-11-13"
   }
  ]
 }
