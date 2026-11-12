@@ -3018,6 +3018,48 @@
    "ko": "특수한 범주의 데이터",
    "from": "32025R0486",
    "added": "2026-11-13"
+  },
+  {
+   "en": "national component",
+   "ko": "국가 구성요소",
+   "from": "32024R3210",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "trans-European system",
+   "ko": "범유럽 시스템",
+   "from": "32024R3210",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "EU Single Window Environment",
+   "ko": "EU 단일창구 환경",
+   "from": "32024R3210",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Uniform User Management and Digital Signature",
+   "ko": "통합 사용자 관리 및 전자서명",
+   "from": "32024R3210",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Customs Risk Management System",
+   "ko": "세관 리스크 관리 시스템",
+   "from": "32024R3210",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "business continuity plan",
+   "ko": "업무 연속성 계획",
+   "from": "32024R3210",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "system owner",
+   "ko": "시스템 소유자",
+   "from": "32024R3210",
+   "added": "2026-11-13"
   }
  ]
 }
