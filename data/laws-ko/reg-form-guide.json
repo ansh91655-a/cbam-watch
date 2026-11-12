@@ -21,5 +21,26 @@
   "d6a32d5dd0b9": "Type of Actor: 이 칸에는 “Third country Operator”가 표시되어야 한다. Type of Identifier: 이 칸에는 \"ORG_ID\"가 표시되어야 한다.",
   "db0572a28976": "Identity: 이 칸에는 “Request new identity”가 표시되어야 한다. Type of Person: 이 칸에는 “Legal Person”이 표시되어야 한다. Legal person: 이 칸에는 증빙 서류에 나타난 회사 이름과 음역한 국제화 이름을 기재해야 한다.",
   "f8d54f0b61f3": "Company Website: 이 칸은 필수가 아니지만 신청을 쉽게 하기 위하여 권장한다."
- }
+ },
+ "checked": [
+  "0f4309d7f04f",
+  "219928cac3de",
+  "3721d0d389cb",
+  "3dc63239ec4d",
+  "49dfe9272ccd",
+  "4d072140fd35",
+  "593de9724db3",
+  "7f63ed6763ee",
+  "92e9623e9659",
+  "964ebaed0258",
+  "a2b7804cd98e",
+  "a454be497cea",
+  "b09ff76573b1",
+  "b9195155599c",
+  "bda54f98472f",
+  "c5800aa614cf",
+  "d6a32d5dd0b9",
+  "db0572a28976",
+  "f8d54f0b61f3"
+ ]
 }
