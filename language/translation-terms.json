@@ -228,6 +228,36 @@
    "ko": "정정 절차",
    "from": "32023R0956",
    "added": "2026-11-12"
+  },
+  {
+   "en": "literature values",
+   "ko": "문헌값",
+   "from": "32023R0956",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "environmental integrity",
+   "ko": "환경적 완전성",
+   "from": "32023R0956",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "CO2 emission factor",
+   "ko": "CO2 배출계수",
+   "from": "32023R0956",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "specific default values",
+   "ko": "고유 기본값",
+   "from": "32023R0956",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "best available data",
+   "ko": "이용 가능한 최선의 데이터",
+   "from": "32023R0956",
+   "added": "2026-11-12"
   }
  ]
 }
