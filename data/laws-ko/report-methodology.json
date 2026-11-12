@@ -184,11 +184,5 @@
   "f67a0e3df9cb",
   "f9583a95220f",
   "fd1c667ad3eb"
- ],
- "held": {
-  "aeccc1d8775e": {
-   "tries": 5,
-   "why": "용어집의 표기가 없음: operator → 사업자"
-  }
- }
+ ]
 }

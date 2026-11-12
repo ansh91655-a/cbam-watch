@@ -1268,11 +1268,5 @@
   "fee083a1ddc8",
   "ff5c4e0d485a",
   "ffec9e3b2c87"
- ],
- "held": {
-  "bbe39ebe2c13": {
-   "tries": 5,
-   "why": "용어집의 표기가 없음: installation → 사업장"
-  }
- }
+ ]
 }
