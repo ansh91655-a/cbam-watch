@@ -187,6 +187,44 @@ class CheckTest(unittest.TestCase):
         self.assertEqual(check.problems("determined in line with the CBAM rules outlined above", "위에 설명한 CBAM 규칙에 따라 정한")["hard"], [])
         self.assertIn("용어: 'CBAM 규칙' 대신 'CBAM 규정'", check.problems("determined in line with the CBAM Regulation", "CBAM 규칙에 따라 정한")["hard"])
 
+    def test_a_term_negated_with_non_is_not_asked_for(self):
+        # non-material misstatement는 용어집의 material misstatement(중요한 오류)를 부정한 말이다
+        self.assertEqual(check.problems("The verification report contains non-material misstatements", "검증보고서에 중요하지 않은 오류가 들어 있다.")["hard"], [])
+        self.assertTrue(any(why.startswith("용어집의 표기가 없음: material misstatement") for why in check.problems("The report contains material misstatements.", "보고서에 큰 잘못이 들어 있다.")["hard"]))
+        # 부정한 것과 그대로인 것이 함께 나오면 그대로 요구한다
+        both = check.problems("Non-material misstatements may jointly become material misstatements.", "중요하지 않은 잘못이 모여 큰 잘못이 될 수 있다.")["hard"]
+        self.assertTrue(any(why.startswith("용어집의 표기가 없음: material misstatement") for why in both))
+        # 용어집에 non-으로 시작하는 낱말이 따로 있으면 그것으로 본다. 부정된 자리에 든 짧은 낱말은 따로 요구하지 않는다
+        self.assertIn("non-eu country", [form for entry in terms.found("goods from non-EU countries") for form in entry["en"]])
+        self.assertNotIn("goods", [entry["show"] for entry in terms.found("imports of non-CBAM goods")])
+
+    def test_site_names_mail_addresses_and_file_names_are_not_text_to_translate(self):
+        self.assertFalse(check.needs("• example.com"))
+        self.assertFalse(check.needs("helpdesk@example.eu"))
+        self.assertEqual(check.problems("CBAM_O3CI_Data_Ele ments.xlsx", "CBAM_O3CI_Data_Ele ments.xlsx")["hard"], [])
+        self.assertTrue(check.needs("1.Introduction"))          # 번호 뒤에 붙은 제목은 주소가 아니다
+        self.assertTrue(check.needs("See section 4.3.The operator registers."))
+
+    def test_screen_names_in_quotes_may_stay_in_a_registry_manual_only(self):
+        for line in ("“Start Request for change”.", "• \"Accept deregistration\", \"Decide to deregister\", \"Decide not to deregister\"", "▪ “Please explain emissions factor calculation” (an..256)."):
+            self.assertEqual(check.problems(line, line, screen=True)["hard"], [], line)
+            self.assertIn("국문으로 옮기지 않음", check.problems(line, line)["hard"], line)   # 법령과 가이던스에서는 따옴표 안의 글도 옮긴다
+        # 따옴표 밖에 글이 있으면 안내서에서도 막는다
+        self.assertIn("국문으로 옮기지 않음", check.problems("Click on “Start Request for change” to begin.", "Click on “Start Request for change” to begin.", screen=True)["hard"])
+
+    def test_a_paragraph_set_aside_as_an_exception_is_noted_not_stopped(self):
+        source = "(a) prevent any unauthorised person from having access to installations used for the processing of data;"
+        korean = "(a) 권한 없는 자가 데이터 처리에 사용되는 설비에 접근하지 못하게 한다"
+        self.assertTrue(any(why.startswith("용어집의 표기가 없음: installation") for why in check.problems(source, korean)["hard"]))
+        found = check.problems(source, korean, excused=True)
+        self.assertEqual(found["hard"], [])
+        self.assertTrue(found["soft"][0].startswith("예외로 둔 문단: 용어집의 표기가 없음: installation"))
+        # 예외로 둔 문단이라도 수가 빠진 것은 막는다
+        self.assertIn("원문의 수가 빠짐: 5", check.problems("Article 5 applies to installations.", "이 조는 설비에 적용한다.", excused=True)["hard"])
+        # 예외는 열쇠로 적은 문단에만 듣는다(sources/translation.json의 excused)
+        self.assertEqual(apply.judge("없는열쇠", "32023R1773", source, korean)["hard"], check.problems(source, korean)["hard"])
+        self.assertEqual(apply.judge("bbe39ebe2c13", "32023R1773", source, korean)["hard"], [])
+
     def test_translations_are_sorted_into_accepted_and_rejected(self):
         known = {"aaa": ("32099R0001", "Annex IV applies from 2030."), "bbb": ("32099R0001", "Scope")}
         accepted, rejected, noted = apply.sort({"aaa": "부속서 IV는 2030년부터 적용한다.", "bbb": "", "zzz": "없는 열쇠"}, known)
@@ -223,7 +261,7 @@ class RepositoryTest(unittest.TestCase):
 
     def test_every_stored_translation_still_passes_the_checks(self):
         known = apply.sources()
-        failed = [(key, check.problems(known[key][1], text)["hard"]) for key, text in store.load_all().items() if key in known and check.problems(known[key][1], text)["hard"]]
+        failed = [(key, apply.judge(key, *known[key], text)["hard"]) for key, text in store.load_all().items() if key in known and apply.judge(key, *known[key], text)["hard"]]
         self.assertEqual(failed, [])
 
     def test_site_data_is_built_with_contents_translations_and_search_rows(self):

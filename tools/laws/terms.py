@@ -53,15 +53,23 @@ def _pattern(form):
 
 
 def found(source, path=GLOSSARY):
-    """원문 문단에 나온 용어집의 낱말들(긴 것부터). 복수형(-s, -es, -y가 바뀐 -ies)도 같은 낱말로 본다."""
+    """원문 문단에 나온 용어집의 낱말들(긴 것부터). 복수형(-s, -es, -y가 바뀐 -ies)도 같은 낱말로 본다.
+
+    non-이 앞에 붙은 것은 그 낱말을 부정한 말이다(non-material misstatement는 '중요한 오류'가 아니다). 그런 자리만 있으면
+    그 낱말은 나온 것으로 세지 않는다. 다만 그 자리에 든 짧은 낱말도 따로 세지 않는다. 용어집에 non-으로 시작하는 낱말이 따로 있으면
+    (non-EU country) 긴 것부터 보므로 그것이 먼저 잡힌다.
+    """
     text = str(source).lower()
     hits = []
     for entry in entries(path):
         for form in entry["en"]:
             pattern = _pattern(form)
-            if pattern.search(text):
+            spots = list(pattern.finditer(text))
+            if spots:
+                plain = any(text[max(0, match.start() - 4):match.start()] != "non-" for match in spots)
                 text = pattern.sub(lambda match: " " * len(match.group(0)), text)  # 이 자리에 든 짧은 낱말은 다시 세지 않는다
-                hits.append(entry)
+                if plain:
+                    hits.append(entry)
                 break
     return hits
 

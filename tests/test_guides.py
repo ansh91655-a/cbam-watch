@@ -559,7 +559,7 @@ class RepositoryTest(unittest.TestCase):
             self.assertGreaterEqual(len(listed & cut), 0.9 * len(listed), document["id"])
             self.assertFalse([part["title"] for part in found if len(part["title"]) > guide_segment.TITLE_MAX and not part["title"].endswith("?")], document["id"])
         self.assertEqual(len({document["id"] for document in guides.documents()}), len(guides.documents()))
-        self.assertEqual(laws_health.problems(today="2026-11-12"), [])
+        self.assertEqual(laws_health._outline_problems(), [])  # 검사에 걸려 남은 문단 같은 운영의 일은 여기서 보지 않는다(실행 확인과 보고가 알린다)
 
     def test_each_runner_takes_only_its_own_documents(self):
         groups = {document["id"]: document["group"] for document in corpus.documents()}

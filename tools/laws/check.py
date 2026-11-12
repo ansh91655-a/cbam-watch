@@ -11,6 +11,9 @@
 용어집이 쓰지 않기로 한 표기도, 원문에 그 표기가 맞는 다른 낱말이 있으면(accuracy and precision의 '정밀도', the CBAM rules의 'CBAM 규칙') senses를 보고 알리기만 한다.
 옮길 글이 없어 원문대로 둔 줄은 '옮기지 않음'으로 막지 않는다: 식(E = eec + el – esca, EFheat,default = 62,3 t CO2e / TJ)과 화면에 뜨는 번호 붙은 알림 글(VAL748 The attribute …).
 PDF에서 각주 번호가 수 뒤에 붙어 버린 것(Equation 5516 = Equation 55와 각주 16)은 번역이 "55[16]"으로 갈라 적으면 수가 빠진 것으로 보지 않는다.
+주소에는 앞머리 없이 적은 사이트 이름(example.com), 전자우편 주소, 파일 이름(….xlsx)도 든다.
+등록부 안내서(screen)에서는 따옴표 안의 화면 이름만 늘어놓은 줄(“Start Request for change”.)도 원문대로 둘 수 있다.
+그래도 남는 한두 문단은 sources/translation.json의 excused에 열쇠와 까닭을 적어 예외로 둔다: 그 문단은 용어와 '옮기지 않음'으로는 막지 않고 알리기만 한다.
 주소와 번호만 있는 줄(주소 하나만 적은 각주)은 옮기지 않고 그대로 싣는다. 주소 안의 수는 번역에 그대로 남아 있어야 한다.
 """
 import collections
@@ -24,7 +27,10 @@ HANGUL = re.compile(r"[가-힣]")
 WORD = re.compile(r"(?<![A-Za-z])[a-z]{4,}")  # 소문자로 시작하는 낱말. 사람 이름이나 약어만 있는 줄(Ursula VON DER LEYEN)과 가린다
 LETTERS = re.compile(r"[A-Za-z]{2,}")
 THOUSANDS = re.compile(r"(?<=\d)[   ,](?=\d{3}(?!\d))")
-URL = re.compile(r"(?:https?://|www\.)\S+")
+URL = re.compile(r"(?:https?://|www\.)\S+|\S+@\S+\.\S+"
+                 r"|(?<![A-Za-z0-9@])(?:[A-Za-z0-9_-]+\.)+(?:com|org|net|eu|int|gov|edu|io|info|xlsx|xls|pdf|docx|doc|csv|zip|xml|json|pptx|txt)\b(?:/\S*)?")
+QUOTED = re.compile(r"[“\"][^”\"]*[”\"]")
+WAIVABLE = ("용어집의 표기가 없음", "용어: ", "국문으로 옮기지 않음")  # 예외로 둔 문단에서 막지 않는 것(수와 번호는 그대로 막는다)
 RELATION = re.compile(r"[=≤≥]")
 RUNNING = re.compile(r"[A-Za-z]{3,}\s+[A-Za-z]{3,}")   # 낱말 둘이 나란히 놓인 곳(식에는 없고 글에는 있다)
 CODED = re.compile(r"^\W*[A-Z]{2,}[0-9]{2,}\b")       # 화면에 뜨는 알림 글의 번호(VAL748)
@@ -53,9 +59,12 @@ def _numbers(text):
     return collections.Counter(DIGITS.findall(THOUSANDS.sub("", str(text))))
 
 
-def as_is(text):
-    """원문대로 두어도 되는 줄인가: 식이거나, 화면에 뜨는 번호 붙은 알림 글."""
-    return bool((RELATION.search(text) and not RUNNING.search(text)) or CODED.search(text))
+def as_is(text, screen=False):
+    """원문대로 두어도 되는 줄인가: 식이거나, 화면에 뜨는 번호 붙은 알림 글. 등록부 안내서(screen)에서는 따옴표 안의 화면 이름만 있는 줄도."""
+    if (RELATION.search(text) and not RUNNING.search(text)) or CODED.search(text):
+        return True
+    bare = QUOTED.sub(" ", text)
+    return bool(screen and bare != text and not WORD.search(bare))
 
 
 def _joined(number, got, korean):
@@ -63,15 +72,15 @@ def _joined(number, got, korean):
     return any(number[:cut] in got and f"[{number[cut:]}]" in korean for cut in range(1, len(number)) if len(number) - cut <= 3)
 
 
-def problems(source, korean):
-    """{"hard": [막는 까닭], "soft": [알릴 것]}"""
+def problems(source, korean, screen=False, excused=False):
+    """{"hard": [막는 까닭], "soft": [알릴 것]}. screen은 등록부 안내서의 문단, excused는 예외로 둔 문단(tools.laws.plan.excused)."""
     global _terms
     hard, soft = [], []
     korean = str(korean or "").strip()
     if not korean:
         return {"hard": ["번역이 비어 있음"], "soft": []}
     plain = prose(source)
-    if WORD.search(plain) and not HANGUL.search(korean) and not as_is(plain):
+    if WORD.search(plain) and not HANGUL.search(korean) and not as_is(plain, screen):
         hard.append("국문으로 옮기지 않음")
     wanted, got = _numbers(source), _numbers(korean)
     missing = sorted(number for number in (wanted - got).elements() if not _joined(number, got, korean))
@@ -107,4 +116,8 @@ def problems(source, korean):
             (hard if hit["hard"] else soft).append(f"용어: '{hit['avoid']}' 대신 '{hit['use']}'")
     if len(source) > 40 and not RATIO[0] <= len(korean) / len(source) <= RATIO[1]:
         soft.append(f"길이가 원문의 {len(korean) / len(source):.1f}배")
+    if excused:
+        waived = [why for why in hard if why.startswith(WAIVABLE)]
+        hard = [why for why in hard if why not in waived]
+        soft = [f"예외로 둔 문단: {why}" for why in waived] + soft
     return {"hard": hard, "soft": soft}

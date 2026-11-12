@@ -37,6 +37,12 @@ def senses():
     return {str(english).lower(): [str(form) for form in forms if str(form).strip()] for english, forms in found.items()}
 
 
+def excused():
+    """검사가 잘못 막는 것을 확인하고 예외로 둔 문단: {열쇠: 까닭}. 용어와 '옮기지 않음'으로는 막지 않는다(tools.laws.check)."""
+    found = (read_json(SOURCE, {}) or {}).get("excused") or {}
+    return {str(block_key): str(why) for block_key, why in found.items()}
+
+
 def everyone():
     """번역을 하는 모든 실행이 맡은 문서를 한 차례로 늘어놓는 설정(검수가 문서를 훑는 차례로 쓴다): first와 groups를 실행의 차례대로 이은 것."""
     first, groups = [], []

@@ -11,7 +11,7 @@ import json
 import sys
 
 from tools.common.jsonio import read_json
-from tools.laws import check, corpus, finish, store, terms
+from tools.laws import check, corpus, finish, plan, store, terms
 
 
 def sources():
@@ -26,6 +26,11 @@ def sources():
     return found
 
 
+def judge(block_key, act_id, source, korean):
+    """문단 하나의 검사 결과. 등록부 안내서인지와 예외로 둔 문단인지를 보고 검사한다."""
+    return check.problems(source, korean, screen=str(act_id).startswith("reg-"), excused=block_key in plan.excused())
+
+
 def sort(blocks, known=None):
     """번역을 받아들일 것과 걸린 것으로 가른다: ({법령: {열쇠: 국문}}, [(열쇠, 까닭들)], [(열쇠, 알릴 것들)])"""
     known = known if known is not None else sources()
@@ -36,7 +41,7 @@ def sort(blocks, known=None):
             continue
         act_id, source = known[block_key]
         korean = finish.finish(terms.unify(source, korean))  # 용어집 낱말의 띄어쓰기를 권장 표기로, 문장의 끝맺음을 한 가지 꼴로 맞춘다
-        found = check.problems(source, korean)
+        found = judge(block_key, act_id, source, korean)
         if found["hard"]:
             rejected.append((block_key, found["hard"]))
             continue
