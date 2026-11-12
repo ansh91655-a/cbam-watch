@@ -22,9 +22,10 @@ on:
         type: string
         default: ""
       dump:
-        description: "본문으로 고른 줄을 모두 찍는다"
-        type: boolean
-        default: false
+        description: "모두 찍을 것: body는 본문으로 고른 줄, page는 화면의 줄과 링크"
+        type: choice
+        options: ["none", "body", "page"]
+        default: "none"
 
 permissions:
   contents: read
@@ -51,5 +52,5 @@ jobs:
           if [ -n "$LICENSE" ]; then set -- "$@" --license "$LICENSE"; fi
           if [ -n "$TERMS_URL" ]; then set -- "$@" --terms-url "$TERMS_URL"; fi
           if [ -n "$STOP" ]; then set -- "$@" --stop "$STOP"; fi
-          if [ "$DUMP" = "true" ]; then set -- "$@" --dump; fi
+          if [ "$DUMP" = "body" ] || [ "$DUMP" = "page" ]; then set -- "$@" --dump "$DUMP"; fi
           python -m tools.collect.articles_try "$@"

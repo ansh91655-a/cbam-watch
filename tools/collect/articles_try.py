@@ -4,12 +4,13 @@
 이용 조건이 어디에서 찾아지는지, 화면이 저작권을 어떻게 적었는지, 본문이 어디서 시작해 어디서 끝나는지.
 
 쓰는 법:
-  python -m tools.collect.articles_try <출처 코드>=<글 주소> [...] [--license "<글귀>"] [--terms-url <주소>] [--stop "<끝 표시>"] [--dump]
+  python -m tools.collect.articles_try <출처 코드>=<글 주소> [...] [--license "<글귀>"] [--terms-url <주소>] [--stop "<끝 표시>"] [--dump body|page]
 - 출처 코드는 출처 대장에 있는 것이어야 한다(수집을 꺼 둔 출처도 된다).
 - 글 주소 자리에 first:<건수>@<주소에 든 글자>를 적으면 그 출처의 목록 화면에서 그런 주소의 링크를 앞에서부터 골라 시험한다
   (예: moj=first:2@artclView.do). 목록에 어떤 글이 있는지 모를 때 쓴다.
 - --license, --terms-url, --stop을 주면 대장의 articles 대신 그 값으로 시험한다(대장에 아직 적지 않은 출처를 알아볼 때 쓴다).
-- --dump를 주면 본문으로 고른 줄을 모두, 그 화면의 링크를 앞에서부터 80개까지 찍는다(끝 표시를 정하거나 글 주소의 꼴을 알아볼 때 쓴다).
+- --dump body는 본문으로 고른 줄을 모두 찍는다(끝 표시를 정할 때 쓴다). --dump page는 화면의 줄과 링크를 모두 찍는다
+  (저작권 안내 화면처럼 글이 아닌 화면을 읽거나, 목록 화면에서 글 주소의 꼴을 알아볼 때 쓴다). 줄은 110자까지만 찍는다.
 글의 제목은 그 출처의 목록 화면에서 그 주소로 가는 링크의 글자로 삼는다(수집 프로그램이 제목으로 적는 글자다).
 워크플로 '본문 받기 시험'이 이 프로그램을 돌린다.
 """
@@ -24,11 +25,11 @@ from tools.common.net import fetch
 
 CUT = 80
 DUMP_CUT = 110
-DUMP_LINKS = 80
 PICK = re.compile(r"^first:(\d+)@(.+)$")
 NOT_PICKED = "목록 화면에서 그런 주소의 링크를 찾지 못함"
 # 이용 조건을 적어 둔 화면으로 가는 링크를 알아보는 낱말(띄어쓰기를 빼고 소문자로 견준다)
-TERMS_LINK_WORDS = ("저작권", "이용안내", "copyright", "licence", "license", "impressum", "legalnotice", "disclaimer", "termsandconditions")
+TERMS_LINK_WORDS = ("저작권", "이용안내", "copyright", "licence", "license", "impressum", "legalnotice", "disclaimer", "termsandconditions",
+                    "termsofuse", "re-use", "reuse")
 
 
 def _same_page(left, right):
@@ -70,8 +71,8 @@ def terms_links(links, limit=6):
     return found[:limit]
 
 
-def look(source, url, title, fetcher=fetch, dump=False):
-    """글 하나를 받아 본 것을 값으로 돌려준다."""
+def look(source, url, title, fetcher=fetch, dump=""):
+    """글 하나를 받아 본 것을 값으로 돌려준다. dump가 "body"면 본문의 줄을, "page"면 화면의 줄과 링크를 모두 싣는다."""
     seen = {"code": source["code"], "url": url, "rules": articles.rules_of(source)}
     page, why = articles.read_page(url, fetcher)
     if page is None:
@@ -87,9 +88,11 @@ def look(source, url, title, fetcher=fetch, dump=False):
         head=[line[:CUT] for line in kept[:10]], tail=[line[:CUT] for line in kept[-4:]],
         pageTail=[line[:CUT] for line in page["lines"][-12:]],
     )
-    if dump:
+    if dump == "body":
         result["body"] = [line[:DUMP_CUT] for line in kept]
-        result["links"] = [[text[:40], address] for address, text in page["links"][:DUMP_LINKS]]
+    if dump == "page":
+        result["page"] = [line[:DUMP_CUT] for line in page["lines"]]
+        result["links"] = [[text[:40], address] for address, text in page["links"]]
     return result
 
 
@@ -99,7 +102,7 @@ def main(argv):
     parser.add_argument("--license", action="append", default=[])
     parser.add_argument("--terms-url", default="")
     parser.add_argument("--stop", action="append", default=[])
-    parser.add_argument("--dump", action="store_true")
+    parser.add_argument("--dump", choices=["", "body", "page"], default="")
     args = parser.parse_args(argv)
     by_code = {source["code"]: source for source in registry.load()[0]}
     boards = {}
