@@ -1608,6 +1608,24 @@
    "ko": "클링커 대 시멘트 비율",
    "from": "guide-3",
    "added": "2026-11-12"
+  },
+  {
+   "en": "default emission factor",
+   "ko": "기본 배출계수",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "alternative default emission factor",
+   "ko": "대체 기본 배출계수",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "total specific embedded emissions",
+   "ko": "총 고유 내재배출량",
+   "from": "guide-3",
+   "added": "2026-11-12"
   }
  ]
 }
