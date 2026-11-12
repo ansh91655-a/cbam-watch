@@ -2496,6 +2496,42 @@
    "ko": "계약된 자",
    "from": "guide-verif",
    "added": "2026-11-13"
+  },
+  {
+   "en": "witness audit",
+   "ko": "입회 심사",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "office audit",
+   "ko": "사무소 심사",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "activity group",
+   "ko": "활동 그룹",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "extension of scope",
+   "ko": "범위 확대",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "evidence of proven competence",
+   "ko": "입증된 적격성의 증거",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "extraordinary assessment",
+   "ko": "특별 평가",
+   "from": "guide-verif",
+   "added": "2026-11-13"
   }
  ]
 }
