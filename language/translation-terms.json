@@ -1794,6 +1794,30 @@
    "ko": "공정 관련 CBAM 벤치마크",
    "from": "guide-4",
    "added": "2026-11-12"
+  },
+  {
+   "en": "high-alloy steel",
+   "ko": "고합금강",
+   "from": "guide-4",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "ferrochromium",
+   "ko": "페로크롬",
+   "from": "guide-4",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "hydraulic cements",
+   "ko": "수경성 시멘트",
+   "from": "guide-4",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "forming processes",
+   "ko": "성형 공정",
+   "from": "guide-4",
+   "added": "2026-11-12"
   }
  ]
 }
