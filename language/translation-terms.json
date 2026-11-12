@@ -2322,6 +2322,30 @@
    "ko": "기준 효율",
    "from": "guide-verif",
    "added": "2026-11-13"
+  },
+  {
+   "en": "precision",
+   "ko": "정밀도",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "error propagation",
+   "ko": "오류 전파",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "significant changes",
+   "ko": "중대한 변경",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "intended users",
+   "ko": "의도된 이용자",
+   "from": "guide-verif",
+   "added": "2026-11-13"
   }
  ]
 }
