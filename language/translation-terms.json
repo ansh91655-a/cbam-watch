@@ -2460,6 +2460,42 @@
    "ko": "CBAM 심사원",
    "from": "guide-verif",
    "added": "2026-11-13"
+  },
+  {
+   "en": "self-review",
+   "ko": "자기 검토",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "familiarity",
+   "ko": "친숙성",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "intimidation",
+   "ko": "위협",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "safeguard",
+   "ko": "안전장치",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "outsourcing",
+   "ko": "외주",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "contracted persons",
+   "ko": "계약된 자",
+   "from": "guide-verif",
+   "added": "2026-11-13"
   }
  ]
 }
