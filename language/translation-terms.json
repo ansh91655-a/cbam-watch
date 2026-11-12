@@ -3966,6 +3966,30 @@
    "ko": "재고 조사",
    "from": "guide-importers",
    "added": "2026-11-13"
+  },
+  {
+   "en": "release to the market",
+   "ko": "시장 출시",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "re-export",
+   "ko": "재수출",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "commercial policy measures",
+   "ko": "상업정책 조치",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "system boundary graphics",
+   "ko": "시스템 경계 그림",
+   "from": "guide-importers",
+   "added": "2026-11-13"
   }
  ]
 }
