@@ -1122,6 +1122,24 @@
    "ko": "이전된 CO2",
    "from": "guide-3",
    "added": "2026-11-12"
+  },
+  {
+   "en": "specific mass consumption",
+   "ko": "고유 질량 소비량",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "attributed direct emissions",
+   "ko": "귀속 직접배출량",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "attributed indirect emissions",
+   "ko": "귀속 간접배출량",
+   "from": "guide-3",
+   "added": "2026-11-12"
   }
  ]
 }
