@@ -124,6 +124,11 @@
    "status": 200,
    "fetchedAt": "2026-11-12T06:56:14+09:00",
    "text": "  Sitemap: https://www.federalregister.gov/sitemaps/sitemap.xml.gz\n\n  User-Agent: *\n  Disallow: /documents/current\n  Disallow: /documents/email-a-friend\n\n  Disallow: /articles/search\n  Disallow: /documents/search\n  Disallow: /public-inspection/search\n  Disallow: /regulations/search\n\n  Disallow: /my/\n  Disallow: /auth/\n"
+  },
+  "https://www.mcee.go.kr": {
+   "status": 200,
+   "fetchedAt": "2026-11-12T13:25:46+09:00",
+   "text": "User-agent: AionBot \r\nDisallow:/\r\n\r\nUser-agent: Yeti \r\nDisallow:/web/newsRead.do\r\n\r\nUser-agent: * \r\nDisallow:/sodamphew/\r\nDisallow:/sodamphew2/\r\nDisallow:/upload_private/\r\nDisallow:/upload/\r\nDisallow:/search/\r\nDisallow:/kor/webzine/\r\nDisallow:/daegu/wangpicheon/\r\nDisallow:/WEB-INF/jsp/mob/webzine/\r\nDisallow:/api/\r\nDisallow:/file/readDownloadFile.do\r\nDisallow:/file/readDownloadFile4.do\r\nDisallow:/web/newsRead.do\r\n#DaumWebMasterTool:d7c01b148661a8d96e8a6006131c5056bf9a23686f8968242790f354f0dfcfbf:SgQVtKE0+akmA+AR7suRxg=="
   }
  },
  "blocked": {
