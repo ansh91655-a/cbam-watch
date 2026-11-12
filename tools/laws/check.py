@@ -8,6 +8,9 @@
 번역이 영문 그대로 둔 용어(화면에 적힌 이름 “Third country Operator”, 역할 이름 Admin Operator)에는 국문 표기를 요구하지 않는다.
 등록부 안내서는 화면의 이름을 원문대로 두게 되어 있다. 옮겨야 할 영문을 남긴 것인지는 검수(tools.laws.verify)가 본다.
 핵심 용어가 다른 뜻으로 쓰인 자리(installation of wind turbines의 '설치')는 sources/translation.json의 senses에 적힌 표기를 쓰면 막지 않고 알린다.
+용어집이 쓰지 않기로 한 표기도, 원문에 그 표기가 맞는 다른 낱말이 있으면(accuracy and precision의 '정밀도', the CBAM rules의 'CBAM 규칙') senses를 보고 알리기만 한다.
+옮길 글이 없어 원문대로 둔 줄은 '옮기지 않음'으로 막지 않는다: 식(E = eec + el – esca, EFheat,default = 62,3 t CO2e / TJ)과 화면에 뜨는 번호 붙은 알림 글(VAL748 The attribute …).
+PDF에서 각주 번호가 수 뒤에 붙어 버린 것(Equation 5516 = Equation 55와 각주 16)은 번역이 "55[16]"으로 갈라 적으면 수가 빠진 것으로 보지 않는다.
 주소와 번호만 있는 줄(주소 하나만 적은 각주)은 옮기지 않고 그대로 싣는다. 주소 안의 수는 번역에 그대로 남아 있어야 한다.
 """
 import collections
@@ -22,6 +25,9 @@ WORD = re.compile(r"(?<![A-Za-z])[a-z]{4,}")  # 소문자로 시작하는 낱말
 LETTERS = re.compile(r"[A-Za-z]{2,}")
 THOUSANDS = re.compile(r"(?<=\d)[   ,](?=\d{3}(?!\d))")
 URL = re.compile(r"(?:https?://|www\.)\S+")
+RELATION = re.compile(r"[=≤≥]")
+RUNNING = re.compile(r"[A-Za-z]{3,}\s+[A-Za-z]{3,}")   # 낱말 둘이 나란히 놓인 곳(식에는 없고 글에는 있다)
+CODED = re.compile(r"^\W*[A-Z]{2,}[0-9]{2,}\b")       # 화면에 뜨는 알림 글의 번호(VAL748)
 ROMAN_REF = re.compile(r"\b(?:Annex(?:es)?|ANNEX|Chapter|CHAPTER|Title|Part|Section)\s+([IVXLC]+)\b")
 # 글자로 적힌 수와 달 이름. 번역에서는 숫자로 적히므로 '원문에 없는 수'로 보지 않는다
 SPELLED = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10, "eleven": 11, "twelve": 12,
@@ -47,6 +53,16 @@ def _numbers(text):
     return collections.Counter(DIGITS.findall(THOUSANDS.sub("", str(text))))
 
 
+def as_is(text):
+    """원문대로 두어도 되는 줄인가: 식이거나, 화면에 뜨는 번호 붙은 알림 글."""
+    return bool((RELATION.search(text) and not RUNNING.search(text)) or CODED.search(text))
+
+
+def _joined(number, got, korean):
+    """각주 번호가 뒤에 붙어 버린 수인가: 앞쪽이 번역의 수에 있고 뒤쪽이 "[번호]"로 적혀 있으면 그렇다(5516 → 55와 [16])."""
+    return any(number[:cut] in got and f"[{number[cut:]}]" in korean for cut in range(1, len(number)) if len(number) - cut <= 3)
+
+
 def problems(source, korean):
     """{"hard": [막는 까닭], "soft": [알릴 것]}"""
     global _terms
@@ -55,14 +71,15 @@ def problems(source, korean):
     if not korean:
         return {"hard": ["번역이 비어 있음"], "soft": []}
     plain = prose(source)
-    if WORD.search(plain) and not HANGUL.search(korean):
+    if WORD.search(plain) and not HANGUL.search(korean) and not as_is(plain):
         hard.append("국문으로 옮기지 않음")
     wanted, got = _numbers(source), _numbers(korean)
-    missing = sorted((wanted - got).elements())
+    missing = sorted(number for number in (wanted - got).elements() if not _joined(number, got, korean))
     if missing:
         hard.append("원문의 수가 빠짐: " + ", ".join(missing[:8]))
     spelled = {str(value) for word, value in SPELLED.items() if re.search(rf"\b{word}\b", source.lower())}
-    extra = sorted(number for number in (got - wanted).elements() if number not in spelled)
+    split = {part for number in wanted if _joined(number, got, korean) for cut in range(1, len(number)) for part in (number[:cut], number[cut:])}
+    extra = sorted(number for number in (got - wanted).elements() if number not in spelled and number not in split)
     if extra:
         soft.append("원문에 없는 수: " + ", ".join(extra[:8]))
     lost = sorted({numeral for numeral in ROMAN_REF.findall(source) if not re.search(rf"(?<![A-Za-z]){numeral}(?![A-Za-z])", korean)})
@@ -81,8 +98,13 @@ def problems(source, korean):
             hard.append(f"용어집의 표기가 없음: {entry['show']} → {entry['ko'][0]}")
     if _terms is None:
         _terms = term_check.load()
+    low = plain.lower()
     for hit in term_check.check(korean, _terms):
-        (hard if hit["hard"] else soft).append(f"용어: '{hit['avoid']}' 대신 '{hit['use']}'")
+        meant = [english for english, forms in other.items() if hit["avoid"] in forms and terms._pattern(english).search(low)]
+        if hit["hard"] and meant:
+            soft.append(f"용어집이 쓰지 않는 표기 '{hit['avoid']}'를 원문의 {meant[0]}의 뜻으로 씀")
+        else:
+            (hard if hit["hard"] else soft).append(f"용어: '{hit['avoid']}' 대신 '{hit['use']}'")
     if len(source) > 40 and not RATIO[0] <= len(korean) / len(source) <= RATIO[1]:
         soft.append(f"길이가 원문의 {len(korean) / len(source):.1f}배")
     return {"hard": hard, "soft": soft}

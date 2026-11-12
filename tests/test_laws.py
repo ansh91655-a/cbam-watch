@@ -160,6 +160,33 @@ class CheckTest(unittest.TestCase):
         # 용어집의 표기를 쓴 번역에는 아무 말도 하지 않는다
         self.assertEqual(check.problems("The installation is located in Korea.", "사업장은 한국에 있다."), {"hard": [], "soft": []})
 
+    def test_lines_with_nothing_to_translate_may_stay_as_they_are(self):
+        # 식과, 화면에 뜨는 번호 붙은 알림 글은 원문대로 두어도 막지 않는다. 수는 그대로 견준다
+        for line in ("E = eec + el + ep + etd + eu – esca – eccs – eccr", "EFheat,default = 62,3 t CO2e / TJ",
+                     "• VAL748 The attribute [Type of Person] has invalid value [Physical Person], please check the onboarding manual for more details."):
+            self.assertEqual(check.problems(line, line)["hard"], [], line)
+        self.assertIn("원문의 수가 빠짐: 3, 62", check.problems("EFheat,default = 62,3 t CO2e / TJ", "EFheat,default = t CO2e / TJ")["hard"])
+        # 등호가 있어도 글이 이어지는 줄, 번호 없이 영문으로 남긴 글은 그대로 막는다
+        self.assertIn("국문으로 옮기지 않음", check.problems("where x = the number of installations", "where x = the number of installations")["hard"])
+        self.assertIn("국문으로 옮기지 않음", check.problems("The attribute has an invalid value.", "The attribute has an invalid value.")["hard"])
+
+    def test_a_footnote_number_stuck_to_a_number_may_be_split_off(self):
+        # PDF에서 Equation 55 뒤의 각주 16이 붙어 5516이 되었다. 번역이 55[16]으로 갈라 적으면 수가 빠진 것이 아니다
+        source = "The parameters are given in the Equation 5516 as follows:"
+        self.assertEqual(check.problems(source, "매개변수는 다음과 같이 식 55[16]에 주어져 있다."), {"hard": [], "soft": []})
+        self.assertIn("원문의 수가 빠짐: 5516", check.problems(source, "매개변수는 다음과 같이 식 55에 주어져 있다.")["hard"])
+        self.assertIn("원문의 수가 빠짐: 5516", check.problems(source, "매개변수는 다음과 같이 식 56[16]에 주어져 있다.")["hard"])
+
+    def test_a_wording_the_glossary_avoids_is_let_through_where_the_source_means_it(self):
+        # 용어집은 accuracy를 '정밀도'로 옮기지 말라고 하지만, precision은 정밀도다. the CBAM rules는 CBAM 규정(Regulation)이 아니다
+        source = "It will depend on the accuracy and precision of the measurement equipment used."
+        found = check.problems(source, "이는 사용한 측정 장비의 정확도와 정밀도에 따라 달라진다.")
+        self.assertEqual(found["hard"], [])
+        self.assertIn("용어집이 쓰지 않는 표기 '정밀도'를 원문의 precision의 뜻으로 씀", found["soft"])
+        self.assertIn("용어: '정밀도' 대신 '정확도'", check.problems("It will depend on the accuracy of the equipment.", "이는 장비의 정밀도에 따라 달라진다.")["hard"])
+        self.assertEqual(check.problems("determined in line with the CBAM rules outlined above", "위에 설명한 CBAM 규칙에 따라 정한")["hard"], [])
+        self.assertIn("용어: 'CBAM 규칙' 대신 'CBAM 규정'", check.problems("determined in line with the CBAM Regulation", "CBAM 규칙에 따라 정한")["hard"])
+
     def test_translations_are_sorted_into_accepted_and_rejected(self):
         known = {"aaa": ("32099R0001", "Annex IV applies from 2030."), "bbb": ("32099R0001", "Scope")}
         accepted, rejected, noted = apply.sort({"aaa": "부속서 IV는 2030년부터 적용한다.", "bbb": "", "zzz": "없는 열쇠"}, known)
