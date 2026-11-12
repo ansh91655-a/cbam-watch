@@ -1,5 +1,5 @@
 {
-"version": "v0.4 (2026-11-12 가이던스 번역에서 쓸 낱말을 후보로 더함, 검토 전)",
+"version": "v0.5 (2026-11-12 번역 시범에서 갈린 표기를 하나로 맞춤, 후보는 검토 전)",
 "note": "국문 표기 기준. status가 confirmed인 것은 정부·공공기관 자료에서 확인된 표기, partial은 일부 확인, candidate는 확인이 더 필요한 후보다. avoid는 쓰지 않는 표기다.",
 "terms": [
 {
@@ -1064,15 +1064,16 @@
 ],
 "abbr": [],
 "preferred": "수입자",
-"allowed": [
-"수입업자"
-],
+"allowed": [],
 "avoid": [
 {
 "form": "수입업체"
 },
 {
 "form": "수입기업"
+},
+{
+"form": "수입업자"
 }
 ],
 "status": "confirmed"
@@ -2496,7 +2497,7 @@
 {
 "no": 129,
 "category": "05 내재배출량 산정",
-"core": false,
+"core": true,
 "en": [
 "co-product"
 ],
@@ -2509,7 +2510,8 @@
 "note": "by-product 번역어 — 국내 LCA 표준은 co-product에도 씀"
 }
 ],
-"status": "candidate"
+"status": "candidate",
+"note": "by-product(부산물)와 가려 쓴다. 배출량을 나눠 귀속하는 대상이다. 정부·공공기관의 국문 자료에서 확인하기 전"
 },
 {
 "no": 130,
