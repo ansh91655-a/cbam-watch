@@ -3636,6 +3636,24 @@
    "ko": "행위자 정보 검색",
    "from": "reg-declarant",
    "added": "2026-11-13"
+  },
+  {
+   "en": "Operator Corporate Register Number",
+   "ko": "사업자 법인등록번호",
+   "from": "reg-privacy",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "aggregation type",
+   "ko": "합산 유형",
+   "from": "reg-privacy",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "sole controller",
+   "ko": "단독 개인정보처리자",
+   "from": "reg-privacy",
+   "added": "2026-11-13"
   }
  ]
 }
