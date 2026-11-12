@@ -3000,6 +3000,24 @@
    "ko": "취소 절차",
    "from": "32025R0486",
    "added": "2026-11-13"
+  },
+  {
+   "en": "immediate revocation",
+   "ko": "즉시 취소",
+   "from": "32025R0486",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "controller",
+   "ko": "개인정보처리자",
+   "from": "32025R0486",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "special categories of data",
+   "ko": "특수한 범주의 데이터",
+   "from": "32025R0486",
+   "added": "2026-11-13"
   }
  ]
 }
