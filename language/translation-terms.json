@@ -1590,6 +1590,24 @@
    "ko": "단독 보일러",
    "from": "guide-3",
    "added": "2026-11-12"
+  },
+  {
+   "en": "joint production process",
+   "ko": "공동 생산공정",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "separate production processes",
+   "ko": "별도 생산공정",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "clinker to cement ratio",
+   "ko": "클링커 대 시멘트 비율",
+   "from": "guide-3",
+   "added": "2026-11-12"
   }
  ]
 }
