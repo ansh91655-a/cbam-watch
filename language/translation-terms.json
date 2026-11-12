@@ -1476,6 +1476,48 @@
    "ko": "회사 내부 인수 합의",
    "from": "guide-3",
    "added": "2026-11-12"
+  },
+  {
+   "en": "cross-boundary heat flows",
+   "ko": "경계를 넘는 열 흐름",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "heat energy balance",
+   "ko": "열에너지 수지",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "load factor",
+   "ko": "부하율",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "reference efficiency",
+   "ko": "기준 효율",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "fuel mix",
+   "ko": "연료 구성",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "specific enthalpy",
+   "ko": "비엔탈피",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "heat distribution network",
+   "ko": "열 분배망",
+   "from": "guide-3",
+   "added": "2026-11-12"
   }
  ]
 }
