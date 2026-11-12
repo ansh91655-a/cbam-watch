@@ -3366,6 +3366,48 @@
    "ko": "인정받은 기관",
    "from": "reg-portal",
    "added": "2026-11-13"
+  },
+  {
+   "en": "Received notifications list",
+   "ko": "수신 통지 목록",
+   "from": "reg-portal",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Sent notifications list",
+   "ko": "발신 통지 목록",
+   "from": "reg-portal",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Email preferences",
+   "ko": "이메일 환경설정",
+   "from": "reg-portal",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "wildcard search",
+   "ko": "와일드카드 검색",
+   "from": "reg-portal",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "pagination",
+   "ko": "페이지 나누기",
+   "from": "reg-portal",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "supporting documents",
+   "ko": "증빙 문서",
+   "from": "reg-portal",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "business context",
+   "ko": "업무 맥락",
+   "from": "reg-portal",
+   "added": "2026-11-13"
   }
  ]
 }
