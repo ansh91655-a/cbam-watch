@@ -3504,6 +3504,24 @@
    "ko": "하위 도메인",
    "from": "reg-delegation",
    "added": "2026-11-13"
+  },
+  {
+   "en": "Accredited Entity Identifier",
+   "ko": "인정받은 기관 식별자",
+   "from": "reg-access-verifier",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "assignable profile",
+   "ko": "배정 가능한 프로필",
+   "from": "reg-access-verifier",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "accreditation number",
+   "ko": "인정 번호",
+   "from": "reg-access-verifier",
+   "added": "2026-11-13"
   }
  ]
 }

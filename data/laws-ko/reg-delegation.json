@@ -2,6 +2,7 @@
  "act": "reg-delegation",
  "updated": "2026-11-13",
  "blocks": {
+  "029141d4ece6": "CBAM 등록부의 제3국 사업자 포털 섹션은 EU 밖의 사업장 사업자가 자신의 사업장과 배출량 데이터를 각 신고인에게 따로 제출하는 대신 간소화된 방식으로 업로드하고 보고 신고인과 공유할 수 있게 한다. 포털은 사업자가 영업상 민감한 데이터의 기밀 취급을 보장할 수 있게 한다.",
   "0380bf7e99fb": "그림 8: EU Access Admin-Ext - EU Login 사용자 검색 d) 이 단계에서 이전 화면(“Create new user”)으로 돌아가며, 거기에 선택한 직원의 세부 정보(EU Login identifier, First Name, Last Name 및 Email)가 표시되어야 한다. \"Save and Mandate\" 단추를 눌러 진행한다.",
   "0541eddf567e": "직원이 제3국 사업자 포털에서 승인받을 수 있도록 QAA 보안 수준으로 “Medium”을 고른다.",
   "061b555c9231": "그림 16: EU Access Admin-Ext - 수락된 위임장",
@@ -17,6 +18,7 @@
   "12a9a59781b6": "조직 접미사",
   "14e74a2a6e4c": "위임을 받는 행위자의 유형으로 “Third Country Employee”를 고른다.",
   "15c4b245407b": "A03 CBAM 규정",
+  "181b6c8eb1dd": "제3국 사업자 포털은 https://cbam.ec.europa.eu/o3cinstallation 주소에서 이용할 수 있다.",
   "1a831d952e65": "그림 9: EU Access Admin-Ext – “Create new user” 화면 - 직원 세부 정보를 보고 “Save & Mandate” 단추를 누른다 e) 이 단계에서 \"Create new mandate\" 화면으로 이동하며, 아래 화면 갈무리에 빨간색으로 강조된 것처럼 “Representative” 섹션에 직원 세부 정보가 미리 채워진다. 아래 표에 설명된 대로 모든 필수 칸을 입력한 다음 “Save” 단추를 눌러 위임장을 만든다.",
   "1aeabe913e1c": "TCO가 직원 누구에게든 권한을 위임하기로 선택하는 경우, TCO 관리자는 아래에 제시된 지침을 따라야 한다.",
   "1e4535530ce2": "직원의 사용자가 이미 있으면 2.1.2.2절에 설명된 절차로 계속한다.",
@@ -67,6 +69,7 @@
   "a1d76eafa205": "직원이 EU Login 계정을 성공적으로 만들었다(CBAM Operators Non-EU Companies Guidance on access request procedure 3.2절에 명시된 바와 같이)",
   "a9025e98c290": "이 문서의 변경 사항은 아래 표에 역시간순(최신 판이 먼저)으로 요약되어 있다. 판 날짜 2.00 27/03/2026 1.00 16/03/2026 0.10 03/02/2026 0.01 28/01/2026",
   "a942a5e2746c": "표 7: TCO 관리자가 입력할 위임장 세부 정보 e) 성공적으로 완료되면 “Accepted” 위임장을 나타내는 페이지가 보여야 하며, 직원은 EU Login 자격증명을 사용하여 다음 링크로 제3국 사업자 포털에 로그인할 수 있어야 한다. https://cbam.ec.europa.eu/o3cinstallation",
+  "a9a3ae9fe47d": "비EU 사업장 사업자는 제3국 사업자 포털 사용자 매뉴얼을 온라인으로 참조할 수 있다.",
   "ae23dbbf7827": "BP_ADMIN_OPERATOR",
   "b1385ea10d3d": "사업자 사용자가 EU 집행위원회에 요청(예: 등록된 사업자가 되기 위한 요청, 변경 요청, 철회 요청 등)을 제출할 수 있게 한다. admin 역할과 simple operator 역할을 모두 고르는 것이 강력히 권장된다.",
   "b29b9c4fbd5e": "CBAM 제3국 사업자 포털의 비EU 기업을 위한 직원 접근 권한 위임 절차 사용자 안내서 탄소국경조정제도",
