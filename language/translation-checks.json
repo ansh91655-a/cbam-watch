@@ -10,6 +10,16 @@
    "caught": 320,
    "discarded": 0,
    "held": 0
+  },
+  {
+   "day": "2026-11-13",
+   "batches": 2,
+   "checked": 206,
+   "dropped": 0,
+   "canaries": 10,
+   "caught": 10,
+   "discarded": 0,
+   "held": 0
   }
  ],
  "disputed": []
