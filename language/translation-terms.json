@@ -2016,6 +2016,54 @@
    "ko": "비료 등급",
    "from": "guide-5c",
    "added": "2026-11-12"
+  },
+  {
+   "en": "baseload",
+   "ko": "기저부하",
+   "from": "guide-5f",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "full-load operating hours",
+   "ko": "전부하 운전 시간",
+   "from": "guide-5f",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "nomination of capacity",
+   "ko": "용량 지정",
+   "from": "guide-5f",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "condensate return",
+   "ko": "응축수 회수",
+   "from": "guide-5f",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "Accreditation and Verification Requirements Delegated Act",
+   "ko": "인정 및 검증 요건 위임규정",
+   "from": "guide-verif",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "Accreditation and Verification Regulation",
+   "ko": "인정 및 검증 규정",
+   "from": "guide-verif",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "harmonised standard",
+   "ko": "조화 표준",
+   "from": "guide-verif",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "conformity assessment",
+   "ko": "적합성평가",
+   "from": "guide-verif",
+   "added": "2026-11-12"
   }
  ]
 }
