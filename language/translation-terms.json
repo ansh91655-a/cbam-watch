@@ -642,6 +642,48 @@
    "ko": "승인을 위해 제출됨",
    "from": "qa",
    "added": "2026-11-12"
+  },
+  {
+   "en": "access request",
+   "ko": "접근 요청",
+   "from": "reg-access-operator",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "Validator",
+   "ko": "승인 검토자",
+   "from": "reg-access-operator",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "company identifier",
+   "ko": "회사 식별자",
+   "from": "reg-access-operator",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "Third Country Operator",
+   "ko": "제3국 사업자",
+   "from": "reg-access-operator",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "Third Country Operator Employee",
+   "ko": "제3국 사업자 직원",
+   "from": "reg-access-operator",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "Type of Actor",
+   "ko": "행위자 유형",
+   "from": "reg-access-operator",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "User Access Management",
+   "ko": "사용자 접근 관리",
+   "from": "reg-access-operator",
+   "added": "2026-11-12"
   }
  ]
 }
