@@ -3468,6 +3468,30 @@
    "ko": "모회사 법인 등록번호",
    "from": "reg-portal",
    "added": "2026-11-13"
+  },
+  {
+   "en": "Delegation of Access Rights",
+   "ko": "접근 권한 위임",
+   "from": "reg-delegation",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "mandate",
+   "ko": "위임장",
+   "from": "reg-delegation",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "unregister collaboration",
+   "ko": "협업 등록 해제",
+   "from": "reg-delegation",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "TCO administrator",
+   "ko": "TCO 관리자",
+   "from": "reg-delegation",
+   "added": "2026-11-13"
   }
  ]
 }
