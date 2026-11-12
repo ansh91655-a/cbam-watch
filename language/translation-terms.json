@@ -2064,6 +2064,30 @@
    "ko": "적합성평가",
    "from": "guide-verif",
    "added": "2026-11-12"
+  },
+  {
+   "en": "internal verification documentation",
+   "ko": "내부 검증 문서",
+   "from": "guide-verif",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "tiers",
+   "ko": "등급",
+   "from": "guide-verif",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "non-compliance",
+   "ko": "미준수",
+   "from": "guide-verif",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "programme-neutral",
+   "ko": "프로그램 중립적",
+   "from": "guide-verif",
+   "added": "2026-11-12"
   }
  ]
 }
