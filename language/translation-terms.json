@@ -2346,6 +2346,30 @@
    "ko": "의도된 이용자",
    "from": "guide-verif",
    "added": "2026-11-13"
+  },
+  {
+   "en": "installation ID",
+   "ko": "사업장 ID",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Operator ID",
+   "ko": "사업자 ID",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "permissible uncertainty",
+   "ko": "허용되는 불확도",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "company registration certificate",
+   "ko": "회사 등록 증명서",
+   "from": "guide-verif",
+   "added": "2026-11-13"
   }
  ]
 }
