@@ -3252,6 +3252,48 @@
    "ko": "고유 내재 간접배출량",
    "from": "32023R1773",
    "added": "2026-11-13"
+  },
+  {
+   "en": "CBAM Trader Portal",
+   "ko": "CBAM 거래자 포털",
+   "from": "32023R1773",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "CBAM Competent Authorities Portal",
+   "ko": "CBAM 관할당국 포털",
+   "from": "32023R1773",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "CBAM Registry Back End Services",
+   "ko": "CBAM 등록부 백엔드 서비스",
+   "from": "32023R1773",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "common components",
+   "ko": "공통 구성요소",
+   "from": "32023R1773",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "identity and access management system",
+   "ko": "신원 및 접근 관리 시스템",
+   "from": "32023R1773",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Customs Imports Declarations",
+   "ko": "세관 수입신고",
+   "from": "32023R1773",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "indicative assessment",
+   "ko": "지표적 평가",
+   "from": "32023R1773",
+   "added": "2026-11-13"
   }
  ]
 }
