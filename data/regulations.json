@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-11",
+ "asOf": "2026-11-13",
  "groups": [
   {
    "code": "eu-law",
@@ -7558,11 +7558,11 @@
     "심리",
     "판결"
    ],
-   "at": 1,
-   "stage": "계류 중",
-   "tone": "dispute",
+   "at": 2,
+   "stage": "판결",
+   "tone": "ended",
    "summary": "폴란드가 CBAM 규정 전체의 취소를 구한 소송입니다. CBAM은 주로 재정에 관한 조치이므로 만장일치가 필요한 다른 법적 근거를 썼어야 한다는 주장입니다.",
-   "status": "2023년 8월 8일에 제소되었습니다. EU 법령 데이터베이스에는 이 사건의 판결문, 법무관 의견, 명령이 올라 있지 않습니다(2026년 11월 10일 조회). 소송이 진행되는 동안에도 CBAM 규정은 그대로 적용됩니다.",
+   "status": "판결이 선고되었습니다. 결론은 원문에서 확인해 주세요. EU 사법재판소 제2재판부가 2026년 11월 12일에 판결을 선고했고, 판결문은 잠정본으로 공개되었습니다.",
    "timeline": [
     {
      "date": "2023-08-08",
@@ -7579,18 +7579,17 @@
      }
     },
     {
-     "date": "2026-11-10",
-     "text": "EU 법령 데이터베이스를 조회했을 때 이 사건의 판결문, 법무관 의견, 명령은 올라 있지 않았습니다.",
-     "source": "EUR-Lex(소송 공고)",
-     "link": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:62023CN0512",
+     "date": "2026-11-12",
+     "text": "EU 사법재판소 제2재판부가 판결을 선고했습니다. 결론은 원문에서 확인해 주세요.",
+     "source": "EUR-Lex(판결문)",
+     "link": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:62023CJ0512",
      "basis": "stored",
      "evidence": {
-      "path": "collected/archive/report/eur-lex-related.json",
-      "contains": [
-       "\"62023CJ0512\": \"없음\"",
-       "\"62023CC0512\": \"없음\"",
-       "\"62023CO0512\": \"없음\""
-      ]
+      "index": "eur-lex-related",
+      "where": {
+       "celex": "62023CJ0512",
+       "date": "2026-11-12"
+      }
      }
     }
    ],
@@ -7753,7 +7752,8 @@
       "path": "collected/archive/pages/eur-lex-docs/52025PC0574.txt"
      }
     ]
-   }
+   },
+   "changedOn": "2026-11-13"
   },
   {
    "id": "ustr-comments",
