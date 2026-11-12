@@ -2424,6 +2424,42 @@
    "ko": "혼잡 보고서",
    "from": "guide-verif",
    "added": "2026-11-13"
+  },
+  {
+   "en": "monthly interim report",
+   "ko": "월간 중간 보고서",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "cut-off date",
+   "ko": "마감일",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "competence process",
+   "ko": "적격성 과정",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "competence criteria",
+   "ko": "적격성 기준",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "verification personnel",
+   "ko": "검증 인력",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "CBAM auditor",
+   "ko": "CBAM 심사원",
+   "from": "guide-verif",
+   "added": "2026-11-13"
   }
  ]
 }
