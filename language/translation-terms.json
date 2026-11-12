@@ -774,6 +774,30 @@
    "ko": "가중평균 규칙",
    "from": "guide-5d",
    "added": "2026-11-12"
+  },
+  {
+   "en": "secondary metallurgy",
+   "ko": "2차 정련",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "reductive smelting",
+   "ko": "환원 용련",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "hot stoves",
+   "ko": "열풍로",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "mass balance method",
+   "ko": "물질수지법",
+   "from": "guide-5d",
+   "added": "2026-11-12"
   }
  ]
 }
