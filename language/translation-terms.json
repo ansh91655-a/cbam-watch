@@ -420,6 +420,30 @@
    "ko": "재생에너지 지침",
    "from": "qa",
    "added": "2026-11-12"
+  },
+  {
+   "en": "group entity",
+   "ko": "그룹 법인",
+   "from": "qa",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "form 302",
+   "ko": "서식 302",
+   "from": "qa",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "military activities",
+   "ko": "군사 활동",
+   "from": "qa",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "market abuse rules",
+   "ko": "시장 남용 규칙",
+   "from": "qa",
+   "added": "2026-11-12"
   }
  ]
 }
