@@ -1020,6 +1020,48 @@
    "ko": "전해조",
    "from": "guide-5e",
    "added": "2026-11-12"
+  },
+  {
+   "en": "slope method",
+   "ko": "기울기 방법",
+   "from": "guide-5e",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "overvoltage method",
+   "ko": "과전압 방법",
+   "from": "guide-5e",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "cell-day",
+   "ko": "전해조-일",
+   "from": "guide-5e",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "current efficiency",
+   "ko": "전류효율",
+   "from": "guide-5e",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "collection efficiency",
+   "ko": "포집 효율",
+   "from": "guide-5e",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "anode stumps",
+   "ko": "양극 잔부",
+   "from": "guide-5e",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "weight fraction",
+   "ko": "중량 분율",
+   "from": "guide-5e",
+   "added": "2026-11-12"
   }
  ]
 }
