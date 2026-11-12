@@ -6978,6 +6978,66 @@
 "avoid": [],
 "status": "candidate",
 "note": "가이던스 번역(2026-11-12)에서 쓰기로 한 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 388,
+"category": "02 적용 범위·면제",
+"core": false,
+"en": [
+"territory"
+],
+"abbr": [],
+"preferred": "영역",
+"allowed": [
+"영토"
+],
+"avoid": [],
+"status": "candidate",
+"note": "번역 견주기 시험(2026-11-12)에서 표기가 갈려 하나로 정함. 국가와 나란히 적힌 territory(third countries and territories). 관세영역(customs territory)과 같은 낱말로 맞춘다"
+},
+{
+"no": 389,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"customs controls"
+],
+"abbr": [],
+"preferred": "세관 통제",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "번역 견주기 시험(2026-11-12)에서 표기가 갈려 하나로 정함. 세관당국이 하는 controls"
+},
+{
+"no": 390,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"Union law"
+],
+"abbr": [],
+"preferred": "EU 법",
+"allowed": [
+"EU 법률"
+],
+"avoid": [],
+"status": "candidate",
+"note": "번역 견주기 시험(2026-11-12)에서 표기가 갈려 하나로 정함."
+},
+{
+"no": 391,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"calendar month"
+],
+"abbr": [],
+"preferred": "역월",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "번역 견주기 시험(2026-11-12)에서 표기가 갈려 하나로 정함. calendar year(역년)와 짝이 되는 말"
 }
 ]
 }

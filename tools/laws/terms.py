@@ -52,6 +52,22 @@ def found(source, path=GLOSSARY):
     return hits
 
 
+def unify(source, korean, path=GLOSSARY):
+    """원문에 나온 용어집 낱말의 국문 표기 가운데 띄어쓰기만 다른 것을 권장 표기로 맞춘다("직접 배출량" → "직접배출량").
+
+    검사는 띄어쓰기를 가리지 않지만 화면의 영문 병기와 찾기는 글자가 같아야 걸린다. 번역하는 쪽이 달라져도 표기가 같도록 넣기 전에 맞춘다.
+    용어집이 허용한 다른 표기가 이미 쓰였으면 건드리지 않는다.
+    """
+    text = str(korean)
+    for entry in found(source, path):
+        preferred = entry["ko"][0]
+        letters = preferred.replace(" ", "")
+        if len(letters) < 3 or any(form in text for form in entry["ko"]):
+            continue
+        text = re.sub(r"\s*".join(re.escape(letter) for letter in letters), preferred, text)
+    return text
+
+
 def spans(korean, forms):
     """국문 글에서 표기들이 나온 자리 [(시작, 끝)]. 띄어쓰기까지 같은 것만 본다."""
     return sorted((match.start(), match.end()) for form in forms for match in re.finditer(re.escape(form), korean))

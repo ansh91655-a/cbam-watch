@@ -177,10 +177,11 @@ class RepositoryTest(unittest.TestCase):
         self.assertFalse(any(row["p"] in ("front", "closing", "notes") for row in rows))
 
     def test_the_next_batch_follows_the_order_of_the_text_and_skips_what_is_done(self):
-        picked, left = todo.pick(limit=3000)
+        picked, left = todo.pick(limit=3000, act_id=catalog.BASE_CELEX, memory={})  # 어느 실행이 맡든 한 문서 안의 차례는 같다
         self.assertTrue(picked)
-        memory = store.load_all()
-        self.assertFalse(any(block["key"] in memory for block in picked))
+        again, _ = todo.pick(limit=3000, act_id=catalog.BASE_CELEX, memory={picked[0]["key"]: "옮긴 문단"})
+        self.assertNotIn(picked[0]["key"], [block["key"] for block in again])
+        self.assertEqual(again[0]["key"], picked[1]["key"])
         self.assertLessEqual(sum(len(block["text"]) for block in picked[:-1]), 3000)
         acts, _ = corpus.everything()
         order = [store.key(text) for _, parts in acts for part in parts for text in corpus.texts(part)]

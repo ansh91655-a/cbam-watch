@@ -246,6 +246,30 @@ class SegmentTest(unittest.TestCase):
         self.assertEqual(found[3]["blocks"][-1], "3. Once the payment is completed, the certificates are available.")
 
 
+class PlanTest(unittest.TestCase):
+    DOCUMENTS = [({"id": "a1", "group": "act"}, []), ({"id": "a2", "group": "act"}, []),
+                 ({"id": "g1", "group": "guide", "turn": 2}, []), ({"id": "g2", "group": "guide", "turn": 1}, [])]
+
+    def order(self, **settings):
+        return [act["id"] for act, _ in plan.ordered(self.DOCUMENTS, settings)]
+
+    def test_documents_come_in_the_order_of_the_plan(self):
+        self.assertEqual(self.order(groups=["guide", "act"]), ["g2", "g1", "a1", "a2"])     # 갈래의 차례, 갈래 안에서는 turn
+        self.assertEqual(self.order(groups=["guide", "act"], first=["a2", "g1"]), ["a2", "g1", "g2", "a1"])
+        self.assertEqual(self.order(groups=["guide"]), ["g2", "g1"])
+        self.assertEqual(self.order(groups=[], first=["a1"]), ["a1"])
+        self.assertEqual(self.order(groups=[]), [])
+
+
+class UnifyTest(unittest.TestCase):
+    def test_glossary_words_get_the_preferred_spacing(self):
+        from tools.laws import terms
+        source = "Direct emissions from the production process are attributed."
+        self.assertEqual(terms.unify(source, "생산 공정의 직접 배출량을 귀속한다."), "생산공정의 직접배출량을 귀속한다.")
+        self.assertEqual(terms.unify(source, "생산공정의 직접배출량을 귀속한다."), "생산공정의 직접배출량을 귀속한다.")
+        self.assertEqual(terms.unify("No such terms here.", "직접 배출량"), "직접 배출량")  # 원문에 그 낱말이 없으면 건드리지 않는다
+
+
 class RepositoryTest(unittest.TestCase):
     """저장소에 받아 둔 문서로 본다."""
 
@@ -258,16 +282,14 @@ class RepositoryTest(unittest.TestCase):
             self.assertGreaterEqual(len(listed & found), 0.9 * len(listed), document["id"])
         self.assertEqual(laws_health.problems(today="2026-11-12"), [])
 
-    def test_each_runner_takes_its_own_documents_in_turn(self):
-        daily, _ = todo.pick(3000)
-        bulk, _ = todo.pick(3000, runner="bulk")
+    def test_each_runner_takes_only_its_own_documents(self):
         groups = {document["id"]: document["group"] for document in corpus.documents()}
-        self.assertEqual({groups[block["act"]] for block in daily}, {"act"})
-        self.assertEqual({groups[block["act"]] for block in bulk}, {"guide"})
-        first = min(guides.documents(), key=lambda document: document["turn"])
-        waiting = corpus.progress(corpus.read(first), store.load_all())
-        if waiting["done"] < waiting["blocks"]:
-            self.assertEqual(bulk[0]["act"], first["id"])
+        for name, settings in plan.runners().items():
+            picked, _ = todo.pick(3000, runner=name)
+            allowed = set(settings.get("groups", []))
+            self.assertTrue(all(groups[block["act"]] in allowed or block["act"] in settings.get("first", []) for block in picked), name)
+            if not allowed and not settings.get("first"):
+                self.assertEqual(picked, [], name)
         with self.assertRaises(KeyError):
             plan.runner("nobody")
 

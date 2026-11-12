@@ -26,7 +26,7 @@ def pick(limit=None, act_id="", titles=False, part_id="", runner=plan.DEFAULT, m
     limit = limit or settings["limit"]
     documents, stored = corpus.everything()
     memory = stored if memory is None else memory
-    documents = [(act, found) for act, found in documents if act["id"] == act_id] if act_id else plan.ordered(documents, settings["groups"])
+    documents = [(act, found) for act, found in documents if act["id"] == act_id] if act_id else plan.ordered(documents, settings)
     picked, taken, size, full = [], set(), 0, False
     left = {"blocks": 0, "chars": 0}
     for act, found in documents:
