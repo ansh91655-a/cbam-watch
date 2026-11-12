@@ -2532,6 +2532,48 @@
    "ko": "특별 평가",
    "from": "guide-verif",
    "added": "2026-11-13"
+  },
+  {
+   "en": "administrative measures",
+   "ko": "행정 조치",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "work programme",
+   "ko": "업무 계획",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "management report",
+   "ko": "경영 보고서",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "suspension of the accreditation",
+   "ko": "인정의 정지",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "withdrawal of the accreditation",
+   "ko": "인정의 취소",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "reduction of scope",
+   "ko": "범위 축소",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "reassessment",
+   "ko": "재평가",
+   "from": "guide-verif",
+   "added": "2026-11-13"
   }
  ]
 }
