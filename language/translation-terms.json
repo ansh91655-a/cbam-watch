@@ -1920,6 +1920,42 @@
    "ko": "순발열량이 높은 가정 폐기물",
    "from": "guide-5a",
    "added": "2026-11-12"
+  },
+  {
+   "en": "supplementary units",
+   "ko": "보충 단위",
+   "from": "guide-5c",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "Haber-Bosch",
+   "ko": "하버-보슈",
+   "from": "guide-5c",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "sulphonitric acids",
+   "ko": "황질산",
+   "from": "guide-5c",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "calcium ammonium nitrate",
+   "ko": "질산암모늄석회",
+   "from": "guide-5c",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "urea ammonium nitrate solutions",
+   "ko": "요소질산암모늄 용액",
+   "from": "guide-5c",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "nitrogenous fertilisers",
+   "ko": "질소질 비료",
+   "from": "guide-5c",
+   "added": "2026-11-12"
   }
  ]
 }
