@@ -1,4 +1,11 @@
 {
- "failed": {},
- "updatedAt": "2026-11-11T02:40:54+09:00"
+ "failed": {
+  "7fd760d4404314bd": {
+   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:62023CJ0512",
+   "tries": 1,
+   "why": "응답 404 HTTP Error 404:",
+   "at": "2026-11-13T08:22:55+09:00"
+  }
+ },
+ "updatedAt": "2026-11-13T08:22:55+09:00"
 }
