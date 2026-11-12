@@ -3906,6 +3906,18 @@
    "ko": "복수 계통",
    "from": "report-methodology",
    "added": "2026-11-13"
+  },
+  {
+   "en": "National Import System",
+   "ko": "국가 수입 시스템",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "standard factors",
+   "ko": "표준 계수",
+   "from": "guide-importers",
+   "added": "2026-11-13"
   }
  ]
 }
