@@ -1062,6 +1062,24 @@
    "ko": "중량 분율",
    "from": "guide-5e",
    "added": "2026-11-12"
+  },
+  {
+   "en": "default production period",
+   "ko": "기본 생산기간",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "composition range",
+   "ko": "조성 범위",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "cost threshold",
+   "ko": "비용 기준",
+   "from": "guide-3",
+   "added": "2026-11-12"
   }
  ]
 }
