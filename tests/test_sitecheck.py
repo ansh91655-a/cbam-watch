@@ -29,8 +29,9 @@ class SitecheckTest(unittest.TestCase):
         plan = self.node("import { plan } from './tools/sitecheck/plan.mjs'; console.log(JSON.stringify(plan(process.argv[1])));", str(self.site))
         self.assertIn("#item-new", plan["views"])          # 가장 최근 소식(요약을 내린 것은 빼고)
         self.assertNotIn("#item-gone", plan["views"])
-        for view in ("#home", "#news-law", "#rules-eu-acts", "#calc", "#calc-72081000", "#calendar-2027", "#cn-7208"):
+        for view in ("#home", "#news-law", "#rules-eu-acts", "#calc", "#calc-72081000", "#calendar-2027", "#cn-7208", "#search", "#search-7208", "#search-%EA%B8%B0%EB%B3%B8%EA%B0%92"):
             self.assertIn(view, plan["views"])
+        self.assertIn("#search-%EA%B8%B0%EB%B3%B8%EA%B0%92", plan["axeViews"])  # 검색 결과 화면도 접근성 검사에 든다
         self.assertEqual(plan["rules"], ["#rules-a", "#rules-b", "#rules-c"])
         self.assertIn("#rules-b", plan["axeViews"])        # 그림이 있는 규제와 비교표가 있는 규제는 접근성 검사에 든다
         self.assertIn("#rules-c", plan["axeViews"])

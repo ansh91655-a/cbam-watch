@@ -97,7 +97,7 @@ a[target="_blank"]:hover > svg.icon { transform: translate(2px, -2px); }
 .site-nav { position: relative; }
 .nav-ink { position: absolute; left: 0; bottom: 0; width: 0; height: 3px; border-radius: 3px 3px 0 0; background: var(--accent); opacity: 0; pointer-events: none; }
 .nav-ink[data-live] { transition: transform 0.36s cubic-bezier(0.3, 0.8, 0.2, 1), width 0.36s cubic-bezier(0.3, 0.8, 0.2, 1), opacity 0.2s; }
-.site-nav.has-ink a[aria-current="page"]::after { display: none; }
+.site-nav.has-ink > a[aria-current="page"]::after { display: none; }
 html[data-theme="white"] .nav-ink { background: var(--brand-bright); }
 
 /* 머리글: 조금이라도 내려오면 그림자가 생기고, 긴 글 화면에서는 읽은 만큼 아래 선이 찬다(js/ui/scrollcue.js) */

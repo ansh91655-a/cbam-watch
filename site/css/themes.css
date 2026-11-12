@@ -25,7 +25,7 @@ html[data-theme="white"] {
   --hl-from: #003399;
   --hl-to: #2b59e0;
 }
-html[data-theme="white"] .site-nav a[aria-current="page"]::after { background: var(--brand-bright); }
+html[data-theme="white"] .site-nav > a[aria-current="page"]::after { background: var(--brand-bright); }
 html[data-theme="white"] .hero, html[data-theme="white"] .view-head { border-bottom: 1px solid var(--line-2); }
 html[data-theme="white"] .fact { box-shadow: var(--shadow-1); }
 html[data-theme="white"] .fact:hover { background: #ffffff; }

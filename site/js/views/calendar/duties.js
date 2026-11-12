@@ -10,7 +10,7 @@ function dateBox(iso) {
 function row(duty, todayIso) {
   const link = safeLink(duty.link, duty.basis);
   if (link) link.append(icon("out", 13));
-  return h("li", { class: "duty", "data-kind": duty.kind, "data-past": duty.date < todayIso ? "true" : null, id: `duty-${duty.id}` }, [
+  return h("li", { class: "duty", "data-kind": duty.kind, "data-past": duty.date < todayIso ? "true" : null, id: `duty-${duty.id}`, tabindex: "-1" }, [
     dateBox(duty.date),
     h("div", { class: "duty-body" }, [
       h("p", { class: "duty-head" }, [

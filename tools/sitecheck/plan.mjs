@@ -28,11 +28,13 @@ export function plan(site) {
   const laws = acts.length ? ["#laws", `#laws-${encodeURIComponent("내재배출량 검증")}`, law, acts[1] ? `#law-${acts[1].id}.art-1` : null,
     guide ? `#law-${guide.id}.${(guide.toc.find((part) => part.kind === "section") || {}).id || "cover"}` : null,
     manual ? `#law-${manual.id}` : null, single ? `#law-${single.id}` : null] : [];
+  // 사이트 검색: 빈 화면, 여러 갈래에서 찾는 말, 품목 코드, 찾지 못하는 말
+  const search = ["#search", `#search-${encodeURIComponent("기본값")}`, "#search-7208", "#search-zzzzqq"];
   return {
     // 가로 넘침과 화면 오류: 모든 화면을 다섯 너비로
     widths: [360, 390, 768, 1024, 1440],
     views: ["#home", "#news", topics[0] ? `#news-${topics[0].code}` : null, item, "#rules", ...(rules.groups || []).map((group) => `#rules-${group.code}`),
-      "#price", "#calc", good, "#calendar", "#calendar-2027", "#calendar-2028", "#cn", "#cn-7208", "#docs", ...laws, "#terms", "#about", "#design"].filter(Boolean),
+      "#price", "#calc", good, "#calendar", "#calendar-2027", "#calendar-2028", "#cn", "#cn-7208", "#docs", ...laws, "#terms", "#about", "#design", ...search].filter(Boolean),
     // 규제 화면: 규제마다 세 너비로
     ruleWidths: [360, 768, 1440],
     rules: (rules.regulations || []).map(rule),
@@ -40,7 +42,7 @@ export function plan(site) {
     axeWidths: [1280, 390],
     themes: ["", "?theme=white", "?theme=midnight"],
     axeViews: [...new Set(["#home", "#news", item, "#rules", rule(withAnalysis), rule(withFigure), rule(withTable), "#price", "#calc", good,
-      "#calendar", "#calendar-2027", "#cn-7208", "#docs", "#laws", law, "#terms", "#about"].filter(Boolean))],
+      "#calendar", "#calendar-2027", "#cn-7208", "#docs", "#laws", law, "#terms", "#about", search[1]].filter(Boolean))],
     good,
   };
 }

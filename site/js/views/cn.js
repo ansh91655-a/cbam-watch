@@ -2,29 +2,17 @@
 // 판정은 js/cn/match.js가 하고, 품목 목록은 법령 원문에서 뽑은 data/cn.json이다. 문구는 이 파일에서 정한다.
 import * as data from "../data.js";
 import { digits, verdict } from "../cn/match.js";
+import { SECTOR, spaced, STATE } from "../cn/names.js";
 import { adopted, proposalRule } from "../cn/stage.js";
 import { band } from "../ui/band.js";
 import { empty, fill, h, pill, safeLink } from "../ui/dom.js";
 import { icon } from "../ui/icons.js";
 import { libraryTabs } from "../ui/tabs.js";
 
-const SECTOR = { cement: "시멘트", electricity: "전력", fertilisers: "비료", steel: "철강", aluminium: "알루미늄", chemicals: "화학제품(수소)", combined: "복합 금속 제품" };
 const SECTOR_ICON = { cement: "cement", electricity: "electricity", fertilisers: "fertilisers", steel: "steel", aluminium: "aluminium", chemicals: "hydrogen", combined: "steel" };
 const GAS = { co2: "이산화탄소", n2o: "아산화질소", pfc: "과불화탄소" };
 const LIMIT = 10; // 개정안의 품목을 한 번에 보여 주는 줄 수
 const EXAMPLES = ["7208", "7318 15", "7606", "2523 29 00", "3102", "7202 21 00", "8544 49", "8708 10"];
-// 판정마다: [짧은 이름, 색, 설명]
-const STATE = {
-  in: ["대상", "ok", "이 코드의 품목은 CBAM 대상입니다."],
-  part: ["일부 품목만 대상", "warn", "이 코드의 품목 가운데 아래 품목 이름에 해당하는 것만 CBAM 대상입니다."],
-  mixed: ["하위 코드에 따라 다름", "warn", "이 코드 아래의 일부 코드만 CBAM 대상입니다. 8자리 코드로 다시 확인해 주세요."],
-  excluded: ["대상에서 제외", "", "이 코드는 부속서 I이 따로 제외한 품목입니다."],
-  out: ["목록에 없음", "", "이 코드는 부속서 I의 대상 품목 목록에 없습니다."],
-};
-
-function spaced(code) {
-  return code.replace(/^(\d{4})(\d{2})?(\d{2})?(\d+)?$/, (all, a, b, c, d) => [a, b, c, d].filter(Boolean).join(" "));
-}
 
 function goods(item) {
   return h("li", {}, [h("span", { class: "cn-code", text: item.shown }), h("span", { lang: "en", text: item.text })]);

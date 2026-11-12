@@ -9,14 +9,17 @@ export function navInk(nav) {
   nav.classList.add("has-ink");
   let placed = false;
   const place = () => {
-    const now = nav.querySelector('a[aria-current="page"]');
+    const now = nav.querySelector(':scope > a[aria-current="page"]');
     if (!now) {
       ink.style.opacity = "0";
       return;
     }
-    const pad = parseFloat(getComputedStyle(now).paddingLeft) || 0;
-    ink.style.width = `${Math.max(now.offsetWidth - pad * 2, 0)}px`;
-    ink.style.transform = `translateX(${now.offsetLeft + pad}px)`;
+    // 밑줄은 글자의 너비만큼만 긋는다. 펼침 단추가 붙은 메뉴는 오른쪽 여백이 좁아 양쪽을 따로 잰다.
+    const style = getComputedStyle(now);
+    const left = parseFloat(style.paddingLeft) || 0;
+    const right = parseFloat(style.paddingRight) || 0;
+    ink.style.width = `${Math.max(now.offsetWidth - left - right, 0)}px`;
+    ink.style.transform = `translateX(${now.offsetLeft + left}px)`;
     ink.style.opacity = "1";
     if (!placed) {
       // 처음 자리를 잡을 때는 미끄러지지 않는다. 한 번 그려진 뒤부터 움직인다.

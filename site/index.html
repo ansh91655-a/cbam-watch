@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/navmenu.css">
 <link rel="stylesheet" href="css/components.css">
 <link rel="stylesheet" href="css/home.css">
 <link rel="stylesheet" href="css/views.css">
@@ -28,6 +29,7 @@
 <link rel="stylesheet" href="css/calc.css">
 <link rel="stylesheet" href="css/item.css">
 <link rel="stylesheet" href="css/laws.css">
+<link rel="stylesheet" href="css/search.css">
 <link rel="stylesheet" href="css/overlay.css">
 <link rel="stylesheet" href="css/motion.css">
 <link rel="stylesheet" href="css/themes.css">
@@ -43,12 +45,23 @@
     </a>
     <nav class="site-nav" aria-label="주 메뉴">
       <a href="#home" data-view="home">최신 동향</a>
-      <a href="#news" data-view="news">소식</a>
-      <a href="#rules" data-view="rules">규제</a>
-      <a href="#price" data-view="price" data-group="price calc">가격</a>
-      <a href="#calendar" data-view="calendar">일정</a>
-      <a href="#docs" data-view="docs" data-group="docs laws terms cn about">자료·안내</a>
+      <a href="#news" data-view="news" data-menu="news">소식</a>
+      <button class="nav-more" type="button" data-menu="news" aria-expanded="false" aria-label="소식 목록 펼치기"><svg class="icon" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+      <a href="#rules" data-view="rules" data-menu="rules">규제</a>
+      <button class="nav-more" type="button" data-menu="rules" aria-expanded="false" aria-label="규제 목록 펼치기"><svg class="icon" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+      <a href="#price" data-view="price" data-group="price calc" data-menu="price">가격</a>
+      <button class="nav-more" type="button" data-menu="price" aria-expanded="false" aria-label="가격 목록 펼치기"><svg class="icon" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+      <a href="#calendar" data-view="calendar" data-menu="calendar">일정</a>
+      <button class="nav-more" type="button" data-menu="calendar" aria-expanded="false" aria-label="일정 목록 펼치기"><svg class="icon" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+      <a href="#docs" data-view="docs" data-group="docs laws terms cn about" data-menu="docs">자료·안내</a>
+      <button class="nav-more" type="button" data-menu="docs" aria-expanded="false" aria-label="자료·안내 목록 펼치기"><svg class="icon" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
     </nav>
+    <form class="head-search" id="site-search" role="search" aria-label="사이트 검색">
+      <button type="submit" aria-label="찾기" title="사이트에서 찾기"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34" /><circle cx="11" cy="11" r="8" /></svg></button>
+      <label class="sr" for="site-q">사이트에서 찾기</label>
+      <input id="site-q" type="search" placeholder="사이트에서 찾기" autocomplete="off" spellcheck="false" enterkeyhint="search">
+      <kbd aria-hidden="true">/</kbd>
+    </form>
   </div>
 </header>
 <main id="main" tabindex="-1"></main>

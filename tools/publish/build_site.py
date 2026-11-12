@@ -111,7 +111,7 @@ def main(argv):
         if pathlib.Path(source).exists():
             (out / target).parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(source, out / target)
-    config = derive.site(counts)
+    config = derive.site(counts, rules, bodies["events"]["events"], bodies["items"]["items"], bodies["topics"].get("topics", []))
     write_json(data_out / "site.json", config)
     if feed.wanted(config):  # 구독 피드(새 소식 받아 보기를 열어 둔 동안에만 만든다)
         (out / "feed.xml").write_text(feed.news(bodies["items"]["items"], bodies["topics"].get("topics", []), config["url"], config["builtAt"]), encoding="utf-8")

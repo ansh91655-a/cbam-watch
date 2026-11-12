@@ -1,10 +1,12 @@
 // 원문 대장. EU 집행위원회가 올린 문서의 목록이다. PDF는 문서 이름을 누르면 화면에서 바로 보고, 그 밖의 파일은 내려받는다.
 // 문서가 바뀌어 판이 둘 이상이면 바뀐 곳과 이전 판을 볼 수 있다.
+// #docs-찾는 말로 오면 그 말로 걸러 보여 준다(사이트 검색의 결과가 이 주소로 보낸다).
 import * as data from "../data.js";
 import { band } from "../ui/band.js";
 import { empty, fill, h, pill, safeLink } from "../ui/dom.js";
 import { bytes, count } from "../ui/format.js";
 import { icon } from "../ui/icons.js";
+import { decode } from "../ui/sitesearch.js";
 import { libraryTabs } from "../ui/tabs.js";
 import { canView, openViewer } from "../ui/viewer.js";
 
@@ -78,7 +80,8 @@ function row(doc) {
   ]);
 }
 
-export async function render(main) {
+export async function render(main, arg) {
+  const asked = decode(arg).trim();
   const [documents, pageOf, unreachable] = await Promise.all([data.documents(), data.documentPages(), data.unreachableDocuments()]);
   const head = band("원문 대장", "EU 집행위원회가 올린 CBAM 문서입니다. 문서 이름을 누르면 내려받지 않고 바로 볼 수 있습니다. 문서가 바뀌면 바뀐 곳을 함께 보여 줍니다.", libraryTabs("docs"));
   if (!documents.length) {
@@ -123,10 +126,11 @@ export async function render(main) {
   fill(main,
     head,
     h("div", { class: "filters" }, [
-      h("label", { class: "field field-grow", for: "doc-q" }, [h("span", { text: "문서 찾기" }), h("input", { id: "doc-q", type: "search", placeholder: "예: guidance, default values, 5d", oninput: (event) => filter(event.target.value) })]),
+      h("label", { class: "field field-grow", for: "doc-q" }, [h("span", { text: "문서 찾기" }), h("input", { id: "doc-q", type: "search", value: asked, placeholder: "예: guidance, default values, 5d", oninput: (event) => filter(event.target.value) })]),
       status,
     ]),
     ...sections,
     none,
   );
+  if (asked) filter(asked);
 }

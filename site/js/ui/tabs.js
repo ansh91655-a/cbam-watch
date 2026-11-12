@@ -3,7 +3,7 @@ import { h } from "./dom.js";
 import { icon } from "./icons.js";
 
 // '자료·안내' 아래의 화면: [화면 이름, 보이는 이름, 아이콘]. 주 메뉴를 누르면 원문 대장이 먼저 열린다.
-const LIBRARY = [["cn", "품목 코드 조회", "search"], ["laws", "규정 원문", "law"], ["docs", "원문 대장", "file"], ["terms", "용어집", "terms"], ["about", "안내", "who"]];
+export const LIBRARY = [["cn", "품목 코드 조회", "search"], ["laws", "규정 원문", "law"], ["docs", "원문 대장", "file"], ["terms", "용어집", "terms"], ["about", "안내", "who"]];
 
 export function libraryTabs(current) {
   return h("nav", { class: "tabs", "aria-label": "자료·안내에서 볼 것 고르기" }, LIBRARY.map(([view, name, key]) =>
@@ -11,7 +11,7 @@ export function libraryTabs(current) {
 }
 
 // '가격' 아래의 화면: 인증서 가격과 비용 추정.
-const PRICE = [["price", "인증서 가격", "price"], ["calc", "비용 추정", "emissions"]];
+export const PRICE = [["price", "인증서 가격", "price"], ["calc", "비용 추정", "emissions"]];
 
 export function priceTabs(current) {
   return h("nav", { class: "tabs", "aria-label": "가격에서 볼 것 고르기" }, PRICE.map(([view, name, key]) =>

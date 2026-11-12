@@ -1,0 +1,29 @@
+/* 주 메뉴의 펼침 목록(js/ui/navmenu.js). 메뉴가 한 줄에 놓이는 너비에서만 쓴다.
+   좁은 화면에서는 펼침 단추와 목록을 모두 숨기고, 화면 안의 탭과 목록으로 고른다. */
+.nav-more, .nav-drop { display: none; }
+@media (min-width: 901px) {
+  .site-nav { overflow: visible; }
+  /* 펼침 단추: 메뉴 이름 바로 뒤의 작은 화살표 */
+  .site-nav > a[data-menu] { padding-right: 2px; }
+  .site-nav > a[data-menu][aria-current="page"]::after { right: 2px; }
+  .nav-more { display: grid; place-items: center; flex: none; align-self: center; width: 24px; height: 32px; margin-right: 2px; padding: 0; border: 0; border-radius: 6px; background: none; color: var(--on-deep-3); }
+  .nav-more[hidden] + .nav-drop { display: none; }
+  .nav-more .icon { transition: transform 0.18s ease; }
+  .nav-more:hover, .site-nav > a[data-menu]:hover + .nav-more, .nav-more[aria-expanded="true"] { color: var(--on-deep); }
+  .nav-more[aria-expanded="true"] .icon { transform: rotate(180deg); }
+  /* 손가락으로 누르는 기기에서는 단추를 넓힌다(여기서는 단추가 목록을 여는 하나뿐인 길이다) */
+  @media (hover: none) { .nav-more { width: 32px; height: 40px; } }
+
+  /* 목록: 머리글 바로 아래에 붙는 밝은 칸 */
+  .nav-drop { display: block; position: absolute; top: 100%; left: 0; z-index: 5; width: max-content; max-width: min(560px, calc(100vw - 32px)); padding: 8px; border: 1px solid var(--line-2); border-top: 0; border-radius: 0 0 var(--radius-l) var(--radius-l); background: var(--surface); color: var(--ink); box-shadow: var(--shadow-2); visibility: hidden; opacity: 0; transform: translateY(-6px); transition: opacity 0.14s ease, transform 0.16s ease, visibility 0s linear 0.16s; }
+  .nav-drop[data-open] { visibility: visible; opacity: 1; transform: none; transition-delay: 0s; }
+  .nav-list { display: grid; gap: 2px; margin: 0; padding: 0; list-style: none; }
+  /* 줄이 많은 목록은 두 단으로 나눈다. 위에서 아래로 읽고 다음 단으로 넘어간다(줄 수는 js가 --rows에 적는다). */
+  .nav-list[data-cols="2"] { grid-auto-flow: column; grid-template-rows: repeat(var(--rows, 5), auto); grid-auto-columns: minmax(0, 1fr); column-gap: 6px; }
+  .nav-drop a { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 0 10px; min-width: 176px; padding: 7px 14px 7px 8px; border-radius: 12px; color: var(--ink); font-size: 0.92rem; font-weight: 500; line-height: 1.4; text-decoration: none; white-space: nowrap; }
+  .nav-drop a:hover { background: var(--surface-2); }
+  .nav-drop a[aria-current="page"] { color: var(--brand); font-weight: 700; }
+  .nav-drop .chipicon { grid-row: 1 / span 2; width: 30px; height: 30px; border-radius: 9px; }
+  .nav-drop a > .nav-name:last-child { grid-row: 1 / span 2; }  /* 설명이 없는 줄은 이름을 아이콘의 가운데에 맞춘다 */
+  .nav-about { grid-column: 2; font-size: 0.78rem; font-weight: 400; color: var(--ink-3); white-space: normal; max-width: 30ch; }
+}
