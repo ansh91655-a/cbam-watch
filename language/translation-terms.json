@@ -1080,6 +1080,24 @@
    "ko": "비용 기준",
    "from": "guide-3",
    "added": "2026-11-12"
+  },
+  {
+   "en": "product environmental footprint",
+   "ko": "제품 환경발자국",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "cradle to gate",
+   "ko": "요람에서 출고까지",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "cradle to grave",
+   "ko": "요람에서 무덤까지",
+   "from": "guide-3",
+   "added": "2026-11-12"
   }
  ]
 }
