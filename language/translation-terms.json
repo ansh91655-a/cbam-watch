@@ -2574,6 +2574,24 @@
    "ko": "재평가",
    "from": "guide-verif",
    "added": "2026-11-13"
+  },
+  {
+   "en": "audit trail",
+   "ko": "심사 추적 기록",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "time allocation",
+   "ko": "시간 배정",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "materiality threshold",
+   "ko": "중요성 임계값",
+   "from": "guide-verif",
+   "added": "2026-11-13"
   }
  ]
 }
