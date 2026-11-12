@@ -1398,6 +1398,48 @@
    "ko": "EU 데이터베이스",
    "from": "guide-3",
    "added": "2026-11-12"
+  },
+  {
+   "en": "inherent CO2",
+   "ko": "고유 CO2",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "chain of custody",
+   "ko": "관리 사슬",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "permanently chemically bound",
+   "ko": "영구적으로 화학적으로 결합된",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "geological storage site",
+   "ko": "지중 저장소",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "originating installation",
+   "ko": "발생 사업장",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "direct technical link",
+   "ko": "직접적인 기술적 연결",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "single line diagram",
+   "ko": "단선결선도",
+   "from": "guide-3",
+   "added": "2026-11-12"
   }
  ]
 }
