@@ -3612,6 +3612,30 @@
    "ko": "재무 부채",
    "from": "reg-declarant",
    "added": "2026-11-13"
+  },
+  {
+   "en": "prefill",
+   "ko": "미리 채우기",
+   "from": "reg-declarant",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Save for later use",
+   "ko": "나중에 쓰도록 저장",
+   "from": "reg-declarant",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "process data",
+   "ko": "절차 데이터",
+   "from": "reg-declarant",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Actor information retrieval",
+   "ko": "행위자 정보 검색",
+   "from": "reg-declarant",
+   "added": "2026-11-13"
   }
  ]
 }
