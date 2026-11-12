@@ -2928,6 +2928,24 @@
    "ko": "생산경로 표시",
    "from": "32025R2621",
    "added": "2026-11-13"
+  },
+  {
+   "en": "transcription mistake",
+   "ko": "전사 오류",
+   "from": "32026R1740",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "double salts",
+   "ko": "복염",
+   "from": "32026R1740",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "calcined kaolinic clay",
+   "ko": "소성 고령토질 점토",
+   "from": "32026R1740",
+   "added": "2026-11-13"
   }
  ]
 }
