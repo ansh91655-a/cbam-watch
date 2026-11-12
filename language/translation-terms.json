@@ -336,6 +336,30 @@
    "ko": "부문 공통 규칙",
    "from": "guide-2",
    "added": "2026-11-12"
+  },
+  {
+   "en": "carbon price report",
+   "ko": "탄소가격 보고서",
+   "from": "guide-1",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "independent person",
+   "ko": "독립된 자",
+   "from": "guide-1",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "carbon price certifier",
+   "ko": "탄소가격 인증자",
+   "from": "guide-1",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "MRV rules",
+   "ko": "MRV 규칙",
+   "from": "guide-1",
+   "added": "2026-11-12"
   }
  ]
 }
