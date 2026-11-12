@@ -3924,6 +3924,18 @@
    "ko": "발전 설비",
    "from": "guide-importers",
    "added": "2026-11-13"
+  },
+  {
+   "en": "learning phase",
+   "ko": "학습 단계",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "phase-in",
+   "ko": "단계적 도입",
+   "from": "guide-importers",
+   "added": "2026-11-13"
   }
  ]
 }
