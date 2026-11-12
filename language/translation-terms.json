@@ -3126,6 +3126,36 @@
    "ko": "세관 절차 코드",
    "from": "32025R2619",
    "added": "2026-11-13"
+  },
+  {
+   "en": "recipient",
+   "ko": "수령인",
+   "from": "32025R2210",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "re-export notification",
+   "ko": "재수출 통지",
+   "from": "32025R2210",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "artificial island",
+   "ko": "인공섬",
+   "from": "32025R2210",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "holder of the inward processing authorisation",
+   "ko": "역내가공 승인 보유자",
+   "from": "32025R2210",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "electronic data-processing techniques",
+   "ko": "전자 데이터 처리 기법",
+   "from": "32025R2210",
+   "added": "2026-11-13"
   }
  ]
 }
