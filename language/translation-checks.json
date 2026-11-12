@@ -1,0 +1,16 @@
+{
+ "note": "번역 검수의 결과. days는 날마다 읽은 묶음의 수(batches), 틀리지 않다고 본 문단(checked), 틀려서 지운 문단(dropped), 일부러 바꿔 섞은 번역(canaries)과 그 가운데 잡아낸 것(caught), 버린 묶음(discarded: 바꾼 것을 놓침)과 반영하지 않은 묶음(held: 틀렸다고 한 비율이 지나치게 높음)이다. disputed는 두 번 다시 옮기고도 또 틀렸다고 한 문단이다(사람이 볼 것).",
+ "days": [
+  {
+   "day": "2026-11-12",
+   "batches": 1,
+   "checked": 54,
+   "dropped": 0,
+   "canaries": 3,
+   "caught": 3,
+   "discarded": 0,
+   "held": 0
+  }
+ ],
+ "disputed": []
+}
