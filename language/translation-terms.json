@@ -3450,6 +3450,12 @@
    "ko": "상태 전이도",
    "from": "reg-portal",
    "added": "2026-11-13"
+  },
+  {
+   "en": "certifier",
+   "ko": "인증자",
+   "from": "reg-portal",
+   "added": "2026-11-13"
   }
  ]
 }
