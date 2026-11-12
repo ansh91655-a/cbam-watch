@@ -2592,6 +2592,24 @@
    "ko": "중요성 임계값",
    "from": "guide-verif",
    "added": "2026-11-13"
+  },
+  {
+   "en": "data and information auditing",
+   "ko": "데이터와 정보 심사",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "geographical exemptions",
+   "ko": "지리적 면제",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "substantive data testing",
+   "ko": "실증 데이터 시험",
+   "from": "guide-verif",
+   "added": "2026-11-13"
   }
  ]
 }
