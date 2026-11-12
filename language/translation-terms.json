@@ -3732,6 +3732,24 @@
    "ko": "영속성",
    "from": "report-carbon-price",
    "added": "2026-11-13"
+  },
+  {
+   "en": "currency conversion",
+   "ko": "통화 환산",
+   "from": "report-carbon-price",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "power exchanges",
+   "ko": "전력거래소",
+   "from": "report-carbon-price",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "undercrediting",
+   "ko": "과소 공제",
+   "from": "report-carbon-price",
+   "added": "2026-11-13"
   }
  ]
 }
