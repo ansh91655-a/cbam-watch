@@ -10,7 +10,7 @@ import unittest
 
 from tools.common.jsonio import now_kst, stamp
 from tools.publish import add_digest, add_items, merge, withdraw
-from tools.run import claude_status, day_summary, holds_to_fix, holds_to_recheck, rechecks, week_items
+from tools.run import claude_status, day_summary, feed_title, holds_to_fix, holds_to_recheck, rechecks, week_items
 
 
 def _write(path, value):
@@ -261,7 +261,15 @@ class PublishTest(unittest.TestCase):
         self.assertEqual(len(found), 1)  # 사이트 쪽 사정으로 한 번 못 읽은 것은 아직 알리지 않는다
         self.assertTrue(found[0].startswith("예약 실행이 웹 읽기 승인을 받지 못해 출처 2곳을 열지 못함(council-cbam, ep-train)"))
         blocked["sources"]["op-europa"]["failCount"] = 3
-        self.assertIn("출처 op-europa: 직접 열람이 3회 연속 실패", health._source_problems({"sources": {}}, blocked))
+        self.assertIn("출처 op-europa: 직접 열람이 3회 연속 실패(403으로 막힘)", health._source_problems({"sources": {}}, blocked))
+        # 도구가 돌려준 오류 이름만 적혀 있어도 같은 문제로 묶는다
+        blocked["sources"]["ep-train"]["note"] = "PROVENANCE_REQUIRED"
+        self.assertIn("(council-cbam, ep-train)", health._source_problems({"sources": {}}, blocked)[-1])
+        # 출처 대장에서 직접 열람을 그만둔 출처의 옛 기록은 알리지 않는다
+        only = health._source_problems({"sources": {}}, blocked, {"council-cbam"})
+        self.assertEqual(len(only), 1)
+        self.assertIn("출처 1곳을 열지 못함(council-cbam)", only[0])
+        self.assertEqual(health._source_problems({"sources": {}}, blocked, set()), [])
 
     def test_claude_status_counts_failures(self):
         _run(claude_status.main, ["council-cbam=ok", "op-europa=fail:403으로 막힘"])
@@ -270,6 +278,59 @@ class PublishTest(unittest.TestCase):
         self.assertEqual((book["council-cbam"]["ok"], book["op-europa"]["failCount"], book["op-europa"]["lastOk"]), (True, 2, ""))
         _run(claude_status.main, ["op-europa=ok"])
         self.assertEqual(_read("collected/claude-status.json")["sources"]["op-europa"]["failCount"], 0)
+        # 출처 대장이 있으면, 직접 열람을 그만둔 출처의 기록은 다음에 적을 때 지워진다
+        _write("sources/registry.json", {"sources": [{"code": "council-cbam", "collector": "claude"}, {"code": "op-europa", "collector": "off"}]})
+        _run(claude_status.main, ["council-cbam=fail:검색 결과에 주소가 없음"])
+        book = _read("collected/claude-status.json")["sources"]
+        self.assertEqual((sorted(book), book["council-cbam"]["failCount"], book["council-cbam"]["note"]), (["council-cbam"], 1, "검색 결과에 주소가 없음"))
+
+    def test_title_only_drafts_are_checked_against_the_collected_feed(self):
+        day = now_kst().date().isoformat()
+        _write(f"collected/feed/{day}.json", {"date": day, "items": [
+            {"id": "aaaaaaaaaaaa", "source": "carbon-pulse", "kind": "link", "url": "https://example.org/569673/?site=cpp", "text": "FEATURE: A hard sell, experts say"},
+            {"id": "bbbbbbbbbbbb", "source": "keco-cbam", "kind": "link", "url": "https://example.org/view.do?article_seq=1", "text": "월간 동향 37호"}]})
+        _write("collected/feed/2020-01-01.json", {"date": "2020-01-01", "items": [{"id": "cccccccccccc", "source": "carbon-pulse", "kind": "link", "url": "https://example.org/old", "text": "오래된 기록"}]})
+        _write("sources/registry.json", {"sources": [{"code": "carbon-pulse", "url": "https://example.org/category/cbam/"}, {"code": "keco-cbam", "url": "https://example.org/list.do"}]})
+
+        def look(**fields):
+            _write("db/items/x.json", {"id": "x", **fields})
+            return _run(feed_title.main, ["--item-file", "db/items/x.json"])[1]
+
+        found = look(candidateIds=["aaaaaaaaaaaa"], link="https://example.org/569673/?site=cpp")
+        self.assertEqual((found["found"], found["linkMatches"]), (True, True))
+        self.assertEqual((found["entries"][0]["text"], found["entries"][0]["feedDate"]), ("FEATURE: A hard sell, experts say", day))
+        # 초안의 링크가 기록의 주소와 다르면 맞지 않는 것으로 본다. 다만 그 출처의 목록 화면 주소는 맞는 것으로 본다
+        self.assertFalse(look(candidateIds=["aaaaaaaaaaaa"], link="https://example.org/569673/")["linkMatches"])
+        self.assertTrue(look(candidateIds=["bbbbbbbbbbbb"], link="https://example.org/list.do")["linkMatches"])
+        # 기록에 없는 후보, 너무 오래된 기록, 후보가 적히지 않은 초안은 찾지 못한 것이다
+        self.assertFalse(look(candidateIds=["dddddddddddd"], link="https://example.org/a")["found"])
+        self.assertFalse(look(candidateIds=["cccccccccccc"], link="https://example.org/old")["found"])
+        self.assertFalse(look(link="https://example.org/569673/?site=cpp")["found"])
+
+    def test_directly_opened_sources_come_with_their_search_words(self):
+        from tools.run import prepare_collect
+        day = now_kst().date().isoformat()
+        _write("sources/registry.json", {"sources": [
+            {"code": "council-cbam", "name": "Council", "url": "https://example.org/council/", "tier": "A", "collector": "claude", "find": "Council CBAM policy"},
+            {"code": "op-europa", "name": "OP", "url": "https://example.org/op", "tier": "A", "collector": "off"},
+            {"code": "keco-cbam", "name": "KECO", "url": "https://example.org/list.do", "tier": "B", "collector": "github"}]})
+        _write(f"collected/feed/{day}.json", {"date": day, "items": [{"id": "bbbbbbbbbbbb", "source": "keco-cbam", "kind": "link", "url": "https://example.org/view.do?article_seq=1", "text": "월간 동향 37호"}]})
+        with contextlib.redirect_stdout(io.StringIO()):
+            prepare_collect.main(["--db-dir", "db", "--out", "candidates.json"])
+        book = _read("candidates.json")
+        self.assertEqual([(row["code"], row["url"], row["find"]) for row in book["claudeSources"]], [("council-cbam", "https://example.org/council/", "Council CBAM policy")])
+        self.assertEqual([(row["id"], row["tier"], row["sourceUrl"]) for row in book["candidates"]], [("bbbbbbbbbbbb", "B", "https://example.org/list.do")])
+
+    def test_one_line_items_keep_their_mark_when_published(self):
+        self._draft("20261112-keco-cbam-brief1", brief=True, tier="B", summary="한국환경공단이 월간 동향 37호를 게시판에 올렸습니다.", events=[])
+        self._draft("20261112-keco-cbam-full01", brief=False, tier="B", events=[])
+        for item_id in ("20261112-keco-cbam-brief1", "20261112-keco-cbam-full01"):
+            self._verdict(item_id, "pass")
+        _, result = _run(add_items.main, ["--db-dir", "db"])
+        self.assertEqual(sorted(result["added"]), ["20261112-keco-cbam-brief1", "20261112-keco-cbam-full01"])
+        rows = {row["id"]: row for row in _read("data/items.json")["items"]}
+        self.assertIs(rows["20261112-keco-cbam-brief1"].get("brief"), True)
+        self.assertNotIn("brief", rows["20261112-keco-cbam-full01"])
 
 
 class DaySummaryTest(unittest.TestCase):

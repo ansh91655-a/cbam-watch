@@ -1,13 +1,21 @@
 """정리 실행이 직접 연 출처의 확인 결과를 저장소에 적는다(collected/claude-status.json).
 
-쓰는 법: python -m tools.run.claude_status council-cbam=ok ep-train=ok "op-europa=fail:403으로 막힘"
-연속 실패 횟수와 마지막으로 읽은 시각을 이어서 적는다. 사이트의 출처 화면과 실행 확인이 이 파일을 읽는다.
+쓰는 법: python -m tools.run.claude_status council-cbam=ok "council-cbam=fail:검색 결과에 주소가 없음"
+연속 실패 횟수와 마지막으로 읽은 시각을 이어서 적는다. 실행 확인(tools.run.health)이 이 파일을 읽는다.
+출처 대장에서 직접 열람(collector가 claude)이 아닌 출처의 기록은 이때 지운다.
 """
 import sys
 
 from tools.common.jsonio import read_json, stamp, write_json
 
 PATH = "collected/claude-status.json"
+REGISTRY = "sources/registry.json"
+
+
+def _active():
+    """출처 대장에서 예약 실행이 직접 여는 출처의 code들. 대장을 읽지 못하면 빈 묶음이다."""
+    sources = read_json(REGISTRY, {"sources": []}).get("sources", [])
+    return {source["code"] for source in sources if source.get("collector") == "claude"}
 
 
 def main(argv):
@@ -27,6 +35,9 @@ def main(argv):
             "failCount": 0 if ok else int(before.get("failCount", 0) or 0) + 1,
             "lastOk": moment if ok else before.get("lastOk", ""),
         }
+    active = _active()
+    if active:  # 대장에서 직접 열람을 그만둔 출처의 옛 기록은 지운다(남아 있으면 상태 점검이 계속 알린다)
+        book["sources"] = {code: row for code, row in sources.items() if code in active}
     book["checkedAt"] = moment
     write_json(PATH, book)
     print(f"직접 연 출처 {len(argv)}곳의 결과를 적음")

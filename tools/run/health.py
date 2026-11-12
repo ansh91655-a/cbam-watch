@@ -33,25 +33,29 @@ def _kst_date(iso_text):
         return ""
 
 
-def _source_problems(status, claude):
+def _source_problems(status, claude, active=None):
+    """출처를 읽지 못한 문제. active는 지금 예약 실행이 직접 여는 출처의 code들이다(주면 그 밖의 옛 기록은 보지 않는다)."""
     problems = []
     for code, row in sorted(status.get("sources", {}).items()):
         if int(row.get("failCount", 0) or 0) >= FAIL_LIMIT:
             problems.append(f"출처 {code}: {row['failCount']}회 연속 읽지 못함({str(row.get('note', ''))[:60]})")
         if "구조가 바뀐" in str(row.get("note", "")):
             problems.append(f"출처 {code}: 화면 구조가 바뀐 것으로 보임")
-    # 예약 실행이 직접 여는 출처. 사이트 쪽의 사정으로 못 읽은 것은 몇 번 이어질 때 알리지만,
-    # 실행의 웹 읽기 권한이 승인되지 않아 못 읽은 것은 날마다 되풀이될 일이므로 첫날에 한 줄로 묶어 알린다.
+    # 예약 실행이 직접 여는 출처. 사이트 쪽의 사정이나 검색 결과에 주소가 나오지 않아 못 읽은 것은 몇 번 이어질 때 알린다.
+    # 웹 읽기 도구가 사람의 확인을 기다리다 끝난 것(승인, PROVENANCE_REQUIRED)은 사람 없이는 열리지 않는 주소를 연 것이라
+    # 날마다 되풀이된다. 첫날에 한 줄로 묶어 알린다. 예약 작업의 자동 승인 설정으로는 풀리지 않는다(2026-11-12에 확인).
     unapproved = []
     for code, row in sorted(claude.get("sources", {}).items()):
-        if row.get("ok") is not False:
+        if row.get("ok") is not False or (active is not None and code not in active):
             continue
-        if "승인" in str(row.get("note", "")):
+        note = str(row.get("note", ""))
+        if "승인" in note or "PROVENANCE" in note:
             unapproved.append(code)
         elif int(row.get("failCount", 0) or 0) >= FAIL_LIMIT:
-            problems.append(f"출처 {code}: 직접 열람이 {row['failCount']}회 연속 실패")
+            problems.append(f"출처 {code}: 직접 열람이 {row['failCount']}회 연속 실패({note[:60]})")
     if unapproved:
-        problems.append(f"예약 실행이 웹 읽기 승인을 받지 못해 출처 {len(unapproved)}곳을 열지 못함({', '.join(unapproved)}). 예약 작업의 자동 승인 설정을 확인해야 함")
+        problems.append(f"예약 실행이 웹 읽기 승인을 받지 못해 출처 {len(unapproved)}곳을 열지 못함({', '.join(unapproved)}). "
+                        "사람의 확인이 필요한 주소를 열려고 한 것이므로 절차서의 웹 읽기 규칙을 확인해야 함")
     return problems
 
 
@@ -95,10 +99,12 @@ def report():
     problems = []
     if workday and not collect_today:
         problems.append(f"출처 자동 수집이 오늘 돌지 않음(마지막 {status.get('checkedAt', '없음')})")
-    problems += _source_problems(status, claude)
+    registry = read_json("sources/registry.json", {"sources": []}).get("sources", [])
+    problems += _source_problems(status, claude, {source["code"] for source in registry if source.get("collector") == "claude"})
     prices = read_json("data/prices.json", {}) or {}
     problems += _price_problems(prices)
-    problems += _robots_problems(day)
+    switched_off = {source.get("url") for source in registry if source.get("collector") == "off"}  # 이미 수집에서 뺀 출처는 다시 알리지 않는다
+    problems += _robots_problems(day, [(url, why) for url, why in robots.blocked_today(day) if url not in switched_off])
     if workday:
         problems += _originals_problems(originals, day)
         if not deployed_today:

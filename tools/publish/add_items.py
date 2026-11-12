@@ -10,6 +10,7 @@
 - 사실: 저장소에 원문 글(sourceTextPath)이 있으면, 제목·요약·실무 영향에 나온 수치와 날짜가 그 글에 있어야 한다.
   검증 실행이 표기 차이라고 사유(factNote)를 적은 경우에만 넘어간다.
 원문 발췌(excerpt)는 EU 공식 출처(등급 A)이고 원문 글에 그대로 있을 때만 싣는다. 아니면 발췌만 빼고 싣는다.
+초안에 brief가 참이면(본문을 읽지 못해 제목만 옮긴 소식) 그 표시를 그대로 싣는다. 사이트가 한 줄 소식으로 보여 준다.
 마지막 줄에 결과를 JSON으로 출력한다.
 """
 import argparse
@@ -104,6 +105,8 @@ def main(argv):
         row = {field: item[field] for field in PUBLIC_FIELDS if field in item and item[field] not in (None, "")}
         row.setdefault("published", "")
         row.setdefault("impact", "")
+        if item.get("brief") is True:  # 본문을 읽지 못해 제목만 옮긴 소식. 사이트가 한 줄로 보여 주고, 나중에 요약 보강(tools.publish.revise)의 대상이 된다
+            row["brief"] = True
         if row.get("topic") not in known_topics:
             row["topic"] = topics.OTHER
             topic_defaulted.append(item_id)

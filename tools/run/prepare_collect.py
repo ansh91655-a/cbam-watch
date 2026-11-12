@@ -38,7 +38,9 @@ def main(argv):
             source = by_code.get(item["source"], {})
             item.update({"feedDate": date, "sourceName": source.get("name", item["source"]), "tier": source.get("tier", "C"), "sourceUrl": source.get("url", "")})
             fresh.append(item)
-    claude_sources = [{"code": s["code"], "name": s["name"], "url": s["url"], "tier": s["tier"], "note": s.get("note", ""), "ops": s.get("ops", "")} for s in registry if s.get("collector") == "claude"]
+    # 직접 여는 출처. find는 그 화면을 찾는 검색어다(웹 읽기는 검색 결과에 나온 주소만 사람 없이 열 수 있다)
+    claude_sources = [{"code": s["code"], "name": s["name"], "url": s["url"], "find": s.get("find", ""), "tier": s["tier"], "note": s.get("note", ""), "ops": s.get("ops", "")}
+                      for s in registry if s.get("collector") == "claude"]
     status = read_json("collected/status.json", {})
     write_json(args.out, {"today": today.isoformat(), "candidates": fresh, "waiting": waiting, "claudeSources": claude_sources, "collectCheckedAt": status.get("checkedAt", "")})
     print(f"새 후보 {len(fresh)}건(다음으로 미룬 것 {waiting}건), 직접 열 출처 {len(claude_sources)}곳, 자동 수집 시각 {status.get('checkedAt', '없음')}")
