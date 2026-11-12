@@ -534,6 +534,30 @@
    "ko": "공동연구센터",
    "from": "qa",
    "added": "2026-11-12"
+  },
+  {
+   "en": "scope of accreditation",
+   "ko": "인정 범위",
+   "from": "qa",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "force majeure",
+   "ko": "불가항력",
+   "from": "qa",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "technical review",
+   "ko": "기술 검토",
+   "from": "qa",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "outsourced body",
+   "ko": "외주를 받은 기관",
+   "from": "qa",
+   "added": "2026-11-12"
   }
  ]
 }
