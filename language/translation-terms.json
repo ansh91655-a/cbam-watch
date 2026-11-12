@@ -3540,6 +3540,48 @@
    "ko": "인정받은 기관 관리자",
    "from": "reg-access-verifier",
    "added": "2026-11-13"
+  },
+  {
+   "en": "Authorisation Management Module",
+   "ko": "승인 관리 모듈",
+   "from": "reg-declarant",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Decision-taking Competent Authority",
+   "ko": "결정 관할당국",
+   "from": "reg-declarant",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Imported Goods Management",
+   "ko": "수입 제품 관리",
+   "from": "reg-declarant",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "business component",
+   "ko": "업무 구성요소",
+   "from": "reg-declarant",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "quantifiable assets",
+   "ko": "정량화 가능한 자산",
+   "from": "reg-declarant",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Declarant Portal",
+   "ko": "신고인 포털",
+   "from": "reg-declarant",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Trader Identification number",
+   "ko": "무역업자 식별번호",
+   "from": "reg-declarant",
+   "added": "2026-11-13"
   }
  ]
 }
