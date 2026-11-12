@@ -2400,6 +2400,30 @@
    "ko": "집계된 전구물질",
    "from": "guide-verif",
    "added": "2026-11-13"
+  },
+  {
+   "en": "intra-company off-take agreement",
+   "ko": "회사 내부 인수 약정",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "heat network",
+   "ko": "열망",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "dedicated electricity line",
+   "ko": "전용 전력선",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "congestion report",
+   "ko": "혼잡 보고서",
+   "from": "guide-verif",
+   "added": "2026-11-13"
   }
  ]
 }
