@@ -3330,6 +3330,42 @@
    "ko": "개별계약",
    "from": "32023R1773",
    "added": "2026-11-13"
+  },
+  {
+   "en": "Syntactic validation",
+   "ko": "구문 유효성 검사",
+   "from": "reg-portal",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Semantic validation",
+   "ko": "의미 유효성 검사",
+   "from": "reg-portal",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Tooltip",
+   "ko": "도움말 풍선",
+   "from": "reg-portal",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "collaboration request",
+   "ko": "협업 요청",
+   "from": "reg-portal",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "deregistration request",
+   "ko": "등록 말소 요청",
+   "from": "reg-portal",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Accredited Entity",
+   "ko": "인정받은 기관",
+   "from": "reg-portal",
+   "added": "2026-11-13"
   }
  ]
 }
