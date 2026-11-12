@@ -2154,6 +2154,18 @@
    "ko": "계량 벨트",
    "from": "guide-verif",
    "added": "2026-11-12"
+  },
+  {
+   "en": "level of assurance engagement",
+   "ko": "보증 수준의 업무",
+   "from": "guide-verif",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "assurance engagement",
+   "ko": "보증 업무",
+   "from": "guide-verif",
+   "added": "2026-11-12"
   }
  ]
 }
