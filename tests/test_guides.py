@@ -1,12 +1,14 @@
 """안내 문서(PDF에서 뽑은 글): 쪽 읽기, 문단 묶기, 절 나누기, 문서 목록, 번역 실행의 갈래, 견주기 시험, 검수, 사이트 자료."""
+import datetime
 import json
 import pathlib
 import random
 import shutil
+import subprocess
 import tempfile
 import unittest
 
-from tools.laws import build, corpus, guide_segment, guides, pdf_blocks, pdf_pages, plan, review, spoil, status, store, todo, trial, verify, wording
+from tools.laws import build, corpus, guide_segment, guides, lock, pdf_blocks, pdf_pages, plan, review, spoil, status, store, todo, trial, verify, wording
 from tools.run import laws_health
 
 COVER = """EUROPEAN TEST OFFICE
@@ -808,6 +810,78 @@ class VerifyTest(unittest.TestCase):
         self.assertEqual((done["outcome"], done["dropped"], done["disputed"], done["checked"]), ("applied", 0, 1, 21))
         self.assertIn(stubborn, store.load(self.act))
         self.assertEqual(json.loads(pathlib.Path(verify.LOG).read_text(encoding="utf-8"))["disputed"], [{"day": "2026-11-12", "key": stubborn, "why": "또 틀림"}])
+
+
+@unittest.skipUnless(shutil.which("git"), "git이 없으면 자물쇠는 시험하지 않는다")
+class LockTest(unittest.TestCase):
+    """번역 실행의 자물쇠: 저장소 하나(origin)를 두 실행(a, b)이 받아 놓고 잡고 푼다."""
+
+    def setUp(self):
+        self.base = pathlib.Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, self.base, ignore_errors=True)
+        self.git(self.base, "init", "-q", "--bare", "-b", "main", "origin.git")
+        self.git(self.base, "clone", "-q", "origin.git", "a")
+        (self.base / "a" / "data" / "laws-ko").mkdir(parents=True)
+        (self.base / "a" / "data" / "laws-ko" / "x.json").write_text("{}\n", encoding="utf-8")
+        self.git(self.base / "a", "add", "-A")
+        self.git(self.base / "a", "commit", "-q", "-m", "처음", env_date="2026-11-12T10:00:00+09:00")
+        self.git(self.base / "a", "push", "-q", "origin", "HEAD:main")
+        self.git(self.base, "clone", "-q", "origin.git", "b")
+        self.a, self.b = str(self.base / "a"), str(self.base / "b")
+        self.noon = datetime.datetime(2026, 11, 12, 12, 0, tzinfo=lock.KST)
+
+    def git(self, where, *args, env_date=None):
+        env = None
+        if env_date:
+            import os
+            env = {**os.environ, "GIT_AUTHOR_DATE": env_date, "GIT_COMMITTER_DATE": env_date}
+        return subprocess.run(["git", "-c", "user.name=t", "-c", "user.email=t@example.com", *args], cwd=where, capture_output=True, text=True, check=True, env=env)
+
+    def later(self, minutes):
+        return self.noon + datetime.timedelta(minutes=minutes)
+
+    def test_only_one_run_holds_the_lock_and_only_its_holder_releases_it(self):
+        self.assertEqual(lock.take("run-a", self.a, at=self.noon), ("taken", ""))
+        self.assertEqual(lock.take("run-b", self.b, at=self.later(5)), ("busy", "run-a"))   # 받아 보니 a가 잡고 있다
+        self.assertEqual(lock.release("run-b", self.b), "not-mine")                          # 남의 것은 풀지 않는다
+        self.assertEqual(lock.read(self.b)["run"], "run-a")
+        self.assertEqual(lock.release("run-a", self.a), "released")
+        self.assertEqual(lock.take("run-b", self.b, at=self.later(6)), ("taken", ""))        # 풀린 뒤에는 바로 잡는다
+        self.assertEqual(lock.read(self.b), {"run": "run-b", "since": "2026-11-12T12:06:00+09:00"})
+
+    def test_a_lock_left_by_a_stopped_run_is_taken_over(self):
+        lock.take("run-a", self.a, at=self.noon)
+        self.assertEqual(lock.take("run-b", self.b, at=self.later(lock.STALE_MINUTES - 1))[0], "busy")
+        self.assertEqual(lock.take("run-b", self.b, at=self.later(lock.STALE_MINUTES + 1)), ("taken", ""))
+        self.assertEqual(lock.release("run-a", self.a), "not-mine")                          # 넘겨받은 뒤에 옛 실행이 풀려 해도 그대로다
+        self.assertEqual(lock.holder({"run": "x", "since": "엉뚱한 값"}, self.noon), "")
+        self.assertEqual(lock.holder(None, self.noon), "")
+
+    def test_an_old_lock_still_counts_while_translations_keep_arriving(self):
+        lock.take("run-a", self.a, at=self.noon)
+        old = self.later(lock.STALE_MINUTES + 3)
+        self.assertEqual(lock.holder(lock.read(self.a), old, last_work=old.timestamp() - 60), "run-a")   # 1분 전에 번역이 올라왔다
+        self.assertEqual(lock.holder(lock.read(self.a), old, last_work=old.timestamp() - lock.QUIET_SECONDS - 1), "")
+
+    def test_when_two_runs_take_at_once_the_first_push_wins(self):
+        # a가 자물쇠를 커밋하고 올리기 직전에 b가 먼저 잡는다. a의 올리기는 거절되고, a는 받아 보고 물러선다.
+        seen = []
+        def cut_in():
+            if not seen:
+                seen.append(lock.take("run-b", self.b, at=self.noon))
+        self.assertEqual(lock.take("run-a", self.a, at=self.noon, between=cut_in), ("busy", "run-b"))
+        self.assertEqual(seen, [("taken", "")])
+        self.assertEqual(self.git(self.a, "status", "--porcelain").stdout, "")               # a에는 자기 자물쇠 커밋이 남지 않는다
+        self.assertEqual(lock.read(self.a)["run"], "run-b")
+
+    def test_the_lock_file_is_outside_every_workflow_path(self):
+        # 자물쇠를 잡고 푸는 커밋이 검사나 배포를 돌리면 안 된다: 자동 실행들의 paths에 걸리지 않는 곳이어야 한다
+        folder = lock.PATH.split("/")[0]
+        for workflow in pathlib.Path(".github/workflows").glob("*.yml"):
+            text = workflow.read_text(encoding="utf-8")
+            self.assertNotIn(f'"{folder}/', text, workflow.name)
+            if "push:" in text:
+                self.assertIn("paths:", text, f"{workflow.name}: 경로를 가리지 않는 push 실행이 있으면 자물쇠 커밋마다 돈다")
 
 
 if __name__ == "__main__":
