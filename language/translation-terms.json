@@ -720,6 +720,30 @@
    "ko": "제3국 사업자 포털 관리자",
    "from": "reg-access-operator",
    "added": "2026-11-12"
+  },
+  {
+   "en": "sintered ore",
+   "ko": "소결광",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "spiegeleisen",
+   "ko": "스피겔아이젠",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "flat-rolled products",
+   "ko": "평판압연제품",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "least privilege",
+   "ko": "최소 권한",
+   "from": "guide-5d",
+   "added": "2026-11-12"
   }
  ]
 }
