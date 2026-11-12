@@ -2832,6 +2832,24 @@
    "ko": "후속 평가",
    "from": "32025R2551",
    "added": "2026-11-13"
+  },
+  {
+   "en": "accreditation work programme",
+   "ko": "인정 업무 계획",
+   "from": "32025R2551",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "peer evaluators",
+   "ko": "동료평가자",
+   "from": "32025R2551",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "technical expert in verification",
+   "ko": "검증 분야 기술전문가",
+   "from": "32025R2551",
+   "added": "2026-11-13"
   }
  ]
 }
