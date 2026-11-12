@@ -1098,6 +1098,30 @@
    "ko": "요람에서 무덤까지",
    "from": "guide-3",
    "added": "2026-11-12"
+  },
+  {
+   "en": "emission point",
+   "ko": "배출지점",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "continual metering",
+   "ko": "연속 계량",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "batch-wise metering",
+   "ko": "배치별 계량",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "transferred CO2",
+   "ko": "이전된 CO2",
+   "from": "guide-3",
+   "added": "2026-11-12"
   }
  ]
 }
