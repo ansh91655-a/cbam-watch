@@ -36,6 +36,42 @@
    "ko": "평균 규칙",
    "from": "guide-5b",
    "added": "2026-11-12"
+  },
+  {
+   "en": "multifunctional production process",
+   "ko": "다기능 생산공정",
+   "from": "guide-5b",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "shift conversion",
+   "ko": "전환 반응",
+   "from": "guide-5b",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "flue gas cleaning",
+   "ko": "배가스 정화",
+   "from": "guide-5b",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "mercury cell",
+   "ko": "수은 전해조",
+   "from": "guide-5b",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "diaphragm cell",
+   "ko": "격막 전해조",
+   "from": "guide-5b",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "membrane cell",
+   "ko": "이온교환막 전해조",
+   "from": "guide-5b",
+   "added": "2026-11-12"
   }
  ]
 }
