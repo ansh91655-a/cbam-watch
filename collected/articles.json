@@ -1,8 +1,11 @@
 {
- "checkedAt": "2026-11-12T12:36:30+09:00",
+ "checkedAt": "2026-11-12T12:57:57+09:00",
  "sources": [
+  "hmrc-cbam",
+  "moj",
   "motir",
-  "motir-policy"
+  "motir-policy",
+  "nea"
  ],
  "items": {
   "cdf4542109a6": {
