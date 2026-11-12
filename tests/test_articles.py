@@ -6,7 +6,7 @@ import pathlib
 import tempfile
 import unittest
 
-from tools.collect import article_text, articles
+from tools.collect import article_terms, article_text, articles, articles_try
 from tools.common.jsonio import KST
 from tools.run import articles_health
 
@@ -75,13 +75,53 @@ class ArticleTextTest(unittest.TestCase):
         self.assertLessEqual(sum(len(line) for line in many), article_text.MAX_CHARS)
         self.assertLessEqual(len(many), article_text.MAX_LINES)
 
-    def test_license_line_and_length(self):
-        self.assertEqual(article_text.license_line(["메뉴", LICENSE], ["공공누리 제1유형", "공공누리 1유형"]), LICENSE)
-        self.assertEqual(article_text.license_line(["공공누리  1 유형 조건"], ["공공누리 1유형"]), "공공누리  1 유형 조건")
-        self.assertEqual(article_text.license_line(["공공누리 2유형(출처표시+상업적이용금지)"], ["공공누리 1유형", "공공누리 제1유형"]), "")
-        self.assertEqual(article_text.license_line(["메뉴"], []), "")
+    def test_length(self):
         self.assertTrue(article_text.long_enough(BODY))
         self.assertFalse(article_text.long_enough(["첨부 파일을 참고"]))
+
+
+KOGL = ["공공누리 1유형", "공공누리 제1유형"]
+
+
+class TermsTest(unittest.TestCase):
+    def test_a_mark_is_found_whatever_the_spacing_and_letter_case(self):
+        self.assertEqual(article_terms.marked(["메뉴", LICENSE], KOGL), (LICENSE, False))
+        self.assertEqual(article_terms.marked(["공공누리  제 1 유형 조건"], KOGL), ("공공누리  제 1 유형 조건", False))
+        self.assertEqual(article_terms.marked(["All content is available under the OPEN GOVERNMENT LICENCE v3.0"], ["Open Government Licence v3.0"])[1], False)
+        self.assertTrue(article_terms.marked(["All content is available under the OPEN GOVERNMENT LICENCE v3.0"], ["Open Government Licence v3.0"])[0])
+        self.assertEqual(article_terms.marked(["메뉴"], KOGL), ("", False))
+        self.assertEqual(article_terms.marked(["메뉴", LICENSE], []), ("", False))
+
+    def test_other_kogl_types_alone_are_not_accepted(self):
+        self.assertEqual(article_terms.marked(["공공누리 2유형(출처표시+상업적이용금지)"], KOGL), ("", False))
+        self.assertEqual(article_terms.marked(["공공누리 제4유형: 출처표시 + 상업적 이용금지 + 변경금지"], KOGL), ("", False))
+
+    def test_a_page_that_lists_several_types_cannot_be_told_apart(self):
+        every = [f'법무부의 해당 저작물은 "공공누리 {n}유형(출처표시)" 조건에 따라 누구나 이용할 수 있습니다.' for n in (0, 1, 2, 3, 4)]
+        self.assertEqual(article_terms.marked(every, KOGL), ("", True))
+        self.assertEqual(article_terms.marked([LICENSE, "그림: 공공누리 제3유형"], KOGL), ("", True))
+
+    def test_badge_images_are_read_from_their_alt_text(self):
+        html = '<p>글</p><img src="/img/kogl1.png" alt="공공누리 제1유형: 출처표시"><a title=\'새 창\'>x</a><img alt="">'
+        self.assertEqual(article_terms.attribute_texts(html), ["공공누리 제1유형: 출처표시", "새 창"])
+        self.assertEqual(article_terms.marked(article_terms.attribute_texts(html), KOGL), ("공공누리 제1유형: 출처표시", False))
+
+    def test_the_type_field_of_a_post(self):
+        rule = {"label": "공공누리", "accept": ["1유형", "제1유형"]}
+        self.assertEqual(article_terms.field_terms(["작성일", "2026.11.12", "공공누리", "1유형", "본문"], rule), "1유형")
+        self.assertEqual(article_terms.field_terms(["공공누리 : 제1유형"], rule), "제1유형")
+        self.assertEqual(article_terms.field_terms(["공공누리", "4유형"], rule), "")
+        self.assertEqual(article_terms.field_terms(["공공누리", "1유형", "공공누리: 2유형"], rule), "")  # 둘이 적혀 있으면 가릴 수 없다
+        self.assertEqual(article_terms.field_terms(["본문에 공공누리라는 낱말이 나오는 긴 문장입니다."], rule), "")
+        self.assertEqual(article_terms.field_terms(["공공누리", "1유형"], {}), "")
+        # 유형마다의 안내문을 모두 실어 둔 화면이라도 칸의 값이 하나면 그 값을 본다
+        every = [f'법무부의 해당 저작물은 "공공누리 {n}유형(출처표시)" 조건에 따라 누구나 이용할 수 있습니다.' for n in (0, 1, 2, 3, 4)]
+        self.assertEqual(article_terms.field_terms(["공공누리", "1유형"] + every, rule), "1유형")
+        self.assertEqual(article_terms.field_terms(["공공누리", "2유형"] + every, rule), "")
+
+    def test_hints_show_how_a_page_words_its_terms(self):
+        found = article_terms.hints(["메뉴", "© Crown copyright", "Re-use of public sector information", "본문", "저작권정책", "© Crown copyright"], limit=3)
+        self.assertEqual(found, ["© Crown copyright", "Re-use of public sector information", "저작권정책"])
 
 
 class FillTest(unittest.TestCase):
@@ -168,7 +208,7 @@ class FillTest(unittest.TestCase):
         self.assertEqual(done["saved"], ["aaa", "aab"])
         self.assertEqual(self.opened.count("https://gov.example/board"), 1)  # 게시판 화면은 한 번만 받는다
         lines = pathlib.Path("collected/pages/items/aaa.txt").read_text(encoding="utf-8").splitlines()
-        self.assertEqual(lines[2], f"[이용 조건] {LICENSE} (게시판 화면 https://gov.example/board 에 적힌 글)")
+        self.assertEqual(lines[2], f"[이용 조건] {LICENSE} (https://gov.example/board 에 적힌 글)")
         self.assertEqual(lines[5], TITLE)
 
     def test_when_no_terms_are_found_the_record_keeps_how_the_page_words_them(self):
@@ -178,6 +218,58 @@ class FillTest(unittest.TestCase):
         state = json.loads(pathlib.Path(articles.STATE).read_text(encoding="utf-8"))["items"]["aaa"]
         self.assertEqual(state["result"], articles.NO_LICENSE)
         self.assertIn(other, state["hints"])
+
+    def test_terms_can_live_on_a_separate_page_named_in_the_register(self):
+        registry = json.loads(pathlib.Path("sources/registry.json").read_text(encoding="utf-8"))
+        registry["sources"][0]["articles"] = {"license": ["Creative Commons zero"], "termsUrl": "https://gov.example/copyright", "stop": ["Deel deze pagina"]}
+        self._write("sources/registry.json", registry)
+        article = page(license_text="Deze pagina noemt geen voorwaarden.", body=BODY + ["Deel deze pagina", "Facebook"])
+        terms = page(title="Copyright", license_text="Tenzij anders is vermeld, is de Creative Commons zero-verklaring (CC0) van toepassing.")
+        done = self._fill({"https://gov.example/copyright": terms, "*": article})
+        self.assertEqual(done["saved"], ["aaa"])
+        self.assertIn("https://gov.example/copyright", self.opened)
+        self.assertNotIn("https://gov.example/board", self.opened)
+        lines = pathlib.Path("collected/pages/items/aaa.txt").read_text(encoding="utf-8").splitlines()
+        self.assertIn("(https://gov.example/copyright 에 적힌 글)", lines[2])
+        self.assertEqual(lines[-1], BODY[-1].strip())  # 그 출처만의 끝 표시 앞에서 멈춘다
+
+    def test_a_post_with_a_type_field_is_stored_only_for_the_accepted_type(self):
+        registry = json.loads(pathlib.Path("sources/registry.json").read_text(encoding="utf-8"))
+        registry["sources"][0]["articles"] = {"field": {"label": "공공누리", "accept": ["1유형", "제1유형"]}}
+        self._write("sources/registry.json", registry)
+        every = "".join(f'<p>시험부의 해당 저작물은 "공공누리 {n}유형(출처표시)" 조건에 따라 누구나 이용할 수 있습니다.</p>' for n in (1, 2, 3, 4))
+
+        def post(kind):
+            html = page(license_text="").decode("utf-8").replace("<li>조회수 12</li>", f"<li>조회수 12</li><li>공공누리</li><li>{kind}</li>").replace("<p>만족도 조사</p>", every + "<p>만족도 조사</p>")
+            return html.encode("utf-8")
+
+        done = self._fill(post("4유형"))
+        self.assertEqual(done["failed"], ["aaa"])
+        self.assertFalse(pathlib.Path("collected/pages/items/aaa.txt").exists())
+        done = self._fill(post("1유형"))
+        self.assertEqual(done["saved"], ["aaa"])
+        self.assertEqual(pathlib.Path("collected/pages/items/aaa.txt").read_text(encoding="utf-8").splitlines()[2], "[이용 조건] 공공누리: 1유형 (글의 화면에 적힌 칸)")
+        self.assertEqual(self.opened, ["https://gov.example/board/1/view"] * 2)  # 칸으로 가리는 출처는 게시판 화면을 보지 않는다
+
+    def test_several_types_on_the_article_page_are_not_overridden_by_the_board_page(self):
+        mixed = page(license_text='시험부 저작물은 "공공누리 1유형(출처표시)" 조건, 다른 저작물은 "공공누리 4유형" 조건')
+        done = self._fill({"https://gov.example/board": page(title="목록"), "*": mixed})
+        self.assertEqual(done["failed"], ["aaa"])
+        self.assertEqual(self.opened, ["https://gov.example/board/1/view"])
+        state = json.loads(pathlib.Path(articles.STATE).read_text(encoding="utf-8"))["items"]["aaa"]
+        self.assertEqual(state["result"], articles.MIXED)
+
+    def test_trying_one_article_reports_what_was_seen_without_storing(self):
+        board = page(title="보도자료 목록", body=['<a href="/board/1/view?page=1">' + TITLE + "</a>"] + BODY)
+        fetch = self._fetcher({"https://gov.example/board": board, "*": page(license_text="")})
+        source = json.loads(pathlib.Path("sources/registry.json").read_text(encoding="utf-8"))["sources"][0]
+        seen = articles_try.look(source, "https://gov.example/board/1/view", fetch)
+        self.assertEqual((seen["opened"], seen["title"], seen["titleFound"], seen["longEnough"]), (True, TITLE, True, True))
+        self.assertIn("(https://gov.example/board 에 적힌 글)", seen["terms"])
+        self.assertEqual(seen["head"][0], TITLE)
+        self.assertFalse(pathlib.Path("collected/pages/items").exists())
+        missing = articles_try.look(source, "https://gov.example/board/9/view", self._fetcher((404, {}, b"", "HTTP Error 404")))
+        self.assertEqual((missing["opened"], missing["why"]), (False, "HTTP Error 404"))
 
     def test_short_pages_files_and_errors_are_not_stored(self):
         for body, expected in ((page(body=["붙임 파일을 참고"]), articles.TOO_SHORT), (answer(b"%PDF" * 400, content_type="application/pdf"), "HTML이 아님"),

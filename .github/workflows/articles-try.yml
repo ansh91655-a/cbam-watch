@@ -1,0 +1,43 @@
+name: 본문 받기 시험
+
+# 출처를 본문 받기에 넣기 전에, 자동 실행 환경에서 그 화면이 어떻게 읽히는지 본다(이용 조건을 어디서 찾는지, 본문의 처음과 끝).
+# 저장소에는 아무것도 쓰지 않고 본 것만 실행 기록에 찍는다. 손으로만 돌린다.
+on:
+  workflow_dispatch:
+    inputs:
+      targets:
+        description: "'<출처 코드>=<글 주소>'를 띄어 적는다"
+        required: true
+        type: string
+      license:
+        description: "(대장에 규칙이 없는 출처) 화면에 있어야 하는 이용 조건의 글귀"
+        type: string
+        default: ""
+      terms_url:
+        description: "(대장에 규칙이 없는 출처) 이용 조건을 적어 둔 화면의 주소"
+        type: string
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  try:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 글을 받아 본 것 찍기
+        env:
+          TARGETS: ${{ inputs.targets }}
+          LICENSE: ${{ inputs.license }}
+          TERMS_URL: ${{ inputs.terms_url }}
+        run: |
+          set -f
+          set -- $TARGETS
+          if [ -n "$LICENSE" ]; then set -- "$@" --license "$LICENSE"; fi
+          if [ -n "$TERMS_URL" ]; then set -- "$@" --terms-url "$TERMS_URL"; fi
+          python -m tools.collect.articles_try "$@"
