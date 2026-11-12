@@ -3582,6 +3582,36 @@
    "ko": "무역업자 식별번호",
    "from": "reg-declarant",
    "added": "2026-11-13"
+  },
+  {
+   "en": "read-only mode",
+   "ko": "읽기 전용 모드",
+   "from": "reg-declarant",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "editable mode",
+   "ko": "편집 모드",
+   "from": "reg-declarant",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "wildcard",
+   "ko": "와일드카드",
+   "from": "reg-declarant",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "coverage",
+   "ko": "충당",
+   "from": "reg-declarant",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "financial liabilities",
+   "ko": "재무 부채",
+   "from": "reg-declarant",
+   "added": "2026-11-13"
   }
  ]
 }
