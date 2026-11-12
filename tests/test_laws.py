@@ -188,6 +188,14 @@ class RepositoryTest(unittest.TestCase):
         places = [order.index(block["key"]) for block in picked]
         self.assertEqual(places, sorted(places))
 
+    def test_signatures_and_footnotes_come_after_everything_else(self):
+        parts = next(found for act, found in corpus.everything()[0] if act["id"] == catalog.BASE_CELEX)
+        body = {store.key(text): "옮긴 문단" for part in parts if part["kind"] not in todo.SKIPPED for text in corpus.texts(part)}
+        first, _ = todo.pick(limit=3000, act_id=catalog.BASE_CELEX, memory={})
+        self.assertFalse({block["part"] for block in first} & {"closing", "notes"})
+        last, _ = todo.pick(limit=10**6, act_id=catalog.BASE_CELEX, memory=body)
+        self.assertTrue(last and {block["part"] for block in last} <= {"closing", "notes"})
+
 
 ENGINE = """
 import { find, makeIndex, marks, parse, split } from './site/js/laws/engine.js';

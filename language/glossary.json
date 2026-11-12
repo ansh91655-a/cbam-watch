@@ -7040,6 +7040,25 @@
 "avoid": [],
 "status": "candidate",
 "note": "번역 견주기 시험(2026-11-12)에서 표기가 갈려 하나로 정함. calendar year(역년)와 짝이 되는 말"
+},
+{
+"no": 392,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"professional scepticism",
+"professional skepticism"
+],
+"abbr": [],
+"preferred": "전문가적 의구심",
+"allowed": [],
+"avoid": [
+{
+"form": "직업적 회의주의"
+}
+],
+"status": "candidate",
+"note": "감사·검증 분야에서 쓰는 말에 맞춤(2026-11-12). 정부·공공기관의 국문 자료에서 확인하기 전"
 }
 ]
 }

@@ -3,6 +3,7 @@
 쓰는 법: python -m tools.laws.todo [--runner <실행 이름>] [--act <문서 id>] [--limit <원문 글자 수>] [--titles] [--part <조각 id>]
 - 무엇을 얼마나 옮길지는 실행(runner)마다 sources/translation.json이 정한다. 이름을 주지 않으면 daily다. --limit을 주면 그 분량으로 한다.
 - 문서는 그 실행이 맡은 갈래의 차례대로(tools.laws.plan), 문단은 글의 차례대로 고른다. 이미 옮긴 문단과 옮길 글이 없는 줄(수와 기호)은 건너뛴다.
+  법령의 서명과 각주는 다른 문단을 모두 옮긴 뒤에 고른다.
   --act로 문서를 가리키면 갈래와 상관없이 그 문서에서 고른다.
 - --titles는 조와 부속서, 장의 이름만 고른다(차례를 국문으로 먼저 보이게 할 때 쓴다).
 - 결과(JSON)의 blocks가 옮길 문단이다: {"key": 열쇠, "act": 문서, "part": 조각, "text": 원문}. glossary는 그 글에 나온 용어집의 낱말,
@@ -18,23 +19,18 @@ from tools.check import term_lookup
 from tools.laws import check, corpus, plan, review, store, wording
 
 LIMIT = 20000
-SKIPPED = ("closing", "notes")  # 서명과 각주는 맨 나중에 옮긴다(--part로 가리키면 옮긴다)
+SKIPPED = ("closing", "notes")  # 서명과 각주는 다른 문단을 모두 옮긴 뒤에 옮긴다(--part로 가리키면 바로 옮긴다)
 
 
-def pick(limit=None, act_id="", titles=False, part_id="", runner=plan.DEFAULT, memory=None):
-    """옮길 문단들과 남은 분량을 돌려준다. memory를 주면 그것을 이미 옮긴 번역으로 본다(견주기 시험에서 빈 것을 준다)."""
-    settings = plan.runner(runner)
-    limit = limit or settings["limit"]
-    documents, stored = corpus.everything()
-    memory = stored if memory is None else memory
-    documents = [(act, found) for act, found in documents if act["id"] == act_id] if act_id else plan.ordered(documents, settings)
+def _gather(documents, memory, limit, titles, part_id, skipped):
+    """문서들에서 옮길 문단을 차례대로 모은다: (고른 문단들, 그 뒤에 남는 분량). skipped에 든 종류의 조각은 건너뛴다."""
     picked, taken, size, full = [], set(), 0, False
     left = {"blocks": 0, "chars": 0}
     for act, found in documents:
         for part in found:
             if part_id and part["id"] != part_id:
                 continue
-            if not part_id and part["kind"] in SKIPPED:
+            if not part_id and part["kind"] in skipped:
                 continue
             for text in ([part["title"]] if part["title"] else []) + ([] if titles else list(part["blocks"])):
                 block_key = store.key(text)
@@ -49,6 +45,22 @@ def pick(limit=None, act_id="", titles=False, part_id="", runner=plan.DEFAULT, m
                 picked.append({"key": block_key, "act": act["id"], "part": part["id"], "text": text})
                 taken.add(block_key)
                 size += len(text)
+    return picked, left
+
+
+def pick(limit=None, act_id="", titles=False, part_id="", runner=plan.DEFAULT, memory=None):
+    """옮길 문단들과 남은 분량을 돌려준다. memory를 주면 그것을 이미 옮긴 번역으로 본다(견주기 시험에서 빈 것을 준다).
+
+    서명과 각주(SKIPPED)는 그 실행이 맡은 다른 문단을 모두 옮긴 뒤에야 고른다.
+    """
+    settings = plan.runner(runner)
+    limit = limit or settings["limit"]
+    documents, stored = corpus.everything()
+    memory = stored if memory is None else memory
+    documents = [(act, found) for act, found in documents if act["id"] == act_id] if act_id else plan.ordered(documents, settings)
+    picked, left = _gather(documents, memory, limit, titles, part_id, SKIPPED)
+    if not picked and not part_id:
+        picked, left = _gather(documents, memory, limit, titles, part_id, ())
     return picked, left
 
 
