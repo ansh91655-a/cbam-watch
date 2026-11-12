@@ -3096,6 +3096,18 @@
    "ko": "국가 서비스 데스크",
    "from": "32024R3210",
    "added": "2026-11-13"
+  },
+  {
+   "en": "certification report",
+   "ko": "인증 보고서",
+   "from": "32025R2550",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Customs Customer Information",
+   "ko": "세관 고객 정보",
+   "from": "32025R2550",
+   "added": "2026-11-13"
   }
  ]
 }
