@@ -90,6 +90,24 @@
    "ko": "열매체",
    "from": "guide-5b",
    "added": "2026-11-12"
+  },
+  {
+   "en": "inward processing procedure",
+   "ko": "역내가공 절차",
+   "from": "32023R0956",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "outward processing procedure",
+   "ko": "역외가공 절차",
+   "from": "32023R0956",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "application for an authorisation",
+   "ko": "승인 신청",
+   "from": "32023R0956",
+   "added": "2026-11-12"
   }
  ]
 }
