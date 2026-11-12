@@ -360,6 +360,24 @@
    "ko": "MRV 규칙",
    "from": "guide-1",
    "added": "2026-11-12"
+  },
+  {
+   "en": "European cooperation for Accreditation",
+   "ko": "유럽인정협력기구",
+   "from": "guide-1",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "lump sum contract",
+   "ko": "총액 고정 계약",
+   "from": "guide-1",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "non-material misstatement",
+   "ko": "중요하지 않은 오류",
+   "from": "guide-1",
+   "added": "2026-11-12"
   }
  ]
 }
