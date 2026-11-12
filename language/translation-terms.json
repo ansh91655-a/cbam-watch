@@ -3408,6 +3408,48 @@
    "ko": "업무 맥락",
    "from": "reg-portal",
    "added": "2026-11-13"
+  },
+  {
+   "en": "Parent Company Details",
+   "ko": "모회사 상세 정보",
+   "from": "reg-portal",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Information Accessible to the Public",
+   "ko": "공개 정보",
+   "from": "reg-portal",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Request for Change",
+   "ko": "변경 요청",
+   "from": "reg-portal",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Registration Request",
+   "ko": "등록 요청",
+   "from": "reg-portal",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Right to be heard",
+   "ko": "의견 진술권",
+   "from": "reg-portal",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Corporate Register Number",
+   "ko": "법인 등록번호",
+   "from": "reg-portal",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "State Transition Diagram",
+   "ko": "상태 전이도",
+   "from": "reg-portal",
+   "added": "2026-11-13"
   }
  ]
 }
