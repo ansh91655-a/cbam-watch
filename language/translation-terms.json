@@ -3234,6 +3234,24 @@
    "ko": "과징금의 지표 범위",
    "from": "32023R1773",
    "added": "2026-11-13"
+  },
+  {
+   "en": "carbon pricing instrument",
+   "ko": "탄소가격 수단",
+   "from": "32023R1773",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "discharge from customs procedure",
+   "ko": "세관 절차의 종결",
+   "from": "32023R1773",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "specific embedded indirect emissions",
+   "ko": "고유 내재 간접배출량",
+   "from": "32023R1773",
+   "added": "2026-11-13"
   }
  ]
 }
