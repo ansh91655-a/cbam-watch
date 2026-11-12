@@ -6,7 +6,8 @@
   --act로 문서를 가리키면 갈래와 상관없이 그 문서에서 고른다.
 - --titles는 조와 부속서, 장의 이름만 고른다(차례를 국문으로 먼저 보이게 할 때 쓴다).
 - 결과(JSON)의 blocks가 옮길 문단이다: {"key": 열쇠, "act": 문서, "part": 조각, "text": 원문}. glossary는 그 글에 나온 용어집의 낱말,
-  wording은 용어집에는 없지만 앞의 실행들이 정해 둔 낱말(tools.laws.wording), left는 이 묶음 뒤에 남는 분량, rounds는 한 번의 실행에서 하는 묶음 수다.
+  wording은 용어집에는 없지만 앞의 실행들이 정해 둔 낱말(tools.laws.wording), remarks는 앞의 번역이 표본 검토에서 지워진 문단과 그 까닭(tools.laws.review),
+  left는 이 묶음 뒤에 남는 분량, rounds는 한 번의 실행에서 하는 묶음 수다.
   옮긴 것은 {"blocks": {열쇠: 국문}} 꼴의 파일로 만들어 python -m tools.laws.apply 에 넘긴다.
 """
 import argparse
@@ -14,7 +15,7 @@ import json
 import sys
 
 from tools.check import term_lookup
-from tools.laws import check, corpus, plan, store, wording
+from tools.laws import check, corpus, plan, review, store, wording
 
 LIMIT = 20000
 SKIPPED = ("closing", "notes")  # 서명과 각주는 맨 나중에 옮긴다(--part로 가리키면 옮긴다)
@@ -55,8 +56,10 @@ def answer(picked, left, **extra):
     """고른 문단을 찍을 꼴로 만든다. 그 글에 나온 용어집의 낱말을 함께 싣는다."""
     text = "\n".join(block["text"] for block in picked)
     glossary = term_lookup.lookup(text, limit=80) if picked else []
+    noted = review.remarks()
     return {"blocks": picked, "chars": len(text) - max(0, len(picked) - 1), "left": left,
-            "glossary": [{"en": term["en"], "ko": term["ko"]} for term in glossary], "wording": wording.found(text) if picked else [], **extra}
+            "glossary": [{"en": term["en"], "ko": term["ko"]} for term in glossary], "wording": wording.found(text) if picked else [],
+            "remarks": {block["key"]: noted[block["key"]] for block in picked if block["key"] in noted}, **extra}
 
 
 def main(argv):

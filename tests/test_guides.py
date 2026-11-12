@@ -5,7 +5,7 @@ import shutil
 import tempfile
 import unittest
 
-from tools.laws import build, corpus, guide_segment, guides, pdf_blocks, pdf_pages, plan, status, store, todo, trial, wording
+from tools.laws import build, corpus, guide_segment, guides, pdf_blocks, pdf_pages, plan, review, status, store, todo, trial, wording
 from tools.run import laws_health
 
 COVER = """EUROPEAN TEST OFFICE
@@ -362,6 +362,37 @@ class WordingTest(unittest.TestCase):
         wording.add([{"en": "ladle furnace", "ko": "래들로"}], "guide-5e", "2026-11-12")
         self.assertEqual(wording.found("The number of Ladle Furnaces in the plant."), [{"en": "ladle furnace", "ko": "래들로"}])
         self.assertEqual(wording.found("No such words here."), [])
+
+
+class ReviewTest(unittest.TestCase):
+    """표본 검토: 번역 자료와 검토 기록을 임시 폴더에 두고 본다."""
+
+    def setUp(self):
+        self.folder = tempfile.mkdtemp()
+        self.kept = (store.FOLDER, review.LOG)
+        store.FOLDER, review.LOG = self.folder, str(pathlib.Path(self.folder) / "reviews.log.json")
+        document = guides.documents()[0]
+        self.act = document["id"]
+        self.text = next(text for part in corpus.read(document) for text in part["blocks"] if len(text) >= review.MIN_CHARS)
+        self.key = store.key(self.text)
+        store.save(self.act, {self.key: "시험용 번역"}, "2026-11-10")
+
+    def tearDown(self):
+        store.FOLDER, review.LOG = self.kept
+        shutil.rmtree(self.folder)
+
+    def test_the_sample_comes_from_documents_translated_lately(self):
+        self.assertEqual(review.sample(5, day="2026-11-12"), [{"key": self.key, "act": self.act, "part": review.sample(5, day="2026-11-12")[0]["part"],
+                                                              "source": self.text, "korean": "시험용 번역"}])
+        self.assertEqual(review.sample(5, day="2026-12-12"), [])  # 번역이 더해진 지 오래된 문서는 뽑지 않는다
+
+    def test_a_dropped_translation_is_gone_and_its_reason_follows_the_paragraph(self):
+        self.assertEqual(review.drop(self.key, "의무가 권고로 옮겨짐", "2026-11-16"), [self.act])
+        self.assertEqual(store.load(self.act), {})
+        self.assertEqual(review.remarks(), {self.key: "의무가 권고로 옮겨짐"})
+        picked, left = todo.pick(10**6, self.act)
+        self.assertEqual(todo.answer([block for block in picked if block["key"] == self.key], left)["remarks"], {self.key: "의무가 권고로 옮겨짐"})
+        self.assertEqual(review.drop("000000000000", "없는 열쇠"), [])
 
 
 if __name__ == "__main__":

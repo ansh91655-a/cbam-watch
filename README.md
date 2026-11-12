@@ -50,7 +50,7 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 | `tools/cn` | 품목 코드 조회의 목록을 법령 원문에서 만드는 프로그램: 부속서의 품목 표 읽기(`annex`), `data/cn.json` 만들기(`build`), 통합본의 판 다루기(`versions`), 새 통합본이 나오면 본문을 받아 목록을 다시 만들기(`refresh`, 평일 수집이 돌린다. 부속서를 제대로 읽었는지의 확인에 걸리면 아무것도 바꾸지 않고 사유를 `collected/cn/refresh.json`에 남긴다). 원문은 `collected/archive/pages/eu-fulltext/`에 있다. 코드를 견주는 셈은 사이트의 `site/js/cn/match.js`, 개정안의 단계에 따라 안내의 말을 바꾸는 기준은 `site/js/cn/stage.js`에 있다 |
 | `tools/thumbs` | 소식 카드의 미리보기 그림을 만드는 프로그램: 만들 것 고르기(`plan`), 원문 화면의 제목 부분 찍기(`shots.mjs`), 법령 PDF의 첫 장 받기(`pdfcover`), 줄여서 싣기(`finish`). 재이용이 허용된 공식 출처만 다루고, 화면을 여는 브라우저는 자동으로 여는 것임을 숨기지 않는다 |
 | `tools/common` | 여러 프로그램이 함께 쓰는 것: 웹에서 받기(`net`), robots.txt 지키기(`robots`), 화면의 글 뽑기(`htmltext`), JSON 읽고 쓰기(`jsonio`), 사이트 주소와 배포 저장소(`siteinfo`) |
-| `tools/laws` | 규정 원문 화면의 자료를 만드는 프로그램: 받아 둔 법령의 글을 조와 문단으로 나누기(`segment`), PDF에서 뽑은 안내 문서의 글을 쪽·문단·절로 나누기(`pdf_pages`, `pdf_blocks`, `guide_segment`), 싣는 문서의 목록(`catalog`, `guides`), 문서와 번역을 함께 읽기(`corpus`), 번역 자료 읽고 쓰기(`store`), 번역 검사(`check`, 용어는 `terms`), 전문용어의 영문 병기(`gloss`), 사이트 자료 만들기(`build`), 번역 실행마다 맡는 갈래(`plan`), 다음에 옮길 문단 고르기(`todo`)와 옮긴 것 넣기(`apply`), 번역 실행들이 정해 둔 낱말(`wording`), 모델 견주기 시험(`trial`), 진행 상황(`status`). 아래 '규정 원문과 국문 번역' 참조 |
+| `tools/laws` | 규정 원문 화면의 자료를 만드는 프로그램: 받아 둔 법령의 글을 조와 문단으로 나누기(`segment`), PDF에서 뽑은 안내 문서의 글을 쪽·문단·절로 나누기(`pdf_pages`, `pdf_blocks`, `guide_segment`), 싣는 문서의 목록(`catalog`, `guides`), 문서와 번역을 함께 읽기(`corpus`), 번역 자료 읽고 쓰기(`store`), 번역 검사(`check`, 용어는 `terms`), 전문용어의 영문 병기(`gloss`), 사이트 자료 만들기(`build`), 번역 실행마다 맡는 갈래(`plan`), 다음에 옮길 문단 고르기(`todo`)와 옮긴 것 넣기(`apply`), 번역 실행들이 정해 둔 낱말(`wording`), 표본 검토(`review`), 모델 견주기 시험(`trial`), 진행 상황(`status`). 아래 '규정 원문과 국문 번역' 참조 |
 | `tools/calc` | 인증서 비용 추정의 품목 자료를 법령의 표에서 만드는 프로그램: 받아 둔 표 읽기(`source`), 품목마다 기본값과 벤치마크를 짝지어 `data/calc-goods.json` 만들기(`build`) |
 | `tools/sitecheck` | 만든 사이트를 브라우저로 열어 가로 넘침, 화면 오류, 접근성을 검사하는 프로그램(Node). 아래 '화면 점검' 참조 |
 | `tools/art` | 사이트의 그림을 만드는 프로그램. 손으로 돌린다: 점 지도(`dotmap`, 나라 경계 읽기는 `world`), 아이콘(`icons`), 라이선스 고지(`notices`), 공유 미리보기 그림의 원본(`social.html`) |
@@ -113,6 +113,8 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 - 번역은 예약 실행이 한다. 실행마다 무엇을 얼마나 옮기는지는 `sources/translation.json`이 정한다(`python -m tools.laws.todo --runner <이름>`). 갈래를 다른 실행으로 옮길 때는 그 파일만 고친다.
 - 실행은 앞의 실행을 기억하지 못한다. 용어집에 없는 전문용어를 어떻게 옮겼는지는 `language/translation-terms.json`에 적어 두고(`tools.laws.wording`), 다음 묶음을 받을 때 그 글에 나온 낱말이 함께 나온다. 확인된 표기가 아니므로 운영자가 살펴 용어집으로 옮긴다.
 - 모델이나 방법을 견줄 때는 `trials/request.json`으로 시험을 청한다(`tools.laws.trial`). 이미 실린 번역을 보여 주지 않고 같은 문단을 다시 옮기게 해서 두 번역을 견준다. 시험의 번역은 `trials/`에만 쌓이고 사이트에는 실리지 않는다.
+- 번역은 기계 검사만 거쳐 실린다. 그래서 번역하는 실행과 다른 실행(주간 작업)이 주마다 표본 30문단을 원문과 견줘 읽고(`python -m tools.laws.review sample`), 틀린 번역은 지우고 까닭을 적는다(`review drop`, `language/translation-reviews.json`). 지워진 문단은 번역하는 실행이 까닭과 함께 다시 받는다.
+- 넣을 때 용어집 낱말의 띄어쓰기를 권장 표기로 맞춘다(`tools.laws.terms.unify`). 번역하는 쪽이 달라져도 화면의 영문 병기와 찾기가 같은 글자로 걸리게 하려는 것이다.
 - 상태 점검(`tools/run/laws_health.py`)은 싣기로 한 문서를 원문 대장에서 찾지 못한 것, 절 나누기가 문서의 차례와 어긋난 것, 번역이 남았는데 여러 날 늘지 않은 것을 알린다.
 
 ## 화면 점검
