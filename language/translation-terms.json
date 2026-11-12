@@ -378,6 +378,24 @@
    "ko": "중요하지 않은 오류",
    "from": "guide-1",
    "added": "2026-11-12"
+  },
+  {
+   "en": "Common Security and Defence Policy",
+   "ko": "공동안보방위정책",
+   "from": "guide-1",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "TARIC document code",
+   "ko": "TARIC 서류 코드",
+   "from": "guide-1",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "military use exemption",
+   "ko": "군사용 면제",
+   "from": "guide-1",
+   "added": "2026-11-12"
   }
  ]
 }
