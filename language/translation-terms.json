@@ -2850,6 +2850,42 @@
    "ko": "검증 분야 기술전문가",
    "from": "32025R2551",
    "added": "2026-11-13"
+  },
+  {
+   "en": "auctioneers",
+   "ko": "경매인",
+   "from": "32025R2548",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "common auction platform",
+   "ko": "공동 경매 플랫폼",
+   "from": "32025R2548",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "opt-out platform",
+   "ko": "옵트아웃 플랫폼",
+   "from": "32025R2548",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "calendar quarter",
+   "ko": "역분기",
+   "from": "32025R2548",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "bidding window",
+   "ko": "입찰 기간",
+   "from": "32025R2548",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "unacceptable risk",
+   "ko": "수용할 수 없는 리스크",
+   "from": "32025R2548",
+   "added": "2026-11-13"
   }
  ]
 }
