@@ -744,6 +744,36 @@
    "ko": "최소 권한",
    "from": "guide-5d",
    "added": "2026-11-12"
+  },
+  {
+   "en": "smelting reduction",
+   "ko": "용융환원",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "basic oxygen steelmaking",
+   "ko": "전로 제강",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "coke breeze",
+   "ko": "분코크스",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "pelletisation",
+   "ko": "펠렛화",
+   "from": "guide-5d",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "weighted-average rules",
+   "ko": "가중평균 규칙",
+   "from": "guide-5d",
+   "added": "2026-11-12"
   }
  ]
 }
