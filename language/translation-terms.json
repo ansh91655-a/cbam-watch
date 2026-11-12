@@ -2694,6 +2694,30 @@
    "ko": "실량형",
    "from": "32025R2547",
    "added": "2026-11-13"
+  },
+  {
+   "en": "non-CBAM good",
+   "ko": "CBAM 비대상 제품",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "pyrometallurgical",
+   "ko": "건식야금적",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "metalloid oxides",
+   "ko": "준금속 산화물",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "significant digits",
+   "ko": "유효숫자",
+   "from": "32025R2547",
+   "added": "2026-11-13"
   }
  ]
 }
