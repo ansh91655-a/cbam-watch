@@ -1284,6 +1284,36 @@
    "ko": "권장 개선",
    "from": "guide-3",
    "added": "2026-11-12"
+  },
+  {
+   "en": "Method A (input based)",
+   "ko": "방법 A(투입 기준)",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "Method B (output based)",
+   "ko": "방법 B(산출 기준)",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "batch-wise determination",
+   "ko": "배치별 결정",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "trace the atom",
+   "ko": "원자 추적",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "preliminary carbon content",
+   "ko": "예비 탄소함량",
+   "from": "guide-3",
+   "added": "2026-11-12"
   }
  ]
 }
