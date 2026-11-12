@@ -324,6 +324,18 @@
    "ko": "실효 탄소가격",
    "from": "guide-2",
    "added": "2026-11-12"
+  },
+  {
+   "en": "operator’s emissions report",
+   "ko": "사업자 배출량 보고서",
+   "from": "guide-2",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "cross-sectoral rules",
+   "ko": "부문 공통 규칙",
+   "from": "guide-2",
+   "added": "2026-11-12"
   }
  ]
 }
