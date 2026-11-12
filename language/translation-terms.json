@@ -1818,6 +1818,42 @@
    "ko": "성형 공정",
    "from": "guide-4",
    "added": "2026-11-12"
+  },
+  {
+   "en": "kaolinic clays",
+   "ko": "고령토질 점토",
+   "from": "guide-5a",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "granulated blast furnace slag",
+   "ko": "고로 수재 슬래그",
+   "from": "guide-5a",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "natural pozzolana",
+   "ko": "천연 포졸란",
+   "from": "guide-5a",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "non-kiln fuels",
+   "ko": "소성로 외 연료",
+   "from": "guide-5a",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "Portland cement",
+   "ko": "포틀랜드 시멘트",
+   "from": "guide-5a",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "blended cement",
+   "ko": "혼합 시멘트",
+   "from": "guide-5a",
+   "added": "2026-11-12"
   }
  ]
 }
