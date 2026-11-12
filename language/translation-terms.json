@@ -2304,6 +2304,24 @@
    "ko": "이중 확인 원칙",
    "from": "guide-verif",
    "added": "2026-11-13"
+  },
+  {
+   "en": "Example check list",
+   "ko": "점검표 예시",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "permissible error in use",
+   "ko": "사용 중 허용 오차",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "reference efficiencies",
+   "ko": "기준 효율",
+   "from": "guide-verif",
+   "added": "2026-11-13"
   }
  ]
 }
