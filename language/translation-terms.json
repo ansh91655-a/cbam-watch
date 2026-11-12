@@ -2250,6 +2250,36 @@
    "ko": "개선 권고",
    "from": "guide-verif",
    "added": "2026-11-12"
+  },
+  {
+   "en": "negative verification statement",
+   "ko": "부정적 검증의견서",
+   "from": "guide-verif",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "verified with comments",
+   "ko": "의견을 붙여 검증됨",
+   "from": "guide-verif",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "verified without comments",
+   "ko": "의견 없이 검증됨",
+   "from": "guide-verif",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "CBAM Declarants Portal",
+   "ko": "CBAM 신고인 포털",
+   "from": "guide-verif",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "verification opinion statement",
+   "ko": "검증의견 진술서",
+   "from": "guide-verif",
+   "added": "2026-11-12"
   }
  ]
 }
