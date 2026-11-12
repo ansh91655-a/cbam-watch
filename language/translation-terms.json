@@ -3312,6 +3312,24 @@
    "ko": "지불해야 할 탄소가격",
    "from": "32023R1773",
    "added": "2026-11-13"
+  },
+  {
+   "en": "Supervising Custom Office",
+   "ko": "감독 세관",
+   "from": "32023R1773",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Framework Contract",
+   "ko": "기본계약",
+   "from": "32023R1773",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Specific Contract",
+   "ko": "개별계약",
+   "from": "32023R1773",
+   "added": "2026-11-13"
   }
  ]
 }
