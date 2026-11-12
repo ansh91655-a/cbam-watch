@@ -1518,6 +1518,48 @@
    "ko": "열 분배망",
    "from": "guide-3",
    "added": "2026-11-12"
+  },
+  {
+   "en": "heat pump",
+   "ko": "열펌프",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "active power",
+   "ko": "유효전력",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "reactive power",
+   "ko": "무효전력",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "apparent power",
+   "ko": "피상전력",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "parasitic load",
+   "ko": "소내 부하",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "surrogate emission factor",
+   "ko": "대리 배출계수",
+   "from": "guide-3",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "harmonised efficiency reference values",
+   "ko": "조화 효율 기준값",
+   "from": "guide-3",
+   "added": "2026-11-12"
   }
  ]
 }
