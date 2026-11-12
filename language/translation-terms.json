@@ -3492,6 +3492,18 @@
    "ko": "TCO 관리자",
    "from": "reg-delegation",
    "added": "2026-11-13"
+  },
+  {
+   "en": "Representative",
+   "ko": "대리인",
+   "from": "reg-delegation",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "subdomain",
+   "ko": "하위 도메인",
+   "from": "reg-delegation",
+   "added": "2026-11-13"
   }
  ]
 }
