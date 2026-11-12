@@ -3456,6 +3456,18 @@
    "ko": "인증자",
    "from": "reg-portal",
    "added": "2026-11-13"
+  },
+  {
+   "en": "emissions qualifying parameters",
+   "ko": "배출량 적격 매개변수",
+   "from": "reg-portal",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Parent Company Corporate Register Number",
+   "ko": "모회사 법인 등록번호",
+   "from": "reg-portal",
+   "added": "2026-11-13"
   }
  ]
 }
