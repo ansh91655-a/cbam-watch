@@ -1,7 +1,7 @@
 {
  "code": "carbon-pulse",
  "baseline": "2026-11-10",
- "checkedAt": "2026-11-12T13:25:34+09:00",
+ "checkedAt": "2026-11-13T06:08:19+09:00",
  "seen": {
   "u:https://carbon-pulse.com/": "2026-11-10",
   "u:https://carbon-pulse.com/nzp": "2026-11-10",
@@ -137,6 +137,7 @@
   "u:https://carbon-pulse.com/569953/?site=cpp": "2026-11-12",
   "u:https://carbon-pulse.com/category/voluntary/vcm-governance/": "2026-11-12",
   "u:https://carbon-pulse.com/569933/?site=cpp": "2026-11-12",
-  "u:https://carbon-pulse.com/569761/?site=cpp": "2026-11-12"
+  "u:https://carbon-pulse.com/569761/?site=cpp": "2026-11-12",
+  "u:https://carbon-pulse.com/570349/?site=cpp": "2026-11-13"
  }
 }

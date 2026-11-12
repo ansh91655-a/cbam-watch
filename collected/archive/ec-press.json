@@ -1,11 +1,11 @@
 {
  "source": "ec-press",
- "fetchedAt": "2026-11-12T13:27:03+09:00",
+ "fetchedAt": "2026-11-13T06:10:28+09:00",
  "since": "2025-01-01",
  "report": {
   "pages": 8,
   "listed": 400,
-  "opened": 0,
+  "opened": 2,
   "kept": 0,
   "failures": [],
   "oldest": "2025-02-18",
@@ -87,6 +87,7 @@
    "MEX/26/2378",
    "MEX/26/2394",
    "MEX/26/2411",
+   "MEX/26/2420",
    "MEX/26/462",
    "QANDA/25/1268",
    "QANDA/25/1688",
@@ -161,6 +162,7 @@
    "STATEMENT/26/2313",
    "STATEMENT/26/2317",
    "STATEMENT/26/2390",
+   "STATEMENT/26/2425",
    "STATEMENT/26/53"
   ]
  },

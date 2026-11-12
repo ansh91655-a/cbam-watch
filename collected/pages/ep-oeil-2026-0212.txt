@@ -260,8 +260,23 @@ Interest representatives
 RATAS Jüri
 Rapporteur for opinion
 ITRE
+12/11/2026
+IBERDROLA
+GYÜRK András
+Shadow rapporteur for opinion
+ITRE
+12/11/2026
+CEFIC - European Chemical Industry Council
+RATAS Jüri
+Rapporteur for opinion
+ITRE
 05/11/2026
 EUROCHAMBRES – Association of European Chambers of Commerce and Industry
+GYÜRK András
+Shadow rapporteur for opinion
+ITRE
+05/11/2026
+BUSINESSEUROPE
 RATAS Jüri
 Rapporteur for opinion
 ITRE
@@ -302,26 +317,14 @@ Committee chair
 ENVI
 22/10/2026
 Climate Strategy
-RATAS Jüri
-Rapporteur for opinion
-ITRE
-21/10/2026
-Association des grandes entreprises françaises / Association of large French companies
-TOBBACK Bruno
-Shadow rapporteur for opinion
-ITRE
-21/10/2026
-NG Nordic AS
-TOBBACK Bruno
-Shadow rapporteur for opinion
-ITRE
-21/10/2026
-FuelsEurope
 Load more
 Other Members
 Name
 Date
 Interest representatives
+GYÜRK András
+12/11/2026
+Bioenergy Europe
 HAIDER Roman
 11/11/2026
 Vereinigung der österreichischen Industrie - Industriellenvereinigung
@@ -349,9 +352,6 @@ Südzucker
 HANSEN Niels Flemming
 29/10/2026
 Confederation of Danish Industry
-HANSEN Niels Flemming
-29/10/2026
-Danish Shipping
 Load more
 Procedure file
 Basic information
@@ -441,17 +441,18 @@ Contribution | PT_PARLIAMENT | COM(2026)0616 | 09/11/2026 |
 Source | Document | Date
 European Commission | EUR-Lex | 
 Name | Role | Committee | Date | Interest representatives
+RATAS Jüri | Rapporteur for opinion | ITRE | 12/11/2026 | IBERDROLA
+GYÜRK András | Shadow rapporteur for opinion | ITRE | 12/11/2026 | CEFIC - European Chemical Industry Council
 RATAS Jüri | Rapporteur for opinion | ITRE | 05/11/2026 | EUROCHAMBRES – Association of European Chambers of Commerce and Industry
+GYÜRK András | Shadow rapporteur for opinion | ITRE | 05/11/2026 | BUSINESSEUROPE
 RATAS Jüri | Rapporteur for opinion | ITRE | 04/11/2026 | American Chamber of Commerce to the European Union
 RATAS Jüri | Rapporteur for opinion | ITRE | 04/11/2026 | Hydro
 BLOSS Michael | Shadow rapporteur | ENVI | 03/11/2026 | SHS - Stahl-Holding-Saar
 BLOSS Michael | Shadow rapporteur | ENVI | 28/10/2026 | Bund für Umwelt und Naturschutz Deutschland e. V. Citizens' Climate Europe Deutsche Umwelthilfe e.V. Deutscher Naturschutzring, Dachverband der deutschen Natur-, Tier- und Umweltschutzverbände (DNR) e.V. Germanwatch Naturschutzbund Deutschland e.V. Umweltinstitut München e.V. WWF Deutschland
 BLOSS Michael | Shadow rapporteur | ENVI | 26/10/2026 | Federated Hermes Limited Institutional Investors Group on Climate Change M&G plc Robeco
 MARAN Pierfrancesco | Committee chair | ENVI | 22/10/2026 | Climate Strategy
-RATAS Jüri | Rapporteur for opinion | ITRE | 21/10/2026 | Association des grandes entreprises françaises / Association of large French companies
-TOBBACK Bruno | Shadow rapporteur for opinion | ITRE | 21/10/2026 | NG Nordic AS
-TOBBACK Bruno | Shadow rapporteur for opinion | ITRE | 21/10/2026 | FuelsEurope
 Name | Date | Interest representatives
+GYÜRK András | 12/11/2026 | Bioenergy Europe
 HAIDER Roman | 11/11/2026 | Vereinigung der österreichischen Industrie - Industriellenvereinigung
 NAGYOVÁ Jana | 10/11/2026 | The European SME Cement Association
 POLFJÄRD Jessica | 09/11/2026 | Jernkontoret
@@ -461,4 +462,3 @@ POLFJÄRD Jessica | 04/11/2026 | EDANA
 ZĪLE Roberts | 03/11/2026 | International Air Transport Association
 BONTE Barbara | 03/11/2026 | Südzucker
 HANSEN Niels Flemming | 29/10/2026 | Confederation of Danish Industry
-HANSEN Niels Flemming | 29/10/2026 | Danish Shipping

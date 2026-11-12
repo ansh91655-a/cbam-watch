@@ -1,10 +1,10 @@
 {
  "source": "eur-lex-docs",
- "fetchedAt": "2026-11-12T13:26:32+09:00",
+ "fetchedAt": "2026-11-13T06:09:45+09:00",
  "since": "2025-01-01",
  "report": {
-  "targets": 24,
-  "stored": 0,
+  "targets": 25,
+  "stored": 1,
   "kept": 24,
   "failures": [],
   "notes": []
@@ -336,6 +336,18 @@
    "lines": 870,
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52026DC0596",
    "textPath": "collected/archive/pages/eur-lex-docs/52026DC0596.txt"
+  },
+  {
+   "date": "2026-11-12",
+   "celex": "62023CJ0512",
+   "title": "__[unreferenced:arret-c-ii-ext]__ of 12 November 2026.#Republic of Poland v European Parliament and Council of the European Union.#Action for interim measures – Regulation (EU) 2023/956 – Carbon Border Adjustment Mechanism – Legal basis of that regulation – Determination – Act supplementing a pre-existing act – Article 192(1) TFEU – Point (a) of the first subparagraph of Article 192(2) TFEU – Provisions primarily of a fiscal nature – Strict interpretation – Market-based measure.#Case C-512/23.",
+   "relations": [
+    "title-match"
+   ],
+   "procedures": [],
+   "lines": 204,
+   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:62023CJ0512",
+   "textPath": "collected/archive/pages/eur-lex-docs/62023CJ0512.txt"
   }
  ]
 }

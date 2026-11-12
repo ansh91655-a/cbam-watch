@@ -212,6 +212,11 @@ Interest representatives
 CORRADO Annalisa
 Shadow rapporteur
 ENVI
+11/11/2026
+European Domestic Glass
+CORRADO Annalisa
+Shadow rapporteur
+ENVI
 30/09/2026
 A2A
 AEGIS Europe
@@ -371,6 +376,7 @@ EESC | Economic and Social Committee: opinion, report | CES2439/2026 | 23/09/202
 Source | Document | Date
 European Commission | EUR-Lex | 
 Name | Role | Committee | Date | Interest representatives
+CORRADO Annalisa | Shadow rapporteur | ENVI | 11/11/2026 | European Domestic Glass
 CORRADO Annalisa | Shadow rapporteur | ENVI | 30/09/2026 | A2A AEGIS Europe Assarmatori CEFIC - European Chemical Industry Council CLECAT - European Association for Forwarding, Transport, Logistic and Customs Services CONFCOMMERCIO - IMPRESE PER L'ITALIA Carbon Market Watch Climate Action Network Europe ENEL SpA EPIA SolarPower Europe Edison Spa Energy Storage Europe Eni S.p.A. Environmental Coalition on Standards European Aluminium AISBL European Metals European Suppliers of Waste-to-Energy Technology FINCANTIERI SpA Fondazione Think Tank ECCO ETS FuelsEurope Iren LEGAMBIENTE NAZIONALE – APS – RETE ASSOCIATIVA – ETS Politecnico di Torino Riva Group confindustria ceramica Federacciai Assocarta Assoclima CGIL confindustria federbeton Federchimica FEVE - European Container Glass Federation PACTA Transport & Environment Confartigianato GEIR Rerefining Industry Stora ENSO Comune di Roma
 CORRADO Annalisa | Shadow rapporteur | ENVI | 10/09/2026 | confindustria ceramica
 CORRADO Annalisa | Shadow rapporteur | ENVI | 08/09/2026 | A2A CRH plc Centrica plc Dow Elia Transmission Belgium Eni S.p.A. Fortum Oyj Holcim Ltd Honeywell Europe NV Hydnum Steel, S.L. Mars Incorporated Teneo Brussels
