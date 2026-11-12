@@ -3804,6 +3804,48 @@
    "ko": "안전 여유",
    "from": "report-free-allocation",
    "added": "2026-11-13"
+  },
+  {
+   "en": "binder benchmark",
+   "ko": "결합재 벤치마크",
+   "from": "report-free-allocation",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "melted and poured",
+   "ko": "용해 및 주조",
+   "from": "report-free-allocation",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "long products",
+   "ko": "봉형강류",
+   "from": "report-free-allocation",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "soda ash",
+   "ko": "소다회",
+   "from": "report-free-allocation",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "indirect cost compensation",
+   "ko": "간접비용 보상",
+   "from": "report-free-allocation",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "fall-back approach",
+   "ko": "대체 접근 방식",
+   "from": "report-free-allocation",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "stop the clock",
+   "ko": "시계를 멈춤",
+   "from": "report-free-allocation",
+   "added": "2026-11-13"
   }
  ]
 }
