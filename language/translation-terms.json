@@ -2886,6 +2886,18 @@
    "ko": "수용할 수 없는 리스크",
    "from": "32025R2548",
    "added": "2026-11-13"
+  },
+  {
+   "en": "opt-out auction platform",
+   "ko": "옵트아웃 경매 플랫폼",
+   "from": "32025R2548",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "actual free allocation adjustment",
+   "ko": "실제 무상할당 조정",
+   "from": "32025R2548",
+   "added": "2026-11-13"
   }
  ]
 }
