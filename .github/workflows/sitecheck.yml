@@ -1,7 +1,8 @@
 name: 화면 점검
 
 # 사이트를 만들어 브라우저로 열고 가로 넘침, 화면 오류, 접근성을 검사한다(tools/sitecheck).
-# 화면 파일이나 게시 데이터가 바뀌면 돈다. 사이트 배포(pages.yml)는 이 검사를 기다리지 않는다:
+# 화면 파일이나 게시 데이터가 바뀌면 돈다. 번역(data/laws-ko)은 묶음마다 올라오므로 그 커밋마다 돌지 않고,
+# 번역 실행이 끝나며 표(stamps/translated.json)를 고칠 때 한 번 돈다. 사이트 배포(pages.yml)는 이 검사를 기다리지 않는다:
 # 날마다의 게시가 검사 도구의 사정으로 멈추지 않게 하려는 것이고, 문제가 나오면 '운영 보고' 이슈에 어느 화면인지 적어 알린다.
 on:
   push:
@@ -9,6 +10,8 @@ on:
     paths:
       - "site/**"
       - "data/**"
+      - "!data/laws-ko/**"
+      - "stamps/**"
       - "tools/publish/**"
       - "tools/sitecheck/**"
       - ".github/workflows/sitecheck.yml"

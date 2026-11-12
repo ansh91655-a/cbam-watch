@@ -874,8 +874,63 @@ class LockTest(unittest.TestCase):
         self.assertEqual(self.git(self.a, "status", "--porcelain").stdout, "")               # a에는 자기 자물쇠 커밋이 남지 않는다
         self.assertEqual(lock.read(self.a)["run"], "run-b")
 
+    def translate(self, where, text, when):
+        """번역 묶음 하나를 올린 것처럼 번역 파일을 고쳐 올린다."""
+        (pathlib.Path(where) / "data" / "laws-ko" / "x.json").write_text(text, encoding="utf-8")
+        self.git(where, "commit", "-q", "-am", "번역", env_date=when)
+        self.git(where, "push", "-q", "origin", "HEAD:main")
+
+    def stamp(self, where):
+        self.git(where, "pull", "-q", "--rebase", "origin", "main")
+        path = pathlib.Path(where) / lock.STAMP
+        return json.loads(path.read_text(encoding="utf-8")) if path.exists() else None
+
+    def test_releasing_marks_the_site_for_redeploy_only_when_translations_arrived(self):
+        # 번역은 묶음마다 올라오지만 사이트는 실행이 끝날 때 한 번 다시 싣는다: 풀 때 표를 고치고, 배포가 그 파일을 본다
+        lock.take("run-a", self.a, at=self.noon)
+        self.translate(self.a, '{"a": 1}\n', "2026-11-12T12:03:00+09:00")
+        self.assertEqual(lock.release("run-a", self.a, at=self.later(9)), "released")
+        self.assertEqual(self.stamp(self.b), {"run": "run-a", "at": "2026-11-12T12:09:00+09:00"})
+        self.assertIsNone(lock.read(self.b))
+        # 옮긴 것 없이 끝난 실행은 표를 건드리지 않는다(사이트를 다시 실을 까닭이 없다)
+        lock.take("run-b", self.b, at=self.later(15))
+        self.assertEqual(lock.release("run-b", self.b, at=self.later(16)), "released")
+        self.assertEqual(self.stamp(self.a)["run"], "run-a")
+        # 풀지 못하고 멈춘 실행이 올려 둔 번역은, 넘겨받은 실행이 풀 때 표에 담긴다
+        lock.take("run-c", self.a, at=self.later(30))
+        self.translate(self.a, '{"a": 2}\n', "2026-11-12T12:33:00+09:00")
+        self.assertEqual(lock.take("run-d", self.b, at=self.later(30 + lock.STALE_MINUTES + 1)), ("taken", ""))
+        self.assertEqual(lock.release("run-d", self.b, at=self.later(50)), "released")
+        self.assertEqual(self.stamp(self.a), {"run": "run-d", "at": "2026-11-12T12:50:00+09:00"})
+
+    def test_taking_and_releasing_leave_other_changes_alone(self):
+        # 실행이 올리지 않고 남긴 변경(걸려서 둔 묶음 따위)이 있어도 잡고 풀 수 있고, 그 변경은 커밋에 섞이지 않는다
+        lock.take("run-a", self.a, at=self.noon)
+        self.translate(self.a, '{"a": 1}\n', "2026-11-12T12:03:00+09:00")
+        left = pathlib.Path(self.a) / "data" / "laws-ko" / "x.json"
+        left.write_text('{"a": "올리지 않은 것"}\n', encoding="utf-8")
+        self.git(self.a, "add", "-A")                                                          # 담기까지 해 둔 변경
+        self.assertEqual(lock.release("run-a", self.a, at=self.later(9)), "released")
+        self.assertIn("올리지 않은 것", left.read_text(encoding="utf-8"))                        # 그대로 남아 있고
+        self.git(self.b, "pull", "-q", "--rebase", "origin", "main")
+        self.assertEqual((pathlib.Path(self.b) / "data" / "laws-ko" / "x.json").read_text(encoding="utf-8"), '{"a": 1}\n')  # 올라가지 않았다
+        self.assertEqual(lock.take("run-a2", self.a, at=self.later(20)), ("taken", ""))
+        self.git(self.b, "pull", "-q", "--rebase", "origin", "main")
+        self.assertEqual((pathlib.Path(self.b) / "data" / "laws-ko" / "x.json").read_text(encoding="utf-8"), '{"a": 1}\n')
+
+    def test_the_site_is_redeployed_when_a_run_ends_not_at_every_batch(self):
+        # 배포와 화면 점검은 번역 묶음(data/laws-ko)마다 돌지 않고, 실행이 끝났다는 표(stamps)가 바뀌면 돈다
+        for name in ("pages.yml", "sitecheck.yml"):
+            text = pathlib.Path(".github/workflows", name).read_text(encoding="utf-8")
+            paths = [line.split('"')[1] for line in text.split("jobs:")[0].splitlines() if line.strip().startswith('- "')]
+            self.assertIn("!" + lock.SHOWN + "/**", paths, name)
+            self.assertLess(paths.index("data/**"), paths.index("!" + lock.SHOWN + "/**"), f"{name}: 빼는 줄은 넣는 줄 뒤에 있어야 듣는다")
+            self.assertIn(lock.STAMP.split("/")[0] + "/**", paths, name)
+        # 번역 파일의 꼴을 보는 자동 시험은 묶음마다 그대로 돈다
+        self.assertIn('"' + lock.SHOWN + '/**"', pathlib.Path(".github/workflows/tests.yml").read_text(encoding="utf-8"))
+
     def test_the_lock_file_is_outside_every_workflow_path(self):
-        # 자물쇠를 잡고 푸는 커밋이 검사나 배포를 돌리면 안 된다: 자동 실행들의 paths에 걸리지 않는 곳이어야 한다
+        # 자물쇠만 바뀐 커밋이 검사나 배포를 돌리면 안 된다: 자동 실행들의 paths에 걸리지 않는 곳이어야 한다
         folder = lock.PATH.split("/")[0]
         for workflow in pathlib.Path(".github/workflows").glob("*.yml"):
             text = workflow.read_text(encoding="utf-8")

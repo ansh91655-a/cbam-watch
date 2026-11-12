@@ -1,11 +1,17 @@
 name: 사이트 배포
 
+# 번역(data/laws-ko)은 실행 하나가 묶음마다 올리므로 그 커밋마다 싣지 않는다. 번역 실행이 끝나며 표(stamps/translated.json)를
+# 고치면 그때 한 번 싣는다(tools/laws/lock.py). GitHub Pages는 한 시간에 열 번까지만 다시 싣는 것을 권한다.
+# 틀려서 지운 번역(language/translation-reviews.json이 바뀜)은 기다리지 않고 바로 싣는다.
 on:
   push:
     branches: [main]
     paths:
       - "site/**"
       - "data/**"
+      - "!data/laws-ko/**"
+      - "stamps/**"
+      - "language/translation-reviews.json"
       - "tools/publish/**"
       - "tools/laws/**"
       - "language/glossary.json"
