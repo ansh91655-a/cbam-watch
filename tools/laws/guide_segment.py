@@ -9,6 +9,7 @@
 표의 칸이나 목록의 번호, 줄 머리에 온 본문의 수를 제목으로 잘못 보지 않도록 세 가지를 본다.
 - 번호는 앞 제목의 번호 바로 다음이어야 한다(follows).
 - 차례가 있는 문서에서는 차례에 적힌 번호여야 한다. 마디가 하나뿐인 번호("3")는 차례의 쪽 번호와 가릴 수 없으므로 제목이 차례의 제목과 같아야 한다.
+  차례가 싣지 않는 깊은 번호("2.3.3.1")는 제목의 꼴이 뚜렷할 때만 받는다.
 - 제목 다음에 본문이 바로 이어지는 꼴(약한 꼴)은 제목이 차례의 제목과 같을 때만 받는다.
 PDF에서 글이 뒤섞여 제목 줄을 찾지 못한 번호는 차례의 제목을 빌려 쓴다.
 
@@ -87,7 +88,9 @@ def _accept(number, title, strong, toc):
         return strong
     if len(number) == 1:  # 차례에서 마디가 하나인 번호는 쪽 번호와 섞여 있어 번호로는 찾지 못한다. 차례의 제목 가운데 같은 것이 있는지 본다
         return any(_same(title, listed) for titles in toc["titles"].values() for listed in titles)
-    return _dotted(number) in toc["numbers"] and (strong or _listed(title, number, toc))
+    if _dotted(number) in toc["numbers"]:
+        return strong or _listed(title, number, toc)
+    return strong and len(number) >= 3  # 차례가 싣지 않는 깊은 번호(2.3.3.1)는 꼴이 뚜렷할 때만 받는다
 
 
 def _title_after(lines, start, number, limit=TITLE_LINES):
