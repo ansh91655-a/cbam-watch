@@ -54,6 +54,12 @@
    "key": "b146b69fb8ef",
    "act": "guide-verif",
    "why": "UN/LOCODE 뒤에 원문에 없는 풀이(유엔 무역·운송 위치코드)를 더함"
+  },
+  {
+   "day": "2026-11-13",
+   "key": "584a9d71938a",
+   "act": "32024R3210",
+   "why": "CBAM Operators Portal을 '제3국 사업자 포털'로 옮겨 CBAM이 빠지고 원문에 없는 '제3국'이 더해짐"
   }
  ]
 }
