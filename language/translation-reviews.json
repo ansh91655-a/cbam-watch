@@ -36,6 +36,12 @@
    "key": "c93291cc4234",
    "act": "qa",
    "why": "aggregated goods categories를 '집계된 제품 범주'로 옮김. 용어집의 표기는 품목군이다"
+  },
+  {
+   "day": "2026-11-12",
+   "key": "1c86817b2c4c",
+   "act": "guide-3",
+   "why": "decomposition based on alkali earth oxides가 빠지고 원문에 없는 '화학량론적 배출계수'가 들어감"
   }
  ]
 }
