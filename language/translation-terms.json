@@ -3990,6 +3990,42 @@
    "ko": "시스템 경계 그림",
    "from": "guide-importers",
    "added": "2026-11-13"
+  },
+  {
+   "en": "fly ash",
+   "ko": "플라이애시",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "dolime",
+   "ko": "돌로마이트 석회",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "alternative fuels",
+   "ko": "대체 연료",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "alternative raw materials",
+   "ko": "대체 원료",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "heavy feedstocks",
+   "ko": "중질 원료",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "chemical feedstock",
+   "ko": "화학 원료",
+   "from": "guide-importers",
+   "added": "2026-11-13"
   }
  ]
 }
