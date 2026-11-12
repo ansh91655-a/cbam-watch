@@ -558,6 +558,36 @@
    "ko": "외주를 받은 기관",
    "from": "qa",
    "added": "2026-11-12"
+  },
+  {
+   "en": "lead auditor",
+   "ko": "선임 심사원",
+   "from": "qa",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "technical reviewer",
+   "ko": "기술 검토자",
+   "from": "qa",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "conditionality",
+   "ko": "조건부",
+   "from": "qa",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "Union transit procedure",
+   "ko": "EU 통과 절차",
+   "from": "qa",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "Union transmission system",
+   "ko": "EU 송전 계통",
+   "from": "qa",
+   "added": "2026-11-12"
   }
  ]
 }
