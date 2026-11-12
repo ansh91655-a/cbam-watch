@@ -31,6 +31,12 @@ def checker():
     return {**CHECKER, **((read_json(SOURCE, {}) or {}).get("verify") or {})}
 
 
+def senses():
+    """용어집의 핵심 용어가 다른 뜻으로도 쓰일 때 그 뜻의 국문 표기: {영문 낱말(소문자): [국문 표기]}. 검사(tools.laws.check)가 쓴다."""
+    found = (read_json(SOURCE, {}) or {}).get("senses") or {}
+    return {str(english).lower(): [str(form) for form in forms if str(form).strip()] for english, forms in found.items()}
+
+
 def everyone():
     """번역을 하는 모든 실행이 맡은 문서를 한 차례로 늘어놓는 설정(검수가 문서를 훑는 차례로 쓴다): first와 groups를 실행의 차례대로 이은 것."""
     first, groups = [], []

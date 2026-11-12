@@ -5,13 +5,16 @@
 알리는 것(soft): 원문에 없는 수가 번역에 있는 것, 길이가 지나치게 다른 것.
 
 웹 주소 안의 낱말은 옮길 말도, 용어집과 견줄 말도 아니다(…/module-for-non-eu-installation-operators 의 installation).
+번역이 영문 그대로 둔 용어(화면에 적힌 이름 “Third country Operator”, 역할 이름 Admin Operator)에는 국문 표기를 요구하지 않는다.
+등록부 안내서는 화면의 이름을 원문대로 두게 되어 있다. 옮겨야 할 영문을 남긴 것인지는 검수(tools.laws.verify)가 본다.
+핵심 용어가 다른 뜻으로 쓰인 자리(installation of wind turbines의 '설치')는 sources/translation.json의 senses에 적힌 표기를 쓰면 막지 않고 알린다.
 주소와 번호만 있는 줄(주소 하나만 적은 각주)은 옮기지 않고 그대로 싣는다. 주소 안의 수는 번역에 그대로 남아 있어야 한다.
 """
 import collections
 import re
 
 from tools.check import term_check
-from tools.laws import terms
+from tools.laws import plan, terms
 
 DIGITS = re.compile(r"\d+")
 HANGUL = re.compile(r"[가-힣]")
@@ -66,8 +69,15 @@ def problems(source, korean):
     if lost:
         hard.append("부속서·장의 번호가 빠짐: " + ", ".join(lost))
     flat = re.sub(r"\s+", "", korean)
+    kept = {entry["show"] for entry in terms.found(prose(korean))}  # 번역이 영문 그대로 둔 용어(화면에 적힌 이름 따위)
+    other = plan.senses()
     for entry in terms.found(plain):
-        if entry["core"] and not any(re.sub(r"\s+", "", form) in flat for form in entry["ko"]):
+        if not entry["core"] or entry["show"] in kept or any(re.sub(r"\s+", "", form) in flat for form in entry["ko"]):
+            continue
+        used = [form for english in entry["en"] for form in other.get(english, []) if re.sub(r"\s+", "", form) in flat]
+        if used:
+            soft.append(f"용어집의 뜻({entry['ko'][0]})이 아닌 다른 뜻으로 옮김: {entry['show']} → {used[0]}")
+        else:
             hard.append(f"용어집의 표기가 없음: {entry['show']} → {entry['ko'][0]}")
     if _terms is None:
         _terms = term_check.load()

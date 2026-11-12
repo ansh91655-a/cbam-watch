@@ -9,7 +9,7 @@ import tempfile
 import unittest
 import unittest.mock
 
-from tools.laws import apply, build, catalog, check, corpus, gloss, segment, status, store, terms, todo
+from tools.laws import apply, build, catalog, check, corpus, gloss, held, segment, status, store, terms, todo
 from tools.run import laws_health
 
 ACT = """[주소] https://example.org/act
@@ -139,6 +139,27 @@ class CheckTest(unittest.TestCase):
         # 주소 안의 수는 번역에 그대로 남아 있어야 한다(주소를 빠뜨리거나 고쳐 적지 않게)
         self.assertIn("원문의 수가 빠짐: 2026", check.problems("See https://example.org/news-2026 for details.", "자세한 내용은 주소를 참고한다.")["hard"])
 
+    def test_a_term_left_in_english_as_a_screen_name_needs_no_korean_wording(self):
+        # 등록부 안내서는 화면에 적힌 이름을 원문대로 둔다. 그 자리에 든 용어에는 국문 표기를 요구하지 않는다
+        source = "Type of Actor: this field must display “Third country Operator”"
+        self.assertEqual(check.problems(source, "행위자 유형: 이 칸에는 “Third country Operator”가 표시되어야 한다.")["hard"], [])
+        self.assertEqual(check.problems("User role: Admin Operator or Simple Operator", "사용자 역할: Admin Operator 또는 Simple Operator")["hard"], [])
+        # 영문으로 두지도 않고 용어집의 표기도 쓰지 않으면 그대로 막는다
+        self.assertTrue(any(why.startswith("용어집의 표기가 없음: operator") for why in check.problems("The operator registers.", "운영자가 등록한다.")["hard"]))
+        # 용어를 영문으로 두더라도 글을 옮기지 않은 것은 막는다
+        self.assertIn("국문으로 옮기지 않음", check.problems("The operator registers.", "The operator registers.")["hard"])
+
+    def test_a_core_term_used_in_another_sense_is_noted_not_stopped(self):
+        # installation of wind turbines의 installation은 사업장이 아니라 설치다(sources/translation.json의 senses)
+        source = "No upstream emissions related to the production and installation of wind turbines are considered."
+        found = check.problems(source, "풍력 터빈의 생산 및 설치와 관련된 업스트림 배출량은 고려하지 않는다.")
+        self.assertEqual(found["hard"], [])
+        self.assertIn("용어집의 뜻(사업장)이 아닌 다른 뜻으로 옮김: installation → 설치", found["soft"])
+        # 적어 둔 뜻이 아닌 낱말로 옮기면 그대로 막는다
+        self.assertTrue(any(why.startswith("용어집의 표기가 없음: installation") for why in check.problems(source, "풍력 터빈의 생산 및 시설과 관련된 배출량은 고려하지 않는다.")["hard"]))
+        # 용어집의 표기를 쓴 번역에는 아무 말도 하지 않는다
+        self.assertEqual(check.problems("The installation is located in Korea.", "사업장은 한국에 있다."), {"hard": [], "soft": []})
+
     def test_translations_are_sorted_into_accepted_and_rejected(self):
         known = {"aaa": ("32099R0001", "Annex IV applies from 2030."), "bbb": ("32099R0001", "Scope")}
         accepted, rejected, noted = apply.sort({"aaa": "부속서 IV는 2030년부터 적용한다.", "bbb": "", "zzz": "없는 열쇠"}, known)
@@ -244,6 +265,25 @@ class HoldTest(unittest.TestCase):
                 self.assertEqual(apply.main([str(source)]), 1)
                 self.assertEqual(apply.main([str(source)]), 1)
             self.assertEqual(store.held_all(), {key: {"tries": 2, "why": "번역이 비어 있음"}})  # 원문에 없는 열쇠는 적을 곳이 없다
+
+    def test_held_paragraphs_are_listed_and_given_out_again_after_a_reset(self):
+        picked, _ = todo.pick(limit=500, act_id=catalog.BASE_CELEX, memory={})
+        key = picked[0]["key"]
+        with tempfile.TemporaryDirectory() as folder, unittest.mock.patch.object(store, "FOLDER", folder):
+            store.save("act-1", {"aaa": "옮긴 문단"}, day="2026-11-01")
+            for _ in range(store.GIVE_UP):
+                store.hold("act-1", key, "용어집의 표기가 없음: installation → 사업장")
+            store.hold("act-1", "없는열쇠", "지금의 문서에 없는 문단")
+            store.hold("act-2", "bbb", "원문의 수가 빠짐: 3")
+            listed = held.rows()
+            self.assertEqual([(row["key"], row["act"], row["tries"]) for row in listed], [(key, catalog.BASE_CELEX, store.GIVE_UP)])  # 지금의 문서에 있는 것만
+            self.assertEqual(listed[0]["text"], picked[0]["text"])
+            self.assertEqual(held.reset([key]), 1)
+            self.assertEqual(sorted(store.held_all()), ["bbb", "없는열쇠"])
+            self.assertEqual(store.load("act-1"), {"aaa": "옮긴 문단"})  # 번역은 그대로
+            self.assertEqual(held.reset(), 2)
+            self.assertEqual(store.held_all(), {})
+            self.assertNotIn("held", json.loads(pathlib.Path(folder, "act-1.json").read_text(encoding="utf-8")))
 
     def test_paragraphs_that_keep_failing_go_to_the_back_of_the_queue(self):
         first, _ = todo.pick(limit=3000, act_id=catalog.BASE_CELEX, memory={})
