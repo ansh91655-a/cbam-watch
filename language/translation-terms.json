@@ -396,6 +396,30 @@
    "ko": "군사용 면제",
    "from": "guide-1",
    "added": "2026-11-12"
+  },
+  {
+   "en": "CBAM financial adjustment",
+   "ko": "CBAM 금전적 조정",
+   "from": "qa",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "cap and trade",
+   "ko": "총량제한 배출권거래",
+   "from": "qa",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "free allowances",
+   "ko": "무상 배출권",
+   "from": "qa",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "Renewable Energy Directive",
+   "ko": "재생에너지 지침",
+   "from": "qa",
+   "added": "2026-11-12"
   }
  ]
 }
