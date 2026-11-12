@@ -2178,6 +2178,54 @@
    "ko": "인일",
    "from": "guide-verif",
    "added": "2026-11-12"
+  },
+  {
+   "en": "verification risk",
+   "ko": "검증 리스크",
+   "from": "guide-verif",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "process analysis",
+   "ko": "공정 분석",
+   "from": "guide-verif",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "verification programme",
+   "ko": "검증 프로그램",
+   "from": "guide-verif",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "test plan",
+   "ko": "시험 계획",
+   "from": "guide-verif",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "data sampling plan",
+   "ko": "데이터 시료채취 계획",
+   "from": "guide-verif",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "substantive testing",
+   "ko": "실증 시험",
+   "from": "guide-verif",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "analytical procedures",
+   "ko": "분석적 절차",
+   "from": "guide-verif",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "qualifying parameters",
+   "ko": "적격 매개변수",
+   "from": "guide-verif",
+   "added": "2026-11-12"
   }
  ]
 }
