@@ -498,6 +498,42 @@
    "ko": "CN 소호",
    "from": "qa",
    "added": "2026-11-12"
+  },
+  {
+   "en": "absorption rule",
+   "ko": "흡수 규칙",
+   "from": "qa",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "enhanced oil recovery",
+   "ko": "석유회수증진",
+   "from": "qa",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "life-cycle assessment",
+   "ko": "전과정평가",
+   "from": "qa",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "off-spec product",
+   "ko": "규격 외 제품",
+   "from": "qa",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "zero-rating",
+   "ko": "영 처리",
+   "from": "qa",
+   "added": "2026-11-12"
+  },
+  {
+   "en": "Joint Research Centre",
+   "ko": "공동연구센터",
+   "from": "qa",
+   "added": "2026-11-12"
   }
  ]
 }
