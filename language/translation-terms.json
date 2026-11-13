@@ -4506,6 +4506,12 @@
    "ko": "자발적 제도",
    "from": "guide-3",
    "added": "2026-11-13"
+  },
+  {
+   "en": "evaporation enthalpy",
+   "ko": "증발 엔탈피",
+   "from": "guide-3",
+   "added": "2026-11-13"
   }
  ]
 }
