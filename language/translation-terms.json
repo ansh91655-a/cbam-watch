@@ -5004,6 +5004,42 @@
    "ko": "영으로 처리되는 바이오매스 비율",
    "from": "32025R2547",
    "added": "2026-11-13"
+  },
+  {
+   "en": "point source emissions",
+   "ko": "점오염원 배출량",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "slope emission factor",
+   "ko": "기울기 배출계수",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Corroborating calculations",
+   "ko": "확증 계산",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "substitution value",
+   "ko": "대체값",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "International Aluminium Institute",
+   "ko": "국제알루미늄협회",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "data points",
+   "ko": "데이터 점",
+   "from": "32025R2547",
+   "added": "2026-11-13"
   }
  ]
 }
