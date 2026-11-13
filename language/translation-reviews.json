@@ -90,6 +90,18 @@
    "key": "24a92861db97",
    "act": "guide-3",
    "why": "This documentation should be from …를 '나온 것이어야 한다'로 옮겨 권고(should)가 의무로 바뀜"
+  },
+  {
+   "day": "2026-11-13",
+   "key": "1562c2e53cf8",
+   "act": "guide-verif",
+   "why": "원문에 없는 '객관적 증거의 제공을 통해 확인하는 것으로 정의되며'가 더해짐(원문 조각은 been fulfilled”, i.e. 로 시작함)"
+  },
+  {
+   "day": "2026-11-13",
+   "key": "bf0ff9b39b2c",
+   "act": "guide-verif",
+   "why": "원문에 없는 풀이 '(유엔 무역·운송 위치코드)'가 더해짐"
   }
  ]
 }
