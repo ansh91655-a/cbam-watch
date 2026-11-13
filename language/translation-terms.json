@@ -4314,6 +4314,12 @@
    "ko": "내재 간접배출량",
    "from": "guide-1",
    "added": "2026-11-13"
+  },
+  {
+   "en": "Economic Operators Registration and Identification number",
+   "ko": "경제운영자 등록·식별 번호",
+   "from": "qa",
+   "added": "2026-11-13"
   }
  ]
 }
