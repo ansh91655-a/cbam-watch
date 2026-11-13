@@ -4620,6 +4620,36 @@
    "ko": "고유 내재할당량",
    "from": "guide-verif",
    "added": "2026-11-13"
+  },
+  {
+   "en": "Net Transfer Capacity",
+   "ko": "순송전용량",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "critical nodes",
+   "ko": "주요 노드",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "private grid",
+   "ko": "사설 전력망",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "onsite production",
+   "ko": "현장 생산",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "auto-production",
+   "ko": "자가 생산",
+   "from": "guide-verif",
+   "added": "2026-11-13"
   }
  ]
 }
