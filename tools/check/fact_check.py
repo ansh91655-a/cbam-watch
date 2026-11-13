@@ -7,6 +7,7 @@
 결과는 JSON 한 줄이다. 원문에서 찾지 못한 것이 있으면 ok는 거짓이다.
 """
 import argparse
+import functools
 import json
 import re
 import sys
@@ -26,17 +27,29 @@ def numbers(text):
     return found
 
 
+@functools.lru_cache(maxsize=64)
+def _read(source):
+    """원문 글에서 대조에 쓰는 것: (날짜들, 천 단위 표기를 뗀 글, 수들).
+
+    같은 원문을 여러 글이 근거로 삼는다(규제 분석의 문단들). 긴 원문에서 날짜를 찾는 데 시간이 걸리므로 글마다 한 번만 읽는다.
+    """
+    found, _ = dates.find(source)
+    plain = re.sub(r"(?<=\d)[,\u00a0\u202f ](?=\d{3}\b)", "", source)  # 천 단위의 쉼표나 띄움을 뗀다
+    return frozenset(found), plain, frozenset(numbers(plain))
+
+
 def check(summary, source):
+    """summary의 날짜와 수가 source에 있는지 본다. source는 글 하나이거나 글 여럿의 목록이다(목록이면 어느 글에든 있으면 된다)."""
     summary_dates, summary_rest = dates.find(summary)
-    source_dates, _ = dates.find(source)
-    source_plain = re.sub(r"(?<=\d)[,\u00a0\u202f ](?=\d{3}\b)", "", source)  # 천 단위의 쉼표나 띄움을 뗀다
-    source_numbers = set(numbers(source_plain))
+    read = [_read(text) for text in ([source] if isinstance(source, str) else source)]
+    source_dates = frozenset().union(*(found for found, _, _ in read))
+    source_numbers = frozenset().union(*(found for _, _, found in read))
     missing_dates = sorted(f"{y}-{m:02d}-{d:02d}" for (y, m, d) in summary_dates - source_dates)
     missing_numbers = []
     for number in numbers(summary_rest):
         if len(number) < 2:  # 한 자리 수는 순서나 개수를 뜻하는 일이 많아 대조하지 않는다
             continue
-        if number in source_numbers or number in source_plain:
+        if number in source_numbers or any(number in plain for _, plain, _ in read):
             continue
         # EU 법령의 영문본은 소수점을 쉼표로 적기도 한다('97,5 %'). 정리 글의 '97.5'는 원문의 '97,5'와 같은 수로 본다.
         if "." in number and number.replace(".", ",") in source_numbers:

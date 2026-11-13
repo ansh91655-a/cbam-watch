@@ -142,7 +142,7 @@ def problems(rule, check_text, kinds=("format", "evidence")):
                 found.append((spot, f"근거 어긋남: 모아 둔 자료를 읽지 못함 {unread}"))
                 continue
             if stored and len(stored) == len(cited):  # 모아 둔 자료만 가리키는 문단: 날짜와 수를 자료의 글과 대조한다
-                result = fact_check.check(f"{item.get('label') or ''} {text}", "\n".join(texts))
+                result = fact_check.check(f"{item.get('label') or ''} {text}", texts)  # 자료의 글마다 따로 넘긴다(같은 글은 한 번만 읽힌다)
                 if not result["ok"]:
                     found.append((spot, f"근거 어긋남: 자료에서 찾지 못한 날짜 {result['missingDates']}, 수 {result['missingNumbers']}"))
     unused = [key for key in keys if key not in used]
