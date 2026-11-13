@@ -4722,6 +4722,30 @@
    "ko": "정산 가격",
    "from": "report-carbon-price",
    "added": "2026-11-13"
+  },
+  {
+   "en": "presumptive carbon price",
+   "ko": "추정 탄소가격",
+   "from": "report-carbon-price",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "credit rate",
+   "ko": "공제율",
+   "from": "report-carbon-price",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "under-crediting",
+   "ko": "과소 공제",
+   "from": "report-carbon-price",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "mutual recognition agreement",
+   "ko": "상호 인정 협정",
+   "from": "report-carbon-price",
+   "added": "2026-11-13"
   }
  ]
 }
