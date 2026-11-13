@@ -1,7 +1,7 @@
 /* 규정 원문: 전체 규정에서 찾기, 법령의 목록, 원문과 국문 번역을 나란히 보는 화면, 규제 화면 오른쪽의 찾기 칸 */
 
 /* 넓게 쓰는 화면(원문과 번역을 나란히 볼 때). 머리 띠와 본문이 함께 넓어진다 */
-body[data-wide] main, body[data-wide] .band-inner, body[data-wide] .head-inner { max-width: min(1480px, 100%); }
+body[data-wide] main, body[data-wide] .band-inner, body[data-wide] .head-inner { max-width: min(max(1480px, var(--maxw)), 100%); }
 
 /* 찾기: 큰 검색 칸과 예시 */
 .law-search { display: flex; align-items: center; gap: 10px; padding: 8px 8px 8px 18px; border: 1px solid var(--line); border-radius: var(--radius-pill); background: var(--surface); box-shadow: var(--shadow-1); color: var(--ink-3); }
@@ -33,6 +33,7 @@ body[data-wide] main, body[data-wide] .band-inner, body[data-wide] .head-inner {
 .rule-page { display: grid; gap: var(--gap-6) 32px; grid-template-columns: minmax(0, 1fr); align-items: start; }
 @media (min-width: 1100px) { .rule-page { grid-template-columns: minmax(0, 1fr) 288px; } .rule-aside { position: sticky; top: 88px; max-height: calc(100vh - 108px); overflow-y: auto; } }
 .rule-aside { display: grid; gap: 14px; }
+.rule-page:has(.pos-wide) .rule-aside { position: static; max-height: none; overflow-y: visible; }  /* 본문 폭을 다 쓰는 표를 가리지 않게 제자리에 둔다 */
 .find-panel { display: grid; gap: 10px; padding: 18px 18px 16px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); }
 .find-panel h2 { display: flex; align-items: center; gap: 8px; font-size: 1.05rem; color: var(--brand); }
 .find-lead { font-size: var(--fs-s); color: var(--ink-2); }

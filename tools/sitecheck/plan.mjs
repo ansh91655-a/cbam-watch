@@ -40,12 +40,12 @@ export function plan(site) {
   // 사이트 검색: 빈 화면, 여러 갈래에서 찾는 말, 품목 코드, 찾지 못하는 말
   const search = ["#search", `#search-${encodeURIComponent("기본값")}`, "#search-7208", "#search-zzzzqq"];
   return {
-    // 가로 넘침과 화면 오류: 모든 화면을 다섯 너비로
-    widths: [360, 390, 768, 1024, 1440],
+    // 가로 넘침과 화면 오류: 모든 화면을 일곱 너비로(폰 둘, 패드, 노트북 둘, 넓은 모니터 둘: 본문 폭이 넓어지는 1,560과 1,800의 단계)
+    widths: [360, 390, 768, 1024, 1440, 1920, 2400],
     views: ["#home", "#news", topics[0] ? `#news-${topics[0].code}` : null, "#news-notices", "#news-recent", item, itemWithRefs, "#rules", ...(rules.groups || []).map((group) => `#rules-${group.code}`),
       "#price", "#calc", good, "#calendar", "#calendar-2027", "#calendar-2027.role-verifier", "#calendar-2028", "#cn", "#cn-7208", "#sector", "#sector-aluminium", "#sector-electricity", "#docs", ...laws, "#terms", "#about", "#design", ...search].filter(Boolean),
-    // 규제 화면: 규제마다 세 너비로
-    ruleWidths: [360, 768, 1440],
+    // 규제 화면: 규제마다 네 너비로
+    ruleWidths: [360, 768, 1440, 1920],
     rules: (rules.regulations || []).map(rule),
     // 접근성: 주요 화면을 두 너비, 세 가지 색으로
     axeWidths: [1280, 390],

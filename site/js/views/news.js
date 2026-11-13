@@ -90,7 +90,7 @@ export async function render(main, arg) {
       }
       nodes.push(card(item));
     }
-    return h("div", { class: "stack" }, nodes);
+    return h("div", { class: "stack month-sec" }, nodes);  // month-sec: 넓은 화면에서 카드를 두 칸으로 놓는다(css/wide.css)
   }
 
   // 주제를 고른 화면의 끝: 그 주제의 국내 공지·자료가 따로 있음을 알린다
