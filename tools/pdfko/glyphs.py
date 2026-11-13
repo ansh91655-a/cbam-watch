@@ -69,6 +69,14 @@ class _Recorder(PDFTextDevice):
         self.height = height
         self.shows, self.images, self.upright, self.level, self.totals = [], [], [], [], {}
         self.tags = []
+        self.ink = {}       # 내용 조각 번호마다 그 안에서 그린 그림과 선이 차지한 네모(그림 요소의 자리를 아는 데 쓴다)
+
+    def _inked(self, x0, top, x1, bottom):
+        mark = next((mark for _, mark in reversed(self.tags) if mark is not None), None)
+        if mark is None:
+            return
+        old = self.ink.get(mark)
+        self.ink[mark] = (x0, top, x1, bottom) if old is None else (min(old[0], x0), min(old[1], top), max(old[2], x1), max(old[3], bottom))
 
     def begin_tag(self, tag, props=None):
         mark = props.get("MCID") if isinstance(props, dict) else None
@@ -151,6 +159,7 @@ class _Recorder(PDFTextDevice):
                 point = start
             elif len(step) >= 3:
                 point = utils.apply_matrix_pt(self.ctm, (step[-2], step[-1]))
+                self._inked(point[0], self.height - point[1], point[0], self.height - point[1])
             else:
                 continue
             if kind == "m":
@@ -173,6 +182,7 @@ class _Recorder(PDFTextDevice):
         corners = [utils.apply_matrix_pt(self.ctm, corner) for corner in ((0, 0), (1, 0), (0, 1), (1, 1))]
         xs, ys = [x for x, _ in corners], [y for _, y in corners]
         self.images.append((min(xs), self.height - max(ys), max(xs), self.height - min(ys)))
+        self._inked(*self.images[-1])
 
 
 class _Reader(PDFPageInterpreter):
@@ -209,6 +219,7 @@ class Sheet:
         self.shows, self.images, self.upright, self.level = shows, images, upright, level
         self.totals = totals        # 흐름마다의 글자 찍기 연산자 수(지울 때 차례가 맞는지 견준다)
         self.once = frozenset()
+        self.ink = {}
         marks = [(glyph["y"], glyph["x"], order, index) for order, show in enumerate(shows) for index, glyph in enumerate(show["glyphs"])]
         marks.sort()
         self._marks = marks
@@ -239,6 +250,7 @@ def read(path):
             device.start(y1 - y0)
             reader.process_page(page)
             sheets.append(Sheet(x1 - x0, y1 - y0, plain, device.shows, device.images, device.upright, device.level, device.totals))
+            sheets[-1].ink = device.ink
     once = {name for name, count in device.uses.items() if count == 1 and name != PAGE and name is not None}
     for sheet in sheets:
         sheet.once = once       # 문서에서 한 번만 그려지는 양식(Form XObject): 그 안의 글자는 고쳐도 다른 쪽이 달라지지 않는다

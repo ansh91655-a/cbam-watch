@@ -192,7 +192,9 @@ def build(path, wanted, target, title="", original="", units=None):
         raise RuntimeError("쪽 수가 읽는 방법마다 다름")
     fonts.missing.clear()
     with pikepdf.open(path) as pdf:
-        _classify(sheets, tags.read(pdf))
+        tree = tags.read(pdf)
+        _classify(sheets, tree)
+        masks = _masks(sheets, tree)
         sound = [sheet.plain and erase.sound(page, sheet) for page, sheet in zip(pdf.pages, sheets)]
         jobs, claimed, report = _arrange_units(pages, sheets, sound, wanted, units) if units else _arrange(pages, sheets, sound, wanted)
         removed, failed = 0, 0
@@ -204,7 +206,7 @@ def build(path, wanted, target, title="", original="", units=None):
             removed += done
             failed += len(bad)
         sizes = [(page["width"], page["height"]) for page in pages]
-        with pikepdf.open(io.BytesIO(typeset.overlay(sizes, jobs))) as cover:
+        with pikepdf.open(io.BytesIO(typeset.overlay(sizes, jobs, masks))) as cover:
             for number, page in enumerate(pdf.pages):
                 # 겹칠 쪽을 양식으로 옮겨 와 원문 내용 뒤에 그린다. 이름을 쪽 번호로 정해 두어 같은 입력이면 같은 파일이 나온다
                 form = pdf.copy_foreign(cover.pages[number].as_form_xobject())
@@ -214,6 +216,7 @@ def build(path, wanted, target, title="", original="", units=None):
             _describe(pdf, title, original)
             pdf.save(target, deterministic_id=True, linearize=False)
     report.update({"pages": len(pages), "untouched": sound.count(False), "glyphs": removed, "failed": failed, "missing": "".join(sorted(fonts.missing)),
+                   "masked": sum(len(boxes) for boxes in masks.values()),
                    "sizes": [[round(width, 1), round(height, 1)] for width, height in sizes]})
     return report
 
@@ -226,6 +229,30 @@ def _classify(sheets, tree):
         for show in sheet.shows:
             kinds = tree.kinds(number, show["mcid"]) if show["mcid"] is not None else []
             show["figure"] = not show["artifact"] and (not kinds or "Figure" in kinds or "Formula" in kinds)
+
+
+LOGO = ("logo", "emblem")
+
+
+def _masks(sheets, tree):
+    """기관의 표장이 놓인 자리: {쪽: [(x0, 위, x1, 아래)]}. 번역본이 기관의 공식 문서로 보이지 않게 가린다.
+
+    꼬리표에 그림을 대신하는 글이 "Logo of the European Commission …"으로 적힌 그림을 찾는다.
+    그런 글이 없는 문서는 첫 쪽 위쪽의 작은 그림(표장이 놓이는 자리)을 가린다.
+    """
+    found = {}
+    for element in tree.elements:
+        if element["type"] == "Figure" and any(word in element.get("alt", "").lower() for word in LOGO):
+            for number, mark in element["marks"]:
+                box = sheets[number].ink.get(mark) if number < len(sheets) else None
+                if box and box[2] - box[0] > 4 and box[3] - box[1] > 4:
+                    found.setdefault(number, []).append((box[0] - 1, box[1] - 1, box[2] + 1, box[3] + 1))
+    if not found and sheets:
+        first = sheets[0]
+        small = [box for box in first.images if box[1] < 0.2 * first.height and 20 < box[2] - box[0] <= 0.3 * first.width and 12 < box[3] - box[1] <= 0.12 * first.height]
+        if small:
+            found[0] = [(box[0] - 1, box[1] - 1, box[2] + 1, box[3] + 1) for box in small]
+    return found
 
 
 def _describe(pdf, title, original):

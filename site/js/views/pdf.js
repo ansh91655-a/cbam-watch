@@ -121,6 +121,13 @@ export async function render(main, arg) {
   open = { pages, onScroll, onResize, onLeave };
 
   const first = /^p(\d+)$/.exec(at);
-  if (first) setTimeout(() => jump(Number(first[1])), 0);
+  if (first) {
+    // 화면 위쪽이 마저 그려지면 쪽이 밀리므로, 그사이에 스크롤하지 않았으면 한 번 더 맞춘다
+    setTimeout(() => {
+      jump(Number(first[1]));
+      const from = window.scrollY;
+      setTimeout(() => { if (open && open.pages === pages && Math.abs(window.scrollY - from) < 4) jump(Number(first[1])); }, 500);
+    }, 0);
+  }
   return `${act.name} ${TITLE}`;
 }

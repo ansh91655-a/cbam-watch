@@ -11,7 +11,7 @@ Figure Formula Form Footnote Title Aside DocumentFragment""".split())
 
 
 class Tree:
-    """elements는 문서의 차례대로 놓인 요소들: {"type", "parent", "marks": [(쪽, MCID), …], "span": 표의 칸이 차지하는 (칸 수, 줄 수)}. where는 {(쪽, MCID): 요소의 차례}."""
+    """elements는 문서의 차례대로 놓인 요소들: {"type", "parent", "marks": [(쪽, MCID), …], "span": 표의 칸이 차지하는 (칸 수, 줄 수), "alt": 그림을 대신하는 글}. where는 {(쪽, MCID): 요소의 차례}."""
 
     def __init__(self):
         self.elements, self.where = [], {}
@@ -89,7 +89,7 @@ def read(pdf):
             if node.objgen in seen:
                 continue
             seen.add(node.objgen)
-        tree.elements.append({"type": _role(str(node.S)[1:], roles), "parent": parent, "marks": [], "span": _span(node)})
+        tree.elements.append({"type": _role(str(node.S)[1:], roles), "parent": parent, "marks": [], "span": _span(node), "alt": str(node.get("/Alt", ""))[:200]})
         if "/K" in node:
             stack.append((node.K, len(tree.elements) - 1, page))
     return tree

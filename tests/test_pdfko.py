@@ -111,10 +111,24 @@ class BuildTest(unittest.TestCase):
             text = subprocess.run(["pdftotext", str(made[0]), "-"], capture_output=True, check=True).stdout.decode("utf-8")
             with pikepdf.open(made[0]) as pdf:
                 self.assertEqual((len(pdf.pages), str(pdf.docinfo["/Title"])), (1, "시험 문서 (비공식 국문 번역)"))
-        for piece in ("적용 범위", "제품이 대상이다[1]", "철강", "부속서 I을 본다.", "비공식 국문 번역입니다", "(a)", "7"):
+        for piece in ("적용 범위", "제품이 대상이다[1]", "철강", "부속서 I을 본다.", "비공식 국문 번역본", "공식 문서가 아닙니다", "(a)", "7"):
             self.assertIn(piece, text)                                        # 번역과 알림, 그대로 둔 표와 쪽 번호
         for piece in ("Scope", "Goods", "iron", "Annex"):
             self.assertNotIn(piece, text)                                     # 옮긴 자리의 원문은 남지 않는다
+
+
+@unittest.skipUnless(pikepdf, "pikepdf와 reportlab이 있어야 한다")
+class MaskTest(unittest.TestCase):
+    def test_the_commission_logo_is_found_by_its_alternative_text(self):
+        from tools.pdfko import tags
+
+        tree = tags.Tree()
+        tree.elements = [{"type": "Figure", "parent": None, "marks": [(0, 7)], "alt": "Logo of the European Commission, 12 yellow stars"},
+                         {"type": "Figure", "parent": None, "marks": [(0, 8)], "alt": "A chart"}]
+        sheet = type("Sheet", (), {"ink": {7: (50, 40, 120, 90), 8: (200, 300, 400, 500)}, "images": [(10, 10, 60, 40)], "width": 595, "height": 842})()
+        self.assertEqual(build._masks([sheet], tree), {0: [(49, 39, 121, 91)]})
+        tree.elements = tree.elements[1:]       # 그런 글이 없으면 첫 쪽 위쪽의 작은 그림
+        self.assertEqual(build._masks([sheet], tree), {0: [(9, 9, 61, 41)]})
 
 
 if __name__ == "__main__":
