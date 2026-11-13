@@ -165,9 +165,9 @@ def main(argv):
             print(f"   [{sign}] {row['act']}.{row['part']}: {row['korean'][:120]}")
     if args.write:
         write_json(args.write, {"blocks": changes})
-    print(json.dumps({"groups": count, "changes": len(changes), "stuck": len(stuck)}, ensure_ascii=False))
     for block_key, why in stuck[:10]:
         print(f"맞추지 못함: {block_key}: {why}")
+    print(json.dumps({"groups": count, "changes": len(changes), "stuck": len(stuck)}, ensure_ascii=False))   # 마지막 줄은 늘 이 한 줄이다(실행이 읽는다)
     return 0
 
 
