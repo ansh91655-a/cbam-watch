@@ -1022,7 +1022,8 @@
    "page": "ec-news",
    "name": "",
    "lastError": "403 HTTP Error 403: Forbidden",
-   "lastTried": "2026-11-10T20:06:26+09:00"
+   "lastTried": "2026-11-10T20:06:26+09:00",
+   "label": "How CBAM certificates work"
   },
   "37c2855b-8913-455a-a7da-c2258b932e54": {
    "firstSeen": "2026-11-10",
@@ -1031,7 +1032,8 @@
    "page": "ec-news",
    "name": "",
    "lastError": "403 HTTP Error 403: Forbidden",
-   "lastTried": "2026-11-10T20:06:26+09:00"
+   "lastTried": "2026-11-10T20:06:26+09:00",
+   "label": "CBAM - Do you import any of these products into the EU?"
   },
   "d255e5a1-9f16-4613-85bd-0f126a5f87de": {
    "firstSeen": "2026-11-10",
@@ -1040,7 +1042,8 @@
    "page": "ec-news",
    "name": "",
    "lastError": "403 HTTP Error 403: Forbidden",
-   "lastTried": "2026-11-10T20:11:18+09:00"
+   "lastTried": "2026-11-10T20:11:18+09:00",
+   "label": "CBAM - Actual vs default values in your declaration"
   },
   "c5e2f28e-e9d7-411d-b2d6-560d094d30c2": {
    "firstSeen": "2026-11-10",
@@ -1049,7 +1052,8 @@
    "page": "ec-sectors",
    "name": "",
    "lastError": "403 HTTP Error 403: Forbidden",
-   "lastTried": "2026-11-10T20:11:18+09:00"
+   "lastTried": "2026-11-10T20:11:18+09:00",
+   "label": "Information for importers of cement"
   },
   "fa3c6d9a-4884-46d6-9729-d12bd4be80bd": {
    "firstSeen": "2026-11-10",
@@ -1058,7 +1062,8 @@
    "page": "ec-sectors",
    "name": "",
    "lastError": "403 HTTP Error 403: Forbidden",
-   "lastTried": "2026-11-10T20:11:18+09:00"
+   "lastTried": "2026-11-10T20:11:18+09:00",
+   "label": "Information for importers of aluminium"
   },
   "c86ff3a8-9e5b-4b4c-9042-21622760a489": {
    "firstSeen": "2026-11-10",
@@ -1067,7 +1072,8 @@
    "page": "ec-sectors",
    "name": "",
    "lastError": "403 HTTP Error 403: Forbidden",
-   "lastTried": "2026-11-10T20:11:18+09:00"
+   "lastTried": "2026-11-10T20:11:18+09:00",
+   "label": "Information for importers of fertilisers"
   },
   "781ea8fa-6611-451f-9a2d-a546342bed9c": {
    "firstSeen": "2026-11-10",
@@ -1076,7 +1082,8 @@
    "page": "ec-sectors",
    "name": "",
    "lastError": "403 HTTP Error 403: Forbidden",
-   "lastTried": "2026-11-10T21:26:13+09:00"
+   "lastTried": "2026-11-10T21:26:13+09:00",
+   "label": "Information for importers of iron and steel"
   },
   "e8793d8c-2334-4d8a-98ac-1675857f1c2f": {
    "firstSeen": "2026-11-10",
@@ -1085,7 +1092,8 @@
    "page": "ec-sectors",
    "name": "",
    "lastError": "403 HTTP Error 403: Forbidden",
-   "lastTried": "2026-11-10T21:26:13+09:00"
+   "lastTried": "2026-11-10T21:26:13+09:00",
+   "label": "Information for non-EU producers of iron and steel"
   },
   "872865bc-9961-493d-ac2e-c3c69c91b9ea": {
    "firstSeen": "2026-11-10",
@@ -1094,7 +1102,8 @@
    "page": "ec-sectors",
    "name": "",
    "lastError": "403 HTTP Error 403: Forbidden",
-   "lastTried": "2026-11-10T21:26:13+09:00"
+   "lastTried": "2026-11-10T21:26:13+09:00",
+   "label": "Information for importers of hydrogen"
   },
   "52a9eac1-f855-47e0-b51f-94b270b0a0ba": {
    "firstSeen": "2026-11-10",
@@ -1103,10 +1112,24 @@
    "page": "ec-sectors",
    "name": "",
    "lastError": "403 HTTP Error 403: Forbidden",
-   "lastTried": "2026-11-10T21:26:13+09:00"
+   "lastTried": "2026-11-10T21:26:13+09:00",
+   "label": "Information for importers of electricity"
   }
  },
  "pendingCount": 11,
  "checkedThisRun": 20,
- "unreachableCount": 11
+ "unreachableCount": 11,
+ "unreachableNames": [
+  "How CBAM certificates work",
+  "CBAM - Do you import any of these products into the EU?",
+  "CBAM - Actual vs default values in your declaration",
+  "Information for importers of cement",
+  "Information for importers of aluminium",
+  "Information for importers of fertilisers",
+  "Information for importers of iron and steel",
+  "Information for non-EU producers of iron and steel",
+  "Information for importers of hydrogen",
+  "Information for importers of electricity",
+  "이름을 모르는 문서(ec-guidance)"
+ ]
 }

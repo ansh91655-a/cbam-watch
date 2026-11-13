@@ -7,6 +7,7 @@ import shutil
 import subprocess
 import tempfile
 import unittest
+from unittest import mock
 import unittest.mock
 
 from tools.laws import build, corpus, guide_segment, guides, lock, pdf_blocks, pdf_pages, plan, review, spoil, status, store, todo, trial, verify, wording
@@ -678,7 +679,8 @@ class ReviewTest(unittest.TestCase):
     def test_the_sample_comes_from_documents_translated_lately(self):
         self.assertEqual(review.sample(5, day="2026-11-12"), [{"key": self.key, "act": self.act, "part": review.sample(5, day="2026-11-12")[0]["part"],
                                                               "source": self.text, "korean": "시험용 번역"}])
-        self.assertEqual(review.sample(5, day="2026-12-12"), [])  # 번역이 더해진 지 오래된 문서는 뽑지 않는다
+        # 최근에 번역이 더해진 문서가 없는 주에도 표본이 비지 않는다: 나머지 번역에서 뽑는다
+        self.assertEqual([row["key"] for row in review.sample(5, day="2026-12-12")], [self.key])
 
     def test_a_dropped_translation_is_gone_and_its_reason_follows_the_paragraph(self):
         self.assertEqual(review.drop(self.key, "의무가 권고로 옮겨짐", "2026-11-16"), [self.act])
@@ -695,6 +697,7 @@ class FinishTest(unittest.TestCase):
         self.assertEqual(finish.finish("‘기본값’이란 제품의 내재배출량을 나타내는 값을 말한다"), "‘기본값’이란 제품의 내재배출량을 나타내는 값을 말한다.")
         self.assertEqual(finish.finish("기준은 다음과 같다:"), "기준은 다음과 같다.")
         self.assertEqual(finish.finish("다음을 포함하여야 한다; "), "다음을 포함하여야 한다.")
+        self.assertEqual(finish.finish("불확도는 최대 ± 15 %이고 탄소는 1,2 % 이하다"), "불확도는 최대 ± 15%이고 탄소는 1,2% 이하다.")   # 수와 퍼센트 기호는 붙여 쓴다
         for kept in ("이미 마침표가 있다.", "(a) 대륙붕에서 생산된 전력", "예:", "CBAM 인증서의 제출", "언제부터 적용되는가?"):
             self.assertEqual(finish.finish(kept), kept)
 
@@ -794,6 +797,30 @@ class VerifyTest(unittest.TestCase):
         self.assertEqual(sorted(block["key"] for block in verify.pending()), sorted(work["canaries"]))  # 바꿔 보였던 문단은 다음에 제 번역으로 다시 읽는다
         self.assertEqual(verify.progress()["checked"], 20)
         self.assertTrue(verify.summary().startswith("검수: 옮긴 문단 23개 가운데 20개(87%)를 원문과 견줌, 일부러 바꾼 번역 3개 가운데 3개를 잡음"))
+
+    def test_a_paragraph_spoiled_once_is_read_as_it_is_next_time(self):
+        _, work = self.batch()
+        first = set(work["canaries"])
+        verify.settle({block_key: "뜻이 뒤집힘" for block_key in first}, work, "2026-11-12")
+        self.assertEqual(sorted(json.loads(pathlib.Path(verify.LOG).read_text(encoding="utf-8"))["canaried"]), sorted(first))
+        # 같은 씨앗으로 다시 묶어도, 바꿔 보였던 문단은 제 번역 그대로 읽힌다(같은 문단이 같은 꼴로 거듭 바뀌지 않는다)
+        store.save(self.act, {block_key: self.KOREAN for block_key in self.keys}, "2026-11-10", checked=set())   # 스물네 문단을 모두 검수 전으로 되돌린다
+        picked, again, _ = verify.batch(10**6, seed="test")
+        self.assertEqual(len(picked), 24)
+        self.assertFalse(first & set(again["canaries"]))
+        self.assertEqual(len(again["canaries"]), verify.CANARY_MIN)
+
+    def test_what_the_verifier_found_after_the_last_report_is_told_in_the_next_one(self):
+        # 검수(13:05)는 그날의 보고(10:05)보다 늦게 돈다. 금요일 오후에 생긴 것은 월요일의 보고에 실려야 하고, 그 뒤로는 되풀이하지 않는다
+        pathlib.Path(verify.LOG).write_text(json.dumps({"days": [{"day": "2026-11-13", "batches": 1, "held": 1}],
+                                                        "disputed": [{"day": "2026-11-13", "key": "abc", "why": "또 틀림"}]}, ensure_ascii=False), encoding="utf-8")
+        with tempfile.TemporaryDirectory() as folder, mock.patch.object(laws_health, "REPORTS", folder):
+            pathlib.Path(folder, "2026-11-13.json").write_text("{}", encoding="utf-8")
+            found = laws_health._check_problems("2026-11-16")
+            self.assertTrue(any("맞선 문단 1개" in line for line in found), found)
+            self.assertTrue(any("묶음 1개를 반영하지 않음" in line for line in found), found)
+            pathlib.Path(folder, "2026-11-16.json").write_text("{}", encoding="utf-8")
+            self.assertFalse(any("맞선" in line or "반영하지" in line for line in laws_health._check_problems("2026-11-17")))
 
     def test_missed_canaries_throw_the_batch_away(self):
         _, work = self.batch()

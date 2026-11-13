@@ -10,6 +10,7 @@ import sys
 
 GLOSSARY = "language/glossary.json"
 STATUS = {"confirmed": "확인", "partial": "부분 확인", "candidate": "확인 필요"}
+NOTE = re.compile(r"\([^)]*\)")
 
 
 def lookup(text, path=GLOSSARY, limit=60):
@@ -21,7 +22,8 @@ def lookup(text, path=GLOSSARY, limit=60):
         hit = ""
         for form in term.get("en", []):
             for variant in re.split(r"\s*/\s*", form):
-                variant = variant.strip()
+                # 괄호 안은 그 낱말이 쓰이는 자리의 풀이다("surrender (of CBAM certificates)"). 글에는 괄호 없이 나오므로 떼고 찾는다
+                variant = NOTE.sub("", variant).strip()
                 if len(variant) >= 4 and re.search(r"(?<![a-z])" + re.escape(variant.lower()) + r"(?:s|es)?(?![a-z])", lowered):
                     hit = variant
         for abbr in term.get("abbr", []):

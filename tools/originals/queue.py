@@ -15,9 +15,12 @@ GIVE_UP = 3       # 이만큼 실패한 문서는 월요일에만 다시 시도�
 def note_new_links(pending, found, docs, quiet_pages, first_run, date):
     """처음 보는 문서 링크를 pending에 올린다. 화면을 처음 본 날의 문서는 소식 없이 등록할 것(quiet)으로 표시한다."""
     for doc_id, info in found.items():
+        if doc_id in pending and not pending[doc_id].get("label") and info.get("label"):
+            pending[doc_id]["label"] = info["label"]   # 전에 올린 문서에도 이름을 채운다(무엇을 받지 못하는지 보고에서 알 수 있게)
         if doc_id in docs or doc_id in pending:
             continue
-        pending[doc_id] = {"firstSeen": date, "quiet": bool(first_run or info["page"] in quiet_pages), "tries": 0, "page": info["page"], "name": info["filename"]}
+        pending[doc_id] = {"firstSeen": date, "quiet": bool(first_run or info["page"] in quiet_pages), "tries": 0, "page": info["page"], "name": info["filename"],
+                           "label": info.get("label", "")}
 
 
 def drop_vanished(pending, found, read_codes):
@@ -44,3 +47,13 @@ def build(found, docs, pending, full, monday):
 def unreachable(pending):
     """여러 번 받지 못해 평소에는 다시 시도하지 않는 문서의 번호."""
     return [doc_id for doc_id, entry in pending.items() if entry["tries"] >= GIVE_UP]
+
+
+def names(pending):
+    """받지 못하는 문서의 이름들(화면에 적힌 링크의 글, 없으면 파일 이름). 이름을 아는 것부터 늘어놓고, 모르는 것은 실린 화면만 적는다."""
+    known, unknown = [], []
+    for doc_id in unreachable(pending):
+        entry = pending[doc_id]
+        name = str(entry.get("label") or entry.get("name") or "").strip()
+        (known if name else unknown).append(name[:90] if name else f"이름을 모르는 문서({entry.get('page', '?')})")
+    return known + unknown

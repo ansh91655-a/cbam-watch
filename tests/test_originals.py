@@ -145,6 +145,8 @@ class OriginalsFlowTest(unittest.TestCase):
         run.main([])
         state = self._state()
         self.assertEqual(state["unreachableCount"], 3)  # 세 번 실패하면 평소에는 다시 시도하지 않는다
+        self.assertEqual(len(state["unreachableNames"]), 3)   # 무엇을 받지 못하는지 이름으로 남긴다(주간 보고가 적는다)
+        self.assertTrue(all(name and "이름을 모르는" not in name for name in state["unreachableNames"]), state["unreachableNames"])
         self.web.blocked = set()
         run.main(["--full"])
         state = self._state()

@@ -35,13 +35,15 @@ def _recent(act_id, day, days):
 
 
 def sample(count=30, days=8, seed="", day=None):
-    """표본: [{"key", "act", "part", "source", "korean"}]. 최근 days일 안에 번역이 더해진 문서의 옮긴 문단 가운데서 뽑는다."""
+    """표본: [{"key", "act", "part", "source", "korean"}]. 최근 days일 안에 번역이 더해진 문서의 옮긴 문단에서 먼저 뽑고, 모자라면 나머지 문서에서 채운다.
+
+    번역이 다 끝난 뒤에는 최근에 더해진 문서가 없는 주가 많다. 그런 주에도 표본이 비지 않게 전체 번역에서 뽑는다(주마다 다른 문단이 나온다).
+    """
     day = day or today()
     documents, memory = corpus.everything(history=True)  # 앞선 판에만 있는 문단(달라진 곳 보기에 실린다)의 번역도 뽑는다
-    pool, seen = [], set()
+    fresh, rest, seen = [], [], set()
     for act, found in documents:
-        if not _recent(act["id"], day, days):
-            continue
+        pool = fresh if _recent(act["id"], day, days) else rest
         for part in found:
             for text in part["blocks"]:
                 block_key = store.key(text)
@@ -49,7 +51,8 @@ def sample(count=30, days=8, seed="", day=None):
                     seen.add(block_key)
                     pool.append({"key": block_key, "act": act["id"], "part": part["id"], "source": text, "korean": memory[block_key]})
     picker = random.Random(seed or day)
-    return picker.sample(pool, min(count, len(pool)))
+    picked = picker.sample(fresh, min(count, len(fresh)))
+    return picked + picker.sample(rest, min(count - len(picked), len(rest)))
 
 
 def drop(block_key, why, day=None):

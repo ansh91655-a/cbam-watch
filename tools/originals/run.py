@@ -145,7 +145,7 @@ def main(argv):
         state["baseline"] = today(moment)
     waiting = len(pending)
     state.update({"checkedAt": stamp(moment), "full": full, "notes": notes, "docCount": len(docs), "pendingCount": waiting,
-                  "unreachableCount": len(queue.unreachable(pending)), "checkedThisRun": len(order)})
+                  "unreachableCount": len(queue.unreachable(pending)), "unreachableNames": queue.names(pending), "checkedThisRun": len(order)})
     write_json(STATE_PATH, state)
     added = feed.append(today(moment), items, stamp(moment)) if items else 0
     print(f"문서 링크 {len(found)}건, 이번에 받은 차례 {len(order)}건, 아직 받지 못한 문서 {waiting}건, 새 소식 {added}건, 특이사항 {len(notes)}건")

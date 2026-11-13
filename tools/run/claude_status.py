@@ -19,6 +19,11 @@ def _active():
 
 
 def main(argv):
+    tokens = [token for token in argv if "=" in token]
+    if not tokens or any(token in ("-h", "--help") for token in argv):
+        print(__doc__.strip())   # 적을 결과가 없으면 파일을 건드리지 않는다(확인 시각이 헛되이 바뀌지 않게)
+        return 0 if argv and argv[0] in ("-h", "--help") else 1
+    argv = tokens
     moment = stamp()
     book = read_json(PATH, {"sources": {}})
     sources = book.setdefault("sources", {})

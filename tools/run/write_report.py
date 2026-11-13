@@ -19,6 +19,7 @@ from tools.run.day_summary import FIXED_PROBLEMS
 
 SITE = site_url()
 NOTIFY_LIMIT = 200
+UNREACHABLE_SHOWN = 4   # 주간 보고에 이름을 적는, 자동으로 받지 못하는 문서의 수
 
 
 def _number(value):
@@ -92,7 +93,10 @@ def weekly(run, health):
     if problems:
         lines.append("- 문제")
         lines += [f"  - {line}" for line in problems]
-    lines.append(f"자동으로 받지 못하는 문서 링크 {unreachable}건. 사이트 {SITE}")
+    # 무엇을 받지 못하는지 이름을 몇 개 적는다(원문 사이트가 자동 열람에 내주지 않는 문서. 사람이 원문 화면에서 볼 수 있다)
+    named = [str(name) for name in health.get("originalsUnreachableNames", []) or [] if str(name).strip()]
+    which = f"({', '.join(named[:UNREACHABLE_SHOWN])}{f' 외 {len(named) - UNREACHABLE_SHOWN}건' if len(named) > UNREACHABLE_SHOWN else ''})" if named else ""
+    lines.append(f"자동으로 받지 못하는 문서 링크 {unreachable}건{which}. 사이트 {SITE}")
     notify = _cut(
         f"주간 작업 {start}~{end}: 새 소식 {counts['items']}건, 다시 대조 어긋남 {counts['mismatch']}건, 문제 {len(problems)}건", NOTIFY_LIMIT
     )

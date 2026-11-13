@@ -80,6 +80,11 @@ class ReportTests(unittest.TestCase):
         self.assertNotIn("날짜가 다름", json.dumps(saved, ensure_ascii=False))
         self.assertTrue(reports.needs_notice(saved))
         self.assertIn("2026-11-09 ~ 2026-11-15", messages.weekly(saved, ""))
+        self.assertIn("자동으로 받지 못하는 문서 링크 11건. 사이트", result["answer"])   # 이름을 모르면 건수만
+        # 받지 못하는 문서의 이름을 알면 앞의 몇 개를 적는다
+        _write("h.json", {"originalsUnreachable": 6, "originalsUnreachableNames": ["How CBAM certificates work", "문서 2", "문서 3", "문서 4", "문서 5", "문서 6"]})
+        _, named = self._run(["weekly", "--health", "h.json", "--run-file", "run.json"])
+        self.assertIn("자동으로 받지 못하는 문서 링크 6건(How CBAM certificates work, 문서 2, 문서 3, 문서 4 외 2건). 사이트", named["answer"])
 
     def test_recent_and_missing_daily(self):
         _write("reports/daily/2026-11-10.json", {"kind": "daily", "date": "2026-11-10", "status": "문제"})

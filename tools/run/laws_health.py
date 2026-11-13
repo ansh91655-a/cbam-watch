@@ -8,6 +8,7 @@
 - 검수(tools.laws.verify)가 여러 날 늘지 않거나, 일부러 바꿔 섞은 번역을 놓치거나, 묶음을 반영하지 못했거나, 번역과 검수가 맞선 문단이 생기면 알린다.
 """
 import datetime
+import os
 import pathlib
 
 from tools.common.jsonio import read_json, today as today_kst
@@ -18,6 +19,7 @@ COVERAGE = 0.8   # 차례에 적힌 절 번호 가운데 찾아낸 비율이 이
 NAMES = {"act": "규정", "guide": "가이던스", "manual": "등록부 안내서", "paper": "보고서·안내 자료"}
 UNCHECKED = 3    # 검수할 문단이 남아 있는데 이만큼의 날 동안 검수 기록이 없으면 알린다
 CAUGHT = 0.6     # 일부러 바꾼 번역을 잡아낸 비율(최근 기록)이 이보다 낮으면 알린다
+REPORTS = "reports/daily"   # 일일 보고 파일(<날짜>.json). 지난 보고의 날을 여기서 안다
 CANARIES_MIN = 10  # 바꾼 번역이 이만큼은 쌓여야 비율을 본다
 
 
@@ -59,6 +61,12 @@ def _stalled_problems(day):
     return found
 
 
+def _last_report_day(day):
+    """지난 일일 보고의 날(오늘 것은 빼고). 보고가 없으면 어제."""
+    names = sorted(name[:-5] for name in (os.listdir(REPORTS) if os.path.isdir(REPORTS) else []) if name.endswith(".json") and name[:-5] < day)
+    return names[-1] if names else (datetime.date.fromisoformat(day) - datetime.timedelta(days=1)).isoformat()
+
+
 def _check_problems(day):
     """검수(tools.laws.verify)가 도는지, 제대로 읽는지."""
     log = read_json(verify.LOG, {}) or {}
@@ -73,10 +81,12 @@ def _check_problems(day):
     seeded, caught = sum(row.get("canaries", 0) for row in recent), sum(row.get("caught", 0) for row in recent)
     if seeded >= CANARIES_MIN and caught < CAUGHT * seeded:
         found.append(f"번역 검수가 일부러 바꾼 번역을 놓침(최근 {seeded}개 가운데 {caught}개만 잡음)")
-    held = sum(row.get("held", 0) for row in recent if row.get("day") == day)
+    # 검수(13:05)는 그날의 보고(10:05)보다 늦게 돈다. 오늘 것만 보면 어제 오후의 결과가 어느 보고에도 실리지 않으므로 지난 보고의 날부터 본다
+    since = _last_report_day(day)
+    held = sum(row.get("held", 0) for row in recent if since <= str(row.get("day", "")) <= day)
     if held:
         found.append(f"번역 검수의 묶음 {held}개를 반영하지 않음(틀렸다고 한 비율이 지나치게 높음)")
-    fresh = [row for row in log.get("disputed", []) if row.get("day") == day]
+    fresh = [row for row in log.get("disputed", []) if since <= str(row.get("day", "")) <= day]
     if fresh:
         found.append(f"번역과 검수가 맞선 문단 {len(fresh)}개(두 번 다시 옮기고도 틀렸다고 함): " + ", ".join(row["key"] for row in fresh[:5]))
     return found

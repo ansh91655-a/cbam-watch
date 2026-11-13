@@ -1,7 +1,11 @@
 """국문 정리를 검사하는 도구를 확인한다."""
+import collections
+import json
+import pathlib
+import tempfile
 import unittest
 
-from tools.check import dates, excerpt_check, fact_check, style_check
+from tools.check import dates, excerpt_check, fact_check, style_check, term_lookup
 
 
 class DatesTest(unittest.TestCase):
@@ -72,6 +76,34 @@ class StyleCheckTest(unittest.TestCase):
     def test_citation_form(self):
         hits = style_check.check("제6조 제1항에 따릅니다.")
         self.assertEqual([hit["rule"] for hit in hits], ["citation"])
+
+
+
+class TermLookupTest(unittest.TestCase):
+    TERMS = {"terms": [
+        {"no": 1, "en": ["surrender (of CBAM certificates)"], "abbr": [], "preferred": "제출", "allowed": [], "status": "confirmed"},
+        {"no": 2, "en": ["ferro-manganese"], "abbr": ["FeMn"], "preferred": "페로망간", "allowed": [], "status": "partial"},
+        {"no": 2, "en": ["ferro-chromium"], "abbr": ["FeCr"], "preferred": "페로크롬", "allowed": [], "status": "partial"},
+    ]}
+
+    def test_a_term_noted_with_a_bracket_is_found_without_it(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = pathlib.Path(folder, "glossary.json")
+            path.write_text(json.dumps(self.TERMS, ensure_ascii=False), encoding="utf-8")
+            found = term_lookup.lookup("Declarants shall surrender the certificates. FeMn is covered.", str(path))
+        # 괄호 안의 풀이("of CBAM certificates")는 글에 나오지 않는다. 약어는 그 항목의 것만 맞는다(FeMn은 페로크롬이 아니다)
+        self.assertEqual([(row["en"], row["ko"], row["status"]) for row in found], [("surrender", "제출", "확인"), ("FeMn", "페로망간", "부분 확인")])
+
+    def test_entries_split_from_one_row_do_not_share_an_abbreviation(self):
+        terms = json.loads(pathlib.Path(term_lookup.GLOSSARY).read_text(encoding="utf-8"))["terms"]
+        owners = collections.defaultdict(set)
+        for term in terms:
+            for abbr in term.get("abbr", []):
+                owners[(term.get("no"), abbr)].add(term["preferred"])
+        self.assertEqual({key: sorted(names) for key, names in owners.items() if len(names) > 1}, {})
+        # 흔한 낱말 하나만으로 된 표기는 엉뚱한 자리에 걸린다(review → 신고서 검토가 review process에 걸려 틀린 번역을 낳았다)
+        by_english = {form: term["preferred"] for term in terms for form in term["en"]}
+        self.assertNotIn("review", by_english)
 
 
 if __name__ == "__main__":

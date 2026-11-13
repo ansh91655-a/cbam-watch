@@ -183,6 +183,7 @@ def report():
         "originalsDocs": len(originals.get("docs", {})),
         "originalsPending": len(originals.get("pending", {})),
         "originalsUnreachable": int(originals.get("unreachableCount", 0) or 0),
+        "originalsUnreachableNames": [str(name) for name in originals.get("unreachableNames", [])][:30],
         "siteDeployedAt": deployed,
         "siteDeployedToday": deployed_today,
         "sitePdfDocs": len((pdf_listing or {}).get("docs", {})) if reached else None,

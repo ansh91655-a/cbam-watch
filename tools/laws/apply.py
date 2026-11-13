@@ -71,10 +71,15 @@ def main(argv):
         for block_key, why in rejected:
             if block_key in known:
                 store.hold(known[block_key][0], block_key, "; ".join(why))
+    quiet = 0
     for block_key, why in noted:  # 용어집의 권고(막지 않는 것)는 --terms를 줄 때만 찍는다. 낱말의 일부가 걸리는 일이 많다
         shown = [text for text in why if args.terms or not text.startswith("용어:")]
         if shown:
             print(f"알림 {block_key}: {'; '.join(shown)}")
+        else:
+            quiet += 1
+    if quiet:  # 결과의 noted에는 찍지 않은 것도 들어 있다. 수가 맞지 않아 보이지 않게 알린다
+        print(f"(용어집의 권고뿐인 알림 {quiet}건은 찍지 않았습니다. --terms를 주면 보입니다)")
     for block_key, why in rejected:
         print(f"걸림 {block_key}: {'; '.join(why)}")
     print(json.dumps({"accepted": sum(len(fresh) for fresh in accepted.values()), "rejected": len(rejected), "noted": len(noted), "saved": not args.dry}, ensure_ascii=False))

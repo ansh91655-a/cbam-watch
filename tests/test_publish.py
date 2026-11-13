@@ -284,6 +284,14 @@ class PublishTest(unittest.TestCase):
         book = _read("collected/claude-status.json")["sources"]
         self.assertEqual((sorted(book), book["council-cbam"]["failCount"], book["council-cbam"]["note"]), (["council-cbam"], 1, "검색 결과에 주소가 없음"))
 
+    def test_claude_status_without_results_changes_nothing(self):
+        _run(claude_status.main, ["council-cbam=ok"])
+        before = pathlib.Path("collected/claude-status.json").read_text(encoding="utf-8")
+        for argv in (["--help"], [], ["council-cbam"]):
+            with contextlib.redirect_stdout(io.StringIO()):
+                claude_status.main(argv)
+            self.assertEqual(pathlib.Path("collected/claude-status.json").read_text(encoding="utf-8"), before, argv)
+
     def test_title_only_drafts_are_checked_against_the_collected_feed(self):
         day = now_kst().date().isoformat()
         _write(f"collected/feed/{day}.json", {"date": day, "items": [

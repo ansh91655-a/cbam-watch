@@ -5,15 +5,17 @@
 - "…다"로 끝나면 마침표를 붙인다.
 - "…다:"나 "…다;"로 끝나면 그 부호를 마침표로 바꾼다.
 명사구로 끝나는 번역과 "예:", "참고:" 같은 이름표는 건드리지 않는다.
+수와 퍼센트 기호 사이는 붙여 쓴다(원문은 "95 %"로 띄어 쓴다. 번역은 "95%"가 열에 아홉이 넘어 한 가지로 맞춘다).
 """
 import re
 
 OPEN_END = re.compile(r"다\s*[:;]$")
+PERCENT = re.compile(r"(?<=\d)[ \u00a0](?=%)")
 
 
 def finish(korean):
     """끝맺음을 맞춘 번역."""
-    text = str(korean).rstrip()
+    text = PERCENT.sub("", str(korean).rstrip())
     if text.endswith("다"):
         return text + "."
     return OPEN_END.sub("다.", text)

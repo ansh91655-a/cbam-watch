@@ -32,8 +32,10 @@ CANARY_MIN = 3     # 섞을 때는 적어도 이만큼 섞는다
 DROPS_BEFORE_DISPUTE = 2  # 같은 문단을 이만큼 지운 뒤에 또 틀렸다고 하면 지우지 않고 적어만 둔다
 HARSH_MIN = 5      # 틀렸다고 한 것이 이보다 적으면 비율이 높아도 반영한다(작은 묶음)
 KEPT_DAYS = 120    # 날마다의 결과를 이만큼만 남긴다
+CANARIED_KEPT = 400  # 바꿔 섞었던 문단의 열쇠를 이만큼 기억한다(그 문단은 다음에 제 번역 그대로 읽힌다)
 NOTE = ("번역 검수의 결과. days는 날마다 읽은 묶음의 수(batches), 틀리지 않다고 본 문단(checked), 틀려서 지운 문단(dropped), 일부러 바꿔 섞은 번역(canaries)과 그 가운데 잡아낸 것(caught), "
-        "버린 묶음(discarded: 바꾼 것을 놓침)과 반영하지 않은 묶음(held: 틀렸다고 한 비율이 지나치게 높음)이다. disputed는 두 번 다시 옮기고도 또 틀렸다고 한 문단이다(사람이 볼 것).")
+        "버린 묶음(discarded: 바꾼 것을 놓침)과 반영하지 않은 묶음(held: 틀렸다고 한 비율이 지나치게 높음)이다. disputed는 두 번 다시 옮기고도 또 틀렸다고 한 문단이다(사람이 볼 것). "
+        "canaried는 얼마 전에 바꿔 섞었던 문단의 열쇠다(같은 문단을 거듭 바꾸지 않으려고 적어 둔다).")
 
 
 def holders():
@@ -75,11 +77,16 @@ def batch(limit=None, seed="", waiting=None):
     rest = waiting[len(picked):]
     canaries = {}
     if len(picked) >= CANARY_FROM and settings["canaries"] > 0:
+        # 바꿔 섞은 문단은 검수 표시가 붙지 않아 다음 묶음의 앞에 다시 선다. 또 고르면 같은 문단이 같은 꼴로 거듭 바뀌어
+        # 읽는 쪽이 되풀이를 알아챌 수 있으므로(잡아낸 비율이 뜻을 잃는다), 얼마 전에 골랐던 문단은 제 번역 그대로 읽힌다.
+        used = set(_log()["canaried"])
         picker = random.Random(seed or f"{today()}:{picked[0]['key']}")
         wanted = max(CANARY_MIN, round(settings["canaries"] * len(picked)))
         for at in picker.sample(range(len(picked)), len(picked)):
             if len(canaries) >= wanted:
                 break
+            if picked[at]["key"] in used:
+                continue
             spoiled = spoil.spoil(picked[at]["korean"], picker)
             if spoiled:
                 canaries[picked[at]["key"]] = {"kind": spoiled[1], "korean": picked[at]["korean"]}
@@ -91,7 +98,7 @@ def batch(limit=None, seed="", waiting=None):
 
 def _log():
     found = read_json(LOG, {}) or {}
-    return {"note": NOTE, "days": list(found.get("days", [])), "disputed": list(found.get("disputed", []))}
+    return {"note": NOTE, "days": list(found.get("days", [])), "disputed": list(found.get("disputed", [])), "canaried": list(found.get("canaried", []))}
 
 
 def _record(day, **counts):
@@ -104,6 +111,8 @@ def _record(day, **counts):
     for name, value in counts.items():
         if name == "disputed":
             log["disputed"] += value
+        elif name == "canaried":
+            log["canaried"] = ([key for key in log["canaried"] if key not in value] + list(value))[-CANARIED_KEPT:]
         else:
             entry[name] = entry.get(name, 0) + value
     log["days"] = sorted(log["days"], key=lambda row: row["day"])[-KEPT_DAYS:]
@@ -122,11 +131,11 @@ def settle(wrong, work, day=None):
             "unknown": sorted(block_key for block_key in wrong if block_key not in keys and block_key not in canaries)}
     if canaries and len(caught) < settings["catch"] * len(canaries):
         done["outcome"] = "discarded"   # 일부러 바꾼 번역을 놓쳤다. 이 묶음은 제대로 읽지 않은 것으로 본다
-        _record(day, batches=1, discarded=1, canaries=len(canaries), caught=len(caught))
+        _record(day, batches=1, discarded=1, canaries=len(canaries), caught=len(caught), canaried=sorted(canaries))
         return done
     if len(real) >= HARSH_MIN and len(real) > settings["harsh"] * len(keys):
         done["outcome"] = "held"        # 틀렸다고 한 것이 지나치게 많다. 반영하지 않고 알린다
-        _record(day, batches=1, held=1, canaries=len(canaries), caught=len(caught))
+        _record(day, batches=1, held=1, canaries=len(canaries), caught=len(caught), canaried=sorted(canaries))
         return done
     earlier = {}
     for entry in review.reviews():
@@ -145,7 +154,7 @@ def settle(wrong, work, day=None):
     for act_id, block_keys in by_act.items():
         done["checked"] += store.mark(act_id, block_keys)
     done["disputed"] = len(disputed)
-    _record(day, batches=1, checked=done["checked"], dropped=done["dropped"], canaries=len(canaries), caught=len(caught), disputed=disputed)
+    _record(day, batches=1, checked=done["checked"], dropped=done["dropped"], canaries=len(canaries), caught=len(caught), disputed=disputed, canaried=sorted(canaries))
     return done
 
 
