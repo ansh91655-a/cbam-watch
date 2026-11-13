@@ -5,10 +5,18 @@ import { priceChart } from "../ui/chart.js";
 import { band } from "../ui/band.js";
 import { empty, fill, h, safeLink, table } from "../ui/dom.js";
 import { countdown, koreanDate, price, signed, today } from "../ui/format.js";
+import { lawRefs } from "../ui/lawrefs.js";
 import { priceTabs } from "../ui/tabs.js";
 
 const RANGES = [["all", "전체", null], ["year", "최근 1년", 365], ["quarter", "최근 3개월", 92]];
 const RANGE_FROM = 9; // 가격이 이만큼 쌓이면 기간 고르기를 보여 준다.
+// 가격을 정하는 방법의 근거. 규정은 '종가의 평균'이라 적고 이행규정이 그 계산법을 정해, 사이트의 다른 화면(규제 요약)과 말이 달라 보이지 않게 둘을 잇는다.
+const METHOD_REFS = [
+  { act: "32023R0956", part: "art-21", label: "CBAM 규정 제21조" },
+  { act: "32025R2548", part: "art-1", label: "이행규정 (EU) 2025/2548 제1조(2026년 분기 가격)" },
+  { act: "32025R2548", part: "art-5", label: "제5조(2027년부터의 주간 가격)" },
+];
+const METHOD_NOTE = "CBAM 규정 제21조는 이 가격을 EU 배출권 '종가의 평균'으로 적습니다. 이행규정 (EU) 2025/2548은 경매의 최종 가격을 경매 낙찰가격으로 보고(전문 4), 경매마다 그 가격을 경매 물량으로 가중해 평균하도록 정했습니다(제1조(4), 제5조(3)).";
 
 function within(rows, days) {
   if (!days) return rows;
@@ -98,6 +106,8 @@ export async function render(main) {
         h("li", { text: "2027년 2월부터 모든 CBAM 인증서는 공통 중앙 플랫폼에서 구매합니다." }),
       ]),
       h("p", { class: "count" }, [h("span", { text: "2026년 11월 10일에 확인한 원문을 옮긴 것입니다. 바뀌었을 수 있으니 원문에서 확인하세요. " }), safeLink(source.url, source.name || "가격 원문")]),
+      lawRefs(METHOD_REFS, "근거 조문"),
+      h("p", { class: "count", text: METHOD_NOTE }),
     ]),
   );
   draw();

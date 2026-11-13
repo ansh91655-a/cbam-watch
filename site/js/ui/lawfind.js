@@ -59,8 +59,8 @@ export function findPanel({ examples = [], lead = "" } = {}) {
     const { rows, index, names } = await corpus();
     const parsed = parse(query, index);
     const hits = find(rows, parsed, { limit: PANEL_LIMIT });
-    if (!rows.length) return out.replaceChildren(h("p", { class: "find-none", text: "규정의 글을 읽지 못했습니다. 잠시 뒤에 다시 찾아 주십시오." }));
-    if (!hits.length) return out.replaceChildren(h("p", { class: "find-none", text: "관련된 조문을 찾지 못했습니다. 다른 낱말로 다시 찾아 주십시오." }));
+    if (!rows.length) return out.replaceChildren(h("p", { class: "find-none", text: "규정의 글을 읽지 못했습니다. 잠시 뒤에 다시 찾아 주세요." }));
+    if (!hits.length) return out.replaceChildren(h("p", { class: "find-none", text: "관련된 조문을 찾지 못했습니다. 다른 낱말로 다시 찾아 주세요." }));
     const needles = marks(parsed);
     out.replaceChildren(
       h("p", { class: "find-answer", text: `‘${parsed.groups.map((group) => group.label).join(", ")}’에 관한 내용은 아래 조문에 있습니다.` }),
@@ -76,6 +76,6 @@ export function findPanel({ examples = [], lead = "" } = {}) {
       h("label", { class: "sr", for: "find-q", text: "찾을 내용" }), input, h("button", { class: "btn", type: "submit", text: "찾기" })]),
     examples.length ? h("p", { class: "find-examples" }, examples.map((text) => h("button", { type: "button", class: "chip", text, onclick: () => ask(text) }))) : null,
     out,
-    h("p", { class: "find-note", text: "낱말이 나온 조문의 위치를 찾아 주는 기능입니다. 답은 조문에서 확인해 주십시오." }),
+    h("p", { class: "find-note", text: "낱말이 나온 조문의 위치를 찾아 주는 기능입니다. 답은 조문에서 확인해 주세요." }),
   ]);
 }

@@ -224,6 +224,15 @@ class ComputeTest(unittest.TestCase):
         self.assertEqual(first["assumed"], {"benchmark": False, "cscf": False, "updated": False})
         self.assertTrue(got[1]["assumed"]["updated"])
 
+    def test_the_estimate_says_which_production_route_its_benchmark_came_from(self):
+        got = self.run_js("const one = (code, more) => { const row = m.estimate(book, paths[0], { good: good(code), mode: 'default', year: 2026, tonnes: 1, price: 1, ...more }); return [row.route, row.routeAlt]; };"
+                          " return [one('72081000'), one('72253010'), one('72081000', { mode: 'actual', see: 1.5, route: 'E' }), one('31021019')];")
+        self.assertEqual(got[0], ["C", ""])       # 탄소강: 기본값 행에 적힌 경로
+        self.assertEqual(got[1][0], "F")           # 합금강: 기본값 행의 경로와
+        self.assertEqual(got[1][1], "J")           # 높은 등급의 경로 가운데 큰 값을 쓴다
+        self.assertEqual(got[2], ["E", ""])       # 실제 배출량: 고른 경로
+        self.assertEqual(got[3], ["", ""])        # 경로를 가르지 않는 품목
+
     def test_fertilisers_keep_the_one_percent_markup(self):
         got = self.run_js("return [2026, 2029].map((year) => m.estimate(book, paths[0], { good: good('31021019'), mode: 'default', year, tonnes: 1, price: 1 }).markup);")
         self.assertEqual(got, [1, 1])

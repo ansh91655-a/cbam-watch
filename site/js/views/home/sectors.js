@@ -19,7 +19,7 @@ function tile([key, name, no]) {
 
 export function sectors() {
   return h("section", { class: "showcase bleed", "aria-labelledby": "h-sectors" }, h("div", { class: "showcase-inner" }, [
-    h("div", { class: "sec-head" }, [h("h2", { id: "h-sectors", text: "부문별로 보기" }), h("a", { href: "#laws", text: "규정 원문 전체 보기" })]),
+    h("div", { class: "sec-head" }, [h("h2", { id: "h-sectors", text: "부문별로 보기" }), h("a", { href: "#sector", text: "부문별 보기 전체" })]),
     h("p", { class: "sec-lead", text: "CBAM 대상 부문마다 대상 품목과 EU 집행위원회의 가이던스, 기본값, 소식을 한곳에 모았습니다." }),
     h("div", { class: "sectors" }, SECTORS.map(tile)),
   ]));

@@ -44,14 +44,22 @@ function split(now) {
   ]);
 }
 
-function steps(now, state, row) {
+// 벤치마크를 어느 생산경로의 값으로 골랐는지. 경로를 가르지 않는 품목이면 빈 글.
+function routeNote(book, now) {
+  const name = (key) => (book.routes.find((route) => route.key === key) || { name: key }).name;
+  if (!now.route) return "";
+  if (now.routeAlt) return ` 벤치마크는 두 생산경로('${name(now.route)}', '${name(now.routeAlt)}')의 값 가운데 큰 값입니다.`;
+  return ` 벤치마크는 생산경로 '${name(now.route)}'의 값입니다.`;
+}
+
+function steps(book, now, state, row) {
   const origin = row.origin === "kr" ? "대한민국 기본값" : "'그 밖의 나라와 지역' 기본값";
   const embedded = now.mode === "actual"
     ? "넣으신 실제 배출량입니다."
     : `${origin} ${tonnes(row.total)}에 ${now.year}년 마크업 ${percent(now.markup)}를 더한 값입니다.`;
   const lines = [
     ["내재배출량", `${tonnes(now.embedded)} tCO2e`, embedded],
-    ["무상할당 조정", `${tonnes(now.allocation)} tCO2e`, `CBAM 벤치마크 ${tonnes(now.benchmark)} × CBAM 계수 ${percent(now.factor)} × 부문 간 보정계수 ${percent(now.cscf)}`],
+    ["무상할당 조정", `${tonnes(now.allocation)} tCO2e`, `CBAM 벤치마크 ${tonnes(now.benchmark)} × CBAM 계수 ${percent(now.factor)} × 부문 간 보정계수 ${percent(now.cscf)}.${routeNote(book, now)}`],
     ["인증서 대상", `${tonnes(now.perTonne)} tCO2e`, now.allocation > now.embedded ? "무상할당 조정이 내재배출량보다 커서 0으로 보았습니다." : "내재배출량에서 무상할당 조정을 뺀 값입니다."],
   ];
   return h("dl", { class: "calc-steps" }, lines.flatMap(([name, value, how]) => [
@@ -108,7 +116,7 @@ export function result(book, path, state) {
     h("section", { class: "panel calc-detail", "aria-labelledby": "h-calc-split" }, [
       h("h2", { id: "h-calc-split", text: `제품 1톤의 배출량(${now.year}년)` }),
       split(now),
-      steps(now, state, row),
+      steps(book, now, state, row),
       compare(book, path, state, now),
     ]),
     h("section", { class: "stack", "aria-labelledby": "h-calc-years" }, [

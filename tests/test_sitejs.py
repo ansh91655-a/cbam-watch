@@ -1,6 +1,6 @@
 """화면 모듈 가운데 화면 요소를 다루지 않아 브라우저 없이 볼 수 있는 것: 국내 공지·자료 가르기(js/news/notices.js),
 문단 인용의 글(js/laws/cite.js), 낱말 단위로 달라진 곳 찾기(js/laws/worddiff.js), 의무를 역할로 고르기(js/calendar/roles.js),
-규정 원문과 그것을 적은 글을 잇는 주소(js/laws/refs.js), 부문별 모아 보기의 글(js/sector/facts.js)."""
+규정 원문과 그것을 적은 글을 잇는 주소(js/laws/refs.js), 부문별 모아 보기의 글(js/sector/facts.js), 최근 소식 가리기(js/news/recent.js)."""
 import json
 import shutil
 import subprocess
@@ -12,6 +12,7 @@ import { address, citeBlock, citePart, partName, source } from './site/js/laws/c
 import { dutyHref, lawHref, linkedTo, tally as linkedTally, termHref } from './site/js/laws/refs.js';
 import { wordDiff } from './site/js/laws/worddiff.js';
 import { isNotice, NOTICES, split } from './site/js/news/notices.js';
+import { PERIODS, RECENT, RECENT_DAYS, within } from './site/js/news/recent.js';
 import { gasText, markupText, proposedText, scopeOf, scopeText, upcoming } from './site/js/sector/facts.js';
 
 const act = { id: '32023R0956', group: 'act', name: 'CBAM 규정', official: 'Regulation (EU) 2023/956', consolidated: '2025-10-20' };
@@ -79,6 +80,9 @@ console.log(JSON.stringify({
     tally: tally(duties, roles).map((role) => [role.key, role.name, role.size]),
   },
   notices: { name: NOTICES, ids: parts.notices.map((item) => item.id), news: parts.news.map((item) => item.id), empty: split(null), one: isNotice(null) },
+  recent: { name: RECENT, days: RECENT_DAYS, periods: PERIODS,
+    seen: ['2026-11-13', '2026-10-14', '2026-10-13', '2026-11-20', '', 'soon', '2026-10-14T09:00:00+09:00'].map((date) => within(date, '2026-11-13')),
+    wider: [within('2026-08-15', '2026-11-13', 90), within('2026-08-14', '2026-11-13', 90)], noToday: within('2026-11-13', '') },
 }));
 """
 
@@ -91,6 +95,15 @@ class SiteModulesTest(unittest.TestCase):
         if done.returncode:
             raise AssertionError(done.stderr[-1500:])
         cls.seen = json.loads(done.stdout)
+
+    def test_recent_news_is_counted_and_listed_by_one_rule(self):
+        recent = self.seen["recent"]
+        self.assertEqual((recent["name"], recent["days"]), ("recent", 30))
+        self.assertIn(recent["days"], recent["periods"])      # 첫 화면이 센 날수를 소식 화면의 기간에서도 고를 수 있다
+        # 오늘, 꼭 30일 전, 31일 전, 앞날의 날짜, 날짜 없음, 날짜가 아닌 글, 시각이 붙은 날짜
+        self.assertEqual(recent["seen"], [True, True, False, True, False, False, True])
+        self.assertEqual(recent["wider"], [True, False])
+        self.assertFalse(recent["noToday"])
 
     def test_title_only_notices_are_set_apart_from_the_news(self):
         notices = self.seen["notices"]

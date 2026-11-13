@@ -52,6 +52,9 @@ export function factorAt(path, year) {
   return year > Math.max(...years) ? 0 : null;
 }
 
+// 합금강의 높은 등급(고합금강)의 경로. 기본값으로 신고할 때에는 기본값 행의 경로와 이 경로의 벤치마크 가운데 큰 값을 쓴다(tools/calc/build.py와 같은 규칙).
+const ALLOY_HIGH = "J";
+
 // 실제 배출량으로 신고할 때 고를 수 있는 생산경로(벤치마크 B열에 경로 표시가 있는 품목만).
 export function routesOf(good) {
   return [...new Set(good.b.map((one) => one.route).filter(Boolean))];
@@ -77,15 +80,18 @@ export function estimate(book, path, input) {
   let embedded;
   let benchmark;
   let rate = null;
+  let route = choice.route;   // 벤치마크를 고른 생산경로(경로를 가르지 않는 품목은 "")
+  let routeAlt = "";          // 기본값으로 신고할 때 함께 견준 경로(합금강: 두 등급 가운데 큰 값을 쓴다)
   if (mode === "actual") {
     if (input.see === "" || input.see === null || input.see === undefined) return null; // 값을 넣기 전에는 추정하지 않는다
     embedded = Number(input.see);
-    const route = routesOf(good).includes(input.route) ? input.route : choice.route;
+    if (routesOf(good).includes(input.route)) route = input.route;
     benchmark = benchmarkAt(good, route, span.key);
   } else {
     rate = markup(book, good.sector, year);
     embedded = choice.row.total * (1 + rate / 100);
     benchmark = choice.benchmark[span.index];
+    if (route && route !== ALLOY_HIGH && routesOf(good).includes(ALLOY_HIGH)) routeAlt = ALLOY_HIGH;
   }
   if (!Number.isFinite(embedded) || embedded < 0 || benchmark === null || factor === null) return null;
   const allocation = benchmark * (factor / 100) * (correction.value / 100);
@@ -93,7 +99,7 @@ export function estimate(book, path, input) {
   const tonnes = Number(input.tonnes) || 0;
   const price = Number(input.price) || 0;
   return {
-    year, mode, embedded, markup: rate, benchmark, factor, cscf: correction.value, allocation, perTonne,
+    year, mode, embedded, markup: rate, benchmark, route, routeAlt, factor, cscf: correction.value, allocation, perTonne,
     covered: Math.min(embedded, allocation),            // 무상할당 조정으로 덜어지는 몫(톤당)
     certificates: perTonne * tonnes, cost: perTonne * tonnes * price, costPerTonne: perTonne * price,
     assumed: { benchmark: span.assumed, cscf: correction.assumed, updated: year >= 2027 },

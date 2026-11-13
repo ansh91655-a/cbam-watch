@@ -10,6 +10,8 @@ import { icon } from "../ui/icons.js";
 import { libraryTabs } from "../ui/tabs.js";
 
 const SECTOR_ICON = { cement: "cement", electricity: "electricity", fertilisers: "fertilisers", steel: "steel", aluminium: "aluminium", chemicals: "hydrogen", combined: "steel" };
+// 부속서 I의 부문에서 부문별 보기의 화면으로: [주소에 쓰는 값, 화면의 이름]. 부문별 보기가 없는 부문(복합 금속 제품)은 잇지 않는다.
+const SECTOR_PAGE = { cement: ["cement", "시멘트"], electricity: ["electricity", "전력"], fertilisers: ["fertilisers", "비료"], steel: ["steel", "철강"], aluminium: ["aluminium", "알루미늄"], chemicals: ["hydrogen", "수소"] };
 const LIMIT = 10; // 개정안의 품목을 한 번에 보여 주는 줄 수
 const EXAMPLES = ["7208", "7318 15", "7606", "2523 29 00", "3102", "7202 21 00", "8544 49", "8708 10"];
 
@@ -18,6 +20,7 @@ function goods(item) {
 }
 
 // 목록의 한 줄(품목)을 보여 준다. 제외 품목이 있으면 함께 적는다.
+// 조회한 코드와 겹치는 제외 품목은 펼쳐 보여 주고, 겹치지 않는 것(그 줄의 다른 코드를 빼는 것)은 접어 둔다.
 function entryCard(hit, proposed) {
   const entry = hit.entry;
   const facts = [
@@ -25,7 +28,8 @@ function entryCard(hit, proposed) {
     ["온실가스", (entry.gases || []).map((key) => GAS[key] || key).join(", ")],
     proposed ? null : ["산정 범위", entry.directOnly ? "직접배출만(부속서 II)" : "직접배출과 간접배출"],
   ].filter(Boolean);
-  const listed = hit.excluded.length ? hit.excluded : (hit.partly.length ? hit.partly : entry.except || []);
+  const listed = hit.excluded.length ? hit.excluded : hit.partly;
+  const others = listed.length ? [] : (entry.except || []);
   return h("article", { class: "cn-entry", "data-sector": entry.sector }, [
     h("div", { class: "cn-entry-head" }, [
       h("span", { class: "chipicon" }, icon(SECTOR_ICON[entry.sector] || "file", 20)),
@@ -34,7 +38,15 @@ function entryCard(hit, proposed) {
     h("dl", { class: "cn-facts" }, facts.flatMap(([name, value]) => [h("dt", { text: name }), h("dd", { text: value })])),
     entry.ex ? h("p", { class: "cn-note", text: "코드 앞의 ex는 이 코드의 품목 가운데 위 품목 이름에 해당하는 것만 든다는 뜻입니다." }) : null,
     listed.length ? h("div", { class: "cn-except" }, [h("p", { text: hit.excluded.length ? "이 코드가 해당하는 제외 품목" : "이 품목에서 제외되는 코드" }), h("ul", {}, listed.map(goods))]) : null,
+    others.length ? h("details", { class: "cn-except cn-except-other" }, [
+      h("summary", { text: `이 줄에서 따로 제외하는 코드 ${others.length}줄 보기(조회한 코드와는 겹치지 않습니다)` }), h("ul", {}, others.map(goods))]) : null,
   ]);
+}
+
+// 찾은 줄들의 부문마다 부문별 보기로 가는 길 한 줄
+function sectorLinks(rows) {
+  const pages = new Map(rows.map((hit) => SECTOR_PAGE[hit.entry.sector]).filter(Boolean));
+  return [...pages].map(([key, name]) => h("p", { class: "cn-basis" }, h("a", { href: `#sector-${key}`, text: `${name} 부문의 가이던스, 기본값, 소식 모아 보기` })));
 }
 
 function basis(source, lead) {
@@ -108,6 +120,8 @@ function result(text, book, rule) {
     // 대상 품목이면 인증서 비용 추정으로 이어 준다(전력은 벤치마크와 기본값 표가 따로 없어 추정하지 않는다)
     ["in", "part"].includes(now.state) && !now.rows.some((hit) => hit.entry.sector === "electricity")
       ? h("p", { class: "cn-basis" }, h("a", { href: `#calc-${now.query.slice(0, 8)}`, text: "이 품목의 인증서 비용 추정하기" })) : null,
+    // 대상이거나 일부가 대상이면 그 부문의 가이던스와 기본값, 소식을 모은 화면으로 이어 준다
+    ...(live(now) ? sectorLinks(now.rows) : []),
     ...blocks,
   ]);
 }

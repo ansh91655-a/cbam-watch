@@ -53,9 +53,16 @@ export function empty(text) {
 // 좁은 화면에서는 표가 옆으로 넘어가 감싼 칸을 옆으로 밀어 본다. 자판으로도 밀 수 있게, 넘칠 때에는 그 칸에 초점이 가도록 한다.
 // 넘치지 않을 때에는 초점이 멈출 까닭이 없으므로 뺀다.
 function focusWhenScrollable(node) {
-  const set = () => { if (node.scrollWidth > node.clientWidth + 1) node.tabIndex = 0; else node.removeAttribute("tabindex"); };
-  if (typeof ResizeObserver === "function") new ResizeObserver(set).observe(node);
-  else node.tabIndex = 0;
+  const set = () => {
+    const wide = node.scrollWidth > node.clientWidth + 1;
+    if (wide) node.tabIndex = 0; else node.removeAttribute("tabindex");
+    // 오른쪽에 아직 가려진 칸이 있으면 표시를 달아, 표의 오른쪽 끝이 흐려지게 한다(components.css의 [data-more])
+    node.toggleAttribute("data-more", wide && node.scrollLeft + node.clientWidth < node.scrollWidth - 1);
+  };
+  if (typeof ResizeObserver === "function") {
+    new ResizeObserver(set).observe(node);
+    node.addEventListener("scroll", set, { passive: true });
+  } else node.tabIndex = 0;
 }
 
 export function table(headers, rows, name) {

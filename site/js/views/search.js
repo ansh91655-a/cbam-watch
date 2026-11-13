@@ -157,8 +157,8 @@ async function results(out, query) {
         after: one && hits.length > limit ? h("p", {}, h("button", { type: "button", class: "btn", text: `더 보기 (남은 ${count(hits.length - limit)}건)`, onclick: () => further(kind) })) : null,
       }) });
     }
-    if (nothing && !pages.length && !parsed.groups.length) wanted.push({ key: "unread", make: () => empty("‘기본값’, ‘검증기관 인정’처럼 찾을 내용을 낱말로 적어 주십시오.") });
-    if (nothing && !pages.length && parsed.groups.length) wanted.push({ key: "none", make: () => h("p", { class: "find-none", text: "다른 낱말로 다시 찾아 주십시오. 낱말을 줄이거나 영문 표기로 적으면 더 잘 찾습니다." }) });
+    if (nothing && !pages.length && !parsed.groups.length) wanted.push({ key: "unread", make: () => empty("‘기본값’, ‘검증기관 인정’처럼 찾을 내용을 낱말로 적어 주세요.") });
+    if (nothing && !pages.length && parsed.groups.length) wanted.push({ key: "none", make: () => h("p", { class: "find-none", text: "다른 낱말로 다시 찾아 주세요. 낱말을 줄이거나 영문 표기로 적으면 더 잘 찾습니다." }) });
     if (nothing && !pages.length) wanted.push({ key: "examples", make: examples });
     settle(body, wanted);
   }
@@ -174,7 +174,7 @@ export async function render(main, arg) {
   const query = decode(arg).trim();
   // 이 화면의 칸에서 찾았으면 초점을 칸에 그대로 둔다. 화면 자판을 쓰는 기기에서는 그러지 않는다(자판이 결과를 가린다).
   const typing = Boolean(document.activeElement) && document.activeElement.id === "search-q" && !window.matchMedia("(pointer: coarse)").matches;
-  const input = h("input", { id: "search-q", type: "search", value: query, placeholder: "찾는 말을 적어 주십시오. 예: 기본값, 검증기관 인정, 7208", autocomplete: "off", spellcheck: "false", enterkeyhint: "search" });
+  const input = h("input", { id: "search-q", type: "search", value: query, placeholder: "찾는 말을 적어 주세요. 예: 기본값, 검증기관 인정, 7208", autocomplete: "off", spellcheck: "false", enterkeyhint: "search" });
   const go = (text) => { if (!visit(target(text))) window.scrollTo(0, 0); };
   const out = h("div", { class: "search-out" });
   fill(main,

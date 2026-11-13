@@ -190,6 +190,8 @@ td > .ref-links { margin-top: 6px; }
 
 /* 표 */
 .table-wrap { overflow-x: auto; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); }
+/* 옆으로 밀어야 다 보이는 표: 가려진 칸이 남아 있는 동안 오른쪽 끝을 흐리게 해 더 있음을 알린다(ui/dom.js가 data-more를 단다) */
+.table-wrap[data-more] { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); }
 table { width: 100%; border-collapse: collapse; }
 th, td { padding: 12px 18px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line-2); }
 tbody tr:last-child td { border-bottom: 0; }

@@ -42,7 +42,7 @@ export function plan(site) {
   return {
     // 가로 넘침과 화면 오류: 모든 화면을 다섯 너비로
     widths: [360, 390, 768, 1024, 1440],
-    views: ["#home", "#news", topics[0] ? `#news-${topics[0].code}` : null, "#news-notices", item, itemWithRefs, "#rules", ...(rules.groups || []).map((group) => `#rules-${group.code}`),
+    views: ["#home", "#news", topics[0] ? `#news-${topics[0].code}` : null, "#news-notices", "#news-recent", item, itemWithRefs, "#rules", ...(rules.groups || []).map((group) => `#rules-${group.code}`),
       "#price", "#calc", good, "#calendar", "#calendar-2027", "#calendar-2027.role-verifier", "#calendar-2028", "#cn", "#cn-7208", "#sector", "#sector-aluminium", "#sector-electricity", "#docs", ...laws, "#terms", "#about", "#design", ...search].filter(Boolean),
     // 규제 화면: 규제마다 세 너비로
     ruleWidths: [360, 768, 1440],
@@ -51,7 +51,7 @@ export function plan(site) {
     axeWidths: [1280, 390],
     themes: ["", "?theme=white", "?theme=midnight"],
     axeViews: [...new Set(["#home", "#news", item, itemWithRefs, "#rules", rule(withAnalysis), rule(withFigure), rule(withTable), "#price", "#calc", good,
-      "#calendar", "#calendar-2027.role-verifier", "#cn-7208", "#sector", "#sector-electricity", "#docs", "#laws", law, revised ? `#changes-${revised.id}` : null, "#news-notices", "#terms", "#about", search[1]].filter(Boolean))],
+      "#calendar", "#calendar-2027.role-verifier", "#cn-7208", "#sector", "#sector-electricity", "#docs", "#laws", law, revised ? `#changes-${revised.id}` : null, "#news-notices", "#news-recent", "#terms", "#about", search[1]].filter(Boolean))],
     good,
   };
 }

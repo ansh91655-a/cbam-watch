@@ -1,13 +1,13 @@
 // 큰 머리 아래쪽의 수치 세 칸: 인증서 가격, 다음 일정, 최근 소식. 칸을 누르면 그 화면으로 간다.
+// 최근 소식 칸은 센 것과 같은 소식만 보이는 화면(#news-recent)으로 간다. 날수와 가리는 법은 news/recent.js에 있다.
 // 수치는 화면에 들어올 때 올라간다(data-count, ui/motion.js). 가격은 직전 가격에서 지금 가격으로 올라가 바뀐 만큼을 보여 준다.
 import * as data from "../../data.js";
+import { RECENT, RECENT_DAYS, within } from "../../news/recent.js";
 import { caveatMark, splitCaveat } from "../../ui/caveat.js";
 import { sparkline } from "../../ui/chart.js";
 import { h } from "../../ui/dom.js";
-import { countdown, daysSince, koreanDate, price, signed, today } from "../../ui/format.js";
+import { countdown, koreanDate, price, signed, today } from "../../ui/format.js";
 import { icon } from "../../ui/icons.js";
-
-const NEW_DAYS = 30;
 
 function priceFact(book) {
   const rows = book.prices || [];
@@ -36,9 +36,10 @@ function nextFact(events) {
 }
 
 function newsFact(items, dated) {
-  const fresh = dated.filter((item) => (daysSince(data.dateOf(item)) ?? 999) <= NEW_DAYS).length;
-  return h("a", { class: "fact", href: "#news" }, [
-    h("span", { class: "fact-label" }, [icon("news", 16), h("span", { text: `최근 ${NEW_DAYS}일 소식` })]),
+  const now = today();
+  const fresh = dated.filter((item) => within(data.dateOf(item), now)).length;
+  return h("a", { class: "fact", href: `#news-${RECENT}` }, [
+    h("span", { class: "fact-label" }, [icon("news", 16), h("span", { text: `최근 ${RECENT_DAYS}일 소식` })]),
     h("span", { class: "fact-value" }, [h("span", { text: fresh, "data-count": "" }), h("small", { text: "건" })]),
     h("span", { class: "fact-note", text: `지금까지 모두 ${items.length}건` }),
   ]);

@@ -26,6 +26,8 @@
 .cn-note { font-size: var(--fs-s); color: var(--ink-3); }
 .cn-except { padding: 10px 14px; border-radius: 10px; background: var(--surface-2); font-size: var(--fs-s); }
 .cn-except > p { margin-bottom: 4px; font-weight: 700; color: var(--ink-2); }
+.cn-except-other > summary { cursor: pointer; color: var(--ink-2); }
+.cn-except-other[open] > summary { margin-bottom: 6px; font-weight: 700; }
 .cn-except ul, .cn-list { display: grid; gap: 3px; margin: 0; padding: 0; list-style: none; }
 .cn-except li, .cn-list li { display: grid; grid-template-columns: 96px minmax(0, 1fr) auto; gap: 10px; color: var(--ink-2); }
 .cn-basis { display: flex; flex-wrap: wrap; gap: 4px; font-size: var(--fs-s); color: var(--ink-3); }

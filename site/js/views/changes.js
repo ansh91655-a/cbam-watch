@@ -150,11 +150,11 @@ export async function render(main, arg) {
         h("span", {}, [h("span", { class: "chg-op", "data-op": "changed", text: "바뀜" }), h("b", { text: count(stats.changed) })]),
         h("span", {}, [h("span", { class: "chg-op", "data-op": "added", text: "더해짐" }), h("b", { text: count(stats.added) })]),
         h("span", {}, [h("span", { class: "chg-op", "data-op": "removed", text: "빠짐" }), h("b", { text: count(stats.removed) })]),
-        h("span", { class: "count", text: `그대로인 문단 ${count(stats.same)}개, 달라진 부분 ${count(stats.parts)}곳` }),
+        h("span", { class: "count", text: `그대로인 문단 ${count(stats.same)}개. 달라진 문단은 ${isAct(body) ? "조·부속서" : "절"} ${count(stats.parts)}개에 있습니다.` }),
       ]),
       h("p", { text: isAct(body)
         ? "조와 부속서의 글을 문단마다 견줬습니다. 전문과 각주는 견주지 않았고, 각주 번호나 줄바꿈만 다른 곳은 싣지 않았습니다. 통합본은 EU 출판국이 참고용으로 낸 글이며 법적 효력은 유럽연합 관보에 실린 글에 있습니다."
-        : "본문의 글을 문단마다 견줬습니다. 표지와 각주 번호, 줄바꿈만 다른 곳은 싣지 않았습니다. 그림과 식은 원문 PDF에서 확인해 주십시오." }),
+        : "본문의 글을 문단마다 견줬습니다. 표지와 각주 번호, 줄바꿈만 다른 곳은 싣지 않았습니다. 그림과 식은 원문 PDF에서 확인해 주세요." }),
       h("p", { text: "옛 글에서 빠진 말은 지운 줄로, 새 글에 들어온 말은 밑줄로 표시했습니다. 국문은 이 사이트가 옮긴 비공식 번역입니다." }),
       h("p", { class: "law-note-links" }, [h("a", { href: `#law-${actId}`, text: "지금의 글을 원문과 번역으로 보기" }), source]),
     ]),
