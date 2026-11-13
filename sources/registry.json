@@ -772,7 +772,7 @@
   {
    "no": 42,
    "code": "eur-lex-related",
-   "name": "EU 법령 데이터베이스(CELLAR)의 CBAM 연관 문서",
+   "name": "EUR-Lex",
    "group": "EU 공식",
    "url": "https://publications.europa.eu/webapi/rdf/sparql",
    "tier": "A",

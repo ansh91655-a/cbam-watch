@@ -13,6 +13,9 @@
   python -m tools.publish.revise --id <소식 id> --fail
       그 글을 읽지 못했거나 새 요약이 검사를 끝내 통과하지 못했을 때: 해 본 횟수(briefTries)만 올린다.
       두 번 실패한 소식은 다시 고르지 않는다(한 줄로 남는다).
+  python -m tools.publish.revise --id <소식 id> --correct --summary-file <새 요약 파일> --source-file <근거가 되는 글 파일> [--title "<새 제목>"] [--impact "…"] [--importance 높음]
+      이미 실은 소식(brief가 아닌 것)을 바로잡는다: 나중에 확인된 결론을 더하거나 틀린 곳을 고칠 때 쓴다. 검사는 위와 같고, 제목도 문체와 용어를 본다.
+      고친 날(revised)을 적는다. 소식의 날짜와 출처, 링크는 그대로다.
 검사에 걸리면 고치지 않고 1로 끝난다. 뽑은 글 파일은 저장소 밖에 둔다(저장소에 올리지 않는다).
 """
 import argparse
@@ -73,6 +76,9 @@ def main(argv):
     parser.add_argument("--impact", default="")
     parser.add_argument("--keep", action="store_true")
     parser.add_argument("--fail", action="store_true")
+    parser.add_argument("--correct", action="store_true")
+    parser.add_argument("--title", default="")
+    parser.add_argument("--importance", default="", choices=["", "높음", "보통", "낮음"])
     args = parser.parse_args(argv)
     body = read_json(ITEMS, None)
     if body is None:
@@ -83,7 +89,7 @@ def main(argv):
         print(json.dumps({"left": len(candidates(items, 10 ** 6)), "items": candidates(items, args.list)}, ensure_ascii=False, indent=1))
         return 0
     item = next((row for row in items if row.get("id") == args.id), None)
-    if item is None or not item.get("brief"):
+    if item is None or item.get("withdrawn") or not (item.get("brief") or args.correct):
         print(f"다시 쓸 대상이 아님: {args.id}")
         return 1
     if args.keep:
@@ -102,7 +108,8 @@ def main(argv):
     except OSError as error:
         print(f"파일을 읽지 못함: {error}")
         return 1
-    found = problems(item, summary, args.impact.strip(), source)
+    title = " ".join(args.title.split()) if args.correct else ""
+    found = problems(item, summary, "\n".join(part for part in (args.impact.strip(), title) if part), source)
     if found:
         for line in found:
             print("문제:", line)
@@ -111,6 +118,10 @@ def main(argv):
     item["summary"] = summary
     if args.impact.strip():
         item["impact"] = args.impact.strip()
+    if title:
+        item["title"] = title
+    if args.correct and args.importance:
+        item["importance"] = args.importance
     item.pop("brief", None)
     item.pop("briefTries", None)
     item["revised"] = today()

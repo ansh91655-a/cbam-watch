@@ -142,6 +142,19 @@ class MoreReadersTest(unittest.TestCase):
         ]
         self.assertEqual([row["celex"] for row in docs.wanted(rows)], ["62023CN0512"])
 
+    def test_a_court_document_keeps_its_ending(self):
+        from tools.archive import docs
+        lines = [f"line {number}" for number in range(1, 501)]
+        kept, ending = docs.kept_lines("62023CJ0512", lines)       # 판결: 앞부분과 끝부분(주문)
+        self.assertTrue(ending)
+        self.assertEqual((kept[0], kept[docs.HEAD_LINES - 1], kept[-1]), ("line 1", f"line {docs.HEAD_LINES}", "line 500"))
+        self.assertIn(f"가운데 {500 - docs.HEAD_LINES - docs.TAIL_LINES}줄은 싣지 않음", kept[docs.HEAD_LINES])
+        self.assertEqual(len(kept), docs.HEAD_LINES + 1 + docs.TAIL_LINES)
+        self.assertEqual(docs.kept_lines("62023CN0512", lines[:30]), (lines[:30], True))  # 짧은 문서는 모두 남긴다
+        kept, ending = docs.kept_lines("52025PC0990", lines)        # 그 밖의 문서는 앞부분만(긴 것으로 적어 둔 문서는 조금 더)
+        self.assertEqual((len(kept), ending), (docs.LONG_LINES, False))
+        self.assertEqual(len(docs.kept_lines("52025PC0408", lines)[0]), docs.HEAD_LINES)
+
     def test_procedure_numbers_in_a_proposal(self):
         from tools.archive import docs
         self.assertEqual(docs.procedures_in(["COM(2025) 990 final", "2025/0418 (COD)", "Proposal for a", "see also 2025/0419(COD)"]),

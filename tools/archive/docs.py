@@ -3,6 +3,8 @@
 어떤 문서를 받을지는 EU 법령 데이터베이스 조회 결과(collected/archive/eur-lex-related.json)에서 고른다.
 CBAM 규정을 근거로 삼거나 고치는 문서는 모두 받고, CBAM 규정을 인용만 하는 문서는 아래 ALSO에 적은 것만 받는다.
 문서의 글은 EU 출판국의 자료 창구에서 받으며, 앞부분만 남긴다(긴 보고서와 의견은 조금 더 남긴다).
+법원의 문서(판결, 결정, 법무관 의견: 번호가 6으로 시작)는 결론이 끝에 있으므로 끝부분도 남긴다(주문: On those grounds, the Court hereby …).
+앞부분만 받아 둔 법원 문서는 한 번 더 받아 끝부분을 채운다.
 """
 import pathlib
 import re
@@ -25,6 +27,7 @@ LONG = {"52025DC0783", "52026AA0013", "52025AE4390", "52025PC0990", "52025PC0989
 # 모으기 시작한 날(SINCE)보다 앞서 나왔지만 지금도 진행 중인 일의 근거가 되는 문서(예: 계류 중인 소송의 공고)
 OLDER = {"62023CN0512"}
 HEAD_LINES, LONG_LINES, LINE_LIMIT = 120, 420, 700
+TAIL_LINES = 40  # 법원 문서에서 남기는 끝부분의 줄 수
 PROCEDURE = re.compile(r"\b(20\d\d)/(\d{4}) ?\((COD|CNS|NLE|APP)\)")
 PAUSE = 2.0
 
@@ -52,6 +55,17 @@ def procedures_in(lines):
             if reference not in found:
                 found.append(reference)
     return found
+
+
+def kept_lines(celex, lines):
+    """남길 줄과, 끝부분까지 담았는지. 법원 문서가 길면 앞부분 뒤에 끝부분(주문, 결론)을 붙인다."""
+    head = LONG_LINES if celex in LONG else HEAD_LINES
+    court = celex.startswith("6")
+    if not court or len(lines) <= head + TAIL_LINES:
+        return [line[:LINE_LIMIT] for line in lines[:head + TAIL_LINES if court else head]], court
+    skipped = len(lines) - head - TAIL_LINES
+    return ([line[:LINE_LIMIT] for line in lines[:head]] + [f"[… 가운데 {skipped}줄은 싣지 않음. 아래는 문서의 끝부분 …]"]
+            + [line[:LINE_LIMIT] for line in lines[-TAIL_LINES:]]), True
 
 
 ACCEPT = {"Accept": "application/xhtml+xml, text/html;q=0.9", "Accept-Language": "eng"}
@@ -96,26 +110,38 @@ def crawl(deadline=None):
     entries, report = [], {"targets": len(targets), "stored": 0, "kept": 0, "failures": [], "notes": []}
     have = {entry["celex"]: entry for entry in read_json(ROOT / "eur-lex-docs.json", {}).get("entries", [])}
     for target in targets:
-        known = have.get(target["celex"])
-        if known and pathlib.Path(known.get("textPath", "")).exists():  # 이미 받은 문서는 그대로 둔다
-            entries.append({**known, "relations": target.get("relations", known.get("relations", []))})
+        celex = target["celex"]
+        known = have.get(celex)
+        stored = bool(known) and pathlib.Path(known.get("textPath", "")).exists()
+        current = {**known, "relations": target.get("relations", known.get("relations", []))} if stored else None
+        short = stored and celex.startswith("6") and not known.get("ending")  # 앞부분만 받아 둔 법원 문서: 끝부분을 채운다
+        late = deadline and time.monotonic() > deadline
+        if stored and (not short or late):  # 이미 받은 문서는 그대로 둔다
+            entries.append(current)
             report["kept"] += 1
             continue
-        if deadline and time.monotonic() > deadline:  # 시간이 다 되면 새 문서는 다음에 받는다. 이미 받은 문서는 뒤에 있어도 목록에 남긴다
-            report.setdefault("stoppedAt", target["celex"])
+        if late:  # 시간이 다 되면 새 문서는 다음에 받는다. 이미 받은 문서는 뒤에 있어도 목록에 남긴다
+            report.setdefault("stoppedAt", celex)
             continue
-        celex = target["celex"]
         source = CELLAR.format(celex=celex)
         lines, reason = lines_of(celex, report["notes"])
         if not lines:
             report["failures"].append(f"{celex} ({reason})")
+            if stored:  # 다시 받지 못했으면 받아 둔 것을 그대로 쓴다
+                entries.append(current)
+                report["kept"] += 1
             continue
-        kept = [line[:LINE_LIMIT] for line in lines[:LONG_LINES if celex in LONG else HEAD_LINES]]
+        kept, ending = kept_lines(celex, lines)
         url = EURLEX.format(celex=celex)
         name = celex.replace("(", "-").replace(")", "")
-        entries.append({"date": target.get("date", ""), "celex": celex, "title": target.get("title", "") or lines[0][:300],
-                        "relations": target.get("relations", []), "procedures": procedures_in(lines), "lines": len(lines), "url": url,
-                        "textPath": save_text(f"eur-lex-docs/{name}.txt", [f"[주소] {url}", f"[받은 곳] {source}", ""] + kept)})
+        entry = {"date": target.get("date", ""), "celex": celex, "title": target.get("title", "") or lines[0][:300],
+                 "relations": target.get("relations", []), "procedures": procedures_in(lines), "lines": len(lines), "url": url,
+                 "textPath": save_text(f"eur-lex-docs/{name}.txt", [f"[주소] {url}", f"[받은 곳] {source}", ""] + kept)}
+        if ending:
+            entry["ending"] = True
+        entries.append(entry)
         report["stored"] += 1
+        if short:
+            report["notes"].append(f"{celex}: 끝부분을 채움")
     save_index("eur-lex-docs", sorted(entries, key=lambda entry: (entry["date"], entry["celex"])), report)
     return report

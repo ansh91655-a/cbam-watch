@@ -252,6 +252,21 @@ class GlossTest(unittest.TestCase):
     def test_no_english_is_added_when_the_source_does_not_use_the_term(self):
         self.assertEqual(gloss.annotate([["The amount is declared.", "내재배출량을 신고한다."]])[0][1], "내재배출량을 신고한다.")
 
+    def test_no_english_is_put_inside_a_compound_word(self):
+        # 검증기관의 '검증'에는 붙이지 않고, 뒤에 제 모습으로 나온 자리에 붙인다
+        done = gloss.annotate([["Verification is carried out under the rules.", "검증기관은 규칙에 따라 검증을 수행한다."]])
+        self.assertEqual(done[0][1], "검증기관은 규칙에 따라 검증(verification)을 수행한다.")
+        # 앞이 다른 글자에 붙은 자리, 뒤가 동사로 이어지는 자리에도 붙이지 않는다
+        self.assertEqual(gloss.annotate([["The free allocation is set.", "내재무상할당량을 정한다."]])[0][1], "내재무상할당량을 정한다.")
+        self.assertEqual(gloss.annotate([["The verification takes place.", "이를 검증한다."]])[0][1], "이를 검증한다.")
+        # 서술격 조사는 낱말의 끝이다. 신고인·제출일처럼 다른 낱말이 되는 꼬리는 아니다
+        self.assertIn("검증(verification)일 수 있다", gloss.annotate([["It may be a verification.", "이는 검증일 수 있다."]])[0][1])
+        self.assertEqual(gloss.annotate([["The date of verification is given.", "검증일 및 장소를 적는다."]])[0][1], "검증일 및 장소를 적는다.")
+
+    def test_a_spaced_wording_of_the_glossary_also_matches_when_written_together(self):
+        done = gloss.annotate([["There is no non-conformity.", "부적합사항이 없다."]])
+        self.assertEqual(done[0][1], "부적합사항(non-conformity)이 없다.")
+
 
 class RepositoryTest(unittest.TestCase):
     """저장소에 받아 둔 법령과 번역으로 본다."""

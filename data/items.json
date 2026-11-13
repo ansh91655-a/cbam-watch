@@ -5003,24 +5003,25 @@
   {
    "id": "20261113-eur-lex-related-7fd760",
    "published": "2026-11-12",
-   "title": "EU 사법재판소, 폴란드의 CBAM 규정 취소 소송(C-512/23) 판결 선고",
-   "summary": "EU 사법재판소(Court) 제2재판부는 2026년 11월 12일 사건 C-512/23의 판결을 선고했습니다. 폴란드는 2023년 8월 8일 제기한 이 소송에서 CBAM을 수립한 규정(EU) 2023/956의 취소를 청구했습니다. 판결문은 잠정본(Provisional text)으로 공개되었습니다.",
+   "title": "EU 사법재판소, 폴란드의 CBAM 규정 취소 소송(C-512/23) 기각",
+   "summary": "EU 사법재판소 제2재판부는 2026년 11월 12일, 폴란드가 CBAM 규정 (EU) 2023/956의 취소를 구한 소송(C-512/23)을 기각했습니다. 폴란드는 2023년 8월 8일 낸 이 소송에서 CBAM이 주로 재정적 성격의 조치이므로 EU 이사회의 만장일치가 필요한 법적 근거를 썼어야 한다고 주장했습니다. 재판소는 같은 날 'Fit for 55' 입법 묶음의 법령을 다툰 폴란드의 소송 일곱 건을 모두 기각했다고 보도자료(제163/2026호)로 알렸습니다. 판결문은 잠정본으로 공개되었습니다.",
    "kind": "소식",
    "topic": "law",
-   "importance": "보통",
+   "importance": "높음",
    "topics": [
     "규정(EU) 2023/956",
     "판결",
     "폴란드"
    ],
    "sourceCode": "eur-lex-related",
-   "sourceName": "EU 법령 데이터베이스(CELLAR)의 CBAM 연관 문서",
+   "sourceName": "EUR-Lex",
    "link": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:62023CJ0512",
-   "impact": "",
+   "impact": "CBAM 규정은 이 판결로 취소되지 않았으므로, 규정에 따른 의무와 일정은 그대로입니다.",
    "excerpt": "Provisional text\nJUDGMENT OF THE COURT (Second Chamber)\n12 November 2026 (*)\n( Action for interim measures – Regulation (EU) 2023/956 – Carbon Border Adjustment Mechanism – Legal basis of that regulation – Determination – Act supplementing a pre-existing act – Article 192(1) TFEU – Point (a) of the first subparagraph of Article 192(2) TFEU – Provisions primarily of a fiscal nature – Strict interpretation – Market-based measure )\nIn Case C‑512/23,\nACTION for annulment under Article 263 TFEU, brought on 8 August 2023,\n1 By its application, the Republic of Poland claims that the Court should annul Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023 establishing a carbon border adjustment mechanism (OJ 2023 L 130, p. 52; ‘the contested regulation’).",
    "listed": "2026-11-13",
    "checkedAt": "2026-11-13T08:20:59+09:00",
-   "authoring": "자동"
+   "authoring": "자동",
+   "revised": "2026-11-13"
   }
  ]
 }
