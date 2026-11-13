@@ -5160,6 +5160,48 @@
    "ko": "고유 사업장 식별자",
    "from": "32025R2547",
    "added": "2026-11-13"
+  },
+  {
+   "en": "ranges of composition",
+   "ko": "조성 범위",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "custom-made compositions",
+   "ko": "주문 제작 조성",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "exhaust gases",
+   "ko": "배기가스",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "clinker content",
+   "ko": "클링커 함량",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "nitrogen content",
+   "ko": "질소 함량",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "default reporting period",
+   "ko": "기본 보고기간",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "installation of origin",
+   "ko": "원산 사업장",
+   "from": "32025R2547",
+   "added": "2026-11-13"
   }
  ]
 }
