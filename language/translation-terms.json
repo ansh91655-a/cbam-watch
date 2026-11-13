@@ -4464,6 +4464,42 @@
    "ko": "영 처리",
    "from": "guide-3",
    "added": "2026-11-13"
+  },
+  {
+   "en": "exothermic chemical process",
+   "ko": "발열 화학 공정",
+   "from": "guide-3",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "flared gas",
+   "ko": "플레어링된 가스",
+   "from": "guide-3",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "pilot flame",
+   "ko": "파일럿 화염",
+   "from": "guide-3",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "absorption cooling process",
+   "ko": "흡수식 냉각 공정",
+   "from": "guide-3",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "electrical efficiency",
+   "ko": "전기효율",
+   "from": "guide-3",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "heat efficiency",
+   "ko": "열효율",
+   "from": "guide-3",
+   "added": "2026-11-13"
   }
  ]
 }
