@@ -4398,6 +4398,42 @@
    "ko": "환원제",
    "from": "guide-5d",
    "added": "2026-11-13"
+  },
+  {
+   "en": "perfluorocarbon",
+   "ko": "과불화탄소",
+   "from": "guide-5e",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "pre-baked",
+   "ko": "사전 소성",
+   "from": "guide-5e",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "technology-specific emission factors",
+   "ko": "기술별 배출계수",
+   "from": "guide-5e",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "installation-specific emission factors",
+   "ko": "사업장 고유 배출계수",
+   "from": "guide-5e",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "permanent chemical binding",
+   "ko": "영구적 화학적 결합",
+   "from": "guide-5e",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Data Retention Period",
+   "ko": "데이터 보존 기간",
+   "from": "guide-5e",
+   "added": "2026-11-13"
   }
  ]
 }
