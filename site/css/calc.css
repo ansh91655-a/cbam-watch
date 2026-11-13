@@ -50,6 +50,17 @@ tr.calc-now td:first-child { box-shadow: inset 3px 0 0 var(--brand-bright); font
 .calc-cost b { position: relative; }
 
 /* 근거와 가정 */
+/* 용어 풀이: 왼쪽에 용어(국문과 영문), 오른쪽에 풀이와 근거 */
+.calc-terms { gap: 14px; }
+.calc-term-list { display: grid; grid-template-columns: minmax(150px, max-content) minmax(0, 1fr); gap: 0 26px; margin: 0; }
+.calc-term-list dt, .calc-term-list dd { padding: 13px 0; border-top: 1px solid var(--line-2); }
+.calc-term-list dt:first-of-type, .calc-term-list dt:first-of-type + dd { border-top: 0; padding-top: 2px; }
+.calc-term-list dt { display: grid; gap: 1px; align-content: start; font-weight: 700; color: var(--ink); }
+.calc-term-list dt small { font-size: 0.78rem; font-weight: 500; color: var(--ink-3); }
+.calc-term-list dd { display: grid; gap: 5px; margin: 0; color: var(--ink-2); line-height: 1.7; max-width: 78ch; }
+.calc-term-src { display: flex; flex-wrap: wrap; gap: 2px 12px; font-size: var(--fs-s); color: var(--ink-3); }
+.calc-term-src a { overflow-wrap: anywhere; }
+.calc-term-src a .icon { margin-left: 3px; vertical-align: -1px; }
 .calc-notes ul { display: grid; gap: 10px; margin: 0; padding-left: 18px; list-style: disc; color: var(--ink-2); max-width: 78ch; }
 .calc-notes li a, .calc-formula a { margin-left: 8px; font-size: var(--fs-s); overflow-wrap: anywhere; }
 .calc-notes li a .icon, .calc-formula a .icon { margin-left: 3px; vertical-align: -1px; }
@@ -62,6 +73,10 @@ html[data-theme="midnight"] .calc-compare b { color: var(--link); }
   .calc-chosen { grid-template-columns: auto minmax(0, 1fr); }
   .calc-change { grid-column: 1 / -1; justify-self: start; }
   .calc-steps { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .calc-term-list { grid-template-columns: minmax(0, 1fr); }
+  .calc-term-list dd { border-top: 0; padding-top: 0; }
+  .calc-term-list dt { padding-bottom: 4px; }
+  .calc-term-list dt:first-of-type + dd { padding-top: 0; }
   .calc-steps dd { margin-bottom: 10px; }
   .calc-cost { min-width: 110px; }
   .calc-mini { display: none; }

@@ -117,6 +117,7 @@ export function result(book, path, state) {
       h("h2", { id: "h-calc-split", text: `제품 1톤의 배출량(${now.year}년)` }),
       split(now),
       steps(book, now, state, row),
+      h("p", { class: "count", text: "내재배출량, 마크업, CBAM 벤치마크, CBAM 계수, 부문 간 보정계수의 뜻은 아래 '용어 풀이'에 있습니다." }),
       compare(book, path, state, now),
     ]),
     h("section", { class: "stack", "aria-labelledby": "h-calc-years" }, [

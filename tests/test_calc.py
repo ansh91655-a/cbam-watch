@@ -152,6 +152,27 @@ class PublishTest(unittest.TestCase):
         self.assertTrue(all(note["sources"] and all(source["url"].startswith("https://") for source in note["sources"]) for note in body["notes"]))
         self.assertEqual(len(body["formula"]["sources"]), 2)   # 법령과, 식이 글로 적힌 집행위 가이던스
 
+    def test_the_terms_of_the_sum_are_explained_from_the_law_and_in_polite_form(self):
+        keys = [term["key"] for term in self.terms["glossary"]]
+        for key in ("embedded", "default", "markup", "faa", "benchmark", "factor", "cscf", "certificate"):
+            self.assertIn(key, keys)                                  # 계산 내역에 나오는 말은 모두 풀이가 있다
+        body = calc.public(self.terms, self.goods)
+        cscf = next(term for term in body["glossary"] if term["key"] == "cscf")
+        self.assertEqual((cscf["ko"], cscf["abbr"]), ("부문 간 보정계수", "CSCF"))
+        self.assertTrue(all(term["sources"] and "evidence" not in term for term in body["glossary"]))
+        terms = copy.deepcopy(self.terms)
+        terms["glossary"][0]["text"] = "제품을 만드는 동안 나온 배출량이다."     # 높임말이 아니다
+        self.assertEqual([where for where, _ in calc.problems(terms, self.goods)], ["용어 풀이 embedded"])
+        self.assertTrue(calc.blocking(calc.problems(terms, self.goods)))
+        terms = copy.deepcopy(self.terms)
+        next(term for term in terms["glossary"] if term["key"] == "cscf")["evidence"][1]["contains"] = ["shall be 95 %."]   # 법령에 없는 대목
+        found = calc.problems(terms, self.goods)
+        self.assertEqual([where for where, _ in found], ["용어 풀이 cscf"])
+        self.assertEqual(calc.blocking(found), [])                    # 알리기만 하고 사이트는 계속 돈다
+        terms = copy.deepcopy(self.terms)
+        terms["glossary"].append(dict(terms["glossary"][0]))
+        self.assertTrue(any(where == "용어 풀이" for where, _ in calc.problems(terms, self.goods)))
+
     def test_evidence_must_be_a_stored_text_and_every_block_of_a_list_is_checked(self):
         terms = copy.deepcopy(self.terms)
         terms["notes"][0]["evidence"] = {"path": "README.md", "contains": ["cbam-watch"]}

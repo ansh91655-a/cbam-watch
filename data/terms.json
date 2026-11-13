@@ -1766,6 +1766,15 @@
 "category": "탄소가격·무상할당"
 },
 {
+"en": "cross-sectoral correction factor",
+"abbr": "CSCF",
+"ko": "부문 간 보정계수",
+"alt": "전부문 조정계수",
+"note": "EU ETS에서 무상할당의 합이 한도에 이르면 모든 무상할당을 같은 비율로 조정하는 계수. 2026~2030년은 100%로 정해짐",
+"article": "부문 간 보정계수 이행결정(2026~2030년) · EU ETS 지침 제10a조(5)",
+"category": "탄소가격·무상할당"
+},
+{
 "en": "specific embedded free allocation",
 "abbr": "SEFA",
 "ko": "고유 내재무상할당량",

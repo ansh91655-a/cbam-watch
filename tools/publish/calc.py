@@ -1,7 +1,8 @@
 """인증서 비용 추정의 자료를 검사하고 사이트에 실을 모양으로 바꾼다.
 
 자료는 둘이다.
-- data/calc.json: 손으로 적는 규칙과 설명. 마크업, 부문 간 보정계수, 벤치마크의 연도 구간, 생산경로의 이름, 계산식, 화면에 싣는 설명 글.
+- data/calc.json: 손으로 적는 규칙과 설명. 마크업, 부문 간 보정계수, 벤치마크의 연도 구간, 생산경로의 이름, 계산식, 화면에 싣는 설명 글,
+  계산에 나오는 용어의 풀이(glossary: 내재배출량, 기본값, 마크업, 무상할당 조정, CBAM 벤치마크, CBAM 계수, 부문 간 보정계수, CBAM 인증서).
   항목마다 그 내용이 적힌 법령 글(evidence)을 가리키고, 검사는 그 대목이 받아 둔 글에 실제로 있는지와 값이 대목에 들어 있는지를 본다.
 - data/calc-goods.json: 받아 둔 법령의 표에서 프로그램이 만든 품목 자료(tools/calc/build.py). 검사는 표에서 다시 만들어 같은지를 본다.
 꼴이 깨진 것은 '문제'이고 사이트 만들기를 멈춘다. 받아 둔 글과 달라진 것은 '근거 어긋남'으로 알리기만 한다(사이트는 앞의 값으로 계속 돈다).
@@ -13,6 +14,7 @@ import re
 import sys
 
 from tools.calc import build
+from tools.check import style_check
 from tools.calc.source import Unreadable
 from tools.common.jsonio import read_json
 
@@ -139,6 +141,22 @@ def terms_problems(terms):
             found.append((where, "글이 없거나 근거 자료를 가리키지 않음"))
         else:
             found += evidence_problems(where, note.get("evidence"))
+    found += glossary_problems(terms.get("glossary") or [], sources)
+    return found
+
+
+def glossary_problems(glossary, sources):
+    """계산에 나오는 용어의 풀이: 열쇠가 겹치지 않고, 국문·영문·풀이가 있고, 높임말로 적고, 근거 대목이 받아 둔 글에 있어야 한다."""
+    found = []
+    if not glossary or len({term.get("key") for term in glossary}) != len(glossary):
+        found.append(("용어 풀이", "풀이가 없거나 열쇠가 겹침"))
+    for term in glossary:
+        where = f"용어 풀이 {term.get('key', '?')}"
+        if not all(str(term.get(key, "")).strip() for key in ("key", "ko", "en", "text")) or not _keys(term) or not set(_keys(term)) <= sources:
+            found.append((where, "열쇠, 국문, 영문, 풀이 가운데 빠진 것이 있거나 근거 자료를 가리키지 않음"))
+            continue
+        found += [(where, f"표기: {hit['message']}") for hit in style_check.check(term["text"]) if hit["hard"]]
+        found += evidence_problems(where, term.get("evidence"))
     return found
 
 
@@ -207,6 +225,8 @@ def public(terms, goods):
         "routes": [{"key": route["key"], "name": route["name"]} for route in terms["routes"]],
         "formula": {"text": terms["formula"]["text"], "sources": [sources[key] for key in _keys(terms["formula"])]},
         "notes": [{"key": note["key"], "text": note["text"], "sources": [sources[key] for key in _keys(note)]} for note in terms["notes"]],
+        "glossary": [{"key": term["key"], "ko": term["ko"], "en": term["en"], "abbr": term.get("abbr", ""), "text": term["text"],
+                      "sources": [sources[key] for key in _keys(term)]} for term in terms["glossary"]],
         "sources": list(sources.values()),
         "korea": goods["builtFrom"]["defaults"]["korea"]["caption"],
         "rows": [[row["shown"], row["text"], row["origin"], row["direct"], row["indirect"], row["total"]] for row in goods["rows"]],

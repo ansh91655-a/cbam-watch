@@ -2,7 +2,7 @@
 import { h, safeLink } from "../../ui/dom.js";
 import { icon } from "../../ui/icons.js";
 
-function sourceLink(source) {
+export function sourceLink(source) {
   const link = safeLink(source.url, source.text);
   if (link) link.append(icon("out", 13));
   return link || h("span", { text: source.text });

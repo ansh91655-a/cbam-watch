@@ -310,6 +310,11 @@
    "key": "guidance4",
    "text": "EU 집행위원회 가이던스 4(무상할당 조정의 산정, 2026년 8월 14일)",
    "url": "https://taxation-customs.ec.europa.eu/document/download/3aa2c730-4f1b-4524-8f71-d9cfe4880ac7_en?filename=Guidance%20No.%204%20-%20CBAM%20calculation%20of%20the%20free%20allocation%20adjustment%20to%20the%20number%20of%20CBAM%20certificates%20to%20be%20surrendered.pdf"
+  },
+  {
+   "key": "ets",
+   "text": "EU 배출권거래제 지침 2003/87/EC 통합본(2024년 3월 1일자) 제10a조",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02003L0087-20240301"
   }
  ],
  "watch": {
@@ -325,5 +330,177 @@
    "32026R1740",
    "32026D1862"
   ]
- }
+ },
+ "glossary": [
+  {
+   "key": "embedded",
+   "ko": "내재배출량",
+   "en": "embedded emissions",
+   "text": "제품을 만드는 동안 나온 직접배출량과, 생산공정에서 쓴 전력을 만들 때 나온 간접배출량을 말합니다. 제품 1톤에 대한 이산화탄소 환산톤(tCO2e)으로 나타냅니다.",
+   "evidence": [
+    {
+     "path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt",
+     "contains": [
+      "‘embedded emissions’ means direct emissions released during the production of goods and indirect emissions from the production of electricity that is consumed during the production processes"
+     ]
+    }
+   ],
+   "sources": [
+    "cbam"
+   ]
+  },
+  {
+   "key": "default",
+   "ko": "기본값",
+   "en": "default value",
+   "text": "내재배출량을 나타내도록 법령이 미리 정해 둔 값입니다. 생산 현장의 자료로 계산한 실제 배출량 대신 쓸 수 있고, 품목과 나라마다 표로 정해져 있습니다.",
+   "evidence": [
+    {
+     "path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt",
+     "contains": [
+      "‘default value’ means a value, which is calculated or drawn from secondary data, which represents the embedded emissions in goods",
+      "‘actual emissions’ means the emissions calculated based on primary data from the production processes of goods"
+     ]
+    }
+   ],
+   "sources": [
+    "cbam",
+    "defaults"
+   ]
+  },
+  {
+   "key": "markup",
+   "ko": "마크업",
+   "en": "mark-up",
+   "text": "기본값으로 신고할 때 기본값에 더하는 비율입니다. 시멘트, 철강, 알루미늄, 수소는 2026년 10%, 2027년 20%, 2028년부터 30%이고, 비료는 2026년부터 1%입니다.",
+   "evidence": [
+    {
+     "path": "collected/archive/pages/eu-acts/32026R1740.txt",
+     "contains": [
+      "For goods in the cement, iron and steel, aluminium and hydrogen sectors, the mark-up shall be 10 % for the year 2026, 20 % for the year 2027 and 30 % for the year 2028 and onwards.",
+      "For goods in the fertiliser sector, the mark-up shall be 1 % for the year 2026 and onwards."
+     ]
+    }
+   ],
+   "sources": [
+    "defaults"
+   ]
+  },
+  {
+   "key": "faa",
+   "ko": "무상할당 조정",
+   "en": "free allocation adjustment",
+   "text": "EU 안에서 같은 제품을 만드는 사업장이 EU 배출권을 무상으로 받는 만큼을, 수입품에 대해 제출할 인증서 수에서 빼 주는 조정입니다. 전력에는 이 조정이 없습니다(0).",
+   "evidence": [
+    {
+     "path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt",
+     "contains": [
+      "shall be adjusted to reflect the extent to which EU ETS allowances are allocated free of charge in accordance with Article 10a of Directive 2003/87/EC to installations producing, within the Union, the goods listed in Annex I to this Regulation"
+     ]
+    },
+    {
+     "path": "collected/archive/pages/eu-acts/32025R2620.txt",
+     "contains": [
+      "The free allocation adjustment for electrical energy (CN code 2716 00 00) shall be zero."
+     ]
+    }
+   ],
+   "sources": [
+    "cbam",
+    "faa"
+   ]
+  },
+  {
+   "key": "benchmark",
+   "ko": "CBAM 벤치마크",
+   "en": "CBAM benchmark",
+   "text": "무상할당 조정을 계산할 때 쓰는 제품별 기준값입니다. EU 배출권거래제에서 무상할당의 수준을 정하는 벤치마크를 바탕으로, 품목 코드마다(품목에 따라 생산경로마다) 정해져 있습니다.",
+   "evidence": [
+    {
+     "path": "collected/archive/pages/eu-acts/32025R2620.txt",
+     "contains": [
+      "By analogy with the EU ETS, that value should be called the CBAM benchmark.",
+      "Therefore, the CBAM benchmarks should be determined for each commodity code.",
+      "is the default CBAM benchmark set out in point 5, Column B, of this Annex"
+     ]
+    }
+   ],
+   "sources": [
+    "faa"
+   ]
+  },
+  {
+   "key": "factor",
+   "ko": "CBAM 계수",
+   "en": "CBAM factor",
+   "text": "EU에서 CBAM 대상 제품의 무상할당을 해마다 줄여 가는 비율입니다. 현행 지침의 값은 2026년 97.5%, 2027년 95%, 2028년 90%로 낮아져 2034년부터는 적용되지 않습니다. 계수가 낮아질수록 무상할당 조정이 줄고 제출할 인증서가 늘어납니다.",
+   "evidence": [
+    {
+     "path": "collected/archive/pages/eu-fulltext/ets-directive-consolidated.txt",
+     "contains": [
+      "shall be equal to 97,5 % in 2026, 95 % in 2027, 90 % in 2028, 77,5 % in 2029, 51,5 % in 2030, 39 % in 2031, 26,5 % in 2032 and 14 % in 2033. From 2034, no CBAM factor shall apply."
+     ]
+    },
+    {
+     "path": "collected/archive/pages/eu-acts/32025R2620.txt",
+     "contains": [
+      "is the CBAM factor referred to in Article 10a(1a) of Directive 2003/87/EC for the year y (dimensionless)"
+     ]
+    }
+   ],
+   "sources": [
+    "ets",
+    "faa"
+   ]
+  },
+  {
+   "key": "cscf",
+   "ko": "부문 간 보정계수",
+   "en": "cross-sectoral correction factor",
+   "abbr": "CSCF",
+   "text": "EU 배출권거래제에서 사업장들에 줄 무상할당의 합이 정해진 한도에 이르면 모든 무상할당을 같은 비율로 조정하는데, 그 비율입니다. 2026~2030년은 100%로 정해져 있어 그 기간에는 무상할당 조정을 줄이지 않습니다. 2031년 이후의 값은 아직 정해지지 않았습니다.",
+   "evidence": [
+    {
+     "path": "collected/archive/pages/eu-fulltext/ets-directive-consolidated.txt",
+     "contains": [
+      "Where, nonetheless, the maximum amount is reached, free allocations shall be adjusted accordingly. Any such adjustment shall be done in a uniform manner."
+     ]
+    },
+    {
+     "path": "collected/archive/pages/eu-acts/32026D1862.txt",
+     "contains": [
+      "For each year in the allocation period 2026 to 2030, the uniform cross-sectoral correction factor for the adjustment of free allocations of emission allowances in accordance with Article 10a(5) and (5a) of Directive 2003/87/EC shall be 100 %."
+     ]
+    },
+    {
+     "path": "collected/archive/pages/eu-acts/32025R2620.txt",
+     "contains": [
+      "is the cross-sectoral correction factor for the reporting period y determined by the Commission"
+     ]
+    }
+   ],
+   "sources": [
+    "ets",
+    "cscf",
+    "faa"
+   ]
+  },
+  {
+   "key": "certificate",
+   "ko": "CBAM 인증서",
+   "en": "CBAM certificate",
+   "text": "내재배출량 1톤(tCO2e)에 해당하는 전자 인증서입니다. 승인된 CBAM 신고인은 신고한 내재배출량에서 무상할당 조정 등을 뺀 만큼의 인증서를 사서 제출합니다.",
+   "evidence": [
+    {
+     "path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt",
+     "contains": [
+      "‘CBAM certificate’ means a certificate in electronic format corresponding to one tonne of CO2e of embedded emissions in goods"
+     ]
+    }
+   ],
+   "sources": [
+    "cbam"
+   ]
+  }
+ ]
 }

@@ -9,6 +9,7 @@ import { priceTabs } from "../ui/tabs.js";
 import { notes } from "./calc/notes.js";
 import { picker } from "./calc/picker.js";
 import { result } from "./calc/result.js";
+import { termsPanel } from "./calc/terms.js";
 
 const MODES = [["default", "기본값으로 신고"], ["actual", "실제 배출량으로 신고"]];
 
@@ -124,6 +125,6 @@ export async function render(main, arg) {
     if (target) target.focus();
   }
 
-  fill(main, head, box, out, notes(book, factorBook));
+  fill(main, head, box, out, termsPanel(raw), notes(book, factorBook));
   draw();
 }
