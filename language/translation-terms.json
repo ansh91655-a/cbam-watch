@@ -5118,6 +5118,48 @@
    "ko": "이동평균",
    "from": "32025R2547",
    "added": "2026-11-13"
+  },
+  {
+   "en": "gross electricity generation",
+   "ko": "총 발전량",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "alkali earth metals",
+   "ko": "알칼리 토금속",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "alkali metals",
+   "ko": "알칼리 금속",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "landfill gas",
+   "ko": "매립가스",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "sludge gas",
+   "ko": "슬러지 가스",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "physical grid connection",
+   "ko": "물리적 망 연결",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "unique installation identifier",
+   "ko": "고유 사업장 식별자",
+   "from": "32025R2547",
+   "added": "2026-11-13"
   }
  ]
 }
