@@ -213,7 +213,8 @@ def build(path, wanted, target, title="", original="", units=None):
                 page.contents_add(f"\nQ\nq {name} Do Q\n".encode("ascii"))
             _describe(pdf, title, original)
             pdf.save(target, deterministic_id=True, linearize=False)
-    report.update({"pages": len(pages), "untouched": sound.count(False), "glyphs": removed, "failed": failed, "missing": "".join(sorted(fonts.missing))})
+    report.update({"pages": len(pages), "untouched": sound.count(False), "glyphs": removed, "failed": failed, "missing": "".join(sorted(fonts.missing)),
+                   "sizes": [[round(width, 1), round(height, 1)] for width, height in sizes]})
     return report
 
 

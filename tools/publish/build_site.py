@@ -9,6 +9,7 @@ import sys
 
 from tools.common.jsonio import read_json, write_json
 from tools.laws import build as laws
+from tools.pdfko import site as pdf_site
 from tools.publish import calc, derive, duties, factor, feed, merge, regulations, thumbs
 
 DATA_FILES = ["items", "events", "digests", "terms", "topics", "prices"]
@@ -97,6 +98,7 @@ def main(argv):
 
     # 규정 원문과 국문 번역, 전체 규정 검색에 쓰는 글(받아 둔 법령의 글에서 만든다)
     counts["laws"] = laws.write(data_out)
+    counts["pdfs"] = pdf_site.write(out)  # 원문과 같은 자리에 번역을 앉힌 국문 PDF(도구가 없는 환경에서는 싣지 않는다)
 
     documents, diffs = derive.documents()
     counts.update({"documents": len(documents["documents"])})

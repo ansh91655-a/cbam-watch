@@ -81,7 +81,7 @@ function contents(act, label) {
 
 export async function render(main, arg) {
   const [actId, target = ""] = String(arg || "").split(".");
-  const [act, acts] = await Promise.all([data.law(actId), data.laws()]);
+  const [act, acts, pdfs] = await Promise.all([data.law(actId), data.laws(), data.pdfs()]);
   if (!act) {
     fill(main, band("규정 원문", "", libraryTabs("laws")), empty("이 문서의 원문을 찾지 못했습니다."), h("p", {}, h("a", { href: "#laws", text: "규정 원문의 목록으로" })));
     return "규정 원문";
@@ -112,6 +112,7 @@ export async function render(main, arg) {
       act.remark ? h("p", { class: "law-remark", text: act.remark }) : null,
       h("p", { text: note(act, done) }),
       h("p", { class: "law-note-links" }, [
+        pdfs[act.id] ? h("a", { href: `#pdf-${act.id}`, text: "원문과 번역을 PDF로 나란히 보기" }) : null,
         safeLink(act.url, words.source),
         act.rule ? h("a", { href: `#rules-${act.rule}`, text: "이 규제의 진행 상황" }) : null,
         h("a", { href: "#laws", text: "전체 규정에서 찾기" }),

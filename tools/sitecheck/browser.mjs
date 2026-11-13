@@ -21,7 +21,11 @@ export async function open(browser, base, width, query = "") {
   const seen = [];
   page.on("pageerror", (error) => seen.push(`오류: ${String(error.message).slice(0, 160)}`));
   page.on("console", (message) => { if (message.type() === "error") seen.push(`콘솔: ${message.text().slice(0, 160)}`); });
-  page.on("requestfailed", (request) => { if (request.url().startsWith(base)) seen.push(`받지 못함: ${request.url().slice(base.length)}`); });
+  page.on("requestfailed", (request) => {
+    // PDF 보기는 파일을 받다가 스스로 끊고 필요한 만큼만 다시 받는다. 그렇게 끊긴 것은 문제가 아니다
+    const cut = (request.failure() || {}).errorText === "net::ERR_ABORTED" && /\.pdf$/i.test(new URL(request.url()).pathname);
+    if (request.url().startsWith(base) && !cut) seen.push(`받지 못함: ${request.url().slice(base.length)}`);
+  });
   page.on("response", (response) => { if (response.url().startsWith(base) && response.status() >= 400) seen.push(`${response.status()}: ${response.url().slice(base.length)}`); });
   await page.emulateMediaFeatures([{ name: "prefers-reduced-motion", value: "reduce" }]);
   await page.setViewport({ width, height: 900, deviceScaleFactor: 1 });

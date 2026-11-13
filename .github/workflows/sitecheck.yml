@@ -13,6 +13,7 @@ on:
       - "!data/laws-ko/**"
       - "stamps/**"
       - "tools/publish/**"
+      - "tools/pdfko/**"
       - "tools/sitecheck/**"
       - ".github/workflows/sitecheck.yml"
   workflow_dispatch:
@@ -40,8 +41,16 @@ jobs:
           node-version: "22"
           cache: npm
           cache-dependency-path: tools/sitecheck/package-lock.json
+      - name: 만들어 둔 국문 PDF 가져오기
+        # 사이트 배포(pages.yml)가 만들어 둔 것을 가져다 쓴다(여기서는 새로 남기지 않는다)
+        uses: actions/cache/restore@v4
+        with:
+          path: .cache/pdfko
+          key: pdfko-${{ hashFiles('data/laws-ko/**', 'originals/units/**', 'originals/state.json', 'sources/guides.json', 'tools/pdfko/**', 'assets/fonts/**') }}
+          restore-keys: pdfko-
       - name: 사이트 만들기
         run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils   # 국문 PDF를 만드는 데 쓴다(PDF 나란히 보기도 점검한다)
           pip install -q -r requirements.txt
           python -m tools.publish.build_site _site
       - name: 검사 도구 받기

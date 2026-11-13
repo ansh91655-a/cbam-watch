@@ -18,7 +18,8 @@ export async function serve(folder) {
       const file = resolve(root, "." + (path.endsWith("/") ? path + "index.html" : path));
       if (file !== root && !file.startsWith(root + sep)) throw new Error("폴더 밖");
       const body = await readFile(file);
-      response.writeHead(200, { "Content-Type": TYPES[extname(file).toLowerCase()] || "application/octet-stream", "Cache-Control": "no-store" });
+      // 길이를 알려 준다(PDF 보기가 길이를 모르는 응답은 받다가 끊고 다시 받는다)
+      response.writeHead(200, { "Content-Type": TYPES[extname(file).toLowerCase()] || "application/octet-stream", "Content-Length": String(body.length), "Cache-Control": "no-store" });
       response.end(body);
     } catch (error) {
       response.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });

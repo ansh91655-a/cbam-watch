@@ -25,9 +25,12 @@ export function plan(site) {
   const guide = acts.find((act) => act.group === "guide");  // EU 집행위원회 안내 문서(절로 나뉜다)
   const manual = acts.find((act) => act.group === "manual");  // 등록부 이용 안내서
   const single = acts.find((act) => act.group !== "act" && act.toc.length === 1);  // 조각이 하나뿐인 짧은 문서(알림이 붙는 것이 많다)
+  // 원문과 번역 PDF를 나란히 보는 화면: 쪽이 적은 문서 하나(없는 문서의 화면도 본다)
+  const pdfs = read(site, "laws/pdf.json", { docs: {} }).docs || {};
+  const small = Object.keys(pdfs).sort((a, b) => pdfs[a].pages - pdfs[b].pages)[0];
   const laws = acts.length ? ["#laws", `#laws-${encodeURIComponent("내재배출량 검증")}`, law, acts[1] ? `#law-${acts[1].id}.art-1` : null,
     guide ? `#law-${guide.id}.${(guide.toc.find((part) => part.kind === "section") || {}).id || "cover"}` : null,
-    manual ? `#law-${manual.id}` : null, single ? `#law-${single.id}` : null] : [];
+    manual ? `#law-${manual.id}` : null, single ? `#law-${single.id}` : null, small ? `#pdf-${small}.p2` : null, "#pdf-none"] : [];
   // 사이트 검색: 빈 화면, 여러 갈래에서 찾는 말, 품목 코드, 찾지 못하는 말
   const search = ["#search", `#search-${encodeURIComponent("기본값")}`, "#search-7208", "#search-zzzzqq"];
   return {
