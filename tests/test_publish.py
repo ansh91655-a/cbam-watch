@@ -335,6 +335,7 @@ class PublishTest(unittest.TestCase):
 
 class DaySummaryTest(unittest.TestCase):
     DAY = "2026-11-10"  # 화요일
+    WEEKLY = {"kind": "weekly", "startedAt": "2026-11-09T09:10:00+09:00", "problems": []}  # 전날(월요일)의 주간 작업
 
     def test_normal_day(self):
         runs = [
@@ -342,6 +343,7 @@ class DaySummaryTest(unittest.TestCase):
             {"kind": "verify", "startedAt": "2026-11-10T08:20:00+09:00", "counts": {"pass": 5, "hold": 1, "published": 5}, "pushed": True, "problems": [],
              "holds": [{"id": "a", "gate": "근거", "why": "제목이 원문과 다름"}]},
             {"kind": "collect", "startedAt": "2026-11-09T07:05:00+09:00", "counts": {"written": 9}, "problems": ["어제의 문제"]},
+            self.WEEKLY,
         ]
         result = day_summary.summarize(runs, self.DAY)
         self.assertEqual((result["problems"], result["finalHolds"], result["retryHolds"]), ([], [], 1))
@@ -351,7 +353,7 @@ class DaySummaryTest(unittest.TestCase):
         runs = [{"kind": "verify", "startedAt": "2026-11-10T08:20:00+09:00", "counts": {}, "pushed": False, "problems": ["x: 게시 단계에서 막힘(사실 대조)"],
                  "holds": [{"id": "b", "gate": "확인 불가", "why": "원문을 열지 못함"}, {"id": "c-r2", "gate": "근거", "why": "다시 쓴 초안도 보류: 근거 없음"},
                            {"id": "d-c3", "gate": "확인 불가", "why": "원문을 열지 못함"}, {"id": "e", "gate": "출처", "why": "저장소의 글과 화면이 다름"},
-                           {"id": "f-r2", "gate": "확인 불가", "why": "다시 쓴 초안도 보류: 원문을 열지 못함"}]}]
+                           {"id": "f-r2", "gate": "확인 불가", "why": "다시 쓴 초안도 보류: 원문을 열지 못함"}]}, self.WEEKLY]
         result = day_summary.summarize(runs, self.DAY)
         self.assertEqual(result["problems"], ["수집·작성 실행 기록이 없음", "x: 게시 단계에서 막힘(사실 대조)", "게시 데이터를 저장소에 올리지 못함"])
         # 원문을 열지 못한 보류는 세 번째(-c3)에야 사람이 볼 보류가 된다. 그 전에는 다시 낼 보류로 센다
@@ -367,6 +369,7 @@ class DaySummaryTest(unittest.TestCase):
             {"kind": "verify", "startedAt": "2026-11-10T08:20:00+09:00", "counts": {}, "pushed": True, "problems": []},
             {"kind": "adhoc", "startedAt": "2026-11-10T01:00:00+09:00", "counts": {"revised": 3}, "problems": ["요약 보강: 웹 읽기가 되지 않음"]},
             {"kind": "report", "startedAt": "2026-11-10T10:05:00+09:00", "problems": ["보고 실행이 적은 글은 다시 모으지 않음"]},
+            self.WEEKLY,
         ]
         result = day_summary.summarize(runs, self.DAY)
         self.assertEqual(result["problems"], ["요약 보강: 웹 읽기가 되지 않음"])
@@ -378,10 +381,33 @@ class DaySummaryTest(unittest.TestCase):
             {"kind": "verify", "startedAt": "2026-11-10T08:20:00+09:00", "counts": {}, "pushed": True, "problems": []},
             {"kind": "translate", "startedAt": "2026-11-09T16:15:00+09:00", "problems": ["번역: 검사를 통과하지 못해 올리지 않음"]},
             {"kind": "translate", "startedAt": "2026-11-08T16:15:00+09:00", "problems": ["그제의 문제"]},
+            self.WEEKLY,
         ]
         result = day_summary.summarize(runs, self.DAY)
         self.assertEqual(result["problems"], ["번역: 검사를 통과하지 못해 올리지 않음"])
         self.assertEqual(result["runs"]["translate"], 1)
+
+    def test_on_monday_the_weekend_runs_are_looked_at_too(self):
+        runs = [
+            {"kind": "collect", "startedAt": "2026-11-16T07:05:00+09:00", "counts": {}, "problems": []},
+            {"kind": "verify", "startedAt": "2026-11-16T08:20:00+09:00", "counts": {}, "pushed": True, "problems": []},
+            {"kind": "translate", "startedAt": "2026-11-14T12:15:00+09:00", "problems": ["토요일 번역의 문제"]},
+            {"kind": "translate", "startedAt": "2026-11-13T12:15:00+09:00", "problems": ["금요일 보고 뒤 번역의 문제"]},
+            {"kind": "adhoc", "startedAt": "2026-11-15T20:00:00+09:00", "problems": ["일요일 임시 작업의 문제"]},
+            {"kind": "translate", "startedAt": "2026-11-12T12:15:00+09:00", "problems": ["목요일의 문제(금요일 보고가 이미 알림)"]},
+        ]
+        result = day_summary.summarize(runs, "2026-11-16")   # 월요일
+        self.assertEqual(sorted(result["problems"]), ["금요일 보고 뒤 번역의 문제", "일요일 임시 작업의 문제", "토요일 번역의 문제"])
+
+    def test_a_missing_weekly_run_is_reported_on_tuesday(self):
+        runs = [
+            {"kind": "collect", "startedAt": "2026-11-10T07:05:00+09:00", "counts": {}, "problems": []},
+            {"kind": "verify", "startedAt": "2026-11-10T08:20:00+09:00", "counts": {}, "pushed": True, "problems": []},
+        ]
+        self.assertEqual(day_summary.summarize(runs, self.DAY)["problems"], ["어제(월요일)의 주간 작업 실행 기록이 없음"])
+        self.assertEqual(day_summary.summarize(runs + [self.WEEKLY], self.DAY)["problems"], [])
+        monday = [{**run, "startedAt": run["startedAt"].replace("2026-11-10", "2026-11-09")} for run in runs]
+        self.assertEqual(day_summary.summarize(monday, "2026-11-09")["problems"], [])   # 월요일 보고는 아직 묻지 않는다
 
 
 class SiteInfoTest(unittest.TestCase):

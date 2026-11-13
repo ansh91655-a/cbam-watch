@@ -103,6 +103,21 @@ class TestsFailedNoticeTest(unittest.TestCase):
         self.assertIn("`0832b3d`", text)
         self.assertIn("https://github.com/o/r/actions/runs/1", text)
 
+    def test_other_failed_runs_are_reported_by_name(self):
+        from tools.notify import run
+        notices = run.pending("failed", "", "owner", sha="0832b3d4c5e6f7a8", url="https://github.com/o/r/actions/runs/2", name="사이트 배포")
+        self.assertEqual(len(notices), 1)
+        mark, text = notices[0]
+        self.assertIn("문제 보고: 사이트 배포가 실패했습니다", text)
+        self.assertIn("마지막으로 배포된 모습 그대로", text)
+        self.assertIn("-0832b3d4c5e6", mark)
+        other = run.pending("failed", "", "owner", sha="0832b3d4c5e6f7a8", name="출처 수집과 원문 판 점검")
+        self.assertIn("출처 수집과 원문 판 점검이 실패했습니다", other[0][1])
+        self.assertNotEqual(other[0][0], mark)     # 실행이 다르면 표시도 다르다(같은 커밋이어도 따로 알린다)
+        # 도구 검사는 전과 같은 표시를 쓴다(이미 알린 것을 다시 알리지 않게)
+        self.assertEqual(run.pending("failed", "", "owner", sha="0832b3d4c5e6f7a8", name="도구 검사")[0][0],
+                         run.pending("tests", "", "owner", sha="0832b3d4c5e6f7a8")[0][0])
+
     def test_a_failed_site_check_names_the_screens_and_is_reported_once_per_commit(self):
         import json
         import tempfile

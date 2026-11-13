@@ -41,8 +41,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
       - name: 국문 PDF를 만드는 도구 설치
-        # 원문과 같은 자리에 번역을 앉힌 PDF를 만드는 데 쓴다(tools/pdfko). 설치가 안 되어도 사이트는 싣는다(PDF 나란히 보기만 빠진다).
+        # 원문과 같은 자리에 번역을 앉힌 PDF를 만드는 데 쓴다(tools/pdfko). 설치가 안 되어도 사이트는 싣는다.
+        # 그때는 국문 PDF를 지난 배포의 것으로 두고(아래 keep), 상태 점검이 그 사실을 알린다.
         continue-on-error: true
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
@@ -77,7 +79,15 @@ jobs:
           # 받지 못해도 그대로 간다(그때는 모두 올린다). 배포 가지는 전과 같이 커밋 하나로 덮어쓴다.
           git remote add origin "$TARGET"
           timeout 60 git fetch -q --depth=1 --filter=blob:none origin gh-pages || echo "지난 배포를 받지 못해 모두 올립니다."
+          # 이번에 국문 PDF를 만들지 못한 문서가 있으면(도구 설치 실패 따위) 지난 배포의 것을 그대로 싣는다. PDF 보기가 조용히 빠지지 않게 한다.
+          # 그렇게 둔 문서는 목록(data/laws/pdf.json의 kept)에 남고 상태 점검이 알린다.
+          (cd "$GITHUB_WORKSPACE" && python -m tools.pdfko.site keep _site) || echo "지난 배포의 국문 PDF를 가져오지 못했습니다."
           git add -A
+          # 오늘 이미 실은 것과 달라진 것이 없으면(만든 시각만 다르면) 다시 싣지 않는다. 수집이나 썸네일 실행 뒤에 따라 도는 배포가 흔히 그렇다.
+          if (cd "$GITHUB_WORKSPACE" && python -m tools.publish.unchanged _site); then
+            echo "지난 배포와 달라진 것이 없어 다시 싣지 않습니다."
+            exit 0
+          fi
           git commit -q -m "사이트 배포 $(TZ=Asia/Seoul date '+%F %H:%M')"
           # 올리기가 멈추면 끊고 다시 해 본다(tools/dev/push.sh)
           PUSH_LIMIT=300 sh "$GITHUB_WORKSPACE/tools/dev/push.sh" --force "$TARGET" gh-pages

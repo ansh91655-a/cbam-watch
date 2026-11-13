@@ -148,5 +148,61 @@ class MaskTest(unittest.TestCase):
         self.assertEqual(build._masks([sheet], tree), {0: [(9, 9, 61, 41)]})
 
 
+class KeepTest(unittest.TestCase):
+    """만들지 못한 국문 PDF는 지난 배포의 것을 그대로 싣는다(꾸러미가 없어도 도는 부분)."""
+
+    def _git(self, folder, *arguments):
+        subprocess.run(["git", "-C", str(folder), "-c", "user.name=t", "-c", "user.email=t@example.com", *arguments], check=True, capture_output=True)
+
+    def test_a_document_that_could_not_be_built_keeps_the_last_deployed_file(self):
+        import json
+
+        from tools.pdfko import site
+
+        with tempfile.TemporaryDirectory() as folder:
+            last, out = pathlib.Path(folder) / "last", pathlib.Path(folder) / "site"
+            for name, body in (("pdf/a-ko.pdf", "old a"), ("pdf/b-ko.pdf", "old b"), ("pdf/c-ko.pdf", "old c")):
+                (last / name).parent.mkdir(parents=True, exist_ok=True)
+                (last / name).write_text(body, encoding="utf-8")
+            entry = lambda name: {"pages": 1, "ko": f"pdf/{name}-ko.pdf", "en": f"files/{name}.pdf"}
+            (last / "data/laws").mkdir(parents=True)
+            (last / "data/laws/pdf.json").write_text(json.dumps({"docs": {name: entry(name) for name in "abc"}}), encoding="utf-8")
+            self._git(last, "init", "-q", "-b", "gh-pages")
+            self._git(last, "add", "-A")
+            self._git(last, "commit", "-q", "-m", "last")
+
+            # 이번에는 a만 만들어졌고 b는 만들지 못했다. c는 원문이 없어져 더는 싣지 않는 문서다
+            (out / "pdf").mkdir(parents=True)
+            (out / "pdf/a-ko.pdf").write_text("new a", encoding="utf-8")
+            (out / "files").mkdir()
+            for name in "ab":
+                (out / f"files/{name}.pdf").write_text("original", encoding="utf-8")
+            (out / "data/laws").mkdir(parents=True)
+            listing = out / "data/laws/pdf.json"
+            listing.write_text(json.dumps({"docs": {"a": entry("a")}, "wanted": 2, "failed": ["b"], "tools": True}), encoding="utf-8")
+            self._git(out, "init", "-q", "-b", "gh-pages")
+            self._git(out, "remote", "add", "origin", str(last))
+            self._git(out, "fetch", "-q", "origin", "gh-pages")
+
+            self.assertEqual(site.keep(out), ["b"])
+            now = json.loads(listing.read_text(encoding="utf-8"))
+            self.assertEqual((sorted(now["docs"]), now["kept"]), (["a", "b"], ["b"]))
+            self.assertEqual(((out / "pdf/a-ko.pdf").read_text(encoding="utf-8"), (out / "pdf/b-ko.pdf").read_text(encoding="utf-8")), ("new a", "old b"))
+            self.assertFalse((out / "pdf/c-ko.pdf").exists())
+            self.assertEqual(site.keep(out), [])     # 다 찼으면 더 하지 않는다
+
+    def test_nothing_is_kept_when_there_is_no_last_deployment(self):
+        import json
+
+        from tools.pdfko import site
+
+        with tempfile.TemporaryDirectory() as folder:
+            out = pathlib.Path(folder)
+            (out / "data/laws").mkdir(parents=True)
+            (out / "data/laws/pdf.json").write_text(json.dumps({"docs": {}, "wanted": 3, "failed": [], "tools": False}), encoding="utf-8")
+            self._git(out, "init", "-q", "-b", "gh-pages")
+            self.assertEqual(site.keep(out), [])
+
+
 if __name__ == "__main__":
     unittest.main()

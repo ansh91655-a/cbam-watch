@@ -1,7 +1,8 @@
 # 자동 실행과 시험이 쓰는 파이썬 꾸러미. 워크플로는 모두 이 파일로 설치한다(작업 환경에만 깔려 있어 시험이 통과하는 일을 막는다).
 # 프로그램의 대부분은 표준 라이브러리만 쓴다. 아래는 그림과 PDF를 다루는 도구가 쓴다.
-pillow      # tools/thumbs: 미리보기 그림 줄이기
-pypdf       # tools/archive/fulltext: 이사회 문서의 본문
-pdfplumber  # tools/archive/fourcolumn: 네 칸 대조 문서를 칸별로 읽기
-pikepdf     # tools/pdfko: 원문 PDF의 꼬리표(짜임) 읽기, 국문 PDF 만들기
-reportlab   # tools/pdfko/typeset: 국문 PDF에 글자 찍기
+# 판을 못박아 둔다: 새 판이 나오며 자동 실행이 어느 날 갑자기 달라지거나 깨지지 않게 한다. 올릴 때는 여기를 고치고 sh tools/dev/check.sh로 확인한다.
+pillow==13.0.0       # tools/thumbs: 미리보기 그림 줄이기
+pypdf==7.0.1         # tools/archive/fulltext: 이사회 문서의 본문
+pdfplumber==0.11.10  # tools/archive/fourcolumn: 네 칸 대조 문서를 칸별로 읽기. tools/pdfko/glyphs가 쓰는 pdfminer.six도 함께 깔린다
+pikepdf==10.18.1     # tools/pdfko: 원문 PDF의 꼬리표(짜임) 읽기, 국문 PDF 만들기
+reportlab==5.1.0     # tools/pdfko/typeset: 국문 PDF에 글자 찍기

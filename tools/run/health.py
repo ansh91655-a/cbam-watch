@@ -17,12 +17,64 @@ from tools.run import articles_health, cn_health, laws_health, reference_health,
 FAIL_LIMIT = 3  # 출처를 이만큼 이어서 읽지 못하면 문제로 본다
 
 
-def _git(*args):
+LAG_HOURS = 3   # 사이트에 실릴 것이 main에 올라간 뒤 이만큼 지나도록 배포가 없으면 문제로 본다
+SITE_PATHS = ["site", "data", "stamps", ":(exclude)data/laws-ko"]  # 바뀌면 사이트를 다시 싣는 곳(.github/workflows/pages.yml)
+
+
+def _run(*args, limit=60):
+    """git을 돌려 (됐는가, 출력)을 돌려준다."""
     try:
-        done = subprocess.run(["git", *args], capture_output=True, timeout=60)
-        return done.stdout.decode("utf-8", "replace").strip()
+        done = subprocess.run(["git", *args], capture_output=True, timeout=limit)
+        return done.returncode == 0, done.stdout.decode("utf-8", "replace").strip()
     except Exception:
-        return ""
+        return False, ""
+
+
+def _git(*args):
+    return _run(*args)[1]
+
+
+def _deployed():
+    """배포 가지의 모습: (읽었는가, 마지막 배포 시각, 국문 PDF 목록 또는 None).
+
+    배포 가지에는 문서 사본과 PDF가 150MB쯤 들어 있다. 시각과 작은 목록만 보면 되므로 큰 파일은 받지 않는다.
+    받지 못하면 읽지 못한 것으로 돌려준다(앞서 다른 것을 받으며 남은 FETCH_HEAD를 배포로 잘못 읽지 않는다).
+    """
+    ok, _ = _run("fetch", "--depth", "1", "--filter=blob:limit=200k", deploy_remote(), "gh-pages", limit=180)
+    if not ok:
+        return False, "", None
+    try:
+        listing = json.loads(_git("show", "FETCH_HEAD:data/laws/pdf.json"))
+    except ValueError:
+        listing = None
+    return True, _git("log", "-1", "--format=%cI", "FETCH_HEAD"), listing
+
+
+def _pdf_problems(listing):
+    """국문 PDF 나란히 보기가 빠졌거나 지난 것으로 남은 문서."""
+    if not isinstance(listing, dict) or "wanted" not in listing:
+        return []  # 목록에 실을 수를 적기 전의 배포
+    problems = []
+    shown, wanted, kept = len(listing.get("docs", {})), int(listing.get("wanted", 0)), listing.get("kept", []) or []
+    if shown < wanted:
+        problems.append(f"국문 PDF 나란히 보기: 문서 {wanted}건 가운데 {shown}건만 실림(빠진 {wanted - shown}건은 화면에서 PDF 보기가 나오지 않음)")
+    if kept:
+        problems.append(f"국문 PDF {len(kept)}건을 이번 배포에서 만들지 못해 지난 배포의 것을 그대로 실음({', '.join(kept)[:120]}). "
+                        + ("배포 실행의 도구 설치가 실패함" if listing.get("tools") is False else "만들다가 오류가 남"))
+    return problems
+
+
+def _lag_problem(deployed):
+    """사이트에 실릴 것이 올라간 지 오래인데 배포가 그보다 앞서 있으면 알린다. 기록이 얕아 알 수 없으면 넘어간다."""
+    changed = _git("log", "-1", "--format=%cI", "--", *SITE_PATHS)
+    try:
+        last, live = datetime.datetime.fromisoformat(changed), datetime.datetime.fromisoformat(deployed)
+    except ValueError:
+        return []
+    waited = (now_kst() - last).total_seconds() / 3600
+    if live < last and waited >= LAG_HOURS:
+        return [f"사이트 배포가 밀림: 실릴 것이 {last.astimezone(KST):%m-%d %H:%M}에 올라갔으나 마지막 배포는 {live.astimezone(KST):%m-%d %H:%M}임({waited:.0f}시간째)"]
+    return []
 
 
 def _kst_date(iso_text):
@@ -91,8 +143,7 @@ def report():
     claude = read_json("collected/claude-status.json", {"sources": {}})
     originals = read_json("originals/state.json", {})
     items = read_json("data/items.json", {"items": []})["items"]
-    _git("fetch", "--depth", "1", deploy_remote(), "gh-pages")  # 사이트만 싣는 저장소를 따로 두면 그 저장소의 배포 가지를 본다
-    deployed = _git("log", "-1", "--format=%cI", "FETCH_HEAD")
+    reached, deployed, pdf_listing = _deployed()  # 사이트만 싣는 저장소를 따로 두면 그 저장소의 배포 가지를 본다
     collect_today = str(status.get("checkedAt", "")).startswith(day)
     deployed_today = _kst_date(deployed) == day
 
@@ -105,9 +156,13 @@ def report():
     problems += _price_problems(prices)
     switched_off = {source.get("url") for source in registry if source.get("collector") == "off"}  # 이미 수집에서 뺀 출처는 다시 알리지 않는다
     problems += _robots_problems(day, [(url, why) for url, why in robots.blocked_today(day) if url not in switched_off])
+    if not reached:
+        problems.append("배포 가지를 읽지 못해 사이트가 제대로 실렸는지 확인하지 못함(잠시 뒤 다시 확인해야 함)")
+    else:
+        problems += _pdf_problems(pdf_listing) + _lag_problem(deployed)
     if workday:
         problems += _originals_problems(originals, day)
-        if not deployed_today:
+        if reached and not deployed_today:
             problems.append(f"사이트가 오늘 다시 배포되지 않음(마지막 {deployed or '알 수 없음'})")
 
     rule_problems, rule_counts = rules_health.problems(day, workday)
@@ -130,6 +185,7 @@ def report():
         "originalsUnreachable": int(originals.get("unreachableCount", 0) or 0),
         "siteDeployedAt": deployed,
         "siteDeployedToday": deployed_today,
+        "sitePdfDocs": len((pdf_listing or {}).get("docs", {})) if reached else None,
         "prices": len(prices.get("prices", [])),
         "publishedItems": len(items),
         # 지난 소식을 한꺼번에 채운 항목(backfill)은 그날의 새 소식으로 세지 않는다

@@ -4,7 +4,8 @@
 쓰는 법: python -m tools.run.day_summary --db-dir /tmp/run/db [--date 2026-11-10]
 - problems: 사람에게 알릴 문제(실행 기록이 없음, 각 실행이 적은 문제, 저장소에 올리지 못함).
   수집·작성(collect), 검증·게시(verify), 임시 작업(adhoc), 번역(translate) 실행이 적은 문제를 모은다.
-  번역 실행은 보고가 나간 뒤에 돌므로 전날 것까지 본다.
+  번역과 임시 작업은 보고가 나간 뒤에도 돌므로 지난 보고 뒤의 것까지 본다: 전날, 월요일에는 금요일부터(주말에 돈 것이 빠지지 않게).
+  화요일에는 전날(월요일)의 주간 작업(weekly) 기록이 있는지도 본다(주간 작업은 월요일 보고보다 늦게 끝날 수 있다).
 - finalHolds: 사람이 봐야 하는 보류(원문과 지금 화면이 다른 것, 세 번째 검증에서도 원문을 열지 못한 것, 다시 쓴 초안이 또 보류된 것)
 - retryHolds: 다음 수집·작성 실행이 다시 쓰거나(글을 고치면 풀리는 사유) 그대로 다시 낼(원문을 열지 못한 것) 보류의 수. 알리지 않는다
 """
@@ -21,8 +22,9 @@ AGAIN = "다시 쓴 초안도 보류"
 NO_COLLECT = "수집·작성 실행 기록이 없음"
 NO_VERIFY = "검증·게시 실행 기록이 없음"
 NOT_PUSHED = "게시 데이터를 저장소에 올리지 못함"
+NO_WEEKLY = "어제(월요일)의 주간 작업 실행 기록이 없음"
 # 이 프로그램이 정해 둔 문구. 실행이 직접 적은 글과 달리 공개 보고 파일에 그대로 실어도 된다.
-FIXED_PROBLEMS = {NO_COLLECT, NO_VERIFY, NOT_PUSHED}
+FIXED_PROBLEMS = {NO_COLLECT, NO_VERIFY, NOT_PUSHED, NO_WEEKLY}
 
 
 def is_final(hold):
@@ -36,15 +38,20 @@ def summarize(runs, day):
     mine = [run for run in runs if str(run.get("startedAt", "")).startswith(day)]
     collect = [run for run in mine if run.get("kind") == "collect"]
     verify = [run for run in mine if run.get("kind") == "verify"]
-    adhoc = [run for run in mine if run.get("kind") == "adhoc"]
-    yesterday = (datetime.date.fromisoformat(day) - datetime.timedelta(days=1)).isoformat()
-    translate = [run for run in runs if run.get("kind") == "translate" and str(run.get("startedAt", ""))[:10] in (day, yesterday)]
+    date = datetime.date.fromisoformat(day)
+    back = 3 if date.weekday() == 0 else 1  # 지난 보고가 나간 날까지: 월요일에는 금요일, 그 밖에는 전날
+    since = {(date - datetime.timedelta(days=step)).isoformat() for step in range(back + 1)}
+    adhoc = [run for run in runs if run.get("kind") == "adhoc" and str(run.get("startedAt", ""))[:10] in since]
+    translate = [run for run in runs if run.get("kind") == "translate" and str(run.get("startedAt", ""))[:10] in since]
     problems = []
-    if datetime.date.fromisoformat(day).weekday() < 5:
+    if date.weekday() < 5:
         if not collect:
             problems.append(NO_COLLECT)
         if not verify:
             problems.append(NO_VERIFY)
+    monday = (date - datetime.timedelta(days=1)).isoformat()
+    if date.weekday() == 1 and not any(run.get("kind") == "weekly" and str(run.get("startedAt", "")).startswith(monday) for run in runs):
+        problems.append(NO_WEEKLY)
     for run in collect + verify + adhoc + translate:
         for problem in run.get("problems", []) or []:
             text = str(problem).strip()

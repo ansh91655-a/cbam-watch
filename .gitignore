@@ -7,3 +7,4 @@ _console/
 node_modules/
 .work/
 .cache/
+.scratch/

@@ -5,10 +5,12 @@
   python -m tools.notify.run --event watch   평일 오전에: 오늘 보고 파일이 없으면 적는다(Claude 쪽 실행이 멈춘 경우)
   python -m tools.notify.run --event test --message "글"   알림 시험
   python -m tools.notify.run --event tests --sha <커밋> --url <실행 주소>   도구 검사가 실패했을 때
+  python -m tools.notify.run --event failed --name "<실행 이름>" --sha <커밋> --url <실행 주소>   GitHub 쪽 자동 실행(수집, 배포, 썸네일, 도구 검사)이 실패했을 때
   python -m tools.notify.run --event sitecheck --sha <커밋> --url <실행 주소> --report <결과 파일>   화면 점검이 실패했을 때
   --dry-run을 붙이면 적을 글만 출력한다.
 """
 import argparse
+import hashlib
 import json
 import os
 import sys
@@ -18,10 +20,13 @@ from tools.notify import github, messages, reports
 from tools.run import health
 
 
-def pending(event, message, owner, sha="", url="", report=""):
+def pending(event, message, owner, sha="", url="", report="", name=""):
     """(표시, 글)의 목록. 표시가 이미 이슈에 있으면 다시 적지 않는다."""
-    if event == "tests":
+    if event == "tests" or (event == "failed" and name == "도구 검사"):
         return [(messages.marker("tests", sha[:12] or "unknown"), messages.tests_failed(sha, url, owner))]
+    if event == "failed":  # 실행마다 한 번(같은 커밋에서 다시 돌려 또 실패해도 다시 적지 않는다)
+        code = hashlib.sha1(name.encode("utf-8")).hexdigest()[:8]
+        return [(messages.marker("failed", f"{code}-{sha[:12] or 'unknown'}"), messages.workflow_failed(name or "자동 실행", sha, url, owner))]
     if event == "sitecheck":
         return [(messages.marker("sitecheck", sha[:12] or "unknown"), messages.sitecheck_failed(sha, url, owner, read_json(report, None) if report else None))]
     day = today()
@@ -43,7 +48,8 @@ def pending(event, message, owner, sha="", url="", report=""):
 
 def main(argv):
     parser = argparse.ArgumentParser()
-    parser.add_argument("--event", choices=["push", "watch", "test", "tests", "sitecheck"], required=True)
+    parser.add_argument("--event", choices=["push", "watch", "test", "tests", "sitecheck", "failed"], required=True)
+    parser.add_argument("--name", default="")
     parser.add_argument("--message", default="")
     parser.add_argument("--sha", default="")
     parser.add_argument("--url", default="")
@@ -51,7 +57,7 @@ def main(argv):
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args(argv)
     owner = os.environ.get("GITHUB_REPOSITORY_OWNER", "")
-    notices = pending(args.event, args.message, owner, args.sha, args.url, args.report)
+    notices = pending(args.event, args.message, owner, args.sha, args.url, args.report, args.name)
     if args.dry_run:
         for mark, text in notices:
             print(text + "\n" + mark + "\n")

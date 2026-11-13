@@ -37,6 +37,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
       - name: 자동 시험
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils   # PDF를 읽는 시험(tests/test_units)이 pdftotext를 쓴다

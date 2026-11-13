@@ -19,4 +19,16 @@
 .pdf-view[data-mode="en"] .pdf-sheet, .pdf-view[data-mode="ko"] .pdf-sheet { width: min(100%, calc(980px * var(--pdf-zoom, 1))); }
 .pdf-view[data-mode="en"] .pdf-sheet[data-side="ko"], .pdf-view[data-mode="ko"] .pdf-sheet[data-side="en"] { display: none; }
 .pdf-view[data-mode="en"] .pdf-heads, .pdf-view[data-mode="ko"] .pdf-heads { display: none; }
-@media (max-width: 760px) { .pdf-bar { top: 56px; padding: 8px 10px; } .pdf-row, .pdf-pages { gap: 8px; } .pdf-heads { gap: 8px; } }
+@media (max-width: 760px) {
+  .pdf-row, .pdf-pages { gap: 8px; }
+  .pdf-heads { gap: 8px; }
+  /* 좁은 화면에서는 도구 줄이 쪽을 가리지 않게 한 줄로 줄인다. 이름표는 화면 낭독기에만 들린다 */
+  .pdf-bar { top: 56px; padding: 6px 8px; gap: 6px 8px; align-items: center; }
+  .pdf-bar .field { gap: 0; }
+  .pdf-bar .field > span:first-child { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .pdf-bar .seg button { min-height: 40px; padding-inline: 10px; }
+  .pdf-zooms, .pdf-pick { height: 40px; gap: 2px; }
+  .pdf-zooms .btn { min-width: 40px; height: 40px; }
+  .pdf-zoom { min-width: 2.9em; font-size: var(--fs-s); }
+  .pdf-pick input { width: 3.4em; height: 40px; padding-inline: 6px; }
+}

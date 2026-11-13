@@ -11,7 +11,18 @@ const LIMIT_MS = 6000;   // 계속 움직이는 화면이라도 이만큼 지나
 export async function launch() {
   const executablePath = CHROME.find((path) => path && existsSync(path));
   if (!executablePath) throw new Error("크롬을 찾지 못했습니다. CHROME_PATH에 실행 파일의 경로를 적어 주세요.");
-  return puppeteer.launch({ executablePath, headless: true, args: ["--no-sandbox", "--disable-gpu", "--hide-scrollbars"] });
+  // 러너가 바쁠 때 브라우저가 제때 뜨지 않는 일이 있다(2026-11에 한 번). 화면의 문제가 아니므로 조금 쉬었다가 다시 띄워 본다.
+  let failure;
+  for (let attempt = 1; attempt <= 3; attempt += 1) {
+    try {
+      return await puppeteer.launch({ executablePath, headless: true, args: ["--no-sandbox", "--disable-gpu", "--hide-scrollbars"], timeout: 60000 });
+    } catch (error) {
+      failure = error;
+      console.error(`브라우저 띄우기 ${attempt}번째 실패: ${String(error.message).slice(0, 160)}`);
+      await new Promise((resolve) => setTimeout(resolve, 5000 * attempt));
+    }
+  }
+  throw failure;
 }
 
 // 너비를 정한 새 탭. 움직임을 줄인 설정으로 열어, 그리는 중간 모습이 아니라 다 그린 모습을 본다.

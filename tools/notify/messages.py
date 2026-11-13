@@ -84,16 +84,38 @@ def test(text, owner):
     ])
 
 
-def tests_failed(sha, url, owner):
-    """도구 검사가 실패했을 때의 글. 사이트는 마지막으로 배포된 모습 그대로이고, 고치기 전까지 도구가 잘못 돌 수 있다."""
+# 실패했을 때 무엇이 멈추는지: 실행 이름 → 한 줄 설명
+FAILED = {
+    "도구 검사": "사이트에 실린 내용은 그대로이지만, 고치기 전까지 자동 실행의 도구가 잘못 돌 수 있습니다.",
+    "출처 수집과 원문 판 점검": "오늘의 새 소식 후보와 원문 판 점검이 빠졌을 수 있습니다. 다음 수집 때까지 사이트에 새 자료가 실리지 않을 수 있습니다.",
+    "사이트 배포": "사이트는 마지막으로 배포된 모습 그대로입니다. 그 뒤에 올라온 소식과 번역은 다음 배포가 될 때까지 보이지 않습니다.",
+    "썸네일 만들기": "새 소식의 미리보기 그림이 만들어지지 않았습니다. 소식 자체는 그대로 실립니다.",
+}
+
+
+def workflow_failed(name, sha, url, owner):
+    """GitHub 쪽 자동 실행(도구 검사, 수집, 배포, 썸네일)이 실패했을 때의 글."""
     lines = [
-        f"{_hello(owner)}**문제 보고: 도구 검사가 실패했습니다**",
+        f"{_hello(owner)}**문제 보고: {name}{_particle(name)} 실패했습니다**",
         "",
-        f"커밋 `{sha[:7] or '알 수 없음'}`을 올린 뒤의 자동 검사가 실패로 끝났습니다. 사이트에 실린 내용은 그대로이지만, 고치기 전까지 자동 실행의 도구가 잘못 돌 수 있습니다.",
+        f"커밋 `{sha[:7] or '알 수 없음'}`에서 돈 자동 실행 '{name}'{_particle(name, '이', '가')} 실패로 끝났습니다. {FAILED.get(name, '')}".rstrip(),
     ]
     if str(url).startswith("https://"):
         lines += ["", f"실행 기록: {url}"]
     return "\n".join(lines)
+
+
+def _particle(word, closed="이", open_="가"):
+    """받침에 맞는 조사."""
+    last = word.rstrip()[-1:]
+    if "가" <= last <= "힣":
+        return closed if (ord(last) - 0xAC00) % 28 else open_
+    return open_
+
+
+def tests_failed(sha, url, owner):
+    """도구 검사가 실패했을 때의 글. 사이트는 마지막으로 배포된 모습 그대로이고, 고치기 전까지 도구가 잘못 돌 수 있다."""
+    return workflow_failed("도구 검사", sha, url, owner)
 
 
 def sitecheck_failed(sha, url, owner, report=None):

@@ -29,6 +29,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
       - name: 만들 그림 고르기
         id: plan
         run: |
@@ -39,7 +40,8 @@ jobs:
       - name: 원문 화면 찍기
         if: steps.plan.outputs.count != '0'
         run: |
-          npm install --no-save --no-package-lock --silent puppeteer-core
+          # 화면 점검(tools/sitecheck)이 못박아 둔 것과 같은 판을 쓴다
+          npm install --no-save --no-package-lock --silent "puppeteer-core@$(node -p "require('./tools/sitecheck/package-lock.json').packages['node_modules/puppeteer-core'].version")"
           # 화면을 여는 브라우저의 이름표는 수집기와 같은 것을 쓴다(이 도구의 이름과 주소가 들어 있다)
           export CBAM_AGENT="$(python -c 'from tools.common.net import USER_AGENT; print(USER_AGENT)')"
           node tools/thumbs/shots.mjs /tmp/thumbs/todo.json /tmp/thumbs/raw
