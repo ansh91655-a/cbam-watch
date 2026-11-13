@@ -23,7 +23,8 @@ NOTES = frozenset({"Note", "Footnote"})
 CONTAINERS = frozenset({"Document", "DocumentFragment", "Part", "Art", "Sect", "Div", "Aside", "L", "Table", "TR", "THead", "TBody", "TFoot"})
 LOOSE = "loose"     # 구조 트리에 없는 글자를 쪽마다 모아 두는 이름
 OPEN, CLOSE = "\ue000", "\ue001"                       # 위첨자의 앞뒤에 잠시 붙여 두는 표시
-MARKED = re.compile(f"([^\\s{OPEN}{CLOSE}]*){OPEN}([^{CLOSE}]*){CLOSE}")
+MARKED = re.compile(f"([^\\s{OPEN}{CLOSE}]*){OPEN}([^{CLOSE}]*){CLOSE}(?=(\\w)?)")
+MEASURES = {"m", "Nm", "cm", "mm", "km", "dm"}        # 뒤에 2나 3이 올라붙으면 넓이·부피의 단위인 낱말
 RAISED = re.compile(r"^[0-9a-zA-Z*†‡]{1,3}$")          # 위첨자로 붙은 각주 번호의 꼴
 
 
@@ -339,18 +340,38 @@ def read(path):
 
 
 def _settle(units):
-    """위첨자 표시를 푼다: 문서에 그 번호의 각주가 있고 앞 낱말이 단위나 수가 아니면 각주 번호("[4]")로, 아니면 그냥 글자로(m3, 10-6) 둔다."""
-    labels = {unit.get("label") for unit in units if unit["kind"] == "note"}
+    """위첨자 표시를 푼다: 각주 번호이면 "[4]"로, 아니면 그냥 글자로(m3, 10-6) 둔다.
 
-    def mark(hit):
-        before, raised = hit.group(1), hit.group(2)
-        tail = re.search(r"[0-9A-Za-z]*$", before.rstrip("’'\")”.,;:)]")).group(0)
-        power = not before or tail[-1:].isdigit() or (tail.isalpha() and len(tail) <= 2)
-        return f"{before}[{raised}]" if raised in labels and not power else before + raised
+    각주 번호로 보는 것은 문서에 그 번호의 각주가 있을 때뿐이다. 그 가운데
+    - 뒤 글자에 붙은 위첨자(14C)는 앞 낱말에서 떼어 글자로 두고, 넓이·부피의 단위(m3, Nm3)와 식 안의 것도 글자로 둔다.
+    - 그 각주가 같은 쪽이나 바로 앞뒤 쪽에 있으면 각주 번호다. 수나 닫는 괄호 뒤에 붙은 것(2025/2621[78], (RED II)[16])도 이것으로 가린다.
+    - 각주가 먼 쪽에 있으면, 앞 낱말이 수이거나 한두 글자일 때는 글자로(10의 거듭제곱), 그 밖에는 각주 번호로 본다(쪽마다 되풀이되는 표의 머리칸).
+    """
+    notes = collections.defaultdict(set)
+    for unit in units:
+        if unit["kind"] == "note":
+            notes[unit.get("label")].add(unit["page"])
+
+    def settle(unit):
+        last = max([unit["page"]] + [page + 1 for page, _ in unit.get("marks", [])])
+
+        def mark(hit):
+            before, raised, after = hit.group(1), hit.group(2), hit.group(3)
+            if after:
+                return f"{before} {raised}" if before else raised
+            tail = re.search(r"\w*$", before.rstrip("’'\")”.,;:)]")).group(0)
+            pages = notes.get(raised)
+            if not pages or not before or unit["kind"] == "formula" or (tail in MEASURES and raised in ("2", "3")):
+                return before + raised
+            near = any(unit["page"] - 1 <= page <= last + 1 for page in pages)
+            vague = not tail or tail[-1:].isdigit() or len(tail) <= 2
+            return f"{before}[{raised}]" if near or not vague else before + raised
+
+        return MARKED.sub(mark, unit["text"]).replace(OPEN, "").replace(CLOSE, "")
 
     for unit in units:
         if OPEN in unit["text"]:
-            unit["text"] = MARKED.sub(mark, unit["text"]).replace(OPEN, "").replace(CLOSE, "")
+            unit["text"] = settle(unit)
         if OPEN in unit.get("label", ""):
             unit["label"] = unit["label"].replace(OPEN, "").replace(CLOSE, "")
     return units

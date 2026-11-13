@@ -1,6 +1,6 @@
 """번역한 문단을 원문과 견줘 본다. 기계로 가릴 수 있는 잘못만 잡는다(사람의 감수를 대신하지 않는다).
 
-막는 것(hard): 빈 번역, 옮기지 않은 글, 원문의 수가 빠진 것, 부속서·장의 로마 숫자가 빠진 것, 용어집이 쓰지 않기로 한 표기,
+막는 것(hard): 빈 번역, 옮기지 않은 글, 원문의 수가 빠진 것, 각주 표시가 빠진 것, 부속서·장의 로마 숫자가 빠진 것, 용어집이 쓰지 않기로 한 표기,
             원문에 핵심 용어(용어집의 core)가 나왔는데 번역에 그 국문 표기가 없는 것(모든 법령에서 같은 낱말을 쓰게 하려는 것).
 알리는 것(soft): 원문에 없는 수가 번역에 있는 것, 길이가 지나치게 다른 것.
 
@@ -10,7 +10,8 @@
 핵심 용어가 다른 뜻으로 쓰인 자리(installation of wind turbines의 '설치')는 sources/translation.json의 senses에 적힌 표기를 쓰면 막지 않고 알린다.
 용어집이 쓰지 않기로 한 표기도, 원문에 그 표기가 맞는 다른 낱말이 있으면(accuracy and precision의 '정밀도', the CBAM rules의 'CBAM 규칙') senses를 보고 알리기만 한다.
 옮길 글이 없어 원문대로 둔 줄은 '옮기지 않음'으로 막지 않는다: 식(E = eec + el – esca, EFheat,default = 62,3 t CO2e / TJ)과 화면에 뜨는 번호 붙은 알림 글(VAL748 The attribute …).
-PDF에서 각주 번호가 수 뒤에 붙어 버린 것(Equation 5516 = Equation 55와 각주 16)은 번역이 "55[16]"으로 갈라 적으면 수가 빠진 것으로 보지 않는다.
+원문의 각주 표시("[16]")는 번역에도 같은 수만큼 있어야 한다(없으면 막는다). 수 뒤에 붙은 각주 번호는 원문을 읽을 때 갈라 둔다(tools.pdfko.units):
+번역이 수를 제멋대로 가르면(2551 → 255[1]) 수가 빠진 것으로 막는다.
 주소에는 앞머리 없이 적은 사이트 이름(example.com), 전자우편 주소, 파일 이름(….xlsx)도 든다.
 등록부 안내서(screen)에서는 따옴표 안의 화면 이름만 늘어놓은 줄(“Start Request for change”.)도 원문대로 둘 수 있다.
 그래도 남는 한두 문단은 sources/translation.json의 excused에 열쇠와 까닭을 적어 예외로 둔다: 그 문단은 용어와 '옮기지 않음'으로는 막지 않고 알리기만 한다.
@@ -23,6 +24,7 @@ from tools.check import term_check
 from tools.laws import plan, terms
 
 DIGITS = re.compile(r"\d+")
+NOTE_MARK = re.compile(r"\[(\d{1,3})\]")           # 각주 표시
 HANGUL = re.compile(r"[가-힣]")
 WORD = re.compile(r"(?<![A-Za-z])[a-z]{4,}")  # 소문자로 시작하는 낱말. 사람 이름이나 약어만 있는 줄(Ursula VON DER LEYEN)과 가린다
 LETTERS = re.compile(r"[A-Za-z]{2,}")
@@ -67,11 +69,6 @@ def as_is(text, screen=False):
     return bool(screen and bare != text and not WORD.search(bare))
 
 
-def _joined(number, got, korean):
-    """각주 번호가 뒤에 붙어 버린 수인가: 앞쪽이 번역의 수에 있고 뒤쪽이 "[번호]"로 적혀 있으면 그렇다(5516 → 55와 [16])."""
-    return any(number[:cut] in got and f"[{number[cut:]}]" in korean for cut in range(1, len(number)) if len(number) - cut <= 3)
-
-
 def problems(source, korean, screen=False, excused=False):
     """{"hard": [막는 까닭], "soft": [알릴 것]}. screen은 등록부 안내서의 문단, excused는 예외로 둔 문단(tools.laws.plan.excused)."""
     global _terms
@@ -83,12 +80,14 @@ def problems(source, korean, screen=False, excused=False):
     if WORD.search(plain) and not HANGUL.search(korean) and not as_is(plain, screen):
         hard.append("국문으로 옮기지 않음")
     wanted, got = _numbers(source), _numbers(korean)
-    missing = sorted(number for number in (wanted - got).elements() if not _joined(number, got, korean))
+    missing = sorted((wanted - got).elements())
     if missing:
         hard.append("원문의 수가 빠짐: " + ", ".join(missing[:8]))
+    marks = sorted((collections.Counter(NOTE_MARK.findall(source)) - collections.Counter(NOTE_MARK.findall(korean))).elements(), key=int)
+    if marks:
+        hard.append("각주 표시가 빠짐: " + ", ".join(f"[{mark}]" for mark in marks[:8]))
     spelled = {str(value) for word, value in SPELLED.items() if re.search(rf"\b{word}\b", source.lower())}
-    split = {part for number in wanted if _joined(number, got, korean) for cut in range(1, len(number)) for part in (number[:cut], number[cut:])}
-    extra = sorted(number for number in (got - wanted).elements() if number not in spelled and number not in split)
+    extra = sorted(number for number in (got - wanted).elements() if number not in spelled)
     if extra:
         soft.append("원문에 없는 수: " + ", ".join(extra[:8]))
     lost = sorted({numeral for numeral in ROMAN_REF.findall(source) if not re.search(rf"(?<![A-Za-z]){numeral}(?![A-Za-z])", korean)})

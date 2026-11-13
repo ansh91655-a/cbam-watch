@@ -170,12 +170,17 @@ class CheckTest(unittest.TestCase):
         self.assertIn("국문으로 옮기지 않음", check.problems("where x = the number of installations", "where x = the number of installations")["hard"])
         self.assertIn("국문으로 옮기지 않음", check.problems("The attribute has an invalid value.", "The attribute has an invalid value.")["hard"])
 
-    def test_a_footnote_number_stuck_to_a_number_may_be_split_off(self):
-        # PDF에서 Equation 55 뒤의 각주 16이 붙어 5516이 되었다. 번역이 55[16]으로 갈라 적으면 수가 빠진 것이 아니다
-        source = "The parameters are given in the Equation 5516 as follows:"
+    def test_footnote_marks_must_be_kept_and_numbers_must_not_be_split(self):
+        # 각주 표시는 원문을 읽을 때 갈라 둔다(Equation 55[16]). 번역에도 그 표시가 있어야 한다
+        source = "The parameters are given in the Equation 55[16] as follows:"
         self.assertEqual(check.problems(source, "매개변수는 다음과 같이 식 55[16]에 주어져 있다."), {"hard": [], "soft": []})
-        self.assertIn("원문의 수가 빠짐: 5516", check.problems(source, "매개변수는 다음과 같이 식 55에 주어져 있다.")["hard"])
-        self.assertIn("원문의 수가 빠짐: 5516", check.problems(source, "매개변수는 다음과 같이 식 56[16]에 주어져 있다.")["hard"])
+        self.assertIn("각주 표시가 빠짐: [16]", check.problems(source, "매개변수는 다음과 같이 식 55(16)에 주어져 있다.")["hard"])
+        self.assertIn("각주 표시가 빠짐: [16]", check.problems(source, "매개변수는 다음과 같이 식 55 16에 주어져 있다.")["hard"])
+        # 표시가 두 번 나오면 번역에도 두 번 있어야 한다
+        self.assertIn("각주 표시가 빠짐: [2]", check.problems("The act[2] and the rule[2] apply.", "그 법[2]과 그 규칙이 적용된다.")["hard"])
+        # 번역이 수를 제멋대로 가르면 수가 빠진 것이다(2551 → 255[1])
+        wrong = check.problems("Regulation (EU) 2025/2551) ([4]) applies.", "규정 (EU) 2025/255[1])([4])이 적용된다.")
+        self.assertIn("원문의 수가 빠짐: 2551", wrong["hard"])
 
     def test_a_wording_the_glossary_avoids_is_let_through_where_the_source_means_it(self):
         # 용어집은 accuracy를 '정밀도'로 옮기지 말라고 하지만, precision은 정밀도다. the CBAM rules는 CBAM 규정(Regulation)이 아니다

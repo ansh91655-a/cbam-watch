@@ -125,14 +125,22 @@ class ReadTest(unittest.TestCase):
         parts = unit_segment.parts(found["units"])
         self.assertEqual([(part["id"], part["blocks"]) for part in parts], [("sec-1", ["Goods are covered[1]", "(a) iron and steel", "[1] See Annex I."])])
 
-    def test_raised_marks_are_footnote_numbers_only_when_the_note_exists(self):
+    def test_raised_marks_are_footnote_numbers_when_their_note_is_near(self):
         from tools.pdfko import units
 
         mark = lambda text: f"{units.OPEN}{text}{units.CLOSE}"
         found = units._settle([
-            {"kind": "p", "text": f"declarant{mark('4')}, 5 m{mark('3')} and 10{mark('4')} with emissions’{mark('4')} or word{mark('9')}"},
-            {"kind": "note", "text": "A note.", "label": "4"}])
-        self.assertEqual(found[0]["text"], "declarant[4], 5 m3 and 104 with emissions’[4] or word9")
+            {"kind": "p", "page": 5, "text": f"declarant{mark('4')}, 5 m{mark('3')} and 2025/2621{mark('4')}, (RED II){mark('4')} with word{mark('9')}, by{mark('14')}C"},
+            {"kind": "note", "page": 5, "text": "A note.", "label": "4"},
+            {"kind": "note", "page": 5, "text": "Another note.", "label": "3"},
+            {"kind": "note", "page": 6, "text": "A third note.", "label": "14"},
+            {"kind": "p", "page": 40, "text": f"about 10{mark('4')} t under Code{mark('4')}"},
+            {"kind": "formula", "page": 5, "text": f"x{mark('4')}"}])
+        # 같은 쪽에 각주가 있으면 수나 닫는 괄호 뒤에 붙은 것도 각주 번호다. 단위(m3), 없는 각주(9), 뒤 글자에 붙은 것(14C)은 글자다
+        self.assertEqual(found[0]["text"], "declarant[4], 5 m3 and 2025/2621[4], (RED II)[4] with word9, by 14C")
+        # 각주가 먼 쪽에 있으면 수 뒤의 것은 거듭제곱으로, 낱말 뒤의 것은 각주 번호로 본다(쪽마다 되풀이되는 표의 머리칸)
+        self.assertEqual(found[4]["text"], "about 104 t under Code[4]")
+        self.assertEqual(found[5]["text"], "x4")     # 식 안의 것은 글자다
 
     def test_table_cells_are_placed_by_where_their_text_sits(self):
         from tools.pdfko import units
