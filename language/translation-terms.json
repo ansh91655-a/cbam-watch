@@ -4512,6 +4512,24 @@
    "ko": "증발 엔탈피",
    "from": "guide-3",
    "added": "2026-11-13"
+  },
+  {
+   "en": "calcined kaolinic clays",
+   "ko": "소성 고령토질 점토",
+   "from": "guide-5a",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "partial calcination ratio",
+   "ko": "부분 소성률",
+   "from": "guide-5a",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "integrated steel plant",
+   "ko": "일관제철소",
+   "from": "guide-5a",
+   "added": "2026-11-13"
   }
  ]
 }
