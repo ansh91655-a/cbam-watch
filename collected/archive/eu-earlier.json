@@ -1,0 +1,16 @@
+{
+ "source": "eu-earlier",
+ "note": "법령의 앞선 판. act는 법령의 번호, code는 그 판의 번호(처음 채택된 글은 법령의 번호 그대로, 통합본은 02023R0956-20251020 꼴), kind는 adopted(관보에 실린 처음 글)나 consolidated(통합본), date는 그 판의 기준일이다.",
+ "savedAt": "2026-11-13T15:17:59+09:00",
+ "entries": [
+  {
+   "act": "32023R0956",
+   "code": "32023R0956",
+   "kind": "adopted",
+   "date": "2023-05-16",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0956",
+   "lines": 1192,
+   "textPath": "collected/archive/pages/eu-earlier/32023R0956.txt"
+  }
+ ]
+}
