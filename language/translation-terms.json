@@ -4446,6 +4446,24 @@
    "ko": "하류 배출량",
    "from": "guide-3",
    "added": "2026-11-13"
+  },
+  {
+   "en": "top-down approach",
+   "ko": "하향식 접근법",
+   "from": "guide-3",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "bottom-up approach",
+   "ko": "상향식 접근법",
+   "from": "guide-3",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "zero-rate",
+   "ko": "영 처리",
+   "from": "guide-3",
+   "added": "2026-11-13"
   }
  ]
 }
