@@ -4308,6 +4308,12 @@
    "ko": "배출량 보고서 서식",
    "from": "guide-5b",
    "added": "2026-11-13"
+  },
+  {
+   "en": "embedded indirect emissions",
+   "ko": "내재 간접배출량",
+   "from": "guide-1",
+   "added": "2026-11-13"
   }
  ]
 }
