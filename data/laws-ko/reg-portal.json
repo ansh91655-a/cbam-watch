@@ -8,6 +8,7 @@
   "013bb1fdd680": "그림 76: Simple 사용자가 등록 요청을 정정하여 다시 제출함 - 등록 요청 편집",
   "013ecc3296dd": "Action(사용 가능한 행위 설명의 목록은 다음과 같다: \"Add Emissions Information”, \"Edit Emissions Information”, \"Delete Emissions Information”",
   "0145e3f06b7c": "그림 199: 인정받은 기관과 사업자 사이의 Active(상태) 협업",
+  "0158a21e676a": "일반적인 기술 문제가 발생했다. 나중에 다시 시도한다. 문제가 계속되면 CBAM 지원 창구(customs-support@itsmtaxud.europa.eu)에 연락하여 다음을 제공한다.",
   "0172c3afc041": "“Country code where carbon price is due”(국가의 코드 목록 값 가운데 하나를 담는다).",
   "01bbf5efc36e": "요청을 보내면 인정받은 기관의 State가 “Deregistration Requested”로 바뀌며, 그 상태는 “Accredited Entity Information” 페이지에서 볼 수 있다.",
   "01d4ddc3aafc": "그림 35: O3CI 홈페이지 - 신규 사용자",
@@ -3408,11 +3409,5 @@
   "ffcc1592018e",
   "ffcfea75597a",
   "ffd06ee8c3bb"
- ],
- "held": {
-  "0158a21e676a": {
-   "tries": 3,
-   "why": "국문으로 옮기지 않음"
-  }
- }
+ ]
 }
