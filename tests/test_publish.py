@@ -375,29 +375,43 @@ class DaySummaryTest(unittest.TestCase):
         self.assertEqual(result["problems"], ["요약 보강: 웹 읽기가 되지 않음"])
         self.assertEqual(result["runs"], {"collect": 1, "verify": 1, "adhoc": 1, "translate": 0})
 
-    def test_problems_of_yesterdays_translation_run_are_reported(self):
+    def test_problems_of_runs_after_the_last_report_are_reported(self):
         runs = [
             {"kind": "collect", "startedAt": "2026-11-10T07:05:00+09:00", "counts": {}, "problems": []},
             {"kind": "verify", "startedAt": "2026-11-10T08:20:00+09:00", "counts": {}, "pushed": True, "problems": []},
-            {"kind": "translate", "startedAt": "2026-11-09T16:15:00+09:00", "problems": ["번역: 검사를 통과하지 못해 올리지 않음"]},
-            {"kind": "translate", "startedAt": "2026-11-08T16:15:00+09:00", "problems": ["그제의 문제"]},
+            {"kind": "report", "startedAt": "2026-11-09T10:05:30+09:00", "finishedAt": "2026-11-09T10:07:00+09:00", "problems": []},
+            {"kind": "translate", "startedAt": "2026-11-09T16:15:00+09:00", "finishedAt": "2026-11-09T16:25:00+09:00", "problems": ["번역: 검사를 통과하지 못해 올리지 않음"]},
+            {"kind": "translate", "startedAt": "2026-11-09T09:15:00+09:00", "finishedAt": "2026-11-09T09:25:00+09:00", "problems": ["어제 보고에 이미 실린 문제"]},
+            # 지난 보고가 도는 동안 끝난 실행: 그 보고가 보지 못했으므로 이번에 싣는다
+            {"kind": "translate", "startedAt": "2026-11-09T09:58:00+09:00", "finishedAt": "2026-11-09T10:06:10+09:00", "problems": ["보고와 엇갈려 끝난 실행의 문제"]},
             self.WEEKLY,
         ]
         result = day_summary.summarize(runs, self.DAY)
-        self.assertEqual(result["problems"], ["번역: 검사를 통과하지 못해 올리지 않음"])
-        self.assertEqual(result["runs"]["translate"], 1)
+        self.assertEqual(sorted(result["problems"]), ["번역: 검사를 통과하지 못해 올리지 않음", "보고와 엇갈려 끝난 실행의 문제"])
+        self.assertEqual(result["runs"]["translate"], 2)
 
     def test_on_monday_the_weekend_runs_are_looked_at_too(self):
         runs = [
             {"kind": "collect", "startedAt": "2026-11-16T07:05:00+09:00", "counts": {}, "problems": []},
             {"kind": "verify", "startedAt": "2026-11-16T08:20:00+09:00", "counts": {}, "pushed": True, "problems": []},
-            {"kind": "translate", "startedAt": "2026-11-14T12:15:00+09:00", "problems": ["토요일 번역의 문제"]},
-            {"kind": "translate", "startedAt": "2026-11-13T12:15:00+09:00", "problems": ["금요일 보고 뒤 번역의 문제"]},
-            {"kind": "adhoc", "startedAt": "2026-11-15T20:00:00+09:00", "problems": ["일요일 임시 작업의 문제"]},
-            {"kind": "translate", "startedAt": "2026-11-12T12:15:00+09:00", "problems": ["목요일의 문제(금요일 보고가 이미 알림)"]},
+            {"kind": "report", "startedAt": "2026-11-13T10:06:04+09:00", "finishedAt": "2026-11-13T10:06:54+09:00", "problems": ["금요일 보고가 실은 글"]},
+            {"kind": "translate", "startedAt": "2026-11-13T05:51:00+09:00", "finishedAt": "2026-11-13T06:02:00+09:00", "problems": ["금요일 아침의 문제(금요일 보고가 이미 알림)"]},
+            {"kind": "translate", "startedAt": "2026-11-13T12:15:00+09:00", "finishedAt": "2026-11-13T12:25:00+09:00", "problems": ["금요일 보고 뒤 번역의 문제"]},
+            {"kind": "translate", "startedAt": "2026-11-14T12:15:00+09:00", "finishedAt": "2026-11-14T12:20:00+09:00", "problems": ["토요일 번역의 문제"]},
+            {"kind": "adhoc", "startedAt": "2026-11-15T20:00:00+09:00", "finishedAt": "2026-11-15T20:30:00+09:00", "problems": ["일요일 임시 작업의 문제"]},
         ]
         result = day_summary.summarize(runs, "2026-11-16")   # 월요일
         self.assertEqual(sorted(result["problems"]), ["금요일 보고 뒤 번역의 문제", "일요일 임시 작업의 문제", "토요일 번역의 문제"])
+
+    def test_without_a_last_report_in_the_records_everything_fetched_is_looked_at(self):
+        runs = [
+            {"kind": "collect", "startedAt": "2026-11-10T07:05:00+09:00", "counts": {}, "problems": []},
+            {"kind": "verify", "startedAt": "2026-11-10T08:20:00+09:00", "counts": {}, "pushed": True, "problems": []},
+            {"kind": "translate", "startedAt": "2026-11-08T16:15:00+09:00", "problems": ["그제의 문제"]},
+            {"kind": "translate", "startedAt": "2026-11-11T00:10:00+09:00", "problems": ["내일의 실행(받아 온 기록에 섞여 있어도 보지 않는다)"]},
+            self.WEEKLY,
+        ]
+        self.assertEqual(day_summary.summarize(runs, self.DAY)["problems"], ["그제의 문제"])
 
     def test_a_missing_weekly_run_is_reported_on_tuesday(self):
         runs = [

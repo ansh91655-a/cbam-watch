@@ -4,7 +4,9 @@
 쓰는 법: python -m tools.run.day_summary --db-dir /tmp/run/db [--date 2026-11-10]
 - problems: 사람에게 알릴 문제(실행 기록이 없음, 각 실행이 적은 문제, 저장소에 올리지 못함).
   수집·작성(collect), 검증·게시(verify), 임시 작업(adhoc), 번역(translate) 실행이 적은 문제를 모은다.
-  번역과 임시 작업은 보고가 나간 뒤에도 돌므로 지난 보고 뒤의 것까지 본다: 전날, 월요일에는 금요일부터(주말에 돈 것이 빠지지 않게).
+  번역과 임시 작업은 보고가 나간 뒤에도, 주말에도 돈다. 그래서 지난 보고(받아 온 기록에 있는, 오늘보다 앞선 날의 마지막 report 실행)가
+  나간 뒤에 끝난 것을 모두 본다. 이미 지난 보고에 실린 문제를 다시 싣지 않고, 보고 뒤나 주말의 문제를 빠뜨리지 않는다.
+  받아 온 기록에 지난 보고가 없으면 받아 온 것을 모두 본다(절차서 60은 사흘 앞부터 받는다).
   화요일에는 전날(월요일)의 주간 작업(weekly) 기록이 있는지도 본다(주간 작업은 월요일 보고보다 늦게 끝날 수 있다).
 - finalHolds: 사람이 봐야 하는 보류(원문과 지금 화면이 다른 것, 세 번째 검증에서도 원문을 열지 못한 것, 다시 쓴 초안이 또 보류된 것)
 - retryHolds: 다음 수집·작성 실행이 다시 쓰거나(글을 고치면 풀리는 사유) 그대로 다시 낼(원문을 열지 못한 것) 보류의 수. 알리지 않는다
@@ -39,10 +41,12 @@ def summarize(runs, day):
     collect = [run for run in mine if run.get("kind") == "collect"]
     verify = [run for run in mine if run.get("kind") == "verify"]
     date = datetime.date.fromisoformat(day)
-    back = 3 if date.weekday() == 0 else 1  # 지난 보고가 나간 날까지: 월요일에는 금요일, 그 밖에는 전날
-    since = {(date - datetime.timedelta(days=step)).isoformat() for step in range(back + 1)}
-    adhoc = [run for run in runs if run.get("kind") == "adhoc" and str(run.get("startedAt", ""))[:10] in since]
-    translate = [run for run in runs if run.get("kind") == "translate" and str(run.get("startedAt", ""))[:10] in since]
+    started = lambda run: str(run.get("startedAt", ""))
+    reports = sorted(started(run) for run in runs if run.get("kind") == "report" and started(run)[:10] < day)
+    cut = reports[-1] if reports else ""  # 지난 보고가 나간 시각. 그 뒤에 끝난 실행의 기록은 지난 보고가 보지 못했다
+    later = [run for run in runs if str(run.get("finishedAt") or started(run)) > cut and started(run)[:10] <= day]
+    adhoc = [run for run in later if run.get("kind") == "adhoc"]
+    translate = [run for run in later if run.get("kind") == "translate"]
     problems = []
     if date.weekday() < 5:
         if not collect:
