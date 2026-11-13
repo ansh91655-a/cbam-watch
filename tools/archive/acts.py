@@ -2,6 +2,8 @@
 
 날마다의 수집(tools/archive/eurlex.py)은 제목과 날짜, 전문의 앞부분, 마지막 조문만 남긴다. 이 단계는 전문과 조문을 모두 남긴다.
 부속서는 값의 표가 수천 줄에 이르는 것이 있어(나라별 기본값), 부속서마다 앞부분만 남기고 몇 줄을 뺐는지 적는다.
+다만 부속서가 규칙의 글인 법령(WHOLE: 산정 방법, 검증 원칙, 인정 조건, 대륙붕·배타적 경제수역)은 부속서도 온전히 남긴다.
+사이트의 규정 원문 화면이 이 글을 그대로 싣기 때문이다(뺀 부속서에는 화면이 싣지 않은 부분이 있다고 알린다).
 받는 곳은 EU 출판국 자료 창구이고, EU 법령은 출처를 밝히고 다시 쓸 수 있다.
 손으로 돌린다: 워크플로 '소급 수집'에서 mode = crawl, steps = eu-acts.
 """
@@ -32,6 +34,9 @@ ACTS = [
 ]
 ANNEX = re.compile(r"^ANNEX(?: [IVXLC]+)?$")
 ANNEX_LINES = 120   # 부속서마다 남기는 줄 수
+# 부속서를 온전히 남기는 법령: 부속서가 값의 표가 아니라 규칙의 글이다(산정 방법의 정의와 계산 규칙, 배출량 보고서의 서식, 검증보고서의 내용, 인정 범위).
+# 여기에 없는 법령의 부속서는 값의 표(기본값, 벤치마크)이거나 전환기간에 쓰던 것(2023/1773)이라 앞부분만 둔다.
+WHOLE = frozenset({"32025R2547", "32025R2546", "32025R2551", "32025R2210"})
 MUST = "Article 1"  # 받은 글에 꼭 있어야 하는 말(법령의 본문인지 확인)
 
 
@@ -70,7 +75,7 @@ def crawl():
         if why:
             failures.append(f"{celex}: {why}")
             continue
-        kept = trim(lines)
+        kept = lines if celex in WHOLE else trim(lines)
         address = f"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:{celex}"
         path = save_text(f"eu-acts/{celex}.txt", [f"[주소] {address}", f"[받은 곳] {parts[0][1]}", f"[무엇] {what}", ""] + kept)
         entries.append({"celex": celex, "title": what, "url": address, "lines": len(kept), "fullLines": len(lines), "textPath": path})

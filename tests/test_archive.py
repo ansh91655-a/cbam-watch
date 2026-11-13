@@ -383,6 +383,20 @@ class ActsTest(unittest.TestCase):
         lines = ["Article 1", "The word ANNEX in a sentence is not a heading", "Article 2"]
         self.assertEqual(acts.trim(lines, keep=1), lines)
 
+    def test_acts_whose_annexes_are_rules_keep_them_whole(self):
+        from unittest import mock
+        lines = ["Article 1", "Subject matter", "ANNEX I"] + [f"rule {number}" for number in range(acts.ANNEX_LINES + 30)]
+        saved = {}
+        with mock.patch.object(acts, "ACTS", [("32025R2547", "산정 방법"), ("32025R2621", "기본값")]), \
+                mock.patch.object(acts.fulltext, "celex_parts", return_value=([("", "https://example.org/x", lines)], "")), \
+                mock.patch.object(acts, "save_text", side_effect=lambda name, kept: saved.update({name: kept}) or name), \
+                mock.patch.object(acts, "save_index") as index:
+            self.assertEqual(acts.crawl(), {"stored": 2, "failures": []})
+        self.assertEqual(saved["eu-acts/32025R2547.txt"][4:], lines)                                    # 규칙의 글인 부속서는 모두 남긴다
+        self.assertEqual(saved["eu-acts/32025R2621.txt"][-1], "[이 부속서의 나머지 30줄은 싣지 않음]")   # 값의 표인 부속서는 앞부분만 남긴다
+        self.assertEqual([entry["lines"] for entry in index.call_args.args[1]], [len(lines), 3 + acts.ANNEX_LINES + 1])
+        self.assertTrue(acts.WHOLE <= {celex for celex, _ in acts.ACTS})
+
     def test_every_act_is_listed_once(self):
         numbers = [celex for celex, _ in acts.ACTS]
         self.assertEqual(len(numbers), len(set(numbers)))

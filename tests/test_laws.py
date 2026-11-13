@@ -88,6 +88,14 @@ class SegmentTest(unittest.TestCase):
         self.assertEqual(self.by_id["notes"]["blocks"], ["(1) OJ L 1, 1.1.2099, p. 1.", "( 2 ) A note at the very end."])
         self.assertEqual(self.by_id["closing"]["blocks"], ["Done at Brussels, 1 March 2099.", "For the Commission"])
 
+    def test_a_number_cut_off_before_a_heading_is_not_joined_to_it(self):
+        # 부속서의 뒷부분을 빼고 받아 둔 글: 번호만 있는 줄에서 끊기면 그 번호가 다음 부속서의 머리에 붙어 부속서가 갈리지 않았다
+        found = {part["id"]: part for part in segment.parts(ACT + "ANNEX II\nLong table\nRow one\n19.\n[이 부속서의 나머지 265줄은 싣지 않음]\nANNEX III\nShort one\nOnly row\n")}
+        self.assertEqual((found["annex-ii"]["title"], found["annex-ii"]["blocks"], found["annex-ii"]["cut"]), ("Long table", ["Row one", "19."], 265))
+        self.assertEqual((found["annex-iii"]["title"], found["annex-iii"]["blocks"]), ("Short one", ["Only row"]))
+        self.assertNotIn("cut", found["annex-iii"])
+        self.assertNotIn("cut", found["annex-i"])
+
     def test_korean_names_of_parts(self):
         self.assertEqual([segment.label_ko(part) for part in self.parts], ["제목과 근거", "전문", "제1장", "제1조", "제2조", "제3조", "맺음", "부속서 I", "각주"])
         self.assertEqual(segment.label_ko({"kind": "article", "label": "Article 10a"}), "제10a조")
