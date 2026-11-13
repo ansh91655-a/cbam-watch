@@ -4830,6 +4830,42 @@
    "ko": "함수 암모니아",
    "from": "guide-importers",
    "added": "2026-11-13"
+  },
+  {
+   "en": "weighted average",
+   "ko": "가중평균",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "summary worksheet",
+   "ko": "요약 워크시트",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Area of import",
+   "ko": "수입 지역",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Installation total emissions",
+   "ko": "사업장 총배출량",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Direct Embedded Emissions",
+   "ko": "직접 내재배출량",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Indirect Embedded Emissions",
+   "ko": "간접 내재배출량",
+   "from": "guide-importers",
+   "added": "2026-11-13"
   }
  ]
 }
