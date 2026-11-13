@@ -4650,6 +4650,30 @@
    "ko": "자가 생산",
    "from": "guide-verif",
    "added": "2026-11-13"
+  },
+  {
+   "en": "deregistration",
+   "ko": "등록 말소",
+   "from": "reg-portal",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "toggle button",
+   "ko": "토글 단추",
+   "from": "reg-portal",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "state transitions",
+   "ko": "상태 전이",
+   "from": "reg-portal",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "drag and drop",
+   "ko": "끌어다 놓기",
+   "from": "reg-portal",
+   "added": "2026-11-13"
   }
  ]
 }
