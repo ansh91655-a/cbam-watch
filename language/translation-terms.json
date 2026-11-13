@@ -4770,6 +4770,24 @@
    "ko": "도입 기간",
    "from": "report-free-allocation",
    "added": "2026-11-13"
+  },
+  {
+   "en": "sub-national region",
+   "ko": "하위 국가 지역",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "financial adjustment",
+   "ko": "재정적 조정",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "CHP unit",
+   "ko": "열병합발전 설비",
+   "from": "guide-importers",
+   "added": "2026-11-13"
   }
  ]
 }
