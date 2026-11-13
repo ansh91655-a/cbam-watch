@@ -66,6 +66,8 @@ def main(argv):
     if not args.dry:
         for act_id, fresh in accepted.items():
             store.save(act_id, {**store.load(act_id), **fresh})
+        # 같은 열쇠를 가진 다른 파일도 같은 번역으로 맞춘다(한 파일만 고치면 이름이 앞선 파일의 옛 번역이 그대로 쓰인다)
+        store.sync({block_key: text for fresh in accepted.values() for block_key, text in fresh.items()})
         for block_key, why in rejected:
             if block_key in known:
                 store.hold(known[block_key][0], block_key, "; ".join(why))

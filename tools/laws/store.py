@@ -107,6 +107,22 @@ def save(act_id, blocks, day=None, checked=None):
     write_json(path_of(act_id), body)
 
 
+def sync(changes, day=None):
+    """바뀐 번역({열쇠: 국문})을 그 열쇠를 가진 모든 파일에 적는다. 고친 파일의 수를 돌려준다.
+
+    같은 문단의 번역이 두 파일에 있을 수 있다(문서의 차례가 바뀌기 전에 다른 문서의 파일에 넣은 것). load_all은 이름이 앞선 파일의 것을 쓰므로,
+    한 파일만 고치면 고친 번역이 가려질 수 있다. 그래서 번역을 넣을 때마다 다른 파일의 같은 열쇠도 함께 맞춘다.
+    """
+    touched = 0
+    for act_id in files():
+        blocks = load(act_id)
+        stale = {block_key: text for block_key, text in changes.items() if block_key in blocks and blocks[block_key] != text}
+        if stale:
+            save(act_id, {**blocks, **stale}, day)
+            touched += 1
+    return touched
+
+
 def mark(act_id, block_keys):
     """한 문서의 번역 가운데 block_keys를 검수를 마친 것으로 적는다. 번역이 더해진 날(updated)은 그대로 둔다(번역이 멈췄는지 보는 데 쓰는 값이다)."""
     current = read_json(path_of(act_id), {}) or {}

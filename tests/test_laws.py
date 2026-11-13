@@ -355,6 +355,18 @@ class HoldTest(unittest.TestCase):
             self.assertEqual(sorted(store.held_all()), ["ccc"])  # 번역이 들어가면 빠진다
             self.assertEqual(store.load_checked("act-1"), {"aaa"})
 
+    def test_a_changed_translation_is_written_to_every_file_that_holds_the_key(self):
+        # 같은 문단의 번역이 두 파일에 있을 때 한 파일만 고치면, 이름이 앞선 파일의 옛 번역이 그대로 쓰인다
+        with tempfile.TemporaryDirectory() as folder, unittest.mock.patch.object(store, "FOLDER", folder):
+            store.save("act-1", {"aaa": "옛 번역", "bbb": "그대로"}, day="2026-11-01", checked={"aaa", "bbb"})
+            store.save("act-2", {"aaa": "옛 번역"}, day="2026-11-01", checked={"aaa"})
+            store.save("act-2", {"aaa": "새 번역"}, day="2026-11-13")
+            self.assertEqual(store.load_all()["aaa"], "옛 번역")
+            self.assertEqual(store.sync({"aaa": "새 번역", "zzz": "어디에도 없는 열쇠"}, day="2026-11-13"), 1)
+            self.assertEqual((store.load_all()["aaa"], store.load("act-1")), ("새 번역", {"aaa": "새 번역", "bbb": "그대로"}))
+            self.assertEqual(store.load_checked("act-1"), {"bbb"})   # 바뀐 문단은 다시 검수한다
+            self.assertEqual(store.sync({"aaa": "새 번역"}), 0)        # 이미 같으면 건드리지 않는다
+
     def test_apply_notes_each_rejection_but_not_a_dry_run(self):
         picked, _ = todo.pick(limit=500, act_id=catalog.BASE_CELEX, memory={})
         key = picked[0]["key"]
