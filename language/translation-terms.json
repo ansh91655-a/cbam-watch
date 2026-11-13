@@ -5058,6 +5058,54 @@
    "ko": "장기 지중 저장",
    "from": "32025R2547",
    "added": "2026-11-13"
+  },
+  {
+   "en": "absorption cooling",
+   "ko": "흡수식 냉각",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "acid gas scrubbing",
+   "ko": "산성가스 세정",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "de-NOx",
+   "ko": "탈질",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "stoichiometric ratio",
+   "ko": "화학량론적 비율",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "specific volume",
+   "ko": "비체적",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "mass flow rate",
+   "ko": "질량 유량",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "emission report",
+   "ko": "배출량 보고서",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "dry gas basis",
+   "ko": "건조가스 기준",
+   "from": "32025R2547",
+   "added": "2026-11-13"
   }
  ]
 }
