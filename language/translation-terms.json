@@ -5106,6 +5106,18 @@
    "ko": "건조가스 기준",
    "from": "32025R2547",
    "added": "2026-11-13"
+  },
+  {
+   "en": "alternative official sources",
+   "ko": "대체 공식 출처",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "moving average",
+   "ko": "이동평균",
+   "from": "32025R2547",
+   "added": "2026-11-13"
   }
  ]
 }
