@@ -373,7 +373,7 @@ class DaySummaryTest(unittest.TestCase):
         ]
         result = day_summary.summarize(runs, self.DAY)
         self.assertEqual(result["problems"], ["요약 보강: 웹 읽기가 되지 않음"])
-        self.assertEqual(result["runs"], {"collect": 1, "verify": 1, "adhoc": 1, "translate": 0})
+        self.assertEqual(result["runs"], {"collect": 1, "verify": 1, "adhoc": 1, "translate": 0, "review": 0})
 
     def test_problems_of_runs_after_the_last_report_are_reported(self):
         runs = [
@@ -389,6 +389,20 @@ class DaySummaryTest(unittest.TestCase):
         result = day_summary.summarize(runs, self.DAY)
         self.assertEqual(sorted(result["problems"]), ["번역: 검사를 통과하지 못해 올리지 않음", "보고와 엇갈려 끝난 실행의 문제"])
         self.assertEqual(result["runs"]["translate"], 2)
+
+    def test_problems_of_translation_review_runs_are_reported(self):
+        # 번역 검수는 번역과 다른 예약 작업(다른 모델)이 한다. 그 실행이 적은 문제도 보고에 실린다
+        runs = [
+            {"kind": "collect", "startedAt": "2026-11-10T07:05:00+09:00", "counts": {}, "problems": []},
+            {"kind": "verify", "startedAt": "2026-11-10T08:20:00+09:00", "counts": {}, "pushed": True, "problems": []},
+            {"kind": "report", "startedAt": "2026-11-09T10:05:30+09:00", "finishedAt": "2026-11-09T10:07:00+09:00", "problems": []},
+            {"kind": "review", "startedAt": "2026-11-09T13:05:00+09:00", "finishedAt": "2026-11-09T13:12:00+09:00", "problems": ["검수: 일부러 바꾼 번역을 두 번 놓침"]},
+            {"kind": "review", "startedAt": "2026-11-08T13:05:00+09:00", "finishedAt": "2026-11-08T13:12:00+09:00", "problems": ["지난 보고에 이미 실린 문제"]},
+            self.WEEKLY,
+        ]
+        result = day_summary.summarize(runs, self.DAY)
+        self.assertEqual(result["problems"], ["검수: 일부러 바꾼 번역을 두 번 놓침"])
+        self.assertEqual(result["runs"]["review"], 1)
 
     def test_on_monday_the_weekend_runs_are_looked_at_too(self):
         runs = [

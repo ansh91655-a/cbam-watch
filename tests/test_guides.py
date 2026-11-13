@@ -947,6 +947,16 @@ class LockTest(unittest.TestCase):
         with unittest.mock.patch.object(todo, "pick", return_value=([{"key": "aaa"}], {})), unittest.mock.patch.object(verify, "pending", return_value=[]):
             self.assertTrue(lock.anything_left())
 
+    def test_a_run_takes_the_lock_only_for_its_own_work(self):
+        # 번역과 검수는 다른 예약 작업이 한다: 번역하는 실행은 검수할 것만 남았을 때, 검수하는 실행은 옮길 것만 남았을 때 잡지 않는다
+        trial = pathlib.Path("trials/request.json").exists()
+        with unittest.mock.patch.object(todo, "pick", return_value=([], {})), unittest.mock.patch.object(verify, "pending", return_value=[{"key": "aaa"}]):
+            self.assertEqual(lock.anything_left("translate"), trial)
+            self.assertTrue(lock.anything_left("verify"))
+        with unittest.mock.patch.object(todo, "pick", return_value=([{"key": "aaa"}], {})), unittest.mock.patch.object(verify, "pending", return_value=[]):
+            self.assertTrue(lock.anything_left("translate"))
+            self.assertFalse(lock.anything_left("verify"))
+
     def test_the_lock_file_is_outside_every_workflow_path(self):
         # 자물쇠만 바뀐 커밋이 검사나 배포를 돌리면 안 된다: 자동 실행들의 paths에 걸리지 않는 곳이어야 한다
         folder = lock.PATH.split("/")[0]

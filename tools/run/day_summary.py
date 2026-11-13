@@ -3,8 +3,8 @@
 데이터베이스의 runs 컬렉션을 파일로 받아 둔 폴더를 읽는다.
 쓰는 법: python -m tools.run.day_summary --db-dir /tmp/run/db [--date 2026-11-10]
 - problems: 사람에게 알릴 문제(실행 기록이 없음, 각 실행이 적은 문제, 저장소에 올리지 못함).
-  수집·작성(collect), 검증·게시(verify), 임시 작업(adhoc), 번역(translate) 실행이 적은 문제를 모은다.
-  번역과 임시 작업은 보고가 나간 뒤에도, 주말에도 돈다. 그래서 지난 보고(받아 온 기록에 있는, 오늘보다 앞선 날의 마지막 report 실행)가
+  수집·작성(collect), 검증·게시(verify), 임시 작업(adhoc), 번역(translate), 번역 검수(review) 실행이 적은 문제를 모은다.
+  번역과 번역 검수, 임시 작업은 보고가 나간 뒤에도, 주말에도 돈다. 그래서 지난 보고(받아 온 기록에 있는, 오늘보다 앞선 날의 마지막 report 실행)가
   나간 뒤에 끝난 것을 모두 본다. 이미 지난 보고에 실린 문제를 다시 싣지 않고, 보고 뒤나 주말의 문제를 빠뜨리지 않는다.
   받아 온 기록에 지난 보고가 없으면 받아 온 것을 모두 본다(절차서 60은 사흘 앞부터 받는다).
   화요일에는 전날(월요일)의 주간 작업(weekly) 기록이 있는지도 본다(주간 작업은 월요일 보고보다 늦게 끝날 수 있다).
@@ -47,6 +47,7 @@ def summarize(runs, day):
     later = [run for run in runs if str(run.get("finishedAt") or started(run)) > cut and started(run)[:10] <= day]
     adhoc = [run for run in later if run.get("kind") == "adhoc"]
     translate = [run for run in later if run.get("kind") == "translate"]
+    review = [run for run in later if run.get("kind") == "review"]  # 번역 검수(번역과 다른 모델이 하는 실행)
     problems = []
     if date.weekday() < 5:
         if not collect:
@@ -56,7 +57,7 @@ def summarize(runs, day):
     monday = (date - datetime.timedelta(days=1)).isoformat()
     if date.weekday() == 1 and not any(run.get("kind") == "weekly" and str(run.get("startedAt", "")).startswith(monday) for run in runs):
         problems.append(NO_WEEKLY)
-    for run in collect + verify + adhoc + translate:
+    for run in collect + verify + adhoc + translate + review:
         for problem in run.get("problems", []) or []:
             text = str(problem).strip()
             if text and text not in problems:
@@ -79,7 +80,7 @@ def summarize(runs, day):
     return {
         "date": day, "problems": problems, "finalHolds": final_holds, "retryHolds": retry,
         "counts": {"written": total(collect, "written") + total(collect, "rewritten"), "pass": total(verify, "pass"), "hold": total(verify, "hold"), "published": total(verify, "published")},
-        "runs": {"collect": len(collect), "verify": len(verify), "adhoc": len(adhoc), "translate": len(translate)},
+        "runs": {"collect": len(collect), "verify": len(verify), "adhoc": len(adhoc), "translate": len(translate), "review": len(review)},
     }
 
 

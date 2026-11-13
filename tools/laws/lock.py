@@ -11,10 +11,13 @@
   표(STAMP)를 고쳐 같은 커밋에 담고, 사이트 배포와 화면 점검이 그 파일을 보고 돈다(번역 파일만 바뀐 커밋에는 돌지 않는다).
   여러 실행이 15분마다 묶음을 올리면 배포가 한 시간에 스무 번쯤 되는데, GitHub Pages가 권하는 횟수(한 시간에 열 번)를 넘기 때문이다.
   풀지 못하고 멈춘 실행이 올려 둔 번역은 다음에 푸는 실행의 표에 함께 담긴다.
-- 옮길 문단도 검수할 문단도 없으면 잡지 않는다(끝나는 값 3). 번역이 다 끝난 뒤의 실행이 날마다 빈 커밋 한 쌍을 남기지 않게 하려는 것이다.
+- 할 일이 없으면 잡지 않는다(끝나는 값 3). 번역이 다 끝난 뒤의 실행이 날마다 빈 커밋 한 쌍을 남기지 않게 하려는 것이다.
+  번역과 검수는 서로 다른 예약 작업(다른 모델)이 한다. 그래서 잡을 때 무슨 일을 하려는지 적는다(--work): 번역하는 실행은 옮길 문단이,
+  검수하는 실행은 검수할 문단이 있을 때만 잡는다. 적지 않으면 둘 가운데 하나라도 있으면 잡는다.
 
 쓰는 법(저장소 맨 위에서)
-  python3 -m tools.laws.lock take <실행 id>     잡는다. 0: 잡음, 2: 다른 실행이 도는 중(이 실행은 아무것도 하지 않고 끝낸다), 3: 할 일 없음(잡지 않는다), 1: 올리지 못함
+  python3 -m tools.laws.lock take <실행 id> [--work translate|verify]
+                                                잡는다. 0: 잡음, 2: 다른 실행이 도는 중(이 실행은 아무것도 하지 않고 끝낸다), 3: 할 일 없음(잡지 않는다), 1: 올리지 못함
   python3 -m tools.laws.lock release <실행 id>  푼다(자기가 잡은 것일 때만 지운다)
   python3 -m tools.laws.lock status             누가 언제 잡았는지
 """
@@ -31,7 +34,7 @@ SHOWN = "data/laws-ko"            # 사이트에 보이는 번역
 STALE_MINUTES = 12     # 실행 하나는 이 안에 끝나게 되어 있다(절차서가 10분이 넘으면 새 묶음을 시작하지 않는다)
 QUIET_SECONDS = 300    # 번역이 이 안에 올라왔으면 자물쇠가 낡았어도 아직 도는 것으로 본다(묶음 하나는 2분 안팎, 길면 3분 넘게 걸리고, 실행은 예정보다 1~2분 늦게 시작하기도 한다)
 TRIES = 3
-WATCHED = ("data/laws-ko", "language/translation-checks.json")  # 번역 실행이 올리는 것
+WATCHED = ("data/laws-ko", "language/translation-checks.json")  # 번역 실행과 검수 실행이 올리는 것
 AUTHOR = ("-c", "user.name=cbam-watch-run", "-c", "user.email=noreply@users.noreply.github.com")
 KST = datetime.timezone(datetime.timedelta(hours=9))
 
@@ -79,12 +82,16 @@ def _sync(root):
     _git(root, "pull", "-q", "--rebase", "--autostash", "origin", "main")
 
 
-def anything_left():
-    """옮길 문단이나 검수할 문단, 청해 둔 견주기 시험이 남았는가(지금 폴더의 저장소에서 본다)."""
+WORKS = ("translate", "verify")  # 번역하는 실행의 일(옮길 문단, 청해 둔 견주기 시험)과 검수하는 실행의 일(검수할 문단)
+
+
+def anything_left(work=""):
+    """그 일이 남았는가(지금 폴더의 저장소에서 본다). work가 "translate"이면 옮길 문단이나 청해 둔 견주기 시험, "verify"이면 검수할 문단,
+    빈 글이면 둘 가운데 하나라도."""
     from tools.laws import plan, todo, verify  # 자물쇠만 쓰는 곳에서 글 전체를 읽지 않게 여기서 들인다
-    if pathlib.Path("trials/request.json").exists():
+    if work != "verify" and (pathlib.Path("trials/request.json").exists() or any(todo.pick(runner=name)[0] for name in plan.runners())):
         return True
-    return any(todo.pick(runner=name)[0] for name in plan.runners()) or bool(verify.pending())
+    return work != "translate" and bool(verify.pending())
 
 
 def take(run_id, root=".", at=None, between=None, work=None):
@@ -156,6 +163,7 @@ def main(argv):
     parser = argparse.ArgumentParser(description="번역 실행이 겹치지 않게 하는 자물쇠")
     parser.add_argument("what", choices=["take", "release", "status"])
     parser.add_argument("run", nargs="?", default="")
+    parser.add_argument("--work", default="", choices=["", *WORKS], help="잡으려는 실행이 하는 일. 그 일이 없으면 잡지 않는다")
     args = parser.parse_args(argv)
     if args.what == "status":
         lock = read()
@@ -166,8 +174,9 @@ def main(argv):
     if not args.run:
         parser.error("실행 id를 적어 주세요")
     if args.what == "take":
-        outcome, detail = take(args.run, work=anything_left)
-        print({"taken": "잡음", "busy": f"다른 실행이 도는 중: {detail}", "idle": "할 일 없음: 옮길 문단도 검수할 문단도 없음", "failed": f"잡지 못함: {detail}"}[outcome])
+        outcome, detail = take(args.run, work=lambda: anything_left(args.work))
+        nothing = {"translate": "옮길 문단이 없음", "verify": "검수할 문단이 없음"}.get(args.work, "옮길 문단도 검수할 문단도 없음")
+        print({"taken": "잡음", "busy": f"다른 실행이 도는 중: {detail}", "idle": f"할 일 없음: {nothing}", "failed": f"잡지 못함: {detail}"}[outcome])
         return {"taken": 0, "busy": 2, "idle": 3, "failed": 1}[outcome]
     outcome = release(args.run)
     print({"released": "풂", "not-mine": "풀 것이 없음(다른 실행의 것이거나 이미 풀림)", "failed": "풀지 못함"}[outcome])
