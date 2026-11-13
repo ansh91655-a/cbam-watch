@@ -4278,6 +4278,36 @@
    "ko": "선임 검증심사원",
    "from": "qa",
    "added": "2026-11-13"
+  },
+  {
+   "en": "transitional methodology",
+   "ko": "전환기간 산정 방법",
+   "from": "guide-5b",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "emission savings",
+   "ko": "배출 절감량",
+   "from": "guide-5b",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "thermal cracking",
+   "ko": "열분해",
+   "from": "guide-5b",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "light olefins",
+   "ko": "경질 올레핀",
+   "from": "guide-5b",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "emissions report template",
+   "ko": "배출량 보고서 서식",
+   "from": "guide-5b",
+   "added": "2026-11-13"
   }
  ]
 }
