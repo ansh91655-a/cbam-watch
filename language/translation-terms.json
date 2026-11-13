@@ -4866,6 +4866,66 @@
    "ko": "간접 내재배출량",
    "from": "guide-importers",
    "added": "2026-11-13"
+  },
+  {
+   "en": "Special provisions",
+   "ko": "특별 규정",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "basic oxygen converter",
+   "ko": "염기성 산소 전로",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "spongy ferrous products",
+   "ko": "해면질 철 제품",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "flue gas scrubbing",
+   "ko": "배가스 세정",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "non-carbonate carbon content",
+   "ko": "비탄산염 탄소함량",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "abated emissions",
+   "ko": "저감된 배출량",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "unabated emissions",
+   "ko": "저감되지 않은 배출량",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "molar equivalent",
+   "ko": "몰 당량",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "coke dust",
+   "ko": "코크스 분진",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "fuel stream",
+   "ko": "연료 흐름",
+   "from": "32025R2547",
+   "added": "2026-11-13"
   }
  ]
 }
