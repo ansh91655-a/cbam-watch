@@ -4704,6 +4704,24 @@
    "ko": "공통 구성요소",
    "from": "reg-declarant",
    "added": "2026-11-13"
+  },
+  {
+   "en": "rebate mechanism",
+   "ko": "환급 메커니즘",
+   "from": "report-carbon-price",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "net carbon costs",
+   "ko": "순 탄소비용",
+   "from": "report-carbon-price",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "settlement price",
+   "ko": "정산 가격",
+   "from": "report-carbon-price",
+   "added": "2026-11-13"
   }
  ]
 }
