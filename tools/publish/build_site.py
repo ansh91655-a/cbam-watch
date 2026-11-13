@@ -10,7 +10,7 @@ import sys
 from tools.common.jsonio import read_json, today, write_json
 from tools.laws import build as laws
 from tools.pdfko import site as pdf_site
-from tools.publish import calc, crossrefs, derive, duties, factor, feed, merge, regulations, sectors, thumbs
+from tools.publish import calc, crossrefs, derive, duties, factor, feed, merge, preload, regulations, sectors, thumbs
 
 DATA_FILES = ["items", "events", "digests", "terms", "topics", "prices"]
 LIST_KEY = {"items": "items", "events": "events", "digests": "digests", "terms": "terms", "topics": "topics", "prices": "prices"}
@@ -62,8 +62,8 @@ def main(argv):
     counts["events"] = len(bodies["events"]["events"])
     # 미리보기 그림이 있는 소식에는 그림의 주소를 붙인다
     bodies["items"] = {**bodies["items"], "items": thumbs.attach(bodies["items"]["items"])}
-    for name, body in bodies.items():
-        write_json(data_out / f"{name}.json", body)
+    for name, body in bodies.items():  # 소식은 안에서만 쓰는 값(출처의 안쪽 이름 등)을 빼고 싣는다. 뒤의 단계들은 빼지 않은 자료를 쓴다
+        write_json(data_out / f"{name}.json", derive.public_items(body) if name == "items" else body)
     # 하나로 묶은 소식의 옛 번호가 어디로 갔는지(옛 주소로 온 사람을 남긴 소식으로 넘긴다)
     records = read_json(merge.MERGED, {"merged": []}).get("merged", [])
     write_json(data_out / "moved.json", {"moved": merge.moved(records, {item["id"] for item in bodies["items"]["items"]})})
@@ -128,6 +128,9 @@ def main(argv):
         (out / "feed.xml").write_text(feed.news(bodies["items"]["items"], bodies["topics"].get("topics", []), config["url"], config["builtAt"]), encoding="utf-8")
         (out / "rules.xml").write_text(feed.rules(rules, config["url"], config["builtAt"]), encoding="utf-8")
     (out / ".nojekyll").write_text("", encoding="utf-8")
+    # 화면 모듈을 한꺼번에 받게 하는 줄을 index.html에 넣는다(처음 여는 사람의 첫 화면이 빨리 뜬다). 넣지 못해도 사이트는 그대로 돌아가므로 알리기만 한다
+    preloaded, why = preload.inject(out)
+    print(f"알림: 화면 모듈 미리 받기: {why}" if why else f"한꺼번에 받게 한 화면 모듈: {preloaded}")
 
     for path in data_out.rglob("*.json"):  # 만든 파일이 모두 JSON으로 풀리는지 확인
         try:

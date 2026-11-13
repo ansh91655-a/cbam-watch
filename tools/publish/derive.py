@@ -13,6 +13,15 @@ PUBLIC_FILES = "files/"
 GENERIC_LABEL = re.compile(r"^\s*(download|available|click|here|english|pdf|xlsx?|zip|open|view)\b", re.I)
 
 
+# 소식 자료에서 화면이 쓰지 않고 안에서만 쓰는 값: 출처의 안쪽 이름, 검증한 때, 쓴 방식, 한 줄 소식을 다시 확인한 기록
+INTERNAL_ITEM_KEYS = ("sourceCode", "checkedAt", "authoring", "briefChecked", "briefTries")
+
+
+def public_items(body):
+    """사이트에 싣는 소식 자료. 안에서만 쓰는 값을 뺀다(저장소의 data/items.json은 그대로다)."""
+    return {**body, "items": [{key: value for key, value in item.items() if key not in INTERNAL_ITEM_KEYS} for item in body.get("items", [])]}
+
+
 def _title(doc):
     label = " ".join(str(doc.get("label", "")).split())
     if len(label) >= 8 and not GENERIC_LABEL.match(label):

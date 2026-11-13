@@ -253,6 +253,14 @@ class MenuDataTest(unittest.TestCase):
         topics = [{"code": "law"}, {"code": "price"}, {"code": "etc"}]
         self.assertEqual(derive.menu(None, None, items + [{"topic": "gone"}], topics)["topics"], ["etc", "law", "price"])
 
+    def test_the_public_news_file_leaves_out_what_only_the_tools_use(self):
+        body = {"asOf": "2026-11-13", "items": [{"id": "a", "title": "가", "sourceName": "EUR-Lex", "sourceCode": "eu-eurlex", "checkedAt": "2026-11-13T08:20:00+09:00",
+                                                 "authoring": "자동", "brief": True, "briefChecked": "2026-11-12", "briefTries": 2, "listed": "2026-11-13"}]}
+        public = derive.public_items(body)
+        self.assertEqual(public, {"asOf": "2026-11-13", "items": [{"id": "a", "title": "가", "sourceName": "EUR-Lex", "brief": True, "listed": "2026-11-13"}]})
+        self.assertIn("sourceCode", body["items"][0])                 # 넘겨받은 자료는 그대로 둔다(뒤의 단계가 쓴다)
+        self.assertEqual(derive.public_items({}), {"items": []})
+
 
 class ShellTest(unittest.TestCase):
     """머리글의 짜임(index.html)이 화면 모듈과 맞는지."""
