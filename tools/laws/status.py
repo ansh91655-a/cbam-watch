@@ -8,7 +8,7 @@
 import argparse
 import sys
 
-from tools.laws import check, corpus, store, verify
+from tools.laws import alike, check, corpus, store, verify
 
 NAMES = {"act": "규정 번역", "guide": "가이던스 번역", "manual": "등록부 안내서 번역", "paper": "보고서·안내 자료 번역"}
 UNITS = {"act": "법령", "guide": "문서", "manual": "문서", "paper": "문서"}
@@ -84,6 +84,9 @@ def main(argv):
     for act, progress in found:
         print(f"{act['id']:<22} {percent(progress):>3}%  문단 {progress['done']:>4}/{progress['blocks']:<4}  원문 {progress['chars']:>7,}자  {act['name']}")
     print(f"쓰이지 않는 번역: {unused()}개")
+    same = alike.summary()   # 같은 문장이 서로 다르게 옮겨진 묶음(없으면 찍지 않는다)
+    if same:
+        print(same)
     if past():
         print(past())
     print(whole())
