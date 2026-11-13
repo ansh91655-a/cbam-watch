@@ -4680,6 +4680,12 @@
    "ko": "모회사",
    "from": "reg-portal",
    "added": "2026-11-13"
+  },
+  {
+   "en": "Service coverage",
+   "ko": "서비스 범위",
+   "from": "reg-portal",
+   "added": "2026-11-13"
   }
  ]
 }
