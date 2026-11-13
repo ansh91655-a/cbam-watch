@@ -69,6 +69,9 @@ def write(out):
     docs, failed = {}, []
     from tools.laws import corpus
     documents, memory = corpus.everything()
+    # 도안으로 된 자료(sources/guides.json에 "side": false로 적은 문서)는 싣지 않는다: 그림으로 박힌 제목 위에 번역이 겹치고
+    # 기관의 표지가 그대로 남아, 공식 문서처럼 보이지 않게 해야 하는 번역본의 조건을 채우지 못한다. 글로 보기에는 그대로 실린다.
+    documents = [(document, parts) for document, parts in documents if document.get("side", True)]
     wanted = [document["id"] for document, parts in documents if document.get("format") == "pdf" and parts]
     try:
         from tools.pdfko import build  # noqa: F401 — 꾸러미가 있는지 여기에서 안다
