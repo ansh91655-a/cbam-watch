@@ -4926,6 +4926,60 @@
    "ko": "연료 흐름",
    "from": "32025R2547",
    "added": "2026-11-13"
+  },
+  {
+   "en": "calculation-based methodology",
+   "ko": "계산 기반 방법론",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "measurement-based methodology",
+   "ko": "측정 기반 방법론",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "standard method",
+   "ko": "표준 방법",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "flue gas treatment",
+   "ko": "배가스 처리",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "electrolysis cells",
+   "ko": "전해조",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "de-oiling",
+   "ko": "탈유",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "zero-rated fuels",
+   "ko": "영으로 처리되는 연료",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "integrated aluminium plants",
+   "ko": "일관 알루미늄 공장",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "risk assessment",
+   "ko": "위험평가",
+   "from": "32025R2547",
+   "added": "2026-11-13"
   }
  ]
 }
