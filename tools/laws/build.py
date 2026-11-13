@@ -33,10 +33,18 @@ def body(act, found, memory):
         "consolidated": act["consolidated"], "received": act.get("received", ""), "pages": act.get("pages", 0), "rule": act["rule"], "remark": act.get("remark", ""),
         "notice": next((line for line in front if line.startswith((NOTICE, DISCLAIMER))), ""),
         "progress": corpus.progress(found, memory),
-        "parts": [{"id": part["id"], "kind": part["kind"], "level": part.get("level", 0), "label": part["label"], "ko": corpus.label_ko(part), "title": part["title"],
-                   "titleKo": corpus.korean(part["title"], memory) if part["title"] else "",
-                   "blocks": gloss.annotate([[text, corpus.korean(text, memory)] for text in part["blocks"]])} for part in found],
+        "parts": [_part(part, memory) for part in found],
     }
+
+
+def _part(part, memory):
+    """조각 하나의 공개용 자료. 문단의 꼴(목록, 표의 칸, 각주 …)을 아는 문서는 shapes에 문단마다 싣는다(화면이 그 꼴로 그린다)."""
+    row = {"id": part["id"], "kind": part["kind"], "level": part.get("level", 0), "label": part["label"], "ko": corpus.label_ko(part), "title": part["title"],
+           "titleKo": corpus.korean(part["title"], memory) if part["title"] else "",
+           "blocks": gloss.annotate([[text, corpus.korean(text, memory)] for text in part["blocks"]])}
+    if any(shape != "p" for shape in part.get("shapes", [])):
+        row["shapes"] = part["shapes"]
+    return row
 
 
 def listing(act_body):

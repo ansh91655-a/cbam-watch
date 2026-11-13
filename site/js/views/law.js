@@ -2,7 +2,7 @@
 // #law-<문서 id>.<조각> 꼴의 주소로 조문이나 절 하나를 바로 가리킬 수 있다.
 // 보는 방식은 셋이다: 나란히, 원문만, 국문만. 아직 옮기지 않은 문단은 원문만 보인다.
 import * as data from "../data.js";
-import { split } from "../laws/engine.js";
+import { rows as blockRows } from "../laws/blocks.js";
 import { recent } from "../laws/recent.js";
 import { band } from "../ui/band.js";
 import { empty, fill, h, safeLink } from "../ui/dom.js";
@@ -22,9 +22,9 @@ const WORDS = {
 const PICK_GROUPS = [["act", "법령"], ["guide", "가이던스와 질의응답"], ["manual", "등록부 이용 안내서"], ["paper", "보고서와 안내 자료"]];
 // 문서의 성격을 알리는 말(갈래마다)
 const NATURE = {
-  guide: "이 문서는 EU 집행위원회가 낸 설명 자료로 법적 구속력이 없습니다. PDF의 글만 옮겨 실었으므로 표와 식, 그림은 원문 PDF에서 확인해 주십시오.",
-  manual: "이 문서는 EU 집행위원회가 낸 등록부 이용 안내서입니다. PDF의 글만 옮겨 실었으므로 화면 그림과 표는 원문 PDF에서 확인해 주십시오.",
-  paper: "이 문서는 EU 집행위원회가 낸 자료로 법적 구속력이 없습니다. PDF의 글만 옮겨 실었으므로 표와 그림은 원문 PDF에서 확인해 주십시오.",
+  guide: "이 문서는 EU 집행위원회가 낸 설명 자료로 법적 구속력이 없습니다. PDF의 글과 표를 옮겨 실었습니다. 식과 그림은 원문 PDF에서 확인해 주십시오.",
+  manual: "이 문서는 EU 집행위원회가 낸 등록부 이용 안내서입니다. PDF의 글과 표를 옮겨 실었습니다. 화면 그림은 원문 PDF에서 확인해 주십시오.",
+  paper: "이 문서는 EU 집행위원회가 낸 자료로 법적 구속력이 없습니다. PDF의 글과 표를 옮겨 실었습니다. 그림은 원문 PDF에서 확인해 주십시오.",
 };
 const isAct = (act) => (act.group || "act") === "act";
 
@@ -39,17 +39,6 @@ function about(act) {
   return `${act.official}${act.consolidated ? `, ${act.consolidated} 통합본` : ""}`;
 }
 
-function marked(text, needles) {
-  return needles.length ? split(text, needles).map(([piece, on]) => (on ? h("mark", { text: piece }) : piece)) : text;
-}
-
-function row([en, ko], needles) {
-  return h("div", { class: "law-row", "data-wait": ko ? null : "" }, [
-    h("p", { class: "law-en", lang: "en" }, marked(en, needles)),
-    ko ? h("p", { class: "law-ko" }, marked(ko, needles)) : h("p", { class: "law-ko law-wait", "aria-hidden": "true" }),
-  ]);
-}
-
 function heading(part) {
   const english = part.kind === "section" ? part.title : [part.label, part.title].filter(Boolean).join(" · ");  // 절의 번호는 국문 쪽에 이미 있다
   return h("h2", { class: "law-head" }, [
@@ -61,7 +50,7 @@ function heading(part) {
 
 function section(part, target, needles, piece) {
   const here = part.id === target;
-  const rows = part.blocks.map((block) => row(block, here ? needles : []));
+  const rows = blockRows(part, here ? needles : []);
   const waiting = part.blocks.length && part.blocks.every(([en, ko]) => !ko);
   if (part.kind === "division") return h("div", { class: "law-division", id: `p-${part.id}` }, heading(part));
   if (FOLDED[part.kind]) {

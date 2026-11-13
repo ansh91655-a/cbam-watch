@@ -11,7 +11,7 @@ Figure Formula Form Footnote Title Aside DocumentFragment""".split())
 
 
 class Tree:
-    """elements는 문서의 차례대로 놓인 요소들: {"type", "parent", "marks": [(쪽, MCID), …]}. where는 {(쪽, MCID): 요소의 차례}."""
+    """elements는 문서의 차례대로 놓인 요소들: {"type", "parent", "marks": [(쪽, MCID), …], "span": 표의 칸이 차지하는 (칸 수, 줄 수)}. where는 {(쪽, MCID): 요소의 차례}."""
 
     def __init__(self):
         self.elements, self.where = [], {}
@@ -36,6 +36,22 @@ def _role(name, roles):
             break
         name = roles[name]
     return name
+
+
+def _span(node):
+    """표의 칸이 차지하는 (칸 수, 줄 수). 적혀 있지 않으면 (1, 1)."""
+    found = node.get("/A")
+    if found is None:
+        return (1, 1)
+    cols = rows = 1
+    for entry in (found if isinstance(found, pikepdf.Array) else [found]):
+        if isinstance(entry, pikepdf.Dictionary):
+            try:
+                cols = max(cols, int(entry.get("/ColSpan", 1)))
+                rows = max(rows, int(entry.get("/RowSpan", 1)))
+            except (TypeError, ValueError):
+                pass
+    return (min(cols, 50), min(rows, 500))
 
 
 def read(pdf):
@@ -73,7 +89,7 @@ def read(pdf):
             if node.objgen in seen:
                 continue
             seen.add(node.objgen)
-        tree.elements.append({"type": _role(str(node.S)[1:], roles), "parent": parent, "marks": []})
+        tree.elements.append({"type": _role(str(node.S)[1:], roles), "parent": parent, "marks": [], "span": _span(node)})
         if "/K" in node:
             stack.append((node.K, len(tree.elements) - 1, page))
     return tree

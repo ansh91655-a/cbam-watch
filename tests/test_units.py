@@ -40,6 +40,8 @@ class PartsTest(unittest.TestCase):
         first = found[1]
         self.assertEqual(first["blocks"], ["Body one.[3]", "• First item", "(a) labelled in the text", "Not numbered", "Head", "Value", "[3] A footnote."])
         self.assertEqual(first["shapes"], ["p", "li1", "li2", "h2", "th:1:1:2", "td:1:2:2", "note"])  # 각주는 조각의 끝에 싣는다
+        inside = [unit("li", "item", label="-", depth=1, table=2, row=3, column=1, head=False), unit("cell", "wide", table=2, row=4, column=1, head=True, cols=2, rows=3)]
+        self.assertEqual(unit_segment.parts(inside)[0]["shapes"], ["td:2:3:1:li1", "th:2:4:1::s2x3"])  # 칸 안의 목록 항목, 합쳐진 칸
         self.assertEqual(first["units"], [2, 4, 5, 6, 7, 8, 3])
         self.assertEqual((found[2]["head"], found[2]["shapes"], found[3]["shapes"]), (9, ["caption"], ["figure"]))
 
@@ -126,6 +128,17 @@ class ReadTest(unittest.TestCase):
             {"kind": "p", "text": f"declarant{mark('4')}, 5 m{mark('3')} and 10{mark('4')} with emissions’{mark('4')} or word{mark('9')}"},
             {"kind": "note", "text": "A note.", "label": "4"}])
         self.assertEqual(found[0]["text"], "declarant[4], 5 m3 and 104 with emissions’[4] or word9")
+
+    def test_table_cells_are_placed_by_where_their_text_sits(self):
+        from tools.pdfko import units
+
+        lines = [[("a", (10, 50)), ("b", (100, 150)), ("c", (200, 250))],   # 칸이 다 있는 줄
+                 [("d", (102, 140)), ("e", (205, 240))],                    # 첫 칸은 위에서 내려온다
+                 [("f", (10, 240))],                                        # 한 칸이 끝까지 간다
+                 [("g", (10, 30)), ("h", (110, 130)), ("i", (200, 210))]]
+        self.assertEqual(units._grid(lines), [[("a", 1, 1, 2), ("b", 2, 1, 1), ("c", 3, 1, 1)], [("d", 2, 1, 1), ("e", 3, 1, 1)],
+                                              [("f", 1, 3, 1)], [("g", 1, 1, 1), ("h", 2, 1, 1), ("i", 3, 1, 1)]])
+        self.assertEqual(units._grid([[("a", None)], [("b", (5, 9)), ("c", (50, 60))]]), [[("a", 1, 2, 1)], [("b", 1, 1, 1), ("c", 2, 1, 1)]])
 
     def test_untagged_pdf_has_no_units(self):
         from tools.pdfko import units

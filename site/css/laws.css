@@ -107,6 +107,29 @@ body[data-wide] main, body[data-wide] .band-inner, body[data-wide] .head-inner {
 .law-body[data-mode="ko"] .law-wait { display: none; }
 .law-body .law-row p { max-width: 86ch; }
 @media (max-width: 760px) { .law-body[data-mode="both"] .law-row { grid-template-columns: minmax(0, 1fr); } .law-wait { display: none; } .law-part { padding-inline: 16px; } }
+/* 문단의 꼴: 작은 제목, 목록 항목, 그림과 표의 제목, 각주, 수식 */
+.law-row[data-shape="h"] p { font-weight: 700; }
+.law-row[data-shape="li"] p, .law-pair[data-shape="li"] p { padding-left: 1.5em; text-indent: -1.5em; }
+.law-row[data-shape="li"][data-depth="2"] p { margin-left: 1.5em; }
+.law-row[data-shape="li"][data-depth="3"] p, .law-row[data-shape="li"][data-depth="4"] p { margin-left: 3em; }
+.law-row[data-shape="caption"] p { font-size: var(--fs-s); font-weight: 600; color: var(--ink-2); }
+.law-row[data-shape="note"] p, .law-row[data-shape="figure"] p { font-size: var(--fs-s); color: var(--ink-2); }
+.law-row[data-shape="formula"] .law-en { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.88rem; }
+/* 표: 칸마다 원문과 국문을 위아래로 둔다. 넓은 표는 옆으로 민다 */
+.law-table { overflow-x: auto; padding: 10px 0; border-top: 1px solid var(--line-2); }
+.law-table table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+.law-table th, .law-table td { min-width: 6.5em; padding: 6px 9px; border: 1px solid var(--line); vertical-align: top; text-align: left; font-weight: 400; }
+.law-table th { background: var(--bg); }
+.law-table th p { font-weight: 600; }
+.law-pair + .law-pair { margin-top: 6px; }
+.law-pair p { line-height: 1.6; overflow-wrap: anywhere; }
+.law-pair .law-en { font-size: 0.85rem; }
+.law-pair .law-wait { display: none; }
+.law-body[data-mode="ko"] .law-pair:not([data-wait]) .law-en { display: none; }
+.law-body[data-mode="en"] .law-pair .law-en { font-size: 0.92rem; }
+.law-figure { padding: 8px 0 2px; border-top: 1px solid var(--line-2); }
+.law-figure summary { display: flex; align-items: baseline; gap: 10px; font-size: var(--fs-s); color: var(--ink-3); cursor: pointer; }
+.law-figure[open] summary { padding-bottom: 6px; }
 .law-fold summary { display: flex; align-items: baseline; gap: 10px; padding: 2px 0 8px; font-weight: 700; cursor: pointer; }
 .law-fold:not([open]) summary { padding-bottom: 6px; }
 .law-source { font-size: var(--fs-s); color: var(--ink-3); }

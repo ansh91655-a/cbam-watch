@@ -211,42 +211,89 @@ class _Reader:
                 else:
                     self.walk(part, inner)
 
+    def reach(self, index):
+        """요소 안(모든 깊이)의 낱말이 놓인 왼쪽 끝과 오른쪽 끝. 낱말이 없으면 None."""
+        words, stack = [], [index]
+        while stack:
+            at = stack.pop()
+            words += self.held.get(at, [])
+            stack += self.kids[at]
+        return (min(word[3] for word in words), max(word[4] for word in words)) if words else None
+
     def table(self, index, context):
         self.tables += 1
-        number, row = self.tables, 0
-        stack = list(reversed(self.kids[index]))
+        lines, stack = [], list(reversed(self.kids[index]))
         while stack:
             kid = stack.pop()
             kind = self.kind(kid)
             if kind == "Caption":
                 self.emit("caption", kid, self.gather(kid), **context)
             elif kind == "TR":
-                row += 1
-                column = 0
-                for cell in self.kids[kid]:
-                    if self.kind(cell) not in ("TH", "TD"):
-                        continue
-                    column += 1
-                    inner = dict(context, table=number, row=row, column=column, head=self.kind(cell) == "TH")
-                    direct = self.gather(cell)
-                    if direct:
-                        self.emit("cell", cell, direct, **inner)
-                    for part in self.blocks(cell):
-                        if self.kind(part) == "P":
-                            self.emit("cell", part, self.gather(part), **inner)
-                            for deeper in self.blocks(part):
-                                self.walk(deeper, inner)
-                        else:
-                            self.walk(part, inner)
+                lines.append([(cell, self.reach(cell)) for cell in self.kids[kid] if self.kind(cell) in ("TH", "TD")])
             else:
                 stack.extend(reversed(self.kids[kid]))
+        for row, placed in enumerate(_grid(lines), start=1):
+            for cell, column, cols, rows in placed:
+                inner = dict(context, table=self.tables, row=row, column=column, head=self.kind(cell) == "TH")
+                if cols > 1 or rows > 1:
+                    inner.update(cols=cols, rows=rows)
+                direct = self.gather(cell)
+                if direct:
+                    self.emit("cell", cell, direct, **inner)
+                for part in self.blocks(cell):
+                    if self.kind(part) == "P":
+                        self.emit("cell", part, self.gather(part), **inner)
+                        for deeper in self.blocks(part):
+                            self.walk(deeper, inner)
+                    else:
+                        self.walk(part, inner)
+
+
+def _grid(lines):
+    """표의 줄마다 칸의 자리를 정한다: [[(칸 요소, 칸 번호, 차지하는 칸 수, 차지하는 줄 수), …], …].
+
+    PDF에는 합쳐진 칸이 한 번만 적히고 얼마나 합쳤는지는 적히지 않는다. 그래서 칸이 모자란 줄은 글의 가로 자리로 어느 칸인지 가린다:
+    칸이 다 있는 줄들에서 칸마다의 왼쪽 끝을 얻고, 모자란 줄의 칸은 그 사이에 든 자리로 보낸다.
+    비는 자리는 위 칸이 아래로 이어진 것(같은 줄의 오른쪽에 칸이 더 있을 때)이거나 왼쪽 칸이 옆으로 이어진 것으로 본다.
+    """
+    width = max((len(line) for line in lines), default=0)
+    full = [line for line in lines if len(line) == width and all(box for _, box in line)]
+    lefts = [min(line[column][1][0] for line in full) for column in range(width)] if full and width > 1 else []
+    ordered = all(a < b for a, b in zip(lefts, lefts[1:]))
+    placed = []
+    for line in lines:
+        columns = list(range(1, len(line) + 1))
+        if lefts and ordered and len(line) < width and all(box for _, box in line):
+            guess = [max((at for at, left in enumerate(lefts) if box[0] >= left - 6), default=0) + 1 for _, box in line]
+            if all(a < b for a, b in zip(guess, guess[1:])):
+                columns = guess
+        placed.append([[cell, column, 1, 1] for (cell, _), column in zip(line, columns)])
+    above = {}      # 칸 번호 → 그 칸을 차지한 위쪽 칸(아래로 늘릴 수 있는 것)
+    for row in placed:
+        taken = {entry[1]: entry for entry in row}
+        last = max(taken, default=0)
+        for column in range(1, width + 1):
+            if column in taken:
+                continue
+            if column < last and column in above:
+                above[column][3] += 1           # 위 칸이 이 줄까지 내려온다
+                taken[column] = None
+            elif column > last and last:
+                taken[last][2] += 1             # 줄의 마지막 칸이 옆으로 이어진다
+        for entry in row:
+            for across in range(entry[2]):
+                above[entry[1] + across] = entry
+        for column, entry in list(above.items()):
+            if column not in taken and not any(e[1] <= column < e[1] + e[2] for e in row):
+                del above[column]               # 이 줄에서 이어지지 않은 칸은 더 내려오지 않는다
+    return [[tuple(entry) for entry in row] for row in placed]
 
 
 def read(path):
     """PDF의 단위들: {"pages": 쪽 수, "tagged": 꼬리표가 있는가, "units": [단위, …]}.
 
     단위는 {"kind": "h"|"p"|"li"|"cell"|"caption"|"note"|"figure"|"formula", "text", "page", "marks": [(쪽, 내용 조각 번호), …]}에
-    제목의 "level", 목록과 각주의 "label", 목록의 "depth", 표의 "table"·"row"·"column"·"head"가 붙는다.
+    제목의 "level", 목록과 각주의 "label", 목록의 "depth", 표의 "table"·"row"·"column"·"head"(합쳐진 칸이면 "cols"·"rows"도)가 붙는다.
     그림 안의 이름표("figure")는 "marks" 대신 "box"(x0, 위, x1, 아래)로 자리를 적는다.
     """
     pages = geometry.read(path)

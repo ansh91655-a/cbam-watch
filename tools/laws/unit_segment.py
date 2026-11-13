@@ -2,7 +2,8 @@
 
 제목은 PDF에 제목으로 적힌 것(H1–H6)만 쓴다. 번호가 앞 제목의 번호에 이어지는 것은 절(section), "ANNEX A" 꼴은 부속서(appendix)가 되고,
 번호가 없거나 이어지지 않는 제목은 그 자리의 문단으로 두되 꼴을 "h"로 적는다.
-문단의 꼴: p(문단), h2(작은 제목과 그 단), li1(목록 항목과 들여쓴 단), th:표:줄:칸 / td:표:줄:칸(표의 칸), caption(그림·표의 제목), note(각주), figure(그림 안의 이름표), formula(수식).
+문단의 꼴: p(문단), h2(작은 제목과 그 단), li1(목록 항목과 들여쓴 단), th:표:줄:칸 / td:표:줄:칸(표의 칸. 칸 안의 목록 항목은 뒤에 ":li1"처럼, 합쳐진 칸은 그 뒤에 ":s칸수x줄수"로 붙는다),
+caption(그림·표의 제목), note(각주), figure(그림 안의 이름표), formula(수식).
 각주는 그 번호가 나온 조각의 끝에 "[3] …"으로 싣는다(guide_segment와 같다).
 """
 
@@ -28,13 +29,13 @@ def _heading(unit, previous):
 
 def _shape(unit):
     kind = unit["kind"]
-    if kind == "h":
-        return f"h{unit.get('level', 1)}"
-    if kind == "li":
-        return f"li{unit.get('depth', 1)}"
-    if kind == "cell":
-        return f"{'th' if unit.get('head') else 'td'}:{unit['table']}:{unit['row']}:{unit['column']}"
-    return kind
+    inner = {"h": f"h{unit.get('level', 1)}", "li": f"li{unit.get('depth', 1)}", "cell": ""}.get(kind, kind)
+    if "table" in unit and kind != "caption":   # 표의 칸과 그 안에 든 것(목록 항목 따위). 칸 안의 꼴은 뒤에 붙인다
+        cell = f"{'th' if unit.get('head') else 'td'}:{unit['table']}:{unit['row']}:{unit['column']}"
+        if unit.get("cols", 1) > 1 or unit.get("rows", 1) > 1:      # 합쳐진 칸: 칸 수 x 줄 수
+            return f"{cell}:{inner}:s{unit.get('cols', 1)}x{unit.get('rows', 1)}"
+        return f"{cell}:{inner}" if inner else cell
+    return inner or "p"
 
 
 def _block(unit):
