@@ -4686,6 +4686,12 @@
    "ko": "서비스 범위",
    "from": "reg-portal",
    "added": "2026-11-13"
+  },
+  {
+   "en": "verification method",
+   "ko": "검증 방법",
+   "from": "reg-delegation",
+   "added": "2026-11-13"
   }
  ]
 }
