@@ -4746,6 +4746,30 @@
    "ko": "상호 인정 협정",
    "from": "report-carbon-price",
    "added": "2026-11-13"
+  },
+  {
+   "en": "activity level change",
+   "ko": "활동수준 변경",
+   "from": "report-free-allocation",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "benchmark curve",
+   "ko": "벤치마크 곡선",
+   "from": "report-free-allocation",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "scrap/EAF",
+   "ko": "고철/전기로",
+   "from": "report-free-allocation",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "introductory period",
+   "ko": "도입 기간",
+   "from": "report-free-allocation",
+   "added": "2026-11-13"
   }
  ]
 }
