@@ -56,7 +56,7 @@ def _borrowed(units, old):
     heads = [part for part in old if part["kind"] in ("section", "appendix") and part["title"]]
     found, at = {}, 0
     for index, unit in enumerate(units):
-        if unit["kind"] in ("figure", "formula", "cell", "note") or len(unit["text"]) > guide_segment.TITLE_MAX + 20:
+        if unit["kind"] in ("figure", "formula", "cell", "note", "toc") or len(unit["text"]) > guide_segment.TITLE_MAX + 20:
             continue
         text = _squash(_block(unit))
         for ahead in range(at, min(at + 3, len(heads))):
@@ -83,6 +83,8 @@ def parts(units, outline="auto", fallback=None):
     found, seen, previous = [first], {first["id"]}, None
     first.update({"blocks": [], "shapes": [], "units": [], "notes": []})
     for index, unit in enumerate(units):
+        if unit["kind"] == "toc":       # 차례의 줄은 싣지 않는다(국문 PDF를 만들 때만 쓴다)
+            continue
         if index in borrowed:
             old = borrowed[index]
             heading = (old["kind"], old["id"], old["label"], old["title"], old["level"], None)
@@ -112,7 +114,7 @@ def parts(units, outline="auto", fallback=None):
             part["shapes"].append("note")
             part["units"].append(index)
         del part["lines"], part["pages"]
-        first = part.get("head", part["units"][0] if part["units"] else None)
+        first = part.get("head", part["units"][0] if part["units"] else None)   # 차례의 줄은 units에 없으므로 차례 쪽을 가리키지 않는다
         if first is not None:
             part["page"] = units[first]["page"]     # 조각이 시작하는 쪽(PDF로 보는 화면에서 그 쪽을 연다)
     return [part for part in found if part["blocks"] or part["title"]]

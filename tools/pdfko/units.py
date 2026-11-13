@@ -18,7 +18,7 @@ from tools.pdfko import geometry, glyphs, tags
 
 INLINE = frozenset({"Span", "Link", "Reference", "Quote", "Annot", "Code", "Ruby", "Warichu", "NonStruct", "Private", "Form"})
 HEADINGS = {"H": 1, "H1": 1, "H2": 2, "H3": 3, "H4": 4, "H5": 5, "H6": 6, "Title": 0}
-SKIPPED = frozenset({"TOC", "TOCI", "Index"})         # 차례와 찾아보기는 싣지 않는다
+SKIPPED = frozenset({"Index"})                         # 찾아보기는 싣지 않는다. 차례는 "toc" 단위로 적어 두되 규정 원문 화면에는 싣지 않는다
 NOTES = frozenset({"Note", "Footnote"})
 CONTAINERS = frozenset({"Document", "DocumentFragment", "Part", "Art", "Sect", "Div", "Aside", "L", "Table", "TR", "THead", "TBody", "TFoot"})
 LOOSE = "loose"     # 구조 트리에 없는 글자를 쪽마다 모아 두는 이름
@@ -133,6 +133,9 @@ class _Reader:
         kind = self.kind(index)
         if kind in SKIPPED:
             return
+        if kind == "TOCI":
+            self.entry(index, context)
+            return
         if kind in HEADINGS:
             self.emit("h", index, self.gather(index), level=HEADINGS[kind], **context)
         elif kind in NOTES:
@@ -176,6 +179,22 @@ class _Reader:
                 boxes = [word[9] for word in group]
                 box = [round(min(b[0] for b in boxes), 1), round(min(b[1] for b in boxes), 1), round(max(b[2] for b in boxes), 1), round(max(b[3] for b in boxes), 1)]
                 self.units.append(dict(context, kind="figure", text=text, page=page + 1, box=box))
+
+    def entry(self, index, context):
+        """차례의 한 줄. 그 안에 든 아래 단의 차례(TOC)는 따로 걷는다. 국문 PDF에서 제목의 번역을 앉히는 데만 쓴다."""
+        words, marks, deeper, stack = [], [], [], [index]
+        while stack:
+            at = stack.pop()
+            if at != index and self.kind(at) == "TOC":
+                deeper.append(at)
+                continue
+            words += self.held.get(at, [])
+            marks += self.tree.elements[at]["marks"]
+            stack += self.kids[at]
+        if words:
+            self.emit("toc", index, words, marks=marks, **context)
+        for at in reversed(deeper):
+            self.walk(at, context)
 
     def note(self, index, context):
         label = next((kid for kid in self.kids[index] if self.kind(kid) == "Lbl"), None)
@@ -293,7 +312,7 @@ def _grid(lines):
 def read(path):
     """PDF의 단위들: {"pages": 쪽 수, "tagged": 꼬리표가 있는가, "units": [단위, …]}.
 
-    단위는 {"kind": "h"|"p"|"li"|"cell"|"caption"|"note"|"figure"|"formula", "text", "page", "marks": [(쪽, 내용 조각 번호), …]}에
+    단위는 {"kind": "h"|"p"|"li"|"cell"|"caption"|"note"|"figure"|"formula"|"toc", "text", "page", "marks": [(쪽, 내용 조각 번호), …]}에
     제목의 "level", 목록과 각주의 "label", 목록의 "depth", 표의 "table"·"row"·"column"·"head"(합쳐진 칸이면 "cols"·"rows"도)가 붙는다.
     그림 안의 이름표("figure")는 "marks" 대신 "box"(x0, 위, x1, 아래)로 자리를 적는다.
     """

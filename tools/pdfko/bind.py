@@ -8,6 +8,25 @@ import collections
 from tools.pdfko import layout
 
 
+def _before_tail(marks):
+    """줄 끝의 쪽 번호와 그 앞의 점줄을 뺀 글자들(차례의 줄에서 제목만 남긴다)."""
+    inked = sorted((mark for mark in marks if mark[2]["text"].strip()), key=lambda mark: mark[2]["x"])
+    end = len(inked)
+    while end and inked[end - 1][2]["text"].strip().isdigit():      # 쪽 번호: 줄 끝에 붙어 있는 숫자들
+        end -= 1
+        if end and inked[end][2]["x0"] - inked[end - 1][2]["x1"] > 0.5 * inked[end][2]["size"]:
+            break
+    dots = end
+    while dots and inked[dots - 1][2]["text"].strip() in (".", "·", "…", "_"):
+        dots -= 1
+    if dots == end and end < len(inked) and end and inked[end][2]["x0"] - inked[end - 1][2]["x1"] <= 0.5 * inked[end][2]["size"]:
+        return marks        # 점줄도 틈도 없이 숫자로 끝난 줄: 제목의 일부다
+    if not dots:
+        return []
+    edge = inked[dots - 1][2]["x1"] + 0.5
+    return [mark for mark in marks if mark[2]["x"] <= edge]
+
+
 class Binding:
     """lines는 {단위: {(쪽, 줄): [글자, …]}}, words는 쪽마다의 [(줄, 네모, 단위 또는 None, 글)]."""
 
@@ -39,8 +58,11 @@ class Binding:
                         self.lines[index].setdefault((number, at), []).extend(marks)
             self.words.append(row)
 
-    def slots(self, index, lead=()):
-        """단위의 줄 칸들(글의 차례대로). lead는 첫 줄 머리에 남겨 둘 표(번호, 글머리표)의 낱말들이다. 돌려주는 것은 (줄 칸들, "") 또는 (None, 까닭)."""
+    def slots(self, index, lead=(), tail=False):
+        """단위의 줄 칸들(글의 차례대로). 돌려주는 것은 (줄 칸들, "") 또는 (None, 까닭).
+
+        lead는 첫 줄 머리에 남겨 둘 표(번호, 글머리표)의 낱말들이다. tail이면 마지막 줄 끝의 점줄과 쪽 번호를 남겨 둔다(차례의 줄).
+        """
         found = self.lines.get(index)
         if not found:
             return None, "글자를 찾지 못함"
@@ -51,6 +73,8 @@ class Binding:
                 marks = self._after_lead(number, at, index, marks, lead)
                 if not marks:
                     continue        # 첫 줄에 표만 있다
+            if tail and position == len(ordered) - 1:
+                marks = _before_tail(marks)
             inked = [glyph for _, _, glyph in marks if glyph["text"].strip()]
             if not inked:
                 continue

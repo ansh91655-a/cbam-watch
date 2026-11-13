@@ -46,6 +46,10 @@ class PartsTest(unittest.TestCase):
         self.assertEqual((found[2]["head"], found[2]["shapes"], found[3]["shapes"]), (9, ["caption"], ["figure"]))
         self.assertEqual([part["page"] for part in found], [1, 1, 1, 1])     # 조각이 시작하는 쪽
 
+    def test_contents_lines_are_not_shown(self):
+        found = unit_segment.parts([unit("toc", "1 One ..... 3"), unit("h", "1 One", level=1), unit("p", "Text")])
+        self.assertEqual([(part["id"], part["blocks"], part["units"]) for part in found], [("sec-1", ["Text"], [2])])
+
     def test_number_that_does_not_follow_is_not_a_section(self):
         found = unit_segment.parts([unit("h", "1 One", level=1), unit("h", "2026 in review", level=2), unit("h", "2 Two", level=1)])
         self.assertEqual([part["id"] for part in found], ["sec-1", "sec-2"])

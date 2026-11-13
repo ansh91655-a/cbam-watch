@@ -118,6 +118,28 @@ class BuildTest(unittest.TestCase):
 
 
 @unittest.skipUnless(pikepdf, "pikepdf와 reportlab이 있어야 한다")
+@unittest.skipUnless(pikepdf, "pikepdf와 reportlab이 있어야 한다")
+class ContentsTest(unittest.TestCase):
+    def test_contents_lines_take_the_translated_titles(self):
+        parts = [{"id": "sec-2-1", "kind": "section", "label": "2.1", "title": "Outputs of this work", "level": 2, "blocks": [], "units": []}]
+        found = [{"kind": "toc", "text": "2.1 Outputs of this work ........ 4", "page": 2, "marks": []},
+                 {"kind": "toc", "text": "2.2 Something else .... 5", "page": 2, "marks": []}]
+        memory = {store.key("Outputs of this work"): "이 작업의 결과물"}
+        self.assertEqual(build.items(parts, found, memory), [(0, "Outputs of this work", "이 작업의 결과물", ["2.1", "tail"])])
+
+    def test_the_leader_and_page_number_stay(self):
+        from tools.pdfko import bind
+
+        def glyphs(text, start=0.0):
+            return [(0, index, {"text": char, "x": start + index * 5 + 2.5, "x0": start + index * 5, "x1": start + index * 5 + 5, "size": 10}) for index, char in enumerate(text)]
+
+        kept = bind._before_tail(glyphs("Scope....12"))
+        self.assertEqual("".join(mark[2]["text"] for mark in kept), "Scope")
+        self.assertEqual("".join(mark[2]["text"] for mark in bind._before_tail(glyphs("Annex 2") + glyphs("15", 100))), "Annex 2")
+        self.assertEqual(len(bind._before_tail(glyphs("Annex 12"))), 8)       # 점줄도 틈도 없으면 숫자는 제목의 일부다
+
+
+@unittest.skipUnless(pikepdf, "pikepdf와 reportlab이 있어야 한다")
 class MaskTest(unittest.TestCase):
     def test_the_commission_logo_is_found_by_its_alternative_text(self):
         from tools.pdfko import tags

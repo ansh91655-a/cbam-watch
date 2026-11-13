@@ -9,12 +9,14 @@ import collections
 import io
 import json
 import pathlib
+import re
 import sys
 
 import pikepdf
 
 from tools.pdfko import bind, erase, fonts, geometry, glyphs, layout, match, tags, typeset
 
+TRAIL = re.compile(r"[\s.·…_]*\d*\s*$")     # 차례의 줄 끝: 점줄과 쪽 번호
 SUFFIX = " (비공식 국문 번역)"
 SUBJECT = "유럽연합 집행위원회 문서의 비공식 국문 번역입니다. 법적 효력이 없으며 원문과 다를 때에는 원문이 우선합니다. 원문: "
 
@@ -92,7 +94,33 @@ def items(parts, units, memory):
             elif layout.MARKER.match(head) and len(pieces) == 2 and pieces[0] == head:
                 lead, korean = [head], pieces[1]
             out.append((index, text, korean, lead))
+    return out + _contents(parts, units, memory, store)
+
+
+def _contents(parts, units, memory, store):
+    """차례 쪽의 줄에 앉힐 것: 번호가 같은 조각의 제목 번역. 줄 끝의 점줄과 쪽 번호는 원문 것을 둔다(lead 뒤에 "tail"을 붙여 알린다)."""
+    titles = {}
+    for part in parts:
+        korean = memory.get(store.key(part["title"])) if part["title"] else None
+        if korean and korean != part["title"]:
+            titles.setdefault(part["label"].lower(), (part["title"], korean))
+    out = []
+    for index, unit in enumerate(units):
+        if unit["kind"] != "toc":
+            continue
+        core = TRAIL.sub("", unit["text"])
+        for label, (title, korean) in titles.items():
+            head = core[:len(label)].lower()
+            rest = core[len(label):].lstrip(" .:–—-\t")
+            if head == label and _same(rest, title):
+                out.append((index, title, korean, label.split() + ["tail"]))
+                break
     return out
+
+
+def _same(one, two):
+    plain = lambda text: "".join(char for char in text.lower() if char.isalnum())
+    return bool(plain(one)) and plain(one) == plain(two)
 
 
 class _Tally:
@@ -137,7 +165,8 @@ def _arrange_units(pages, sheets, sound, wanted, units):
     """단위가 있는 문서: 단위가 가리키는 글자를 바로 찾아 앉힌다. 돌려주는 것은 (쪽마다 그릴 줄, 쪽마다 지울 글자, 보고)."""
     binding, tally = bind.Binding(pages, sheets, units), _Tally(sheets)
     for index, text, korean, lead in wanted:
-        lines, why = binding.slots(index, lead)
+        tail = lead[-1:] == ["tail"]      # 차례의 줄: 끝의 점줄과 쪽 번호를 둔다
+        lines, why = binding.slots(index, lead[:-1] if tail else lead, tail)
         page = units[index]["page"] - 1
         if lines is None:
             tally.leave(why, page, text)
@@ -145,7 +174,7 @@ def _arrange_units(pages, sheets, sound, wanted, units):
         if not all(sound[slot["page"]] for slot in lines):
             tally.leave("고칠 수 없는 쪽", page, text)
             continue
-        placed, why = layout.settle(lines, pages, sheets, binding.others(index, {slot["page"] for slot in lines}), korean, tight="box" in units[index])
+        placed, why = layout.settle(lines, pages, sheets, binding.others(index, {slot["page"] for slot in lines}), korean, tight=tail or "box" in units[index])
         if placed is None:
             tally.leave(why, page, text)
             continue
