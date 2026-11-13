@@ -25,19 +25,22 @@ export function plan(site) {
   const guide = acts.find((act) => act.group === "guide");  // EU 집행위원회 안내 문서(절로 나뉜다)
   const manual = acts.find((act) => act.group === "manual");  // 등록부 이용 안내서
   const single = acts.find((act) => act.group !== "act" && act.toc.length === 1);  // 조각이 하나뿐인 짧은 문서(알림이 붙는 것이 많다)
+  const revised = acts.find((act) => act.changes);  // 앞선 판을 받아 두어 달라진 곳을 볼 수 있는 문서
   // 원문과 번역 PDF를 나란히 보는 화면: 쪽이 적은 문서 하나(없는 문서의 화면도 본다)
   const pdfs = read(site, "laws/pdf.json", { docs: {} }).docs || {};
   const small = Object.keys(pdfs).sort((a, b) => pdfs[a].pages - pdfs[b].pages)[0];
   const laws = acts.length ? ["#laws", `#laws-${encodeURIComponent("내재배출량 검증")}`, law, acts[1] ? `#law-${acts[1].id}.art-1` : null,
     guide ? `#law-${guide.id}.${(guide.toc.find((part) => part.kind === "section") || {}).id || "cover"}` : null,
-    manual ? `#law-${manual.id}` : null, single ? `#law-${single.id}` : null, small ? `#pdf-${small}.p2` : null, "#pdf-none"] : [];
+    manual ? `#law-${manual.id}` : null, single ? `#law-${single.id}` : null, small ? `#pdf-${small}.p2` : null, "#pdf-none",
+    // 문단 하나를 가리키는 주소와, 앞선 판과 달라진 곳 보기(앞선 판을 받아 둔 문서가 있을 때)
+    acts[0] ? `#law-${acts[0].id}.art-2.1` : null, revised ? `#changes-${revised.id}` : null, "#changes-none"] : [];
   // 사이트 검색: 빈 화면, 여러 갈래에서 찾는 말, 품목 코드, 찾지 못하는 말
   const search = ["#search", `#search-${encodeURIComponent("기본값")}`, "#search-7208", "#search-zzzzqq"];
   return {
     // 가로 넘침과 화면 오류: 모든 화면을 다섯 너비로
     widths: [360, 390, 768, 1024, 1440],
-    views: ["#home", "#news", topics[0] ? `#news-${topics[0].code}` : null, item, "#rules", ...(rules.groups || []).map((group) => `#rules-${group.code}`),
-      "#price", "#calc", good, "#calendar", "#calendar-2027", "#calendar-2028", "#cn", "#cn-7208", "#docs", ...laws, "#terms", "#about", "#design", ...search].filter(Boolean),
+    views: ["#home", "#news", topics[0] ? `#news-${topics[0].code}` : null, "#news-notices", item, "#rules", ...(rules.groups || []).map((group) => `#rules-${group.code}`),
+      "#price", "#calc", good, "#calendar", "#calendar-2027", "#calendar-2027.role-verifier", "#calendar-2028", "#cn", "#cn-7208", "#docs", ...laws, "#terms", "#about", "#design", ...search].filter(Boolean),
     // 규제 화면: 규제마다 세 너비로
     ruleWidths: [360, 768, 1440],
     rules: (rules.regulations || []).map(rule),
@@ -45,7 +48,7 @@ export function plan(site) {
     axeWidths: [1280, 390],
     themes: ["", "?theme=white", "?theme=midnight"],
     axeViews: [...new Set(["#home", "#news", item, "#rules", rule(withAnalysis), rule(withFigure), rule(withTable), "#price", "#calc", good,
-      "#calendar", "#calendar-2027", "#cn-7208", "#docs", "#laws", law, "#terms", "#about", search[1]].filter(Boolean))],
+      "#calendar", "#calendar-2027.role-verifier", "#cn-7208", "#docs", "#laws", law, revised ? `#changes-${revised.id}` : null, "#news-notices", "#terms", "#about", search[1]].filter(Boolean))],
     good,
   };
 }
