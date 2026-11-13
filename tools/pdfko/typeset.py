@@ -20,12 +20,11 @@ MARK = "비공식 국문 번역본"      # 기관 표장을 가린 자리에 적
 MARK_SIZE = 10.5
 
 
-def _line(sheet, x, y, text, kind, heavy, size, color):
+def _line(sheet, x, y, text, heavy, size, color):
     writer = sheet.beginText(x, y)
     writer.setFillColorRGB(*color)
-    for name, piece in fonts.pieces(text, kind, heavy):
-        writer.setFont(name, size)
-        writer.textOut(piece)
+    writer.setFont(fonts.face(heavy), size)
+    writer.textOut(text)
     sheet.drawText(writer)
 
 
@@ -36,25 +35,24 @@ def overlay(sizes, jobs, masks=None):
     masks는 {쪽: [(x0, 위, x1, 아래), …]} — 흰 네모로 가리고 비공식 번역본임을 적을 자리(기관의 표장).
     """
     buffer = io.BytesIO()
-    notice = fonts.tidy(NOTICE)     # 글꼴은 처음 쓸 때 등록된다. 아래에서 첫 글꼴로 삼으려면 먼저 불러야 한다
-    banner = fonts.tidy(BANNER, "sans", True)
-    sheet = canvas.Canvas(buffer, pagesize=sizes[0], invariant=1, pageCompression=1, initialFontName=fonts.FACES[("sans", False)])
+    notice, banner = fonts.tidy(NOTICE), fonts.tidy(BANNER, True)
+    sheet = canvas.Canvas(buffer, pagesize=sizes[0], invariant=1, pageCompression=1, initialFontName=fonts.face(False))
     for number, (width, height) in enumerate(sizes):
         sheet.setPageSize((width, height))
         for x0, top, x1, bottom in (masks or {}).get(number, []):
             sheet.setFillColorRGB(1, 1, 1)
             sheet.rect(x0, height - bottom, x1 - x0, bottom - top, stroke=0, fill=1)
-            _line(sheet, x0, height - (top + bottom) / 2 - MARK_SIZE * 0.35, MARK, "sans", True, MARK_SIZE, NOTICE_INK)
+            _line(sheet, x0, height - (top + bottom) / 2 - MARK_SIZE * 0.35, MARK, True, MARK_SIZE, NOTICE_INK)
         for job in jobs.get(number, []):
-            _line(sheet, job["x"], height - job["base"], job["text"], job["kind"], job["heavy"], job["size"], job["color"])
+            _line(sheet, job["x"], height - job["base"], job["text"], job["heavy"], job["size"], job["color"])
         if number == 0:     # 첫 쪽에는 띠를 두르고 굵게 적는다(표지가 기관의 공식 문서로 보이지 않게)
             sheet.setFillColorRGB(*BAND_FILL)
             sheet.rect(0, height - BAND_HEIGHT, width, BAND_HEIGHT, stroke=0, fill=1)
-            size = min(BAND_SIZE, BAND_SIZE * (width - 24) / max(fonts.width(banner, "sans", True, BAND_SIZE), 1))
-            _line(sheet, (width - fonts.width(banner, "sans", True, size)) / 2, height - BAND_HEIGHT / 2 - size * 0.35, banner, "sans", True, size, BAND_INK)
+            size = min(BAND_SIZE, BAND_SIZE * (width - 24) / max(fonts.width(banner, True, BAND_SIZE), 1))
+            _line(sheet, (width - fonts.width(banner, True, size)) / 2, height - BAND_HEIGHT / 2 - size * 0.35, banner, True, size, BAND_INK)
         else:
-            wide = fonts.width(notice, "sans", False, NOTICE_SIZE)
-            _line(sheet, (width - wide) / 2, height - NOTICE_TOP, notice, "sans", False, NOTICE_SIZE, NOTICE_INK)
+            wide = fonts.width(notice, False, NOTICE_SIZE)
+            _line(sheet, (width - wide) / 2, height - NOTICE_TOP, notice, False, NOTICE_SIZE, NOTICE_INK)
         sheet.showPage()
     sheet.save()
     return buffer.getvalue()

@@ -26,7 +26,7 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 | `sources/registry.json` | 출처 대장. 어디를 어떤 방법으로 보는지 적혀 있다 |
 | `collected/` | 수집 결과. `feed/`(그날 새로 보인 것), `state/`(이미 본 것의 열쇠), `pages/`(EU 공식 화면의 글), `status.json`(출처별 확인 결과), `archive/`(지난 소식을 한꺼번에 모은 것. 아래 '지난 소식 채우기' 참조) |
 | `originals/` | EU 집행위원회 문서의 사본(`files/<문서 id>/<해시>/<원래 파일 이름>`), 뽑아 낸 본문(`text/`), 판 사이의 비교 결과(`diffs/`), 대장(`state.json`) `units/`에는 PDF에 적힌 짜임에서 읽은 뜻 단위(제목, 문단, 목록 항목, 표의 칸, 각주)를 둔다(`tools/pdfko/units.py`). |
-| `assets/fonts/` | 국문 PDF에 번역을 찍는 글꼴(Pretendard, 나눔명조, Tinos. 모두 OFL 1.1이고 허락글이 함께 있다) |
+| `assets/fonts/` | 국문 PDF에 번역을 찍는 글꼴(Pretendard. OFL 1.1이고 허락글이 함께 있다) |
 | `data/` | 사이트에 게시한 데이터. 소식(`items.json`), 주제 목록(`topics.json`), 인증서 가격(`prices.json`, 프로그램이 가격표에서 만든다), 일정(`events.json`), 주간 요약(`digests.json`), 용어집(`terms.json`), 하나로 묶은 소식의 기록(`merged.json`), 규제별 진행 상황(`regulations.json`), 품목 코드 조회의 목록(`cn.json`), 법령에서 옮겨 온 참고 자료(`factor.json`, `duties.json`, `calc.json`, `calc-goods.json`), 규정 원문과 안내 문서의 국문 번역(`laws-ko/`, 문서마다 한 파일) |
 | `reports/` | 보고 실행이 올리는 그날과 그 주의 보고 파일. 알림의 근거다 |
 | `language/` | 국문 표기 기준(용어집 `glossary.json`), 번역 실행들이 정해 둔 낱말(`translation-terms.json`), 번역을 지운 까닭(`translation-reviews.json`), 검수의 결과(`translation-checks.json`) |
@@ -122,7 +122,7 @@ EU 탄소국경조정제도(CBAM)의 규제 동향을 원문과 함께 정리해
 - 화면은 문단의 꼴대로 그린다(`site/js/laws/blocks.js`): 목록 항목은 들여 쓰고, 표는 칸마다 원문과 국문을 위아래로 두며, 그림 안의 글자는 접어 둔다. 식과 그림은 원문 PDF에서 확인하라고 밝힌다.
 - 원문과 번역을 PDF로 나란히 볼 수 있다(`#pdf-<문서>.p<쪽>`). `tools/pdfko`가 원문 PDF에서 번역이 있는 문단의 글자만 들어내고 같은 자리에 국문을 찍어 국문 PDF를 만든다. 쪽 수와 쪽의 크기가 같으므로 화면은 한 줄에 원문 쪽과 번역 쪽을 두어 함께 스크롤한다(PDF.js, `site/vendor/pdfjs`). 국문 PDF는 사이트를 만들 때 만들고(`tools/pdfko/site.py`), 입력이 같으면 만들어 둔 것을 쓴다(`.cache/pdfko`).
   - 쪽마다 비공식 번역임을 적고 첫 쪽에는 띠로 알린다. 꼬리표에 기관의 표장이라고 적힌 그림은 가린다(도안으로 그려진 표장은 가리지 못한다). 번호와 글머리표, 각주 번호, 번역하지 않는 글(수식, 쪽 번호, 머리말·꼬리말)은 원문 것이 그대로 남는다. 차례 쪽에는 번호가 같은 조각의 제목 번역을 앉히고 점줄과 쪽 번호는 둔다.
-  - 번역이 원문보다 길면 아래 빈 곳을 쓰거나 글자를 줄인다(0.6배까지). 그래도 자리가 모자라거나 줄들이 문단 꼴이 아니면 그 문단은 원문 그대로 둔다. 글꼴은 `assets/fonts`의 Pretendard, 나눔명조, Tinos다(모두 OFL 1.1).
+  - 번역이 원문보다 길면 아래 빈 곳을 쓰거나 글자를 줄인다(0.6배까지). 그래도 자리가 모자라거나 줄들이 문단 꼴이 아니면 그 문단은 원문 그대로 둔다. 글꼴은 `assets/fonts`의 Pretendard다(OFL 1.1). 원문이 굵은 글씨인 곳만 굵게 찍는다.
 - 찾기에 쓰는 글은 법령의 것(`data/laws/search.json`)과 따로 둔다(`search-guides.json`). 크기가 커서 규정 원문 화면에서 찾을 때만 받는다.
 
 ### 번역을 하는 실행

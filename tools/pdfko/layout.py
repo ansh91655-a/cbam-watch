@@ -314,7 +314,7 @@ def place(spots, pages, sheets, others, korean):
     """문단 하나를 앉힌다.
 
     돌려주는 것은 ((그릴 줄들, 지울 글자들, 줄인 비율), "") 또는 (None, 까닭).
-    그릴 줄은 {"page", "x", "base", "size", "text", "kind", "heavy", "color"}, 지울 글자는 {쪽: {(찍기 연산의 차례, 글자 차례), …}}.
+    그릴 줄은 {"page", "x", "base", "size", "text", "heavy", "color"}, 지울 글자는 {쪽: {(찍기 연산의 차례, 글자 차례), …}}.
     """
     lines, why = slots(spots, sheets)
     if not lines:
@@ -330,11 +330,10 @@ def settle(lines, pages, sheets, others, korean, tight=False):
         return None, "문단 꼴이 아님"
     names = sum((slot["fonts"] for slot in lines), collections.Counter())
     colors = sum((slot["colors"] for slot in lines), collections.Counter())
-    name = names.most_common(1)[0][0]
-    kind, heavy = fonts.family(name), fonts.bold(name)
+    heavy = fonts.bold(names.most_common(1)[0][0])
     color = colors.most_common(1)[0][0] or (0.0, 0.0, 0.0)
     size = _mode(slot["size"] for slot in lines for _ in slot["marks"])
-    text = fonts.tidy(korean, kind, heavy)
+    text = fonts.tidy(korean, heavy)
     if not text:
         return None, "찍을 글자가 없음"
     zones = []
@@ -376,7 +375,7 @@ def settle(lines, pages, sheets, others, korean, tight=False):
             actual = size * scale * KOREAN
             if actual < SMALLEST and scale < 1.0:
                 break
-            measure, space = (lambda word: fonts.width(word, kind, heavy, actual)), fonts.width(" ", kind, heavy, actual)
+            measure, space = (lambda word: fonts.width(word, heavy, actual)), fonts.width(" ", heavy, actual)
             drawn = []
             for run, part in zip(runs, texts):
                 cells = [(zone, cell) for zone in run for cell in _cells(zone, scale)]
@@ -386,7 +385,7 @@ def settle(lines, pages, sheets, others, korean, tight=False):
                     break
                 for (zone, _), (cell, line, used) in zip(cells, fitted):
                     x = zone["axis"] - used / 2 if cell[0] is None else cell[0]
-                    drawn.append({"page": zone["page"], "x": x, "base": cell[1], "size": actual, "text": line, "kind": kind, "heavy": heavy, "color": color})
+                    drawn.append({"page": zone["page"], "x": x, "base": cell[1], "size": actual, "text": line, "heavy": heavy, "color": color})
             if drawn is None:
                 continue
             gone = {}

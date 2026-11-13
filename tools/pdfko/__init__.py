@@ -11,6 +11,6 @@
 - match: 꼬리표가 없는 PDF에서는 문단의 글을 원문의 낱말에 맞추어 자리를 찾는다
 - layout: 번역을 앉힐 자리(줄 칸, 너비, 글자 크기)를 정한다
 - erase: 번역으로 바꿀 자리의 원문 글자를 들어낸다(pikepdf)
-- fonts, typeset: 그 자리에 국문을 찍는다(reportlab, assets/fonts의 글꼴)
+- fonts, typeset: 그 자리에 국문을 찍는다(reportlab, assets/fonts의 Pretendard)
 - build: 문서 하나의 국문 PDF를 만들고 얼마나 앉혔는지 알린다
 """

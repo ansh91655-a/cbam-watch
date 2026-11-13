@@ -19,18 +19,13 @@ from tests.test_units import _tagged_pdf
 
 @unittest.skipUnless(pikepdf, "pikepdf와 reportlab이 있어야 한다")
 class FontsTest(unittest.TestCase):
-    def test_family_and_weight_follow_the_original_font(self):
-        self.assertEqual((fonts.family("ABCDEF+TimesNewRomanPS-BoldMT"), fonts.bold("ABCDEF+TimesNewRomanPS-BoldMT")), ("serif", True))
-        self.assertEqual((fonts.family("XYZABC+ArialMT"), fonts.bold("XYZABC+ArialMT")), ("sans", False))
+    def test_translations_are_set_in_pretendard(self):
+        self.assertEqual((fonts.face(False), fonts.face(True)), ("Pretendard-Regular", "Pretendard-Bold"))
+        self.assertEqual((fonts.bold("ABCDEF+TimesNewRomanPS-BoldMT"), fonts.bold("XYZABC+ArialMT")), (True, False))   # 굵기만 원문을 따른다
+        self.assertTrue(fonts.has("가") and fonts.has("A", True) and not fonts.has("\U00013000"))
+        self.assertGreater(fonts.width("가나", False, 10), fonts.width("ab", False, 10))
 
-    def test_each_character_gets_a_font_that_has_it(self):
-        self.assertEqual(fonts.face("가", "sans", True)[0], "Pretendard-Bold")
-        self.assertEqual(fonts.face("가", "serif", False)[0], "NanumMyeongjo-Regular")
-        self.assertEqual(fonts.face("A", "serif", False)[0], "Tinos-Regular")      # 부리글꼴 문서의 로마자는 Times와 폭이 같은 글꼴
-        self.assertEqual(fonts.pieces("가 A", "serif", False), [("NanumMyeongjo-Regular", "가"), ("Tinos-Regular", " A")])
-        self.assertGreater(fonts.width("가나", "sans", False, 10), fonts.width("ab", "sans", False, 10))
-
-    def test_tidy_drops_what_no_font_can_draw(self):
+    def test_tidy_drops_what_the_font_cannot_draw(self):
         fonts.missing.clear()
         self.assertEqual(fonts.tidy("앞\t(\U00013000)  뒤 ⚫"), "앞 뒤 ●")       # 빠진 글자만 든 괄호도 뺀다
         self.assertEqual(fonts.missing, {"\U00013000"})
