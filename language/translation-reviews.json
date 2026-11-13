@@ -84,6 +84,12 @@
    "key": "902f07b7e211",
    "act": "guide-3",
    "why": "review process를 '신고서 검토 절차'로 옮겨 원문에 없는 '신고서'가 더해짐"
+  },
+  {
+   "day": "2026-11-13",
+   "key": "24a92861db97",
+   "act": "guide-3",
+   "why": "This documentation should be from …를 '나온 것이어야 한다'로 옮겨 권고(should)가 의무로 바뀜"
   }
  ]
 }
