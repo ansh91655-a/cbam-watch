@@ -4788,6 +4788,48 @@
    "ko": "열병합발전 설비",
    "from": "guide-importers",
    "added": "2026-11-13"
+  },
+  {
+   "en": "oxygen converter",
+   "ko": "산소 전로",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Bayer process",
+   "ko": "바이어 공정",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "beneficiation",
+   "ko": "선광",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "green anode paste",
+   "ko": "생양극 페이스트",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "fertilizing elements",
+   "ko": "비료 요소",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "steam reformation",
+   "ko": "수증기 개질",
+   "from": "guide-importers",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "hydrous ammonia",
+   "ko": "함수 암모니아",
+   "from": "guide-importers",
+   "added": "2026-11-13"
   }
  ]
 }
