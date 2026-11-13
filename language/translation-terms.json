@@ -4560,6 +4560,30 @@
    "ko": "용량 지정",
    "from": "guide-5c",
    "added": "2026-11-13"
+  },
+  {
+   "en": "verification engagement",
+   "ko": "검증 업무",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "constant values",
+   "ko": "고정값",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "lower heating value",
+   "ko": "저위발열량",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "business risks",
+   "ko": "사업상 위험",
+   "from": "guide-verif",
+   "added": "2026-11-13"
   }
  ]
 }
