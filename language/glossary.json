@@ -441,7 +441,8 @@
 ],
 "preferred": "유럽사법재판소",
 "allowed": [
-"유럽연합 사법재판소"
+"유럽연합 사법재판소",
+"EU 사법재판소"
 ],
 "avoid": [
 {
@@ -2034,7 +2035,9 @@
 "category": "04 인증서·신고·등록부",
 "core": false,
 "en": [
-"review"
+"review of CBAM declarations",
+"review of the CBAM declaration",
+"review of a CBAM declaration"
 ],
 "abbr": [],
 "preferred": "신고서 검토",
@@ -4008,8 +4011,7 @@
 "carbon capture and storage"
 ],
 "abbr": [
-"CCS",
-"CCU(S)"
+"CCS"
 ],
 "preferred": "탄소 포집·저장",
 "allowed": [],
@@ -4024,8 +4026,7 @@
 "utilisation"
 ],
 "abbr": [
-"CCS",
-"CCU(S)"
+"CCU"
 ],
 "preferred": "탄소 포집·활용",
 "allowed": [],
@@ -5652,9 +5653,7 @@
 "ferro-manganese"
 ],
 "abbr": [
-"FeMn",
-"FeCr",
-"FeNi"
+"FeMn"
 ],
 "preferred": "페로망간",
 "allowed": [],
@@ -5669,9 +5668,7 @@
 "ferro-chromium"
 ],
 "abbr": [
-"FeMn",
-"FeCr",
-"FeNi"
+"FeCr"
 ],
 "preferred": "페로크롬",
 "allowed": [],
@@ -5686,8 +5683,6 @@
 "ferro-nickel"
 ],
 "abbr": [
-"FeMn",
-"FeCr",
 "FeNi"
 ],
 "preferred": "페로니켈",
@@ -5716,8 +5711,7 @@
 "argon oxygen decarburisation"
 ],
 "abbr": [
-"AOD",
-"VOD"
+"AOD"
 ],
 "preferred": "AOD(아르곤산소탈탄)",
 "allowed": [],
@@ -5732,7 +5726,6 @@
 "vacuum oxygen decarburisation"
 ],
 "abbr": [
-"AOD",
 "VOD"
 ],
 "preferred": "VOD(진공산소탈탄)",
@@ -5842,8 +5835,7 @@
 "anode effect minutes"
 ],
 "abbr": [
-"AEM",
-"AEO"
+"AEM"
 ],
 "preferred": "양극효과 시간",
 "allowed": [],
@@ -5858,7 +5850,6 @@
 "anode effect overvoltage"
 ],
 "abbr": [
-"AEM",
 "AEO"
 ],
 "preferred": "양극효과 과전압",
@@ -6067,8 +6058,7 @@
 "ferro-silicon"
 ],
 "abbr": [
-"FeSi",
-"SiMn"
+"FeSi"
 ],
 "preferred": "페로실리콘",
 "allowed": [],
@@ -6083,7 +6073,6 @@
 "silico-manganese"
 ],
 "abbr": [
-"FeSi",
 "SiMn"
 ],
 "preferred": "실리코망가니즈",
@@ -6477,10 +6466,11 @@
 "abbr": [
 "UN/LOCODE"
 ],
-"preferred": "UN/LOCODE(유엔 무역·운송 위치코드)",
+"preferred": "UN/LOCODE",
 "allowed": [],
 "avoid": [],
-"status": "confirmed"
+"status": "confirmed",
+"note": "유엔 무역·운송 위치코드."
 },
 {
 "no": 353,
