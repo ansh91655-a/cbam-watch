@@ -119,6 +119,12 @@ class CheckTest(unittest.TestCase):
         self.assertIn("원문의 수가 빠짐: 2027", check.problems(source, "5월 31일까지 수수료는 제5조(2)에 따라 1,000유로로 한다.")["hard"])
         self.assertEqual(check.problems(source, "2027년 5월 31일까지 수수료는 제5조(2)에 따라 1,000유로로 한다.")["soft"], [])  # 달 이름에서 온 5는 원문에 없는 수가 아니다
         self.assertIn("원문에 없는 수: 90", check.problems(source, "2027년 5월 31일까지 90일 안에 제5조(2)에 따라 1,000유로를 낸다.")["soft"])
+        # 원문에 없는 글머리표는 알린다. 원문에 글머리표(다른 꼴이어도)가 있으면 알리지 않는다
+        self.assertIn("원문에 없는 글머리표로 시작함", check.problems("Transport of the goods", "• 물품의 운송")["soft"])
+        self.assertIn("원문에 없는 글머리표로 시작함", check.problems("Transport of the goods", "- 물품의 운송")["soft"])
+        for bulleted in ("• Transport of the goods", "— Transport of the goods", "· Transport of the goods", "o Transport of the goods"):
+            self.assertNotIn("원문에 없는 글머리표로 시작함", check.problems(bulleted, "• 물품의 운송")["soft"], bulleted)
+        self.assertNotIn("원문에 없는 글머리표로 시작함", check.problems("Transport of the goods", "물품의 운송")["soft"])
 
     def test_untranslated_text_empty_text_and_lost_annex_numbers_are_stopped(self):
         self.assertEqual(check.problems("The rules apply.", "")["hard"], ["번역이 비어 있음"])
@@ -366,6 +372,7 @@ class HoldTest(unittest.TestCase):
             self.assertEqual((store.load_all()["aaa"], store.load("act-1")), ("새 번역", {"aaa": "새 번역", "bbb": "그대로"}))
             self.assertEqual(store.load_checked("act-1"), {"bbb"})   # 바뀐 문단은 다시 검수한다
             self.assertEqual(store.sync({"aaa": "새 번역"}), 0)        # 이미 같으면 건드리지 않는다
+            self.assertEqual(json.loads(pathlib.Path(folder, "act-1.json").read_text(encoding="utf-8"))["updated"], "2026-11-01")   # 옮겨 적은 파일의 '번역이 더해진 날'은 그대로다
 
     def test_apply_notes_each_rejection_but_not_a_dry_run(self):
         picked, _ = todo.pick(limit=500, act_id=catalog.BASE_CELEX, memory={})

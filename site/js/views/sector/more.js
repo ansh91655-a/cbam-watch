@@ -11,7 +11,7 @@ export function calcSection(sector) {
   if (!calc) {
     return h("section", { class: "panel sector-side", "aria-labelledby": "h-sector-calc" }, [
       h("h2", { id: "h-sector-calc", text: "기본값과 비용 추정" }),
-      h("p", { text: `${sector.name}은 인증서 비용 추정에 싣지 않았습니다. 기본값과 산정 방법은 위의 안내 문서에서 확인하세요.` }),
+      h("p", { text: "이 부문은 인증서 비용 추정에 싣지 않았습니다. 기본값과 산정 방법은 위의 안내 문서에서 확인하세요." }),
     ]);
   }
   const markups = markupText(calc.markups);
@@ -47,10 +47,11 @@ function newsLink(item) {
 
 export function newsSection(sector) {
   if (!sector.items.length) return null;
-  const word = (sector.words || [])[0] || sector.name;
+  const words = (sector.words || []).length ? sector.words : [sector.name];
+  // 이름마다 조사가 달라지지 않게, 낱말은 괄호와 따옴표 안에 적는다
   return h("section", { class: "stack sector-sec", "aria-labelledby": "h-sector-news" }, [
-    h("div", { class: "sec-head" }, [h("h2", { id: "h-sector-news", text: `${sector.name} 소식` }), h("a", { href: target(word), text: `'${word}'로 찾은 것 모두 보기` })]),
-    h("p", { class: "sector-lead", text: `제목이나 요약에 ${sector.name}이 나오는 소식 ${count(sector.itemCount)}건 가운데 최근 것입니다.` }),
+    h("div", { class: "sec-head" }, [h("h2", { id: "h-sector-news", text: `${sector.name} 소식` }), h("a", { href: target(words[0]), text: `사이트에서 ‘${words[0]}’ 찾기` })]),
+    h("p", { class: "sector-lead", text: `제목, 요약, 다룬 내용에 이 부문의 낱말(${words.join(", ")})이 나오는 소식 ${count(sector.itemCount)}건 가운데 최근 것입니다.` }),
     h("ul", { class: "sector-news" }, sector.items.map((item) => h("li", {}, [h("time", { datetime: item.date, text: day(item.date) }), newsLink(item)]))),
   ]);
 }

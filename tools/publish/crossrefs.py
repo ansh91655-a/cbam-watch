@@ -168,7 +168,8 @@ def build(index, items, duties, terms, day):
     for item in sorted(items or [], key=lambda row: str(row.get("published", "")), reverse=True):
         if item.get("withdrawn"):
             continue
-        refs, _ = found(" \n ".join(str(item.get(field, "")) for field in ITEM_FIELDS), known)
+        # 칸(제목, 요약, 실무 영향)은 띄어쓰기가 아닌 글자로 갈라 잇는다: 제목 끝의 법령과 요약 첫머리의 조가 한데 이어지지 않게
+        refs, _ = found(" | ".join(str(item.get(field, "")) for field in ITEM_FIELDS), known)
         if refs:
             body["items"][item["id"]] = _row(known, refs)
         for act_id, part_id in refs:

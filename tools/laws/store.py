@@ -115,10 +115,12 @@ def sync(changes, day=None):
     """
     touched = 0
     for act_id in files():
-        blocks = load(act_id)
+        current = read_json(path_of(act_id), {}) or {}
+        blocks = dict(current.get("blocks", {}))
         stale = {block_key: text for block_key, text in changes.items() if block_key in blocks and blocks[block_key] != text}
         if stale:
-            save(act_id, {**blocks, **stale}, day)
+            # 번역이 더해진 날(updated)은 그대로 둔다: 다른 문서에서 고친 번역을 옮겨 적은 것이지 이 문서를 옮긴 것이 아니다(멈춤 점검과 표본 검토가 이 날을 본다)
+            save(act_id, {**blocks, **stale}, current.get("updated") or day)
             touched += 1
     return touched
 

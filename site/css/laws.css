@@ -116,6 +116,7 @@ body[data-wide] main, body[data-wide] .band-inner, body[data-wide] .head-inner {
 .law-en { color: var(--ink-2); font-size: 0.95rem; }
 .law-ko { color: var(--ink); }
 .law-wait-note { margin-bottom: 8px; font-size: var(--fs-s); color: var(--ink-3); }
+.law-fold-tools { display: flex; justify-content: flex-end; padding: 4px 0 8px; }
 /* 조각에 이어진 것(의무 일정, 소식, 용어). 접어 두고, 펼치면 갈래마다 한 줄씩 보인다 */
 .law-linked { margin-top: 12px; border: 1px solid var(--line-2); border-radius: 12px; background: var(--surface-2); font-size: var(--fs-s); }
 .law-linked > summary { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; padding: 9px 14px; cursor: pointer; font-weight: 650; color: var(--ink-2); }

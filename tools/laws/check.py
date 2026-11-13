@@ -44,6 +44,8 @@ SPELLED = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seve
            "first": 1, "second": 2, "third": 3, "fourth": 4, "fifth": 5, "sixth": 6, "seventh": 7, "eighth": 8, "ninth": 9, "tenth": 10,
            "twenty": 20, "thirty": 30, "forty": 40, "fifty": 50, "sixty": 60, "ninety": 90, "hundred": 100, "twentieth": 20, "single": 1, "both": 2,
            "january": 1, "february": 2, "march": 3, "april": 4, "may": 5, "june": 6, "july": 7, "august": 8, "september": 9, "october": 10, "november": 11, "december": 12}
+BULLET_KO = re.compile(r"^\s*(?:[—–\-]\s|[•▪■●○·◦‣⁃])")                    # 번역의 글머리표
+BULLET_SRC = re.compile(r"^\s*(?:[^\w\s(\[\"'“‘<]|o\s)")                      # 원문의 글머리표(글자·숫자·괄호·따옴표가 아닌 표시, PDF에서 o로 뽑힌 것)
 RATIO = (0.2, 2.2)  # 번역 길이 ÷ 원문 길이가 이 범위를 벗어나면 알린다(원문이 40자보다 길 때)
 
 _terms = None
@@ -118,6 +120,8 @@ def problems(source, korean, screen=False, excused=False):
             soft.append(f"용어집이 쓰지 않는 표기 '{hit['avoid']}'를 원문의 {meant[0]}의 뜻으로 씀")
         else:
             (hard if hit["hard"] else soft).append(f"용어: '{hit['avoid']}' 대신 '{hit['use']}'")
+    if BULLET_KO.match(korean) and not BULLET_SRC.match(str(source)):
+        soft.append("원문에 없는 글머리표로 시작함")
     if len(source) > 40 and not RATIO[0] <= len(korean) / len(source) <= RATIO[1]:
         soft.append(f"길이가 원문의 {len(korean) / len(source):.1f}배")
     if excused:

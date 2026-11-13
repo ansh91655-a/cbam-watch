@@ -108,6 +108,13 @@ class BuildTest(unittest.TestCase):
         self.assertEqual(laws[VALUES][""]["items"], [{"id": "old", "title": "이행규정(EU) 2025/2621 관보 게재", "date": "2025-12-31", "link": "https://example.org/act"}])
         self.assertNotIn("art-99", laws[BASE])
 
+    def test_fields_of_an_item_are_read_apart(self):
+        # 제목 끝의 법령과 요약 첫머리의 조를 한데 잇지 않는다
+        items = [{"id": "name", "published": "2026-11-11", "title": "개정 대상은 CBAM 규정", "summary": "제6조에 따른 신고서의 서식도 함께 바뀝니다.", "impact": ""},
+                 {"id": "number", "published": "2026-11-12", "title": "개정 대상은 규정(EU) 2023/956", "summary": "제6조에 따른 신고서의 서식도 함께 바뀝니다.", "impact": ""}]
+        found = crossrefs.build(INDEX, items, [], [], "2026-11-13")[0]["items"]
+        self.assertEqual(found, {"number": [{"act": BASE, "part": "", "label": "CBAM 규정"}]})   # 번호로 적은 법령만 잇고, 다른 칸의 제6조는 붙이지 않는다
+
     def test_a_basis_naming_a_missing_part_is_reported(self):
         self.assertEqual(self.problems, [("의무 wrong", "근거에 적힌 조각이 사이트의 규정 원문에 없음: CBAM 규정 제99조")])
 

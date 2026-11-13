@@ -24,6 +24,8 @@ DATE = re.compile(r"^(20\d\d)-(\d\d)-(\d\d)$")
 SLUG = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 ORDINAL = re.compile(r"(?<=\d)(st|nd|rd|th)\b")
+LEAP_DAY = "02-29"
+MADE_ID = re.compile(r"^(.+)-(20\d\d)$")     # 해마다 돌아오는 의무가 만드는 일정의 id
 AHEAD = 2                                    # 해마다 돌아오는 의무를 올해에서 이만큼 뒤의 해까지 싣는다
 REPEATED = ("title", "text", "supplier", "verifier")   # yearly에서 달리 적을 수 있는 글
 NOTES = ("text", "supplier", "verifier")     # 표기 규칙을 보는 글
@@ -55,8 +57,8 @@ def expanded(body, day=None):
     for duty in (body or {}).get("duties", []):
         plan = duty.get("yearly")
         base = {key: value for key, value in duty.items() if key != "yearly"}
-        if not isinstance(plan, dict) or not DATE.match(str(duty.get("date", ""))):
-            found.append(base)
+        if not isinstance(plan, dict) or not DATE.match(str(duty.get("date", ""))) or duty["date"][5:] == LEAP_DAY:
+            found.append(base)   # 2월 29일은 해마다 있는 날이 아니어서 되풀이하지 않는다(검사가 따로 알린다)
             continue
         found.append({**base, "repeat": True})
         for year in range(int(duty["date"][:4]) + 1, last + 1):
@@ -92,6 +94,8 @@ def duty_problems(duty, schemes, term_index, kinds, roles=frozenset()):
             found.append((where, f"roles가 비었거나 모르는 역할이 있음: {mine}"))
         plan = duty.get("yearly")
         if plan is not None:
+            if str(duty.get("date", ""))[5:] == LEAP_DAY:
+                found.append((where, "yearly는 2월 29일의 의무에 붙일 수 없음(해마다 있는 날이 아니다)"))
             if not isinstance(plan, dict) or any(name not in REPEATED for name in plan):
                 found.append((where, f"yearly에는 {list(REPEATED)}만 적을 수 있음"))
             else:
@@ -124,6 +128,12 @@ def problems(body, term_index=None, kinds=("format", "evidence")):
     if "format" in kinds:
         if len(set(ids)) != len(ids):
             found.append(("실무 달력", "id가 겹침"))
+        # 해마다 돌아오는 의무는 "<id>-<해>"라는 id의 일정을 만든다. 같은 꼴의 id를 따로 적어 두면 어느 해엔가 겹친다
+        repeating = {duty.get("id") for duty in body["duties"] if isinstance(duty.get("yearly"), dict)}
+        for duty_id in ids:
+            made = MADE_ID.match(str(duty_id))
+            if made and made.group(1) in repeating:
+                found.append((f"의무 {duty_id}", f"id가 해마다 돌아오는 의무 {made.group(1)}가 만드는 일정의 id와 겹침"))
         found += [("실무 달력 note", problem) for problem in regulations.text_problems(str(body.get("note", "")), term_index)]
         for role in body.get("roles", []):
             if not SLUG.match(str(role.get("key", ""))) or not str(role.get("name", "")).strip():

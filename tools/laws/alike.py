@@ -30,25 +30,58 @@ from tools.laws import check, corpus, store
 
 PICKS = "language/alike-picks.json"   # 묶음마다 골라 둔 바탕: {"pick": {다듬은 원문: 문단의 열쇠}, "skip": [다듬은 원문], "why": {다듬은 원문: 까닭}}
 SHORTEST = 20     # 다듬은 원문이 이보다 짧으면 묶지 않는다("Source", "Total" 같은 말은 자리마다 뜻이 다를 수 있다)
-LEAD = re.compile(r"^(?:\(?\d+[a-z]?[.)]|\([a-z]{1,3}\)|\([ivxlc]+\)|[—–•▪■●○\-])\s*", re.I)
+# 문단 앞의 번호와 글머리표 하나: "1.", "(30)", "1a.", "2.1.", "(a)", "(iv)", "—", "•". 번호 뒤는 띄어 쓴 것만 번호로 본다.
+# 번호가 아닌 것은 떼지 않는다: "(EU) 2023/956"(대문자), "2026. 1. 1."(네 자리 수), "0.5 tonnes"·"1.1.2026"(점 바로 뒤가 숫자),
+# "(c)호의 목적상"(바로 뒤가 글자), "-5 %"(붙임표 바로 뒤가 글자).
+PIECE = re.compile(r"(?:(?:\(?\d{1,3}(?:\.\d{1,3}){0,4}[a-z]?[.)]|\([a-z]{1,3}\))(?=\s|$)|[—–\-](?=\s)|[•▪■●○])\s*")
+PIECES = 3        # 번호와 글머리표를 이만큼까지 뗀다: "• (a) (i) …"
+BULLETS = "—–-•▪■●○"
 MARK = re.compile(r"\[(\d+)\]")
 GLOSS = re.compile(r"\([A-Za-z][A-Za-z0-9 ,.'’/&\-]*\)")   # 번역에 붙인 영문 병기(견줄 때는 본다: 병기만 다른 번역은 같은 번역이다)
 TAILS = ".;:,"
 QUOTES = str.maketrans({"‘": "'", "’": "'", "“": '"', "”": '"', "–": "-", "—": "-", " ": " "})
 
 
-def shape(text):
-    """글을 (앞의 번호·글머리표, 몸, 끝의 문장부호)로 가른다. 셋을 이으면 본디 글이다."""
-    text = str(text)
-    lead = ""
-    for _ in range(3):
-        hit = LEAD.match(text[len(lead):])
+def leads(text):
+    """글 앞의 번호와 글머리표를 차례대로(많아야 PIECES개)."""
+    text, found, at = str(text), [], 0
+    for _ in range(PIECES):
+        hit = PIECE.match(text, at)
         if not hit:
             break
-        lead += hit.group(0)
+        found.append(hit.group(0))
+        at = hit.end()
+    return found
+
+
+def numbered(pieces):
+    """번호와 글머리표의 목록에서 번호(글머리표가 아닌 것)의 수."""
+    return sum(1 for piece in pieces if piece.strip(BULLETS + " \t\u00a0"))
+
+
+def shape(text, numbers=None):
+    """글을 (앞의 번호·글머리표, 몸, 끝의 문장부호)로 가른다. 셋을 이으면 본디 글이다. numbers를 주면 번호는 그 수까지만 뗀다(글머리표는 세지 않는다)."""
+    text = str(text)
+    pieces = leads(text)
+    if numbers is not None:
+        kept = []
+        for piece in pieces:
+            if numbered([piece]) and numbered(kept) == numbers:
+                break
+            kept.append(piece)
+        pieces = kept
+    lead = "".join(pieces)
     body = text[len(lead):]
     tail = body[-1] if body and body[-1] in TAILS else ""
     return lead, body[:len(body) - len(tail)], tail
+
+
+def shape_ko(source, korean):
+    """번역을 (번호, 몸, 끝)으로 가른다. 번호는 원문에 있는 수만큼만 뗀다: 그보다 뒤의 것은 번호가 아니라 번역의 글이다("(2) (c) 목적상 …").
+
+    글머리표(•, —)는 원문에 없어도 글머리표로 본다: 뜻을 싣지 않는 표시이고, 글머리표만 다른 번역을 다른 번역으로 보지 않아야 한다.
+    """
+    return shape(korean, numbered(leads(source)))
 
 
 def marks(text):
@@ -62,9 +95,11 @@ def norm(source):
     return re.sub(r"\s+", " ", body).strip().rstrip(TAILS).strip().lower()
 
 
-def kind(korean):
-    """번역을 견주는 꼴: 번호와 각주 표시, 끝의 문장부호, 띄어쓰기, 영문 병기를 떼어 낸 것."""
-    body = GLOSS.sub("", MARK.sub("", shape(str(korean).translate(QUOTES))[1]))
+def kind(korean, source=None):
+    """번역을 견주는 꼴: 번호와 각주 표시, 끝의 문장부호, 띄어쓰기, 영문 병기를 떼어 낸 것. 원문을 주면 번호는 원문에 있을 때만 뗀다."""
+    korean = str(korean).translate(QUOTES)
+    body = shape(korean)[1] if source is None else shape_ko(str(source).translate(QUOTES), korean)[1]
+    body = GLOSS.sub("", MARK.sub("", body))
     return re.sub(r"\s+", "", body).rstrip(TAILS)
 
 
@@ -96,7 +131,7 @@ def groups(documents, memory, picks=None):
     for same, rows in found.items():
         kinds = collections.OrderedDict()
         for row in rows.values():
-            kinds.setdefault(kind(row["korean"]), []).append(row)
+            kinds.setdefault(kind(row["korean"], row["source"]), []).append(row)
         if len(kinds) < 2 or same in skipped:
             continue
         legal = [members for members in kinds.values() if any(row["law"] for row in members)]
@@ -109,15 +144,18 @@ def groups(documents, memory, picks=None):
 
 def matched(base, row):
     """row의 번역을 base의 번역에 맞춘 글과 사유. 맞출 수 없으면 ("", 사유), 이미 같으면 (지금의 번역, "")."""
-    if kind(row["korean"]) == kind(base["korean"]):
+    if kind(row["korean"], row["source"]) == kind(base["korean"], base["source"]):
         return row["korean"], ""
     theirs, mine = marks(base["source"]), marks(row["source"])
     inside = marks(base["korean"])
     if len(theirs) != len(mine) or sorted(inside) != sorted(theirs) or len(set(theirs)) != len(theirs):
         return "", "각주 번호를 짝지을 수 없음"
     renumber = dict(zip(theirs, mine))
-    _, body, tail = shape(base["korean"])
-    lead, _, own_tail = shape(row["korean"])
+    base_lead, body, tail = shape_ko(base["source"], base["korean"])
+    lead, _, own_tail = shape_ko(row["source"], row["korean"])
+    # 번역이 원문의 번호를 그대로 지닌 것끼리만 맞춘다: 번호의 수가 원문과 다르면 어디까지가 번호인지 알 수 없다
+    if numbered(leads(base_lead)) != numbered(leads(base["source"])) or numbered(leads(lead)) != numbered(leads(row["source"])):
+        return "", "번호의 꼴이 원문과 달라 맞출 수 없음"
     body = MARK.sub(lambda hit: f"[{renumber[hit.group(1)]}]", body)
     if shape(base["source"])[2] != shape(row["source"])[2]:
         tail = own_tail   # 원문의 끝이 다르면(쉼표와 마침표) 이 문단의 끝을 지킨다

@@ -9,7 +9,7 @@ from tools.publish import sectors
 
 BOOK = {"common": ["32023R0956", "guide-3"], "sectors": [
     {"key": "steel", "name": "철강", "cn": ["steel"], "calc": "steel", "docs": ["guide-5d"], "words": ["철강"], "proposed": ["steel", "combined"]},
-    {"key": "electricity", "name": "전력", "cn": ["electricity"], "calc": "", "docs": ["guide-5f", "fact-electricity"], "words": ["전력"], "proposed": []},
+    {"key": "electricity", "name": "전력", "cn": ["electricity"], "calc": "", "docs": ["guide-5f", "fact-electricity"], "words": ["전력"], "except": ["전력투구"], "proposed": []},
 ]}
 INDEX = {"acts": [
     {"id": "32023R0956", "group": "act", "name": "CBAM 규정", "toc": []},
@@ -40,6 +40,7 @@ ITEMS = [
     {"id": "c", "published": "2026-11-05", "title": "내린 소식", "summary": "철강", "topics": [], "withdrawn": True},
     {"id": "d", "published": "2026-09-01", "title": "전력 수입 가이던스", "summary": "", "topics": []},
     {"id": "e", "published": "2026-08-01", "title": "다른 소식", "summary": "", "topics": ["철강 품목"]},
+    {"id": "f", "published": "2026-11-09", "title": "수출 지원에 전력투구", "summary": "", "topics": []},
 ]
 
 
@@ -88,6 +89,9 @@ class BuildTest(unittest.TestCase):
         self.assertEqual([item["id"] for item in self.steel["items"]], ["b", "a", "e"])     # 내린 소식은 싣지 않는다. 다룬 내용(topics)에 나온 것도 고른다
         self.assertEqual(self.steel["items"][0], {"id": "b", "title": "설명회", "date": "2026-11-01", "link": "https://example.org/b"})   # 제목만 실은 소식은 원문으로
         self.assertEqual((self.steel["itemCount"], self.power["itemCount"]), (3, 1))
+        self.assertEqual([item["id"] for item in self.power["items"]], ["d"])                # 그 낱말이 든 다른 말(전력투구)은 세지 않는다
+        both = [{"id": "g", "published": "2026-11-10", "title": "전력투구한 끝에 전력 수입 신고", "summary": "", "topics": []}]
+        self.assertEqual(sectors.build(BOOK, self.root, both)["sectors"][1]["itemCount"], 1)  # 다른 말을 지운 뒤에도 그 낱말이 남으면 고른다
         many = [{"id": f"n{number}", "published": f"2026-01-{number + 1:02d}", "title": "철강", "summary": ""} for number in range(sectors.ITEMS + 4)]
         found = sectors.build(BOOK, self.root, many)["sectors"][0]
         self.assertEqual((len(found["items"]), found["itemCount"]), (sectors.ITEMS, sectors.ITEMS + 4))
@@ -118,7 +122,8 @@ class RepositoryTest(unittest.TestCase):
         book = read_json(sectors.SOURCE, {})
         self.assertEqual([sector["key"] for sector in book["sectors"]], ["steel", "aluminium", "cement", "fertilisers", "hydrogen", "electricity"])
         for sector in book["sectors"]:   # 사실을 적는 글은 두지 않는다(화면의 수와 글은 사이트의 자료에서 만든다)
-            self.assertEqual(sorted(sector), ["calc", "cn", "docs", "key", "name", "proposed", "words"], sector["key"])
+            self.assertEqual(sorted(sector), ["calc", "cn", "docs", "except", "key", "name", "proposed", "words"], sector["key"])
+            self.assertFalse([word for word in sector["except"] if not any(own in word for own in sector["words"])], sector["key"])   # 지울 말에는 그 부문의 낱말이 들어 있다
 
 
 if __name__ == "__main__":

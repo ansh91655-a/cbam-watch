@@ -71,6 +71,18 @@ class DutiesTest(unittest.TestCase):
         self.assertIn("eu-verifier-plan-2029", {duty["id"] for duty in duties.expanded(self.body, "2027-01-02")})
         self.assertNotIn("eu-verifier-plan-2029", made)
 
+    def test_a_yearly_duty_cannot_collide_or_fall_on_29_february(self):
+        self.assertFalse(any("겹침" in what for _, what in duties.problems(self.body, kinds=("format",))))   # eu-cancellation-2026은 해마다 돌아오는 의무가 만드는 id가 아니다
+        body = copy.deepcopy(self.body)
+        clash = copy.deepcopy(next(row for row in body["duties"] if row["id"] == "eu-cancellation-2026"))
+        clash["id"] = "eu-verifier-plan-2031"
+        body["duties"].append(clash)
+        self.assertIn(("의무 eu-verifier-plan-2031", "id가 해마다 돌아오는 의무 eu-verifier-plan가 만드는 일정의 id와 겹침"), duties.problems(body, kinds=("format",)))
+        body = copy.deepcopy(self.body)
+        next(row for row in body["duties"] if row["id"] == "eu-verifier-plan")["date"] = "2028-02-29"
+        self.assertTrue(any("2월 29일" in what for where, what in duties.problems(body, kinds=("format",)) if where == "의무 eu-verifier-plan"))
+        self.assertEqual([row["id"] for row in duties.expanded(body, "2026-11-13") if row["id"].startswith("eu-verifier-plan")], ["eu-verifier-plan"])   # 없는 날의 일정은 만들지 않는다
+
     def test_roles_and_yearly_texts_are_checked(self):
         body = copy.deepcopy(self.body)
         duty = next(row for row in body["duties"] if row["id"] == "eu-verifier-plan")

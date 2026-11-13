@@ -80,7 +80,7 @@ function partNode(part, labels, actId) {
 
 function toc(revision) {
   return h("nav", { class: "law-toc", "aria-label": "달라진 부분의 차례" }, h("ul", {}, revision.parts.map((part) =>
-    h("li", { "data-kind": part.kind }, h("a", { href: `#c-${part.id}`, onclick: (event) => {
+    h("li", { "data-kind": part.kind, "data-part": part.id }, h("a", { href: `#c-${part.id}`, onclick: (event) => {
       event.preventDefault();
       const node = document.getElementById(`c-${part.id}`);
       if (node) node.scrollIntoView({ block: "start" });
@@ -113,13 +113,22 @@ export async function render(main, arg) {
   const stats = revision.stats;
   const list = h("div", { class: "chg-body", "data-mode": "both", "data-show": "" }, revision.parts.map((part) => partNode(part, labels, actId)));
   const none = h("p", { class: "empty", hidden: true, text: "고른 갈래의 문단이 없습니다." });
+  const contents = toc(revision);
   const pick = (op) => {
     list.dataset.show = op;
     let shown = 0;
+    const rows = new Map();   // 조각마다 고른 갈래의 문단 수. 차례도 이 수로 맞춘다(없는 조각은 숨긴다: 눌러도 갈 곳이 없다)
     for (const part of list.querySelectorAll(".chg-part")) {
-      const mine = op ? part.querySelectorAll(`.chg-row[data-op="${op}"]`).length : 1;
-      part.hidden = !mine;
-      shown += mine;
+      const mine = part.querySelectorAll(op ? `.chg-row[data-op="${op}"]` : ".chg-row").length;
+      part.hidden = Boolean(op) && !mine;
+      rows.set(part.id.replace(/^c-/, ""), mine);
+      shown += op ? mine : 1;
+    }
+    for (const entry of contents.querySelectorAll("li[data-part]")) {
+      const mine = rows.get(entry.dataset.part) || 0;
+      entry.hidden = Boolean(op) && !mine;
+      const tally = entry.querySelector(".law-toc-en");
+      if (tally) tally.textContent = `${count(mine)}곳`;
     }
     none.hidden = shown > 0;
   };
@@ -149,7 +158,7 @@ export async function render(main, arg) {
       h("p", { text: "옛 글에서 빠진 말은 지운 줄로, 새 글에 들어온 말은 밑줄로 표시했습니다. 국문은 이 사이트가 옮긴 비공식 번역입니다." }),
       h("p", { class: "law-note-links" }, [h("a", { href: `#law-${actId}`, text: "지금의 글을 원문과 번역으로 보기" }), source]),
     ]),
-    h("div", { class: "law-layout" }, [toc(revision), h("div", { class: "stack" }, [list, none])]),
+    h("div", { class: "law-layout" }, [contents, h("div", { class: "stack" }, [list, none])]),
     h("p", { class: "law-source", text: isAct(body)
       ? "원문: © European Union, EUR-Lex. 출처를 밝히고 재이용합니다. 번역: 이 사이트(용어집의 표기를 따릅니다)."
       : "원문: © European Union, EU 집행위원회 조세·관세동맹 총국. 출처를 밝히고 재이용합니다. 번역: 이 사이트(용어집의 표기를 따릅니다)." }),

@@ -3,7 +3,7 @@
 - 무엇을 모을지는 sources/sectors.json이 정한다. 수와 글은 모두 사이트의 자료에서 만든다(손으로 적은 사실이 없다):
   대상 품목과 온실가스, 산정 범위는 품목 코드 조회의 목록(cn.json: CBAM 규정 부속서 I·II에서 만든 것),
   기본값·벤치마크가 정해진 품목 수와 마크업은 인증서 비용 추정의 자료(calc.json), 문서의 이름과 차례는 규정 원문의 목록(laws/index.json),
-  소식은 게시한 소식 가운데 제목·요약·다룬 내용에 그 부문의 낱말이 나온 것이다.
+  소식은 게시한 소식 가운데 제목·요약·다룬 내용에 그 부문의 낱말이 나온 것이다(그 낱말이 든 다른 말은 except에 적어 세지 않는다: 수소의 '탄화수소').
 - 만드는 것: data/sectors.json
   {"sectors": [{"key", "name", "goods": {"rows", "gases", "directOnly", "both"}, "proposed": {"own", "combined", "name"} 또는 없음,
                 "docs": [{"id", "name", "group", "pages", "pdf", "sections"}], "calc": {"goods", "first", "markups"} 또는 없음,
@@ -91,11 +91,14 @@ def _calc(sector, calc):
 
 def _items(sector, items):
     words = [str(word) for word in sector.get("words", [])]
+    others = [str(word) for word in sector.get("except", [])]   # 그 낱말이 든 다른 말(수소의 '탄화수소'). 글에서 지우고 찾는다
     hits = []
     for item in items or []:
         if item.get("withdrawn"):
             continue
         text = " ".join([str(item.get(field, "")) for field in ITEM_FIELDS] + [str(topic) for topic in item.get("topics", [])])
+        for other in others:
+            text = text.replace(other, " ")
         if any(word in text for word in words):
             hits.append(item)
     hits.sort(key=lambda item: str(item.get("published", "")), reverse=True)

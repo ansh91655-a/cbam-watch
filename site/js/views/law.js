@@ -118,8 +118,11 @@ function section(part, target, needles, piece, paged, source, linked) {
   const waiting = part.blocks.length && part.blocks.every(([en, ko]) => !ko);
   if (part.kind === "division") return h("div", { class: "law-division", id: `p-${part.id}` }, heading(part));
   if (FOLDED[part.kind]) {
+    // 접어 둔 조각에는 머리가 없다. 펼친 안쪽에 조각을 통째로 인용하는 단추를 둔다(문단의 단추는 자판의 차례에 없다)
+    const citeAll = part.blocks.length ? h("div", { class: "law-head-tools law-fold-tools" },
+      h("button", { class: "law-cite-part", type: "button", "data-cite": part.id, title: "이 부분의 원문과 국문, 출처, 주소를 복사합니다" }, [icon("copy", 14), h("span", { text: "인용 복사" })])) : null;
     return h("details", { class: "law-part law-fold", id: `p-${part.id}`, open: here || null }, [
-      h("summary", {}, [h("span", { text: FOLDED[part.kind] }), h("span", { class: "count", text: `문단 ${count(part.blocks.length)}개` })]), ...rows]);
+      h("summary", {}, [h("span", { text: FOLDED[part.kind] }), h("span", { class: "count", text: `문단 ${count(part.blocks.length)}개` })]), citeAll, ...rows]);
   }
   return h("section", { class: "law-part", id: `p-${part.id}`, "data-here": here ? "" : null, "data-waiting": waiting ? "" : null }, [
     heading(part, paged, part.blocks.length > 0), waiting ? h("p", { class: "law-wait-note", text: `이 ${piece}은 아직 국문으로 옮기지 않았습니다. 원문만 보입니다.` }) : null,
