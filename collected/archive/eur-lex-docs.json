@@ -1,13 +1,17 @@
 {
  "source": "eur-lex-docs",
- "fetchedAt": "2026-11-13T10:18:26+09:00",
+ "fetchedAt": "2026-11-13T14:07:41+09:00",
  "since": "2025-01-01",
  "report": {
   "targets": 25,
-  "stored": 0,
-  "kept": 25,
+  "stored": 3,
+  "kept": 22,
   "failures": [],
-  "notes": []
+  "notes": [
+   "62023CJ0512: 끝부분을 채움",
+   "62024CC0519: 끝부분을 채움",
+   "62023CN0512: 끝부분을 채움"
+  ]
  },
  "entries": [
   {
@@ -20,7 +24,8 @@
    "procedures": [],
    "lines": 22,
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:62023CN0512",
-   "textPath": "collected/archive/pages/eur-lex-docs/62023CN0512.txt"
+   "textPath": "collected/archive/pages/eur-lex-docs/62023CN0512.txt",
+   "ending": true
   },
   {
    "date": "2025-02-26",
@@ -117,7 +122,8 @@
    "procedures": [],
    "lines": 262,
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:62024CC0519",
-   "textPath": "collected/archive/pages/eur-lex-docs/62024CC0519.txt"
+   "textPath": "collected/archive/pages/eur-lex-docs/62024CC0519.txt",
+   "ending": true
   },
   {
    "date": "2025-11-13",
@@ -347,7 +353,8 @@
    "procedures": [],
    "lines": 204,
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:62023CJ0512",
-   "textPath": "collected/archive/pages/eur-lex-docs/62023CJ0512.txt"
+   "textPath": "collected/archive/pages/eur-lex-docs/62023CJ0512.txt",
+   "ending": true
   }
  ]
 }

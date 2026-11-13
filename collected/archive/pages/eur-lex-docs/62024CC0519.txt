@@ -121,3 +121,44 @@ The big change to the system occurred in the third trading period, lasting from 
 40.
 During that third period, the auctioning of emission allowances became the default system when allocating them. However, free allowances continued to be distributed.
 41.
+[… 가운데 102줄은 싣지 않음. 아래는 문서의 끝부분 …]
+The objectives and provisions of Directive 2003/87/EC of the European Parliament and of the Council of 13 October 2003 establishing a scheme for greenhouse gas emission allowance trading within the Community and amending Council Directive 96/61/EC, as amended by Directive 2009/29/EC of the European Parliament and of the Council of 23 April 2009, in particular Articles 1, 10a and 11 thereof,
+must be interpreted as precluding a fiscal charge imposed by national law which:
+–
+retrospectively subjects emissions produced as a result of the use of free emission allowances to a fiscal charge the effect of which is to deprive the free emission allowances of their value and their compensatory effect; or
+–
+retrospectively subjects emissions produced as a result of the use of free emission allowances to a fiscal charge the effect of which is to deter operators from reducing their emissions, improving their environmental efficiency or investing in more environmentally friendly technologies,
+notwithstanding the proclaimed purpose of such a charge under national law.
+( 1 ) Original language: English.
+( 2 ) Directive of the European Parliament and of the Council of 13 October 2003 establishing a scheme for greenhouse gas emission allowance trading within the Community and amending Council Directive 96/61/EC (OJ 2003 L 275, p. 32).
+( 3 ) Article 1 of Directive 2003/87. See also recitals 5 and 7 thereof.
+( 4 ) See Paragraph 1(1)(ba) and (bb) of the Government Decree.
+( 5 ) Commission Delegated Regulation of 19 December 2018 determining transitional Union-wide rules for harmonised free allocation of emission allowances pursuant to Article 10a of Directive 2003/87 (OJ 2019 L 59, p. 8) (‘Delegated Regulation 2019/331’).
+( 6 ) Judgment of 17 October 2013 (C‑566/11, C‑567/11, C‑580/11, C‑591/11, C‑620/11 and C‑640/11, Iberdrola and Others, EU:C:2013:660).
+( 7 ) Judgment of 26 February 2015 (C‑43/14, ŠKO–Energo, EU:C:2015:120).
+( 8 ) Judgment of 12 April 2018 (C‑302/17, PPC Power, EU:C:2018:245).
+( 9 ) The defendant made references to judgments of 3 March 2020, Tesco-Global Áruházak (C‑323/18, EU:C:2020:140); of 3 March 2020, Vodafone Magyarország (C‑75/18, EU:C:2020:139); and in Iberdrola and Others.
+( 10 ) Judgment of 16 July 2020 (C‑686/18, EU:C:2020:567).
+( 11 ) As introduced by Directive 2009/29/EC of the European Parliament and of the Council of 23 April 2009 amending Directive 2003/87 so as to improve and extend the greenhouse gas emission allowance trading scheme of the Community (OJ 2009 L 140, p. 63) and as last amended by Directive (EU) 2018/410 of the European Parliament and of the Council of 14 March 2018 amending Directive 2003/87 to enhance cost-effective emission reductions and low-carbon investments, and Decision (EU) 2015/1814 (OJ 2018 L 76, p. 3) (‘Directive 2009/29’). It must be noted that Directive 2003/87 was amended again in 2023. However, those amendments postdate the circumstances of the present case.
+( 12 ) See, in that respect, judgment of 22 June 2016, DK Recycling und Roheisen v Commission (C‑540/14 P, ‘DK Recycling’, EU:C:2016:469, paragraph 49).
+( 13 ) Article 12(3) of Directive 2003/87 provides that ‘Member States shall ensure that, by 30 April each year at the latest, the operator of each installation surrenders a number of allowances equal to the total emissions from that installation during the preceding calendar year as verified in accordance with Article 15, and that these are subsequently cancelled.’
+( 14 ) For a concise but clear description of the evolution and the reasons behind different phases of the EU ETS, see Sato, M. et al., ‘Allocation, allocation, allocation! The political economy of the development of the European Union Emissions Trading System’, WIREs Climate Change, Vol. 13, Issue 5, 2022, pp. 1 to 19.
+( 15 ) See Iberdrola and Others, paragraph 39, and ŠKO–Energo, paragraph 28.
+( 16 ) See, in that respect, recital 10 of Directive 2018/410, which amended the basic Directive 2003/87 for the fourth trading period.
+( 17 ) As explained by Carević, M., ‘from the environmental perspective, a measure which aims to reduce greenhouse gas emissions can only be effective if it does not at the same time induce carbon leakage which results in the increase of emissions elsewhere’; see ‘Carbon leakage in the EU in the light of the Paris Climate Agreement’, Croatian Yearbook of European Law and Policy, Vol. 11, 2016, pp. 47-71, at p. 51.
+( 18 ) The first such list was established by Commission Decision of 24 December 2009 determining, pursuant to Directive 2003/87/EC of the European Parliament and of the Council, a list of sectors and subsectors which are deemed to be exposed to a significant risk of carbon leakage (notified under document C(2009) 10251) (OJ 2010 L 1, p. 10). The list of sectors exposed to the significant risk of carbon leakage has so far been amended several times. The current list is contained in Commission Delegated Decision (EU) 2019/708 of 15 February 2019 supplementing Directive 2003/87 concerning the determination of sectors and subsectors deemed at risk of carbon leakage for the period 2021 to 2030 (
+( 19 ) See, in that respect, Article 10a(2) of Directive 2003/87.
+( 20 ) Communication from the Commission to the European Parliament, the European Council, the Council, the European Economic and Social Committee and the Committee of the Regions – The European Green Deal (COM(2019) 640 final).
+( 21 ) On the fourth trading period see, for instance, De Clara, S. and Mayr, K., ‘The EU ETS phase IV reform: implications for system functioning and for the carbon price signal’, Oxford Energy Insight, Vol. 38, 2018, pp. 1 to 18.
+( 22 ) In the third period, 156 sectors representing 98% of emissions were eligible for free allowances. See Sato, M. et al., footnote 14, op. cit., p. 9.
+( 23 ) Ibid.
+( 24 ) The CBAM was introduced by Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023 establishing a carbon border adjustment mechanism (OJ 2023 L 130, p. 52). Under that mechanism, the imported products from countries which are not subject to decarbonisation measures are charged upon entry to the EU internal market, thus protecting the competitiveness of EU production and encouraging cleaner production in non-EU countries. The transitional phase for introducing the measure started in 2023 and should apply in full as of 2026.
+( 25 ) See, in that respect, recital 23 of Directive 2009/29, which inserted Article 10a into Directive 2003/87: ‘Transitional free allocation to installations should be provided for through harmonised Community-wide rules ([ex ante] benchmarks) in order to minimise distortions of competition with the Community. …’ (emphasis added).
+( 26 ) See footnote 18 to the present Opinion.
+( 27 ) Commission Implementing Regulation of 12 March 2021 determining revised benchmark values for free allocation of emission allowances for the period from 2021 to 2025 pursuant to Article 10a(2) of Directive 2003/87 (OJ 2021 L 87, p. 29).
+( 28 ) Commission Decision of 25 February 2021 concerning national implementation measures for the transitional free allocation of greenhouse gas emission allowances in accordance with Article 11(3) of Directive 2003/87 (OJ 2021 L 68, p. 221).
+( 29 ) Paragraph 52.
+( 30 ) That is why in DK Recycling (paragraph 55), the Court considered that the Commission could not include an installation on that list on the basis of the concept of ‘hardship’, which was said to have existed at national level, as that condition has not been set by the EU legislature for establishing the carbon leakage list.
+( 31 ) DK Recycling, paragraph 53.
+( 32 ) See, in that respect, Nysten, J.V., ‘On the legality of national carbon pricing instruments alongside the new EU ETS 2’, npj Climate Action, Vol. 3, Issue 91, 2024, pp. 1 to 10.
+( 33 ) See recitals 15 and 16 of Delegated Regulation 2019/331.

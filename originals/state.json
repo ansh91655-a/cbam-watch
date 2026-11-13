@@ -177,7 +177,7 @@
    "page": "ec-guidance",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-13",
-   "lastChecked": "2026-11-13T06:11:12+09:00",
+   "lastChecked": "2026-11-13T14:08:58+09:00",
    "linked": true,
    "versions": [
     {
@@ -201,7 +201,7 @@
    "page": "ec-guidance",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-13",
-   "lastChecked": "2026-11-13T06:11:12+09:00",
+   "lastChecked": "2026-11-13T14:08:58+09:00",
    "linked": true,
    "versions": [
     {
@@ -225,7 +225,7 @@
    "page": "ec-guidance",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-13",
-   "lastChecked": "2026-11-13T06:11:12+09:00",
+   "lastChecked": "2026-11-13T14:08:58+09:00",
    "linked": true,
    "versions": [
     {
@@ -249,7 +249,7 @@
    "page": "ec-guidance",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-13",
-   "lastChecked": "2026-11-13T06:11:12+09:00",
+   "lastChecked": "2026-11-13T14:08:58+09:00",
    "linked": true,
    "versions": [
     {
@@ -273,7 +273,7 @@
    "page": "ec-guidance",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-13",
-   "lastChecked": "2026-11-13T06:11:12+09:00",
+   "lastChecked": "2026-11-13T14:08:58+09:00",
    "linked": true,
    "versions": [
     {
@@ -297,7 +297,7 @@
    "page": "ec-guidance",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-13",
-   "lastChecked": "2026-11-13T06:11:12+09:00",
+   "lastChecked": "2026-11-13T14:08:58+09:00",
    "linked": true,
    "versions": [
     {
@@ -321,7 +321,7 @@
    "page": "ec-guidance",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-13",
-   "lastChecked": "2026-11-13T06:11:12+09:00",
+   "lastChecked": "2026-11-13T14:08:58+09:00",
    "linked": true,
    "versions": [
     {
@@ -345,7 +345,7 @@
    "page": "ec-guidance",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-13",
-   "lastChecked": "2026-11-13T06:11:12+09:00",
+   "lastChecked": "2026-11-13T14:08:58+09:00",
    "linked": true,
    "versions": [
     {
@@ -369,7 +369,7 @@
    "page": "ec-guidance",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-13",
-   "lastChecked": "2026-11-13T06:11:12+09:00",
+   "lastChecked": "2026-11-13T14:08:58+09:00",
    "linked": true,
    "versions": [
     {
@@ -417,7 +417,7 @@
    "page": "ec-guidance",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-13",
-   "lastChecked": "2026-11-13T06:11:12+09:00",
+   "lastChecked": "2026-11-13T14:08:58+09:00",
    "linked": true,
    "versions": [
     {
@@ -441,7 +441,7 @@
    "page": "ec-news",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-13",
-   "lastChecked": "2026-11-13T06:11:12+09:00",
+   "lastChecked": "2026-11-13T14:08:58+09:00",
    "linked": true,
    "versions": [
     {
@@ -465,7 +465,7 @@
    "page": "ec-news",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-13",
-   "lastChecked": "2026-11-13T06:11:12+09:00",
+   "lastChecked": "2026-11-13T14:08:58+09:00",
    "linked": true,
    "versions": [
     {
@@ -489,7 +489,7 @@
    "page": "ec-news",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-13",
-   "lastChecked": "2026-11-13T06:11:12+09:00",
+   "lastChecked": "2026-11-13T14:08:58+09:00",
    "linked": true,
    "versions": [
     {
@@ -513,7 +513,7 @@
    "page": "ec-news",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-13",
-   "lastChecked": "2026-11-13T06:11:12+09:00",
+   "lastChecked": "2026-11-13T14:08:58+09:00",
    "linked": true,
    "versions": [
     {
@@ -537,7 +537,7 @@
    "page": "ec-news",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-13",
-   "lastChecked": "2026-11-13T06:11:12+09:00",
+   "lastChecked": "2026-11-13T14:08:58+09:00",
    "linked": true,
    "versions": [
     {
@@ -551,7 +551,8 @@
      "kept": false
     }
    ],
-   "replaces": ""
+   "replaces": "",
+   "lastError": "0 IncompleteRead: IncompleteRead(7274496 bytes read)"
   },
   "9e724f6e-0860-4abb-848a-8b0f1911463a": {
    "id": "9e724f6e-0860-4abb-848a-8b0f1911463a",
@@ -562,7 +563,7 @@
    "page": "ec-news",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-13",
-   "lastChecked": "2026-11-13T06:11:12+09:00",
+   "lastChecked": "2026-11-13T14:08:58+09:00",
    "linked": true,
    "versions": [
     {
@@ -576,7 +577,8 @@
      "kept": false
     }
    ],
-   "replaces": ""
+   "replaces": "",
+   "lastError": "0 IncompleteRead: IncompleteRead(13828096 bytes read)"
   },
   "5595ce5b-9fd2-42f6-9908-ed6325338ffa": {
    "id": "5595ce5b-9fd2-42f6-9908-ed6325338ffa",
@@ -972,7 +974,7 @@
    "page": "ec-sectors",
    "firstSeen": "2026-11-10",
    "lastSeen": "2026-11-13",
-   "lastChecked": "2026-11-12T13:27:48+09:00",
+   "lastChecked": "2026-11-13T14:08:58+09:00",
    "linked": true,
    "versions": [
     {
@@ -989,9 +991,11 @@
   }
  },
  "baseline": "2026-11-10",
- "checkedAt": "2026-11-13T10:19:37+09:00",
+ "checkedAt": "2026-11-13T14:08:58+09:00",
  "full": false,
- "notes": [],
+ "notes": [
+  "전에 받았던 문서를 2번 이어서 받지 못해 이번 실행에서는 그만 받음(남은 3건은 다음 실행에서)"
+ ],
  "docCount": 41,
  "pages": {
   "ec-verification": "2026-11-10",
