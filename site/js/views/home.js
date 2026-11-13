@@ -2,6 +2,7 @@
 // 이어서 가장 중요한 소식, 다가오는 일정, 가격 추세, 주제별 소식, 규제 진행 상황, 품목 코드 조회, 최근 소식을 칸으로 나눠 놓고,
 // 맨 아래 짙은 띠에 품목별 가이던스를 둔다. 칸마다의 모듈은 home/ 아래에 있다.
 import * as data from "../data.js";
+import { isNotice } from "../news/notices.js";
 import { card } from "../ui/card.js";
 import { empty, fill, h } from "../ui/dom.js";
 import { daysSince } from "../ui/format.js";
@@ -19,7 +20,8 @@ const MORE_IMPORTANT = 3;
 export async function render(main) {
   const [all, events, digests, book, documents, rules] = await Promise.all([data.items(), data.events(), data.digests(), data.prices(), data.documents(), data.regulations()]);
   // 처음에 한꺼번에 채운 소식 가운데 날짜가 없는 것(제도 안내)은 최근 소식으로 세지 않는다.
-  const items = data.newestFirst(all).filter((item) => !item.withdrawn);
+  // 제목이 곧 내용인 국내 공지·자료는 첫 화면에 싣지 않는다(소식 화면에 따로 모여 있다).
+  const items = data.newestFirst(all).filter((item) => !item.withdrawn && !isNotice(item));
   const dated = items.filter((item) => data.dateOf(item));
   const isImportant = (item) => item.importance === "높음" && (daysSince(data.dateOf(item)) ?? 999) <= IMPORTANT_DAYS;
   const important = items.find(isImportant);

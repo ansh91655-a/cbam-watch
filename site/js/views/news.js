@@ -1,6 +1,8 @@
 // 소식. 왼쪽에 주제 메뉴, 오른쪽에 소식. 주제를 고르지 않았을 때는 주제별로 나눠 보여 주고(기본) 최신순으로도 볼 수 있다.
 // 최신순과 주제를 고른 화면에서는 달마다 머리를 달아 지난 소식을 거슬러 보기 쉽게 한다.
+// 국내 기관의 게시판에 올라온 한 줄 소식(국내 공지·자료)은 기본 목록과 주제별 건수에서 빼고 #news-notices에 따로 모은다(news/notices.js).
 import * as data from "../data.js";
+import { NOTICES, NOTICE_ABOUT, NOTICE_NAME, split } from "../news/notices.js";
 import { band } from "../ui/band.js";
 import { card } from "../ui/card.js";
 import { empty, fill, h } from "../ui/dom.js";
@@ -9,6 +11,8 @@ import { topicAbout, topicList, topicName, topicOf } from "../ui/topics.js";
 
 const PAGE = 20;
 const PER_TOPIC = 3;
+const NOTICE_ROWS = 5;      // 주제별 화면의 끝에 보여 주는 국내 공지·자료의 수
+const NOTICE_ICON = "sources";
 
 function select(id, label, options, onChange) {
   return h("label", { class: "field", for: id }, [
@@ -19,9 +23,11 @@ function select(id, label, options, onChange) {
 }
 
 export async function render(main, arg) {
-  const items = data.newestFirst(await data.items());
+  const { news, notices } = split(data.newestFirst(await data.items()));
   const topics = topicList();
-  const picked = topics.some((topic) => topic.code === arg) ? arg : "";
+  const onNotices = arg === NOTICES;
+  const picked = !onNotices && topics.some((topic) => topic.code === arg) ? arg : "";
+  const items = onNotices ? notices : news;   // 이 화면이 다루는 소식
   const kinds = [...new Set(items.map((item) => item.kind).filter(Boolean))].sort();
   const years = [...new Set(items.map((item) => data.dateOf(item).slice(0, 4)).filter(Boolean))].sort().reverse();
   const state = { text: "", kind: "", importance: "", year: "", latest: false, shown: PAGE };
@@ -39,8 +45,21 @@ export async function render(main, arg) {
     return state.text.toLowerCase().split(/\s+/).filter(Boolean).every((word) => haystack.includes(word));
   }
 
+  // 주제별 화면의 끝에 두는 칸: 국내 공지·자료의 가장 최근 것 몇 건과 모두 보는 길
+  function noticeStrip() {
+    if (!notices.length) return null;
+    return h("section", { class: "topic-sec notice-sec", "aria-labelledby": "h-notices" }, [
+      h("div", { class: "sec-head" }, [
+        h("h2", { id: "h-notices" }, [h("span", { class: "chipicon" }, icon(NOTICE_ICON, 22)), h("span", { text: NOTICE_NAME })]),
+        h("a", { href: `#news-${NOTICES}`, text: `${notices.length}건 모두 보기` }),
+      ]),
+      h("p", { class: "about", text: NOTICE_ABOUT }),
+      ...notices.slice(0, NOTICE_ROWS).map(card),
+    ]);
+  }
+
   function grouped(found) {
-    return topics.map((topic) => {
+    return [...topics.map((topic) => {
       const mine = found.filter((item) => topicOf(item) === topic.code);
       if (!mine.length) return null;
       return h("section", { class: "topic-sec", "aria-labelledby": `h-topic-${topic.code}`, "data-topic": topic.code }, [
@@ -51,7 +70,7 @@ export async function render(main, arg) {
         h("p", { class: "about", text: topic.about || "" }),
         ...mine.slice(0, PER_TOPIC).map(card),
       ]);
-    });
+    }), noticeStrip()];
   }
 
   // 날짜가 늦은 것부터 늘어놓고, 달이 바뀌는 곳에 머리를 단다.
@@ -69,6 +88,13 @@ export async function render(main, arg) {
     return h("div", { class: "stack" }, nodes);
   }
 
+  // 주제를 고른 화면의 끝: 그 주제의 국내 공지·자료가 따로 있음을 알린다
+  function elsewhere() {
+    const mine = picked ? notices.filter((item) => topicOf(item) === picked).length : 0;
+    return mine ? h("p", { class: "notice-hint" }, [
+      h("span", { text: `이 주제의 ${NOTICE_NAME} ${mine}건은 따로 모았습니다.` }), h("a", { href: `#news-${NOTICES}`, text: `${NOTICE_NAME} 보기` })]) : null;
+  }
+
   function draw() {
     const found = items.filter(matches);
     const filtered = Boolean(state.text || state.kind || state.importance || state.year);
@@ -76,24 +102,26 @@ export async function render(main, arg) {
     if (!found.length) {
       fill(body, empty("조건에 맞는 소식이 없습니다. 검색어나 조건을 바꿔 보세요."));
       more.hidden = true;
-    } else if (!picked && !state.latest && !filtered) {
+    } else if (!picked && !onNotices && !state.latest && !filtered) {
       fill(body, grouped(found));
       more.hidden = true;
     } else {
-      fill(body, byMonth(found));
+      fill(body, byMonth(found), found.length <= state.shown ? elsewhere() : null);
       more.hidden = found.length <= state.shown;
       more.textContent = `더 보기 (남은 ${found.length - state.shown}건)`;
     }
   }
 
   const side = h("nav", { class: "side-nav", "aria-label": "주제" }, [
-    h("a", { href: "#news", "aria-current": picked ? null : "true" }, [h("span", { class: "chipicon" }, icon("news", 17)), h("span", { text: "전체" }), h("span", { class: "n", text: items.length })]),
+    h("a", { href: "#news", "aria-current": picked || onNotices ? null : "true" }, [h("span", { class: "chipicon" }, icon("news", 17)), h("span", { text: "전체" }), h("span", { class: "n", text: news.length })]),
     ...topics.map((topic) => {
-      const size = items.filter((item) => topicOf(item) === topic.code).length;
+      const size = news.filter((item) => topicOf(item) === topic.code).length;
       if (!size && topic.code === "etc") return null;
       return h("a", { href: `#news-${topic.code}`, "data-topic": topic.code, "aria-current": picked === topic.code ? "true" : null, "data-empty": size ? null : "true" },
         [h("span", { class: "chipicon" }, icon(topic.code, 17)), h("span", { text: topic.name }), h("span", { class: "n", text: size })]);
     }),
+    notices.length ? h("a", { class: "side-apart", href: `#news-${NOTICES}`, "aria-current": onNotices ? "true" : null },
+      [h("span", { class: "chipicon" }, icon(NOTICE_ICON, 17)), h("span", { text: NOTICE_NAME }), h("span", { class: "n", text: notices.length })]) : null,
   ]);
 
   const reset = (key) => (event) => { state[key] = event.target.value; state.shown = PAGE; draw(); };
@@ -103,16 +131,19 @@ export async function render(main, arg) {
   byTopic.addEventListener("click", setMode(false));
   byDate.addEventListener("click", setMode(true));
   const filters = h("div", { class: "filters" }, [
-    picked ? null : h("div", { class: "seg", role: "group", "aria-label": "보는 방법" }, [byTopic, byDate]),
-    h("label", { class: "field field-grow", for: "news-q" }, [h("span", { text: "검색" }), h("input", { id: "news-q", type: "search", placeholder: "제목, 요약, 출처", oninput: reset("text") })]),
+    picked || onNotices ? null : h("div", { class: "seg", role: "group", "aria-label": "보는 방법" }, [byTopic, byDate]),
+    h("label", { class: "field field-grow", for: "news-q" }, [h("span", { text: "검색" }), h("input", { id: "news-q", type: "search", placeholder: onNotices ? "제목, 기관" : "제목, 요약, 출처", oninput: reset("text") })]),
     years.length > 1 ? select("news-year", "연도", years.map((year) => ({ value: year, text: `${year}년` })), reset("year")) : null,
-    select("news-kind", "종류", kinds, reset("kind")),
-    select("news-importance", "중요도", ["높음", "보통", "낮음"], reset("importance")),
+    kinds.length > 1 ? select("news-kind", "종류", kinds, reset("kind")) : null,
+    onNotices ? null : select("news-importance", "중요도", ["높음", "보통", "낮음"], reset("importance")),
     count,
   ]);
+  const title = onNotices ? `소식: ${NOTICE_NAME}` : (picked ? `소식: ${topicName(picked)}` : "소식");
+  const about = onNotices ? NOTICE_ABOUT : (picked ? topicAbout(picked) : "2025년 1월부터의 소식을 주제별로 나눠 보여 줍니다. 제목을 누르면 국문 요약을 먼저 보여 줍니다.");
   fill(main,
-    band(picked ? `소식: ${topicName(picked)}` : "소식", picked ? topicAbout(picked) : "2025년 1월부터의 소식을 주제별로 나눠 보여 줍니다. 제목을 누르면 국문 요약을 먼저 보여 줍니다."),
+    band(title, about),
     h("div", { class: "with-side" }, [h("aside", { class: "side" }, side), h("div", { class: "stack-l" }, [filters, body, more])]),
   );
   draw();
+  return onNotices ? NOTICE_NAME : "";
 }

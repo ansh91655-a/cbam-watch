@@ -107,7 +107,8 @@ console.log(JSON.stringify({
   menu: (() => { const lists = menuLists({ menu: { rules: [{ code: 'uk', name: '영국 CBAM', icon: 'abroad' }], years: [2026, 2027], topics: ['law'] } }, [{ code: 'law', name: '제도·법령' }, { code: 'etc', name: '기타' }]);
     return { news: lists.news.items.map((item) => item.href), cols: lists.news.cols, rules: lists.rules.items.map((item) => [item.href, item.icon]), years: lists.calendar.items.map((item) => item.href),
       docs: lists.docs.items.map((item) => item.href), price: lists.price.items.map((item) => [item.href, Boolean(item.about)]),
-      bare: menuLists({}, [{ code: 'law', name: '제도·법령' }, { code: 'etc', name: '기타' }]).news.items.length }; })(),
+      bare: menuLists({}, [{ code: 'law', name: '제도·법령' }, { code: 'etc', name: '기타' }]).news.items.length,
+      notices: menuLists({ menu: { topics: ['law'], notices: 3 } }, [{ code: 'law', name: '제도·법령' }]).news.items.map((item) => [item.href, item.name]) }; })(),
 }));
 """
 
@@ -232,6 +233,7 @@ class SearchTest(unittest.TestCase):
         self.assertEqual(menu["docs"], ["#cn", "#laws", "#docs", "#terms", "#about"])
         self.assertEqual(menu["price"], [["#price", True], ["#calc", True]])     # 화면의 설명이 붙는다
         self.assertEqual(menu["bare"], 3)                                        # 메뉴 값이 없으면 주제를 모두 싣는다
+        self.assertEqual(menu["notices"][-1], ["#news-notices", "국내 공지·자료"])   # 국내 공지·자료가 있으면 주제 뒤에 싣는다
 
 
 class MenuDataTest(unittest.TestCase):
@@ -242,8 +244,11 @@ class MenuDataTest(unittest.TestCase):
         items = [{"topic": "price"}, {"topic": "law"}, {"topic": "price"}, {}]
         self.assertEqual(derive.menu(rules, events, items), {
             "rules": [{"code": "eu-law", "name": "EU CBAM 기본법", "icon": "law"}, {"code": "uk", "name": "영국 CBAM", "icon": ""}],
-            "years": [2026, 2027], "topics": ["law", "price"]})
-        self.assertEqual(derive.menu(None, None), {"rules": [], "years": [], "topics": []})
+            "years": [2026, 2027], "topics": ["law", "price"], "notices": 0})
+        self.assertEqual(derive.menu(None, None), {"rules": [], "years": [], "topics": [], "notices": 0})
+        # 제목이 곧 내용인 국내 공지·자료는 주제를 셀 때 빼고 수만 따로 적는다(요약을 내린 것은 보통 소식으로 센다)
+        briefs = [{"topic": "korea", "brief": True}, {"topic": "korea", "brief": True}, {"topic": "events", "brief": True, "withdrawn": True}]
+        self.assertEqual(derive.menu(None, None, items + briefs), {"rules": [], "years": [], "topics": ["events", "law", "price"], "notices": 2})
         # 주제 목록을 넘기면, 목록에 없는 주제나 주제가 없는 소식은 화면처럼 '기타'로 센다
         topics = [{"code": "law"}, {"code": "price"}, {"code": "etc"}]
         self.assertEqual(derive.menu(None, None, items + [{"topic": "gone"}], topics)["topics"], ["etc", "law", "price"])

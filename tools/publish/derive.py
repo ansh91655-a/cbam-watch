@@ -114,7 +114,9 @@ def events(listed, prices, rules=None):
 
 
 def menu(rules, listed, items=None, topics=None):
-    """주 메뉴의 펼침 목록에 쓰는 값: 규제가 하나라도 든 규제 묶음(차례대로), 일정이 있는 해, 소식이 하나라도 있는 주제.
+    """주 메뉴의 펼침 목록에 쓰는 값: 규제가 하나라도 든 규제 묶음(차례대로), 일정이 있는 해, 소식이 하나라도 있는 주제, 국내 공지·자료의 수.
+
+    제목이 곧 내용인 국내 공지·자료(brief)는 화면(js/news/notices.js)이 주제별 소식에서 빼고 따로 모으므로, 여기에서도 주제를 셀 때 빼고 수만 따로 적는다.
 
     화면이 처음 뜰 때 읽는 site.json에 실어, 메뉴를 그리려고 큰 자료(규제, 일정, 소식)를 따로 읽지 않게 한다.
     주제 목록(topics)을 넘기면 목록에 없는 주제의 소식은 화면과 같이 '기타'(etc)로 센다.
@@ -124,8 +126,10 @@ def menu(rules, listed, items=None, topics=None):
               for group in (rules or {}).get("groups", []) if group.get("code") in used]
     years = sorted({int(str(row.get("date", ""))[:4]) for row in listed or [] if str(row.get("date", ""))[:4].isdigit()})
     known = {topic.get("code") for topic in topics or []}
-    used_topics = sorted({str(item.get("topic") or "") if not known or item.get("topic") in known else "etc" for item in items or []} - {""})
-    return {"rules": groups, "years": years, "topics": used_topics}
+    notices = [item for item in items or [] if item.get("brief") and not item.get("withdrawn")]
+    news = [item for item in items or [] if not (item.get("brief") and not item.get("withdrawn"))]
+    used_topics = sorted({str(item.get("topic") or "") if not known or item.get("topic") in known else "etc" for item in news} - {""})
+    return {"rules": groups, "years": years, "topics": used_topics, "notices": len(notices)}
 
 
 def site(counts, rules=None, listed=None, items=None, topics=None):
