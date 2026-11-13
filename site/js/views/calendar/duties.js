@@ -1,5 +1,7 @@
 // 실무 달력: 법령에 날짜가 적힌 의무를 그해의 차례대로 보여 준다. 일정마다 누가 하는 일인지, 생산자가 준비할 것, 근거 조문을 붙인다.
-import { h, safeLink } from "../../ui/dom.js";
+// 역할(신고인·수입자, 제3국 사업자, 검증기관, 영국 수입자)을 골라 그 역할의 일정만 볼 수 있다(calendar/roles.js).
+import { forRole, tally } from "../../calendar/roles.js";
+import { fill, h, safeLink } from "../../ui/dom.js";
 import { koreanDate } from "../../ui/format.js";
 import { icon } from "../../ui/icons.js";
 
@@ -17,23 +19,52 @@ function row(duty, todayIso) {
         h("strong", { text: duty.title }),
         h("span", { class: "pill", "data-scheme": duty.scheme, text: duty.schemeName }),
         h("span", { class: "pill", "data-tone": duty.kind === "기한" ? "due" : null, text: duty.kind }),
+        duty.repeat ? h("span", { class: "pill", text: "해마다" }) : null,
       ]),
       h("p", { class: "duty-when" }, [h("time", { datetime: duty.date, text: koreanDate(duty.date) }), h("span", { text: duty.who })]),
       h("p", { class: "duty-text", text: duty.text }),
       duty.supplier ? h("p", { class: "duty-supplier" }, [h("b", { text: "생산자가 준비할 것" }), h("span", { text: duty.supplier })]) : null,
+      duty.verifier ? h("p", { class: "duty-supplier" }, [h("b", { text: "검증기관이 알아 둘 것" }), h("span", { text: duty.verifier })]) : null,
       h("p", { class: "duty-basis" }, [h("span", { text: "근거" }), link || h("span", { text: duty.basis })]),
     ]),
   ]);
 }
 
 // 그해의 의무 일정 구역. 그해에 의무가 없으면 null.
-export function dutyList(book, year, todayIso) {
+// role은 처음에 고를 역할(없으면 모두), onRole은 역할을 바꿀 때 부르는 함수(주소를 고친다)
+export function dutyList(book, year, todayIso, role = "", onRole = () => {}) {
   const mine = (book.duties || []).filter((duty) => String(duty.date).startsWith(`${year}-`));
   if (!mine.length) return null;
-  const ahead = mine.filter((duty) => duty.date >= todayIso).length;
-  return h("section", { class: "stack duty-sec", "aria-labelledby": "h-duty" }, [
-    h("div", { class: "sec-head" }, [h("h3", { id: "h-duty", text: "의무 일정" }), h("span", { class: "count", text: `${mine.length}건${ahead && ahead < mine.length ? `, 앞으로 ${ahead}건` : ""}` })]),
+  const roles = tally(mine, book.roles);
+  const state = { role: roles.some((one) => one.key === role) ? role : "" };
+  const list = h("ol", { class: "duty-list" });
+  const size = h("span", { class: "count", role: "status" });
+  const about = h("p", { class: "duty-role-about" });
+  const none = h("p", { class: "empty", hidden: true, text: "이 해에는 이 역할의 의무 일정이 없습니다." });
+  const buttons = [{ key: "", name: "전체", size: mine.length }, ...roles].map((one) => {
+    const button = h("button", { class: "chip", type: "button", "aria-pressed": "false" }, [h("span", { text: one.name }), h("span", { class: "n", text: one.size })]);
+    button.addEventListener("click", () => { state.role = one.key; onRole(one.key); draw(); });
+    return [one.key, button];
+  });
+
+  function draw() {
+    const shown = forRole(mine, state.role);
+    const ahead = shown.filter((duty) => duty.date >= todayIso).length;
+    fill(list, shown.map((duty) => row(duty, todayIso)));
+    size.textContent = `${shown.length}건${ahead && ahead < shown.length ? `, 앞으로 ${ahead}건` : ""}`;
+    about.textContent = (roles.find((one) => one.key === state.role) || {}).about || "";
+    about.hidden = !about.textContent;
+    none.hidden = shown.length > 0;
+    for (const [key, button] of buttons) button.setAttribute("aria-pressed", String(key === state.role));
+  }
+
+  draw();
+  return h("section", { class: "stack duty-sec", "aria-labelledby": "h-duty", id: "duties" }, [
+    h("div", { class: "sec-head" }, [h("h3", { id: "h-duty", text: "의무 일정" }), size]),
     h("p", { class: "duty-note", text: book.note || "" }),
-    h("ol", { class: "duty-list" }, mine.map((duty) => row(duty, todayIso))),
+    roles.length > 1 ? h("div", { class: "chips duty-roles", role: "group", "aria-label": "역할로 골라 보기" }, buttons.map(([, button]) => button)) : null,
+    about,
+    list,
+    none,
   ]);
 }

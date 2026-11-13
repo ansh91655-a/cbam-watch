@@ -46,13 +46,43 @@ class DutiesTest(unittest.TestCase):
         self.assertFalse(duties.superseded({**same, "kind": "기한"}, self.body))
 
     def test_events_and_the_public_shape(self):
-        rows = duties.events(self.body)
-        self.assertEqual(len(rows), len(self.body["duties"]))
+        rows = duties.events(self.body, "2026-11-13")
+        self.assertEqual(len(rows), len(duties.expanded(self.body, "2026-11-13")))
         first = next(row for row in rows if row["duty"] == "eu-first-declaration")
         self.assertEqual((first["date"], first["kind"], first["scheme"]), ("2027-09-30", "기한", "EU CBAM"))
-        public = duties.public(self.body)
-        self.assertTrue(all("evidence" not in duty and "covers" not in duty for duty in public["duties"]))
+        public = duties.public(self.body, "2026-11-13")
+        self.assertTrue(all("evidence" not in duty and "covers" not in duty and "yearly" not in duty for duty in public["duties"]))
         self.assertEqual([duty["date"] for duty in public["duties"]], sorted(duty["date"] for duty in public["duties"]))
+        self.assertEqual([role["key"] for role in public["roles"]], ["declarant", "operator", "verifier", "uk"])
+
+    def test_yearly_duties_are_repeated_up_to_two_years_ahead(self):
+        made = {duty["id"]: duty for duty in duties.expanded(self.body, "2026-11-13")}
+        # 첫 일정은 그대로 두고, 이듬해부터 올해의 두 해 뒤까지 같은 날에 일정을 만든다
+        self.assertEqual(sorted(key for key in made if key.startswith("eu-first-declaration")), ["eu-first-declaration", "eu-first-declaration-2028"])
+        again = made["eu-first-declaration-2028"]
+        self.assertEqual((again["date"], again["title"], again["repeat"]), ("2028-09-30", "2027년분 CBAM 신고서 제출과 인증서 제출", True))
+        self.assertIn("2027년 수입분", again["text"])
+        self.assertIn("2027년 생산분", again["supplier"])
+        self.assertNotIn("covers", again)                           # 게시 데이터의 일정과 겹치는지는 첫 일정으로만 본다
+        self.assertTrue(made["eu-first-declaration"]["repeat"])      # 원래 의무에도 해마다 돌아온다는 표시를 한다
+        self.assertEqual(made["eu-verifier-plan-2027"]["text"], made["eu-verifier-plan"]["text"])   # 달리 적지 않은 글은 그대로 되풀이한다
+        self.assertNotIn("repeat", made["eu-cancellation-2026"])
+        # 해가 넘어가면 만드는 일정도 한 해 늘어난다
+        self.assertIn("eu-verifier-plan-2029", {duty["id"] for duty in duties.expanded(self.body, "2027-01-02")})
+        self.assertNotIn("eu-verifier-plan-2029", made)
+
+    def test_roles_and_yearly_texts_are_checked(self):
+        body = copy.deepcopy(self.body)
+        duty = next(row for row in body["duties"] if row["id"] == "eu-verifier-plan")
+        duty["roles"] = ["verifier", "nobody"]
+        duty["yearly"] = {"text": "해마다 통지한다.", "when": "x"}
+        found = [what for where, what in duties.problems(body, kinds=("format",)) if "eu-verifier-plan" in where]
+        self.assertTrue(any("모르는 역할" in what for what in found))
+        self.assertTrue(any("yearly에는" in what for what in found))
+        duty["yearly"] = {"text": "해마다 통지한다."}
+        self.assertTrue(any("표기 규칙" in what for where, what in duties.problems(body, kinds=("format",)) if "yearly" in where))
+        body["duties"][0].pop("roles")
+        self.assertTrue(any("roles가 비었" in what for _, what in duties.problems(body, kinds=("format",))))
 
 
 if __name__ == "__main__":

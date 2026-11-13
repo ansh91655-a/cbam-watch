@@ -40,7 +40,7 @@ export function termRows(terms) {
 export function dateRows(events, duties) {
   return [
     ...(events || []).filter((event) => !event.duty).map((event) => row("dates", `event-${event.date}-${event.title}`, [event.title], lines(event.note, event.basis), event, { form: "event" })),
-    ...(duties || []).map((duty) => row("dates", `duty-${duty.id}`, [duty.title], lines(duty.text, duty.who, duty.supplier, duty.basis), duty, { form: "duty" })),
+    ...(duties || []).map((duty) => row("dates", `duty-${duty.id}`, [duty.title], lines(duty.text, duty.who, duty.supplier, duty.verifier, duty.basis), duty, { form: "duty" })),
   ];
 }
 
