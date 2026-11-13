@@ -4320,6 +4320,18 @@
    "ko": "경제운영자 등록·식별 번호",
    "from": "qa",
    "added": "2026-11-13"
+  },
+  {
+   "en": "Access Request Validator",
+   "ko": "접근 요청 확인자",
+   "from": "qa",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "customs suspensive regime",
+   "ko": "관세 정지 제도",
+   "from": "qa",
+   "added": "2026-11-13"
   }
  ]
 }
