@@ -4584,6 +4584,24 @@
    "ko": "사업상 위험",
    "from": "guide-verif",
    "added": "2026-11-13"
+  },
+  {
+   "en": "stock piles",
+   "ko": "야적 더미",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "surveillance",
+   "ko": "사후관리",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "plant layout",
+   "ko": "설비 배치",
+   "from": "guide-verif",
+   "added": "2026-11-13"
   }
  ]
 }
