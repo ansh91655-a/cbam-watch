@@ -10,7 +10,7 @@ import sys
 from tools.common.jsonio import read_json, today, write_json
 from tools.laws import build as laws
 from tools.pdfko import site as pdf_site
-from tools.publish import calc, crossrefs, derive, duties, factor, feed, merge, regulations, thumbs
+from tools.publish import calc, crossrefs, derive, duties, factor, feed, merge, regulations, sectors, thumbs
 
 DATA_FILES = ["items", "events", "digests", "terms", "topics", "prices"]
 LIST_KEY = {"items": "items", "events": "events", "digests": "digests", "terms": "terms", "topics": "topics", "prices": "prices"}
@@ -102,6 +102,9 @@ def main(argv):
     # 소식, 의무 일정, 용어집에 적힌 법령과 조문을 규정 원문으로 잇는다(글에 또렷이 적힌 곳만). 근거 칸에 적힌 조각이 글에 없으면 알리기만 한다
     linked, unlinked = crossrefs.write(data_out, bodies["items"]["items"], read_json(data_out / "duties.json", {}).get("duties", []),
                                        bodies["terms"].get("terms", []), today())
+    # 부문별 모아 보기: 부문마다 대상 품목, 안내 문서, 기본값·벤치마크, 소식을 모은다(무엇을 모을지는 sources/sectors.json)
+    counts["sectors"], sector_problems = sectors.write(data_out, bodies["items"]["items"])
+    problems += [f"부문별 모아 보기: {where}: {what}" for where, what in sector_problems]
     print("규정 원문으로 이은 것:", linked)
     for where, what in unlinked:
         print(f"알림: 조문 잇기: {where}: {what}")

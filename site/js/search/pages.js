@@ -12,6 +12,7 @@ export const PAGES = [
   { href: "#laws", name: "규정 원문", about: "CBAM 법령과 가이던스의 원문과 국문 번역", words: ["법령", "규정", "조문", "번역", "가이던스", "guidance", "regulation"] },
   { href: "#docs", name: "원문 대장", about: "EU 집행위원회가 올린 CBAM 문서", words: ["문서", "자료", "pdf", "내려받기", "다운로드", "download"] },
   { href: "#terms", name: "용어집", about: "국문 정리에 쓰는 용어의 표기 기준", words: ["용어", "표기", "glossary"] },
+  { href: "#sector", name: "부문별 보기", about: "부문마다의 대상 품목, 안내 문서, 기본값, 소식", words: ["부문", "부문별", "품목별", "업종", "sector"] },
   { href: "#cn", name: "품목 코드 조회", about: "CN 코드가 CBAM 대상 품목인지 확인", words: ["품목", "대상 품목", "cn", "hs"] },
   { href: "#about", name: "안내", about: "이 사이트에서 볼 수 있는 것과 알아 둘 점", words: ["사이트 안내", "소개", "about"] },
 ];

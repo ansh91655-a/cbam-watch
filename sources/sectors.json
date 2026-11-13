@@ -1,0 +1,12 @@
+{
+ "note": "부문별 모아 보기(#sector-<부문>)가 부문마다 무엇을 모으는지 정한다. cn은 품목 코드 조회 목록(data/cn.json)의 부문 이름, calc는 인증서 비용 추정 자료(data/calc-goods.json)의 부문 이름, docs는 그 부문만 다루는 EU 집행위원회 문서(sources/guides.json의 id, 적은 차례대로 싣는다), words는 소식의 제목·요약·다룬 내용에서 그 부문의 소식을 고르는 낱말, proposed는 개정안의 품목 목록에서 이 부문에 걸리는 부문 이름이다. common은 모든 부문에 함께 적용되는 문서다. 사실을 적는 글은 여기에 두지 않는다: 화면의 수와 글은 모두 사이트의 자료에서 만든다(tools/publish/sectors.py).",
+ "common": ["32023R0956", "32025R2547", "32025R2621", "32025R2620", "guide-2", "guide-3", "guide-4"],
+ "sectors": [
+  {"key": "steel", "name": "철강", "cn": ["steel"], "calc": "steel", "docs": ["guide-5d"], "words": ["철강"], "proposed": ["steel", "combined"]},
+  {"key": "aluminium", "name": "알루미늄", "cn": ["aluminium"], "calc": "aluminium", "docs": ["guide-5e", "fact-aluminium"], "words": ["알루미늄"], "proposed": ["combined"]},
+  {"key": "cement", "name": "시멘트", "cn": ["cement"], "calc": "cement", "docs": ["guide-5a", "fact-cement"], "words": ["시멘트", "클링커"], "proposed": []},
+  {"key": "fertilisers", "name": "비료", "cn": ["fertilisers"], "calc": "fertilisers", "docs": ["guide-5c", "fact-fertilisers"], "words": ["비료"], "proposed": []},
+  {"key": "hydrogen", "name": "수소", "cn": ["chemicals"], "calc": "hydrogen", "docs": ["guide-5b", "fact-hydrogen"], "words": ["수소"], "proposed": []},
+  {"key": "electricity", "name": "전력", "cn": ["electricity"], "calc": "", "docs": ["guide-5f", "faq-electricity", "fact-electricity"], "words": ["전력"], "proposed": []}
+ ]
+}

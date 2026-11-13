@@ -2,6 +2,9 @@
 // 품목 코드 조회와 사이트 검색이 함께 쓴다. 화면 요소를 다루지 않는다.
 export const SECTOR = { cement: "시멘트", electricity: "전력", fertilisers: "비료", steel: "철강", aluminium: "알루미늄", chemicals: "화학제품(수소)", combined: "복합 금속 제품" };
 
+// 온실가스의 이름(부속서 I의 표가 품목마다 적는 것)
+export const GAS = { co2: "이산화탄소", n2o: "아산화질소", pfc: "과불화탄소" };
+
 // 판정마다: [짧은 이름, 색, 설명]
 export const STATE = {
   in: ["대상", "ok", "이 코드의 품목은 CBAM 대상입니다."],

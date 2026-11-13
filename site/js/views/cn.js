@@ -2,7 +2,7 @@
 // 판정은 js/cn/match.js가 하고, 품목 목록은 법령 원문에서 뽑은 data/cn.json이다. 문구는 이 파일에서 정한다.
 import * as data from "../data.js";
 import { digits, verdict } from "../cn/match.js";
-import { SECTOR, spaced, STATE } from "../cn/names.js";
+import { GAS, SECTOR, spaced, STATE } from "../cn/names.js";
 import { adopted, proposalRule } from "../cn/stage.js";
 import { band } from "../ui/band.js";
 import { empty, fill, h, pill, safeLink } from "../ui/dom.js";
@@ -10,7 +10,6 @@ import { icon } from "../ui/icons.js";
 import { libraryTabs } from "../ui/tabs.js";
 
 const SECTOR_ICON = { cement: "cement", electricity: "electricity", fertilisers: "fertilisers", steel: "steel", aluminium: "aluminium", chemicals: "hydrogen", combined: "steel" };
-const GAS = { co2: "이산화탄소", n2o: "아산화질소", pfc: "과불화탄소" };
 const LIMIT = 10; // 개정안의 품목을 한 번에 보여 주는 줄 수
 const EXAMPLES = ["7208", "7318 15", "7606", "2523 29 00", "3102", "7202 21 00", "8544 49", "8708 10"];
 

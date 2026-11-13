@@ -230,7 +230,7 @@ class SearchTest(unittest.TestCase):
         self.assertEqual(menu["cols"], 2)
         self.assertEqual(menu["rules"], [["#rules", "law"], ["#rules-uk", "abroad"]])
         self.assertEqual(menu["years"], ["#calendar-2026", "#calendar-2027"])
-        self.assertEqual(menu["docs"], ["#cn", "#laws", "#docs", "#terms", "#about"])
+        self.assertEqual(menu["docs"], ["#sector", "#cn", "#laws", "#docs", "#terms", "#about"])
         self.assertEqual(menu["price"], [["#price", True], ["#calc", True]])     # 화면의 설명이 붙는다
         self.assertEqual(menu["bare"], 3)                                        # 메뉴 값이 없으면 주제를 모두 싣는다
         self.assertEqual(menu["notices"][-1], ["#news-notices", "국내 공지·자료"])   # 국내 공지·자료가 있으면 주제 뒤에 싣는다

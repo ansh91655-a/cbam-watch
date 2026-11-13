@@ -1,0 +1,58 @@
+/* 부문별 모아 보기(#sector-<부문>): 부문을 고르는 줄, 한눈에 보는 사실, 왼쪽의 문서·품목·소식과 오른쪽의 비용·일정 */
+.sector-pick { display: flex; flex-wrap: wrap; gap: 8px; }
+.sector-pick a { display: inline-flex; align-items: center; gap: 9px; padding: 7px 18px 7px 8px; border: 1px solid var(--line); border-radius: var(--radius-pill); background: var(--surface); color: var(--ink-2); font-weight: 600; text-decoration: none; }
+.sector-pick a:hover { border-color: var(--brand-bright); color: var(--brand-bright); }
+.sector-pick a[aria-current="page"] { border-color: var(--brand); background: var(--brand); color: var(--on-brand); font-weight: 700; }
+.sector-pick a[aria-current="page"] .chipicon { background: color-mix(in srgb, var(--on-brand) 16%, transparent); color: var(--on-brand); }
+
+.sector-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 0; margin: 0; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); overflow: hidden; }
+.sector-facts > div { display: grid; gap: 4px; align-content: start; padding: 16px 20px; border-right: 1px solid var(--line-2); border-bottom: 1px solid var(--line-2); margin: 0 -1px -1px 0; }
+.sector-facts dt { font-size: var(--fs-s); color: var(--ink-3); font-weight: 600; }
+.sector-facts dd { margin: 0; font-size: var(--fs-l); font-weight: 750; letter-spacing: -0.015em; line-height: 1.35; }
+
+.sector-main, .sector-aside { display: grid; gap: var(--gap-6); align-content: start; min-width: 0; }
+.sector-aside { gap: 20px; }
+.sector-sec { gap: 12px; }
+.sector-lead { max-width: 62em; font-size: var(--fs-s); color: var(--ink-3); }
+.sector-lead a { display: inline-flex; align-items: center; gap: 4px; }
+
+.sector-docs { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
+.sector-doc { gap: 8px; }
+.sector-doc h3 { font-size: var(--fs-l); letter-spacing: -0.015em; }
+.sector-doc h3 a { color: inherit; text-decoration: none; }
+.sector-doc h3 a:hover { color: var(--brand-bright); text-decoration: underline; }
+.sector-remark { padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--accent-soft); color: var(--on-accent); font-size: var(--fs-s); }
+html[data-theme="midnight"] .sector-remark { background: var(--surface-2); color: var(--ink-2); }
+.sector-toc { display: grid; gap: 2px; margin: 4px 0 2px; padding: 0; list-style: none; }
+.sector-toc a { display: grid; grid-template-columns: 1.6em minmax(0, 1fr); gap: 8px; padding: 5px 0; border-top: 1px solid var(--line-2); color: var(--ink-2); text-decoration: none; }
+.sector-toc li:first-child a { border-top: 0; }
+.sector-toc a:hover span:last-child { color: var(--brand-bright); text-decoration: underline; }
+.sector-toc .no { color: var(--ink-3); font-variant-numeric: tabular-nums; font-weight: 600; }
+.sector-doc-links { display: flex; flex-wrap: wrap; gap: 8px; padding-top: 6px; }
+
+.sector-sec .cn-code { font-variant-numeric: tabular-nums; font-weight: 700; white-space: nowrap; }
+/* 온실가스, 산정 범위, 비용 추정의 칸은 줄을 바꾸지 않는다(품목 이름의 칸이 남는 너비를 쓴다) */
+@media (min-width: 641px) { .sector-sec td:nth-child(n+3), .sector-sec th:nth-child(n+3) { white-space: nowrap; } }
+.sector-proposed { display: flex; flex-wrap: wrap; gap: 4px 12px; max-width: 62em; padding: 12px 16px; border: 1px dashed var(--line); border-radius: 12px; background: var(--surface-2); font-size: var(--fs-s); color: var(--ink-2); }
+
+.sector-news, .sector-dates, .sector-common { display: grid; margin: 0; padding: 0; list-style: none; }
+.sector-news li { display: grid; grid-template-columns: 6.4em minmax(0, 1fr); gap: 4px 14px; padding: 10px 0; border-top: 1px solid var(--line-2); }
+.sector-news li:first-child { border-top: 0; }
+.sector-news time, .sector-dates time { color: var(--ink-3); font-size: var(--fs-s); font-variant-numeric: tabular-nums; }
+.sector-news a { font-weight: 600; }
+.sector-news li a[target] { display: inline; }
+.sector-dates { gap: 0; }
+.sector-dates li { display: grid; gap: 2px; padding: 10px 0; border-top: 1px solid var(--line-2); }
+.sector-dates li:first-child { border-top: 0; padding-top: 0; }
+.sector-dates a { font-weight: 650; }
+.sector-common { gap: 0; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); column-gap: 28px; }
+.sector-common a { display: flex; align-items: baseline; gap: 10px; padding: 9px 0; border-top: 1px solid var(--line-2); color: var(--ink-2); text-decoration: none; }
+.sector-common a:hover span:last-child { color: var(--brand-bright); text-decoration: underline; }
+
+.sector-side h2 { font-size: var(--fs-l); }
+.sector-markup { display: grid; gap: 2px; padding: 10px 14px; border-radius: 12px; background: var(--brand-soft); font-size: var(--fs-s); color: var(--ink-2); }
+.sector-markup b { color: var(--brand); font-weight: 750; }
+@media (max-width: 640px) {
+  .sector-news li { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .sector-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

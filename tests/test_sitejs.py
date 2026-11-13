@@ -1,6 +1,6 @@
 """화면 모듈 가운데 화면 요소를 다루지 않아 브라우저 없이 볼 수 있는 것: 국내 공지·자료 가르기(js/news/notices.js),
 문단 인용의 글(js/laws/cite.js), 낱말 단위로 달라진 곳 찾기(js/laws/worddiff.js), 의무를 역할로 고르기(js/calendar/roles.js),
-규정 원문과 그것을 적은 글을 잇는 주소(js/laws/refs.js)."""
+규정 원문과 그것을 적은 글을 잇는 주소(js/laws/refs.js), 부문별 모아 보기의 글(js/sector/facts.js)."""
 import json
 import shutil
 import subprocess
@@ -12,6 +12,7 @@ import { address, citeBlock, citePart, partName, source } from './site/js/laws/c
 import { dutyHref, lawHref, linkedTo, tally as linkedTally, termHref } from './site/js/laws/refs.js';
 import { wordDiff } from './site/js/laws/worddiff.js';
 import { isNotice, NOTICES, split } from './site/js/news/notices.js';
+import { gasText, markupText, proposedText, scopeOf, scopeText, upcoming } from './site/js/sector/facts.js';
 
 const act = { id: '32023R0956', group: 'act', name: 'CBAM 규정', official: 'Regulation (EU) 2023/956', consolidated: '2025-10-20' };
 const article = { id: 'art-6', kind: 'article', label: 'Article 6', ko: '제6조', title: 'CBAM declaration', titleKo: 'CBAM 신고',
@@ -58,6 +59,14 @@ console.log(JSON.stringify({
     sources: [source(act, article, 0), source({ ...act, consolidated: '' }, article, 0), source(guide, section, 0)],
     links: [address(base, act, article), address('https://example.org/x/', guide, section, 2)],
   },
+  sector: {
+    gases: [gasText(['co2', 'pfc']), gasText(['co2', 'xx']), gasText(null)],
+    scope: [scopeText({ directOnly: 14, both: 1 }), scopeText({ directOnly: 3, both: 0 }), scopeText({ directOnly: 0, both: 5 }), scopeText({}), scopeOf({ directOnly: true }), scopeOf({})],
+    markups: [markupText({ 2026: 10, 2027: 20, 2028: 30 }), markupText({ 2026: 1 }), markupText(null)],
+    next: upcoming([{ id: 'late', date: '2027-09-30', scheme: 'eu' }, { id: 'past', date: '2026-03-31', scheme: 'eu' }, { id: 'uk', date: '2027-01-01', scheme: 'uk' },
+      { id: 'soon', date: '2026-11-15', scheme: 'eu' }, { id: 'today', date: '2026-11-13', scheme: 'eu' }, { id: 'far', date: '2028-01-01', scheme: 'eu' }], '2026-11-13', 3, 'eu').map((duty) => duty.id),
+    proposed: [proposedText('철강', { own: 22, combined: 107 }), proposedText('알루미늄', { own: 0, combined: 107 }), proposedText('시멘트', null), proposedText('시멘트', { own: 0, combined: 0 })],
+  },
   refs: {
     hrefs: [lawHref({ act: '32023R0956', part: 'art-6' }), lawHref({ act: '32025R2621', part: '' }), dutyHref({ id: 'eu-first-declaration', date: '2027-09-30' }), termHref({ en: 'CBAM declaration', ko: 'CBAM 신고서' })],
     linked: linkedTo(linkedRefs, '32023R0956', 'art-6'), whole: linkedTo(linkedRefs, '32023R0956'), none: [linkedTo(linkedRefs, '32023R0956', 'art-7'), linkedTo(linkedRefs, 'nobody', 'art-1'), linkedTo(null, 'x')],
@@ -90,6 +99,16 @@ class SiteModulesTest(unittest.TestCase):
         self.assertEqual(notices["news"], ["b", "c"])         # 요약을 내린 것은 보통 소식으로 둔다(내렸다는 알림이 보여야 한다)
         self.assertEqual(notices["empty"], {"news": [], "notices": []})
         self.assertFalse(notices["one"])
+
+    def test_sector_facts_are_worded_from_the_data(self):
+        sector = self.seen["sector"]
+        self.assertEqual(sector["gases"], ["이산화탄소, 과불화탄소", "이산화탄소, xx", ""])
+        self.assertEqual(sector["scope"], ["직접배출만 14줄, 직접배출과 간접배출 1줄", "직접배출만(부속서 II)", "직접배출과 간접배출", "", "직접배출만", "직접배출과 간접배출"])
+        self.assertEqual(sector["markups"], ["2026년 10%, 2027년 20%, 2028년부터 30%", "2026년부터 1%", ""])   # 마지막 값은 그 뒤의 해에도 쓴다
+        self.assertEqual(sector["next"], ["today", "soon", "late"])                                          # 오늘부터, 그 제도의 것만, 날짜 차례로
+        self.assertTrue(sector["proposed"][0].startswith("철강 품목 22줄과 복합 금속 제품 107줄을 더하려는 개정안이 심의 중입니다."))
+        self.assertTrue(sector["proposed"][1].startswith("복합 금속 제품 107줄을 더하려는"))
+        self.assertEqual(sector["proposed"][2:], ["", ""])
 
     def test_links_between_the_law_text_and_what_cites_it(self):
         refs = self.seen["refs"]

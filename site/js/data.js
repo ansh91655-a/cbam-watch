@@ -44,6 +44,8 @@ export const pdfs = () => load("laws/pdf", { docs: {} }).then((body) => body.doc
 export const lawRows = () => load("laws/search", { rows: [] }).then((body) => body.rows || []);
 export const guideRows = () => load("laws/search-guides", { rows: [] }).then((body) => body.rows || []);
 // 하나로 묶은 소식의 옛 번호 → 남긴 소식의 번호
+// 부문별 모아 보기의 자료(tools/publish/sectors.py)
+export const sectors = () => load("sectors", {}).then((body) => ({ sectors: [], common: [], law: {}, ...body }));
 // 소식, 의무 일정, 용어집과 규정 원문을 잇는 자료(tools/publish/crossrefs.py). 없으면 빈 것으로 본다(잇는 링크만 보이지 않는다)
 export const refs = () => load("refs", {}).then((body) => ({ items: {}, duties: {}, terms: {}, laws: {}, ...body }));
 export const moved = () => load("moved", { moved: {} }).then((body) => body.moved || {});
