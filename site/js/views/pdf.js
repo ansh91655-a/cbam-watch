@@ -11,7 +11,7 @@ import { libraryTabs } from "../ui/tabs.js";
 const MODES = [["both", "나란히"], ["en", "원문"], ["ko", "번역"]];
 const ZOOMS = [0.75, 1, 1.25, 1.5, 2];
 const NARROW = "(max-width: 760px)";
-const NOTE = "번역 PDF는 이 사이트가 원문과 같은 자리에 번역을 앉혀 만든 비공식 자료입니다. 아직 옮기지 않은 문단과 일부 그림 안의 글자, 차례와 머리말·꼬리말은 원문 그대로입니다.";
+const NOTE = "번역 PDF는 이 사이트가 원문과 같은 자리에 번역을 앉혀 만든 비공식 자료입니다. 아직 옮기지 않은 문단과 일부 그림 안의 글자, 머리말·꼬리말은 원문 그대로입니다.";
 const TITLE = "PDF 나란히 보기";
 let open = null;  // 지금 열어 둔 것. 화면을 떠나면 닫는다
 
