@@ -34,9 +34,19 @@ def summary(found=None, group="act"):
     return f"{NAMES[group]}: 원문 {chars:,}자 가운데 {done:,}자({round(100 * done / chars) if chars else 100}%), {UNITS[group]} {len(found)}건 가운데 {finished}건을 모두 옮김"
 
 
+def past():
+    """앞선 판에만 있는 문단(달라진 곳 보기에 쓰는 것)의 한 줄. 그런 문단이 없으면 빈 글."""
+    documents, memory = corpus.everything(history=True)
+    keys = {store.key(text) for act, found in documents if act.get("hidden") for part in found for text in corpus.texts(part) if check.needs(text)}
+    if not keys:
+        return ""
+    return f"앞선 판의 문단(달라진 곳 보기에 쓴다): 서로 다른 문단 {len(keys):,}개 가운데 {sum(block_key in memory for block_key in keys):,}개를 옮김"
+
+
 def whole():
-    """모든 문서를 통틀어 본 한 줄. 여러 문서에 똑같이 나오는 문단은 한 번만 센다(갈래의 줄은 문서마다 세므로 겹쳐 셈한다)."""
-    documents, memory = corpus.everything()
+    """모든 문서를 통틀어 본 한 줄. 여러 문서에 똑같이 나오는 문단은 한 번만 센다(갈래의 줄은 문서마다 세므로 겹쳐 셈한다).
+    앞선 판에만 있는 문단(숨은 문서)도 함께 센다: 번역과 검수가 다루는 것이 모두 여기에 든다."""
+    documents, memory = corpus.everything(history=True)
     sizes = {}
     for _, found in documents:
         for part in found:
@@ -53,14 +63,15 @@ def whole():
 def held(live=None, memory=None, tries=store.HOLD_AFTER):
     """검사에 tries번 이상 걸려 아직 번역이 없는 문단: {열쇠: {"tries", "why"}}. 지금의 문서에 없는 문단은 세지 않는다."""
     if live is None or memory is None:
-        documents, memory = corpus.everything()
+        documents, memory = corpus.everything(history=True)
         live = {store.key(text) for _, found in documents for part in found for text in corpus.texts(part) if check.needs(text)}
     return {block_key: row for block_key, row in store.held_all().items() if row["tries"] >= tries and block_key in live and block_key not in memory}
 
 
 def unused():
-    """어느 문서에도 붙지 않는 번역의 수. 원문이 새 판으로 바뀌었거나 문단 나누기가 달라지면 생긴다(번역 자료에는 남아 있다)."""
-    documents, memory = corpus.everything()
+    """어느 문서에도 붙지 않는 번역의 수. 원문이 새 판으로 바뀌었거나 문단 나누기가 달라지면 생긴다(번역 자료에는 남아 있다).
+    앞선 판에만 있는 문단의 번역은 달라진 곳 보기에 쓰이므로 세지 않는다."""
+    documents, memory = corpus.everything(history=True)
     live = {store.key(text) for _, found in documents for part in found for text in corpus.texts(part)}
     return sum(block_key not in live for block_key in memory)
 
@@ -73,6 +84,8 @@ def main(argv):
     for act, progress in found:
         print(f"{act['id']:<22} {percent(progress):>3}%  문단 {progress['done']:>4}/{progress['blocks']:<4}  원문 {progress['chars']:>7,}자  {act['name']}")
     print(f"쓰이지 않는 번역: {unused()}개")
+    if past():
+        print(past())
     print(whole())
     print(verify.summary())
     for group in ([args.group] if args.group else ORDER):

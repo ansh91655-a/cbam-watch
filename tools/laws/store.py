@@ -30,6 +30,11 @@ def path_of(act_id):
     return f"{FOLDER}/{act_id}.json"
 
 
+def files():
+    """번역 자료의 파일이 있는 문서의 id들(이름의 차례대로)."""
+    return [path.stem for path in sorted(pathlib.Path(FOLDER).glob("*.json"))]
+
+
 def load(act_id):
     """한 법령의 번역: {열쇠: 국문}."""
     return dict((read_json(path_of(act_id), {}) or {}).get("blocks", {}))

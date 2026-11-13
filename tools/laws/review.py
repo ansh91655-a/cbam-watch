@@ -37,7 +37,7 @@ def _recent(act_id, day, days):
 def sample(count=30, days=8, seed="", day=None):
     """표본: [{"key", "act", "part", "source", "korean"}]. 최근 days일 안에 번역이 더해진 문서의 옮긴 문단 가운데서 뽑는다."""
     day = day or today()
-    documents, memory = corpus.everything()
+    documents, memory = corpus.everything(history=True)  # 앞선 판에만 있는 문단(달라진 곳 보기에 실린다)의 번역도 뽑는다
     pool, seen = [], set()
     for act, found in documents:
         if not _recent(act["id"], day, days):
@@ -55,12 +55,12 @@ def sample(count=30, days=8, seed="", day=None):
 def drop(block_key, why, day=None):
     """번역 하나를 지우고 까닭을 적는다. 지운 문서의 id들을 돌려준다(없는 열쇠이면 빈 목록)."""
     removed = []
-    for act in corpus.documents():
-        blocks = store.load(act["id"])
+    for act_id in store.files():   # 번역 자료의 파일마다 본다(앞선 판의 문단을 담은 숨은 문서의 파일도 여기에 든다)
+        blocks = store.load(act_id)
         if block_key in blocks:
             del blocks[block_key]
-            store.save(act["id"], blocks, day)
-            removed.append(act["id"])
+            store.save(act_id, blocks, day)
+            removed.append(act_id)
     if removed:
         write_json(LOG, {"note": "표본 검토에서 틀린 것으로 보아 지운 번역과 그 까닭. 번역하는 실행이 그 문단을 다시 옮길 때 까닭을 함께 받는다.",
                          "reviews": reviews() + [{"day": day or today(), "key": block_key, "act": removed[0], "why": str(why).strip()[:200]}]})

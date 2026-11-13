@@ -1,6 +1,7 @@
 // 조각 하나의 문단들을 그 꼴에 맞게 그린다: 문단, 작은 제목, 목록 항목, 표, 그림과 표의 제목, 각주, 그림 안의 이름표.
 // 꼴은 자료의 shapes에 문단마다 적혀 있다(없으면 모두 문단이다).
 // 표의 칸은 "th:표:줄:칸"이나 "td:표:줄:칸"이고, 칸 안에 든 목록 항목 같은 것은 뒤에 ":li1"처럼 붙는다.
+// 문단의 줄에는 번호를 붙인다(id가 "b-<조각>-<몇 번째>"다). 주소로 문단 하나를 바로 가리키고(#law-…​.<조각>.<몇 번째>), 그 문단을 인용할 때 쓴다.
 import { h } from "../ui/dom.js";
 import { count } from "../ui/format.js";
 import { split } from "./engine.js";
@@ -25,9 +26,17 @@ function named(shape) {
   return [hit[1], hit[1] === "li" && hit[2] ? hit[2] : null];
 }
 
-function row(block, needles, shape) {
+// where는 { id: 조각의 id, at: 조각 안에서의 차례(0부터), tool: 그 줄에 덧붙일 것을 만드는 함수 }다. 주지 않으면 번호 없는 줄이 된다(표와 그림 안의 줄).
+function row(block, needles, shape, where) {
   const [name, depth] = named(shape);
-  return h("div", { class: "law-row", "data-wait": block[1] ? null : "", "data-shape": name, "data-depth": depth }, pair(block, needles));
+  const extra = where && where.tool ? where.tool(where.at) : null;
+  return h("div", { class: "law-row", id: where ? rowId(where.id, where.at) : null, "data-wait": block[1] ? null : "", "data-shape": name, "data-depth": depth },
+    [...pair(block, needles), extra]);
+}
+
+// 문단의 줄에 붙는 id. at은 0부터 센 차례이고, 주소와 id에는 1부터 센 번호를 쓴다.
+export function rowId(partId, at) {
+  return `b-${partId}-${at + 1}`;
 }
 
 function table(blocks, shapes, needles) {
@@ -74,12 +83,12 @@ function table(blocks, shapes, needles) {
 function labels(blocks, needles) {
   return h("details", { class: "law-figure", open: needles.length ? "" : null }, [
     h("summary", {}, [h("span", { text: "그림 안의 글자" }), h("span", { class: "count", text: `${count(blocks.length)}개` })]),
-    ...blocks.map((block) => row(block, needles, "figure")),
+    ...blocks.map((block) => row(block, needles, "figure", null)),
   ]);
 }
 
-// 조각의 문단들을 그린 것. needles는 찾은 낱말(그 낱말에 표시를 한다)
-export function rows(part, needles) {
+// 조각의 문단들을 그린 것. needles는 찾은 낱말(그 낱말에 표시를 한다), tool은 문단의 줄마다 덧붙일 것을 만드는 함수(차례를 받는다. 없어도 된다)
+export function rows(part, needles, tool = null) {
   const shapes = part.shapes || [];
   const made = [];
   let at = 0;
@@ -94,7 +103,7 @@ export function rows(part, needles) {
       while (end < part.blocks.length && shapes[end] === "figure") end += 1;
       made.push(labels(part.blocks.slice(at, end), needles));
     } else {
-      made.push(row(part.blocks[at], needles, shape));
+      made.push(row(part.blocks[at], needles, shape, { id: part.id, at, tool }));
     }
     at = end;
   }

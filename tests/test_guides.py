@@ -562,7 +562,8 @@ class RepositoryTest(unittest.TestCase):
         self.assertEqual(laws_health._outline_problems(), [])  # 검사에 걸려 남은 문단 같은 운영의 일은 여기서 보지 않는다(실행 확인과 보고가 알린다)
 
     def test_each_runner_takes_only_its_own_documents(self):
-        groups = {document["id"]: document["group"] for document in corpus.documents()}
+        # 앞선 판에만 있는 문단을 담은 숨은 문서(…-was-…)도 본디 문서의 갈래를 따라 그 실행이 옮긴다
+        groups = {document["id"]: document["group"] for document, _ in corpus.everything(history=True)[0]}
         for name, settings in plan.runners().items():
             picked, _ = todo.pick(3000, runner=name)
             allowed = set(settings.get("groups", []))

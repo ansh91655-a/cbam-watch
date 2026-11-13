@@ -37,6 +37,8 @@ export const calc = () => load("calc", { goods: [] });
 // 규정 원문: 법령의 목록과 차례, 법령 하나의 본문과 번역, 전체 규정 검색에 쓰는 글(크므로 찾을 때만 읽는다)
 export const laws = () => load("laws/index", { acts: [] }).then((body) => body.acts || []);
 export const law = (id) => (/^[0-9A-Za-z-]+$/.test(String(id)) ? load(`laws/${id}`, null) : Promise.resolve(null));
+// 문서의 앞선 판과 견줘 달라진 문단(앞선 판을 받아 둔 문서만 있다). 없으면 null
+export const changes = (id) => (/^[0-9A-Za-z-]+$/.test(String(id)) ? load(`laws/changes/${id}`, null) : Promise.resolve(null));
 // 원문과 번역을 나란히 볼 수 있는 PDF의 목록(문서 id별: 원문 파일, 국문 파일, 쪽 수와 쪽의 크기)
 export const pdfs = () => load("laws/pdf", { docs: {} }).then((body) => body.docs || {});
 export const lawRows = () => load("laws/search", { rows: [] }).then((body) => body.rows || []);

@@ -46,6 +46,7 @@ function actCard(act) {
     h("h3", {}, h("a", { href: `#law-${act.id}`, text: act.name })),
     h("p", { class: "law-official", lang: "en", text: `${act.official}${act.consolidated ? ` (consolidated ${act.consolidated})` : ""}` }),
     act.remark ? h("p", { class: "law-remark", text: firstSentence(act.remark) }) : null,
+    act.changes ? h("p", { class: "law-changed" }, h("a", { href: `#changes-${act.id}`, text: `${act.changes.from}과 달라진 곳 ${count(act.changes.rows)}곳 보기` })) : null,
     h("p", { class: "count", text: [...facts(act), `국문 번역 ${done}%`].filter(Boolean).join(", ") }),
     h("div", { class: "law-progress", role: "img", "aria-label": `국문 번역 ${done}%` }, h("span", { style: `width:${done}%` })),
     h("p", { class: "law-card-links" }, [

@@ -1,10 +1,13 @@
 // 문서 하나(법령이나 EU 집행위원회가 낸 문서)의 원문과 국문 번역을 문단마다 나란히 보는 화면.
-// #law-<문서 id>.<조각> 꼴의 주소로 조문이나 절 하나를 바로 가리킬 수 있다.
+// #law-<문서 id>.<조각> 꼴의 주소로 조문이나 절 하나를, #law-<문서 id>.<조각>.<몇 번째> 꼴로 문단 하나를 바로 가리킬 수 있다.
 // 보는 방식은 셋이다: 나란히, 원문만, 국문만. 아직 옮기지 않은 문단은 원문만 보인다.
+// 문단과 조각마다 '인용 복사'가 있다: 원문, 국문, 출처(문서·조·쪽), 주소를 한 번에 복사한다(laws/cite.js).
 import * as data from "../data.js";
-import { rows as blockRows } from "../laws/blocks.js";
+import { rowId, rows as blockRows } from "../laws/blocks.js";
+import { citeBlock, citePart } from "../laws/cite.js";
 import { recent } from "../laws/recent.js";
 import { band } from "../ui/band.js";
+import { copyText } from "../ui/copy.js";
 import { empty, fill, h, safeLink } from "../ui/dom.js";
 import { count } from "../ui/format.js";
 import { icon } from "../ui/icons.js";
@@ -26,6 +29,8 @@ const NATURE = {
   manual: "이 문서는 EU 집행위원회가 낸 등록부 이용 안내서입니다. PDF의 글과 표를 옮겨 실었습니다. 화면 그림은 원문 PDF에서 확인해 주십시오.",
   paper: "이 문서는 EU 집행위원회가 낸 자료로 법적 구속력이 없습니다. PDF의 글과 표를 옮겨 실었습니다. 그림은 원문 PDF에서 확인해 주십시오.",
 };
+const BACK_MS = 2000;    // 복사했다는 표시를 되돌리는 시간
+const FLASH_MS = 2600;   // 주소로 가리킨 문단을 표시해 두는 시간
 const isAct = (act) => (act.group || "act") === "act";
 
 function note(act, done) {
@@ -39,20 +44,41 @@ function about(act) {
   return `${act.official}${act.consolidated ? `, ${act.consolidated} 통합본` : ""}`;
 }
 
-// paged는 이 문서를 PDF로 나란히 볼 수 있을 때의 문서 id다. 조각이 시작하는 쪽으로 가는 링크를 단다
-function heading(part, paged) {
+// 조각의 머리: 이름, 그리고 오른쪽의 도구(PDF의 그 쪽으로 가는 링크, 인용 복사).
+// paged는 이 문서를 PDF로 나란히 볼 수 있을 때의 문서 id다. citable이면 조각을 통째로 인용하는 단추를 단다
+function heading(part, paged, citable) {
   const english = part.kind === "section" ? part.title : [part.label, part.title].filter(Boolean).join(" · ");  // 절의 번호는 국문 쪽에 이미 있다
-  return h("h2", { class: "law-head" }, [
+  const name = h("h2", { class: "law-head" }, [
     h("span", { class: "law-no", text: part.ko }),
     part.titleKo ? h("span", { text: part.titleKo }) : null,
-    paged && part.page ? h("a", { class: "law-page", href: `#pdf-${paged}.p${part.page}`, text: `PDF ${count(part.page)}쪽`, title: "이 부분을 원문과 번역 PDF로 나란히 보기" }) : null,
     english ? h("span", { class: "law-head-en", lang: "en", text: english }) : null,
+  ]);
+  const tools = [
+    paged && part.page ? h("a", { class: "law-page", href: `#pdf-${paged}.p${part.page}`, text: `PDF ${count(part.page)}쪽`, title: "이 부분을 원문과 번역 PDF로 나란히 보기" }) : null,
+    citable ? h("button", { class: "law-cite-part", type: "button", "data-cite": part.id, title: "이 부분의 원문과 국문, 출처, 주소를 복사합니다" }, [icon("copy", 14), h("span", { text: "인용 복사" })]) : null,
+  ].filter(Boolean);
+  return tools.length ? h("div", { class: "law-top" }, [name, h("div", { class: "law-head-tools" }, tools)]) : name;
+}
+
+// 문단의 줄 끝에 다는 단추: 그 문단을 인용하는 글을 복사한다. 자판의 차례에는 넣지 않는다(문단마다 멈추면 화면을 다니기 어렵다).
+// 자판으로는 조각 머리의 '인용 복사'를 쓴다.
+function citeTool(part) {
+  return (at) => h("button", { class: "law-cite", type: "button", tabindex: "-1", "data-cite": `${part.id}.${at}`, "aria-label": "이 문단 인용 복사", title: "이 문단의 원문과 국문, 출처, 주소를 복사합니다" }, icon("copy", 14));
+}
+
+// 받아 둘 때 뒷부분을 뺀 부속서(값의 표가 아주 긴 것)의 끝에 다는 알림. 뺀 줄 수와 전체를 볼 수 있는 곳을 알린다.
+function cutNote(part, source) {
+  if (!part.cut) return null;
+  const link = safeLink(source, "EUR-Lex의 원문");
+  if (link) link.append(icon("out", 13));
+  return h("p", { class: "law-cut-note" }, [
+    h("span", { text: `이 부속서의 글은 앞부분만 실었습니다. 뒤의 ${count(part.cut)}줄은 싣지 않았습니다. 전체는 ` }), link || h("span", { text: "EUR-Lex의 원문" }), h("span", { text: "에서 확인하세요." }),
   ]);
 }
 
-function section(part, target, needles, piece, paged) {
+function section(part, target, needles, piece, paged, source) {
   const here = part.id === target;
-  const rows = blockRows(part, here ? needles : []);
+  const rows = blockRows(part, here ? needles : [], citeTool(part));
   const waiting = part.blocks.length && part.blocks.every(([en, ko]) => !ko);
   if (part.kind === "division") return h("div", { class: "law-division", id: `p-${part.id}` }, heading(part));
   if (FOLDED[part.kind]) {
@@ -60,7 +86,8 @@ function section(part, target, needles, piece, paged) {
       h("summary", {}, [h("span", { text: FOLDED[part.kind] }), h("span", { class: "count", text: `문단 ${count(part.blocks.length)}개` })]), ...rows]);
   }
   return h("section", { class: "law-part", id: `p-${part.id}`, "data-here": here ? "" : null, "data-waiting": waiting ? "" : null }, [
-    heading(part, paged), waiting ? h("p", { class: "law-wait-note", text: `이 ${piece}은 아직 국문으로 옮기지 않았습니다. 원문만 보입니다.` }) : null, ...rows]);
+    heading(part, paged, part.blocks.length > 0), waiting ? h("p", { class: "law-wait-note", text: `이 ${piece}은 아직 국문으로 옮기지 않았습니다. 원문만 보입니다.` }) : null, ...rows,
+    cutNote(part, source)]);
 }
 
 function jump(event, id, href) {
@@ -81,8 +108,42 @@ function contents(act, label) {
   })));
 }
 
+// 인용 복사: 본문 안의 단추(data-cite가 "<조각>"이면 조각 전체, "<조각>.<차례>"이면 문단 하나)를 한곳에서 듣는다.
+function wireCite(body, act, said) {
+  const base = `${location.origin}${location.pathname}`;
+  body.addEventListener("click", async (event) => {
+    const button = event.target instanceof Element ? event.target.closest("[data-cite]") : null;
+    if (!button) return;
+    const [partId, at] = button.dataset.cite.split(".");
+    const part = act.parts.find((one) => one.id === partId);
+    if (!part) return;
+    const done = await copyText(at === undefined ? citePart(act, part, base) : citeBlock(act, part, Number(at), base));
+    said.textContent = done ? "인용할 글을 복사했습니다." : "복사하지 못했습니다.";
+    button.dataset.state = done ? "done" : "failed";
+    const words = button.querySelector("span");
+    if (words) words.textContent = done ? "복사했습니다" : "복사하지 못했습니다";
+    setTimeout(() => {
+      delete button.dataset.state;
+      if (words) words.textContent = "인용 복사";
+      said.textContent = "";
+    }, BACK_MS);
+  });
+}
+
+// 주소가 가리킨 조각이나 문단으로 옮겨 간다. 문단이면 잠깐 표시한다.
+function reach(target, at) {
+  const part = document.getElementById(`p-${target}`);
+  if (!part) return;
+  if (part.tagName === "DETAILS") part.open = true;
+  const row = /^\d+$/.test(at) ? document.getElementById(rowId(target, Number(at) - 1)) : null;
+  (row || part).scrollIntoView({ block: row ? "center" : "start" });
+  if (!row) return;
+  row.dataset.flash = "true";
+  setTimeout(() => { delete row.dataset.flash; }, FLASH_MS);
+}
+
 export async function render(main, arg) {
-  const [actId, target = ""] = String(arg || "").split(".");
+  const [actId, target = "", at = ""] = String(arg || "").split(".");
   const [act, acts, pdfs] = await Promise.all([data.law(actId), data.laws(), data.pdfs()]);
   if (!act) {
     fill(main, band("규정 원문", "", libraryTabs("laws")), empty("이 문서의 원문을 찾지 못했습니다."), h("p", {}, h("a", { href: "#laws", text: "규정 원문의 목록으로" })));
@@ -91,16 +152,19 @@ export async function render(main, arg) {
   document.body.dataset.wide = "";
   const needles = target ? recent.needles : [];
   const words = isAct(act) ? WORDS.act : WORDS.doc;
-  const body = h("div", { class: "law-body", "data-mode": recent.mode }, act.parts.map((part) => section(part, target, needles, words.piece, pdfs[act.id] ? act.id : "")));
+  const body = h("div", { class: "law-body", "data-mode": recent.mode }, act.parts.map((part) => section(part, target, needles, words.piece, pdfs[act.id] ? act.id : "", act.url)));
+  const said = h("p", { class: "sr", role: "status", "aria-live": "polite" });  // 복사했는지를 화면 낭독기에 알린다
+  wireCite(body, act, said);
   const buttons = MODES.map(([key, text]) => h("button", { type: "button", text, "aria-pressed": String(key === recent.mode), onclick: () => {
     recent.mode = key;
     body.dataset.mode = key;
-    buttons.forEach((button, at) => button.setAttribute("aria-pressed", String(MODES[at][0] === key)));
+    buttons.forEach((button, index) => button.setAttribute("aria-pressed", String(MODES[index][0] === key)));
   } }));
   const done = act.progress.chars ? Math.round((100 * act.progress.doneChars) / act.progress.chars) : 100;
   const picker = h("select", { id: "law-pick", onchange: (event) => { location.hash = `#law-${event.target.value}`; } },
     PICK_GROUPS.map(([key, label]) => h("optgroup", { label }, acts.filter((other) => (other.group || "act") === key)
       .map((other) => h("option", { value: other.id, selected: other.id === act.id || null, text: other.name })))));
+  const changed = act.changes && act.changes.rows ? h("a", { href: `#changes-${act.id}`, text: `앞선 판과 달라진 곳 ${count(act.changes.rows)}곳 보기` }) : null;
   fill(main,
     band(act.name, about(act), libraryTabs("laws")),
     h("div", { class: "law-bar" }, [
@@ -115,15 +179,18 @@ export async function render(main, arg) {
       h("p", { text: note(act, done) }),
       h("p", { class: "law-note-links" }, [
         pdfs[act.id] ? h("a", { href: `#pdf-${act.id}`, text: "원문과 번역을 PDF로 나란히 보기" }) : null,
+        changed,
         safeLink(act.url, words.source),
         act.rule ? h("a", { href: `#rules-${act.rule}`, text: "이 규제의 진행 상황" }) : null,
         h("a", { href: "#laws", text: "전체 규정에서 찾기" }),
       ]),
+      h("p", { class: "law-cite-tip", text: `문단 오른쪽의 복사 표시나 ${words.piece} 머리의 ‘인용 복사’를 누르면 원문과 국문, 출처, 주소가 함께 복사됩니다.` }),
     ]),
     h("div", { class: "law-layout" }, [contents(act, words.toc), body]),
+    said,
     h("p", { class: "law-source", text: words.credit }),
   );
   for (const link of main.querySelectorAll(".law-note-links a[target]")) link.append(icon("out", 14));
-  if (target) setTimeout(() => { const node = document.getElementById(`p-${target}`); if (node) node.scrollIntoView({ block: "start" }); }, 0);
+  if (target) setTimeout(() => reach(target, at), 0);
   return act.name;
 }

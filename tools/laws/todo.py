@@ -67,7 +67,7 @@ def pick(limit=None, act_id="", titles=False, part_id="", runner=plan.DEFAULT, m
     """
     settings = plan.runner(runner)
     limit = limit or settings["limit"]
-    documents, stored = corpus.everything()
+    documents, stored = corpus.everything(history=True)  # 앞선 판에만 있는 문단(달라진 곳 보기에 쓴다)도 옮긴다
     held = (store.held_all() if memory is None else {}) if held is None else held
     memory = stored if memory is None else memory
     documents = [(act, found) for act, found in documents if act["id"] == act_id] if act_id else plan.ordered(documents, settings)

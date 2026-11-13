@@ -85,19 +85,40 @@ body[data-wide] main, body[data-wide] .band-inner, body[data-wide] .head-inner {
 @media (max-width: 999px) { .law-toc { max-height: 220px; overflow-y: auto; padding: 8px; border: 1px solid var(--line-2); border-radius: var(--radius); background: var(--surface); } }
 
 .law-body { display: grid; gap: 22px; min-width: 0; }
-.law-part { display: grid; gap: 0; padding: 20px 22px 14px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); scroll-margin-top: 84px; }
+.law-part { display: grid; gap: 0; padding: 20px 34px 14px 22px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); scroll-margin-top: 84px; }
 .law-part[data-here] { border-color: var(--brand-bright); box-shadow: var(--shadow-1); }
 .law-division { scroll-margin-top: 84px; padding: 6px 4px 0; }
 .law-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin-bottom: 8px; font-size: 1.15rem; line-height: 1.45; }
 .law-division .law-head { margin: 0; font-size: 1.3rem; }
 .law-no { color: var(--brand); }
-.law-page { margin-left: auto; font-size: var(--fs-s); font-weight: 500; white-space: nowrap; }
+.law-page { font-size: var(--fs-s); font-weight: 500; white-space: nowrap; }
+/* 조각의 머리와 그 오른쪽의 도구(PDF의 그 쪽으로 가는 링크, 인용 복사) */
+.law-top { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 4px 14px; margin-bottom: 8px; }
+.law-top .law-head { flex: 1 1 260px; margin-bottom: 0; }
+.law-head-tools { display: inline-flex; align-items: center; gap: 12px; padding-top: 3px; }
+.law-cite-part { display: inline-flex; align-items: center; gap: 5px; padding: 3px 11px; border: 1px solid var(--line); border-radius: var(--radius-pill); background: var(--surface); color: var(--ink-2); font-size: 0.78rem; font-weight: 600; white-space: nowrap; cursor: pointer; }
+.law-cite-part:hover { border-color: var(--brand-bright); color: var(--brand-bright); }
+.law-cite-part[data-state="done"] { border-color: var(--ok); color: var(--ok); }
+.law-cite-part[data-state="failed"] { border-color: var(--bad); color: var(--bad); }
+.law-cite-tip { color: var(--ink-3); }
 .law-head-en { flex-basis: 100%; font-size: var(--fs-s); font-weight: 500; color: var(--ink-3); }
-.law-row { display: grid; gap: 4px 28px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); padding: 9px 0; border-top: 1px solid var(--line-2); }
+.law-row { position: relative; display: grid; gap: 4px 28px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); padding: 9px 0; border-top: 1px solid var(--line-2); scroll-margin-top: 84px; }
+/* 문단마다의 인용 복사: 조각의 오른쪽 여백에 둔다. 마우스를 올리면 보이고, 손가락으로 쓰는 기기에서는 흐리게 늘 보인다 */
+.law-cite { position: absolute; top: 9px; right: -29px; display: grid; place-items: center; width: 24px; height: 24px; padding: 0; border: 0; border-radius: 7px; background: none; color: var(--ink-3); opacity: 0; cursor: pointer; transition: opacity 0.12s; }
+.law-row:hover > .law-cite, .law-cite:focus-visible, .law-cite[data-state] { opacity: 1; }
+.law-cite:hover { background: var(--surface-2); color: var(--brand-bright); }
+.law-cite[data-state="done"] { color: var(--ok); }
+.law-cite[data-state="failed"] { color: var(--bad); }
+@media (hover: none) { .law-cite { opacity: 0.5; } }
+/* 주소가 가리킨 문단: 잠깐 표시한다(views/law.js의 reach) */
+.law-row[data-flash="true"] { border-radius: 6px; background: var(--accent-soft); box-shadow: 0 0 0 8px var(--accent-soft); }
 .law-row p { line-height: 1.75; overflow-wrap: anywhere; }
 .law-en { color: var(--ink-2); font-size: 0.95rem; }
 .law-ko { color: var(--ink); }
 .law-wait-note { margin-bottom: 8px; font-size: var(--fs-s); color: var(--ink-3); }
+/* 받아 둘 때 뒷부분을 뺀 부속서의 끝: 싣지 않은 부분이 있다고 알린다 */
+.law-cut-note { margin-top: 12px; padding: 10px 14px; border: 1px dashed var(--line); border-radius: 12px; background: var(--surface-2); font-size: var(--fs-s); color: var(--ink-2); }
+.law-cut-note a { display: inline-flex; align-items: center; gap: 4px; }
 .law-body[data-mode="en"] .law-row, .law-body[data-mode="ko"] .law-row { grid-template-columns: minmax(0, 1fr); }
 /* 통째로 옮기지 않은 조문은 원문을 한 단으로 보여 준다 */
 .law-part[data-waiting] .law-row { grid-template-columns: minmax(0, 1fr); }
@@ -107,7 +128,7 @@ body[data-wide] main, body[data-wide] .band-inner, body[data-wide] .head-inner {
 .law-body[data-mode="ko"] .law-row:not([data-wait]) .law-en { display: none; }
 .law-body[data-mode="ko"] .law-wait { display: none; }
 .law-body .law-row p { max-width: 86ch; }
-@media (max-width: 760px) { .law-body[data-mode="both"] .law-row { grid-template-columns: minmax(0, 1fr); } .law-wait { display: none; } .law-part { padding-inline: 16px; } }
+@media (max-width: 760px) { .law-body[data-mode="both"] .law-row { grid-template-columns: minmax(0, 1fr); } .law-wait { display: none; } .law-part { padding-inline: 16px 32px; } .law-cite { right: -28px; } }
 /* 문단의 꼴: 작은 제목, 목록 항목, 그림과 표의 제목, 각주, 수식 */
 .law-row[data-shape="h"] p { font-weight: 700; }
 .law-row[data-shape="li"] p, .law-pair[data-shape="li"] p { padding-left: 1.5em; text-indent: -1.5em; }

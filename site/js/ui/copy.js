@@ -4,7 +4,8 @@ import { icon } from "./icons.js";
 
 const BACK_MS = 2000;
 
-async function write(text) {
+// 글자를 복사한다. 됐는지를 돌려준다.
+export async function copyText(text) {
   try {
     await navigator.clipboard.writeText(text);
     return true;
@@ -26,7 +27,7 @@ export function copyButton(text, label = "복사", attrs = {}) {
   const button = h("button", { class: "btn btn-small", type: "button", ...attrs }, [icon("copy", 15), words]);
   let timer = null;
   button.addEventListener("click", async () => {
-    const done = await write(text);
+    const done = await copyText(text);
     words.textContent = done ? "복사했습니다" : "복사하지 못했습니다";
     button.dataset.state = done ? "done" : "failed";
     clearTimeout(timer);

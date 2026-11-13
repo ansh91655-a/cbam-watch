@@ -47,7 +47,7 @@ def _last_update(act_ids):
 
 
 def _stalled_problems(day):
-    documents, memory = corpus.everything()
+    documents, memory = corpus.everything(history=True)   # 앞선 판에만 있는 문단(달라진 곳 보기에 쓰는 것)도 옮길 것으로 센다
     groups = {group for settings in plan.runners().values() for group in settings.get("groups", [])}
     found = []
     for group in sorted(groups):

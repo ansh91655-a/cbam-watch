@@ -48,7 +48,7 @@ def holders():
 def pending(documents=None, memory=None, checked=None):
     """옮겼지만 아직 검수하지 않은 문단을 번역하는 차례대로: [{"key", "act", "part", "source", "korean"}]"""
     if documents is None or memory is None:
-        documents, memory = corpus.everything()
+        documents, memory = corpus.everything(history=True)
     checked = store.checked_all() if checked is None else checked
     found, seen = [], set()
     for act, parts in plan.ordered(documents, plan.everyone()):
@@ -152,7 +152,7 @@ def settle(wrong, work, day=None):
 def progress(documents=None, memory=None):
     """{"translated": 옮긴 문단 수, "checked": 그 가운데 검수를 마친 수, "disputed": 가리지 못한 문단 수, "canaries", "caught"}"""
     if documents is None or memory is None:
-        documents, memory = corpus.everything()
+        documents, memory = corpus.everything(history=True)
     checked = store.checked_all()
     live = {store.key(text) for _, parts in documents for part in parts for text in corpus.texts(part) if check.needs(text)}
     translated = {block_key for block_key in live if block_key in memory}

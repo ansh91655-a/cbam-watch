@@ -87,6 +87,14 @@ def documents():
     return catalog.acts() + guides.documents()
 
 
-def everything():
-    """[(문서, 조각들)] 을 싣는 차례대로, 그리고 모든 번역 {열쇠: 국문}."""
-    return [(act, read(act)) for act in documents()], store.load_all()
+def everything(history=False):
+    """[(문서, 조각들)] 을 싣는 차례대로, 그리고 모든 번역 {열쇠: 국문}.
+
+    history가 참이면 문서의 앞선 판에만 있는 문단을 담은 숨은 문서(tools.laws.revisions.history)를 뒤에 붙인다.
+    번역과 검수가 그 문단까지 다루게 하려는 것이다. 사이트에 싣는 자료를 만들 때에는 붙이지 않는다.
+    """
+    found = [(act, read(act)) for act in documents()]
+    if history:
+        from tools.laws import revisions  # revisions가 이 모듈을 들이므로 여기서 들인다
+        found += revisions.history(found)
+    return found, store.load_all()

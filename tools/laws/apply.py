@@ -17,7 +17,7 @@ from tools.laws import check, corpus, finish, plan, store, terms
 def sources():
     """{열쇠: (그 문단이 처음 나오는 법령의 번호, 원문)}"""
     found = {}
-    acts, _ = corpus.everything()
+    acts, _ = corpus.everything(history=True)
     for act, parts in acts:
         for part in parts:
             for text in corpus.texts(part):
