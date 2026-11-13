@@ -56,6 +56,7 @@
   "3ea22703850b": "따라서 이 문서의 목적은 EU 또는 비EU 기업이 CBAM 제3국 사업자 포털(CBAM 제3국 사업자 포털)에 접근하기 위하여 따라야 하는 접근 요청 단계와, 등록된 CBAM 인정받은 검증기관이 되기 위하여 포털에서 국가 관할당국에 신청하는 방법을 제공하는 것이다. 접근 요청이 승인되면 인정받은 CBAM 검증기관은 CBAM 제3국 사업자 포털에 접근할 수 있게 되며, 거기서 등록된 CBAM 인정받은 검증기관이 되기 위해 신청하는 추가 단계를 수행하고 모니터링 접근방식, 배출량 계산 및 뒷받침 증거를 검토하는 것이 바람직하다. 이 단계는 CBAM 등록부 웹사이트에서 이용할 수 있는 CBAM Registry – User manual for the O3CI Portal에 설명되어 있다.",
   "3eba561414b3": "• VAL748 The attribute [Legal Name] has invalid value [xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx], please check the onboarding manual for more details. o 이 오류는 (마법사 2단계에서) \"Legal Name\" 속성에 입력한 값이 표 7에 제시된 규칙을 위반할 때 발생한다. o 예를 들어 위 화면 갈무리(그림 12)에서 이 오류가 두 번 나타나는 것은 “Legal Name” 칸에 입력한 값 “TCO Test xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxx”가 허용되는 최대 길이 70자를 넘기 때문이다.",
   "408b91b6bd7a": "지원 창구의 업무 시간은 월요일부터 금요일까지 07:00 – 21:00 CET/Europe-Belgium 시간대이다.",
+  "413283fb621a": "포털 사용 방법에 관한 추가 안내는 CBAM 등록부 웹사이트에서 볼 수 있는 CBAM Registry – User manual for the O3CI Portal을 참고한다.",
   "41596acbb590": "ACEO가 제3국 사업자 포털에 접근하고 EU 집행위원회에 요청(예: 인정받은 기관이 되기 위한 요청, 변경 요청, 철회 요청 등)을 제출할 수 있게 한다.",
   "41980c1a03ae": "1.00 EN",
   "41f399d2ec81": "o 이 오류는 (마법사 2단계에서) \"Legal Name\" 속성에 입력한 값이 표 7에 제시된 규칙을 위반할 때 발생한다.",

@@ -4692,6 +4692,18 @@
    "ko": "검증 방법",
    "from": "reg-delegation",
    "added": "2026-11-13"
+  },
+  {
+   "en": "emission coverage rule",
+   "ko": "배출량 충당 규칙",
+   "from": "reg-declarant",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "horizontal component",
+   "ko": "공통 구성요소",
+   "from": "reg-declarant",
+   "added": "2026-11-13"
   }
  ]
 }
