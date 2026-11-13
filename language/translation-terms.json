@@ -4362,6 +4362,42 @@
    "ko": "2단계 인증",
    "from": "guide-5d",
    "added": "2026-11-13"
+  },
+  {
+   "en": "converter gas",
+   "ko": "전로가스",
+   "from": "guide-5d",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "oxygen steelmaking",
+   "ko": "산소 제강",
+   "from": "guide-5d",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "bubble",
+   "ko": "버블",
+   "from": "guide-5d",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "hot rolling",
+   "ko": "열간압연",
+   "from": "guide-5d",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "cold rolling",
+   "ko": "냉간압연",
+   "from": "guide-5d",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "reducing agents",
+   "ko": "환원제",
+   "from": "guide-5d",
+   "added": "2026-11-13"
   }
  ]
 }
