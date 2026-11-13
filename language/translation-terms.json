@@ -4602,6 +4602,24 @@
    "ko": "설비 배치",
    "from": "guide-verif",
    "added": "2026-11-13"
+  },
+  {
+   "en": "materially misstated",
+   "ko": "중요한 오류가 있는",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "absolute deviations",
+   "ko": "절대 편차",
+   "from": "guide-verif",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "specific embedded allocation",
+   "ko": "고유 내재할당량",
+   "from": "guide-verif",
+   "added": "2026-11-13"
   }
  ]
 }
