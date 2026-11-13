@@ -59,6 +59,12 @@
     "5d02757f9122": "화면에 뜨는 상태 이름 둘(Update requested, Deregistration requested)이라 원문대로 둔다",
     "632aadb57157": "lead verifiers는 검증팀을 이끄는 사람이다(검증기관이 아니다). 국내 정부 자료의 CBAM 표기는 확인하지 못했다",
     "5bc7084865b4": "각주가 단체의 이름뿐이다(International federation of industrial energy consumers). 정해진 국문 이름을 확인하지 못해 원문대로 둔다",
-    "ce6c9b50f25c": "각주가 단체의 이름뿐이다(Union des Industries Utilisatrices d'Énergie). 정해진 국문 이름을 확인하지 못해 원문대로 둔다"
+    "ce6c9b50f25c": "각주가 단체의 이름뿐이다(Union des Industries Utilisatrices d'Énergie). 정해진 국문 이름을 확인하지 못해 원문대로 둔다",
+    "56b9afbe0b70": "식 29의 글이다(Vflue gas flow [Nm3/h] = Vair × …). 식은 원문대로 둔다",
+    "1ffb7e573d3c": "식의 기호 AttrEm indir(귀속 간접배출량)이다. 바로 뒤 문단이 뜻을 풀이하므로 원문대로 둔다",
+    "70dbe2369742": "식의 기호 WG corr,imp이다. 바로 뒤 문단이 뜻을 풀이하므로 원문대로 둔다",
+    "5b5f9621f7f7": "식의 기호 WG corr,exp이다. 바로 뒤 문단이 뜻을 풀이하므로 원문대로 둔다",
+    "24307df162ce": "식의 기호 Em el,prod이다. 바로 뒤 문단이 뜻을 풀이하므로 원문대로 둔다",
+    "1b8202d7a3c7": "식의 기호 Em el,cons이다. 바로 뒤 문단이 뜻을 풀이하므로 원문대로 둔다"
   }
 }
