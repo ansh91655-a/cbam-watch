@@ -1,11 +1,11 @@
 {
  "source": "eur-lex-docs",
- "fetchedAt": "2026-11-13T06:09:45+09:00",
+ "fetchedAt": "2026-11-13T10:18:26+09:00",
  "since": "2025-01-01",
  "report": {
   "targets": 25,
-  "stored": 1,
-  "kept": 24,
+  "stored": 0,
+  "kept": 25,
   "failures": [],
   "notes": []
  },

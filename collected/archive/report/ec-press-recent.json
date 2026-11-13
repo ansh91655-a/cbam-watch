@@ -1,10 +1,10 @@
 {
- "ranAt": "2026-11-13T06:10:28+09:00",
+ "ranAt": "2026-11-13T10:19:00+09:00",
  "since": "2025-01-01",
  "result": {
   "pages": 8,
   "listed": 400,
-  "opened": 2,
+  "opened": 0,
   "kept": 0,
   "failures": [],
   "oldest": "2025-02-18",
