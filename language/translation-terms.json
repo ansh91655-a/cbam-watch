@@ -4980,6 +4980,30 @@
    "ko": "위험평가",
    "from": "32025R2547",
    "added": "2026-11-13"
+  },
+  {
+   "en": "Minimum requirement",
+   "ko": "최소 요건",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "maximum permissible error in service",
+   "ko": "사용 중 최대허용오차",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "decarbonatisation",
+   "ko": "탈탄산",
+   "from": "32025R2547",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "zero-rated biomass fraction",
+   "ko": "영으로 처리되는 바이오매스 비율",
+   "from": "32025R2547",
+   "added": "2026-11-13"
   }
  ]
 }
