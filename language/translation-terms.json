@@ -4530,6 +4530,36 @@
    "ko": "일관제철소",
    "from": "guide-5a",
    "added": "2026-11-13"
+  },
+  {
+   "en": "Haber-Bosch process",
+   "ko": "하버-보슈 공정",
+   "from": "guide-5c",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "ammonium sulphate",
+   "ko": "황산암모늄",
+   "from": "guide-5c",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "ammonium phosphates",
+   "ko": "인산암모늄",
+   "from": "guide-5c",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "anhydrous ammonia",
+   "ko": "무수 암모니아",
+   "from": "guide-5c",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "nomination of the capacity",
+   "ko": "용량 지정",
+   "from": "guide-5c",
+   "added": "2026-11-13"
   }
  ]
 }
