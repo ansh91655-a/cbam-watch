@@ -96,7 +96,8 @@
   "o read: specifies that the notification has been read by the user. note that as soon as the notification is opened, the notification is automatically marked as read",
   "b. notification subject (e.g. \"request for change\")",
   "provide an integrated overview of stakeholder feedback, organised by key topic",
-  "highlight areas where stakeholder views converge or diverge, including differences between stakeholder groups and sectors"
+  "highlight areas where stakeholder views converge or diverge, including differences between stakeholder groups and sectors",
+  "other relevant iso standards, in particular iso 16911-2 (stationary source emissions - manual and automatic determination of velocity and volume flow rate in ducts)"
  ],
  "why": {
   "this regulation shall enter into force on the day following that of its publication in the official journal of the european union": "말뭉치에서 \"게재된 날의 다음 날\"이 우세하고 원문(the day following that of)에도 더 가깝다.",
@@ -192,6 +193,7 @@
   "o read: specifies that the notification has been read by the user. note that as soon as the notification is opened, the notification is automatically marked as read": "등록부 안내서마다 notification을 옮기는 말이 다르다(신고인 포털 안내서는 '알림'). 한 문단만 바꾸면 그 문서 안에서 어긋난다.",
   "b. notification subject (e.g. \"request for change\")": "원문 자체가 인용 UI 문자열의 대소문자(\"Request for Change\"/\"Request for change\")에서 달라 각 국문이 자기 원문을 그대로 옮긴 것이므로 통일하지 않는다.",
   "provide an integrated overview of stakeholder feedback, organised by key topic": "보고서마다 이 목록의 항목을 적는 꼴이 다르다(문장과 명사구). 한 항목만 바꾸면 목록 안에서 꼴이 섞인다.",
-  "highlight areas where stakeholder views converge or diverge, including differences between stakeholder groups and sectors": "보고서마다 이 목록의 항목을 적는 꼴이 다르다(문장과 명사구). 한 항목만 바꾸면 목록 안에서 꼴이 섞인다."
+  "highlight areas where stakeholder views converge or diverge, including differences between stakeholder groups and sectors": "보고서마다 이 목록의 항목을 적는 꼴이 다르다(문장과 명사구). 한 항목만 바꾸면 목록 안에서 꼴이 섞인다.",
+  "other relevant iso standards, in particular iso 16911-2 (stationary source emissions - manual and automatic determination of velocity and volume flow rate in ducts)": "법령 번역은 ISO 표준의 제목을 원문대로 두고 가이던스 3은 국문으로 옮긴다(가이던스 3의 다른 표준 제목 둘도 국문이다). 표준 제목을 어떻게 적을지 정해질 때까지 문서 안의 일관성을 지킨다"
  }
 }
