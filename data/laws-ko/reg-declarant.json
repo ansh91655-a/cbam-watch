@@ -133,7 +133,7 @@
   "3ed8c06afc95": "• CBAM 신고인 계정 조회",
   "403411450063": "양식을 작성하면 사용자는 \"Proceed\"를 눌러 문서를 제출한다. 시스템은 경제운영자의 식별 정보와 설립 국가에 따라 문서를 해당 관할당국으로 자동으로 보낸다. 그런 다음 사용자는 Homepage로 가게 된다.",
   "40addd99acfb": "• 알림의 업무 맥락. 신고인 포털의 경우, 현재로서는 승인 관리만 지원된다.",
-  "40c49814c24f": "[2] 자세한 정보는 https://taxation-customs.ec.europa.eu/carbon-border-adjustmentmechanism_en#cbam 에서 볼 수 있다.",
+  "40c49814c24f": "[2] 자세한 정보는 https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en#cbam 에서 볼 수 있다.",
   "4149d93cea62": "그림 24: CBAM 신고인 포털 메뉴의 발신 알림 목록 단추 그러면 사용자는 “Sent notifications” 탭의 “Notifications list” 페이지로 이동하며, 이 페이지에는 보낸 모든 알림의 목록이 표시되고 각 열에 서로 다른 정보가 나온다.",
   "42686c4c654f": "전력 수입을 위한 송전 용량이 명시적 용량 할당을 통하여 할당되는 경우, 이 용량을 할당받고 이를 수입을 위하여 지정하는 자는 세관신고에서 전력 수입이 신고된 회원국에서 승인된 CBAM 신고인으로 본다(규정 (EU) 2023/956 제5조(4)). 이 경우 경제운영자는 승인을 받기 위하여 관할당국에 증빙 문서를 제공해야 한다.",
   "427823e6244c": "신청서 보기 페이지나 승인 보기 페이지에서 사용자는 신청서나 승인의 인쇄 가능한 판(PDF 문서 형태)을 생성할 수 있다.",
@@ -349,7 +349,7 @@
   "9b9b9e11bc08": "그림 64: 사업장 검색 – 검색 결과 내보내기",
   "9bd9515eabe1": "o CBAM 신고서 모니터링",
   "9bea88708e1e": "이 권한은 신고인 포털에 연결하는 모든 사용자가 시스템의 일반 페이지에 접근하는 데 필요하다.",
-  "9c007af56907": "이 애플리케이션은 일반적인 웹 브라우저(Google Chrome, Mozilla Firefox, Microsoft Edge Chromium, Safari)의 최신 판과 그 이전 2개 판의 브라우저 호환성에 의존한다. 자세한 정보는 다음 링크의 eUI 브라우저 호환성 페이지에서 찾을 수 있다: https://euidev.ecdevops.eu/eui-showcase-ux-components-19.x/showcase-dev-guide/docs/00b-generalinfos/04-browsers-support. 일반적으로 보안상의 이유로 최신 브라우저 판으로 업데이트할 것을 권고한다.",
+  "9c007af56907": "이 애플리케이션은 일반적인 웹 브라우저(Google Chrome, Mozilla Firefox, Microsoft Edge Chromium, Safari)의 최신 판과 그 이전 2개 판의 브라우저 호환성에 의존한다. 자세한 정보는 다음 링크의 eUI 브라우저 호환성 페이지에서 찾을 수 있다: https://euidev.ecdevops.eu/eui-showcase-ux-components-19.x/showcase-dev-guide/docs/00b-general-infos/04-browsers-support. 일반적으로 보안상의 이유로 최신 브라우저 판으로 업데이트할 것을 권고한다.",
   "9c722bd57179": "경제운영자 CBAM 규정의 적용을 받는 활동에 종사하는 사업체나 개인을 가리킨다. 여기에는 보통 탄소 배출량이 CBAM 규정의 적용을 받는 제품의 수입자나 생산자가 포함된다. 이러한 사업자는 CBAM의 요건을 준수할 책임이 있으며, 그 요건에는 제품의 탄소함량 보고와 탄소비용 지불이 포함될 수 있다.",
   "9d4d1555d8d0": "그림 8: 오류 메시지의 예",
   "9e09972dc613": "규정 (EU) 2023/956(2023년 5월 10일) 규정 (EU) 2025/2083",
@@ -569,7 +569,7 @@
   "fd9454527930": "• 재평가",
   "feb6eca704e2": "이 페이지에 접근하려면 “Find my applications and authorisations” 절을 참조한다.",
   "fecca28aa629": "• “Search”: 지정한 기준에 따라 검색을 시작한다.",
-  "ff1f840caea4": "[3] 자세한 정보는 https://taxation-customs.ec.europa.eu/customs-4/customs-procedures-importand-export-0/customs-procedures/economic-operators-registration-and-identification-number-eori_en 에서 볼 수 있다.",
+  "ff1f840caea4": "[3] 자세한 정보는 https://taxation-customs.ec.europa.eu/customs-4/customs-procedures-import-and-export-0/customs-procedures/economic-operators-registration-and-identification-number-eori_en 에서 볼 수 있다.",
   "ffa2ee89520e": "• 승인 부여"
  },
  "checked": [
@@ -704,7 +704,6 @@
   "3ed8c06afc95",
   "403411450063",
   "40addd99acfb",
-  "40c49814c24f",
   "4149d93cea62",
   "42686c4c654f",
   "427823e6244c",
@@ -920,7 +919,6 @@
   "9b9b9e11bc08",
   "9bd9515eabe1",
   "9bea88708e1e",
-  "9c007af56907",
   "9c722bd57179",
   "9d4d1555d8d0",
   "9e09972dc613",
@@ -1140,7 +1138,6 @@
   "fd9454527930",
   "feb6eca704e2",
   "fecca28aa629",
-  "ff1f840caea4",
   "ffa2ee89520e"
  ]
 }

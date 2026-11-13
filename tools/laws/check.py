@@ -1,6 +1,7 @@
 """번역한 문단을 원문과 견줘 본다. 기계로 가릴 수 있는 잘못만 잡는다(사람의 감수를 대신하지 않는다).
 
-막는 것(hard): 빈 번역, 옮기지 않은 글, 원문의 수가 빠진 것, 각주 표시가 빠진 것, 부속서·장의 로마 숫자가 빠진 것, 용어집이 쓰지 않기로 한 표기,
+막는 것(hard): 빈 번역, 옮기지 않은 글, 원문의 수가 빠진 것, 각주 표시가 빠진 것, 원문의 주소가 달라진 것(붙임표 하나만 빠져도 열리지 않는다),
+            부속서·장의 로마 숫자가 빠진 것, 용어집이 쓰지 않기로 한 표기,
             원문에 핵심 용어(용어집의 core)가 나왔는데 번역에 그 국문 표기가 없는 것(모든 법령에서 같은 낱말을 쓰게 하려는 것).
 알리는 것(soft): 원문에 없는 수가 번역에 있는 것, 길이가 지나치게 다른 것.
 
@@ -25,6 +26,7 @@ from tools.laws import plan, terms
 
 DIGITS = re.compile(r"\d+")
 NOTE_MARK = re.compile(r"\[(\d{1,3})\]")           # 각주 표시
+LINK = re.compile(r"(?:https?://|www\.)[^\s<>\"”’)\]가-힣]+")  # 열어 볼 수 있는 주소(번역에서는 바로 뒤에 조사가 붙기도 한다)
 HANGUL = re.compile(r"[가-힣]")
 WORD = re.compile(r"(?<![A-Za-z])[a-z]{4,}")  # 소문자로 시작하는 낱말. 사람 이름이나 약어만 있는 줄(Ursula VON DER LEYEN)과 가린다
 LETTERS = re.compile(r"[A-Za-z]{2,}")
@@ -86,6 +88,9 @@ def problems(source, korean, screen=False, excused=False):
     marks = sorted((collections.Counter(NOTE_MARK.findall(source)) - collections.Counter(NOTE_MARK.findall(korean))).elements(), key=int)
     if marks:
         hard.append("각주 표시가 빠짐: " + ", ".join(f"[{mark}]" for mark in marks[:8]))
+    broken = [link for link in (found.rstrip(".,;:") for found in LINK.findall(source)) if link not in korean]
+    if broken:
+        hard.append("원문의 주소가 그대로 있지 않음: " + ", ".join(link[:80] for link in broken[:3]))
     spelled = {str(value) for word, value in SPELLED.items() if re.search(rf"\b{word}\b", source.lower())}
     extra = sorted(number for number in (got - wanted).elements() if number not in spelled)
     if extra:

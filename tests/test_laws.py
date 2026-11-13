@@ -182,6 +182,15 @@ class CheckTest(unittest.TestCase):
         wrong = check.problems("Regulation (EU) 2025/2551) ([4]) applies.", "규정 (EU) 2025/255[1])([4])이 적용된다.")
         self.assertIn("원문의 수가 빠짐: 2551", wrong["hard"])
 
+    def test_a_web_address_must_stay_exactly_as_in_the_source(self):
+        source = "See https://example.eu/carbon-markets/monitoring-and-verification_en?lang=de#docs for details."
+        kept = "자세한 내용은 https://example.eu/carbon-markets/monitoring-and-verification_en?lang=de#docs의 안내를 참조한다."
+        self.assertEqual(check.problems(source, kept)["hard"], [])
+        # 붙임표 하나만 빠져도 열리지 않는 주소가 된다
+        broken = check.problems(source, kept.replace("carbon-markets", "carbonmarkets"))["hard"]
+        self.assertEqual(len(broken), 1)
+        self.assertIn("원문의 주소가 그대로 있지 않음: https://example.eu/carbon-markets/", broken[0])
+
     def test_a_wording_the_glossary_avoids_is_let_through_where_the_source_means_it(self):
         # 용어집은 accuracy를 '정밀도'로 옮기지 말라고 하지만, precision은 정밀도다. the CBAM rules는 CBAM 규정(Regulation)이 아니다
         source = "It will depend on the accuracy and precision of the measurement equipment used."
