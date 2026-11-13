@@ -5232,6 +5232,42 @@
    "ko": "이상값",
    "from": "32025R2551",
    "added": "2026-11-13"
+  },
+  {
+   "en": "opinion statement",
+   "ko": "의견 표명",
+   "from": "32025R2551",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "authentication of the verification report",
+   "ko": "검증보고서의 인증",
+   "from": "32025R2551",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "limitation of scope",
+   "ko": "범위의 제한",
+   "from": "32025R2551",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "due professional care",
+   "ko": "정당한 전문가적 주의",
+   "from": "32025R2551",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Movement Reference Number",
+   "ko": "화물이동참조번호",
+   "from": "32025R2210",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Global Navigation Satellite Systems",
+   "ko": "위성항법시스템",
+   "from": "32025R2210",
+   "added": "2026-11-13"
   }
  ]
 }
