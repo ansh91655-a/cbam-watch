@@ -3,6 +3,7 @@ import * as data from "./data.js";
 import { markNav, onRoute } from "./router.js";
 import { daysSince, minute } from "./ui/format.js";
 import { empty, h } from "./ui/dom.js";
+import { allMenu } from "./ui/allmenu.js";
 import { watch } from "./ui/motion.js";
 import { navInk } from "./ui/navink.js";
 import { navMenu } from "./ui/navmenu.js";
@@ -24,13 +25,14 @@ import { render as pdf } from "./views/pdf.js";
 import { render as terms } from "./views/terms.js";
 import { render as cn } from "./views/cn.js";
 import { render as sector } from "./views/sector.js";
+import { render as handbook } from "./views/handbook.js";
 import { render as about } from "./views/about.js";
 import { render as design } from "./views/design.js";
 import { render as search } from "./views/search.js";
 
-const VIEWS = { home, news, item, rules, price, calc, calendar, docs, laws, law, changes, pdf, terms, cn, sector, about, design, search };
+const VIEWS = { home, news, item, rules, price, calc, calendar, docs, laws, law, changes, pdf, terms, cn, sector, handbook, about, design, search };
 // 브라우저 탭에 적는 화면 이름. 화면이 이름을 돌려주면(소식 하나의 제목 등) 그것을 쓴다.
-const NAMES = { news: "소식", item: "소식", rules: "규제", price: "인증서 가격", calc: "인증서 비용 추정", calendar: "일정", docs: "원문 대장", laws: "규정 원문", pdf: "PDF 나란히 보기", law: "규정 원문", changes: "달라진 곳", terms: "용어집", cn: "품목 코드 조회", sector: "부문별 보기", about: "안내", design: "색 변형", search: "검색" };
+const NAMES = { news: "소식", item: "소식", rules: "규제", price: "인증서 가격", calc: "인증서 비용 추정", calendar: "일정", docs: "원문 대장", laws: "규정 원문", pdf: "PDF 나란히 보기", law: "규정 원문", changes: "달라진 곳", terms: "용어집", cn: "품목 코드 조회", sector: "부문별 보기", handbook: "CBAM 해설서", about: "안내", design: "색 변형", search: "검색" };
 const SITE_NAME = "CBAM 규제동향";
 const STALE_DAYS = 5; // 이보다 오래 갱신되지 않으면 알린다.
 const fresh = { text: "데이터를 읽는 중", state: "ok" };
@@ -79,6 +81,7 @@ async function fillChrome() {
   }
   await topicsReady;
   navMenu(document.querySelector(".site-nav"), site);  // 주 메뉴의 펼침 목록(주제는 topics.json, 규제 묶음과 해는 site.json을 따른다)
+  allMenu(document.getElementById("all-menu"), site);   // 머리글 오른쪽 끝의 '전체 메뉴' 단추
 }
 
 // 새 소식 받아 보기(구독 안내 창)와 의견 보내기(오른쪽 여백의 탭과 창). 설정(site.config.json의 features)에서 켠 것만 연다.

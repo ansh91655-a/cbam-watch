@@ -100,6 +100,16 @@ function fileHit(hit, { needles, actNames }) {
   ]);
 }
 
+// 해설서의 절 하나. 누르면 그 장을 열고 그 절로 간다.
+function bookHit(hit, { needles }) {
+  const section = hit.row.ref;
+  return inside(`#handbook-${section.chapter}.${section.id}`, [
+    facts([`해설서 ${section.chapterNo}장`, section.chapterTitle]),
+    name(marked(section.title, needles)),
+    passage(hit, needles, (section.body || [])[0]),
+  ]);
+}
+
 // 규정 원문의 문서(법령, 가이던스) 하나
 function lawHit(hit, { needles }) {
   const act = hit.row.ref;
@@ -122,7 +132,7 @@ function partHit(hit, { needles, actNames }) {
   ], { onclick: () => remember(needles) });
 }
 
-const DRAW = { news: newsHit, rules: ruleHit, terms: termHit, dates: dateHit, codes: codeHit, files: fileHit, laws: lawHit, acts: partHit, guides: partHit };
+const DRAW = { news: newsHit, rules: ruleHit, terms: termHit, book: bookHit, dates: dateHit, codes: codeHit, files: fileHit, laws: lawHit, acts: partHit, guides: partHit };
 
 // 찾은 것 하나를 그린다. kind는 갈래(js/search/find.js의 KINDS와 조문의 acts, guides).
 export function hitNode(kind, hit, context) {

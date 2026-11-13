@@ -6,7 +6,7 @@ import { band } from "../ui/band.js";
 import { empty, fill, h } from "../ui/dom.js";
 import { bytes, count } from "../ui/format.js";
 import { icon } from "../ui/icons.js";
-import { libraryTabs } from "../ui/tabs.js";
+import { groupTabs } from "../ui/tabs.js";
 
 const MODES = [["both", "나란히"], ["en", "원문"], ["ko", "번역"]];
 const ZOOMS = [0.75, 1, 1.25, 1.5, 2];
@@ -31,7 +31,7 @@ export async function render(main, arg) {
   const act = acts.find((one) => one.id === id);
   const entry = docs[id];
   if (!act || !entry) {
-    fill(main, band(TITLE, "", libraryTabs("laws")), empty("이 문서의 PDF를 찾지 못했습니다."),
+    fill(main, band(TITLE, "", groupTabs("laws")), empty("이 문서의 PDF를 찾지 못했습니다."),
       h("p", {}, h("a", act ? { href: `#law-${id}`, text: "이 문서를 글로 보기" } : { href: "#laws", text: "규정 원문의 목록으로" })));
     return TITLE;
   }
@@ -82,7 +82,7 @@ export async function render(main, arg) {
   ]);
 
   fill(main,
-    band(act.name, `${act.official || ""}${act.official ? ", " : ""}${count(entry.pages)}쪽`, libraryTabs("laws")),
+    band(act.name, `${act.official || ""}${act.official ? ", " : ""}${count(entry.pages)}쪽`, groupTabs("laws")),
     h("p", { class: "crumbs" }, [h("a", { href: "#laws", text: "규정 원문" }), h("span", { text: "›" }), h("a", { href: `#law-${id}`, text: act.name }), h("span", { text: "›" }), h("span", { text: TITLE })]),
     h("div", { class: "law-note" }, [
       h("p", { text: NOTE }),

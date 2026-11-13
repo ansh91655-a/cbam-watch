@@ -1,4 +1,4 @@
-// 첫 화면. 맨 위에 큰 머리(한 줄 소개, 점 지도, 지금 알아 둘 수치 세 칸)를 두고, 바로 아래에 가장 최근의 요약을 놓는다.
+// 첫 화면. 맨 위에 큰 머리(한 줄 소개, 점 지도, 지금 알아 둘 수치 세 칸)를 두고, 바로 아래에 처음 온 사람을 위한 길잡이와 가장 최근의 요약을 놓는다.
 // 이어서 가장 중요한 소식, 다가오는 일정, 가격 추세, 주제별 소식, 규제 진행 상황, 품목 코드 조회, 최근 소식을 칸으로 나눠 놓고,
 // 맨 아래 짙은 띠에 부문별 보기로 가는 칸을 둔다. 칸마다의 모듈은 home/ 아래에 있다.
 import * as data from "../data.js";
@@ -12,6 +12,7 @@ import { hero } from "./home/hero.js";
 import { lookupBar } from "./home/lookup.js";
 import { pricePanel, rulesPanel, schedule, topicsPanel } from "./home/panels.js";
 import { sectors } from "./home/sectors.js";
+import { startGuide } from "./home/start.js";
 
 const IMPORTANT_DAYS = 45;
 const RECENT_COUNT = 6;
@@ -32,6 +33,7 @@ export async function render(main) {
 
   fill(main,
     hero(book, events, items, dated),
+    startGuide(),
     digestPanel(latestDigest(digests), items),
     h("div", { class: "bento" }, [lead ? feature(lead, Boolean(important), others) : null, schedule(events), pricePanel(book), topicsPanel(items), rulesPanel(rules)]),
     lookupBar(),

@@ -13,18 +13,20 @@
 .head-search kbd { flex: none; margin-right: 10px; padding: 0 6px; border: 1px solid var(--glass-line); border-radius: 5px; font-family: inherit; font-size: 0.72rem; line-height: 1.5; color: var(--on-deep-3); }
 .head-search:focus-within kbd, .head-search input:not(:placeholder-shown) + kbd { display: none; }
 /* 한 줄 머리글에 칸까지 넣을 자리가 없는 너비: 단추만 */
-@media (min-width: 901px) and (max-width: 1060px) {
+@media (min-width: 1001px) and (max-width: 1199px) {
   .head-search { width: 40px; height: 40px; border-color: transparent; background: none; }
   .head-search input, .head-search kbd { display: none; }
   .head-search button { width: 40px; height: 40px; }
 }
 /* 메뉴가 둘째 줄로 내려가는 너비: 칸은 이름표와 같은 줄의 오른쪽에 둔다 */
-@media (max-width: 900px) {
+/* 한 줄에 칸이 들어가기는 하지만 빠듯한 너비: 칸을 조금 줄인다 */
+@media (min-width: 1200px) and (max-width: 1499px) { .head-search { width: 200px; } }
+@media (max-width: 1000px) {
   .head-search { order: 2; margin-left: auto; }
   .site-nav { order: 3; margin-left: -10px; }
 }
 @media (max-width: 560px) {
-  .head-search { width: 40px; height: 40px; margin-right: -9px; border-color: transparent; background: none; }
+  .head-search { width: 40px; height: 40px; border-color: transparent; background: none; }
   .head-search input, .head-search kbd { display: none; }
   .head-search button { width: 40px; height: 40px; }
 }

@@ -5,7 +5,7 @@ import * as data from "../data.js";
 import { routesOf, unpack } from "../calc/compute.js";
 import { band } from "../ui/band.js";
 import { empty, fill, h } from "../ui/dom.js";
-import { priceTabs } from "../ui/tabs.js";
+import { groupTabs } from "../ui/tabs.js";
 import { notes } from "./calc/notes.js";
 import { picker } from "./calc/picker.js";
 import { result } from "./calc/result.js";
@@ -29,7 +29,7 @@ function field(id, label, control, hint) {
 
 export async function render(main, arg) {
   const [raw, factorBook, prices] = await Promise.all([data.calc(), data.factor(), data.prices()]);
-  const head = band("인증서 비용 추정", "품목과 물량을 넣으면 제출할 CBAM 인증서 수와 비용을 어림해 드립니다.", priceTabs("calc"));
+  const head = band("인증서 비용 추정", "품목과 물량을 넣으면 제출할 CBAM 인증서 수와 비용을 어림해 드립니다.", groupTabs("calc"));
   if (!raw || !Array.isArray(raw.goods) || !raw.goods.length || !factorBook.paths.length) {
     fill(main, head, empty("추정에 쓸 자료를 준비하고 있습니다."));
     return;
@@ -125,6 +125,6 @@ export async function render(main, arg) {
     if (target) target.focus();
   }
 
-  fill(main, head, box, out, termsPanel(raw), notes(book, factorBook));
+  fill(main, head, box, out, termsPanel(raw, true), notes(book, factorBook));
   draw();
 }

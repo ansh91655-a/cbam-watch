@@ -1,4 +1,4 @@
-// 사이트 검색. 찾는 말 하나로 소식, 규제, 용어집, 일정, 품목 코드, 원문 대장, 규정 원문을 한 번에 찾아 갈래별로 보여 준다.
+// 사이트 검색. 찾는 말 하나로 용어집, 해설서, 규제, 소식, 일정, 품목 코드, 원문 대장, 규정 원문을 한 번에 찾아 갈래별로 보여 준다.
 // 주소는 #search-찾는 말이다(결과를 주소로 남겨 뒤로 가기와 공유가 되게 한다). 머리글의 검색 칸(ui/sitesearch.js)이 이 화면으로 보낸다.
 // 찾는 일은 js/search/의 모듈이, 구역과 결과 한 줄을 그리는 일은 views/search/의 모듈이 한다. 여기에서는 무엇을 보여 줄지와 갈래 고르기만 맡는다.
 import * as data from "../data.js";
@@ -17,7 +17,7 @@ import { decode, target } from "../ui/sitesearch.js";
 import { examples, lawSection, lawShown, NAMES, section, settle, shortcuts } from "./search/sections.js";
 
 // 모든 갈래를 함께 볼 때 갈래마다 보여 주는 줄 수
-const FEW = { terms: 3, rules: 4, news: 5, dates: 3, codes: 3, files: 3, laws: 2, acts: 3, guides: 3 };
+const FEW = { terms: 3, book: 3, rules: 4, news: 5, dates: 3, codes: 3, files: 3, laws: 2, acts: 3, guides: 3 };
 const PAGE = 40;       // 갈래 하나만 볼 때 한 번에 보여 주는 줄 수
 const PARTS = 30;      // 갈래 하나만 볼 때 보여 주는 조문의 수(나머지는 규정 원문 화면에서 본다)
 const WAIT_MS = 300;   // 규정의 글을 이만큼 기다렸다가, 아직이면 먼저 찾은 것부터 보여 준다
@@ -28,15 +28,15 @@ const pause = (ms) => new Promise((resolve) => { setTimeout(resolve, ms); });
 let loaded = null;
 function book() {
   if (!loaded) {
-    loaded = Promise.all([data.items(), data.regulations(), data.terms(), data.events(), data.duties(), data.cn(), data.documents(), data.laws()])
-      .then(([items, rules, terms, events, duties, cn, documents, acts]) => ({
+    loaded = Promise.all([data.items(), data.regulations(), data.terms(), data.events(), data.duties(), data.cn(), data.documents(), data.laws(), data.handbook()])
+      .then(([items, rules, terms, events, duties, cn, documents, acts, handbook]) => ({
         index: makeIndex(terms),
         cn,
         ruleGroups: new Map((rules.groups || []).map((group) => [group.code, group.name])),
         actNames: Object.fromEntries(acts.map((act) => [act.id, act.name])),
         rows: {
           news: rows.newsRows(items), rules: rows.ruleRows(rules), terms: rows.termRows(terms), dates: rows.dateRows(events, duties.duties),
-          codes: rows.codeRows(cn), files: rows.fileRows(documents, acts), laws: rows.lawRows(acts),
+          codes: rows.codeRows(cn), files: rows.fileRows(documents, acts), laws: rows.lawRows(acts), book: rows.bookRows(handbook),
         },
       }));
   }
@@ -178,7 +178,7 @@ export async function render(main, arg) {
   const go = (text) => { if (!visit(target(text))) window.scrollTo(0, 0); };
   const out = h("div", { class: "search-out" });
   fill(main,
-    band("검색", "소식, 규제, 규정 원문, 용어집, 일정, 품목 코드, 원문 대장을 한 번에 찾습니다."),
+    band("검색", "소식, 규제, 해설서, 규정 원문, 용어집, 일정, 품목 코드, 원문 대장을 한 번에 찾습니다."),
     h("form", { class: "law-search", role: "search", "aria-label": "검색 화면의 검색", onsubmit: (event) => { event.preventDefault(); go(input.value); } }, [
       h("label", { class: "sr", for: "search-q", text: "찾는 말" }), icon("search", 20), input, h("button", { class: "btn btn-main", type: "submit", text: "찾기" })]),
     out,

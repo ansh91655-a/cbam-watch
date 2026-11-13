@@ -53,8 +53,16 @@ const cn = { current: [{ sector: 'steel', codes: ['72'], shown: '72', text: 'Iro
 const acts = [{ id: 'guide-5d', group: 'guide', name: '가이던스 5d: 철강', short: '가이던스 5d', official: 'Guidance document 5d', url: 'https://x.example/download/abc-123_en?filename=g.pdf', remark: '' },
   { id: '32025R2621', group: 'act', name: '기본값 이행규정', short: '기본값 이행규정', official: 'Implementing Regulation (EU) 2025/2621', url: 'https://eur-lex.example/2621' }];
 const documents = [{ id: 'abc-123', title: 'Guidance No. 5d - iron and steel', filename: 'g.pdf', format: 'PDF' }, { id: 'dv', title: 'Default values for the definitive period', filename: 'dv.pdf', format: 'PDF' }];
+const handbook = { chapters: [
+  { id: 'defaults', title: '기본값과 마크업', sections: [
+    { id: 'markup', title: '마크업', body: ['마크업은 기본값을 쓸 때 더하는 비율입니다.'], list: ['비료는 1%입니다.'], table: { head: ['부문', '2026년'], rows: [['철강', '10%']] },
+      terms: [{ ko: '마크업', en: 'mark-up', text: '평균 배출집약도에 더하는 비율입니다.' }], caveat: '늦어도 2027년에 개정합니다.' },
+    { id: 'tables', title: '기본값을 찾는 표', body: ['부속서의 표에서 찾습니다.'] }] },
+  { id: 'certificates', title: '제출할 인증서 수', sections: [
+    { id: 'cscf', title: '부문 간 보정계수', body: ['무상할당을 같은 비율로 줄이는 계수입니다.'], formula: { text: '무상할당 조정 = 벤치마크 × 계수', parts: [['계수', '그해의 값입니다.']] },
+      terms: [{ ko: '부문 간 보정계수', en: 'cross-sectoral correction factor', abbr: 'CSCF', text: '2026년부터 2030년까지는 100%입니다.' }] }] }] };
 const book = { news: rows.newsRows(items), rules: rows.ruleRows(rules), terms: rows.termRows(terms), dates: rows.dateRows(events, duties), codes: rows.codeRows(cn),
-  files: rows.fileRows(documents, acts), laws: rows.lawRows(acts) };
+  files: rows.fileRows(documents, acts), laws: rows.lawRows(acts), book: rows.bookRows(handbook) };
 
 const ask = (query) => { const parsed = parse(query, index); return { parsed, found: gather(parsed, book, { today: '2026-11-12' }) }; };
 const names = (hits) => hits.map((hit) => hit.row.p);
@@ -78,6 +86,7 @@ console.log(JSON.stringify({
     news: book.news.map((row) => [row.p, row.y]), sourceLeak: JSON.stringify(book.news.map((row) => [row.t, row.x, row.names])).includes('숨길 출처'),
     rule: book.rules[0].y, termNames: book.terms[2].names, dateForms: book.dates.map((row) => row.form), codeForms: book.codes.map((row) => [row.form, row.ref.shown]),
     fileActs: book.files.map((row) => [row.p, row.act, row.names.includes('가이던스 5d: 철강')]), lawNames: book.laws[0].names,
+    book: book.book.map((row) => [row.p, row.names, row.ref.chapterNo, row.ref.chapterTitle]), bookText: book.book[0].y, bookFormula: book.book[2].y,
   },
   find: {
     needed: [needed(one.parsed), needed(two.parsed), needed(three.parsed), needed(parse('무엇인가요', index))],
@@ -88,8 +97,9 @@ console.log(JSON.stringify({
     englishFiles: names(keep(english.found, 1).files), englishTerms: names(keep(english.found, 1).terms),
     empty: tally(ask('무엇인가요').found).total,
     plain: names(rank(book.news, parse('인증서 가격', index))),
+    oneBook: names(keep(one.found, 1).book), markup: names(keep(ask('마크업').found, 1).book), cscf: names(keep(ask('CSCF').found, 1).book), revise: names(keep(ask('2027년 개정').found, 2).book),
   },
-  pages: Object.fromEntries(['가격', '인증서 가격 추이', '탄소가격 공제', 'three months', 'hs', '규제', '규정', '신고 기한', '기본값', '가'].map((query) => [query, findPages(query).map((page) => page.href)])),
+  pages: Object.fromEntries(['가격', '인증서 가격 추이', '탄소가격 공제', 'three months', 'hs', '규제', '규정', '신고 기한', '기본값', '가', '해설서', '비용 추정', '안내서'].map((query) => [query, findPages(query).map((page) => page.href)])),
   codes: {
     read: ['7208', '7318 15 00', 'CN 7208', 'HS코드 7208.10', '720', 'abc 7208', '2026년'].map(codeIn),
     verdicts: Object.fromEntries(['7208', '2026', 'cn 9999', '999999', '7202 21 00', '8544 49', '8708 10', '2507 00 80'].map((query) => { const found = codeVerdict(query, cn); return [query, found ? [found.state, found.later, found.council, found.rows.length] : null]; })),
@@ -106,7 +116,8 @@ console.log(JSON.stringify({
   },
   menu: (() => { const lists = menuLists({ menu: { rules: [{ code: 'uk', name: '영국 CBAM', icon: 'abroad' }], years: [2026, 2027], topics: ['law'] } }, [{ code: 'law', name: '제도·법령' }, { code: 'etc', name: '기타' }]);
     return { news: lists.news.items.map((item) => item.href), cols: lists.news.cols, rules: lists.rules.items.map((item) => [item.href, item.icon]), years: lists.calendar.items.map((item) => item.href),
-      docs: lists.docs.items.map((item) => item.href), price: lists.price.items.map((item) => [item.href, Boolean(item.about)]),
+      goods: lists.goods.items.map((item) => [item.href, Boolean(item.about)]), handbook: lists.handbook.items.map((item) => item.href), library: lists.library.items.map((item) => item.href),
+      keys: Object.keys(lists).sort(),
       bare: menuLists({}, [{ code: 'law', name: '제도·법령' }, { code: 'etc', name: '기타' }]).news.items.length,
       notices: menuLists({ menu: { topics: ['law'], notices: 3 } }, [{ code: 'law', name: '제도·법령' }]).news.items.map((item) => [item.href, item.name]) }; })(),
 }));
@@ -136,6 +147,12 @@ class SearchTest(unittest.TestCase):
         self.assertEqual(rows["codeForms"], [["current", "72"], ["current", "ex 2507 00 80"], ["proposed", "8544 49"]])  # 두 목록에 다 있는 줄은 한 번만
         self.assertEqual(rows["fileActs"], [["abc-123", "guide-5d", True], ["dv", "", False]])  # 번역해 실은 문서는 국문 이름으로도 찾는다
         self.assertEqual(rows["lawNames"], ["가이던스 5d: 철강", "Guidance document 5d", "가이던스 5d"])
+        # 해설서는 절 하나가 한 줄이다. 절의 제목과 그 절이 풀이한 용어가 이름이고, 장의 번호와 이름을 함께 싣는다
+        self.assertEqual(rows["book"], [["defaults.markup", ["마크업", "마크업", "mark-up"], 1, "기본값과 마크업"], ["defaults.tables", ["기본값을 찾는 표"], 1, "기본값과 마크업"],
+                                        ["certificates.cscf", ["부문 간 보정계수", "부문 간 보정계수", "cross-sectoral correction factor", "CSCF"], 2, "제출할 인증서 수"]])
+        for piece in ("마크업은 기본값을 쓸 때 더하는 비율입니다.", "비료는 1%입니다.", "철강 10%", "마크업: 평균 배출집약도에 더하는 비율입니다.", "늦어도 2027년에 개정합니다."):
+            self.assertIn(piece, rows["bookText"].split("\n"))                  # 문단, 목록, 표의 줄, 용어 풀이, 알아 둘 점이 한 줄씩
+        self.assertIn("계수: 그해의 값입니다.", rows["bookFormula"])            # 식과 식의 풀이도 찾는 글에 든다
 
     def test_words_must_come_together_and_exact_names_come_first(self):
         found = self.seen["find"]
@@ -150,6 +167,10 @@ class SearchTest(unittest.TestCase):
         self.assertEqual(found["twoTerms"], [])                                  # 한 낱말만 나온 용어는 뺀다
         self.assertEqual(found["threeRules"], ["uk-cbam"])
         self.assertEqual(found["plain"], ["price"])
+        self.assertEqual(found["oneBook"][0], "defaults.tables")                 # 해설서: 제목에 찾는 말이 든 절이 본문에만 든 절보다 앞
+        self.assertEqual(found["markup"][0], "defaults.markup")                  # 그 용어를 풀이한 절이 맨 앞
+        self.assertEqual(found["cscf"], ["certificates.cscf"])                   # 약어로도 찾는다
+        self.assertEqual(found["revise"], ["defaults.markup"])                   # 알아 둘 점의 글로도 찾는다
 
     def test_it_steps_back_only_when_nothing_has_every_word(self):
         found = self.seen["find"]
@@ -177,6 +198,9 @@ class SearchTest(unittest.TestCase):
         self.assertEqual(pages["신고 기한"], ["#calendar"])
         self.assertEqual(pages["기본값"], [])
         self.assertEqual(pages["가"], [])
+        self.assertEqual(pages["해설서"], ["#handbook"])
+        self.assertEqual(pages["비용 추정"][0], "#calc")                          # 메뉴에 적는 짧은 이름으로도 그 화면을 찾는다
+        self.assertEqual(pages["안내서"], [])                                    # '안내서'는 '안내' 화면을 부르는 말이 아니다
 
     def test_a_code_is_read_only_when_it_is_one(self):
         codes = self.seen["codes"]
@@ -230,8 +254,10 @@ class SearchTest(unittest.TestCase):
         self.assertEqual(menu["cols"], 2)
         self.assertEqual(menu["rules"], [["#rules", "law"], ["#rules-uk", "abroad"]])
         self.assertEqual(menu["years"], ["#calendar-2026", "#calendar-2027"])
-        self.assertEqual(menu["docs"], ["#sector", "#cn", "#laws", "#docs", "#terms", "#about"])
-        self.assertEqual(menu["price"], [["#price", True], ["#calc", True]])     # 화면의 설명이 붙는다
+        self.assertEqual(menu["keys"], ["calendar", "goods", "handbook", "library", "news", "rules"])  # 첫 화면만 목록이 없다
+        self.assertEqual(menu["goods"], [["#cn", True], ["#sector", True], ["#price", True], ["#calc", True]])  # 화면이 여럿인 묶음은 그 화면들이 목록이고, 화면의 설명이 붙는다
+        self.assertEqual(menu["handbook"], ["#handbook", "#terms", "#about"])
+        self.assertEqual(menu["library"], ["#laws", "#docs"])
         self.assertEqual(menu["bare"], 3)                                        # 메뉴 값이 없으면 주제를 모두 싣는다
         self.assertEqual(menu["notices"][-1], ["#news-notices", "국내 공지·자료"])   # 국내 공지·자료가 있으면 주제 뒤에 싣는다
 
@@ -244,14 +270,17 @@ class MenuDataTest(unittest.TestCase):
         items = [{"topic": "price"}, {"topic": "law"}, {"topic": "price"}, {}]
         self.assertEqual(derive.menu(rules, events, items), {
             "rules": [{"code": "eu-law", "name": "EU CBAM 기본법", "icon": "law"}, {"code": "uk", "name": "영국 CBAM", "icon": ""}],
-            "years": [2026, 2027], "topics": ["law", "price"], "notices": 0})
-        self.assertEqual(derive.menu(None, None), {"rules": [], "years": [], "topics": [], "notices": 0})
+            "years": [2026, 2027], "topics": ["law", "price"], "notices": 0, "handbook": []})
+        self.assertEqual(derive.menu(None, None), {"rules": [], "years": [], "topics": [], "notices": 0, "handbook": []})
         # 제목이 곧 내용인 국내 공지·자료는 주제를 셀 때 빼고 수만 따로 적는다(요약을 내린 것은 보통 소식으로 센다)
         briefs = [{"topic": "korea", "brief": True}, {"topic": "korea", "brief": True}, {"topic": "events", "brief": True, "withdrawn": True}]
-        self.assertEqual(derive.menu(None, None, items + briefs), {"rules": [], "years": [], "topics": ["events", "law", "price"], "notices": 2})
+        self.assertEqual(derive.menu(None, None, items + briefs), {"rules": [], "years": [], "topics": ["events", "law", "price"], "notices": 2, "handbook": []})
         # 주제 목록을 넘기면, 목록에 없는 주제나 주제가 없는 소식은 화면처럼 '기타'로 센다
         topics = [{"code": "law"}, {"code": "price"}, {"code": "etc"}]
         self.assertEqual(derive.menu(None, None, items + [{"topic": "gone"}], topics)["topics"], ["etc", "law", "price"])
+        # 해설서의 장은 번호와 이름만 싣는다(전체 메뉴가 쓴다)
+        guide = {"chapters": [{"id": "overview", "title": "CBAM 한눈에 보기", "lead": "…", "sections": [{"id": "purpose"}]}, {"id": "scope", "title": "대상 품목과 적용 제외"}]}
+        self.assertEqual(derive.menu(None, None, handbook=guide)["handbook"], [{"id": "overview", "title": "CBAM 한눈에 보기"}, {"id": "scope", "title": "대상 품목과 적용 제외"}])
 
     def test_the_public_news_file_leaves_out_what_only_the_tools_use(self):
         body = {"asOf": "2026-11-13", "items": [{"id": "a", "title": "가", "sourceName": "EUR-Lex", "sourceCode": "eu-eurlex", "checkedAt": "2026-11-13T08:20:00+09:00",
@@ -283,15 +312,12 @@ class ShellTest(unittest.TestCase):
         self.assertIn('id: "search-q"', pathlib.Path("site/js/views/search.js").read_text(encoding="utf-8"))  # 머리글의 단추가 찾아가는 큰 입력 칸
 
     def test_every_menu_button_sits_right_after_its_menu(self):
-        pairs = re.findall(r'<a href="#(\w+)"[^>]*data-menu="(\w+)"[^>]*>([^<]+)</a>\s*<button class="nav-more" type="button" data-menu="(\w+)" aria-expanded="false" aria-label="([^"]+)"', self.nav)
-        self.assertEqual([pair[1] for pair in pairs], ["news", "rules", "price", "calendar", "docs"])
-        for view, menu, name, button, label in pairs:
-            self.assertEqual((view, menu), (button, button))                     # 메뉴의 이름은 그 화면의 이름과 같다
+        pairs = re.findall(r'<a href="#(\w+)" data-key="(\w+)" data-menu="(\w+)">([^<]+)</a>\s*<button class="nav-more" type="button" data-menu="(\w+)" aria-expanded="false" aria-label="([^"]+)"', self.nav)
+        self.assertEqual([pair[2] for pair in pairs], ["news", "rules", "calendar", "goods", "handbook", "library"])
+        for _, key, menu, name, button, label in pairs:
+            self.assertEqual((key, menu), (button, button))                      # 링크와 단추가 같은 묶음을 가리킨다
             self.assertTrue(label.startswith(name), label)
-        self.assertEqual(self.nav.count('class="nav-more"'), len(pairs))
-        lists = pathlib.Path("site/js/ui/navmenu.js").read_text(encoding="utf-8")
-        for _, menu, _, _, _ in pairs:
-            self.assertRegex(lists, rf"\b{menu}: \{{")                            # 단추마다 목록이 있다
+        self.assertEqual(self.nav.count('class="nav-more"'), len(pairs))         # 묶음과 화면이 표(js/nav/map.js)와 맞는지는 tests/test_nav.py가 본다
 
     def test_every_linked_stylesheet_exists(self):
         sheets = re.findall(r'<link rel="stylesheet" href="(css/[^"]+)">', self.page)

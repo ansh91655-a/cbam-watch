@@ -1,23 +1,13 @@
 // 안내. 이 사이트에서 볼 수 있는 것과 이용할 때 알아 둘 점을 적는다. 문구는 이 파일 한 곳에서만 정한다.
 import * as data from "../data.js";
+import { allScreens } from "../nav/map.js";
 import { band } from "../ui/band.js";
 import { fill, h } from "../ui/dom.js";
 import { icon } from "../ui/icons.js";
-import { libraryTabs } from "../ui/tabs.js";
+import { groupTabs } from "../ui/tabs.js";
 
-// 화면마다 무엇을 볼 수 있는지: [아이콘, 이름, 설명, 주소]
-const SCREENS = [
-  ["news", "소식", "CBAM 소식을 주제별로 정리했습니다. 제목을 누르면 국문 요약을 먼저 보여 주고, 거기에서 원문으로 갈 수 있습니다.", "#news"],
-  ["legis", "규제", "규제마다 지금 어느 단계에 있는지와 그동안의 연혁, 다음 단계를 정리했습니다.", "#rules"],
-  ["price", "가격", "EU 집행위원회가 게시하는 CBAM 인증서 가격과 추세를 보여 줍니다.", "#price"],
-  ["emissions", "인증서 비용 추정", "품목과 물량, 연도를 넣으면 제출할 CBAM 인증서 수와 비용을 어림해 볼 수 있습니다. 법령의 기본값과 벤치마크로 계산한 참고용 추정입니다.", "#calc"],
-  ["calendar", "일정", "신고 기한과 시행일처럼 날짜가 정해진 일정을 모았습니다. 역할을 고르면 그 역할이 챙길 의무 일정만 볼 수 있습니다.", "#calendar"],
-  ["steel", "부문별 보기", "CBAM 대상 부문마다 대상 품목과 EU 집행위원회의 가이던스, 기본값, 소식을 한곳에 모았습니다.", "#sector"],
-  ["search", "품목 코드 조회", "CN 코드를 넣으면 CBAM 대상 품목인지와 근거를 보여 줍니다.", "#cn"],
-  ["law", "규정 원문", "CBAM 법령과 EU 집행위원회의 가이던스를 문단마다 원문과 국문 번역으로 나란히 실었습니다. 개정으로 달라진 곳을 견줘 볼 수 있고, 가이던스는 원문 PDF와 번역 PDF를 쪽마다 나란히 볼 수 있습니다.", "#laws"],
-  ["file", "원문 대장", "EU 집행위원회의 가이던스와 서식을 화면에서 바로 보거나 내려받을 수 있습니다.", "#docs"],
-  ["terms", "용어집", "CBAM 용어의 국문 표기를 찾아볼 수 있습니다.", "#terms"],
-];
+// 화면마다 무엇을 볼 수 있는지. 이름과 설명(detail)은 화면의 묶음을 적은 표(js/nav/map.js)에 있고, 설명이 있는 화면만 싣는다.
+const SCREENS = allScreens().filter((one) => one.detail);
 
 // 새 소식 받아 보기를 열어 둔 동안에만 보이는 안내
 const SUBSCRIBE = ["news", "새 소식 받아 보기", [
@@ -44,10 +34,10 @@ const SECTIONS = [
 function screens() {
   return h("section", { class: "stack", "aria-labelledby": "h-screens" }, [
     h("h2", { id: "h-screens", text: "이 사이트에서 볼 수 있는 것" }),
-    h("div", { class: "steps" }, SCREENS.map(([key, name, text, href]) => h("a", { class: "step", href }, [
-      h("span", { class: "chipicon" }, icon(key, 22)),
-      h("h3", { text: name }),
-      h("p", { text }),
+    h("div", { class: "steps" }, SCREENS.map((one) => h("a", { class: "step", href: one.href }, [
+      h("span", { class: "chipicon" }, icon(one.icon, 22)),
+      h("h3", { text: one.title }),
+      h("p", { text: one.detail }),
     ]))),
   ]);
 }
@@ -63,7 +53,7 @@ export async function render(main) {
   const features = (await data.site()).features || {};
   const sections = features.subscribe ? [...SECTIONS.slice(0, 2), SUBSCRIBE, ...SECTIONS.slice(2)] : SECTIONS;
   fill(main,
-    band("안내", "이 사이트에서 볼 수 있는 것과 이용할 때 알아 둘 점입니다.", libraryTabs("about")),
+    band("안내", "이 사이트에서 볼 수 있는 것과 이용할 때 알아 둘 점입니다.", groupTabs("about")),
     screens(),
     h("div", { class: "about-grid" }, sections.map(section)),
   );

@@ -7,7 +7,7 @@ import { target } from "../../ui/sitesearch.js";
 import { codeCard } from "./code.js";
 import { hitNode } from "./hits.js";
 
-export const NAMES = { terms: "용어집", rules: "규제", news: "소식", dates: "일정", codes: "품목 코드", files: "원문 대장", laws: "규정 원문" };
+export const NAMES = { terms: "용어집", book: "해설서", rules: "규제", news: "소식", dates: "일정", codes: "품목 코드", files: "원문 대장", laws: "규정 원문" };
 // 규정 원문 구역 안의 작은 제목
 const PART_NAMES = { laws: "문서", acts: "법령의 조문", guides: "가이던스와 안내 자료" };
 const PARTS = ["laws", "acts", "guides"];

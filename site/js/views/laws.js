@@ -7,7 +7,7 @@ import { empty, fill, h, safeLink } from "../ui/dom.js";
 import { count } from "../ui/format.js";
 import { icon } from "../ui/icons.js";
 import { corpus, guideCorpus, hitLink, understood } from "../ui/lawfind.js";
-import { libraryTabs } from "../ui/tabs.js";
+import { groupTabs } from "../ui/tabs.js";
 
 const LIMIT = 30;
 const GUIDE_LIMIT = 15;
@@ -115,7 +115,7 @@ export async function render(main, arg) {
   const go = (text) => { location.hash = text.trim() ? `#laws-${encodeURIComponent(text.trim())}` : "#laws"; };
   const holder = h("div", { class: "stack" });
   fill(main,
-    band("규정 원문", "CBAM 규정과 이행·위임규정, EU 집행위원회의 가이던스와 등록부 안내서를 국문 번역과 나란히 봅니다. 낱말이나 질문으로 조문을 찾을 수 있습니다.", libraryTabs("laws")),
+    band("규정 원문", "CBAM 규정과 이행·위임규정, EU 집행위원회의 가이던스와 등록부 안내서를 국문 번역과 나란히 봅니다. 낱말이나 질문으로 조문을 찾을 수 있습니다.", groupTabs("laws")),
     acts.length ? null : empty("규정의 글을 읽지 못했습니다. 잠시 뒤에 다시 열어 주세요."),
     h("form", { class: "law-search", role: "search", onsubmit: (event) => { event.preventDefault(); go(input.value); } }, [
       h("label", { class: "sr", for: "law-q", text: "전체 규정에서 찾기" }), icon("search", 20), input, h("button", { class: "btn btn-main", type: "submit", text: "찾기" })]),

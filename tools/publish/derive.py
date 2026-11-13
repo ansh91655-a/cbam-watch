@@ -122,8 +122,8 @@ def events(listed, prices, rules=None):
     return sorted(kept + derived + rule_events(rules), key=lambda row: (str(row.get("date", "")), str(row.get("title", ""))))
 
 
-def menu(rules, listed, items=None, topics=None):
-    """주 메뉴의 펼침 목록에 쓰는 값: 규제가 하나라도 든 규제 묶음(차례대로), 일정이 있는 해, 소식이 하나라도 있는 주제, 국내 공지·자료의 수.
+def menu(rules, listed, items=None, topics=None, handbook=None):
+    """주 메뉴의 펼침 목록과 전체 메뉴에 쓰는 값: 규제가 하나라도 든 규제 묶음(차례대로), 일정이 있는 해, 소식이 하나라도 있는 주제, 국내 공지·자료의 수, 해설서의 장.
 
     제목이 곧 내용인 국내 공지·자료(brief)는 화면(js/news/notices.js)이 주제별 소식에서 빼고 따로 모으므로, 여기에서도 주제를 셀 때 빼고 수만 따로 적는다.
 
@@ -138,11 +138,12 @@ def menu(rules, listed, items=None, topics=None):
     notices = [item for item in items or [] if item.get("brief") and not item.get("withdrawn")]
     news = [item for item in items or [] if not (item.get("brief") and not item.get("withdrawn"))]
     used_topics = sorted({str(item.get("topic") or "") if not known or item.get("topic") in known else "etc" for item in news} - {""})
-    return {"rules": groups, "years": years, "topics": used_topics, "notices": len(notices)}
+    chapters = [{"id": chapter.get("id", ""), "title": chapter.get("title", "")} for chapter in (handbook or {}).get("chapters", [])]
+    return {"rules": groups, "years": years, "topics": used_topics, "notices": len(notices), "handbook": chapters}
 
 
-def site(counts, rules=None, listed=None, items=None, topics=None):
+def site(counts, rules=None, listed=None, items=None, topics=None, handbook=None):
     config = read_json("site/site.config.json", {})
     status = read_json("collected/status.json", {})
-    config.update({"builtAt": stamp(), "lastCollected": status.get("checkedAt", ""), "counts": counts, "menu": menu(rules, listed, items, topics)})
+    config.update({"builtAt": stamp(), "lastCollected": status.get("checkedAt", ""), "counts": counts, "menu": menu(rules, listed, items, topics, handbook)})
     return config

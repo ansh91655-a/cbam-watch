@@ -10,6 +10,10 @@
   main:has(> .cn-notes) > .cn-box { grid-column: 1; }
   main:has(> .cn-notes) > .cn-notes { grid-column: 2; align-self: start; }
   main:has(> .cn-notes) > .cn-notes ul { grid-template-columns: minmax(0, 1fr); }
+
+  /* 해설서의 절: 글과 곁들이는 것(용어 풀이, 알아 둘 점, 근거 조문)을 나란히 */
+  .hb-cols { grid-template-columns: minmax(0, 1fr) 300px; }
+  .hb-aside { padding-top: 0; padding-left: 28px; border-top: 0; border-left: 1px solid var(--line-2); }
 }
 
 /* ── 1800px부터(본문 1,560) ─────────────────────────────────────────── */
@@ -18,6 +22,10 @@
   .cols { grid-template-columns: minmax(0, 1fr) 380px; }
   .rule-grid { grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); }  /* 묶음에 규제가 둘뿐이면 둘이 줄을 채운다 */
   .doc-list { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 14px; }
+  /* 해설서: 차례는 네 칸. 절은 글줄을 조금 길게 하고 남는 폭은 곁들이는 것에 준다 */
+  .hb-chapters { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .hb-cols { grid-template-columns: minmax(0, 86ch) minmax(320px, 1fr); }
+  .hb-main > p, .hb-list { max-width: 86ch; }
 
   /* 한 규제의 화면: 글 칸과 오른쪽 칸을 함께 넓히고, 글줄을 조금 길게(한 줄에 마흔 자 남짓) */
   .rule-page { grid-template-columns: minmax(0, 1fr) 380px; column-gap: 40px; }

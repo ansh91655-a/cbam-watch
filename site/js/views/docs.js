@@ -7,7 +7,7 @@ import { empty, fill, h, pill, safeLink } from "../ui/dom.js";
 import { bytes, count } from "../ui/format.js";
 import { icon } from "../ui/icons.js";
 import { decode } from "../ui/sitesearch.js";
-import { libraryTabs } from "../ui/tabs.js";
+import { groupTabs } from "../ui/tabs.js";
 import { canView, openViewer } from "../ui/viewer.js";
 
 const LABEL = { added: "더해짐", removed: "빠짐", changed: "바뀜" };
@@ -83,7 +83,7 @@ function row(doc) {
 export async function render(main, arg) {
   const asked = decode(arg).trim();
   const [documents, pageOf, unreachable] = await Promise.all([data.documents(), data.documentPages(), data.unreachableDocuments()]);
-  const head = band("원문 대장", "EU 집행위원회가 올린 CBAM 문서입니다. 문서 이름을 누르면 내려받지 않고 바로 볼 수 있습니다. 문서가 바뀌면 바뀐 곳을 함께 보여 줍니다.", libraryTabs("docs"));
+  const head = band("원문 대장", "EU 집행위원회가 올린 CBAM 문서입니다. 문서 이름을 누르면 내려받지 않고 바로 볼 수 있습니다. 문서가 바뀌면 바뀐 곳을 함께 보여 줍니다.", groupTabs("docs"));
   if (!documents.length) {
     fill(main, head, empty("문서 목록을 준비하고 있습니다."));
     return;

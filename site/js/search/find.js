@@ -1,4 +1,4 @@
-// 사이트 검색. 찾는 말 하나로 소식, 규제, 용어집, 일정, 품목 코드, 원문 대장, 규정 원문을 한 번에 찾는다.
+// 사이트 검색. 찾는 말 하나로 용어집, 해설서, 규제, 소식, 일정, 품목 코드, 원문 대장, 규정 원문을 한 번에 찾는다.
 // 낱말을 읽고 점수를 매기는 일은 규정 원문의 찾기 엔진(js/laws/engine.js)이 한다. 그래서 용어집의 낱말은 국문으로 적어도 영문 표기까지 함께 찾는다.
 // 화면 요소를 다루지 않으므로 node로 시험한다(tests/test_search.py).
 //
@@ -8,7 +8,7 @@ import { dateOf } from "../data.js";
 import { find } from "../laws/engine.js";
 
 // 갈래와 화면에 놓는 차례. laws에는 문서 이름으로 찾은 것만 들어 있고, 조문은 글을 읽은 뒤에 따로 찾아 더한다(acts, guides).
-export const KINDS = ["terms", "rules", "news", "dates", "codes", "files", "laws"];
+export const KINDS = ["terms", "book", "rules", "news", "dates", "codes", "files", "laws"];
 const ALL = 100000;
 const EXACT = 3;        // 찾는 말이 이름과 똑같은 것에 곱하는 값
 const RECENT = 0.3;     // 가장 새로운 소식에 더 주는 몫

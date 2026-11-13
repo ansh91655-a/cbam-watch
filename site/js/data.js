@@ -34,6 +34,8 @@ export const duties = () => load("duties", { duties: [] }).then((body) => ({ dut
 export const factor = () => load("factor", { paths: [] }).then((body) => ({ paths: [], ...body }));
 // 인증서 비용 추정의 자료(법령의 표에서 만든 품목별 CBAM 벤치마크와 기본값, 마크업 등). 품목이 많아 짧은 꼴로 실려 있다(js/calc/compute.js의 unpack이 편다).
 export const calc = () => load("calc", { goods: [] });
+// CBAM 해설서(tools/publish/handbook.py): 장과 절, 절마다의 근거 조문, 한데 모은 용어 풀이
+export const handbook = () => load("handbook", { chapters: [] }).then((body) => ({ chapters: [], terms: [], ...body }));
 // 규정 원문: 법령의 목록과 차례, 법령 하나의 본문과 번역, 전체 규정 검색에 쓰는 글(크므로 찾을 때만 읽는다)
 export const laws = () => load("laws/index", { acts: [] }).then((body) => body.acts || []);
 export const law = (id) => (/^[0-9A-Za-z-]+$/.test(String(id)) ? load(`laws/${id}`, null) : Promise.resolve(null));

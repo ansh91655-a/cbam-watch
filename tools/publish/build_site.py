@@ -7,10 +7,11 @@ import pathlib
 import shutil
 import sys
 
+from tools.check import term_check
 from tools.common.jsonio import read_json, today, write_json
 from tools.laws import build as laws
 from tools.pdfko import site as pdf_site
-from tools.publish import calc, crossrefs, derive, duties, factor, feed, merge, preload, regulations, sectors, thumbs
+from tools.publish import calc, crossrefs, derive, duties, factor, feed, handbook, merge, preload, regulations, sectors, thumbs
 
 DATA_FILES = ["items", "events", "digests", "terms", "topics", "prices"]
 LIST_KEY = {"items": "items", "events": "events", "digests": "digests", "terms": "terms", "topics": "topics", "prices": "prices"}
@@ -99,6 +100,16 @@ def main(argv):
     # 규정 원문과 국문 번역, 전체 규정 검색에 쓰는 글(받아 둔 법령의 글에서 만든다)
     counts["laws"] = laws.write(data_out)
     counts["pdfs"] = pdf_site.write(out)  # 원문과 같은 자리에 번역을 앉힌 국문 PDF(도구가 없는 환경에서는 싣지 않는다)
+    # CBAM 해설서: 꼴이 깨졌으면 멈추고, 근거로 적은 대목이 규정 원문이나 받아 둔 글과 달라진 것은 알리기만 한다
+    guide = read_json(handbook.SOURCE, None)
+    guide_found = handbook.problems(guide, term_check.load(), data_out / "laws", rules={rule.get("id") for rule in rules.get("regulations", [])}) if guide else [("해설서", "data/handbook.json 을 읽지 못함")]
+    problems += [f"해설서: {where}: {what}" for where, what in handbook.blocking(guide_found)]
+    for where, what in guide_found:
+        if what.startswith(handbook.DRIFT):
+            print(f"알림: 해설서: {where}: {what}")
+    if guide and not handbook.blocking(guide_found):
+        write_json(data_out / "handbook.json", handbook.public(guide, handbook.known_laws(read_json(data_out / "laws" / "index.json", None))))
+        counts["handbook"] = sum(len(chapter.get("sections", [])) for chapter in guide.get("chapters", []))
     # 소식, 의무 일정, 용어집에 적힌 법령과 조문을 규정 원문으로 잇는다(글에 또렷이 적힌 곳만). 근거 칸에 적힌 조각이 글에 없으면 알리기만 한다
     linked, unlinked = crossrefs.write(data_out, bodies["items"]["items"], read_json(data_out / "duties.json", {}).get("duties", []),
                                        bodies["terms"].get("terms", []), today())
@@ -122,7 +133,8 @@ def main(argv):
         if pathlib.Path(source).exists():
             (out / target).parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(source, out / target)
-    config = derive.site(counts, rules, bodies["events"]["events"], bodies["items"]["items"], bodies["topics"].get("topics", []))
+    config = derive.site(counts, rules, bodies["events"]["events"], bodies["items"]["items"], bodies["topics"].get("topics", []),
+                         guide if counts.get("handbook") else None)
     write_json(data_out / "site.json", config)
     if feed.wanted(config):  # 구독 피드(새 소식 받아 보기를 열어 둔 동안에만 만든다)
         (out / "feed.xml").write_text(feed.news(bodies["items"]["items"], bodies["topics"].get("topics", []), config["url"], config["builtAt"]), encoding="utf-8")

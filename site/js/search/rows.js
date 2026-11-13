@@ -65,6 +65,19 @@ export function fileRows(documents, acts) {
   });
 }
 
+// 해설서: 절 하나가 한 줄이다. 절의 제목과 그 절이 풀이한 용어가 이름이고, 문단과 목록, 식, 표, 용어 풀이, 알아 둘 점이 본문이다.
+// ref에는 절과 함께 그 절이 든 장의 번호(chapterNo), 이름(chapterTitle), 주소에 쓰는 이름(chapter)을 넣는다.
+export function bookRows(book) {
+  return ((book && book.chapters) || []).flatMap((chapter, at) => (chapter.sections || []).map((section) => {
+    const formula = section.formula || {};
+    const terms = section.terms || [];
+    return row("book", `${chapter.id}.${section.id}`, [section.title, ...terms.flatMap((term) => [term.ko, term.en, term.abbr])], lines(
+      section.body, section.list, formula.text, (formula.parts || []).map((pair) => pair.join(": ")),
+      ((section.table || {}).rows || []).map((cells) => cells.join(" ")), terms.map((term) => `${term.ko}: ${term.text}`), section.caveat,
+    ), { ...section, chapter: chapter.id, chapterNo: at + 1, chapterTitle: chapter.title });
+  }));
+}
+
 // 규정 원문의 문서: 법령과 안내 문서의 이름(국문 이름, 공식 이름, 짧은 이름). 본문은 따로 찾는다(js/ui/lawfind.js의 corpus).
 export function lawRows(acts) {
   return (acts || []).filter((act) => act && act.id).map((act) =>

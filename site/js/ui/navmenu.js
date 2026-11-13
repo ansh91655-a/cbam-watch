@@ -1,36 +1,35 @@
-// 주 메뉴의 펼침 목록. 메뉴에 마우스를 올리면 그 메뉴 아래의 목록(소식의 주제, 규제의 묶음, 자료·안내의 화면 등)이 펼쳐진다.
+// 주 메뉴의 펼침 목록. 메뉴에 마우스를 올리면 그 메뉴 아래의 목록(소식의 주제, 규제의 묶음, 묶인 화면들)이 펼쳐진다.
 // 마우스가 없는 기기와 자판을 위해 메뉴 옆에 펼침 단추를 둔다(index.html). 단추를 누르거나, 메뉴에서 아래 화살표 키를 누르면 펼쳐진다.
 // 메뉴가 둘째 줄로 내려가는 좁은 화면에서는 쓰지 않는다(css/navmenu.css가 숨긴다). 그때는 화면 안의 탭과 목록으로 고른다.
-// 목록의 내용은 게시 데이터를 따른다: 주제는 topics.json, 규제 묶음과 일정이 있는 해, 국내 공지·자료의 수는 site.json의 menu(tools/publish/derive.py의 menu).
+// 목록의 내용은 화면의 묶음(js/nav/map.js)과 게시 데이터를 따른다: 주제는 topics.json, 규제 묶음과 일정이 있는 해, 국내 공지·자료의 수는 site.json의 menu(tools/publish/derive.py의 menu).
+import { GROUPS, screensOf } from "../nav/map.js";
 import { NOTICES, NOTICE_NAME } from "../news/notices.js";
-import { PAGES } from "../search/pages.js";
 import { h } from "./dom.js";
 import { icon } from "./icons.js";
-import { LIBRARY, PRICE } from "./tabs.js";
 import { topicList } from "./topics.js";
 
 const OPEN_MS = 90;    // 마우스를 올리고 이만큼 지나면 편다(지나가기만 할 때는 펴지 않는다)
 const CLOSE_MS = 220;  // 마우스가 벗어나고 이만큼 지나면 접는다(목록으로 내려가는 사이에 접히지 않게)
-const WIDE = "(min-width: 901px)";
+const WIDE = "(min-width: 1001px)";
 const EDGE = 16;       // 목록과 화면 오른쪽 끝 사이에 남기는 거리
 
-const about = (href) => (PAGES.find((page) => page.href === href) || {}).about || "";
-const screens = (list) => list.map(([view, name, key]) => ({ href: `#${view}`, name, icon: key, about: about(`#${view}`) }));
-
-// 메뉴마다의 목록: { 메뉴 이름: { cols, items: [{ href, name, icon, topic, about }] } }
+// 메뉴마다의 목록: { 묶음의 이름(key): { cols, items: [{ href, name, icon, topic, about }] } }
+// 화면이 여럿인 묶음은 그 화면들이 목록이고, 화면이 하나인 묶음(소식, 규제, 일정)은 그 화면 안에서 고르는 것(주제, 규제 묶음, 해)이 목록이다.
 export function menuLists(site, topics) {
   const menu = (site && site.menu) || {};
   const live = Array.isArray(menu.topics) ? new Set(menu.topics) : null;  // 소식이 하나도 없는 주제는 싣지 않는다
-  return {
+  const lists = {
     news: { cols: 2, items: [{ href: "#news", name: "전체 소식", icon: "news" },
       ...(topics || []).filter((topic) => !live || live.has(topic.code)).map((topic) => ({ href: `#news-${topic.code}`, name: topic.name, icon: topic.code, topic: topic.code })),
       ...(menu.notices ? [{ href: `#news-${NOTICES}`, name: NOTICE_NAME, icon: "sources" }] : [])] },
     rules: { items: [{ href: "#rules", name: "전체 규제", icon: "law" },
       ...(menu.rules || []).map((group) => ({ href: `#rules-${group.code}`, name: group.name, icon: group.icon || "legis" }))] },
-    price: { items: screens(PRICE) },
     calendar: { items: (menu.years || []).map((year) => ({ href: `#calendar-${year}`, name: `${year}년 일정`, icon: "calendar" })) },
-    docs: { items: screens(LIBRARY) },
   };
+  for (const group of GROUPS) {
+    if (group.views.length > 1) lists[group.key] = { items: screensOf(group).map((one) => ({ href: one.href, name: one.name, icon: one.icon, about: one.about })) };
+  }
+  return lists;
 }
 
 function panel(key, name, list) {

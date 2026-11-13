@@ -37,13 +37,18 @@ export function plan(site) {
     manual ? `#law-${manual.id}` : null, single ? `#law-${single.id}` : null, small ? `#pdf-${small}.p2` : null, "#pdf-none",
     // 문단 하나를 가리키는 주소와, 앞선 판과 달라진 곳 보기(앞선 판을 받아 둔 문서가 있을 때)
     acts[0] ? `#law-${acts[0].id}.art-2.1` : null, revised ? `#changes-${revised.id}` : null, "#changes-none"] : [];
+  // 해설서: 차례, 절이 가장 많은 장(식과 표가 있는 장), 절 하나를 가리키는 주소, 없는 장
+  const book = read(site, "handbook.json", { chapters: [] }).chapters || [];
+  const longest = [...book].sort((a, b) => b.sections.length - a.sections.length)[0];
+  const tabled = book.find((chapter) => chapter.sections.some((one) => one.table) && (!longest || chapter.id !== longest.id));
+  const handbook = book.length ? ["#handbook", longest ? `#handbook-${longest.id}` : null, tabled ? `#handbook-${tabled.id}.${tabled.sections.find((one) => one.table).id}` : null, "#handbook-none"] : [];
   // 사이트 검색: 빈 화면, 여러 갈래에서 찾는 말, 품목 코드, 찾지 못하는 말
   const search = ["#search", `#search-${encodeURIComponent("기본값")}`, "#search-7208", "#search-zzzzqq"];
   return {
     // 가로 넘침과 화면 오류: 모든 화면을 일곱 너비로(폰 둘, 패드, 노트북 둘, 넓은 모니터 둘: 본문 폭이 넓어지는 1,560과 1,800의 단계)
     widths: [360, 390, 768, 1024, 1440, 1920, 2400],
     views: ["#home", "#news", topics[0] ? `#news-${topics[0].code}` : null, "#news-notices", "#news-recent", item, itemWithRefs, "#rules", ...(rules.groups || []).map((group) => `#rules-${group.code}`),
-      "#price", "#calc", good, "#calendar", "#calendar-2027", "#calendar-2027.role-verifier", "#calendar-2028", "#cn", "#cn-7208", "#sector", "#sector-aluminium", "#sector-electricity", "#docs", ...laws, "#terms", "#about", "#design", ...search].filter(Boolean),
+      "#price", "#calc", good, "#calendar", "#calendar-2027", "#calendar-2027.role-verifier", "#calendar-2028", "#cn", "#cn-7208", "#sector", "#sector-aluminium", "#sector-electricity", ...handbook, "#docs", ...laws, "#terms", "#about", "#design", ...search].filter(Boolean),
     // 규제 화면: 규제마다 네 너비로
     ruleWidths: [360, 768, 1440, 1920],
     rules: (rules.regulations || []).map(rule),
@@ -51,7 +56,7 @@ export function plan(site) {
     axeWidths: [1280, 390],
     themes: ["", "?theme=white", "?theme=midnight"],
     axeViews: [...new Set(["#home", "#news", item, itemWithRefs, "#rules", rule(withAnalysis), rule(withFigure), rule(withTable), "#price", "#calc", good,
-      "#calendar", "#calendar-2027.role-verifier", "#cn-7208", "#sector", "#sector-electricity", "#docs", "#laws", law, revised ? `#changes-${revised.id}` : null, "#news-notices", "#news-recent", "#terms", "#about", search[1]].filter(Boolean))],
+      "#calendar", "#calendar-2027.role-verifier", "#cn-7208", "#sector", "#sector-electricity", handbook[0], handbook[1], "#docs", "#laws", law, revised ? `#changes-${revised.id}` : null, "#news-notices", "#news-recent", "#terms", "#about", search[1]].filter(Boolean))],
     good,
   };
 }

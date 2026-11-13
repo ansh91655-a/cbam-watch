@@ -1,4 +1,4 @@
-// 작은 창. 구독 안내와 의견 보내기가 함께 쓴다. 한 번에 하나만 열고, 바깥을 누르거나 Esc를 누르면 닫힌다.
+// 작은 창. 구독 안내, 의견 보내기, 전체 메뉴가 함께 쓴다. 한 번에 하나만 열고, 바깥을 누르거나 Esc를 누르면 닫힌다.
 import { h } from "./dom.js";
 import { icon } from "./icons.js";
 
@@ -8,7 +8,8 @@ export function canOpen() {
   return typeof HTMLDialogElement !== "undefined";
 }
 
-export function openDialog(title, body) {
+// kind는 창의 꼴이다(css/overlay.css): "menu"는 넓은 창.
+export function openDialog(title, body, kind = "") {
   if (!canOpen()) return false;
   if (!dialog) {
     dialog = h("dialog", { class: "sheet", tabindex: "-1" });
@@ -17,6 +18,7 @@ export function openDialog(title, body) {
   }
   if (dialog.open) dialog.close();
   dialog.setAttribute("aria-labelledby", "sheet-title");
+  dialog.dataset.kind = kind;
   dialog.replaceChildren(
     h("div", { class: "sheet-head" }, [
       h("h2", { id: "sheet-title", text: title }),

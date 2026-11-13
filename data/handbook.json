@@ -1,0 +1,3620 @@
+{
+ "asOf": "2026-11-14",
+ "lead": "CBAM을 처음 맡은 담당자를 위해 제도가 어떻게 돌아가는지를 차례로 풀어 쓴 해설서입니다. 절마다 근거가 된 CBAM 규정과 이행규정의 조문으로 이어집니다.",
+ "sources": {
+  "ets-directive": {
+   "text": "EU 배출권거래제 지침 2003/87/EC 통합본(2024년 3월 1일자)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02003L0087-20240301",
+   "path": "collected/archive/pages/eu-fulltext/ets-directive-consolidated.txt"
+  }
+ },
+ "chapters": [
+  {
+   "id": "overview",
+   "title": "CBAM 한눈에 보기",
+   "lead": "CBAM이 왜 생겼는지, 언제부터 무엇을 해야 하는지, 어떤 품목이 대상인지, 수입부터 인증서 제출까지 어떤 순서로 흘러가는지를 간추립니다.",
+   "sections": [
+    {
+     "id": "purpose",
+     "title": "제도의 목적",
+     "body": [
+      "탄소국경조정제도(CBAM)는 부속서 I의 제품이 EU 관세영역으로 수입될 때 그 제품에 내재된 온실가스 배출량을 다루는 제도입니다. 목적은 탄소누출(carbon leakage)의 위험을 막는 것입니다. 이를 통해 전 세계 탄소 배출을 줄이고 파리협정의 목표를 뒷받침하며, 제3국 사업자가 배출을 줄이도록 유인하는 것도 목적에 들어 있습니다.",
+      "CBAM은 EU 배출권거래제(EU ETS)를 보완합니다. EU 안의 생산자에게 적용되는 것과 동등한 규칙을 수입품에도 적용하는 방식입니다.",
+      "CBAM은 EU ETS가 탄소누출을 막으려고 써 온 장치를 대체하도록 설계되었습니다. 그래서 EU ETS 배출권이 무상으로 할당되는 정도를 CBAM에도 반영합니다."
+     ],
+     "terms": [
+      {
+       "ko": "탄소누출",
+       "en": "carbon leakage",
+       "abbr": "",
+       "text": "EU 밖의 사업자에게는 같은 탄소 비용이 없어서 EU의 생산이 EU 밖으로 옮겨 갈 위험을 말합니다."
+      },
+      {
+       "ko": "EU 배출권거래제",
+       "en": "EU emissions trading system",
+       "abbr": "EU ETS",
+       "text": "지침 2003/87/EC로 만든 EU의 온실가스 배출권 거래 제도입니다. CBAM 규정에서는 항공 활동을 뺀 활동에 대한 제도를 뜻합니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-1",
+       "contains": [
+        "in order to prevent the risk of carbon leakage",
+        "by creating incentives for the reduction of emissions by operators in third countries",
+        "by applying an equivalent set of rules to imports into the customs territory of the Union",
+        "by reflecting the extent to which EU ETS allowances are allocated free of charge"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-3",
+       "contains": [
+        "in respect of activities listed in Annex I to Directive 2003/87/EC other than aviation activities"
+       ]
+      },
+      {
+       "act": "guide-1",
+       "part": "sec-2-1",
+       "contains": [
+        "puts European production at risk of carbon leakage i.e. relocation outside the EU"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "periods",
+     "title": "전환기간과 확정기간",
+     "body": [
+      "CBAM은 2023년 10월 1일부터 적용되었습니다. 2023년 10월 1일부터 2025년 12월 31일까지는 전환기간(transitional period)이었습니다. 이 기간에 수입자가 진 의무는 보고 의무뿐이었습니다.",
+      "2026년 1월 1일부터는 소량 면제(제2a조), 승인된 CBAM 신고인만의 수입(제4조), CBAM 신고서와 내재배출량의 산정·검증(제6조~제9조), 인증서 제출(제22조(1)) 등이 적용됩니다. 집행위원회의 안내 자료는 이때부터를 확정기간(definitive period)이라고 부릅니다.",
+      "조문마다 적용 시기가 다릅니다. 주요 시기는 아래 표와 같습니다."
+     ],
+     "table": {
+      "head": [
+       "적용 시기",
+       "적용되는 조문",
+       "내용"
+      ],
+      "rows": [
+       [
+        "2023년 10월 1일~2025년 12월 31일",
+        "제32조~제35조",
+        "전환기간. 수입자의 의무는 보고 의무로 한정"
+       ],
+       [
+        "2024년 12월 31일부터",
+        "제5조, 제10조, 제14조, 제16조, 제17조",
+        "승인 신청과 승인, 제3국 사업자 등록, CBAM 등록부와 계정"
+       ],
+       [
+        "2026년 1월 1일부터",
+        "제2a조, 제4조, 제6조~제9조, 제22조(1), 제23조~제27조 등",
+        "소량 면제, 신고, 산정, 검증, 인증서 제출, 환매, 말소, 과징금, 우회 방지"
+       ],
+       [
+        "2027년 1월 1일부터",
+        "제22조(2)",
+        "분기 말 인증서 보유 의무"
+       ],
+       [
+        "2027년 2월 1일부터",
+        "제20조(1), (3), (4), (5)",
+        "공통 중앙 플랫폼에서 인증서 판매"
+       ]
+      ]
+     },
+     "terms": [
+      {
+       "ko": "전환기간",
+       "en": "transitional period",
+       "abbr": "",
+       "text": "2023년 10월 1일부터 2025년 12월 31일까지의 기간입니다. 수입자는 내재배출량 등을 보고만 하고 인증서를 제출하지 않았습니다."
+      },
+      {
+       "ko": "확정기간",
+       "en": "definitive period",
+       "abbr": "",
+       "text": "전환기간이 끝난 뒤 2026년 1월 1일부터 인증서 제출 등 CBAM의 의무가 본격 적용되는 기간을 가리키는 말입니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-32",
+       "contains": [
+        "During the transitional period from 1 October 2023 until 31 December 2025, the obligations of the importer under this Regulation shall be limited to the reporting obligations"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-36",
+       "contains": [
+        "It shall apply from 1 October 2023.",
+        "Articles 5, 10, 14, 16 and 17 shall apply from 31 December 2024",
+        "Article 2(2) and Articles 2a, 4, 6 to 9, 10a, 15, 19 and 21, Article 22(1) and 22(3) and Articles 23 to 27 and 31 shall apply from 1 January 2026",
+        "Article 22(2) shall apply from 1 January 2027",
+        "Article 20(1), (3), (4) and (5) shall apply from 1 February 2027"
+       ]
+      },
+      {
+       "act": "qa",
+       "part": "sec-1-2",
+       "contains": [
+        "CBAM entered its definitive phase as of 1 January 2026"
+       ]
+      },
+      {
+       "act": "guide-1",
+       "part": "sec-2-4-3",
+       "contains": [
+        "As a new element in the definitive period of the CBAM, you as an operator must also determine the level of free allocation which you would receive for your production process, if your installation were situated in the EU. This level of free allocation is deducted from the embedded emissions to determine the amount of CBAM certificates which the authorised declarant has to surrender upon the import of your goods (“the CBAM obligation”). This is necessary to make the CBAM obligation comparable to the carbon costs faced by EU ETS operators. The rules to determine the “embedded free allocation” of CBAM goods are significantly simpler than those used in the EU ETS and well aligned with the monitoring needs you already have for the embedded emissions. Like for embedded emissions, either default values (“default CBAM benchmarks”) can be used or values that take into account actual data from your installation. Because the free allocation in the EU ETS is phased out while the CBAM is gradually introduced, the production year of the goods produced and of the precursors used are important parameters."
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#calendar",
+       "text": "CBAM 일정"
+      }
+     ]
+    },
+    {
+     "id": "sectors",
+     "title": "대상 부문",
+     "body": [
+      "CBAM의 대상은 부속서 I에 적힌 제품입니다. 부속서 I은 제품을 통합품목분류표(CN)의 코드로 정하고, 제품마다 따지는 온실가스도 함께 정합니다.",
+      "부문은 시멘트, 전력, 비료, 철강, 알루미늄, 화학물질(수소)의 여섯 가지입니다. 아래 표는 부문마다의 주요 코드를 간추린 것입니다. 정확한 범위와 제외 코드는 품목 코드 조회에서 확인할 수 있습니다."
+     ],
+     "table": {
+      "head": [
+       "부문",
+       "주요 CN 코드",
+       "온실가스"
+      ],
+      "rows": [
+       [
+        "시멘트",
+        "2523(시멘트 클링커, 시멘트), ex 2507 00 80(소성한 그 밖의 고령토질 점토)",
+        "이산화탄소"
+       ],
+       [
+        "전력",
+        "2716 00 00",
+        "이산화탄소"
+       ],
+       [
+        "비료",
+        "2808 00 00, 2814, 2834 21 00, 3102, 3105(3105 60 00 제외)",
+        "이산화탄소, 아산화질소(2814는 이산화탄소만)"
+       ],
+       [
+        "철강",
+        "제72류(일부 합금철과 7204 제외), 2601 12 00, 7301~7311, 7318, 7326",
+        "이산화탄소"
+       ],
+       [
+        "알루미늄",
+        "7601, 7603~7614, 7616",
+        "이산화탄소, 과불화탄소"
+       ],
+       [
+        "화학물질",
+        "2804 10 00(수소)",
+        "이산화탄소"
+       ]
+      ]
+     },
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "annex-i",
+       "contains": [
+        "this Regulation shall apply to goods falling under the Combined Nomenclature",
+        "2716 00 00 – Electrical energy",
+        "2601 12 00 – Agglomerated iron ores and concentrates",
+        "Except: 3105 60 00 – Mineral or chemical fertilisers containing the two fertilising elements phosphorus and potassium",
+        "Carbon dioxide and perfluorocarbons",
+        "2804 10 00 – Hydrogen",
+        "ex 2507 00 80 – Other kaolinic clays except non-calcined kaolinic clays"
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#sector",
+       "text": "부문별 안내"
+      },
+      {
+       "href": "#cn",
+       "text": "품목 코드 조회"
+      }
+     ]
+    },
+    {
+     "id": "flow",
+     "title": "수입에서 인증서 제출까지",
+     "body": [
+      "CBAM 제품은 승인된 CBAM 신고인만 EU로 수입할 수 있습니다(소량 면제를 받는 수입자는 예외입니다). 신고인은 해마다 지난해 수입분에 대한 CBAM 신고서를 내고, 그 신고서에 적은 수의 CBAM 인증서(CBAM certificate)를 제출합니다. 차례는 아래와 같습니다."
+     ],
+     "list": [
+      "EU의 수입자나 간접 세관 대리인이 승인된 CBAM 신고인 지위를 받습니다.",
+      "제품의 내재배출량을 정합니다. 실제배출량으로 정하면 인정받은 검증기관의 검증을 받아야 하고, 그렇지 않으면 기본값을 씁니다.",
+      "신고인은 수입한 다음 해 9월 30일까지 CBAM 신고서를 냅니다. 신고서에는 수입량, 총 내재배출량, 제출할 인증서 수가 들어갑니다.",
+      "신고인은 공통 중앙 플랫폼에서 인증서를 사서, 같은 기한까지 신고서에 적은 수만큼 제출합니다. 그 수는 총 내재배출량에 무상할당 조정과 제3국 탄소가격 공제를 반영한 것입니다.",
+      "제출하고 남은 인증서는 제출한 해의 10월 31일까지 환매를 요청할 수 있습니다. 산 해의 두 해 뒤 11월 1일에도 계정에 남아 있는 인증서는 보상 없이 말소됩니다."
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-4",
+       "contains": [
+        "Goods shall be imported into the customs territory of the Union only by an authorised CBAM declarant."
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-3",
+       "contains": [
+        "(24) ‘CBAM certificate’ means a certificate in electronic format corresponding to one tonne of CO2e of embedded emissions in goods;"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-6",
+       "contains": [
+        "1. By 30 September of each year, and for the first time in 2027 for the year 2026, each authorised CBAM declarant shall use the CBAM registry referred to in Article 14 to submit a CBAM declaration for the preceding calendar year.",
+        "(c) the total number of CBAM certificates to be surrendered, corresponding to the total embedded emissions referred to in point (b) of this paragraph after the reduction that is due on the account of the carbon price paid in a third country in accordance with Article 9 and the adjustment necessary to reflect the extent to which EU ETS allowances are allocated free of charge in accordance with Article 31;"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-8",
+       "contains": [
+        "1. Where the embedded emissions are determined on the basis of actual emissions, the authorised CBAM declarant shall ensure that the total embedded emissions declared in the CBAM declaration submitted pursuant to Article 6 are verified by a verifier accredited pursuant to Article 18, based on the verification principles set out in Annex VI."
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-20",
+       "contains": [
+        "1. From 1 February 2027, a Member State shall sell CBAM certificates on a common central platform to authorised CBAM declarants established in that Member State."
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-22",
+       "contains": [
+        "By 30 September of each year, and for the first time in 2027 for the year 2026, the authorised CBAM declarant shall surrender via the CBAM registry a number of CBAM certificates that corresponds to the embedded emissions declared in accordance with Article 6(2), point (c), and verified in accordance with Article 8, for the calendar year preceding the surrender."
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-23",
+       "contains": [
+        "1. Where an authorised CBAM declarant so requests, the Member State where that authorised CBAM declarant is established shall repurchase the excess CBAM certificates remaining on the account of the declarant in the CBAM registry after the certificates have been surrendered in accordance with Article 22.",
+        "The authorised CBAM declarant shall submit the repurchase request by 31 October of each year during which CBAM certificates were surrendered."
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-24",
+       "contains": [
+        "On 1 November of each year, the Commission shall cancel any CBAM certificates that were purchased during the year before the previous calendar year and that remained in the account of an authorised CBAM declarant in the CBAM registry.",
+        "Those CBAM certificates shall be cancelled without any compensation."
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-25",
+       "contains": [
+        "1. Without prejudice to Article 2a, the customs authorities shall not allow the importation of goods by any person other than an authorised CBAM declarant."
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#handbook-scope.de-minimis",
+       "text": "소량 면제"
+      },
+      {
+       "href": "#handbook-roles",
+       "text": "누가 무엇을 하나"
+      },
+      {
+       "href": "#handbook-cycle",
+       "text": "한 해의 일정"
+      },
+      {
+       "href": "#calendar",
+       "text": "CBAM 일정"
+      }
+     ],
+     "ordered": true,
+     "terms": [
+      {
+       "ko": "CBAM 인증서",
+       "en": "CBAM certificate",
+       "text": "제품의 내재배출량 CO2e 1톤에 해당하는 전자 형식의 인증서입니다."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "scope",
+   "title": "대상 품목과 적용 제외",
+   "lead": "어떤 제품이 CBAM의 대상이 되는지, 원산지와 수입량에 따라 무엇이 빠지는지를 설명합니다.",
+   "sections": [
+    {
+     "id": "goods-cn",
+     "title": "부속서 I의 품목과 CN 코드",
+     "body": [
+      "CBAM 규정은 부속서 I의 제품이 제3국을 원산지로 하여 EU 관세영역으로 수입될 때 적용됩니다. 역내가공(inward processing) 절차를 거쳐 그 제품으로 만든 가공품이 수입될 때도 적용됩니다.",
+      "제품은 이름이 아니라 통합품목분류표(Combined Nomenclature)의 CN 코드로 정합니다. 수입하는 제품의 CN 코드가 부속서 I에 있는지가 대상 여부를 가릅니다.",
+      "원산지는 EU 관세법의 비특혜 원산지 규칙으로 정합니다. 회원국의 대륙붕이나 배타적 경제수역의 인공섬 등 구조물로 들여오는 제품에도 CBAM 규정이 적용됩니다."
+     ],
+     "terms": [
+      {
+       "ko": "CN 코드",
+       "en": "CN code",
+       "abbr": "CN",
+       "text": "EU의 통합품목분류표(Combined Nomenclature)에 따른 품목 코드입니다. 규정 (EEC) No 2658/87이 정합니다."
+      },
+      {
+       "ko": "역내가공",
+       "en": "inward processing",
+       "abbr": "",
+       "text": "규정 (EU) No 952/2013 제256조에 정해진 세관 절차입니다. 이 절차를 거쳐 부속서 I의 제품으로 만든 가공품도 CBAM 규정의 대상이 됩니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-2",
+       "contains": [
+        "This Regulation applies to goods listed in Annex I originating in a third country",
+        "resulting from the inward processing procedure referred to in Article 256 of Regulation (EU) No 952/2013",
+        "in accordance with the rules for non-preferential origin",
+        "are brought to an artificial island, a fixed or floating structure"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "annex-i",
+       "contains": [
+        "The CN codes shall be those under Regulation (EEC) No 2658/87."
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#cn",
+       "text": "품목 코드 조회"
+      }
+     ]
+    },
+    {
+     "id": "origin",
+     "title": "원산지에 따른 제외",
+     "body": [
+      "부속서 III 제1호에 적힌 나라와 영역을 원산지로 하는 제품에는 CBAM 규정이 적용되지 않습니다. 나라는 아이슬란드, 리히텐슈타인, 노르웨이, 스위스이고, 영역은 뷔징겐, 헬골란트, 리비뇨, 세우타, 멜리야입니다. 한국은 이 목록에 없습니다.",
+      "이 목록에 들려면 EU ETS가 그 나라에 적용되거나 EU ETS와 완전히 연계된 배출권거래제가 있어야 합니다. 또 원산지에서 낸 탄소가격이 EU ETS에서 허용하는 것을 넘는 환급 없이 실제로 부과되어야 합니다.",
+      "전력 수입에 대해서는 따로 부속서 III 제2호의 목록을 둡니다. EU 전력시장과 시장 커플링(market coupling)으로 통합된 나라 가운데 제2조(7)의 조건을 모두 갖춘 나라가 대상입니다."
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-2",
+       "contains": [
+        "this Regulation shall not apply to goods originating in the third countries and territories listed in point 1 of Annex III",
+        "the EU ETS applies to that third country or territory or an agreement has been concluded",
+        "is effectively charged on the greenhouse gas emissions embedded in those goods without any rebates",
+        "shall be listed in point 2 of Annex III"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "annex-iii",
+       "contains": [
+        "This Regulation shall not apply to goods originating in the following countries:",
+        "This Regulation shall not apply to goods originating in the following territories:"
+       ]
+      }
+     ],
+     "caveat": "부속서 III의 목록은 집행위원회가 위임법으로 나라나 영역을 더하거나 빼서 바꿀 수 있습니다."
+    },
+    {
+     "id": "de-minimis",
+     "title": "소량 면제",
+     "body": [
+      "수입자가 한 해에 수입한 제품의 순중량이 단일 중량 임계값(single mass-based threshold)을 넘지 않으면 CBAM 규정의 의무를 면제받습니다. 임계값은 순중량 50톤입니다. 모든 CN 코드의 순중량을 수입자별, 역년별로 합쳐 따집니다. 면제받는 수입자는 세관신고서에 면제를 신고해야 합니다.",
+      "한 해 동안 임계값을 넘으면 그해에 수입한 모든 제품의 내재배출량에 대해 모든 의무를 집니다. 넘기 전에 수입한 물량도 포함됩니다. 임계값을 넘을 것으로 예상하는 수입자는 승인된 CBAM 신고인 지위를 신청해야 합니다.",
+      "소량 면제는 전력과 수소의 수입에는 적용되지 않습니다. 전력과 수소는 양이 적어도 면제받지 못합니다."
+     ],
+     "terms": [
+      {
+       "ko": "단일 중량 임계값",
+       "en": "single mass-based threshold",
+       "abbr": "",
+       "text": "소량 면제를 가르는 기준 무게입니다. 부속서 VII 제1호가 순중량 50톤으로 정합니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-2a",
+       "contains": [
+        "shall be exempted from the obligations under this Regulation",
+        "That threshold shall apply to the total net mass of goods under all CN codes aggregated per importer and per calendar year.",
+        "shall declare that exemption in the relevant customs declaration",
+        "shall be subject to all obligations under this Regulation in respect of all emissions embedded in all goods imported in that calendar year",
+        "This Article shall not apply to imports of electricity or hydrogen.",
+        "where the value of the resulting threshold deviates from the applicable threshold by more than 15 tonnes. The amended single mass-based threshold shall apply from 1 January of the following calendar year.",
+        "The amended single mass-based threshold shall apply from 1 January of the following calendar year."
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "annex-vii",
+       "contains": [
+        "shall be set at 50 tonnes of net mass"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-5",
+       "contains": [
+        "the importer shall submit the application for an authorisation in cases where that importer expects to exceed the single mass-based threshold"
+       ]
+      }
+     ],
+     "caveat": "집행위원회는 해마다 4월 30일까지 임계값이 알맞은지 평가합니다. 계산한 값이 적용 중인 임계값과 15톤 넘게 차이 나면 위임법으로 임계값을 바꾸며, 바뀐 임계값은 다음 해 1월 1일부터 적용됩니다.",
+     "see": [
+      {
+       "href": "#law-32023R0956.art-2a",
+       "text": "제2a조 원문"
+      }
+     ]
+    },
+    {
+     "id": "direct-only",
+     "title": "직접배출량만 보는 품목",
+     "body": [
+      "부속서 II에 적힌 제품은 직접배출량만 산정하고 반영합니다. 철강(제72류와 7301~7326의 해당 품목), 알루미늄, 수소, 전력이 여기에 듭니다.",
+      "부속서 II에 없는 제품은 간접배출량도 넣습니다. 시멘트, 비료, 철광석 응결체(2601 12 00)가 그렇습니다. 자세한 내용은 내재배출량 장에서 다룹니다."
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-7",
+       "contains": [
+        "For goods listed in Annex II only direct emissions shall be calculated and taken into account."
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "annex-ii",
+       "contains": [
+        "7601 – Unwrought aluminium",
+        "2804 10 00 – Hydrogen",
+        "2716 00 00 – Electrical energy"
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#handbook-embedded",
+       "text": "내재배출량"
+      }
+     ]
+    },
+    {
+     "id": "other-exclusions",
+     "title": "그 밖의 제외와 특별한 취급",
+     "body": [
+      "군사 활동에서 옮기거나 쓰는 제품에는 CBAM 규정이 적용되지 않습니다. 회원국이나 부속서 III 제1호·제2호의 나라와 영역의 대륙붕 또는 배타적 경제수역에서 생산한 전력에도 적용되지 않습니다. 수소는 회원국이나 부속서 III 제1호의 나라와 영역의 대륙붕 또는 배타적 경제수역을 원산지로 할 때 적용되지 않습니다.",
+      "적용에서 빠지는 것은 아니지만 신고를 달리하는 경우도 있습니다. 역외가공(outward processing)을 거쳐 다시 들여온 제품은 EU 밖에서 한 가공의 배출량만 신고합니다. 재수입 물품(returned goods)은 내재배출량을 0으로 따로 신고합니다."
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-2",
+       "contains": [
+        "this Regulation shall not apply to goods to be moved or used in the context of military activities",
+        "electricity generated on the continental shelf or in the exclusive economic zone of a Member State or of a country or territory listed in points 1 and 2 of Annex III",
+        "hydrogen originating on the continental shelf or in the exclusive economic zone of a Member State or of a country or territory listed in point 1 of Annex III"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-6",
+       "contains": [
+        "only the emissions of the processing operation undertaken outside the customs territory of the Union",
+        "for the total embedded emissions corresponding to those goods"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "roles",
+   "title": "누가 무엇을 하나",
+   "lead": "CBAM에 관여하는 사람과 기관이 각각 무엇을 하는지, 한국의 생산자와 EU의 수입자가 지는 의무가 어떻게 다른지를 정리합니다.",
+   "sections": [
+    {
+     "id": "declarant",
+     "title": "승인된 CBAM 신고인과 간접 세관 대리인",
+     "body": [
+      "CBAM 제품은 승인된 CBAM 신고인(authorised CBAM declarant)만 EU로 수입할 수 있습니다. 회원국에 설립된 수입자는 수입하기 전에 CBAM 등록부를 통해 이 지위를 신청해야 합니다. 소량 면제(제2a조)를 받는 수입자는 단일 중량 임계값을 넘을 것으로 예상할 때 신청합니다. 신청인이 설립된 회원국의 관할당국이 지위를 주며, 이 지위는 모든 회원국에서 인정됩니다.",
+      "수입자가 회원국에 설립되어 있지 않으면 간접 세관 대리인(indirect customs representative)이 지위를 받아야 합니다. 간접 세관 대리인이 신고인으로 일하면 그 수입자를 대신해 수입한 제품에 대해 수입자의 의무를 집니다.",
+      "2026년 3월 31일까지 신청한 수입자나 간접 세관 대리인은 관할당국이 결정할 때까지 잠정적으로 수입을 이어 갈 수 있습니다.",
+      "신청한 해에 앞선 두 회계연도 내내 설립되어 있지 않았던 신청인에게는 담보(guarantee)를 요구합니다. 신고인은 신고서 제출을 다른 사람에게 맡길 수 있지만, 의무를 지키는 책임은 신고인에게 남습니다.",
+      "관할당국은 아래 네 가지 기준을 모두 갖춘 신청인에게 지위를 줍니다."
+     ],
+     "list": [
+      "관세법령, 조세 규칙, 시장남용 규칙, CBAM 규정을 중대하게 또는 되풀이해 어긴 적이 없고, 신청 전 5년 동안 경제활동과 관련한 중대한 범죄 기록이 없을 것",
+      "의무를 다할 재무적·운영적 능력을 보일 것",
+      "신청한 회원국에 설립되어 있을 것",
+      "EORI 번호를 받았을 것"
+     ],
+     "terms": [
+      {
+       "ko": "승인된 CBAM 신고인",
+       "en": "authorised CBAM declarant",
+       "abbr": "",
+       "text": "제17조에 따라 관할당국의 승인을 받은 사람입니다. CBAM 제품을 수입하고 신고서와 인증서를 내는 주체입니다."
+      },
+      {
+       "ko": "간접 세관 대리인",
+       "en": "indirect customs representative",
+       "abbr": "",
+       "text": "수입자가 규정 (EU) No 952/2013 제18조에 따라 지정해 수입자를 위해 세관신고를 하게 하는 대리인입니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-4",
+       "contains": [
+        "Goods shall be imported into the customs territory of the Union only by an authorised CBAM declarant."
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-5",
+       "contains": [
+        "Any importer established in a Member State shall, prior to importing goods into the customs territory of the Union, apply for the status of authorised CBAM declarant",
+        "Where an importer is not established in a Member State, the indirect customs representative shall obtain the status of authorised CBAM declarant",
+        "shall be subject to the obligations applicable to the importer pursuant to this Regulation",
+        "The authorised CBAM declarant shall remain responsible for compliance with the obligations applicable to it under this Regulation.",
+        "3. The application for an authorisation shall be submitted via the CBAM registry established in accordance with Article 14.",
+        "An authorised CBAM declarant may delegate the submission of CBAM declarations as referred to in Article 6 to a person acting on behalf and in the name of that authorised CBAM declarant. The authorised CBAM declarant shall remain responsible for compliance with the obligations applicable to it under this Regulation.",
+        "1b. Where Article 2a applies, the importer shall submit the application for an authorisation in cases where that importer expects to exceed the single mass-based threshold."
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-17",
+       "contains": [
+        "the competent authority in the Member State in which the applicant is established shall grant the status of authorised CBAM declarant",
+        "The status of authorised CBAM declarant shall be recognised in all Member States.",
+        "the applicant demonstrates its financial and operational capacity to fulfil its obligations under this Regulation",
+        "the applicant has been assigned an EORI number",
+        "(a) the applicant has not been involved in a serious infringement or in repeated infringements of customs legislation, taxation rules, market abuse rules or this Regulation and delegated and implementing acts adopted under this Regulation, and in particular the applicant has no record of serious criminal offences relating to its economic activity during the five years preceding the application;",
+        "(c) the applicant is established in the Member State where the application is submitted; and",
+        "has submitted an application in accordance with Article 5 by 31 March 2026, such an importer or indirect customs representative may provisionally continue to import goods until the competent authority takes a decision under this Article.",
+        "may provisionally continue to import goods until the competent authority takes a decision under this Article.",
+        "the competent authority shall require the provision of a guarantee if the applicant was not established throughout the two financial years preceding the year when the application in accordance with Article 5(1) was submitted."
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-3",
+       "contains": [
+        "where the customs declaration is lodged by an indirect customs representative in accordance with Article 18 of Regulation (EU) No 952/2013, the person on whose behalf such a declaration is lodged"
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#handbook-penalties",
+       "text": "위반과 제재"
+      }
+     ]
+    },
+    {
+     "id": "operators",
+     "title": "제3국의 사업자와 사업장 등록",
+     "body": [
+      "사업자(operator)는 제3국에서 사업장(installation)을 운영하거나 관리하는 사람입니다. 사업장을 관리하는 모회사도 포함됩니다. 사업자가 요청하면 집행위원회가 사업자와 사업장의 정보를 CBAM 등록부에 등록합니다. 등록은 통지일부터 5년간 유효합니다.",
+      "등록한 사업자에 대해 제10조(5)는 할 일을 정합니다. 부속서 IV의 방법으로 제품별 내재배출량을 정하고, 인정받은 검증기관의 검증을 받고, 검증보고서와 기록을 검증 후 4년간 보관하는 일입니다. 사업자는 검증된 정보를 신고인에게 알려 줄 수 있고, 신고인은 그것으로 검증 의무를 채울 수 있습니다.",
+      "실제배출량으로 내재배출량을 산정하면 사업자는 사업자 배출량 보고서(operator's emissions report)를 작성합니다. 보고서는 영어로 냅니다. 등록한 사업자는 이를 CBAM 등록부로, 등록하지 않은 사업자는 다른 방법으로 검증기관에 보냅니다."
+     ],
+     "terms": [
+      {
+       "ko": "사업자",
+       "en": "operator",
+       "abbr": "",
+       "text": "제3국에서 사업장을 운영하거나 관리하는 사람입니다. 사업장을 관리하는 모회사도 포함됩니다."
+      },
+      {
+       "ko": "사업장",
+       "en": "installation",
+       "abbr": "",
+       "text": "생산공정이 이루어지는 고정된 기술 단위입니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-3",
+       "contains": [
+        "means any person that operates or controls an installation in a third country, including a parent company that controls an installation in a third country"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-10",
+       "contains": [
+        "The Commission shall, upon request by an operator of an installation located in a third country, register the information on that operator and on its installation in the CBAM registry",
+        "The registration shall be valid for a period of five years",
+        "ensure that the embedded emissions referred to in point (a) of this paragraph are verified",
+        "for a period of four years after the verification has been performed",
+        "The authorised CBAM declarant shall be entitled to use that disclosed information in order to fulfil the obligation referred to in Article 8."
+       ]
+      },
+      {
+       "act": "32025R2547",
+       "part": "art-10",
+       "contains": [
+        "Where the embedded emissions are calculated based on actual emissions, the operators shall prepare an emissions report",
+        "The operator’s emissions report shall be submitted in English."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "verifiers",
+     "title": "검증기관",
+     "body": [
+      "실제배출량으로 내재배출량을 정하면 신고인은 신고한 내재배출량이 인정받은 검증기관(verifier)의 검증을 받도록 해야 합니다. 검증은 부속서 VI의 원칙에 따릅니다.",
+      "검증기관은 국가인정기구(national accreditation body)가 인정한 법인입니다. 인정을 받은 검증기관은 그 국가인정기구가 있는 회원국의 관할당국에 CBAM 등록부 등록을 요청합니다. 요청은 인정일부터 2개월 안에 하되, 2026년 9월 1일 전에는 할 수 없습니다."
+     ],
+     "terms": [
+      {
+       "ko": "검증기관",
+       "en": "verifier",
+       "abbr": "",
+       "text": "내재배출량이 원칙대로 산정되었는지 확인하는 기관입니다. CBAM에서는 국가인정기구의 인정을 받은 법인이어야 합니다."
+      },
+      {
+       "ko": "국가인정기구",
+       "en": "national accreditation body",
+       "abbr": "",
+       "text": "규정 (EC) No 765/2008 제4조(1)에 따라 회원국마다 지정한 인정 기관입니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-8",
+       "contains": [
+        "Where the embedded emissions are determined on the basis of actual emissions, the authorised CBAM declarant shall ensure that the total embedded emissions declared",
+        "based on the verification principles set out in Annex VI"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-18",
+       "contains": [
+        "A national accreditation body may, on request, accredit a legal person to be a verifier for the purpose of this Regulation"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-10a",
+       "contains": [
+        "the verifier shall submit a request for registration in the CBAM registry to the competent authority of the Member State in which the national accreditation body is established",
+        "within two months of the date on which the accreditation was granted, but not before 1 September 2026"
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#handbook-verification",
+       "text": "검증"
+      }
+     ]
+    },
+    {
+     "id": "authorities",
+     "title": "관할당국, 집행위원회, CBAM 등록부",
+     "body": [
+      "회원국마다 관할당국(competent authority)을 지정합니다. 관할당국은 신고인 지위를 주거나 거두고, 신고서를 검토할 수 있으며, 신고한 인증서 수가 틀렸다고 결론 내리면 모자란 인증서의 제출을 요구합니다. 집행위원회는 관할당국을 돕고 그 활동을 조정하며, 신고서 검토에서 감독 역할을 맡습니다.",
+      "집행위원회는 CBAM 등록부(CBAM registry)를 만듭니다. 등록부에는 신고인마다 계정이 있고, 인증서의 식별번호, 판매가격, 판매일, 제출·환매·말소일이 기록됩니다. 제3국의 사업자와 사업장, 인정받은 검증기관의 정보는 등록부의 별도 부분에 담깁니다.",
+      "등록부의 정보는 원칙적으로 비공개입니다. 다만 사업자의 이름, 주소, 사업장 위치 등과 인정받은 검증기관의 정보는 공개됩니다. 사업자는 자기 정보를 공개하지 않기로 고를 수 있습니다."
+     ],
+     "terms": [
+      {
+       "ko": "관할당국",
+       "en": "competent authority",
+       "abbr": "",
+       "text": "CBAM 규정의 업무를 맡도록 회원국마다 지정한 당국입니다."
+      },
+      {
+       "ko": "CBAM 등록부",
+       "en": "CBAM registry",
+       "abbr": "",
+       "text": "집행위원회가 운영하는 전자 데이터베이스입니다. 신고인의 계정과 인증서, 제3국 사업자와 검증기관의 정보가 담깁니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-11",
+       "contains": [
+        "Each Member State shall designate the competent authority to carry out the functions and duties under this Regulation"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-12",
+       "contains": [
+        "the Commission shall assist the competent authorities in carrying out their functions and duties under this Regulation and shall coordinate their activities"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-19",
+       "contains": [
+        "The Commission shall have the oversight role in the review of CBAM declarations.",
+        "shall request that the authorised CBAM declarant surrender the additional CBAM certificates within one month",
+        "may also review a CBAM declaration within the period referred to in the first subparagraph of this paragraph. The competent authority shall communicate the initiation and the results of a review to the Commission, via the CBAM registry.",
+        "Where the competent authority concludes that the declared number of CBAM certificates to be surrendered is incorrect, or that no CBAM declaration has been submitted in accordance with Article 6, it shall determine the number of CBAM certificates which should have been surrendered by the authorised CBAM declarant, taking into account the information submitted by the Commission."
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-14",
+       "contains": [
+        "The Commission shall establish a CBAM registry of authorised CBAM declarants",
+        "the identification number, the sale price, the date of sale, and the date of surrender, repurchase or cancellation of CBAM certificates",
+        "in a separate section of the registry, the information about the operators and installations in third countries",
+        "An operator may choose not to have its name, address, corporate or activity registration number, contact information and the location of its installations made accessible to the public.",
+        "shall be confidential, with the exception of the names, addresses, corporate or activity registration numbers, contact information of the operators, the location of installations in third countries and the information on accredited verifiers referred to in Article 10a(2)."
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-17",
+       "contains": [
+        "The competent authority shall revoke the status of authorised CBAM declarant"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "customs",
+     "title": "세관당국의 역할",
+     "body": [
+      "세관당국(customs authorities)은 승인된 CBAM 신고인이 아닌 사람의 CBAM 제품 수입을 허용하지 않습니다. 다만 소량 면제를 받는 수입자는 예외입니다.",
+      "세관당국은 수입 신고된 제품의 정보를 집행위원회에 정기적으로, 자동으로 알립니다. 수입자나 신고인의 EORI 번호, 신고인의 CBAM 계정번호, 8자리 CN 코드, 수량, 원산지, 세관신고 일자, 세관 절차가 들어갑니다. 집행위원회는 이 정보를 CBAM 등록부의 자료와 맞춰 보고, 소량 면제의 임계값을 지키는지도 살핍니다."
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-25",
+       "contains": [
+        "Without prejudice to Article 2a, the customs authorities shall not allow the importation of goods by any person other than an authorised CBAM declarant.",
+        "the eight-digit CN code of the goods, the quantity, the country of origin, the date of the customs declaration and the customs procedure",
+        "cross-check that information with the data in the CBAM registry"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-25a",
+       "contains": [
+        "The Commission shall monitor the imports of goods for the purpose of monitoring the compliance with the single mass-based threshold."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "korea-eu",
+     "title": "한국의 생산자와 EU의 수입자",
+     "body": [
+      "CBAM 규정이 정한 신고와 인증서 제출의 의무는 승인된 CBAM 신고인이 집니다. 신고서 제출, 인증서 구매와 제출, 실제배출량을 쓸 때의 검증, 기록 보관이 그렇습니다. 한국의 생산자는 EU 밖의 사업자로서 등록을 요청할지를 스스로 정하며, 등록한 뒤에는 제10조(5)의 일을 해야 합니다.",
+      "실제배출량을 쓰려면 사업자의 자료가 필요합니다. 이행규정 (EU) 2025/2547은 이때 사업자가 사업자 배출량 보고서를 작성하도록 정합니다. 아래 표는 원문이 각자에게 정한 일을 나눈 것입니다."
+     ],
+     "table": {
+      "head": [
+       "할 일",
+       "누가",
+       "근거"
+      ],
+      "rows": [
+       [
+        "승인된 CBAM 신고인 지위 신청",
+        "EU의 수입자 또는 간접 세관 대리인",
+        "제5조"
+       ],
+       [
+        "CBAM 신고서 제출과 인증서 제출",
+        "승인된 CBAM 신고인",
+        "제6조, 제22조"
+       ],
+       [
+        "실제배출량의 검증을 받도록 함",
+        "승인된 CBAM 신고인",
+        "제8조(1)"
+       ],
+       [
+        "CBAM 등록부에 등록 요청(선택)",
+        "제3국의 사업자",
+        "제10조(1)"
+       ],
+       [
+        "내재배출량 산정, 검증, 기록 보관(등록한 경우)",
+        "제3국의 사업자",
+        "제10조(5)"
+       ],
+       [
+        "사업자 배출량 보고서 작성(실제배출량을 쓸 때)",
+        "제3국의 사업자",
+        "이행규정 (EU) 2025/2547 제10조"
+       ]
+      ]
+     },
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-6",
+       "contains": [
+        "each authorised CBAM declarant shall use the CBAM registry referred to in Article 14 to submit a CBAM declaration"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-22",
+       "contains": [
+        "the authorised CBAM declarant shall surrender via the CBAM registry a number of CBAM certificates"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-7",
+       "contains": [
+        "The authorised CBAM declarant shall keep records of the information required to calculate the embedded emissions"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-10",
+       "contains": [
+        "upon request by an operator of an installation located in a third country",
+        "determine the embedded emissions calculated in accordance with the methods set out in Annex IV"
+       ]
+      },
+      {
+       "act": "32025R2547",
+       "part": "art-10",
+       "contains": [
+        "the operators shall prepare an emissions report"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cycle",
+   "title": "한 해의 일정",
+   "lead": "CBAM 신고서와 인증서를 둘러싼 한 해의 기한을 차례로 봅니다. 2026년 수입분은 2027년에 처음 신고하고 제출합니다.",
+   "sections": [
+    {
+     "id": "declaration",
+     "title": "CBAM 신고서의 기한과 내용",
+     "body": [
+      "승인된 CBAM 신고인은 매년 9월 30일까지 CBAM 등록부를 통해 지난 역년에 대한 CBAM 신고서(CBAM declaration)를 냅니다.",
+      "신고인은 산정에 쓴 정보의 기록을 부속서 V의 요건대로 남겨야 합니다. 기록은 신고서를 냈거나 냈어야 할 해의 다음 4년째 해가 끝날 때까지 보관합니다.",
+      "신고서에는 아래 내용이 들어갑니다."
+     ],
+     "list": [
+      "지난해 수입한 제품의 종류별 총량(전력은 메가와트시, 그 밖의 제품은 톤). 단일 중량 임계값 아래의 수입분도 포함",
+      "그 제품의 총 내재배출량(제7조로 산정하고, 실제배출량이면 제8조로 검증한 값)",
+      "제출할 CBAM 인증서의 총수(제3국에서 낸 탄소가격에 따른 공제와 무상할당 조정을 거친 수)",
+      "해당하면 인정받은 검증기관이 낸 검증보고서의 사본"
+     ],
+     "terms": [
+      {
+       "ko": "CBAM 신고서",
+       "en": "CBAM declaration",
+       "abbr": "",
+       "text": "승인된 CBAM 신고인이 해마다 지난해 수입분의 물량, 내재배출량, 제출할 인증서 수를 담아 내는 신고서입니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-6",
+       "contains": [
+        "By 30 September of each year, and for the first time in 2027 for the year 2026",
+        "including the imported goods below the single mass-based threshold",
+        "the total embedded emissions in the goods referred to in point (a) of this paragraph",
+        "the total number of CBAM certificates to be surrendered",
+        "copies of verification reports, issued by accredited verifiers"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-7",
+       "contains": [
+        "until the end of the fourth year after the year in which the CBAM declaration has been or should have been submitted"
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#calendar",
+       "text": "CBAM 일정"
+      }
+     ]
+    },
+    {
+     "id": "first-year",
+     "title": "2026년 수입분의 첫 신고",
+     "body": [
+      "2026년에 수입한 제품은 2027년 9월 30일까지 처음으로 신고합니다. 같은 날까지 그 신고서에 적은 수의 인증서도 처음으로 제출합니다.",
+      "2026년분에는 몇 가지 다른 규칙이 있습니다. 2026년분으로 산 인증서는 2027년에만 환매할 수 있고, 남은 것은 2027년 11월 1일에 말소됩니다. 2026년분 인증서의 가격은 수입한 분기의 평균 가격으로 정합니다."
+     ],
+     "table": {
+      "head": [
+       "날짜",
+       "할 일",
+       "근거"
+      ],
+      "rows": [
+       [
+        "2027년 2월 1일부터",
+        "공통 중앙 플랫폼에서 인증서 판매 시작",
+        "제20조(1)"
+       ],
+       [
+        "2027년 각 분기 말",
+        "그해 수입분 내재배출량의 50% 이상에 해당하는 인증서 보유",
+        "제22조(2)"
+       ],
+       [
+        "2027년 9월 30일까지",
+        "2026년분 CBAM 신고서 제출과 인증서 제출",
+        "제6조(1), 제22조(1)"
+       ],
+       [
+        "2027년 10월 31일까지",
+        "남은 인증서의 환매 요청",
+        "제23조(1), (2a)"
+       ],
+       [
+        "2027년 11월 1일",
+        "2026년분으로 산 인증서 가운데 남은 것 말소",
+        "제24조(2)"
+       ]
+      ]
+     },
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-6",
+       "contains": [
+        "By 30 September of each year, and for the first time in 2027 for the year 2026"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-22",
+       "contains": [
+        "By 30 September of each year, and for the first time in 2027 for the year 2026, the authorised CBAM declarant shall surrender"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-23",
+       "contains": [
+        "CBAM certificates purchased in 2027 in respect of the embedded emissions for the year 2026 may only be repurchased in 2027."
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-24",
+       "contains": [
+        "on 1 November 2027, the Commission shall cancel any CBAM certificates purchased in respect of the embedded emissions for the year 2026"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-21",
+       "contains": [
+        "as the quarterly average of the closing prices of EU ETS allowances on the auction platform"
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#calendar",
+       "text": "CBAM 일정"
+      },
+      {
+       "href": "#handbook-price",
+       "text": "인증서 가격과 구매"
+      }
+     ]
+    },
+    {
+     "id": "surrender",
+     "title": "인증서 제출과 분기 말 보유 의무",
+     "body": [
+      "신고인은 매년 9월 30일까지 지난 역년에 대해 CBAM 신고서에 적은 수의 인증서를 CBAM 등록부를 통해 제출(surrender)합니다. 그 수는 신고한 내재배출량에 무상할당 조정과 제3국 탄소가격 공제를 반영한 것입니다. 필요한 수의 인증서가 계정에 있도록 해야 합니다.",
+      "2027년부터 신고인은 각 분기 말 계정에 있는 인증서 수가 그해 초부터 수입한 모든 제품의 내재배출량의 50% 이상이 되도록 해야 합니다. 이때 내재배출량은 마크업을 더하지 않은 기본값으로 정하거나, 전년에 제출한 인증서 수로 정합니다. 뒤의 방법은 전년에 신고한 것과 같은 CN 코드와 원산지의 제품을 수입할 때 쓸 수 있습니다. 어느 쪽이든 무상할당 조정을 반영합니다.",
+      "단일 중량 임계값을 넘긴 신고인은 넘긴 분기의 다음 분기 말까지 이 의무를 지킵니다.",
+      "보유량이 모자라면 관할당국이 신고인에게 알리고, 신고인은 통지일부터 1개월 안에 인증서를 채워야 합니다."
+     ],
+     "terms": [
+      {
+       "ko": "제출",
+       "en": "surrender",
+       "abbr": "",
+       "text": "신고한 내재배출량에 대해 CBAM 인증서를 상계하는 것입니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-22",
+       "contains": [
+        "corresponds to the embedded emissions declared in accordance with Article 6(2), point (c), and verified in accordance with Article 8",
+        "at the end of each quarter corresponds to at least 50 % of the embedded emissions in all goods it has imported since the beginning of the calendar year",
+        "without the mark-up as referred to in point 4.1 of that Annex",
+        "the adjustment for free allocation referred to in Article 31 shall be taken into account",
+        "by the end of the quarter following that in which the single mass-based threshold is exceeded",
+        "within one month of such notification",
+        "provided that the customs declaration for the import of goods refers to the same goods by CN code and countries of origin as the CBAM declaration submitted in the calendar year preceding the current year."
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-6",
+       "contains": [
+        "(c) the total number of CBAM certificates to be surrendered, corresponding to the total embedded emissions referred to in point (b) of this paragraph after the reduction that is due on the account of the carbon price paid in a third country in accordance with Article 9 and the adjustment necessary to reflect the extent to which EU ETS allowances are allocated free of charge in accordance with Article 31;"
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#handbook-certificates",
+       "text": "제출할 인증서 수"
+      }
+     ]
+    },
+    {
+     "id": "repurchase",
+     "title": "남은 인증서의 환매",
+     "body": [
+      "제출하고 남은 인증서는 신고인이 요청하면 그 신고인이 설립된 회원국이 다시 삽니다. 이를 환매(repurchase)라고 합니다. 집행위원회가 회원국을 대신해 공통 중앙 플랫폼에서 환매합니다. 요청은 인증서를 제출한 해의 10월 31일까지 합니다.",
+      "환매할 수 있는 수는 인증서를 산 해에 제22조(2)에 따라 사야 했던 수까지입니다. 임계값을 넘을 것으로 보고 인증서를 샀으나 넘지 않았다면 산 인증서를 모두 환매할 수 있습니다. 환매 가격은 산 때의 가격입니다."
+     ],
+     "terms": [
+      {
+       "ko": "환매",
+       "en": "repurchase",
+       "abbr": "",
+       "text": "제출하고 남은 CBAM 인증서를 신고인의 요청에 따라 회원국이 산 가격 그대로 다시 사들이는 것입니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-23",
+       "contains": [
+        "the Member State where that authorised CBAM declarant is established shall repurchase the excess CBAM certificates",
+        "The authorised CBAM declarant shall submit the repurchase request by 31 October of each year during which CBAM certificates were surrendered.",
+        "shall be limited to the total number of CBAM certificates that the authorised CBAM declarant had an obligation to purchase pursuant to Article 22(2)",
+        "all those CBAM certificates shall be repurchased upon request",
+        "The repurchase price for each CBAM certificate shall be the price paid by the authorised CBAM declarant for that certificate at the time of purchase."
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#handbook-price",
+       "text": "인증서 가격과 구매"
+      }
+     ]
+    },
+    {
+     "id": "cancellation",
+     "title": "인증서의 말소",
+     "body": [
+      "집행위원회는 매년 11월 1일에 전전년에 사서 계정에 남아 있는 인증서를 말소(cancellation)합니다. 예를 들어 어느 해에 산 인증서는 두 해 뒤 11월 1일에 말소됩니다. 말소에는 보상이 없습니다.",
+      "제출할 인증서 수를 두고 회원국에서 분쟁이 진행 중이면, 다투는 수만큼은 말소를 미룹니다."
+     ],
+     "terms": [
+      {
+       "ko": "말소",
+       "en": "cancellation",
+       "abbr": "",
+       "text": "계정에 남아 기한이 지난 CBAM 인증서를 집행위원회가 보상 없이 없애는 것입니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-24",
+       "contains": [
+        "On 1 November of each year, the Commission shall cancel any CBAM certificates that were purchased during the year before the previous calendar year",
+        "Those CBAM certificates shall be cancelled without any compensation.",
+        "the Commission shall suspend the cancellation of the CBAM certificates to the extent corresponding to the disputed amount"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "embedded",
+   "title": "내재배출량",
+   "lead": "CBAM에서 값을 매기는 대상인 내재배출량이 무엇이고, 어떤 틀로 산정하는지를 입문자의 눈높이로 설명합니다.",
+   "sections": [
+    {
+     "id": "definitions",
+     "title": "내재배출량, 직접배출량, 간접배출량",
+     "body": [
+      "내재배출량(embedded emissions)은 제품을 생산하는 동안 나온 직접배출량과, 생산공정에서 쓴 전력의 생산에서 나온 간접배출량을 합친 것입니다. 부속서 IV와 제7조(7)에 따른 이행법의 방법으로 산정합니다.",
+      "직접배출량(direct emissions)은 제품의 생산공정에서 나온 배출량입니다. 생산공정에서 쓴 열과 냉기를 만들 때 나온 배출량도 포함하며, 열이나 냉기를 어디서 만들었는지는 묻지 않습니다. 간접배출량(indirect emissions)은 생산공정에서 쓴 전력을 만들 때 나온 배출량입니다. 전력을 어디서 만들었는지는 묻지 않습니다.",
+      "배출량은 tCO2e로 셉니다. 1 tCO2e는 CO2 1톤, 또는 부속서 I의 다른 온실가스 가운데 지구온난화지수가 그와 같은 양입니다."
+     ],
+     "terms": [
+      {
+       "ko": "내재배출량",
+       "en": "embedded emissions",
+       "abbr": "",
+       "text": "제품 생산 중의 직접배출량과 생산공정에서 쓴 전력의 간접배출량을 합친 것입니다."
+      },
+      {
+       "ko": "직접배출량",
+       "en": "direct emissions",
+       "abbr": "",
+       "text": "제품의 생산공정에서 나온 배출량입니다. 공정에서 쓴 열과 냉기의 생산에서 나온 배출량을 포함합니다."
+      },
+      {
+       "ko": "간접배출량",
+       "en": "indirect emissions",
+       "abbr": "",
+       "text": "제품의 생산공정에서 쓴 전력을 생산할 때 나온 배출량입니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-3",
+       "contains": [
+        "means direct emissions released during the production of goods and indirect emissions from the production of electricity that is consumed during the production processes",
+        "including emissions from the production of heating and cooling that is consumed during the production processes, irrespective of the location of the production of the heating or cooling",
+        "means emissions from the production of electricity which is consumed during the production processes of goods, irrespective of the location of the production of the consumed electricity",
+        "means one metric tonne of CO2, or an amount of any other greenhouse gas listed in Annex I with an equivalent global warming potential"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "simple-complex",
+     "title": "단순제품, 복합제품, 전구물질",
+     "body": [
+      "단순제품(simple goods)은 내재배출량이 0인 투입물질과 연료만 써서 만든 제품입니다. 그 밖의 제품은 모두 복합제품(complex goods)입니다.",
+      "전구물질(precursor)은 생산공정에 들어가는 투입물질 가운데 부속서 I의 제품에 해당하는 것입니다. 복합제품의 내재배출량에는 전구물질의 내재배출량이 더해집니다. 다만 부속서 I에 있고 부속서 III 제1호의 나라가 원산지가 아닌 전구물질만 셉니다.",
+      "전구물질의 내재배출량은 그 전구물질을 만든 사업장의 자료를 적절히 측정할 수 있으면 그 사업장의 값을 씁니다. 복합제품의 공정은 실제배출량으로, 전구물질은 기본값으로 산정해 섞어 쓸 수도 있습니다."
+     ],
+     "terms": [
+      {
+       "ko": "단순제품",
+       "en": "simple goods",
+       "abbr": "",
+       "text": "내재배출량이 0인 투입물질과 연료만 필요한 생산공정에서 만든 제품입니다."
+      },
+      {
+       "ko": "복합제품",
+       "en": "complex goods",
+       "abbr": "",
+       "text": "단순제품이 아닌 제품입니다. 내재배출량이 있는 전구물질을 써서 만듭니다."
+      },
+      {
+       "ko": "전구물질",
+       "en": "precursor",
+       "abbr": "",
+       "text": "생산공정에 들어가는 투입물질 가운데 CBAM 규정 부속서 I의 제품에 해당하는 것입니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "annex-iv",
+       "contains": [
+        "means goods produced in a production process requiring exclusively input materials (precursors) and fuels having zero embedded emissions",
+        "means goods other than simple goods",
+        "Only input materials (precursors) listed in Annex I and originating in third countries and territories that are not exempted pursuant to point 1 of Annex III are to be considered.",
+        "the operator of the installation shall use the value of emissions resulting from the installation where the input material (precursor) was produced",
+        "provided that that installation’s data can be adequately measured."
+       ]
+      },
+      {
+       "act": "32025R2547",
+       "part": "art-1",
+       "contains": [
+        "means any input material into a production process included in the list of goods set out in Annex I to Regulation (EU) 2023/956"
+       ]
+      },
+      {
+       "act": "32025R2547",
+       "part": "art-15",
+       "contains": [
+        "The specific embedded emissions for complex goods may be calculated by determining actual emissions for the production processes within the installation producing the complex goods, and default values for one or more precursors"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "framework",
+     "title": "사업장, 생산공정, 시스템 경계",
+     "body": [
+      "산정은 사업장(installation) 단위에서 시작합니다. 사업자는 사업장 안에서 같은 기능단위(functional unit)가 적용되는 제품의 생산공정(production process)을 정합니다. 기능단위는 보통 같은 CN 코드로 분류되는 제품의 톤입니다. 다만 전력은 kWh입니다. 비료는 들어 있는 질소의 킬로그램(2808 00 00, 2814, 3105)이나 보충 단위(그 밖의 비료)입니다. 클링커, 포틀랜드 시멘트, 그 밖의 수경성 시멘트(2523 10 00, 2523 21 00, 2523 29 00, 2523 90 00)는 들어 있는 클링커의 톤입니다.",
+      "어느 공정까지 산정에 넣을지는 시스템 경계(system boundary)가 정합니다. 시스템 경계는 품목군마다 이행규정 (EU) 2025/2547 부속서 I에 정해져 있습니다. 시스템 경계는 직접배출량, 부속서 II에 없는 제품의 간접배출량, 전구물질의 내재배출량을 덮습니다.",
+      "사업장의 배출량을 생산공정에 나누어 귀속시키고, 해당하는 전구물질의 내재배출량을 더한 뒤, 공정의 활동수준(activity level)으로 나눕니다. 그 결과가 제품 1톤(또는 기능단위)당 내재배출량입니다."
+     ],
+     "terms": [
+      {
+       "ko": "시스템 경계",
+       "en": "system boundary",
+       "abbr": "",
+       "text": "같은 품목군에 속하는 제품의 내재배출량 계산에 넣는 화학적·물리적 공정의 묶음입니다."
+      },
+      {
+       "ko": "기능단위",
+       "en": "functional unit",
+       "abbr": "",
+       "text": "내재배출량 계산에 쓰는 기준 단위입니다. 보통 같은 CN 코드의 제품 톤이며, 전력, 비료, 일부 시멘트 품목은 따로 정합니다."
+      },
+      {
+       "ko": "활동수준",
+       "en": "activity level",
+       "abbr": "",
+       "text": "보고기간 동안 생산공정의 시스템 경계 안에서 생산된, 같은 기능단위가 적용되는 제품의 양입니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32025R2547",
+       "part": "art-4",
+       "contains": [
+        "Operators of an installation shall identify, within the system boundaries of an installation, the production process of goods to which the same functional unit applies.",
+        "The quantities of goods produced in tonnes classified under the same CN code shall constitute the functional unit",
+        "For electricity, the kWh shall constitute the functional unit.",
+        "the tonnes of clinker contained in the goods produced under the respective CN codes shall constitute the functional unit",
+        "(a) for CN codes 2808 00 00 , 2814 , 3105 , the kilograms of nitrogen contained in the goods produced under the respective CN codes;",
+        "the supplementary units as laid down in Regulation (EEC) No 2658/87 of the goods produced under the respective CN codes.",
+        "For CN codes 2523 10 00 , 2523 21 00 , 2523 29 00 , 2523 90 00 , the tonnes of clinker contained in the goods produced under the respective CN codes shall constitute the functional unit."
+       ]
+      },
+      {
+       "act": "32025R2547",
+       "part": "art-3",
+       "contains": [
+        "defined per aggregated goods category in accordance with Annex I",
+        "The system boundaries shall cover direct emissions, indirect emissions for goods not listed in Annex II to Regulation (EU) 2023/956, and the embedded emissions of any precursor."
+       ]
+      },
+      {
+       "act": "32025R2547",
+       "part": "art-1",
+       "contains": [
+        "means the group of chemical or physical processes included in the calculation of embedded emissions of goods under the same aggregated goods category"
+       ]
+      },
+      {
+       "act": "guide-3",
+       "part": "sec-4-2-1",
+       "contains": [
+        "Then any relevant embedded emissions of precursor materials are added, and the result is divided by the activity level of each production process"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "reporting-period",
+     "title": "보고기간",
+     "body": [
+      "실제배출량을 정하려면 제품이 생산된 보고기간(reporting period)을 정해야 합니다. 2026년에 수입한 제품의 보고기간은 2026년입니다.",
+      "2026년이 아닌 해에 수입한 제품은 수입한 역년이 기본 보고기간입니다. 다만 실제 생산 시기를 밝힐 충분한 증거가 있으면 생산한 기간이 보고기간이 됩니다. 수입 전력의 보고기간은 수입한 해입니다.",
+      "전구물질의 기본 보고기간은 복합제품을 생산한 해입니다. 사업자가 검증기관에 실제 생산 시기의 충분한 증거를 내면 전구물질을 생산한 기간이 보고기간이 됩니다."
+     ],
+     "terms": [
+      {
+       "ko": "보고기간",
+       "en": "reporting period",
+       "abbr": "",
+       "text": "제품이 생산된 역년에 해당하는 기간으로서, 내재배출량을 정하는 기준으로 쓰는 기간입니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32025R2547",
+       "part": "art-7",
+       "contains": [
+        "Where a good was imported during the year 2026, the reporting period shall be the year 2026.",
+        "the reporting period shall by default be the calendar year during which the good was imported",
+        "if there is sufficient evidence to identify the actual time of production",
+        "the reporting period for electricity imported into the customs territory of the Union shall be the year of import"
+       ]
+      },
+      {
+       "act": "32025R2547",
+       "part": "art-13",
+       "contains": [
+        "The default reporting period of a precursor shall be the year of production of the complex good."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "actual-default",
+     "title": "실제배출량과 기본값",
+     "body": [
+      "전력이 아닌 제품의 내재배출량은 실제배출량(actual emissions)으로 정하거나 기본값(default values)을 참조해 정합니다. 실제배출량은 생산공정의 1차 데이터로 계산한 값이고, 기본값은 계산되거나 2차 데이터에서 끌어낸 값입니다.",
+      "수입 전력은 기본값으로 정합니다. 신고인이 부속서 IV 제5호의 조건을 갖췄음을 보이면 실제배출량을 쓸 수 있습니다. 간접배출량도 기본값으로 산정합니다. 사업장과 발전원이 직접 기술적으로 연결되어 있음을 보이거나, 사업자가 그만큼의 전력에 대해 제3국의 전력 생산자와 전력구매계약을 맺었으면 실제 내재배출량을 쓸 수 있습니다(부속서 IV 제6호).",
+      "실제배출량을 쓰면 신고한 내재배출량은 인정받은 검증기관의 검증을 받아야 합니다. 기본값의 수치와 마크업은 기본값과 마크업 장에서, 인증서 수의 계산은 제출할 인증서 수 장에서 다룹니다."
+     ],
+     "terms": [
+      {
+       "ko": "실제배출량",
+       "en": "actual emissions",
+       "abbr": "",
+       "text": "제품의 생산공정과 그 공정에서 쓴 전력의 생산에서 얻은 1차 데이터로 계산한 배출량입니다."
+      },
+      {
+       "ko": "기본값",
+       "en": "default value",
+       "abbr": "",
+       "text": "계산되거나 2차 데이터에서 끌어낸 값으로서 제품의 내재배출량을 나타내는 값입니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-7",
+       "contains": [
+        "based on the actual emissions in accordance with the methods set out in points 2 and 3 of Annex IV",
+        "by reference to default values in accordance with the methods set out in point 4.1 of Annex IV",
+        "Embedded emissions in imported electricity shall be determined by reference to default values",
+        "Embedded indirect emissions shall be calculated in accordance with the method set out in point 4.3 of Annex IV"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-3",
+       "contains": [
+        "means a value, which is calculated or drawn from secondary data, which represents the embedded emissions in goods",
+        "means the emissions calculated based on primary data from the production processes of goods"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "annex-iv",
+       "contains": [
+        "if it can demonstrate a direct technical link between the installation in which the imported good is produced and the electricity generation source",
+        "or if the operator of that installation has concluded a power purchase agreement with a producer of electricity located in a third country for an amount of electricity that is equivalent to the amount for which the use of a specific value is claimed."
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-8",
+       "contains": [
+        "Where the embedded emissions are determined on the basis of actual emissions, the authorised CBAM declarant shall ensure"
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#handbook-defaults",
+       "text": "기본값과 마크업"
+      },
+      {
+       "href": "#handbook-certificates",
+       "text": "제출할 인증서 수"
+      }
+     ]
+    },
+    {
+     "id": "indirect-goods",
+     "title": "간접배출량을 넣는 품목과 넣지 않는 품목",
+     "body": [
+      "부속서 II에 적힌 제품은 직접배출량만 산정하고 반영합니다. 부속서 II에 없는 부속서 I의 제품은 간접배출량도 넣습니다. 부속서 I과 부속서 II를 맞춰 보면 아래 표와 같습니다."
+     ],
+     "table": {
+      "head": [
+       "구분",
+       "제품"
+      ],
+      "rows": [
+       [
+        "직접배출량만(부속서 II)",
+        "철강(제72류의 해당 품목, 7301~7311, 7318, 7326), 알루미늄 전체, 수소(2804 10 00), 전력(2716 00 00)"
+       ],
+       [
+        "간접배출량도 포함",
+        "시멘트(ex 2507 00 80 포함), 비료 전체, 철광석 응결체(2601 12 00)"
+       ]
+      ]
+     },
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-7",
+       "contains": [
+        "For goods listed in Annex II only direct emissions shall be calculated and taken into account."
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "annex-ii",
+       "contains": [
+        "7326 – Other articles of iron or steel",
+        "7616 – Other articles of aluminium",
+        "2804 10 00 – Hydrogen",
+        "2716 00 00 – Electrical energy"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "annex-i",
+       "contains": [
+        "2523 10 00 – Cement clinkers",
+        "2601 12 00 – Agglomerated iron ores and concentrates",
+        "2808 00 00 – Nitric acid; sulphonitric acids"
+       ]
+      },
+      {
+       "act": "32025R2547",
+       "part": "art-3",
+       "contains": [
+        "indirect emissions for goods not listed in Annex II to Regulation (EU) 2023/956"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "defaults",
+   "title": "기본값과 마크업",
+   "lead": "실제배출량 자료가 없을 때 쓰는 기본값이 어떻게 정해지는지, 어느 표에서 찾는지, 해마다 마크업이 얼마나 붙는지를 설명합니다.",
+   "sections": [
+    {
+     "id": "how-set",
+     "title": "기본값을 정하는 방법",
+     "body": [
+      "기본값(default value)은 계산되거나 2차 데이터에서 끌어낸 값으로, 제품의 내재배출량을 나타냅니다. 전력이 아닌 제품의 내재배출량은 실제배출량으로 정하거나 기본값을 참조해 정합니다.",
+      "전력이 아닌 제품의 기본값은 수출국마다, 제품마다 정합니다. 그 나라의 평균 배출집약도(emission intensity)에 마크업(mark-up)을 더한 값입니다. 어떤 제품에 대해 그 수출국의 믿을 만한 자료를 쓸 수 없으면, 믿을 만한 자료가 있는 수출국 가운데 배출집약도가 가장 높은 10개국의 평균을 바탕으로 정합니다.",
+      "기본값은 구할 수 있는 가장 좋은 자료로 정합니다. 가장 좋은 자료는 믿을 수 있고 공개된 정보에 바탕을 둔 것이어야 합니다."
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-3",
+       "contains": [
+        "(27) ‘default value’ means a value, which is calculated or drawn from secondary data, which represents the embedded emissions in goods;"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-7",
+       "contains": [
+        "2. Embedded emissions in goods other than electricity shall be determined:",
+        "(b) by reference to default values in accordance with the methods set out in point 4.1 of Annex IV."
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "annex-iv",
+       "contains": [
+        "Default values shall be set at the average emission intensity of each exporting country and for each of the goods listed in Annex I other than electricity, increased by a proportionately designed mark-up.",
+        "When reliable data for the exporting country cannot be applied for a type of goods, the default values shall be based on the average emission intensity of the 10 exporting countries with the highest emission intensities for which reliable data can be applied for that type of goods.",
+        "Default values shall be determined based on the best available data. Best available data shall be based on reliable and publicly available information."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "tables",
+     "title": "기본값을 찾는 표",
+     "body": [
+      "기본값의 수치는 이행규정 (EU) 2025/2621의 부속서에 표로 실려 있습니다. 이 이행규정은 2026년 1월 1일부터 적용됩니다. 부속서 I과 부속서 IV는 정정 규정 (EU) 2026/1740이 새 글로 바꾸었고, 바뀐 표도 2026년 1월 1일부터 적용됩니다.",
+      "부속서 I의 표는 나라별로 나뉘어 있습니다. 품목마다 직접배출량, 간접배출량, 총배출량의 기본값이 제품 1톤당 이산화탄소 환산톤으로 적혀 있습니다. 인증서 수를 계산할 때에는 총배출량 칸의 값을 고릅니다. 직접배출량과 간접배출량 칸의 값은 참고용입니다.",
+      "표에 그 나라가 없으면 '그 밖의 국가와 영토' 표에서 그 품목의 값을 고릅니다. 나라는 있는데 값이 비어 있거나 칸에 줄표만 적혀 있을 때에도 같습니다."
+     ],
+     "table": {
+      "head": [
+       "부속서",
+       "쓰는 경우"
+      ],
+      "rows": [
+       [
+        "부속서 I",
+        "전력이 아닌 수입 제품의 내재배출량을 기본값으로 정할 때"
+       ],
+       [
+        "부속서 II",
+        "간접 내재배출량을 기본값으로 정할 때"
+       ],
+       [
+        "부속서 III",
+        "수입 전력의 내재 직접배출량을 기본값으로 정할 때"
+       ],
+       [
+        "부속서 IV",
+        "전구물질의 생산국을 알 수 없을 때"
+       ]
+      ]
+     },
+     "basis": [
+      {
+       "act": "32025R2621",
+       "part": "art-1",
+       "contains": [
+        "1. Where the embedded emissions in imported goods are determined on the basis of default values in accordance with Article 7(2), point (b), of Regulation (EU) 2023/956, the default values laid down in Annex I to this Regulation shall be used.",
+        "3. Where the specific indirect embedded emissions are determined on the basis of default values in accordance with Article 7(4) of Regulation (EU) 2023/956, the default values laid down in Annex II to this Regulation shall be used.",
+        "4. Where the embedded direct emissions in electricity imported into the customs territory of the Union are determined on the basis of default values in accordance with Article 7(3) of Regulation (EU) 2023/956, the default values laid down in Annex III to this Regulation shall be used.",
+        "5. By way of derogation from paragraph 2, where a country of production cannot be identified for a precursor, the default values laid down in Annex IV shall be used."
+       ]
+      },
+      {
+       "act": "32025R2621",
+       "part": "art-2",
+       "contains": [
+        "It shall apply from 1 January 2026."
+       ]
+      },
+      {
+       "act": "32026R1740",
+       "part": "art-1",
+       "contains": [
+        "1. Annex I to Implementing Regulation (EU) 2025/2621 is replaced by the text in Annex I to this Regulation.",
+        "2. Annex IV to Implementing Regulation (EU) 2025/2621 is replaced by the text in Annex II to this Regulation."
+       ]
+      },
+      {
+       "act": "32026R1740",
+       "part": "art-2",
+       "contains": [
+        "It shall apply from 1 January 2026."
+       ]
+      },
+      {
+       "act": "32026R1740",
+       "part": "annex-i-2",
+       "contains": [
+        "For the calculation of the number of CBAM certificates, the default values of the column ‘total emissions’ shall be selected and increased as follows:",
+        "Where a country or territory is not explicitly listed, the default value for the respective good from the table “Other countries and territories” needs to be selected. Where a country or territory is explicitly listed but no value is provided or the relevant field shows “–”, the default value for the respective good from the table “Other countries and territories” needs to be selected.",
+        "Default Value (total emissions) (tCO2eq/tonne of good)"
+       ]
+      },
+      {
+       "act": "32026R1740",
+       "part": "recitals",
+       "contains": [
+        "The default values for direct emissions and indirect emissions in Annex I have only been provided for information."
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#calc",
+       "text": "인증서 비용 추정"
+      },
+      {
+       "href": "#law-32026R1740.annex-i-2",
+       "text": "정정 규정이 바꾼 부속서 I"
+      }
+     ]
+    },
+    {
+     "id": "markup",
+     "title": "마크업",
+     "body": [
+      "마크업은 기본값을 쓸 때 평균 배출집약도에 더하는 비율입니다. 이행규정 (EU) 2025/2621의 전문은 생산국의 평균보다 배출이 많은 사업장과의 차이를 반영하고, 기본값을 썼을 때 내재배출량이 낮게 잡히지 않게 하려는 것이라고 설명합니다.",
+      "인증서 수를 계산할 때에는 부속서 I의 총배출량 기본값을 아래 표의 비율만큼 올립니다. 시멘트, 철강, 알루미늄, 수소 부문은 2026년 10%, 2027년 20%, 2028년부터 30%입니다. 비료 부문은 2026년부터 1%입니다.",
+      "전문은 마크업을 단계적으로 올리는 까닭으로, 제품 가격에 갑자기 지나친 영향이 가지 않게 하고 사업자에게 적응할 시간을 주는 것을 듭니다. 정정 규정의 전문은 마크업을 더한 최종 기본값이 CBAM 등록부 안에서 계산된다고 설명합니다.",
+      "분기 말 보유 의무를 따질 때 기본값을 기준으로 삼으면 마크업을 더하지 않은 값을 씁니다."
+     ],
+     "table": {
+      "head": [
+       "부문",
+       "2026년",
+       "2027년",
+       "2028년부터"
+      ],
+      "rows": [
+       [
+        "시멘트, 철강, 알루미늄, 수소",
+        "10%",
+        "20%",
+        "30%"
+       ],
+       [
+        "비료",
+        "1%",
+        "1%",
+        "1%"
+       ]
+      ]
+     },
+     "terms": [
+      {
+       "ko": "마크업",
+       "en": "mark-up",
+       "text": "기본값을 쓸 때 수출국의 평균 배출집약도에 더하는 비율입니다. 부문과 연도에 따라 다릅니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "annex-iv",
+       "contains": [
+        "This mark-up shall be determined in the implementing acts adopted pursuant to Article 7(7) and shall be set at an appropriate level to ensure the environmental integrity of the CBAM"
+       ]
+      },
+      {
+       "act": "32025R2621",
+       "part": "recitals",
+       "contains": [
+        "Therefore, the default values including mark-ups should be determined using a conservative approach that ensures that embedded emissions are not underestimated when applying default values.",
+        "To ensure the environmental integrity of the CBAM, default values for embedded emissions of goods other than electricity should include a mark-up to account for the deviations of an individual installation with emission levels higher than the relevant average emission intensity of the producer country.",
+        "To avoid immediate disproportionate impacts on prices of goods, and to give economic operators time to adapt, the mark-up should be gradually phased-in."
+       ]
+      },
+      {
+       "act": "32026R1740",
+       "part": "annex-i-2",
+       "contains": [
+        "For the calculation of the number of CBAM certificates, the default values of the column ‘total emissions’ shall be selected and increased as follows:",
+        "For goods in the cement, iron and steel, aluminium and hydrogen sectors, the mark-up shall be 10 % for the year 2026, 20 % for the year 2027 and 30 % for the year 2028 and onwards.",
+        "For goods in the fertiliser sector, the mark-up shall be 1 % for the year 2026 and onwards."
+       ]
+      },
+      {
+       "act": "32026R1740",
+       "part": "recitals",
+       "contains": [
+        "The final default values that include the mark-ups should then be calculated within the CBAM Registry"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-22",
+       "contains": [
+        "(a) default values in accordance with the methods set out in Annex IV without the mark-up as referred to in point 4.1 of that Annex; or"
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#handbook-cycle",
+       "text": "한 해의 일정(분기 말 보유 의무)"
+      }
+     ]
+    },
+    {
+     "id": "precursors",
+     "title": "전구물질의 기본값",
+     "body": [
+      "복합제품의 내재배출량에는 전구물질의 내재배출량이 들어갑니다. 복합제품의 공정은 실제값으로 정하고 전구물질만 기본값으로 정할 수도 있습니다. 그때에도 전구물질에는 부속서 I의 기본값을 씁니다.",
+      "전구물질을 어느 나라에서 만들었는지 알 수 없으면 부속서 IV의 값을 씁니다. 그 전구물질에 대해 배출집약도가 가장 높은 제3국의 기본값입니다. 높은 기본값을 피하려고 생산국을 알 수 없다고 주장하는 일을 막으려는 것입니다. 이 값에도 부속서 I에 적힌 마크업을 더합니다."
+     ],
+     "basis": [
+      {
+       "act": "32025R2621",
+       "part": "art-1",
+       "contains": [
+        "2. Where the embedded emissions of complex goods are determined on the basis of actual values, and the embedded emissions of precursors used in the production of those complex goods are determined on the basis of default values in accordance with Article 15 of Commission Implementing Regulation (EU) 2025/2547 (2), the default values laid down in Annex I shall be used for those precursors.",
+        "5. By way of derogation from paragraph 2, where a country of production cannot be identified for a precursor, the default values laid down in Annex IV shall be used."
+       ]
+      },
+      {
+       "act": "32025R2621",
+       "part": "recitals",
+       "contains": [
+        "To prevent operators that use a precursor produced in a third country for which a high default has been set from claiming that the country of production of a precursor is unknown in order to avoid being subject to that high default value, where the country of production of a precursor cannot be identified, the default value to be used for that precursor should be the default value of the third country with the highest emission intensities for that precursor."
+       ]
+      },
+      {
+       "act": "32026R1740",
+       "part": "annex-iv",
+       "contains": [
+        "The ‘highest default values’ in this Annex shall be increased by the mark-ups laid down in the introductory part of Annex I."
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#handbook-embedded",
+       "text": "내재배출량(단순제품, 복합제품, 전구물질)"
+      }
+     ]
+    },
+    {
+     "id": "routes",
+     "title": "기본값 표의 생산경로 표시",
+     "body": [
+      "부속서 I의 표에는 품목 옆에 (A)부터 (L)까지의 글자가 붙은 것이 있습니다. 그 기본값이 바탕으로 삼은 생산경로(production route)를 가리킵니다. 기본값으로 신고하면 무상할당 조정도 이 생산경로에 해당하는 CBAM 벤치마크로 계산합니다.",
+      "생산경로가 표시되지 않은 CN 코드의 CBAM 벤치마크는 생산경로와 무관합니다."
+     ],
+     "table": {
+      "head": [
+       "표시",
+       "생산경로"
+      ],
+      "rows": [
+       [
+        "(A)",
+        "회색 클링커·시멘트"
+       ],
+       [
+        "(B)",
+        "백색 클링커·시멘트"
+       ],
+       [
+        "(C)",
+        "탄소강, 고로·전로"
+       ],
+       [
+        "(D)",
+        "탄소강, 직접환원철·전기로"
+       ],
+       [
+        "(E)",
+        "탄소강, 철스크랩·전기로"
+       ],
+       [
+        "(F)",
+        "저합금강, 고로·전로"
+       ],
+       [
+        "(G)",
+        "저합금강, 직접환원철·전기로"
+       ],
+       [
+        "(H)",
+        "저합금강, 철스크랩·전기로"
+       ],
+       [
+        "(J)",
+        "고합금강(전기로)"
+       ],
+       [
+        "(K)",
+        "1차 알루미늄"
+       ],
+       [
+        "(L)",
+        "2차 알루미늄"
+       ]
+      ]
+     },
+     "terms": [
+      {
+       "ko": "생산경로",
+       "en": "production route",
+       "text": "생산공정에서 제품을 만드는 데 쓰는 특정한 기술입니다. 철강의 고로·전로나 전기로가 그 예입니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32026R1740",
+       "part": "annex-i-2",
+       "contains": [
+        "Where default values are used to determine the specific embedded emissions of a final good or of a precursor, the specific embedded free allocation shall be based on the corresponding underlying production route determining the CBAM benchmark (BM) as defined in Commission Implementing Regulation (EU) 2025/2620.",
+        "If no production route is indicated for a CN code, the CBAM benchmark (BM) is independent of the production route.",
+        "(A) grey clinker / cementw (B) white clinker / cement (C) Carbon Steel based on BF/BOF (D) Carbon Steel based on DRI/EAF (E) Carbon Steel based on Scrap/EAF (F) Low alloy Steel based on BF/BOF (G) Low alloy Steel based on DRI/EAF (H) Low alloy Steel based on scrap/EAF (J) High alloy Steel (based on EAF) (K) primary Aluminium (L) secondary Aluminium"
+       ]
+      },
+      {
+       "act": "32025R2620",
+       "part": "annex-0",
+       "contains": [
+        "(4) ‘production route’ means a specific technology used in a production process to produce goods.",
+        "Where default values are used to determine SEFA of a final good or of a precursor, the same production route shall be used as indicated in Annex I to Commission Implementing Regulation (EU) 2025/2621 (1) for the country of origin of that good or precursor."
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#handbook-certificates",
+       "text": "제출할 인증서 수(CBAM 벤치마크)"
+      }
+     ]
+    },
+    {
+     "id": "indirect",
+     "title": "간접배출량과 수입 전력의 기본값",
+     "body": [
+      "간접 내재배출량의 기본값은 부속서 II의 나라별 배출계수(emission factor)로 정합니다. 이행규정의 전문은 이 값을 원산지 전력망의 배출계수를 평균한 것으로, 믿을 만한 자료가 있는 가장 최근 5년의 단순 평균으로 계산한다고 설명합니다.",
+      "수입 전력의 기본값은 부속서 III에 나라별로 실려 있습니다. 전문은 믿을 만한 자료가 있는 가장 최근 5년의 연간 CO2 배출계수를 평균한다고 설명합니다.",
+      "신고인이 CBAM 규정 부속서 IV의 조건을 갖추었음을 보이면 간접배출량과 수입 전력에도 기본값 대신 실제 내재배출량을 쓸 수 있습니다."
+     ],
+     "basis": [
+      {
+       "act": "32025R2621",
+       "part": "art-1",
+       "contains": [
+        "3. Where the specific indirect embedded emissions are determined on the basis of default values in accordance with Article 7(4) of Regulation (EU) 2023/956, the default values laid down in Annex II to this Regulation shall be used.",
+        "4. Where the embedded direct emissions in electricity imported into the customs territory of the Union are determined on the basis of default values in accordance with Article 7(3) of Regulation (EU) 2023/956, the default values laid down in Annex III to this Regulation shall be used."
+       ]
+      },
+      {
+       "act": "32025R2621",
+       "part": "recitals",
+       "contains": [
+        "For indirect embedded emissions, the default value should be calculated based on the average of the emission factor of the country-of-origin electricity grid.",
+        "the emission factor should be calculated on the basis of the simple average of the emission factor for the most recent five-year period before the reporting for which reliable data is available.",
+        "the CO2 emission factor should be calculated on the basis of the average of the yearly CO2 emission factors for the most recent five-years period for which reliable data is available."
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-7",
+       "contains": [
+        "Embedded emissions in imported electricity shall be determined by reference to default values in accordance with the method set out in point 4.2 of Annex IV",
+        "Embedded indirect emissions shall be calculated in accordance with the method set out in point 4.3 of Annex IV"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "annex-iv",
+       "contains": [
+        "An authorised CBAM declarant may apply actual embedded emissions instead of default values for the calculation referred to in Article 7(3) if the following cumulative criteria are met:",
+        "An authorised CBAM declarant may apply actual embedded emissions instead of default values for the calculation referred to in Article 7(4)"
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#handbook-embedded",
+       "text": "내재배출량(실제값과 기본값)"
+      }
+     ]
+    },
+    {
+     "id": "revision",
+     "title": "기본값의 조정과 개정",
+     "body": [
+      "기본값은 가장 최신의 믿을 만한 정보에 따라 주기적으로 개정됩니다. 제3국이 낸 정보도 개정의 바탕이 될 수 있습니다.",
+      "기본값은 제3국 안의 특정 지역에 맞추어 조정될 수 있습니다. 그 지역의 객관적인 배출계수에 뚜렷한 특성이 있을 때입니다. 신고인이 믿을 만한 자료로 지역별 조정값이 집행위원회가 정한 기본값보다 낮다는 것을 보이면 그 조정값을 쓸 수 있습니다."
+     ],
+     "caveat": "이행규정 (EU) 2025/2621은 늦어도 2027년에 개정하도록 되어 있습니다. 전문은 기본값과 마크업을 늦어도 2027년 12월까지 개정한다고 적고 있어, 이 장의 수치는 그 뒤에 달라질 수 있습니다.",
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "annex-iv",
+       "contains": [
+        "Default values shall be revised periodically through the implementing acts adopted pursuant to Article 7(7) based on the most up-to-date and reliable information, including on the basis of information provided by a third country or group of third countries.",
+        "Default values can be adapted to particular areas and regions within third countries where specific characteristics prevail in terms of objective emission factors.",
+        "Where declarants for goods produced in a third country, a group of third countries or a region within a third country can demonstrate, on the basis of reliable data, that alternative region-specific adaptations of default values are lower than the default values determined by the Commission, such region-specific adaptations can be used."
+       ]
+      },
+      {
+       "act": "32025R2621",
+       "part": "art-2",
+       "contains": [
+        "It shall be revised in 2027 at the latest."
+       ]
+      },
+      {
+       "act": "32025R2621",
+       "part": "recitals",
+       "contains": [
+        "The default values and mark-ups shall be revised by December 2027 at the latest. The Commission should make all necessary efforts, in close collaboration with the Member States and based on a systematic and holistic review, to ensure that a revision of the default values can already be carried out in 2026."
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#rules-ir-default-values",
+       "text": "기본값 이행규정의 진행 상황"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "certificates",
+   "title": "제출할 인증서 수",
+   "lead": "신고한 내재배출량에 무상할당 조정과 제3국에서 낸 탄소가격을 반영하면 제출할 인증서 수가 나옵니다. 무상할당 조정을 이루는 CBAM 벤치마크, CBAM 계수, 부문 간 보정계수를 차례로 설명합니다.",
+   "sections": [
+    {
+     "id": "sum",
+     "title": "인증서 수를 구하는 틀",
+     "body": [
+      "CBAM 인증서(CBAM certificate) 한 개는 제품의 내재배출량 CO2e 1톤에 해당합니다. 승인된 CBAM 신고인은 CBAM 신고서에 지난해에 수입한 제품의 총 내재배출량과 제출할 인증서의 총수를 적습니다.",
+      "제출할 인증서 수는 총 내재배출량에 두 가지를 반영한 뒤의 수입니다. 하나는 EU 배출권거래제(EU ETS)의 무상할당을 반영하는 조정이고, 다른 하나는 제3국에서 낸 탄소가격에 따른 공제입니다.",
+      "가이던스 1은 이 계산을 아래 식으로 정리합니다. 제품마다 제품 1톤당 값으로 셈한 뒤 수입량을 곱합니다. 결과가 0보다 작으면 0으로 봅니다. 집행위원회의 질의응답(Q&A)은 한 제품에서 나온 음수를 다른 제품의 인증서 수에서 뺄 수 없다고 풀이합니다."
+     ],
+     "formula": {
+      "text": "제출할 인증서 수 = (고유 내재배출량 − 고유 내재무상할당량 − 탄소가격 공제분) × 수입량",
+      "parts": [
+       [
+        "고유 내재배출량",
+        "제품 1톤당 내재배출량입니다. 실제배출량이나 기본값으로 정합니다."
+       ],
+       [
+        "고유 내재무상할당량",
+        "그 제품을 EU 배출권거래제의 사업장에서 만들었다면 받았을 무상할당을 제품 1톤당으로 나타낸 값입니다."
+       ],
+       [
+        "탄소가격 공제분",
+        "제3국에서 낸 탄소가격(환급과 보상을 뺀 값)을 제품 1톤당으로 나타내 CBAM 인증서의 기준가격으로 나눈 값입니다. 내재배출량을 기본값으로 정했으면 연간 기본 탄소가격을 참조해서만 공제를 청구할 수 있습니다."
+       ],
+       [
+        "수입량",
+        "그해에 수입한 그 제품의 중량(톤)입니다. 전력은 MWh로 셉니다."
+       ]
+      ]
+     },
+     "terms": [
+      {
+       "ko": "고유 내재배출량",
+       "en": "specific embedded emissions",
+       "abbr": "SEE",
+       "text": "제품 1톤의 내재배출량입니다. 제품 1톤당 이산화탄소 환산톤으로 나타냅니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-3",
+       "contains": [
+        "(24) ‘CBAM certificate’ means a certificate in electronic format corresponding to one tonne of CO2e of embedded emissions in goods;"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-6",
+       "contains": [
+        "(c) the total number of CBAM certificates to be surrendered, corresponding to the total embedded emissions referred to in point (b) of this paragraph after the reduction that is due on the account of the carbon price paid in a third country in accordance with Article 9 and the adjustment necessary to reflect the extent to which EU ETS allowances are allocated free of charge in accordance with Article 31;"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "annex-iv",
+       "contains": [
+        "(c) ‘specific embedded emissions’ means the embedded emissions of one tonne of goods, expressed as tonnes of CO2e emissions per tonne of goods;"
+       ]
+      },
+      {
+       "act": "guide-1",
+       "part": "sec-2-4-2",
+       "contains": [
+        "𝐶𝐵𝐴𝑀 𝑂𝑏𝑙𝑖𝑔𝑎𝑡𝑖𝑜𝑛𝑔 = max [0 ; (𝑆𝐸𝐸𝑔 − 𝑆𝐸𝐹𝐴𝑔 − 𝑆𝐸𝐶𝑃𝑃𝑔 𝑅𝑃𝐶𝐵𝐴𝑀 )] × 𝑀𝑔",
+        "Reduced by an adjustment reflecting the free allocation that would be granted if the good had been produced by an installation covered by the EU ETS",
+        "RPCBAM is the reference price of a CBAM certificate, determined by the Commission as the yearly average of the prices determined pursuant to Article 21 of the CBAM Regulation[10], and",
+        "The term “Max(0; …)” ensures that any result of the formula which is below zero would become zero.",
+        "Being an effective carbon price, it is reduced by any rebate or other compensation received in that third country."
+       ]
+      },
+      {
+       "act": "qa",
+       "part": "sec-4-32",
+       "contains": [
+        "In such case, the negative value is set at 0 and cannot be deducted from the CBAM obligations of this declarant for its other CBAM goods."
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-9",
+       "contains": [
+        "Where the embedded emissions are determined on the basis of default values, a reduction may be claimed only by a reference to yearly default carbon prices."
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#handbook-carbon-price",
+       "text": "제3국에서 낸 탄소가격"
+      },
+      {
+       "href": "#handbook-embedded",
+       "text": "내재배출량"
+      }
+     ]
+    },
+    {
+     "id": "faa",
+     "title": "무상할당 조정의 뜻",
+     "body": [
+      "EU 배출권거래제에서 탄소누출(carbon leakage) 위험이 큰 업종은 배출권의 일부를 무상으로 받습니다. CBAM이 단계적으로 도입되는 동안 CBAM 대상 부문의 무상할당은 그에 맞추어 단계적으로 줄어듭니다.",
+      "그 기간에는 EU 배출권거래제에서 무상할당을 받는 만큼 수입 제품의 인증서 의무를 조정합니다. 가이던스 4는 이를 EU에서 만든 제품과 수입한 제품이 같은 수준의 탄소가격을 치르게 하려는 것이라고 설명합니다. 이것이 무상할당 조정(free allocation adjustment)이며, CBAM 규정 제31조가 근거입니다.",
+      "무상할당 조정은 제품마다 고유 내재무상할당량(specific embedded free allocation)에 수입량을 곱해 구합니다. 전력의 무상할당 조정은 0입니다. EU 배출권거래제가 발전에는 무상할당을 하지 않기 때문입니다."
+     ],
+     "formula": {
+      "text": "무상할당 조정 = 고유 내재무상할당량 × 수입량",
+      "parts": [
+       [
+        "고유 내재무상할당량",
+        "제품 1톤당 무상할당 조정분입니다. 제품 1톤당 이산화탄소 환산톤으로 나타냅니다."
+       ],
+       [
+        "수입량",
+        "CBAM 신고서가 다루는 해에 수입한 그 제품의 중량입니다."
+       ]
+      ]
+     },
+     "terms": [
+      {
+       "ko": "무상할당 조정",
+       "en": "free allocation adjustment",
+       "abbr": "FAA",
+       "text": "EU 배출권거래제의 무상할당을 반영해 제출할 CBAM 인증서 수를 줄이는 조정입니다."
+      },
+      {
+       "ko": "고유 내재무상할당량",
+       "en": "specific embedded free allocation",
+       "abbr": "SEFA",
+       "text": "제품 1톤당 무상할당 조정분입니다. 제품 1톤당 이산화탄소 환산톤으로 나타냅니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-31",
+       "contains": [
+        "1. The CBAM certificates to be surrendered in accordance with Article 22 of this Regulation shall be adjusted to reflect the extent to which EU ETS allowances are allocated free of charge in accordance with Article 10a of Directive 2003/87/EC to installations producing, within the Union, the goods listed in Annex I to this Regulation."
+       ]
+      },
+      {
+       "act": "32025R2620",
+       "part": "art-1",
+       "contains": [
+        "1. The adjustment to the number of CBAM certificates, as referred to in Article 31 of Regulation (EU) 2023/956 (‘free allocation adjustment’), shall be calculated in accordance with point 2 of the Annex to this Regulation.",
+        "2. The free allocation adjustment for electrical energy (CN code 2716 00 00) shall be zero."
+       ]
+      },
+      {
+       "act": "32025R2620",
+       "part": "annex-0",
+       "contains": [
+        "the free allocation adjustment pursuant to Article 31 of that Regulation shall be calculated using the following equation:",
+        "is the specific embedded free allocation of good g in year y expressed as t CO2e / tonne of good g;",
+        "is the mass of good g imported during the year to which the CBAM declaration applies;"
+       ]
+      },
+      {
+       "act": "32025R2620",
+       "part": "recitals",
+       "contains": [
+        "should in no case result in more favourable treatment for Union goods compared to goods imported into the customs territory of the Union.",
+        "no free allocation is to be made in respect of any electricity production. Therefore, the free allocation adjustment for electrical energy (CN 2716 00 00) should be zero."
+       ]
+      },
+      {
+       "act": "guide-4",
+       "part": "sec-2-1",
+       "contains": [
+        "The EU ETS industry sectors exposed to a significant risk of carbon leakage are entitled to receive a part of their emission allowances free of charge. While the CBAM is being phased in, free allocation in the EU ETS will be phased out accordingly for sectors covered by the CBAM. During that phase-out period, the CBAM obligation is adjusted to mirror the free allocation received under the EU ETS and to ensure an equivalent carbon price."
+       ]
+      },
+      {
+       "act": "guide-4",
+       "part": "sec-2-2-1",
+       "contains": [
+        "𝐹𝐴𝐴𝑔 = 𝑆𝐸𝐹𝐴𝑔,𝑦 ⋅ 𝑀𝑔 Equation (1)"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sefa",
+     "title": "고유 내재무상할당량을 이루는 세 값",
+     "body": [
+      "기본값으로 신고할 때 고유 내재무상할당량은 세 값을 곱해 구합니다. CBAM 계수, 부문 간 보정계수, CBAM 벤치마크입니다.",
+      "CBAM 벤치마크는 제품 1톤당 이산화탄소 환산톤으로 나타낸 기준값이고, 나머지 둘은 그 값에 곱하는 단위 없는 비율입니다. 세 값은 아래 절에서 차례로 설명합니다.",
+      "실제 데이터로 신고할 때에도 생산공정마다 같은 꼴의 식을 씁니다. 다만 벤치마크는 공정 관련 CBAM 벤치마크를 씁니다."
+     ],
+     "formula": {
+      "text": "고유 내재무상할당량 = CBAM 계수 × 부문 간 보정계수 × CBAM 벤치마크",
+      "parts": [
+       [
+        "CBAM 계수",
+        "지침 2003/87/EC 제10a조(1a)에 정해진 그해의 값입니다."
+       ],
+       [
+        "부문 간 보정계수",
+        "집행위원회가 정해 공표하는 그해의 값입니다."
+       ],
+       [
+        "CBAM 벤치마크",
+        "기본값으로 신고할 때에는 무상할당 조정 이행규정 부속서 제5호 표의 B열 값입니다."
+       ]
+      ]
+     },
+     "basis": [
+      {
+       "act": "32025R2620",
+       "part": "annex-0",
+       "contains": [
+        "Where default values are used, the SEFA is calculated using the following equation:",
+        "is the CBAM factor referred to in Article 10a(1a) of Directive 2003/87/EC for the year y (dimensionless);",
+        "is the cross-sectoral correction factor for the reporting period y determined by the Commission pursuant to Article 14(6) of Delegated Regulation (EU) 2019/331 and published in accordance with Article 10a(5) of Directive 2003/87/EC (dimensionless);",
+        "is the default CBAM benchmark set out in point 5, Column B, of this Annex;",
+        "is the process-related CBAM benchmark for the production process which yields good g, expressed as t CO2e / tonne of g produced, as set out in point 5, Column A, of this Annex."
+       ]
+      },
+      {
+       "act": "32025R2620",
+       "part": "recitals",
+       "contains": [
+        "The determination of the free allocation adjustment requires taking into account the quantity of imported goods, the cross-sectoral correction factor of the total amount of free allowances under the EU ETS, the relevant CBAM factor as established in Article 10a of Directive 2003/87/EC and a value combining the relevant EU ETS benchmarks for the goods concerned."
+       ]
+      },
+      {
+       "act": "guide-4",
+       "part": "sec-2-2-1-2",
+       "contains": [
+        "𝑆𝐸𝐹𝐴𝑔,𝑦 = 𝐶𝐵𝐴𝑀𝑦 ∙ 𝐶𝑆𝐶𝐹𝑦 ∙ 𝐵𝑀𝑔"
+       ]
+      },
+      {
+       "act": "guide-4",
+       "part": "sec-2-2-1-1",
+       "contains": [
+        "𝑆𝐹𝐴𝑃𝑟𝑜𝑐𝑔,𝑦 = 𝐶𝐵𝐴𝑀𝑦 ∙ 𝐶𝑆𝐶𝐹𝑦 ∙ 𝐵𝑀𝑔∗"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "benchmark",
+     "title": "CBAM 벤치마크",
+     "body": [
+      "EU 배출권거래제의 무상할당은 벤치마크(benchmark)를 바탕으로 합니다. 가이던스 4에 따르면 벤치마크는 부문마다 가장 효율적인 10% 사업장의 생산 단위당 평균 배출집약도로 정합니다.",
+      "EU 배출권거래제의 벤치마크는 하위사업장(sub-installation)에 적용되지만 무상할당 조정은 제품 단위로 적용됩니다. 그래서 품목 코드마다 CBAM 벤치마크(CBAM benchmark)를 따로 정했습니다. 전문은 CBAM 벤치마크가 제품이나 전구물질의 원산지와 관계없이 적용되어야 한다고 설명합니다.",
+      "무상할당 조정 이행규정 부속서 제5호의 표에는 두 가지 값이 있습니다. A열은 생산공정 하나에 대한 값으로 실제 데이터로 신고할 때 씁니다. B열은 기본 CBAM 벤치마크로 기본값으로 신고할 때 씁니다. 가이던스 4는 B열 값에 전구물질의 내재 무상할당이 이미 들어 있다고 설명합니다.",
+      "기본값으로 신고하면 기본값 표가 그 원산지의 품목에 표시한 생산경로와 같은 생산경로의 벤치마크를 씁니다. 같은 CN 코드에 철강의 합금 등급에 따라 값이 여럿이면 그 생산연도의 값 가운데 가장 높은 값을 씁니다."
+     ],
+     "terms": [
+      {
+       "ko": "CBAM 벤치마크",
+       "en": "CBAM benchmark",
+       "abbr": "BM",
+       "text": "무상할당 조정에 쓰는 품목별 기준값입니다. EU 배출권거래제의 벤치마크를 제품에 맞게 묶은 값으로, 제품 1톤당 이산화탄소 환산톤으로 나타냅니다."
+      }
+     ],
+     "caveat": "2026년의 CBAM 벤치마크는 추정한 EU 배출권거래제 벤치마크를 바탕으로 한 값입니다. 전문은 2026~2030년의 최종 벤치마크가 공표되면 이를 검토하고, 갱신한 값을 2027년 1월 1일부터 수입되는 제품에 적용한다고 적고 있습니다.",
+     "basis": [
+      {
+       "act": "guide-4",
+       "part": "sec-2-1-1",
+       "contains": [
+        "The basis for free allocation under the EU ETS is performance benchmarks which are determined using an average emissions intensity per unit of production of the 10% most efficient installations in the EU ETS in each sector."
+       ]
+      },
+      {
+       "act": "32025R2620",
+       "part": "recitals",
+       "contains": [
+        "By analogy with the EU ETS, that value should be called the CBAM benchmark.",
+        "Therefore, the CBAM benchmarks should be determined for each commodity code.",
+        "the CBAM benchmarks should be applicable independently of the country of origin of the imported good or precursor used.",
+        "the CBAM benchmarks in 2026 should be based on the estimated ETS benchmarks to be applied in the period from 2026 to 2030 and apply from 1 January 2026. These CBAM benchmarks should be reviewed at the latest one month after the final EU ETS benchmarks for the period from 2026 to 2030 are published. The updated CBAM benchmarks based on the final ETS benchmarks for the period 2026 to 2030 should apply to goods imported from 1 January 2027."
+       ]
+      },
+      {
+       "act": "32025R2620",
+       "part": "annex-0",
+       "contains": [
+        "is the process-related CBAM benchmark for the production process which yields good g, expressed as t CO2e / tonne of g produced, as set out in point 5, Column A, of this Annex.",
+        "is the default CBAM benchmark set out in point 5, Column B, of this Annex;",
+        "Where default values are used to determine SEFA of a final good or of a precursor, the same production route shall be used as indicated in Annex I to Commission Implementing Regulation (EU) 2025/2621 (1) for the country of origin of that good or precursor.",
+        "Where different alloy grades for steel are given in the table for the same CN code, the highest benchmark value given for the relevant production year is used."
+       ]
+      },
+      {
+       "act": "guide-4",
+       "part": "sec-2-2-1-2",
+       "contains": [
+        "Where relevant, this value includes the embedded free allocation for all precursors."
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#calc",
+       "text": "인증서 비용 추정"
+      },
+      {
+       "href": "#rules-ir-free-allocation",
+       "text": "무상할당 조정 이행규정의 진행 상황"
+      }
+     ]
+    },
+    {
+     "id": "factor",
+     "title": "CBAM 계수",
+     "body": [
+      "CBAM 계수(CBAM factor)는 EU 배출권거래제에서 CBAM 대상 부문의 무상할당을 줄이는 연도별 비율입니다. 무상할당의 단계적 폐지가 CBAM의 단계적 도입과 맞물리게 하는 값이며, 지침 2003/87/EC 제10a조(1a)가 정합니다.",
+      "같은 계수가 무상할당 조정의 식에도 들어갑니다. 계수가 작아질수록 무상할당 조정이 줄어들고, 그만큼 제출할 인증서가 늘어납니다.",
+      "지침은 CBAM 계수를 아래 표와 같이 정하고, 2034년부터는 CBAM 계수를 적용하지 않는다고 정합니다. 가이던스 1은 2034년부터 CBAM 제품의 내재배출량 전부가 CBAM 인증서로 덮이고 그 제품에 대한 무상할당은 없다고 설명합니다."
+     ],
+     "table": {
+      "head": [
+       "연도",
+       "CBAM 계수"
+      ],
+      "rows": [
+       [
+        "2026년",
+        "97.5%"
+       ],
+       [
+        "2027년",
+        "95.0%"
+       ],
+       [
+        "2028년",
+        "90.0%"
+       ],
+       [
+        "2029년",
+        "77.5%"
+       ],
+       [
+        "2030년",
+        "51.5%"
+       ],
+       [
+        "2031년",
+        "39.0%"
+       ],
+       [
+        "2032년",
+        "26.5%"
+       ],
+       [
+        "2033년",
+        "14.0%"
+       ],
+       [
+        "2034년부터",
+        "적용하지 않음(무상할당 없음)"
+       ]
+      ]
+     },
+     "terms": [
+      {
+       "ko": "CBAM 계수",
+       "en": "CBAM factor",
+       "text": "EU 배출권거래제에서 CBAM 대상 부문의 무상할당을 줄이는 연도별 비율입니다. 무상할당 조정의 식에도 같은 값이 들어갑니다."
+      }
+     ],
+     "caveat": "CBAM 계수는 지침 2003/87/EC가 정하므로 지침이 개정되면 값이 달라집니다. 개정 논의의 진행 상황은 규제 화면에서 볼 수 있습니다.",
+     "basis": [
+      {
+       "act": "32025R2620",
+       "part": "annex-0",
+       "contains": [
+        "is the CBAM factor referred to in Article 10a(1a) of Directive 2003/87/EC for the year y (dimensionless);"
+       ]
+      },
+      {
+       "source": "ets-directive",
+       "label": "제10a조(1a)",
+       "contains": [
+        "Subject to the application of Regulation (EU) 2023/956, no free allocation shall be given in relation to the production of goods listed in Annex I to that Regulation.",
+        "A factor reducing the free allocation for the production of those goods shall be applied (CBAM factor).",
+        "shall be equal to 97,5 % in 2026, 95 % in 2027, 90 % in 2028, 77,5 % in 2029, 51,5 % in 2030, 39 % in 2031, 26,5 % in 2032 and 14 % in 2033. From 2034, no CBAM factor shall apply."
+       ]
+      },
+      {
+       "act": "guide-4",
+       "part": "sec-2-1-1",
+       "contains": [
+        "In case of sub-installations in sectors covered by the CBAM, this preliminary free allocation is reduced by applying the “CBAM factor”, reflecting the phasing-out of free allocation in the EU ETS to mirror the phasing-in of the CBAM."
+       ]
+      },
+      {
+       "act": "guide-4",
+       "part": "sec-2-2-1-1",
+       "contains": [
+        "2026 97,5% 1,0 2027 95,0% 1,0 2028 90,0% 1,0 2029 77,5% 1,0 2030 51,5% 1,0 2031 39,0% 1,0 2032 26,5% 1,0 2033 14,0% 1,0 2034 0,0% 1,0"
+       ]
+      },
+      {
+       "act": "qa",
+       "part": "sec-3-8",
+       "contains": [
+        "The CBAM factor reflects that the gradual phase-out of EU ETS free allowances in CBAM sectors from 2026 to 2034 is mirrored by a corresponding increase in the CBAM obligation. This is because the CBAM adjustment for free allocation will gradually decrease and thereby the CBAM obligation will increase."
+       ]
+      },
+      {
+       "act": "guide-1",
+       "part": "sec-2-4",
+       "contains": [
+        "From 2034, embedded emissions of CBAM goods are fully covered by CBAM certificates, with no free allocation for those goods."
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#rules-ets-review",
+       "text": "EU 배출권거래제 개정안의 진행 상황"
+      },
+      {
+       "href": "#calc",
+       "text": "인증서 비용 추정"
+      }
+     ]
+    },
+    {
+     "id": "cscf",
+     "title": "부문 간 보정계수",
+     "body": [
+      "EU 배출권거래제에는 한 해에 무상으로 할당할 수 있는 배출권의 최대량이 있습니다. 사업장들의 무상할당을 모두 더한 값이 이 최대량을 넘으면, 무상할당을 받는 사업장의 무상할당을 같은 비율로 줄입니다. 이때 곱하는 비율이 부문 간 보정계수(cross-sectoral correction factor)입니다. 배출 수준이 가장 효율적인 10% 사업장의 평균보다 낮은 사업장은 이 조정에서 빠집니다.",
+      "집행위원회는 할당기간의 해마다 이 계수를 정합니다. 이행결정 (EU) 2026/1862는 2026년부터 2030년까지의 할당기간에 대해 해마다 100%로 정했습니다. 100%는 줄이지 않는다는 뜻이므로, 이 기간에는 부문 간 보정계수 때문에 무상할당 조정이 달라지지 않습니다.",
+      "무상할당 조정의 식은 EU 배출권거래제에서 공표된 이 계수를 그대로 씁니다. 수입 제품의 인증서 의무를 EU 배출권거래제의 무상할당에 맞추어 조정하려는 것입니다."
+     ],
+     "terms": [
+      {
+       "ko": "부문 간 보정계수",
+       "en": "cross-sectoral correction factor",
+       "abbr": "CSCF",
+       "text": "EU 배출권거래제에서 무상할당의 합이 최대량을 넘지 않도록 무상할당을 같은 비율로 줄이는 계수입니다. 2026년부터 2030년까지는 해마다 100%입니다."
+      }
+     ],
+     "caveat": "이행결정 (EU) 2026/1862는 2026년부터 2030년까지만 다루며, 2031년 이후의 값은 이 이행결정에 없습니다. 가이던스 4의 표는 이 계수를 잠정값 1.0으로 적었고, 이행결정이 2026년부터 2030년까지의 값을 100%로 확정했습니다.",
+     "basis": [
+      {
+       "act": "32026D1862",
+       "part": "recitals",
+       "contains": [
+        "In order to ensure that that maximum annual amount of allowances allocated free of charge is not exceeded, an adjustment is to be applied in accordance with Article 10a(5) of Directive 2003/87/EC, if necessary, and reducing in a uniform manner the number of free allowances for each installation eligible for free allocation.",
+        "However, installations whose greenhouse gas emission levels are below the average of the 10 % most efficient installations in a sector or subsector in the Union for the relevant benchmarks in a year when the adjustment applies, are to be exempted from that adjustment.",
+        "is to determine a cross-sectoral correction factor for each year of the relevant allocation period once the preliminary annual amounts of free allowances for that period are notified."
+       ]
+      },
+      {
+       "act": "32026D1862",
+       "part": "art-1",
+       "contains": [
+        "For each year in the allocation period 2026 to 2030, the uniform cross-sectoral correction factor for the adjustment of free allocations of emission allowances in accordance with Article 10a(5) and (5a) of Directive 2003/87/EC shall be 100 %."
+       ]
+      },
+      {
+       "act": "32025R2620",
+       "part": "annex-0",
+       "contains": [
+        "is the cross-sectoral correction factor for year y determined by the Commission pursuant to Article 14(6) of Delegated Regulation (EU) 2019/331 and published in accordance with Article 10a(5) of Directive 2003/87/EC (dimensionless);"
+       ]
+      },
+      {
+       "act": "guide-4",
+       "part": "sec-2-1-1",
+       "contains": [
+        "If the total amount is exceeded, the allocation per installation must be reduced by applying a cross-sectoral correction factor (CSCF)[5] published by the Commission."
+       ]
+      },
+      {
+       "act": "guide-4",
+       "part": "sec-2-2-1-1",
+       "contains": [
+        "the CSCF values have not yet been calculated by the Commission. Therefore, the given values have to be considered preliminary and are provided for information only."
+       ]
+      },
+      {
+       "act": "guide-4",
+       "part": "sec-2-1",
+       "contains": [
+        "During that phase-out period, the CBAM obligation is adjusted to mirror the free allocation received under the EU ETS and to ensure an equivalent carbon price."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "actual",
+     "title": "실제 데이터로 신고할 때의 무상할당 조정",
+     "body": [
+      "무상할당 조정은 내재배출량을 신고한 방식을 따릅니다. 고유 내재배출량을 기본값으로 신고하면 무상할당 조정도 기본값으로 계산하고, 실제배출량으로 신고하면 실제 데이터로 계산합니다.",
+      "실제 데이터로 계산할 때에는 생산공정마다 공정 관련 CBAM 벤치마크(A열)에 CBAM 계수와 부문 간 보정계수를 곱합니다. 단순제품은 이 값이 그대로 고유 내재무상할당량입니다.",
+      "복합제품은 여기에 전구물질의 몫을 더합니다. 제품 1톤을 만드는 데 쓴 전구물질의 양에 그 전구물질의 고유 내재무상할당량을 곱해 더합니다. 전구물질이 다시 복합제품이면 같은 계산을 거슬러 올라가며 되풀이합니다.",
+      "같은 종류의 전구물질을 여러 사업장에서 받아 쓰면 원칙적으로 사업장별 값을 가중평균합니다. 전구물질의 생산자가 값을 주지 않으면 B열에서 그 전구물질에 맞는 기본 CBAM 벤치마크를 골라 정합니다.",
+      "가이던스 4는 사업자의 검증된 배출량 보고서에 고유 내재무상할당량에 필요한 정보가 모두 담긴다고 설명합니다."
+     ],
+     "basis": [
+      {
+       "act": "32025R2620",
+       "part": "art-2",
+       "contains": [
+        "The specific embedded free allocation of a good shall be calculated based on actual data in accordance with point 3 of the Annex."
+       ]
+      },
+      {
+       "act": "32025R2620",
+       "part": "art-3",
+       "contains": [
+        "By way of derogation from Article 2, the free allocation adjustment shall be calculated based on default values in accordance with point 4 of the Annex, if default values for the specific embedded emissions are used in the CBAM declaration."
+       ]
+      },
+      {
+       "act": "32025R2620",
+       "part": "art-4",
+       "contains": [
+        "Where an installation producing complex goods uses a type of precursor from multiple installations, the embedded free allocation of the complex goods shall by default be determined, for the part of the free allocation embedded in that precursor, as the weighted average of the free allocation embedded in the precursors of that type of precursor used from the different installations."
+       ]
+      },
+      {
+       "act": "32025R2620",
+       "part": "annex-0",
+       "contains": [
+        "For a single production process, the process-level specific free allocation shall be calculated using the following equation:",
+        "The SEFA of a simple good g shall be calculated using the following equation:",
+        "For a complex good, the calculation of the SEFA shall take into account the production process as well as the SEFA of each precursor",
+        "is the specific mass of precursor i consumed for the production of one tonne of good g, as determined in accordance with the rules set out in Implementing Regulation (EU) 2025/2547, expressed as t/t;",
+        "Where precursors are themselves complex goods, the calculation of SEFAi,y’ shall be repeated recursively using Equations 2, 3 and 4, as appropriate, until no more precursors are relevant.",
+        "is determined by selecting the appropriate BM g value from point 5, Column B, of this Annex, taking into account the following factors:"
+       ]
+      },
+      {
+       "act": "32025R2620",
+       "part": "recitals",
+       "contains": [
+        "If actual emissions are declared, the free allocation adjustment should equally reflect the actual production process and the composition of goods (‘actual free allocation adjustment’). If default values for emissions are declared, the adjustment should equally be based on default values for free allocation."
+       ]
+      },
+      {
+       "act": "guide-4",
+       "part": "sec-2-2-1",
+       "contains": [
+        "This emission report also contains all necessary information on SEFAg,y."
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#handbook-verification",
+       "text": "검증"
+      }
+     ]
+    },
+    {
+     "id": "example",
+     "title": "계산 예: 한국산 열연 평판압연 제품 100톤",
+     "body": [
+      "2026년에 한국산 열연 평판압연 제품(CN 7208 10 00) 100톤을 수입하고 기본값으로 신고하는 경우를 가정합니다. 기본값 표의 대한민국 표에서 이 품목이 속한 7208의 총배출량 기본값은 제품 1톤당 2.118 tCO2e이고, 생산경로 표시는 (C)입니다.",
+      "철강의 2026년 마크업은 10%입니다. 이 품목의 기본 CBAM 벤치마크는 제품 1톤당 1.370 tCO2e이고, 2026년의 CBAM 계수는 97.5%, 부문 간 보정계수는 100%입니다. 아래 표처럼 셈하면 제품 1톤당 제출할 인증서는 0.994개(0.994 tCO2e)입니다.",
+      "제품 100톤이면 약 99.4 tCO2e로, 인증서 약 99.4개에 해당합니다. 제3국에서 낸 탄소가격에 따른 공제는 넣지 않은 값입니다."
+     ],
+     "table": {
+      "head": [
+       "단계",
+       "셈",
+       "제품 1톤당 값(tCO2e)"
+      ],
+      "rows": [
+       [
+        "고유 내재배출량",
+        "2.118 × (1 + 10%)",
+        "2.330"
+       ],
+       [
+        "고유 내재무상할당량",
+        "1.370 × 97.5% × 100%",
+        "1.336"
+       ],
+       [
+        "제출할 인증서",
+        "2.330 − 1.336",
+        "0.994"
+       ]
+      ]
+     },
+     "caveat": "마크업을 더한 기본값은 CBAM 등록부 안에서 계산되므로 반올림에 따라 끝자리가 이 예와 다를 수 있습니다. 2027년 수입분부터는 갱신된 CBAM 벤치마크가 적용될 수 있습니다.",
+     "basis": [
+      {
+       "act": "32026R1740",
+       "part": "annex-i-2",
+       "contains": [
+        "For the calculation of the number of CBAM certificates, the default values of the column ‘total emissions’ shall be selected and increased as follows:",
+        "For goods in the cement, iron and steel, aluminium and hydrogen sectors, the mark-up shall be 10 % for the year 2026, 20 % for the year 2027 and 30 % for the year 2028 and onwards."
+       ]
+      },
+      {
+       "act": "32025R2620",
+       "part": "annex-0",
+       "contains": [
+        "Where default values are used, the SEFA is calculated using the following equation:",
+        "is the default CBAM benchmark set out in point 5, Column B, of this Annex;",
+        "Where default values are used to determine SEFA of a final good or of a precursor, the same production route shall be used as indicated in Annex I to Commission Implementing Regulation (EU) 2025/2621 (1) for the country of origin of that good or precursor."
+       ]
+      },
+      {
+       "act": "32026D1862",
+       "part": "art-1",
+       "contains": [
+        "For each year in the allocation period 2026 to 2030, the uniform cross-sectoral correction factor for the adjustment of free allocations of emission allowances in accordance with Article 10a(5) and (5a) of Directive 2003/87/EC shall be 100 %."
+       ]
+      },
+      {
+       "act": "guide-4",
+       "part": "sec-2-2-1-1",
+       "contains": [
+        "2026 97,5% 1,0 2027 95,0% 1,0"
+       ]
+      },
+      {
+       "act": "guide-1",
+       "part": "sec-2-4-2",
+       "contains": [
+        "𝐶𝐵𝐴𝑀 𝑂𝑏𝑙𝑖𝑔𝑎𝑡𝑖𝑜𝑛𝑔 = max [0 ; (𝑆𝐸𝐸𝑔 − 𝑆𝐸𝐹𝐴𝑔 − 𝑆𝐸𝐶𝑃𝑃𝑔 𝑅𝑃𝐶𝐵𝐴𝑀 )] × 𝑀𝑔"
+       ]
+      },
+      {
+       "act": "32026R1740",
+       "part": "recitals",
+       "contains": [
+        "The final default values that include the mark-ups should then be calculated within the CBAM Registry"
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#calc-72081000",
+       "text": "이 품목으로 인증서 비용 추정해 보기"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "price",
+   "title": "인증서 가격과 구매",
+   "lead": "CBAM 인증서 한 개가 무엇에 해당하는지, 가격을 어떻게 정해 언제 공개하는지, 어디에서 사는지를 설명합니다.",
+   "sections": [
+    {
+     "id": "unit",
+     "title": "인증서 한 개의 뜻",
+     "body": [
+      "CBAM 인증서(CBAM certificate)는 제품의 내재배출량 CO2e 1톤에 해당하는 전자 형식의 인증서입니다.",
+      "승인된 CBAM 신고인은 CBAM 신고서에 적은 수만큼 인증서를 제출(surrender)합니다. 제출은 인증서를 신고한 내재배출량, 또는 신고했어야 할 내재배출량과 상계하는 것입니다.",
+      "집행위원회는 인증서가 만들어질 때 인증서마다 고유한 식별번호를 붙입니다. 그 식별번호와 판매 가격, 판매일은 인증서를 산 신고인의 CBAM 등록부 계정에 기록됩니다."
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-3",
+       "contains": [
+        "means a certificate in electronic format corresponding to one tonne of CO2e of embedded emissions in goods",
+        "means offsetting of CBAM certificates against the declared embedded emissions in imported goods or against the embedded emissions in imported goods that should have been declared"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-20",
+       "contains": [
+        "each CBAM certificate is assigned a unique identification number upon its creation",
+        "register the unique identification number and the price and date of sale of the CBAM certificate in the CBAM registry in the account of the authorised CBAM declarant purchasing that certificate"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "method",
+     "title": "가격을 정하는 방법",
+     "body": [
+      "인증서 가격은 EU 배출권(EU ETS allowance)의 경매 가격을 따릅니다. 집행위원회가 계산하며, 2026년분과 2027년부터의 방법이 다릅니다.",
+      "2026년에 관하여 신고하는 내재배출량에 해당하는 인증서는 분기 가격을 씁니다. 그 배출량이 내재된 제품을 수입한 분기의 평균 가격입니다. 2027년 1월 1일부터는 역주(calendar week)마다 주간 평균 가격을 계산합니다.",
+      "평균은 경매 낙찰가격(auction clearing price)을 경매된 배출권의 물량으로 가중해 구합니다. 공동 경매 플랫폼과 옵트아웃 경매 플랫폼의 경매를 넣고, 취소된 경매는 넣지 않습니다. 가격은 유로로 계산해 가장 가까운 센트로 반올림합니다. 2027년부터의 주간 가격에서는, 경매가 예정되지 않은 주에 경매가 있었던 마지막 주의 평균 가격을 씁니다."
+     ],
+     "table": {
+      "head": [
+       "구분",
+       "2026년분",
+       "2027년부터"
+      ],
+      "rows": [
+       [
+        "계산 단위",
+        "분기 평균",
+        "주간 평균"
+       ],
+       [
+        "적용 대상",
+        "2026년에 관하여 신고하는 내재배출량에 해당하는 인증서(제품을 수입한 분기의 가격)",
+        "그 가격의 적용 기간에 판매되는 인증서"
+       ],
+       [
+        "계산하는 때",
+        "다음 분기의 첫 역주",
+        "역주마다"
+       ]
+      ]
+     },
+     "terms": [
+      {
+       "ko": "경매 낙찰가격",
+       "en": "auction clearing price",
+       "abbr": "",
+       "text": "EU 배출권 경매에서 입찰 기간이 끝났을 때 낙찰자가 배출권 한 개마다 내는 가격입니다. 인증서 가격은 이 가격의 평균으로 계산합니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-21",
+       "contains": [
+        "as the quarterly average of the closing prices of EU ETS allowances on the auction platform",
+        "the price of CBAM certificates shall be the average of the closing prices of EU ETS allowances of the last week in which auctions on the auction platform took place"
+       ]
+      },
+      {
+       "act": "32025R2548",
+       "part": "art-1",
+       "contains": [
+        "For each quarter in 2026, the Commission shall calculate the price of CBAM certificates as the quarterly average of the auction clearing prices",
+        "The Commission shall calculate the price of a quarter during the first calendar week of the following quarter.",
+        "auctions which have been cancelled shall not be taken into account in the quarterly average calculation",
+        "the auction clearing price shall be weighted by the volume of the auctioned allowances",
+        "for the quarter of importation of the goods in which those emissions are embedded"
+       ]
+      },
+      {
+       "act": "32025R2548",
+       "part": "art-5",
+       "contains": [
+        "From 1 January 2027, the Commission shall calculate the price of CBAM certificates every calendar week",
+        "The price of CBAM certificates shall be calculated in euro and rounded up or down to the nearest cent.",
+        "shall apply to CBAM certificates that are sold to the authorised CBAM declarants during the period set out in Article 21(2)"
+       ]
+      },
+      {
+       "act": "32025R2548",
+       "part": "recitals",
+       "contains": [
+        "that price is defined as the auction clearing price which corresponds to the price that successful bidders pay for each EU ETS allowance upon closure of the bidding window in each auction"
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#price",
+       "text": "인증서 가격"
+      },
+      {
+       "href": "#calc",
+       "text": "인증서 비용 추정"
+      }
+     ]
+    },
+    {
+     "id": "publish",
+     "title": "가격을 공개하는 때와 곳",
+     "body": [
+      "가격은 집행위원회가 자기 웹사이트에 공개합니다. 2026년의 분기 가격은 계산한 주의 다음 역주 첫 영업일에 공개합니다. 2026년 3분기부터는 2026년에 적용되는 분기 가격을 CBAM 등록부에서도 신고인에게 제공합니다.",
+      "2027년부터의 주간 가격은 그 경매들이 있었던 주의 다음 역주 첫 영업일에 공개합니다. 공개한 가격은 공개일 다음 첫 영업일부터 그다음 역주의 첫 영업일까지 적용됩니다. CBAM 등록부에서는 그 가격이 처음 적용되는 날부터 볼 수 있습니다.",
+      "영업일은 집행위원회가 규정 (EEC, Euratom) No 1182/71 제2조에 따라 영업일로 정한 날입니다."
+     ],
+     "basis": [
+      {
+       "act": "32025R2548",
+       "part": "art-4",
+       "contains": [
+        "on its website on the first working day",
+        "of the calendar week following the week of calculation",
+        "As from the third quarter of 2026, the Commission shall make the quarterly prices of CBAM certificates applicable in 2026 available to authorised CBAM declarants in the CBAM registry."
+       ]
+      },
+      {
+       "act": "32025R2548",
+       "part": "art-8",
+       "contains": [
+        "of the calendar week which follows the relevant auctions",
+        "The Commission shall make the price of CBAM certificates available to authorised CBAM declarants in the CBAM registry on the first day of application of that price."
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-21",
+       "contains": [
+        "That price shall apply from the first working day following that of its publication to the first working day of the following calendar week."
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#price",
+       "text": "인증서 가격"
+      }
+     ]
+    },
+    {
+     "id": "purchase",
+     "title": "인증서를 사는 곳",
+     "body": [
+      "인증서는 2027년 2월 1일부터 판매됩니다. 판매하는 쪽은 회원국이며, 그 회원국에 설립된 승인된 CBAM 신고인에게 공통 중앙 플랫폼(common central platform)에서 팝니다. 판매 가격은 제21조에 따라 계산한 가격입니다.",
+      "공통 중앙 플랫폼은 집행위원회가 회원국과의 공동 조달 절차를 거쳐 만들고 관리합니다. 플랫폼에서 이루어진 판매와 환매의 정보는 영업일이 끝날 때마다 CBAM 등록부로 옮겨집니다.",
+      "플랫폼을 만들고 운영하는 비용은 승인된 CBAM 신고인이 내는 수수료로 충당합니다. 첫 공동 조달 계약 기간에는 그 비용을 먼저 EU 일반예산이 부담합니다. 수수료의 시기, 구조, 수준 같은 세부는 집행위원회가 위임법으로 정할 수 있습니다."
+     ],
+     "terms": [
+      {
+       "ko": "공통 중앙 플랫폼",
+       "en": "common central platform",
+       "abbr": "",
+       "text": "회원국이 승인된 CBAM 신고인에게 CBAM 인증서를 팔고 환매하는 플랫폼입니다. 집행위원회가 만들고 관리합니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-20",
+       "contains": [
+        "From 1 February 2027, a Member State shall sell CBAM certificates on a common central platform to authorised CBAM declarants established in that Member State.",
+        "The Commission shall establish and manage the common central platform following a joint procurement procedure between the Commission and the Member States.",
+        "shall be transferred to the CBAM registry at the end of each working day",
+        "CBAM certificates shall be sold to authorised CBAM declarants at the price calculated in accordance with Article 21.",
+        "shall be financed by fees payable by authorised CBAM declarants",
+        "those costs shall initially be borne by the general budget of the Union",
+        "further specifying the timing, administration, structure and level of fees"
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#handbook-cycle",
+       "text": "한 해의 일정(환매와 말소의 기한)"
+      },
+      {
+       "href": "#rules-dr-sale-repurchase",
+       "text": "인증서 판매·환매 위임규정(안)의 진행 상황"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carbon-price",
+   "title": "제3국에서 낸 탄소가격",
+   "lead": "제품을 만든 제3국에서 이미 낸 탄소가격만큼 제출할 인증서 수를 줄이는 규칙과, 그에 필요한 증빙을 설명합니다.",
+   "sections": [
+    {
+     "id": "deduction",
+     "title": "탄소가격 공제의 뜻",
+     "body": [
+      "탄소가격(carbon price)은 제3국에서 탄소 배출 감축 제도에 따라 낸 돈입니다. 세금, 부과금, 수수료로 냈거나 온실가스 배출권거래제의 배출권으로 낸 것이 해당합니다. 그 제도가 다루는 온실가스로서 제품을 생산하는 동안 배출된 것에 대해 계산한 금액이어야 합니다.",
+      "내재배출량을 실제배출량으로 정한 경우, 승인된 CBAM 신고인은 CBAM 신고서에서 이 탄소가격만큼 제출할 인증서 수를 줄여 달라고 청구할 수 있습니다. 탄소가격이 제3국에서 실질적으로 지불된 경우에만 청구할 수 있습니다.",
+      "그 나라에서 받을 수 있는 환급(rebate)이나 다른 형태의 보상이 있어 탄소가격이 줄어들었을 것이면 그것을 반영합니다. 신고서에 적는 제출 인증서 수는 이 공제와 무상할당 조정을 반영한 뒤의 수입니다."
+     ],
+     "terms": [
+      {
+       "ko": "탄소가격",
+       "en": "carbon price",
+       "abbr": "",
+       "text": "제3국에서 탄소 배출 감축 제도에 따라 세금, 부과금, 수수료 또는 배출권의 형태로 지불한 금액입니다. 제품 생산 중 배출된 온실가스에 대해 계산한 것입니다."
+      },
+      {
+       "ko": "환급",
+       "en": "rebate",
+       "abbr": "",
+       "text": "낸 탄소가격의 일부를 돌려받는 것입니다. 받을 수 있는 환급이나 보상은 공제할 탄소가격에서 뺍니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-3",
+       "contains": [
+        "means the monetary amount paid in a third country, under a carbon emissions reduction scheme, in the form of a tax, levy or fee or in the form of emission allowances",
+        "calculated on greenhouse gases covered by such a measure, and released during the production of goods"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-9",
+       "contains": [
+        "Where the embedded emissions are determined on the basis of actual emissions, an authorised CBAM declarant may claim in the CBAM declaration a reduction in the number of CBAM certificates to be surrendered",
+        "The reduction may be claimed only if the carbon price has been effectively paid in a third country.",
+        "any rebate or other form of compensation available in that country that would have resulted in a reduction of that carbon price shall be taken into account"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-6",
+       "contains": [
+        "after the reduction that is due on the account of the carbon price paid in a third country in accordance with Article 9 and the adjustment necessary to reflect the extent to which EU ETS allowances are allocated free of charge"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "evidence",
+     "title": "증빙과 기록",
+     "body": [
+      "신고인은 신고한 내재배출량에 제3국의 탄소가격이 매겨졌고 실제로 지불되었음을 보여 주는 서류를 기록으로 보관해야 합니다. 특히 환급이나 보상에 관한 증거와 그 나라의 관련 법령에 대한 참조를 보관해야 합니다. 탄소가격을 실제로 냈다는 증거도 보관해야 합니다.",
+      "서류의 정보는 신고인과도, 제3국 당국과도 독립된 사람이 확인해야 합니다. 그 독립적 확인자(independent person)의 이름과 연락처가 서류에 나타나야 합니다. 신고인은 이 기록을 CBAM 신고서를 냈거나 냈어야 할 해가 지난 뒤 네 번째 해가 끝날 때까지 보관합니다.",
+      "CBAM 등록부에 등록한 제3국의 사업자는 해당하는 경우 제9조에 따라 탄소가격을 정하고 서류와 증거를 올립니다. 사업자는 그 정보를 승인된 CBAM 신고인에게 공개할 수 있습니다."
+     ],
+     "terms": [
+      {
+       "ko": "독립적 확인자",
+       "en": "independent person",
+       "abbr": "",
+       "text": "제3국에서 낸 탄소가격의 증빙 서류에 담긴 정보를 확인하는 사람입니다. 승인된 CBAM 신고인과 제3국 당국 모두로부터 독립되어 있어야 합니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-9",
+       "contains": [
+        "keep records of the documentation required to demonstrate that the declared embedded emissions were subject to a carbon price in a third country",
+        "keep evidence related to any rebate or other form of compensation available, in particular the references to the relevant legislation of that country",
+        "shall be certified by a person that is independent from the authorised CBAM declarant and from the authorities of the third country",
+        "The name and contact information of that independent person shall appear on the documentation.",
+        "The authorised CBAM declarant shall also keep evidence of the actual payment of the carbon price.",
+        "until the end of the fourth year after the year during which the CBAM declaration has been or should have been submitted"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-10",
+       "contains": [
+        "determine, where applicable, the carbon price paid in a third country in accordance with Article 9, and upload accompanying documentation and evidence",
+        "An operator may disclose the information on the verification of embedded emissions and the carbon price paid in a third country"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "default-carbon-price",
+     "title": "기본 탄소가격",
+     "body": [
+      "신고인은 실제로 지불한 금액 대신 연간 기본 탄소가격(default carbon price)을 참조해 공제를 청구할 수도 있습니다. 이때도 그 나라에서 받을 수 있는 환급이나 보상은 반영합니다.",
+      "이 방법은 제3국의 규칙이 탄소가격을 정하고 있고, 그 나라의 연간 기본 탄소가격을 보수적으로라도 정할 수 있을 때만 쓸 수 있습니다. 내재배출량을 기본값으로 정한 경우에는 기본 탄소가격을 참조하는 방법으로만 공제를 청구할 수 있습니다.",
+      "집행위원회는 2027년부터 탄소가격 규칙이 있는 제3국의 기본 탄소가격을 정해 CBAM 등록부에 올리고 계산 방법을 공개할 수 있습니다. 믿을 만한 공개 정보와 제3국이 제공한 정보 가운데 가장 좋은 자료를 근거로 합니다."
+     ],
+     "terms": [
+      {
+       "ko": "기본 탄소가격",
+       "en": "default carbon price",
+       "abbr": "",
+       "text": "집행위원회가 제3국마다 정해 CBAM 등록부에 올릴 수 있는 연간 탄소가격입니다. 실제 지불액을 증명하는 대신 이 값을 참조해 공제를 청구할 수 있습니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-9",
+       "contains": [
+        "by reference to yearly default carbon prices",
+        "any rebate or other form of compensation available in that country that would have resulted in a reduction of that default carbon price shall be taken into account",
+        "The reduction may be claimed only where a carbon price was set by the rules applicable in the third country and a yearly default carbon price can be determined, including on a conservative basis",
+        "Where the embedded emissions are determined on the basis of default values, a reduction may be claimed only by a reference to yearly default carbon prices.",
+        "As from 2027, the Commission may, for third countries where carbon pricing rules are in place, determine and make available, in the CBAM registry",
+        "on the basis of the best available data from reliable, publicly available information and information provided by those third countries"
+       ]
+      }
+     ],
+     "caveat": "제9조(4)는 집행위원회가 기본 탄소가격을 정할 수 있다고 적었습니다. 어느 나라의 값을 언제 정할지는 법에 적혀 있지 않습니다."
+    },
+    {
+     "id": "rules-to-come",
+     "title": "집행위원회가 정할 세부 규칙",
+     "body": [
+      "제9조(5)는 집행위원회가 이행법으로 세부 규칙을 정할 권한을 주었습니다. 그 이행법이 다룰 내용은 다음과 같습니다."
+     ],
+     "list": [
+      "실제로 지불한 연평균 탄소가격과 연간 기본 탄소가격을 제출할 인증서 수의 감소로 바꾸는 방법",
+      "외화로 낸 탄소가격을 연평균 환율로 유로로 바꾸는 방법",
+      "탄소가격을 실제로 지불했다는 증거로 필요한 것",
+      "관련된 환급이나 다른 형태의 보상의 예",
+      "독립적 확인자의 자격과 그 독립성을 확인하는 조건"
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-9",
+       "contains": [
+        "concerning the conversion of the yearly average carbon price effectively paid",
+        "the conversion of the carbon price expressed in foreign currency into euro at the yearly average exchange rate",
+        "the evidence required of the actual payment of the carbon price",
+        "examples of any relevant rebate or other form of compensation",
+        "the qualifications of the independent person referred to in paragraph 2 of this Article and the conditions to ascertain that person’s independence"
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#rules-ir-carbon-price",
+       "text": "제3국에서 지불한 탄소가격 이행규정(안)의 진행 상황"
+      }
+     ],
+     "caveat": "환산 방법, 증거의 꼴, 독립적 확인자의 자격은 제9조(5)에 따른 이행법이 정합니다. 그 진행 상황은 규제 화면에서 볼 수 있습니다."
+    }
+   ]
+  },
+  {
+   "id": "verification",
+   "title": "검증",
+   "lead": "실제배출량으로 정한 내재배출량을 누가 어떤 원칙으로 검증하는지, 제3국 사업자와 EU의 신고인이 각각 무엇을 하는지를 설명합니다.",
+   "sections": [
+    {
+     "id": "scope",
+     "title": "검증을 받아야 하는 것",
+     "body": [
+      "내재배출량을 실제배출량으로 정한 경우, 승인된 CBAM 신고인은 CBAM 신고서에 신고한 총 내재배출량이 검증(verification)을 받도록 해야 합니다. 검증은 제18조에 따라 인정받은 검증기관(verifier)이 부속서 VI의 검증 원칙에 따라 합니다.",
+      "제8조(1)과 제6조(2)(b)의 검증 요건은 실제배출량으로 정한 내재배출량에 붙습니다. 기본값(default values)으로 정한 내재배출량에는 이 조문들이 검증을 요구하지 않습니다. Q&A는 검증된 실제배출량 자료가 없을 때 전력 외의 모든 CBAM 제품에 기본값을 쓸 수 있다고 풀이합니다.",
+      "CBAM 신고서에는 해당하는 경우 인정받은 검증기관이 발행한 검증보고서의 사본을 넣습니다."
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-8",
+       "contains": [
+        "Where the embedded emissions are determined on the basis of actual emissions, the authorised CBAM declarant shall ensure that the total embedded emissions declared in the CBAM declaration submitted pursuant to Article 6 are verified by a verifier accredited pursuant to Article 18, based on the verification principles set out in Annex VI."
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-6",
+       "contains": [
+        "where the embedded emissions are determined on the basis of actual emissions, verified in accordance with Article 8",
+        "where applicable, copies of verification reports, issued by accredited verifiers, under Article 8 and Annex VI"
+       ]
+      },
+      {
+       "act": "qa",
+       "part": "sec-4-25",
+       "contains": [
+        "can use default values for all types of CBAM goods other than electricity in cases where verified actual embedded emissions data for those goods is not available"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "roles",
+     "title": "사업자와 신고인이 할 일",
+     "body": [
+      "검증받을 배출량 자료는 제3국의 사업자에게서 나옵니다. CBAM 등록부에 등록한 사업자가 할 일은 제10조(5)에 정해져 있습니다. 신고인은 등록한 사업자가 공개한 검증된 정보를 써서 제8조의 검증 의무를 채울 수 있습니다.",
+      "검증기관은 사업자가 현장 출입을 허용하도록 해야 합니다. 검증보고서는 사업자에게 전달됩니다. 사업자가 CBAM 등록부에 등록되어 있으면 등록부를 거쳐, 등록되어 있지 않으면 검증기관이 다른 수단으로 전달합니다."
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-10",
+       "contains": [
+        "determine the embedded emissions calculated in accordance with the methods set out in Annex IV, by type of goods produced at the installation",
+        "ensure that the embedded emissions referred to in point (a) of this paragraph are verified in accordance with the verification principles set out in Annex VI by a verifier accredited pursuant to Article 18",
+        "keep a copy of the verification report as well as records of the information required to calculate the embedded emissions",
+        "for a period of four years after the verification has been performed",
+        "An operator may disclose the information on the verification of embedded emissions"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-8",
+       "contains": [
+        "the authorised CBAM declarant may choose to use verified information disclosed to it in accordance with Article 10(7)"
+       ]
+      },
+      {
+       "act": "32025R2551",
+       "part": "annex-ii",
+       "contains": [
+        "The verifier shall ensure that the operator provides the verifier with access to its sites.",
+        "the verification report shall be transmitted to the operator via the CBAM registry",
+        "the verifier shall export and transmit the verification report in its original standard software format to the operator via other means"
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#handbook-roles",
+       "text": "누가 무엇을 하나(제3국의 사업자, 검증기관)"
+      }
+     ]
+    },
+    {
+     "id": "accreditation",
+     "title": "검증기관의 인정",
+     "body": [
+      "검증기관은 국가인정기구(national accreditation body)의 인정(accreditation)을 받은 법인입니다. 국가인정기구는 신청을 받아, 그 법인이 부속서 VI의 검증 원칙을 적용할 능력이 있다고 보면 인정할 수 있습니다. 인정의 조건, 검증기관의 감독, 인정의 철회, 상호 인정의 세부는 위임규정 (EU) 2025/2551이 정합니다.",
+      "회원국 법에 따라 설립된 신청인은 원칙적으로 자기 회원국의 국가인정기구에 신청합니다. 회원국 법에 따라 설립되지 않은 신청인은 이 규정에 따라 인정을 하는 회원국의 국가인정기구 가운데 한 곳에 신청합니다. 그 국가인정기구가 제3국에 설립된 신청인을 인정할 수 없으면, 이유와 함께 인정 절차를 맡을 수 있는 다른 국가인정기구의 목록을 알려 주어야 합니다.",
+      "이행규정 (EU) 2018/2067에 따라 인정받은 신청인은 인정 범위를 해당 CBAM 활동군으로 넓혀 달라고 신청할 수 있습니다.",
+      "인정서(accreditation certificate)는 발급일부터 5년을 넘지 않는 기간 동안 유효합니다. 검증기관은 인정받은 활동군에 대해서만 검증보고서를 발행할 수 있습니다. 회원국은 동료평가를 통과한 국가인정기구가 인정한 검증기관의 인정서와 검증보고서를 인정해야 합니다."
+     ],
+     "terms": [
+      {
+       "ko": "인정서",
+       "en": "accreditation certificate",
+       "abbr": "",
+       "text": "국가인정기구가 검증기관의 인정을 부여하거나 갱신하거나 범위를 넓힐 때 발급하는 문서입니다. 인정 범위와 활동군, 유효기간이 적힙니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-18",
+       "contains": [
+        "A national accreditation body may, on request, accredit a legal person to be a verifier",
+        "specifying the conditions for granting of accreditation referred to in paragraph 2 of this Article, for the control and oversight of accredited verifiers, for the withdrawal of accreditation and for mutual recognition and peer evaluation of accreditation bodies"
+       ]
+      },
+      {
+       "act": "32025R2551",
+       "part": "art-3",
+       "contains": [
+        "shall request the national accreditation body of that Member State to grant accreditation",
+        "An applicant that is not established under the national law of a Member State shall request a national accreditation body of any Member State that provides accreditation in accordance with this Regulation",
+        "with a duly justified reply outlining the reasons for not carrying out the accreditation as well as a list of national accreditation bodies which may be able to undertake the accreditation process"
+       ]
+      },
+      {
+       "act": "32025R2551",
+       "part": "art-4",
+       "contains": [
+        "may apply for an extension of the scope of its accreditation to the corresponding CBAM activity groups"
+       ]
+      },
+      {
+       "act": "32025R2551",
+       "part": "art-6",
+       "contains": [
+        "The accreditation certificate shall be valid for a period not exceeding five years from the date on which the national accreditation body has issued it."
+       ]
+      },
+      {
+       "act": "32025R2551",
+       "part": "annex-ii",
+       "contains": [
+        "for the group of activities referred to in Annex I for which the verifier is accredited"
+       ]
+      },
+      {
+       "act": "32025R2551",
+       "part": "art-23",
+       "contains": [
+        "They shall accept the accreditation certificates and recognise the verification reports of verifiers accredited by those national accreditation bodies."
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#law-32025R2551.annex-i",
+       "text": "CBAM 활동군 목록"
+      }
+     ]
+    },
+    {
+     "id": "principles",
+     "title": "검증의 원칙",
+     "body": [
+      "검증기관은 전문가적 의구심(professional scepticism)을 가지고 검증합니다. 신고할 총 내재배출량은 검증기관이 중요한 오류와 중요한 부적합이 없다는 것을 합리적 보증(reasonable assurance)으로 확인한 경우에만 검증된 것으로 봅니다.",
+      "검증기관의 사업장 방문은 의무입니다. 다만 이행규정 (EU) 2025/2546의 조건을 모두 채우면 대면 현장검증을 원격 현장검증으로 바꾸거나 면제할 수 있습니다. 예를 들어 직전 보고기간에 대면 현장검증이 있었고, 그 뒤 사업장이나 모니터링 계획에 중대한 변경이 없어야 합니다. 면제하려면 현재 보고기간에 앞선 두 보고기간 동안 대면 현장검증이 있었어야 합니다.",
+      "오류가 중요한지는 중요성 기준(materiality level)으로 판단합니다. CN 코드로 구분한 제품 1톤마다 총 고유 내재배출량의 5%와 총 고유 내재무상할당량의 5%가 기준입니다. 이 기준보다 작은 오류와 기준이 없는 매개변수는 검증기관이 전문가적 판단으로 정합니다."
+     ],
+     "terms": [
+      {
+       "ko": "합리적 보증",
+       "en": "reasonable assurance",
+       "abbr": "",
+       "text": "검증기관이 보고서에 중요한 오류와 중요한 부적합이 없다고 결론 내릴 때 요구되는 확신의 수준입니다."
+      },
+      {
+       "ko": "중요성 기준",
+       "en": "materiality level",
+       "abbr": "",
+       "text": "검증기관이 오류를 중요한 것으로 보는 양적 기준입니다. 오류 하나로 또는 다른 오류와 합쳐 이 기준을 넘으면 중요한 오류입니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "annex-vi",
+       "contains": [
+        "verifiers shall carry out verifications with an attitude of professional scepticism",
+        "shall be considered as verified only if the verifier finds with reasonable assurance that the verification report is free of material misstatements and of material non-conformities",
+        "installation visits by the verifier shall be mandatory except where specific criteria for waiving the installation visit are met"
+       ]
+      },
+      {
+       "act": "32025R2546",
+       "part": "art-2",
+       "contains": [
+        "The verifier may replace a physical site visit",
+        "The verifier may waive the obligation to carry out a physical site visit"
+       ]
+      },
+      {
+       "act": "32025R2546",
+       "part": "art-3",
+       "contains": [
+        "a verifier has carried out a physical site visit during the reporting period immediately preceding the current reporting period",
+        "in the case of a waiver of the obligation to carry out a physical site visit, a verifier has carried out a physical site visit during two reporting periods preceding the current reporting period",
+        "the installation or its monitoring plan has not undergone any significant changes or modifications since the last physical site visit"
+       ]
+      },
+      {
+       "act": "32025R2546",
+       "part": "art-5",
+       "contains": [
+        "for each tonne of the relevant good, identified by its Combined Nomenclature (CN) code, apply the following materiality levels",
+        "5 % of the total specific embedded emissions",
+        "5 % of the total specific embedded free allocation",
+        "parameters which are not referred to in paragraph 1"
+       ]
+      },
+      {
+       "act": "32025R2546",
+       "part": "art-1",
+       "contains": [
+        "means the quantitative threshold or cut-off point above which the verifier considers misstatements, either individually or when aggregated with other misstatements, to be material"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "report",
+     "title": "검증보고서",
+     "body": [
+      "검증기관은 제품의 내재배출량을 확정하는 검증보고서(verification report)를 작성합니다. 보고서는 집행위원회가 CBAM 등록부로 제공하는 전자 템플릿으로 작성합니다.",
+      "보고서의 의견은 만족스러운 것으로 검증됨, 또는 만족스럽지 않은 것으로 검증됨입니다. 사업자 배출량 보고서에 중요한 오류가 없을 때만 만족스러운 것으로 검증될 수 있습니다. 검증기관은 2027년 1월 1일부터 CBAM 등록부에서 보고서를 발행하며, 보고서는 영어로 작성합니다.",
+      "보고서에는 아래와 같은 정보 등이 들어갑니다."
+     ],
+     "list": [
+      "제품을 생산한 사업장과 그 사업자의 연락처",
+      "적용되는 보고기간",
+      "검증기관의 이름과 연락처, 인정 번호, 인정기구의 이름",
+      "사업장 방문 날짜, 또는 방문하지 않은 이유",
+      "신고한 제품 종류별 생산량과 사업장의 직접배출량",
+      "복합제품이면 쓰인 전구물질의 양과 그 내재배출량",
+      "중요한 오류와 중요한 부적합이 없다는 것을 합리적 보증으로 확인한다는 검증기관의 진술"
+     ],
+     "terms": [
+      {
+       "ko": "검증보고서",
+       "en": "verification report",
+       "abbr": "",
+       "text": "검증기관이 제품의 내재배출량을 확정하고 검증 의견을 적어 발행하는 보고서입니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "annex-vi",
+       "contains": [
+        "The verifier shall prepare a verification report establishing the embedded emissions of the goods",
+        "identification of the installations where the goods were produced",
+        "accreditation number of the verifier, and name of the accreditation body",
+        "the date of the installations visits, if applicable, or the reasons for not carrying out an installation visit",
+        "quantification of direct emissions of the installation during the reporting period",
+        "quantities of each input material (precursor) used"
+       ]
+      },
+      {
+       "act": "32025R2546",
+       "part": "art-6",
+       "contains": [
+        "The verification report shall be prepared based on an electronic template provided by the Commission via the CBAM Registry."
+       ]
+      },
+      {
+       "act": "32025R2551",
+       "part": "annex-ii",
+       "contains": [
+        "the report is verified as satisfactory;",
+        "may be verified as satisfactory only where the report is free from material misstatements",
+        "From 1 January 2027, the verifier shall issue the verification report in the CBAM registry.",
+        "The verifier shall complete the verification report in English."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "penalties",
+   "title": "위반과 제재",
+   "lead": "인증서를 기한까지 제출하지 않거나 승인 없이 수입했을 때의 과징금, 우회 행위, 승인된 CBAM 신고인 지위의 취소를 설명합니다.",
+   "sections": [
+    {
+     "id": "late-surrender",
+     "title": "인증서를 제출하지 않았을 때",
+     "body": [
+      "승인된 CBAM 신고인이 매년 9월 30일까지 전년도 수입품의 내재배출량에 해당하는 수의 인증서를 제출하지 않으면 과징금(penalty)을 냅니다. 과징금은 제출하지 않은 인증서 한 개마다 매깁니다.",
+      "인증서 한 개당 과징금은 지침 2003/87/EC 제16조(3)의 초과배출 과징금(excess emissions penalty)과 같습니다. 그 지침은 초과배출 과징금을 이산화탄소 환산톤당 100유로로 정하고, 2013년 1월 1일 이후 발행된 배출권에 대해서는 유럽 소비자물가지수에 따라 인상하도록 합니다. CBAM에는 제품을 수입한 해에 적용되는 인상된 금액을 씁니다.",
+      "과징금을 내도 아직 제출하지 않은 인증서를 제출할 의무는 남습니다."
+     ],
+     "terms": [
+      {
+       "ko": "과징금",
+       "en": "penalty",
+       "abbr": "",
+       "text": "CBAM 규정의 의무를 지키지 않은 사람에게 관할당국이 부과하는 금전 제재입니다."
+      },
+      {
+       "ko": "초과배출 과징금",
+       "en": "excess emissions penalty",
+       "abbr": "",
+       "text": "EU 배출권거래제에서 배출량만큼 배출권을 내지 않은 사업자가 내는 과징금입니다. CBAM의 미제출 과징금은 이와 같은 금액입니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-26",
+       "contains": [
+        "An authorised CBAM declarant who fails to surrender, by 30 September of each year, the number of CBAM certificates that corresponds to the emissions embedded in goods imported during the preceding calendar year shall be held liable for the payment of a penalty.",
+        "Such a penalty shall be identical to the excess emissions penalty set out in Article 16(3) of Directive 2003/87/EC and increased pursuant to Article 16(4) of that Directive, applicable in the year of importation of the goods.",
+        "Such a penalty shall apply for each CBAM certificate that the authorised CBAM declarant has not surrendered.",
+        "shall not release the authorised CBAM declarant from the obligation to surrender the outstanding number of CBAM certificates in a given year"
+       ]
+      },
+      {
+       "source": "ets-directive",
+       "label": "제16조(3), (4)",
+       "contains": [
+        "The excess emissions penalty shall be EUR 100 for each tonne of carbon dioxide equivalent emitted",
+        "The excess emissions penalty relating to allowances issued from 1 January 2013 onwards shall increase in accordance with the European index of consumer prices."
+       ]
+      }
+     ],
+     "caveat": "수입한 해에 실제로 적용되는 금액은 물가 인상분이 반영된 값이며, 이 글에는 싣지 않았습니다."
+    },
+    {
+     "id": "unauthorised",
+     "title": "승인 없이 수입했을 때",
+     "body": [
+      "승인된 CBAM 신고인이 아닌 사람이 CBAM 규정의 의무를 지키지 않고 제품을 EU 관세영역에 들여오면 과징금을 냅니다. 금액은 제출하지 않은 인증서 한 개마다, 들여온 해에 적용되는 제26조(1) 과징금의 3배에서 5배입니다. 위반의 기간, 심각성, 범위, 고의, 반복, 관할당국과의 협력 정도에 따라 정합니다.",
+      "승인된 CBAM 신고인이 아닌 수입자가 단일 중량 임계값을 넘은 때에도 같습니다. 이때는 그해에 수입한 제품의 내재배출량 전체를 셉니다. 과징금을 내면 그 수입분에 대한 CBAM 신고와 인증서 제출 의무에서 벗어납니다.",
+      "2026년 3월 31일까지 승인을 신청한 수입자나 간접 세관 대리인은 관할당국이 결정할 때까지 잠정적으로 수입을 계속할 수 있습니다. 승인이 거부되면 관할당국은 2026년 1월 1일부터 결정일까지 수입한 제품의 내재배출량을 기본값 등으로 확정하고, 그 값을 과징금 산정에 씁니다."
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-26",
+       "contains": [
+        "Where a person other than an authorised CBAM declarant introduces goods into the customs territory of the Union without complying with the obligations under this Regulation, that person shall be held liable for the payment of a penalty.",
+        "be an amount from three to five times the penalty referred to in paragraph 1, applicable in the year of introduction of the goods",
+        "Paragraph 2 shall also apply to importers other than authorised CBAM declarants, where they exceed the single mass-based threshold.",
+        "the entirety of the emissions embedded in the goods imported by such an importer in the relevant calendar year shall be taken into account",
+        "The payment of the penalty shall release the importer from the obligation to submit a CBAM declaration and to surrender CBAM certificates in respect of those imports."
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-17",
+       "contains": [
+        "has submitted an application in accordance with Article 5 by 31 March 2026",
+        "may provisionally continue to import goods until the competent authority takes a decision under this Article",
+        "the emissions embedded in the goods imported between 1 January 2026 and the date of that decision",
+        "Those established emissions shall be used for the calculation of penalties in accordance with Article 26(2a)."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "reduction",
+     "title": "감경과 과징금의 산정",
+     "body": [
+      "신고인이 사업자, 검증기관, 탄소가격 서류를 확인한 독립적 확인자 같은 제3자의 잘못된 정보 때문에 올바른 수의 인증서를 제출하지 못했으면 관할당국은 제26조(1)의 과징금을 줄일 수 있습니다.",
+      "승인된 CBAM 신고인이 아닌 수입자가 단일 중량 임계값을 그 10% 이하로 넘었거나 제17조(7a)의 경우에 해당하면, 관할당국은 제26조(2)의 과징금을 줄일 수 있습니다. 줄인 과징금도 제26조(1)의 과징금보다 낮을 수 없습니다.",
+      "제출했어야 할 인증서 수는 관할당국이 계산합니다. 수입품의 순중량에 기본값으로 정한 내재배출량을 적용하고 무상할당 조정을 반영합니다. 관할당국은 위반 결론과 이유, 과징금 금액, 납부일, 납부 방법, 불복할 권리를 당사자에게 알립니다."
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-26",
+       "contains": [
+        "as a result of incorrect information provided by a third party, namely an operator, a verifier or an independent person certifying the carbon price documentation",
+        "the competent authority may reduce the penalty referred to in paragraph 1 of this Article",
+        "where an importer exceeded the single mass-based threshold by no more than 10 % of that threshold or in cases referred to in Article 17(7a)",
+        "shall not be lower than the penalty provided in paragraph 1",
+        "based on the net mass of the imported goods and by reference to the embedded emissions determined by default values in accordance with the methods set out in Annex IV and taking into account the adjustment for free allocation",
+        "of the date from which the penalty is due"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "circumvention",
+     "title": "우회 행위",
+     "body": [
+      "우회(circumvention)는 CBAM 규정의 의무를 피하려는 것 말고는 충분한 이유나 경제적 정당성이 없는 관행, 공정, 작업 때문에 생긴 제품 교역 양상의 변화입니다.",
+      "집행위원회는 EU 차원에서 우회를 계속 감시합니다. 회원국이나 관련 당사자의 통지가 요건을 갖추었거나 집행위원회가 필요하다고 보면 조사를 시작하고, 통지일부터 9개월 안에 마칩니다. 조금 바꾼 제품이 정해진 양상으로 나타나면 집행위원회는 위임법으로 그 제품을 부속서 I에 더할 수 있습니다.",
+      "법은 우회의 예로 다음을 들며, 이것에 한정하지 않습니다."
+     ],
+     "list": [
+      "제품을 조금 바꾸어 부속서 I에 없는 CN 코드에 들게 하는 것. 다만 그 변경이 제품의 본질적 특성을 바꾸는 경우는 빠집니다.",
+      "단일 중량 임계값을 넘지 않으려고 진정하지 않은 약정 등으로 수입을 인위적으로 나누는 것."
+     ],
+     "terms": [
+      {
+       "ko": "우회",
+       "en": "circumvention",
+       "abbr": "",
+       "text": "CBAM 규정의 의무를 피하려는 것 말고는 충분한 이유가 없는 관행 때문에 생긴 제품 교역 양상의 변화입니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-27",
+       "contains": [
+        "Practices of circumvention shall be defined as a change in the pattern of trade in goods",
+        "slightly modifying the goods concerned to make those goods fall under CN codes which are not listed in Annex I, except where the modification alters their essential characteristics",
+        "artificially splitting imports, including via non-genuine arrangements, to avoid exceeding the single mass-based threshold",
+        "shall continuously monitor the situation at Union level with a view to identifying practices of circumvention",
+        "The Commission shall conclude the investigation within nine months from the date of notification.",
+        "to amend the list of goods in Annex I by adding the relevant slightly modified products"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "revocation",
+     "title": "승인의 취소",
+     "body": [
+      "관할당국은 다음의 경우 승인된 CBAM 신고인의 지위를 취소합니다. 신고인이 취소를 요청한 경우, 승인 기준이나 담보 요건을 더는 채우지 못하는 경우, 인증서 제출 의무나 분기 말 보유 의무를 심각하게 또는 되풀이해 어긴 경우입니다.",
+      "취소하기 전에 관할당국은 신고인에게 의견을 말할 기회를 줍니다. 취소 결정에는 이유와 불복할 권리가 적힙니다. 지위가 취소된 사람의 정보는 CBAM 등록부에 기록됩니다.",
+      "심각하거나 반복된 위반의 기준과 취소의 결과 같은 조건은 집행위원회가 이행법으로 정합니다."
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-17",
+       "contains": [
+        "The competent authority shall revoke the status of authorised CBAM declarant where",
+        "the authorised CBAM declarant requests a revocation",
+        "no longer meets the criteria set out in paragraph 2 or 6 of this Article, or has been involved in a serious or repeated infringement of the obligation to surrender CBAM certificates",
+        "the competent authority shall give the authorised CBAM declarant the possibility to be heard",
+        "Any decision of revocation shall contain the reasons for the decision as well as information about the right to appeal.",
+        "the consequences of the revocation of the status of authorised CBAM declarant referred to in paragraph 8"
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#handbook-cycle",
+       "text": "한 해의 일정"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ahead",
+   "title": "앞으로 달라질 것",
+   "lead": "CBAM 규정이 예고한 검토와 보고, 무상할당이 줄어드는 만큼 인증서 의무가 늘어나는 일정, 앞으로 정해지거나 바뀔 세부 규칙을 모았습니다.",
+   "sections": [
+    {
+     "id": "review",
+     "title": "법이 예고한 검토",
+     "body": [
+      "집행위원회는 이해관계자와 협의해, 적용 범위를 넓히고 환경발자국 방법에 기반한 내재배출량 산정 방법을 만드는 데 필요한 정보를 모읍니다.",
+      "CBAM 규정은 전환기간(2023년 10월 1일부터 2025년 12월 31일까지)이 끝나기 전에 집행위원회가 규정의 적용에 관한 보고서를 유럽의회와 이사회에 내도록 정했습니다. 전환기간이 끝나기 적어도 1년 전에는 부속서 I 제품의 가치사슬 하류 제품 가운데 대상에 넣기를 권고하는 것을 밝히는 보고서도 내도록 했습니다. 두 보고서에는 적절한 경우 개정안을 붙입니다.",
+      "진행 중인 개정은 규제 화면에서 단계별로 볼 수 있습니다.",
+      "제30조(2)의 보고서가 평가할 범위 확대 항목은 아래와 같습니다."
+     ],
+     "list": [
+      "부속서 II 제품의 내재 간접배출량",
+      "부속서 I 제품의 운송에 내재된 배출량과 운송 서비스",
+      "부속서 I에 없는 탄소누출 위험 제품, 특히 유기화학물질과 폴리머",
+      "부속서 I 제품의 다른 전구물질"
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-30",
+       "contains": [
+        "shall collect the information necessary with a view to extending the scope of this Regulation",
+        "developing methods of calculating embedded emissions based on environmental footprint methods",
+        "Before the end of the transitional period referred to in Article 32, the Commission shall present a report to the European Parliament and to the Council on the application of this Regulation.",
+        "identifies products further down the value chain of the goods listed in Annex I",
+        "accompanied by a legislative proposal by the end of the transitional period",
+        "embedded indirect emissions in the goods listed in Annex II"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-30",
+       "contains": [
+        "goods at risk of carbon leakage other than those listed in Annex I, and specifically organic chemicals and polymers",
+        "other input materials (precursors) for the goods listed in Annex I",
+        "embedded emissions in the transport of the goods listed in Annex I and transportation services"
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-32",
+       "contains": [
+        "During the transitional period from 1 October 2023 until 31 December 2025"
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#rules-cbam-downstream",
+       "text": "CBAM 하류제품 확대·우회방지 개정안"
+      },
+      {
+       "href": "#rules",
+       "text": "규제 진행 상황"
+      }
+     ]
+    },
+    {
+     "id": "reports",
+     "title": "정기 보고",
+     "body": [
+      "집행위원회는 CBAM의 작동을 지켜보며 영향과 조정 가능성을 평가합니다. 2028년 1월 1일 전에, 그 뒤로는 2년마다 규정의 적용과 CBAM의 작동에 관한 보고서를 유럽의회와 이사회에 냅니다.",
+      "이와 별도로 전환기간이 끝난 뒤 2년마다, EU에서 생산해 EU 배출권거래제나 비슷한 탄소가격 제도가 없는 제3국으로 수출하는 제품의 탄소누출 위험에 CBAM이 얼마나 효과적인지 평가합니다. 위험이 있다고 결론 내리면 적절한 경우 세계무역기구 법에 맞는 개정안을 냅니다.",
+      "규정의 적용과 CBAM의 작동에 관한 보고서에는 적어도 아래 내용이 들어갑니다."
+     ],
+     "list": [
+      "탄소누출(수출 관련 포함), 대상 부문, EU 전역의 역내시장·경제·지역, 물가와 원자재 가격, 부속서 I 제품을 쓰는 산업, 국제 교역, 최빈개도국에 대한 영향",
+      "거버넌스, 적용 범위, 우회 관행, 회원국의 과징금 적용",
+      "단일 중량 임계값의 적용과, 그 임계값을 높이거나 화물 단위의 보조 임계값을 들일 가능성",
+      "조사 결과와 부과된 과징금, 원산지 국가별·제품별 배출 집약도의 집계"
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-30",
+       "contains": [
+        "Before 1 January 2028, as well as every two years thereafter, the Commission shall present a report to the European Parliament and to the Council on the application of this Regulation and functioning of the CBAM.",
+        "inflation and the price of commodities",
+        "the application of the single mass-based threshold, including the possibility of increasing that threshold and of introducing a supplementary consignment-based threshold",
+        "aggregated information on the emission intensity for each country of origin for the different goods listed in Annex I",
+        "Every two years from the end of the transitional period",
+        "in a manner that complies with World Trade Organization law",
+        "(iii) internal market, economic and territorial impact throughout the Union;"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "phase-out",
+     "title": "무상할당 축소와 인증서 의무의 증가",
+     "body": [
+      "CBAM 계수는 2026년 97.5%에서 해마다 낮아져 2033년에 14%가 되고, 2034년부터는 적용되지 않습니다. 계수가 낮아지는 만큼 무상할당 조정이 줄어들고 제출할 인증서가 늘어납니다.",
+      "가이던스 1은 2026년부터 2033년까지 CBAM 의무가 EU 배출권거래제의 무상할당 폐지와 나란히 단계적으로 도입되고, 2034년부터는 CBAM 제품의 내재배출량 전부가 CBAM 인증서로 덮인다고 설명합니다."
+     ],
+     "caveat": "이 일정은 지침 2003/87/EC에 정해져 있어 지침이 개정되면 달라집니다. 개정 논의의 진행 상황은 규제 화면에서 볼 수 있습니다.",
+     "basis": [
+      {
+       "source": "ets-directive",
+       "label": "제10a조(1a)",
+       "contains": [
+        "shall be equal to 97,5 % in 2026, 95 % in 2027, 90 % in 2028, 77,5 % in 2029, 51,5 % in 2030, 39 % in 2031, 26,5 % in 2032 and 14 % in 2033. From 2034, no CBAM factor shall apply."
+       ]
+      },
+      {
+       "act": "guide-1",
+       "part": "sec-2-4",
+       "contains": [
+        "Between 2026 and 2033 the CBAM obligation is phased in in parallel with the phase-out of free allocation under the EU ETS. From 2034, embedded emissions of CBAM goods are fully covered by CBAM certificates, with no free allocation for those goods."
+       ]
+      },
+      {
+       "act": "qa",
+       "part": "sec-3-8",
+       "contains": [
+        "The CBAM factor reflects that the gradual phase-out of EU ETS free allowances in CBAM sectors from 2026 to 2034 is mirrored by a corresponding increase in the CBAM obligation. This is because the CBAM adjustment for free allocation will gradually decrease and thereby the CBAM obligation will increase."
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#handbook-certificates",
+       "text": "제출할 인증서 수(CBAM 계수)"
+      },
+      {
+       "href": "#rules-ets-review",
+       "text": "EU 배출권거래제 개정안의 진행 상황"
+      },
+      {
+       "href": "#calc",
+       "text": "인증서 비용 추정"
+      }
+     ]
+    },
+    {
+     "id": "to-come",
+     "title": "앞으로 정해지거나 바뀔 세부 규칙",
+     "body": [
+      "앞의 장들에서 단서로 적은 것을 모으면 아래와 같습니다. 법령이 집행위원회에 맡겼거나 개정을 예고한 것들입니다. 진행 상황은 규제 화면에서 볼 수 있습니다."
+     ],
+     "list": [
+      "제3국에서 낸 탄소가격을 인증서 수의 감소로 바꾸는 방법과 증빙(제9조(5)의 이행법)",
+      "CBAM 인증서 판매와 환매의 시기, 운영, 수수료(제20조(6)의 위임법)",
+      "CBAM 신고서의 표준 양식과 제출 절차(제6조(6)의 이행법)",
+      "2027년 1월 1일부터 수입되는 제품에 적용할 갱신된 CBAM 벤치마크",
+      "늦어도 2027년에 개정할 기본값과 마크업",
+      "2031년 이후의 부문 간 보정계수"
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-9",
+       "contains": [
+        "The Commission is empowered to adopt implementing acts concerning the conversion of the yearly average carbon price effectively paid in accordance with paragraph 1 of this Article and of the yearly default carbon prices determined in accordance with paragraph 4 of this Article into a corresponding reduction of the number of CBAM certificates to be surrendered."
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-20",
+       "contains": [
+        "further specifying the timing, administration, structure and level of fees and other aspects related to the management of the sale and repurchase of CBAM certificates, as well as the organisation and use of the common central platform, seeking coherence with the procedures laid down in Commission Delegated Regulation (EU) 2023/2830 ( 5 ). The delegated acts shall ensure that the organisation and use of the common central platform is cost-efficient, that the level of fees is set so as to strictly cover the relevant costs and that undue administrative costs are avoided."
+       ]
+      },
+      {
+       "act": "32023R0956",
+       "part": "art-6",
+       "contains": [
+        "The Commission is empowered to adopt implementing acts concerning the standard format of the CBAM declaration, including detailed information for each installation and country of origin or other third country and type of goods to be reported, which supports the totals referred to in paragraph 2 of this Article, in particular as regards embedded emissions, the carbon price paid, the default carbon price for the purpose of Article 9(4), the procedure for submitting the CBAM declaration via the CBAM registry, and the arrangements for surrendering the CBAM certificates referred to in paragraph 2, point (c), of this Article, in accordance with Article 22(1), in particular as regards the process and the selection by the authorised CBAM declarant of certificates to be surrendered. Those implementing acts shall be adopted in accordance with the examination procedure referred to in Article 29(2)."
+       ]
+      },
+      {
+       "act": "32025R2620",
+       "part": "recitals",
+       "contains": [
+        "The updated CBAM benchmarks based on the final ETS benchmarks for the period 2026 to 2030 should apply to goods imported from 1 January 2027."
+       ]
+      },
+      {
+       "act": "32025R2621",
+       "part": "art-2",
+       "contains": [
+        "It shall be revised in 2027 at the latest."
+       ]
+      },
+      {
+       "act": "32026D1862",
+       "part": "art-1",
+       "contains": [
+        "For each year in the allocation period 2026 to 2030, the uniform cross-sectoral correction factor for the adjustment of free allocations of emission allowances in accordance with Article 10a(5) and (5a) of Directive 2003/87/EC shall be 100 %."
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#rules-ir-carbon-price",
+       "text": "탄소가격 이행규정(안)"
+      },
+      {
+       "href": "#rules-dr-sale-repurchase",
+       "text": "인증서 판매·환매 위임규정(안)"
+      },
+      {
+       "href": "#rules-ir-declarations",
+       "text": "CBAM 신고서 이행규정(계획)"
+      },
+      {
+       "href": "#rules-ir-free-allocation",
+       "text": "무상할당 조정 이행규정"
+      },
+      {
+       "href": "#rules-ir-default-values",
+       "text": "기본값 이행규정"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

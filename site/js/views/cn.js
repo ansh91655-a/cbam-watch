@@ -7,7 +7,7 @@ import { adopted, proposalRule } from "../cn/stage.js";
 import { band } from "../ui/band.js";
 import { empty, fill, h, pill, safeLink } from "../ui/dom.js";
 import { icon } from "../ui/icons.js";
-import { libraryTabs } from "../ui/tabs.js";
+import { groupTabs } from "../ui/tabs.js";
 
 const SECTOR_ICON = { cement: "cement", electricity: "electricity", fertilisers: "fertilisers", steel: "steel", aluminium: "aluminium", chemicals: "hydrogen", combined: "steel" };
 // 부속서 I의 부문에서 부문별 보기의 화면으로: [주소에 쓰는 값, 화면의 이름]. 부문별 보기가 없는 부문(복합 금속 제품)은 잇지 않는다.
@@ -162,7 +162,7 @@ function notes() {
 export async function render(main, arg) {
   const [book, rules] = await Promise.all([data.cn(), data.regulations()]);
   const rule = proposalRule(rules);
-  const head = band("품목 코드 조회", "CN 코드를 넣으면 CBAM 대상 품목인지와 그 근거를 보여 줍니다.", libraryTabs("cn"));
+  const head = band("품목 코드 조회", "CN 코드를 넣으면 CBAM 대상 품목인지와 그 근거를 보여 줍니다.", groupTabs("cn"));
   if (!book || !Array.isArray(book.current) || !book.current.length) {
     fill(main, head, empty("품목 목록을 준비하고 있습니다."));
     return;

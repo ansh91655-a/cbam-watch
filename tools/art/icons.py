@@ -21,6 +21,8 @@ ICONS = {
     "mail": "mail", "copy": "copy", "check": "check", "close": "x", "feed": "rss", "back": "arrow-left",
     # 안내 화면
     "terms": "book-open", "sources": "library", "who": "user-round", "limits": "triangle-alert", "reuse": "recycle",
+    # 메뉴: 첫 화면, 해설서, 전체 메뉴, 처음 온 사람을 위한 길잡이
+    "home": "house", "guide": "book-marked", "menu": "menu", "start": "compass",
 }
 
 

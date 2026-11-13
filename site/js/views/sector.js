@@ -8,7 +8,7 @@ import { band } from "../ui/band.js";
 import { empty, fill, h } from "../ui/dom.js";
 import { count, today } from "../ui/format.js";
 import { icon } from "../ui/icons.js";
-import { libraryTabs } from "../ui/tabs.js";
+import { groupTabs } from "../ui/tabs.js";
 import { commonSection, docsSection } from "./sector/docs.js";
 import { goodsSection } from "./sector/goods.js";
 import { calcSection, dutySection, newsSection } from "./sector/more.js";
@@ -35,11 +35,11 @@ export async function render(main, key) {
   const [book, duties] = await Promise.all([data.sectors(), data.duties()]);
   const sector = book.sectors.find((one) => one.key === key) || book.sectors[0];
   if (!sector) {
-    fill(main, band(TITLE, "", libraryTabs("sector")), empty("부문별 자료를 불러오지 못했습니다."));
+    fill(main, band(TITLE, "", groupTabs("sector")), empty("부문별 자료를 불러오지 못했습니다."));
     return TITLE;
   }
   fill(main,
-    band(`${sector.name} 부문`, `CBAM 대상인 ${sector.name} 품목과, 그 품목에 관한 안내 문서, 기본값, 의무 일정, 소식을 한곳에 모았습니다.`, libraryTabs("sector")),
+    band(`${sector.name} 부문`, `CBAM 대상인 ${sector.name} 품목과, 그 품목에 관한 안내 문서, 기본값, 의무 일정, 소식을 한곳에 모았습니다.`, groupTabs("sector")),
     picker(book.sectors, sector.key),
     facts(sector),
     h("div", { class: "cols sector-cols" }, [

@@ -8,7 +8,7 @@ import { band } from "../ui/band.js";
 import { empty, fill, h, safeLink } from "../ui/dom.js";
 import { count } from "../ui/format.js";
 import { icon } from "../ui/icons.js";
-import { libraryTabs } from "../ui/tabs.js";
+import { groupTabs } from "../ui/tabs.js";
 
 const OPS = [["", "전체"], ["changed", "바뀜"], ["added", "더해짐"], ["removed", "빠짐"]];
 const OP_NAME = { changed: "바뀜", added: "더해짐", removed: "빠짐" };
@@ -101,7 +101,7 @@ export async function render(main, arg) {
   const act = acts.find((one) => one.id === actId);
   const body = act && act.changes ? await data.changes(actId) : null;   // 달라진 곳이 있는 문서만 자료를 받는다(없는 파일을 청하지 않는다)
   if (!body || !body.revisions || !body.revisions.length) {
-    fill(main, band("달라진 곳", "", libraryTabs("laws")),
+    fill(main, band("달라진 곳", "", groupTabs("laws")),
       empty(act ? "이 문서는 앞선 판을 받아 둔 것이 없어 견줄 수 없습니다. 문서가 새 판으로 바뀌면 달라진 곳을 여기에 싣습니다." : "이 문서를 찾지 못했습니다."),
       h("p", {}, h("a", { href: act ? `#law-${actId}` : "#laws", text: act ? "이 문서의 원문과 번역 보기" : "규정 원문의 목록으로" })));
     return "달라진 곳";
@@ -135,7 +135,7 @@ export async function render(main, arg) {
   const source = safeLink(revision.from.url, "앞선 판의 원문 보기");
   if (source) source.append(icon("out", 14));
   fill(main,
-    band(`${body.name}: 달라진 곳`, `${labels.from}과 ${labels.to}을 문단마다 견줬습니다.`, libraryTabs("laws")),
+    band(`${body.name}: 달라진 곳`, `${labels.from}과 ${labels.to}을 문단마다 견줬습니다.`, groupTabs("laws")),
     h("div", { class: "law-bar" }, [
       h("p", { class: "crumbs" }, [h("a", { href: "#laws", text: "규정 원문" }), h("span", { text: "›" }), h("a", { href: `#law-${actId}`, text: body.name }), h("span", { text: "›" }), h("span", { text: "달라진 곳" })]),
       h("div", { class: "law-tools" }, [

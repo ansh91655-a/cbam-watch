@@ -1,19 +1,13 @@
-// 주 메뉴 하나 아래에 묶인 화면들 사이를 오가는 탭. 화면 머리 띠 안에 둔다.
+// 주 메뉴 하나 아래에 묶인 화면들 사이를 오가는 탭. 화면 머리 띠 안에 둔다. 묶음과 이름은 js/nav/map.js를 따른다.
+import { groupOf, screensOf, UNDER } from "../nav/map.js";
 import { h } from "./dom.js";
 import { icon } from "./icons.js";
 
-// '자료·안내' 아래의 화면: [화면 이름, 보이는 이름, 아이콘]. 주 메뉴를 누르면 원문 대장이 먼저 열린다.
-export const LIBRARY = [["sector", "부문별 보기", "steel"], ["cn", "품목 코드 조회", "search"], ["laws", "규정 원문", "law"], ["docs", "원문 대장", "file"], ["terms", "용어집", "terms"], ["about", "안내", "who"]];
-
-export function libraryTabs(current) {
-  return h("nav", { class: "tabs", "aria-label": "자료·안내에서 볼 것 고르기" }, LIBRARY.map(([view, name, key]) =>
-    h("a", { href: `#${view}`, "aria-current": view === current ? "page" : null }, [icon(key, 16), h("span", { text: name })])));
-}
-
-// '가격' 아래의 화면: 인증서 가격과 비용 추정.
-export const PRICE = [["price", "인증서 가격", "price"], ["calc", "비용 추정", "emissions"]];
-
-export function priceTabs(current) {
-  return h("nav", { class: "tabs", "aria-label": "가격에서 볼 것 고르기" }, PRICE.map(([view, name, key]) =>
-    h("a", { href: `#${view}`, "aria-current": view === current ? "page" : null }, [icon(key, 16), h("span", { text: name })])));
+// 그 화면이 든 묶음의 탭. 화면이 하나뿐인 묶음(소식, 규제, 일정)과 메뉴에 없는 화면에는 탭이 없다(null).
+export function groupTabs(view) {
+  const group = groupOf(view);
+  if (!group || group.views.length < 2) return null;
+  const now = UNDER[view] || view;
+  return h("nav", { class: "tabs", "aria-label": `${group.name}에서 볼 것 고르기` }, screensOf(group).map((one) =>
+    h("a", { href: one.href, "aria-current": one.view === now ? "page" : null }, [icon(one.icon, 16), h("span", { text: one.name })])));
 }

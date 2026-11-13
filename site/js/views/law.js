@@ -12,7 +12,7 @@ import { copyText } from "../ui/copy.js";
 import { empty, fill, h, safeLink } from "../ui/dom.js";
 import { count, day } from "../ui/format.js";
 import { icon } from "../ui/icons.js";
-import { libraryTabs } from "../ui/tabs.js";
+import { groupTabs } from "../ui/tabs.js";
 
 const MODES = [["both", "나란히"], ["en", "원문"], ["ko", "국문"]];
 const FOLDED = { front: "제목과 근거", recitals: "전문", closing: "맺음", notes: "각주", cover: "표지와 일러두기" };  // 접어 두는 조각
@@ -186,7 +186,7 @@ export async function render(main, arg) {
   const [actId, target = "", at = ""] = String(arg || "").split(".");
   const [act, acts, pdfs, refs] = await Promise.all([data.law(actId), data.laws(), data.pdfs(), data.refs()]);
   if (!act) {
-    fill(main, band("규정 원문", "", libraryTabs("laws")), empty("이 문서의 원문을 찾지 못했습니다."), h("p", {}, h("a", { href: "#laws", text: "규정 원문의 목록으로" })));
+    fill(main, band("규정 원문", "", groupTabs("laws")), empty("이 문서의 원문을 찾지 못했습니다."), h("p", {}, h("a", { href: "#laws", text: "규정 원문의 목록으로" })));
     return "규정 원문";
   }
   document.body.dataset.wide = "";
@@ -206,7 +206,7 @@ export async function render(main, arg) {
       .map((other) => h("option", { value: other.id, selected: other.id === act.id || null, text: other.name })))));
   const changed = act.changes && act.changes.rows ? h("a", { href: `#changes-${act.id}`, text: `앞선 판과 달라진 곳 ${count(act.changes.rows)}곳 보기` }) : null;
   fill(main,
-    band(act.name, about(act), libraryTabs("laws")),
+    band(act.name, about(act), groupTabs("laws")),
     h("div", { class: "law-bar" }, [
       h("p", { class: "crumbs" }, [h("a", { href: "#laws", text: "규정 원문" }), h("span", { text: "›" }), h("span", { text: act.name })]),
       h("div", { class: "law-tools" }, [
