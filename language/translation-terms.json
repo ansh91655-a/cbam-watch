@@ -5202,6 +5202,24 @@
    "ko": "원산 사업장",
    "from": "32025R2547",
    "added": "2026-11-13"
+  },
+  {
+   "en": "consultancy body",
+   "ko": "컨설팅 기관",
+   "from": "32025R2551",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "technical assistance body",
+   "ko": "기술 지원 기관",
+   "from": "32025R2551",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "reducing agent",
+   "ko": "환원제",
+   "from": "32025R2551",
+   "added": "2026-11-13"
   }
  ]
 }
