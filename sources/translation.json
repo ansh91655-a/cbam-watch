@@ -57,6 +57,8 @@
     "bbe39ebe2c13": "installations used for the processing of data: 데이터를 처리하는 설비를 가리킨다(CBAM의 사업장이 아니다)",
     "aeccc1d8775e": "uncertainties around specific technical requirements: 측정의 불확도가 아니라 일반적인 불확실성이다",
     "5d02757f9122": "화면에 뜨는 상태 이름 둘(Update requested, Deregistration requested)이라 원문대로 둔다",
-    "632aadb57157": "lead verifiers는 검증팀을 이끄는 사람이다(검증기관이 아니다). 국내 정부 자료의 CBAM 표기는 확인하지 못했다"
+    "632aadb57157": "lead verifiers는 검증팀을 이끄는 사람이다(검증기관이 아니다). 국내 정부 자료의 CBAM 표기는 확인하지 못했다",
+    "5bc7084865b4": "각주가 단체의 이름뿐이다(International federation of industrial energy consumers). 정해진 국문 이름을 확인하지 못해 원문대로 둔다",
+    "ce6c9b50f25c": "각주가 단체의 이름뿐이다(Union des Industries Utilisatrices d'Énergie). 정해진 국문 이름을 확인하지 못해 원문대로 둔다"
   }
 }
