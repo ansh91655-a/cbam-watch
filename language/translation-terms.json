@@ -4434,6 +4434,18 @@
    "ko": "데이터 보존 기간",
    "from": "guide-5e",
    "added": "2026-11-13"
+  },
+  {
+   "en": "building block",
+   "ko": "구성 요소",
+   "from": "guide-3",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "downstream emissions",
+   "ko": "하류 배출량",
+   "from": "guide-3",
+   "added": "2026-11-13"
   }
  ]
 }
