@@ -62,6 +62,7 @@ class _Recorder(PDFTextDevice):
         self.height = 0.0
         self.shows, self.images, self.upright, self.level, self.totals = [], [], [], [], {}
         self.tags = []
+        self.uses = {}      # 문서 전체에서 흐름(쪽의 내용, 양식)마다 그려진 횟수
         self._show = None
 
     def start(self, height):
@@ -181,6 +182,7 @@ class _Reader(PDFPageInterpreter):
         device = self.device
         name = PAGE if not device.streams else getattr(streams[0], "objid", None)
         device.streams.append([name, 0])
+        device.uses[name] = device.uses.get(name, 0) + 1
         try:
             super().render_contents(resources, streams, ctm)
         finally:
@@ -206,6 +208,7 @@ class Sheet:
         self.width, self.height, self.plain = width, height, plain
         self.shows, self.images, self.upright, self.level = shows, images, upright, level
         self.totals = totals        # 흐름마다의 글자 찍기 연산자 수(지울 때 차례가 맞는지 견준다)
+        self.once = frozenset()
         marks = [(glyph["y"], glyph["x"], order, index) for order, show in enumerate(shows) for index, glyph in enumerate(show["glyphs"])]
         marks.sort()
         self._marks = marks
@@ -236,4 +239,7 @@ def read(path):
             device.start(y1 - y0)
             reader.process_page(page)
             sheets.append(Sheet(x1 - x0, y1 - y0, plain, device.shows, device.images, device.upright, device.level, device.totals))
+    once = {name for name, count in device.uses.items() if count == 1 and name != PAGE and name is not None}
+    for sheet in sheets:
+        sheet.once = once       # 문서에서 한 번만 그려지는 양식(Form XObject): 그 안의 글자는 고쳐도 다른 쪽이 달라지지 않는다
     return sheets

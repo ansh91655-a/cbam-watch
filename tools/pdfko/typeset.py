@@ -1,0 +1,47 @@
+"""앉힐 자리가 정해진 국문을 원문과 같은 크기의 빈 쪽들에 찍는다(reportlab). 이 쪽들을 원문 위에 겹친다.
+
+쪽마다 맨 위에 비공식 번역임을 알리는 글을 넣는다. 같은 입력이면 같은 파일이 나오도록 만든 때는 적지 않는다.
+"""
+
+import io
+
+from reportlab.pdfgen import canvas
+
+from tools.pdfko import fonts
+
+NOTICE = "비공식 국문 번역입니다. 유럽연합 집행위원회의 공식 문서가 아니며, 원문과 다를 때에는 원문이 우선합니다."
+NOTICE_SIZE = 6.5
+NOTICE_TOP = 13.0       # 쪽 위 끝에서 알림 글의 밑금까지
+NOTICE_INK = (0.35, 0.35, 0.35)
+
+
+def _line(sheet, x, y, text, kind, heavy, size, color):
+    writer = sheet.beginText(x, y)
+    writer.setFillColorRGB(*color)
+    for name, piece in fonts.pieces(text, kind, heavy):
+        writer.setFont(name, size)
+        writer.textOut(piece)
+    sheet.drawText(writer)
+
+
+def overlay(sizes, jobs, masks=None):
+    """겹칠 쪽들을 PDF 바이트로 돌려준다.
+
+    sizes는 쪽마다의 (너비, 높이), jobs는 {쪽: [그릴 줄, …]}(layout.place가 주는 꼴, 좌표는 왼쪽 위가 원점),
+    masks는 {쪽: [(x0, 위, x1, 아래), …]} — 흰 네모로 가릴 자리(표지의 기관 표장).
+    """
+    buffer = io.BytesIO()
+    notice = fonts.tidy(NOTICE)     # 글꼴은 처음 쓸 때 등록된다. 아래에서 첫 글꼴로 삼으려면 먼저 불러야 한다
+    sheet = canvas.Canvas(buffer, pagesize=sizes[0], invariant=1, pageCompression=1, initialFontName=fonts.FACES[("sans", False)])
+    for number, (width, height) in enumerate(sizes):
+        sheet.setPageSize((width, height))
+        for x0, top, x1, bottom in (masks or {}).get(number, []):
+            sheet.setFillColorRGB(1, 1, 1)
+            sheet.rect(x0, height - bottom, x1 - x0, bottom - top, stroke=0, fill=1)
+        for job in jobs.get(number, []):
+            _line(sheet, job["x"], height - job["base"], job["text"], job["kind"], job["heavy"], job["size"], job["color"])
+        wide = fonts.width(notice, "sans", False, NOTICE_SIZE)
+        _line(sheet, (width - wide) / 2, height - NOTICE_TOP, notice, "sans", False, NOTICE_SIZE, NOTICE_INK)
+        sheet.showPage()
+    sheet.save()
+    return buffer.getvalue()

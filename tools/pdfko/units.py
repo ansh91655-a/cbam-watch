@@ -105,7 +105,7 @@ class _Reader:
                 out += self.marks(kid)
         return out
 
-    def emit(self, kind, index, words, **more):
+    def emit(self, kind, index, words, marks=None, **more):
         if kind == "p" and len(words) > 1:
             first = min(words, key=lambda word: (word[0], word[1]))
             if first[7] and first[6].isdigit():     # 위첨자 번호로 시작하는 문단: 꼬리표가 없는 각주
@@ -115,7 +115,7 @@ class _Reader:
         text = _join(words)
         if not text:
             return
-        unit = {"kind": kind, "text": text, "page": min(word[0] for word in words) + 1, "marks": sorted(set(map(tuple, self.marks(index))))}
+        unit = {"kind": kind, "text": text, "page": min(word[0] for word in words) + 1, "marks": sorted(set(map(tuple, marks if marks is not None else self.marks(index))))}
         unit.update({key: value for key, value in more.items() if value not in (None, "")})
         self.units.append(unit)
 
@@ -179,15 +179,16 @@ class _Reader:
 
     def note(self, index, context):
         label = next((kid for kid in self.kids[index] if self.kind(kid) == "Lbl"), None)
-        words = self.gather(index)
+        words, marks = self.gather(index), self.marks(index)
         for kid in self.blocks(index):
             if kid != label:
                 words += self.gather(kid)
+                marks += self.marks(kid)
         words.sort(key=lambda word: (word[0], word[1]))
         mark = _join(self.gather(label)) if label is not None else ""
         if not mark and words and (words[0][7] or re.fullmatch(r"\(?\d{1,3}\)?", words[0][6])):
             mark, words = words[0][6], words[1:]
-        self.emit("note", index, words, label=mark.strip("[]()"), **context)
+        self.emit("note", index, words, marks=marks, label=mark.strip("[]()"), **context)
 
     def item(self, index, context):
         label = "".join(_join(self.gather(kid)) for kid in self.kids[index] if self.kind(kid) == "Lbl")
