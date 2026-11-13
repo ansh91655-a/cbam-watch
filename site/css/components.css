@@ -148,6 +148,11 @@ a.m-topic:hover { text-decoration: underline; }
 }
 
 /* 단추 줄과 걸러 보기 */
+/* 규정 원문으로 가는 링크의 줄(ui/lawrefs.js): 소식, 의무 일정, 용어집에서 그 조문으로 간다 */
+.ref-links { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; margin: 0; font-size: var(--fs-s); }
+.ref-links .ref-name { display: inline-flex; align-items: center; gap: 5px; color: var(--ink-3); font-weight: 600; }
+.ref-links a { font-weight: 550; }
+td > .ref-links { margin-top: 6px; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .chip { display: inline-flex; align-items: baseline; gap: 6px; padding: 6px 14px; border: 1px solid var(--line); border-radius: var(--radius-pill); background: var(--surface); color: var(--ink-2); font-size: var(--fs-s); font-weight: 500; text-decoration: none; white-space: nowrap; }
 .chip:hover { border-color: var(--brand-bright); color: var(--brand-bright); }

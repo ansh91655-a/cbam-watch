@@ -6,10 +6,11 @@ import * as data from "../data.js";
 import { rowId, rows as blockRows } from "../laws/blocks.js";
 import { citeBlock, citePart } from "../laws/cite.js";
 import { recent } from "../laws/recent.js";
+import { dutyHref, linkedTo, tally, termHref } from "../laws/refs.js";
 import { band } from "../ui/band.js";
 import { copyText } from "../ui/copy.js";
 import { empty, fill, h, safeLink } from "../ui/dom.js";
-import { count } from "../ui/format.js";
+import { count, day } from "../ui/format.js";
 import { icon } from "../ui/icons.js";
 import { libraryTabs } from "../ui/tabs.js";
 
@@ -76,7 +77,42 @@ function cutNote(part, source) {
   ]);
 }
 
-function section(part, target, needles, piece, paged, source) {
+// 이 조각에 이어진 것(접어 둔다): 이 조가 근거인 의무 일정, 이 조를 적은 소식, 이 조에서 나온 용어.
+// 글에 법령과 조문이 또렷이 적힌 것만 이어져 있다(laws/refs.js). row가 없으면 null.
+function linkedBlock(row, name) {
+  if (!row) return null;
+  const itemLink = (item) => {
+    if (!item.link) return h("a", { href: `#item-${item.id}`, text: item.title });
+    const link = safeLink(item.link, item.title);   // 제목만 실은 소식은 원문으로 바로 간다
+    if (link) link.append(icon("out", 13));
+    return link || h("span", { text: item.title });
+  };
+  const dated = (date, link) => h("li", {}, [h("time", { datetime: date, text: day(date) }), link]);
+  return h("details", { class: "law-linked" }, [
+    h("summary", {}, [h("span", { text: name }), h("span", { class: "count", text: tally(row) })]),
+    row.duties.length ? h("div", { class: "law-linked-row" }, [h("b", { text: "의무 일정" }),
+      h("ul", {}, row.duties.map((duty) => dated(duty.date, h("a", { href: dutyHref(duty), text: duty.title }))))]) : null,
+    row.items.length ? h("div", { class: "law-linked-row" }, [h("b", { text: "소식" }),
+      h("ul", {}, [...row.items.map((item) => dated(item.date, itemLink(item))), row.more ? h("li", { class: "count", text: `이 밖에 ${count(row.more)}건이 더 있습니다.` }) : null])]) : null,
+    row.terms.length ? h("div", { class: "law-linked-row" }, [h("b", { text: "용어" }),
+      h("p", { class: "law-linked-terms" }, row.terms.map((term) => h("a", { href: termHref(term), text: term.ko || term.en })))]) : null,
+  ]);
+}
+
+const LINKED_NAMES = { article: "이 조와 이어진 내용", annex: "이 부속서와 이어진 내용" };
+
+// 법령의 수식은 원문에 그림으로 실려 있어 받아 둔 글에는 번호만 남는다. 그런 조각의 머리에 원문에서 보라고 알린다.
+function formulaNote(part, source) {
+  if (!part.formulas) return null;
+  const link = safeLink(source, "EUR-Lex의 원문");
+  if (link) link.append(icon("out", 13));
+  return h("p", { class: "law-cut-note" }, [
+    h("span", { text: `이 ${part.kind === "annex" ? "부속서" : "부분"}의 수식 ${count(part.formulas)}개는 원문에 그림으로 실려 있어, 여기에는 식의 번호((Equation 4) 같은 줄)만 보입니다. 식은 ` }),
+    link || h("span", { text: "EUR-Lex의 원문" }), h("span", { text: "에서 확인하세요." }),
+  ]);
+}
+
+function section(part, target, needles, piece, paged, source, linked) {
   const here = part.id === target;
   const rows = blockRows(part, here ? needles : [], citeTool(part));
   const waiting = part.blocks.length && part.blocks.every(([en, ko]) => !ko);
@@ -86,8 +122,9 @@ function section(part, target, needles, piece, paged, source) {
       h("summary", {}, [h("span", { text: FOLDED[part.kind] }), h("span", { class: "count", text: `문단 ${count(part.blocks.length)}개` })]), ...rows]);
   }
   return h("section", { class: "law-part", id: `p-${part.id}`, "data-here": here ? "" : null, "data-waiting": waiting ? "" : null }, [
-    heading(part, paged, part.blocks.length > 0), waiting ? h("p", { class: "law-wait-note", text: `이 ${piece}은 아직 국문으로 옮기지 않았습니다. 원문만 보입니다.` }) : null, ...rows,
-    cutNote(part, source)]);
+    heading(part, paged, part.blocks.length > 0), waiting ? h("p", { class: "law-wait-note", text: `이 ${piece}은 아직 국문으로 옮기지 않았습니다. 원문만 보입니다.` }) : null,
+    formulaNote(part, source), ...rows,
+    cutNote(part, source), linkedBlock(linked, LINKED_NAMES[part.kind] || "이 부분과 이어진 내용")]);
 }
 
 function jump(event, id, href) {
@@ -144,7 +181,7 @@ function reach(target, at) {
 
 export async function render(main, arg) {
   const [actId, target = "", at = ""] = String(arg || "").split(".");
-  const [act, acts, pdfs] = await Promise.all([data.law(actId), data.laws(), data.pdfs()]);
+  const [act, acts, pdfs, refs] = await Promise.all([data.law(actId), data.laws(), data.pdfs(), data.refs()]);
   if (!act) {
     fill(main, band("규정 원문", "", libraryTabs("laws")), empty("이 문서의 원문을 찾지 못했습니다."), h("p", {}, h("a", { href: "#laws", text: "규정 원문의 목록으로" })));
     return "규정 원문";
@@ -152,7 +189,7 @@ export async function render(main, arg) {
   document.body.dataset.wide = "";
   const needles = target ? recent.needles : [];
   const words = isAct(act) ? WORDS.act : WORDS.doc;
-  const body = h("div", { class: "law-body", "data-mode": recent.mode }, act.parts.map((part) => section(part, target, needles, words.piece, pdfs[act.id] ? act.id : "", act.url)));
+  const body = h("div", { class: "law-body", "data-mode": recent.mode }, act.parts.map((part) => section(part, target, needles, words.piece, pdfs[act.id] ? act.id : "", act.url, linkedTo(refs, act.id, part.id))));
   const said = h("p", { class: "sr", role: "status", "aria-live": "polite" });  // 복사했는지를 화면 낭독기에 알린다
   wireCite(body, act, said);
   const buttons = MODES.map(([key, text]) => h("button", { type: "button", text, "aria-pressed": String(key === recent.mode), onclick: () => {
@@ -184,6 +221,7 @@ export async function render(main, arg) {
         act.rule ? h("a", { href: `#rules-${act.rule}`, text: "이 규제의 진행 상황" }) : null,
         h("a", { href: "#laws", text: "전체 규정에서 찾기" }),
       ]),
+      linkedBlock(linkedTo(refs, act.id), "이 문서와 이어진 내용"),
       h("p", { class: "law-cite-tip", text: `문단 오른쪽의 복사 표시나 ${words.piece} 머리의 ‘인용 복사’를 누르면 원문과 국문, 출처, 주소가 함께 복사됩니다.` }),
     ]),
     h("div", { class: "law-layout" }, [contents(act, words.toc), body]),

@@ -4,12 +4,13 @@ import { forRole, tally } from "../../calendar/roles.js";
 import { fill, h, safeLink } from "../../ui/dom.js";
 import { koreanDate } from "../../ui/format.js";
 import { icon } from "../../ui/icons.js";
+import { lawRefs } from "../../ui/lawrefs.js";
 
 function dateBox(iso) {
   return h("span", { class: "date-box" }, [h("span", { text: `${iso.slice(0, 4)}.${Number(iso.slice(5, 7))}` }), h("b", { text: Number(iso.slice(8, 10)) })]);
 }
 
-function row(duty, todayIso) {
+function row(duty, todayIso, refs) {
   const link = safeLink(duty.link, duty.basis);
   if (link) link.append(icon("out", 13));
   return h("li", { class: "duty", "data-kind": duty.kind, "data-past": duty.date < todayIso ? "true" : null, id: `duty-${duty.id}`, tabindex: "-1" }, [
@@ -26,13 +27,15 @@ function row(duty, todayIso) {
       duty.supplier ? h("p", { class: "duty-supplier" }, [h("b", { text: "생산자가 준비할 것" }), h("span", { text: duty.supplier })]) : null,
       duty.verifier ? h("p", { class: "duty-supplier" }, [h("b", { text: "검증기관이 알아 둘 것" }), h("span", { text: duty.verifier })]) : null,
       h("p", { class: "duty-basis" }, [h("span", { text: "근거" }), link || h("span", { text: duty.basis })]),
+      lawRefs(refs, "국문과 함께 보기"),
     ]),
   ]);
 }
 
 // 그해의 의무 일정 구역. 그해에 의무가 없으면 null.
-// role은 처음에 고를 역할(없으면 모두), onRole은 역할을 바꿀 때 부르는 함수(주소를 고친다)
-export function dutyList(book, year, todayIso, role = "", onRole = () => {}) {
+// role은 처음에 고를 역할(없으면 모두), onRole은 역할을 바꿀 때 부르는 함수(주소를 고친다),
+// refs는 의무마다 근거 조문을 사이트의 규정 원문으로 잇는 자료({ 의무 id: [{ act, part, label }] })
+export function dutyList(book, year, todayIso, role = "", onRole = () => {}, refs = {}) {
   const mine = (book.duties || []).filter((duty) => String(duty.date).startsWith(`${year}-`));
   if (!mine.length) return null;
   const roles = tally(mine, book.roles);
@@ -50,7 +53,7 @@ export function dutyList(book, year, todayIso, role = "", onRole = () => {}) {
   function draw() {
     const shown = forRole(mine, state.role);
     const ahead = shown.filter((duty) => duty.date >= todayIso).length;
-    fill(list, shown.map((duty) => row(duty, todayIso)));
+    fill(list, shown.map((duty) => row(duty, todayIso, refs[duty.id])));
     size.textContent = `${shown.length}건${ahead && ahead < shown.length ? `, 앞으로 ${ahead}건` : ""}`;
     about.textContent = (roles.find((one) => one.key === state.role) || {}).about || "";
     about.hidden = !about.textContent;

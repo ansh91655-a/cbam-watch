@@ -3,23 +3,24 @@
 import * as data from "../data.js";
 import { band } from "../ui/band.js";
 import { empty, fill, h, table } from "../ui/dom.js";
+import { lawRefs } from "../ui/lawrefs.js";
 import { stackable } from "../ui/stack.js";
 import { decode } from "../ui/sitesearch.js";
 import { libraryTabs } from "../ui/tabs.js";
 
 const PAGE = 60;
 
-function row(term) {
+function row(term, refs) {
   return h("tr", {}, [
     h("td", { text: term.en }),
     h("td", { text: term.abbr || "" }),
     h("td", {}, [h("strong", { text: term.ko }), term.alt ? h("span", { class: "count", text: ` (${term.alt})` }) : null]),
-    h("td", { text: term.note || "" }),
+    h("td", {}, [h("span", { text: term.note || "" }), lawRefs(refs, "근거 조문")]),
   ]);
 }
 
 export async function render(main, arg) {
-  const terms = await data.terms();
+  const [terms, refs] = await Promise.all([data.terms(), data.refs()]);
   const state = { text: decode(arg).trim(), shown: PAGE };
   const holder = h("div", {});
   const count = h("p", { class: "count", role: "status" });
@@ -33,7 +34,7 @@ export async function render(main, arg) {
     });
     count.textContent = `${found.length}건`;
     holder.replaceChildren(found.length
-      ? stackable(table(["영문", "약어", "국문 표기", "설명"], found.slice(0, state.shown).map(row), "용어 목록"), { wideLast: true })
+      ? stackable(table(["영문", "약어", "국문 표기", "설명"], found.slice(0, state.shown).map((term) => row(term, refs.terms[term.en])), "용어 목록"), { wideLast: true })
       : empty("찾는 용어가 없습니다. 다른 낱말로 찾아보세요."));
     more.hidden = found.length <= state.shown;
     more.textContent = `더 보기 (남은 ${found.length - state.shown}건)`;

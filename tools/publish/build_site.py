@@ -7,10 +7,10 @@ import pathlib
 import shutil
 import sys
 
-from tools.common.jsonio import read_json, write_json
+from tools.common.jsonio import read_json, today, write_json
 from tools.laws import build as laws
 from tools.pdfko import site as pdf_site
-from tools.publish import calc, derive, duties, factor, feed, merge, regulations, thumbs
+from tools.publish import calc, crossrefs, derive, duties, factor, feed, merge, regulations, thumbs
 
 DATA_FILES = ["items", "events", "digests", "terms", "topics", "prices"]
 LIST_KEY = {"items": "items", "events": "events", "digests": "digests", "terms": "terms", "topics": "topics", "prices": "prices"}
@@ -99,6 +99,12 @@ def main(argv):
     # 규정 원문과 국문 번역, 전체 규정 검색에 쓰는 글(받아 둔 법령의 글에서 만든다)
     counts["laws"] = laws.write(data_out)
     counts["pdfs"] = pdf_site.write(out)  # 원문과 같은 자리에 번역을 앉힌 국문 PDF(도구가 없는 환경에서는 싣지 않는다)
+    # 소식, 의무 일정, 용어집에 적힌 법령과 조문을 규정 원문으로 잇는다(글에 또렷이 적힌 곳만). 근거 칸에 적힌 조각이 글에 없으면 알리기만 한다
+    linked, unlinked = crossrefs.write(data_out, bodies["items"]["items"], read_json(data_out / "duties.json", {}).get("duties", []),
+                                       bodies["terms"].get("terms", []), today())
+    print("규정 원문으로 이은 것:", linked)
+    for where, what in unlinked:
+        print(f"알림: 조문 잇기: {where}: {what}")
 
     documents, diffs = derive.documents()
     counts.update({"documents": len(documents["documents"])})

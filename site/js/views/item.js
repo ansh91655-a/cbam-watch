@@ -6,6 +6,7 @@ import { empty, fill, h, safeLink, unsplit } from "../ui/dom.js";
 import { day } from "../ui/format.js";
 import { icon } from "../ui/icons.js";
 import { card } from "../ui/card.js";
+import { lawRefs } from "../ui/lawrefs.js";
 import { topicName, topicOf } from "../ui/topics.js";
 
 const RELATED = 4;
@@ -59,7 +60,7 @@ function facts(item, topic) {
   ]);
 }
 
-function body(item) {
+function body(item, refs) {
   const host = hostOf(item.link);
   const source = safeLink(item.link, "원문 열기", { class: "btn btn-main" });
   if (source) source.append(icon("out", 15));
@@ -69,6 +70,7 @@ function body(item) {
       : (item.summary ? h("p", { class: "item-summary", text: item.summary }) : h("p", { class: "item-summary withdrawn", text: "이 소식은 제목이 곧 내용이어서 따로 요약을 두지 않았습니다." })),
     !item.withdrawn && item.impact ? h("p", { class: "card-impact item-impact" }, [h("strong", { text: "실무 영향" }), h("span", { text: item.impact })]) : null,
     !item.withdrawn && item.excerpt ? excerpt(item) : null,
+    item.withdrawn ? null : lawRefs(refs, "이 소식에 나온 법령과 조문"),
     source ? h("div", { class: "item-actions" }, [source, host ? h("span", { class: "count", text: `${host}에서 열립니다` }) : null]) : null,
     h("p", { class: "item-note", text: "이 요약은 원문을 바탕으로 정리한 참고 자료입니다. 정확한 내용은 원문에서 확인해 주세요." }),
   ]);
@@ -91,10 +93,11 @@ export async function render(main, id) {
     return "소식";
   }
   const topic = topicOf(item);
+  const refs = (await data.refs()).items[item.id];  // 글에 또렷이 적힌 법령과 조문만 이어져 있다
   const related = items.filter((entry) => entry.id !== item.id && !entry.withdrawn && !isNotice(entry) && topicOf(entry) === topic).slice(0, RELATED);
   fill(main,
     head(item, topic),
-    h("div", { class: "cols item-cols" }, [body(item), facts(item, topic)]),
+    h("div", { class: "cols item-cols" }, [body(item, refs), facts(item, topic)]),
     related.length ? h("section", { class: "stack", "aria-labelledby": "h-related" }, [
       h("div", { class: "sec-head" }, [h("h2", { id: "h-related", text: `${topicName(topic)}의 다른 소식` }), h("a", { href: `#news-${topic}`, text: "이 주제 모두 보기" })]),
       h("div", { class: "cards-2" }, related.map(card)),

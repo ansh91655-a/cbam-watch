@@ -2,6 +2,8 @@
 // 쓰는 법: node tools/dev/shot.mjs <사이트 폴더> <찍을 곳> [...]
 //   찍을 곳은 "<#화면>@<너비>[:<높이>]=<그림 파일>" 꼴이다. 높이를 주지 않으면 화면 전체를 찍는다(너무 길면 6000까지).
 //   예: node tools/dev/shot.mjs _site "#news-notices@1280=/tmp/notices.png" "#news@390:900=/tmp/news-m.png"
+//   그림 파일 뒤에 "!<고르는 말>"을 붙이면 찍기 전에 그 요소를 누르고(접힌 것을 펼친다) 그 자리로 옮겨 간다.
+//   예: "#law-32023R0956.art-6@1280:900=/tmp/linked.png!#p-art-6 .law-linked > summary"
 // 화면마다 가로 넘침과 화면 오류도 함께 찍어 준다(tools/sitecheck의 도구를 쓴다).
 import { go, launch, measure, open } from "../sitecheck/browser.mjs";
 import { serve } from "../sitecheck/serve.mjs";
@@ -15,13 +17,18 @@ const site = await serve(folder);
 const browser = await launch();
 try {
   for (const target of targets) {
-    const [where, file] = target.split("=");
+    const [shot, press = ""] = target.split("!");
+    const [where, file] = shot.split("=");
     const [hash, size = "1280"] = where.split("@");
     const [width, height] = size.split(":").map(Number);
     const { page, took } = await open(browser, site.url, width);
     await go(page, hash);
     const seen = await measure(page);
     if (height) await page.setViewport({ width, height, deviceScaleFactor: 1 });
+    if (press) {
+      await page.evaluate((selector) => { const node = document.querySelector(selector); if (node) { node.click(); node.scrollIntoView({ block: "center" }); } }, press);
+      await new Promise((done) => setTimeout(done, 250));
+    }
     const full = !height;
     const tall = await page.evaluate(() => document.documentElement.scrollHeight);
     await page.screenshot({ path: file, fullPage: full && tall <= 6000, ...(full && tall > 6000 ? { clip: { x: 0, y: 0, width, height: 6000 } } : {}) });

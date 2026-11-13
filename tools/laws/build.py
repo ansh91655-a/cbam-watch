@@ -9,6 +9,7 @@
 """
 import json
 import pathlib
+import re
 
 from tools.laws import catalog, corpus, gloss, revisions
 
@@ -16,6 +17,7 @@ SEARCHED = ("recitals", "article", "annex", "section", "appendix")           # �
 LISTED = ("recitals", "division", "article", "annex", "section", "appendix")  # 차례에 보이는 조각
 HEADS = ("front", "cover")                                                   # 문서의 머리(제목, 근거, 표지)
 NOTICE = "This text is meant purely as a documentation tool"  # 통합본이 스스로 적어 둔 알림의 첫머리
+FORMULA = re.compile(r"^\(Equation \d+[a-z]?\)[;,.]?$")        # 법령의 수식 자리에 남은 번호(식은 원문에 그림으로 실려 있다)
 DISCLAIMER = "Disclaimer:"                                    # 안내 문서가 표지에 적어 둔 일러두기의 첫머리
 SEARCH_FILES = {"search.json": ("act",), "search-guides.json": ("guide", "manual", "paper")}  # 검색에 쓰는 글의 파일과 거기에 싣는 갈래
 
@@ -50,6 +52,9 @@ def _part(part, memory, units=()):
         row["shapes"] = part["shapes"]
     if part.get("page"):
         row["page"] = part["page"]  # 이 조각이 시작하는 PDF의 쪽
+    formulas = sum(1 for text in part["blocks"] if FORMULA.match(text))
+    if formulas:
+        row["formulas"] = formulas  # 수식의 번호만 남은 줄의 수(법령의 수식은 원문에 그림으로 실려 있다). 화면이 원문에서 보라고 알린다
     if part.get("cut"):
         row["cut"] = part["cut"]    # 받아 둘 때 뺀 줄 수(값의 표가 아주 긴 부속서). 화면이 싣지 않은 부분이 있다고 알린다
     if units and len(part.get("units", [])) == len(part["blocks"]) and part["blocks"]:

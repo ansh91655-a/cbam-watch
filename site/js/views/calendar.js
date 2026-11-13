@@ -26,7 +26,7 @@ const show = (event) => flash(eventId(event));
 
 export async function render(main, arg) {
   const [asked, target = ""] = String(arg || "").split(".");
-  const [events, duties] = await Promise.all([data.events(), data.duties()]);
+  const [events, duties, refs] = await Promise.all([data.events(), data.duties(), data.refs()]);
   const role = roleIn(target, duties.roles);
   const now = today();
   const thisYear = Number(now.slice(0, 4));
@@ -49,7 +49,7 @@ export async function render(main, arg) {
     ]),
     h("section", { class: "stack", "aria-label": `${year}년 일정선` }, yearLine(events, year, now, show)),
     // 법령에 날짜가 적힌 의무(실무 달력). 역할을 고르면 주소만 바꿔 둔다(다시 그리지 않는다)
-    dutyList(duties, year, now, role, (key) => rename(`#calendar-${year}${key ? `.${roleTarget(key)}` : ""}`)),
+    dutyList(duties, year, now, role, (key) => rename(`#calendar-${year}${key ? `.${roleTarget(key)}` : ""}`), refs.duties),
     h("section", { class: "stack", "aria-label": `${year}년 달력` }, monthGrid(events, year, now, show)),
   );
   if (role) {

@@ -1,5 +1,6 @@
 """화면 모듈 가운데 화면 요소를 다루지 않아 브라우저 없이 볼 수 있는 것: 국내 공지·자료 가르기(js/news/notices.js),
-문단 인용의 글(js/laws/cite.js), 낱말 단위로 달라진 곳 찾기(js/laws/worddiff.js), 의무를 역할로 고르기(js/calendar/roles.js)."""
+문단 인용의 글(js/laws/cite.js), 낱말 단위로 달라진 곳 찾기(js/laws/worddiff.js), 의무를 역할로 고르기(js/calendar/roles.js),
+규정 원문과 그것을 적은 글을 잇는 주소(js/laws/refs.js)."""
 import json
 import shutil
 import subprocess
@@ -8,6 +9,7 @@ import unittest
 SCRIPT = r"""
 import { forRole, roleIn, roleTarget, tally } from './site/js/calendar/roles.js';
 import { address, citeBlock, citePart, partName, source } from './site/js/laws/cite.js';
+import { dutyHref, lawHref, linkedTo, tally as linkedTally, termHref } from './site/js/laws/refs.js';
 import { wordDiff } from './site/js/laws/worddiff.js';
 import { isNotice, NOTICES, split } from './site/js/news/notices.js';
 
@@ -30,6 +32,12 @@ const parts = split(items);
 const roles = [{ key: 'declarant', name: '신고인·수입자' }, { key: 'verifier', name: '검증기관' }, { key: 'uk', name: '영국 수입자' }];
 const duties = [{ id: 'one', roles: ['declarant'] }, { id: 'two', roles: ['declarant', 'verifier'] }, { id: 'three' }];
 
+const linkedRefs = { laws: { '32023R0956': {
+  'art-6': { items: [], duties: [{ id: 'eu-first-declaration', title: '첫 신고', date: '2027-09-30' }], terms: [{ en: 'CBAM declaration', ko: 'CBAM 신고서' }, { en: 'CBAM obligation', ko: 'CBAM 의무' }], more: 0 },
+  'art-7': { items: [], duties: [], terms: [], more: 0 },
+  '': { items: [{ id: 'a', title: '소식', date: '2026-11-12' }], more: 4 },
+} } };
+
 const long = (word) => Array.from({ length: 900 }, (_, index) => `${word}${index}`).join(' ');
 
 console.log(JSON.stringify({
@@ -49,6 +57,11 @@ console.log(JSON.stringify({
     names: [partName(article), partName(section), partName({ kind: 'recitals', ko: '전문' }), partName(null)],
     sources: [source(act, article, 0), source({ ...act, consolidated: '' }, article, 0), source(guide, section, 0)],
     links: [address(base, act, article), address('https://example.org/x/', guide, section, 2)],
+  },
+  refs: {
+    hrefs: [lawHref({ act: '32023R0956', part: 'art-6' }), lawHref({ act: '32025R2621', part: '' }), dutyHref({ id: 'eu-first-declaration', date: '2027-09-30' }), termHref({ en: 'CBAM declaration', ko: 'CBAM 신고서' })],
+    linked: linkedTo(linkedRefs, '32023R0956', 'art-6'), whole: linkedTo(linkedRefs, '32023R0956'), none: [linkedTo(linkedRefs, '32023R0956', 'art-7'), linkedTo(linkedRefs, 'nobody', 'art-1'), linkedTo(null, 'x')],
+    tally: [linkedTally(linkedTo(linkedRefs, '32023R0956', 'art-6')), linkedTally(linkedTo(linkedRefs, '32023R0956')), linkedTally(null)],
   },
   roles: {
     read: [roleIn('role-verifier', roles), roleIn('role-nobody', roles), roleIn('duty-one', roles), roleIn('', roles), roleIn('role-verifier', null)],
@@ -77,6 +90,14 @@ class SiteModulesTest(unittest.TestCase):
         self.assertEqual(notices["news"], ["b", "c"])         # 요약을 내린 것은 보통 소식으로 둔다(내렸다는 알림이 보여야 한다)
         self.assertEqual(notices["empty"], {"news": [], "notices": []})
         self.assertFalse(notices["one"])
+
+    def test_links_between_the_law_text_and_what_cites_it(self):
+        refs = self.seen["refs"]
+        self.assertEqual(refs["hrefs"], ["#law-32023R0956.art-6", "#law-32025R2621", "#calendar-2027.duty-eu-first-declaration", "#terms-CBAM%20declaration"])
+        self.assertEqual((len(refs["linked"]["duties"]), len(refs["linked"]["terms"]), refs["linked"]["items"]), (1, 2, []))
+        self.assertEqual((refs["whole"]["duties"], refs["whole"]["terms"], refs["whole"]["more"]), ([], [], 4))   # 빠진 갈래는 빈 목록으로 채운다
+        self.assertEqual(refs["none"], [None, None, None])                                                          # 이어진 것이 없으면 그리지 않는다
+        self.assertEqual(refs["tally"], ["의무 일정 1건, 용어 2건", "소식 5건", ""])                                 # 다 싣지 못한 소식도 센다
 
     def test_duties_are_picked_by_the_role_named_in_the_address(self):
         roles = self.seen["roles"]
