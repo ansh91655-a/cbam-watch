@@ -78,6 +78,12 @@
    "key": "e1f62c1a4ad7",
    "act": "guide-importers",
    "why": "immediately(즉시)를 '직접'으로 옮겨 시점에 관한 뜻이 방식에 관한 뜻으로 바뀜"
+  },
+  {
+   "day": "2026-11-13",
+   "key": "902f07b7e211",
+   "act": "guide-3",
+   "why": "review process를 '신고서 검토 절차'로 옮겨 원문에 없는 '신고서'가 더해짐"
   }
  ]
 }
