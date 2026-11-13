@@ -1,6 +1,6 @@
 {
  "source": "eu-acts",
- "fetchedAt": "2026-11-11T12:59:43+09:00",
+ "fetchedAt": "2026-11-13T16:15:59+09:00",
  "since": "2025-01-01",
  "report": {
   "targets": 16,
@@ -19,7 +19,7 @@
    "celex": "32025R2547",
    "title": "내재배출량 산정 방법 이행규정",
    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2547",
-   "lines": 706,
+   "lines": 2801,
    "fullLines": 2801,
    "textPath": "collected/archive/pages/eu-acts/32025R2547.txt"
   },
@@ -27,7 +27,7 @@
    "celex": "32025R2546",
    "title": "내재배출량 검증 원칙 이행규정",
    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2546",
-   "lines": 267,
+   "lines": 362,
    "fullLines": 362,
    "textPath": "collected/archive/pages/eu-acts/32025R2546.txt"
   },
@@ -35,7 +35,7 @@
    "celex": "32025R2551",
    "title": "검증기관 인정 조건 위임규정",
    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2551",
-   "lines": 560,
+   "lines": 912,
    "fullLines": 912,
    "textPath": "collected/archive/pages/eu-acts/32025R2551.txt"
   },
@@ -115,7 +115,7 @@
    "celex": "32025R2210",
    "title": "대륙붕·배타적 경제수역 반입 제품 이행규정",
    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2210",
-   "lines": 291,
+   "lines": 543,
    "fullLines": 543,
    "textPath": "collected/archive/pages/eu-acts/32025R2210.txt"
   },

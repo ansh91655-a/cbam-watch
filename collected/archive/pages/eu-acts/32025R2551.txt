@@ -561,4 +561,356 @@ technical assistance to develop or maintain the system for monitoring and report
 A conflict of interest between the verifier and the operator shall be considered to have arisen in particular in either of the following cases:
 (a)
 where the relationship between the verifier and the operator is based on common ownership, common governance, common management or personnel, shared resources, common finances or common contracts or marketing;
-[이 부속서의 나머지 353줄은 싣지 않음]
+(b)
+where the operator has received consulting services referred to in Section 1.7.2, point (a), or technical assistance referred to in Section 1.7.2, point (b), from a consultancy body, technical assistance body or another organisation that has a relationship with the verifier, which threaten the impartiality of the verifier.
+For the purposes of the first paragraph, point (b), the verifier’s impartiality shall be considered compromised where the relationship between the verifier and the consultancy body, technical assistance body or the other organisation is based on common ownership, common governance, common management or personnel, shared resources, common finances, common contracts or marketing and common payment of sales commission or other inducement for the referral of new clients.
+1.7.4. Outsourcing of verification activities
+Verifiers shall not outsource the independent review or the drafting and issuing of verification reports.
+Where verifiers outsource other verification activities, they shall meet the relevant requirements laid down in the harmonised standard referred to in Section 1.5.1. The verifier shall, among others, be subject to the following obligations:
+(a)
+retain full responsibility for the verification and the verification report;
+(b)
+require the outsourced body to provide independent evidence that demonstrates their conformity with Sections 1.7.1, 1.7.2 and 1.7.3;
+(c)
+obtain consent from the operator to use the outsourced body; and
+(d)
+have a properly documented agreement with the outsourced body.
+1.7.5. Process to ensure continuous impartiality and independence
+Verifiers shall establish, document, implement and maintain a process to ensure their continuous impartiality and independence, and the continuous impartiality and independence of the parts of the same legal entity, of bodies and organisations referred to in Section 1.7.3, and of all personnel and contracted persons involved in the verification. That process shall include a mechanism to safeguard the impartiality and independence of the verifier.
+1.7.6. Consecutive verifications of the same installation
+When verifying the same installation as in the previous year, the verifier shall assess the risk to impartiality and take measures to reduce the risk to impartiality.
+If the CBAM lead auditor undertakes five annual verifications for a given installation, and no other CBAM lead auditor has undertaken an annual verification of the installation during this time, the CBAM lead auditor shall take a three consecutive year break from providing verification services to that same installation.
+2. REQUIREMENTS FOR VERIFICATION ACTIVITIES
+2.1. General obligations of the verifier
+2.1.1. General obligations for the verification
+The process of verifying an operator’s emissions report shall be an effective and reliable tool to support of quality assurance and quality control procedures, and in response to which an operator can act to improve performance in monitoring and reporting emissions.
+A verified operator’s emissions report shall be reliable for users. It shall faithfully represent what it either purports to represent or may reasonably be expected to represent.
+The verifier shall carry out the verification activities required under this Section and apply the verification principles under Implementing Regulation (EU) 2025/2546 and prepare a verification report establishing with reasonable assurance whether the operator’s emissions report is free from material misstatements.
+The verifier shall plan and perform the verification with an attitude of professional scepticism, recognising that circumstances may exist that cause the information in the operator’s emissions report to contain material misstatements.
+2.1.2. General obligations during the verification
+During the verification, the verifier shall assess whether:
+(a)
+the operator’s emissions report is complete and meets the requirements laid down in Annex IV to Implementing Regulation (EU) 2025/2547;
+(b)
+the operator has acted in conformity with the installation’s monitoring plan;
+(c)
+the data in the operator’s emissions report are free from material misstatements;
+(d)
+information can be provided in support of the operator’s data flow activities, control system and associated procedures to improve the performance of their monitoring and reporting.
+For the purposes of point (c), the verifier shall obtain clear and objective evidence from the operator to support the reported embedded emissions and other data related to the goods produced, taking into account all other information provided in the operator’s emissions report.
+If the verifier discovers that an installation’s monitoring plan is not in compliance with Implementing Regulation (EU) 2025/2547, the verifier shall take the necessary action in accordance with Section 2.14.
+2.2. Pre-contractual obligations and time allocation
+Before accepting a verification engagement, a verifier shall obtain a proper understanding of the operator’s installation and assess whether it can undertake the verification. For this purpose, the verifier shall at least:
+(a)
+undertake a review of the information supplied by the operator to determine the scope of the verification;
+(b)
+assess whether the verification engagement falls within the scope of its accreditation;
+(c)
+assess whether it has the competence, personnel and resources required to select a verification team capable of dealing with the complexity of the installation as well as whether it is capable of successfully completing the verification activities within the timeframe required;
+(d)
+assess whether it is capable of ensuring that the potential verification team at its disposal holds all the competence and persons required to carry out verification activities for that specific installation;
+(e)
+evaluate the risks involved to undertake the verification of the operator’s emissions report in accordance with this Regulation;
+(f)
+determine, for each verification engagement requested, the time allocation needed to properly carry out the verification, taking into account the complexity of the installation, of the monitoring, and of the verification engagement.
+The verifier shall ensure that the verification contract provides for the possibility for time to be charged in addition to the time agreed in the contract, where such additional time is found to be needed for the strategic analysis, risk analysis or other verification activities.
+The verifier shall record the time allocated in the internal verification documentation.
+2.3. Information to be received from operators
+Before the strategic analysis and at other points of time during the verification, the verifier shall receive from the operator all of the following:
+(a)
+the latest version of the operator’s monitoring plan, prepared in accordance with point A.5 of Annex II to Implementing Regulation (EU) 2025/2547;
+(b)
+relevant documentation or a description of the installation, procedures and processes or flowcharts prepared and kept up-to-date outside the monitoring plan;
+(c)
+if applicable, a record of all changes made to the installation and to the monitoring plan since the last verification;
+(d)
+if applicable, the operator’s sampling plan, prepared in accordance with point A.6 of Annex II to Implementing Regulation (EU) 2025/2547;
+(e)
+the operator’s emissions report to be verified;
+(f)
+the operator’s emissions report and the related verification report for the previous reporting period, if not verified by the same verifier;
+(g)
+where applicable, information on how the operator has corrected non-conformities or addressed recommendations for improvement that were reported in the verification report concerning the previous reporting period;
+(h)
+if applicable, the verification reports relating to precursors used but not produced at the installation;
+(i)
+where the operator used the actual time of production of the precursor to determine the reporting period during which the precursor was produced, evidence of the actual time of production;
+(j)
+where the production process for a complex good used a type of precursor obtained from multiple installations, the specific embedded direct and, if applicable, indirect emissions to be used for that precursor, and an indication of whether the specific embedded emissions were determined by using the default method laid down in Article 14 of Implementing Regulation (EU) 2025/2547 or by calculating the embedded emissions of the precursor obtained from a specific installation or subset of installations in accordance with that Article;
+(k)
+where goods that are not listed in Annex II to Regulation (EU) 2023/956 are produced at the installation, and if the operator uses neither the default value for the emission factor of electricity nor the value for electricity produced at the installation, the following elements:
+(1)
+the verification report of the installation producing electricity;
+(2)
+the evidence referred to in point D.4.3 of Annex II to Implementing Regulation (EU) 2025/2547.
+(l)
+where the installation produces electricity imported into the customs territory of the Union, the evidence referred to in point D.2.4 of Annex II to Implementing Regulation (EU) 2025/2547;
+(m)
+information on databases and data sources used for monitoring and reporting purposes;
+(n)
+any other relevant information necessary to plan and carry out the verification.
+2.4. Strategic analysis
+2.4.1. Assessment of the likely nature, scale and complexity of the verification tasks
+At the beginning of the verification the verifier shall assess the likely nature, scale and complexity of the verification tasks by carrying out a strategic analysis of all the activities that it must perform in order to verify the installation.
+When carrying out the strategic analysis, the verifier shall check the following:
+(a)
+whether the monitoring plan presented to it is the most recent version, and whether there were any non-conformities or recommendations for improvement included in the previous verification report;
+(b)
+whether there have been any modifications to the installation or the monitoring plan during the reporting period.
+2.4.2. Collection of information
+The verifier shall collect the information needed to assess whether the verification team is sufficiently competent to carry out the verification, to determine that the time allocation indicated in the contract has been set correctly and to ensure that it is able to conduct the necessary risk analysis.
+2.4.3. Review of information
+The verifier shall review the information referred to in Section 2.4.2. When reviewing this information, the verifier shall at least assess the following:
+(a)
+the size and complexity of the installation, the number of different goods produced, the number and nature of production processes and production routes;
+(b)
+the monitoring plan as well as the specifics of the monitoring methodology laid down therein;
+(c)
+the nature, scale and complexity of emission sources and source streams as well as the technical connections between production processes, production routes and other installations, if any;
+(d)
+the measurement equipment described in the monitoring plan, the origin and application of calculation factors and other primary data sources;
+(e)
+the number of different precursors used but not produced at the installation, and the variety of their sources;
+(f)
+for goods produced at the installation and that are not listed in Annex II to Regulation (EU) 2023/956, the number of installations from where electricity is received and the approach used by the operator to determine the emission factor of electricity, and any relevant underlying data;
+(g)
+for electricity imported into the customs territory of the Union, the approach used by the operator to determine the emission factor of electricity, and any relevant underlying data;
+(h)
+the data flow activities and the control system.
+2.5. Risk analysis
+In order to design, plan and implement an effective verification, the verifier shall identify and analyse the following elements:
+(a)
+the inherent risks;
+(b)
+the control activities;
+(c)
+where control activities referred to in point (b) have been implemented, the control risks that could affect the effectiveness of those control activities.
+When identifying and analysing the elements referred to in the first paragraph, the verifier shall at least consider:
+(a)
+the findings from the strategic analysis referred to in Section 2.4;
+(b)
+the information referred to in Section 2.3 and Section 2.4.3, point (c);
+(c)
+the required materiality levels as specified in Implementing Regulation (EU) 2025/2546.
+Where appropriate in the light of the information obtained in the course of the verification, the verifier shall revise the risk analysis and modify or repeat the verification activities to be performed.
+2.6. Verification plan
+2.6.1. Minimum content of the verification plan
+The verifier shall draft a verification plan commensurate with the information obtained and the risks identified during the strategic analysis and the risk analysis. The verification plan shall include at least:
+(a)
+a verification programme describing the nature and scope of the verification activities as well as the time frame and manner in which these activities are to be carried out;
+(b)
+a test plan setting out the scope and methods of testing the control activities as well as the procedures for control activities;
+(c)
+a data sampling plan setting out the scope and methods of data sampling related to data points underlying the embedded emissions and other information in the operator’s emissions report.
+When determining the sampling size and sampling activities for testing the control activities referred to in point (b) of the first subparagraph, the verifier shall consider the following elements:
+(a)
+the inherent risks;
+(b)
+the control environment;
+(c)
+the relevant control activities;
+(d)
+the requirement to deliver a verification opinion with reasonable assurance.
+When determining the sampling size and sampling activities for sampling the data referred to in point (c) of the first subparagraph, the verifier shall consider the following elements:
+(a)
+the inherent risks and control risks;
+(b)
+the results of the analytical procedures;
+(c)
+the requirement to deliver a verification opinion with reasonable assurance;
+(d)
+the materiality level;
+(e)
+the materiality of the contribution of an individual data element for the overall data set.
+2.6.2. Implementation and update of the verification plan
+The verifier shall set up and implement the verification plan such that the verification risk is reduced to an acceptable level to obtain reasonable assurance that the operator’s emissions report is free from material misstatements.
+The verifier shall update the verification plan if it finds additional risks that need to be reduced or if there is less actual risk than initially expected.
+2.7. Verification activities
+The verifier shall implement the verification plan referred to in Section 2.6 and, on the basis of the risk analysis referred to in Section 2.5, check whether the monitoring plan is properly implemented.
+As part of this work, the verifier shall at least carry out substantive testing consisting of analytical procedures, data verification and verification of the correct application of the monitoring methodology, and check the following:
+(a)
+the data flow activities and the systems used in the data flow, including information technology systems;
+(b)
+whether the control activities of the operator are appropriately documented, implemented and updated and whether they are effective in mitigating the inherent risks;
+(c)
+whether the procedures listed in the monitoring plan are effective to mitigate the inherent risks and control risks and whether the procedures are implemented, sufficiently documented and properly updated.
+For the purposes of checking point (a) of the first paragraph, the verifier shall track the data flow following the sequence and interaction of the data flow activities from primary source data to the compilation of the operator’s emissions report.
+2.8. Analytical procedures
+The verifier shall use analytical procedures to assess the plausibility and completeness of data where the inherent risk, the control risk and the aptness of the operator’s control activities show the need for such analytical procedures.
+In carrying out those analytical procedures, the verifier shall assess reported data to identify potential risk areas and to subsequently validate and tailor the planned verification activities. The verifier shall at least:
+(a)
+assess the plausibility of fluctuations and trends over time or between comparable items;
+(b)
+identify immediate outliers, unexpected data and data gaps.
+In applying those analytical procedures, the verifier shall perform the following procedures:
+(a)
+preliminary analytical procedures on aggregated data before carrying out the activities referred to in Section 2.7 in order to understand the nature, complexity and relevance of the reported data;
+(b)
+substantive analytical procedures on the aggregated data and the data points underlying these data for the purposes of identifying potential structural errors and immediate outliers;
+(c)
+final analytical procedures on the aggregated data to ensure that all errors identified during the verification process have been resolved correctly.
+Where the verifier identifies outliers, fluctuations, trends, data gaps or data that are inconsistent with other relevant information or that differ significantly from expected amounts or ratios, the verifier shall obtain explanations from the operator which are to be supported by additional relevant evidence.
+Based on the explanations and additional evidence provided, the verifier shall assess the impact on the verification plan and the verification activities to be performed.
+2.9. Data verification
+The verifier shall verify the data in the operator’s emissions report by carrying out detailed testing of the data, including by tracing the data back to the primary data source, cross-checking data with external data sources, performing reconciliations, checking thresholds regarding appropriate data and carrying out recalculations.
+As part of that data verification and taking into account the monitoring plan, including the procedures described in that monitoring plan, the verifier shall check:
+(a)
+the boundaries of the installation;
+(b)
+the boundaries of the installation’s production processes and production routes;
+(c)
+the completeness of source streams and emission sources, as well as, if applicable, technical connections between production processes and with other installations, as described in the monitoring plan;
+(d)
+the consistency of the data reported in the operator’s emissions report with primary source data;
+(e)
+where applicable, the data resulting from the primary data source compared to a corroborating data source, if available in the monitoring plan;
+(f)
+where the operator applies a measurement-based methodology as referred to in Article 6 of Implementing Regulation (EU) 2025/2547, the measured values against the respective corroborating calculation;
+(g)
+the reported activity levels of the production processes;
+(h)
+the reliability and accuracy of the data.
+2.10. Verification of the correct application of the monitoring methodology
+The verifier shall check that the monitoring methodology as laid down in the monitoring plan has been correctly applied, including the following specific points:
+(a)
+whether data are complete and whether data gaps or double counting have occurred, and if so, whether the approach used by the operator to complete the missing data ensures that the emissions are not underestimated;
+(b)
+if applicable, whether operator’s sampling plan referred to in point A.5 of Annex II to Implementing Regulation (EU) 2025/2547 has been correctly applied;
+(c)
+whether all data on emissions, inputs, outputs and energy flows are attributed correctly to the production process in line with the system boundaries defined per aggregated goods category in accordance with Annex I to Implementing Regulation (EU) 2025/2547;
+(d)
+whether activity levels for production processes are based on a correct application of the definitions of aggregated goods categories listed in Table 1 of Section 2 of Annex I to Implementing Regulation (EU) 2025/2547;
+(e)
+whether the energy consumption has been correctly attributed to each production process, where applicable;
+(f)
+for precursors used but not produced at the installation, whether any actual emissions were verified as satisfactory by a verifier;
+(g)
+where the operator used the actual time of production of the precursor to determine the reporting period during which the precursor was produced, whether the evidence supporting the actual time of production is sufficient;
+(h)
+whether any default factors used in accordance with Implementing Regulation (EU) 2025/2547 are applied for the country of origin for which the default factor is defined;
+(i)
+where goods that are not listed in Annex II to Regulation (EU) 2023/956 are produced at the installation, whether the operator has used an emission factor for electricity other than the default value specified in Annex V to Implementing Regulation (EU) 2025/2547, and if so, whether the criteria laid down in point 5 of Annex IV to Regulation (EU) 2023/956 are met;
+(j)
+where the operator has used an emission factor for electricity imported into the customs territory of the Union other than the default value, the verifier shall check whether the conditions laid down in point 6 to Annex IV to Regulation (EU) 2023/956 are met;
+(k)
+if biofuels, bioliquids or biomass fuels are used for energy purposes, the operator’s evidence demonstrating compliance with the sustainability and greenhouse gas savings criteria laid down in Article 29(2) to (7) and (10) of Directive (EU) 2018/2001 of the European Parliament and of the Council (2);
+(l)
+transferred CO2 and N2O, geological carbon capture and storage and permanent carbon capture and use in accordance with point B.8 of Annex II to Implementing Regulation (EU) 2025/2547.
+2.11. Reliance on other audits
+2.11.1. Precursors used but not produced at the installation
+For the purposes of checking the correct application of the monitoring methodology with respect to point (f) of Section 2.10, the verifier shall confirm that the verification report of the installation producing the precursor meets all the following conditions:
+(a)
+at the time the verification report was issued, the entity carrying out the verification activities was a verifier with a valid accreditation certificate containing the scope of accreditation required to perform the verification;
+(b)
+the opinion statement contained in the verification report indicates that the operator’s emissions report is verified as satisfactory;
+(c)
+the verification report covers the reporting period during which the precursor was produced, which is determined as follows:
+(1)
+the default reporting period of a precursor shall be the year of production of the complex good;
+(2)
+however, if the verifier finds that there is sufficient evidence to determine the actual time of production, the reporting period shall be the period during which the precursor was produced.
+2.11.2. Use of actual values for goods that are not listed in Annex II to Regulation (EU) 2023/956 produced at the installation
+For the purposes of checking the correct application and implementation of the monitoring methodology with respect to point (i) of Section 2.10, the verifier shall confirm that the verification report of the installation producing the electricity meets all the following conditions:
+(a)
+at the time the verification report was issued, the entity carrying out the verification activities was a verifier with a valid accreditation certificate containing the scope of accreditation required to perform the verification;
+(b)
+the opinion statement contained in the verification report indicates that the operator’s emissions report is verified as satisfactory;
+(c)
+the verification report covers the reporting period during which the electricity was produced.
+2.12. Sampling
+When checking the conformity of control activities and procedures referred to in points (b) and (c) of the second paragraph of Section 2.7 or when performing the checks referred to in Sections 2.8 and 2.9, the verifier may use sampling methods specific to an installation provided that, based on the risk analysis, sampling is justified.
+Where the verifier identifies a non-conformity or a misstatement in the course of sampling, it shall request the operator to explain the main causes of the non-conformity or the misstatement in order to assess the impact of the non-conformity or misstatement on the reported data. Based on the outcome of that assessment, the verifier shall determine whether additional verification activities are needed, whether the sample size needs to be increased, and which part of the data population must be corrected by the operator.
+The verifier shall document the outcome of the checks referred to in Sections 2.7 to 2.10, including the details of additional samples, in the internal verification documentation.
+2.13. Physical site visits
+In accordance with Section 1, point (c), of Annex VI to Regulation (EU) 2023/956, the verifier shall, at one or more appropriate times during the verification process, conduct a physical site visit at the installation where the goods mentioned in the operator’s emissions report are produced in order to assess the operation of measuring devices and monitoring systems, to conduct interviews, to carry out the activities required by this Section 2 as well as to gather sufficient information and evidence enabling it to conclude whether the operator’s report is free from material misstatements.
+On the basis of the results of the risk analysis, the verifier shall decide whether visits to additional locations are needed, including if relevant parts of data flow activities and control activities are carried out in other locations such as company headquarters and other off-site offices.
+The verifier shall ensure that the operator provides the verifier with access to its sites.
+The verifier shall also use a physical site visit to assess the boundaries of the installation and its production processes as well as the completeness of source streams, emission sources and technical connections.
+2.14. Addressing misstatements, non-conformities and non-compliance
+2.14.1. Identification and resolution of misstatements, non-conformities and non-compliance
+Where the verifier identifies misstatements, non-conformities or non-compliance with Implementing Regulation (EU) 2025/2547 or Implementing Regulation (EU) 2025/2620 during the verification, it shall inform the operator thereof without delay and request the operator to correct the identified misstatements, non-conformities or non-compliance.
+The verifier shall document and mark as resolved in the internal verification documentation pursuant to Section 2.5 all misstatements, non-conformities, or non-compliance that have been corrected by the operator during the verification.
+2.14.2. Uncorrected misstatements, non-conformities and non-compliance
+Where the operator does not correct the misstatements or non-conformities referred to in the first paragraph, the verifier shall, before issuing the verification report in accordance with Section 2.17, request the operator to explain the main causes of the misstatements or non-conformities and the reasons for not making the requested corrections.
+The verifier shall determine whether the uncorrected misstatements, individually or when aggregated with other misstatements, have an impact on the total specific embedded emissions or the total specific free allocation adjustment reported for each good. In assessing the materiality of misstatements, the verifier shall consider the size and nature of the misstatement as well as the particular circumstances of their occurrence.
+The verifier shall assess whether the uncorrected non-conformities, individually or when combined with other non-conformities, have an impact on the reported data and whether this leads to material misstatement.
+If the operator does not correct the non-compliance with Implementing Regulation (EU) 2025/2547 or Implementing Regulation (EU) 2025/2620 in accordance with the first paragraph before the verifier issues the verification report, the verifier shall assess whether the uncorrected non-compliance has an impact on the reported data and whether this leads to material misstatement.
+2.15. Independent review
+2.15.1. Review of the internal verification documentation and of the verification report
+Before issuing the verification report, the verifier shall submit the internal verification documentation and the verification report to an independent reviewer who is not part of the verification team.
+The independent reviewer shall not have carried out any of the verification activities that are subject to their review.
+The scope of the independent review shall encompass the complete verification process described in this Section 2 and recorded in the internal verification documentation.
+The independent reviewer shall perform the review so as to ensure that the verification process is conducted in accordance with this Regulation and Implementing Regulation (EU) 2025/2546, that the procedures for verification activities referred to in Section 1.5.1 have been correctly carried out, and that due professional care and judgement have been applied.
+The independent reviewer shall also assess whether the evidence gathered is sufficient to enable the verifier to issue a verification report with reasonable assurance.
+Where circumstances occur which may cause changes in the verification report after the review, the independent reviewer shall also review those changes and the evidence thereof.
+2.15.2. Authentication of the verification report
+The verification report shall be authenticated based on the conclusions of the independent reviewer and the evidence in the internal verification documentation. The person who authenticates the verification report shall be duly authorised to do so by the verifier.
+2.16. Internal verification documentation
+2.16.1. Compilation of the internal verification documentation
+The verifier shall prepare and compile internal verification documentation containing at least:
+(a)
+the results of the verification activities performed;
+(b)
+the information received from the operator under Section 2.3;
+(c)
+the strategic analysis, risk analysis and verification plan;
+(d)
+any justification for not organising a physical site visit in accordance with Implementing Regulation (EU) 2025/2546;
+(e)
+sufficient information to support the verification opinion, including justifications for judgements made on whether or not the misstatements were material.
+The internal verification documentation referred to in the first paragraph shall be drafted in such a manner that the independent reviewer referred to in Section 2.15.1 and the national accreditation body are able to assess whether the verification has been performed in accordance with this Regulation.
+After the verification report has been authenticated pursuant to Section 2.15.2, the verifier shall include the results of the independent review in the internal verification documentation.
+The verifier shall keep the internal verification documentation for as long as is necessary to allow for a review of CBAM declarations that have been submitted.
+2.16.2. Access to the internal verification documentation
+Where the operator is registered in the CBAM registry pursuant to Article 10 of Regulation (EU) 2023/956, the verifier shall, upon request and for the purpose of reviewing verification reports pursuant to Article 19(2) of Regulation (EU) 2023/956, provide the Commission and the competent authorities with access to the internal verification documentation and other relevant information to facilitate an evaluation of the verification. The verifier shall provide access to that documentation via the CBAM registry, unless otherwise requested, within 30 calendar days after the request is made.
+2.17. Verification report
+2.17.1. Sectoral scope of accreditation
+The verifier shall only issue a verification report in respect of an operator’s emissions report for the group of activities referred to in Annex I for which the verifier is accredited.
+2.17.2. Opinion statements
+On the basis of the information collected, the verifier shall issue a verification report on the operator’s emissions report that is subject to verification. The verification report shall include one of the following opinion statements:
+(a)
+the report is verified as satisfactory;
+(b)
+the report is verified as unsatisfactory, this statement will be made if the operator’s emissions report contains material misstatements or non-conformities that were not corrected before issuing the verification report;
+(c)
+the report is verified as unsatisfactory, this statement will be made if non-conformities, individually or combined with other non-conformities, provide insufficient clarity and prevent the verifier from stating with reasonable assurance that the operator’s emissions report is free from material misstatements;
+(d)
+the report is verified as unsatisfactory, this statement will be made if the scope of verification is too limited pursuant to Section 2.17 and the verifier could not obtain sufficient evidence to issue a verification opinion with reasonable assurance that the report is free from material misstatements.
+For the purposes of the first paragraph, point (a), the operator’s emissions report may be verified as satisfactory only where the report is free from material misstatements.
+2.17.3. Issuing the verification report
+From 1 January 2027, the verifier shall issue the verification report in the CBAM registry.
+Where the operator is registered in the CBAM registry pursuant to Article 10 of Regulation (EU) 2023/956, the verification report shall be transmitted to the operator via the CBAM registry.
+Where the operator is not registered in the CBAM registry, the verifier shall export and transmit the verification report in its original standard software format to the operator via other means. The verifier shall also provide the operator with a copy of the verification report in a standardised electronic format widely accepted for digital documents, for information purposes only.
+The verifier shall not issue the verification report where there is already a verification report covering the same reporting period for the same installation.
+At the operator’s request, the verifier may issue a revised version of a verification report which the verifier has issued.
+The verifier shall complete the verification report in English.
+2.18. Limitation of scope
+The verifier may conclude that the scope of the verification referred to in Section 2.17.2, first paragraph, point (d), is too limited in any of the following situations:
+(a)
+data are missing that prevent a verifier from obtaining the evidence required to reduce the verification risk to the level needed to obtain a reasonable level of assurance;
+(b)
+the monitoring plan does not provide sufficient scope or clarity to reach a conclusion on the verification;
+(c)
+the operator has failed to make sufficient information available to enable the verifier to carry out the verification.
+2.19. Addressing outstanding non-material non-conformities
+The verifier shall assess whether the operator has corrected the non-conformities indicated in the verification report related to the previous reporting period, where relevant.
+The verifier shall report in the verification report whether those non-conformities have been corrected by the operator.
+If the operator has not corrected those non-conformities, the verifier shall consider whether the failure to do so increases or may increase the risk of misstatements.
+The verifier shall record in the internal verification documentation pursuant to Section 2.16.2 details of when and how identified non-conformities are resolved by the operator during the verification.
+2.20. Improvement of the monitoring and reporting process
+Where the verifier has identified areas for improvement in the operator’s performance, it shall include in the verification report recommendations for improvement on the following points:
+(a)
+the operator’s risk assessment;
+(b)
+the development, documentation, implementation and update of data flow activities and control activities as well as the evaluation of the control system;
+(c)
+the development, documentation, implementation and update of procedures;
+(d)
+the monitoring and reporting of emissions, including in relation to measuring and achieving lower uncertainty, reducing risks and enhancing the efficiency of the monitoring and reporting.
+When communicating recommendations for improvement to the operator, the verifier shall remain impartial vis-à-vis the operator. It shall not jeopardise its impartiality by giving advice or developing parts of the monitoring and reporting process pursuant to Implementing Regulation (EU) 2025/2547.
+When carrying out a verification the year after the year during which recommendations for improvement were made in a verification report, the verifier shall check whether and how the operator has implemented those recommendations.
+Where the operator has not implemented those recommendations or has not implemented them correctly, the verifier shall assess the impact this has on the risk of misstatements and non-conformities.
+(1) Referred to in Annex II to Commission Implementing Decision (EU) 2020/1835 of 3 December 2020 on the harmonised standards for accreditation and conformity assessment (OJ L 408, 4.12.2020, p. 6, ELI: http://data.europa.eu/eli/dec_impl/2020/1835/oj).
+(2) Directive (EU) 2018/2001 of the European Parliament and of the Council of 11 December 2018 on the promotion of the use of energy from renewable sources (OJ L 328, 21.12.2018, p. 82, ELI: http://data.europa.eu/eli/dir/2018/2001/oj).
+ELI: http://data.europa.eu/eli/reg_del/2025/2551/oj
+ISSN 1977-0677 (electronic edition)

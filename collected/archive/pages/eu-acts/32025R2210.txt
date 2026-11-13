@@ -248,7 +248,259 @@ CBRD 01 01 010 020
 Country
 a2
 1x
-[이 부속서의 나머지 253줄은 싣지 않음]
+N
+Title I. paragraph (8) 1.
+CBRD 01 01 020 000
+Identification
+CBRD 01 01 020 229
+EORI
+an..17
+1x
+N
+CBRD 01 01 020 123
+TIN
+an..35
+1x
+N
+CBRD 01 01 030 000
+CBAM account number
+CBRD 01 01 030 052
+Account number
+an..35
+CBRD 02 00 000 000
+Location receipt goods concerned
+CBRD 02 01 000 000
+Location receipt goods concerned
+CBRD 02 01 010 000
+GNSS Coordinates
+CBRD 02 01 010 049
+Latitude
+an..17
+1x
+N
+CBRD 02 01 010 050
+Longitude
+an..17
+1x
+N
+CBRD 02 01 020 000
+Structure
+CBRD 02 01 020 016
+Name
+an..70
+1x
+N
+CBRD 02 01 020 267
+ID
+binary
+1x
+N
+CBRD 03 00 000 000
+Goods concerned declared
+CBRD 03 01 000 000
+Goods information
+CBRD 03 01 010 000
+Commodity code
+1x
+N
+CBRD 03 01 010 056
+Harmonised System sub-heading code
+an..6
+1x
+N
+CBRD 03 01 010 057
+Combined Nomenclature code
+an2
+1x
+N
+CBRD 03 01 010 058
+TARIC code
+an2
+1x
+N
+CBRD 03 01 020 000
+Country of origin
+1x
+N
+CBRD 03 01 020 273
+Country of origin code (non-preferential)
+a2
+1x
+N
+Title I. paragraph (8) 1.
+CBRD 03 01 030 000
+Mass
+CBRD 03 01 030 410
+Gross mass
+n..16,6
+1x
+N
+CBRD 03 01 030 408
+Net mass
+n..16,6
+1x
+N
+CBRD 03 01 040 000
+Quantity in supplementary unit
+CBRD 03 01 040 249
+Measurement unit
+an..4
+1x
+N
+CBRD 03 01 040 006
+Quantity
+n..16,6
+1x
+N
+CBRD 03 01 050 000
+Description of goods concerned
+CBRD 03 01 050 254
+Text
+an..512
+1x
+N
+CBRD 04 00 000 000
+Competent Member State
+CBRD 04 01 000 000
+Competent Member State
+CBRD 04 01 010 020
+Country
+a2
+1x
+N
+CBRD 05 00 000 000
+Date of receipt, MRN
+CBRD 05 01 000 000
+Date of receipt, MRN
+CBRD 05 01 000 000
+Date of receipt of the good concerned
+CBRD 05 01 010 207
+Date
+n8
+1x
+N
+The format is set as ‘yyyymmdd’ where ‘yyyy’marks the year, ‘mm’ marks the month, ‘dd’ marks the day.
+CBRD 05 01 020 000
+Movement Reference Number
+CBRD 05 01 020 001
+MRN
+an..35
+1x
+N
+CBRD 06 00 000 000
+Supporting documents and additional information
+CBRD 06 01 000 000
+Supporting documents and additional information
+CBRD 06 01 000 279
+Certificates
+CBRD 06 01 010 000
+Authorisations
+1x
+N
+CBRD 06 01 010 404
+CBAM Authorisation
+1x
+N
+CBRD 06 01 010 052
+Other authorisations
+9x
+N
+CBRD 06 01 020 000
+Additional references
+CBRD 06 01 020 222
+Additional references
+9x
+N
+CBRD 06 01 020 451
+Invoice
+9x
+N
+CBRD 07 00 000 000
+Receipt declaration authentication
+CBRD 07 01 000 000
+Receipt declaration authentication
+CBRD 07 01 000 207
+Date
+n8
+1x
+N
+The format is set as ‘yyyymmdd’ where ‘yyyy’marks the year, ‘mm’ marks the month, ‘dd’ marks the day.
+CBRD 07 01 000 016
+Name of recipient
+an..35
+1x
+N
+CBRD 07 01 000 411
+Signature of recipient
+binary
+1x
+N
+CBRD 11 00 000 000
+Customs activity related information
+CBRD 11 01 000 000
+Remarks of the Competent authorities of the Member State
+CBRD 11 01 000 207
+Date of receipt of the Receipt declaration
+n8
+1x
+N
+The format is set as ‘yyyymmdd’ where ‘yyyy’ marks the year, ‘mm’ marks the month, ‘dd’ marks the day.
+CBRD 11 01 000 001
+Number of the Receipt declaration
+an..35
+1x
+N
+CBRD 11 01 000 009
+Other remarks
+an..512
+1x
+N
+CBRD 11 01 000 207
+Date
+n8
+1x
+N
+The format is set as ‘yyyymmdd’ where ‘yyyy’ marks the year, ‘mm’ marks the month, ‘dd’ marks the day.
+CBRD 11 01 000 016
+Name
+an..70
+1x
+N
+CBRD 11 01 000 411
+Signature
+binary
+1x
+N
+CBRD 11 01 000 452
+Stamp
+binary
+1x
+N
+Section 3 – Data requirements notes
+CBRD 01 01 … Recipient
+Indicate here all the relevant information of the recipient of the goods concerned, including the EORI number and – if available – any Trader Identification Number (TIN) issued by the third country, together with the name and address particulars. Also indicate here – if applicable – the CBAM account number of the recipient.
+CBRD 02 01 … Location receipt goods concerned
+Indicate here, if available, all the relevant information concerning the relevant coordinates from Global Navigation Satellite Systems (GNSS) and the name and ID of the structure where goods are available.
+CBRD 03 01 … Goods information
+Indicate here all the relevant information of the goods concerned.
+CBRD 04 01 … Competent Member State
+Indicate here the country code of the competent Member State in accordance with Article 4 of this Implementing Regulation.
+CBRD 05 01 … Date of receipt, MRN
+Indicate here the date of receipt of the goods concerned, and – if available – the Movement Reference Number related to the goods concerned.
+CBRD 06 01 … Additional, supporting documents and information
+Indicate here all the available supporting documents and information, including – if available – certificates, CBAM Authorisation or other authorisations, additional references. In case of sale of the goods concerned, the invoice shall be attached.
+CBRD 07 01 … Receipt declaration authentication
+Indicate here the date of signature, the signature and the name of the recipient of the Receipt declaration.
+CBRD 11 01 … Remarks of the competent authorities of the Member State
+The data elements in CBRD 11 01… are for the exclusive use of the competent authorities of the Member State. In this class the information on the date of receipt, the reference number of the receipt declaration shall be used, together with other remarks, the date, name, signature and stamp of the competent authority of the Member State.
+TITLE III
+Codes in relation with the electronic receipt declaration for CBAM goods brought to the EEZ or the CS
+Section 1. – Introduction
+This Title contains the available codes in the form of code-lists to be used on the electronic receipt declaration for CBAM goods brought to the EEZ or the CS.
+Section 2. – Codes in code-lists
+No coded information required.
+(1) Commission Implementing Regulation (EU) 2020/1470 of 12 October 2020 on the nomenclature of countries and territories for the European statistics on international trade in goods and on the geographical breakdown for other business statistics (OJ L 334, 13.10.2020, p. 2, ELI: http://data.europa.eu/eli/reg_impl/2020/1470/oj).
+(2) Council Regulation (EEC) No 2658/87 of 23 July 1987 on the tariff and statistical nomenclature and on the Common Customs Tariff (OJ L 256, 7.9.1987, p. 1, ELI: http://data.europa.eu/eli/reg/1987/2658/oj).
 ANNEX II
 DATA REQUIREMENTS FOR NON-ELECTRONIC RECEIPT DECLARATION FOR CBAM GOODS BROUGHT TO THE EXCLUSIVE ECONOMIC ZONE (EEZ) OR THE CONTINENTAL SHELF (CS)
 EUROPEAN UNION

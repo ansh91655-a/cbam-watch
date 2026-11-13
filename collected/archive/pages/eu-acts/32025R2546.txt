@@ -268,4 +268,99 @@ produced by co-generation,
 produced by separate generation,
 —
 produced from fossil or renewable sources,
-[이 부속서의 나머지 96줄은 싣지 않음]
+—
+exported from the system boundaries of a production process;
+(b)
+the share of indirect emissions determined on the basis of actual values in accordance with Article 9 of Implementing Regulation (EU) 2025/2547;
+(c)
+the share of indirect emissions determined on the basis of default values;
+(d)
+for the share of indirect emissions determined on the basis of actual values, confirmation that the criteria for the use of actual values laid down in point 6 of Annex IV to Regulation (EU) 2023/956 are met;
+(e)
+the specific indirect emissions calculated in accordance with Article 9 of Implementing Regulation (EU) 2025/2547;
+(7)
+the specific embedded free allocation of each good produced;
+(8)
+confirmation of the use of the applicable CBAM benchmarks and the methods used for determining the specific embedded free allocation.
+2.5. Data verification of precursors
+(a)
+data on each type of precursor that was used by the installation, and for which default values were used, excluding precursors produced in the production process in accordance with Article 4(9) of Implementing Regulation (EU) 2025/2547:
+(1)
+CN code;
+(2)
+name of the good;
+(3)
+country of origin, where it is known, and where the precursor was produced outside the installation;
+(4)
+the applicable default value;
+(b)
+data on each type of precursor that was used by the installation, and for which actual values were used, excluding precursors produced in the production process in accordance with Article 4(9) of Implementing Regulation (EU) 2025/2547:
+(1)
+CN code;
+(2)
+name of the good;
+(3)
+country of origin;
+(4)
+reporting period, and indication of whether it was determined using the default reporting period or the actual time of production;
+(5)
+specific embedded emissions (direct and, if applicable, indirect);
+(6)
+information on the operator and on the installation of origin of the precursor:
+(a)
+name of the operator;
+(b)
+name of the installation;
+(c)
+unique installation identifier in the CBAM Registry, if available;
+(d)
+applicable reporting period;
+(7)
+information on the verifier who verified the precursor’s actual values:
+(a)
+name of the verifier;
+(b)
+address where the verifier is established;
+(c)
+where the verifier outsourced verification activities, address(es) of office(s) from where some verification activities were outsource;
+(d)
+name and contact details of the CBAM lead auditor;
+(e)
+accreditation number of the verifier;
+(f)
+name of the national accreditation body;
+(g)
+country of establishment of the national accreditation body;
+(h)
+expiration date of the accreditation;
+(i)
+scope of accreditation required to perform the verification;
+(j)
+whether the verifier’s statement concludes with reasonable assurance that the report is free from material misstatements and material non-conformities;
+(k)
+date of issuance of the verification statement;
+(c)
+where an installation, producing complex goods, receives from another installation, precursors under a given CN code produced during different reporting periods, the specific embedded emissions (direct and, if applicable, indirect) to be used for that precursor in accordance with Article 14(1) of Implementing Regulation (EU) 2025/2547;
+(d)
+where the production process of a complex good uses a type of precursor obtained from multiple installations, the specific embedded (direct and, if applicable, indirect) emissions to be used for that precursor, calculated in accordance with Article 14 of Implementing Regulation (EU) 2025/2547.
+2.6. Verification statement
+(a)
+the verifier’s statement indicating whether it concludes with reasonable assurance that the report is free from material misstatements and material non-conformities;
+(b)
+information on material misstatements found and corrected;
+(c)
+information of material non-conformities found and corrected;
+(d)
+information on remaining misstatements that were not corrected before the issuance of the verification report and whether they are material;
+(e)
+information on remaining non-conformities that were not corrected before the issuance of the verification report and whether they are material;
+(f)
+information on remaining non-compliance that was not corrected before the issuance of the verification report and whether they are material;
+(g)
+recommendations for improvement, if applicable;
+(h)
+date and signature by an authorised person on behalf of the verifier, including his/her name.
+3. ANNEX: OPERATOR’S SUMMARY EMISSIONS REPORT PURSUANT TO ANNEX IV TO IMPLEMENTING REGULATION (EU) 2025/2547
+4. DECLARANT-SPECIFIC ADDENDUM TO THE OPERATOR’S EMISSIONS REPORT FOR ELECTRICITY IMPORTED INTO THE CUSTOMS TERRITORY OF THE UNION
+ELI: http://data.europa.eu/eli/reg_impl/2025/2546/oj
+ISSN 1977-0677 (electronic edition)
