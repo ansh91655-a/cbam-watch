@@ -39,16 +39,18 @@ function about(act) {
   return `${act.official}${act.consolidated ? `, ${act.consolidated} 통합본` : ""}`;
 }
 
-function heading(part) {
+// paged는 이 문서를 PDF로 나란히 볼 수 있을 때의 문서 id다. 조각이 시작하는 쪽으로 가는 링크를 단다
+function heading(part, paged) {
   const english = part.kind === "section" ? part.title : [part.label, part.title].filter(Boolean).join(" · ");  // 절의 번호는 국문 쪽에 이미 있다
   return h("h2", { class: "law-head" }, [
     h("span", { class: "law-no", text: part.ko }),
     part.titleKo ? h("span", { text: part.titleKo }) : null,
+    paged && part.page ? h("a", { class: "law-page", href: `#pdf-${paged}.p${part.page}`, text: `PDF ${count(part.page)}쪽`, title: "이 부분을 원문과 번역 PDF로 나란히 보기" }) : null,
     english ? h("span", { class: "law-head-en", lang: "en", text: english }) : null,
   ]);
 }
 
-function section(part, target, needles, piece) {
+function section(part, target, needles, piece, paged) {
   const here = part.id === target;
   const rows = blockRows(part, here ? needles : []);
   const waiting = part.blocks.length && part.blocks.every(([en, ko]) => !ko);
@@ -58,7 +60,7 @@ function section(part, target, needles, piece) {
       h("summary", {}, [h("span", { text: FOLDED[part.kind] }), h("span", { class: "count", text: `문단 ${count(part.blocks.length)}개` })]), ...rows]);
   }
   return h("section", { class: "law-part", id: `p-${part.id}`, "data-here": here ? "" : null, "data-waiting": waiting ? "" : null }, [
-    heading(part), waiting ? h("p", { class: "law-wait-note", text: `이 ${piece}은 아직 국문으로 옮기지 않았습니다. 원문만 보입니다.` }) : null, ...rows]);
+    heading(part, paged), waiting ? h("p", { class: "law-wait-note", text: `이 ${piece}은 아직 국문으로 옮기지 않았습니다. 원문만 보입니다.` }) : null, ...rows]);
 }
 
 function jump(event, id, href) {
@@ -89,7 +91,7 @@ export async function render(main, arg) {
   document.body.dataset.wide = "";
   const needles = target ? recent.needles : [];
   const words = isAct(act) ? WORDS.act : WORDS.doc;
-  const body = h("div", { class: "law-body", "data-mode": recent.mode }, act.parts.map((part) => section(part, target, needles, words.piece)));
+  const body = h("div", { class: "law-body", "data-mode": recent.mode }, act.parts.map((part) => section(part, target, needles, words.piece, pdfs[act.id] ? act.id : "")));
   const buttons = MODES.map(([key, text]) => h("button", { type: "button", text, "aria-pressed": String(key === recent.mode), onclick: () => {
     recent.mode = key;
     body.dataset.mode = key;

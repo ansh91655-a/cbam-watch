@@ -69,7 +69,7 @@ def _borrowed(units, old):
 
 
 def parts(units, outline="auto", fallback=None):
-    """단위들을 조각의 목록으로. 조각은 {"id", "kind", "label", "title", "level", "blocks", "shapes", "units"}다.
+    """단위들을 조각의 목록으로. 조각은 {"id", "kind", "label", "title", "level", "blocks", "shapes", "units", "page"}다.
 
     "units"는 문단마다 그 단위가 단위 목록의 몇 번째인지(국문 PDF를 만들 때 자리를 찾는 데 쓴다), "head"는 조각의 제목이 된 단위의 차례다.
     outline이 none이면 제목으로 나누지 않고 글 전체를 조각 하나로 둔다.
@@ -112,4 +112,7 @@ def parts(units, outline="auto", fallback=None):
             part["shapes"].append("note")
             part["units"].append(index)
         del part["lines"], part["pages"]
+        first = part.get("head", part["units"][0] if part["units"] else None)
+        if first is not None:
+            part["page"] = units[first]["page"]     # 조각이 시작하는 쪽(PDF로 보는 화면에서 그 쪽을 연다)
     return [part for part in found if part["blocks"] or part["title"]]

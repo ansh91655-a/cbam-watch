@@ -44,6 +44,8 @@ def _part(part, memory):
            "blocks": gloss.annotate([[text, corpus.korean(text, memory)] for text in part["blocks"]])}
     if any(shape != "p" for shape in part.get("shapes", [])):
         row["shapes"] = part["shapes"]
+    if part.get("page"):
+        row["page"] = part["page"]  # 이 조각이 시작하는 PDF의 쪽
     return row
 
 

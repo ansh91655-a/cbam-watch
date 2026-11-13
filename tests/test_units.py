@@ -44,6 +44,7 @@ class PartsTest(unittest.TestCase):
         self.assertEqual(unit_segment.parts(inside)[0]["shapes"], ["td:2:3:1:li1", "th:2:4:1::s2x3"])  # 칸 안의 목록 항목, 합쳐진 칸
         self.assertEqual(first["units"], [2, 4, 5, 6, 7, 8, 3])
         self.assertEqual((found[2]["head"], found[2]["shapes"], found[3]["shapes"]), (9, ["caption"], ["figure"]))
+        self.assertEqual([part["page"] for part in found], [1, 1, 1, 1])     # 조각이 시작하는 쪽
 
     def test_number_that_does_not_follow_is_not_a_section(self):
         found = unit_segment.parts([unit("h", "1 One", level=1), unit("h", "2026 in review", level=2), unit("h", "2 Two", level=1)])

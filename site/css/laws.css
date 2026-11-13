@@ -91,6 +91,7 @@ body[data-wide] main, body[data-wide] .band-inner, body[data-wide] .head-inner {
 .law-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin-bottom: 8px; font-size: 1.15rem; line-height: 1.45; }
 .law-division .law-head { margin: 0; font-size: 1.3rem; }
 .law-no { color: var(--brand); }
+.law-page { margin-left: auto; font-size: var(--fs-s); font-weight: 500; white-space: nowrap; }
 .law-head-en { flex-basis: 100%; font-size: var(--fs-s); font-weight: 500; color: var(--ink-3); }
 .law-row { display: grid; gap: 4px 28px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); padding: 9px 0; border-top: 1px solid var(--line-2); }
 .law-row p { line-height: 1.75; overflow-wrap: anywhere; }
