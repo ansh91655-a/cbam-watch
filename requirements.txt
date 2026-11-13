@@ -3,3 +3,4 @@
 pillow      # tools/thumbs: 미리보기 그림 줄이기
 pypdf       # tools/archive/fulltext: 이사회 문서의 본문
 pdfplumber  # tools/archive/fourcolumn: 네 칸 대조 문서를 칸별로 읽기
+pikepdf     # tools/pdfko: 원문 PDF의 꼬리표(짜임) 읽기, 국문 PDF 만들기

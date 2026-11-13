@@ -4,23 +4,52 @@
 guide(가이던스와 질의응답), manual(CBAM 등록부 이용 안내서), paper(보고서와 그 밖의 안내 자료). 어느 문서가 어느 갈래인지는 sources/guides.json이 정한다.
 """
 import functools
+import json
 import pathlib
 
-from tools.laws import catalog, check, guide_segment, guides, segment, store
+from tools.laws import catalog, check, guide_segment, guides, segment, store, unit_segment
 
 GUIDE_KINDS = ("cover", "section", "appendix")
+UNITS = "originals/units"   # PDF의 꼬리표에서 읽어 둔 뜻 단위(tools.pdfko.units가 만든다)
+
+
+def units_path(text_path):
+    """받아 둔 글(originals/text/<문서>/<판>.txt)에 짝이 되는 단위 파일의 자리."""
+    text = pathlib.Path(text_path)
+    return pathlib.Path(UNITS) / text.parent.name / f"{text.stem}.json"
+
+
+def units(act):
+    """문서의 단위들. 단위 파일이 없거나 꼬리표가 없는 PDF이거나 쓰지 않기로 한 문서(sources/guides.json의 units: false)면 빈 목록."""
+    if act.get("format") != "pdf" or act.get("units") is False:
+        return []
+    path = units_path(act["path"])
+    if not path.is_file():
+        return []
+    found = json.loads(path.read_text(encoding="utf-8"))
+    return found["units"] if found.get("tagged") else []
 
 
 @functools.lru_cache(maxsize=128)
-def _parts(path, form, outline, stamp):
+def _parts(path, form, outline, stamp, tagged):
     text = pathlib.Path(path).read_text(encoding="utf-8")
-    return guide_segment.parts(text, outline) if form == "pdf" else segment.parts(text)
+    if form != "pdf":
+        return segment.parts(text)
+    found = units({"format": form, "path": path}) if tagged else []
+    if found:   # PDF에 적힌 짜임(제목, 문단, 목록, 표, 각주)을 그대로 쓴다. 제목 꼬리표가 없는 문서는 글에서 찾은 제목을 빌린다
+        return unit_segment.parts(found, outline, lambda: guide_segment.parts(text, outline))
+    return guide_segment.parts(text, outline)
 
 
 def read(act):
     """문서 하나의 조각들. 받아 둔 글이 없으면 빈 목록. 같은 파일은 한 번만 나눈다(파일이 바뀌면 다시 나눈다)."""
     path = pathlib.Path(act["path"])
-    return _parts(str(path), act.get("format", "act"), act.get("outline", "auto"), path.stat().st_mtime_ns) if path.is_file() else []
+    if not path.is_file():
+        return []
+    side = units_path(path)
+    tagged = act.get("units") is not False and side.is_file()
+    stamp = (path.stat().st_mtime_ns, side.stat().st_mtime_ns if tagged else 0)
+    return _parts(str(path), act.get("format", "act"), act.get("outline", "auto"), stamp, tagged)
 
 
 def label_ko(part):

@@ -34,6 +34,13 @@ def _outline_problems():
     return found
 
 
+def _units_problems():
+    """PDF로 받은 문서인데 꼬리표에서 읽은 단위 파일이 없는 것. 그 문서는 글에서 나눈 조각을 쓰게 되어 문단이 달라지고 번역이 떨어져 나간다."""
+    missing = [document["short"] for document in guides.documents()
+               if document.get("format") == "pdf" and document.get("units") is not False and not corpus.units_path(document["path"]).is_file()]
+    return [f"원문 PDF의 뜻 단위를 읽어 두지 않은 문서 {len(missing)}건({', '.join(missing[:3])}): python -m tools.pdfko.units --missing"] if missing else []
+
+
 def _last_update(act_ids):
     days = [str((read_json(store.path_of(act_id), {}) or {}).get("updated", "")) for act_id in act_ids]
     return max((day for day in days if day), default="")
@@ -86,4 +93,4 @@ def _held_problems():
 
 def problems(today=None):
     day = today or today_kst()
-    return _outline_problems() + _stalled_problems(day) + _held_problems() + _check_problems(day)
+    return _outline_problems() + _units_problems() + _stalled_problems(day) + _held_problems() + _check_problems(day)

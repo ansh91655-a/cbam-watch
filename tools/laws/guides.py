@@ -38,7 +38,7 @@ def documents():
         version = doc["versions"][-1]
         found.append({"id": entry["id"], "celex": "", "name": entry["name"], "short": entry.get("short", entry["name"]), "official": entry.get("en", ""),
                       "url": doc.get("url", ""), "path": version["text"], "consolidated": "", "rule": "", "group": entry.get("group", DEFAULT_GROUP), "format": "pdf",
-                      "outline": entry.get("outline", "auto"), "remark": entry.get("remark", ""),
+                      "outline": entry.get("outline", "auto"), "units": entry.get("units", True), "remark": entry.get("remark", ""),
                       "received": version.get("date", ""), "pages": version.get("pages", 0), "turn": entry.get("turn", 99)})
     return found
 

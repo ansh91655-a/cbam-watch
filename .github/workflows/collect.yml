@@ -60,6 +60,14 @@ jobs:
         run: python -m tools.prices.run
       - name: 원문 판 점검
         run: python -m tools.originals.run ${{ (github.event_name == 'workflow_dispatch' && inputs.full) && '--full' || '' }}
+      - name: 원문 PDF의 뜻 단위 읽기
+        # 새로 받은 PDF에 적힌 짜임(제목, 문단, 목록, 표, 각주)을 읽어 둔다(originals/units). 규정 원문 화면이 이것으로 문단을 나눈다.
+        # 실패해도 나머지는 올린다. 단위가 없는 문서는 글에서 나눈 조각을 쓰고, 실행 확인(tools.run.laws_health)이 알린다.
+        continue-on-error: true
+        timeout-minutes: 10
+        run: |
+          pip install -q -r requirements.txt
+          python -m tools.pdfko.units --missing
       - name: 결과 올리기
         run: |
           git config user.name "cbam-watch-bot"
