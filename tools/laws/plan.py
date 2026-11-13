@@ -57,13 +57,16 @@ def ordered(documents, settings):
 
     first에 적힌 문서가 적힌 차례대로 먼저 오고, 나머지는 groups에 적힌 갈래의 차례, 갈래 안에서는 turn(없으면 목록의 차례)을 따른다.
     first에도 없고 groups의 갈래도 아닌 문서는 뺀다.
+    문서의 앞선 판에만 있는 문단을 담은 숨은 문서(of에 본디 문서의 id가 있다)는, 본디 문서가 first에 있으면 그 바로 뒤에 온다
+    (달라진 곳 보기가 그 문단의 번역을 기다리므로 먼저 옮기는 문서와 함께 먼저 옮긴다).
     """
     groups, first = list(settings.get("groups", [])), list(settings.get("first", []))
     kept = []
     for index, (act, found) in enumerate(documents):
         group = act.get("group", "act")
-        if act["id"] in first:
-            kept.append((0, first.index(act["id"]), 0, index, act, found))
+        lead = act["id"] if act["id"] in first else act.get("of", "")
+        if lead in first:
+            kept.append((0, first.index(lead), 0 if lead == act["id"] else 1, index, act, found))
         elif group in groups:
             kept.append((1, groups.index(group), act.get("turn", 0), index, act, found))
     return [(act, found) for *_, act, found in sorted(kept, key=lambda row: row[:4])]

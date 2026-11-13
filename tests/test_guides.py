@@ -531,6 +531,13 @@ class PlanTest(unittest.TestCase):
         self.assertEqual(self.order(groups=[], first=["a1"]), ["a1"])
         self.assertEqual(self.order(groups=[]), [])
 
+    def test_the_earlier_version_of_a_document_follows_it_when_it_comes_first(self):
+        documents = self.DOCUMENTS + [({"id": "a2-was-20230516", "group": "act", "turn": 900, "hidden": True, "of": "a2"}, [])]
+        order = lambda **settings: [act["id"] for act, _ in plan.ordered(documents, settings)]
+        self.assertEqual(order(groups=["guide", "act"], first=["a2", "g1"]), ["a2", "a2-was-20230516", "g1", "g2", "a1"])  # 먼저 옮기는 문서의 앞선 판은 그 바로 뒤
+        self.assertEqual(order(groups=["guide", "act"]), ["g2", "g1", "a1", "a2", "a2-was-20230516"])                       # 그 밖에는 갈래의 맨 뒤(turn)
+        self.assertEqual(order(groups=[], first=["a1"]), ["a1"])
+
 
 class UnifyTest(unittest.TestCase):
     def test_glossary_words_get_the_preferred_spacing(self):
