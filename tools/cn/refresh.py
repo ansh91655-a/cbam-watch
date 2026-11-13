@@ -11,7 +11,7 @@
 import json
 import sys
 
-from tools.archive import fulltext
+from tools.archive import earlier, fulltext
 from tools.archive.store import save_text
 from tools.cn import build, versions
 from tools.common.jsonio import read_json, stamp, write_json
@@ -37,6 +37,12 @@ def _update_index(celex, address, size):
     entries.insert(0, {"name": "cbam-consolidated", "code": celex, "url": address, "lines": size, "textPath": f"collected/archive/pages/{TEXT}"})
     index["entries"] = entries
     write_json(build.INDEX, index)
+
+
+def _keep_current(used):
+    """새 통합본으로 덮어쓰기 전에, 받아 둔 지금의 판을 앞선 판으로 남긴다(규정 원문 화면의 개정 대조가 견줄 글이다)."""
+    stored = next((row for row in (read_json(build.INDEX, {}) or {}).get("entries", []) if row.get("name") == "cbam-consolidated"), {})
+    earlier.keep(versions.ACT, str(stored.get("code") or used), f"collected/archive/pages/{TEXT}")
 
 
 def _note(result):
@@ -68,6 +74,7 @@ def refresh(fetch_parts=None):
     data, found = build.assemble(law, build.read_lines("downstream-commission-DOC_2.txt"), build.read_lines("downstream-council.txt"), newer)
     if found:
         return _note({"state": "failed", "celex": newer, "from": used, "problems": found})
+    _keep_current(used)
     save_text(TEXT, law)
     _update_index(newer, address, len(lines))
     write_json(build.OUT, data)

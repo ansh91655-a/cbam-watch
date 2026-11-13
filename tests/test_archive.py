@@ -1,7 +1,10 @@
 """소급 수집과 소급 게시 도구를 확인한다."""
+import os
+import pathlib
+import tempfile
 import unittest
 
-from tools.archive import acts, boards, ecnews, eurlex, gate, newsletter, store
+from tools.archive import acts, boards, earlier, ecnews, eurlex, gate, newsletter, store
 from tools.check import term_check
 
 TOPICS = {"law", "legis", "etc"}
@@ -388,3 +391,41 @@ class ActsTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class EarlierTest(unittest.TestCase):
+    """법령의 앞선 판을 받아 두고 남긴다(개정 대조가 견줄 글)."""
+
+    def setUp(self):
+        self.previous = os.getcwd()
+        self.folder = tempfile.TemporaryDirectory()
+        os.chdir(self.folder.name)
+
+    def tearDown(self):
+        os.chdir(self.previous)
+        self.folder.cleanup()
+
+    def test_the_adopted_text_is_fetched_once(self):
+        called = []
+        fetch = lambda code: called.append(code) or ([("", "http://x.example/" + code, ["Article 1", "ANNEX I", "List of goods"])], "")
+        self.assertEqual(earlier.crawl(fetch)["stored"], 1)
+        row = earlier.entries()[0]
+        self.assertEqual((row["act"], row["code"], row["kind"], row["date"]), ("32023R0956", "32023R0956", "adopted", "2023-05-16"))
+        self.assertIn("ANNEX I", pathlib.Path(row["textPath"]).read_text(encoding="utf-8"))
+        self.assertEqual(earlier.crawl(lambda code: self.fail("이미 받아 둔 글은 다시 받지 않는다"))["stored"], 0)
+        self.assertEqual(called, ["32023R0956"])
+
+    def test_a_text_that_is_another_document_is_not_stored(self):
+        result = earlier.crawl(lambda code: ([("", "http://x.example/doc", ["다른 문서"])], ""))
+        self.assertEqual((result["stored"], len(result["failures"]), earlier.entries()), (0, 1, []))
+
+    def test_a_version_is_kept_once_and_listed_by_date(self):
+        text = pathlib.Path("now.txt")
+        text.write_text("[주소] http://x.example\n\nArticle 1\n", encoding="utf-8")
+        first = earlier.keep("32023R0956", "02023R0956-20251020", text)
+        text.write_text("달라진 글\n", encoding="utf-8")
+        self.assertEqual(earlier.keep("32023R0956", "02023R0956-20251020", text), first)  # 이미 남긴 판은 덮어쓰지 않는다
+        self.assertIn("Article 1", pathlib.Path(first).read_text(encoding="utf-8"))
+        earlier.crawl(lambda code: ([("", "http://x.example/doc", ["ANNEX I"])], ""))
+        self.assertEqual([row["code"] for row in earlier.entries()], ["32023R0956", "02023R0956-20251020"])
+        self.assertEqual(earlier.keep("32023R0956", "02023R0956-20270301", "없는 파일.txt"), "")

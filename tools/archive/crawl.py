@@ -9,13 +9,13 @@ import argparse
 import sys
 import time
 
-from tools.archive import acts, boards, cellar, council, docs, ecnews, efta, eurlex, fedreg, fulltext, govuk, hys, newsletter, oeil, presscorner, tables, tofeed, ukleg
+from tools.archive import acts, boards, cellar, council, docs, earlier, ecnews, efta, eurlex, fedreg, fulltext, govuk, hys, newsletter, oeil, presscorner, tables, tofeed, ukleg
 from tools.archive.store import ROOT, SINCE
 from tools.common.jsonio import stamp, write_json
 
 STEPS = [("ec-news", ecnews.crawl), ("ec-newsletter", newsletter.crawl), ("eur-lex", eurlex.crawl), ("eur-lex-related", cellar.crawl),
          ("eur-lex-docs", docs.crawl), ("ep-oeil", oeil.crawl), ("ec-hys", hys.crawl), ("ec-press", presscorner.crawl), ("ec-press-recent", presscorner.recent),
-         ("eu-council", council.crawl), ("eu-fulltext", fulltext.crawl), ("eu-acts", acts.crawl), ("eu-tables", tables.crawl), ("efta-eea-lex", efta.crawl),
+         ("eu-council", council.crawl), ("eu-fulltext", fulltext.crawl), ("eu-acts", acts.crawl), ("eu-earlier", earlier.crawl), ("eu-tables", tables.crawl), ("efta-eea-lex", efta.crawl),
          ("uk-govuk", govuk.crawl), ("uk-govuk-recent", govuk.recent), ("uk-legislation", ukleg.crawl), ("us-fedreg", fedreg.crawl), ("kr-boards", boards.crawl),
          ("to-feed", tofeed.run)]
 
@@ -30,7 +30,7 @@ def main(argv):
     args = parser.parse_args(argv)
     wanted = set(args.steps)
     if not wanted:  # 이름을 주지 않으면 전체를 다시 모으는 것만 돌린다(최근 것만 보는 단계는 이름을 줘야 돈다)
-        wanted = {name for name, _ in STEPS} - {"ec-press-recent", "uk-govuk-recent", "to-feed", "eu-fulltext", "eu-acts", "eu-tables"}
+        wanted = {name for name, _ in STEPS} - {"ec-press-recent", "uk-govuk-recent", "to-feed", "eu-fulltext", "eu-acts", "eu-earlier", "eu-tables"}
     deadline = time.monotonic() + args.budget_minutes * 60 if args.budget_minutes else None
     for name, step in STEPS:
         if wanted and name not in wanted:

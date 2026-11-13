@@ -256,6 +256,16 @@ class RefreshTest(unittest.TestCase):
         self.assertTrue(any(row["name"].startswith("downstream-") for row in index["entries"]))  # 다른 문서의 기록은 그대로다
         self.assertEqual(refresh.refresh(fetch_parts=lambda number: self.fail("다시 받으면 안 된다"))["state"], "same")
 
+    def test_the_text_in_use_is_kept_as_an_earlier_version_before_it_is_replaced(self):
+        from tools.archive import earlier
+        from tools.cn import refresh
+        before = pathlib.Path(self.FILES[2]).read_text(encoding="utf-8")
+        refresh.refresh(fetch_parts=lambda number: ([("", "http://x.example/doc", self._with_new_line())], ""))
+        kept = [row for row in earlier.entries() if row["code"] == "02023R0956-20251020"]
+        self.assertEqual([(row["act"], row["kind"], row["date"]) for row in kept], [("32023R0956", "consolidated", "2025-10-20")])
+        self.assertEqual(pathlib.Path(kept[0]["textPath"]).read_text(encoding="utf-8"), before)
+        self.assertNotEqual(pathlib.Path(self.FILES[2]).read_text(encoding="utf-8"), before)
+
     def test_a_text_that_does_not_read_well_changes_nothing(self):
         from tools.cn import refresh
         before = (self._book(), pathlib.Path(self.FILES[2]).read_text(encoding="utf-8"))

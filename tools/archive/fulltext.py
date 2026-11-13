@@ -22,6 +22,7 @@ ACCEPT = {"Accept": "application/xhtml+xml, text/html;q=0.9", "Accept-Language":
 COUNCIL = "https://data.consilium.europa.eu/doc/document/{code}/en/pdf"
 PARLIAMENT = "https://www.europarl.europa.eu/doceo/document/{code}_EN.html"
 RELATED = "collected/archive/eur-lex-related.json"
+STORED = "collected/archive/eu-fulltext.json"
 # (이름, 종류, 번호, 받은 글에 꼭 있어야 하는 말). 통합본의 번호는 돌릴 때 가장 새 판으로 바꿔 넣는다(targets).
 TARGETS = [
     ("cbam-consolidated", "celex", versions.FIRST, "ANNEX I"),
@@ -145,6 +146,14 @@ def targets():
     return [(name, kind, newest if name == "cbam-consolidated" else code, must) for name, kind, code, must in TARGETS]
 
 
+def _keep_before(name, code):
+    """받아 둔 통합본이 이번에 받는 판과 다른 판이면 앞선 판으로 남긴다."""
+    from tools.archive import earlier  # 이 모듈을 earlier가 들이므로 여기서 들인다
+    stored = next((row for row in (read_json(STORED, {}) or {}).get("entries", []) if row.get("name") == name), None)
+    if stored and stored.get("code") and stored["code"] != code:
+        earlier.keep(versions.ACT, stored["code"], stored.get("textPath", ""))
+
+
 READERS = {"celex": celex_parts, "council": council_parts, "fourcolumn": fourcolumn_parts, "parliament": parliament_parts, "oeil": oeil_parts}
 
 
@@ -161,6 +170,8 @@ def crawl():
         if why:
             failures.append(f"{name} {code}: {why}")
             continue
+        if name == "cbam-consolidated":  # 새 판으로 덮어쓰기 전에 받아 둔 판을 앞선 판으로 남긴다(개정 대조가 견줄 글)
+            _keep_before(name, code)
         for tail, address, lines in parts:
             path = save_text(f"eu-fulltext/{name}{tail}.txt", [f"[주소] {address}", ""] + lines)
             entries.append({"name": f"{name}{tail}", "code": code, "url": address, "lines": len(lines), "textPath": path})
