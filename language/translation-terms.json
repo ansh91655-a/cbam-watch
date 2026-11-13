@@ -4332,6 +4332,36 @@
    "ko": "관세 정지 제도",
    "from": "qa",
    "added": "2026-11-13"
+  },
+  {
+   "en": "bars and rods",
+   "ko": "봉 및 막대",
+   "from": "guide-5d",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "clad, plated or coated",
+   "ko": "클래드, 도금 또는 피복",
+   "from": "guide-5d",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "irregularly wound coils",
+   "ko": "불규칙하게 감은 코일",
+   "from": "guide-5d",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "Legal Entity Identifier",
+   "ko": "법인식별기호",
+   "from": "guide-5d",
+   "added": "2026-11-13"
+  },
+  {
+   "en": "2-factor authentication",
+   "ko": "2단계 인증",
+   "from": "guide-5d",
+   "added": "2026-11-13"
   }
  ]
 }
