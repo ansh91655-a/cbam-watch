@@ -123,15 +123,16 @@ def rule_events(rules):
     """규제별 진행 상황에 적힌 다음 일정을 일정으로 만든다. 규제에 "calendar": false가 있으면 만들지 않는다(이미 일정에 있는 날짜).
 
     일정의 이름은 규제의 nextTitle(그 날 있을 일을 적은 짧은 구)이고, 없으면 규제 이름이다.
+    출처는 그 날짜를 알려 준 곳(nextSource)이고, 적혀 있지 않으면 규제의 첫 링크다(언론 보도로만 아는 날짜에는 nextSource가 꼭 있다: tools.publish.regulations).
     """
     rows = []
     for rule in (rules or {}).get("regulations", []):
         date = str(rule.get("nextDate", ""))
-        links = rule.get("links") or [{}]
+        source = rule.get("nextSource") or (rule.get("links") or [{}])[0]
         if len(date) != 10 or rule.get("calendar") is False or not rule.get("next"):
             continue
-        rows.append({"date": date, "title": rule.get("nextTitle") or rule.get("name", ""), "kind": "입법", "note": rule["next"], "sourceName": links[0].get("text", ""),
-                     "link": links[0].get("url", ""), "derived": True, "rule": rule.get("id", "")})
+        rows.append({"date": date, "title": rule.get("nextTitle") or rule.get("name", ""), "kind": "입법", "note": rule["next"], "sourceName": source.get("text", ""),
+                     "link": source.get("url", ""), "derived": True, "rule": rule.get("id", "")})
     return rows
 
 

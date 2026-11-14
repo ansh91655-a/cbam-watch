@@ -4,6 +4,7 @@
 규제에는 분석 글(analysis: 배경, 주요 내용, 쟁점과 정세, 실무에서 볼 점)을 둘 수 있다. 그 꼴과 근거의 검사는 tools/publish/analysis.py가 한다.
 한 규제의 연혁은 사건마다 근거를 가진다.
  - basis "stored": 모아 둔 공식 자료와 맞춰 본 것. evidence에 어느 자료의 무엇과 맞추는지 적으며, 이 도구가 실제로 맞춰 본다.
+   글 파일(path)은 모아 둔 공식 기록(collected/archive), 게시 데이터(data), 원문 대장이 받아 둔 문서의 글(originals/text) 가운데 하나여야 한다.
  - basis "web":    공식 화면을 읽고 확인한 것(자동으로 받을 수 없는 화면). checkedOn에 확인한 날을 적는다.
  - basis "press":  공식 발표가 없어 언론 보도로만 아는 것. 글에 '보도'라는 말이 있어야 하고, 사이트에서도 따로 표시한다.
 """
@@ -17,6 +18,8 @@ from tools.publish import analysis
 
 SOURCE = "data/regulations.json"
 ARCHIVE = pathlib.Path("collected/archive")
+# 근거로 댈 수 있는 글이 있는 곳: 모아 둔 공식 기록, 게시 데이터, 원문 대장이 받아 둔 문서에서 뽑은 글
+STORED = (ARCHIVE, pathlib.Path("data"), pathlib.Path("originals/text"))
 DATE = re.compile(r"^\d{4}(-\d{2}(-\d{2})?)?$")
 BASES = {"stored", "web", "press"}
 TEXT_FIELDS = ["summary", "status", "next", "nextTitle"]
@@ -39,7 +42,7 @@ def evidence_problem(evidence, date):
         return ""
     if "path" in evidence:
         path = pathlib.Path(evidence["path"])
-        if ARCHIVE not in path.parents and pathlib.Path("data") not in path.parents:
+        if not any(folder in path.parents for folder in STORED):
             return "근거 파일이 모아 둔 자료가 아님"
         if not path.exists():
             return f"근거 파일이 없음: {path}"
@@ -105,6 +108,25 @@ def position_problems(rule, term_index, kinds):
     return found
 
 
+def next_source_problems(rule):
+    """다음 일정의 날짜를 알려 준 출처(nextSource)의 꼴. 일정 화면은 이 출처를 그 날짜의 출처로 보여 준다(없으면 규제의 첫 링크).
+
+    언론 보도로만 아는 날짜는 첫 링크의 공식 문서에 적혀 있지 않다. 그런 일정에 공식 문서가 출처로 붙지 않도록,
+    다음 일정의 글이나 이름에 '보도'가 있으면 그 보도를 출처로 꼭 적게 한다.
+    """
+    source = rule.get("nextSource")
+    press = bool(rule.get("nextDate")) and "보도" in f"{rule.get('next', '')} {rule.get('nextTitle', '')}"
+    if source is None:
+        return ["보도에 기댄 다음 일정에는 그 날짜를 알려 준 출처(nextSource)가 있어야 함(rule_edit set --next-source \"<매체 이름> 보도\" --next-link \"<그 보도의 주소>\")"] if press else []
+    if not isinstance(source, dict) or not str(source.get("text", "")).strip() or not str(source.get("url", "")).startswith("https://"):
+        return ["다음 일정의 출처(nextSource)는 이름(text)과 주소(url, https)를 가져야 함"]
+    if not rule.get("nextDate"):
+        return ["다음 일정의 날짜(nextDate)가 없는데 그 출처(nextSource)가 남아 있음"]
+    if press and "보도" not in source["text"]:
+        return ["보도에 기댄 다음 일정의 출처 이름(nextSource.text)에는 '보도'가 있어야 함"]
+    return []
+
+
 def problems(body, term_index=None, kinds=("format", "evidence")):
     """자료 전체의 문제를 (어디, 무엇) 목록으로 돌려준다.
 
@@ -135,6 +157,7 @@ def problems(body, term_index=None, kinds=("format", "evidence")):
             found.append((where, "단계 위치(at)가 단계 목록(path) 밖임"))
         if rule.get("nextDate") and not DATE.match(str(rule["nextDate"])):
             found.append((where, "다음 일정 날짜(nextDate)가 날짜가 아님"))
+        found += [(where, problem) for problem in next_source_problems(rule)]
         for field in TEXT_FIELDS:
             found += [(f"{where} {field}", problem) for problem in text_problems(str(rule.get(field, "")), term_index)]
         timeline = rule.get("timeline", [])

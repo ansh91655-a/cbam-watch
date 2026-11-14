@@ -59,6 +59,17 @@ class RegulationsTest(unittest.TestCase):
         self.assertEqual(regulations.problems(body(timeline=[event]), self.terms, kinds=("format",)), [])
         self.assertEqual(len(regulations.problems(body(timeline=[event]), self.terms, kinds=("evidence",))), 1)
 
+    def test_a_press_based_next_date_must_name_the_report_as_its_source(self):
+        # 언론 보도로만 아는 날짜: 그 날짜가 적혀 있지 않은 공식 문서(규제의 첫 링크)가 일정의 출처로 붙지 않게 한다
+        press = dict(next="협상이 열릴 예정이라는 보도가 있습니다.", nextDate="2026-11-30", nextTitle="두 번째 3자 협상(보도 기준)")
+        self.assertTrue(any(what.startswith("보도에 기댄 다음 일정에는 그 날짜를 알려 준 출처(nextSource)가 있어야 함") for what in self.whats(body(**press))))
+        self.assertEqual(self.whats(body(**press, nextSource={"text": "어느 신문 보도", "url": "https://example.com/n"})), [])
+        self.assertTrue(any("'보도'가 있어야 함" in what for what in self.whats(body(**press, nextSource={"text": "어느 신문", "url": "https://example.com/n"}))))
+        self.assertTrue(any("이름(text)과 주소(url, https)" in what for what in self.whats(body(**press, nextSource={"text": "어느 신문 보도", "url": "example.com"}))))
+        # 공식 기록에 적힌 날짜는 출처를 따로 적지 않아도 된다(첫 링크가 출처로 보인다). 날짜가 없는데 출처만 남으면 알린다
+        self.assertEqual(self.whats(body(next="표결이 잠정적으로 잡혀 있습니다.", nextDate="2026-12-14")), [])
+        self.assertTrue(any("출처(nextSource)가 남아 있음" in what for what in self.whats(body(next="다음입니다.", nextSource={"text": "어느 신문 보도", "url": "https://example.com/n"}))))
+
     def test_evidence_file_must_be_collected_material(self):
         self.assertIn("모아 둔 자료가 아님", regulations.evidence_problem({"path": "README.md", "contains": ["CBAM"]}, ""))
 
@@ -89,6 +100,18 @@ class RuleEventsTest(unittest.TestCase):
         self.assertEqual(derive.rule_events(body(next="표결이 잡혀 있습니다.")), [])
         merged = derive.events([{"date": "2026-12-01", "title": "기존 일정"}], {}, data)
         self.assertEqual([row["date"] for row in merged], ["2026-12-01", "2026-12-14"])
+
+    def test_the_event_names_the_source_that_gave_the_date(self):
+        from tools.publish import derive
+        told = {"text": "어느 신문 보도", "url": "https://example.com/n"}
+        row = derive.rule_events(body(next="협상이 열릴 예정이라는 보도가 있습니다.", nextDate="2026-11-30", nextSource=told))[0]
+        self.assertEqual((row["sourceName"], row["link"]), ("어느 신문 보도", "https://example.com/n"))
+
+    def test_published_press_based_dates_carry_their_source(self):
+        from tools.publish import derive
+        for row in derive.rule_events(read_json(regulations.SOURCE)):
+            if "보도" in f"{row['title']} {row['note']}":
+                self.assertIn("보도", row["sourceName"], row["title"])
 
 
 class RuleEditTest(unittest.TestCase):
@@ -121,6 +144,22 @@ class RuleEditTest(unittest.TestCase):
         self.assertEqual((rule["nextDate"], rule.get("nextTitle")), ("2026-12-08", None))
         self.edit.set_fields(self.body, self.args(id="sample-rule", stage=None, tone=None, status=None, at=None, next=None, next_date="2026-12-09", next_title="본회의 표결"))
         self.assertEqual(rule["nextTitle"], "본회의 표결")
+
+    def test_the_source_of_the_next_date_is_set_kept_and_dropped_with_the_date(self):
+        blank = dict(id="sample-rule", stage=None, tone=None, status=None, at=None, next=None, next_date=None, next_title=None)
+        rule = self.body["regulations"][0]
+        rule.update({"next": "협상이 열릴 예정이라는 보도가 있습니다.", "nextDate": "2026-11-30"})
+        self.edit.set_fields(self.body, self.args(**blank, next_source="어느 신문 보도", next_link="https://example.com/n"))
+        self.assertEqual(rule["nextSource"], {"text": "어느 신문 보도", "url": "https://example.com/n"})
+        self.assertNotIn("changedOn", rule)  # 출처를 적는 것은 규제가 바뀐 것이 아니다
+        # 다른 값을 고칠 때에는 그대로 남고, 날짜를 바꾸면서 새 출처를 주지 않으면 지워진다(새 날짜에 옛 출처가 붙지 않게)
+        self.edit.set_fields(self.body, self.args(**{**blank, "status": "협상 중입니다."}))
+        self.assertIn("nextSource", rule)
+        self.edit.set_fields(self.body, self.args(**{**blank, "next_date": "2026-12-07"}))
+        self.assertNotIn("nextSource", rule)
+        self.edit.set_fields(self.body, self.args(**blank, next_source="다른 신문 보도", next_link="https://example.com/m"))
+        self.edit.set_fields(self.body, self.args(**blank, next_source=""))
+        self.assertNotIn("nextSource", rule)
 
     def test_a_tool_link_is_set_and_cleared_without_marking_the_rule_as_changed(self):
         blank = dict(id="sample-rule", stage=None, tone=None, status=None, at=None, next=None, next_date=None, next_title=None)

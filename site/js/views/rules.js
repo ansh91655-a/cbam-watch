@@ -24,10 +24,13 @@ function stageChip(rule) {
   return h("span", { class: "stage-chip", "data-tone": rule.tone || "progress", text: rule.stage });
 }
 
+// 다음 단계. 날짜가 있으면 그 날짜와, 그 날짜를 알려 준 출처(자료에 적혀 있을 때)를 함께 보여 준다.
 function nextLine(rule) {
   if (!rule.next) return null;
   const when = rule.nextDate ? h("time", { datetime: rule.nextDate, text: `${koreanDate(rule.nextDate)}, ${countdown(rule.nextDate)}` }) : null;
-  return h("p", { class: "rule-next" }, [h("strong", { text: "다음 단계" }), h("span", { text: rule.next }), when]);
+  const from = rule.nextDate && rule.nextSource ? safeLink(rule.nextSource.url, rule.nextSource.text) : null;
+  return h("p", { class: "rule-next" }, [h("strong", { text: "다음 단계" }), h("span", { text: rule.next }), when,
+    from ? h("span", { class: "rule-next-from" }, [h("span", { text: "날짜의 출처 " }), from]) : null]);
 }
 
 function ruleCard(rule) {
@@ -132,7 +135,7 @@ function detail(main, rule, group, items, drawing, acts, read) {
         nextLine(rule),
       ]),
       h("section", { class: "stack", "aria-labelledby": "h-what" }, [
-        h("h2", { id: "h-what", text: "무엇을 정하는 규제인가요" }),
+        h("h2", { id: "h-what", text: "개요" }),
         h("p", { class: "rule-summary", text: rule.summary }),
         analysis(rule),  // 배경, 주요 내용, 쟁점과 정세, 실무에서 볼 점(분석 글이 있는 규제만)
       ]),

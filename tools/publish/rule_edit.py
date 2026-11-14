@@ -8,6 +8,8 @@
 연혁에서 한 줄 빼기:   python -m tools.publish.rule_edit drop-event --id <규제> --date <날짜> --starts "<글의 앞부분>"
 단계와 설명 고치기:    python -m tools.publish.rule_edit set --id <규제> [--stage "…"] [--at 2] [--tone progress] [--status "…"] [--summary "…"] [--figure cbam-factor] [--tool calc] [--next "…"] [--next-date 2026-12-14] [--next-title "…"]
                       (--next "", --next-date "", --next-title ""는 그 값을 지운다. --next-title은 일정 화면에 보일 이름으로, 그 날 있을 일을 적은 짧은 구다)
+                      (--next-source "<출처 이름>" --next-link "<주소>": 다음 일정의 날짜를 알려 준 출처. 일정 화면과 규제 화면이 그 날짜의 출처로 보여 준다.
+                       주지 않으면 규제의 첫 링크가 출처로 보이므로, 그 날짜가 첫 링크의 문서에 없을 때(언론 보도로만 아는 날짜)에는 꼭 준다. 보도이면 이름에 '보도'를 넣는다)
 새 규제 더하기:        python -m tools.publish.rule_edit add-rule --file rule.json   (rule.json은 규제 하나의 JSON)
 분석 글 넣기와 바꾸기: python -m tools.publish.rule_edit analysis --id <규제> --file analysis.json
                       (analysis.json은 sections와 sources를 담은 JSON. 꼴은 tools/publish/analysis.py의 머리글에 있다. 쓴 날과 그때의 규제 모습은 스스로 적힌다)
@@ -68,6 +70,14 @@ def set_fields(body, args):
     # 다음 단계나 그 날짜를 바꾸면서 일정 이름을 새로 주지 않으면, 옛 일정 이름은 지운다(다른 일에 옛 이름이 붙지 않게)
     if (args.next is not None or args.next_date is not None) and args.next_title is None:
         rule.pop("nextTitle", None)
+    # 그 날짜를 알려 준 출처도 같다: 다음 단계나 날짜를 바꾸면서 새 출처를 주지 않으면 옛 출처를 지운다(새 날짜에 옛 출처가 붙지 않게)
+    source = getattr(args, "next_source", None)
+    if (args.next is not None or args.next_date is not None) and source is None:
+        rule.pop("nextSource", None)
+    if source == "":
+        rule.pop("nextSource", None)
+    elif source is not None:
+        rule["nextSource"] = {"text": source, "url": getattr(args, "next_link", None) or ""}
     for field, value in (("next", args.next), ("nextDate", args.next_date), ("nextTitle", args.next_title)):
         if value == "":
             rule.pop(field, None)
@@ -167,6 +177,8 @@ def main(argv):
     change.add_argument("--next")
     change.add_argument("--next-date")
     change.add_argument("--next-title")
+    change.add_argument("--next-source")   # 다음 일정의 날짜를 알려 준 출처의 이름(예: "Euronews 보도"). --next-link와 함께 준다
+    change.add_argument("--next-link")     # 그 출처의 주소(https)
     new = commands.add_parser("add-rule")
     new.add_argument("--file", required=True)
     table = commands.add_parser("positions")

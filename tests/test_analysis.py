@@ -67,6 +67,25 @@ class AnalysisCheckTest(unittest.TestCase):
         self.assertTrue(any("plain-ending" in what for what in found))
         self.assertTrue(any("수입업체" in what for what in found))
 
+    def test_advice_and_forecasts_are_not_written(self):
+        # 사이트는 원문이 정한 사실과 그 결과만 적는다. 권유, 전망, 날이 지나면 틀리는 말은 걸린다
+        def with_text(text, label=None):
+            item = {"text": text, "refs": ["release"], **({"label": label} if label else {})}
+            return rule(analysis=written(sections=[written()["sections"][0], {"key": "content", "items": [item]}, written()["sections"][2]]))
+        for text in ("거래처가 승인을 받았는지 확인해 둘 필요가 있습니다.", "코드를 미리 맞춰 두는 것이 좋습니다.", "자료를 요청하게 될 것으로 보입니다.",
+                     "협상 경과를 지켜볼 일입니다.", "판매 시작까지 석 달이 채 남지 않았습니다."):
+            self.assertTrue(any("권유나 전망으로 읽히는 말" in what for what in whats(with_text(text))), text)
+        self.assertTrue(any("권유나 전망으로 읽히는 말" in what for what in whats(with_text("남은 절차를 적은 문단입니다.", "지켜볼 일정"))))
+        # 원문이 정한 것과 그 결과, 원문이 스스로 가능성으로 적은 것은 걸리지 않는다
+        for text in ("수입자는 기한까지 신고서를 내야 합니다.", "기본값은 개정될 수 있습니다.", "제안에는 수수료를 두는 것이 들어갈 수 있습니다."):
+            self.assertEqual(whats(with_text(text)), [], text)
+
+    def test_published_analyses_carry_no_advice(self):
+        body = regulations.read_json(regulations.SOURCE)
+        said = [(one["id"], item["text"][:40]) for one in body["regulations"] for part in (one.get("analysis") or {}).get("sections", [])
+                for item in part.get("items", []) if analysis.ADVICE.search(f"{item.get('text', '')} {item.get('label') or ''}")]
+        self.assertEqual(said, [])
+
     def test_a_paragraph_resting_on_the_press_must_say_so(self):
         body = written()
         body["sections"][2]["items"][0]["text"] = "협상이 열렸습니다."

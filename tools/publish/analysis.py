@@ -4,7 +4,7 @@
  - sections: 절의 목록. 절은 key(아래 SECTIONS 가운데 하나)와 items(문단의 목록)를 가진다.
    문단은 text(글), refs(근거 자료의 key 목록), 그리고 있으면 label(문단 앞에 굵게 적는 짧은 이름)을 가진다.
  - sources: 근거 자료의 목록. 자료는 key, text(이름), url(https), basis(연혁의 근거와 같은 세 종류)를 가진다.
-     stored: 저장소에 모아 둔 공식 자료. path(글 파일)나 index와 where(목록의 줄)를 적는다.
+     stored: 저장소에 모아 둔 공식 자료. path(글 파일: collected/archive, data, originals/text 아래)나 index와 where(목록의 줄)를 적는다.
      web:    공식 화면을 읽고 확인한 것. checkedOn에 확인한 날을 적는다.
      press:  언론 보도로만 아는 것. checkedOn을 적고, 이 자료에 기댄 문단에는 '보도'라는 말이 있어야 한다.
  - asOf: 쓴 날. basedOn: 쓸 때의 규제 단계와 연혁의 줄 수(그 뒤에 규제가 달라졌는지 알아보는 데 쓴다).
@@ -20,12 +20,17 @@ from tools.common.jsonio import read_json
 
 ARCHIVE = pathlib.Path("collected/archive")
 DATA = pathlib.Path("data")
+ORIGINALS = pathlib.Path("originals/text")   # 원문 대장이 받아 둔 문서에서 뽑은 글
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 KEY = re.compile(r"^[a-z0-9][a-z0-9-]*$")
 BASES = {"stored", "web", "press"}
 # (key, 화면에 보이는 이름, 꼭 있어야 하는가)
 SECTIONS = [("background", "배경", True), ("content", "주요 내용", True), ("situation", "쟁점과 정세", True), ("practice", "실무에서 볼 점", False)]
 TITLES = {key: title for key, title, _ in SECTIONS}
+# 분석 글에 쓰지 않는 말. 사이트는 원문이 정한 사실과 그 결과만 적고, 권유와 전망은 쓰지 않는다.
+# 권유('~할 필요가 있습니다', '~하는 것이 좋습니다', '지켜볼'), 전망('~것으로 보입니다'), 날이 지나면 틀리는 말('석 달이 채 남지 않았습니다').
+# 원문이 스스로 가능성으로 적은 것은 누구의 말인지 밝혀 적는다(예: "…할 수 있다고 적고 있습니다").
+ADVICE = re.compile(r"필요가 있습니다|것이 좋습니다|것이 안전합니다|지켜볼|살펴볼|것으로 보입니다|남지 않았습니다|하셔야 합니다")
 
 
 def based_on(rule):
@@ -43,7 +48,7 @@ def _source_text(source):
     """모아 둔 자료의 글. 글 파일이면 그 내용, 목록의 줄이면 그 줄들을 적은 글. 읽지 못하면 None."""
     if source.get("path"):
         path = pathlib.Path(source["path"])
-        if ARCHIVE not in path.parents and DATA not in path.parents:
+        if not any(folder in path.parents for folder in (ARCHIVE, DATA, ORIGINALS)):
             return None
         return path.read_text(encoding="utf-8") if path.exists() else None
     if source.get("index"):
@@ -117,6 +122,9 @@ def problems(rule, check_text, kinds=("format", "evidence")):
                 found.append((spot, "글이 비어 있음"))
                 continue
             found += [(spot, problem) for problem in check_text(text)]
+            said = ADVICE.search(f"{text} {item.get('label') or ''}")
+            if said:
+                found.append((spot, f"권유나 전망으로 읽히는 말('{said.group(0)}')은 쓰지 않음. 원문이 정한 사실과 그 결과만 적음"))
             if item.get("label") is not None:
                 found += [(spot, problem) for problem in check_text(str(item["label"]))]
                 if not str(item["label"]).strip():
