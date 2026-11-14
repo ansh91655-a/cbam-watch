@@ -987,6 +987,20 @@ class LockTest(unittest.TestCase):
         self.assertNotIn('"' + lock.SHOWN + '/**"', tests)
         self.assertIn('"' + lock.STAMP.split("/")[0] + '/**"', tests)
 
+    def test_whether_there_is_work_can_be_asked_without_taking_the_lock(self):
+        # 예약 작업의 지시문이 절차서를 읽기 전에 묻는다. 묻기만 하고 아무것도 쓰지 않는다(끝나는 값은 둘 다 0)
+        import contextlib
+        import io
+        for left, work, said in ((True, "translate", "할 일 있음"), (False, "translate", "할 일 없음: 옮길 문단이 없음"), (False, "verify", "할 일 없음: 검수할 문단이 없음"),
+                                 (False, "", "할 일 없음: 옮길 문단도 검수할 문단도 없음")):
+            asked = []
+            out = io.StringIO()
+            with mock.patch.object(lock, "anything_left", side_effect=lambda name: asked.append(name) or left), mock.patch.object(lock, "take") as take, \
+                    contextlib.redirect_stdout(out):
+                code = lock.main(["work"] + (["--work", work] if work else []))
+            self.assertEqual((code, out.getvalue().strip(), asked), (0, said, [work]))
+            take.assert_not_called()
+
     def test_a_run_with_nothing_to_do_does_not_take_the_lock(self):
         # 번역이 다 끝난 뒤의 실행이 빈 커밋 한 쌍(시작, 끝)을 남기지 않게 한다
         before = self.git(self.a, "rev-parse", "HEAD").stdout

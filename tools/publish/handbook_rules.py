@@ -6,8 +6,9 @@
 지금의 규제 자료(data/regulations.json)가 이 기록과 다르면 상태 점검이 일일 보고에 올린다(tools/run/reference_health.py).
 글이 틀렸다는 뜻은 아니므로 사이트 만들기는 멈추지 않는다. 그 절을 원문과 다시 맞춰 본 뒤에 기록을 지금 모습으로 고친다.
 
-쓰는 법: python -m tools.publish.handbook_rules            달라진 규제와 그 규제를 가리키는 절을 찍는다
-        python -m tools.publish.handbook_rules --accept   지금의 규제 모습을 '맞춰 본 것'으로 적는다(절을 다시 본 뒤에 돌린다)
+쓰는 법: python -m tools.publish.handbook_rules                        달라진 규제와 그 규제를 가리키는 절을 찍는다(줄 머리에 규제 id)
+        python -m tools.publish.handbook_rules --accept               지금의 규제 모습을 '맞춰 본 것'으로 적는다(절을 다시 본 뒤에 돌린다)
+        python -m tools.publish.handbook_rules --accept <규제 id> …   적어 준 규제만 '맞춰 본 것'으로 적는다(다시 보니 고칠 것이 없는 규제만 넘길 때)
 """
 import re
 import sys
@@ -52,10 +53,20 @@ def changed(body, rules):
     return found
 
 
-def accept(body, rules):
-    """맞춰 본 기록을 지금의 규제 모습으로 고친 해설서를 돌려준다(가리키는 규제만 적는다)."""
+def accept(body, rules, only=None):
+    """맞춰 본 기록을 지금의 규제 모습으로 고친 해설서를 돌려준다(가리키는 규제만 적는다).
+
+    only(규제 id들)를 주면 그 규제만 지금 모습으로 고치고 나머지는 적혀 있던 대로 둔다(적힌 것이 없던 규제는 적지 않는다: 여전히 '달라진 것'으로 남는다).
+    """
     by_id = {rule.get("id"): rule for rule in rules or []}
-    return {**body, "rulesSeen": {rule_id: analysis.based_on(by_id[rule_id]) for rule_id in sorted(pointed(body, set(by_id)))}}
+    before = (body or {}).get("rulesSeen") or {}
+    seen = {}
+    for rule_id in sorted(pointed(body, set(by_id))):
+        if only is None or rule_id in only:
+            seen[rule_id] = analysis.based_on(by_id[rule_id])
+        elif rule_id in before:
+            seen[rule_id] = before[rule_id]
+    return {**body, "rulesSeen": seen}
 
 
 def lines(body, rules):
@@ -69,16 +80,22 @@ def main(argv):
     if body is None or not rules:
         print(f"읽지 못함: {SOURCE} 또는 {RULES}")
         return 1
-    if argv == ["--accept"]:
-        write_json(SOURCE, accept(body, rules))
-        print(f"맞춰 본 규제 {len(pointed(body, {rule.get('id') for rule in rules}))}건을 지금 모습으로 적음")
+    known = pointed(body, {rule.get("id") for rule in rules})
+    if argv[:1] == ["--accept"]:
+        only = argv[1:]
+        unknown = [rule_id for rule_id in only if rule_id not in known]
+        if unknown:
+            print(f"해설서가 가리키지 않는 규제: {', '.join(unknown)}")
+            return 2
+        write_json(SOURCE, accept(body, rules, set(only) if only else None))
+        print(f"맞춰 본 규제 {len(only) if only else len(known)}건을 지금 모습으로 적음")
         return 0
     if argv:
         print(__doc__.strip().split("쓰는 법:")[1].strip())
         return 2
     found = lines(body, rules)
-    for line in found:
-        print(line)
+    for (rule_id, *_), line in zip(changed(body, rules), found):
+        print(f"{rule_id}: {line}")
     print(f"해설서가 가리키는 규제 {len(pointed(body, {rule.get('id') for rule in rules}))}건, 달라진 것 {len(found)}건")
     return 0
 

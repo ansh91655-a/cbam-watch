@@ -46,6 +46,19 @@ class ChangedTest(unittest.TestCase):
                          "규제 '탄소가격 이행규정(안)'이(가) 해설서를 맞춰 본 뒤에 달라짐(단계가 '의견수렴 종료'에서 '채택'(으)로 바뀜). 이 규제를 가리키는 절을 다시 볼 것: carbon-price.rules-to-come, ahead.to-come")
         self.assertEqual(handbook_rules.changed(handbook_rules.accept(self.seen, moved), moved), [])   # 다시 맞춰 보고 적으면 사라진다
 
+    def test_only_the_named_rules_are_accepted_when_some_still_need_a_change(self):
+        """다시 보니 고칠 것이 없는 규제만 넘기고, 글을 고쳐야 하는 규제는 '달라진 것'으로 남긴다."""
+        moved = copy.deepcopy(RULES)
+        moved[0]["stage"] = "채택"
+        moved[1]["timeline"].append({})
+        partly = handbook_rules.accept(self.seen, moved, {"ir-declarations"})
+        self.assertEqual(partly["rulesSeen"], {"ir-carbon-price": {"stage": "의견수렴 종료", "events": 3}, "ir-declarations": {"stage": "준비 단계", "events": 2}})
+        self.assertEqual([rule for rule, *_ in handbook_rules.changed(partly, moved)], ["ir-carbon-price"])
+        # 적힌 것이 없던 규제는 이름을 적어 주지 않으면 적지 않는다(여전히 달라진 것으로 남는다)
+        fresh = handbook_rules.accept(BOOK, RULES, {"ir-declarations"})
+        self.assertEqual(sorted(fresh["rulesSeen"]), ["ir-declarations"])
+        self.assertEqual([rule for rule, *_ in handbook_rules.changed(fresh, RULES)], ["ir-carbon-price"])
+
     def test_a_rule_without_a_record_is_told_too(self):
         self.assertEqual([(rule, why) for rule, _, _, why in handbook_rules.changed(BOOK, RULES)],
                          [("ir-carbon-price", "맞춰 본 기록이 없음"), ("ir-declarations", "맞춰 본 기록이 없음")])

@@ -20,6 +20,10 @@
                                                 잡는다. 0: 잡음, 2: 다른 실행이 도는 중(이 실행은 아무것도 하지 않고 끝낸다), 3: 할 일 없음(잡지 않는다), 1: 올리지 못함
   python3 -m tools.laws.lock release <실행 id>  푼다(자기가 잡은 것일 때만 지운다)
   python3 -m tools.laws.lock status             누가 언제 잡았는지
+  python3 -m tools.laws.lock work [--work translate|verify]
+                                                할 일이 있는지만 본다(잡지 않고, 아무것도 쓰지 않는다). "할 일 있음"이나 "할 일 없음: <까닭>"을 찍는다.
+                                                예약 작업의 지시문이 절차서를 읽기 전에 돌린다: 번역이 모두 끝난 뒤의 실행이 날마다 긴 절차서를 읽지 않게 하려는 것이다.
+                                                지금 폴더의 저장소를 본다(먼저 최신으로 받아 둔다). 끝나는 값은 둘 다 0이고, 볼 수 없으면 0이 아니다.
 """
 import argparse
 import datetime
@@ -161,7 +165,7 @@ def release(run_id, root=".", at=None):
 
 def main(argv):
     parser = argparse.ArgumentParser(description="번역 실행이 겹치지 않게 하는 자물쇠")
-    parser.add_argument("what", choices=["take", "release", "status"])
+    parser.add_argument("what", choices=["take", "release", "status", "work"])
     parser.add_argument("run", nargs="?", default="")
     parser.add_argument("--work", default="", choices=["", *WORKS], help="잡으려는 실행이 하는 일. 그 일이 없으면 잡지 않는다")
     args = parser.parse_args(argv)
@@ -171,11 +175,14 @@ def main(argv):
         who = holder(lock, now, _last_work("."))
         print(f"자물쇠: {who}이(가) {lock.get('since', '')}부터 도는 중" if who else ("자물쇠: 낡은 것이 남아 있음" if lock else "자물쇠: 없음"))
         return 0
+    nothing = {"translate": "옮길 문단이 없음", "verify": "검수할 문단이 없음"}.get(args.work, "옮길 문단도 검수할 문단도 없음")
+    if args.what == "work":
+        print("할 일 있음" if anything_left(args.work) else f"할 일 없음: {nothing}")
+        return 0
     if not args.run:
         parser.error("실행 id를 적어 주세요")
     if args.what == "take":
         outcome, detail = take(args.run, work=lambda: anything_left(args.work))
-        nothing = {"translate": "옮길 문단이 없음", "verify": "검수할 문단이 없음"}.get(args.work, "옮길 문단도 검수할 문단도 없음")
         print({"taken": "잡음", "busy": f"다른 실행이 도는 중: {detail}", "idle": f"할 일 없음: {nothing}", "failed": f"잡지 못함: {detail}"}[outcome])
         return {"taken": 0, "busy": 2, "idle": 3, "failed": 1}[outcome]
     outcome = release(args.run)
