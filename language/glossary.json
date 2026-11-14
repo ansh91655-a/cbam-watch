@@ -1,5 +1,5 @@
 {
-"version": "v0.5 (2026-11-12 번역 시범에서 갈린 표기를 하나로 맞춤, 후보는 검토 전)",
+"version": "v0.6 (2026-11-14 용어 통일 3차: 정부의 법률 번역서와 국가법령정보센터에서 확인한 표기로 맞춤)",
 "note": "국문 표기 기준. status가 confirmed인 것은 정부·공공기관 자료에서 확인된 표기, partial은 일부 확인, candidate는 확인이 더 필요한 후보다. avoid는 쓰지 않는 표기다.",
 "terms": [
 {
@@ -2040,10 +2040,15 @@
 "review of a CBAM declaration"
 ],
 "abbr": [],
-"preferred": "신고서 검토",
-"allowed": [],
+"preferred": "CBAM 신고서의 검토",
+"allowed": [
+"신고서 검토",
+"신고서의 검토",
+"신고서를 검토"
+],
 "avoid": [],
-"status": "candidate"
+"status": "confirmed",
+"note": "산업통상자원부·환경부 「EU 탄소국경조정제도 법률 번역서」 v3.0(2025-03-11)의 규정 (EU) 2023/956 제19조 제목"
 },
 {
 "no": 105,
@@ -2303,10 +2308,8 @@
 "form": "관련 전구체"
 },
 {
-"form": "원료물질(2023"
-},
-{
-"form": "2025 법률 번역서)"
+"form": "관련 원료물질",
+"note": "2023·2025 법률 번역서"
 }
 ],
 "status": "confirmed"
@@ -2479,7 +2482,11 @@
 ],
 "abbr": [],
 "preferred": "귀속 배출량",
-"allowed": [],
+"allowed": [
+"귀속 직접배출량",
+"귀속 간접배출량",
+"귀속배출량"
+],
 "avoid": [
 {
 "form": "배분",
@@ -3497,7 +3504,8 @@
 "preferred": "통제 시스템",
 "allowed": [],
 "avoid": [],
-"status": "candidate"
+"status": "confirmed",
+"note": "산업통상자원부·환경부 「EU 탄소국경조정제도 법률 번역서」 v3.0(2025-03-11)의 이행규정 (EU) 2023/1773 부속서 III H"
 },
 {
 "no": 186,
@@ -3512,7 +3520,8 @@
 "내부 통제 활동"
 ],
 "avoid": [],
-"status": "partial"
+"status": "confirmed",
+"note": "산업통상자원부·환경부 「EU 탄소국경조정제도 법률 번역서」 v3.0(2025-03-11)의 이행규정 (EU) 2023/1773 부속서 III H"
 },
 {
 "no": 187,
@@ -3545,10 +3554,12 @@
 "avoid": [
 {
 "form": "샘플링",
-"note": "검증기관 데이터 샘플링과 구분"
+"note": "물질의 시료를 채취하는 일을 가리킬 때. 검증기관이 자료를 골라 보는 일은 '데이터 샘플링'",
+"conditional": true
 }
 ],
-"status": "confirmed"
+"status": "confirmed",
+"note": "국내 배출권거래제의 낱말(시료 채취). 정부의 법률 번역서는 '샘플링'으로 옮긴다"
 },
 {
 "no": 189,
@@ -3876,12 +3887,21 @@
 "abbr": [
 "TSO"
 ],
-"preferred": "송전망 운영자",
+"preferred": "송전계통운영자",
 "allowed": [
-"송전계통운영자"
+"송전계통 운영자"
 ],
-"avoid": [],
-"status": "confirmed"
+"avoid": [
+{
+"form": "송전망 운영자",
+"note": "정부의 법률 번역서는 '송전계통운영자'"
+},
+{
+"form": "송전시스템운영자"
+}
+],
+"status": "confirmed",
+"note": "산업통상자원부·환경부 「EU 탄소국경조정제도 법률 번역서」 v3.0(2025-03-11)의 규정 (EU) 2023/956 부속서 IV 제1항(g). 2026-11-14에 '송전망 운영자'에서 바꿈"
 },
 {
 "no": 208,
@@ -4306,14 +4326,16 @@
 "form": "현장 실사"
 }
 ],
-"status": "confirmed"
+"status": "confirmed",
+"note": "국가법령정보센터에 실린 고시의 별표(배출량 산정계획서 검증의 세부 방법)가 '현장검증'이라 적는다(2026-11-14 확인). 정부의 법률 번역서(규정 (EU) 2023/956 부속서 VI)는 '사업장 방문'으로 옮긴다"
 },
 {
 "no": 230,
 "category": "08 검증·인정",
 "core": false,
 "en": [
-"virtual site visit"
+"virtual site visit",
+"virtual visit"
 ],
 "abbr": [],
 "preferred": "원격 현장검증",
@@ -4321,9 +4343,13 @@
 "avoid": [
 {
 "form": "가상 현장 방문"
+},
+{
+"form": "가상 현장검증"
 }
 ],
-"status": "candidate"
+"status": "candidate",
+"note": "규정 번역(2026-11-12)에서 쓴 표기. 국내 공식 자료에서 확인하지 못함(2026-11-14)"
 },
 {
 "no": 231,
@@ -4452,7 +4478,9 @@
 "category": "08 검증·인정",
 "core": false,
 "en": [
-"lead auditor (team leader)"
+"lead auditor (team leader)",
+"CBAM lead auditor",
+"lead verifier"
 ],
 "abbr": [],
 "preferred": "검증팀장",
@@ -4460,9 +4488,14 @@
 "avoid": [
 {
 "form": "선임 감사원"
+},
+{
+"form": "선임 심사원",
+"note": "국내 온실가스 검증 제도의 낱말(검증팀장)에 맞춘다"
 }
 ],
-"status": "confirmed"
+"status": "confirmed",
+"note": "국가법령정보센터에 실린 고시의 별표(배출량 산정계획서 검증의 세부 방법)가 검증팀을 이끄는 사람을 '검증팀장'이라 적는다(2026-11-14 확인)"
 },
 {
 "no": 239,
@@ -4558,13 +4591,13 @@
 ],
 "abbr": [],
 "preferred": "타당성평가",
-"allowed": [],
-"avoid": [
-{
-"form": "유효성 확인"
-}
+"allowed": [
+"유효성 확인",
+"유효성 검사"
 ],
-"status": "confirmed"
+"avoid": [],
+"status": "confirmed",
+"note": "ISO 14065와 국내 제도의 validation(계획의 타당성평가). 데이터의 validation은 '유효성 확인', 등록부 화면에서 입력값을 보는 validation은 '유효성 검사'로 옮긴다"
 },
 {
 "no": 244,
@@ -4575,7 +4608,10 @@
 ],
 "abbr": [],
 "preferred": "적합성평가 — 계획검증 및 결과검증 기관에 대한 일반 원칙과 요구사항(KS Q ISO/IEC 17029)",
-"allowed": [],
+"allowed": [
+"ISO/IEC 17029",
+"IEC 17029"
+],
 "avoid": [],
 "status": "confirmed"
 },
@@ -4588,7 +4624,9 @@
 ],
 "abbr": [],
 "preferred": "환경 정보 계획검증 및 결과검증 기관에 관한 일반원칙 및 요구사항(KS I ISO 14065)",
-"allowed": [],
+"allowed": [
+"ISO 14065"
+],
 "avoid": [],
 "status": "confirmed"
 },
@@ -4601,7 +4639,9 @@
 ],
 "abbr": [],
 "preferred": "온실가스 – 제3부: 온실가스 성명서에 대한 타당성평가 및 검증을 위한 사용 규칙 및 지침",
-"allowed": [],
+"allowed": [
+"ISO 14064-3"
+],
 "avoid": [],
 "status": "confirmed"
 },
@@ -4626,10 +4666,25 @@
 "independent person (carbon price certifier)"
 ],
 "abbr": [],
-"preferred": "독립적 확인자",
+"preferred": "독립적인 사람",
 "allowed": [],
-"avoid": [],
-"status": "candidate"
+"avoid": [
+{
+"form": "독립적 확인자"
+},
+{
+"form": "독립된 자",
+"note": "제9조(2)의 independent person을 가리킬 때",
+"conditional": true
+},
+{
+"form": "독립적인 자",
+"note": "제9조(2)의 independent person을 가리킬 때",
+"conditional": true
+}
+],
+"status": "confirmed",
+"note": "산업통상자원부·환경부 「EU 탄소국경조정제도 법률 번역서」 v3.0(2025-03-11)의 규정 (EU) 2023/956 제9조제2항. 2026-11-14에 '독립적 확인자'에서 바꿈"
 },
 {
 "no": 249,
@@ -6685,24 +6740,33 @@
 ],
 "abbr": [],
 "preferred": "회원국에 설립된",
-"allowed": [],
+"allowed": [
+"회원국에 설립되",
+"회원국에 소재하는",
+"회원국에 소재한"
+],
 "avoid": [],
-"status": "candidate",
-"note": "규정 번역(2026-11-12)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+"status": "partial",
+"note": "산업통상자원부·환경부 「EU 탄소국경조정제도 법률 번역서」 v3.0(2025-03-11)의 규정 (EU) 2023/956 제3조는 '회원국에 소재하는'으로 옮긴다. 이 사이트의 번역은 established와 establishment를 모두 '설립'으로 옮겨 그대로 둔다(2026-11-14)"
 },
 {
 "no": 368,
 "category": "08 검증·인정",
 "core": false,
 "en": [
-"physical site visit"
+"physical site visit",
+"physical visit"
 ],
 "abbr": [],
 "preferred": "대면 현장검증",
 "allowed": [],
-"avoid": [],
+"avoid": [
+{
+"form": "물리적 현장검증"
+}
+],
 "status": "candidate",
-"note": "규정 번역(2026-11-12)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+"note": "규정 번역(2026-11-12)에서 쓴 표기. 국내 공식 자료에서 확인하지 못함(2026-11-14). '현장검증'은 국가법령정보센터의 고시 별표에서 확인"
 },
 {
 "no": 369,
@@ -6973,8 +7037,8 @@
 "preferred": "국가 관할당국",
 "allowed": [],
 "avoid": [],
-"status": "candidate",
-"note": "가이던스 번역(2026-11-12)에서 쓰기로 한 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+"status": "confirmed",
+"note": "산업통상자원부·환경부 「EU 탄소국경조정제도 법률 번역서」 v3.0(2025-03-11)의 이행규정 (EU) 2023/1773 제23조, (EU) 2024/3210 제4조"
 },
 {
 "no": 388,
@@ -7054,6 +7118,97 @@
 ],
 "status": "candidate",
 "note": "감사·검증 분야에서 쓰는 말에 맞춤(2026-11-12). 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 393,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"internal market"
+],
+"abbr": [],
+"preferred": "역내시장",
+"allowed": [
+"역내 시장"
+],
+"avoid": [
+{
+"form": "내부시장"
+},
+{
+"form": "단일시장",
+"note": "single market을 옮긴 말일 때는 그대로 쓴다",
+"conditional": true
+}
+],
+"status": "confirmed",
+"note": "산업통상자원부·환경부 「EU 탄소국경조정제도 법률 번역서」 v3.0(2025-03-11)의 규정 (EU) 2023/956 전문 제17항은 '역내 시장'으로 띄어 적는다. 이 사이트는 붙여 적는다"
+},
+{
+"no": 394,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"CBAM auditor"
+],
+"abbr": [],
+"preferred": "CBAM 검증심사원",
+"allowed": [],
+"avoid": [
+{
+"form": "CBAM 심사원"
+},
+{
+"form": "CBAM 감사원"
+}
+],
+"status": "confirmed",
+"note": "국내 온실가스 검증 제도의 낱말(검증심사원: 「온실가스 배출권의 할당 및 거래에 관한 법률」, 검증지침)에 맞춘다. 앞에서 CBAM 검증심사원이라고 적은 사람을 다시 가리킬 때는 '그 검증심사원'으로 적는다"
+},
+{
+"no": 395,
+"category": "06 모니터링·측정",
+"core": false,
+"en": [
+"validation of data",
+"data validation"
+],
+"abbr": [],
+"preferred": "유효성 확인",
+"allowed": [
+"데이터의 유효성 확인"
+],
+"avoid": [],
+"status": "confirmed",
+"note": "산업통상자원부·환경부 「EU 탄소국경조정제도 법률 번역서」 v3.0(2025-03-11)의 이행규정 (EU) 2023/1773 부속서 III H(데이터의 내부 검토 및 유효성 확인). ISO 14065의 validation(타당성평가)과 다른 말이다"
+},
+{
+"no": 396,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"data sampling"
+],
+"abbr": [],
+"preferred": "데이터 샘플링",
+"allowed": [],
+"avoid": [],
+"status": "partial",
+"note": "검증기관이 확인할 자료를 골라 보는 일. '데이터 샘플링 계획'과 같은 낱말로 맞춘다. 정부의 법률 번역서는 sampling을 '샘플링'으로 옮긴다. '데이터 샘플링'이라는 표기는 현행 국내 고시에서 확인하지 못함(2026-11-14). 물질의 시료채취(sampling)와 가려 쓴다"
+},
+{
+"no": 397,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"carbon pricing instrument"
+],
+"abbr": [],
+"preferred": "탄소가격제 수단",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "carbon pricing(탄소가격제)에 맞춰 정한 표기(2026-11-14). 정부의 법률 번역서는 이행규정 (EU) 2023/1773 제7조에서 '탄소가격 기구'로 옮긴다"
 }
 ]
 }

@@ -146,12 +146,6 @@
    "added": "2026-11-12"
   },
   {
-   "en": "risk analysis",
-   "ko": "리스크 분석",
-   "from": "32023R0956",
-   "added": "2026-11-12"
-  },
-  {
    "en": "internal assigned revenue",
    "ko": "내부 지정 수입",
    "from": "32023R0956",
@@ -160,12 +154,6 @@
   {
    "en": "preliminary calculation",
    "ko": "예비 산정",
-   "from": "32023R0956",
-   "added": "2026-11-12"
-  },
-  {
-   "en": "excess emissions penalty",
-   "ko": "초과배출 과징금",
    "from": "32023R0956",
    "added": "2026-11-12"
   },
@@ -260,12 +248,6 @@
    "added": "2026-11-12"
   },
   {
-   "en": "non-conformities",
-   "ko": "부적합사항",
-   "from": "32023R0956",
-   "added": "2026-11-12"
-  },
-  {
    "en": "price-setting sources",
    "ko": "가격결정 발전원",
    "from": "32023R0956",
@@ -344,12 +326,6 @@
    "added": "2026-11-12"
   },
   {
-   "en": "independent person",
-   "ko": "독립된 자",
-   "from": "guide-1",
-   "added": "2026-11-12"
-  },
-  {
    "en": "carbon price certifier",
    "ko": "탄소가격 인증자",
    "from": "guide-1",
@@ -412,12 +388,6 @@
   {
    "en": "free allowances",
    "ko": "무상 배출권",
-   "from": "qa",
-   "added": "2026-11-12"
-  },
-  {
-   "en": "Renewable Energy Directive",
-   "ko": "재생에너지 지침",
    "from": "qa",
    "added": "2026-11-12"
   },
@@ -556,12 +526,6 @@
   {
    "en": "outsourced body",
    "ko": "외주를 받은 기관",
-   "from": "qa",
-   "added": "2026-11-12"
-  },
-  {
-   "en": "lead auditor",
-   "ko": "선임 심사원",
    "from": "qa",
    "added": "2026-11-12"
   },
@@ -1706,12 +1670,6 @@
    "added": "2026-11-12"
   },
   {
-   "en": "fallback approach",
-   "ko": "대체 방식",
-   "from": "guide-4",
-   "added": "2026-11-12"
-  },
-  {
    "en": "product benchmark",
    "ko": "제품 벤치마크",
    "from": "guide-4",
@@ -2072,12 +2030,6 @@
    "added": "2026-11-12"
   },
   {
-   "en": "tiers",
-   "ko": "등급",
-   "from": "guide-verif",
-   "added": "2026-11-12"
-  },
-  {
    "en": "non-compliance",
    "ko": "미준수",
    "from": "guide-verif",
@@ -2200,12 +2152,6 @@
   {
    "en": "test plan",
    "ko": "시험 계획",
-   "from": "guide-verif",
-   "added": "2026-11-12"
-  },
-  {
-   "en": "data sampling plan",
-   "ko": "데이터 시료채취 계획",
    "from": "guide-verif",
    "added": "2026-11-12"
   },
@@ -2456,12 +2402,6 @@
    "added": "2026-11-13"
   },
   {
-   "en": "CBAM auditor",
-   "ko": "CBAM 심사원",
-   "from": "guide-verif",
-   "added": "2026-11-13"
-  },
-  {
    "en": "self-review",
    "ko": "자기 검토",
    "from": "guide-verif",
@@ -2512,12 +2452,6 @@
   {
    "en": "activity group",
    "ko": "활동 그룹",
-   "from": "guide-verif",
-   "added": "2026-11-13"
-  },
-  {
-   "en": "extension of scope",
-   "ko": "범위 확대",
    "from": "guide-verif",
    "added": "2026-11-13"
   },
@@ -2626,12 +2560,6 @@
   {
    "en": "internal audit",
    "ko": "내부 심사",
-   "from": "guide-verif",
-   "added": "2026-11-13"
-  },
-  {
-   "en": "CBAM lead auditor",
-   "ko": "CBAM 선임 심사원",
    "from": "guide-verif",
    "added": "2026-11-13"
   },
@@ -3008,12 +2936,6 @@
    "added": "2026-11-13"
   },
   {
-   "en": "controller",
-   "ko": "개인정보처리자",
-   "from": "32025R0486",
-   "added": "2026-11-13"
-  },
-  {
    "en": "special categories of data",
    "ko": "특수한 범주의 데이터",
    "from": "32025R0486",
@@ -3087,7 +3009,7 @@
   },
   {
    "en": "CBAM National Competent Authorities Portal",
-   "ko": "CBAM 회원국 관할당국 포털",
+   "ko": "CBAM 국가 관할당국 포털",
    "from": "32024R3210",
    "added": "2026-11-13"
   },
@@ -3232,12 +3154,6 @@
   {
    "en": "indicative range of penalties",
    "ko": "과징금의 지표 범위",
-   "from": "32023R1773",
-   "added": "2026-11-13"
-  },
-  {
-   "en": "carbon pricing instrument",
-   "ko": "탄소가격 수단",
    "from": "32023R1773",
    "added": "2026-11-13"
   },
@@ -3662,12 +3578,6 @@
    "added": "2026-11-13"
   },
   {
-   "en": "competent authorities",
-   "ko": "관할당국",
-   "from": "reg-privacy",
-   "added": "2026-11-13"
-  },
-  {
    "en": "right to data portability",
    "ko": "데이터 이동권",
    "from": "reg-privacy",
@@ -3766,12 +3676,6 @@
   {
    "en": "International Accreditation Forum",
    "ko": "국제인정포럼",
-   "from": "report-carbon-price",
-   "added": "2026-11-13"
-  },
-  {
-   "en": "Transmission System Operators",
-   "ko": "계통 운영 사업자",
    "from": "report-carbon-price",
    "added": "2026-11-13"
   },
@@ -3928,12 +3832,6 @@
   {
    "en": "learning phase",
    "ko": "학습 단계",
-   "from": "guide-importers",
-   "added": "2026-11-13"
-  },
-  {
-   "en": "phase-in",
-   "ko": "단계적 도입",
    "from": "guide-importers",
    "added": "2026-11-13"
   },
@@ -4196,12 +4094,6 @@
    "added": "2026-11-13"
   },
   {
-   "en": "standard values",
-   "ko": "표준값",
-   "from": "guide-importers",
-   "added": "2026-11-13"
-  },
-  {
    "en": "Results-Based Climate Finance",
    "ko": "성과 기반 기후재원",
    "from": "guide-importers",
@@ -4271,12 +4163,6 @@
    "en": "Member of the Commission",
    "ko": "집행위원",
    "from": "32024R3210",
-   "added": "2026-11-13"
-  },
-  {
-   "en": "lead verifier",
-   "ko": "선임 검증심사원",
-   "from": "qa",
    "added": "2026-11-13"
   },
   {
@@ -4976,12 +4862,6 @@
    "added": "2026-11-13"
   },
   {
-   "en": "risk assessment",
-   "ko": "위험평가",
-   "from": "32025R2547",
-   "added": "2026-11-13"
-  },
-  {
    "en": "Minimum requirement",
    "ko": "최소 요건",
    "from": "32025R2547",
@@ -5039,12 +4919,6 @@
    "en": "data points",
    "ko": "데이터 점",
    "from": "32025R2547",
-   "added": "2026-11-13"
-  },
-  {
-   "en": "goods of negligible value",
-   "ko": "경미한 가치의 제품",
-   "from": "32023R0956-was-20230516",
    "added": "2026-11-13"
   },
   {

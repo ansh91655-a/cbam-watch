@@ -658,6 +658,26 @@ class WordingTest(unittest.TestCase):
         self.assertEqual(wording.found("The number of Ladle Furnaces in the plant."), [{"en": "ladle furnace", "ko": "래들로"}])
         self.assertEqual(wording.found("No such words here."), [])
 
+    def test_the_glossary_comes_first(self):
+        """용어집에 든 낱말은 더하지 않고, 적어 둔 뒤에 용어집에 들어간 낱말은 건네지 않는다. 괄호 풀이가 붙었거나 복수형이어도 같다."""
+        glossary = pathlib.Path(self.folder) / "glossary.json"
+        glossary.write_text(json.dumps({"terms": [{"en": ["site visit"], "abbr": [], "preferred": "현장검증"}]}), encoding="utf-8")
+        kept, wording.GLOSSARY = wording.GLOSSARY, str(glossary)
+        try:
+            wording.add([{"en": "lead auditor", "ko": "선임 심사원"}, {"en": "ladle furnace", "ko": "래들로"}], "qa", "2026-11-12")
+            self.assertEqual([term["en"] for term in wording.found("The lead auditor looks at the ladle furnace.")], ["ladle furnace", "lead auditor"])
+            glossary.write_text(json.dumps({"terms": [{"en": ["lead auditor (team leader)", "lead verifier / verification team leader"], "abbr": ["NCA"],
+                                                       "preferred": "검증팀장"}]}), encoding="utf-8")
+            self.assertEqual(wording.found("The lead auditors look at the ladle furnace."), [{"en": "ladle furnace", "ko": "래들로"}])
+            added, skipped = wording.add([{"en": "Lead Verifiers", "ko": "선임 검증심사원"}, {"en": "verification team leader", "ko": "검증팀 책임자"},
+                                          {"en": "NCA", "ko": "회원국 관할당국"}, {"en": "kiln dust", "ko": "킬른 분진"}], "qa", "2026-11-14")
+            self.assertEqual((added, skipped), (["kiln dust"], ["Lead Verifiers", "verification team leader", "NCA"]))
+            self.assertEqual([term["en"] for term in wording.prune()], ["lead auditor"])
+            self.assertEqual([term["en"] for term in wording.load()], ["ladle furnace", "kiln dust"])
+            self.assertEqual(wording.prune(), [])
+        finally:
+            wording.GLOSSARY = kept
+
 
 class ReviewTest(unittest.TestCase):
     """표본 검토: 번역 자료와 검토 기록을 임시 폴더에 두고 본다."""
