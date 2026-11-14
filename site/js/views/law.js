@@ -54,8 +54,9 @@ function about(act) {
 }
 
 // 조각의 머리: 이름, 그리고 오른쪽의 도구(PDF의 그 쪽으로 가는 링크, 인용 복사).
-// paged는 이 문서를 PDF로 나란히 볼 수 있을 때의 문서 id다. citable이면 조각을 통째로 인용하는 단추를 단다
-function heading(part, paged, citable) {
+// paged는 이 문서를 PDF로 나란히 볼 수 있을 때의 문서 id다. citable이면 조각을 통째로 인용하는 단추를 단다.
+// changed는 앞선 판과 견줘 이 조각에서 달라진 곳({ href, rows })이다. 달라진 곳이 없으면 null
+function heading(part, paged, citable, changed) {
   const english = part.kind === "section" ? part.title : [part.label, part.title].filter(Boolean).join(" · ");  // 절의 번호는 국문 쪽에 이미 있다
   const name = h("h2", { class: "law-head" }, [
     h("span", { class: "law-no", text: part.ko }),
@@ -63,6 +64,7 @@ function heading(part, paged, citable) {
     english ? h("span", { class: "law-head-en", lang: "en", text: english }) : null,
   ]);
   const tools = [
+    changed ? h("a", { class: "law-page", href: changed.href, text: `달라진 곳 ${count(changed.rows)}곳`, title: "앞선 판과 견줘 이 부분에서 달라진 문단 보기" }) : null,
     paged && part.page ? h("a", { class: "law-page", href: `#pdf-${paged}.p${part.page}`, text: `PDF ${count(part.page)}쪽`, title: "이 부분을 원문과 번역 PDF로 나란히 보기" }) : null,
     citable ? h("button", { class: "law-cite-part", type: "button", "data-cite": part.id, title: "이 부분의 원문과 국문, 출처, 주소를 복사합니다" }, [icon("copy", 14), h("span", { text: "인용 복사" })]) : null,
   ].filter(Boolean);
@@ -122,7 +124,7 @@ function formulaNote(part, source) {
   ]);
 }
 
-function section(part, target, needles, piece, paged, source, linked) {
+function section(part, target, needles, piece, paged, source, linked, changed) {
   const here = part.id === target;
   const rows = blockRows(part, here ? needles : [], citeTool(part));
   const missing = part.blocks.filter(([en, ko]) => !ko).length;
@@ -137,7 +139,7 @@ function section(part, target, needles, piece, paged, source, linked) {
       h("summary", {}, [h("span", { text: FOLDED[part.kind] }), h("span", { class: "count", text: `문단 ${count(part.blocks.length)}개` })]), citeAll, ...rows]);
   }
   return h("section", { class: "law-part", id: `p-${part.id}`, "data-here": here ? "" : null, "data-waiting": waiting ? "" : null }, [
-    heading(part, paged, part.blocks.length > 0),
+    heading(part, paged, part.blocks.length > 0, changed),
     waiting ? h("p", { class: "law-wait-note", text: `이 ${piece}의 국문 번역은 준비 중입니다. 원문만 보입니다.` }) : null,
     some ? h("p", { class: "law-wait-note", text: `이 ${piece}의 일부 문단은 번역 준비 중입니다. 그 문단은 원문만 보입니다.` }) : null,
     formulaNote(part, source), ...rows,
@@ -208,7 +210,10 @@ export async function render(main, arg) {
   const words = isAct(act) ? WORDS.act : WORDS.doc;
   const state = translation(act.progress);
   const mode = state === "none" ? "en" : recent.mode;   // 실린 번역이 없으면 원문만 본다(보는 방식을 고르는 단추도 두지 않는다)
-  const body = h("div", { class: "law-body", "data-mode": mode }, act.parts.map((part) => section(part, target, needles, words.piece, pdfs[act.id] ? act.id : "", act.url, linkedTo(refs, act.id, part.id))));
+  // 앞선 판과 견줘 달라진 문단이 있는 조각의 머리에는 그 조각의 달라진 곳으로 가는 링크를 단다(가장 새 대조)
+  const changedParts = (act.changes && act.changes.parts) || {};
+  const changedOf = (part) => (changedParts[part.id] ? { href: `#changes-${act.id}.${part.id}`, rows: changedParts[part.id] } : null);
+  const body = h("div", { class: "law-body", "data-mode": mode }, act.parts.map((part) => section(part, target, needles, words.piece, pdfs[act.id] ? act.id : "", act.url, linkedTo(refs, act.id, part.id), changedOf(part))));
   const said = h("p", { class: "sr", role: "status", "aria-live": "polite" });  // 복사했는지를 화면 낭독기에 알린다
   wireCite(body, act, said);
   const buttons = MODES.map(([key, text]) => h("button", { type: "button", text, "aria-pressed": String(key === mode), onclick: () => {

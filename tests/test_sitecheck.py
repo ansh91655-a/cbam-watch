@@ -35,6 +35,10 @@ class SitecheckTest(unittest.TestCase):
         self.assertEqual(plan["rules"], ["#rules-a", "#rules-b", "#rules-c"])
         self.assertIn("#rules-b", plan["axeViews"])        # 그림이 있는 규제와 비교표가 있는 규제는 접근성 검사에 든다
         self.assertIn("#rules-c", plan["axeViews"])
+        for view in ("#rules-recent", "#rules-recent-90", "#rule", "#nowhere-at-all"):   # 규제 변화 기록과, 없는 주소의 안내 화면(어림할 수 있는 주소와 없는 주소)
+            self.assertIn(view, plan["views"])
+        self.assertIn("#rules-recent", plan["axeViews"])
+        self.assertIn("#rule", plan["axeViews"])
         self.assertEqual(plan["themes"], ["", "?theme=white", "?theme=midnight"])
 
     def test_a_chapter_on_another_scheme_is_looked_at_on_its_own(self):
@@ -54,6 +58,15 @@ class SitecheckTest(unittest.TestCase):
         self.write("gloss.json", {"terms": [{"forms": ["내재배출량"], "ko": "내재배출량"}]})
         plan = self.node("import { plan } from './tools/sitecheck/plan.mjs'; console.log(JSON.stringify(plan(process.argv[1])));", str(self.site))
         self.assertEqual((plan["glossViews"], plan["glossScoped"]), (["#handbook-certificates"], {}))
+
+    def test_links_in_a_scrolled_chip_row_are_not_taken_for_skip_links(self):
+        # 좁은 화면에서 가로로 넘겨 보는 고르기 줄(.side-nav)의 링크가 화면 왼쪽 밖에 놓이면 axe는 건너뛰기 링크로 본다. 그 줄 안의 것만 세지 않는다
+        found = [{"id": "skip-link", "impact": "moderate", "nodes": ['.side-nav > a[href$="#rules"]', '.side-nav > a[href$="#rules-eu-law"]']},
+                 {"id": "skip-link", "impact": "moderate", "nodes": ['.side-nav > a[href$="#news"]', ".skip"]},
+                 {"id": "color-contrast", "impact": "serious", "nodes": [".side-nav > a"]}]
+        kept = self.node("import { kept } from './tools/sitecheck/checks/axe_rules.mjs'; console.log(JSON.stringify(kept(JSON.parse(process.argv[1]))));", json.dumps(found))
+        self.assertEqual(kept, [{"id": "skip-link", "impact": "moderate", "nodes": [".skip"]},            # 진짜 건너뛰기 링크는 남는다
+                                {"id": "color-contrast", "impact": "serious", "nodes": [".side-nav > a"]}])  # 다른 위반은 그 줄 안의 것도 그대로 센다
 
     def test_the_plan_survives_a_site_without_data(self):
         plan = self.node("import { plan } from './tools/sitecheck/plan.mjs'; console.log(JSON.stringify(plan(process.argv[1])));", str(self.site))

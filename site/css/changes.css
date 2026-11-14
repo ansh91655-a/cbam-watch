@@ -2,6 +2,8 @@
 .chg-body { display: grid; gap: 22px; min-width: 0; }
 .chg-part { display: grid; gap: 0; padding: 20px 22px 14px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); scroll-margin-top: 84px; }
 .chg-part[data-gone] { border-style: dashed; border-color: var(--line); }
+/* 주소가 가리킨 조각(규정 원문 화면의 '달라진 곳' 링크로 왔을 때)을 잠깐 표시한다 */
+.chg-part[data-flash="true"] { border-color: var(--accent-strong); box-shadow: 0 0 0 3px var(--accent-soft); }
 .chg-row { display: grid; gap: 6px; padding: 12px 0; border-top: 1px solid var(--line-2); }
 .chg-tag { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; font-size: var(--fs-s); }
 /* 갈래의 이름표: 색만으로 가리지 않도록 글자를 함께 적는다 */

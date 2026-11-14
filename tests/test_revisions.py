@@ -114,7 +114,9 @@ class RevisionsTest(unittest.TestCase):
         self.assertEqual(row["old"][1], "1. 매년 5월 31일까지 신고인은 신고서를 제출하여야 한다.")
         self.assertEqual(row["new"][1], "1. 매년 9월 30일까지 신고인은 신고서를 제출하여야 한다.")
         self.assertEqual(newest["parts"][0]["rows"][0], {"op": "added", "new": ["De minimis exemption", ""], "at": 0})   # 이름은 0번째
-        self.assertEqual(revisions.brief(body), {"rows": 8, "from": "2023-05-16 관보에 실린 처음 글", "to": "2025-10-20 통합본", "date": "2025-10-20"})
+        # 목록과 문서의 머리에 싣는 한 줄. 조각마다 달라진 문단의 수는 지금의 판에 있는 조각만 싣는다(없어진 제9조는 갈 곳이 없다)
+        self.assertEqual(revisions.brief(body), {"rows": 8, "from": "2023-05-16 관보에 실린 처음 글", "to": "2025-10-20 통합본", "date": "2025-10-20",
+                                                 "parts": {"art-2a": 2, "art-6": 1, "art-7": 3}})
 
     def test_a_document_without_changes_gets_no_file(self):
         with unittest.mock.patch.object(corpus, "read", return_value=NEW), tempfile.TemporaryDirectory() as folder:
@@ -166,6 +168,21 @@ class ChainTest(unittest.TestCase):
             self.assertEqual(revisions.current(act)["label"], "2027-01-05에 받은 판")
             with unittest.mock.patch.object(revisions, "read_json", return_value={"docs": {}}):
                 self.assertEqual(revisions.chain(act), [])
+
+
+class ViewTest(unittest.TestCase):
+    """규정 원문의 조각 머리에서 그 조각의 달라진 곳으로, 달라진 곳에서 지금의 글로 오간다."""
+
+    def test_a_part_leads_to_its_changes_and_the_changes_open_at_that_part(self):
+        law = pathlib.Path("site/js/views/law.js").read_text(encoding="utf-8")
+        self.assertIn("const changedParts = (act.changes && act.changes.parts) || {};", law)   # brief가 실은 조각마다의 수
+        self.assertIn("href: `#changes-${act.id}.${part.id}`", law)
+        changes = pathlib.Path("site/js/views/changes.js").read_text(encoding="utf-8")
+        self.assertIn('const nth = rest.find((one) => /^\\d+$/.test(one)) || "1";', changes)      # 숫자는 몇 번째 대조인지
+        self.assertIn('const partId = rest.find((one) => !/^\\d+$/.test(one)) || "";', changes)  # 그 밖의 것은 가서 볼 조각
+        self.assertIn("if (partId) setTimeout(() => reach(partId), 0);", changes)
+        self.assertIn('href: `#law-${actId}.${part.id}`, text: "지금의 글 보기"', changes)        # 돌아가는 길
+        self.assertIn("href: partHref(actId, which, part.id)", changes)                         # 차례의 링크도 온전한 주소다(새 탭으로 열어도 그 조각으로 간다)
 
 
 if __name__ == "__main__":

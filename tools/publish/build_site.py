@@ -11,7 +11,7 @@ from tools.check import term_check
 from tools.common.jsonio import read_json, today, write_json
 from tools.laws import build as laws
 from tools.pdfko import site as pdf_site
-from tools.publish import calc, crossrefs, derive, duties, factor, feed, gloss, handbook, item_sheet, merge, preload, regulations, sectors, thumbs
+from tools.publish import calc, crossrefs, derive, duties, factor, feed, gloss, handbook, item_sheet, merge, preload, regulations, sectors, source_names, thumbs
 
 DATA_FILES = ["items", "events", "digests", "terms", "topics", "prices"]
 LIST_KEY = {"items": "items", "events": "events", "digests": "digests", "terms": "terms", "topics": "topics", "prices": "prices"}
@@ -34,6 +34,13 @@ def main(argv):
             body = {LIST_KEY[name]: []}
         counts[name] = len(body[LIST_KEY[name]])
         bodies[name] = body
+    # 출처의 이름을 화면에 적는 국문 이름으로 바꾼다(저장소의 자료는 그대로다). 뒤의 모든 것(소식, 일정, 가격, 피드)이 바꾼 이름을 쓴다
+    shown = source_names.labels()
+    named = source_names.by_name(shown, bodies["items"]["items"])
+    bodies["items"] = {**bodies["items"], "items": source_names.rename_items(bodies["items"]["items"], shown)}
+    bodies["events"] = {**bodies["events"], "events": source_names.rename_rows(bodies["events"]["events"], named)}
+    if "source" in bodies["prices"]:
+        bodies["prices"] = {**bodies["prices"], "source": source_names.rename_source(bodies["prices"]["source"], shown)}
     # 규제별 진행 상황: 연혁의 근거를 다시 맞춰 보고, 안에서만 쓰는 값을 뺀 뒤 관련 소식을 붙여 싣는다
     rules = read_json("data/regulations.json", None)
     if rules is None:

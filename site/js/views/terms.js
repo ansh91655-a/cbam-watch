@@ -1,4 +1,5 @@
 // 용어집. 영문, 약어, 국문 어느 쪽으로도 찾는다. 한 번에 60건씩 보여 준다.
+// 용어마다 해설서의 풀이, 근거 조문, 그리고 그 용어가 쓰인 곳을 사이트 검색으로 찾는 길을 단다.
 // #terms-찾는 말로 오면 그 말로 걸러 보여 준다(사이트 검색의 결과가 이 주소로 보낸다).
 import * as data from "../data.js";
 import { band } from "../ui/band.js";
@@ -7,7 +8,7 @@ import { empty, fill, h, table } from "../ui/dom.js";
 import { icon } from "../ui/icons.js";
 import { lawRefs } from "../ui/lawrefs.js";
 import { stackable } from "../ui/stack.js";
-import { decode } from "../ui/sitesearch.js";
+import { decode, target } from "../ui/sitesearch.js";
 import { groupTabs } from "../ui/tabs.js";
 
 const PAGE = 60;
@@ -18,12 +19,22 @@ function readLine(read) {
   return h("p", { class: "ref-links" }, [h("span", { class: "ref-name" }, [icon("guide", 14), h("span", { text: "해설서" })]), h("a", { href: read.href, text: `${read.chapter}: ${read.title}` })]);
 }
 
+const LONG = 24;   // 이보다 긴 국문 표기(표준의 이름 등)는 그대로 찾아도 나오지 않으므로 영문 표기로 찾는다
+
+// 그 용어가 쓰인 곳을 사이트 검색으로 찾는 줄. 소식, 규제, 해설서, 규정 원문에서 국문 표기로 찾는다(괄호 안의 풀이는 뗀다)
+function usedLine(term) {
+  const ko = String(term.ko || "").replace(/\([^)]*\)/g, "").trim();
+  const word = ko && ko.length <= LONG ? ko : String(term.en || "").replace(/\([^)]*\)/g, "").split(" / ")[0].trim();
+  if (!word) return null;
+  return h("p", { class: "ref-links" }, [h("span", { class: "ref-name" }, [icon("search", 14), h("span", { text: "쓰인 곳" })]), h("a", { href: target(word), text: `‘${word}’ 찾기` })]);
+}
+
 function row(term, refs, read) {
   return h("tr", {}, [
     h("td", { text: term.en }),
     h("td", {}, term.abbr ? h("span", { class: "nb", text: term.abbr }) : null),   // 약어는 글자 사이에서 줄을 바꾸지 않는다
     h("td", {}, [h("strong", { text: term.ko }), term.alt ? h("span", { class: "count", text: ` (${term.alt})` }) : null]),
-    h("td", {}, [h("span", { text: term.note || "" }), readLine(read), lawRefs(refs, "근거 조문")]),
+    h("td", {}, [h("span", { text: term.note || "" }), readLine(read), lawRefs(refs, "근거 조문"), usedLine(term)]),
   ]);
 }
 

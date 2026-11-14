@@ -42,6 +42,7 @@ function row(doc) {
     fill(main,
       h("span", { class: "doc-type", "data-type": doc.format || null, text: doc.format || "파일" }),
       h("span", { class: "doc-title", text: doc.title }),
+      doc.ko ? h("span", { class: "doc-ko", text: doc.ko }) : null,   // 번역해 실은 문서의 국문 이름
       h("span", { class: "doc-meta", text: meta(doc) }),
       h("span", { class: "doc-get" }, viewable ? [icon("file", 16), h("span", { text: "바로 보기" })] : [icon("download", 16), h("span", { text: "내려받기" })]),
     );
@@ -68,12 +69,13 @@ function row(doc) {
     },
   }) : null;
   const extra = [
+    doc.law ? h("a", { href: `#law-${doc.law}`, text: "원문과 국문 번역 보기" }) : null,   // 규정 원문 화면에 번역해 실은 문서
     doc.versions > 1 ? h("span", { text: `${doc.versions}번째 판` }) : null,
     changed,
     ...(doc.earlier || []).map((version) => safeLink(version.download, `${version.date} 판 내려받기`, { target: null })),
     doc.linked === false ? pill("원래 화면에서 링크가 사라짐", "warn") : null,
   ].filter(Boolean);
-  return h("li", { class: "doc", "data-text": `${doc.title} ${doc.filename}`.toLowerCase() }, [
+  return h("li", { class: "doc", "data-text": `${doc.title} ${doc.filename} ${doc.ko || ""}`.toLowerCase() }, [
     h("div", { class: "doc-row" }, [main || h("span", { class: "doc-main" }, h("span", { class: "doc-title", text: doc.title })), save]),
     extra.length ? h("div", { class: "doc-extra" }, extra) : null,
     detail,
@@ -83,7 +85,7 @@ function row(doc) {
 export async function render(main, arg) {
   const asked = decode(arg).trim();
   const [documents, pageOf, unreachable] = await Promise.all([data.documents(), data.documentPages(), data.unreachableDocuments()]);
-  const head = band("원문 대장", "EU 집행위원회가 올린 CBAM 문서입니다. 문서 이름을 누르면 내려받지 않고 바로 볼 수 있습니다. 문서가 바뀌면 바뀐 곳을 함께 보여 줍니다.", groupTabs("docs"));
+  const head = band("원문 대장", "EU 집행위원회가 올린 CBAM 문서입니다. 문서 이름을 누르면 내려받지 않고 바로 볼 수 있습니다. 문서가 바뀌면 바뀐 곳을 함께 보여 줍니다. 국문 이름이 적힌 문서는 원문과 국문 번역을 나란히 볼 수 있습니다.", groupTabs("docs"));
   if (!documents.length) {
     fill(main, head, empty("문서 목록을 준비하고 있습니다."));
     return;

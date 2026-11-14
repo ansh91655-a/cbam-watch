@@ -4,6 +4,7 @@
 // 목록의 내용은 화면의 묶음(js/nav/map.js)과 게시 데이터를 따른다: 주제는 topics.json, 규제 묶음과 일정이 있는 해, 국내 공지·자료의 수는 site.json의 menu(tools/publish/derive.py의 menu).
 import { GROUPS, screensOf } from "../nav/map.js";
 import { NOTICES, NOTICE_NAME } from "../news/notices.js";
+import { hrefOf as ruleChanges } from "../rules/changes.js";
 import { h } from "./dom.js";
 import { icon } from "./icons.js";
 import { topicList } from "./topics.js";
@@ -23,7 +24,8 @@ export function menuLists(site, topics) {
       ...(topics || []).filter((topic) => !live || live.has(topic.code)).map((topic) => ({ href: `#news-${topic.code}`, name: topic.name, icon: topic.code, topic: topic.code })),
       ...(menu.notices ? [{ href: `#news-${NOTICES}`, name: NOTICE_NAME, icon: "sources" }] : [])] },
     rules: { items: [{ href: "#rules", name: "전체 규제", icon: "law" },
-      ...(menu.rules || []).map((group) => ({ href: `#rules-${group.code}`, name: group.name, icon: group.icon || "legis" }))] },
+      ...(menu.rules || []).map((group) => ({ href: `#rules-${group.code}`, name: group.name, icon: group.icon || "legis" })),
+      { href: ruleChanges(), name: "최근 변화", icon: "clock" }] },   // 연혁을 합쳐 최근에 달라진 것만 보는 화면
     calendar: { items: (menu.years || []).map((year) => ({ href: `#calendar-${year}`, name: `${year}년 일정`, icon: "calendar" })) },
   };
   for (const group of GROUPS) {

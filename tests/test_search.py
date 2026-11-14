@@ -252,7 +252,7 @@ class SearchTest(unittest.TestCase):
         menu = self.seen["menu"]
         self.assertEqual(menu["news"], ["#news", "#news-law"])                   # 소식이 없는 주제는 싣지 않는다
         self.assertEqual(menu["cols"], 2)
-        self.assertEqual(menu["rules"], [["#rules", "law"], ["#rules-uk", "abroad"]])
+        self.assertEqual(menu["rules"], [["#rules", "law"], ["#rules-uk", "abroad"], ["#rules-recent", "clock"]])   # 묶음 뒤에 변화 기록
         self.assertEqual(menu["years"], ["#calendar-2026", "#calendar-2027"])
         self.assertEqual(menu["keys"], ["calendar", "goods", "handbook", "library", "news", "rules"])  # 첫 화면만 목록이 없다
         self.assertEqual(menu["goods"], [["#cn", True], ["#sector", True], ["#price", True], ["#calc", True]])  # 화면이 여럿인 묶음은 그 화면들이 목록이고, 화면의 설명이 붙는다

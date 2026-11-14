@@ -1,5 +1,7 @@
 // 달라진 곳 보기: 문서(법령이나 EU 집행위원회 문서)의 앞선 판과 뒤의 판에서 달라진 문단만 골라 옛 글과 새 글을 나란히 보여 준다.
 // 주소는 #changes-<문서 id>이고, 대조가 여럿이면 #changes-<문서 id>.<몇 번째>로 지난 대조를 본다(1이 가장 새 것).
+// 조각(조, 부속서, 절)을 덧붙이면 그 조각의 달라진 곳으로 간다: #changes-<문서 id>.<조각>, #changes-<문서 id>.<몇 번째>.<조각>.
+// 규정 원문 화면의 조각 머리에 있는 '달라진 곳' 링크가 이 주소로 보낸다.
 // 달라진 낱말에는 표시를 한다: 옛 글에서 빠진 말은 지운 줄로, 새 글에 들어온 말은 밑줄로(js/laws/worddiff.js).
 // 자료는 사이트를 만들 때 받아 둔 두 판의 글을 문단마다 견줘 만든 것이다(tools/laws/revisions.py).
 import * as data from "../data.js";
@@ -15,6 +17,7 @@ const OP_NAME = { changed: "바뀜", added: "더해짐", removed: "빠짐" };
 const MODES = [["both", "원문과 국문"], ["en", "원문"], ["ko", "국문"]];
 const FOLDED = { front: "제목과 근거", recitals: "전문", closing: "맺음", notes: "각주", cover: "표지와 일러두기" };
 const isAct = (body) => (body.group || "act") === "act";
+const FLASH_MS = 1800;   // 주소가 가리킨 조각을 표시해 두는 시간
 
 // 달라진 낱말에 표시를 한 글. tag는 옛 글이면 del, 새 글이면 ins다.
 function marked(pieces, tag) {
@@ -78,9 +81,24 @@ function partNode(part, labels, actId) {
   ]);
 }
 
-function toc(revision) {
+// 조각의 주소: 가장 새 대조면 #changes-<문서>.<조각>, 지난 대조면 몇 번째인지를 사이에 적는다
+function partHref(actId, which, partId) {
+  return `#changes-${actId}${which ? `.${which + 1}` : ""}.${partId}`;
+}
+
+// 주소에 적힌 조각으로 옮겨 가고 잠깐 표시한다
+function reach(partId) {
+  const node = document.getElementById(`c-${partId}`);
+  if (!node) return;
+  node.scrollIntoView({ block: "start" });
+  node.dataset.flash = "true";
+  setTimeout(() => { delete node.dataset.flash; }, FLASH_MS);
+}
+
+// 차례의 링크는 새 탭으로 열어도 그 조각으로 가도록 온전한 주소로 적고, 이 화면 안에서 누르면 다시 그리지 않고 옮겨 가기만 한다
+function toc(revision, actId, which) {
   return h("nav", { class: "law-toc", "aria-label": "달라진 부분의 차례" }, h("ul", {}, revision.parts.map((part) =>
-    h("li", { "data-kind": part.kind, "data-part": part.id }, h("a", { href: `#c-${part.id}`, onclick: (event) => {
+    h("li", { "data-kind": part.kind, "data-part": part.id }, h("a", { href: partHref(actId, which, part.id), onclick: (event) => {
       event.preventDefault();
       const node = document.getElementById(`c-${part.id}`);
       if (node) node.scrollIntoView({ block: "start" });
@@ -96,7 +114,9 @@ function seg(label, options, current, onPick) {
 }
 
 export async function render(main, arg) {
-  const [actId, nth = "1"] = String(arg || "").split(".");
+  const [actId, ...rest] = String(arg || "").split(".");
+  const nth = rest.find((one) => /^\d+$/.test(one)) || "1";       // 몇 번째 대조인지(숫자)
+  const partId = rest.find((one) => !/^\d+$/.test(one)) || "";    // 가서 볼 조각(art-7, annex-iv, sec-4-3)
   const acts = await data.laws();
   const act = acts.find((one) => one.id === actId);
   const body = act && act.changes ? await data.changes(actId) : null;   // 달라진 곳이 있는 문서만 자료를 받는다(없는 파일을 청하지 않는다)
@@ -113,7 +133,7 @@ export async function render(main, arg) {
   const stats = revision.stats;
   const list = h("div", { class: "chg-body", "data-mode": "both", "data-show": "" }, revision.parts.map((part) => partNode(part, labels, actId)));
   const none = h("p", { class: "empty", hidden: true, text: "고른 갈래의 문단이 없습니다." });
-  const contents = toc(revision);
+  const contents = toc(revision, actId, which);
   const pick = (op) => {
     list.dataset.show = op;
     let shown = 0;
@@ -163,5 +183,6 @@ export async function render(main, arg) {
       ? "원문: © European Union, EUR-Lex. 출처를 밝히고 재이용합니다. 번역: 이 사이트(용어집의 표기를 따릅니다)."
       : "원문: © European Union, EU 집행위원회 조세·관세동맹 총국. 출처를 밝히고 재이용합니다. 번역: 이 사이트(용어집의 표기를 따릅니다)." }),
   );
+  if (partId) setTimeout(() => reach(partId), 0);   // 화면을 맨 위로 옮긴 뒤에 그 조각으로 간다
   return `${body.name}: 달라진 곳`;
 }

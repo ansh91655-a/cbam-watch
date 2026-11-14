@@ -70,7 +70,7 @@ class MapTest(unittest.TestCase):
         named = set(re.findall(r"(\w+): \"", re.search(r"const NAMES = \{([^}]*)\};", app).group(1)))
         wanted = set(self.views) | set(self.seen["under"])
         self.assertLessEqual(wanted, routed)
-        self.assertEqual(routed, drawn)                                          # 주소로 갈 수 있는 화면은 모두 그릴 수 있다
+        self.assertEqual(routed | {"missing"}, drawn)                            # 주소로 갈 수 있는 화면은 모두 그릴 수 있다. 없는 주소의 안내 화면은 주소가 없다(tests/test_missing.py)
         self.assertLessEqual(wanted - {"home"}, named)                           # 브라우저 탭에 적는 이름(첫 화면은 사이트 이름만 적는다)
         for under, parent in self.seen["under"].items():
             self.assertIn(parent, self.views, under)

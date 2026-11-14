@@ -154,9 +154,13 @@ def public(act, parts, memory):
 
 
 def brief(body):
-    """목록과 문서의 머리에 싣는 한 줄: 가장 새 대조에서 달라진 문단의 수와 두 판의 이름."""
+    """목록과 문서의 머리에 싣는 한 줄: 가장 새 대조에서 달라진 문단의 수와 두 판의 이름.
+
+    parts는 조각마다 달라진 문단의 수다({조각 id: 수}. 지금의 판에 있는 조각만). 규정 원문 화면이 조각의 머리에서 그 조각의 달라진 곳으로 잇는 데 쓴다.
+    """
     newest = body["revisions"][0]
-    return {"rows": sum(newest["stats"][name] for name in ("changed", "added", "removed")), "from": newest["from"]["label"], "to": newest["to"]["label"], "date": newest["to"]["date"]}
+    return {"rows": sum(newest["stats"][name] for name in ("changed", "added", "removed")), "from": newest["from"]["label"], "to": newest["to"]["label"], "date": newest["to"]["date"],
+            "parts": {part["id"]: len(part["rows"]) for part in newest["parts"] if not part["gone"]}}
 
 
 def write(folder, documents, memory):

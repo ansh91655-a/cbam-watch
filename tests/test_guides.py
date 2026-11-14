@@ -982,8 +982,10 @@ class LockTest(unittest.TestCase):
             self.assertIn("!" + lock.SHOWN + "/**", paths, name)
             self.assertLess(paths.index("data/**"), paths.index("!" + lock.SHOWN + "/**"), f"{name}: 빼는 줄은 넣는 줄 뒤에 있어야 듣는다")
             self.assertIn(lock.STAMP.split("/")[0] + "/**", paths, name)
-        # 번역 파일의 꼴을 보는 자동 시험은 묶음마다 그대로 돈다
-        self.assertIn('"' + lock.SHOWN + '/**"', pathlib.Path(".github/workflows/tests.yml").read_text(encoding="utf-8"))
+        # 자동 시험도 묶음마다 돌지 않고 같은 표가 바뀔 때 한 번 돈다(번역은 넣을 때 이미 검사를 거친다)
+        tests = pathlib.Path(".github/workflows/tests.yml").read_text(encoding="utf-8")
+        self.assertNotIn('"' + lock.SHOWN + '/**"', tests)
+        self.assertIn('"' + lock.STAMP.split("/")[0] + '/**"', tests)
 
     def test_a_run_with_nothing_to_do_does_not_take_the_lock(self):
         # 번역이 다 끝난 뒤의 실행이 빈 커밋 한 쌍(시작, 끝)을 남기지 않게 한다

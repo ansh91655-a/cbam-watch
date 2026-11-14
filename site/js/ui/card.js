@@ -3,6 +3,7 @@ import { h, safeLink } from "./dom.js";
 import { day } from "./format.js";
 import { icon } from "./icons.js";
 import { titleLink } from "./itemlink.js";
+import { HIGH_NAME, isHigh } from "../news/importance.js";
 import { thumb } from "./thumb.js";
 import { topicName, topicOf } from "./topics.js";
 
@@ -23,7 +24,7 @@ export function card(item) {
       : (item.listed ? h("span", { class: "m-date", text: `${day(item.listed)} 수록` }) : null),
     h("a", { class: "m-topic", href: `#news-${topic}`, text: topicName(topic) }),
     item.kind ? h("span", { class: "m-kind", text: item.kind }) : null,
-    item.importance === "높음" ? h("span", { class: "m-imp", text: "중요" }) : null,
+    isHigh(item) ? h("span", { class: "m-imp", text: HIGH_NAME }) : null,
     item.sourceName ? h("span", { class: "m-src", text: item.sourceName }) : null,
   ]);
   // 제목을 누르면 국문 요약 화면으로 간다. 제목이 곧 내용인 한 줄 소식은 원문으로 바로 간다.

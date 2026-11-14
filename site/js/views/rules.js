@@ -1,19 +1,23 @@
 // 규제. 규제마다 지금 어느 단계에 있는지, 그동안 무슨 일이 있었는지, 다음에 무엇이 남았는지를 보여 준다.
 // #rules는 전체 목록, #rules-<묶음>은 한 묶음, #rules-<규제>는 한 규제의 자세한 화면이다.
+// #rules-recent(와 #rules-recent-90)는 연혁을 합쳐 최근에 달라진 것만 보는 화면이다(rules/recent.js).
 import { adopted } from "../cn/stage.js";
 import * as data from "../data.js";
 import { readRule } from "../laws/refs.js";
 import { band } from "../ui/band.js";
 import { card } from "../ui/card.js";
 import { empty, fill, h, safeLink, table, unsplit } from "../ui/dom.js";
-import { countdown, day, koreanDate } from "../ui/format.js";
+import { countdown, day, koreanDate, today } from "../ui/format.js";
 import { gloss } from "../ui/gloss.js";
 import { icon } from "../ui/icons.js";
+import { changes, periodOf, RECENT } from "../rules/changes.js";
 import { findPanel } from "../ui/lawfind.js";
 import { stackable } from "../ui/stack.js";
 import { stepper } from "../ui/stepper.js";
 import { analysis } from "./rules/analysis.js";
 import { figure } from "./rules/figure.js";
+import { recentBlock, recentPage } from "./rules/recent.js";
+import { sideNav } from "./rules/side.js";
 import { tool } from "./rules/tool.js";
 
 function stageChip(rule) {
@@ -164,14 +168,19 @@ export async function render(main, arg) {
     detail(main, one, groups.find((group) => group.code === one.group) || { code: "", name: "" }, items, await figure(one), await data.laws(), readRule(await data.refs(), one.id));
     return;
   }
+  const recent = changes(rules, today()).length;   // 왼쪽의 '최근 변화'에 적는 건수(기본 날수)
+  const days = periodOf(arg);
+  if (days) {
+    fill(main,
+      band("규제: 최근 변화", `규제 ${rules.length}건의 연혁에서 최근 ${days}일 동안 달라진 것만 날짜순으로 모았습니다.`),
+      h("div", { class: "with-side" }, [h("aside", { class: "side" }, sideNav(rules, groups, RECENT, recent)), h("div", { class: "stack-l" }, recentPage(rules, days))]),
+    );
+    return "규제: 최근 변화";
+  }
   const picked = groups.some((group) => group.code === arg) ? arg : "";
   const shown = groups.filter((group) => !picked || group.code === picked);
-  const side = h("nav", { class: "side-nav", "aria-label": "규제 묶음" }, [
-    h("a", { href: "#rules", "aria-current": picked ? null : "true" }, [h("span", { class: "chipicon" }, icon("law", 17)), h("span", { text: "전체" }), h("span", { class: "n", text: rules.length })]),
-    ...groups.map((group) => h("a", { href: `#rules-${group.code}`, "aria-current": picked === group.code ? "true" : null },
-      [h("span", { class: "chipicon" }, icon(group.icon || "legis", 17)), h("span", { text: group.name }), h("span", { class: "n", text: rules.filter((rule) => rule.group === group.code).length })])),
-  ]);
-  const upcoming = rules.filter((rule) => rule.nextDate && rule.nextDate >= new Date(Date.now() + 9 * 3600000).toISOString().slice(0, 10))
+  const side = sideNav(rules, groups, picked, recent);
+  const upcoming = rules.filter((rule) => rule.nextDate && rule.nextDate >= today())
     .sort((a, b) => a.nextDate.localeCompare(b.nextDate)).slice(0, 4);
   const soon = !picked && upcoming.length ? h("section", { class: "rule-soon", "aria-labelledby": "h-soon" }, [
     h("h2", { id: "h-soon", text: "곧 움직일 규제" }),
@@ -186,7 +195,7 @@ export async function render(main, arg) {
     h("div", { class: "with-side" }, [
       h("aside", { class: "side" }, side),
       h("div", { class: "stack-l" }, [
-        soon,
+        picked ? null : h("div", { class: "rule-heads" }, [soon, recentBlock(rules)]),
         ...shown.map((group) => h("section", { class: "stack", "aria-labelledby": `h-g-${group.code}` }, [
           h("div", { class: "sec-head" }, [h("h2", { id: `h-g-${group.code}`, text: group.name }), h("span", { class: "count", text: `${rules.filter((rule) => rule.group === group.code).length}건` })]),
           picked ? null : h("p", { class: "sec-lead", text: group.about }),

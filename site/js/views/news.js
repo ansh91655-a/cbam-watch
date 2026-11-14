@@ -3,6 +3,7 @@
 // 국내 기관의 게시판에 올라온 한 줄 소식(국내 공지·자료)은 기본 목록과 주제별 건수에서 빼고 #news-notices에 따로 모은다(news/notices.js).
 // #news-recent는 최근 30일의 소식만 최신순으로 보여 준다. 첫 화면의 '최근 30일 소식' 칸이 센 것과 같다(news/recent.js).
 import * as data from "../data.js";
+import { IMPORTANCE } from "../news/importance.js";
 import { NOTICES, NOTICE_ABOUT, NOTICE_NAME, split } from "../news/notices.js";
 import { PERIODS, RECENT, RECENT_DAYS, within } from "../news/recent.js";
 import { band } from "../ui/band.js";
@@ -140,7 +141,7 @@ export async function render(main, arg) {
     h("label", { class: "field field-grow", for: "news-q" }, [h("span", { text: "검색" }), h("input", { id: "news-q", type: "search", placeholder: onNotices ? "제목, 기관" : "제목, 요약, 출처", oninput: reset("text") })]),
     select("news-when", "기간", [...PERIODS.map((days) => ({ value: `d${days}`, text: `최근 ${days}일` })), ...years.map((year) => ({ value: year, text: `${year}년` }))], reset("when"), state.when),
     kinds.length > 1 ? select("news-kind", "종류", kinds, reset("kind")) : null,
-    onNotices ? null : select("news-importance", "중요도", ["높음", "보통", "낮음"], reset("importance")),
+    onNotices ? null : select("news-importance", "중요도", IMPORTANCE, reset("importance")),
     count,
   ]);
   const recentName = `최근 ${RECENT_DAYS}일`;

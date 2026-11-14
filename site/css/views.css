@@ -28,6 +28,9 @@
 .doc-type[data-type="ZIP"] { background: var(--surface-2); color: var(--ink-2); }
 .doc-title { font-weight: 600; color: var(--ink); }
 .doc-main:hover .doc-title { color: var(--link); }
+/* 번역해 규정 원문에 실은 문서의 국문 이름. 줄이 하나 늘어나므로 왼쪽의 파일 종류와 오른쪽의 '바로 보기'가 세 줄에 걸친다 */
+.doc-ko { grid-column: 2; font-size: var(--fs-s); font-weight: 600; color: var(--ink-2); }
+.doc-main:has(.doc-ko) .doc-type, .doc-main:has(.doc-ko) .doc-get { grid-row: 1 / span 3; }
 .doc-meta { grid-column: 2; font-size: var(--fs-s); color: var(--ink-3); font-variant-numeric: tabular-nums; }
 .doc-get { grid-row: 1 / span 2; grid-column: 3; display: inline-flex; align-items: center; gap: 6px; font-size: var(--fs-s); font-weight: 700; color: var(--link); white-space: nowrap; }
 .doc-extra { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; padding-left: 84px; font-size: var(--fs-s); color: var(--ink-3); }
@@ -58,6 +61,7 @@
 /* 안내: 화면마다 무엇을 볼 수 있는지 알려 주는 칸. 누르면 그 화면으로 간다. */
 .steps { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 .step { display: grid; gap: 4px; align-content: start; padding: 22px 22px 24px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); color: inherit; text-decoration: none; transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s; }
+.steps-few { grid-template-columns: repeat(auto-fit, minmax(240px, 380px)); }   /* 칸이 한둘일 때 화면 끝까지 늘어나지 않게(없는 주소의 안내에서 어림한 화면) */
 .step:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--brand-bright) 40%, var(--line-2)); box-shadow: var(--shadow-2); }
 .step .chipicon { margin-bottom: 10px; background: var(--feat-bg); color: var(--accent); }
 .step h3 { font-size: 1.15rem; }

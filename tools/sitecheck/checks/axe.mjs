@@ -2,6 +2,7 @@
 import { readFileSync } from "node:fs";
 import { createRequire } from "node:module";
 import { go, open } from "../browser.mjs";
+import { kept } from "./axe_rules.mjs";
 
 const source = readFileSync(createRequire(import.meta.url).resolve("axe-core/axe.min.js"), "utf8");
 const TAGS = ["wcag2a", "wcag2aa", "wcag21aa", "best-practice"];
@@ -9,10 +10,11 @@ const TAGS = ["wcag2a", "wcag2aa", "wcag21aa", "best-practice"];
 // 지금 화면에 검사를 돌려 위반을 [{ id, impact, count, at }]로 돌려준다.
 export async function violations(page) {
   await page.evaluate(source);
-  return page.evaluate(async (tags) => {
-    const found = await window.axe.run(document, { runOnly: { type: "tag", values: tags } });
-    return found.violations.map((one) => ({ id: one.id, impact: one.impact || "", count: one.nodes.length, at: one.nodes.slice(0, 2).map((node) => node.target.join(" ")).join(" | ").slice(0, 160) }));
+  const found = await page.evaluate(async (tags) => {
+    const seen = await window.axe.run(document, { runOnly: { type: "tag", values: tags } });
+    return seen.violations.map((one) => ({ id: one.id, impact: one.impact || "", nodes: one.nodes.map((node) => node.target.join(" ")) }));
   }, TAGS);
+  return kept(found).map((one) => ({ id: one.id, impact: one.impact, count: one.nodes.length, at: one.nodes.slice(0, 2).join(" | ").slice(0, 160) }));
 }
 
 export async function axe(browser, base, plan) {

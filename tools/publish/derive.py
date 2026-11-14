@@ -1,8 +1,10 @@
 """저장소의 수집 결과에서 사이트용 데이터를 만든다: 출처 목록, 원문 대장, 일정, 사이트 정보."""
+import pathlib
 import re
 import urllib.parse
 
 from tools.common.jsonio import read_json, stamp
+from tools.publish import source_names
 
 # 문서 사본은 사이트 안의 files/ 아래에 싣는다(빌드가 originals/files/에서 복사한다). 원문 대장이 이 주소로 문서를 보여 주고 내려받게 한다.
 STORE = "originals/files/"
@@ -50,13 +52,30 @@ def document_pages(codes):
     살펴보는 출처의 목록은 사이트에 싣지 않는다. 여기에는 문서를 실제로 내려받은 화면만 들어간다.
     """
     registry = read_json("sources/registry.json", {"sources": []})
-    return {source["code"]: {"name": source["name"], "url": source["url"], "order": index}
+    shown = source_names.labels()   # 화면에 적는 국문 이름. 없으면 대장의 이름
+    return {source["code"]: {"name": shown.get(source["code"]) or source["name"], "url": source["url"], "order": index}
             for index, source in enumerate(registry["sources"]) if source["code"] in codes}
+
+
+def translated():
+    """번역해 '규정 원문'에 실은 문서: {원문 대장의 문서 id: {"id": 규정 원문의 문서 id, "name": 국문 이름}}.
+
+    원문 대장의 문서 이름은 EU 집행위원회가 붙인 영문이다. 번역해 실은 문서에는 국문 이름을 함께 적고 그 화면으로 잇는다.
+    안내 문서의 글은 originals/text/<문서 id>/<판>.txt에 받아 두므로, 그 자리로 어느 문서인지 안다.
+    """
+    from tools.laws import guides   # 법령 쪽 도구는 여기에서만 쓴다
+    found = {}
+    for act in guides.documents():
+        parts = pathlib.PurePosixPath(str(act.get("path", ""))).parts
+        if len(parts) >= 4 and parts[:2] == ("originals", "text"):
+            found[parts[2]] = {"id": act["id"], "name": act["name"]}
+    return found
 
 
 def documents():
     state = read_json("originals/state.json", {"docs": {}})
     rows, diffs = [], []
+    korean = translated()
     for doc in state["docs"].values():
         versions = doc.get("versions", [])
         latest = versions[-1] if versions else {}
@@ -73,6 +92,8 @@ def documents():
             "earlier": [{"date": version["date"], "download": _download(version, doc)} for version in versions[:-1] if version.get("file")],
             "diff": ("data/diffs/" + diff_path.split("originals/diffs/", 1)[1]) if diff_path else "",
             "linked": doc.get("linked", True), "firstSeen": doc.get("firstSeen", ""),
+            # 번역해 규정 원문에 실은 문서: 국문 이름과 그 화면의 문서 id
+            **({"ko": korean[doc["id"]]["name"], "law": korean[doc["id"]]["id"]} if doc["id"] in korean else {}),
         })
     # 자동으로 받지 못한 문서 링크의 수(화면별). 사이트가 원문 대장에 한 줄로 알린다.
     unreachable = {}
