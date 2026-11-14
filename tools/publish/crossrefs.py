@@ -11,6 +11,10 @@
   {"items": {소식 id: [{"act", "part", "label"}]}, "duties": {의무 id: […]}, "terms": {용어의 영문: […]},
    "laws": {문서 id: {조각 id(문서 전체는 ""): {"items": [{"id", "title", "date"}], "duties": [{"id", "title", "date"}], "terms": [{"en", "ko"}], "more": 다 싣지 못한 소식의 수}}}}
   제목만 실은 소식(brief)에는 "link"(원문 주소)가 함께 실린다. 해마다 돌아오는 의무는 조각마다 다가오는 것 하나만 싣는다.
+- 해설서로 돌아가는 길도 함께 만든다(해설서의 글이 스스로 적어 둔 것을 뒤집은 것이다. 새로 어림하는 것은 없다):
+  해설서의 절이 근거로 든 조각에는 그 절을 싣고("laws"의 조각마다 "handbook": [{"href", "title", "chapter"}]),
+  "read": {"terms": {용어의 영문(소문자): {"href", "title", "chapter"}}, "rules": {규제 id: [{"href", "title", "chapter"}]}}에는
+  해설서가 풀이한 용어의 절과, 관련 화면으로 그 규제를 가리킨 절을 싣는다.
 
 쓰는 법: python -m tools.publish.crossrefs <사이트 폴더의 data>   (사이트 만들기가 부른다. 따로 돌리면 이어진 수와 문제를 찍는다)
 """
@@ -156,10 +160,34 @@ def _next_of_each(duties, day):
     return sorted(groups.values(), key=lambda row: row["date"])
 
 
-def build(index, items, duties, terms, day):
-    """(refs.json의 내용, [(자리, 문제)])."""
+RULE_VIEW = re.compile(r"^#rules-([a-z0-9-]+)$")
+
+
+def _handbook(body, place, handbook, rule_ids):
+    """해설서의 절에서 근거 조각, 풀이한 용어, 가리킨 규제로 돌아가는 길을 body에 싣는다. handbook은 사이트에 싣는 해설서(handbook.public)다."""
+    read = body["read"]
+    for chapter in (handbook or {}).get("chapters", []):
+        for section in chapter.get("sections", []):
+            here = {"href": f"#handbook-{chapter['id']}.{section['id']}", "title": section.get("title", ""), "chapter": chapter.get("title", "")}
+            for basis in section.get("basis", []):
+                if not basis.get("act"):
+                    continue
+                listed = place(basis["act"], basis.get("part", "")).setdefault("handbook", [])
+                if here not in listed:
+                    listed.append(here)
+            for term in section.get("terms") or []:
+                if term.get("en"):
+                    read["terms"].setdefault(term["en"].lower(), here)   # 영문 표기의 대소문자는 가리지 않는다
+            for link in section.get("see") or []:
+                hit = RULE_VIEW.match(str(link.get("href", "")))
+                if hit and (rule_ids is None or hit.group(1) in rule_ids) and here not in read["rules"].setdefault(hit.group(1), []):
+                    read["rules"][hit.group(1)].append(here)
+
+
+def build(index, items, duties, terms, day, handbook=None, rule_ids=None):
+    """(refs.json의 내용, [(자리, 문제)]). handbook: 사이트에 싣는 해설서, rule_ids: 규제의 id들(주면 규제 묶음의 주소와 가른다)."""
     known = book(index)
-    body = {"items": {}, "duties": {}, "terms": {}, "laws": {}}
+    body = {"items": {}, "duties": {}, "terms": {}, "laws": {}, "read": {"terms": {}, "rules": {}}}
     problems = []
 
     def place(act_id, part_id):
@@ -197,6 +225,8 @@ def build(index, items, duties, terms, day):
         for act_id, part_id in refs:
             place(act_id, part_id)["terms"].append({"en": term["en"], "ko": term.get("ko", "")})
 
+    _handbook(body, place, handbook, rule_ids)
+
     for parts in body["laws"].values():
         for row in parts.values():
             row["more"] = max(0, len(row["items"]) - ITEMS_PER_PART)   # 다 싣지 못한 소식의 수
@@ -204,12 +234,14 @@ def build(index, items, duties, terms, day):
     return body, problems
 
 
-def write(data_out, items, duties, terms, day):
-    """data/refs.json을 쓰고 (이어진 수, 문제)를 돌려준다. 규정 원문의 목록(laws/index.json)이 먼저 만들어져 있어야 한다."""
+def write(data_out, items, duties, terms, day, rule_ids=None):
+    """data/refs.json을 쓰고 (이어진 수, 문제)를 돌려준다. 규정 원문의 목록(laws/index.json)과 해설서(handbook.json)가 먼저 만들어져 있어야 한다."""
     data_out = pathlib.Path(data_out)
-    body, problems = build(read_json(data_out / "laws" / "index.json", {}), items, duties, terms, day)
+    body, problems = build(read_json(data_out / "laws" / "index.json", {}), items, duties, terms, day, read_json(data_out / "handbook.json", None), rule_ids)
     write_json(data_out / "refs.json", body)
-    return {name: len(body[name]) for name in ("items", "duties", "terms")}, problems
+    counts = {name: len(body[name]) for name in ("items", "duties", "terms")}
+    counts["handbook"] = sum(1 for parts in body["laws"].values() for row in parts.values() if row.get("handbook"))   # 해설서의 절로 돌아가는 조각의 수
+    return counts, problems
 
 
 def source_problems(day=None):

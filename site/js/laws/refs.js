@@ -16,17 +16,28 @@ export function termHref(term) {
   return `#terms-${encodeURIComponent(term.en || term.ko || "")}`;
 }
 
-// 조각 하나(partId가 ""이면 문서 전체)에 이어진 것: { items, duties, terms, more }. 아무것도 없으면 null.
+// 조각 하나(partId가 ""이면 문서 전체)에 이어진 것: { handbook, items, duties, terms, more }. 아무것도 없으면 null.
+// handbook은 이 조각을 근거로 든 해설서의 절들이다([{ href, title, chapter }]).
 export function linkedTo(refs, actId, partId = "") {
   const found = (((refs || {}).laws || {})[actId] || {})[partId || ""];
   if (!found) return null;
-  const row = { items: [], duties: [], terms: [], more: 0, ...found };
-  return row.items.length + row.duties.length + row.terms.length ? row : null;
+  const row = { handbook: [], items: [], duties: [], terms: [], more: 0, ...found };
+  return row.handbook.length + row.items.length + row.duties.length + row.terms.length ? row : null;
 }
 
-// 한 줄로 간추린 말: "의무 일정 1건, 소식 3건, 용어 2건"
+// 한 줄로 간추린 말: "해설서 2곳, 의무 일정 1건, 소식 3건, 용어 2건"
 export function tally(row) {
   if (!row) return "";
-  return [["의무 일정", row.duties.length], ["소식", row.items.length + (row.more || 0)], ["용어", row.terms.length]]
-    .filter(([, size]) => size).map(([name, size]) => `${name} ${size}건`).join(", ");
+  return [["해설서", (row.handbook || []).length, "곳"], ["의무 일정", row.duties.length, "건"], ["소식", row.items.length + (row.more || 0), "건"], ["용어", row.terms.length, "건"]]
+    .filter(([, size]) => size).map(([name, size, unit]) => `${name} ${size}${unit}`).join(", ");
+}
+
+// 그 용어를 풀이한 해설서의 절({ href, title, chapter }). 없으면 null. term은 용어집의 용어(영문 표기로 찾는다)
+export function readTerm(refs, term) {
+  return ((((refs || {}).read || {}).terms || {})[String((term && term.en) || "").toLowerCase()]) || null;
+}
+
+// 그 규제를 관련 화면으로 가리킨 해설서의 절들. 없으면 빈 목록
+export function readRule(refs, ruleId) {
+  return (((refs || {}).read || {}).rules || {})[ruleId] || [];
 }

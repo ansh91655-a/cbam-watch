@@ -53,7 +53,7 @@ export const gloss = () => load("gloss", { terms: [] }).then((body) => ({ terms:
 // 품목 한 장 보기가 품목마다 잇는 근거 조문과 해설서의 절(tools/publish/item_sheet.py). 없으면 빈 것으로 본다(그 줄만 보이지 않는다)
 export const sheet = () => load("sheet", {}).then((body) => ({ basis: [], read: [], ...body }));
 // 소식, 의무 일정, 용어집과 규정 원문을 잇는 자료(tools/publish/crossrefs.py). 없으면 빈 것으로 본다(잇는 링크만 보이지 않는다)
-export const refs = () => load("refs", {}).then((body) => ({ items: {}, duties: {}, terms: {}, laws: {}, ...body }));
+export const refs = () => load("refs", {}).then((body) => ({ items: {}, duties: {}, terms: {}, laws: {}, read: { terms: {}, rules: {} }, ...body }));
 export const moved = () => load("moved", { moved: {} }).then((body) => body.moved || {});
 
 // 판 비교 결과는 문서마다 따로 있어서 필요할 때만 읽는다.

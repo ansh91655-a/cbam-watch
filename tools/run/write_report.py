@@ -45,6 +45,8 @@ def daily(health, day):
     problems = health_problems + day_problems
     trouble = bool(problems or holds)
     tail = f"새 게시 {published}건(누적 {total}건)."
+    # 해설서의 절이 가리킨 규제가 달라져 그 절을 다시 봐야 하는 것. 문제가 아니므로 '정상'을 바꾸지 않는다(주간 작업이 다시 보고 기록을 고친다)
+    review = [str(line) for line in health.get("handbookToReview", []) or []]
 
     if trouble:
         lines = [f"문제 보고: {date} CBAM 규제동향 사이트"]
@@ -54,12 +56,17 @@ def daily(health, day):
         if holds:
             lines.append(f"- 보류 {len(holds)}건")
             lines += [f"  - {hold['id']}: {hold.get('gate', '')} {hold.get('why', '')}".rstrip() for hold in holds]
+        if review:
+            lines.append(f"- 해설서에서 다시 볼 절 {len(review)}건(문제 아님)")
+            lines += [f"  - {line}" for line in review]
         lines.append(f"{tail} 사이트 {SITE}")
         answer = "\n".join(lines)
         first = problems[0] if problems else f"{holds[0]['id']} 보류"
         notify = _cut(f"문제 보고: CBAM 사이트 {date} 문제 {len(problems)}건, 보류 {len(holds)}건. {first}", NOTIFY_LIMIT)
     else:
         answer = f"정상: {date} {tail} 보고할 문제 없음." + (f" 다시 쓸 초안 {retry}건." if retry else "")
+        if review:
+            answer += "\n" + "\n".join([f"해설서에서 다시 볼 절 {len(review)}건(문제 아님. 주간 작업이 다시 봄)"] + [f"- {line}" for line in review])
         notify = ""
 
     public = {
@@ -68,6 +75,7 @@ def daily(health, day):
         "runProblems": sum(1 for line in day_problems if line not in FIXED_PROBLEMS),
         "holds": [{"id": hold["id"], "gate": hold.get("gate", "")} for hold in holds],
         "counts": {"published": published, "total": total, "retryHolds": retry},
+        "handbookToReview": review,
     }
     path = f"reports/daily/{date}.json"
     write_json(path, public)

@@ -48,13 +48,15 @@ const see = (links) => (links && links.length
   : null);
 
 // chapterId는 절의 주소(#handbook-<장>.<절>)를 만드는 데 쓴다.
-export function sectionNode(chapterId, section) {
+// whole이 참이면 해설서 전체를 한 화면에 놓는 자리다(views/handbook/whole.js): 제목을 한 단계 낮추고, 요소의 이름에 장을 넣어 장끼리 겹치지 않게 한다.
+export function sectionNode(chapterId, section, whole = false) {
   const side = [terms(section), caveat(section.caveat), basis(section.basis), see(section.see)].filter(Boolean);
   const here = `#handbook-${chapterId}.${section.id}`;
-  const node = h("section", { class: "panel hb-sec", id: `hb-${section.id}`, "aria-labelledby": `hb-h-${section.id}`, tabindex: "-1" }, [
-    h("h2", { id: `hb-h-${section.id}` }, h("a", { class: "hb-anchor", href: `#handbook-${chapterId}.${section.id}`, text: section.title })),
+  const name = whole ? `${chapterId}-${section.id}` : section.id;
+  const node = h("section", { class: "panel hb-sec", id: `hb-${name}`, "aria-labelledby": `hb-h-${name}`, tabindex: "-1" }, [
+    h(whole ? "h3" : "h2", { id: `hb-h-${name}`, class: "hb-sec-title" }, h("a", { class: "hb-anchor", href: here, text: section.title })),
     h("div", { class: "hb-cols" }, [
-      h("div", { class: "hb-main" }, [...section.body.map((text) => h("p", { text })), figureNode(section.figure, `hb-fig-${section.id}`), list(section), formula(section.formula), sheet(section.table, section.title)]),
+      h("div", { class: "hb-main" }, [...section.body.map((text) => h("p", { text })), figureNode(section.figure, `hb-fig-${name}`), list(section), formula(section.formula), sheet(section.table, section.title)]),
       side.length ? h("div", { class: "hb-aside" }, side) : null,
     ]),
   ]);

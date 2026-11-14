@@ -2,11 +2,12 @@
 // #rules는 전체 목록, #rules-<묶음>은 한 묶음, #rules-<규제>는 한 규제의 자세한 화면이다.
 import { adopted } from "../cn/stage.js";
 import * as data from "../data.js";
+import { readRule } from "../laws/refs.js";
 import { band } from "../ui/band.js";
 import { card } from "../ui/card.js";
 import { empty, fill, h, safeLink, table, unsplit } from "../ui/dom.js";
-import { gloss } from "../ui/gloss.js";
 import { countdown, day, koreanDate } from "../ui/format.js";
+import { gloss } from "../ui/gloss.js";
 import { icon } from "../ui/icons.js";
 import { findPanel } from "../ui/lawfind.js";
 import { stackable } from "../ui/stack.js";
@@ -90,19 +91,25 @@ function positions(rule) {
 }
 
 // 오른쪽 칸: 이 규제의 원문과 국문 번역으로 가는 길, 그리고 규정에서 찾기(질문을 적으면 관련 조문의 위치를 알려 준다).
-function aside(rule, acts) {
+// read: 이 규제를 관련 화면으로 가리킨 해설서의 절들(laws/refs.js의 readRule)
+function aside(rule, acts, read) {
   const own = acts.filter((act) => act.rule === rule.id);
-  return h("aside", { class: "rule-aside", "aria-label": "규정 원문" }, [
+  return h("aside", { class: "rule-aside", "aria-label": "규정 원문과 해설서" }, [
     own.length ? h("div", { class: "law-open" }, [
       h("strong", { text: "원문과 국문 번역" }),
       h("p", { text: "조문마다 원문과 번역을 나란히 봅니다." }),
       ...own.map((act) => h("a", { href: `#law-${act.id}` }, [h("span", { text: act.name }), icon("next", 15)])),
     ]) : null,
+    read.length ? h("div", { class: "law-open" }, [
+      h("strong", { text: "해설서에서 읽기" }),
+      h("p", { text: "이 규제가 다루는 내용을 제도의 차례에 맞춰 풀어 쓴 절입니다." }),
+      ...read.map((one) => h("a", { href: one.href }, [h("span", { text: one.title }), icon("next", 15)])),
+    ]) : null,
     findPanel({ examples: ["인증서 제출 기한", "내재배출량 검증", "기본값"] }),
   ]);
 }
 
-function detail(main, rule, group, items, drawing, acts) {
+function detail(main, rule, group, items, drawing, acts, read) {
   const related = (rule.relatedItems || []).map((id) => items.find((item) => item.id === id)).filter(Boolean);
   const links = (rule.links || []).map((link) => {
     const node = safeLink(link.url, link.text);
@@ -137,7 +144,7 @@ function detail(main, rule, group, items, drawing, acts) {
         h("div", { class: "sec-head" }, [h("h2", { id: "h-rel", text: "관련 소식" }), h("a", { href: "#news", text: "소식 전체" })]),
         ...related.map(card),
       ]) : null,
-    ]), aside(rule, acts)]),
+    ]), aside(rule, acts, read)]),
   );
   // 현재 상황, 요약, 분석의 글에 나온 용어에 풀이를 단다(근거 자료의 목록과 연혁에는 달지 않는다)
   gloss(main, ".rule-now .rule-status, .rule-summary, .rule-analysis .an-sec:not(.an-src) p");
@@ -153,7 +160,7 @@ export async function render(main, arg) {
   }
   const one = rules.find((rule) => rule.id === arg);
   if (one) {
-    detail(main, one, groups.find((group) => group.code === one.group) || { code: "", name: "" }, items, await figure(one), await data.laws());
+    detail(main, one, groups.find((group) => group.code === one.group) || { code: "", name: "" }, items, await figure(one), await data.laws(), readRule(await data.refs(), one.id));
     return;
   }
   const picked = groups.some((group) => group.code === arg) ? arg : "";

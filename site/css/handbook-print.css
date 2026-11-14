@@ -1,0 +1,40 @@
+/* 해설서 전체를 한 화면에 놓는 화면(#handbook-all, js/views/handbook/whole.js)과, 해설서를 인쇄할 때의 모양 */
+.hb-whole-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 20px; color: var(--ink-2); }
+.hb-whole-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.hb-whole-toc > ol { display: grid; gap: 14px 28px; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); margin: 0; padding: 0; list-style: none; }
+.hb-whole-toc > ol > li { display: grid; gap: 4px; align-content: start; }
+.hb-whole-toc > ol > li > a { display: flex; align-items: baseline; gap: 8px; font-weight: 700; color: var(--ink); text-decoration: none; }
+.hb-whole-toc > ol > li > a:hover { text-decoration: underline; }
+.hb-whole-toc .hb-toc-no { min-width: 1.4em; color: var(--ink-3); font-variant-numeric: tabular-nums; text-align: right; }
+.hb-whole-toc ul { display: grid; gap: 2px; margin: 0; padding: 0 0 0 calc(1.4em + 8px); list-style: none; font-size: var(--fs-s); }
+.hb-whole-toc ul a { color: var(--ink-2); text-decoration: none; }
+.hb-whole-toc ul a:hover { color: var(--link); text-decoration: underline; }
+.hb-whole-chapter { scroll-margin-top: 84px; }
+.hb-whole-chapter:focus { outline: none; }
+.hb-whole-head { display: grid; gap: 4px; padding-top: 10px; border-top: 2px solid var(--ink); }
+.hb-whole-head h2 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; font-size: 1.5rem; letter-spacing: -0.02em; }
+.hb-whole-no { font-size: 1rem; color: var(--ink-3); }
+
+/* 인쇄: 머리글과 바닥글, 옆의 목록, 단추를 빼고 글만 찍는다. 칸의 테두리와 그림자를 걷어 종이를 아낀다 */
+@media print {
+  .site-head, .site-foot, .skip, .preview-bar, .hb-side, .hb-pager, .hb-whole-actions, .view-head .tabs, .view-head .band-map, .view-head .fresh { display: none !important; }
+  .view-head { background: none !important; color: #000 !important; }
+  .view-head h1 { color: #000 !important; }
+  .view-head h1, .view-head .lead { opacity: 1 !important; animation: none !important; }   /* 들어오는 움직임이 끝나기 전에 인쇄해도 제목이 찍히게 */
+  .view-head .lead { color: #333 !important; }
+  .band-inner { padding-block: 0 12px !important; }
+  body { background: #fff !important; }
+  /* 쪽을 넘어가는 격자는 칸이 겹쳐 찍히는 일이 있다. 인쇄할 때에는 위아래로 흐르는 보통 글로 놓는다 */
+  .hb-page, .hb-body, .hb-whole, .hb-whole-chapter, .hb-cols, .hb-main, .hb-aside { display: block !important; }
+  .hb-body > * + *, .hb-whole > * + *, .hb-whole-chapter > * + * { margin-top: 14px; }
+  .hb-main > * + *, .hb-aside > * + * { margin-top: 10px; }
+  .hb-aside { margin-top: 12px; }
+  .hb-sec { padding: 14px 0 !important; border: 0 !important; border-top: 1px solid #bbb !important; border-radius: 0 !important; box-shadow: none !important; background: none !important; }
+  .hb-sec-title, .hb-whole-head, .hb-fig-cap { break-after: avoid; }
+  .hb-main > p, .hb-list li { orphans: 3; widows: 3; }
+  .hb-main .table-wrap, .hb-formula, .hb-terms, .hb-caveat { break-inside: avoid; }
+  .hb-whole-chapter + .hb-whole-chapter { break-before: page; }
+  .hb-whole-toc { break-after: page; box-shadow: none !important; }
+  .hb-anchor, .hb-refs a, .hb-whole-toc a { color: #000 !important; text-decoration: none !important; }
+  .hb-fig { background: none !important; border: 1px solid #bbb; }
+}

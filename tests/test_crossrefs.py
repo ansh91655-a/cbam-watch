@@ -129,8 +129,60 @@ class BuildTest(unittest.TestCase):
             (pathlib.Path(folder) / "laws" / "index.json").write_text(json.dumps(INDEX), encoding="utf-8")
             counts, problems = crossrefs.write(folder, self.ITEMS, self.DUTIES, self.TERMS, "2026-11-13")
             written = json.loads((pathlib.Path(folder) / "refs.json").read_text(encoding="utf-8"))
-        self.assertEqual((counts, len(problems)), ({"items": 2, "duties": 4, "terms": 1}, 1))
-        self.assertEqual(sorted(written), ["duties", "items", "laws", "terms"])
+        self.assertEqual((counts, len(problems)), ({"items": 2, "duties": 4, "terms": 1, "handbook": 0}, 1))
+        self.assertEqual(sorted(written), ["duties", "items", "laws", "read", "terms"])
+        self.assertEqual(written["read"], {"terms": {}, "rules": {}})   # 해설서가 없으면 돌아가는 길도 없다
+
+
+class HandbookTest(unittest.TestCase):
+    """해설서로 돌아가는 길: 해설서의 절이 스스로 적어 둔 근거, 풀이한 용어, 관련 화면을 뒤집는다."""
+
+    BOOK = {"chapters": [
+        {"id": "cycle", "title": "한 해의 일정", "sections": [
+            {"id": "declaration", "title": "CBAM 신고서의 기한과 내용", "terms": [{"ko": "CBAM 신고서", "en": "CBAM declaration", "text": "풀이입니다."}],
+             "basis": [{"act": BASE, "part": "art-6", "label": "CBAM 규정 제6조 CBAM 신고서"}, {"act": BASE, "part": "art-6", "label": "CBAM 규정 제6조 CBAM 신고서"},
+                       {"label": "EU 배출권거래제 지침", "url": "https://example.org/ets"}],
+             "see": [{"href": "#calendar", "text": "일정"}, {"href": "#rules-ir-declarations", "text": "신고서 이행규정(안)"}]},
+            {"id": "surrender", "title": "인증서 제출과 분기 말 보유 의무", "basis": [{"act": BASE, "part": "art-22", "label": "CBAM 규정 제22조"}, {"act": BASE, "part": "art-6", "label": "CBAM 규정 제6조"}],
+             "see": [{"href": "#rules-ir-declarations", "text": "신고서 이행규정(안)"}, {"href": "#rules-eu-law", "text": "규제 묶음"}]}]},
+        {"id": "defaults", "title": "기본값과 마크업", "sections": [
+            {"id": "tables", "title": "기본값을 찾는 표", "terms": [{"ko": "기본값", "en": "Default Value", "text": "풀이입니다."}],
+             "basis": [{"act": "guide-3", "part": "sec-1", "label": "가이던스 3 1"}, {"act": VALUES, "part": "", "label": "기본값 이행규정"}], "see": []}]},
+    ]}
+
+    def setUp(self):
+        self.body, _ = crossrefs.build(INDEX, [], [], [{"en": "CBAM declaration", "ko": "CBAM 신고서", "article": "CBAM 규정 제6조"}], "2026-11-13", self.BOOK, {"ir-declarations"})
+
+    def test_a_part_lists_the_sections_that_rest_on_it(self):
+        laws = self.body["laws"]
+        here = {"href": "#handbook-cycle.declaration", "title": "CBAM 신고서의 기한과 내용", "chapter": "한 해의 일정"}
+        there = {"href": "#handbook-cycle.surrender", "title": "인증서 제출과 분기 말 보유 의무", "chapter": "한 해의 일정"}
+        self.assertEqual(laws[BASE]["art-6"]["handbook"], [here, there])        # 한 절이 같은 조를 두 번 들어도 한 번만. 책의 차례대로
+        self.assertEqual(laws[BASE]["art-6"]["terms"], [{"en": "CBAM declaration", "ko": "CBAM 신고서"}])   # 다른 것(용어)과 함께 실린다
+        self.assertEqual(laws[BASE]["art-22"], {"items": [], "duties": [], "terms": [], "handbook": [there], "more": 0})
+        # 가이던스의 절과 문서 전체를 근거로 든 것도 잇는다. 사이트 밖의 근거(주소만 있는 것)는 잇지 않는다
+        self.assertEqual([one["href"] for one in laws["guide-3"]["sec-1"]["handbook"]], ["#handbook-defaults.tables"])
+        self.assertEqual([one["href"] for one in laws[VALUES][""]["handbook"]], ["#handbook-defaults.tables"])
+
+    def test_terms_and_rules_lead_back_to_their_sections(self):
+        read = self.body["read"]
+        self.assertEqual(read["terms"], {"cbam declaration": {"href": "#handbook-cycle.declaration", "title": "CBAM 신고서의 기한과 내용", "chapter": "한 해의 일정"},
+                                         "default value": {"href": "#handbook-defaults.tables", "title": "기본값을 찾는 표", "chapter": "기본값과 마크업"}})   # 영문 표기의 대소문자는 가리지 않는다
+        # 관련 화면으로 그 규제를 가리킨 절들. 규제가 아닌 주소(규제 묶음, 다른 화면)는 싣지 않는다
+        self.assertEqual({rule: [one["href"] for one in rows] for rule, rows in read["rules"].items()},
+                         {"ir-declarations": ["#handbook-cycle.declaration", "#handbook-cycle.surrender"]})
+
+    def test_without_the_rule_list_every_rule_address_is_kept(self):
+        body, _ = crossrefs.build(INDEX, [], [], [], "2026-11-13", self.BOOK)
+        self.assertEqual(sorted(body["read"]["rules"]), ["eu-law", "ir-declarations"])
+
+    def test_the_count_tells_how_many_parts_lead_back(self):
+        with tempfile.TemporaryDirectory() as folder:
+            (pathlib.Path(folder) / "laws").mkdir()
+            (pathlib.Path(folder) / "laws" / "index.json").write_text(json.dumps(INDEX), encoding="utf-8")
+            (pathlib.Path(folder) / "handbook.json").write_text(json.dumps(self.BOOK, ensure_ascii=False), encoding="utf-8")
+            counts, _ = crossrefs.write(folder, [], [], [], "2026-11-13", {"ir-declarations"})
+        self.assertEqual(counts["handbook"], 4)
 
 
 class RepositoryTest(unittest.TestCase):

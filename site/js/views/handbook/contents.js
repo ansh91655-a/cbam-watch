@@ -41,7 +41,8 @@ export function contents(book, missing) {
     notice(book),
     missing ? h("p", { class: "empty", text: "찾으시는 장이 없습니다. 아래 차례에서 골라 주세요." }) : null,
     h("section", { class: "stack", "aria-labelledby": "h-hb-chapters" }, [
-      h("div", { class: "sec-head" }, [h("h2", { id: "h-hb-chapters", text: "차례" }), h("span", { class: "count", text: `${count(book.chapters.length)}개 장` })]),
+      h("div", { class: "sec-head" }, [h("h2", { id: "h-hb-chapters", text: "차례" }), h("span", { class: "count", text: `${count(book.chapters.length)}개 장` }),
+        h("a", { href: "#handbook-all", text: "전체를 한 화면에 보기(인쇄용)" })]),
       h("ol", { class: "hb-chapters" }, book.chapters.map(chapterCard)),
     ]),
     termIndex(book.terms || []),

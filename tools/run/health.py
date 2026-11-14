@@ -175,6 +175,8 @@ def report():
     return {
         "today": day,
         "problems": problems,
+        # 해설서의 절이 가리킨 규제가 달라져 그 절을 다시 봐야 하는 것(문제가 아니다. 주간 작업이 다시 보고 기록을 고친다)
+        "handbookToReview": reference_health.handbook_rule_lines(),
         **rule_counts,
         "collectCheckedAt": status.get("checkedAt", ""),
         "collectToday": collect_today,

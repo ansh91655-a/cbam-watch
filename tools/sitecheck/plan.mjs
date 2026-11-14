@@ -62,6 +62,8 @@ export function plan(site) {
   const longest = [...book].sort((a, b) => b.sections.length - a.sections.length)[0];
   const tabled = book.find((chapter) => chapter.sections.some((one) => one.table) && (!longest || chapter.id !== longest.id));
   const handbook = book.length ? ["#handbook", longest ? `#handbook-${longest.id}` : null, tabled ? `#handbook-${tabled.id}.${tabled.sections.find((one) => one.table).id}` : null, "#handbook-none"] : [];
+  // 해설서 전체를 한 화면에 놓는 화면(인쇄용): 가로 넘침과 화면 오류만 본다(접근성은 장 화면에서 본다)
+  const whole = book.length ? "#handbook-all" : null;
   // 그림이 있는 장: 그림의 종류를 모두 한 번씩 본다(위에서 이미 보는 장은 뺀다)
   const drawn = figureChapters(book).map((chapter) => `#handbook-${chapter.id}`).filter((view) => !handbook.includes(view));
   // 사이트 검색: 빈 화면, 여러 갈래에서 찾는 말, 품목 코드, 찾지 못하는 말
@@ -70,7 +72,7 @@ export function plan(site) {
     // 가로 넘침과 화면 오류: 모든 화면을 일곱 너비로(폰 둘, 패드, 노트북 둘, 넓은 모니터 둘: 본문 폭이 넓어지는 1,560과 1,800의 단계)
     widths: [360, 390, 768, 1024, 1440, 1920, 2400],
     views: ["#home", "#news", topics[0] ? `#news-${topics[0].code}` : null, "#news-notices", "#news-recent", item, itemWithRefs, "#rules", ...(rules.groups || []).map((group) => `#rules-${group.code}`),
-      "#price", "#calc", good, "#calendar", "#calendar-2027", "#calendar-2027.role-verifier", "#calendar-2028", "#cn", "#cn-7208", ...sheets, "#sector", "#sector-aluminium", "#sector-electricity", ...handbook, ...drawn, "#docs", ...laws, "#terms", "#about", "#design", ...search].filter(Boolean),
+      "#price", "#calc", good, "#calendar", "#calendar-2027", "#calendar-2027.role-verifier", "#calendar-2028", "#cn", "#cn-7208", ...sheets, "#sector", "#sector-aluminium", "#sector-electricity", ...handbook, ...drawn, whole, "#docs", ...laws, "#terms", "#about", "#design", ...search].filter(Boolean),
     // 규제 화면: 규제마다 네 너비로
     ruleWidths: [360, 768, 1440, 1920],
     rules: (rules.regulations || []).map(rule),

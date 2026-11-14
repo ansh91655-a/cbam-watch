@@ -46,6 +46,26 @@ class ReportTests(unittest.TestCase):
         self.assertEqual(saved["status"], "정상")
         self.assertFalse(reports.needs_notice(saved))
 
+    def test_sections_to_read_again_are_told_without_making_it_a_problem(self):
+        # 해설서의 절이 가리킨 규제가 달라진 것은 다시 볼 일이지 문제가 아니다: 답변에는 적고, 알림은 보내지 않는다
+        line = "해설서: 규제 '탄소가격 이행규정(안)'이(가) 해설서를 맞춰 본 뒤에 달라짐(연혁이 5줄에서 6줄로 달라짐). 이 규제를 가리키는 절을 다시 볼 것: ahead.to-come"
+        _write("h.json", {"today": "2026-11-11", "problems": [], "handbookToReview": [line], "publishedItems": 20})
+        _write("d.json", {"date": "2026-11-11", "problems": [], "finalHolds": [], "retryHolds": 0, "counts": {"published": 1}})
+        _, result = self._run(["daily", "--health", "h.json", "--day", "d.json"])
+        self.assertEqual((result["status"], result["notify"]), ("정상", ""))
+        self.assertIn("해설서에서 다시 볼 절 1건(문제 아님", result["answer"])
+        self.assertIn(line, result["answer"])
+        saved = json.loads(pathlib.Path("reports/daily/2026-11-11.json").read_text(encoding="utf-8"))
+        self.assertEqual((saved["status"], saved["handbookToReview"]), ("정상", [line]))
+        self.assertFalse(reports.needs_notice(saved))
+        # 문제가 있는 날에는 문제 아래에 따로 적는다(문제의 수에는 넣지 않는다)
+        _write("h.json", {"today": "2026-11-11", "problems": ["사이트가 오늘 다시 배포되지 않음(마지막 알 수 없음)"], "handbookToReview": [line], "publishedItems": 20})
+        _, result = self._run(["daily", "--health", "h.json", "--day", "d.json"])
+        self.assertEqual(result["status"], "문제")
+        self.assertIn("- 문제 1건", result["answer"])
+        self.assertIn("- 해설서에서 다시 볼 절 1건(문제 아님)", result["answer"])
+        self.assertIn("문제 1건, 보류 0건", result["notify"])
+
     def test_daily_problem_keeps_private_text_out_of_public_file(self):
         _write("h.json", {"today": "2026-11-11", "problems": ["출처 자동 수집이 오늘 돌지 않음(마지막 없음)"], "publishedItems": 20})
         _write("d.json", {

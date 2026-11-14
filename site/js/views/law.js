@@ -85,7 +85,7 @@ function cutNote(part, source) {
   ]);
 }
 
-// 이 조각에 이어진 것(접어 둔다): 이 조가 근거인 의무 일정, 이 조를 적은 소식, 이 조에서 나온 용어.
+// 이 조각에 이어진 것(접어 둔다): 이 조를 풀어 쓴 해설서의 절, 이 조가 근거인 의무 일정, 이 조를 적은 소식, 이 조에서 나온 용어.
 // 글에 법령과 조문이 또렷이 적힌 것만 이어져 있다(laws/refs.js). row가 없으면 null.
 function linkedBlock(row, name) {
   if (!row) return null;
@@ -98,6 +98,8 @@ function linkedBlock(row, name) {
   const dated = (date, link) => h("li", {}, [h("time", { datetime: date, text: day(date) }), link]);
   return h("details", { class: "law-linked" }, [
     h("summary", {}, [h("span", { text: name }), h("span", { class: "count", text: tally(row) })]),
+    row.handbook.length ? h("div", { class: "law-linked-row" }, [h("b", { text: "해설서" }),
+      h("ul", {}, row.handbook.map((one) => h("li", {}, [h("span", { class: "count", text: one.chapter }), h("a", { href: one.href, text: one.title })])))]) : null,
     row.duties.length ? h("div", { class: "law-linked-row" }, [h("b", { text: "의무 일정" }),
       h("ul", {}, row.duties.map((duty) => dated(duty.date, h("a", { href: dutyHref(duty), text: duty.title }))))]) : null,
     row.items.length ? h("div", { class: "law-linked-row" }, [h("b", { text: "소식" }),

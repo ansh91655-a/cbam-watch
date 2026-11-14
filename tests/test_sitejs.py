@@ -15,7 +15,7 @@ import { forRole, roleIn, roleTarget, tally } from './site/js/calendar/roles.js'
 import { benchmarks, flagsOf, goodsUnder, line, LIST_LIMIT, markedUp, nearest, sectorOf, sheetYear, shown, splitByPeriod, yearly } from './site/js/cn/sheet.js';
 import { address, citeBlock, citePart, partName, source } from './site/js/laws/cite.js';
 import { translation, waitLabel } from './site/js/laws/ready.js';
-import { dutyHref, lawHref, linkedTo, tally as linkedTally, termHref } from './site/js/laws/refs.js';
+import { dutyHref, lawHref, linkedTo, readRule, readTerm, tally as linkedTally, termHref } from './site/js/laws/refs.js';
 import { wordDiff } from './site/js/laws/worddiff.js';
 import { compile, find } from './site/js/gloss/match.js';
 import { isNotice, NOTICES, split } from './site/js/news/notices.js';
@@ -43,6 +43,9 @@ const parts = split(items);
 const roles = [{ key: 'declarant', name: '신고인·수입자' }, { key: 'verifier', name: '검증기관' }, { key: 'uk', name: '영국 수입자' }];
 const duties = [{ id: 'one', roles: ['declarant'] }, { id: 'two', roles: ['declarant', 'verifier'] }, { id: 'three' }];
 
+const backRefs = { laws: { '32023R0956': { 'art-9': { items: [], duties: [], terms: [], more: 0, handbook: [{ href: '#handbook-carbon-price.deduction', title: '탄소가격 공제의 뜻', chapter: '제3국에서 낸 탄소가격' }] } } },
+  read: { terms: { 'cbam declaration': { href: '#handbook-cycle.declaration', title: 'CBAM 신고서의 기한과 내용', chapter: '한 해의 일정' } },
+    rules: { 'ir-carbon-price': [{ href: '#handbook-carbon-price.rules-to-come', title: '집행위원회가 정할 세부 규칙', chapter: '제3국에서 낸 탄소가격' }] } } };
 const linkedRefs = { laws: { '32023R0956': {
   'art-6': { items: [], duties: [{ id: 'eu-first-declaration', title: '첫 신고', date: '2027-09-30' }], terms: [{ en: 'CBAM declaration', ko: 'CBAM 신고서' }, { en: 'CBAM obligation', ko: 'CBAM 의무' }], more: 0 },
   'art-7': { items: [], duties: [], terms: [], more: 0 },
@@ -112,6 +115,9 @@ console.log(JSON.stringify({
     hrefs: [lawHref({ act: '32023R0956', part: 'art-6' }), lawHref({ act: '32025R2621', part: '' }), dutyHref({ id: 'eu-first-declaration', date: '2027-09-30' }), termHref({ en: 'CBAM declaration', ko: 'CBAM 신고서' })],
     linked: linkedTo(linkedRefs, '32023R0956', 'art-6'), whole: linkedTo(linkedRefs, '32023R0956'), none: [linkedTo(linkedRefs, '32023R0956', 'art-7'), linkedTo(linkedRefs, 'nobody', 'art-1'), linkedTo(null, 'x')],
     tally: [linkedTally(linkedTo(linkedRefs, '32023R0956', 'art-6')), linkedTally(linkedTo(linkedRefs, '32023R0956')), linkedTally(null)],
+    back: { part: linkedTo(backRefs, '32023R0956', 'art-9'), tally: linkedTally(linkedTo(backRefs, '32023R0956', 'art-9')),
+      terms: [readTerm(backRefs, { en: 'CBAM Declaration' }), readTerm(backRefs, { en: 'default value' }), readTerm(null, { en: 'x' }), readTerm(backRefs, null)],
+      rules: [readRule(backRefs, 'ir-carbon-price').map((one) => one.href), readRule(backRefs, 'none'), readRule(null, 'x')] },
   },
   roles: {
     read: [roleIn('role-verifier', roles), roleIn('role-nobody', roles), roleIn('duty-one', roles), roleIn('', roles), roleIn('role-verifier', null)],
@@ -276,6 +282,14 @@ class SiteModulesTest(unittest.TestCase):
         self.assertEqual((refs["whole"]["duties"], refs["whole"]["terms"], refs["whole"]["more"]), ([], [], 4))   # 빠진 갈래는 빈 목록으로 채운다
         self.assertEqual(refs["none"], [None, None, None])                                                          # 이어진 것이 없으면 그리지 않는다
         self.assertEqual(refs["tally"], ["의무 일정 1건, 용어 2건", "소식 5건", ""])                                 # 다 싣지 못한 소식도 센다
+
+    def test_law_parts_terms_and_rules_lead_back_to_the_handbook(self):
+        back = self.seen["refs"]["back"]
+        # 해설서의 절만 이어진 조도 '이어진 내용'이 있는 조다
+        self.assertEqual(back["part"]["handbook"], [{"href": "#handbook-carbon-price.deduction", "title": "탄소가격 공제의 뜻", "chapter": "제3국에서 낸 탄소가격"}])
+        self.assertEqual(back["tally"], "해설서 1곳")
+        self.assertEqual(back["terms"], [{"href": "#handbook-cycle.declaration", "title": "CBAM 신고서의 기한과 내용", "chapter": "한 해의 일정"}, None, None, None])   # 영문 표기의 대소문자는 가리지 않는다
+        self.assertEqual(back["rules"], [["#handbook-carbon-price.rules-to-come"], [], []])
 
     def test_duties_are_picked_by_the_role_named_in_the_address(self):
         roles = self.seen["roles"]

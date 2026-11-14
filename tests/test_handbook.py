@@ -55,6 +55,11 @@ class FormatTest(unittest.TestCase):
                        caveat="늦어도 2027년에 개정합니다.", see=[{"href": "#calc", "text": "인증서 비용 추정"}])
         self.assertEqual(handbook.problems(book(good)), [])
 
+    def test_the_address_of_the_whole_book_is_not_a_chapter_name(self):
+        body = book()
+        body["chapters"][0]["id"] = "all"   # #handbook-all은 해설서 전체를 한 화면에 놓는 주소다
+        self.assertIn("장의 id로 'all'은 쓰지 않음(해설서 전체를 한 화면에 놓는 주소다)", blocking(body))
+
     def test_a_sentence_that_points_at_the_list_sits_right_before_it(self):
         items = ["첫째 항목입니다.", "둘째 항목입니다."]
         apart = section(body=["신고서를 냅니다. 신고서에는 아래 내용이 들어갑니다.", "기록은 4년 동안 보관합니다."], list=items)

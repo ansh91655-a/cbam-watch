@@ -4152,5 +4152,35 @@
     }
    ]
   }
- ]
+ ],
+ "rulesSeen": {
+  "cbam-downstream": {
+   "stage": "3자 협상 중",
+   "events": 12
+  },
+  "dr-sale-repurchase": {
+   "stage": "채택 대기",
+   "events": 3
+  },
+  "ets-review": {
+   "stage": "제안 심의 중",
+   "events": 6
+  },
+  "ir-carbon-price": {
+   "stage": "채택 보도(공식 확인 전)",
+   "events": 5
+  },
+  "ir-declarations": {
+   "stage": "준비 단계",
+   "events": 1
+  },
+  "ir-default-values": {
+   "stage": "시행 중",
+   "events": 6
+  },
+  "ir-free-allocation": {
+   "stage": "시행 중",
+   "events": 5
+  }
+ }
 }

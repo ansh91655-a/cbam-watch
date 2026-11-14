@@ -112,7 +112,7 @@ def main(argv):
         counts["handbook"] = sum(len(chapter.get("sections", [])) for chapter in guide.get("chapters", []))
     # 소식, 의무 일정, 용어집에 적힌 법령과 조문을 규정 원문으로 잇는다(글에 또렷이 적힌 곳만). 근거 칸에 적힌 조각이 글에 없으면 알리기만 한다
     linked, unlinked = crossrefs.write(data_out, bodies["items"]["items"], read_json(data_out / "duties.json", {}).get("duties", []),
-                                       bodies["terms"].get("terms", []), today())
+                                       bodies["terms"].get("terms", []), today(), {rule.get("id") for rule in rules.get("regulations", [])})
     # 부문별 모아 보기: 부문마다 대상 품목, 안내 문서, 기본값·벤치마크, 소식을 모은다(무엇을 모을지는 sources/sectors.json)
     counts["sectors"], sector_problems = sectors.write(data_out, bodies["items"]["items"])
     problems += [f"부문별 모아 보기: {where}: {what}" for where, what in sector_problems]

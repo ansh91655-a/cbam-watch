@@ -2,7 +2,9 @@
 // #terms-찾는 말로 오면 그 말로 걸러 보여 준다(사이트 검색의 결과가 이 주소로 보낸다).
 import * as data from "../data.js";
 import { band } from "../ui/band.js";
+import { readTerm } from "../laws/refs.js";
 import { empty, fill, h, table } from "../ui/dom.js";
+import { icon } from "../ui/icons.js";
 import { lawRefs } from "../ui/lawrefs.js";
 import { stackable } from "../ui/stack.js";
 import { decode } from "../ui/sitesearch.js";
@@ -10,12 +12,18 @@ import { groupTabs } from "../ui/tabs.js";
 
 const PAGE = 60;
 
-function row(term, refs) {
+// 그 용어를 풀어 쓴 해설서의 절로 가는 줄(해설서가 풀이한 용어에만)
+function readLine(read) {
+  if (!read) return null;
+  return h("p", { class: "ref-links" }, [h("span", { class: "ref-name" }, [icon("guide", 14), h("span", { text: "해설서" })]), h("a", { href: read.href, text: `${read.chapter}: ${read.title}` })]);
+}
+
+function row(term, refs, read) {
   return h("tr", {}, [
     h("td", { text: term.en }),
-    h("td", { text: term.abbr || "" }),
+    h("td", {}, term.abbr ? h("span", { class: "nb", text: term.abbr }) : null),   // 약어는 글자 사이에서 줄을 바꾸지 않는다
     h("td", {}, [h("strong", { text: term.ko }), term.alt ? h("span", { class: "count", text: ` (${term.alt})` }) : null]),
-    h("td", {}, [h("span", { text: term.note || "" }), lawRefs(refs, "근거 조문")]),
+    h("td", {}, [h("span", { text: term.note || "" }), readLine(read), lawRefs(refs, "근거 조문")]),
   ]);
 }
 
@@ -34,7 +42,7 @@ export async function render(main, arg) {
     });
     count.textContent = `${found.length}건`;
     holder.replaceChildren(found.length
-      ? stackable(table(["영문", "약어", "국문 표기", "설명"], found.slice(0, state.shown).map((term) => row(term, refs.terms[term.en])), "용어 목록"), { wideLast: true })
+      ? stackable(table(["영문", "약어", "국문 표기", "설명"], found.slice(0, state.shown).map((term) => row(term, refs.terms[term.en], readTerm(refs, term))), "용어 목록"), { wideLast: true })
       : empty("찾는 용어가 없습니다. 다른 낱말로 찾아보세요."));
     more.hidden = found.length <= state.shown;
     more.textContent = `더 보기 (남은 ${found.length - state.shown}건)`;

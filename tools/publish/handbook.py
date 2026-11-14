@@ -47,6 +47,7 @@ SOURCE = "data/handbook.json"
 DRIFT = "근거 어긋남"
 VIEWS = ("home", "news", "rules", "price", "calc", "calendar", "sector", "cn", "laws", "law", "changes", "docs", "terms", "about", "handbook", "search")
 ID = re.compile(r"^[a-z][a-z0-9-]{1,39}$")
+WHOLE = "all"     # #handbook-all은 해설서 전체를 한 화면에 놓는 주소다(site/js/views/handbook.js). 장의 id로 쓰지 않는다
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 HANGUL = re.compile(r"[가-힣]")
 POINTER = re.compile(r"아래(?!\s*(?:표|절|식|그림))|다음(?:을|과 같)")   # 뒤따르는 목록을 가리키는 말(아래 표, 아래 절처럼 다른 것을 가리키는 말은 뺀다)
@@ -278,6 +279,8 @@ def problems(body, term_index=None, laws_dir=None, kinds=("format", "evidence"),
         if "format" in kinds:
             if not ID.match(str(chapter.get("id", ""))) or chapter.get("id") in seen:
                 found.append((name, "장의 id가 없거나 겹침"))
+            if chapter.get("id") == WHOLE:
+                found.append((name, f"장의 id로 '{WHOLE}'은 쓰지 않음(해설서 전체를 한 화면에 놓는 주소다)"))
             seen.add(chapter.get("id"))
             found += [(f"{name} {where}", what) for where, what in _wording("제목", chapter.get("title", ""), LIMITS["title"], term_index, False)]
             found += [(f"{name} {where}", what) for where, what in _wording("요약", chapter.get("lead", ""), LIMITS["lead"], term_index, True)]
