@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-11",
+ "asOf": "2026-11-14",
  "law": {
   "name": "규정 (EU) 2023/956 부속서 I·II(2025년 10월 20일 통합본)",
   "celex": "02023R0956-20251020",
@@ -86,7 +86,7 @@
     ],
     "shown": "7320 10 90",
     "ex": false,
-    "text": "Leaf-springs and leaves therefor, of iron or steel (excl. hot- worked) 쪽 85"
+    "text": "Leaf-springs and leaves therefor, of iron or steel (excl. hot-worked)"
    },
    {
     "codes": [
@@ -166,7 +166,7 @@
     ],
     "shown": "8302 41 50",
     "ex": false,
-    "text": "Base metal mountings and fittings suitable for windows and French windows (excl. locks with keys and hinges) 쪽 86"
+    "text": "Base metal mountings and fittings suitable for windows and French windows (excl. locks with keys and hinges)"
    },
    {
     "codes": [
@@ -214,7 +214,7 @@
     ],
     "shown": "8407 34 91",
     "ex": false,
-    "text": "Spark-ignition reciprocating piston engine, of a kind used for vehicles of chapter 87, new, of a cylinder capacity <= 1.500 cm³ but > 1.000 cm³ (excl. engines of subheading 8407.34.10) 쪽 87"
+    "text": "Spark-ignition reciprocating piston engine, of a kind used for vehicles of chapter 87, new, of a cylinder capacity <= 1.500 cm³ but > 1.000 cm³ (excl. engines of subheading 8407.34.10)"
    },
    {
     "codes": [
@@ -278,7 +278,7 @@
     ],
     "shown": "8418 21 91",
     "ex": false,
-    "text": "Household refrigerators compression-type, of a capacity <= 250 l (excl. table models and building-in types) 쪽 88"
+    "text": "Household refrigerators compression-type, of a capacity <= 250 l (excl. table models and building-in types)"
    },
    {
     "codes": [
@@ -342,7 +342,7 @@
     ],
     "shown": "8419 81 80",
     "ex": false,
-    "text": "Machinery, plant and equipment for cooking or heating food (excl. percolators and other appliances for making hot drinks and domestic appliances) 쪽 89"
+    "text": "Machinery, plant and equipment for cooking or heating food (excl. percolators and other appliances for making hot drinks and domestic appliances)"
    },
    {
     "codes": [
@@ -398,7 +398,7 @@
     ],
     "shown": "8424 82 90",
     "ex": false,
-    "text": "Agricultural or horticultural mechanical appliances, whether or not hand-operated, for projecting or dispersing liquids or powders (excl. sprayers and watering appliances) 쪽 90"
+    "text": "Agricultural or horticultural mechanical appliances, whether or not hand-operated, for projecting or dispersing liquids or powders (excl. sprayers and watering appliances)"
    },
    {
     "codes": [
@@ -430,7 +430,7 @@
     ],
     "shown": "8426 41 00",
     "ex": false,
-    "text": "Mobile cranes and works trucks fitted with a crane, self- propelled, on tyres (excl. wheel-mounted cranes, mobile lifting frames on tyres and straddle carriers)"
+    "text": "Mobile cranes and works trucks fitted with a crane, self-propelled, on tyres (excl. wheel-mounted cranes, mobile lifting frames on tyres and straddle carriers)"
    },
    {
     "codes": [
@@ -438,7 +438,7 @@
     ],
     "shown": "8426 49 00",
     "ex": false,
-    "text": "Mobile cranes and works trucks fitted with a crane, self- propelled (excl. those on tyres and straddle carriers)"
+    "text": "Mobile cranes and works trucks fitted with a crane, self-propelled (excl. those on tyres and straddle carriers)"
    },
    {
     "codes": [
@@ -478,7 +478,7 @@
     ],
     "shown": "8427 20 11",
     "ex": false,
-    "text": "Rough terrain fork-lift and other stacking trucks, self- propelled, with a lifting height >= 1 m 쪽 91"
+    "text": "Rough terrain fork-lift and other stacking trucks, self-propelled, with a lifting height >= 1 m"
    },
    {
     "codes": [
@@ -486,7 +486,7 @@
     ],
     "shown": "8427 20 19",
     "ex": false,
-    "text": "Works trucks, self-propelled, with a lifting height >= 1 m, non- powered with an electric motor (excl. rough terrain fork- lift trucks and other stacking trucks)"
+    "text": "Works trucks, self-propelled, with a lifting height >= 1 m, non- powered with an electric motor (excl. rough terrain fork-lift trucks and other stacking trucks)"
    },
    {
     "codes": [
@@ -494,7 +494,7 @@
     ],
     "shown": "8427 20 90",
     "ex": false,
-    "text": "Works trucks, self-propelled, with a lifting height < 1 m, non- powered with an electric motor"
+    "text": "Works trucks, self-propelled, with a lifting height < 1 m, non-powered with an electric motor"
    },
    {
     "codes": [
@@ -566,7 +566,7 @@
     ],
     "shown": "8474 90 10",
     "ex": false,
-    "text": "Parts of machinery of heading 8474, of cast iron or cast steel 쪽 92"
+    "text": "Parts of machinery of heading 8474, of cast iron or cast steel"
    },
    {
     "codes": [
@@ -654,7 +654,7 @@
     ],
     "shown": "8501 31 00",
     "ex": false,
-    "text": "DC motors of an output > 37,5 W but <= 750 W and DC generators of an output <= 750 W (excl. photovoltaic generators) 쪽 93"
+    "text": "DC motors of an output > 37,5 W but <= 750 W and DC generators of an output <= 750 W (excl. photovoltaic generators)"
    },
    {
     "codes": [
@@ -742,7 +742,7 @@
     ],
     "shown": "8504 22 10",
     "ex": false,
-    "text": "Liquid dielectric transformers, having a power handling capacity > 650 kVA but <= 1.600 kVA 쪽 94"
+    "text": "Liquid dielectric transformers, having a power handling capacity > 650 kVA but <= 1.600 kVA"
    },
    {
     "codes": [
@@ -814,7 +814,7 @@
     ],
     "shown": "8504 90 17",
     "ex": false,
-    "text": "Parts of transformers and inductors, n.e.s. (excl. ferrite cores and steel laminations and cores) 쪽 95"
+    "text": "Parts of transformers and inductors, n.e.s. (excl. ferrite cores and steel laminations and cores)"
    },
    {
     "codes": [
@@ -838,7 +838,7 @@
     ],
     "shown": "8708 22 10",
     "ex": false,
-    "text": "Front windscreens \"windshields\", rear windows and other windows for motor vehicles of headings 8701 to 8705, for the industrial assembly of: Pedestrian-controlled tractors of subheading 870110;Vehicles of heading 8703; Vehicles of heading 8704 with either a compression-ignition internal combustion piston engine \"diesel or semi-diesel\" of a cylinder capacity <= 2500 cm3 or with a spark-ignition internal combustion piston engine of a cylinder capacity <= 2800 cm3; Vehicles of heading 8705 쪽 96"
+    "text": "Front windscreens \"windshields\", rear windows and other windows for motor vehicles of headings 8701 to 8705, for the industrial assembly of: Pedestrian-controlled tractors of subheading 870110;Vehicles of heading 8703; Vehicles of heading 8704 with either a compression-ignition internal combustion piston engine \"diesel or semi-diesel\" of a cylinder capacity <= 2500 cm3 or with a spark-ignition internal combustion piston engine of a cylinder capacity <= 2800 cm3; Vehicles of heading 8705"
    },
    {
     "codes": [
@@ -854,7 +854,7 @@
     ],
     "shown": "8708 29 10",
     "ex": false,
-    "text": "Parts and accessories for the industrial assembly of bodies of: pedestrian-controlled tractors, motor cars and vehicles principally designed for the transport of persons, vehicles for the transport of goods with compression-ignition internal combustion piston engine \"diesel or semi-diesel engine\" <= 2500 cm³ or spark-ignition internal piston engine <= 2800 cm³; special purpose motor vehicles of No 8705 (excl. bumpers, safety seat belts and front windscreens \"windshields\", rear windows and other windows) 쪽 97"
+    "text": "Parts and accessories for the industrial assembly of bodies of: pedestrian-controlled tractors, motor cars and vehicles principally designed for the transport of persons, vehicles for the transport of goods with compression-ignition internal combustion piston engine \"diesel or semi-diesel engine\" <= 2500 cm³ or spark-ignition internal piston engine <= 2800 cm³; special purpose motor vehicles of No 8705 (excl. bumpers, safety seat belts and front windscreens \"windshields\", rear windows and other windows)"
    },
    {
     "codes": [
@@ -878,7 +878,7 @@
     ],
     "shown": "8708 30 91",
     "ex": false,
-    "text": "Parts for disc brakes, for tractors, motor vehicles for the transport of ten or more persons, motor cars and other motor vehicles principally designed for the transport of persons, motor vehicles for the transport of goods and special purpose motor vehicles, n.e.s. (excl. those for the industrial assembly of certain motor vehicles of subheading 8708.30.10) 쪽 98"
+    "text": "Parts for disc brakes, for tractors, motor vehicles for the transport of ten or more persons, motor cars and other motor vehicles principally designed for the transport of persons, motor vehicles for the transport of goods and special purpose motor vehicles, n.e.s. (excl. those for the industrial assembly of certain motor vehicles of subheading 8708.30.10)"
    },
    {
     "codes": [
@@ -894,7 +894,7 @@
     ],
     "shown": "8708 50 20",
     "ex": false,
-    "text": "Drive-axles with differential, whether or not provided with other transmission components, and non-driving axles, and parts thereof, for the industrial assembly of: pedestrian- controlled tractors, motor cars and vehicles principally designed for the transport of persons, vehicles for the transport of goods with compression-ignition internal combustion piston engine \"diesel or semi-diesel engine\" <= 2500 cm³ or with spark-ignition internal piston engine <= 2800 cm³, special purpose motor vehicles of heading 8705, n.e.s"
+    "text": "Drive-axles with differential, whether or not provided with other transmission components, and non-driving axles, and parts thereof, for the industrial assembly of: pedestrian-controlled tractors, motor cars and vehicles principally designed for the transport of persons, vehicles for the transport of goods with compression-ignition internal combustion piston engine \"diesel or semi-diesel engine\" <= 2500 cm³ or with spark-ignition internal piston engine <= 2800 cm³, special purpose motor vehicles of heading 8705, n.e.s"
    },
    {
     "codes": [
@@ -902,7 +902,7 @@
     ],
     "shown": "8708 50 35",
     "ex": false,
-    "text": "Drive-axles with differential, whether or not provided with other transmission components, and non-driving axles, for tractors, motor vehicles for the transport of ten or more persons, motor cars and other motor vehicles principally designed for the transport of persons, motor vehicles for the transport of goods and special purpose motor vehicles (excl. those for the industrial assembly of certain motor vehicles of subheading 8708.50.20) 쪽 99"
+    "text": "Drive-axles with differential, whether or not provided with other transmission components, and non-driving axles, for tractors, motor vehicles for the transport of ten or more persons, motor cars and other motor vehicles principally designed for the transport of persons, motor vehicles for the transport of goods and special purpose motor vehicles (excl. those for the industrial assembly of certain motor vehicles of subheading 8708.50.20)"
    },
    {
     "codes": [
@@ -910,7 +910,7 @@
     ],
     "shown": "8708 50 55",
     "ex": false,
-    "text": "Parts for drive-axles with differential, whether or not provided with other transmission components, and for non- driving axles, of closed-die forged steel, for tractors, motor vehicles for the transport of ten or more persons, motor cars and other motor vehicles principally designed for the transport of persons, motor vehicles for the transport of goods and special purpose motor vehicles, n.e.s. (excl. those for the industrial assembly of certain motor vehicles of subheading 8708.50.20)"
+    "text": "Parts for drive-axles with differential, whether or not provided with other transmission components, and for non-driving axles, of closed-die forged steel, for tractors, motor vehicles for the transport of ten or more persons, motor cars and other motor vehicles principally designed for the transport of persons, motor vehicles for the transport of goods and special purpose motor vehicles, n.e.s. (excl. those for the industrial assembly of certain motor vehicles of subheading 8708.50.20)"
    },
    {
     "codes": [
@@ -926,7 +926,7 @@
     ],
     "shown": "8708 50 99",
     "ex": false,
-    "text": "Parts for drive-axles with differential, whether or not provided with other transmission components, for tractors, motor vehicles for the transport of ten or more persons, motor cars and other motor vehicles principally designed for the transport of persons, motor vehicles for the transport of goods and special purpose motor vehicles, n.e.s. (excl. those for the industrial assembly of certain motor vehicles of subheading 8708.50.20, for non-driving axles and of closed-die forged steel) 쪽 100"
+    "text": "Parts for drive-axles with differential, whether or not provided with other transmission components, for tractors, motor vehicles for the transport of ten or more persons, motor cars and other motor vehicles principally designed for the transport of persons, motor vehicles for the transport of goods and special purpose motor vehicles, n.e.s. (excl. those for the industrial assembly of certain motor vehicles of subheading 8708.50.20, for non-driving axles and of closed-die forged steel)"
    },
    {
     "codes": [
@@ -934,7 +934,7 @@
     ],
     "shown": "8708 92 20",
     "ex": false,
-    "text": "Silencers \"mufflers\" and exhaust pipes, and parts thereof, for the industrial assembly of: pedestrian-controlled tractors, motor cars and vehicles principally designed for the transport of persons, vehicles for the transport of goods with compression-ignition internal combustion piston engine \"diesel or semi-diesel engine\" <= 2500 cm³ or with spark- ignition internal piston engine <= 2800 cm³, special purpose motor vehicles of heading 8705, n.e.s"
+    "text": "Silencers \"mufflers\" and exhaust pipes, and parts thereof, for the industrial assembly of: pedestrian-controlled tractors, motor cars and vehicles principally designed for the transport of persons, vehicles for the transport of goods with compression-ignition internal combustion piston engine \"diesel or semi-diesel engine\" <= 2500 cm³ or with spark-ignition internal piston engine <= 2800 cm³, special purpose motor vehicles of heading 8705, n.e.s"
    },
    {
     "codes": [
@@ -950,7 +950,7 @@
     ],
     "shown": "8708 92 91",
     "ex": false,
-    "text": "Parts for silencers \"mufflers\" and exhaust pipes, of closed-die forged steel, for tractors, motor vehicles for the transport of ten or more persons, motor cars and other motor vehicles principally designed for the transport of persons, motor vehicles for the transport of goods and special purpose motor vehicles, n.e.s. (excl. those for the industrial assembly of certain motor vehicles of subheading 8708.92.20) 쪽 101"
+    "text": "Parts for silencers \"mufflers\" and exhaust pipes, of closed-die forged steel, for tractors, motor vehicles for the transport of ten or more persons, motor cars and other motor vehicles principally designed for the transport of persons, motor vehicles for the transport of goods and special purpose motor vehicles, n.e.s. (excl. those for the industrial assembly of certain motor vehicles of subheading 8708.92.20)"
    },
    {
     "codes": [
@@ -974,7 +974,7 @@
     ],
     "shown": "8708 93 90",
     "ex": false,
-    "text": "Clutches and parts thereof, for tractors, motor vehicles for the transport of ten or more persons, motor cars and other motor vehicles principally designed for the transport of persons, motor vehicles for the transport of goods and special purpose motor vehicles, n.e.s. (excl. those for the industrial assembly of certain motor vehicles of subheading 8708.93.10) 쪽 102"
+    "text": "Clutches and parts thereof, for tractors, motor vehicles for the transport of ten or more persons, motor cars and other motor vehicles principally designed for the transport of persons, motor vehicles for the transport of goods and special purpose motor vehicles, n.e.s. (excl. those for the industrial assembly of certain motor vehicles of subheading 8708.93.10)"
    },
    {
     "codes": [
@@ -998,7 +998,7 @@
     ],
     "shown": "8708 94 91",
     "ex": false,
-    "text": "Parts for steering wheels, steering columns and steering boxes, of closed-die forged steel, for tractors, motor vehicles for the transport of ten or more persons, motor cars and other motor vehicles principally designed for the transport of persons, motor vehicles for the transport of goods and special purpose motor vehicles, n.e.s. (excl. those for the industrial assembly of certain motor vehicles of subheading 8708.94.20) 쪽 103"
+    "text": "Parts for steering wheels, steering columns and steering boxes, of closed-die forged steel, for tractors, motor vehicles for the transport of ten or more persons, motor cars and other motor vehicles principally designed for the transport of persons, motor vehicles for the transport of goods and special purpose motor vehicles, n.e.s. (excl. those for the industrial assembly of certain motor vehicles of subheading 8708.94.20)"
    },
    {
     "codes": [
@@ -1022,7 +1022,7 @@
     ],
     "shown": "8708 99 93",
     "ex": false,
-    "text": "Parts and accessories of closed-die forged steel, for tractors, motor vehicles for the transport of ten or more persons, motor cars and other motor vehicles principally designed for the transport of persons, motor vehicles for the transport of goods and special purpose motor vehicles, n.e.s. 쪽 104"
+    "text": "Parts and accessories of closed-die forged steel, for tractors, motor vehicles for the transport of ten or more persons, motor cars and other motor vehicles principally designed for the transport of persons, motor vehicles for the transport of goods and special purpose motor vehicles, n.e.s."
    },
    {
     "codes": [
@@ -1070,7 +1070,7 @@
     ],
     "shown": "8716 39 30",
     "ex": false,
-    "text": "Semi-trailers for the transport of goods, new (excl. self- loading or self-unloading semi-trailers for agricultural purposes, tanker semi-trailers, and semi-trailers not designed for running on rails for the transport of highly radioactive materials [Euratom])"
+    "text": "Semi-trailers for the transport of goods, new (excl. self-loading or self-unloading semi-trailers for agricultural purposes, tanker semi-trailers, and semi-trailers not designed for running on rails for the transport of highly radioactive materials [Euratom])"
    },
    {
     "codes": [
@@ -1078,7 +1078,7 @@
     ],
     "shown": "8716 39 50",
     "ex": false,
-    "text": "Trailers for the transport of goods, new (excl. self-loading or self-unloading trailers for agricultural purposes, tanker trailers, and trailers designed for the transport of highly radioactive materials) 쪽 105"
+    "text": "Trailers for the transport of goods, new (excl. self-loading or self-unloading trailers for agricultural purposes, tanker trailers, and trailers designed for the transport of highly radioactive materials)"
    },
    {
     "codes": [
@@ -1166,7 +1166,7 @@
     ],
     "shown": "8202 10 00",
     "ex": false,
-    "text": "Handsaws, with working parts of base metal (excl. power- operated saws) 쪽 106"
+    "text": "Handsaws, with working parts of base metal (excl. power-operated saws)"
    },
    {
     "codes": [
@@ -1238,7 +1238,7 @@
     ],
     "shown": "8403 10 10",
     "ex": false,
-    "text": "Central heating boilers, non-electric, of cast iron (excl. vapour generating boilers and superheated water boilers of heading 8402) 쪽 107"
+    "text": "Central heating boilers, non-electric, of cast iron (excl. vapour generating boilers and superheated water boilers of heading 8402)"
    },
    {
     "codes": [
@@ -1334,7 +1334,7 @@
     ],
     "shown": "8411 82 60",
     "ex": false,
-    "text": "Gas turbines of a power > 20.000 kW but <= 50.000 kW (excl. turbojets and turbopropellers) 쪽 108"
+    "text": "Gas turbines of a power > 20.000 kW but <= 50.000 kW (excl. turbojets and turbopropellers)"
    },
    {
     "codes": [
@@ -1382,7 +1382,7 @@
     ],
     "shown": "8417 80 70",
     "ex": false,
-    "text": "Industrial or laboratory furnaces, incl. incinerators, non- electric (excl. for the roasting, melting or other heat treatment of ores, pyrites or metals, bakery ovens, ovens and furnaces for firing ceramic products, ovens and furnaces for firing cement, glass or chemical products, drying ovens and ovens for cracking operations)"
+    "text": "Industrial or laboratory furnaces, incl. incinerators, non-electric (excl. for the roasting, melting or other heat treatment of ores, pyrites or metals, bakery ovens, ovens and furnaces for firing ceramic products, ovens and furnaces for firing cement, glass or chemical products, drying ovens and ovens for cracking operations)"
    },
    {
     "codes": [
@@ -1422,7 +1422,7 @@
     ],
     "shown": "8418 40 80",
     "ex": false,
-    "text": "Freezers of the upright type, of a capacity > 250 l but <= 900 l 쪽 109"
+    "text": "Freezers of the upright type, of a capacity > 250 l but <= 900 l"
    },
    {
     "codes": [
@@ -1510,7 +1510,7 @@
     ],
     "shown": "8501 20 00",
     "ex": false,
-    "text": "Universal AC-DC motors of an output > 37,5 W 쪽 110"
+    "text": "Universal AC-DC motors of an output > 37,5 W"
    },
    {
     "codes": [
@@ -1590,7 +1590,7 @@
     ],
     "shown": "8503 00 10",
     "ex": false,
-    "text": "Non-magnetic retaining rings for electric motors and electric generating sets 쪽 111"
+    "text": "Non-magnetic retaining rings for electric motors and electric generating sets"
    },
    {
     "codes": [
@@ -1640,7 +1640,7 @@
     ],
     "shown": "ex 9018 90 84",
     "ex": true,
-    "text": "Other instruments and appliances, containing steel or aluminium 쪽 112"
+    "text": "Other instruments and appliances, containing steel or aluminium"
    }
   ]
  },

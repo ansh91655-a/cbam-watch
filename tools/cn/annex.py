@@ -85,7 +85,11 @@ def between(lines, start, end):
     return lines[begin + 1:finish]
 
 
-PAGE_MARK = re.compile(r"^(\[쪽 \d+\]|\d+/\d+ \d+|[A-Z]+\.\d\.[A-Z] EN)$")  # PDF에서 뽑은 글에 끼어 있는 쪽 머리
+# PDF에서 뽑은 글에 끼어 있는 쪽 머리. 쪽 표시의 대괄호는 clean이 떼어 내므로 있든 없든 맞춘다(없는 꼴을 놓치면 "쪽 85"가 앞 품목의 이름에 붙는다).
+PAGE_MARK = re.compile(r"^(\[?쪽 \d+\]?|\d+/\d+ \d+|[A-Z]+\.\d\.[A-Z] EN)$")
+# 줄 끝에서 붙임표로 나뉜 낱말('hot-' / 'worked'). 다음 줄이 소문자로 시작하면 빈칸 없이 잇는다. 'hot- or cold-rolled'처럼 뒤가 or, and인 것은 원래 띄어 쓴 것이다.
+SPLIT_WORD = re.compile(r"[A-Za-z]-$")
+JOINED = re.compile(r"^(?!(?:or|and)\b)[a-z]")
 PLAIN_CODE = re.compile(r"^(?P<ex>ex\s*-?\s*)?(?P<code>\d{8}|\d{4} \d{2} \d{2}|\d{4} \d{2})\b\s*(?:–|-)?\s*(?P<text>.*)$")
 
 
@@ -105,5 +109,6 @@ def code_list(lines):
             shown = " ".join([code[:4], code[4:6], code[6:8]]).strip()
             entries.append({"codes": [code], "shown": ("ex " if match.group("ex") else "") + shown, "ex": bool(match.group("ex")), "text": match.group("text").strip()})
         elif entries:
-            entries[-1]["text"] = (entries[-1]["text"] + " " + line).strip()
+            before = entries[-1]["text"]
+            entries[-1]["text"] = (before + ("" if SPLIT_WORD.search(before) and JOINED.match(line) else " ") + line).strip()
     return entries

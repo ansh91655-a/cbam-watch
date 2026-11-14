@@ -3,6 +3,7 @@ import datetime
 import json
 import os
 import pathlib
+import re
 import shutil
 import subprocess
 import tempfile
@@ -78,6 +79,30 @@ class AnnexTest(unittest.TestCase):
 
 
 @unittest.skipUnless(shutil.which("node"), "node가 없으면 화면의 셈은 시험하지 않는다")
+class CodeListTest(unittest.TestCase):
+    """표 없이 이어진 코드 목록(이사회 문서): 쪽 머리는 품목의 이름에 섞이지 않고, 줄 끝에서 나뉜 낱말은 다시 붙는다."""
+
+    LINES = ["73201090", "Leaf-springs and leaves therefor, of iron or steel (excl. hot-", "worked)", "[쪽 85]", "10423/26 85", "ECOFIN.2.B EN",
+             "73202020", "Helical springs, of iron or steel, hot-worked (excl. flat spiral", "springs)",
+             "72111400 Flat-rolled products, hot- or cold-rolled, not further worked than hot-", "or cold-rolled"]
+
+    def test_page_headers_are_skipped_and_a_split_word_is_joined(self):
+        found = annex.code_list(self.LINES)
+        self.assertEqual([entry["codes"] for entry in found], [["73201090"], ["73202020"], ["72111400"]])
+        self.assertEqual(found[0]["text"], "Leaf-springs and leaves therefor, of iron or steel (excl. hot-worked)")
+        self.assertEqual(found[1]["text"], "Helical springs, of iron or steel, hot-worked (excl. flat spiral springs)")
+        # 'hot- or cold-rolled'은 원래 띄어 쓴 것이다. 줄이 바뀐 곳이어도 붙이지 않는다
+        self.assertEqual(found[2]["text"], "Flat-rolled products, hot- or cold-rolled, not further worked than hot- or cold-rolled")
+
+    def test_the_published_council_list_carries_no_page_marks(self):
+        with open("data/cn.json", encoding="utf-8") as handle:
+            council = json.load(handle)["council"]
+        texts = [entry["text"] for key in ("added", "removed") for entry in council[key]]
+        self.assertFalse([text for text in texts if re.search(r"쪽 \d+", text)])
+        # 줄 끝에서 나뉜 낱말이 다시 붙었는지(원문이 한 줄 안에서 'non- powered'처럼 띄어 적은 곳은 그대로 둔다)
+        self.assertIn("Leaf-springs and leaves therefor, of iron or steel (excl. hot-worked)", texts)
+
+
 class MatchTest(unittest.TestCase):
     def states(self, queries):
         entries = annex.tables(annex.between(SAMPLE, "ANNEX I", "ANNEX II"))
