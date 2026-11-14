@@ -98,3 +98,13 @@ def everything(history=False):
         from tools.laws import revisions  # revisions가 이 모듈을 들이므로 여기서 들인다
         found += revisions.history(found)
     return found, store.load_all()
+
+
+def published():
+    """사이트에 싣는 것: [(문서, 조각들)]과, 검수를 거친 번역만 남긴 {열쇠: 국문}.
+
+    한 번도 검수하지 않은 번역은 싣지 않는다(화면에는 '번역 준비 중'으로 보인다). 검수를 마친 뒤에 고친 번역은 다시 검수하기 전에도 싣는다(tools.laws.store).
+    """
+    found, memory = everything()
+    ready = store.reviewed_all()
+    return found, {block_key: text for block_key, text in memory.items() if block_key in ready}

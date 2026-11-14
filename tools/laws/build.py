@@ -87,7 +87,7 @@ def search_rows(act_id, found, memory):
 def write(data_out):
     """data_out(사이트의 data 폴더) 아래 laws/에 자료를 쓰고, 문서의 수를 돌려준다."""
     folder = pathlib.Path(data_out) / "laws"
-    documents, memory = corpus.everything()
+    documents, memory = corpus.published()   # 검수를 거친 번역만 싣는다
     documents = [(act, found) for act, found in documents if found]
     bodies = [body(act, found, memory) for act, found in documents]
     changed = revisions.write(folder, documents, memory)   # 앞선 판과 달라진 곳(문서마다의 파일)과, 목록에 실을 한 줄

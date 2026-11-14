@@ -1,10 +1,11 @@
 // 문서 하나(법령이나 EU 집행위원회가 낸 문서)의 원문과 국문 번역을 문단마다 나란히 보는 화면.
 // #law-<문서 id>.<조각> 꼴의 주소로 조문이나 절 하나를, #law-<문서 id>.<조각>.<몇 번째> 꼴로 문단 하나를 바로 가리킬 수 있다.
-// 보는 방식은 셋이다: 나란히, 원문만, 국문만. 아직 옮기지 않은 문단은 원문만 보인다.
+// 보는 방식은 셋이다: 나란히, 원문만, 국문만. 실린 번역이 없는 문단은 원문만 보이고 번역 자리에 '번역 준비 중'이라고 적힌다(퍼센트는 보여 주지 않는다).
 // 문단과 조각마다 '인용 복사'가 있다: 원문, 국문, 출처(문서·조·쪽), 주소를 한 번에 복사한다(laws/cite.js).
 import * as data from "../data.js";
 import { rowId, rows as blockRows } from "../laws/blocks.js";
 import { citeBlock, citePart } from "../laws/cite.js";
+import { translation } from "../laws/ready.js";
 import { recent } from "../laws/recent.js";
 import { dutyHref, linkedTo, tally, termHref } from "../laws/refs.js";
 import { band } from "../ui/band.js";
@@ -34,8 +35,15 @@ const BACK_MS = 2000;    // 복사했다는 표시를 되돌리는 시간
 const FLASH_MS = 2600;   // 주소로 가리킨 문단을 표시해 두는 시간
 const isAct = (act) => (act.group || "act") === "act";
 
-function note(act, done) {
-  const lead = `국문은 이 사이트가 옮긴 비공식 번역입니다(지금 ${done}%).`;
+// 번역이 준비된 정도에 따라 머리의 안내가 달라진다(퍼센트는 적지 않는다)
+const LEADS = {
+  ready: "국문은 이 사이트가 옮긴 비공식 번역입니다.",
+  partial: "국문은 이 사이트가 옮긴 비공식 번역입니다. 검수를 마친 번역만 싣고, 아직 준비하지 못한 문단은 ‘번역 준비 중’으로 표시합니다.",
+  none: "이 문서의 국문 번역은 준비 중입니다. 지금은 원문만 실려 있습니다.",
+};
+
+function note(act, state) {
+  const lead = LEADS[state];
   if (!isAct(act)) return `${lead} ${NATURE[act.group] || NATURE.guide}`;
   return `${lead} 법적 효력은 유럽연합 관보에 실린 원문에 있습니다.${act.consolidated ? " 통합본은 여러 개정을 한데 모은 참고용 문서입니다." : ""}`;
 }
@@ -115,7 +123,9 @@ function formulaNote(part, source) {
 function section(part, target, needles, piece, paged, source, linked) {
   const here = part.id === target;
   const rows = blockRows(part, here ? needles : [], citeTool(part));
-  const waiting = part.blocks.length && part.blocks.every(([en, ko]) => !ko);
+  const missing = part.blocks.filter(([en, ko]) => !ko).length;
+  const waiting = part.blocks.length && missing === part.blocks.length;
+  const some = missing > 0 && !waiting;
   if (part.kind === "division") return h("div", { class: "law-division", id: `p-${part.id}` }, heading(part));
   if (FOLDED[part.kind]) {
     // 접어 둔 조각에는 머리가 없다. 펼친 안쪽에 조각을 통째로 인용하는 단추를 둔다(문단의 단추는 자판의 차례에 없다)
@@ -125,7 +135,9 @@ function section(part, target, needles, piece, paged, source, linked) {
       h("summary", {}, [h("span", { text: FOLDED[part.kind] }), h("span", { class: "count", text: `문단 ${count(part.blocks.length)}개` })]), citeAll, ...rows]);
   }
   return h("section", { class: "law-part", id: `p-${part.id}`, "data-here": here ? "" : null, "data-waiting": waiting ? "" : null }, [
-    heading(part, paged, part.blocks.length > 0), waiting ? h("p", { class: "law-wait-note", text: `이 ${piece}은 아직 국문으로 옮기지 않았습니다. 원문만 보입니다.` }) : null,
+    heading(part, paged, part.blocks.length > 0),
+    waiting ? h("p", { class: "law-wait-note", text: `이 ${piece}의 국문 번역은 준비 중입니다. 원문만 보입니다.` }) : null,
+    some ? h("p", { class: "law-wait-note", text: `이 ${piece}의 일부 문단은 번역 준비 중입니다. 그 문단은 원문만 보입니다.` }) : null,
     formulaNote(part, source), ...rows,
     cutNote(part, source), linkedBlock(linked, LINKED_NAMES[part.kind] || "이 부분과 이어진 내용")]);
 }
@@ -192,15 +204,16 @@ export async function render(main, arg) {
   document.body.dataset.wide = "";
   const needles = target ? recent.needles : [];
   const words = isAct(act) ? WORDS.act : WORDS.doc;
-  const body = h("div", { class: "law-body", "data-mode": recent.mode }, act.parts.map((part) => section(part, target, needles, words.piece, pdfs[act.id] ? act.id : "", act.url, linkedTo(refs, act.id, part.id))));
+  const state = translation(act.progress);
+  const mode = state === "none" ? "en" : recent.mode;   // 실린 번역이 없으면 원문만 본다(보는 방식을 고르는 단추도 두지 않는다)
+  const body = h("div", { class: "law-body", "data-mode": mode }, act.parts.map((part) => section(part, target, needles, words.piece, pdfs[act.id] ? act.id : "", act.url, linkedTo(refs, act.id, part.id))));
   const said = h("p", { class: "sr", role: "status", "aria-live": "polite" });  // 복사했는지를 화면 낭독기에 알린다
   wireCite(body, act, said);
-  const buttons = MODES.map(([key, text]) => h("button", { type: "button", text, "aria-pressed": String(key === recent.mode), onclick: () => {
+  const buttons = MODES.map(([key, text]) => h("button", { type: "button", text, "aria-pressed": String(key === mode), onclick: () => {
     recent.mode = key;
     body.dataset.mode = key;
     buttons.forEach((button, index) => button.setAttribute("aria-pressed", String(MODES[index][0] === key)));
   } }));
-  const done = act.progress.chars ? Math.round((100 * act.progress.doneChars) / act.progress.chars) : 100;
   const picker = h("select", { id: "law-pick", onchange: (event) => { location.hash = `#law-${event.target.value}`; } },
     PICK_GROUPS.map(([key, label]) => h("optgroup", { label }, acts.filter((other) => (other.group || "act") === key)
       .map((other) => h("option", { value: other.id, selected: other.id === act.id || null, text: other.name })))));
@@ -211,12 +224,12 @@ export async function render(main, arg) {
       h("p", { class: "crumbs" }, [h("a", { href: "#laws", text: "규정 원문" }), h("span", { text: "›" }), h("span", { text: act.name })]),
       h("div", { class: "law-tools" }, [
         h("label", { class: "field", for: "law-pick" }, [h("span", { text: "문서" }), picker]),
-        h("div", { class: "field" }, [h("span", { text: "보는 방식" }), h("div", { class: "seg", role: "group", "aria-label": "보는 방식" }, buttons)]),
+        state === "none" ? null : h("div", { class: "field" }, [h("span", { text: "보는 방식" }), h("div", { class: "seg", role: "group", "aria-label": "보는 방식" }, buttons)]),
       ]),
     ]),
     h("div", { class: "law-note" }, [
       act.remark ? h("p", { class: "law-remark", text: act.remark }) : null,
-      h("p", { text: note(act, done) }),
+      h("p", { text: note(act, state) }),
       h("p", { class: "law-note-links" }, [
         pdfs[act.id] ? h("a", { href: `#pdf-${act.id}`, text: "원문과 번역을 PDF로 나란히 보기" }) : null,
         changed,

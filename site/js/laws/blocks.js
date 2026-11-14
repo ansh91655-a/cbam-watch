@@ -15,7 +15,7 @@ function marked(text, needles) {
 function pair([en, ko], needles) {
   return [
     h("p", { class: "law-en", lang: "en" }, marked(en, needles)),
-    ko ? h("p", { class: "law-ko" }, marked(ko, needles)) : h("p", { class: "law-ko law-wait", "aria-hidden": "true" }),
+    ko ? h("p", { class: "law-ko" }, marked(ko, needles)) : h("p", { class: "law-ko law-wait" }, h("span", { class: "pill", text: "번역 준비 중" })),
   ];
 }
 

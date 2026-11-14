@@ -68,7 +68,7 @@ def write(out):
     listing.parent.mkdir(parents=True, exist_ok=True)
     docs, failed = {}, []
     from tools.laws import corpus
-    documents, memory = corpus.everything()
+    documents, memory = corpus.published()   # 검수를 거친 번역만 앉힌다
     # 도안으로 된 자료(sources/guides.json에 "side": false로 적은 문서)는 싣지 않는다: 그림으로 박힌 제목 위에 번역이 겹치고
     # 기관의 표지가 그대로 남아, 공식 문서처럼 보이지 않게 해야 하는 번역본의 조건을 채우지 못한다. 글로 보기에는 그대로 실린다.
     documents = [(document, parts) for document, parts in documents if document.get("side", True)]
@@ -83,6 +83,10 @@ def write(out):
         code = _code()
         for document, parts in documents:
             if document.get("format") != "pdf" or not parts:
+                continue
+            state = corpus.progress(parts, memory)
+            if state["done"] < state["blocks"]:
+                wanted.remove(document["id"])  # 번역이 다 준비되지 않은 문서의 국문 PDF는 싣지 않는다(원문과 번역이 섞인 PDF를 내지 않는다)
                 continue
             try:
                 made, report = _made(document, parts, memory, code)

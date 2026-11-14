@@ -4,8 +4,11 @@
 - 법령이 고쳐져 통합본이 새로 나와도 글자가 그대로인 문단의 번역은 남고, 바뀐 문단만 번역이 없는 상태가 된다.
 - 여러 법령에 똑같이 나오는 문단(맺음말, 표의 머리 글자)은 한 번만 옮기면 모든 곳에 실린다.
 
-파일은 {"act", "updated": 번역이 마지막으로 더해진 날, "blocks": {열쇠: 국문}, "checked": [검수를 마친 열쇠], "held": {열쇠: {"tries", "why"}}} 꼴이다.
+파일은 {"act", "updated": 번역이 마지막으로 더해진 날, "blocks": {열쇠: 국문}, "checked": [검수를 마친 열쇠], "passed": [열쇠], "held": {열쇠: {"tries", "why"}}} 꼴이다.
 checked는 번역한 실행과 다른 실행이 원문과 견줘 본 문단이다(tools.laws.verify). 번역이 바뀐 문단은 checked에서 빠진다.
+passed는 검수를 마친 번역을 그 뒤에 고친 문단이다(용어를 맞추거나 같은 문장의 번역을 하나로 맞춘 것). 다시 검수를 마치면 checked로 돌아간다.
+사이트에는 checked와 passed의 번역만 실린다(reviewed_all). 한 번도 검수하지 않은 번역은 싣지 않고 '번역 준비 중'으로 보인다.
+번역이 지워진 문단(검수에서 틀린 것으로 본 것)은 둘 다에서 빠지므로, 다시 옮긴 번역은 검수를 마쳐야 실린다.
 held는 검사(tools.laws.check)에 걸려 넣지 못한 문단과 걸린 횟수, 마지막 까닭이다(tools.laws.apply가 적는다). 번역이 들어가면 빠진다.
 걸린 문단은 번역이 없으므로 줄의 맨 앞에 남아 묶음마다 다시 나온다. 그런 문단이 쌓여 묶음을 채우면 번역이 더 나아가지 못하므로,
 HOLD_AFTER번 걸린 문단은 다른 문단을 모두 옮긴 뒤로 돌리고(tools.laws.todo), 그때도 걸려 GIVE_UP번이 되면 더 주지 않는다(사람이 본다).
@@ -62,6 +65,15 @@ def checked_all():
     return found
 
 
+def reviewed_all():
+    """사이트에 실어도 되는 번역의 열쇠들: 검수를 마친 것(checked)과, 검수를 마친 뒤에 고쳐 다시 검수를 기다리는 것(passed)."""
+    found = set()
+    for path in sorted(pathlib.Path(FOLDER).glob("*.json")):
+        body = read_json(path, {}) or {}
+        found |= set(body.get("checked", [])) | set(body.get("passed", []))
+    return found
+
+
 def held_all():
     """검사에 걸려 넣지 못한 문단: {열쇠: {"tries": 걸린 횟수, "why": 마지막 까닭}}. 여러 문서에 적혀 있으면 많이 걸린 쪽을 본다."""
     found = {}
@@ -83,6 +95,8 @@ def hold(act_id, block_key, why):
     body["blocks"] = dict(sorted((current.get("blocks", {}) or {}).items()))
     if current.get("checked"):
         body["checked"] = sorted(current["checked"])
+    if current.get("passed"):
+        body["passed"] = sorted(current["passed"])
     body["held"] = dict(sorted(held.items()))
     write_json(path_of(act_id), body)
     return held[block_key]["tries"]
@@ -93,14 +107,19 @@ def save(act_id, blocks, day=None, checked=None):
 
     검수를 마친 열쇠(checked)는 그대로 둔다. 다만 번역이 바뀌었거나 없어진 문단은 검수하지 않은 것으로 돌린다(다시 견줘 보게).
     checked를 주면 그것을 검수를 마친 열쇠로 적는다(tools.laws.verify가 쓴다).
+    검수를 마친 번역을 고친 문단은 passed에 남긴다: 다시 검수할 때까지도 사이트에 실린다(머리 설명). 번역이 없어진 문단은 남기지 않는다.
     """
     current = read_json(path_of(act_id), {}) or {}
     before = current.get("blocks", {})
-    marks = set(current.get("checked", [])) if checked is None else set(checked)
+    was_checked = set(current.get("checked", []))
+    marks = was_checked if checked is None else set(checked)
     marks = {block_key for block_key in marks if block_key in blocks and before.get(block_key, blocks[block_key]) == blocks[block_key]}
+    once = {block_key for block_key in (set(current.get("passed", [])) | was_checked) - marks if block_key in blocks}
     body = {"act": act_id, "updated": day or today(), "blocks": dict(sorted(blocks.items()))}
     if marks:
         body["checked"] = sorted(marks)
+    if once:
+        body["passed"] = sorted(once)
     held = {block_key: row for block_key, row in (current.get("held", {}) or {}).items() if block_key not in blocks}  # 번역이 들어간 문단은 뺀다
     if held:
         body["held"] = dict(sorted(held.items()))

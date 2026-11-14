@@ -1,4 +1,4 @@
-"""화면 모듈 가운데 화면 요소를 다루지 않아 브라우저 없이 볼 수 있는 것: 국내 공지·자료 가르기(js/news/notices.js),
+"""화면 모듈 가운데 화면 요소를 다루지 않아 브라우저 없이 볼 수 있는 것: 국내 공지·자료 가르기(js/news/notices.js), 번역이 준비된 정도(js/laws/ready.js),
 문단 인용의 글(js/laws/cite.js), 낱말 단위로 달라진 곳 찾기(js/laws/worddiff.js), 의무를 역할로 고르기(js/calendar/roles.js),
 규정 원문과 그것을 적은 글을 잇는 주소(js/laws/refs.js), 부문별 모아 보기의 글(js/sector/facts.js), 최근 소식 가리기(js/news/recent.js)."""
 import json
@@ -9,6 +9,7 @@ import unittest
 SCRIPT = r"""
 import { forRole, roleIn, roleTarget, tally } from './site/js/calendar/roles.js';
 import { address, citeBlock, citePart, partName, source } from './site/js/laws/cite.js';
+import { translation, waitLabel } from './site/js/laws/ready.js';
 import { dutyHref, lawHref, linkedTo, tally as linkedTally, termHref } from './site/js/laws/refs.js';
 import { wordDiff } from './site/js/laws/worddiff.js';
 import { isNotice, NOTICES, split } from './site/js/news/notices.js';
@@ -79,6 +80,8 @@ console.log(JSON.stringify({
     picked: forRole(duties, 'verifier').map((duty) => duty.id), all: forRole(duties, '').map((duty) => duty.id), none: forRole(null, 'verifier'),
     tally: tally(duties, roles).map((role) => [role.key, role.name, role.size]),
   },
+  ready: { states: [{ blocks: 10, done: 10 }, { blocks: 10, done: 4 }, { blocks: 10, done: 0 }, { blocks: 0, done: 0 }, null, { blocks: 3, done: 5 }].map(translation),
+    labels: [{ blocks: 10, done: 10 }, { blocks: 10, done: 4 }, { blocks: 10, done: 0 }].map(waitLabel) },
   notices: { name: NOTICES, ids: parts.notices.map((item) => item.id), news: parts.news.map((item) => item.id), empty: split(null), one: isNotice(null) },
   recent: { name: RECENT, days: RECENT_DAYS, periods: PERIODS,
     seen: ['2026-11-13', '2026-10-14', '2026-10-13', '2026-11-20', '', 'soon', '2026-10-14T09:00:00+09:00'].map((date) => within(date, '2026-11-13')),
@@ -95,6 +98,15 @@ class SiteModulesTest(unittest.TestCase):
         if done.returncode:
             raise AssertionError(done.stderr[-1500:])
         cls.seen = json.loads(done.stdout)
+
+    def test_translation_state_is_told_without_a_percentage(self):
+        # 사이트에는 검수를 마친 번역만 실린다. 다 실린 문서에는 표시가 없고, 그렇지 않은 문서에만 '번역 준비 중'이라고 적는다
+        ready = self.seen["ready"]
+        self.assertEqual(ready["states"], ["ready", "partial", "none", "ready", "ready", "ready"])
+        self.assertEqual(ready["labels"], ["", "일부 번역 준비 중", "번역 준비 중"])
+        for path in ("site/js/views/laws.js", "site/js/views/law.js", "site/js/views/search/hits.js"):
+            with open(path, encoding="utf-8") as file:
+                self.assertNotRegex(file.read(), r"국문 번역 \$\{[^}]*\}%", path)   # 퍼센트를 화면에 적지 않는다
 
     def test_recent_news_is_counted_and_listed_by_one_rule(self):
         recent = self.seen["recent"]

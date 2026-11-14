@@ -343,6 +343,43 @@ class RepositoryTest(unittest.TestCase):
         self.assertTrue(last and {block["part"] for block in last} <= {"closing", "notes"})
 
 
+class ReviewedTest(unittest.TestCase):
+    """사이트에는 검수를 거친 번역만 싣는다. 퍼센트는 보여 주지 않고, 실리지 않은 문단은 '번역 준비 중'으로 보인다."""
+
+    def _body(self, folder, act_id="act-1"):
+        return json.loads(pathlib.Path(folder, f"{act_id}.json").read_text(encoding="utf-8"))
+
+    def test_only_reviewed_translations_are_published(self):
+        with tempfile.TemporaryDirectory() as folder, unittest.mock.patch.object(store, "FOLDER", folder):
+            store.save("act-1", {"aaa": "검수한 번역", "bbb": "새 번역"}, day="2026-11-01", checked={"aaa"})
+            self.assertEqual(store.reviewed_all(), {"aaa"})          # 한 번도 검수하지 않은 번역은 싣지 않는다
+            store.save("act-1", {"aaa": "용어를 고친 번역", "bbb": "새 번역"})
+            self.assertEqual(store.load_checked("act-1"), set())     # 고친 문단은 다시 검수한다
+            self.assertEqual(self._body(folder)["passed"], ["aaa"])
+            self.assertEqual(store.reviewed_all(), {"aaa"})          # 검수를 거쳤던 문단은 다시 검수하기 전에도 싣는다
+            store.hold("act-1", "ccc", "번역이 비어 있음")
+            self.assertEqual(store.reviewed_all(), {"aaa"})          # 걸린 문단을 적어도 그 기록이 남는다
+            store.mark("act-1", {"aaa", "bbb"})
+            body = self._body(folder)
+            self.assertEqual((body["checked"], "passed" in body), (["aaa", "bbb"], False))   # 다시 검수를 마치면 checked로 돌아간다
+
+    def test_a_dropped_translation_must_pass_review_again(self):
+        with tempfile.TemporaryDirectory() as folder, unittest.mock.patch.object(store, "FOLDER", folder):
+            store.save("act-1", {"aaa": "틀린 번역", "bbb": "맞는 번역"}, day="2026-11-01", checked={"aaa", "bbb"})
+            store.save("act-1", {"bbb": "맞는 번역"})                 # 검수에서 틀린 것으로 보아 지운 번역
+            store.save("act-1", {"aaa": "다시 옮긴 번역", "bbb": "맞는 번역"})
+            self.assertEqual(store.reviewed_all(), {"bbb"})
+
+    def test_site_data_is_built_from_reviewed_translations_only(self):
+        memory = {"aaa": "검수한 번역", "bbb": "새 번역"}
+        with unittest.mock.patch.object(corpus, "everything", return_value=([], memory)), unittest.mock.patch.object(store, "reviewed_all", return_value={"aaa"}):
+            self.assertEqual(corpus.published(), ([], {"aaa": "검수한 번역"}))
+        parts = [{"title": "", "blocks": ["First paragraph of the law.", "Second paragraph of the law."]}]
+        keys = [store.key(text) for text in parts[0]["blocks"]]
+        shown = corpus.progress(parts, {keys[0]: "첫 문단"})
+        self.assertEqual((shown["blocks"], shown["done"]), (2, 1))   # 화면은 이 수로 '일부 번역 준비 중'을 가린다
+
+
 class HoldTest(unittest.TestCase):
     """검사에 거듭 걸리는 문단이 줄의 앞을 막지 않게 한다(그런 문단이 쌓여 묶음을 채우면 번역이 나아가지 못한다)."""
 

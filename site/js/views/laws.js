@@ -2,6 +2,7 @@
 // #laws-<찾을 말>로 오면 그 말로 찾은 결과를 보여 준다(결과를 주소로 남겨 뒤로 가기와 공유가 되게 한다).
 import * as data from "../data.js";
 import { find, marks, parse } from "../laws/engine.js";
+import { translation, waitLabel } from "../laws/ready.js";
 import { band } from "../ui/band.js";
 import { empty, fill, h, safeLink } from "../ui/dom.js";
 import { count } from "../ui/format.js";
@@ -25,10 +26,6 @@ const GROUPS = [
 ];
 const isAct = (act) => (act.group || "act") === "act";
 
-function percent(progress) {
-  return progress.chars ? Math.round((100 * progress.doneChars) / progress.chars) : 100;
-}
-
 function facts(act) {
   const annexes = act.annexes ? `부속서 ${count(act.annexes)}개` : "";
   return isAct(act) ? [`조 ${count(act.articles)}개`, annexes] : [act.sections > 1 ? `절 ${count(act.sections)}개` : "", annexes, act.pages ? `${count(act.pages)}쪽` : ""];
@@ -41,16 +38,16 @@ function firstSentence(text) {
 }
 
 function actCard(act) {
-  const done = percent(act.progress);
+  const state = translation(act.progress);
+  const waiting = waitLabel(act.progress);
   return h("article", { class: "law-card" }, [
     h("h3", {}, h("a", { href: `#law-${act.id}`, text: act.name })),
     h("p", { class: "law-official", lang: "en", text: `${act.official}${act.consolidated ? ` (consolidated ${act.consolidated})` : ""}` }),
     act.remark ? h("p", { class: "law-remark", text: firstSentence(act.remark) }) : null,
     act.changes ? h("p", { class: "law-changed" }, h("a", { href: `#changes-${act.id}`, text: `${act.changes.from}과 달라진 곳 ${count(act.changes.rows)}곳 보기` })) : null,
-    h("p", { class: "count", text: [...facts(act), `국문 번역 ${done}%`].filter(Boolean).join(", ") }),
-    h("div", { class: "law-progress", role: "img", "aria-label": `국문 번역 ${done}%` }, h("span", { style: `width:${done}%` })),
+    h("p", { class: "count" }, [h("span", { text: facts(act).filter(Boolean).join(", ") }), waiting ? h("span", { class: "pill law-wait-pill", text: waiting }) : null]),
     h("p", { class: "law-card-links" }, [
-      h("a", { class: "btn", href: `#law-${act.id}` }, [icon("file", 15), h("span", { text: "원문과 번역 보기" })]),
+      h("a", { class: "btn", href: `#law-${act.id}` }, [icon("file", 15), h("span", { text: state === "none" ? "원문 보기" : "원문과 번역 보기" })]),
       act.rule ? h("a", { href: `#rules-${act.rule}`, text: "진행 상황" }) : null,
       safeLink(act.url, isAct(act) ? "EUR-Lex" : "원문 PDF"),
     ]),
@@ -60,9 +57,9 @@ function actCard(act) {
 function group({ key, id, title, unit, lead }, acts) {
   const mine = acts.filter((act) => (act.group || "act") === key);
   if (!mine.length) return null;
-  const total = mine.reduce((sum, act) => ({ chars: sum.chars + act.progress.chars, doneChars: sum.doneChars + act.progress.doneChars }), { chars: 0, doneChars: 0 });
+  const waiting = mine.filter((act) => translation(act.progress) !== "ready").length;
   return h("section", { class: "stack", "aria-labelledby": id }, [
-    h("div", { class: "sec-head" }, [h("h2", { id, text: title }), h("span", { class: "count", text: `${mine.length}${unit}, 국문 번역 ${percent(total)}%` })]),
+    h("div", { class: "sec-head" }, [h("h2", { id, text: title }), h("span", { class: "count", text: `${mine.length}${unit}${waiting ? `, 번역 준비 중 ${waiting}${unit}` : ""}` })]),
     h("p", { class: "sec-lead", text: lead }),
     h("div", { class: "law-grid" }, mine.map(actCard)),
   ]);

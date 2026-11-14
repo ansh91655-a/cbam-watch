@@ -4,6 +4,7 @@
 import { SECTOR } from "../../cn/names.js";
 import { dateOf } from "../../data.js";
 import { split } from "../../laws/engine.js";
+import { waitLabel } from "../../laws/ready.js";
 import { remember } from "../../laws/recent.js";
 import { h, safeLink } from "../../ui/dom.js";
 import { count, koreanDate } from "../../ui/format.js";
@@ -113,9 +114,8 @@ function bookHit(hit, { needles }) {
 // 규정 원문의 문서(법령, 가이던스) 하나
 function lawHit(hit, { needles }) {
   const act = hit.row.ref;
-  const done = act.progress && act.progress.chars ? Math.round((100 * act.progress.doneChars) / act.progress.chars) : null;
   return inside(`#law-${act.id}`, [
-    facts([LAW_GROUP[act.group || "act"], done === null ? "" : `국문 번역 ${done}%`]),
+    facts([LAW_GROUP[act.group || "act"], waitLabel(act.progress)]),
     name(marked(act.name, needles)),
     text(act.official || "", needles, { lang: "en" }),
   ]);

@@ -39,7 +39,7 @@ function cell(side, label, pair, other, row) {
   return h("div", { class: "chg-cell", "data-side": side, "data-wait": untranslated || ko === en ? "" : null }, [
     name,
     text(en, other ? other[0] : "", side, "en"),
-    untranslated ? h("p", { class: "chg-ko chg-wait", text: side === "old" ? "앞선 판의 이 문단은 아직 국문으로 옮기지 않았습니다." : "이 문단은 아직 국문으로 옮기지 않았습니다." })
+    untranslated ? h("p", { class: "chg-ko chg-wait", text: side === "old" ? "앞선 판의 이 문단은 번역 준비 중입니다." : "이 문단은 번역 준비 중입니다." })
       : (ko === en ? null : text(ko, other && other[1] && other[1] !== other[0] ? other[1] : "", side, "ko")),
   ]);
 }

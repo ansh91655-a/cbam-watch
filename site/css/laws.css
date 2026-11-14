@@ -60,8 +60,7 @@ body[data-wide] main, body[data-wide] .band-inner, body[data-wide] .head-inner {
 .law-official { font-size: var(--fs-s); color: var(--ink-3); }
 .law-remark { font-size: var(--fs-s); color: var(--ink-2); font-weight: 600; }
 .law-card .law-remark { font-weight: 400; }
-.law-progress { height: 6px; border-radius: 999px; background: var(--surface-2); overflow: hidden; }
-.law-progress span { display: block; height: 100%; border-radius: inherit; background: var(--brand-bright); }
+.law-card .count { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
 .law-card-links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-top: 6px; font-size: var(--fs-s); }
 
 /* 법령 하나: 위쪽의 도구, 알림, 차례와 본문 */
@@ -117,6 +116,8 @@ body[data-wide] main, body[data-wide] .band-inner, body[data-wide] .head-inner {
 .law-en { color: var(--ink-2); font-size: 0.95rem; }
 .law-ko { color: var(--ink); }
 .law-wait-note { margin-bottom: 8px; font-size: var(--fs-s); color: var(--ink-3); }
+/* 아직 실린 번역이 없는 문단: 번역 자리에 '번역 준비 중'이라고만 적는다 */
+.law-wait .pill { font-size: 0.74rem; color: var(--ink-3); }
 .law-fold-tools { display: flex; justify-content: flex-end; padding: 4px 0 8px; }
 /* 조각에 이어진 것(의무 일정, 소식, 용어). 접어 두고, 펼치면 갈래마다 한 줄씩 보인다 */
 .law-linked { margin-top: 12px; border: 1px solid var(--line-2); border-radius: 12px; background: var(--surface-2); font-size: var(--fs-s); }
@@ -143,9 +144,8 @@ body[data-wide] main, body[data-wide] .band-inner, body[data-wide] .head-inner {
 .law-body[data-mode="en"] .law-ko, .law-body[data-mode="en"] .law-wait-note { display: none; }
 .law-body[data-mode="en"] .law-en { color: var(--ink); font-size: 1rem; }
 .law-body[data-mode="ko"] .law-row:not([data-wait]) .law-en { display: none; }
-.law-body[data-mode="ko"] .law-wait { display: none; }
 .law-body .law-row p { max-width: 86ch; }
-@media (max-width: 760px) { .law-body[data-mode="both"] .law-row { grid-template-columns: minmax(0, 1fr); } .law-wait { display: none; } .law-part { padding-inline: 16px 32px; } .law-cite { right: -28px; } }
+@media (max-width: 760px) { .law-body[data-mode="both"] .law-row { grid-template-columns: minmax(0, 1fr); } .law-part { padding-inline: 16px 32px; } .law-cite { right: -28px; } }
 /* 문단의 꼴: 작은 제목, 목록 항목, 그림과 표의 제목, 각주, 수식 */
 .law-row[data-shape="h"] p { font-weight: 700; }
 .law-row[data-shape="li"] p, .law-pair[data-shape="li"] p { padding-left: 1.5em; text-indent: -1.5em; }
