@@ -3,6 +3,7 @@
 import * as data from "../data.js";
 import { isNotice } from "../news/notices.js";
 import { empty, fill, h, safeLink, unsplit } from "../ui/dom.js";
+import { gloss } from "../ui/gloss.js";
 import { day } from "../ui/format.js";
 import { icon } from "../ui/icons.js";
 import { card } from "../ui/card.js";
@@ -103,5 +104,6 @@ export async function render(main, id) {
       h("div", { class: "cards-2" }, related.map(card)),
     ]) : null,
   );
+  gloss(main, ".item-summary:not(.withdrawn), .item-impact > span");   // 요약과 실무 영향의 글에 나온 용어에 풀이를 단다
   return item.title || "소식";
 }

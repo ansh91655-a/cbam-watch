@@ -2,6 +2,7 @@
 // 좁은 화면에서는 곁들이는 것이 글 아래로 내려간다(css/handbook.css).
 import { lawHref } from "../../laws/refs.js";
 import { h, safeLink, table } from "../../ui/dom.js";
+import { gloss } from "../../ui/gloss.js";
 import { icon } from "../../ui/icons.js";
 import { figureNode } from "./figure.js";
 import { formulaLine } from "./figures/equation.js";
@@ -49,11 +50,15 @@ const see = (links) => (links && links.length
 // chapterId는 절의 주소(#handbook-<장>.<절>)를 만드는 데 쓴다.
 export function sectionNode(chapterId, section) {
   const side = [terms(section), caveat(section.caveat), basis(section.basis), see(section.see)].filter(Boolean);
-  return h("section", { class: "panel hb-sec", id: `hb-${section.id}`, "aria-labelledby": `hb-h-${section.id}`, tabindex: "-1" }, [
+  const here = `#handbook-${chapterId}.${section.id}`;
+  const node = h("section", { class: "panel hb-sec", id: `hb-${section.id}`, "aria-labelledby": `hb-h-${section.id}`, tabindex: "-1" }, [
     h("h2", { id: `hb-h-${section.id}` }, h("a", { class: "hb-anchor", href: `#handbook-${chapterId}.${section.id}`, text: section.title })),
     h("div", { class: "hb-cols" }, [
       h("div", { class: "hb-main" }, [...section.body.map((text) => h("p", { text })), figureNode(section.figure, `hb-fig-${section.id}`), list(section), formula(section.formula), sheet(section.table, section.title)]),
       side.length ? h("div", { class: "hb-aside" }, side) : null,
     ]),
   ]);
+  // 문단과 목록에 나온 다른 절의 용어에 표시한다(이 절이 스스로 풀이한 용어는 바로 옆에 풀이가 있으므로 건너뛴다)
+  gloss(node, ".hb-main > p, .hb-list li", { skip: (term) => term.read === here });
+  return node;
 }

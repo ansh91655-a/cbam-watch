@@ -5,6 +5,7 @@ import * as data from "../data.js";
 import { band } from "../ui/band.js";
 import { card } from "../ui/card.js";
 import { empty, fill, h, safeLink, table, unsplit } from "../ui/dom.js";
+import { gloss } from "../ui/gloss.js";
 import { countdown, day, koreanDate } from "../ui/format.js";
 import { icon } from "../ui/icons.js";
 import { findPanel } from "../ui/lawfind.js";
@@ -138,6 +139,8 @@ function detail(main, rule, group, items, drawing, acts) {
       ]) : null,
     ]), aside(rule, acts)]),
   );
+  // 현재 상황, 요약, 분석의 글에 나온 용어에 풀이를 단다(근거 자료의 목록과 연혁에는 달지 않는다)
+  gloss(main, ".rule-now .rule-status, .rule-summary, .rule-analysis .an-sec:not(.an-src) p");
 }
 
 export async function render(main, arg) {

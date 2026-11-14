@@ -32,6 +32,8 @@ export function plan(site) {
   const linked = Object.keys(read(site, "refs.json", { items: {} }).items || {}).map((id) => items.find((one) => one.id === id)).find((one) => one && !one.brief);
   const itemWithRefs = linked && (!newest || linked.id !== newest.id) ? `#item-${linked.id}` : null;
   const good = (calc.goods || []).some((row) => row[0] === "72081000") ? "#calc-72081000" : null;
+  // 요약에 풀이가 달릴 용어(내재배출량)가 나오는 소식 하나
+  const glossed = items.find((one) => !one.brief && String(one.summary || "").includes("내재배출량"));
   // 품목 한 장 보기: 품목 하나(값과 비용의 어림), 세부 품목이 여럿인 품목, 값의 표가 없는 부문(전력)의 품목. 코드 아래의 여러 품목은 #cn-7208이 본다
   const twoRows = (calc.goods || []).find((row) => row[5].length > 1);
   const unpriced = (read(site, "cn.json", { current: [] }).current || []).find((row) => row.sector === "electricity");
@@ -78,5 +80,7 @@ export function plan(site) {
     axeViews: [...new Set(["#home", "#news", item, itemWithRefs, "#rules", rule(withAnalysis), rule(withFigure), rule(withTable), "#price", "#calc", good,
       "#calendar", "#calendar-2027.role-verifier", "#cn-7208", sheets[0], "#sector", "#sector-electricity", handbook[0], handbook[1], ...drawn, "#docs", "#laws", law, revised ? `#changes-${revised.id}` : null, "#news-notices", "#news-recent", "#terms", "#about", search[1]].filter(Boolean))],
     good,
+    // 글 속 용어 풀이를 다뤄 보는 화면: 해설서의 장 하나와, 요약에 용어가 나오는 소식 하나(용어의 자료가 있을 때)
+    glossViews: (read(site, "gloss.json", { terms: [] }).terms || []).length ? [handbook[1], glossed ? `#item-${glossed.id}` : null].filter(Boolean) : [],
   };
 }

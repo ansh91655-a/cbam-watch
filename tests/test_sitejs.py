@@ -2,7 +2,7 @@
 문단 인용의 글(js/laws/cite.js), 낱말 단위로 달라진 곳 찾기(js/laws/worddiff.js), 의무를 역할로 고르기(js/calendar/roles.js),
 규정 원문과 그것을 적은 글을 잇는 주소(js/laws/refs.js), 부문별 모아 보기의 글(js/sector/facts.js), 최근 소식 가리기(js/news/recent.js),
 해설서 그림의 글(식 한 줄을 칸과 기호로 나누기 js/views/handbook/figures/equation.js, 날짜 적기 js/views/handbook/figures/timeline.js),
-품목 한 장 보기의 셈(js/cn/sheet.js)."""
+품목 한 장 보기의 셈(js/cn/sheet.js), 글 속 용어 풀이의 찾기(js/gloss/match.js)."""
 import json
 import shutil
 import subprocess
@@ -17,6 +17,7 @@ import { address, citeBlock, citePart, partName, source } from './site/js/laws/c
 import { translation, waitLabel } from './site/js/laws/ready.js';
 import { dutyHref, lawHref, linkedTo, tally as linkedTally, termHref } from './site/js/laws/refs.js';
 import { wordDiff } from './site/js/laws/worddiff.js';
+import { compile, find } from './site/js/gloss/match.js';
 import { isNotice, NOTICES, split } from './site/js/news/notices.js';
 import { PERIODS, RECENT, RECENT_DAYS, within } from './site/js/news/recent.js';
 import { gasText, markupText, proposedText, scopeOf, scopeText, upcoming } from './site/js/sector/facts.js';
@@ -69,6 +70,13 @@ const clinker = sheetBook.goods.find((good) => good.code === '25231000');
 const tool = sheetBook.goods.find((good) => good.code === '72241010');
 const sheetRows = [{ about: '늘', when: '' }, { about: '직접', when: 'direct' }, { about: '둘 다', when: 'both' }, { about: '값 있음', when: 'priced' }, { about: '값 없음', when: 'unpriced' }];
 const round = (value) => Math.round(value * 1000) / 1000;
+
+// 글 속 용어 풀이: 찾은 자리를 [찾은 글, 용어의 국문 표기]로 적는다
+const glossTerms = [{ forms: ['부문 간 보정계수', 'CSCF'], ko: '부문 간 보정계수' }, { forms: ['EU 배출권거래제', 'EU ETS'], ko: 'EU 배출권거래제' }, { forms: ['ETS'], ko: '배출권거래제' },
+  { forms: ['탄소가격'], ko: '탄소가격' }, { forms: ['기본 탄소가격'], ko: '기본 탄소가격' }, { forms: ['SEE'], ko: '고유 내재배출량' }, { forms: ['EUA'], ko: 'EU 배출권' },
+  { forms: ['CCS', 'CCU', 'CCUS'], ko: '탄소 포집·저장' }, { forms: ['RED II'], ko: '재생에너지 지침' }];
+const glossBook = compile(glossTerms);
+const marked = (text, seen, skip) => find(text, glossBook, seen, skip).map((hit) => [text.slice(hit.start, hit.end), glossTerms[hit.at].ko]);
 
 // 해설서에 실린 식: 풀이가 달린 말은 식 한 줄에서 칸 하나로 나뉘어야 한다(그래야 그 말이 칸으로 그려진다)
 const formulas = JSON.parse(readFileSync('./data/handbook.json', 'utf8')).chapters.flatMap((chapter) => chapter.sections).map((one) => one.formula).filter(Boolean);
@@ -130,6 +138,15 @@ console.log(JSON.stringify({
     flags: [flagsOf([{ directOnly: true }], true, true), flagsOf([{ directOnly: false }, { directOnly: true }], false, true), flagsOf([{ directOnly: true }], false, false), flagsOf([], false, false)],
     shown: [flagsOf([{ directOnly: true }], true, true), flagsOf([{ directOnly: false }], false, false)].map((flags) => shown(sheetRows, flags).map((row) => row.about)), empty: shown(null, {}),
     sector: [sectorOf([{ key: 'steel', cn: ['steel'] }, { key: 'hydrogen', cn: ['chemicals'] }], [{ sector: 'chemicals' }]).key, sectorOf([{ key: 'steel', cn: ['steel'] }], [{ sector: 'combined' }]), sectorOf(null, [])],
+  },
+  gloss: {
+    spacing: marked('부문간 보정계수(CSCF)는 해마다 정합니다.'),
+    longest: [marked('EU ETS의 배출권과 다른 나라의 ETS'), marked('기본 탄소가격은 탄소가격과 다릅니다.')],
+    whole: [marked('markets and assets, see Article 5; SEEs'), marked('SEE는 제품 1톤당 값입니다. ETS2는 따로입니다.')],
+    plural: marked('EUAs를 삽니다. CCUS와 CCS는 다릅니다. RED II와 RED III'),
+    once: (() => { const seen = new Set(); return [marked('탄소가격을 냅니다.', seen), marked('탄소가격을 또 냅니다. CSCF도 있습니다.', seen)]; })(),
+    skipped: marked('CSCF와 탄소가격', new Set(), (term) => term.ko === '탄소가격'),
+    empty: [find('CSCF', compile([])), find('', glossBook), find('CSCF', null), compile(null).rows],
   },
   figures: {
     tokens: tokens('인증서 수 = (내재배출량 − 무상할당량) × 수입량'), plain: tokens('CO2e 1톤'), none: tokens(''),
@@ -199,6 +216,19 @@ class SiteModulesTest(unittest.TestCase):
                                           {"direct": True, "both": False, "priced": False, "unpriced": True}, {"direct": False, "both": False, "priced": False, "unpriced": True}])
         self.assertEqual(sheet["shown"], [["늘", "직접", "값 있음"], ["늘", "둘 다", "값 없음"]])
         self.assertEqual((sheet["empty"], sheet["sector"]), ([], ["hydrogen", None, None]))
+
+    def test_terms_in_the_text_are_found_for_the_inline_glossary(self):
+        gloss = self.seen["gloss"]
+        # 국문 표기는 띄어쓰기가 달라도 찾는다. 한 용어의 두 표기(국문, 약어)가 한 글에 함께 나오면 처음 것만 표시한다
+        self.assertEqual(gloss["spacing"], [["부문간 보정계수", "부문 간 보정계수"]])
+        # 긴 표기부터 본다. 긴 표기에 걸린 자리에서는 그 안의 짧은 표기를 다시 찾지 않는다
+        self.assertEqual(gloss["longest"], [[["EU ETS", "EU 배출권거래제"], ["ETS", "배출권거래제"]], [["기본 탄소가격", "기본 탄소가격"], ["탄소가격", "탄소가격"]]])
+        # 영문 약어는 낱말 하나로 나온 곳만, 대소문자를 가려 찾는다(markets의 ets, see에 걸리지 않는다). 약어에 붙은 숫자는 다른 말이다(ETS2)
+        self.assertEqual(gloss["whole"], [[["SEEs", "고유 내재배출량"]], [["SEE", "고유 내재배출량"]]])
+        self.assertEqual(gloss["plural"], [["EUAs", "EU 배출권"], ["CCUS", "탄소 포집·저장"], ["RED II", "재생에너지 지침"]])   # 복수형의 s는 받아 준다. 같은 용어의 다른 표기(CCS)는 다시 표시하지 않는다
+        self.assertEqual(gloss["once"], [[["탄소가격", "탄소가격"]], [["CSCF", "부문 간 보정계수"]]])                                # 글 한 편에서 용어마다 한 번만
+        self.assertEqual(gloss["skipped"], [["CSCF", "부문 간 보정계수"]])
+        self.assertEqual(gloss["empty"], [[], [], [], []])
 
     def test_a_formula_line_is_cut_into_boxes_and_signs(self):
         figures = self.seen["figures"]
