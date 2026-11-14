@@ -1,0 +1,1384 @@
+{
+ "asOf": "2026-11-14",
+ "law": {
+  "name": "규정 (EU) 2023/956 부속서 I·II(2025년 10월 20일 통합본)",
+  "celex": "02023R0956-20251020",
+  "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0956-20251020",
+  "fetched": "http://publications.europa.eu/resource/celex/02023R0956-20251020"
+ },
+ "common": [
+  {
+   "id": "32023R0956",
+   "name": "CBAM 규정",
+   "group": "act"
+  },
+  {
+   "id": "32025R2547",
+   "name": "내재배출량 산정 방법 이행규정",
+   "group": "act"
+  },
+  {
+   "id": "32025R2621",
+   "name": "기본값 이행규정",
+   "group": "act"
+  },
+  {
+   "id": "32025R2620",
+   "name": "무상할당 조정 이행규정",
+   "group": "act"
+  },
+  {
+   "id": "guide-2",
+   "name": "가이던스 2: 비EU 사업자를 위한 CBAM 이행 요약 안내",
+   "group": "guide"
+  },
+  {
+   "id": "guide-3",
+   "name": "가이던스 3: 제품의 내재배출량 산정 방법",
+   "group": "guide"
+  },
+  {
+   "id": "guide-4",
+   "name": "가이던스 4: 무상할당 조정 산정",
+   "group": "guide"
+  },
+  {
+   "id": "info-scope",
+   "name": "CBAM 대상 제품의 수입 여부 확인 안내 자료",
+   "group": "paper"
+  },
+  {
+   "id": "info-values",
+   "name": "CBAM 신고서의 실제값과 기본값 안내 자료",
+   "group": "paper"
+  },
+  {
+   "id": "info-certificates",
+   "name": "CBAM 인증서의 운용 방식 안내 자료",
+   "group": "paper"
+  }
+ ],
+ "sectors": [
+  {
+   "key": "steel",
+   "name": "철강",
+   "cn": [
+    "steel"
+   ],
+   "words": [
+    "철강"
+   ],
+   "goods": {
+    "rows": [
+     {
+      "shown": "72",
+      "text": "Iron and steel",
+      "ex": false,
+      "gases": [
+       "co2"
+      ],
+      "directOnly": true,
+      "codes": [
+       "72"
+      ],
+      "calc": "72011011"
+     },
+     {
+      "shown": "2601 12 00",
+      "text": "Agglomerated iron ores and concentrates, other than roasted iron pyrites",
+      "ex": false,
+      "gases": [
+       "co2"
+      ],
+      "directOnly": false,
+      "codes": [
+       "26011200"
+      ],
+      "calc": "26011200"
+     },
+     {
+      "shown": "7301",
+      "text": "Sheet piling of iron or steel, whether or not drilled, punched or made from assembled elements; welded angles, shapes and sections, of iron or steel",
+      "ex": false,
+      "gases": [
+       "co2"
+      ],
+      "directOnly": true,
+      "codes": [
+       "7301"
+      ],
+      "calc": "73011000"
+     },
+     {
+      "shown": "7302",
+      "text": "Railway or tramway track construction material of iron or steel, the following: rails, check-rails and rack rails, switch blades, crossing frogs, point rods and other crossing pieces, sleepers (cross-ties), fish- plates, chairs, chair wedges, sole plates (base plates), rail clips, bedplates, ties and other material specialised for jointing or fixing rails",
+      "ex": false,
+      "gases": [
+       "co2"
+      ],
+      "directOnly": true,
+      "codes": [
+       "7302"
+      ],
+      "calc": "73021010"
+     },
+     {
+      "shown": "7303 00",
+      "text": "Tubes, pipes and hollow profiles, of cast iron",
+      "ex": false,
+      "gases": [
+       "co2"
+      ],
+      "directOnly": true,
+      "codes": [
+       "730300"
+      ],
+      "calc": "73030010"
+     },
+     {
+      "shown": "7304",
+      "text": "Tubes, pipes and hollow profiles, seamless, of iron (other than cast iron) or steel",
+      "ex": false,
+      "gases": [
+       "co2"
+      ],
+      "directOnly": true,
+      "codes": [
+       "7304"
+      ],
+      "calc": "73041100"
+     },
+     {
+      "shown": "7305",
+      "text": "Other tubes and pipes (for example, welded, riveted or similarly closed), having circular cross-sections, the external diameter of which exceeds 406,4 mm, of iron or steel",
+      "ex": false,
+      "gases": [
+       "co2"
+      ],
+      "directOnly": true,
+      "codes": [
+       "7305"
+      ],
+      "calc": "73051100"
+     },
+     {
+      "shown": "7306",
+      "text": "Other tubes, pipes and hollow profiles (for example, open seam or welded, riveted or similarly closed), of iron or steel",
+      "ex": false,
+      "gases": [
+       "co2"
+      ],
+      "directOnly": true,
+      "codes": [
+       "7306"
+      ],
+      "calc": "73061100"
+     },
+     {
+      "shown": "7307",
+      "text": "Tube or pipe fittings (for example, couplings, elbows, sleeves), of iron or steel",
+      "ex": false,
+      "gases": [
+       "co2"
+      ],
+      "directOnly": true,
+      "codes": [
+       "7307"
+      ],
+      "calc": "73071110"
+     },
+     {
+      "shown": "7308",
+      "text": "Structures (excluding prefabricated buildings of heading 9406 ) and parts of structures (for example, bridges and bridge-sections, lock- gates, towers, lattice masts, roofs, roofing frameworks, doors and windows and their frames and thresholds for doors, shutters, balustrades, pillars and columns), of iron or steel; plates, rods, angles, shapes, sections, tubes and the like, prepared for use in structures, of iron or steel",
+      "ex": false,
+      "gases": [
+       "co2"
+      ],
+      "directOnly": true,
+      "codes": [
+       "7308"
+      ],
+      "calc": "73081000"
+     },
+     {
+      "shown": "7309 00",
+      "text": "Reservoirs, tanks, vats and similar containers for any material (other than compressed or liquefied gas), of iron or steel, of a capacity exceeding 300 l, whether or not lined or heat-insulated, but not fitted with mechanical or thermal equipment",
+      "ex": false,
+      "gases": [
+       "co2"
+      ],
+      "directOnly": true,
+      "codes": [
+       "730900"
+      ],
+      "calc": "73090010"
+     },
+     {
+      "shown": "7310",
+      "text": "Tanks, casks, drums, cans, boxes and similar containers, for any material (other than compressed or liquefied gas), of iron or steel, of a capacity not exceeding 300 l, whether or not lined or heat-insulated, but not fitted with mechanical or thermal equipment",
+      "ex": false,
+      "gases": [
+       "co2"
+      ],
+      "directOnly": true,
+      "codes": [
+       "7310"
+      ],
+      "calc": "73101000"
+     },
+     {
+      "shown": "7311 00",
+      "text": "Containers for compressed or liquefied gas, of iron or steel",
+      "ex": false,
+      "gases": [
+       "co2"
+      ],
+      "directOnly": true,
+      "codes": [
+       "731100"
+      ],
+      "calc": "73110011"
+     },
+     {
+      "shown": "7318",
+      "text": "Screws, bolts, nuts, coach screws, screw hooks, rivets, cotters, cotter pins, washers (including spring washers) and similar articles, of iron or steel",
+      "ex": false,
+      "gases": [
+       "co2"
+      ],
+      "directOnly": true,
+      "codes": [
+       "7318"
+      ],
+      "calc": "73181100"
+     },
+     {
+      "shown": "7326",
+      "text": "Other articles of iron or steel",
+      "ex": false,
+      "gases": [
+       "co2"
+      ],
+      "directOnly": true,
+      "codes": [
+       "7326"
+      ],
+      "calc": "73261100"
+     }
+    ],
+    "gases": [
+     "co2"
+    ],
+    "directOnly": 14,
+    "both": 1
+   },
+   "proposed": {
+    "own": 22,
+    "combined": 107,
+    "name": "하류제품 확대 개정안의 부속서(집행위 제안 COM(2025) 989)"
+   },
+   "docs": [
+    {
+     "id": "guide-5d",
+     "name": "가이던스 5d: 철강",
+     "group": "guide",
+     "official": "Guidance document 5d: Sector-specific guidance document on iron and steel",
+     "pages": 65,
+     "received": "2026-11-10",
+     "remark": "",
+     "pdf": true,
+     "sections": [
+      {
+       "id": "sec-1",
+       "ko": "1",
+       "titleKo": "서문",
+       "title": "PREFACE"
+      },
+      {
+       "id": "sec-2",
+       "ko": "2",
+       "titleKo": "CBAM 대상 품목과 생산경로",
+       "title": "CBAM GOODS AND PRODUCTION ROUTES"
+      },
+      {
+       "id": "sec-3",
+       "ko": "3",
+       "titleKo": "철강 부문 – 고유 요건",
+       "title": "IRON AND STEEL SECTOR - SPECIFIC REQUIREMENTS"
+      },
+      {
+       "id": "sec-4",
+       "ko": "4",
+       "titleKo": "철강 부문의 계산 예시",
+       "title": "WORKED EXAMPLES FOR THE IRON AND STEEL SECTORS"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "id": "fact-steel",
+     "name": "EU로 수출하는 철강 생산자 안내 자료(전환기간용)",
+     "group": "paper",
+     "official": "Carbon Border Adjustment Mechanism: Information for producers of iron and steel goods that are exported to the EU",
+     "pages": 2,
+     "received": "2026-11-14",
+     "remark": "전환기간(2023년 10월~2025년 12월)의 보고 의무를 설명한 자료입니다. 2026년부터의 확정기간에는 맞지 않는 내용이 있습니다. 도안으로 된 자료여서 글의 차례가 원문과 다를 수 있습니다. 원문 PDF와 함께 보아 주십시오.",
+     "pdf": false,
+     "sections": [],
+     "more": 0
+    },
+    {
+     "id": "imp-steel",
+     "name": "철강 수입자 안내 자료(전환기간용)",
+     "group": "paper",
+     "official": "Carbon Border Adjustment Mechanism: Information for importers of iron and steel",
+     "pages": 2,
+     "received": "2026-11-14",
+     "remark": "전환기간(2023년 10월~2025년 12월)의 보고 의무를 설명한 자료입니다. 2026년부터의 확정기간에는 맞지 않는 내용이 있습니다. 도안으로 된 자료여서 글의 차례가 원문과 다를 수 있습니다. 원문 PDF와 함께 보아 주십시오.",
+     "pdf": false,
+     "sections": [],
+     "more": 0
+    }
+   ],
+   "calc": {
+    "goods": 478,
+    "first": "26011200",
+    "markups": {
+     "2026": 10,
+     "2027": 20,
+     "2028": 30
+    }
+   },
+   "items": [
+    {
+     "id": "20261023-motir-8bf87c",
+     "title": "EU CBAM 하류재 확대 시행 대비 수출기업 맞춤형 설명회 개최",
+     "date": "2026-10-23"
+    },
+    {
+     "id": "20261014-ec-press-fe15a0",
+     "title": "EU 집행위원회, CBAM 이행 대화 개최와 2027년 CBAM 종합 검토 예고",
+     "date": "2026-10-14"
+    },
+    {
+     "id": "20261008-us-fedreg-de64d9",
+     "title": "미국 무역대표부, EU CBAM과 확대 제안이 미국 무역에 미치는 영향에 대한 의견 요청",
+     "date": "2026-10-08"
+    },
+    {
+     "id": "20260814-ec-news-694c66",
+     "title": "확정기간 CBAM 이행을 위한 가이던스 10종 공개",
+     "date": "2026-08-14"
+    },
+    {
+     "id": "20260731-ec-news-acf37c",
+     "title": "CBAM 이행 세 번째 웨비나 후속 소식: 검증기관의 인정과 검증",
+     "date": "2026-07-31"
+    },
+    {
+     "id": "20260616-keco-cbam-2abaaa",
+     "title": "EU CBAM 배출량 산정 실무 핸드북 3권",
+     "date": "2026-06-16"
+    }
+   ],
+   "itemCount": 21
+  },
+  {
+   "key": "aluminium",
+   "name": "알루미늄",
+   "cn": [
+    "aluminium"
+   ],
+   "words": [
+    "알루미늄"
+   ],
+   "goods": {
+    "rows": [
+     {
+      "shown": "7601",
+      "text": "Unwrought aluminium",
+      "ex": false,
+      "gases": [
+       "co2",
+       "pfc"
+      ],
+      "directOnly": true,
+      "codes": [
+       "7601"
+      ],
+      "calc": "76011010"
+     },
+     {
+      "shown": "7603",
+      "text": "Aluminium powders and flakes",
+      "ex": false,
+      "gases": [
+       "co2",
+       "pfc"
+      ],
+      "directOnly": true,
+      "codes": [
+       "7603"
+      ],
+      "calc": "76031000"
+     },
+     {
+      "shown": "7604",
+      "text": "Aluminium bars, rods and profiles",
+      "ex": false,
+      "gases": [
+       "co2",
+       "pfc"
+      ],
+      "directOnly": true,
+      "codes": [
+       "7604"
+      ],
+      "calc": "76041010"
+     },
+     {
+      "shown": "7605",
+      "text": "Aluminium wire",
+      "ex": false,
+      "gases": [
+       "co2",
+       "pfc"
+      ],
+      "directOnly": true,
+      "codes": [
+       "7605"
+      ],
+      "calc": "76051100"
+     },
+     {
+      "shown": "7606",
+      "text": "Aluminium plates, sheets and strip, of a thickness exceeding 0,2 mm",
+      "ex": false,
+      "gases": [
+       "co2",
+       "pfc"
+      ],
+      "directOnly": true,
+      "codes": [
+       "7606"
+      ],
+      "calc": "76061130"
+     },
+     {
+      "shown": "7607",
+      "text": "Aluminium foil (whether or not printed or backed with paper, paper-board, plastics or similar backing materials) of a thickness (excluding any backing) not exceeding 0,2 mm",
+      "ex": false,
+      "gases": [
+       "co2",
+       "pfc"
+      ],
+      "directOnly": true,
+      "codes": [
+       "7607"
+      ],
+      "calc": "76071111"
+     },
+     {
+      "shown": "7608",
+      "text": "Aluminium tubes and pipes",
+      "ex": false,
+      "gases": [
+       "co2",
+       "pfc"
+      ],
+      "directOnly": true,
+      "codes": [
+       "7608"
+      ],
+      "calc": "76081000"
+     },
+     {
+      "shown": "7609 00 00",
+      "text": "Aluminium tube or pipe fittings (for example, couplings, elbows, sleeves)",
+      "ex": false,
+      "gases": [
+       "co2",
+       "pfc"
+      ],
+      "directOnly": true,
+      "codes": [
+       "76090000"
+      ],
+      "calc": "76090000"
+     },
+     {
+      "shown": "7610",
+      "text": "Aluminium structures (excluding prefabricated buildings of heading 9406 ) and parts of structures (for example, bridges and bridge-sections, towers, lattice masts, roofs, roofing frameworks, doors and windows and their frames and thresholds for doors, balustrades, pillars and columns); aluminium plates, rods, profiles, tubes and the like, prepared for use in structures",
+      "ex": false,
+      "gases": [
+       "co2",
+       "pfc"
+      ],
+      "directOnly": true,
+      "codes": [
+       "7610"
+      ],
+      "calc": "76101000"
+     },
+     {
+      "shown": "7611 00 00",
+      "text": "Aluminium reservoirs, tanks, vats and similar containers, for any material (other than compressed or liquefied gas), of a capacity exceeding 300 litres, whether or not lined or heat-insulated, but not fitted with mechanical or thermal equipment",
+      "ex": false,
+      "gases": [
+       "co2",
+       "pfc"
+      ],
+      "directOnly": true,
+      "codes": [
+       "76110000"
+      ],
+      "calc": "76110000"
+     },
+     {
+      "shown": "7612",
+      "text": "Aluminium casks, drums, cans, boxes and similar containers (including rigid or collapsible tubular containers), for any material (other than compressed or liquefied gas), of a capacity not exceeding 300 litres, whether or not lined or heat-insulated, but not fitted with mechanical or thermal equipment",
+      "ex": false,
+      "gases": [
+       "co2",
+       "pfc"
+      ],
+      "directOnly": true,
+      "codes": [
+       "7612"
+      ],
+      "calc": "76121000"
+     },
+     {
+      "shown": "7613 00 00",
+      "text": "Aluminium containers for compressed or liquefied gas",
+      "ex": false,
+      "gases": [
+       "co2",
+       "pfc"
+      ],
+      "directOnly": true,
+      "codes": [
+       "76130000"
+      ],
+      "calc": "76130000"
+     },
+     {
+      "shown": "7614",
+      "text": "Stranded wire, cables, plaited bands and the like, of aluminium, not electrically insulated",
+      "ex": false,
+      "gases": [
+       "co2",
+       "pfc"
+      ],
+      "directOnly": true,
+      "codes": [
+       "7614"
+      ],
+      "calc": "76141000"
+     },
+     {
+      "shown": "7616",
+      "text": "Other articles of aluminium",
+      "ex": false,
+      "gases": [
+       "co2",
+       "pfc"
+      ],
+      "directOnly": true,
+      "codes": [
+       "7616"
+      ],
+      "calc": "76161000"
+     }
+    ],
+    "gases": [
+     "co2",
+     "pfc"
+    ],
+    "directOnly": 14,
+    "both": 0
+   },
+   "proposed": {
+    "own": 0,
+    "combined": 107,
+    "name": "하류제품 확대 개정안의 부속서(집행위 제안 COM(2025) 989)"
+   },
+   "docs": [
+    {
+     "id": "guide-5e",
+     "name": "가이던스 5e: 알루미늄",
+     "group": "guide",
+     "official": "Guidance document 5e: Sector-specific guidance document on aluminium",
+     "pages": 39,
+     "received": "2026-11-10",
+     "remark": "",
+     "pdf": true,
+     "sections": [
+      {
+       "id": "sec-1",
+       "ko": "1",
+       "titleKo": "서문",
+       "title": "PREFACE"
+      },
+      {
+       "id": "sec-2",
+       "ko": "2",
+       "titleKo": "CBAM 대상 품목과 생산경로",
+       "title": "CBAM GOODS AND PRODUCTION ROUTES"
+      },
+      {
+       "id": "sec-3",
+       "ko": "3",
+       "titleKo": "알루미늄 부문 – 고유 요건",
+       "title": "ALUMINIUM SECTOR-SPECIFIC REQUIREMENTS"
+      },
+      {
+       "id": "sec-4",
+       "ko": "4",
+       "titleKo": "알루미늄 부문의 계산 예시",
+       "title": "WORKED EXAMPLE FOR THE ALUMINIUM SECTOR"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "id": "fact-aluminium",
+     "name": "EU로 수출하는 알루미늄 생산자 안내 자료(전환기간용)",
+     "group": "paper",
+     "official": "Carbon Border Adjustment Mechanism: Information for producers of aluminium goods exported to the EU",
+     "pages": 2,
+     "received": "2026-11-10",
+     "remark": "전환기간(2023년 10월~2025년 12월)의 보고 의무를 설명한 자료입니다. 2026년부터의 확정기간에는 맞지 않는 내용이 있습니다. 도안으로 된 자료여서 글의 차례가 원문과 다를 수 있습니다. 원문 PDF와 함께 보아 주십시오.",
+     "pdf": false,
+     "sections": [],
+     "more": 0
+    },
+    {
+     "id": "imp-aluminium",
+     "name": "알루미늄 수입자 안내 자료(전환기간용)",
+     "group": "paper",
+     "official": "Carbon Border Adjustment Mechanism: Information for importers of aluminium",
+     "pages": 2,
+     "received": "2026-11-14",
+     "remark": "전환기간(2023년 10월~2025년 12월)의 보고 의무를 설명한 자료입니다. 2026년부터의 확정기간에는 맞지 않는 내용이 있습니다. 도안으로 된 자료여서 글의 차례가 원문과 다를 수 있습니다. 원문 PDF와 함께 보아 주십시오.",
+     "pdf": false,
+     "sections": [],
+     "more": 0
+    }
+   ],
+   "calc": {
+    "goods": 58,
+    "first": "76011010",
+    "markups": {
+     "2026": 10,
+     "2027": 20,
+     "2028": 30
+    }
+   },
+   "items": [
+    {
+     "id": "20261023-motir-8bf87c",
+     "title": "EU CBAM 하류재 확대 시행 대비 수출기업 맞춤형 설명회 개최",
+     "date": "2026-10-23"
+    },
+    {
+     "id": "20261014-ec-press-fe15a0",
+     "title": "EU 집행위원회, CBAM 이행 대화 개최와 2027년 CBAM 종합 검토 예고",
+     "date": "2026-10-14"
+    },
+    {
+     "id": "20261008-us-fedreg-de64d9",
+     "title": "미국 무역대표부, EU CBAM과 확대 제안이 미국 무역에 미치는 영향에 대한 의견 요청",
+     "date": "2026-10-08"
+    },
+    {
+     "id": "20260814-ec-news-694c66",
+     "title": "확정기간 CBAM 이행을 위한 가이던스 10종 공개",
+     "date": "2026-08-14"
+    },
+    {
+     "id": "20260731-ec-news-acf37c",
+     "title": "CBAM 이행 세 번째 웨비나 후속 소식: 검증기관의 인정과 검증",
+     "date": "2026-07-31"
+    },
+    {
+     "id": "20260616-keco-cbam-2abaaa",
+     "title": "EU CBAM 배출량 산정 실무 핸드북 3권",
+     "date": "2026-06-16"
+    }
+   ],
+   "itemCount": 18
+  },
+  {
+   "key": "cement",
+   "name": "시멘트",
+   "cn": [
+    "cement"
+   ],
+   "words": [
+    "시멘트",
+    "클링커"
+   ],
+   "goods": {
+    "rows": [
+     {
+      "shown": "ex 2507 00 80",
+      "text": "Other kaolinic clays except non-calcined kaolinic clays",
+      "ex": true,
+      "gases": [
+       "co2"
+      ],
+      "directOnly": false,
+      "codes": [
+       "25070080"
+      ],
+      "calc": "25070080"
+     },
+     {
+      "shown": "2523 10 00",
+      "text": "Cement clinkers",
+      "ex": false,
+      "gases": [
+       "co2"
+      ],
+      "directOnly": false,
+      "codes": [
+       "25231000"
+      ],
+      "calc": "25231000"
+     },
+     {
+      "shown": "2523 21 00",
+      "text": "White Portland cement, whether or not artificially coloured",
+      "ex": false,
+      "gases": [
+       "co2"
+      ],
+      "directOnly": false,
+      "codes": [
+       "25232100"
+      ],
+      "calc": "25232100"
+     },
+     {
+      "shown": "2523 29 00",
+      "text": "Other Portland cement",
+      "ex": false,
+      "gases": [
+       "co2"
+      ],
+      "directOnly": false,
+      "codes": [
+       "25232900"
+      ],
+      "calc": "25232900"
+     },
+     {
+      "shown": "2523 30 00",
+      "text": "Aluminous cement",
+      "ex": false,
+      "gases": [
+       "co2"
+      ],
+      "directOnly": false,
+      "codes": [
+       "25233000"
+      ],
+      "calc": "25233000"
+     },
+     {
+      "shown": "2523 90 00",
+      "text": "Other hydraulic cements",
+      "ex": false,
+      "gases": [
+       "co2"
+      ],
+      "directOnly": false,
+      "codes": [
+       "25239000"
+      ],
+      "calc": "25239000"
+     }
+    ],
+    "gases": [
+     "co2"
+    ],
+    "directOnly": 0,
+    "both": 6
+   },
+   "proposed": null,
+   "docs": [
+    {
+     "id": "guide-5a",
+     "name": "가이던스 5a: 시멘트",
+     "group": "guide",
+     "official": "Guidance document 5a: Sector-specific guidance document on cement",
+     "pages": 40,
+     "received": "2026-11-10",
+     "remark": "",
+     "pdf": true,
+     "sections": [
+      {
+       "id": "sec-1",
+       "ko": "1",
+       "titleKo": "서문",
+       "title": "PREFACE"
+      },
+      {
+       "id": "sec-2",
+       "ko": "2",
+       "titleKo": "CBAM 대상 품목과 생산경로",
+       "title": "CBAM GOODS AND PRODUCTION ROUTES"
+      },
+      {
+       "id": "sec-3",
+       "ko": "3",
+       "titleKo": "시멘트 부문별 요건",
+       "title": "CEMENT SECTOR-SPECIFIC REQUIREMENTS"
+      },
+      {
+       "id": "sec-4",
+       "ko": "4",
+       "titleKo": "시멘트 부문의 계산 예시",
+       "title": "WORKED EXAMPLE FOR THE CEMENT SECTOR"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "id": "fact-cement",
+     "name": "EU로 수출하는 시멘트 생산자 안내 자료(전환기간용)",
+     "group": "paper",
+     "official": "Carbon Border Adjustment Mechanism: Information for producers of cement goods exported to the EU",
+     "pages": 2,
+     "received": "2026-11-10",
+     "remark": "전환기간(2023년 10월~2025년 12월)의 보고 의무를 설명한 자료입니다. 2026년부터의 확정기간에는 맞지 않는 내용이 있습니다. 도안으로 된 자료여서 글의 차례가 원문과 다를 수 있습니다. 원문 PDF와 함께 보아 주십시오.",
+     "pdf": false,
+     "sections": [],
+     "more": 0
+    },
+    {
+     "id": "imp-cement",
+     "name": "시멘트 수입자 안내 자료(전환기간용)",
+     "group": "paper",
+     "official": "Carbon Border Adjustment Mechanism: Information for importers of cement",
+     "pages": 2,
+     "received": "2026-11-14",
+     "remark": "전환기간(2023년 10월~2025년 12월)의 보고 의무를 설명한 자료입니다. 2026년부터의 확정기간에는 맞지 않는 내용이 있습니다. 도안으로 된 자료여서 글의 차례가 원문과 다를 수 있습니다. 원문 PDF와 함께 보아 주십시오.",
+     "pdf": false,
+     "sections": [],
+     "more": 0
+    }
+   ],
+   "calc": {
+    "goods": 6,
+    "first": "25070080",
+    "markups": {
+     "2026": 10,
+     "2027": 20,
+     "2028": 30
+    }
+   },
+   "items": [
+    {
+     "id": "20261014-ec-press-fe15a0",
+     "title": "EU 집행위원회, CBAM 이행 대화 개최와 2027년 CBAM 종합 검토 예고",
+     "date": "2026-10-14"
+    },
+    {
+     "id": "20260831-ec-newsletter-82eeb2",
+     "title": "CBAM 소식지 3호: 시멘트 품목의 새 TARIC 코드와 웹사이트 개편",
+     "date": "2026-08-31"
+    },
+    {
+     "id": "20260814-ec-news-694c66",
+     "title": "확정기간 CBAM 이행을 위한 가이던스 10종 공개",
+     "date": "2026-08-14"
+    },
+    {
+     "id": "20260616-keco-cbam-b97090",
+     "title": "알기쉽게 풀어쓰는 CBAM 해설서 3권 개정본_v4",
+     "date": "2026-06-16"
+    },
+    {
+     "id": "seed-definitive-period",
+     "title": "CBAM 확정기간 체제 적용",
+     "date": "2026-01-01"
+    },
+    {
+     "id": "20251223-ec-news-1aa8cc",
+     "title": "CBAM 2026년 1월 1일 시행 안내와 승인 신청 기한",
+     "date": "2025-12-23"
+    }
+   ],
+   "itemCount": 7
+  },
+  {
+   "key": "fertilisers",
+   "name": "비료",
+   "cn": [
+    "fertilisers"
+   ],
+   "words": [
+    "비료"
+   ],
+   "goods": {
+    "rows": [
+     {
+      "shown": "2808 00 00",
+      "text": "Nitric acid; sulphonitric acids",
+      "ex": false,
+      "gases": [
+       "co2",
+       "n2o"
+      ],
+      "directOnly": false,
+      "codes": [
+       "28080000"
+      ],
+      "calc": "28080000"
+     },
+     {
+      "shown": "2814",
+      "text": "Ammonia, anhydrous or in aqueous solution",
+      "ex": false,
+      "gases": [
+       "co2"
+      ],
+      "directOnly": false,
+      "codes": [
+       "2814"
+      ],
+      "calc": "28141000"
+     },
+     {
+      "shown": "2834 21 00",
+      "text": "Nitrates of potassium",
+      "ex": false,
+      "gases": [
+       "co2",
+       "n2o"
+      ],
+      "directOnly": false,
+      "codes": [
+       "28342100"
+      ],
+      "calc": "28342100"
+     },
+     {
+      "shown": "3102",
+      "text": "Mineral or chemical fertilisers, nitrogenous",
+      "ex": false,
+      "gases": [
+       "co2",
+       "n2o"
+      ],
+      "directOnly": false,
+      "codes": [
+       "3102"
+      ],
+      "calc": "31021012"
+     },
+     {
+      "shown": "3105",
+      "text": "Mineral or chemical fertilisers containing two or three of the fertilising elements nitrogen, phosphorus and potassium; other fertilisers; goods of this chapter in tablets or similar forms or in packages of a gross weight not exceeding 10 kg",
+      "ex": false,
+      "gases": [
+       "co2",
+       "n2o"
+      ],
+      "directOnly": false,
+      "codes": [
+       "3105"
+      ],
+      "calc": "31051000"
+     }
+    ],
+    "gases": [
+     "co2",
+     "n2o"
+    ],
+    "directOnly": 0,
+    "both": 5
+   },
+   "proposed": null,
+   "docs": [
+    {
+     "id": "guide-5c",
+     "name": "가이던스 5c: 비료",
+     "group": "guide",
+     "official": "Guidance document 5c: Sector-specific guidance document on fertilisers",
+     "pages": 35,
+     "received": "2026-11-10",
+     "remark": "",
+     "pdf": true,
+     "sections": [
+      {
+       "id": "sec-1",
+       "ko": "1",
+       "titleKo": "서문",
+       "title": "PREFACE"
+      },
+      {
+       "id": "sec-2",
+       "ko": "2",
+       "titleKo": "CBAM 대상 품목과 생산경로",
+       "title": "CBAM GOODS AND PRODUCTION ROUTES"
+      },
+      {
+       "id": "sec-3",
+       "ko": "3",
+       "titleKo": "비료 부문별 요건",
+       "title": "FERTILISERS SECTOR-SPECIFIC REQUIREMENTS"
+      },
+      {
+       "id": "sec-4",
+       "ko": "4",
+       "titleKo": "비료 부문의 계산 예시",
+       "title": "WORKED EXAMPLE FOR THE FERTILISER SECTOR"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "id": "fact-fertilisers",
+     "name": "EU로 수출하는 비료 생산자 안내 자료(전환기간용)",
+     "group": "paper",
+     "official": "Carbon Border Adjustment Mechanism: Information for producers of fertilisers exported to the EU",
+     "pages": 2,
+     "received": "2026-11-10",
+     "remark": "전환기간(2023년 10월~2025년 12월)의 보고 의무를 설명한 자료입니다. 2026년부터의 확정기간에는 맞지 않는 내용이 있습니다. 도안으로 된 자료여서 글의 차례가 원문과 다를 수 있습니다. 원문 PDF와 함께 보아 주십시오.",
+     "pdf": false,
+     "sections": [],
+     "more": 0
+    },
+    {
+     "id": "imp-fertilisers",
+     "name": "비료 수입자 안내 자료(전환기간용)",
+     "group": "paper",
+     "official": "Carbon Border Adjustment Mechanism: Information for importers of fertilisers",
+     "pages": 2,
+     "received": "2026-11-14",
+     "remark": "전환기간(2023년 10월~2025년 12월)의 보고 의무를 설명한 자료입니다. 2026년부터의 확정기간에는 맞지 않는 내용이 있습니다. 도안으로 된 자료여서 글의 차례가 원문과 다를 수 있습니다. 원문 PDF와 함께 보아 주십시오.",
+     "pdf": false,
+     "sections": [],
+     "more": 0
+    }
+   ],
+   "calc": {
+    "goods": 27,
+    "first": "28080000",
+    "markups": {
+     "2026": 1
+    }
+   },
+   "items": [
+    {
+     "id": "20261014-ec-press-fe15a0",
+     "title": "EU 집행위원회, CBAM 이행 대화 개최와 2027년 CBAM 종합 검토 예고",
+     "date": "2026-10-14"
+    },
+    {
+     "id": "20260814-ec-news-694c66",
+     "title": "확정기간 CBAM 이행을 위한 가이던스 10종 공개",
+     "date": "2026-08-14"
+    },
+    {
+     "id": "20260616-keco-cbam-b97090",
+     "title": "알기쉽게 풀어쓰는 CBAM 해설서 3권 개정본_v4",
+     "date": "2026-06-16"
+    },
+    {
+     "id": "20260519-ec-press-6de1c5",
+     "title": "EU 비료 행동계획: CBAM·EU 배출권거래제 비용이 비료 가격에 얼마나 전가되는지 보고서 작성",
+     "date": "2026-05-19"
+    },
+    {
+     "id": "20260224-ec-press-055d0b",
+     "title": "EU 집행위원회, 비료 최혜국 관세 철폐 제안과 CBAM 비료 마크업 예외 설명",
+     "date": "2026-02-24"
+    },
+    {
+     "id": "seed-definitive-period",
+     "title": "CBAM 확정기간 체제 적용",
+     "date": "2026-01-01"
+    }
+   ],
+   "itemCount": 8
+  },
+  {
+   "key": "hydrogen",
+   "name": "수소",
+   "cn": [
+    "chemicals"
+   ],
+   "words": [
+    "수소"
+   ],
+   "goods": {
+    "rows": [
+     {
+      "shown": "2804 10 00",
+      "text": "Hydrogen",
+      "ex": false,
+      "gases": [
+       "co2"
+      ],
+      "directOnly": true,
+      "codes": [
+       "28041000"
+      ],
+      "calc": "28041000"
+     }
+    ],
+    "gases": [
+     "co2"
+    ],
+    "directOnly": 1,
+    "both": 0
+   },
+   "proposed": null,
+   "docs": [
+    {
+     "id": "guide-5b",
+     "name": "가이던스 5b: 수소",
+     "group": "guide",
+     "official": "Guidance document 5b: Sector-specific guidance document on chemical sector - hydrogen",
+     "pages": 30,
+     "received": "2026-11-10",
+     "remark": "",
+     "pdf": true,
+     "sections": [
+      {
+       "id": "sec-1",
+       "ko": "1",
+       "titleKo": "서문",
+       "title": "PREFACE"
+      },
+      {
+       "id": "sec-2",
+       "ko": "2",
+       "titleKo": "CBAM 대상 품목과 생산경로",
+       "title": "CBAM GOODS AND PRODUCTION ROUTES"
+      },
+      {
+       "id": "sec-3",
+       "ko": "3",
+       "titleKo": "화학 – 수소 부문별 모니터링 및 보고 요건",
+       "title": "CHEMICALS – HYDROGEN SECTOR-SPECIFIC REQUIREMENTS FOR MONITORING AND REPORTING"
+      },
+      {
+       "id": "sec-4",
+       "ko": "4",
+       "titleKo": "수소 부문의 계산 예시",
+       "title": "WORKED EXAMPLE FOR THE HYDROGEN SECTOR"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "id": "fact-hydrogen",
+     "name": "EU로 수출하는 수소 생산자 안내 자료(전환기간용)",
+     "group": "paper",
+     "official": "Carbon Border Adjustment Mechanism: Information for producers of hydrogen exported to the EU",
+     "pages": 2,
+     "received": "2026-11-10",
+     "remark": "전환기간(2023년 10월~2025년 12월)의 보고 의무를 설명한 자료입니다. 2026년부터의 확정기간에는 맞지 않는 내용이 있습니다. 도안으로 된 자료여서 글의 차례가 원문과 다를 수 있습니다. 원문 PDF와 함께 보아 주십시오.",
+     "pdf": false,
+     "sections": [],
+     "more": 0
+    },
+    {
+     "id": "imp-hydrogen",
+     "name": "수소 수입자 안내 자료(전환기간용)",
+     "group": "paper",
+     "official": "Carbon Border Adjustment Mechanism: Information for importers of hydrogen",
+     "pages": 2,
+     "received": "2026-11-14",
+     "remark": "전환기간(2023년 10월~2025년 12월)의 보고 의무를 설명한 자료입니다. 2026년부터의 확정기간에는 맞지 않는 내용이 있습니다. 도안으로 된 자료여서 글의 차례가 원문과 다를 수 있습니다. 원문 PDF와 함께 보아 주십시오.",
+     "pdf": false,
+     "sections": [],
+     "more": 0
+    }
+   ],
+   "calc": {
+    "goods": 1,
+    "first": "28041000",
+    "markups": {
+     "2026": 10,
+     "2027": 20,
+     "2028": 30
+    }
+   },
+   "items": [
+    {
+     "id": "20260814-ec-news-694c66",
+     "title": "확정기간 CBAM 이행을 위한 가이던스 10종 공개",
+     "date": "2026-08-14"
+    },
+    {
+     "id": "20260616-keco-cbam-b97090",
+     "title": "알기쉽게 풀어쓰는 CBAM 해설서 3권 개정본_v4",
+     "date": "2026-06-16"
+    },
+    {
+     "id": "seed-definitive-period",
+     "title": "CBAM 확정기간 체제 적용",
+     "date": "2026-01-01"
+    },
+    {
+     "id": "20251223-ec-news-1aa8cc",
+     "title": "CBAM 2026년 1월 1일 시행 안내와 승인 신청 기한",
+     "date": "2025-12-23"
+    },
+    {
+     "id": "20251216-eur-lex-docs-ee0617",
+     "title": "CBAM 규정 적용 보고서 공개: 두 단계에 걸친 강화·확대 구상",
+     "date": "2025-12-16"
+    },
+    {
+     "id": "20250522-keco-cbam-252c06",
+     "title": "알기쉽게 풀어쓰는 CBAM 해설서 3권 개정본_v3",
+     "date": "2025-05-22"
+    }
+   ],
+   "itemCount": 6
+  },
+  {
+   "key": "electricity",
+   "name": "전력",
+   "cn": [
+    "electricity"
+   ],
+   "words": [
+    "전력"
+   ],
+   "goods": {
+    "rows": [
+     {
+      "shown": "2716 00 00",
+      "text": "Electrical energy",
+      "ex": false,
+      "gases": [
+       "co2"
+      ],
+      "directOnly": true,
+      "codes": [
+       "27160000"
+      ],
+      "calc": ""
+     }
+    ],
+    "gases": [
+     "co2"
+    ],
+    "directOnly": 1,
+    "both": 0
+   },
+   "proposed": null,
+   "docs": [
+    {
+     "id": "guide-5f",
+     "name": "가이던스 5f: 전력",
+     "group": "guide",
+     "official": "Guidance document 5f: Sector-specific guidance document on electricity as a good",
+     "pages": 26,
+     "received": "2026-11-10",
+     "remark": "",
+     "pdf": true,
+     "sections": [
+      {
+       "id": "sec-1",
+       "ko": "1",
+       "titleKo": "서문",
+       "title": "PREFACE"
+      },
+      {
+       "id": "sec-2",
+       "ko": "2",
+       "titleKo": "“제품으로서의” 전력(즉, EU로 수입되는 전력)",
+       "title": "ELECTRICITY “AS A GOOD” (I.E. IMPORTED INTO THE EU)"
+      },
+      {
+       "id": "sec-3",
+       "ko": "3",
+       "titleKo": "전력에 대한 계산 예시",
+       "title": "WORKED EXAMPLE FOR ELECTRICITY"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "id": "faq-electricity",
+     "name": "CBAM과 전력에 관한 질의응답",
+     "group": "guide",
+     "official": "Frequently Asked Questions on CBAM and Electricity (version 18 March 2026)",
+     "pages": 3,
+     "received": "2026-11-10",
+     "remark": "",
+     "pdf": true,
+     "sections": [],
+     "more": 0
+    },
+    {
+     "id": "fact-electricity",
+     "name": "EU로 수출하는 전력 생산자 안내 자료(전환기간용)",
+     "group": "paper",
+     "official": "Carbon Border Adjustment Mechanism: Information for producers of electricity exported to the EU",
+     "pages": 2,
+     "received": "2026-11-10",
+     "remark": "전환기간(2023년 10월~2025년 12월)의 보고 의무를 설명한 자료입니다. 2026년부터의 확정기간에는 맞지 않는 내용이 있습니다. 도안으로 된 자료여서 글의 차례가 원문과 다를 수 있습니다. 원문 PDF와 함께 보아 주십시오.",
+     "pdf": false,
+     "sections": [],
+     "more": 0
+    },
+    {
+     "id": "imp-electricity",
+     "name": "전력 수입자 안내 자료(전환기간용)",
+     "group": "paper",
+     "official": "Carbon Border Adjustment Mechanism: Information for importers of electricity",
+     "pages": 2,
+     "received": "2026-11-14",
+     "remark": "전환기간(2023년 10월~2025년 12월)의 보고 의무를 설명한 자료입니다. 2026년부터의 확정기간에는 맞지 않는 내용이 있습니다. 도안으로 된 자료여서 글의 차례가 원문과 다를 수 있습니다. 원문 PDF와 함께 보아 주십시오.",
+     "pdf": false,
+     "sections": [],
+     "more": 0
+    }
+   ],
+   "calc": null,
+   "items": [
+    {
+     "id": "20261106-ec-news-139ae7",
+     "title": "수입 통합통관(CCI)에 따른 전력 수입 가이던스 안내",
+     "date": "2026-11-06"
+    },
+    {
+     "id": "20261014-ec-press-fe15a0",
+     "title": "EU 집행위원회, CBAM 이행 대화 개최와 2027년 CBAM 종합 검토 예고",
+     "date": "2026-10-14"
+    },
+    {
+     "id": "20260814-ec-news-694c66",
+     "title": "확정기간 CBAM 이행을 위한 가이던스 10종 공개",
+     "date": "2026-08-14"
+    },
+    {
+     "id": "20260612-ec-news-607e3e",
+     "title": "EU 집행위원회, CBAM 강화에 관한 EU 이사회 합의 환영",
+     "date": "2026-06-12"
+    },
+    {
+     "id": "20260608-ec-news-c855b2",
+     "title": "CBAM 간접배출량에 관한 기술 연구 보고서 공개",
+     "date": "2026-06-08"
+    },
+    {
+     "id": "seed-definitive-period",
+     "title": "CBAM 확정기간 체제 적용",
+     "date": "2026-01-01"
+    }
+   ],
+   "itemCount": 12
+  }
+ ]
+}

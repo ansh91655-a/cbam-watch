@@ -1,0 +1,57 @@
+/* 가격 그림. 선 2px, 끝점은 바탕색 고리를 두른 점, 눈금선은 가는 실선. 글은 모두 글자색 이름을 쓴다. */
+.chart-card { display: grid; gap: 10px; padding: 26px 28px 20px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); }
+.chart-card h2 { font-size: var(--fs-l); }
+.chart-card .sub { font-size: var(--fs-s); color: var(--ink-3); }
+.chart { position: relative; }
+.chart svg { display: block; width: 100%; overflow: visible; }
+.chart .grid line { stroke: var(--chart-grid); stroke-width: 1; }
+.chart .axis text { fill: var(--ink-3); font-size: 12px; font-variant-numeric: tabular-nums; }
+.chart .axis .base { stroke: var(--line); stroke-width: 1; }
+.chart .area { fill: var(--chart-fill); }
+.chart .line { fill: none; stroke: var(--chart-line); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.chart .dot { fill: var(--chart-line); stroke: var(--surface); stroke-width: 2; }
+/* 마지막 점의 둘레. 지금 값이라는 뜻으로 천천히 번진다(motion.css). 움직임을 끈 화면에서는 보이지 않는다. */
+.chart .halo, .spark .halo { fill: var(--chart-line); opacity: 0; pointer-events: none; }
+.chart .label { fill: var(--ink); font-size: 12.5px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.chart .cross { stroke: var(--ink-3); stroke-width: 1; }
+.chart .hit { fill: transparent; }
+.chart .hit:focus { outline: none; }
+.chart .hit:focus-visible { stroke: var(--accent-strong); stroke-width: 2; }
+.tip { position: absolute; z-index: 5; pointer-events: none; min-width: 150px; padding: 9px 14px; border-radius: 12px; background: var(--tip-bg); color: #ffffff; box-shadow: var(--shadow-2); font-size: var(--fs-s); line-height: 1.5; transform: translate(-50%, -100%); white-space: nowrap; }
+.tip b { display: block; font-size: var(--fs-l); font-variant-numeric: tabular-nums; }
+.spark { display: block; }
+.spark .line { fill: none; stroke: var(--chart-line); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.spark .area { fill: var(--chart-fill); }
+.spark .dot { fill: var(--chart-line); stroke: var(--surface); stroke-width: 2; }
+
+/* 선이 둘인 그림(CBAM 계수). 둘째 선은 첫째와 색각 이상에서도 갈리는 색을 쓴다(검사한 짝: tokens.css의 --chart-line-2). */
+.chart .line-2 { stroke: var(--chart-line-2); }
+.factor-card { gap: 14px; }
+.chart-legend { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 0; padding: 0; list-style: none; font-size: var(--fs-s); color: var(--ink-2); }
+.chart-legend li { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; }
+.chart-legend li > span:not(.key) { font-weight: 700; color: var(--ink); }
+.chart-legend small { color: var(--ink-3); font-size: 0.8rem; }
+.key { flex: none; display: inline-block; width: 18px; height: 3px; border-radius: 2px; background: var(--chart-line); }
+.key-2 { background: var(--chart-line-2); }
+.tip-rows { display: grid; gap: 3px; text-align: left; }
+.tip-rows .tip-head { font-weight: 700; opacity: 0.85; }
+.tip-rows .tip-row { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+.tip-rows .tip-row b { display: inline; min-width: 3.4em; font-size: var(--fs-m); }
+.chart-unit { font-size: 0.8rem; color: var(--ink-3); }
+.chart-table summary { width: fit-content; cursor: pointer; font-size: var(--fs-s); font-weight: 700; color: var(--brand); }
+.chart-table[open] summary { margin-bottom: 10px; }
+.chart-table .table-wrap { box-shadow: none; }
+.chart-sources { display: grid; gap: 4px; margin: 0; padding: 12px 0 0; border-top: 1px solid var(--line-2); list-style: none; font-size: var(--fs-s); }
+.chart-sources li { display: flex; flex-wrap: wrap; gap: 4px 10px; }
+.chart-sources strong { color: var(--ink-2); font-weight: 700; }
+.chart-sources a { display: inline-flex; align-items: center; gap: 4px; }
+
+/* 전체를 몫으로 나눈 막대(js/ui/splitbar.js). 몫 사이는 바탕색으로 2px 띄운다. 색은 선이 둘인 그림과 같은 짝(색 검사로 확인한 것)을 쓴다. */
+.splitbar { display: grid; gap: 10px; }
+.splitbar-track { display: flex; gap: 2px; height: 22px; }
+.splitbar-seg { min-width: 3px; flex: 0 0 0; background: var(--chart-line); }
+.splitbar-seg[data-tone="free"] { background: var(--chart-line-2); }
+.splitbar-seg:first-child { border-radius: 4px 0 0 4px; }
+.splitbar-seg:last-child { border-radius: 0 4px 4px 0; }
+.splitbar-seg:only-child { border-radius: 4px; }
+.splitbar .key { width: 12px; height: 12px; border-radius: 3px; }

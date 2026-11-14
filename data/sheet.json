@@ -1,0 +1,109 @@
+{
+ "basis": [
+  {
+   "about": "대상 품목과 온실가스",
+   "act": "32023R0956",
+   "part": "annex-i",
+   "label": "CBAM 규정 부속서 I 제품과 온실가스의 목록",
+   "when": ""
+  },
+  {
+   "about": "직접배출량만 넣는 품목",
+   "act": "32023R0956",
+   "part": "annex-ii",
+   "label": "CBAM 규정 부속서 II 제7조(1)에 따라 직접배출량만 고려하는 제품의 목록",
+   "when": "direct"
+  },
+  {
+   "about": "소량 면제",
+   "act": "32023R0956",
+   "part": "art-2a",
+   "label": "CBAM 규정 제2a조 소량 면제",
+   "when": ""
+  },
+  {
+   "about": "기본값과 마크업",
+   "act": "32026R1740",
+   "part": "annex-i-2",
+   "label": "기본값 이행규정의 정정 규정 부속서 I EU 관세영역으로 수입되는 제품의 기본값(전력 제외)",
+   "when": "priced"
+  },
+  {
+   "about": "CBAM 벤치마크",
+   "act": "32025R2620",
+   "part": "annex-0",
+   "label": "무상할당 조정 이행규정 부속서",
+   "when": "priced"
+  },
+  {
+   "about": "부문 간 보정계수",
+   "act": "32026D1862",
+   "part": "art-1",
+   "label": "부문 간 보정계수 이행결정(2026~2030년) 제1조",
+   "when": "priced"
+  },
+  {
+   "about": "전력의 기본값",
+   "act": "32025R2621",
+   "part": "annex-iii",
+   "label": "기본값 이행규정 부속서 III EU 관세영역으로 수입되는 전력의 기본값",
+   "when": "unpriced"
+  }
+ ],
+ "read": [
+  {
+   "href": "#handbook-scope.goods-cn",
+   "chapter": "대상 품목과 적용 제외",
+   "title": "부속서 I의 품목과 CN 코드",
+   "when": ""
+  },
+  {
+   "href": "#handbook-scope.de-minimis",
+   "chapter": "대상 품목과 적용 제외",
+   "title": "소량 면제",
+   "when": ""
+  },
+  {
+   "href": "#handbook-scope.direct-only",
+   "chapter": "대상 품목과 적용 제외",
+   "title": "직접배출량만 보는 품목",
+   "when": "direct"
+  },
+  {
+   "href": "#handbook-embedded.indirect-goods",
+   "chapter": "내재배출량",
+   "title": "간접배출량을 넣는 품목과 넣지 않는 품목",
+   "when": "both"
+  },
+  {
+   "href": "#handbook-defaults.tables",
+   "chapter": "기본값과 마크업",
+   "title": "기본값을 찾는 표",
+   "when": "priced"
+  },
+  {
+   "href": "#handbook-defaults.markup",
+   "chapter": "기본값과 마크업",
+   "title": "마크업",
+   "when": "priced"
+  },
+  {
+   "href": "#handbook-certificates.sum",
+   "chapter": "제출할 인증서 수",
+   "title": "인증서 수를 구하는 틀",
+   "when": "priced"
+  },
+  {
+   "href": "#handbook-certificates.example",
+   "chapter": "제출할 인증서 수",
+   "title": "계산 예: 한국산 열연 평판압연 제품 100톤",
+   "when": "priced"
+  },
+  {
+   "href": "#handbook-defaults.indirect",
+   "chapter": "기본값과 마크업",
+   "title": "간접배출량과 수입 전력의 기본값",
+   "when": "unpriced"
+  }
+ ]
+}

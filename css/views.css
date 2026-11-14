@@ -1,0 +1,90 @@
+/* 화면마다 따로 쓰는 것: 원문 대장의 문서 목록, 가격의 수치, 안내의 단계와 항목, 디자인의 색 변형 고르기 */
+
+/* 원문 대장: 누르면 내려받는 문서 목록 */
+.doc-list { display: grid; gap: 8px; }
+.doc-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; align-items: stretch; }
+.doc-row > :only-child { grid-column: 1 / -1; }
+.doc-save { display: grid; place-items: center; width: 52px; border: 1px solid var(--line-2); border-radius: 14px; background: var(--surface); color: var(--ink-3); transition: border-color 0.15s, color 0.15s, transform 0.15s; }
+.doc-save:hover { border-color: var(--brand-bright); color: var(--link); transform: translateY(-1px); }
+/* 문서를 화면에서 바로 보는 창 */
+.viewer { width: min(1120px, 96vw); height: 92vh; max-width: none; max-height: none; padding: 0; border: 0; border-radius: 16px; overflow: hidden; background: #525659; box-shadow: 0 40px 120px -20px rgb(2 6 23 / 0.6); }
+.viewer[open] { display: grid; grid-template-rows: auto minmax(0, 1fr); }
+.viewer::backdrop { background: rgb(5 11 36 / 0.66); -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); }
+.viewer-head { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 11px 12px 11px 20px; background: #0b1437; color: #fff; }
+.viewer-title { display: grid; min-width: 0; }
+.viewer-title strong { overflow: hidden; font-size: 0.98rem; white-space: nowrap; text-overflow: ellipsis; }
+.viewer-title span { overflow: hidden; font-size: 0.78rem; color: #b9c4ea; white-space: nowrap; text-overflow: ellipsis; }
+.viewer-actions { display: flex; flex: none; gap: 6px; }
+.viewer-btn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 12px; border: 1px solid rgb(255 255 255 / 0.22); border-radius: 10px; background: rgb(255 255 255 / 0.06); color: #fff; font: inherit; font-size: 0.84rem; font-weight: 600; text-decoration: none; cursor: pointer; }
+.viewer-btn:hover { background: rgb(255 255 255 / 0.16); }
+.viewer-close { background: #fff; color: #0b1437; border-color: #fff; }
+.viewer-close:hover { background: #e7ecfb; }
+.viewer-frame { width: 100%; height: 100%; border: 0; background: #525659; }
+.doc { display: grid; gap: 6px; }
+.doc-main { display: grid; grid-template-columns: 54px minmax(0, 1fr) auto; align-items: center; gap: 0 16px; padding: 13px 18px 13px 14px; border: 1px solid var(--line-2); border-radius: 14px; background: var(--surface); color: inherit; text-decoration: none; transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s; }
+.doc-main:hover { border-color: var(--brand-bright); box-shadow: var(--shadow-1); transform: translateY(-1px); }
+.doc-type { grid-row: 1 / span 2; padding: 5px 0; border-radius: 9px; background: var(--brand-soft); color: var(--brand); font-size: 0.72rem; font-weight: 800; text-align: center; letter-spacing: 0.02em; }
+.doc-type[data-type="XLSX"] { background: color-mix(in srgb, var(--t-verify) 13%, var(--surface)); color: color-mix(in srgb, var(--t-verify) 80%, var(--ink)); }
+.doc-type[data-type="ZIP"] { background: var(--surface-2); color: var(--ink-2); }
+.doc-title { font-weight: 600; color: var(--ink); }
+.doc-main:hover .doc-title { color: var(--link); }
+/* 번역해 규정 원문에 실은 문서의 국문 이름. 줄이 하나 늘어나므로 왼쪽의 파일 종류와 오른쪽의 '바로 보기'가 세 줄에 걸친다 */
+.doc-ko { grid-column: 2; font-size: var(--fs-s); font-weight: 600; color: var(--ink-2); }
+.doc-main:has(.doc-ko) .doc-type, .doc-main:has(.doc-ko) .doc-get { grid-row: 1 / span 3; }
+.doc-meta { grid-column: 2; font-size: var(--fs-s); color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.doc-get { grid-row: 1 / span 2; grid-column: 3; display: inline-flex; align-items: center; gap: 6px; font-size: var(--fs-s); font-weight: 700; color: var(--link); white-space: nowrap; }
+.doc-extra { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; padding-left: 84px; font-size: var(--fs-s); color: var(--ink-3); }
+.diff { display: grid; gap: 8px; margin-left: 84px; padding: 14px 16px; border-radius: 14px; background: var(--surface-2); font-size: var(--fs-s); }
+.diff-block { display: grid; gap: 4px; padding-left: 10px; border-left: 3px solid var(--line); }
+.diff-block[data-op="added"] { border-left-color: var(--ok); }
+.diff-block[data-op="removed"] { border-left-color: var(--bad); }
+.diff-block[data-op="changed"] { border-left-color: var(--accent-strong); }
+.diff-label { font-weight: 700; color: var(--ink-2); }
+.diff-old { color: var(--ink-3); text-decoration: line-through; }
+@media (max-width: 560px) {
+  .doc-main { grid-template-columns: 46px minmax(0, 1fr); }
+  .doc-get { display: none; }
+  .doc-extra, .diff { padding-left: 0; margin-left: 0; }
+}
+
+/* 수치(가격 화면) */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.stat { display: grid; align-content: start; gap: 3px; padding: 22px 26px 24px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); }
+.stat-label { font-size: var(--fs-s); font-weight: 600; color: var(--ink-3); }
+.stat-value { font-size: 2rem; font-weight: 800; line-height: 1.2; letter-spacing: -0.03em; }
+.stat-value small { margin-left: 5px; font-size: 1rem; font-weight: 600; color: var(--ink-2); letter-spacing: 0; }
+.stat-note { font-size: var(--fs-s); color: var(--ink-3); }
+.stat-hero { border: 0; background: var(--feat-bg); color: var(--on-feat); box-shadow: var(--shadow-2); }
+.stat-hero .stat-label, .stat-hero .stat-note, .stat-hero .stat-value small { color: var(--on-feat-2); }
+.stat-hero .stat-value { font-size: 3.4rem; line-height: 1.05; color: var(--accent); }
+
+/* 안내: 화면마다 무엇을 볼 수 있는지 알려 주는 칸. 누르면 그 화면으로 간다. */
+.steps { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.step { display: grid; gap: 4px; align-content: start; padding: 22px 22px 24px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); color: inherit; text-decoration: none; transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s; }
+.steps-few { grid-template-columns: repeat(auto-fit, minmax(240px, 380px)); }   /* 칸이 한둘일 때 화면 끝까지 늘어나지 않게(없는 주소의 안내에서 어림한 화면) */
+.step:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--brand-bright) 40%, var(--line-2)); box-shadow: var(--shadow-2); }
+.step .chipicon { margin-bottom: 10px; background: var(--feat-bg); color: var(--accent); }
+.step h3 { font-size: 1.15rem; }
+.step p { font-size: var(--fs-s); color: var(--ink-2); }
+/* 안내: 항목마다 한 칸. 두 단으로 흘린다. */
+.about-grid { columns: 1; column-gap: 18px; }
+@media (min-width: 900px) { .about-grid { columns: 2; } }
+.about-card { break-inside: avoid; margin-bottom: 18px; gap: 10px; }
+.about-card h2 { font-size: 1.2rem; margin-bottom: 4px; }
+.about-card .chipicon { width: 38px; height: 38px; border-radius: 11px; }
+.about-card p { color: var(--ink-2); }
+
+/* 글 위주의 화면 */
+.prose { display: grid; gap: 10px; max-width: 70ch; }
+.prose h2 { margin-top: 22px; }
+.prose p { color: var(--ink-2); }
+.note-list { display: grid; gap: 6px; padding-left: 18px; list-style: disc; color: var(--ink-2); max-width: 74ch; }
+
+/* 색 변형 고르기 */
+.proposals { display: grid; gap: var(--gap-4); grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.proposal { display: grid; gap: 12px; align-content: start; padding: 24px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); }
+.proposal[data-current="true"] { border: 2px solid var(--brand-bright); }
+.proposal p { color: var(--ink-2); }
+.swatches { display: flex; gap: 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); }
+.swatch { flex: 1; height: 56px; }
+.refs { display: grid; gap: 8px; padding-left: 18px; list-style: disc; color: var(--ink-2); max-width: 80ch; }

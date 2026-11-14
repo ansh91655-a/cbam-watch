@@ -1,0 +1,94 @@
+/* 일정: 맨 위에 한 해를 한 줄로 그린 일정선, 그 아래에 달력 */
+.year-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
+.year-nav .next-hint { font-size: var(--fs-s); font-weight: 600; }
+.year-nav .year { font-weight: 800; font-size: var(--fs-2xl); line-height: inherit; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+
+/* 칸 안에서만 옆으로 밀어 본다. min-width가 없으면 본문 폭이 일정선의 너비만큼 늘어난다 */
+.yearline-card { min-width: 0; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); }
+.yearline-wrap { overflow-x: auto; padding-bottom: 4px; }
+/* 옆으로 밀어야 다 보일 때: 가려진 일정이 남아 있는 동안 오른쪽 끝을 흐리게 한다(ui/dom.js의 moreHint가 data-more를 단다) */
+.yearline-wrap[data-more] { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); }
+.yearline-card > .count { padding: 0 32px 16px; }
+.yearline { position: relative; min-width: 760px; margin: 26px 32px 14px; }
+.yl-labels { position: relative; }
+.yl-label { position: absolute; z-index: 1; display: grid; align-content: start; gap: 0; width: 164px; height: 56px; padding: 0 0 0 8px; background: var(--surface); border: 0; text-align: left; color: inherit; line-height: 1.35; }
+.yl-label[data-flipped="true"] { padding: 0 8px 0 0; text-align: right; }
+.yl-label .d { font-size: var(--fs-s); color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.yl-label .t { font-size: var(--fs-s); font-weight: 700; color: var(--ink); overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.yl-label:hover .t { color: var(--link); text-decoration: underline; }
+.yl-stem { position: absolute; width: 1px; background: var(--line); }
+.yl-track { position: relative; height: 22px; }
+.yl-line { position: absolute; left: 0; right: 0; top: 9px; height: 4px; border-radius: 2px; background: var(--line); }
+.yl-done { position: absolute; left: 0; top: 9px; height: 4px; border-radius: 2px; background: linear-gradient(90deg, var(--brand), var(--brand-bright)); }
+.yl-dot { position: absolute; top: 11px; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: var(--brand); border: 2px solid var(--surface); box-shadow: 0 0 0 1px var(--brand); }
+.yl-dot[data-kind="기한"] { background: var(--accent); box-shadow: 0 0 0 1px var(--on-accent); }
+.yl-dot[data-kind="가격"] { background: var(--surface); }
+.yl-dot[data-month="true"] { border-radius: 2px; transform: rotate(45deg); }
+.yl-today { position: absolute; top: -4px; width: 2px; height: 30px; margin-left: -1px; background: var(--ink); }
+.yl-today span { position: absolute; top: 30px; left: 50%; transform: translateX(-50%); padding: 0 6px; background: var(--ink); color: var(--bg); font-size: 0.72rem; font-weight: 700; white-space: nowrap; border-radius: var(--radius); }
+.yl-months { display: grid; grid-template-columns: repeat(12, 1fr); margin-top: 4px; }
+.yl-months span { padding-top: 6px; border-left: 1px solid var(--line); font-size: var(--fs-s); color: var(--ink-3); text-align: center; }
+.yl-months span:nth-child(3n + 1) { border-left-color: var(--ink-3); }
+.yl-legend { display: flex; flex-wrap: wrap; gap: 4px 18px; padding: 8px 32px 16px; font-size: var(--fs-s); color: var(--ink-2); }
+.yl-legend i { display: inline-block; position: static; margin: 0 6px -2px 0; }
+
+.cal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(256px, 1fr)); gap: 16px; }
+.cal-month { display: grid; align-content: start; gap: 10px; padding: 18px 18px 20px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); }
+.cal-month[data-has="true"] { box-shadow: var(--shadow-1); }
+.cal-month h3 { display: flex; align-items: baseline; justify-content: space-between; font-size: var(--fs-l); }
+.cal-month h3 small { font-size: var(--fs-s); font-weight: 500; color: var(--ink-3); }
+.cal-days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px 0; font-size: var(--fs-s); text-align: center; font-variant-numeric: tabular-nums; }
+.cal-days .wd { color: var(--ink-3); font-size: 0.75rem; padding-bottom: 2px; }
+.cal-days span, .cal-days button { display: grid; place-items: center; height: 30px; }
+.cal-days .day { color: var(--ink-2); }
+.cal-month:not([data-has="true"]) .cal-days .day { color: var(--ink-3); }
+.cal-days .day[data-today="true"] { outline: 2px solid var(--ink); outline-offset: -3px; border-radius: 50%; color: var(--ink); font-weight: 700; }
+.cal-days button.day { width: 30px; margin: 0 auto; padding: 0; border: 0; border-radius: 50%; background: var(--brand); color: var(--on-brand); font-weight: 700; }
+.cal-days button.day[data-kind="기한"] { background: var(--accent); color: var(--on-accent); }
+.cal-days button.day[data-kind="가격"] { background: var(--surface); color: var(--brand); box-shadow: inset 0 0 0 2px var(--brand); }
+.cal-events { display: grid; gap: 8px; }
+.cal-event { display: grid; gap: 1px; padding: 8px 0 0 12px; border-top: 1px solid var(--line-2); border-left: 3px solid var(--brand); scroll-margin-top: 20px; }
+.cal-event[data-kind="기한"] { border-left-color: var(--accent-strong); }
+.cal-event[data-kind="가격"] { border-left-color: var(--line); }
+.cal-event[data-flash="true"] { background: var(--accent-soft); }
+.cal-event .d { font-size: var(--fs-s); color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.cal-event .t { font-weight: 700; }
+.cal-event .n, .cal-event .b, .cal-event .s { font-size: var(--fs-s); color: var(--ink-3); }
+.cal-event .b { font-style: normal; }
+
+/* 실무 달력: 법령에 날짜가 적힌 의무. 날짜 칸, 할 일, 누가, 생산자가 준비할 것, 근거의 차례다. */
+.duty-sec { gap: 12px; }
+.duty-note { max-width: 62em; font-size: var(--fs-s); color: var(--ink-3); }
+/* 역할로 골라 보기(calendar/roles.js): 신고인·수입자, 제3국 사업자, 검증기관, 영국 수입자 */
+.duty-roles .chip { cursor: pointer; }
+.duty-roles .chip .n { font-size: 0.8rem; font-variant-numeric: tabular-nums; color: var(--ink-3); }
+.duty-roles .chip[aria-pressed="true"] { border-color: var(--brand); background: var(--brand); color: var(--on-brand); font-weight: 700; }
+.duty-roles .chip[aria-pressed="true"] .n { color: inherit; opacity: 0.85; }
+.duty-role-about { max-width: 60em; padding-left: 12px; border-left: 3px solid var(--brand-bright); font-size: var(--fs-s); color: var(--ink-2); }
+.duty-list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.duty { display: grid; grid-template-columns: 58px minmax(0, 1fr); align-items: start; gap: 0 18px; padding: 18px 22px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); }
+.duty .date-box { grid-row: auto; }
+.duty[data-kind="기한"] .date-box { background: var(--accent-soft); color: var(--on-accent); }
+.duty[data-past="true"] { box-shadow: none; background: var(--surface-2); }
+/* 검색 결과에서 넘어온 의무 일정: 잠깐 표시한다(views/calendar.js의 flash) */
+.duty[data-flash="true"] { border-color: var(--accent-strong); background: var(--accent-soft); }
+.duty-body { display: grid; gap: 6px; min-width: 0; }
+.duty-head { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+.duty-head strong { font-size: var(--fs-l); font-weight: 750; letter-spacing: -0.015em; }
+.duty-when { display: flex; flex-wrap: wrap; gap: 2px 12px; font-size: var(--fs-s); color: var(--ink-3); }
+.duty-when time { font-variant-numeric: tabular-nums; }
+.duty-text { max-width: 60em; color: var(--ink-2); }
+.duty-supplier { display: grid; gap: 2px; max-width: 60em; padding: 10px 14px; border-radius: 12px; background: var(--brand-soft); font-size: var(--fs-s); color: var(--ink-2); }
+.duty-supplier b { color: var(--brand); font-weight: 750; }
+.duty-basis { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; font-size: var(--fs-s); }
+.duty-basis > span:first-child { color: var(--ink-3); font-weight: 600; }
+.duty-basis a { display: inline-flex; align-items: center; gap: 4px; }
+html[data-theme="midnight"] .duty[data-kind="기한"] .date-box { color: var(--accent); }
+/* 지난 일정의 날짜: 흐리게 하지 않고(글자의 대비가 떨어진다) 색을 빼서 가라앉힌다 */
+.duty[data-past="true"] .date-box, html[data-theme="midnight"] .duty[data-past="true"] .date-box { background: var(--surface); color: var(--ink-2); box-shadow: inset 0 0 0 1px var(--line); }
+@media (max-width: 640px) {
+  .duty { grid-template-columns: minmax(0, 1fr); gap: 10px; padding: 16px 16px 14px; }
+  .duty .date-box { justify-self: start; grid-auto-flow: column; align-items: baseline; gap: 6px; padding: 4px 12px; }
+}
+.duty .pill[data-tone="due"] { border-color: transparent; background: var(--accent-soft); color: var(--on-accent); font-weight: 700; }
+html[data-theme="midnight"] .duty .pill[data-tone="due"] { color: var(--accent); }

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- 표지: CB와 AM 사이에 노란 국경선 -->
+  <rect width="32" height="32" rx="5" fill="#003399"/>
+  <g fill="none" stroke="#fff" stroke-width="2.4" transform="translate(16 16) scale(1.08) translate(-16 -16)">
+    <path d="M13.08 6.79A3.6 3.6 0 1 0 13.08 11.61"/>
+    <path d="M18.9 5.6H22.3A1.8 1.8 0 0 1 22.3 9.2H18.9ZM18.9 9.2H22.9A1.8 1.8 0 0 1 22.9 12.8H18.9Z"/>
+    <path stroke-linejoin="bevel" d="M6.9 26.4L10.4 19.2 13.9 26.4M8.2 24H12.6"/>
+    <path stroke-linejoin="bevel" d="M18.9 26.4V19.2L22.3 24.2 25.7 19.2V26.4"/>
+  </g>
+  <rect y="15.4" width="32" height="1.2" fill="#ffcc00"/>
+</svg>

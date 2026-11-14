@@ -1,0 +1,58 @@
+/* 화면 위에 뜨는 것: 작은 창(구독 안내, 의견 보내기)과 오른쪽 여백의 탭 */
+.sheet { width: min(560px, calc(100vw - 32px)); max-height: calc(100vh - 48px); padding: 0; border: 0; border-radius: var(--radius-l); background: var(--surface); color: var(--ink); box-shadow: var(--shadow-2); overflow: auto; }
+.sheet:focus { outline: none; }
+.sheet::backdrop { background: rgb(5 11 36 / 0.55); }
+.sheet-head { position: sticky; top: 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 16px 14px 24px; border-bottom: 1px solid var(--line-2); background: var(--surface); }
+.sheet-head h2 { font-size: 1.15rem; }
+.sheet-close { display: grid; place-items: center; width: 36px; height: 36px; border: 0; border-radius: var(--radius); background: none; color: var(--ink-3); }
+.sheet-close:hover { background: var(--surface-2); color: var(--ink); }
+.sheet-body { display: grid; gap: 16px; padding: 20px 24px 26px; }
+.sheet-body > p { color: var(--ink-2); }
+.sheet-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.sheet-note { display: grid; gap: 8px; padding: 14px 16px; border-radius: var(--radius); background: var(--surface-2); font-size: var(--fs-s); color: var(--ink-2); }
+.sheet-note > p:first-child { font-weight: 700; color: var(--ink); }
+.sheet-note ul { display: grid; gap: 4px; padding-left: 16px; list-style: disc; }
+.sheet-note code { padding: 1px 6px; border-radius: 4px; background: var(--surface); font-size: 0.92em; }
+.sheet .field textarea { box-sizing: border-box; width: 100%; padding: 10px 14px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); font: inherit; font-size: var(--fs-m); font-weight: 400; line-height: 1.6; color: var(--ink); resize: vertical; }
+.sheet .field textarea:focus { border-color: var(--brand-bright); }
+
+/* 전체 메뉴(js/ui/allmenu.js): 넓은 창에 묶음마다 한 칸. 넓은 창에서는 세 단, 좁은 창에서는 한 단이다. */
+.sheet[data-kind="menu"] { width: min(1080px, calc(100vw - 32px)); }
+.allmenu { display: grid; gap: 0 36px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 900px) { .allmenu { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.am-col { display: grid; gap: 20px; align-content: start; margin-bottom: 20px; }
+.am-group { display: grid; gap: 2px; }
+/* 폰: 화면 안에서 고르는 것(주제, 규제 묶음, 해)은 접어 창을 짧게 한다. 그 화면에 가면 고를 수 있다 */
+@media (max-width: 720px) { .am-sub:not([data-kind="list"]) { display: none; } }
+.am-group h3 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; margin-bottom: 4px; font-size: 0.95rem; }
+.am-group h3 small { font-size: 0.8rem; font-weight: 400; color: var(--ink-3); }
+.am-row { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 0 12px; margin-inline: -8px; padding: 7px 8px; border-radius: 12px; color: var(--ink); text-decoration: none; }
+.am-row:hover { background: var(--surface-2); }
+.am-row .chipicon { grid-row: 1 / span 2; width: 36px; height: 36px; border-radius: 10px; }
+.am-row > .am-name:last-child { grid-row: 1 / span 2; }
+.am-name { font-weight: 650; }
+.am-about { grid-column: 2; font-size: 0.8rem; color: var(--ink-3); }
+.am-sub { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 8px 48px; padding: 0; list-style: none; font-size: var(--fs-s); }
+.am-sub a { display: inline-block; padding: 2px 11px; border: 1px solid var(--line); border-radius: 999px; color: var(--ink-2); text-decoration: none; }
+.am-sub a:hover { border-color: var(--brand-bright); color: var(--brand-bright); }
+.am-sub[data-kind="list"] { display: grid; gap: 0; }
+.am-sub[data-kind="list"] a { display: block; padding: 3px 0; border: 0; border-radius: 0; }
+.am-sub[data-kind="list"] a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.allmenu a[aria-current="page"], .allmenu a[aria-current="page"] .am-name { color: var(--brand); font-weight: 700; }
+
+/* 구독 주소 한 줄: 이름과 설명, 그 아래에 주소와 복사 단추 */
+.feed-list { display: grid; gap: 14px; }
+.feed-row { display: grid; gap: 8px; }
+.feed-text { display: grid; gap: 1px; }
+.feed-text span { font-size: var(--fs-s); color: var(--ink-3); }
+.feed-url { display: flex; gap: 8px; }
+.feed-url input { flex: 1; min-width: 0; height: 40px; padding: 0 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); font-size: var(--fs-s); color: var(--ink-2); }
+.btn-small { height: 40px; padding: 0 14px; white-space: nowrap; }
+.btn-small[data-state="done"] { border-color: var(--ok); color: var(--ok); }
+.seg-wrap { flex-wrap: wrap; height: auto; }
+
+/* 오른쪽 여백의 '의견 보내기' 탭. 본문 옆에 여백이 생기는 넓은 화면에서만 보인다. */
+.edge-tab { position: fixed; right: 0; top: 46%; z-index: 20; display: none; align-items: center; gap: 8px; padding: 14px 9px 16px; border: 1px solid var(--line); border-right: 0; border-radius: var(--radius) 0 0 var(--radius); background: var(--surface); color: var(--ink-2); font-size: 0.86rem; font-weight: 700; writing-mode: vertical-rl; box-shadow: -6px 6px 18px -12px rgba(11, 18, 48, 0.3); }
+.edge-tab:hover { border-color: var(--brand-bright); color: var(--link); }
+@media (min-width: 1280px) { .edge-tab { display: inline-flex; } }
+@media print { .edge-tab { display: none; } }

@@ -1,0 +1,376 @@
+{
+ "events": [
+  {
+   "date": "2026-01-01",
+   "title": "CBAM 확정기간 체제 적용 시작",
+   "kind": "시행",
+   "note": "",
+   "sourceName": "EU 집행위원회 CBAM 안내",
+   "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en",
+   "basis": "As of 1 January 2026, CBAM is applicable under its definitive regime."
+  },
+  {
+   "date": "2026-03-31",
+   "title": "승인 신청을 마친 수입자의 잠정 수입 허용 기준일",
+   "kind": "기한",
+   "note": "이날까지 승인된 CBAM 신고인 자격을 신청한 수입자나 간접 세관 대리인은 관할당국의 결정이 날 때까지 잠정적으로 계속 수입할 수 있습니다.",
+   "sourceName": "CBAM 규정 제17조(7a)",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020",
+   "derived": true,
+   "duty": "eu-authorisation-interim",
+   "scheme": "EU CBAM"
+  },
+  {
+   "date": "2026-04-07",
+   "title": "2026년 1분기 CBAM 인증서 가격 게시",
+   "kind": "가격",
+   "note": "75.36유로",
+   "sourceName": "EU 집행위원회 CBAM 인증서 가격",
+   "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en",
+   "derived": true
+  },
+  {
+   "date": "2026-04-30",
+   "title": "단일 중량 임계값의 연례 평가",
+   "kind": "기한",
+   "note": "집행위원회는 해마다 4월 30일까지 직전 12개월의 수입 자료로, 단일 중량 임계값 아래여서 의무를 면제받는 양이 수입 제품 내재배출량의 1%를 넘지 않는지 평가합니다. 계산한 임계값이 적용 중인 값과 15톤 넘게 다르면 위임법으로 임계값을 고치고, 고친 값은 다음 해 1월 1일부터 적용됩니다.",
+   "sourceName": "CBAM 규정 제2a조(3)",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020",
+   "derived": true,
+   "duty": "eu-threshold-review",
+   "scheme": "EU CBAM"
+  },
+  {
+   "date": "2026-06-30",
+   "title": "기본값의 지역별 조정을 위한 대체 자료 제출",
+   "kind": "기한",
+   "note": "그해에 수입하는 제품에 법령의 기본값보다 낮은 지역별 조정값을 쓰려면, 승인된 CBAM 신고인이 그해 6월 30일까지 국가 통계 같은 믿을 만한 대체 공식 자료(한 해치)로 그 값이 더 낮다는 것을 집행위원회에 보여야 합니다. 그 뒤에 낸 자료는 낸 해의 다음 해 수입분부터 반영됩니다.",
+   "sourceName": "내재배출량 산정 방법 이행규정 (EU) 2025/2547 부속서 V",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2547",
+   "derived": true,
+   "duty": "eu-default-values-evidence",
+   "scheme": "EU CBAM"
+  },
+  {
+   "date": "2026-07-06",
+   "title": "2026년 2분기 CBAM 인증서 가격 게시",
+   "kind": "가격",
+   "note": "75.28유로",
+   "sourceName": "EU 집행위원회 CBAM 인증서 가격",
+   "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en",
+   "derived": true
+  },
+  {
+   "date": "2026-09-01",
+   "title": "인정받은 검증기관의 CBAM 등록부 등록 신청 개시",
+   "kind": "시행",
+   "note": "인정을 받은 검증기관은 인정받은 날부터 두 달 안에, 자신을 인정한 국가인정기구가 있는 회원국의 관할당국에 CBAM 등록부 등록을 신청해야 합니다. 신청은 2026년 9월 1일부터 할 수 있고, 관할당국이 검증기관의 정보를 CBAM 등록부에 올립니다.",
+   "sourceName": "CBAM 규정 제10a조(1)",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020",
+   "derived": true,
+   "duty": "eu-verifier-registration",
+   "scheme": "EU CBAM"
+  },
+  {
+   "date": "2026-10-05",
+   "title": "2026년 3분기 CBAM 인증서 가격 게시",
+   "kind": "가격",
+   "note": "82.32유로",
+   "sourceName": "EU 집행위원회 CBAM 인증서 가격",
+   "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en",
+   "derived": true
+  },
+  {
+   "date": "2026-11-15",
+   "title": "검증기관의 다음 해 검증 계획 통지",
+   "kind": "기한",
+   "note": "검증기관은 해마다 11월 15일까지 다음 해의 검증 계획을 자신을 인정한 국가인정기구에 보내야 합니다. 계획에는 검증의 일정과 장소(현장검증을 직접 하는지 가상으로 하는지 포함), 배출량 보고서를 검증할 사업자와 그 사업장, 검증팀의 구성원과 해당 인정 범위를 적습니다.",
+   "sourceName": "검증기관 인정 조건 위임규정 (EU) 2025/2551 제22조(1)",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2551",
+   "derived": true,
+   "duty": "eu-verifier-plan",
+   "scheme": "EU CBAM"
+  },
+  {
+   "date": "2026-11-20",
+   "title": "EU·영국 정상회의(배출권거래제 연계 협상 타결 발표 예상, 보도 기준)",
+   "kind": "입법",
+   "note": "EU·영국 정상회의가 열릴 예정이라는 보도가 있습니다. 타결되더라도 서명과 비준, 발효를 거쳐야 CBAM 적용 제외로 이어집니다.",
+   "sourceName": "Euronews 보도(2026년 11월 6일)",
+   "link": "https://www.euronews.com/2026/11/06/eu-and-uk-set-to-link-carbon-markets-in-major-post-brexit-deal",
+   "derived": true,
+   "rule": "eu-uk-link"
+  },
+  {
+   "date": "2026-11-30",
+   "title": "CBAM 하류제품 확대 개정안의 두 번째 3자 협상(보도 기준)",
+   "kind": "입법",
+   "note": "두 번째 3자 협상이 열릴 예정이라는 보도가 있습니다. 합의되면 유럽의회와 EU 이사회의 공식 채택, 유럽연합 관보 게재가 남습니다. 제안된 적용 시작일은 2028년 1월 1일입니다.",
+   "sourceName": "cbamguide.com 보도(Agence Europe 인용, 2026년 10월 23일)",
+   "link": "https://cbamguide.com/news/2026-10-23-cbam-downstream-first-trilogue-no-deal/",
+   "derived": true,
+   "rule": "cbam-downstream"
+  },
+  {
+   "date": "2026-12-01",
+   "title": "탄소가격 서류를 인증하는 독립적인 사람의 CBAM 등록부 등록 신청 개시",
+   "kind": "시행",
+   "note": "제3국에서 낸 탄소가격의 서류는 신고인과 그 나라 당국에서 독립적인 사람이 인증해야 합니다. 그 독립적인 사람은 인정받은 날부터 두 달 안에 관할당국에 CBAM 등록부 등록을 신청해야 하고, 신청은 2026년 12월 1일부터 할 수 있습니다.",
+   "sourceName": "CBAM 규정 제9조(2), CBAM 등록부 이행규정의 개정·정정 규정 (EU) 2025/2550",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2550",
+   "derived": true,
+   "duty": "eu-independent-person-registration",
+   "scheme": "EU CBAM"
+  },
+  {
+   "date": "2026-12-14",
+   "title": "EU 배출권거래제 개정안의 유럽의회 본회의 표결(잠정)",
+   "kind": "입법",
+   "note": "본 개정안의 유럽의회 본회의 제1독회 표결이 잠정적으로 잡혀 있습니다.",
+   "sourceName": "유럽의회 입법 관측소: 2026/0212(COD)",
+   "link": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0212(COD)",
+   "derived": true,
+   "rule": "ets-review"
+  },
+  {
+   "date": "2027-01-01",
+   "title": "CBAM 인증서 가격의 주간 산정 시작",
+   "kind": "시행",
+   "note": "2027년 1월 1일부터 집행위원회는 CBAM 인증서 가격을 달력 주마다, EU 배출권 경매 낙찰가를 경매 물량으로 가중한 평균으로 계산합니다. 2026년 수입분에는 분기마다 계산한 가격을 씁니다.",
+   "sourceName": "CBAM 인증서 가격 산정·공개 이행규정 (EU) 2025/2548 제1조, 제5조",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2548",
+   "derived": true,
+   "duty": "eu-weekly-price",
+   "scheme": "EU CBAM"
+  },
+  {
+   "date": "2027-01-01",
+   "title": "분기말 인증서 보유의무 적용 시작",
+   "kind": "시행",
+   "note": "2027년부터 분기 말마다, 그해 들어 수입한 제품의 내재배출량의 50% 이상에 해당하는 CBAM 인증서를 CBAM 등록부 계정에 두어야 합니다. 단일 중량 임계값을 넘은 신고인은 넘은 분기의 다음 분기 말까지 이 의무를 지키면 됩니다.",
+   "sourceName": "CBAM 규정 제22조(2), 제22조(2a), 제36조",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020",
+   "derived": true,
+   "duty": "eu-quarterly-holding",
+   "scheme": "EU CBAM"
+  },
+  {
+   "date": "2027-01-01",
+   "title": "영국 CBAM 적용 시작",
+   "kind": "시행",
+   "note": "이날 이후 영국으로 수입되는 CBAM 대상 제품(알루미늄, 시멘트, 비료, 수소, 철강)의 내재배출량에 영국 CBAM이 부과됩니다.",
+   "sourceName": "Finance Act 2026 제143조, 제158조",
+   "link": "https://www.legislation.gov.uk/ukpga/2026/11/part/5",
+   "derived": true,
+   "duty": "uk-start",
+   "scheme": "영국 CBAM"
+  },
+  {
+   "date": "2027-01-04",
+   "title": "2026년 4분기 CBAM 인증서 가격 게시 예정",
+   "kind": "가격",
+   "note": "",
+   "sourceName": "EU 집행위원회 CBAM 인증서 가격",
+   "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en",
+   "derived": true
+  },
+  {
+   "date": "2027-02-01",
+   "title": "CBAM 인증서 판매 시작",
+   "kind": "시행",
+   "note": "회원국이 공통 중앙 플랫폼에서 자기 나라에 설립된 승인된 CBAM 신고인에게 인증서를 팔기 시작합니다. 2026년 수입분의 인증서도 이때부터 삽니다.",
+   "sourceName": "CBAM 규정 제20조(1), 제36조",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020",
+   "derived": true,
+   "duty": "eu-certificate-sale",
+   "scheme": "EU CBAM"
+  },
+  {
+   "date": "2027-02-15",
+   "title": "2026년에 승인이 취소된 신고인의 인증서 제출",
+   "kind": "기한",
+   "note": "승인의 취소가 2026년 안에 효력을 가지면, 취소에 따라 내는 신고서로 계산한 CBAM 인증서를 2027년 2월 15일까지 모두 제출해야 합니다. 신고인이 요청한 취소와 관할당국이 결정한 취소에 모두 적용됩니다.",
+   "sourceName": "승인된 CBAM 신고인 지위 이행규정 (EU) 2025/486 제21조(10), 제23조(8)(이행규정 (EU) 2025/2549로 추가)",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2549",
+   "derived": true,
+   "duty": "eu-revocation-surrender-2026",
+   "scheme": "EU CBAM"
+  },
+  {
+   "date": "2027-04-30",
+   "title": "단일 중량 임계값의 연례 평가",
+   "kind": "기한",
+   "note": "집행위원회는 해마다 4월 30일까지 직전 12개월의 수입 자료로, 단일 중량 임계값 아래여서 의무를 면제받는 양이 수입 제품 내재배출량의 1%를 넘지 않는지 평가합니다. 계산한 임계값이 적용 중인 값과 15톤 넘게 다르면 위임법으로 임계값을 고치고, 고친 값은 다음 해 1월 1일부터 적용됩니다.",
+   "sourceName": "CBAM 규정 제2a조(3)",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020",
+   "derived": true,
+   "duty": "eu-threshold-review-2027",
+   "scheme": "EU CBAM"
+  },
+  {
+   "date": "2027-06-30",
+   "title": "기본값의 지역별 조정을 위한 대체 자료 제출",
+   "kind": "기한",
+   "note": "그해에 수입하는 제품에 법령의 기본값보다 낮은 지역별 조정값을 쓰려면, 승인된 CBAM 신고인이 그해 6월 30일까지 국가 통계 같은 믿을 만한 대체 공식 자료(한 해치)로 그 값이 더 낮다는 것을 집행위원회에 보여야 합니다. 그 뒤에 낸 자료는 낸 해의 다음 해 수입분부터 반영됩니다.",
+   "sourceName": "내재배출량 산정 방법 이행규정 (EU) 2025/2547 부속서 V",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2547",
+   "derived": true,
+   "duty": "eu-default-values-evidence-2027",
+   "scheme": "EU CBAM"
+  },
+  {
+   "date": "2027-09-30",
+   "title": "첫 CBAM 신고서 제출과 인증서 제출",
+   "kind": "기한",
+   "note": "2026년 수입분에 대한 CBAM 신고서를 CBAM 등록부로 내고, 신고한 내재배출량에 해당하는 인증서를 제출합니다. 그 뒤로도 해마다 9월 30일이 기한입니다.",
+   "sourceName": "CBAM 규정 제6조(1), 제22조(1)",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020",
+   "derived": true,
+   "duty": "eu-first-declaration",
+   "scheme": "EU CBAM"
+  },
+  {
+   "date": "2027-10-31",
+   "title": "남은 인증서의 환매 요청",
+   "kind": "기한",
+   "note": "제출하고 남은 인증서를 환매받으려면 인증서를 제출한 해의 10월 31일까지 요청해야 합니다. 첫 제출이 2027년이므로 첫 기한도 2027년입니다. 환매 가격은 그 인증서를 산 값입니다.",
+   "sourceName": "CBAM 규정 제23조",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020",
+   "derived": true,
+   "duty": "eu-repurchase-request",
+   "scheme": "EU CBAM"
+  },
+  {
+   "date": "2027-11-01",
+   "title": "2026년분 CBAM 인증서 말소",
+   "kind": "기한",
+   "note": "2026년 내재배출량에 대해 산 인증서 가운데 계정에 남아 있는 것은 이날 보상 없이 말소됩니다.",
+   "sourceName": "CBAM 규정 제24조(2)",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020",
+   "derived": true,
+   "duty": "eu-cancellation-2026",
+   "scheme": "EU CBAM"
+  },
+  {
+   "date": "2027-11-15",
+   "title": "검증기관의 다음 해 검증 계획 통지",
+   "kind": "기한",
+   "note": "검증기관은 해마다 11월 15일까지 다음 해의 검증 계획을 자신을 인정한 국가인정기구에 보내야 합니다. 계획에는 검증의 일정과 장소(현장검증을 직접 하는지 가상으로 하는지 포함), 배출량 보고서를 검증할 사업자와 그 사업장, 검증팀의 구성원과 해당 인정 범위를 적습니다.",
+   "sourceName": "검증기관 인정 조건 위임규정 (EU) 2025/2551 제22조(1)",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2551",
+   "derived": true,
+   "duty": "eu-verifier-plan-2027",
+   "scheme": "EU CBAM"
+  },
+  {
+   "date": "2028-01-01",
+   "title": "영국 CBAM 등록 개시",
+   "kind": "시행",
+   "note": "영국 국세청의 안내에 따르면 2027년 1월 1일부터 기록을 보관해야 하고, 등록은 2028년 1월 1일에 열립니다.",
+   "sourceName": "영국 국세청 CBAM 안내",
+   "link": "https://www.gov.uk/government/collections/carbon-border-adjustment-mechanism",
+   "derived": true,
+   "duty": "uk-registration-opens",
+   "scheme": "영국 CBAM"
+  },
+  {
+   "date": "2028-01-31",
+   "title": "2027년에 등록 요건에 해당한 영국 수입자의 등록",
+   "kind": "기한",
+   "note": "2027년에 등록 의무가 생긴 수입자는 이날까지 영국 국세청에 등록하면 됩니다. 등록 의무는 매월 1일에 직전 12개월 동안 수입한 CBAM 대상 제품의 가액이 5만 파운드 이상이거나, 앞으로 30일 안에 5만 파운드 이상을 수입할 것으로 예상될 때 생깁니다.",
+   "sourceName": "경과 규정(SI 2026/830) 제2조, Finance Act 2026 부칙 17 제2항",
+   "link": "https://www.legislation.gov.uk/uksi/2026/830/made",
+   "derived": true,
+   "duty": "uk-registration-deadline",
+   "scheme": "영국 CBAM"
+  },
+  {
+   "date": "2028-04-30",
+   "title": "단일 중량 임계값의 연례 평가",
+   "kind": "기한",
+   "note": "집행위원회는 해마다 4월 30일까지 직전 12개월의 수입 자료로, 단일 중량 임계값 아래여서 의무를 면제받는 양이 수입 제품 내재배출량의 1%를 넘지 않는지 평가합니다. 계산한 임계값이 적용 중인 값과 15톤 넘게 다르면 위임법으로 임계값을 고치고, 고친 값은 다음 해 1월 1일부터 적용됩니다.",
+   "sourceName": "CBAM 규정 제2a조(3)",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020",
+   "derived": true,
+   "duty": "eu-threshold-review-2028",
+   "scheme": "EU CBAM"
+  },
+  {
+   "date": "2028-05-31",
+   "title": "2027년분 영국 CBAM 신고와 납부",
+   "kind": "기한",
+   "note": "2027년 한 해를 하나의 회계기간으로 보고, 그 기간의 신고와 납부를 이날까지 합니다.",
+   "sourceName": "경과 규정(SI 2026/830) 제2조",
+   "link": "https://www.legislation.gov.uk/uksi/2026/830/made",
+   "derived": true,
+   "duty": "uk-first-return",
+   "scheme": "영국 CBAM"
+  },
+  {
+   "date": "2028-06-30",
+   "title": "기본값의 지역별 조정을 위한 대체 자료 제출",
+   "kind": "기한",
+   "note": "그해에 수입하는 제품에 법령의 기본값보다 낮은 지역별 조정값을 쓰려면, 승인된 CBAM 신고인이 그해 6월 30일까지 국가 통계 같은 믿을 만한 대체 공식 자료(한 해치)로 그 값이 더 낮다는 것을 집행위원회에 보여야 합니다. 그 뒤에 낸 자료는 낸 해의 다음 해 수입분부터 반영됩니다.",
+   "sourceName": "내재배출량 산정 방법 이행규정 (EU) 2025/2547 부속서 V",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2547",
+   "derived": true,
+   "duty": "eu-default-values-evidence-2028",
+   "scheme": "EU CBAM"
+  },
+  {
+   "date": "2028-07-31",
+   "title": "2028년 1~3월분 영국 CBAM 신고와 납부",
+   "kind": "기한",
+   "note": "2028년 1월 1일부터 3월 31일까지의 회계기간에 대한 신고와 납부 기한입니다.",
+   "sourceName": "경과 규정(SI 2026/830) 제2조",
+   "link": "https://www.legislation.gov.uk/uksi/2026/830/made",
+   "derived": true,
+   "duty": "uk-return-2028-q1",
+   "scheme": "영국 CBAM"
+  },
+  {
+   "date": "2028-09-29",
+   "title": "2028년 4~6월분 영국 CBAM 신고와 납부",
+   "kind": "기한",
+   "note": "2028년 4월 1일부터 6월 30일까지의 회계기간에 대한 신고와 납부 기한입니다.",
+   "sourceName": "경과 규정(SI 2026/830) 제2조",
+   "link": "https://www.legislation.gov.uk/uksi/2026/830/made",
+   "derived": true,
+   "duty": "uk-return-2028-q2",
+   "scheme": "영국 CBAM"
+  },
+  {
+   "date": "2028-09-30",
+   "title": "2027년분 CBAM 신고서 제출과 인증서 제출",
+   "kind": "기한",
+   "note": "2027년 수입분에 대한 CBAM 신고서를 CBAM 등록부로 내고, 신고한 내재배출량에 해당하는 인증서를 제출합니다.",
+   "sourceName": "CBAM 규정 제6조(1), 제22조(1)",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020",
+   "derived": true,
+   "duty": "eu-first-declaration-2028",
+   "scheme": "EU CBAM"
+  },
+  {
+   "date": "2028-10-31",
+   "title": "남은 인증서의 환매 요청",
+   "kind": "기한",
+   "note": "제출하고 남은 인증서를 환매받으려면 인증서를 제출한 해의 10월 31일까지 요청해야 합니다. 환매 가격은 그 인증서를 산 값입니다.",
+   "sourceName": "CBAM 규정 제23조",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020",
+   "derived": true,
+   "duty": "eu-repurchase-request-2028",
+   "scheme": "EU CBAM"
+  },
+  {
+   "date": "2028-11-15",
+   "title": "검증기관의 다음 해 검증 계획 통지",
+   "kind": "기한",
+   "note": "검증기관은 해마다 11월 15일까지 다음 해의 검증 계획을 자신을 인정한 국가인정기구에 보내야 합니다. 계획에는 검증의 일정과 장소(현장검증을 직접 하는지 가상으로 하는지 포함), 배출량 보고서를 검증할 사업자와 그 사업장, 검증팀의 구성원과 해당 인정 범위를 적습니다.",
+   "sourceName": "검증기관 인정 조건 위임규정 (EU) 2025/2551 제22조(1)",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2551",
+   "derived": true,
+   "duty": "eu-verifier-plan-2028",
+   "scheme": "EU CBAM"
+  }
+ ]
+}

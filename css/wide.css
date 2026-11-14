@@ -1,0 +1,61 @@
+/* 넓은 모니터에서의 구성. 본문 폭은 layout.css가 세 단계로 넓힌다(1500px부터 1,320, 1800px부터 1,560, 2200px부터 1,800).
+   여기서는 그 폭을 글줄을 늘이는 데 쓰지 않고 칸을 늘리는 데 쓴다: 목록은 칸 수를 더하고, 넣는 칸과 결과가 있는 화면은 둘로 나눈다.
+   노트북, 패드, 폰(1499px까지)에서는 이 파일의 어느 규칙도 걸리지 않는다. */
+
+/* ── 1500px부터(본문 1,320) ─────────────────────────────────────────── */
+@media (min-width: 1500px) {
+  /* 품목 코드 조회: 조회 칸과 '함께 알아 둘 점'을 나란히 */
+  main:has(> .cn-notes) { grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); column-gap: var(--gap-5); }
+  main:has(> .cn-notes) > * { grid-column: 1 / -1; }
+  main:has(> .cn-notes) > .cn-box { grid-column: 1; }
+  main:has(> .cn-notes) > .cn-notes { grid-column: 2; align-self: start; }
+  main:has(> .cn-notes) > .cn-notes ul { grid-template-columns: minmax(0, 1fr); }
+
+  /* 해설서의 절: 글과 곁들이는 것(용어 풀이, 알아 둘 점, 근거 조문)을 나란히 */
+  .hb-cols { grid-template-columns: minmax(0, 1fr) 300px; }
+  .hb-aside { padding-top: 0; padding-left: 28px; border-top: 0; border-left: 1px solid var(--line-2); }
+}
+
+/* ── 1800px부터(본문 1,560) ─────────────────────────────────────────── */
+@media (min-width: 1800px) {
+  .with-side { grid-template-columns: 264px minmax(0, 1fr); }
+  .cols { grid-template-columns: minmax(0, 1fr) 380px; }
+  .rule-grid { grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); }  /* 묶음에 규제가 둘뿐이면 둘이 줄을 채운다 */
+  .doc-list { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 14px; }
+  /* 해설서: 차례는 네 칸. 절은 글줄을 조금 길게 하고 남는 폭은 곁들이는 것에 준다 */
+  .hb-chapters { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .hb-cols { grid-template-columns: minmax(0, 86ch) minmax(320px, 1fr); }
+  .hb-main > p, .hb-list { max-width: 86ch; }
+
+  /* 한 규제의 화면: 글 칸과 오른쪽 칸을 함께 넓히고, 글줄을 조금 길게(한 줄에 마흔 자 남짓) */
+  .rule-page { grid-template-columns: minmax(0, 1fr) 380px; column-gap: 40px; }
+  .rule-detail { max-width: 1040px; }
+  .rule-status, .rule-summary, .an-prose p, .an-point p, .tl p { max-width: 86ch; }
+  .an-point { grid-template-columns: 208px minmax(0, 1fr); }
+
+  /* 소식: 주제나 달 하나의 카드를 두 칸으로. 카드 안의 그림은 조금 줄인다 */
+  .topic-sec, .month-sec { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 16px; }
+  .topic-sec > :not(.card), .month-sec > :not(.card) { grid-column: 1 / -1; }
+  .topic-sec > .card .thumb, .month-sec > .card .thumb { width: 150px; }
+
+  /* 인증서 가격: 추세 그림과 가격표를 나란히 */
+  main:has(> .chart-card) { grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); column-gap: var(--gap-5); }
+  main:has(> .chart-card) > * { grid-column: 1 / -1; }
+  main:has(> .chart-card) > .chart-card { grid-column: 1; }
+  main:has(> .chart-card) > .chart-card + .stack { grid-column: 2; align-self: start; }
+
+  /* 비용 추정: 왼쪽에 넣는 칸(따라 내려온다), 오른쪽에 결과 */
+  main:has(> .calc-out) { grid-template-columns: 500px minmax(0, 1fr); column-gap: var(--gap-5); }
+  main:has(> .calc-out) > * { grid-column: 1 / -1; }
+  main:has(> .calc-out) > .calc-box { grid-column: 1; align-self: start; position: sticky; top: calc(var(--head-h, 64px) + 20px); }
+  main:has(> .calc-out) > .calc-out, main:has(> .calc-out) > .calc-terms { grid-column: 2; }
+  main:has(> .calc-out) > .calc-box .calc-chosen { grid-template-columns: auto minmax(0, 1fr); }
+}
+
+/* ── 2200px부터(본문 1,800) ─────────────────────────────────────────── */
+@media (min-width: 2200px) {
+  .cards-2 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .with-side { grid-template-columns: 280px minmax(0, 1fr); }
+  .rule-page { grid-template-columns: minmax(0, 1fr) 420px; column-gap: 56px; }
+  .rule-detail { max-width: 1180px; }
+}

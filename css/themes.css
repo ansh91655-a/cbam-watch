@@ -1,0 +1,87 @@
+/* 색 변형. 기본(네이비)의 값은 tokens.css에 있고, 여기에는 화이트와 미드나잇이 덮어쓰는 값만 적는다.
+   어느 변형도 EU 엠블럼(별 열두 개)이나 기관 로고를 쓰지 않는다. 색만 빌린다. */
+
+/* ── 화이트: 머리 쪽까지 밝게. 지도와 강조만 파랑 ── */
+html[data-theme="white"] {
+  --head-bg: rgba(255, 255, 255, 0.88);
+  --head-line: #e4e9f5;
+  --hero-bg: radial-gradient(820px 460px at 14% 100%, rgba(43, 89, 224, 0.13), transparent 64%), radial-gradient(760px 420px at 96% 0%, rgba(255, 204, 0, 0.17), transparent 62%), linear-gradient(180deg, #ffffff, #f0f4ff);
+  --band-bg: radial-gradient(640px 260px at 88% 130%, rgba(43, 89, 224, 0.14), transparent 65%), linear-gradient(120deg, #ffffff, #f0f4ff);
+  --foot-bg: #ffffff;
+  --on-deep: #0b1230;
+  --on-deep-2: #3f486a;
+  --on-deep-3: #5d6787;
+  --glass: rgba(255, 255, 255, 0.78);
+  --glass-line: #dde3f2;
+  --map-land: rgba(43, 89, 224, 0.17);
+  --map-eu: #2b59e0;
+  --map-kr: #e0a400;
+  --map-arc-from: #e0a400;
+  --map-arc-to: #2b59e0;
+  --map-glow: rgba(43, 89, 224, 0.16);
+  --map-light: #003399;
+  --spark-ring: #ffffff;
+  --on-deep-link: var(--link);
+  --hl-from: #003399;
+  --hl-to: #2b59e0;
+}
+html[data-theme="white"] .site-nav > a[aria-current="page"]::after { background: var(--brand-bright); }
+html[data-theme="white"] .hero, html[data-theme="white"] .view-head { border-bottom: 1px solid var(--line-2); }
+html[data-theme="white"] .fact { box-shadow: var(--shadow-1); }
+html[data-theme="white"] .fact:hover { background: #ffffff; }
+html[data-theme="white"] .fact .spark { --chart-line: var(--brand-bright); }
+html[data-theme="white"] .fact-value { color: var(--brand); }
+html[data-theme="white"] .fact-note .caveat { color: var(--warn); }
+html[data-theme="white"] .btn-ghost { border-color: var(--line); background: #ffffff; color: var(--ink); }
+html[data-theme="white"] .btn-ghost:hover { border-color: var(--brand-bright); background: #ffffff; color: var(--brand-bright); }
+html[data-theme="white"] .feature .btn-ghost { border-color: rgba(255, 255, 255, 0.22); background: rgba(255, 255, 255, 0.08); color: #ffffff; }
+html[data-theme="white"] .hero-fresh::before { background: #16a34a; box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.18); }
+html[data-theme="white"] .site-foot { border-top: 1px solid var(--line-2); }
+html[data-theme="white"] .showcase { border-top: 1px solid var(--line-2); }
+html[data-theme="white"] .showcase .sector { box-shadow: var(--shadow-1); }
+html[data-theme="white"] .view-head .fresh[data-state="stale"], html[data-theme="white"] .freshness[data-state="stale"] { color: var(--warn); }
+
+/* ── 미드나잇: 본문까지 어둡게 ── */
+html[data-theme="midnight"] {
+  color-scheme: dark;
+  --bg: #060b22;
+  --surface: #0d1535;
+  --surface-2: #131d47;
+  --ink: #eef1fb;
+  --ink-2: #bac4e6;
+  --ink-3: #93a0cb;
+  --line: #28335f;
+  --line-2: #1c2650;
+  --brand: #8fa9ff;
+  --brand-strong: #b9c8ff;
+  --brand-bright: #7c9bff;
+  --brand-soft: #18245a;
+  --on-brand: #060b22;
+  --accent-soft: #3d340c;
+  --link: #9db4ff;
+  --ok: #4ade80;
+  --warn: #fbbf24;
+  --bad: #ff8f8f;
+  --foot-bg: #040817;
+  --feat-bg: linear-gradient(135deg, #15215c, #1d3190);
+  --tip-bg: #1d3190;
+  --t-law: #7c9bff;
+  --t-legis: #a595ff;
+  --t-declare: #5cc3f2;
+  --t-emissions: #45d0c1;
+  --t-verify: #5fd08c;
+  --t-price: #ffcc00;
+  --t-korea: #ff8fae;
+  --t-abroad: #b99cff;
+  --t-events: #ffa26b;
+  --t-etc: #93a0cb;
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.4), 0 10px 28px -14px rgba(0, 0, 0, 0.7);
+  --shadow-2: 0 2px 6px rgba(0, 0, 0, 0.45), 0 26px 56px -22px rgba(0, 0, 0, 0.8);
+  --chart-line: #5b82f5;
+  --chart-line-2: #dd7435;
+}
+html[data-theme="midnight"] .date-list li[data-kind="기한"] .date-box { color: var(--accent); }
+html[data-theme="midnight"] .cal-event[data-flash="true"] { background: var(--accent-soft); }
+html[data-theme="midnight"] .quote { background: var(--surface-2); }
+/* 이 변형의 대표색은 밝은 파랑이라 단추의 흰 글자가 묻힌다. 글자를 어둡게 한다. */
+html[data-theme="midnight"] .btn-primary { color: #0b1230; }

@@ -1,0 +1,57 @@
+{
+ "source": {
+  "code": "ec-price",
+  "name": "EU 집행위원회 CBAM 인증서 가격",
+  "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en"
+ },
+ "unit": "유로",
+ "prices": [
+  {
+   "period": "2026-Q1",
+   "kind": "quarter",
+   "label": "2026년 1분기",
+   "from": "2026-01-01",
+   "to": "2026-03-31",
+   "published": "2026-04-07",
+   "value": 75.36,
+   "raw": "Q1 2026 | 7 April 2026 | 75.36",
+   "firstSeen": "2026-11-10"
+  },
+  {
+   "period": "2026-Q2",
+   "kind": "quarter",
+   "label": "2026년 2분기",
+   "from": "2026-04-01",
+   "to": "2026-06-30",
+   "published": "2026-07-06",
+   "value": 75.28,
+   "raw": "Q2 2026 | 6 July 2026 | 75.28",
+   "firstSeen": "2026-11-10"
+  },
+  {
+   "period": "2026-Q3",
+   "kind": "quarter",
+   "label": "2026년 3분기",
+   "from": "2026-07-01",
+   "to": "2026-09-30",
+   "published": "2026-10-05",
+   "value": 82.32,
+   "raw": "Q3 2026 | 5 October 2026 | 82.32",
+   "firstSeen": "2026-11-10"
+  }
+ ],
+ "upcoming": [
+  {
+   "period": "2026-Q4",
+   "kind": "quarter",
+   "label": "2026년 4분기",
+   "from": "2026-10-01",
+   "to": "2026-12-31",
+   "published": "2027-01-04",
+   "raw": "Q4 2026 | 4 January 2027 | "
+  }
+ ],
+ "revisions": [],
+ "unparsed": [],
+ "updated": "2026-11-10T18:18:14+09:00"
+}

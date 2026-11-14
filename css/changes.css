@@ -1,0 +1,39 @@
+/* 달라진 곳 보기(views/changes.js): 문서의 앞선 판과 뒤의 판에서 달라진 문단을 옛 글과 새 글로 나란히 보여 준다 */
+.chg-body { display: grid; gap: 22px; min-width: 0; }
+.chg-part { display: grid; gap: 0; padding: 20px 22px 14px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); scroll-margin-top: 84px; }
+.chg-part[data-gone] { border-style: dashed; border-color: var(--line); }
+/* 주소가 가리킨 조각(규정 원문 화면의 '달라진 곳' 링크로 왔을 때)을 잠깐 표시한다 */
+.chg-part[data-flash="true"] { border-color: var(--accent-strong); box-shadow: 0 0 0 3px var(--accent-soft); }
+.chg-row { display: grid; gap: 6px; padding: 12px 0; border-top: 1px solid var(--line-2); }
+.chg-tag { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; font-size: var(--fs-s); }
+/* 갈래의 이름표: 색만으로 가리지 않도록 글자를 함께 적는다 */
+.chg-op { display: inline-block; padding: 0 9px; border: 1px solid currentColor; border-radius: 999px; font-size: 0.75rem; font-weight: 700; line-height: 1.7; white-space: nowrap; }
+.chg-op[data-op="changed"] { color: var(--warn); }
+.chg-op[data-op="added"] { color: var(--ok); }
+.chg-op[data-op="removed"] { color: var(--bad); }
+.chg-go { margin-left: auto; font-size: 0.8rem; }
+.chg-pair { display: grid; gap: 10px 28px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.chg-cell { display: grid; gap: 4px; align-content: start; min-width: 0; }
+.chg-cell p { max-width: 86ch; line-height: 1.75; overflow-wrap: anywhere; }
+.chg-side { font-size: 0.72rem; font-weight: 700; color: var(--ink-3); }
+.chg-en { color: var(--ink-2); font-size: 0.95rem; }
+.chg-ko { color: var(--ink); }
+.chg-cell .chg-wait, .chg-cell .chg-blank { color: var(--ink-3); font-size: var(--fs-s); }
+.chg-none { align-self: start; padding: 8px 12px; border: 1px dashed var(--line); border-radius: var(--radius); }
+/* 달라진 낱말: 옛 글에서 빠진 말은 지운 줄, 새 글에 들어온 말은 밑줄(색에 기대지 않는다) */
+.chg-cell del { border-radius: 3px; background: color-mix(in srgb, var(--bad) 13%, transparent); color: inherit; text-decoration: line-through; text-decoration-thickness: 1px; text-decoration-color: color-mix(in srgb, var(--bad) 75%, transparent); }
+.chg-cell ins { border-radius: 3px; background: color-mix(in srgb, var(--ok) 16%, transparent); color: inherit; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; text-decoration-color: color-mix(in srgb, var(--ok) 80%, transparent); }
+/* 보는 글: 원문만, 국문만. 국문이 없는 칸(아직 옮기지 않았거나 옮길 글이 없는 줄)은 국문만 볼 때에도 원문을 보여 준다 */
+.chg-body[data-mode="en"] .chg-ko { display: none; }
+.chg-body[data-mode="ko"] .chg-cell:not([data-wait]) .chg-en { display: none; }
+.chg-body[data-mode="ko"] .chg-wait { display: none; }
+/* 볼 것: 한 갈래만 */
+.chg-body[data-show="changed"] .chg-row:not([data-op="changed"]),
+.chg-body[data-show="added"] .chg-row:not([data-op="added"]),
+.chg-body[data-show="removed"] .chg-row:not([data-op="removed"]) { display: none; }
+.chg-stats { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; }
+.chg-stats > span { display: inline-flex; align-items: center; gap: 7px; }
+.chg-stats b { font-size: 1.05rem; font-variant-numeric: tabular-nums; color: var(--ink); }
+/* 규정 원문 목록의 카드에 적는 한 줄 */
+.law-changed { font-size: var(--fs-s); }
+@media (max-width: 760px) { .chg-pair { grid-template-columns: minmax(0, 1fr); } .chg-part { padding-inline: 16px; } }

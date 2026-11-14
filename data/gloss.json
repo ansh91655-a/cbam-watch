@@ -1,0 +1,1133 @@
+{
+ "terms": [
+  {
+   "forms": [
+    "탄소누출"
+   ],
+   "ko": "탄소누출",
+   "en": "carbon leakage",
+   "abbr": "",
+   "text": "EU 밖의 사업자에게는 같은 탄소 비용이 없어서 EU의 생산이 EU 밖으로 옮겨 갈 위험을 말합니다.",
+   "read": "#handbook-overview.purpose"
+  },
+  {
+   "forms": [
+    "EU 배출권거래제",
+    "EU ETS"
+   ],
+   "ko": "EU 배출권거래제",
+   "en": "EU emissions trading system",
+   "abbr": "EU ETS",
+   "text": "지침 2003/87/EC로 만든 EU의 온실가스 배출권 거래 제도입니다. CBAM 규정에서는 항공 활동을 뺀 활동에 대한 제도를 뜻합니다.",
+   "read": "#handbook-overview.purpose"
+  },
+  {
+   "forms": [
+    "전환기간"
+   ],
+   "ko": "전환기간",
+   "en": "transitional period",
+   "abbr": "",
+   "text": "2023년 10월 1일부터 2025년 12월 31일까지의 기간입니다. 수입자는 내재배출량 등을 보고만 하고 인증서를 제출하지 않았습니다.",
+   "read": "#handbook-overview.periods"
+  },
+  {
+   "forms": [
+    "확정기간"
+   ],
+   "ko": "확정기간",
+   "en": "definitive period",
+   "abbr": "",
+   "text": "전환기간이 끝난 뒤 2026년 1월 1일부터 인증서 제출 등 CBAM의 의무가 본격 적용되는 기간을 가리키는 말입니다.",
+   "read": "#handbook-overview.periods"
+  },
+  {
+   "forms": [
+    "CBAM 인증서"
+   ],
+   "ko": "CBAM 인증서",
+   "en": "CBAM certificate",
+   "abbr": "",
+   "text": "제품의 내재배출량 CO2e 1톤에 해당하는 전자 형식의 인증서입니다.",
+   "read": "#handbook-overview.flow"
+  },
+  {
+   "forms": [
+    "CN 코드",
+    "CN"
+   ],
+   "ko": "CN 코드",
+   "en": "CN code",
+   "abbr": "CN",
+   "text": "EU의 통합품목분류표(Combined Nomenclature)에 따른 품목 코드입니다. 규정 (EEC) No 2658/87이 정합니다.",
+   "read": "#handbook-scope.goods-cn"
+  },
+  {
+   "forms": [
+    "역내가공"
+   ],
+   "ko": "역내가공",
+   "en": "inward processing",
+   "abbr": "",
+   "text": "규정 (EU) No 952/2013 제256조에 정해진 세관 절차입니다. 이 절차를 거쳐 부속서 I의 제품으로 만든 가공품도 CBAM 규정의 대상이 됩니다.",
+   "read": "#handbook-scope.goods-cn"
+  },
+  {
+   "forms": [
+    "단일 중량 임계값"
+   ],
+   "ko": "단일 중량 임계값",
+   "en": "single mass-based threshold",
+   "abbr": "",
+   "text": "소량 면제를 가르는 기준 무게입니다. 부속서 VII 제1호가 순중량 50톤으로 정합니다.",
+   "read": "#handbook-scope.de-minimis"
+  },
+  {
+   "forms": [
+    "승인된 CBAM 신고인"
+   ],
+   "ko": "승인된 CBAM 신고인",
+   "en": "authorised CBAM declarant",
+   "abbr": "",
+   "text": "제17조에 따라 관할당국의 승인을 받은 사람입니다. CBAM 제품을 수입하고 신고서와 인증서를 내는 주체입니다.",
+   "read": "#handbook-roles.declarant"
+  },
+  {
+   "forms": [
+    "간접 세관 대리인"
+   ],
+   "ko": "간접 세관 대리인",
+   "en": "indirect customs representative",
+   "abbr": "",
+   "text": "수입자가 규정 (EU) No 952/2013 제18조에 따라 지정해 수입자를 위해 세관신고를 하게 하는 대리인입니다.",
+   "read": "#handbook-roles.declarant"
+  },
+  {
+   "forms": [
+    "검증기관"
+   ],
+   "ko": "검증기관",
+   "en": "verifier",
+   "abbr": "",
+   "text": "내재배출량이 원칙대로 산정되었는지 확인하는 기관입니다. CBAM에서는 국가인정기구의 인정을 받은 법인이어야 합니다.",
+   "read": "#handbook-roles.verifiers"
+  },
+  {
+   "forms": [
+    "국가인정기구",
+    "NAB"
+   ],
+   "ko": "국가인정기구",
+   "en": "national accreditation body",
+   "abbr": "NAB",
+   "text": "규정 (EC) No 765/2008 제4조(1)에 따라 회원국마다 지정한 인정 기관입니다.",
+   "read": "#handbook-roles.verifiers"
+  },
+  {
+   "forms": [
+    "관할당국"
+   ],
+   "ko": "관할당국",
+   "en": "competent authority",
+   "abbr": "CA",
+   "text": "CBAM 규정의 업무를 맡도록 회원국마다 지정한 당국입니다.",
+   "read": "#handbook-roles.authorities"
+  },
+  {
+   "forms": [
+    "CBAM 등록부"
+   ],
+   "ko": "CBAM 등록부",
+   "en": "CBAM registry",
+   "abbr": "",
+   "text": "집행위원회가 운영하는 전자 데이터베이스입니다. 신고인의 계정과 인증서, 제3국 사업자와 검증기관의 정보가 담깁니다.",
+   "read": "#handbook-roles.authorities"
+  },
+  {
+   "forms": [
+    "CBAM 신고서"
+   ],
+   "ko": "CBAM 신고서",
+   "en": "CBAM declaration",
+   "abbr": "",
+   "text": "승인된 CBAM 신고인이 해마다 지난해 수입분의 물량, 내재배출량, 제출할 인증서 수를 담아 내는 신고서입니다.",
+   "read": "#handbook-cycle.declaration"
+  },
+  {
+   "forms": [
+    "환매"
+   ],
+   "ko": "환매",
+   "en": "repurchase",
+   "abbr": "",
+   "text": "제출하고 남은 CBAM 인증서를 신고인의 요청에 따라 회원국이 산 가격 그대로 다시 사들이는 것입니다.",
+   "read": "#handbook-cycle.repurchase"
+  },
+  {
+   "forms": [
+    "말소"
+   ],
+   "ko": "말소",
+   "en": "cancellation",
+   "abbr": "",
+   "text": "계정에 남아 기한이 지난 CBAM 인증서를 집행위원회가 보상 없이 없애는 것입니다.",
+   "read": "#handbook-cycle.cancellation"
+  },
+  {
+   "forms": [
+    "내재배출량"
+   ],
+   "ko": "내재배출량",
+   "en": "embedded emissions",
+   "abbr": "",
+   "text": "제품 생산 중의 직접배출량과 생산공정에서 쓴 전력의 간접배출량을 합친 것입니다.",
+   "read": "#handbook-embedded.definitions"
+  },
+  {
+   "forms": [
+    "직접배출량"
+   ],
+   "ko": "직접배출량",
+   "en": "direct emissions",
+   "abbr": "",
+   "text": "제품의 생산공정에서 나온 배출량입니다. 공정에서 쓴 열과 냉기의 생산에서 나온 배출량을 포함합니다.",
+   "read": "#handbook-embedded.definitions"
+  },
+  {
+   "forms": [
+    "간접배출량"
+   ],
+   "ko": "간접배출량",
+   "en": "indirect emissions",
+   "abbr": "",
+   "text": "제품의 생산공정에서 쓴 전력을 생산할 때 나온 배출량입니다.",
+   "read": "#handbook-embedded.definitions"
+  },
+  {
+   "forms": [
+    "단순제품"
+   ],
+   "ko": "단순제품",
+   "en": "simple goods",
+   "abbr": "",
+   "text": "내재배출량이 0인 투입물질과 연료만 필요한 생산공정에서 만든 제품입니다.",
+   "read": "#handbook-embedded.simple-complex"
+  },
+  {
+   "forms": [
+    "복합제품"
+   ],
+   "ko": "복합제품",
+   "en": "complex goods",
+   "abbr": "",
+   "text": "단순제품이 아닌 제품입니다. 내재배출량이 있는 전구물질을 써서 만듭니다.",
+   "read": "#handbook-embedded.simple-complex"
+  },
+  {
+   "forms": [
+    "전구물질"
+   ],
+   "ko": "전구물질",
+   "en": "precursor",
+   "abbr": "",
+   "text": "생산공정에 들어가는 투입물질 가운데 CBAM 규정 부속서 I의 제품에 해당하는 것입니다.",
+   "read": "#handbook-embedded.simple-complex"
+  },
+  {
+   "forms": [
+    "시스템 경계"
+   ],
+   "ko": "시스템 경계",
+   "en": "system boundary",
+   "abbr": "",
+   "text": "같은 품목군에 속하는 제품의 내재배출량 계산에 넣는 화학적·물리적 공정의 묶음입니다.",
+   "read": "#handbook-embedded.framework"
+  },
+  {
+   "forms": [
+    "기능단위"
+   ],
+   "ko": "기능단위",
+   "en": "functional unit",
+   "abbr": "",
+   "text": "내재배출량 계산에 쓰는 기준 단위입니다. 보통 같은 CN 코드의 제품 톤이며, 전력, 비료, 일부 시멘트 품목은 따로 정합니다.",
+   "read": "#handbook-embedded.framework"
+  },
+  {
+   "forms": [
+    "활동수준"
+   ],
+   "ko": "활동수준",
+   "en": "activity level",
+   "abbr": "AL",
+   "text": "보고기간 동안 생산공정의 시스템 경계 안에서 생산된, 같은 기능단위가 적용되는 제품의 양입니다.",
+   "read": "#handbook-embedded.framework"
+  },
+  {
+   "forms": [
+    "보고기간"
+   ],
+   "ko": "보고기간",
+   "en": "reporting period",
+   "abbr": "",
+   "text": "제품이 생산된 역년에 해당하는 기간으로서, 내재배출량을 정하는 기준으로 쓰는 기간입니다.",
+   "read": "#handbook-embedded.reporting-period"
+  },
+  {
+   "forms": [
+    "실제배출량"
+   ],
+   "ko": "실제배출량",
+   "en": "actual emissions",
+   "abbr": "",
+   "text": "제품의 생산공정과 그 공정에서 쓴 전력의 생산에서 얻은 1차 데이터로 계산한 배출량입니다.",
+   "read": "#handbook-embedded.actual-default"
+  },
+  {
+   "forms": [
+    "기본값"
+   ],
+   "ko": "기본값",
+   "en": "default value",
+   "abbr": "",
+   "text": "계산되거나 2차 데이터에서 끌어낸 값으로서 제품의 내재배출량을 나타내는 값입니다.",
+   "read": "#handbook-embedded.actual-default"
+  },
+  {
+   "forms": [
+    "마크업"
+   ],
+   "ko": "마크업",
+   "en": "mark-up",
+   "abbr": "",
+   "text": "기본값을 쓸 때 수출국의 평균 배출집약도에 더하는 비율입니다. 부문과 연도에 따라 다릅니다.",
+   "read": "#handbook-defaults.markup"
+  },
+  {
+   "forms": [
+    "생산경로"
+   ],
+   "ko": "생산경로",
+   "en": "production route",
+   "abbr": "",
+   "text": "생산공정에서 제품을 만드는 데 쓰는 특정한 기술입니다. 철강의 고로·전로나 전기로가 그 예입니다.",
+   "read": "#handbook-defaults.routes"
+  },
+  {
+   "forms": [
+    "고유 내재배출량",
+    "SEE"
+   ],
+   "ko": "고유 내재배출량",
+   "en": "specific embedded emissions",
+   "abbr": "SEE",
+   "text": "제품 1톤의 내재배출량입니다. 제품 1톤당 이산화탄소 환산톤으로 나타냅니다.",
+   "read": "#handbook-certificates.sum"
+  },
+  {
+   "forms": [
+    "무상할당 조정",
+    "FAA"
+   ],
+   "ko": "무상할당 조정",
+   "en": "free allocation adjustment",
+   "abbr": "FAA",
+   "text": "EU 배출권거래제의 무상할당을 반영해 제출할 CBAM 인증서 수를 줄이는 조정입니다.",
+   "read": "#handbook-certificates.faa"
+  },
+  {
+   "forms": [
+    "고유 내재무상할당량",
+    "SEFA"
+   ],
+   "ko": "고유 내재무상할당량",
+   "en": "specific embedded free allocation",
+   "abbr": "SEFA",
+   "text": "제품 1톤당 무상할당 조정분입니다. 제품 1톤당 이산화탄소 환산톤으로 나타냅니다.",
+   "read": "#handbook-certificates.faa"
+  },
+  {
+   "forms": [
+    "CBAM 벤치마크"
+   ],
+   "ko": "CBAM 벤치마크",
+   "en": "CBAM benchmark",
+   "abbr": "BM",
+   "text": "무상할당 조정에 쓰는 품목별 기준값입니다. EU 배출권거래제의 벤치마크를 제품에 맞게 묶은 값으로, 제품 1톤당 이산화탄소 환산톤으로 나타냅니다.",
+   "read": "#handbook-certificates.benchmark"
+  },
+  {
+   "forms": [
+    "CBAM 계수"
+   ],
+   "ko": "CBAM 계수",
+   "en": "CBAM factor",
+   "abbr": "",
+   "text": "EU 배출권거래제에서 CBAM 대상 부문의 무상할당에 곱하는 연도별 비율입니다. 해마다 작아져 무상할당을 그만큼 줄이며, 무상할당 조정의 식에도 같은 값이 들어갑니다.",
+   "read": "#handbook-certificates.factor"
+  },
+  {
+   "forms": [
+    "부문 간 보정계수",
+    "CSCF"
+   ],
+   "ko": "부문 간 보정계수",
+   "en": "cross-sectoral correction factor",
+   "abbr": "CSCF",
+   "text": "EU 배출권거래제에서 무상할당의 합이 최대량을 넘지 않도록 무상할당을 같은 비율로 줄이는 계수입니다. 2026년부터 2030년까지는 해마다 100%입니다.",
+   "read": "#handbook-certificates.cscf"
+  },
+  {
+   "forms": [
+    "경매 낙찰가격"
+   ],
+   "ko": "경매 낙찰가격",
+   "en": "auction clearing price",
+   "abbr": "",
+   "text": "EU 배출권 경매에서 입찰 기간이 끝났을 때 낙찰자가 배출권 한 개마다 내는 가격입니다. 인증서 가격은 이 가격의 평균으로 계산합니다.",
+   "read": "#handbook-price.method"
+  },
+  {
+   "forms": [
+    "공통 중앙 플랫폼"
+   ],
+   "ko": "공통 중앙 플랫폼",
+   "en": "common central platform",
+   "abbr": "",
+   "text": "회원국이 승인된 CBAM 신고인에게 CBAM 인증서를 팔고 환매하는 플랫폼입니다. 집행위원회가 만들고 관리합니다.",
+   "read": "#handbook-price.purchase"
+  },
+  {
+   "forms": [
+    "탄소가격"
+   ],
+   "ko": "탄소가격",
+   "en": "carbon price",
+   "abbr": "",
+   "text": "제3국에서 탄소 배출 감축 제도에 따라 세금, 부과금, 수수료 또는 배출권의 형태로 지불한 금액입니다. 제품 생산 중 배출된 온실가스에 대해 계산한 것입니다.",
+   "read": "#handbook-carbon-price.deduction"
+  },
+  {
+   "forms": [
+    "독립적인 사람"
+   ],
+   "ko": "독립적인 사람",
+   "en": "independent person",
+   "abbr": "",
+   "text": "제3국에서 낸 탄소가격의 증빙 서류에 담긴 정보를 확인하는 사람입니다. 승인된 CBAM 신고인과 제3국 당국 모두로부터 독립되어 있어야 합니다.",
+   "read": "#handbook-carbon-price.evidence"
+  },
+  {
+   "forms": [
+    "기본 탄소가격"
+   ],
+   "ko": "기본 탄소가격",
+   "en": "default carbon price",
+   "abbr": "",
+   "text": "집행위원회가 제3국마다 정해 CBAM 등록부에 올릴 수 있는 연간 탄소가격입니다. 실제 지불액을 증명하는 대신 이 값을 참조해 공제를 청구할 수 있습니다.",
+   "read": "#handbook-carbon-price.default-carbon-price"
+  },
+  {
+   "forms": [
+    "인정서"
+   ],
+   "ko": "인정서",
+   "en": "accreditation certificate",
+   "abbr": "",
+   "text": "국가인정기구가 검증기관의 인정을 부여하거나 갱신하거나 범위를 넓힐 때 발급하는 문서입니다. 인정 범위와 활동군, 유효기간이 적힙니다.",
+   "read": "#handbook-verification.accreditation"
+  },
+  {
+   "forms": [
+    "합리적 보증"
+   ],
+   "ko": "합리적 보증",
+   "en": "reasonable assurance",
+   "abbr": "",
+   "text": "검증기관이 보고서에 중요한 오류와 중요한 부적합이 없다고 결론 내릴 때 요구되는 확신의 수준입니다.",
+   "read": "#handbook-verification.principles"
+  },
+  {
+   "forms": [
+    "중요성 기준"
+   ],
+   "ko": "중요성 기준",
+   "en": "materiality level",
+   "abbr": "",
+   "text": "검증기관이 오류를 중요한 것으로 보는 양적 기준입니다. 오류 하나로 또는 다른 오류와 합쳐 이 기준을 넘으면 중요한 오류입니다.",
+   "read": "#handbook-verification.principles"
+  },
+  {
+   "forms": [
+    "검증보고서"
+   ],
+   "ko": "검증보고서",
+   "en": "verification report",
+   "abbr": "",
+   "text": "검증기관이 제품의 내재배출량을 확정하고 검증 의견을 적어 발행하는 보고서입니다.",
+   "read": "#handbook-verification.report"
+  },
+  {
+   "forms": [
+    "과징금"
+   ],
+   "ko": "과징금",
+   "en": "penalty",
+   "abbr": "",
+   "text": "CBAM 규정의 의무를 지키지 않은 사람에게 관할당국이 부과하는 금전 제재입니다.",
+   "read": "#handbook-penalties.late-surrender"
+  },
+  {
+   "forms": [
+    "초과배출 과징금"
+   ],
+   "ko": "초과배출 과징금",
+   "en": "excess emissions penalty",
+   "abbr": "",
+   "text": "EU 배출권거래제에서 배출량만큼 배출권을 내지 않은 사업자가 내는 과징금입니다. CBAM의 미제출 과징금은 이와 같은 금액입니다.",
+   "read": "#handbook-penalties.late-surrender"
+  },
+  {
+   "forms": [
+    "고시"
+   ],
+   "ko": "고시",
+   "en": "notice",
+   "abbr": "",
+   "text": "재무부나 국세청이 법령에 따라 공표하는 문서입니다. 영국 CBAM의 규정은 세부 사항을 고시에 맡기는 일이 많고, 고시는 다른 고시로 고치거나 거둘 수 있습니다.",
+   "read": "#handbook-uk.overview",
+   "scope": "uk"
+  },
+  {
+   "forms": [
+    "CBAM 부문"
+   ],
+   "ko": "CBAM 부문",
+   "en": "CBAM sector",
+   "abbr": "",
+   "text": "영국 CBAM에서 부칙 16의 표의 한 제목에 묶인 품목 코드입니다(제외한다고 표시된 코드는 빼고). 부문별 국내 가격은 이 부문마다 정합니다.",
+   "read": "#handbook-uk.goods",
+   "scope": "uk"
+  },
+  {
+   "forms": [
+    "특별절차"
+   ],
+   "ko": "특별절차",
+   "en": "special customs procedure",
+   "abbr": "",
+   "text": "영국 CBAM에서는 TCTA 2018 제3조(4)의 특별 세관절차와, EU 관세법(UCC 2013) 제7편의 특별절차 가운데 역외가공을 뺀 것을 말합니다. 이 절차에서 가공한 제품에는 원래 품목의 배출량만큼 과세합니다.",
+   "read": "#handbook-uk.goods",
+   "scope": "uk"
+  },
+  {
+   "forms": [
+    "등록 대상자"
+   ],
+   "ko": "등록 대상자",
+   "en": "registrable person",
+   "abbr": "",
+   "text": "영국 CBAM에서 등록 의무가 생겼으나, 스스로 등록하지도 않았고 국세청 공무원이 직권으로 등록하지도 않은 사람입니다. 등록자와 같이 회계기간마다 신고하고 납부해야 합니다.",
+   "read": "#handbook-uk.registration",
+   "scope": "uk"
+  },
+  {
+   "forms": [
+    "부문별 국내 가격"
+   ],
+   "ko": "부문별 국내 가격",
+   "en": "sectoral domestic price",
+   "abbr": "",
+   "text": "영국 CBAM의 세액을 정하는 이산화탄소 환산톤당 가격입니다. 직전 분기 영국 배출권거래제 경매 낙찰가격의 평균을 그 부문의 기준 무상할당 비율(조정 계수 적용)만큼 낮추어 재무부가 분기마다 정합니다.",
+   "read": "#handbook-uk.rate-relief",
+   "scope": "uk"
+  },
+  {
+   "forms": [
+    "기준 무상할당 비율"
+   ],
+   "ko": "기준 무상할당 비율",
+   "en": "baseline free allocation percentage",
+   "abbr": "",
+   "text": "그 CBAM 부문의 품목을 생산하는 영국 하위사업장의 배출량 가운데 2019년, 2022년, 2023년 의무이행연도에 무상 배출권으로 덮인 비율의 평균입니다.",
+   "read": "#handbook-uk.rate-relief",
+   "scope": "uk"
+  },
+  {
+   "forms": [
+    "탄소가격 경감"
+   ],
+   "ko": "탄소가격 경감",
+   "en": "carbon price relief",
+   "abbr": "",
+   "text": "같은 배출량에 대해 세금이나 배출권 대가 같은 다른 금액을 내야 할 때(이미 냈거나 앞으로 낼 금액을 포함합니다) 규정이 정한 요건에 따라 영국 CBAM 세액을 줄여 주는 것입니다. 경감액은 그 품목의 세액을 넘지 못합니다.",
+   "read": "#handbook-uk.rate-relief",
+   "scope": "uk"
+  },
+  {
+   "forms": [
+    "적격 탄소가격제도"
+   ],
+   "ko": "적격 탄소가격제도",
+   "en": "qualifying carbon pricing scheme",
+   "abbr": "",
+   "text": "도시, 지역, 국가, 초국가기구가 운영하고 그 수입의 쓰임을 정하며, CBAM 대상 품목을 만드는 모든 사업장(또는 정해진 배출량을 넘는 모든 사업장)의 참여를 법으로 요구하고, 관련 배출량에 비용을 물리며, 규칙과 범위와 명목 탄소가격을 공개하는 탄소가격제도입니다.",
+   "read": "#handbook-uk.rate-relief",
+   "scope": "uk"
+  },
+  {
+   "forms": [
+    "실효 탄소가격"
+   ],
+   "ko": "실효 탄소가격",
+   "en": "effective carbon price",
+   "abbr": "",
+   "text": "영국 밖 사업장이 관련 배출량 1톤당 실제로 부담하는 가격입니다. 무상 배출권, 부과 문턱, 누진 가격과 배출량에 연동된 환급 등 지원금을 반영해 계산합니다.",
+   "read": "#handbook-uk.rate-relief",
+   "scope": "uk"
+  },
+  {
+   "forms": [
+    "회계기간"
+   ],
+   "ko": "회계기간",
+   "en": "accounting period",
+   "abbr": "",
+   "text": "영국 CBAM의 세액을 계산하고 신고하고 납부하는 단위 기간입니다. 원칙은 3월, 6월, 9월, 12월 말에 끝나는 3개월이고, 경과 규정이 2027년은 한 해 전체를 한 기간으로 정합니다.",
+   "read": "#handbook-uk.returns",
+   "scope": "uk"
+  },
+  {
+   "forms": [
+    "세액 신고서"
+   ],
+   "ko": "세액 신고서",
+   "en": "return",
+   "abbr": "",
+   "text": "영국 CBAM의 등록자와 등록 대상자가 회계기간마다 국세청에 내는 신고서입니다. 품목마다 품목 코드, 무게, 원산지, 탄소가격 경감액, 내재배출량을 정한 근거 값을 적습니다.",
+   "read": "#handbook-uk.returns",
+   "scope": "uk"
+  },
+  {
+   "forms": [
+    "시스템 경계 문서"
+   ],
+   "ko": "시스템 경계 문서",
+   "en": "system boundaries document",
+   "abbr": "",
+   "text": "영국 CBAM에서 내재배출량에 넣을 배출량과 생산공정, 전구물질, 무게를 정하는 방법을 정한 문서입니다. 규정은 2026년 7월 10일자 1.00판을 가리킵니다.",
+   "read": "#handbook-uk.emissions",
+   "scope": "uk"
+  },
+  {
+   "forms": [
+    "배출집약도"
+   ],
+   "ko": "배출집약도",
+   "en": "emissions intensity",
+   "abbr": "",
+   "text": "품목 1톤을 생산하는 동안 배출된 이산화탄소 환산톤입니다. 영국 CBAM에서는 모니터링 기간의 검증된 배출량을 그 기간의 생산량으로 나누어 구합니다.",
+   "read": "#handbook-uk.emissions",
+   "scope": "uk"
+  },
+  {
+   "forms": [
+    "모니터링 기간"
+   ],
+   "ko": "모니터링 기간",
+   "en": "monitoring period",
+   "abbr": "",
+   "text": "영국 CBAM에서 사업장의 관련 배출량을 모니터링하는 한 역년입니다. 실제배출량은 이 기간의 검증된 자료로 계산합니다.",
+   "read": "#handbook-uk.emissions",
+   "scope": "uk"
+  },
+  {
+   "forms": [
+    "검증의견서"
+   ],
+   "ko": "검증의견서",
+   "en": "verification opinion statement",
+   "abbr": "",
+   "text": "검증보고서에 들어가는 진술로, 사업자가 만든 배출량 자료가 검증된 배출량 자료로 쓰일 만큼 충분히 정확한지에 대한 검증기관의 의견입니다.",
+   "read": "#handbook-uk.emissions",
+   "scope": "uk"
+  },
+  {
+   "forms": [
+    "인정기구"
+   ],
+   "ko": "인정기구",
+   "en": "accreditation body",
+   "abbr": "",
+   "text": "영국 CBAM의 검증기관을 인정하는 기구입니다. Global Accreditation Cooperation Incorporated의 정회원이어야 하고 국세청 고시의 요건을 갖추어야 합니다.",
+   "read": "#handbook-uk.emissions",
+   "scope": "uk"
+  },
+  {
+   "forms": [
+    "DG TAXUD"
+   ],
+   "ko": "조세총국",
+   "en": "Directorate-General for Taxation and Customs Union",
+   "abbr": "DG TAXUD",
+   "text": "CBAM을 맡은 집행위원회 총국",
+   "read": ""
+  },
+  {
+   "forms": [
+    "CJEU"
+   ],
+   "ko": "EU 사법재판소",
+   "en": "Court of Justice of the European Union",
+   "abbr": "CJEU",
+   "text": "EU 법의 유권해석 권한을 가진 법원",
+   "read": ""
+  },
+  {
+   "forms": [
+    "EORI"
+   ],
+   "ko": "EORI 번호",
+   "en": "EORI number",
+   "abbr": "EORI",
+   "text": "EU 세관 업무용 경제운영자 등록·식별 번호. CBAM 신고인 승인·신고에 필요",
+   "read": ""
+  },
+  {
+   "forms": [
+    "HS"
+   ],
+   "ko": "통일상품명 및 부호체계",
+   "en": "Harmonised System",
+   "abbr": "HS",
+   "text": "세계관세기구(WCO)의 국제 품목분류(6단위)",
+   "read": ""
+  },
+  {
+   "forms": [
+    "UCC"
+   ],
+   "ko": "EU 관세법",
+   "en": "Union Customs Code",
+   "abbr": "UCC",
+   "text": "EU 관세법(규정(EU) No 952/2013)",
+   "read": ""
+  },
+  {
+   "forms": [
+    "BTI"
+   ],
+   "ko": "품목분류 사전심사",
+   "en": "binding tariff information",
+   "abbr": "BTI",
+   "text": "세관이 품목분류를 미리 확정해 주는 제도(CBAM 대상 여부 확인에 활용)",
+   "read": ""
+  },
+  {
+   "forms": [
+    "AEO"
+   ],
+   "ko": "수출입 안전관리 우수업체",
+   "en": "Authorised Economic Operator",
+   "abbr": "AEO",
+   "text": "세관이 공인한 안전관리 우수 사업자. 알루미늄 업종의 AEO(양극효과 과전압)와 약어가 같아 문맥 주의",
+   "read": ""
+  },
+  {
+   "forms": [
+    "O3CI"
+   ],
+   "ko": "제3국 사업자 포털",
+   "en": "CBAM Operators and Installations Portal",
+   "abbr": "O3CI",
+   "text": "제3국 사업자가 사업장과 배출량 데이터를 등록하는 CBAM 등록부 포털",
+   "read": ""
+  },
+  {
+   "forms": [
+    "GHG"
+   ],
+   "ko": "온실가스",
+   "en": "greenhouse gases",
+   "abbr": "GHG",
+   "text": "부속서 I에 제품별로 정한 온실가스(CO₂, N₂O, PFCs)",
+   "read": ""
+  },
+  {
+   "forms": [
+    "GWP"
+   ],
+   "ko": "지구온난화지수",
+   "en": "global warming potential",
+   "abbr": "GWP",
+   "text": "온실가스의 온난화 효과를 CO₂ 기준으로 나타낸 계수",
+   "read": ""
+  },
+  {
+   "forms": [
+    "NCV"
+   ],
+   "ko": "순발열량",
+   "en": "net calorific value",
+   "abbr": "NCV",
+   "text": "연료가 완전 연소할 때의 열량에서 수증기 잠열을 뺀 값. 국내 지침의 에너지 집계용 '총발열량'과 구분",
+   "read": ""
+  },
+  {
+   "forms": [
+    "CEM"
+   ],
+   "ko": "연속측정방법",
+   "en": "continuous emission measurement",
+   "abbr": "CEM",
+   "text": "굴뚝에 설치한 기기로 배출가스를 연속 측정하는 일련의 작업",
+   "read": ""
+  },
+  {
+   "forms": [
+    "CEMS"
+   ],
+   "ko": "굴뚝자동측정기기",
+   "en": "continuous emission measurement system",
+   "abbr": "CEMS",
+   "text": "연속측정에 쓰는 측정기기 일체. CBAM에서는 CO₂ 이송 배관 측정에도 쓰여 국내 '굴뚝자동측정기기'보다 범위가 넓음",
+   "read": ""
+  },
+  {
+   "forms": [
+    "MRV"
+   ],
+   "ko": "모니터링·보고·검증",
+   "en": "monitoring, reporting and verification",
+   "abbr": "MRV",
+   "text": "배출량 모니터링·보고·검증 체계",
+   "read": ""
+  },
+  {
+   "forms": [
+    "PPA"
+   ],
+   "ko": "전력구매계약",
+   "en": "power purchase agreement",
+   "abbr": "PPA",
+   "text": "발전사업자로부터 전력을 직접 사기로 한 계약",
+   "read": ""
+  },
+  {
+   "forms": [
+    "TSO"
+   ],
+   "ko": "송전계통운영자",
+   "en": "transmission system operator",
+   "abbr": "TSO",
+   "text": "전력 송전계통을 운영하는 자(지침(EU) 2019/944). 정부의 법률 번역서의 표기",
+   "read": ""
+  },
+  {
+   "forms": [
+    "CHP"
+   ],
+   "ko": "열병합발전",
+   "en": "combined heat and power",
+   "abbr": "CHP",
+   "text": "열과 전력을 함께 생산하는 방식 또는 그 발전 시설",
+   "read": ""
+  },
+  {
+   "forms": [
+    "CCS",
+    "CCU",
+    "CCUS"
+   ],
+   "ko": "탄소 포집·저장",
+   "en": "carbon capture and storage / utilisation",
+   "abbr": "CCS / CCU(S)",
+   "text": "CO₂를 포집해 지중 저장하거나 제품에 활용하는 기술",
+   "read": ""
+  },
+  {
+   "forms": [
+    "ETS"
+   ],
+   "ko": "배출권거래제",
+   "en": "emissions trading system",
+   "abbr": "ETS",
+   "text": "배출 한도 안에서 배출권을 사고파는 제도(일반 명칭)",
+   "read": ""
+  },
+  {
+   "forms": [
+    "EUA"
+   ],
+   "ko": "EU 배출권",
+   "en": "EU ETS allowance",
+   "abbr": "EUA",
+   "text": "EU ETS에서 거래되는 배출권(CO₂e 1톤)",
+   "read": ""
+  },
+  {
+   "forms": [
+    "CKD"
+   ],
+   "ko": "시멘트 킬른먼지",
+   "en": "cement kiln dust",
+   "abbr": "CKD",
+   "text": "시멘트 소성로에서 배출·회수되는 분진",
+   "read": ""
+  },
+  {
+   "forms": [
+    "BFG"
+   ],
+   "ko": "고로가스",
+   "en": "blast furnace gas",
+   "abbr": "BFG",
+   "text": "고로에서 나오는 부생가스(CBAM의 폐가스)",
+   "read": ""
+  },
+  {
+   "forms": [
+    "BOF"
+   ],
+   "ko": "전로",
+   "en": "basic oxygen furnace",
+   "abbr": "BOF",
+   "text": "용선에 산소를 불어 강을 만드는 노(LD 전로)",
+   "read": ""
+  },
+  {
+   "forms": [
+    "BOFG"
+   ],
+   "ko": "전로가스",
+   "en": "basic oxygen furnace gas",
+   "abbr": "BOFG",
+   "text": "전로에서 나오는 부생가스. 업계 약칭은 LDG",
+   "read": ""
+  },
+  {
+   "forms": [
+    "COG"
+   ],
+   "ko": "코크스로가스",
+   "en": "coke oven gas",
+   "abbr": "COG",
+   "text": "코크스로에서 나오는 부생가스",
+   "read": ""
+  },
+  {
+   "forms": [
+    "EAF"
+   ],
+   "ko": "전기로",
+   "en": "electric arc furnace",
+   "abbr": "EAF",
+   "text": "전기 아크로 철스크랩·직접환원철을 녹여 강을 만드는 노. 법령 표기는 '전기아크로'",
+   "read": ""
+  },
+  {
+   "forms": [
+    "DRI"
+   ],
+   "ko": "직접환원철",
+   "en": "direct reduced iron",
+   "abbr": "DRI",
+   "text": "철광석을 녹이지 않고 환원한 철(전기로 원료)",
+   "read": ""
+  },
+  {
+   "forms": [
+    "HBI"
+   ],
+   "ko": "HBI(고온 브리켓 철)",
+   "en": "hot briquetted iron",
+   "abbr": "HBI",
+   "text": "직접환원철을 고온에서 압축 성형한 것. 업계는 약어 HBI를 그대로 씀",
+   "read": ""
+  },
+  {
+   "forms": [
+    "NPI"
+   ],
+   "ko": "니켈선철",
+   "en": "nickel pig iron",
+   "abbr": "NPI",
+   "text": "니켈을 함유한 선철(스테인리스 원료)",
+   "read": ""
+  },
+  {
+   "forms": [
+    "PFC"
+   ],
+   "ko": "과불화탄소",
+   "en": "perfluorocarbons",
+   "abbr": "PFCs",
+   "text": "알루미늄 생산에서 나오는 CF₄·C₂F₆ 등 온실가스",
+   "read": ""
+  },
+  {
+   "forms": [
+    "SMR"
+   ],
+   "ko": "스팀개질",
+   "en": "steam methane reforming",
+   "abbr": "SMR",
+   "text": "천연가스와 수증기로 수소를 만드는 공정",
+   "read": ""
+  },
+  {
+   "forms": [
+    "BAT"
+   ],
+   "ko": "최적가용기법",
+   "en": "best available techniques",
+   "abbr": "BAT",
+   "text": "기술·경제적으로 가능한 최선의 환경 기법",
+   "read": ""
+  },
+  {
+   "forms": [
+    "BREF"
+   ],
+   "ko": "EU 최적가용기법 기준서",
+   "en": "BAT reference documents",
+   "abbr": "BREFs",
+   "text": "EU의 업종별 BAT 참조 문서. 국내 통합환경관리제도의 BAT 기준서와 다른 문서",
+   "read": ""
+  },
+  {
+   "forms": [
+    "BATC"
+   ],
+   "ko": "최적가용기법 결정문",
+   "en": "BAT conclusions",
+   "abbr": "BATC",
+   "text": "EU 최적가용기법 기준서(BREF) 가운데 법적 효력이 있는 결론 부분",
+   "read": ""
+  },
+  {
+   "forms": [
+    "FeSi",
+    "SiMn"
+   ],
+   "ko": "페로실리콘",
+   "en": "ferro-silicon / silico-manganese",
+   "abbr": "FeSi / SiMn",
+   "text": "합금철 품목",
+   "read": ""
+  },
+  {
+   "forms": [
+    "ATR"
+   ],
+   "ko": "자열개질",
+   "en": "autothermal reforming",
+   "abbr": "ATR",
+   "text": "산소와 수증기를 함께 써 탄화수소를 개질하는 수소 생산 공정",
+   "read": ""
+  },
+  {
+   "forms": [
+    "CFP"
+   ],
+   "ko": "제품 탄소발자국",
+   "en": "Carbon footprint of products",
+   "abbr": "CFP",
+   "text": "제품 전과정의 온실가스 배출량",
+   "read": ""
+  },
+  {
+   "forms": [
+    "EEA"
+   ],
+   "ko": "유럽경제지역",
+   "en": "European Economic Area",
+   "abbr": "EEA",
+   "text": "EU 27개국과 아이슬란드·노르웨이·리히텐슈타인",
+   "read": ""
+  },
+  {
+   "forms": [
+    "EFTA"
+   ],
+   "ko": "유럽자유무역연합",
+   "en": "European Free Trade Association",
+   "abbr": "EFTA",
+   "text": "아이슬란드·리히텐슈타인·노르웨이·스위스의 자유무역연합. 국문본 약어표 원문은 'European Free Trade Area'로 오기",
+   "read": ""
+  },
+  {
+   "forms": [
+    "FIFO"
+   ],
+   "ko": "선입선출 원칙",
+   "en": "first-in-first-out principle",
+   "abbr": "FIFO",
+   "text": "먼저 들어온 재고를 먼저 쓴 것으로 보는 원칙(전구물질 배분 등)",
+   "read": ""
+  },
+  {
+   "forms": [
+    "IEA"
+   ],
+   "ko": "국제에너지기구",
+   "en": "International Energy Agency",
+   "abbr": "IEA",
+   "text": "전력 기본 배출계수의 데이터 출처",
+   "read": ""
+  },
+  {
+   "forms": [
+    "LULUCF"
+   ],
+   "ko": "토지이용, 토지이용변화 및 임업",
+   "en": "land use, land-use change and forestry",
+   "abbr": "LULUCF",
+   "text": "바이오매스 지속가능성 기준에 쓰이는 토지 부문",
+   "read": ""
+  },
+  {
+   "forms": [
+    "RED II"
+   ],
+   "ko": "재생에너지 지침",
+   "en": "Renewable Energy Directive (recast)",
+   "abbr": "RED II",
+   "text": "지침(EU) 2018/2001. 바이오매스 정의·지속가능성 기준의 근거",
+   "read": ""
+  },
+  {
+   "forms": [
+    "UN/LOCODE"
+   ],
+   "ko": "UN/LOCODE(유엔 무역·운송 위치코드)",
+   "en": "United Nations Code for Trade and Transport Locations",
+   "abbr": "UN/LOCODE",
+   "text": "사업장 소재지 등을 표시하는 국제 위치 코드",
+   "read": ""
+  }
+ ],
+ "scopes": {
+  "uk": [
+   "20250424-hmrc-cbam-872766",
+   "20251128-hmrc-cbam-d4b7f1",
+   "20260210-hmrc-cbam-0d0b72",
+   "20260318-uk-legislation-bf7220",
+   "20260409-hmrc-cbam-161903",
+   "20260513-hmrc-cbam-3556ee",
+   "20260713-hmrc-cbam-48a307",
+   "20260713-uk-legislation-20cbb5",
+   "20260713-uk-legislation-aac6aa",
+   "20260716-hmrc-cbam-56a2c0",
+   "20260827-hmrc-cbam-7e5f7e",
+   "20260908-uk-legislation-c37dcf",
+   "20261016-hmrc-cbam-01ed03",
+   "20261020-hmrc-cbam-dfcf2a",
+   "20261029-hmrc-cbam-c12a3b",
+   "20261102-hmrc-cbam-786818",
+   "20261103-hmrc-cbam-779846",
+   "20261110-hmrc-cbam-6305a0",
+   "seed-uk-cbam"
+  ]
+ }
+}

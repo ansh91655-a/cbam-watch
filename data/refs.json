@@ -1,0 +1,4500 @@
+{
+ "items": {
+  "20261113-eur-lex-related-7fd760": [
+   {
+    "act": "32023R0956",
+    "part": "",
+    "label": "CBAM 규정"
+   }
+  ],
+  "20261110-ec-news-1a22d2": [
+   {
+    "act": "32023R0956",
+    "part": "art-2a",
+    "label": "CBAM 규정 제2a조 소량 면제"
+   }
+  ],
+  "20260924-eur-lex-docs-c13e8c": [
+   {
+    "act": "32025R2083",
+    "part": "",
+    "label": "CBAM 간소화·강화 개정 규정"
+   }
+  ],
+  "20260813-compass-269f85": [
+   {
+    "act": "32026R1740",
+    "part": "",
+    "label": "기본값 이행규정의 정정 규정"
+   }
+  ],
+  "20260731-op-europa-c2031d": [
+   {
+    "act": "32026R1740",
+    "part": "",
+    "label": "기본값 이행규정의 정정 규정"
+   },
+   {
+    "act": "32025R2621",
+    "part": "annex-i",
+    "label": "기본값 이행규정 부속서 I EU 관세영역으로 수입되는 제품의 기본값(전력 제외)"
+   },
+   {
+    "act": "32025R2621",
+    "part": "annex-iv",
+    "label": "기본값 이행규정 부속서 IV 생산국을 알 수 없는 전구물질의 기본값"
+   }
+  ],
+  "20260731-eur-lex-docs-6b9fb4": [
+   {
+    "act": "32023R0956",
+    "part": "art-11",
+    "label": "CBAM 규정 제11조 관할당국"
+   }
+  ],
+  "20260102-compass-1f859d": [
+   {
+    "act": "32025R2621",
+    "part": "",
+    "label": "기본값 이행규정"
+   }
+  ],
+  "20251231-op-europa-084cb9": [
+   {
+    "act": "32025R2621",
+    "part": "",
+    "label": "기본값 이행규정"
+   }
+  ],
+  "20251222-compass-86986b": [
+   {
+    "act": "32025R2550",
+    "part": "",
+    "label": "CBAM 등록부 이행규정의 개정·정정 규정"
+   }
+  ],
+  "20251222-compass-7b14bd": [
+   {
+    "act": "32025R2619",
+    "part": "",
+    "label": "세관당국 정보 전달 이행규정"
+   }
+  ],
+  "20251222-compass-48e444": [
+   {
+    "act": "32025R2546",
+    "part": "",
+    "label": "내재배출량 검증 원칙 이행규정"
+   }
+  ],
+  "20251222-compass-9a0414": [
+   {
+    "act": "32025R2549",
+    "part": "",
+    "label": "승인된 CBAM 신고인 지위 이행규정의 개정·정정 규정"
+   }
+  ],
+  "20251222-compass-28704b": [
+   {
+    "act": "32025R2548",
+    "part": "",
+    "label": "CBAM 인증서 가격 산정·공개 이행규정"
+   }
+  ],
+  "20251222-compass-9a65dc": [
+   {
+    "act": "32025R2547",
+    "part": "",
+    "label": "내재배출량 산정 방법 이행규정"
+   }
+  ],
+  "20251222-compass-97c67b": [
+   {
+    "act": "32025R2620",
+    "part": "",
+    "label": "무상할당 조정 이행규정"
+   }
+  ],
+  "20251222-compass-aaf213": [
+   {
+    "act": "32025R2551",
+    "part": "",
+    "label": "검증기관 인정 조건 위임규정"
+   }
+  ],
+  "20251222-op-europa-9ba4dd": [
+   {
+    "act": "32025R2546",
+    "part": "",
+    "label": "내재배출량 검증 원칙 이행규정"
+   }
+  ],
+  "20251222-op-europa-a80eae": [
+   {
+    "act": "32025R2547",
+    "part": "",
+    "label": "내재배출량 산정 방법 이행규정"
+   }
+  ],
+  "20251222-op-europa-b51dc4": [
+   {
+    "act": "32025R2548",
+    "part": "",
+    "label": "CBAM 인증서 가격 산정·공개 이행규정"
+   }
+  ],
+  "20251222-op-europa-ae4b1c": [
+   {
+    "act": "32025R2549",
+    "part": "",
+    "label": "승인된 CBAM 신고인 지위 이행규정의 개정·정정 규정"
+   },
+   {
+    "act": "32025R0486",
+    "part": "",
+    "label": "승인된 CBAM 신고인 지위 이행규정"
+   }
+  ],
+  "20251222-op-europa-e55e4e": [
+   {
+    "act": "32025R2550",
+    "part": "",
+    "label": "CBAM 등록부 이행규정의 개정·정정 규정"
+   },
+   {
+    "act": "32024R3210",
+    "part": "",
+    "label": "CBAM 등록부 이행규정"
+   }
+  ],
+  "20251222-op-europa-99daab": [
+   {
+    "act": "32025R2551",
+    "part": "",
+    "label": "검증기관 인정 조건 위임규정"
+   }
+  ],
+  "20251222-op-europa-e68df2": [
+   {
+    "act": "32025R2619",
+    "part": "",
+    "label": "세관당국 정보 전달 이행규정"
+   }
+  ],
+  "20251222-op-europa-732930": [
+   {
+    "act": "32025R2620",
+    "part": "",
+    "label": "무상할당 조정 이행규정"
+   }
+  ],
+  "20251217-ep-oeil-2025-0419-1e1b9a": [
+   {
+    "act": "32023R0956",
+    "part": "",
+    "label": "CBAM 규정"
+   }
+  ],
+  "20251103-compass-6cecaa": [
+   {
+    "act": "32025R2210",
+    "part": "",
+    "label": "대륙붕·배타적 경제수역 반입 제품 이행규정"
+   }
+  ],
+  "20251103-op-europa-29e826": [
+   {
+    "act": "32025R2210",
+    "part": "",
+    "label": "대륙붕·배타적 경제수역 반입 제품 이행규정"
+   }
+  ],
+  "20251017-ep-oeil-2025-0039-b74ef5": [
+   {
+    "act": "32025R2083",
+    "part": "",
+    "label": "CBAM 간소화·강화 개정 규정"
+   }
+  ],
+  "20251017-compass-757041": [
+   {
+    "act": "32025R2083",
+    "part": "",
+    "label": "CBAM 간소화·강화 개정 규정"
+   }
+  ],
+  "20250318-op-europa-4309d2": [
+   {
+    "act": "32025R0486",
+    "part": "",
+    "label": "승인된 CBAM 신고인 지위 이행규정"
+   }
+  ],
+  "seed-acts-numbers": [
+   {
+    "act": "32025R2621",
+    "part": "",
+    "label": "기본값 이행규정"
+   },
+   {
+    "act": "32025R2620",
+    "part": "",
+    "label": "무상할당 조정 이행규정"
+   },
+   {
+    "act": "32025R2551",
+    "part": "",
+    "label": "검증기관 인정 조건 위임규정"
+   },
+   {
+    "act": "32025R2546",
+    "part": "",
+    "label": "내재배출량 검증 원칙 이행규정"
+   }
+  ]
+ },
+ "duties": {
+  "eu-authorisation-interim": [
+   {
+    "act": "32023R0956",
+    "part": "art-17",
+    "label": "CBAM 규정 제17조 승인"
+   }
+  ],
+  "eu-threshold-review": [
+   {
+    "act": "32023R0956",
+    "part": "art-2a",
+    "label": "CBAM 규정 제2a조 소량 면제"
+   }
+  ],
+  "eu-default-values-evidence": [
+   {
+    "act": "32025R2547",
+    "part": "annex-v",
+    "label": "내재배출량 산정 방법 이행규정 부속서 V 기본값의 지역별 조정"
+   }
+  ],
+  "eu-verifier-registration": [
+   {
+    "act": "32023R0956",
+    "part": "art-10a",
+    "label": "CBAM 규정 제10a조 인정받은 검증기관의 등록"
+   }
+  ],
+  "eu-verifier-plan": [
+   {
+    "act": "32025R2551",
+    "part": "art-22",
+    "label": "검증기관 인정 조건 위임규정 제22조 검증기관의 통지"
+   }
+  ],
+  "eu-independent-person-registration": [
+   {
+    "act": "32023R0956",
+    "part": "art-9",
+    "label": "CBAM 규정 제9조 제3국에서 지불한 탄소가격"
+   },
+   {
+    "act": "32025R2550",
+    "part": "",
+    "label": "CBAM 등록부 이행규정의 개정·정정 규정"
+   }
+  ],
+  "eu-quarterly-holding": [
+   {
+    "act": "32023R0956",
+    "part": "art-22",
+    "label": "CBAM 규정 제22조 CBAM 인증서의 제출"
+   },
+   {
+    "act": "32023R0956",
+    "part": "art-36",
+    "label": "CBAM 규정 제36조 발효"
+   }
+  ],
+  "eu-weekly-price": [
+   {
+    "act": "32025R2548",
+    "part": "art-1",
+    "label": "CBAM 인증서 가격 산정·공개 이행규정 제1조 2026년 CBAM 인증서 가격의 산정 방법"
+   },
+   {
+    "act": "32025R2548",
+    "part": "art-5",
+    "label": "CBAM 인증서 가격 산정·공개 이행규정 제5조 2027년부터의 CBAM 인증서 가격 산정 방법"
+   }
+  ],
+  "eu-certificate-sale": [
+   {
+    "act": "32023R0956",
+    "part": "art-20",
+    "label": "CBAM 규정 제20조 CBAM 인증서의 판매"
+   },
+   {
+    "act": "32023R0956",
+    "part": "art-36",
+    "label": "CBAM 규정 제36조 발효"
+   }
+  ],
+  "eu-revocation-surrender-2026": [
+   {
+    "act": "32025R0486",
+    "part": "art-21",
+    "label": "승인된 CBAM 신고인 지위 이행규정 제21조 승인된 CBAM 신고인의 요청에 따른 취소 절차"
+   },
+   {
+    "act": "32025R0486",
+    "part": "art-23",
+    "label": "승인된 CBAM 신고인 지위 이행규정 제23조 승인된 CBAM 신고인 지위의 취소 결정"
+   },
+   {
+    "act": "32025R2549",
+    "part": "",
+    "label": "승인된 CBAM 신고인 지위 이행규정의 개정·정정 규정"
+   }
+  ],
+  "eu-threshold-review-2027": [
+   {
+    "act": "32023R0956",
+    "part": "art-2a",
+    "label": "CBAM 규정 제2a조 소량 면제"
+   }
+  ],
+  "eu-default-values-evidence-2027": [
+   {
+    "act": "32025R2547",
+    "part": "annex-v",
+    "label": "내재배출량 산정 방법 이행규정 부속서 V 기본값의 지역별 조정"
+   }
+  ],
+  "eu-first-declaration": [
+   {
+    "act": "32023R0956",
+    "part": "art-6",
+    "label": "CBAM 규정 제6조 CBAM 신고서"
+   },
+   {
+    "act": "32023R0956",
+    "part": "art-22",
+    "label": "CBAM 규정 제22조 CBAM 인증서의 제출"
+   }
+  ],
+  "eu-repurchase-request": [
+   {
+    "act": "32023R0956",
+    "part": "art-23",
+    "label": "CBAM 규정 제23조 CBAM 인증서의 환매"
+   }
+  ],
+  "eu-cancellation-2026": [
+   {
+    "act": "32023R0956",
+    "part": "art-24",
+    "label": "CBAM 규정 제24조 CBAM 인증서의 말소"
+   }
+  ],
+  "eu-verifier-plan-2027": [
+   {
+    "act": "32025R2551",
+    "part": "art-22",
+    "label": "검증기관 인정 조건 위임규정 제22조 검증기관의 통지"
+   }
+  ],
+  "eu-threshold-review-2028": [
+   {
+    "act": "32023R0956",
+    "part": "art-2a",
+    "label": "CBAM 규정 제2a조 소량 면제"
+   }
+  ],
+  "eu-default-values-evidence-2028": [
+   {
+    "act": "32025R2547",
+    "part": "annex-v",
+    "label": "내재배출량 산정 방법 이행규정 부속서 V 기본값의 지역별 조정"
+   }
+  ],
+  "eu-first-declaration-2028": [
+   {
+    "act": "32023R0956",
+    "part": "art-6",
+    "label": "CBAM 규정 제6조 CBAM 신고서"
+   },
+   {
+    "act": "32023R0956",
+    "part": "art-22",
+    "label": "CBAM 규정 제22조 CBAM 인증서의 제출"
+   }
+  ],
+  "eu-repurchase-request-2028": [
+   {
+    "act": "32023R0956",
+    "part": "art-23",
+    "label": "CBAM 규정 제23조 CBAM 인증서의 환매"
+   }
+  ],
+  "eu-verifier-plan-2028": [
+   {
+    "act": "32025R2551",
+    "part": "art-22",
+    "label": "검증기관 인정 조건 위임규정 제22조 검증기관의 통지"
+   }
+  ]
+ },
+ "terms": {
+  "Carbon Border Adjustment Mechanism": [
+   {
+    "act": "32023R0956",
+    "part": "art-1",
+    "label": "CBAM 규정 제1조 주제"
+   }
+  ],
+  "CBAM Regulation": [
+   {
+    "act": "32023R0956",
+    "part": "",
+    "label": "CBAM 규정"
+   }
+  ],
+  "implementing regulation / implementing act": [
+   {
+    "act": "32023R0956",
+    "part": "art-7",
+    "label": "CBAM 규정 제7조 내재배출량의 산정"
+   },
+   {
+    "act": "32023R0956",
+    "part": "art-8",
+    "label": "CBAM 규정 제8조 내재배출량의 검증"
+   },
+   {
+    "act": "32023R0956",
+    "part": "art-31",
+    "label": "CBAM 규정 제31조 EU 배출권거래제의 배출권 무상할당과 CBAM 인증서 제출 의무"
+   }
+  ],
+  "delegated regulation / delegated act": [
+   {
+    "act": "32023R0956",
+    "part": "art-18",
+    "label": "CBAM 규정 제18조 검증기관의 인정"
+   },
+   {
+    "act": "32023R0956",
+    "part": "art-28",
+    "label": "CBAM 규정 제28조 위임 권한의 행사"
+   }
+  ],
+  "Omnibus I simplification package": [
+   {
+    "act": "32025R2083",
+    "part": "",
+    "label": "CBAM 간소화·강화 개정 규정"
+   }
+  ],
+  "transitional period": [
+   {
+    "act": "32023R0956",
+    "part": "art-32",
+    "label": "CBAM 규정 제32조 전환기간의 범위"
+   },
+   {
+    "act": "32023R0956",
+    "part": "art-33",
+    "label": "CBAM 규정 제33조 제품의 수입"
+   },
+   {
+    "act": "32023R0956",
+    "part": "art-34",
+    "label": "CBAM 규정 제34조 특정 통관 절차에 대한 보고 의무"
+   },
+   {
+    "act": "32023R0956",
+    "part": "art-35",
+    "label": "CBAM 규정 제35조 보고 의무"
+   }
+  ],
+  "carbon leakage": [
+   {
+    "act": "32023R0956",
+    "part": "art-1",
+    "label": "CBAM 규정 제1조 주제"
+   }
+  ],
+  "third country / non-EU country": [
+   {
+    "act": "32023R0956",
+    "part": "art-3",
+    "label": "CBAM 규정 제3조 정의"
+   }
+  ],
+  "internal market": [
+   {
+    "act": "32023R0956",
+    "part": "art-2",
+    "label": "CBAM 규정 제2조 적용 범위"
+   },
+   {
+    "act": "32023R0956",
+    "part": "art-30",
+    "label": "CBAM 규정 제30조 집행위원회의 검토와 보고"
+   }
+  ],
+  "CBAM goods": [
+   {
+    "act": "32023R0956",
+    "part": "annex-i",
+    "label": "CBAM 규정 부속서 I 제품과 온실가스의 목록"
+   }
+  ],
+  "aggregated goods category": [
+   {
+    "act": "32025R2547",
+    "part": "annex-i",
+    "label": "내재배출량 산정 방법 이행규정 부속서 I 정의, 기능단위와 시스템 경계"
+   }
+  ],
+  "exemption": [
+   {
+    "act": "32023R0956",
+    "part": "art-2",
+    "label": "CBAM 규정 제2조 적용 범위"
+   }
+  ],
+  "electricity (CBAM goods)": [
+   {
+    "act": "32023R0956",
+    "part": "annex-i",
+    "label": "CBAM 규정 부속서 I 제품과 온실가스의 목록"
+   },
+   {
+    "act": "32023R0956",
+    "part": "annex-ii",
+    "label": "CBAM 규정 부속서 II 제7조(1)에 따라 직접배출량만 고려하는 제품의 목록"
+   }
+  ],
+  "continental shelf / exclusive economic zone": [
+   {
+    "act": "32023R0956",
+    "part": "art-2",
+    "label": "CBAM 규정 제2조 적용 범위"
+   }
+  ],
+  "authorised CBAM declarant": [
+   {
+    "act": "32023R0956",
+    "part": "art-5",
+    "label": "CBAM 규정 제5조 승인 신청"
+   },
+   {
+    "act": "32023R0956",
+    "part": "art-17",
+    "label": "CBAM 규정 제17조 승인"
+   }
+  ],
+  "authorisation": [
+   {
+    "act": "32023R0956",
+    "part": "art-17",
+    "label": "CBAM 규정 제17조 승인"
+   }
+  ],
+  "application for authorisation": [
+   {
+    "act": "32023R0956",
+    "part": "art-5",
+    "label": "CBAM 규정 제5조 승인 신청"
+   }
+  ],
+  "importer": [
+   {
+    "act": "32023R0956",
+    "part": "art-3",
+    "label": "CBAM 규정 제3조 정의"
+   }
+  ],
+  "competent authority": [
+   {
+    "act": "32023R0956",
+    "part": "art-11",
+    "label": "CBAM 규정 제11조 관할당국"
+   }
+  ],
+  "release for free circulation": [
+   {
+    "act": "32023R0956",
+    "part": "art-3",
+    "label": "CBAM 규정 제3조 정의"
+   }
+  ],
+  "importation": [
+   {
+    "act": "32023R0956",
+    "part": "art-3",
+    "label": "CBAM 규정 제3조 정의"
+   }
+  ],
+  "non-preferential origin": [
+   {
+    "act": "32023R0956",
+    "part": "art-2",
+    "label": "CBAM 규정 제2조 적용 범위"
+   }
+  ],
+  "CN code": [
+   {
+    "act": "32023R0956",
+    "part": "annex-i",
+    "label": "CBAM 규정 부속서 I 제품과 온실가스의 목록"
+   }
+  ],
+  "guarantee": [
+   {
+    "act": "32023R0956",
+    "part": "art-17",
+    "label": "CBAM 규정 제17조 승인"
+   }
+  ],
+  "CBAM certificate": [
+   {
+    "act": "32023R0956",
+    "part": "art-3",
+    "label": "CBAM 규정 제3조 정의"
+   }
+  ],
+  "purchase (of CBAM certificates)": [
+   {
+    "act": "32023R0956",
+    "part": "art-20",
+    "label": "CBAM 규정 제20조 CBAM 인증서의 판매"
+   }
+  ],
+  "sale (of CBAM certificates)": [
+   {
+    "act": "32023R0956",
+    "part": "art-20",
+    "label": "CBAM 규정 제20조 CBAM 인증서의 판매"
+   }
+  ],
+  "price of CBAM certificates": [
+   {
+    "act": "32023R0956",
+    "part": "art-21",
+    "label": "CBAM 규정 제21조 CBAM 인증서 가격"
+   },
+   {
+    "act": "32025R2548",
+    "part": "",
+    "label": "CBAM 인증서 가격 산정·공개 이행규정"
+   }
+  ],
+  "surrender (of CBAM certificates)": [
+   {
+    "act": "32023R0956",
+    "part": "art-3",
+    "label": "CBAM 규정 제3조 정의"
+   },
+   {
+    "act": "32023R0956",
+    "part": "art-22",
+    "label": "CBAM 규정 제22조 CBAM 인증서의 제출"
+   }
+  ],
+  "re-purchase (of CBAM certificates)": [
+   {
+    "act": "32023R0956",
+    "part": "art-23",
+    "label": "CBAM 규정 제23조 CBAM 인증서의 환매"
+   }
+  ],
+  "cancellation (of CBAM certificates)": [
+   {
+    "act": "32023R0956",
+    "part": "art-24",
+    "label": "CBAM 규정 제24조 CBAM 인증서의 말소"
+   }
+  ],
+  "quarterly holding requirement": [
+   {
+    "act": "32023R0956",
+    "part": "art-22",
+    "label": "CBAM 규정 제22조 CBAM 인증서의 제출"
+   }
+  ],
+  "CBAM declaration": [
+   {
+    "act": "32023R0956",
+    "part": "art-6",
+    "label": "CBAM 규정 제6조 CBAM 신고서"
+   }
+  ],
+  "CBAM report": [
+   {
+    "act": "32023R0956",
+    "part": "art-35",
+    "label": "CBAM 규정 제35조 보고 의무"
+   }
+  ],
+  "CBAM Registry": [
+   {
+    "act": "32023R0956",
+    "part": "art-14",
+    "label": "CBAM 규정 제14조 CBAM 등록부"
+   }
+  ],
+  "common central platform": [
+   {
+    "act": "32023R0956",
+    "part": "art-20",
+    "label": "CBAM 규정 제20조 CBAM 인증서의 판매"
+   }
+  ],
+  "CBAM Operators and Installations Portal": [
+   {
+    "act": "32023R0956",
+    "part": "art-10",
+    "label": "CBAM 규정 제10조 제3국의 사업자와 사업장의 등록"
+   }
+  ],
+  "CBAM obligation": [
+   {
+    "act": "32023R0956",
+    "part": "art-6",
+    "label": "CBAM 규정 제6조 CBAM 신고서"
+   }
+  ],
+  "embedded emissions": [
+   {
+    "act": "32023R0956",
+    "part": "art-3",
+    "label": "CBAM 규정 제3조 정의"
+   },
+   {
+    "act": "32023R0956",
+    "part": "art-7",
+    "label": "CBAM 규정 제7조 내재배출량의 산정"
+   },
+   {
+    "act": "32023R0956",
+    "part": "annex-iv",
+    "label": "CBAM 규정 부속서 IV 제7조의 목적을 위한 내재배출량 산정 방법"
+   }
+  ],
+  "specific embedded emissions": [
+   {
+    "act": "32023R0956",
+    "part": "annex-iv",
+    "label": "CBAM 규정 부속서 IV 제7조의 목적을 위한 내재배출량 산정 방법"
+   },
+   {
+    "act": "32025R2547",
+    "part": "",
+    "label": "내재배출량 산정 방법 이행규정"
+   }
+  ],
+  "direct emissions": [
+   {
+    "act": "32023R0956",
+    "part": "art-3",
+    "label": "CBAM 규정 제3조 정의"
+   }
+  ],
+  "indirect emissions": [
+   {
+    "act": "32023R0956",
+    "part": "art-3",
+    "label": "CBAM 규정 제3조 정의"
+   }
+  ],
+  "actual emissions": [
+   {
+    "act": "32025R2547",
+    "part": "annex-iv",
+    "label": "내재배출량 산정 방법 이행규정 부속서 IV 사업자의 배출량 보고서 양식"
+   }
+  ],
+  "actual values / actual data": [
+   {
+    "act": "32023R0956",
+    "part": "art-7",
+    "label": "CBAM 규정 제7조 내재배출량의 산정"
+   }
+  ],
+  "default value": [
+   {
+    "act": "32023R0956",
+    "part": "art-7",
+    "label": "CBAM 규정 제7조 내재배출량의 산정"
+   },
+   {
+    "act": "32023R0956",
+    "part": "annex-iv",
+    "label": "CBAM 규정 부속서 IV 제7조의 목적을 위한 내재배출량 산정 방법"
+   }
+  ],
+  "mark-up": [
+   {
+    "act": "32025R2621",
+    "part": "",
+    "label": "기본값 이행규정"
+   }
+  ],
+  "precursor": [
+   {
+    "act": "32025R2547",
+    "part": "annex-i",
+    "label": "내재배출량 산정 방법 이행규정 부속서 I 정의, 기능단위와 시스템 경계"
+   }
+  ],
+  "relevant precursor": [
+   {
+    "act": "32025R2547",
+    "part": "annex-i",
+    "label": "내재배출량 산정 방법 이행규정 부속서 I 정의, 기능단위와 시스템 경계"
+   }
+  ],
+  "production process": [
+   {
+    "act": "32023R0956",
+    "part": "art-3",
+    "label": "CBAM 규정 제3조 정의"
+   }
+  ],
+  "production route": [
+   {
+    "act": "32025R2547",
+    "part": "art-1",
+    "label": "내재배출량 산정 방법 이행규정 제1조 정의"
+   }
+  ],
+  "installation": [
+   {
+    "act": "32023R0956",
+    "part": "art-3",
+    "label": "CBAM 규정 제3조 정의"
+   }
+  ],
+  "operator": [
+   {
+    "act": "32023R0956",
+    "part": "art-3",
+    "label": "CBAM 규정 제3조 정의"
+   }
+  ],
+  "system boundaries": [
+   {
+    "act": "32025R2547",
+    "part": "annex-i",
+    "label": "내재배출량 산정 방법 이행규정 부속서 I 정의, 기능단위와 시스템 경계"
+   }
+  ],
+  "attribution / attributed emissions": [
+   {
+    "act": "32025R2547",
+    "part": "annex-iii",
+    "label": "내재배출량 산정 방법 이행규정 부속서 III 제품에 배출량을 귀속하는 규칙"
+   }
+  ],
+  "bubble approach": [
+   {
+    "act": "32025R2547",
+    "part": "art-4",
+    "label": "내재배출량 산정 방법 이행규정 제4조 생산공정과 기능단위"
+   }
+  ],
+  "tonne of CO₂e": [
+   {
+    "act": "32023R0956",
+    "part": "art-3",
+    "label": "CBAM 규정 제3조 정의"
+   }
+  ],
+  "greenhouse gases": [
+   {
+    "act": "32023R0956",
+    "part": "art-3",
+    "label": "CBAM 규정 제3조 정의"
+   },
+   {
+    "act": "32023R0956",
+    "part": "annex-i",
+    "label": "CBAM 규정 부속서 I 제품과 온실가스의 목록"
+   }
+  ],
+  "emissions": [
+   {
+    "act": "32023R0956",
+    "part": "art-3",
+    "label": "CBAM 규정 제3조 정의"
+   }
+  ],
+  "monitoring plan": [
+   {
+    "act": "32025R2547",
+    "part": "annex-ii",
+    "label": "내재배출량 산정 방법 이행규정 부속서 II 사업장 수준에서 생산공정의 데이터 세트를 정하는 규칙"
+   }
+  ],
+  "source stream": [
+   {
+    "act": "32025R2547",
+    "part": "annex-i",
+    "label": "내재배출량 산정 방법 이행규정 부속서 I 정의, 기능단위와 시스템 경계"
+   }
+  ],
+  "standard methodology": [
+   {
+    "act": "32025R2547",
+    "part": "annex-ii",
+    "label": "내재배출량 산정 방법 이행규정 부속서 II 사업장 수준에서 생산공정의 데이터 세트를 정하는 규칙"
+   }
+  ],
+  "mass balance methodology": [
+   {
+    "act": "32025R2547",
+    "part": "annex-ii",
+    "label": "내재배출량 산정 방법 이행규정 부속서 II 사업장 수준에서 생산공정의 데이터 세트를 정하는 규칙"
+   }
+  ],
+  "measurement-based approach": [
+   {
+    "act": "32025R2547",
+    "part": "annex-ii",
+    "label": "내재배출량 산정 방법 이행규정 부속서 II 사업장 수준에서 생산공정의 데이터 세트를 정하는 규칙"
+   }
+  ],
+  "power purchase agreement": [
+   {
+    "act": "32023R0956",
+    "part": "annex-iv",
+    "label": "CBAM 규정 부속서 IV 제7조의 목적을 위한 내재배출량 산정 방법"
+   }
+  ],
+  "transmission system operator": [
+   {
+    "act": "32023R0956",
+    "part": "annex-iv",
+    "label": "CBAM 규정 부속서 IV 제7조의 목적을 위한 내재배출량 산정 방법"
+   }
+  ],
+  "market coupling": [
+   {
+    "act": "32023R0956",
+    "part": "art-3",
+    "label": "CBAM 규정 제3조 정의"
+   },
+   {
+    "act": "32023R0956",
+    "part": "art-2",
+    "label": "CBAM 규정 제2조 적용 범위"
+   }
+  ],
+  "verification": [
+   {
+    "act": "32023R0956",
+    "part": "art-8",
+    "label": "CBAM 규정 제8조 내재배출량의 검증"
+   },
+   {
+    "act": "32025R2546",
+    "part": "",
+    "label": "내재배출량 검증 원칙 이행규정"
+   }
+  ],
+  "verifier": [
+   {
+    "act": "32023R0956",
+    "part": "art-18",
+    "label": "CBAM 규정 제18조 검증기관의 인정"
+   }
+  ],
+  "accredited verifier": [
+   {
+    "act": "32023R0956",
+    "part": "art-8",
+    "label": "CBAM 규정 제8조 내재배출량의 검증"
+   },
+   {
+    "act": "32023R0956",
+    "part": "art-18",
+    "label": "CBAM 규정 제18조 검증기관의 인정"
+   }
+  ],
+  "verification report": [
+   {
+    "act": "32025R2546",
+    "part": "",
+    "label": "내재배출량 검증 원칙 이행규정"
+   }
+  ],
+  "verification opinion / verification statement": [
+   {
+    "act": "32025R2546",
+    "part": "",
+    "label": "내재배출량 검증 원칙 이행규정"
+   }
+  ],
+  "reasonable assurance": [
+   {
+    "act": "32025R2546",
+    "part": "",
+    "label": "내재배출량 검증 원칙 이행규정"
+   }
+  ],
+  "materiality level": [
+   {
+    "act": "32025R2546",
+    "part": "",
+    "label": "내재배출량 검증 원칙 이행규정"
+   }
+  ],
+  "material misstatement": [
+   {
+    "act": "32025R2546",
+    "part": "",
+    "label": "내재배출량 검증 원칙 이행규정"
+   }
+  ],
+  "non-conformity": [
+   {
+    "act": "32025R2546",
+    "part": "",
+    "label": "내재배출량 검증 원칙 이행규정"
+   }
+  ],
+  "site visit": [
+   {
+    "act": "32025R2546",
+    "part": "",
+    "label": "내재배출량 검증 원칙 이행규정"
+   }
+  ],
+  "accreditation": [
+   {
+    "act": "32023R0956",
+    "part": "art-18",
+    "label": "CBAM 규정 제18조 검증기관의 인정"
+   },
+   {
+    "act": "32025R2551",
+    "part": "",
+    "label": "검증기관 인정 조건 위임규정"
+   }
+  ],
+  "national accreditation body": [
+   {
+    "act": "32023R0956",
+    "part": "art-18",
+    "label": "CBAM 규정 제18조 검증기관의 인정"
+   }
+  ],
+  "lead auditor (team leader)": [
+   {
+    "act": "32025R2551",
+    "part": "art-1",
+    "label": "검증기관 인정 조건 위임규정 제1조 정의"
+   }
+  ],
+  "CBAM auditor": [
+   {
+    "act": "32025R2551",
+    "part": "art-1",
+    "label": "검증기관 인정 조건 위임규정 제1조 정의"
+   }
+  ],
+  "technical expert": [
+   {
+    "act": "32025R2551",
+    "part": "",
+    "label": "검증기관 인정 조건 위임규정"
+   }
+  ],
+  "impartiality": [
+   {
+    "act": "32025R2551",
+    "part": "",
+    "label": "검증기관 인정 조건 위임규정"
+   }
+  ],
+  "competence": [
+   {
+    "act": "32025R2551",
+    "part": "",
+    "label": "검증기관 인정 조건 위임규정"
+   }
+  ],
+  "inherent risk / control risk / detection risk": [
+   {
+    "act": "32025R2546",
+    "part": "",
+    "label": "내재배출량 검증 원칙 이행규정"
+   }
+  ],
+  "uncorrected misstatement": [
+   {
+    "act": "32025R2546",
+    "part": "",
+    "label": "내재배출량 검증 원칙 이행규정"
+   }
+  ],
+  "data sampling plan (verifier)": [
+   {
+    "act": "32025R2546",
+    "part": "",
+    "label": "내재배출량 검증 원칙 이행규정"
+   }
+  ],
+  "verification team": [
+   {
+    "act": "32025R2551",
+    "part": "",
+    "label": "검증기관 인정 조건 위임규정"
+   }
+  ],
+  "carbon price": [
+   {
+    "act": "32023R0956",
+    "part": "art-3",
+    "label": "CBAM 규정 제3조 정의"
+   }
+  ],
+  "carbon price effectively paid": [
+   {
+    "act": "32023R0956",
+    "part": "art-9",
+    "label": "CBAM 규정 제9조 제3국에서 지불한 탄소가격"
+   }
+  ],
+  "reduction (deduction) of CBAM certificates": [
+   {
+    "act": "32023R0956",
+    "part": "art-9",
+    "label": "CBAM 규정 제9조 제3국에서 지불한 탄소가격"
+   },
+   {
+    "act": "32023R0956",
+    "part": "art-31",
+    "label": "CBAM 규정 제31조 EU 배출권거래제의 배출권 무상할당과 CBAM 인증서 제출 의무"
+   }
+  ],
+  "rebate": [
+   {
+    "act": "32023R0956",
+    "part": "art-9",
+    "label": "CBAM 규정 제9조 제3국에서 지불한 탄소가격"
+   },
+   {
+    "act": "32023R1773",
+    "part": "art-2",
+    "label": "전환기간 보고 의무 이행규정 제2조 정의"
+   }
+  ],
+  "free allocation": [
+   {
+    "act": "32023R0956",
+    "part": "art-31",
+    "label": "CBAM 규정 제31조 EU 배출권거래제의 배출권 무상할당과 CBAM 인증서 제출 의무"
+   }
+  ],
+  "free allocation adjustment": [
+   {
+    "act": "32023R0956",
+    "part": "art-31",
+    "label": "CBAM 규정 제31조 EU 배출권거래제의 배출권 무상할당과 CBAM 인증서 제출 의무"
+   }
+  ],
+  "cross-sectoral correction factor": [
+   {
+    "act": "32026D1862",
+    "part": "",
+    "label": "부문 간 보정계수 이행결정(2026~2030년)"
+   }
+  ],
+  "weekly average price (quarterly average in 2026)": [
+   {
+    "act": "32023R0956",
+    "part": "art-21",
+    "label": "CBAM 규정 제21조 CBAM 인증서 가격"
+   }
+  ],
+  "phase-out (of free allocation)": [
+   {
+    "act": "32023R0956",
+    "part": "art-31",
+    "label": "CBAM 규정 제31조 EU 배출권거래제의 배출권 무상할당과 CBAM 인증서 제출 의무"
+   }
+  ],
+  "linking (of ETS) / linked ETS": [
+   {
+    "act": "32023R0956",
+    "part": "art-2",
+    "label": "CBAM 규정 제2조 적용 범위"
+   }
+  ],
+  "default carbon price": [
+   {
+    "act": "32023R0956",
+    "part": "art-9",
+    "label": "CBAM 규정 제9조 제3국에서 지불한 탄소가격"
+   }
+  ],
+  "independent person": [
+   {
+    "act": "32023R0956",
+    "part": "art-9",
+    "label": "CBAM 규정 제9조 제3국에서 지불한 탄소가격"
+   }
+  ],
+  "aluminous cement": [
+   {
+    "act": "32023R0956",
+    "part": "annex-i",
+    "label": "CBAM 규정 부속서 I 제품과 온실가스의 목록"
+   }
+  ],
+  "nitrous oxide": [
+   {
+    "act": "32023R0956",
+    "part": "annex-i",
+    "label": "CBAM 규정 부속서 I 제품과 온실가스의 목록"
+   }
+  ],
+  "ferro-silicon / silico-manganese": [
+   {
+    "act": "32023R0956",
+    "part": "annex-i",
+    "label": "CBAM 규정 부속서 I 제품과 온실가스의 목록"
+   }
+  ],
+  "penalty": [
+   {
+    "act": "32023R0956",
+    "part": "art-26",
+    "label": "CBAM 규정 제26조 과징금"
+   }
+  ],
+  "circumvention": [
+   {
+    "act": "32023R0956",
+    "part": "art-27",
+    "label": "CBAM 규정 제27조 우회"
+   }
+  ],
+  "anti-circumvention": [
+   {
+    "act": "32023R0956",
+    "part": "art-27",
+    "label": "CBAM 규정 제27조 우회"
+   }
+  ]
+ },
+ "laws": {
+  "32023R0956": {
+   "": {
+    "items": [
+     {
+      "id": "20261113-eur-lex-related-7fd760",
+      "title": "EU 사법재판소, 폴란드의 CBAM 규정 취소 소송(C-512/23) 기각",
+      "date": "2026-11-12"
+     },
+     {
+      "id": "20251217-ep-oeil-2025-0419-1e1b9a",
+      "title": "CBAM 하류제품 확대·우회방지 개정안(COM(2025)0989) 공표",
+      "date": "2025-12-17"
+     }
+    ],
+    "duties": [],
+    "terms": [
+     {
+      "en": "CBAM Regulation",
+      "ko": "CBAM 규정"
+     }
+    ],
+    "more": 0
+   },
+   "art-2a": {
+    "items": [
+     {
+      "id": "20261110-ec-news-1a22d2",
+      "title": "50톤 단일 중량 임계값 평가 결과, 내재배출량의 0.87% 면제",
+      "date": "2026-09-30"
+     }
+    ],
+    "duties": [
+     {
+      "id": "eu-threshold-review-2027",
+      "title": "단일 중량 임계값의 연례 평가",
+      "date": "2027-04-30"
+     }
+    ],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-scope.de-minimis",
+      "title": "소량 면제",
+      "chapter": "대상 품목과 적용 제외"
+     }
+    ],
+    "more": 0
+   },
+   "art-11": {
+    "items": [
+     {
+      "id": "20260731-eur-lex-docs-6b9fb4",
+      "title": "회원국 CBAM 관할당국 목록, 유럽연합 관보 게재",
+      "date": "2026-07-31"
+     }
+    ],
+    "duties": [],
+    "terms": [
+     {
+      "en": "competent authority",
+      "ko": "관할당국"
+     }
+    ],
+    "handbook": [
+     {
+      "href": "#handbook-roles.authorities",
+      "title": "관할당국, 집행위원회, CBAM 등록부",
+      "chapter": "누가 무엇을 하는지"
+     }
+    ],
+    "more": 0
+   },
+   "art-17": {
+    "items": [],
+    "duties": [
+     {
+      "id": "eu-authorisation-interim",
+      "title": "승인 신청을 마친 수입자의 잠정 수입 허용 기준일",
+      "date": "2026-03-31"
+     }
+    ],
+    "terms": [
+     {
+      "en": "authorised CBAM declarant",
+      "ko": "승인된 CBAM 신고인"
+     },
+     {
+      "en": "authorisation",
+      "ko": "승인"
+     },
+     {
+      "en": "guarantee",
+      "ko": "담보"
+     }
+    ],
+    "handbook": [
+     {
+      "href": "#handbook-roles.declarant",
+      "title": "승인된 CBAM 신고인과 간접 세관 대리인",
+      "chapter": "누가 무엇을 하는지"
+     },
+     {
+      "href": "#handbook-roles.authorities",
+      "title": "관할당국, 집행위원회, CBAM 등록부",
+      "chapter": "누가 무엇을 하는지"
+     },
+     {
+      "href": "#handbook-penalties.unauthorised",
+      "title": "승인 없이 수입했을 때",
+      "chapter": "위반과 제재"
+     },
+     {
+      "href": "#handbook-penalties.revocation",
+      "title": "승인의 취소",
+      "chapter": "위반과 제재"
+     }
+    ],
+    "more": 0
+   },
+   "art-10a": {
+    "items": [],
+    "duties": [
+     {
+      "id": "eu-verifier-registration",
+      "title": "인정받은 검증기관의 CBAM 등록부 등록 신청 개시",
+      "date": "2026-09-01"
+     }
+    ],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-roles.verifiers",
+      "title": "검증기관",
+      "chapter": "누가 무엇을 하는지"
+     }
+    ],
+    "more": 0
+   },
+   "art-9": {
+    "items": [],
+    "duties": [
+     {
+      "id": "eu-independent-person-registration",
+      "title": "탄소가격 서류를 인증하는 독립적인 사람의 CBAM 등록부 등록 신청 개시",
+      "date": "2026-12-01"
+     }
+    ],
+    "terms": [
+     {
+      "en": "carbon price effectively paid",
+      "ko": "실질적으로 지불된 탄소가격"
+     },
+     {
+      "en": "reduction (deduction) of CBAM certificates",
+      "ko": "차감"
+     },
+     {
+      "en": "rebate",
+      "ko": "환급"
+     },
+     {
+      "en": "default carbon price",
+      "ko": "기본 탄소가격"
+     },
+     {
+      "en": "independent person",
+      "ko": "독립적인 사람"
+     }
+    ],
+    "handbook": [
+     {
+      "href": "#handbook-certificates.sum",
+      "title": "인증서 수를 구하는 틀",
+      "chapter": "제출할 인증서 수"
+     },
+     {
+      "href": "#handbook-carbon-price.deduction",
+      "title": "탄소가격 공제의 뜻",
+      "chapter": "제3국에서 낸 탄소가격"
+     },
+     {
+      "href": "#handbook-carbon-price.evidence",
+      "title": "증빙과 기록",
+      "chapter": "제3국에서 낸 탄소가격"
+     },
+     {
+      "href": "#handbook-carbon-price.default-carbon-price",
+      "title": "기본 탄소가격",
+      "chapter": "제3국에서 낸 탄소가격"
+     },
+     {
+      "href": "#handbook-carbon-price.rules-to-come",
+      "title": "집행위원회가 정할 세부 규칙",
+      "chapter": "제3국에서 낸 탄소가격"
+     },
+     {
+      "href": "#handbook-ahead.to-come",
+      "title": "앞으로 정해지거나 바뀔 세부 규칙",
+      "chapter": "앞으로 달라질 것"
+     }
+    ],
+    "more": 0
+   },
+   "art-22": {
+    "items": [],
+    "duties": [
+     {
+      "id": "eu-quarterly-holding",
+      "title": "분기말 인증서 보유의무 적용 시작",
+      "date": "2027-01-01"
+     },
+     {
+      "id": "eu-first-declaration",
+      "title": "첫 CBAM 신고서 제출과 인증서 제출",
+      "date": "2027-09-30"
+     }
+    ],
+    "terms": [
+     {
+      "en": "surrender (of CBAM certificates)",
+      "ko": "제출"
+     },
+     {
+      "en": "quarterly holding requirement",
+      "ko": "분기말 인증서 보유의무"
+     }
+    ],
+    "handbook": [
+     {
+      "href": "#handbook-overview.flow",
+      "title": "수입에서 인증서 제출까지",
+      "chapter": "CBAM 한눈에 보기"
+     },
+     {
+      "href": "#handbook-roles.korea-eu",
+      "title": "한국의 생산자와 EU의 수입자",
+      "chapter": "누가 무엇을 하는지"
+     },
+     {
+      "href": "#handbook-cycle.first-year",
+      "title": "2026년 수입분의 첫 신고",
+      "chapter": "한 해의 일정"
+     },
+     {
+      "href": "#handbook-cycle.surrender",
+      "title": "인증서 제출과 분기말 인증서 보유의무",
+      "chapter": "한 해의 일정"
+     },
+     {
+      "href": "#handbook-defaults.markup",
+      "title": "마크업",
+      "chapter": "기본값과 마크업"
+     }
+    ],
+    "more": 0
+   },
+   "art-36": {
+    "items": [],
+    "duties": [
+     {
+      "id": "eu-quarterly-holding",
+      "title": "분기말 인증서 보유의무 적용 시작",
+      "date": "2027-01-01"
+     },
+     {
+      "id": "eu-certificate-sale",
+      "title": "CBAM 인증서 판매 시작",
+      "date": "2027-02-01"
+     }
+    ],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-overview.periods",
+      "title": "전환기간과 확정기간",
+      "chapter": "CBAM 한눈에 보기"
+     }
+    ],
+    "more": 0
+   },
+   "art-20": {
+    "items": [],
+    "duties": [
+     {
+      "id": "eu-certificate-sale",
+      "title": "CBAM 인증서 판매 시작",
+      "date": "2027-02-01"
+     }
+    ],
+    "terms": [
+     {
+      "en": "purchase (of CBAM certificates)",
+      "ko": "구매"
+     },
+     {
+      "en": "sale (of CBAM certificates)",
+      "ko": "판매"
+     },
+     {
+      "en": "common central platform",
+      "ko": "공통 중앙 플랫폼"
+     }
+    ],
+    "handbook": [
+     {
+      "href": "#handbook-overview.flow",
+      "title": "수입에서 인증서 제출까지",
+      "chapter": "CBAM 한눈에 보기"
+     },
+     {
+      "href": "#handbook-price.unit",
+      "title": "인증서 한 개의 뜻",
+      "chapter": "인증서 가격과 구매"
+     },
+     {
+      "href": "#handbook-price.purchase",
+      "title": "인증서를 사는 곳",
+      "chapter": "인증서 가격과 구매"
+     },
+     {
+      "href": "#handbook-ahead.to-come",
+      "title": "앞으로 정해지거나 바뀔 세부 규칙",
+      "chapter": "앞으로 달라질 것"
+     }
+    ],
+    "more": 0
+   },
+   "art-6": {
+    "items": [],
+    "duties": [
+     {
+      "id": "eu-first-declaration",
+      "title": "첫 CBAM 신고서 제출과 인증서 제출",
+      "date": "2027-09-30"
+     }
+    ],
+    "terms": [
+     {
+      "en": "CBAM declaration",
+      "ko": "CBAM 신고서"
+     },
+     {
+      "en": "CBAM obligation",
+      "ko": "CBAM 의무"
+     }
+    ],
+    "handbook": [
+     {
+      "href": "#handbook-overview.flow",
+      "title": "수입에서 인증서 제출까지",
+      "chapter": "CBAM 한눈에 보기"
+     },
+     {
+      "href": "#handbook-scope.other-exclusions",
+      "title": "그 밖의 제외와 특별한 취급",
+      "chapter": "대상 품목과 적용 제외"
+     },
+     {
+      "href": "#handbook-roles.korea-eu",
+      "title": "한국의 생산자와 EU의 수입자",
+      "chapter": "누가 무엇을 하는지"
+     },
+     {
+      "href": "#handbook-cycle.declaration",
+      "title": "CBAM 신고서의 기한과 내용",
+      "chapter": "한 해의 일정"
+     },
+     {
+      "href": "#handbook-cycle.first-year",
+      "title": "2026년 수입분의 첫 신고",
+      "chapter": "한 해의 일정"
+     },
+     {
+      "href": "#handbook-cycle.surrender",
+      "title": "인증서 제출과 분기말 인증서 보유의무",
+      "chapter": "한 해의 일정"
+     },
+     {
+      "href": "#handbook-certificates.sum",
+      "title": "인증서 수를 구하는 틀",
+      "chapter": "제출할 인증서 수"
+     },
+     {
+      "href": "#handbook-carbon-price.deduction",
+      "title": "탄소가격 공제의 뜻",
+      "chapter": "제3국에서 낸 탄소가격"
+     },
+     {
+      "href": "#handbook-verification.scope",
+      "title": "검증을 받아야 하는 것",
+      "chapter": "검증"
+     },
+     {
+      "href": "#handbook-ahead.to-come",
+      "title": "앞으로 정해지거나 바뀔 세부 규칙",
+      "chapter": "앞으로 달라질 것"
+     }
+    ],
+    "more": 0
+   },
+   "art-23": {
+    "items": [],
+    "duties": [
+     {
+      "id": "eu-repurchase-request",
+      "title": "남은 인증서의 환매 요청",
+      "date": "2027-10-31"
+     }
+    ],
+    "terms": [
+     {
+      "en": "re-purchase (of CBAM certificates)",
+      "ko": "환매"
+     }
+    ],
+    "handbook": [
+     {
+      "href": "#handbook-overview.flow",
+      "title": "수입에서 인증서 제출까지",
+      "chapter": "CBAM 한눈에 보기"
+     },
+     {
+      "href": "#handbook-cycle.first-year",
+      "title": "2026년 수입분의 첫 신고",
+      "chapter": "한 해의 일정"
+     },
+     {
+      "href": "#handbook-cycle.repurchase",
+      "title": "남은 인증서의 환매",
+      "chapter": "한 해의 일정"
+     }
+    ],
+    "more": 0
+   },
+   "art-24": {
+    "items": [],
+    "duties": [
+     {
+      "id": "eu-cancellation-2026",
+      "title": "2026년분 CBAM 인증서 말소",
+      "date": "2027-11-01"
+     }
+    ],
+    "terms": [
+     {
+      "en": "cancellation (of CBAM certificates)",
+      "ko": "말소"
+     }
+    ],
+    "handbook": [
+     {
+      "href": "#handbook-overview.flow",
+      "title": "수입에서 인증서 제출까지",
+      "chapter": "CBAM 한눈에 보기"
+     },
+     {
+      "href": "#handbook-cycle.first-year",
+      "title": "2026년 수입분의 첫 신고",
+      "chapter": "한 해의 일정"
+     },
+     {
+      "href": "#handbook-cycle.cancellation",
+      "title": "인증서의 말소",
+      "chapter": "한 해의 일정"
+     }
+    ],
+    "more": 0
+   },
+   "art-1": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "Carbon Border Adjustment Mechanism",
+      "ko": "탄소국경조정제도"
+     },
+     {
+      "en": "carbon leakage",
+      "ko": "탄소누출"
+     }
+    ],
+    "handbook": [
+     {
+      "href": "#handbook-overview.purpose",
+      "title": "제도의 목적",
+      "chapter": "CBAM 한눈에 보기"
+     }
+    ],
+    "more": 0
+   },
+   "art-7": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "implementing regulation / implementing act",
+      "ko": "이행규정"
+     },
+     {
+      "en": "embedded emissions",
+      "ko": "내재배출량"
+     },
+     {
+      "en": "actual values / actual data",
+      "ko": "실제값"
+     },
+     {
+      "en": "default value",
+      "ko": "기본값"
+     }
+    ],
+    "handbook": [
+     {
+      "href": "#handbook-scope.direct-only",
+      "title": "직접배출량만 보는 품목",
+      "chapter": "대상 품목과 적용 제외"
+     },
+     {
+      "href": "#handbook-roles.korea-eu",
+      "title": "한국의 생산자와 EU의 수입자",
+      "chapter": "누가 무엇을 하는지"
+     },
+     {
+      "href": "#handbook-cycle.declaration",
+      "title": "CBAM 신고서의 기한과 내용",
+      "chapter": "한 해의 일정"
+     },
+     {
+      "href": "#handbook-embedded.actual-default",
+      "title": "실제배출량과 기본값",
+      "chapter": "내재배출량"
+     },
+     {
+      "href": "#handbook-embedded.indirect-goods",
+      "title": "간접배출량을 넣는 품목과 넣지 않는 품목",
+      "chapter": "내재배출량"
+     },
+     {
+      "href": "#handbook-defaults.how-set",
+      "title": "기본값을 정하는 방법",
+      "chapter": "기본값과 마크업"
+     },
+     {
+      "href": "#handbook-defaults.indirect",
+      "title": "간접배출량과 수입 전력의 기본값",
+      "chapter": "기본값과 마크업"
+     }
+    ],
+    "more": 0
+   },
+   "art-8": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "implementing regulation / implementing act",
+      "ko": "이행규정"
+     },
+     {
+      "en": "verification",
+      "ko": "검증"
+     },
+     {
+      "en": "accredited verifier",
+      "ko": "인정받은 검증기관"
+     }
+    ],
+    "handbook": [
+     {
+      "href": "#handbook-overview.flow",
+      "title": "수입에서 인증서 제출까지",
+      "chapter": "CBAM 한눈에 보기"
+     },
+     {
+      "href": "#handbook-roles.verifiers",
+      "title": "검증기관",
+      "chapter": "누가 무엇을 하는지"
+     },
+     {
+      "href": "#handbook-embedded.actual-default",
+      "title": "실제배출량과 기본값",
+      "chapter": "내재배출량"
+     },
+     {
+      "href": "#handbook-verification.scope",
+      "title": "검증을 받아야 하는 것",
+      "chapter": "검증"
+     },
+     {
+      "href": "#handbook-verification.roles",
+      "title": "사업자와 신고인이 할 일",
+      "chapter": "검증"
+     }
+    ],
+    "more": 0
+   },
+   "art-31": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "implementing regulation / implementing act",
+      "ko": "이행규정"
+     },
+     {
+      "en": "reduction (deduction) of CBAM certificates",
+      "ko": "차감"
+     },
+     {
+      "en": "free allocation",
+      "ko": "무상할당"
+     },
+     {
+      "en": "free allocation adjustment",
+      "ko": "무상할당 조정"
+     },
+     {
+      "en": "phase-out (of free allocation)",
+      "ko": "단계적 폐지"
+     }
+    ],
+    "handbook": [
+     {
+      "href": "#handbook-certificates.faa",
+      "title": "무상할당 조정의 뜻",
+      "chapter": "제출할 인증서 수"
+     }
+    ],
+    "more": 0
+   },
+   "art-18": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "delegated regulation / delegated act",
+      "ko": "위임규정"
+     },
+     {
+      "en": "verifier",
+      "ko": "검증기관"
+     },
+     {
+      "en": "accredited verifier",
+      "ko": "인정받은 검증기관"
+     },
+     {
+      "en": "accreditation",
+      "ko": "인정"
+     },
+     {
+      "en": "national accreditation body",
+      "ko": "국가인정기구"
+     }
+    ],
+    "handbook": [
+     {
+      "href": "#handbook-roles.verifiers",
+      "title": "검증기관",
+      "chapter": "누가 무엇을 하는지"
+     },
+     {
+      "href": "#handbook-verification.accreditation",
+      "title": "검증기관의 인정",
+      "chapter": "검증"
+     }
+    ],
+    "more": 0
+   },
+   "art-28": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "delegated regulation / delegated act",
+      "ko": "위임규정"
+     }
+    ],
+    "more": 0
+   },
+   "art-32": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "transitional period",
+      "ko": "전환기간"
+     }
+    ],
+    "handbook": [
+     {
+      "href": "#handbook-overview.periods",
+      "title": "전환기간과 확정기간",
+      "chapter": "CBAM 한눈에 보기"
+     },
+     {
+      "href": "#handbook-ahead.review",
+      "title": "법이 예고한 검토",
+      "chapter": "앞으로 달라질 것"
+     }
+    ],
+    "more": 0
+   },
+   "art-33": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "transitional period",
+      "ko": "전환기간"
+     }
+    ],
+    "more": 0
+   },
+   "art-34": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "transitional period",
+      "ko": "전환기간"
+     }
+    ],
+    "more": 0
+   },
+   "art-35": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "transitional period",
+      "ko": "전환기간"
+     },
+     {
+      "en": "CBAM report",
+      "ko": "CBAM 보고서"
+     }
+    ],
+    "more": 0
+   },
+   "art-3": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "third country / non-EU country",
+      "ko": "제3국"
+     },
+     {
+      "en": "importer",
+      "ko": "수입자"
+     },
+     {
+      "en": "release for free circulation",
+      "ko": "자유유통을 위한 반출"
+     },
+     {
+      "en": "importation",
+      "ko": "수입"
+     },
+     {
+      "en": "CBAM certificate",
+      "ko": "CBAM 인증서"
+     },
+     {
+      "en": "surrender (of CBAM certificates)",
+      "ko": "제출"
+     },
+     {
+      "en": "embedded emissions",
+      "ko": "내재배출량"
+     },
+     {
+      "en": "direct emissions",
+      "ko": "직접배출량"
+     },
+     {
+      "en": "indirect emissions",
+      "ko": "간접배출량"
+     },
+     {
+      "en": "production process",
+      "ko": "생산공정"
+     },
+     {
+      "en": "installation",
+      "ko": "사업장"
+     },
+     {
+      "en": "operator",
+      "ko": "사업자"
+     },
+     {
+      "en": "tonne of CO₂e",
+      "ko": "CO₂ 환산톤"
+     },
+     {
+      "en": "greenhouse gases",
+      "ko": "온실가스"
+     },
+     {
+      "en": "emissions",
+      "ko": "배출량"
+     },
+     {
+      "en": "market coupling",
+      "ko": "시장 커플링"
+     },
+     {
+      "en": "carbon price",
+      "ko": "탄소가격"
+     }
+    ],
+    "handbook": [
+     {
+      "href": "#handbook-overview.purpose",
+      "title": "제도의 목적",
+      "chapter": "CBAM 한눈에 보기"
+     },
+     {
+      "href": "#handbook-overview.flow",
+      "title": "수입에서 인증서 제출까지",
+      "chapter": "CBAM 한눈에 보기"
+     },
+     {
+      "href": "#handbook-roles.declarant",
+      "title": "승인된 CBAM 신고인과 간접 세관 대리인",
+      "chapter": "누가 무엇을 하는지"
+     },
+     {
+      "href": "#handbook-roles.operators",
+      "title": "제3국의 사업자와 사업장 등록",
+      "chapter": "누가 무엇을 하는지"
+     },
+     {
+      "href": "#handbook-embedded.definitions",
+      "title": "내재배출량, 직접배출량, 간접배출량",
+      "chapter": "내재배출량"
+     },
+     {
+      "href": "#handbook-embedded.actual-default",
+      "title": "실제배출량과 기본값",
+      "chapter": "내재배출량"
+     },
+     {
+      "href": "#handbook-defaults.how-set",
+      "title": "기본값을 정하는 방법",
+      "chapter": "기본값과 마크업"
+     },
+     {
+      "href": "#handbook-certificates.sum",
+      "title": "인증서 수를 구하는 틀",
+      "chapter": "제출할 인증서 수"
+     },
+     {
+      "href": "#handbook-price.unit",
+      "title": "인증서 한 개의 뜻",
+      "chapter": "인증서 가격과 구매"
+     },
+     {
+      "href": "#handbook-carbon-price.deduction",
+      "title": "탄소가격 공제의 뜻",
+      "chapter": "제3국에서 낸 탄소가격"
+     }
+    ],
+    "more": 0
+   },
+   "art-2": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "internal market",
+      "ko": "역내시장"
+     },
+     {
+      "en": "exemption",
+      "ko": "면제"
+     },
+     {
+      "en": "continental shelf / exclusive economic zone",
+      "ko": "대륙붕"
+     },
+     {
+      "en": "non-preferential origin",
+      "ko": "비특혜원산지"
+     },
+     {
+      "en": "market coupling",
+      "ko": "시장 커플링"
+     },
+     {
+      "en": "linking (of ETS) / linked ETS",
+      "ko": "연계"
+     }
+    ],
+    "handbook": [
+     {
+      "href": "#handbook-scope.goods-cn",
+      "title": "부속서 I의 품목과 CN 코드",
+      "chapter": "대상 품목과 적용 제외"
+     },
+     {
+      "href": "#handbook-scope.origin",
+      "title": "원산지에 따른 제외",
+      "chapter": "대상 품목과 적용 제외"
+     },
+     {
+      "href": "#handbook-scope.other-exclusions",
+      "title": "그 밖의 제외와 특별한 취급",
+      "chapter": "대상 품목과 적용 제외"
+     }
+    ],
+    "more": 0
+   },
+   "art-30": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "internal market",
+      "ko": "역내시장"
+     }
+    ],
+    "handbook": [
+     {
+      "href": "#handbook-ahead.review",
+      "title": "법이 예고한 검토",
+      "chapter": "앞으로 달라질 것"
+     },
+     {
+      "href": "#handbook-ahead.reports",
+      "title": "정기 보고",
+      "chapter": "앞으로 달라질 것"
+     }
+    ],
+    "more": 0
+   },
+   "annex-i": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "CBAM goods",
+      "ko": "CBAM 대상 품목"
+     },
+     {
+      "en": "electricity (CBAM goods)",
+      "ko": "전력"
+     },
+     {
+      "en": "CN code",
+      "ko": "CN 코드"
+     },
+     {
+      "en": "greenhouse gases",
+      "ko": "온실가스"
+     },
+     {
+      "en": "aluminous cement",
+      "ko": "알루미나 시멘트"
+     },
+     {
+      "en": "nitrous oxide",
+      "ko": "아산화질소"
+     },
+     {
+      "en": "ferro-silicon / silico-manganese",
+      "ko": "페로실리콘"
+     }
+    ],
+    "handbook": [
+     {
+      "href": "#handbook-overview.sectors",
+      "title": "대상 부문",
+      "chapter": "CBAM 한눈에 보기"
+     },
+     {
+      "href": "#handbook-scope.goods-cn",
+      "title": "부속서 I의 품목과 CN 코드",
+      "chapter": "대상 품목과 적용 제외"
+     },
+     {
+      "href": "#handbook-embedded.indirect-goods",
+      "title": "간접배출량을 넣는 품목과 넣지 않는 품목",
+      "chapter": "내재배출량"
+     }
+    ],
+    "more": 0
+   },
+   "annex-ii": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "electricity (CBAM goods)",
+      "ko": "전력"
+     }
+    ],
+    "handbook": [
+     {
+      "href": "#handbook-scope.direct-only",
+      "title": "직접배출량만 보는 품목",
+      "chapter": "대상 품목과 적용 제외"
+     },
+     {
+      "href": "#handbook-embedded.indirect-goods",
+      "title": "간접배출량을 넣는 품목과 넣지 않는 품목",
+      "chapter": "내재배출량"
+     }
+    ],
+    "more": 0
+   },
+   "art-5": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "authorised CBAM declarant",
+      "ko": "승인된 CBAM 신고인"
+     },
+     {
+      "en": "application for authorisation",
+      "ko": "승인 신청"
+     }
+    ],
+    "handbook": [
+     {
+      "href": "#handbook-scope.de-minimis",
+      "title": "소량 면제",
+      "chapter": "대상 품목과 적용 제외"
+     },
+     {
+      "href": "#handbook-roles.declarant",
+      "title": "승인된 CBAM 신고인과 간접 세관 대리인",
+      "chapter": "누가 무엇을 하는지"
+     }
+    ],
+    "more": 0
+   },
+   "art-21": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "price of CBAM certificates",
+      "ko": "CBAM 인증서 가격"
+     },
+     {
+      "en": "weekly average price (quarterly average in 2026)",
+      "ko": "주간 평균가격"
+     }
+    ],
+    "handbook": [
+     {
+      "href": "#handbook-cycle.first-year",
+      "title": "2026년 수입분의 첫 신고",
+      "chapter": "한 해의 일정"
+     },
+     {
+      "href": "#handbook-price.method",
+      "title": "가격을 정하는 방법",
+      "chapter": "인증서 가격과 구매"
+     },
+     {
+      "href": "#handbook-price.publish",
+      "title": "가격을 공개하는 때와 곳",
+      "chapter": "인증서 가격과 구매"
+     }
+    ],
+    "more": 0
+   },
+   "art-14": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "CBAM Registry",
+      "ko": "CBAM 등록부"
+     }
+    ],
+    "handbook": [
+     {
+      "href": "#handbook-roles.authorities",
+      "title": "관할당국, 집행위원회, CBAM 등록부",
+      "chapter": "누가 무엇을 하는지"
+     }
+    ],
+    "more": 0
+   },
+   "art-10": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "CBAM Operators and Installations Portal",
+      "ko": "제3국 사업자 포털"
+     }
+    ],
+    "handbook": [
+     {
+      "href": "#handbook-roles.operators",
+      "title": "제3국의 사업자와 사업장 등록",
+      "chapter": "누가 무엇을 하는지"
+     },
+     {
+      "href": "#handbook-roles.korea-eu",
+      "title": "한국의 생산자와 EU의 수입자",
+      "chapter": "누가 무엇을 하는지"
+     },
+     {
+      "href": "#handbook-carbon-price.evidence",
+      "title": "증빙과 기록",
+      "chapter": "제3국에서 낸 탄소가격"
+     },
+     {
+      "href": "#handbook-verification.roles",
+      "title": "사업자와 신고인이 할 일",
+      "chapter": "검증"
+     }
+    ],
+    "more": 0
+   },
+   "annex-iv": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "embedded emissions",
+      "ko": "내재배출량"
+     },
+     {
+      "en": "specific embedded emissions",
+      "ko": "고유 내재배출량"
+     },
+     {
+      "en": "default value",
+      "ko": "기본값"
+     },
+     {
+      "en": "power purchase agreement",
+      "ko": "전력구매계약"
+     },
+     {
+      "en": "transmission system operator",
+      "ko": "송전계통운영자"
+     }
+    ],
+    "handbook": [
+     {
+      "href": "#handbook-embedded.simple-complex",
+      "title": "단순제품, 복합제품, 전구물질",
+      "chapter": "내재배출량"
+     },
+     {
+      "href": "#handbook-embedded.actual-default",
+      "title": "실제배출량과 기본값",
+      "chapter": "내재배출량"
+     },
+     {
+      "href": "#handbook-defaults.how-set",
+      "title": "기본값을 정하는 방법",
+      "chapter": "기본값과 마크업"
+     },
+     {
+      "href": "#handbook-defaults.markup",
+      "title": "마크업",
+      "chapter": "기본값과 마크업"
+     },
+     {
+      "href": "#handbook-defaults.indirect",
+      "title": "간접배출량과 수입 전력의 기본값",
+      "chapter": "기본값과 마크업"
+     },
+     {
+      "href": "#handbook-defaults.revision",
+      "title": "기본값의 조정과 개정",
+      "chapter": "기본값과 마크업"
+     },
+     {
+      "href": "#handbook-certificates.sum",
+      "title": "인증서 수를 구하는 틀",
+      "chapter": "제출할 인증서 수"
+     }
+    ],
+    "more": 0
+   },
+   "art-26": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "penalty",
+      "ko": "과징금"
+     }
+    ],
+    "handbook": [
+     {
+      "href": "#handbook-penalties.late-surrender",
+      "title": "인증서를 제출하지 않았을 때",
+      "chapter": "위반과 제재"
+     },
+     {
+      "href": "#handbook-penalties.unauthorised",
+      "title": "승인 없이 수입했을 때",
+      "chapter": "위반과 제재"
+     },
+     {
+      "href": "#handbook-penalties.reduction",
+      "title": "감경과 과징금의 산정",
+      "chapter": "위반과 제재"
+     }
+    ],
+    "more": 0
+   },
+   "art-27": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "circumvention",
+      "ko": "우회"
+     },
+     {
+      "en": "anti-circumvention",
+      "ko": "우회방지"
+     }
+    ],
+    "handbook": [
+     {
+      "href": "#handbook-penalties.circumvention",
+      "title": "우회 행위",
+      "chapter": "위반과 제재"
+     }
+    ],
+    "more": 0
+   },
+   "art-4": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-overview.flow",
+      "title": "수입에서 인증서 제출까지",
+      "chapter": "CBAM 한눈에 보기"
+     },
+     {
+      "href": "#handbook-roles.declarant",
+      "title": "승인된 CBAM 신고인과 간접 세관 대리인",
+      "chapter": "누가 무엇을 하는지"
+     }
+    ],
+    "more": 0
+   },
+   "art-25": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-overview.flow",
+      "title": "수입에서 인증서 제출까지",
+      "chapter": "CBAM 한눈에 보기"
+     },
+     {
+      "href": "#handbook-roles.customs",
+      "title": "세관당국의 역할",
+      "chapter": "누가 무엇을 하는지"
+     }
+    ],
+    "more": 0
+   },
+   "annex-iii": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-scope.origin",
+      "title": "원산지에 따른 제외",
+      "chapter": "대상 품목과 적용 제외"
+     }
+    ],
+    "more": 0
+   },
+   "annex-vii": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-scope.de-minimis",
+      "title": "소량 면제",
+      "chapter": "대상 품목과 적용 제외"
+     }
+    ],
+    "more": 0
+   },
+   "art-12": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-roles.authorities",
+      "title": "관할당국, 집행위원회, CBAM 등록부",
+      "chapter": "누가 무엇을 하는지"
+     }
+    ],
+    "more": 0
+   },
+   "art-19": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-roles.authorities",
+      "title": "관할당국, 집행위원회, CBAM 등록부",
+      "chapter": "누가 무엇을 하는지"
+     }
+    ],
+    "more": 0
+   },
+   "art-25a": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-roles.customs",
+      "title": "세관당국의 역할",
+      "chapter": "누가 무엇을 하는지"
+     }
+    ],
+    "more": 0
+   },
+   "annex-vi": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-verification.principles",
+      "title": "검증의 원칙",
+      "chapter": "검증"
+     },
+     {
+      "href": "#handbook-verification.report",
+      "title": "검증보고서",
+      "chapter": "검증"
+     }
+    ],
+    "more": 0
+   }
+  },
+  "32025R2083": {
+   "": {
+    "items": [
+     {
+      "id": "20260924-eur-lex-docs-c13e8c",
+      "title": "EU 이사회, CBAM의 EEA 협정 편입에 관한 EU 입장 결정",
+      "date": "2026-09-24"
+     },
+     {
+      "id": "20251017-ep-oeil-2025-0039-b74ef5",
+      "title": "CBAM 간소화·강화 개정 규정(EU) 2025/2083, 유럽연합 관보 게재",
+      "date": "2025-10-17"
+     },
+     {
+      "id": "20251017-compass-757041",
+      "title": "CBAM 개정 규정(EU) 2025/2083",
+      "date": "2025-10-17",
+      "link": "https://www.compass.or.kr/eucbam/data/view?idx=Mzg%3D"
+     }
+    ],
+    "duties": [],
+    "terms": [
+     {
+      "en": "Omnibus I simplification package",
+      "ko": "옴니버스 패키지 I"
+     }
+    ],
+    "more": 0
+   }
+  },
+  "32026R1740": {
+   "": {
+    "items": [
+     {
+      "id": "20260813-compass-269f85",
+      "title": "기본값 이행규정(EU) 2026/1740",
+      "date": "2026-08-13",
+      "link": "https://www.compass.or.kr/eucbam/data/view?idx=NjM%3D"
+     },
+     {
+      "id": "20260731-op-europa-c2031d",
+      "title": "이행규정(EU) 2026/1740 관보 게재: 기본값 이행규정의 부속서 I·IV 정정",
+      "date": "2026-07-31"
+     }
+    ],
+    "duties": [],
+    "terms": [],
+    "more": 0
+   },
+   "art-1": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-defaults.tables",
+      "title": "기본값을 찾는 표",
+      "chapter": "기본값과 마크업"
+     }
+    ],
+    "more": 0
+   },
+   "art-2": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-defaults.tables",
+      "title": "기본값을 찾는 표",
+      "chapter": "기본값과 마크업"
+     }
+    ],
+    "more": 0
+   },
+   "annex-i-2": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-defaults.tables",
+      "title": "기본값을 찾는 표",
+      "chapter": "기본값과 마크업"
+     },
+     {
+      "href": "#handbook-defaults.markup",
+      "title": "마크업",
+      "chapter": "기본값과 마크업"
+     },
+     {
+      "href": "#handbook-defaults.routes",
+      "title": "기본값 표의 생산경로 표시",
+      "chapter": "기본값과 마크업"
+     },
+     {
+      "href": "#handbook-certificates.example",
+      "title": "계산 예: 한국산 열연 평판압연 제품 100톤",
+      "chapter": "제출할 인증서 수"
+     }
+    ],
+    "more": 0
+   },
+   "recitals": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-defaults.tables",
+      "title": "기본값을 찾는 표",
+      "chapter": "기본값과 마크업"
+     },
+     {
+      "href": "#handbook-defaults.markup",
+      "title": "마크업",
+      "chapter": "기본값과 마크업"
+     },
+     {
+      "href": "#handbook-certificates.example",
+      "title": "계산 예: 한국산 열연 평판압연 제품 100톤",
+      "chapter": "제출할 인증서 수"
+     }
+    ],
+    "more": 0
+   },
+   "annex-iv": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-defaults.precursors",
+      "title": "전구물질의 기본값",
+      "chapter": "기본값과 마크업"
+     }
+    ],
+    "more": 0
+   }
+  },
+  "32025R2621": {
+   "annex-i": {
+    "items": [
+     {
+      "id": "20260731-op-europa-c2031d",
+      "title": "이행규정(EU) 2026/1740 관보 게재: 기본값 이행규정의 부속서 I·IV 정정",
+      "date": "2026-07-31"
+     }
+    ],
+    "duties": [],
+    "terms": [],
+    "more": 0
+   },
+   "annex-iv": {
+    "items": [
+     {
+      "id": "20260731-op-europa-c2031d",
+      "title": "이행규정(EU) 2026/1740 관보 게재: 기본값 이행규정의 부속서 I·IV 정정",
+      "date": "2026-07-31"
+     }
+    ],
+    "duties": [],
+    "terms": [],
+    "more": 0
+   },
+   "": {
+    "items": [
+     {
+      "id": "20260102-compass-1f859d",
+      "title": "기본값 이행규정(EU) 2025/2621",
+      "date": "2026-01-02",
+      "link": "https://www.compass.or.kr/eucbam/data/view?idx=NDg%3D"
+     },
+     {
+      "id": "20251231-op-europa-084cb9",
+      "title": "이행규정(EU) 2025/2621 관보 게재: CBAM 기본값 설정",
+      "date": "2025-12-31"
+     },
+     {
+      "id": "seed-acts-numbers",
+      "title": "CBAM 하위규정의 번호",
+      "date": ""
+     }
+    ],
+    "duties": [],
+    "terms": [
+     {
+      "en": "mark-up",
+      "ko": "마크업"
+     }
+    ],
+    "more": 0
+   },
+   "art-1": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-defaults.tables",
+      "title": "기본값을 찾는 표",
+      "chapter": "기본값과 마크업"
+     },
+     {
+      "href": "#handbook-defaults.precursors",
+      "title": "전구물질의 기본값",
+      "chapter": "기본값과 마크업"
+     },
+     {
+      "href": "#handbook-defaults.indirect",
+      "title": "간접배출량과 수입 전력의 기본값",
+      "chapter": "기본값과 마크업"
+     }
+    ],
+    "more": 0
+   },
+   "art-2": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-defaults.tables",
+      "title": "기본값을 찾는 표",
+      "chapter": "기본값과 마크업"
+     },
+     {
+      "href": "#handbook-defaults.revision",
+      "title": "기본값의 조정과 개정",
+      "chapter": "기본값과 마크업"
+     },
+     {
+      "href": "#handbook-ahead.to-come",
+      "title": "앞으로 정해지거나 바뀔 세부 규칙",
+      "chapter": "앞으로 달라질 것"
+     }
+    ],
+    "more": 0
+   },
+   "recitals": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-defaults.markup",
+      "title": "마크업",
+      "chapter": "기본값과 마크업"
+     },
+     {
+      "href": "#handbook-defaults.precursors",
+      "title": "전구물질의 기본값",
+      "chapter": "기본값과 마크업"
+     },
+     {
+      "href": "#handbook-defaults.indirect",
+      "title": "간접배출량과 수입 전력의 기본값",
+      "chapter": "기본값과 마크업"
+     },
+     {
+      "href": "#handbook-defaults.revision",
+      "title": "기본값의 조정과 개정",
+      "chapter": "기본값과 마크업"
+     }
+    ],
+    "more": 0
+   }
+  },
+  "32025R2550": {
+   "": {
+    "items": [
+     {
+      "id": "20251222-compass-86986b",
+      "title": "CBAM 등록부 개정 이행규정(EU) 2025/2550",
+      "date": "2025-12-22",
+      "link": "https://www.compass.or.kr/eucbam/data/view?idx=NDU%3D"
+     },
+     {
+      "id": "20251222-op-europa-e55e4e",
+      "title": "이행규정(EU) 2025/2550 관보 게재: CBAM 등록부 규정의 개정·정정",
+      "date": "2025-12-22"
+     }
+    ],
+    "duties": [
+     {
+      "id": "eu-independent-person-registration",
+      "title": "탄소가격 서류를 인증하는 독립적인 사람의 CBAM 등록부 등록 신청 개시",
+      "date": "2026-12-01"
+     }
+    ],
+    "terms": [],
+    "more": 0
+   }
+  },
+  "32025R2619": {
+   "": {
+    "items": [
+     {
+      "id": "20251222-compass-7b14bd",
+      "title": "세관당국 정보전달 이행규정(EU) 2025/2619",
+      "date": "2025-12-22",
+      "link": "https://www.compass.or.kr/eucbam/data/view?idx=NDc%3D"
+     },
+     {
+      "id": "20251222-op-europa-e68df2",
+      "title": "이행규정(EU) 2025/2619 관보 게재: 세관당국이 전달하는 정보",
+      "date": "2025-12-22"
+     }
+    ],
+    "duties": [],
+    "terms": [],
+    "more": 0
+   }
+  },
+  "32025R2546": {
+   "": {
+    "items": [
+     {
+      "id": "20251222-compass-48e444",
+      "title": "검증원칙 이행규정(EU) 2025/2546",
+      "date": "2025-12-22",
+      "link": "https://www.compass.or.kr/eucbam/data/view?idx=NDY%3D"
+     },
+     {
+      "id": "20251222-op-europa-9ba4dd",
+      "title": "이행규정(EU) 2025/2546 관보 게재: 내재배출량 검증 원칙의 적용",
+      "date": "2025-12-22"
+     },
+     {
+      "id": "seed-acts-numbers",
+      "title": "CBAM 하위규정의 번호",
+      "date": ""
+     }
+    ],
+    "duties": [],
+    "terms": [
+     {
+      "en": "verification",
+      "ko": "검증"
+     },
+     {
+      "en": "verification report",
+      "ko": "검증보고서"
+     },
+     {
+      "en": "verification opinion / verification statement",
+      "ko": "검증의견"
+     },
+     {
+      "en": "reasonable assurance",
+      "ko": "합리적 보증"
+     },
+     {
+      "en": "materiality level",
+      "ko": "중요성 기준"
+     },
+     {
+      "en": "material misstatement",
+      "ko": "중요한 오류"
+     },
+     {
+      "en": "non-conformity",
+      "ko": "부적합"
+     },
+     {
+      "en": "site visit",
+      "ko": "현장검증"
+     },
+     {
+      "en": "inherent risk / control risk / detection risk",
+      "ko": "고유리스크"
+     },
+     {
+      "en": "uncorrected misstatement",
+      "ko": "미수정된 오류"
+     },
+     {
+      "en": "data sampling plan (verifier)",
+      "ko": "데이터 샘플링 계획"
+     }
+    ],
+    "more": 0
+   },
+   "art-2": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-verification.principles",
+      "title": "검증의 원칙",
+      "chapter": "검증"
+     }
+    ],
+    "more": 0
+   },
+   "art-3": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-verification.principles",
+      "title": "검증의 원칙",
+      "chapter": "검증"
+     }
+    ],
+    "more": 0
+   },
+   "art-5": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-verification.principles",
+      "title": "검증의 원칙",
+      "chapter": "검증"
+     }
+    ],
+    "more": 0
+   },
+   "art-1": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-verification.principles",
+      "title": "검증의 원칙",
+      "chapter": "검증"
+     }
+    ],
+    "more": 0
+   },
+   "art-6": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-verification.report",
+      "title": "검증보고서",
+      "chapter": "검증"
+     }
+    ],
+    "more": 0
+   }
+  },
+  "32025R2549": {
+   "": {
+    "items": [
+     {
+      "id": "20251222-compass-9a0414",
+      "title": "CBAM 신고인 승인 개정 이행규정(EU) 2025/2549",
+      "date": "2025-12-22",
+      "link": "https://www.compass.or.kr/eucbam/data/view?idx=NDQ%3D"
+     },
+     {
+      "id": "20251222-op-europa-ae4b1c",
+      "title": "이행규정(EU) 2025/2549 관보 게재: 승인된 CBAM 신고인 지위 규정의 개정·정정",
+      "date": "2025-12-22"
+     }
+    ],
+    "duties": [
+     {
+      "id": "eu-revocation-surrender-2026",
+      "title": "2026년에 승인이 취소된 신고인의 인증서 제출",
+      "date": "2027-02-15"
+     }
+    ],
+    "terms": [],
+    "more": 0
+   }
+  },
+  "32025R2548": {
+   "": {
+    "items": [
+     {
+      "id": "20251222-compass-28704b",
+      "title": "CBAM 인증서 가격 이행규정(EU) 2025/2548",
+      "date": "2025-12-22",
+      "link": "https://www.compass.or.kr/eucbam/data/view?idx=NDM%3D"
+     },
+     {
+      "id": "20251222-op-europa-b51dc4",
+      "title": "이행규정(EU) 2025/2548 관보 게재: CBAM 인증서 가격의 산정과 공개",
+      "date": "2025-12-22"
+     }
+    ],
+    "duties": [],
+    "terms": [
+     {
+      "en": "price of CBAM certificates",
+      "ko": "CBAM 인증서 가격"
+     }
+    ],
+    "more": 0
+   },
+   "art-1": {
+    "items": [],
+    "duties": [
+     {
+      "id": "eu-weekly-price",
+      "title": "CBAM 인증서 가격의 주간 산정 시작",
+      "date": "2027-01-01"
+     }
+    ],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-price.method",
+      "title": "가격을 정하는 방법",
+      "chapter": "인증서 가격과 구매"
+     }
+    ],
+    "more": 0
+   },
+   "art-5": {
+    "items": [],
+    "duties": [
+     {
+      "id": "eu-weekly-price",
+      "title": "CBAM 인증서 가격의 주간 산정 시작",
+      "date": "2027-01-01"
+     }
+    ],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-price.method",
+      "title": "가격을 정하는 방법",
+      "chapter": "인증서 가격과 구매"
+     }
+    ],
+    "more": 0
+   },
+   "recitals": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-price.method",
+      "title": "가격을 정하는 방법",
+      "chapter": "인증서 가격과 구매"
+     }
+    ],
+    "more": 0
+   },
+   "art-4": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-price.publish",
+      "title": "가격을 공개하는 때와 곳",
+      "chapter": "인증서 가격과 구매"
+     }
+    ],
+    "more": 0
+   },
+   "art-8": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-price.publish",
+      "title": "가격을 공개하는 때와 곳",
+      "chapter": "인증서 가격과 구매"
+     }
+    ],
+    "more": 0
+   }
+  },
+  "32025R2547": {
+   "": {
+    "items": [
+     {
+      "id": "20251222-compass-9a65dc",
+      "title": "확정기간 배출량 산정방법 이행규정(EU) 2025/2547",
+      "date": "2025-12-22",
+      "link": "https://www.compass.or.kr/eucbam/data/view?idx=NDI%3D"
+     },
+     {
+      "id": "20251222-op-europa-a80eae",
+      "title": "이행규정(EU) 2025/2547 관보 게재: 제품 내재배출량의 산정 방법",
+      "date": "2025-12-22"
+     }
+    ],
+    "duties": [],
+    "terms": [
+     {
+      "en": "specific embedded emissions",
+      "ko": "고유 내재배출량"
+     }
+    ],
+    "more": 0
+   },
+   "annex-v": {
+    "items": [],
+    "duties": [
+     {
+      "id": "eu-default-values-evidence-2027",
+      "title": "기본값의 지역별 조정을 위한 대체 자료 제출",
+      "date": "2027-06-30"
+     }
+    ],
+    "terms": [],
+    "more": 0
+   },
+   "annex-i": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "aggregated goods category",
+      "ko": "품목군"
+     },
+     {
+      "en": "precursor",
+      "ko": "전구물질"
+     },
+     {
+      "en": "relevant precursor",
+      "ko": "관련 전구물질"
+     },
+     {
+      "en": "system boundaries",
+      "ko": "시스템 경계"
+     },
+     {
+      "en": "source stream",
+      "ko": "소스스트림"
+     }
+    ],
+    "more": 0
+   },
+   "annex-iv": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "actual emissions",
+      "ko": "실제배출량"
+     }
+    ],
+    "more": 0
+   },
+   "art-1": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "production route",
+      "ko": "생산경로"
+     }
+    ],
+    "handbook": [
+     {
+      "href": "#handbook-embedded.simple-complex",
+      "title": "단순제품, 복합제품, 전구물질",
+      "chapter": "내재배출량"
+     },
+     {
+      "href": "#handbook-embedded.framework",
+      "title": "사업장, 생산공정, 시스템 경계",
+      "chapter": "내재배출량"
+     }
+    ],
+    "more": 0
+   },
+   "annex-iii": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "attribution / attributed emissions",
+      "ko": "귀속"
+     }
+    ],
+    "more": 0
+   },
+   "art-4": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "bubble approach",
+      "ko": "버블접근법"
+     }
+    ],
+    "handbook": [
+     {
+      "href": "#handbook-embedded.framework",
+      "title": "사업장, 생산공정, 시스템 경계",
+      "chapter": "내재배출량"
+     }
+    ],
+    "more": 0
+   },
+   "annex-ii": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "monitoring plan",
+      "ko": "모니터링 계획"
+     },
+     {
+      "en": "standard methodology",
+      "ko": "표준방법"
+     },
+     {
+      "en": "mass balance methodology",
+      "ko": "물질수지법"
+     },
+     {
+      "en": "measurement-based approach",
+      "ko": "측정 기반 방법"
+     }
+    ],
+    "more": 0
+   },
+   "art-10": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-roles.operators",
+      "title": "제3국의 사업자와 사업장 등록",
+      "chapter": "누가 무엇을 하는지"
+     },
+     {
+      "href": "#handbook-roles.korea-eu",
+      "title": "한국의 생산자와 EU의 수입자",
+      "chapter": "누가 무엇을 하는지"
+     }
+    ],
+    "more": 0
+   },
+   "art-15": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-embedded.simple-complex",
+      "title": "단순제품, 복합제품, 전구물질",
+      "chapter": "내재배출량"
+     }
+    ],
+    "more": 0
+   },
+   "art-3": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-embedded.framework",
+      "title": "사업장, 생산공정, 시스템 경계",
+      "chapter": "내재배출량"
+     },
+     {
+      "href": "#handbook-embedded.indirect-goods",
+      "title": "간접배출량을 넣는 품목과 넣지 않는 품목",
+      "chapter": "내재배출량"
+     }
+    ],
+    "more": 0
+   },
+   "art-7": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-embedded.reporting-period",
+      "title": "보고기간",
+      "chapter": "내재배출량"
+     }
+    ],
+    "more": 0
+   },
+   "art-13": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-embedded.reporting-period",
+      "title": "보고기간",
+      "chapter": "내재배출량"
+     }
+    ],
+    "more": 0
+   }
+  },
+  "32025R2620": {
+   "": {
+    "items": [
+     {
+      "id": "20251222-compass-97c67b",
+      "title": "무상할당 조정량 이행규정(EU) 2025/2620",
+      "date": "2025-12-22",
+      "link": "https://www.compass.or.kr/eucbam/data/view?idx=NDE%3D"
+     },
+     {
+      "id": "20251222-op-europa-732930",
+      "title": "이행규정(EU) 2025/2620 관보 게재: 무상할당 조정의 산정",
+      "date": "2025-12-22"
+     },
+     {
+      "id": "seed-acts-numbers",
+      "title": "CBAM 하위규정의 번호",
+      "date": ""
+     }
+    ],
+    "duties": [],
+    "terms": [],
+    "more": 0
+   },
+   "annex-0": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-defaults.routes",
+      "title": "기본값 표의 생산경로 표시",
+      "chapter": "기본값과 마크업"
+     },
+     {
+      "href": "#handbook-certificates.faa",
+      "title": "무상할당 조정의 뜻",
+      "chapter": "제출할 인증서 수"
+     },
+     {
+      "href": "#handbook-certificates.sefa",
+      "title": "고유 내재무상할당량을 이루는 세 값",
+      "chapter": "제출할 인증서 수"
+     },
+     {
+      "href": "#handbook-certificates.benchmark",
+      "title": "CBAM 벤치마크",
+      "chapter": "제출할 인증서 수"
+     },
+     {
+      "href": "#handbook-certificates.factor",
+      "title": "CBAM 계수",
+      "chapter": "제출할 인증서 수"
+     },
+     {
+      "href": "#handbook-certificates.cscf",
+      "title": "부문 간 보정계수",
+      "chapter": "제출할 인증서 수"
+     },
+     {
+      "href": "#handbook-certificates.actual",
+      "title": "실제 데이터로 신고할 때의 무상할당 조정",
+      "chapter": "제출할 인증서 수"
+     },
+     {
+      "href": "#handbook-certificates.example",
+      "title": "계산 예: 한국산 열연 평판압연 제품 100톤",
+      "chapter": "제출할 인증서 수"
+     }
+    ],
+    "more": 0
+   },
+   "art-1": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-certificates.faa",
+      "title": "무상할당 조정의 뜻",
+      "chapter": "제출할 인증서 수"
+     }
+    ],
+    "more": 0
+   },
+   "recitals": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-certificates.faa",
+      "title": "무상할당 조정의 뜻",
+      "chapter": "제출할 인증서 수"
+     },
+     {
+      "href": "#handbook-certificates.sefa",
+      "title": "고유 내재무상할당량을 이루는 세 값",
+      "chapter": "제출할 인증서 수"
+     },
+     {
+      "href": "#handbook-certificates.benchmark",
+      "title": "CBAM 벤치마크",
+      "chapter": "제출할 인증서 수"
+     },
+     {
+      "href": "#handbook-certificates.actual",
+      "title": "실제 데이터로 신고할 때의 무상할당 조정",
+      "chapter": "제출할 인증서 수"
+     },
+     {
+      "href": "#handbook-ahead.to-come",
+      "title": "앞으로 정해지거나 바뀔 세부 규칙",
+      "chapter": "앞으로 달라질 것"
+     }
+    ],
+    "more": 0
+   },
+   "art-2": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-certificates.actual",
+      "title": "실제 데이터로 신고할 때의 무상할당 조정",
+      "chapter": "제출할 인증서 수"
+     }
+    ],
+    "more": 0
+   },
+   "art-3": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-certificates.actual",
+      "title": "실제 데이터로 신고할 때의 무상할당 조정",
+      "chapter": "제출할 인증서 수"
+     }
+    ],
+    "more": 0
+   },
+   "art-4": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-certificates.actual",
+      "title": "실제 데이터로 신고할 때의 무상할당 조정",
+      "chapter": "제출할 인증서 수"
+     }
+    ],
+    "more": 0
+   }
+  },
+  "32025R2551": {
+   "": {
+    "items": [
+     {
+      "id": "20251222-compass-aaf213",
+      "title": "인정조건 위임규정(EU) 2025/2551",
+      "date": "2025-12-22",
+      "link": "https://www.compass.or.kr/eucbam/data/view?idx=NDA%3D"
+     },
+     {
+      "id": "20251222-op-europa-99daab",
+      "title": "위임규정(EU) 2025/2551 관보 게재: 검증기관의 인정 조건",
+      "date": "2025-12-22"
+     },
+     {
+      "id": "seed-acts-numbers",
+      "title": "CBAM 하위규정의 번호",
+      "date": ""
+     }
+    ],
+    "duties": [],
+    "terms": [
+     {
+      "en": "accreditation",
+      "ko": "인정"
+     },
+     {
+      "en": "technical expert",
+      "ko": "기술전문가"
+     },
+     {
+      "en": "impartiality",
+      "ko": "공평성"
+     },
+     {
+      "en": "competence",
+      "ko": "적격성"
+     },
+     {
+      "en": "verification team",
+      "ko": "검증팀"
+     }
+    ],
+    "more": 0
+   },
+   "art-22": {
+    "items": [],
+    "duties": [
+     {
+      "id": "eu-verifier-plan",
+      "title": "검증기관의 다음 해 검증 계획 통지",
+      "date": "2026-11-15"
+     }
+    ],
+    "terms": [],
+    "more": 0
+   },
+   "art-1": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "lead auditor (team leader)",
+      "ko": "검증팀장"
+     },
+     {
+      "en": "CBAM auditor",
+      "ko": "CBAM 검증심사원"
+     }
+    ],
+    "more": 0
+   },
+   "annex-ii": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-verification.roles",
+      "title": "사업자와 신고인이 할 일",
+      "chapter": "검증"
+     },
+     {
+      "href": "#handbook-verification.accreditation",
+      "title": "검증기관의 인정",
+      "chapter": "검증"
+     },
+     {
+      "href": "#handbook-verification.report",
+      "title": "검증보고서",
+      "chapter": "검증"
+     }
+    ],
+    "more": 0
+   },
+   "art-3": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-verification.accreditation",
+      "title": "검증기관의 인정",
+      "chapter": "검증"
+     }
+    ],
+    "more": 0
+   },
+   "art-4": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-verification.accreditation",
+      "title": "검증기관의 인정",
+      "chapter": "검증"
+     }
+    ],
+    "more": 0
+   },
+   "art-6": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-verification.accreditation",
+      "title": "검증기관의 인정",
+      "chapter": "검증"
+     }
+    ],
+    "more": 0
+   },
+   "art-23": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-verification.accreditation",
+      "title": "검증기관의 인정",
+      "chapter": "검증"
+     }
+    ],
+    "more": 0
+   }
+  },
+  "32025R0486": {
+   "": {
+    "items": [
+     {
+      "id": "20251222-op-europa-ae4b1c",
+      "title": "이행규정(EU) 2025/2549 관보 게재: 승인된 CBAM 신고인 지위 규정의 개정·정정",
+      "date": "2025-12-22"
+     },
+     {
+      "id": "20250318-op-europa-4309d2",
+      "title": "이행규정(EU) 2025/486 관보 게재: 승인된 CBAM 신고인 지위의 조건과 절차",
+      "date": "2025-03-18"
+     }
+    ],
+    "duties": [],
+    "terms": [],
+    "more": 0
+   },
+   "art-21": {
+    "items": [],
+    "duties": [
+     {
+      "id": "eu-revocation-surrender-2026",
+      "title": "2026년에 승인이 취소된 신고인의 인증서 제출",
+      "date": "2027-02-15"
+     }
+    ],
+    "terms": [],
+    "more": 0
+   },
+   "art-23": {
+    "items": [],
+    "duties": [
+     {
+      "id": "eu-revocation-surrender-2026",
+      "title": "2026년에 승인이 취소된 신고인의 인증서 제출",
+      "date": "2027-02-15"
+     }
+    ],
+    "terms": [],
+    "more": 0
+   }
+  },
+  "32024R3210": {
+   "": {
+    "items": [
+     {
+      "id": "20251222-op-europa-e55e4e",
+      "title": "이행규정(EU) 2025/2550 관보 게재: CBAM 등록부 규정의 개정·정정",
+      "date": "2025-12-22"
+     }
+    ],
+    "duties": [],
+    "terms": [],
+    "more": 0
+   }
+  },
+  "32025R2210": {
+   "": {
+    "items": [
+     {
+      "id": "20251103-compass-6cecaa",
+      "title": "대륙붕과 EEZ 이행규정(EU) 2025/2210",
+      "date": "2025-11-03",
+      "link": "https://www.compass.or.kr/eucbam/data/view?idx=Mzk%3D"
+     },
+     {
+      "id": "20251103-op-europa-29e826",
+      "title": "이행규정(EU) 2025/2210 관보 게재: 대륙붕과 배타적 경제수역으로 반입되는 제품",
+      "date": "2025-11-03"
+     }
+    ],
+    "duties": [],
+    "terms": [],
+    "more": 0
+   }
+  },
+  "32023R1773": {
+   "art-2": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "rebate",
+      "ko": "환급"
+     }
+    ],
+    "more": 0
+   }
+  },
+  "32026D1862": {
+   "": {
+    "items": [],
+    "duties": [],
+    "terms": [
+     {
+      "en": "cross-sectoral correction factor",
+      "ko": "부문 간 보정계수"
+     }
+    ],
+    "more": 0
+   },
+   "recitals": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-certificates.cscf",
+      "title": "부문 간 보정계수",
+      "chapter": "제출할 인증서 수"
+     }
+    ],
+    "more": 0
+   },
+   "art-1": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-certificates.cscf",
+      "title": "부문 간 보정계수",
+      "chapter": "제출할 인증서 수"
+     },
+     {
+      "href": "#handbook-certificates.example",
+      "title": "계산 예: 한국산 열연 평판압연 제품 100톤",
+      "chapter": "제출할 인증서 수"
+     },
+     {
+      "href": "#handbook-ahead.to-come",
+      "title": "앞으로 정해지거나 바뀔 세부 규칙",
+      "chapter": "앞으로 달라질 것"
+     }
+    ],
+    "more": 0
+   }
+  },
+  "guide-1": {
+   "sec-2-1": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-overview.purpose",
+      "title": "제도의 목적",
+      "chapter": "CBAM 한눈에 보기"
+     }
+    ],
+    "more": 0
+   },
+   "sec-2-4-3": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-overview.periods",
+      "title": "전환기간과 확정기간",
+      "chapter": "CBAM 한눈에 보기"
+     }
+    ],
+    "more": 0
+   },
+   "sec-2-4-2": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-certificates.sum",
+      "title": "인증서 수를 구하는 틀",
+      "chapter": "제출할 인증서 수"
+     },
+     {
+      "href": "#handbook-certificates.example",
+      "title": "계산 예: 한국산 열연 평판압연 제품 100톤",
+      "chapter": "제출할 인증서 수"
+     }
+    ],
+    "more": 0
+   },
+   "sec-2-4": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-certificates.factor",
+      "title": "CBAM 계수",
+      "chapter": "제출할 인증서 수"
+     },
+     {
+      "href": "#handbook-ahead.phase-out",
+      "title": "무상할당 축소와 인증서 의무의 증가",
+      "chapter": "앞으로 달라질 것"
+     }
+    ],
+    "more": 0
+   }
+  },
+  "qa": {
+   "sec-1-2": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-overview.periods",
+      "title": "전환기간과 확정기간",
+      "chapter": "CBAM 한눈에 보기"
+     }
+    ],
+    "more": 0
+   },
+   "sec-4-32": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-certificates.sum",
+      "title": "인증서 수를 구하는 틀",
+      "chapter": "제출할 인증서 수"
+     }
+    ],
+    "more": 0
+   },
+   "sec-3-8": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-certificates.factor",
+      "title": "CBAM 계수",
+      "chapter": "제출할 인증서 수"
+     },
+     {
+      "href": "#handbook-ahead.phase-out",
+      "title": "무상할당 축소와 인증서 의무의 증가",
+      "chapter": "앞으로 달라질 것"
+     }
+    ],
+    "more": 0
+   },
+   "sec-4-25": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-verification.scope",
+      "title": "검증을 받아야 하는 것",
+      "chapter": "검증"
+     }
+    ],
+    "more": 0
+   }
+  },
+  "guide-3": {
+   "sec-4-2-1": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-embedded.framework",
+      "title": "사업장, 생산공정, 시스템 경계",
+      "chapter": "내재배출량"
+     }
+    ],
+    "more": 0
+   }
+  },
+  "guide-4": {
+   "sec-2-1": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-certificates.faa",
+      "title": "무상할당 조정의 뜻",
+      "chapter": "제출할 인증서 수"
+     },
+     {
+      "href": "#handbook-certificates.cscf",
+      "title": "부문 간 보정계수",
+      "chapter": "제출할 인증서 수"
+     }
+    ],
+    "more": 0
+   },
+   "sec-2-2-1": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-certificates.faa",
+      "title": "무상할당 조정의 뜻",
+      "chapter": "제출할 인증서 수"
+     },
+     {
+      "href": "#handbook-certificates.actual",
+      "title": "실제 데이터로 신고할 때의 무상할당 조정",
+      "chapter": "제출할 인증서 수"
+     }
+    ],
+    "more": 0
+   },
+   "sec-2-2-1-2": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-certificates.sefa",
+      "title": "고유 내재무상할당량을 이루는 세 값",
+      "chapter": "제출할 인증서 수"
+     },
+     {
+      "href": "#handbook-certificates.benchmark",
+      "title": "CBAM 벤치마크",
+      "chapter": "제출할 인증서 수"
+     }
+    ],
+    "more": 0
+   },
+   "sec-2-2-1-1": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-certificates.sefa",
+      "title": "고유 내재무상할당량을 이루는 세 값",
+      "chapter": "제출할 인증서 수"
+     },
+     {
+      "href": "#handbook-certificates.factor",
+      "title": "CBAM 계수",
+      "chapter": "제출할 인증서 수"
+     },
+     {
+      "href": "#handbook-certificates.cscf",
+      "title": "부문 간 보정계수",
+      "chapter": "제출할 인증서 수"
+     },
+     {
+      "href": "#handbook-certificates.example",
+      "title": "계산 예: 한국산 열연 평판압연 제품 100톤",
+      "chapter": "제출할 인증서 수"
+     }
+    ],
+    "more": 0
+   },
+   "sec-2-1-1": {
+    "items": [],
+    "duties": [],
+    "terms": [],
+    "handbook": [
+     {
+      "href": "#handbook-certificates.benchmark",
+      "title": "CBAM 벤치마크",
+      "chapter": "제출할 인증서 수"
+     },
+     {
+      "href": "#handbook-certificates.factor",
+      "title": "CBAM 계수",
+      "chapter": "제출할 인증서 수"
+     },
+     {
+      "href": "#handbook-certificates.cscf",
+      "title": "부문 간 보정계수",
+      "chapter": "제출할 인증서 수"
+     }
+    ],
+    "more": 0
+   }
+  }
+ },
+ "read": {
+  "terms": {
+   "carbon leakage": {
+    "href": "#handbook-overview.purpose",
+    "title": "제도의 목적",
+    "chapter": "CBAM 한눈에 보기"
+   },
+   "eu emissions trading system": {
+    "href": "#handbook-overview.purpose",
+    "title": "제도의 목적",
+    "chapter": "CBAM 한눈에 보기"
+   },
+   "transitional period": {
+    "href": "#handbook-overview.periods",
+    "title": "전환기간과 확정기간",
+    "chapter": "CBAM 한눈에 보기"
+   },
+   "definitive period": {
+    "href": "#handbook-overview.periods",
+    "title": "전환기간과 확정기간",
+    "chapter": "CBAM 한눈에 보기"
+   },
+   "cbam certificate": {
+    "href": "#handbook-overview.flow",
+    "title": "수입에서 인증서 제출까지",
+    "chapter": "CBAM 한눈에 보기"
+   },
+   "cn code": {
+    "href": "#handbook-scope.goods-cn",
+    "title": "부속서 I의 품목과 CN 코드",
+    "chapter": "대상 품목과 적용 제외"
+   },
+   "inward processing": {
+    "href": "#handbook-scope.goods-cn",
+    "title": "부속서 I의 품목과 CN 코드",
+    "chapter": "대상 품목과 적용 제외"
+   },
+   "single mass-based threshold": {
+    "href": "#handbook-scope.de-minimis",
+    "title": "소량 면제",
+    "chapter": "대상 품목과 적용 제외"
+   },
+   "authorised cbam declarant": {
+    "href": "#handbook-roles.declarant",
+    "title": "승인된 CBAM 신고인과 간접 세관 대리인",
+    "chapter": "누가 무엇을 하는지"
+   },
+   "indirect customs representative": {
+    "href": "#handbook-roles.declarant",
+    "title": "승인된 CBAM 신고인과 간접 세관 대리인",
+    "chapter": "누가 무엇을 하는지"
+   },
+   "operator": {
+    "href": "#handbook-roles.operators",
+    "title": "제3국의 사업자와 사업장 등록",
+    "chapter": "누가 무엇을 하는지"
+   },
+   "installation": {
+    "href": "#handbook-roles.operators",
+    "title": "제3국의 사업자와 사업장 등록",
+    "chapter": "누가 무엇을 하는지"
+   },
+   "verifier": {
+    "href": "#handbook-roles.verifiers",
+    "title": "검증기관",
+    "chapter": "누가 무엇을 하는지"
+   },
+   "national accreditation body": {
+    "href": "#handbook-roles.verifiers",
+    "title": "검증기관",
+    "chapter": "누가 무엇을 하는지"
+   },
+   "competent authority": {
+    "href": "#handbook-roles.authorities",
+    "title": "관할당국, 집행위원회, CBAM 등록부",
+    "chapter": "누가 무엇을 하는지"
+   },
+   "cbam registry": {
+    "href": "#handbook-roles.authorities",
+    "title": "관할당국, 집행위원회, CBAM 등록부",
+    "chapter": "누가 무엇을 하는지"
+   },
+   "cbam declaration": {
+    "href": "#handbook-cycle.declaration",
+    "title": "CBAM 신고서의 기한과 내용",
+    "chapter": "한 해의 일정"
+   },
+   "surrender": {
+    "href": "#handbook-cycle.surrender",
+    "title": "인증서 제출과 분기말 인증서 보유의무",
+    "chapter": "한 해의 일정"
+   },
+   "repurchase": {
+    "href": "#handbook-cycle.repurchase",
+    "title": "남은 인증서의 환매",
+    "chapter": "한 해의 일정"
+   },
+   "cancellation": {
+    "href": "#handbook-cycle.cancellation",
+    "title": "인증서의 말소",
+    "chapter": "한 해의 일정"
+   },
+   "embedded emissions": {
+    "href": "#handbook-embedded.definitions",
+    "title": "내재배출량, 직접배출량, 간접배출량",
+    "chapter": "내재배출량"
+   },
+   "direct emissions": {
+    "href": "#handbook-embedded.definitions",
+    "title": "내재배출량, 직접배출량, 간접배출량",
+    "chapter": "내재배출량"
+   },
+   "indirect emissions": {
+    "href": "#handbook-embedded.definitions",
+    "title": "내재배출량, 직접배출량, 간접배출량",
+    "chapter": "내재배출량"
+   },
+   "simple goods": {
+    "href": "#handbook-embedded.simple-complex",
+    "title": "단순제품, 복합제품, 전구물질",
+    "chapter": "내재배출량"
+   },
+   "complex goods": {
+    "href": "#handbook-embedded.simple-complex",
+    "title": "단순제품, 복합제품, 전구물질",
+    "chapter": "내재배출량"
+   },
+   "precursor": {
+    "href": "#handbook-embedded.simple-complex",
+    "title": "단순제품, 복합제품, 전구물질",
+    "chapter": "내재배출량"
+   },
+   "system boundary": {
+    "href": "#handbook-embedded.framework",
+    "title": "사업장, 생산공정, 시스템 경계",
+    "chapter": "내재배출량"
+   },
+   "functional unit": {
+    "href": "#handbook-embedded.framework",
+    "title": "사업장, 생산공정, 시스템 경계",
+    "chapter": "내재배출량"
+   },
+   "activity level": {
+    "href": "#handbook-embedded.framework",
+    "title": "사업장, 생산공정, 시스템 경계",
+    "chapter": "내재배출량"
+   },
+   "reporting period": {
+    "href": "#handbook-embedded.reporting-period",
+    "title": "보고기간",
+    "chapter": "내재배출량"
+   },
+   "actual emissions": {
+    "href": "#handbook-embedded.actual-default",
+    "title": "실제배출량과 기본값",
+    "chapter": "내재배출량"
+   },
+   "default value": {
+    "href": "#handbook-embedded.actual-default",
+    "title": "실제배출량과 기본값",
+    "chapter": "내재배출량"
+   },
+   "mark-up": {
+    "href": "#handbook-defaults.markup",
+    "title": "마크업",
+    "chapter": "기본값과 마크업"
+   },
+   "production route": {
+    "href": "#handbook-defaults.routes",
+    "title": "기본값 표의 생산경로 표시",
+    "chapter": "기본값과 마크업"
+   },
+   "specific embedded emissions": {
+    "href": "#handbook-certificates.sum",
+    "title": "인증서 수를 구하는 틀",
+    "chapter": "제출할 인증서 수"
+   },
+   "free allocation adjustment": {
+    "href": "#handbook-certificates.faa",
+    "title": "무상할당 조정의 뜻",
+    "chapter": "제출할 인증서 수"
+   },
+   "specific embedded free allocation": {
+    "href": "#handbook-certificates.faa",
+    "title": "무상할당 조정의 뜻",
+    "chapter": "제출할 인증서 수"
+   },
+   "cbam benchmark": {
+    "href": "#handbook-certificates.benchmark",
+    "title": "CBAM 벤치마크",
+    "chapter": "제출할 인증서 수"
+   },
+   "cbam factor": {
+    "href": "#handbook-certificates.factor",
+    "title": "CBAM 계수",
+    "chapter": "제출할 인증서 수"
+   },
+   "cross-sectoral correction factor": {
+    "href": "#handbook-certificates.cscf",
+    "title": "부문 간 보정계수",
+    "chapter": "제출할 인증서 수"
+   },
+   "auction clearing price": {
+    "href": "#handbook-price.method",
+    "title": "가격을 정하는 방법",
+    "chapter": "인증서 가격과 구매"
+   },
+   "common central platform": {
+    "href": "#handbook-price.purchase",
+    "title": "인증서를 사는 곳",
+    "chapter": "인증서 가격과 구매"
+   },
+   "carbon price": {
+    "href": "#handbook-carbon-price.deduction",
+    "title": "탄소가격 공제의 뜻",
+    "chapter": "제3국에서 낸 탄소가격"
+   },
+   "rebate": {
+    "href": "#handbook-carbon-price.deduction",
+    "title": "탄소가격 공제의 뜻",
+    "chapter": "제3국에서 낸 탄소가격"
+   },
+   "independent person": {
+    "href": "#handbook-carbon-price.evidence",
+    "title": "증빙과 기록",
+    "chapter": "제3국에서 낸 탄소가격"
+   },
+   "default carbon price": {
+    "href": "#handbook-carbon-price.default-carbon-price",
+    "title": "기본 탄소가격",
+    "chapter": "제3국에서 낸 탄소가격"
+   },
+   "accreditation certificate": {
+    "href": "#handbook-verification.accreditation",
+    "title": "검증기관의 인정",
+    "chapter": "검증"
+   },
+   "reasonable assurance": {
+    "href": "#handbook-verification.principles",
+    "title": "검증의 원칙",
+    "chapter": "검증"
+   },
+   "materiality level": {
+    "href": "#handbook-verification.principles",
+    "title": "검증의 원칙",
+    "chapter": "검증"
+   },
+   "verification report": {
+    "href": "#handbook-verification.report",
+    "title": "검증보고서",
+    "chapter": "검증"
+   },
+   "penalty": {
+    "href": "#handbook-penalties.late-surrender",
+    "title": "인증서를 제출하지 않았을 때",
+    "chapter": "위반과 제재"
+   },
+   "excess emissions penalty": {
+    "href": "#handbook-penalties.late-surrender",
+    "title": "인증서를 제출하지 않았을 때",
+    "chapter": "위반과 제재"
+   },
+   "circumvention": {
+    "href": "#handbook-penalties.circumvention",
+    "title": "우회 행위",
+    "chapter": "위반과 제재"
+   }
+  },
+  "rules": {
+   "ir-default-values": [
+    {
+     "href": "#handbook-defaults.revision",
+     "title": "기본값의 조정과 개정",
+     "chapter": "기본값과 마크업"
+    },
+    {
+     "href": "#handbook-ahead.to-come",
+     "title": "앞으로 정해지거나 바뀔 세부 규칙",
+     "chapter": "앞으로 달라질 것"
+    }
+   ],
+   "ir-free-allocation": [
+    {
+     "href": "#handbook-certificates.benchmark",
+     "title": "CBAM 벤치마크",
+     "chapter": "제출할 인증서 수"
+    },
+    {
+     "href": "#handbook-ahead.to-come",
+     "title": "앞으로 정해지거나 바뀔 세부 규칙",
+     "chapter": "앞으로 달라질 것"
+    }
+   ],
+   "ets-review": [
+    {
+     "href": "#handbook-certificates.factor",
+     "title": "CBAM 계수",
+     "chapter": "제출할 인증서 수"
+    },
+    {
+     "href": "#handbook-ahead.phase-out",
+     "title": "무상할당 축소와 인증서 의무의 증가",
+     "chapter": "앞으로 달라질 것"
+    }
+   ],
+   "dr-sale-repurchase": [
+    {
+     "href": "#handbook-price.purchase",
+     "title": "인증서를 사는 곳",
+     "chapter": "인증서 가격과 구매"
+    },
+    {
+     "href": "#handbook-ahead.to-come",
+     "title": "앞으로 정해지거나 바뀔 세부 규칙",
+     "chapter": "앞으로 달라질 것"
+    }
+   ],
+   "ir-carbon-price": [
+    {
+     "href": "#handbook-carbon-price.rules-to-come",
+     "title": "집행위원회가 정할 세부 규칙",
+     "chapter": "제3국에서 낸 탄소가격"
+    },
+    {
+     "href": "#handbook-ahead.to-come",
+     "title": "앞으로 정해지거나 바뀔 세부 규칙",
+     "chapter": "앞으로 달라질 것"
+    }
+   ],
+   "cbam-downstream": [
+    {
+     "href": "#handbook-ahead.review",
+     "title": "법이 예고한 검토",
+     "chapter": "앞으로 달라질 것"
+    }
+   ],
+   "ir-declarations": [
+    {
+     "href": "#handbook-ahead.to-come",
+     "title": "앞으로 정해지거나 바뀔 세부 규칙",
+     "chapter": "앞으로 달라질 것"
+    }
+   ],
+   "uk-cbam": [
+    {
+     "href": "#handbook-uk.overview",
+     "title": "영국 CBAM 한눈에 보기",
+     "chapter": "영국 CBAM"
+    },
+    {
+     "href": "#handbook-uk.pending",
+     "title": "고시와 앞으로의 규정에 맡긴 것",
+     "chapter": "영국 CBAM"
+    }
+   ]
+  }
+ }
+}

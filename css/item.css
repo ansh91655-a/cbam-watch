@@ -1,0 +1,25 @@
+/* 소식 하나의 국문 요약 화면 */
+.item-head .back { display: inline-flex; align-items: center; gap: 6px; width: fit-content; margin-bottom: 6px; padding: 5px 14px 5px 10px; border: 1px solid var(--glass-line); border-radius: var(--radius-pill); background: var(--glass); color: var(--on-deep-2); font-size: var(--fs-s); font-weight: 600; text-decoration: none; transition: background 0.15s, color 0.15s; }
+.item-head .back:hover { background: rgba(255, 255, 255, 0.14); color: var(--on-deep); }
+.item-head h1 { max-width: 30em; line-height: 1.4; }
+.item-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 14px; margin-top: 4px; font-size: var(--fs-s); color: var(--on-deep-2); font-variant-numeric: tabular-nums; }
+
+.item-cols { align-items: start; }
+.item-body { display: grid; gap: 22px; align-content: start; padding: 30px 34px 28px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); }
+.item-summary { max-width: 44em; font-size: 1.1rem; line-height: 1.85; color: var(--ink); }
+.item-summary.withdrawn { color: var(--ink-3); }
+.item-impact { max-width: none; padding: 14px 18px; border-left: 3px solid var(--accent); font-size: var(--fs-m); }
+.item-impact strong { display: block; margin: 0 0 2px; font-size: var(--fs-s); }
+.item-excerpt { display: grid; gap: 10px; }
+.item-excerpt h2 { font-size: 1.05rem; }
+.item-excerpt blockquote { display: grid; gap: 8px; padding: 16px 20px; border-radius: var(--radius); background: var(--surface-2); color: var(--ink-2); font-size: 0.96rem; line-height: 1.7; }
+.item-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; padding-top: 4px; }
+.item-note { padding-top: 16px; border-top: 1px solid var(--line-2); font-size: var(--fs-s); color: var(--ink-3); }
+@media (max-width: 640px) { .item-body { padding: 22px 20px; } }
+
+.item-facts { gap: 16px; }
+.item-facts dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 8px 18px; font-size: var(--fs-s); }
+.item-facts dt { color: var(--ink-3); white-space: nowrap; }
+.item-facts dd { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+.item-tags { display: flex; flex-wrap: wrap; gap: 6px; padding-top: 14px; border-top: 1px solid var(--line-2); }
+.item-tags li { padding: 2px 11px; border-radius: var(--radius-pill); background: var(--surface-2); font-size: 0.8rem; font-weight: 600; color: var(--ink-2); }

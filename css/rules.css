@@ -1,0 +1,179 @@
+/* 규제 화면: 규제 카드, 단계 표시, 연혁 */
+.rule-grid { display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 760px) { .rule-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.rule-card { display: flex; flex-direction: column; gap: 10px; padding: var(--card-pad); border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); border-top: 3px solid var(--rule-tone, var(--brand-bright)); }
+.rule-card h3 { font-size: 1.12rem; letter-spacing: -0.02em; line-height: 1.35; }
+.rule-card h3 a { color: var(--ink); text-decoration: none; }
+.rule-card h3 a:hover { color: var(--link); text-decoration: underline; }
+.rule-top { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.rule-kind { font-size: 0.8rem; color: var(--ink-3); }
+.rule-official { margin-top: -6px; font-size: var(--fs-s); color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.rule-status { color: var(--ink-2); max-width: 70ch; }
+.rule-next { display: grid; gap: 2px; padding: 10px 14px; border-radius: var(--radius); background: var(--surface-2); font-size: var(--fs-s); color: var(--ink-2); }
+.rule-next strong { color: var(--ink); font-size: 0.8rem; }
+.rule-next time { color: var(--brand); font-weight: 700; font-variant-numeric: tabular-nums; }
+/* 다음 단계의 날짜를 알려 준 출처(언론 보도로만 아는 날짜처럼, 규제의 첫 링크에 그 날짜가 없을 때 적는다) */
+.rule-next-from { font-size: 0.8rem; color: var(--ink-3); }
+.rule-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px; margin-top: auto; padding-top: 4px; font-size: var(--fs-s); }
+.rule-foot a { font-weight: 600; }
+.rule-note { font-size: var(--fs-s); color: var(--ink-3); max-width: 76ch; }
+
+[data-tone="live"] { --rule-tone: var(--ok); }
+[data-tone="progress"] { --rule-tone: var(--brand-bright); }
+[data-tone="planned"] { --rule-tone: var(--t-price); }
+[data-tone="adopted"] { --rule-tone: var(--t-legis); }
+[data-tone="dispute"] { --rule-tone: var(--t-korea); }
+[data-tone="ended"] { --rule-tone: var(--ink-3); }
+.stage-chip { display: inline-flex; align-items: center; gap: 6px; padding: 2px 11px; border-radius: 999px; background: color-mix(in srgb, var(--rule-tone, var(--brand-bright)) 12%, var(--surface)); color: color-mix(in srgb, var(--rule-tone, var(--brand)) 80%, var(--ink)); font-size: 0.82rem; font-weight: 700; line-height: 1.7; }
+.stage-chip::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--rule-tone, var(--brand)); }
+
+/* 단계 표시 */
+.stepper { display: flex; align-items: flex-start; gap: 0; margin: 4px 0; padding: 0; list-style: none; }
+.stepper li { position: relative; flex: 1 1 0; display: grid; justify-items: center; gap: 6px; min-width: 0; text-align: center; font-size: 0.8rem; color: var(--ink-3); }
+/* 단계 사이의 선은 두 겹이다: 바탕의 옅은 선(::before)과, 지나온 단계까지 칠한 선(::after). 칠한 선은 화면에 들어올 때 왼쪽에서 차오른다(motion.css). */
+.stepper li::before, .stepper li::after { content: ""; position: absolute; top: 6px; left: -50%; width: 100%; height: 2px; }
+.stepper li::before { background: var(--line); }
+.stepper li::after { background: var(--rule-tone, var(--brand-bright)); transform-origin: left center; }
+.stepper li:first-child::before, .stepper li:first-child::after, .stepper li[data-state="todo"]::after { display: none; }
+.stepper .dot { position: relative; z-index: 1; width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--line); background: var(--surface); }
+.stepper li[data-state="done"] .dot { border-color: var(--rule-tone, var(--brand-bright)); background: var(--rule-tone, var(--brand-bright)); }
+.stepper li[data-state="now"] .dot { border-color: var(--rule-tone, var(--brand-bright)); box-shadow: 0 0 0 4px color-mix(in srgb, var(--rule-tone, var(--brand-bright)) 22%, transparent); }
+.stepper li[data-state="now"] { color: var(--ink); font-weight: 700; }
+.stepper .name { padding: 0 2px; overflow-wrap: anywhere; }
+.stepper.compact li[data-state="done"] .name, .stepper.compact li[data-state="todo"] .name { display: none; }
+.stepper.compact { margin-bottom: 0; }
+.stepper.compact li[data-state="now"] .name { white-space: nowrap; }
+@media (max-width: 520px) { .stepper:not(.compact) li[data-state="done"] .name, .stepper:not(.compact) li[data-state="todo"] .name { font-size: 0.72rem; } }
+
+/* 한 규제의 자세한 화면 */
+/* 글 폭은 860px로 묶는다. 칸의 폭을 minmax(0, 1fr)로 적어 두어야, 본문 폭을 다 쓰는 비교표(.pos-wide)가 있어도 다른 절들이 따라 넓어지지 않는다. */
+.rule-detail { max-width: 860px; grid-template-columns: minmax(0, 1fr); }
+.crumbs { display: flex; flex-wrap: wrap; gap: 8px; font-size: var(--fs-s); color: var(--ink-3); }
+.rule-now { display: grid; gap: 12px; padding: 24px 26px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); border-top: 3px solid var(--rule-tone, var(--brand-bright)); }
+.rule-now h2 { font-size: 1.2rem; }
+.rule-summary { max-width: 72ch; }
+/* 분석 글: 배경, 주요 내용, 쟁점과 정세, 실무에서 볼 점 */
+.rule-summary { font-size: 1.06rem; color: var(--ink); }
+.rule-analysis { display: grid; gap: 0; margin-top: 6px; padding: 8px 30px 22px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); }
+.an-stale { display: flex; align-items: flex-start; gap: 8px; margin: 14px 0 0; padding: 10px 14px; border-radius: var(--radius); background: var(--accent-soft); color: var(--on-accent); font-size: var(--fs-s); }
+.an-stale svg { flex: none; margin-top: 3px; }
+/* 절의 이름 줄: 글을 읽는 동안 머리글 아래에 붙어 있고, 지금 읽는 절이 강조된다(js/views/rules/analysis.js) */
+.an-nav { position: sticky; top: var(--head-h, 64px); z-index: 4; display: flex; flex-wrap: wrap; gap: 6px; margin: 0 -30px; padding: 12px 30px 11px; border-radius: var(--radius-l) var(--radius-l) 0 0; background: var(--surface); box-shadow: 0 1px 0 var(--line-2); }
+html:has(.an-nav) { scroll-padding-top: calc(var(--head-h, 64px) + 66px); }
+.an-nav button { flex: none; padding: 5px 14px; border: 1px solid var(--line); border-radius: var(--radius-pill); background: var(--surface); color: var(--ink-2); font-size: var(--fs-s); font-weight: 600; white-space: nowrap; transition: border-color 0.15s, color 0.15s, background 0.15s, transform 0.15s; }
+.an-nav button:hover { border-color: var(--brand-bright); color: var(--brand-bright); }
+.an-nav button[aria-current="true"] { border-color: var(--brand); background: var(--brand); color: var(--on-brand); }
+.an-sec { display: grid; gap: 12px; padding: 22px 0; border-top: 1px solid var(--line-2); }
+.an-nav + .an-sec { border-top: 0; padding-top: 20px; }
+.an-sec h3 { display: flex; align-items: center; gap: 10px; font-size: 1.1rem; scroll-margin-top: calc(var(--head-h, 64px) + 70px); }
+.an-sec h3::before { content: ""; width: 4px; height: 1.05em; border-radius: 2px; background: var(--accent); }
+.an-sec h3[data-flash="true"] { color: var(--brand-bright); }
+.an-prose { display: grid; gap: 12px; }
+.an-prose p, .an-point p { max-width: 72ch; color: var(--ink-2); line-height: 1.8; }
+.an-points { display: grid; gap: 0; }
+.an-point { display: grid; gap: 4px 24px; padding: 13px 0; border-top: 1px dashed var(--line); }
+.an-point:first-child { border-top: 0; padding-top: 2px; }
+.an-point h4 { margin: 0; font-size: 0.95rem; font-weight: 700; line-height: 1.6; color: var(--ink); }
+@media (min-width: 720px) { .an-point { grid-template-columns: 168px minmax(0, 1fr); align-items: start; } .an-point.an-lead { grid-template-columns: minmax(0, 1fr); } .an-point h4 { padding-top: 2px; } }
+/* 근거 번호. 글 속의 작은 단추이고, 누르면 아래 자료 목록의 그 줄로 간다 */
+.an-refs { margin-left: 5px; white-space: nowrap; }
+.an-ref { min-width: 19px; height: 19px; margin-left: 2px; padding: 0 5px; border: 0; border-radius: 6px; background: var(--brand-soft); color: var(--brand); font-size: 0.72rem; font-weight: 700; line-height: 19px; vertical-align: 2px; font-variant-numeric: tabular-nums; }
+.an-ref:hover { background: var(--brand); color: var(--on-brand); }
+.an-src ol { display: grid; gap: 7px; margin: 0; padding: 0; list-style: none; counter-reset: source; font-size: var(--fs-s); }
+.an-src li { position: relative; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; padding: 3px 8px 3px 34px; border-radius: 8px; counter-increment: source; transition: background 0.3s; }
+.an-src li::before { content: counter(source); position: absolute; left: 6px; top: 4px; min-width: 19px; height: 19px; padding: 0 5px; border-radius: 6px; background: var(--brand-soft); color: var(--brand); font-size: 0.72rem; font-weight: 700; line-height: 19px; text-align: center; font-variant-numeric: tabular-nums; }
+.an-src li[data-flash="true"] { background: var(--accent-soft); }
+.an-src a { display: inline; overflow-wrap: anywhere; }
+.an-src a svg { margin-left: 4px; vertical-align: -1px; }
+.an-foot { padding-top: 14px; border-top: 1px solid var(--line-2); font-size: var(--fs-s); color: var(--ink-3); }
+@media (max-width: 640px) {
+  .rule-analysis { padding: 4px 18px 18px; }
+  /* 좁은 화면: 이름 줄을 한 줄로 두고 옆으로 민다(두 줄이 되면 글을 가린다) */
+  .an-nav { flex-wrap: nowrap; margin: 0 -18px; padding: 10px 18px; overflow-x: auto; scrollbar-width: none; }
+  .an-nav::-webkit-scrollbar { display: none; }
+  .an-nav button { padding: 5px 11px; }
+  /* 이름이 화면 밖으로 이어질 때: 가려진 이름이 남아 있는 동안 오른쪽 끝을 흐리게 한다(ui/dom.js의 moreHint가 data-more를 단다).
+     이 줄은 글 위에 붙어 다니므로 줄 자체를 비치게 하지 않고, 오른쪽 끝에 붙어 있는 흐림 칸을 얹는다 */
+  .an-nav[data-more]::after { content: ""; position: sticky; right: -18px; flex: none; align-self: stretch; width: 40px; margin-left: -40px; background: linear-gradient(to right, transparent, var(--surface) 75%); pointer-events: none; }
+}
+html[data-theme="midnight"] .an-stale { color: var(--accent); }
+@media print { .an-nav { display: none; } }
+.rule-links { display: grid; gap: 8px; padding: 0; list-style: none; }
+.rule-links a { display: inline-flex; align-items: center; gap: 5px; font-weight: 600; }
+
+/* 연혁 */
+.tl { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+.tl li { position: relative; display: grid; gap: 4px; padding: 0 0 22px 26px; border-left: 2px solid var(--line); margin-left: 6px; }
+.tl li:last-child { border-left-color: transparent; padding-bottom: 0; }
+.tl li::before { content: ""; position: absolute; left: -7px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: var(--surface); border: 2px solid var(--brand-bright); }
+.tl li[data-press="true"]::before { border-color: var(--warn); }
+.tl time { font-size: var(--fs-s); font-weight: 700; color: var(--brand); font-variant-numeric: tabular-nums; }
+.tl p { max-width: 72ch; }
+.tl-src { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: var(--fs-s); }
+.tl-src a { display: inline-flex; align-items: center; gap: 4px; }
+.tl-press { padding: 0 8px; border: 1px solid currentColor; border-radius: 999px; color: var(--warn); font-size: 0.76rem; font-weight: 700; line-height: 1.6; }
+
+/* 곧 움직일 규제 */
+.rule-soon { display: grid; gap: 12px; padding: 20px 24px; border-radius: var(--radius-l); background: var(--feat-bg); color: var(--on-feat); }
+.rule-soon h2 { font-size: 1.05rem; color: var(--on-feat); }
+.rule-soon ul { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.rule-soon li { display: grid; gap: 2px 14px; grid-template-columns: minmax(0, 1fr); font-size: var(--fs-s); color: var(--on-feat-2); }
+@media (min-width: 720px) { .rule-soon li { grid-template-columns: 150px minmax(0, 240px) minmax(0, 1fr); align-items: baseline; } }
+.rule-soon time { color: var(--on-deep-link); font-weight: 700; font-variant-numeric: tabular-nums; }
+.rule-soon a { color: var(--on-feat); font-weight: 700; }
+
+/* 규제 전체 화면의 머리: 곧 움직일 규제와 최근에 달라진 것을 나란히 둔다(좁으면 위아래로) */
+.rule-heads { display: grid; gap: var(--gap-4); grid-template-columns: minmax(0, 1fr); align-items: start; }
+.rule-heads:empty { display: none; }
+@media (min-width: 1100px) { .rule-heads:has(.rule-soon):has(.rule-recent) { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+.rule-heads:has(.rule-soon):has(.rule-recent) .rule-soon li { grid-template-columns: minmax(0, 1fr); }
+.rule-recent { display: grid; gap: 12px; padding: 20px 24px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); }
+.rule-recent h2 { font-size: 1.05rem; }
+.rule-recent ul { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.rule-recent li { display: grid; gap: 2px; font-size: var(--fs-s); color: var(--ink-2); }
+.rule-recent time { color: var(--brand); font-weight: 700; font-variant-numeric: tabular-nums; }
+.rule-recent li a { color: var(--ink); font-weight: 700; }
+.rule-recent li > span { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* 규제 변화 기록: 연혁의 줄에 어느 규제의 일인지 적는다 */
+.tl-rule { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; }
+.tl-rule a { font-weight: 700; color: var(--ink); }
+.tl-all li { padding-bottom: 26px; }
+
+/* 첫 화면의 규제 진행 상황 */
+.rule-rows { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+.rule-rows li { display: grid; gap: 4px 12px; grid-template-columns: minmax(0, 1fr) auto; align-items: center; padding: 11px 0; border-top: 1px solid var(--line-2); }
+.rule-rows li:first-child { border-top: 0; padding-top: 0; }
+.rule-rows a { color: var(--ink); font-weight: 700; text-decoration: none; }
+.rule-rows a:hover { color: var(--link); text-decoration: underline; }
+.rule-rows small { grid-column: 1 / -1; color: var(--ink-3); font-size: var(--fs-s); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* 기관별 입장 비교표. 칸이 넷이라 글 폭(860px)에 가두지 않고 본문 폭을 다 쓴다.
+   표가 오른쪽 칸(규정에서 찾기)의 자리까지 넓어지므로, 이 표가 있는 화면에서는 오른쪽 칸이 따라 내려오지 않게 한다(laws.css의 .rule-page:has(.pos-wide)). */
+.pos-wide { width: calc(min(var(--maxw), 100vw) - 40px); }
+.pos-past { max-width: 86ch; padding: 12px 16px; border-left: 3px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; background: var(--surface); color: var(--ink-2); }
+.pos-table table { table-layout: fixed; }
+.pos-table th[scope="col"]:first-child { width: 21%; }
+.pos-table td, .pos-table th { vertical-align: top; }
+.pos-table tbody th { font-size: 0.92rem; font-weight: 700; line-height: 1.5; letter-spacing: -0.01em; white-space: normal; text-transform: none; color: var(--ink); text-align: left; }
+.pos-table td { color: var(--ink-2); line-height: 1.6; }
+.pos-table td.blank { color: var(--ink-3); font-size: var(--fs-s); }
+.pos-sources { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 0; padding: 0; list-style: none; font-size: var(--fs-s); color: var(--ink-3); }
+.pos-sources li { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; }
+.pos-sources strong { color: var(--ink-2); }
+.pos-sources a { display: inline-flex; align-items: center; gap: 3px; font-weight: 600; }
+.pos-note { max-width: 86ch; font-size: var(--fs-s); color: var(--ink-3); }
+@media (max-width: 640px) {
+  /* 좁은 화면: 쟁점을 카드의 제목으로 두고 기관의 칸을 아래로 쌓는다 */
+  .pos-table.table-stack tr { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .pos-table.table-stack tbody th { display: block; padding: 0 0 2px; border: 0; background: none; font-size: 1.04rem; }
+  .pos-table.table-stack td.blank { display: none; }
+}
+
+/* 규제에 이어 주는 도구(인증서 비용 추정). 한 줄짜리 링크 칸이다. */
+.rule-tool { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 4px 16px; padding: 16px 20px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); color: var(--ink); text-decoration: none; }
+.rule-tool:hover { border-color: var(--brand-bright); }
+.rule-tool-body { display: grid; gap: 1px; min-width: 0; }
+.rule-tool-body strong { font-size: var(--fs-l); }
+.rule-tool-body span { font-size: var(--fs-s); color: var(--ink-2); }
+.rule-tool > .icon:last-child { color: var(--ink-3); }

@@ -1,0 +1,176 @@
+/* 규정 원문: 전체 규정에서 찾기, 법령의 목록, 원문과 국문 번역을 나란히 보는 화면, 규제 화면 오른쪽의 찾기 칸 */
+
+/* 넓게 쓰는 화면(원문과 번역을 나란히 볼 때). 머리 띠와 본문이 함께 넓어진다 */
+body[data-wide] main, body[data-wide] .band-inner, body[data-wide] .head-inner { max-width: min(max(1480px, var(--maxw)), 100%); }
+
+/* 찾기: 큰 검색 칸과 예시 */
+.law-search { display: flex; align-items: center; gap: 10px; padding: 8px 8px 8px 18px; border: 1px solid var(--line); border-radius: var(--radius-pill); background: var(--surface); box-shadow: var(--shadow-1); color: var(--ink-3); }
+.law-search:focus-within { border-color: var(--brand-bright); }
+.law-search { min-width: 0; }
+.law-search > svg { flex: none; }
+.law-search input { flex: 1 1 0; width: 0; min-width: 0; height: 44px; border: 0; background: none; color: var(--ink); font: inherit; font-size: var(--fs-l); outline: none; }
+.law-search .btn-main { flex: none; box-shadow: none; }
+@media (max-width: 480px) { .law-search { padding-left: 14px; } .law-search > svg { display: none; } .law-search input { font-size: var(--fs-m); } .law-search .btn-main { padding-inline: 16px; } }
+.find-examples { display: flex; flex-wrap: wrap; gap: 8px; }
+.find-examples .chip { font-size: var(--fs-s); cursor: pointer; }
+
+/* 찾은 조문 */
+.find-list { display: grid; gap: 8px; padding: 0; list-style: none; counter-reset: hit; }
+.find-list li { counter-increment: hit; }
+.find-hit { position: relative; display: grid; gap: 2px; padding: 12px 14px 12px 44px; border: 1px solid var(--line-2); border-radius: var(--radius); background: var(--surface); color: var(--ink); text-decoration: none; }
+.find-hit::before { content: counter(hit); position: absolute; left: 12px; top: 12px; display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--brand-soft); color: var(--brand); font-size: 0.78rem; font-weight: 700; }
+.find-hit:hover { border-color: var(--brand-bright); box-shadow: var(--shadow-1); }
+.find-act { font-size: 0.78rem; font-weight: 600; color: var(--ink-3); }
+.find-hit strong { font-size: var(--fs-m); line-height: 1.45; }
+.find-snip { font-size: var(--fs-s); line-height: 1.6; color: var(--ink-2); overflow-wrap: anywhere; }
+.find-hit mark, .law-row mark { padding: 0 2px; border-radius: 3px; background: var(--accent-soft); color: inherit; }
+.find-terms { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: var(--fs-s); color: var(--ink-3); }
+.find-note { font-size: var(--fs-s); color: var(--ink-3); }
+.find-none { padding: 12px 14px; border-radius: var(--radius); background: var(--surface-2); font-size: var(--fs-s); color: var(--ink-2); }
+.find-wide .find-hit { padding-block: 14px; }
+
+/* 규제 화면 오른쪽의 찾기 칸 */
+.rule-page { display: grid; gap: var(--gap-6) 32px; grid-template-columns: minmax(0, 1fr); align-items: start; }
+@media (min-width: 1100px) { .rule-page { grid-template-columns: minmax(0, 1fr) 288px; } .rule-aside { position: sticky; top: 88px; max-height: calc(100vh - 108px); overflow-y: auto; } }
+.rule-aside { display: grid; gap: 14px; }
+.rule-page:has(.pos-wide) .rule-aside { position: static; max-height: none; overflow-y: visible; }  /* 본문 폭을 다 쓰는 표를 가리지 않게 제자리에 둔다 */
+.find-panel { display: grid; gap: 10px; padding: 18px 18px 16px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); }
+.find-panel h2 { display: flex; align-items: center; gap: 8px; font-size: 1.05rem; color: var(--brand); }
+.find-lead { font-size: var(--fs-s); color: var(--ink-2); }
+.find-form { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px; }
+.find-form input { box-sizing: border-box; min-width: 0; height: 42px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--ink); font: inherit; font-size: var(--fs-s); }
+.find-form input:focus { border-color: var(--brand-bright); outline: none; }
+.find-form .btn { padding-inline: 14px; }
+.find-panel .find-examples .chip { padding: 3px 10px; font-size: 0.78rem; }
+.find-panel .find-hit { padding: 10px 10px 10px 38px; }
+.find-panel .find-hit::before { left: 9px; top: 10px; }
+.find-answer { font-size: var(--fs-s); font-weight: 600; color: var(--ink); }
+.find-more { display: inline-flex; align-items: center; gap: 4px; font-size: var(--fs-s); font-weight: 600; }
+.law-open { display: grid; gap: 8px; padding: 16px 18px; border-radius: var(--radius-l); background: var(--feat-bg); color: var(--on-feat); }
+.law-open p { font-size: var(--fs-s); color: var(--on-feat-2); }
+.law-open a { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 9px 12px; border: 1px solid var(--glass-line); border-radius: 12px; background: var(--glass); color: var(--on-feat); font-size: var(--fs-s); font-weight: 600; text-decoration: none; }
+.law-open a:hover { border-color: var(--accent); color: var(--accent); }
+
+/* 법령의 목록 */
+.law-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+.law-card { display: grid; gap: 6px; align-content: start; padding: 20px 22px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); }
+.law-card h3 { font-size: 1.1rem; line-height: 1.4; }
+.law-card h3 a { color: var(--ink); text-decoration: none; }
+.law-card h3 a:hover { color: var(--brand-bright); }
+.law-official { font-size: var(--fs-s); color: var(--ink-3); }
+.law-remark { font-size: var(--fs-s); color: var(--ink-2); font-weight: 600; }
+.law-card .law-remark { font-weight: 400; }
+.law-card .count { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+.law-card-links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-top: 6px; font-size: var(--fs-s); }
+
+/* 법령 하나: 위쪽의 도구, 알림, 차례와 본문 */
+.law-bar { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px 24px; }
+.law-tools { display: flex; flex-wrap: wrap; align-items: end; gap: 10px 14px; }
+.law-tools select { max-width: min(340px, 80vw); }
+.law-note { display: grid; gap: 6px; padding: 12px 16px; border-left: 3px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; background: var(--surface); font-size: var(--fs-s); color: var(--ink-2); }
+.law-note-links { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+.law-note-links a { display: inline-flex; align-items: center; gap: 4px; }
+.law-layout { display: grid; gap: var(--gap-5) 28px; grid-template-columns: minmax(0, 1fr); align-items: start; }
+@media (min-width: 1000px) { .law-layout { grid-template-columns: 232px minmax(0, 1fr); } .law-toc { position: sticky; top: 88px; max-height: calc(100vh - 108px); overflow-y: auto; } }
+.law-toc ul { display: grid; gap: 1px; padding: 0; list-style: none; font-size: var(--fs-s); }
+.law-toc a { display: block; padding: 5px 10px; border-radius: 8px; color: var(--ink-2); line-height: 1.45; text-decoration: none; }
+.law-toc a:hover { background: var(--surface); color: var(--ink); }
+.law-toc li[data-kind="division"] a { margin-top: 8px; font-weight: 700; color: var(--ink); }
+.law-toc li[data-kind="front"] a, .law-toc li[data-kind="recitals"] a, .law-toc li[data-kind="closing"] a, .law-toc li[data-kind="notes"] a { color: var(--ink-3); }
+.law-toc li[data-kind="cover"] a { color: var(--ink-3); }
+.law-toc li[data-level="1"] a { margin-top: 6px; font-weight: 700; color: var(--ink); }
+.law-toc li[data-level="3"] a { padding-left: 22px; }
+.law-toc li[data-level="4"] a, .law-toc li[data-level="5"] a { padding-left: 34px; }
+.law-toc-en { display: block; font-size: 0.78rem; color: var(--ink-3); }
+@media (max-width: 999px) { .law-toc { max-height: 220px; overflow-y: auto; padding: 8px; border: 1px solid var(--line-2); border-radius: var(--radius); background: var(--surface); } }
+
+.law-body { display: grid; gap: 22px; min-width: 0; }
+.law-part { display: grid; gap: 0; padding: 20px 34px 14px 22px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); scroll-margin-top: 84px; }
+.law-part[data-here] { border-color: var(--brand-bright); box-shadow: var(--shadow-1); }
+.law-division { scroll-margin-top: 84px; padding: 6px 4px 0; }
+.law-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin-bottom: 8px; font-size: 1.15rem; line-height: 1.45; }
+.law-division .law-head { margin: 0; font-size: 1.3rem; }
+.law-no { color: var(--brand); }
+.law-page { font-size: var(--fs-s); font-weight: 500; white-space: nowrap; }
+/* 조각의 머리와 그 오른쪽의 도구(PDF의 그 쪽으로 가는 링크, 인용 복사) */
+.law-top { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 4px 14px; margin-bottom: 8px; }
+.law-top .law-head { flex: 1 1 260px; margin-bottom: 0; }
+.law-head-tools { display: inline-flex; align-items: center; gap: 12px; padding-top: 3px; }
+.law-cite-part { display: inline-flex; align-items: center; gap: 5px; padding: 3px 11px; border: 1px solid var(--line); border-radius: var(--radius-pill); background: var(--surface); color: var(--ink-2); font-size: 0.78rem; font-weight: 600; white-space: nowrap; cursor: pointer; }
+.law-cite-part:hover { border-color: var(--brand-bright); color: var(--brand-bright); }
+.law-cite-part[data-state="done"] { border-color: var(--ok); color: var(--ok); }
+.law-cite-part[data-state="failed"] { border-color: var(--bad); color: var(--bad); }
+.law-cite-tip { color: var(--ink-3); }
+.law-head-en { flex-basis: 100%; font-size: var(--fs-s); font-weight: 500; color: var(--ink-3); }
+.law-row { position: relative; display: grid; gap: 4px 28px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); padding: 9px 0; border-top: 1px solid var(--line-2); scroll-margin-top: 84px; }
+/* 문단마다의 인용 복사: 조각의 오른쪽 여백에 둔다. 마우스를 올리면 보이고, 손가락으로 쓰는 기기에서는 흐리게 늘 보인다 */
+.law-cite { position: absolute; top: 9px; right: -29px; display: grid; place-items: center; width: 24px; height: 24px; padding: 0; border: 0; border-radius: 7px; background: none; color: var(--ink-3); opacity: 0; cursor: pointer; transition: opacity 0.12s; }
+.law-row:hover > .law-cite, .law-cite:focus-visible, .law-cite[data-state] { opacity: 1; }
+.law-cite:hover { background: var(--surface-2); color: var(--brand-bright); }
+.law-cite[data-state="done"] { color: var(--ok); }
+.law-cite[data-state="failed"] { color: var(--bad); }
+@media (hover: none) { .law-cite { opacity: 0.5; } }
+/* 주소가 가리킨 문단: 잠깐 표시한다(views/law.js의 reach) */
+.law-row[data-flash="true"] { border-radius: 6px; background: var(--accent-soft); box-shadow: 0 0 0 8px var(--accent-soft); }
+.law-row p { line-height: 1.75; overflow-wrap: anywhere; }
+.law-en { color: var(--ink-2); font-size: 0.95rem; }
+.law-ko { color: var(--ink); }
+.law-wait-note { margin-bottom: 8px; font-size: var(--fs-s); color: var(--ink-3); }
+/* 아직 실린 번역이 없는 문단: 번역 자리에 '번역 준비 중'이라고만 적는다 */
+.law-wait .pill { font-size: 0.74rem; color: var(--ink-3); }
+.law-fold-tools { display: flex; justify-content: flex-end; padding: 4px 0 8px; }
+/* 조각에 이어진 것(의무 일정, 소식, 용어). 접어 두고, 펼치면 갈래마다 한 줄씩 보인다 */
+.law-linked { margin-top: 12px; border: 1px solid var(--line-2); border-radius: 12px; background: var(--surface-2); font-size: var(--fs-s); }
+.law-linked > summary { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; padding: 9px 14px; cursor: pointer; font-weight: 650; color: var(--ink-2); }
+.law-linked > summary .count { font-weight: 500; }
+.law-linked[open] > summary { border-bottom: 1px solid var(--line-2); }
+.law-linked-row { display: grid; grid-template-columns: 5.5em minmax(0, 1fr); gap: 4px 12px; padding: 9px 14px; }
+.law-linked-row + .law-linked-row { border-top: 1px solid var(--line-2); }
+.law-linked-row > b { color: var(--ink-3); font-weight: 650; }
+.law-linked-row ul { display: grid; gap: 4px; margin: 0; padding: 0; list-style: none; }
+.law-linked-row li { display: flex; flex-wrap: wrap; gap: 2px 10px; }
+.law-linked-row time { color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.law-linked-row li a { display: inline-flex; align-items: center; gap: 4px; }
+.law-linked-terms { display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 0; }
+.law-note .law-linked { margin: 4px 0 2px; background: var(--surface); }
+@media (max-width: 640px) { .law-linked-row { grid-template-columns: minmax(0, 1fr); } }
+/* 받아 둘 때 뒷부분을 뺀 부속서의 끝: 싣지 않은 부분이 있다고 알린다 */
+.law-cut-note { margin: 12px 0; padding: 10px 14px; border: 1px dashed var(--line); border-radius: 12px; background: var(--surface-2); font-size: var(--fs-s); color: var(--ink-2); }
+.law-cut-note a { display: inline-flex; align-items: center; gap: 4px; }
+.law-body[data-mode="en"] .law-row, .law-body[data-mode="ko"] .law-row { grid-template-columns: minmax(0, 1fr); }
+/* 통째로 옮기지 않은 조문은 원문을 한 단으로 보여 준다 */
+.law-part[data-waiting] .law-row { grid-template-columns: minmax(0, 1fr); }
+.law-part[data-waiting] .law-wait { display: none; }
+.law-body[data-mode="en"] .law-ko, .law-body[data-mode="en"] .law-wait-note { display: none; }
+.law-body[data-mode="en"] .law-en { color: var(--ink); font-size: 1rem; }
+.law-body[data-mode="ko"] .law-row:not([data-wait]) .law-en { display: none; }
+.law-body .law-row p { max-width: 86ch; }
+@media (max-width: 760px) { .law-body[data-mode="both"] .law-row { grid-template-columns: minmax(0, 1fr); } .law-part { padding-inline: 16px 32px; } .law-cite { right: -28px; } }
+/* 문단의 꼴: 작은 제목, 목록 항목, 그림과 표의 제목, 각주, 수식 */
+.law-row[data-shape="h"] p { font-weight: 700; }
+.law-row[data-shape="li"] p, .law-pair[data-shape="li"] p { padding-left: 1.5em; text-indent: -1.5em; }
+.law-row[data-shape="li"][data-depth="2"] p { margin-left: 1.5em; }
+.law-row[data-shape="li"][data-depth="3"] p, .law-row[data-shape="li"][data-depth="4"] p { margin-left: 3em; }
+.law-row[data-shape="caption"] p { font-size: var(--fs-s); font-weight: 600; color: var(--ink-2); }
+.law-row[data-shape="note"] p, .law-row[data-shape="figure"] p { font-size: var(--fs-s); color: var(--ink-2); }
+.law-row[data-shape="formula"] .law-en { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.88rem; }
+/* 표: 칸마다 원문과 국문을 위아래로 둔다. 넓은 표는 옆으로 민다 */
+.law-table { overflow-x: auto; padding: 10px 0; border-top: 1px solid var(--line-2); }
+.law-table table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+.law-table th, .law-table td { min-width: 6.5em; padding: 6px 9px; border: 1px solid var(--line); vertical-align: top; text-align: left; font-weight: 400; }
+.law-table th { background: var(--bg); }
+.law-table th p { font-weight: 600; }
+.law-pair + .law-pair { margin-top: 6px; }
+.law-pair p { line-height: 1.6; overflow-wrap: anywhere; }
+.law-pair .law-en { font-size: 0.85rem; }
+.law-pair .law-wait { display: none; }
+.law-body[data-mode="ko"] .law-pair:not([data-wait]) .law-en { display: none; }
+.law-body[data-mode="en"] .law-pair .law-en { font-size: 0.92rem; }
+.law-figure { padding: 8px 0 2px; border-top: 1px solid var(--line-2); }
+.law-figure summary { display: flex; align-items: baseline; gap: 10px; font-size: var(--fs-s); color: var(--ink-3); cursor: pointer; }
+.law-figure[open] summary { padding-bottom: 6px; }
+.law-fold summary { display: flex; align-items: baseline; gap: 10px; padding: 2px 0 8px; font-weight: 700; cursor: pointer; }
+.law-fold:not([open]) summary { padding-bottom: 6px; }
+.law-source { font-size: var(--fs-s); color: var(--ink-3); }
+.find-jump:empty { display: none; }
+.find-jump .chip { display: inline-flex; align-items: center; gap: 6px; }
