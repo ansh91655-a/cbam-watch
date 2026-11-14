@@ -67,6 +67,8 @@ class BuildTest(unittest.TestCase):
         # 그 줄의 코드로 시작하는 품목 가운데 기본값·벤치마크가 정해진 첫 품목으로 비용 추정을 잇는다. 없으면 잇지 않는다
         self.assertEqual([row["calc"] for row in goods["rows"]], ["72081000", "26011200", ""])
         self.assertEqual((self.body["asOf"], self.body["law"]["url"]), ("2026-11-11", "https://example.org/law"))
+        # 품목 목록의 부문 이름도 싣는다(품목 한 장 보기가 조회한 품목의 부문을 찾는 데 쓴다)
+        self.assertEqual((self.steel["cn"], self.power["cn"]), (["steel"], ["electricity"]))
 
     def test_documents_carry_their_top_sections_and_whether_a_pdf_view_exists(self):
         doc = self.steel["docs"][0]

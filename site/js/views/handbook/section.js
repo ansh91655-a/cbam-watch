@@ -1,15 +1,17 @@
-// 해설서의 절 하나. 왼쪽에 글(문단, 목록, 식, 표), 오른쪽에 곁들이는 것(용어 풀이, 알아 둘 점, 근거 조문, 관련 화면)을 둔다.
+// 해설서의 절 하나. 왼쪽에 글(문단, 그림, 목록, 식, 표), 오른쪽에 곁들이는 것(용어 풀이, 알아 둘 점, 근거 조문, 관련 화면)을 둔다.
 // 좁은 화면에서는 곁들이는 것이 글 아래로 내려간다(css/handbook.css).
 import { lawHref } from "../../laws/refs.js";
 import { h, safeLink, table } from "../../ui/dom.js";
 import { icon } from "../../ui/icons.js";
+import { figureNode } from "./figure.js";
+import { formulaLine } from "./figures/equation.js";
 
 const list = (section) => (section.list ? h(section.ordered ? "ol" : "ul", { class: "hb-list" }, section.list.map((text) => h("li", { text }))) : null);
 
 function formula(one) {
   if (!one) return null;
   return h("div", { class: "hb-formula" }, [
-    h("p", { class: "hb-formula-text", text: one.text }),
+    formulaLine(one.text, (one.parts || []).map(([word]) => word)),
     one.parts && one.parts.length ? h("dl", { class: "hb-formula-parts" }, one.parts.flatMap(([word, text]) => [h("dt", { text: word }), h("dd", { text })])) : null,
   ]);
 }
@@ -50,7 +52,7 @@ export function sectionNode(chapterId, section) {
   return h("section", { class: "panel hb-sec", id: `hb-${section.id}`, "aria-labelledby": `hb-h-${section.id}`, tabindex: "-1" }, [
     h("h2", { id: `hb-h-${section.id}` }, h("a", { class: "hb-anchor", href: `#handbook-${chapterId}.${section.id}`, text: section.title })),
     h("div", { class: "hb-cols" }, [
-      h("div", { class: "hb-main" }, [...section.body.map((text) => h("p", { text })), list(section), formula(section.formula), sheet(section.table, section.title)]),
+      h("div", { class: "hb-main" }, [...section.body.map((text) => h("p", { text })), figureNode(section.figure, `hb-fig-${section.id}`), list(section), formula(section.formula), sheet(section.table, section.title)]),
       side.length ? h("div", { class: "hb-aside" }, side) : null,
     ]),
   ]);

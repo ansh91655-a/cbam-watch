@@ -5,7 +5,7 @@
   기본값·벤치마크가 정해진 품목 수와 마크업은 인증서 비용 추정의 자료(calc.json), 문서의 이름과 차례는 규정 원문의 목록(laws/index.json),
   소식은 게시한 소식 가운데 제목·요약·다룬 내용에 그 부문의 낱말이 나온 것이다(그 낱말이 든 다른 말은 except에 적어 세지 않는다: 수소의 '탄화수소').
 - 만드는 것: data/sectors.json
-  {"sectors": [{"key", "name", "goods": {"rows", "gases", "directOnly", "both"}, "proposed": {"own", "combined", "name"} 또는 없음,
+  {"sectors": [{"key", "name", "cn": [품목 목록의 부문 이름], "goods": {"rows", "gases", "directOnly", "both"}, "proposed": {"own", "combined", "name"} 또는 없음,
                 "docs": [{"id", "name", "group", "pages", "pdf", "sections"}], "calc": {"goods", "first", "markups"} 또는 없음,
                 "items": [{"id", "title", "date"}], "itemCount"}],
    "common": [{"id", "name", "group"}], "law": 품목 목록의 근거, "asOf": 품목 목록을 만든 날}
@@ -122,7 +122,7 @@ def build(book, data_out, items):
     sectors = []
     for sector in book["sectors"]:
         found, total = _items(sector, items)
-        sectors.append({"key": sector["key"], "name": sector["name"], "words": sector.get("words", []), "goods": _goods(sector, cn, calc_codes), "proposed": _proposed(sector, cn),
+        sectors.append({"key": sector["key"], "name": sector["name"], "cn": sector["cn"], "words": sector.get("words", []), "goods": _goods(sector, cn, calc_codes), "proposed": _proposed(sector, cn),
                         "docs": [_doc(acts[doc], pdfs) for doc in sector.get("docs", []) if doc in acts], "calc": _calc(sector, calc),
                         "items": found, "itemCount": total})
     common = [{"id": doc, "name": acts[doc].get("name", doc), "group": acts[doc].get("group", "act")} for doc in book.get("common", []) if doc in acts]

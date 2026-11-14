@@ -1,13 +1,18 @@
 """화면 모듈 가운데 화면 요소를 다루지 않아 브라우저 없이 볼 수 있는 것: 국내 공지·자료 가르기(js/news/notices.js), 번역이 준비된 정도(js/laws/ready.js),
 문단 인용의 글(js/laws/cite.js), 낱말 단위로 달라진 곳 찾기(js/laws/worddiff.js), 의무를 역할로 고르기(js/calendar/roles.js),
-규정 원문과 그것을 적은 글을 잇는 주소(js/laws/refs.js), 부문별 모아 보기의 글(js/sector/facts.js), 최근 소식 가리기(js/news/recent.js)."""
+규정 원문과 그것을 적은 글을 잇는 주소(js/laws/refs.js), 부문별 모아 보기의 글(js/sector/facts.js), 최근 소식 가리기(js/news/recent.js),
+해설서 그림의 글(식 한 줄을 칸과 기호로 나누기 js/views/handbook/figures/equation.js, 날짜 적기 js/views/handbook/figures/timeline.js),
+품목 한 장 보기의 셈(js/cn/sheet.js)."""
 import json
 import shutil
 import subprocess
 import unittest
 
 SCRIPT = r"""
+import { readFileSync } from 'node:fs';
+import { unpack } from './site/js/calc/compute.js';
 import { forRole, roleIn, roleTarget, tally } from './site/js/calendar/roles.js';
+import { benchmarks, flagsOf, goodsUnder, line, LIST_LIMIT, markedUp, nearest, sectorOf, sheetYear, shown, splitByPeriod, yearly } from './site/js/cn/sheet.js';
 import { address, citeBlock, citePart, partName, source } from './site/js/laws/cite.js';
 import { translation, waitLabel } from './site/js/laws/ready.js';
 import { dutyHref, lawHref, linkedTo, tally as linkedTally, termHref } from './site/js/laws/refs.js';
@@ -15,6 +20,8 @@ import { wordDiff } from './site/js/laws/worddiff.js';
 import { isNotice, NOTICES, split } from './site/js/news/notices.js';
 import { PERIODS, RECENT, RECENT_DAYS, within } from './site/js/news/recent.js';
 import { gasText, markupText, proposedText, scopeOf, scopeText, upcoming } from './site/js/sector/facts.js';
+import { tokens } from './site/js/views/handbook/figures/equation.js';
+import { whenText } from './site/js/views/handbook/figures/timeline.js';
 
 const act = { id: '32023R0956', group: 'act', name: 'CBAM 규정', official: 'Regulation (EU) 2023/956', consolidated: '2025-10-20' };
 const article = { id: 'art-6', kind: 'article', label: 'Article 6', ko: '제6조', title: 'CBAM declaration', titleKo: 'CBAM 신고',
@@ -42,6 +49,30 @@ const linkedRefs = { laws: { '32023R0956': {
 } } };
 
 const long = (word) => Array.from({ length: 900 }, (_, index) => `${word}${index}`).join(' ');
+
+// 품목 한 장 보기: 비용 추정의 자료를 짧은 꼴로 지어 셈을 본다(열연 코일 한 품목, 세부 품목이 둘인 클링커, 연도 구간에 따라 값이 다른 합금강)
+const sheetBook = unpack({
+  years: { from: 2026, to: 2034 }, periods: [{ key: 1, from: 2026, to: 2027 }, { key: 2, from: 2028, to: 2030 }],
+  markups: [{ sectors: ['cement', 'steel'], values: { 2026: 10, 2027: 20, 2028: 30 } }], cscf: { 2026: 100, 2027: 100, 2028: 100, 2029: 100, 2030: 100 },
+  routes: [{ key: 'A', name: '회색 클링커·시멘트' }, { key: 'B', name: '백색 클링커·시멘트' }, { key: 'C', name: '탄소강, 고로·전로' }, { key: 'D', name: '탄소강, 직접환원철·전기로' }, { key: 'F', name: '저합금강, 고로·전로' }, { key: 'J', name: '고합금강(전기로)' }],
+  rows: [['7208', 'Flat-rolled, hot-rolled', 'kr', 2.118, null, 2.118], ['2523100010', 'White clinker', 'kr', 1.19, 0.04, 1.23], ['2523100090', 'Other clinker', 'kr', 0.88, 0.03, 0.92], ['7224', 'Other alloy steel', 'other', 2.0, null, 2.0]],
+  goods: [
+    ['25231000', 'Cement clinkers', 'cement', [[0.666, 'A', 0], [0.859, 'B', 0]], [[0.666, 'A', 0], [0.859, 'B', 0]], [[1, 'B', 0.859, 0.859], [2, 'A', 0.666, 0.666]]],
+    ['72081000', 'Flat-rolled, in coils, with patterns', 'steel', [[0.044, '', 0]], [[1.37, 'C', 0], [0.481, 'D', 0]], [[0, 'C', 1.37, 1.37]]],
+    ['72082500', 'Flat-rolled, in coils, pickled', 'steel', [[0.044, '', 0]], [[1.37, 'C', 0], [0.481, 'D', 0]], [[0, 'C', 1.37, 1.37]]],
+    ['72241010', 'Ingots of tool steel', 'steel', [[0.2, '', 1], [0.1, '', 2]], [[1.807, 'F', 1], [1.18, 'J', 1], [1.64, 'F', 2], [1.148, 'J', 2]], [[3, 'F', 1.807, 1.64]]],
+  ],
+});
+const sheetPath = { key: 'current', name: '현행 지침', values: { 2026: 97.5, 2027: 95, 2028: 90, 2029: 77.5, 2030: 51.5, 2031: 39, 2032: 26.5, 2033: 14, 2034: 0 } };
+const coil = sheetBook.goods.find((good) => good.code === '72081000');
+const clinker = sheetBook.goods.find((good) => good.code === '25231000');
+const tool = sheetBook.goods.find((good) => good.code === '72241010');
+const sheetRows = [{ about: '늘', when: '' }, { about: '직접', when: 'direct' }, { about: '둘 다', when: 'both' }, { about: '값 있음', when: 'priced' }, { about: '값 없음', when: 'unpriced' }];
+const round = (value) => Math.round(value * 1000) / 1000;
+
+// 해설서에 실린 식: 풀이가 달린 말은 식 한 줄에서 칸 하나로 나뉘어야 한다(그래야 그 말이 칸으로 그려진다)
+const formulas = JSON.parse(readFileSync('./data/handbook.json', 'utf8')).chapters.flatMap((chapter) => chapter.sections).map((one) => one.formula).filter(Boolean);
+const drawn = (formula) => tokens(formula.text).filter(([kind]) => kind === 'term').map(([, word]) => word);
 
 console.log(JSON.stringify({
   diff: {
@@ -83,6 +114,29 @@ console.log(JSON.stringify({
   ready: { states: [{ blocks: 10, done: 10 }, { blocks: 10, done: 4 }, { blocks: 10, done: 0 }, { blocks: 0, done: 0 }, null, { blocks: 3, done: 5 }].map(translation),
     labels: [{ blocks: 10, done: 10 }, { blocks: 10, done: 4 }, { blocks: 10, done: 0 }].map(waitLabel) },
   notices: { name: NOTICES, ids: parts.notices.map((item) => item.id), news: parts.news.map((item) => item.id), empty: split(null), one: isNotice(null) },
+  sheet: {
+    under: [['7208', 2], ['720810', 1], ['7208100090', 1], ['72', 0], ['720', 0], ['', 0], ['7318', 0]].map(([query, size]) => goodsUnder(sheetBook.goods, query).length === size),
+    near: [nearest(sheetBook.goods, '72081510'), nearest(sheetBook.goods, '72089900'), nearest(sheetBook.goods, '73181510'), nearest(sheetBook.goods, '7208')],
+    years: [2026, 2019, 2040, 0].map((year) => sheetYear(sheetBook, year)), limit: LIST_LIMIT,
+    coil: (({ code, value, markup, embedded, benchmark, factor, cscf, allocation, perTonne, costPerTonne, route, routeAlt, more, year }) =>
+      ({ code, value, markup, embedded: round(embedded), benchmark, factor, cscf, allocation: round(allocation), perTonne: round(perTonne), cost: round(costPerTonne), route, routeAlt, more, year }))(line(sheetBook, sheetPath, coil, 2026, 80)),
+    clinker: [0, 1].map((choice) => { const one = line(sheetBook, sheetPath, clinker, 2026, 80, choice); return [one.row.text, one.route, round(one.embedded), round(one.perTonne), one.more]; }),
+    tool: (({ route, routeAlt, benchmark }) => ({ route, routeAlt, benchmark }))(line(sheetBook, sheetPath, tool, 2028, 80)),
+    none: line(sheetBook, { values: {} }, coil, 2026, 80),
+    yearly: yearly(sheetBook, sheetPath, coil, 80).map((row) => [row.year, round(row.perTonne), round(row.costPerTonne), row.assumed, row.updated]),
+    marked: markedUp(sheetBook, 'steel', 2.118).map((cell) => [cell.year, cell.rate, round(cell.value), cell.onward]), unmarked: markedUp(sheetBook, 'hydrogen', 14.03),
+    benchmarks: { coil: benchmarks(sheetBook, coil), clinker: benchmarks(sheetBook, clinker).map((row) => [row.route, row.name, row.a, row.b]), tool: benchmarks(sheetBook, tool).map((row) => [row.route, row.a, row.b]) },
+    split: [coil, clinker, tool].map((good) => splitByPeriod(benchmarks(sheetBook, good))),
+    flags: [flagsOf([{ directOnly: true }], true, true), flagsOf([{ directOnly: false }, { directOnly: true }], false, true), flagsOf([{ directOnly: true }], false, false), flagsOf([], false, false)],
+    shown: [flagsOf([{ directOnly: true }], true, true), flagsOf([{ directOnly: false }], false, false)].map((flags) => shown(sheetRows, flags).map((row) => row.about)), empty: shown(null, {}),
+    sector: [sectorOf([{ key: 'steel', cn: ['steel'] }, { key: 'hydrogen', cn: ['chemicals'] }], [{ sector: 'chemicals' }]).key, sectorOf([{ key: 'steel', cn: ['steel'] }], [{ sector: 'combined' }]), sectorOf(null, [])],
+  },
+  figures: {
+    tokens: tokens('인증서 수 = (내재배출량 − 무상할당량) × 수입량'), plain: tokens('CO2e 1톤'), none: tokens(''),
+    when: [{ date: '2027-02-01', edge: '부터' }, { date: '2027-11-01' }, { when: '2027년 각 분기 말' }, { when: '2026년', edge: '부터' }, {}].map(whenText),
+    formulas: formulas.length, results: formulas.map((one) => tokens(one.text).findIndex(([kind, word]) => kind === 'op' && word === '=')),
+    unnamed: formulas.flatMap((one) => one.parts.map(([word]) => word).filter((word) => !drawn(one).includes(word))),
+  },
   recent: { name: RECENT, days: RECENT_DAYS, periods: PERIODS,
     seen: ['2026-11-13', '2026-10-14', '2026-10-13', '2026-11-20', '', 'soon', '2026-10-14T09:00:00+09:00'].map((date) => within(date, '2026-11-13')),
     wider: [within('2026-08-15', '2026-11-13', 90), within('2026-08-14', '2026-11-13', 90)], noToday: within('2026-11-13', '') },
@@ -107,6 +161,56 @@ class SiteModulesTest(unittest.TestCase):
         for path in ("site/js/views/laws.js", "site/js/views/law.js", "site/js/views/search/hits.js"):
             with open(path, encoding="utf-8") as file:
                 self.assertNotRegex(file.read(), r"국문 번역 \$\{[^}]*\}%", path)   # 퍼센트를 화면에 적지 않는다
+
+    def test_the_item_sheet_finds_the_goods_under_a_code(self):
+        sheet = self.seen["sheet"]
+        self.assertEqual(sheet["under"], [True] * 7)   # 앞자리로 찾는다. 8자리를 넘으면 앞 8자리로, 4자리가 안 되면 찾지 않는다
+        # 그 코드의 품목이 없으면 앞 6자리, 앞 4자리 차례로 넓혀 처음 품목이 있는 곳을 알려 준다
+        self.assertEqual(sheet["near"], [{"code": "7208", "count": 2}, {"code": "7208", "count": 2}, None, None])
+        self.assertEqual((sheet["years"], sheet["limit"]), ([2026, 2026, 2034, 2026], 12))
+
+    def test_the_item_sheet_uses_the_estimate_of_the_calculator(self):
+        sheet = self.seen["sheet"]
+        # 기본값 2.118에 마크업 10%를 더하고, 벤치마크 1.370 × CBAM 계수 97.5% × 보정계수 100%를 뺀다(해설서의 계산 예와 같은 값)
+        self.assertEqual(sheet["coil"], {"code": "72081000", "value": 2.118, "markup": 10, "embedded": 2.33, "benchmark": 1.37, "factor": 97.5, "cscf": 100,
+                                         "allocation": 1.336, "perTonne": 0.994, "cost": 79.524, "route": "C", "routeAlt": "", "more": 0, "year": 2026})
+        # 세부 품목이 둘인 품목은 줄마다 값과 생산경로가 다르다
+        self.assertEqual(sheet["clinker"], [["White clinker", "B", 1.353, 0.515, 1], ["Other clinker", "A", 1.012, 0.363, 1]])
+        self.assertEqual(sheet["tool"], {"route": "F", "routeAlt": "J", "benchmark": 1.64})   # 2028년은 둘째 연도 구간의 값. 합금강은 고합금강의 경로와 견준다
+        self.assertIsNone(sheet["none"])                                                      # CBAM 계수가 없으면 어림하지 않는다
+        years = sheet["yearly"]
+        self.assertEqual([row[0] for row in years], list(range(2026, 2035)))
+        self.assertEqual((years[0][1:], years[-1][1:]), ([0.994, 79.524, False, False], [2.753, 220.272, True, True]))   # 2034년에는 무상할당 조정이 없다. 2031년부터는 가정이 든다
+        self.assertEqual([row[4] for row in years[:2]], [False, True])                                                   # 2027년부터는 갱신될 벤치마크의 해
+        self.assertEqual(sheet["marked"], [[2026, 10, 2.33, False], [2027, 20, 2.542, False], [2028, 30, 2.753, True]])
+        self.assertEqual(sheet["unmarked"], [])
+
+    def test_the_item_sheet_lists_benchmarks_by_route_and_period(self):
+        tables = self.seen["sheet"]["benchmarks"]
+        self.assertEqual(tables["coil"], [{"route": "C", "name": "탄소강, 고로·전로", "a": [0.044, 0.044], "b": [1.37, 1.37]},
+                                          {"route": "D", "name": "탄소강, 직접환원철·전기로", "a": [0.044, 0.044], "b": [0.481, 0.481]}])
+        self.assertEqual(tables["clinker"], [["A", "회색 클링커·시멘트", [0.666, 0.666], [0.666, 0.666]], ["B", "백색 클링커·시멘트", [0.859, 0.859], [0.859, 0.859]]])
+        self.assertEqual(tables["tool"], [["F", [0.2, 0.1], [1.807, 1.64]], ["J", [0.2, 0.1], [1.18, 1.148]]])
+        self.assertEqual(self.seen["sheet"]["split"], [False, False, True])   # 연도 구간에 따라 값이 다른 품목만 표에 구간을 나누어 적는다
+
+    def test_the_item_sheet_shows_only_the_lines_that_fit_the_item(self):
+        sheet = self.seen["sheet"]
+        self.assertEqual(sheet["flags"], [{"direct": True, "both": False, "priced": True, "unpriced": False}, {"direct": True, "both": True, "priced": False, "unpriced": False},
+                                          {"direct": True, "both": False, "priced": False, "unpriced": True}, {"direct": False, "both": False, "priced": False, "unpriced": True}])
+        self.assertEqual(sheet["shown"], [["늘", "직접", "값 있음"], ["늘", "둘 다", "값 없음"]])
+        self.assertEqual((sheet["empty"], sheet["sector"]), ([], ["hydrogen", None, None]))
+
+    def test_a_formula_line_is_cut_into_boxes_and_signs(self):
+        figures = self.seen["figures"]
+        self.assertEqual(figures["tokens"], [["term", "인증서 수"], ["op", "="], ["op", "("], ["term", "내재배출량"], ["op", "−"], ["term", "무상할당량"], ["op", ")"], ["op", "×"], ["term", "수입량"]])
+        self.assertEqual((figures["plain"], figures["none"]), ([["term", "CO2e 1톤"]], []))
+        # 실린 식은 모두 '결과 = …' 꼴이고, 풀이가 달린 말은 빠짐없이 칸으로 그려진다
+        self.assertGreaterEqual(figures["formulas"], 3)
+        self.assertEqual(set(figures["results"]), {1})
+        self.assertEqual(figures["unnamed"], [])
+
+    def test_a_date_on_a_timeline_is_written_out_in_korean(self):
+        self.assertEqual(self.seen["figures"]["when"], ["2027년 2월 1일부터", "2027년 11월 1일", "2027년 각 분기 말", "2026년부터", ""])
 
     def test_recent_news_is_counted_and_listed_by_one_rule(self):
         recent = self.seen["recent"]

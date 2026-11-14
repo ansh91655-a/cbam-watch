@@ -12,6 +12,7 @@
 .calc-chosen-body { display: grid; gap: 2px; min-width: 0; }
 .calc-chosen-body p:first-child { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
 .calc-chosen .cn-code { font-size: 1.15rem; }
+.calc-chosen-more { margin-top: 2px; font-size: var(--fs-s); font-weight: 600; }
 .calc-change { white-space: nowrap; }
 .calc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px 18px; align-items: start; }
 .calc-field { display: grid; gap: 4px; align-content: start; min-width: 0; }
@@ -24,16 +25,6 @@
 .calc-stats .stat-value { font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
 .calc-flag { max-width: 70em; padding: 10px 16px; border-left: 3px solid var(--warn); border-radius: 0 10px 10px 0; background: color-mix(in srgb, var(--warn) 8%, var(--surface)); font-size: var(--fs-s); color: var(--ink-2); }
 .calc-detail { gap: 16px; }
-.calc-split { display: grid; gap: 10px; }
-/* 막대의 두 몫 사이는 바탕색으로 2px 띄운다. 색은 선이 둘인 그림과 같은 짝(색 검사로 확인한 것)을 쓴다. */
-.calc-bar { display: flex; gap: 2px; height: 22px; }
-.calc-seg { min-width: 3px; flex: 0 0 0; }
-.calc-seg-pay { background: var(--chart-line); }
-.calc-seg-free { background: var(--chart-line-2); }
-.calc-seg:first-child { border-radius: 4px 0 0 4px; }
-.calc-seg:last-child { border-radius: 0 4px 4px 0; }
-.calc-seg:only-child { border-radius: 4px; }
-.calc-split .key { width: 12px; height: 12px; border-radius: 3px; }
 .calc-steps { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 8px 22px; margin: 0; }
 .calc-steps dt { font-size: var(--fs-s); font-weight: 700; color: var(--ink-3); padding-top: 2px; }
 .calc-steps dd { display: grid; gap: 1px; margin: 0; }

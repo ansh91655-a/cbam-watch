@@ -27,6 +27,8 @@ function chosenCard(good, onPick) {
     h("div", { class: "calc-chosen-body" }, [
       h("p", {}, [h("span", { class: "cn-code", text: spaced(good.code) }), h("span", { class: "pill", text: SECTOR[good.sector] || good.sector })]),
       h("p", { class: "calc-good-text", lang: "en", text: good.text }),
+      // 그 품목의 대상 여부, 기본값과 벤치마크, 일정, 근거 조문을 모은 화면으로
+      h("p", { class: "calc-chosen-more" }, h("a", { href: `#cn-${good.code}`, text: "이 품목 한 장 보기" })),
     ]),
     h("button", { type: "button", class: "btn calc-change", onclick: () => onPick(null), text: "다른 품목 고르기" }),
   ]);

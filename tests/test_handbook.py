@@ -8,7 +8,7 @@ import unittest
 
 from tools.check import term_check
 from tools.common.jsonio import read_json
-from tools.publish import handbook
+from tools.publish import handbook, handbook_figures
 from tools.run import reference_health
 
 LAW_TEXT = "1. Embedded emissions in goods shall be calculated pursuant to the methods set out in Annex IV."
@@ -91,6 +91,74 @@ class FormatTest(unittest.TestCase):
         self.assertEqual(blocking(book(outside)), ["sources에 없는 근거 문서: ets-directive"])
         self.assertEqual(blocking(book(outside, sources={"ets-directive": {"text": "EU 배출권거래제 지침", "url": "http://x.example", "path": "x.txt"}})),
                          ["ets-directive: text, url(https), path가 있어야 함"])
+
+
+FIGURES = {
+    "flow": {"kind": "flow", "title": "수입에서 신고까지의 차례", "numbered": True, "links": ["다음"],
+             "steps": [{"title": "수입", "text": "제품을 들여옴", "tag": "수입자"}, {"title": "신고"}]},
+    "timeline": {"kind": "timeline", "title": "첫 해의 일정", "note": "칸의 간격은 기간의 길이와 비례하지 않습니다.",
+                 "bands": [{"label": "2027년", "text": "첫 신고", "marks": [{"date": "2027-02-01", "edge": "부터", "label": "인증서 판매"},
+                                                                         {"when": "2027년 각 분기 말", "label": "인증서 보유"}]}]},
+    "tiles": {"kind": "tiles", "title": "대상 부문", "items": [{"icon": "steel", "title": "철강", "text": "이산화탄소", "href": "#calc"}, {"title": "비료"}]},
+    "matrix": {"kind": "matrix", "title": "산정에 넣는 배출량", "cols": ["직접배출량", "간접배출량"], "yes": "넣음", "no": "넣지 않음",
+               "rows": [{"title": "시멘트", "cells": [True, True]}, {"title": "철강", "text": "제72류", "cells": [True, False]}]},
+    "lanes": {"kind": "lanes", "title": "두 쪽이 하는 일", "handover": "사업자의 자료",
+              "lanes": [{"title": "생산자", "items": ["배출량을 산정"]}, {"title": "수입자", "items": ["신고서를 제출", "인증서를 제출"]}]},
+    "equation": {"kind": "equation", "title": "인증서 수의 틀", "terms": [{"label": "인증서 수"}, {"label": "내재배출량", "text": "제품 1톤당"}, {"label": "수입량"}], "ops": ["=", "×"]},
+    "bars": {"kind": "bars", "title": "연도별 마크업", "unit": "%", "groups": ["2026년", "2027년"], "series": [{"name": "철강", "values": [10, 20]}, {"name": "비료", "values": [1, 1]}]},
+    "split": {"kind": "split", "title": "내재배출량의 몫", "unit": "tCO2e", "whole": {"label": "내재배출량", "value": 2.33},
+              "parts": [{"label": "무상할당량", "value": 1.336}, {"label": "제출할 인증서", "value": 0.994}]},
+    "factor": {"kind": "factor", "title": "CBAM 계수의 연도별 값", "path": "current"},
+}
+
+
+def figure_problems(figure, **options):
+    return blocking(book(section(figure=figure)), **options)
+
+
+class FigureTest(unittest.TestCase):
+    """절의 그림(figure): 꼴은 tools/publish/handbook_figures.py가 본다."""
+
+    def test_every_kind_has_a_shape_that_passes(self):
+        self.assertEqual(set(FIGURES), set(handbook_figures.KINDS))
+        for kind, figure in FIGURES.items():
+            self.assertEqual(handbook.problems(book(section(figure=figure))), [], kind)
+
+    def test_a_figure_needs_a_known_kind_and_a_title(self):
+        self.assertIn("그림의 종류를 모름: 'pie'", figure_problems({"kind": "pie", "title": "몫"}))
+        self.assertIn("그림의 꼴이 다름", figure_problems(["flow"]))
+        self.assertIn("title이 빔", figure_problems({**FIGURES["factor"], "title": ""}))
+        self.assertTrue(any(what.startswith("title이 너무 김") for what in figure_problems({**FIGURES["factor"], "title": "가" * 41})))
+
+    def test_the_parts_of_each_kind_must_fit_together(self):
+        changed = lambda kind, **parts: figure_problems({**FIGURES[kind], **parts})
+        self.assertIn("steps은 2~7개여야 함", changed("flow", steps=[{"title": "수입"}]))
+        self.assertIn("links는 steps보다 하나 적어야 함", changed("flow", links=["다음", "그다음"]))
+        self.assertTrue(any(what.startswith("links 1이 너무 김") for what in changed("flow", links=["길게 적은 화살표의 말"])))
+        mark = {"date": "2027-02-01", "when": "2027년", "label": "인증서 판매"}
+        self.assertIn("bands 1의 marks 1에는 date와 when 가운데 하나만 적음", changed("timeline", bands=[{"label": "2027년", "marks": [mark]}]))
+        self.assertIn("bands 1의 marks 1의 date는 2027-02-01 꼴이어야 함", changed("timeline", bands=[{"label": "2027년", "marks": [{"date": "2027년 2월", "label": "판매"}]}]))
+        self.assertIn("bands 1의 marks 1의 edge는 '부터'나 '까지'여야 함", changed("timeline", bands=[{"label": "2027년", "marks": [{"date": "2027-02-01", "edge": "쯤", "label": "판매"}]}]))
+        self.assertIn("marks가 하나도 없음", changed("timeline", bands=[{"label": "2027년", "marks": []}]))
+        self.assertIn("items 1의 href는 사이트 안의 주소(#…)여야 함", changed("tiles", items=[{"title": "철강", "href": "https://example.org/"}, {"title": "비료"}]))
+        self.assertIn("rows 1의 cells는 cols와 같은 수의 true·false여야 함", changed("matrix", rows=[{"title": "시멘트", "cells": [True]}, {"title": "철강", "cells": [True, False]}]))
+        self.assertIn("lanes은 2~2개여야 함", changed("lanes", lanes=[{"title": "생산자", "items": ["배출량을 산정"]}]))
+        self.assertTrue(any(what.startswith("ops는 terms보다 하나 적어야 하고") for what in changed("equation", ops=["="])))
+        self.assertIn("ops에는 = 가 하나 있어야 함", changed("equation", ops=["×", "×"]))
+        self.assertIn("series 1의 values는 groups와 같은 수의 0 이상인 수여야 함", changed("bars", series=[{"name": "철강", "values": [10]}]))
+        self.assertIn("parts의 합이 whole과 다름", changed("split", parts=[{"label": "무상할당량", "value": 1.3}, {"label": "제출할 인증서", "value": 0.994}]))
+        self.assertIn("path에 data/factor.json의 경로 이름을 적음", changed("factor", path=""))
+
+    def test_the_words_and_links_of_a_figure_are_checked_like_the_text(self):
+        # 그림의 글도 용어집이 쓰지 말라는 표기를 쓰지 않고, 그림에서 가는 주소도 실제로 있는 곳이어야 한다
+        terms = term_check.load()
+        self.assertEqual(figure_problems(FIGURES["bars"], term_index=terms), [])
+        self.assertTrue(any(what.startswith("용어: '가산율'") for what in figure_problems({**FIGURES["bars"], "title": "연도별 가산율"}, term_index=terms)))
+        self.assertIn("사이트에 없는 주소: #nowhere", figure_problems({**FIGURES["tiles"], "items": [{"title": "철강", "href": "#nowhere"}, {"title": "비료"}]}))
+
+    def test_a_figure_reaches_the_site_as_it_is(self):
+        body = book(section(figure=FIGURES["flow"]))
+        self.assertEqual(handbook.public(body)["chapters"][0]["sections"][0]["figure"], FIGURES["flow"])
 
 
 class EvidenceTest(unittest.TestCase):
@@ -214,6 +282,118 @@ class StoredBookTest(unittest.TestCase):
                       f"{embedded - allocation:.3f}", f"{(embedded - allocation) * 100:.1f}", "(C)", "7208 10 00"):
             self.assertIn(piece, text, piece)
         self.assertEqual(self.sections["certificates.example"]["see"][0]["href"], "#calc-72081000")
+
+
+class StoredFiguresTest(unittest.TestCase):
+    """실린 글의 그림: 그림은 그 절의 글을 한눈에 보이게 한 것이므로, 글에 없는 수나 날짜를 그림에만 적지 않는다."""
+
+    NUMBER = re.compile(r"\d+(?:[.,]\d+)*")
+
+    @classmethod
+    def setUpClass(cls):
+        cls.book = read_json(handbook.SOURCE, None)
+        cls.sections = {f"{chapter['id']}.{one['id']}": one for chapter in cls.book["chapters"] for one in chapter["sections"]}
+        cls.figures = {key: one["figure"] for key, one in cls.sections.items() if one.get("figure")}
+
+    def text(self, key):
+        """절에 적힌 모든 글: 제목, 문단, 목록, 표, 식과 풀이, 용어 풀이, 단서."""
+        one = self.sections[key]
+        table = one.get("table") or {}
+        formula = one.get("formula") or {}
+        pieces = [one["title"], *one["body"], *one.get("list", []), *table.get("head", []), *(cell for row in table.get("rows", []) for cell in row),
+                  formula.get("text", ""), *(word for pair in formula.get("parts", []) for word in pair),
+                  *(word for term in one.get("terms", []) for word in (term["ko"], term["text"])), one.get("caveat", "")]
+        return " ".join(pieces)
+
+    def test_the_book_has_figures_of_several_kinds(self):
+        self.assertGreaterEqual(len(self.figures), 14)
+        self.assertGreaterEqual(len({figure["kind"] for figure in self.figures.values()}), 7)
+
+    def test_a_figure_shows_no_number_the_section_does_not_state(self):
+        for key, figure in self.figures.items():
+            stated = set(self.NUMBER.findall(self.text(key)))
+            # CBAM 계수의 그림은 적용하지 않는 해를 0으로 그렸다고 밝힌다(그 말의 0은 그림을 두고 한 말이다)
+            allowed = {"0"} if figure["kind"] == "factor" else set()
+            for text in handbook_figures.texts(figure):
+                for number in self.NUMBER.findall(text):
+                    self.assertIn(number, stated | allowed, f"{key}: {text}")
+
+    def test_the_dates_of_a_timeline_are_stated_in_the_section(self):
+        seen = 0
+        for key, figure in self.figures.items():
+            if figure["kind"] != "timeline":
+                continue
+            text = self.text(key)
+            for band in figure["bands"]:
+                for mark in band["marks"]:
+                    if mark.get("date"):
+                        year, month, day = (int(part) for part in mark["date"].split("-"))
+                        self.assertIn(f"{year}년 {month}월 {day}일{mark.get('edge', '')}", text, f"{key}: {mark['label']}")
+                    else:
+                        self.assertIn(mark["when"], text, f"{key}: {mark['label']}")
+                    seen += 1
+        self.assertGreaterEqual(seen, 10)
+
+    def test_the_coming_dates_of_a_timeline_are_duties_on_the_calendar(self):
+        # 앞으로 올 날짜(2027년부터)는 일정 화면의 의무에도 있는 날짜다
+        duties = {duty["date"] for duty in read_json("data/duties.json", {})["duties"]}
+        for key, figure in self.figures.items():
+            for band in figure.get("bands", []):
+                for mark in band["marks"]:
+                    if mark.get("date", "") >= "2027-01-01":
+                        self.assertIn(mark["date"], duties, f"{key}: {mark['label']}")
+
+    def test_the_markup_bars_are_the_ones_the_estimate_uses(self):
+        figure = self.figures["defaults.markup"]
+        self.assertEqual((figure["kind"], figure["unit"], figure["groups"]), ("bars", "%", ["2026년", "2027년", "2028년부터"]))
+        by_sector = {tuple(group["sectors"]): group["values"] for group in read_json("data/calc.json", {})["markups"]}
+        heavy, light = figure["series"]
+        self.assertEqual((heavy["name"], heavy["values"]), ("시멘트, 철강, 알루미늄, 수소", [by_sector[("cement", "steel", "aluminium", "hydrogen")][year] for year in ("2026", "2027", "2028")]))
+        self.assertEqual((light["name"], light["values"]), ("비료", [by_sector[("fertilisers",)]["2026"]] * 3))
+
+    def test_the_split_is_the_worked_example(self):
+        figure = self.figures["certificates.example"]
+        goods = read_json("data/calc-goods.json", {})
+        choice = next(one for one in goods["goods"] if one["code"] == "72081000")["defaults"][0]
+        terms = read_json("data/calc.json", {})
+        markup = next(group for group in terms["markups"] if "steel" in group["sectors"])["values"]["2026"]
+        factor = next(path for path in read_json("data/factor.json", {})["paths"] if path["key"] == "current")["values"]["2026"]
+        embedded = goods["rows"][choice["row"]]["total"] * (1 + markup / 100)
+        allocation = choice["benchmark"][0] * factor / 100 * terms["cscf"]["values"]["2026"] / 100
+        self.assertEqual(figure["unit"], "tCO2e")
+        self.assertEqual(figure["whole"]["value"], round(embedded, 3))
+        self.assertEqual([part["value"] for part in figure["parts"]], [round(allocation, 3), round(embedded - allocation, 3)])
+        self.assertIn(f"마크업 {markup}%", figure["whole"]["label"])
+
+    def test_the_factor_figure_draws_a_stored_path(self):
+        paths = {path["key"] for path in read_json("data/factor.json", {})["paths"]}
+        drawn = [figure["path"] for figure in self.figures.values() if figure["kind"] == "factor"]
+        self.assertEqual(drawn, ["current"])
+        self.assertLessEqual(set(drawn), paths)
+
+    def test_the_sector_tiles_are_the_six_sectors_of_the_site(self):
+        sectors = read_json("sources/sectors.json", {})["sectors"]
+        tiles = self.figures["overview.sectors"]["items"]
+        self.assertEqual(len(tiles), 6)
+        self.assertEqual({tile["href"] for tile in tiles}, {f"#sector-{sector['key']}" for sector in sectors})
+        self.assertEqual({tile["icon"] for tile in tiles}, {sector["key"] for sector in sectors})
+
+    def test_the_matrix_agrees_with_the_item_list_on_indirect_emissions(self):
+        # 품목 목록(data/cn.json)이 '직접배출량만'이라고 적은 품목과 그림이 같아야 한다. 철강 부문에서는 철광석 응결체(2601 12 00)만 간접배출량도 넣는다
+        figure = self.figures["scope.direct-only"]
+        rows = {row["title"]: row for row in figure["rows"]}
+        self.assertEqual(figure["cols"], ["직접배출량", "간접배출량"])
+        names = {"cement": "시멘트", "fertilisers": "비료", "steel": "철강", "aluminium": "알루미늄", "chemicals": "수소", "electricity": "전력"}
+        both, direct = {}, {}
+        for good in read_json("data/cn.json", {})["current"]:
+            (direct if good["directOnly"] else both).setdefault(good["sector"], []).append(good)
+        self.assertEqual(set(both) | set(direct), set(names))
+        for sector, name in names.items():
+            self.assertEqual(rows[name]["cells"], [True, sector not in direct], name)
+        mixed = [good for sector in set(both) & set(direct) for good in both[sector]]
+        self.assertEqual([good["codes"] for good in mixed], [["26011200"]])
+        self.assertEqual((rows["철광석 응결체"]["text"], rows["철광석 응결체"]["cells"]), ("2601 12 00", [True, True]))
+        self.assertEqual(len(rows), len(names) + len(mixed))
 
 
 class HealthTest(unittest.TestCase):

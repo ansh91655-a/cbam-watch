@@ -60,13 +60,18 @@ export function routesOf(good) {
   return [...new Set(good.b.map((one) => one.route).filter(Boolean))];
 }
 
-// B열에서 경로와 연도 구간에 맞는 값. 표시가 없는 값 하나뿐이면 그 값이다.
-export function benchmarkAt(good, route, key) {
+// 벤치마크 표의 한 열(A열이나 B열)에서 경로와 연도 구간에 맞는 값. 표시가 없는 값 하나뿐이면 그 값이다.
+export function valueAt(column, route, key) {
   for (const [wantRoute, wantKey] of [[route, key], [route, 0], ["", key], ["", 0]]) {
-    const hit = good.b.find((one) => one.route === wantRoute && one.period === wantKey);
+    const hit = (column || []).find((one) => one.route === wantRoute && one.period === wantKey);
     if (hit) return hit.value;
   }
   return null;
+}
+
+// B열에서 경로와 연도 구간에 맞는 값.
+export function benchmarkAt(good, route, key) {
+  return valueAt(good.b, route, key);
 }
 
 // 한 해의 추정. input: { good, choice(기본값 짝의 자리), mode("default" | "actual"), see(실제 배출량), route(실제일 때의 경로), year, tonnes, price }

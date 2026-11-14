@@ -1,0 +1,115 @@
+/* CBAM 해설서의 그림(js/views/handbook/figure.js와 figures/). 절의 글 바로 아래에 놓인다.
+   그림은 옅은 바탕의 틀 하나에 담고, 안의 칸은 흰 면으로 띄운다. 색은 차례·결과처럼 뜻이 있는 곳에만 쓴다.
+   넓은 화면에서는 가로로, 좁은 화면에서는 세로로 놓이는 그림(흐름, 때, 두 쪽)은 틀의 너비로 가른다. */
+.hb-fig { container-type: inline-size; display: grid; gap: 14px; max-width: 86ch; margin: 2px 0; padding: 16px 18px 18px; border-radius: var(--radius); background: var(--surface-2); }
+.hb-fig-cap { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; font-size: var(--fs-s); font-weight: 700; color: var(--ink); }
+.hb-fig-mark { padding: 1px 8px; border-radius: 6px; background: var(--surface); color: var(--ink-3); font-size: 0.76rem; font-weight: 700; }
+.hb-fig-note { font-size: 0.82rem; line-height: 1.6; color: var(--ink-3); }
+.hb-fig .fig-text { font-size: 0.82rem; line-height: 1.5; color: var(--ink-2); }
+.hb-fig strong { font-weight: 700; color: var(--ink); }
+
+/* ── 흐름 ── 칸을 화살표로 잇는다 */
+.fig-flow { display: grid; gap: 0; }
+.fig-step { display: grid; grid-template-rows: auto 1fr; min-width: 0; }
+.fig-card { display: grid; gap: 4px; align-content: start; padding: 12px 14px; border: 1px solid var(--line-2); border-radius: 12px; background: var(--surface); font-size: var(--fs-s); line-height: 1.45; }
+.fig-no { display: grid; place-items: center; width: 24px; height: 24px; margin-bottom: 2px; border-radius: 8px; background: var(--feat-bg); color: var(--accent); font-size: 0.8rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+.fig-tag { justify-self: start; margin-top: 2px; padding: 1px 9px; border-radius: 10px; background: var(--brand-soft); color: var(--brand-strong); font-size: 0.76rem; font-weight: 600; line-height: 1.7; }
+/* 화살표: 세로로 놓일 때는 아래로, 가로로 놓일 때는 오른쪽으로 */
+.fig-join { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 26px; color: var(--ink-3); font-size: 0.78rem; font-weight: 700; }
+.fig-join::after { content: ""; flex: none; width: 8px; height: 8px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(-2px) rotate(45deg); }
+@container (min-width: 620px) {
+  /* 가로로 놓을 때: 화살표의 너비를 정해 두고 칸의 너비를 모두 같게 한다(첫 칸에는 화살표가 없다) */
+  .fig-flow { display: flex; --join: 28px; }
+  .fig-flow[data-links] { --join: 48px; }
+  .fig-step { display: flex; flex: 1 1 var(--join); }
+  .fig-step:first-child { flex-basis: 0; }
+  .fig-card { flex: 1 1 0; min-width: 0; }
+  .fig-join { flex: none; flex-direction: column; gap: 4px; width: var(--join); min-height: 0; text-align: center; }
+  .fig-join::after { transform: translateX(-2px) rotate(-45deg); }
+  .fig-join > span { max-width: 100%; line-height: 1.3; overflow-wrap: anywhere; }
+}
+
+/* ── 때의 흐름 ── 기간마다 한 묶음, 그 안에 날짜가 붙은 일 */
+.fig-time { display: grid; gap: 10px; }
+.fig-band { display: grid; gap: 10px; align-content: start; min-width: 0; padding: 12px 14px 14px; border: 1px solid var(--line-2); border-radius: 12px; background: var(--surface); }
+.fig-band-head { display: grid; gap: 2px; font-size: var(--fs-s); line-height: 1.45; }
+.fig-band-head strong { color: var(--brand-strong); }
+.fig-band-head span { font-size: 0.82rem; color: var(--ink-2); }
+.fig-marks { position: relative; display: grid; gap: 12px; margin: 0; padding: 0 0 0 18px; list-style: none; }
+.fig-marks::before { content: ""; position: absolute; left: 4px; top: 6px; bottom: 6px; width: 2px; border-radius: 1px; background: var(--line); }
+.fig-mark { position: relative; display: grid; gap: 1px; font-size: var(--fs-s); line-height: 1.45; }
+.fig-mark::before { content: ""; position: absolute; left: -18px; top: 5px; width: 10px; height: 10px; border: 2px solid var(--surface); border-radius: 50%; background: var(--brand-bright); box-shadow: 0 0 0 1px var(--brand-bright); }
+.fig-mark time, .fig-when { font-size: 0.8rem; font-weight: 700; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+@container (min-width: 620px) {
+  .fig-time { display: flex; align-items: stretch; }
+  .fig-band { flex: var(--marks, 1) 1 0; }
+  .fig-marks { grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 14px; padding: 18px 0 0; }
+  .fig-marks::before { left: 4px; right: 4px; top: 4px; bottom: auto; width: auto; height: 2px; }
+  .fig-mark::before { left: 0; top: -18px; }
+}
+
+/* ── 칸의 묶음 ── */
+.fig-tiles { display: grid; gap: 8px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0; padding: 0; list-style: none; }
+@container (min-width: 620px) { .fig-tiles[data-many] { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.fig-tile { display: flex; align-items: flex-start; gap: 10px; height: 100%; padding: 12px 14px; border: 1px solid var(--line-2); border-radius: 12px; background: var(--surface); color: inherit; font-size: var(--fs-s); line-height: 1.45; text-decoration: none; }
+a.fig-tile:hover { border-color: color-mix(in srgb, var(--brand-bright) 45%, var(--line-2)); box-shadow: var(--shadow-1); }
+.fig-tile-icon { flex: none; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--brand-soft); color: var(--brand); }
+.fig-tile-text { display: grid; gap: 1px; min-width: 0; }
+
+/* ── 넣는지 아닌지의 표 ── */
+.fig-matrix { display: grid; gap: 10px; }
+.fig-matrix table { width: 100%; border-collapse: separate; border-spacing: 0; border: 1px solid var(--line-2); border-radius: 12px; background: var(--surface); font-size: var(--fs-s); overflow: hidden; }
+.fig-matrix th, .fig-matrix td { padding: 9px 14px; border-bottom: 1px solid var(--line-2); text-align: center; vertical-align: middle; }
+.fig-matrix tbody tr:last-child > * { border-bottom: 0; }
+.fig-matrix thead th { background: none; font-size: 0.8rem; font-weight: 700; color: var(--ink-3); white-space: normal; }
+.fig-matrix tbody th { display: grid; gap: 1px; background: none; font-size: inherit; font-weight: 700; color: var(--ink); text-align: left; white-space: normal; }
+.fig-matrix tbody th small { font-size: 0.78rem; font-weight: 400; color: var(--ink-3); }
+.fig-dot { display: inline-block; width: 14px; height: 14px; border: 2px solid var(--ink-3); border-radius: 50%; vertical-align: -2px; opacity: 0.55; }
+.fig-dot[data-on] { opacity: 1; }
+.fig-dot[data-on] { border-color: var(--brand-bright); background: var(--brand-bright); }
+.fig-key { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--ink-2); }
+.fig-key .fig-dot:not(:first-child) { margin-left: 12px; }
+
+/* ── 두 쪽이 하는 일 ── */
+.fig-lanes { display: grid; gap: 0; }
+.fig-lane { display: grid; gap: 8px; align-content: start; min-width: 0; padding: 12px 14px 14px; border: 1px solid var(--line-2); border-radius: 12px; background: var(--surface); font-size: var(--fs-s); line-height: 1.5; }
+.fig-lane-head strong { color: var(--brand-strong); }
+.fig-lane ul { display: grid; gap: 6px; margin: 0; padding-left: 18px; list-style: disc; }
+.fig-hand { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 8px 10px; color: var(--ink-2); font-size: 0.8rem; font-weight: 700; line-height: 1.4; text-align: center; }
+.fig-hand::after { content: ""; width: 8px; height: 8px; border-right: 2px solid var(--ink-3); border-bottom: 2px solid var(--ink-3); transform: translateY(-3px) rotate(45deg); }
+@container (min-width: 620px) {
+  .fig-lanes { grid-template-columns: minmax(0, 1fr) minmax(88px, 0.34fr) minmax(0, 1fr); }
+  .fig-hand::after { transform: translateX(-3px) rotate(-45deg); }
+}
+
+/* ── 셈의 틀 ── 값의 칸과 셈 기호. = 뒤(식 한 줄에서는 = 앞)의 칸이 결과다 */
+.fig-eq { display: flex; flex-wrap: wrap; align-items: stretch; gap: 8px; }
+.fig-term { display: grid; gap: 2px; align-content: center; min-width: 0; max-width: 100%; padding: 9px 13px; border: 1px solid var(--line-2); border-radius: 12px; background: var(--surface); font-size: var(--fs-s); line-height: 1.4; }
+.fig-term[data-result] { border-color: color-mix(in srgb, var(--accent-strong) 55%, var(--line-2)); background: var(--accent-soft); }
+.fig-op { display: grid; place-items: center; min-width: 14px; color: var(--ink-2); font-size: 1.15rem; font-weight: 700; }
+.fig-eq .fig-text { max-width: 22ch; }
+/* 식 한 줄(절의 formula): 옅은 바탕의 틀 안에 놓인다 */
+.fig-eq-line { margin: 0; }
+.fig-eq-line .fig-term { padding: 6px 12px; }
+.fig-eq-line .fig-term[data-plain] { padding-inline: 2px; border-color: transparent; background: none; }
+.fig-eq-line .fig-op[data-paren] { min-width: 6px; font-weight: 400; color: var(--ink-3); }
+
+/* ── 묶음별 막대 ── */
+.fig-bars-wrap { display: grid; gap: 10px; padding: 14px 16px 10px; border: 1px solid var(--line-2); border-radius: 12px; background: var(--surface); }
+.fig-bars svg { width: auto; max-width: 100%; margin-inline: auto; }
+.fig-bar { fill: var(--chart-line); }
+.fig-bar-2 { fill: var(--chart-line-2); }
+.fig-bars-wrap .fig-key-box { width: 12px; height: 12px; border-radius: 3px; }
+
+/* ── 전체를 두 몫으로 ── */
+.fig-split { display: grid; gap: 10px; padding: 14px 16px; border: 1px solid var(--line-2); border-radius: 12px; background: var(--surface); }
+.fig-whole { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 2px 12px; font-size: var(--fs-s); color: var(--ink-2); }
+.fig-whole b { color: var(--ink); font-variant-numeric: tabular-nums; }
+
+/* ── CBAM 계수 ── 규제 화면의 그림을 틀 안에 담는다 */
+.fig-factor .chart-card { padding: 16px 18px 12px; border-radius: 12px; box-shadow: none; }
+.fig-factor .chart-card > .sub:empty { display: none; }
+/* 값의 표와 출처는 같은 절의 표와 근거에 있으므로 그림 안에서는 뺀다 */
+.fig-factor .chart-table, .fig-factor .chart-sources { display: none; }
+
+@media print { .hb-fig { break-inside: avoid; } }

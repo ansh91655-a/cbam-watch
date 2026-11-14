@@ -1,5 +1,6 @@
 // 품목 코드 조회. CN 코드를 넣으면 CBAM 규정 부속서 I에 든 품목인지와 그 근거를 보여 준다.
 // 판정은 js/cn/match.js가 하고, 품목 목록은 법령 원문에서 뽑은 data/cn.json이다. 문구는 이 파일에서 정한다.
+// 대상 품목이면 그 아래에 한 장 보기(views/cn/sheet.js)를 놓는다: 값, 비용의 어림, 일정, 근거 조문, 읽을 곳.
 import * as data from "../data.js";
 import { digits, verdict } from "../cn/match.js";
 import { GAS, SECTOR, spaced, STATE } from "../cn/names.js";
@@ -8,10 +9,9 @@ import { band } from "../ui/band.js";
 import { empty, fill, h, pill, safeLink } from "../ui/dom.js";
 import { icon } from "../ui/icons.js";
 import { groupTabs } from "../ui/tabs.js";
+import { sheet } from "./cn/sheet.js";
 
 const SECTOR_ICON = { cement: "cement", electricity: "electricity", fertilisers: "fertilisers", steel: "steel", aluminium: "aluminium", chemicals: "hydrogen", combined: "steel" };
-// 부속서 I의 부문에서 부문별 보기의 화면으로: [주소에 쓰는 값, 화면의 이름]. 부문별 보기가 없는 부문(복합 금속 제품)은 잇지 않는다.
-const SECTOR_PAGE = { cement: ["cement", "시멘트"], electricity: ["electricity", "전력"], fertilisers: ["fertilisers", "비료"], steel: ["steel", "철강"], aluminium: ["aluminium", "알루미늄"], chemicals: ["hydrogen", "수소"] };
 const LIMIT = 10; // 개정안의 품목을 한 번에 보여 주는 줄 수
 const EXAMPLES = ["7208", "7318 15", "7606", "2523 29 00", "3102", "7202 21 00", "8544 49", "8708 10"];
 
@@ -41,12 +41,6 @@ function entryCard(hit, proposed) {
     others.length ? h("details", { class: "cn-except cn-except-other" }, [
       h("summary", { text: `이 줄에서 따로 제외하는 코드 ${others.length}줄 보기(조회한 코드와는 겹치지 않습니다)` }), h("ul", {}, others.map(goods))]) : null,
   ]);
-}
-
-// 찾은 줄들의 부문마다 부문별 보기로 가는 길 한 줄
-function sectorLinks(rows) {
-  const pages = new Map(rows.map((hit) => SECTOR_PAGE[hit.entry.sector]).filter(Boolean));
-  return [...pages].map(([key, name]) => h("p", { class: "cn-basis" }, h("a", { href: `#sector-${key}`, text: `${name} 부문의 가이던스, 기본값, 소식 모아 보기` })));
 }
 
 function basis(source, lead) {
@@ -117,11 +111,8 @@ function result(text, book, rule) {
     ]),
     now.rows.length ? h("div", { class: "cn-entries" }, now.rows.map((hit) => entryCard(hit, false))) : null,
     basis(book.law, "근거: "),
-    // 대상 품목이면 인증서 비용 추정으로 이어 준다(전력은 벤치마크와 기본값 표가 따로 없어 추정하지 않는다)
-    ["in", "part"].includes(now.state) && !now.rows.some((hit) => hit.entry.sector === "electricity")
-      ? h("p", { class: "cn-basis" }, h("a", { href: `#calc-${now.query.slice(0, 8)}`, text: "이 품목의 인증서 비용 추정하기" })) : null,
-    // 대상이거나 일부가 대상이면 그 부문의 가이던스와 기본값, 소식을 모은 화면으로 이어 준다
-    ...(live(now) ? sectorLinks(now.rows) : []),
+    // 대상이거나 일부가 대상이면 그 품목의 한 장 보기를 놓는다: 기본값과 CBAM 벤치마크, 비용의 어림, 일정, 근거 조문, 해설서, 그 부문의 소식
+    live(now) ? sheet(now) : null,
     ...blocks,
   ]);
 }

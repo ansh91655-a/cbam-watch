@@ -14,6 +14,7 @@
        "terms": [{"ko", "en", "abbr"?, "text"}],              선택. 이 절에서 처음 나오는 용어의 풀이
        "basis": [{"act": "32023R0956", "part": "art-31", "contains": ["원문의 영문 대목", …]},   꼭. 근거 조문
                  {"source": "ets-directive", "label": "제10a조(1a)", "contains": […]}],       사이트의 규정 원문에 없는 문서(sources에 적은 것)
+       "figure": {"kind": "flow", "title": "그림의 이름", …},    선택. 글을 한눈에 보이게 한 그림(꼴은 tools/publish/handbook_figures.py)
        "see": [{"href": "#calc", "text": "인증서 비용 추정"}],   선택. 사이트 안의 관련 화면
        "caveat": "아직 정해지지 않았거나 바뀔 수 있는 점"          선택
    }]}]}
@@ -38,6 +39,7 @@ import re
 import sys
 
 from tools.check import style_check, term_check
+from tools.publish import handbook_figures
 from tools.common.jsonio import read_json
 from tools.publish import crossrefs
 
@@ -181,6 +183,15 @@ def section_problems(where, section, term_index=None, known=None, laws_dir=None,
             head, rows = (table.get("head"), table.get("rows")) if isinstance(table, dict) else (None, None)
             if not (isinstance(head, list) and head and isinstance(rows, list) and rows and all(isinstance(row, list) and len(row) == len(head) for row in rows)):
                 found.append((where, "표는 머리와 같은 칸 수의 줄들이어야 함"))
+        figure = section.get("figure")
+        if figure is not None:
+            found += [(f"{where} 그림", what) for what in handbook_figures.problems(figure)]
+            for text in handbook_figures.texts(figure):   # 그림의 글도 표기 규칙과 용어집을 지킨다(짧은 구라서 문장의 꼴은 보지 않는다)
+                found += [(f"{where} 그림", what) for _, what in _wording("그림", text, 10 ** 6, term_index, False)]
+            for href in handbook_figures.hrefs(figure):
+                problem = _href_problem(href, known, places)
+                if problem:
+                    found.append((f"{where} 그림", problem))
         for link in section.get("see") or []:
             if not isinstance(link, dict) or not str(link.get("text", "")).strip():
                 found.append((where, "관련 화면에 text가 있어야 함"))
@@ -301,7 +312,7 @@ def public(body, known=None):
     for chapter in body.get("chapters", []):
         sections = []
         for section in chapter.get("sections", []):
-            row = {key: section[key] for key in ("id", "title", "body", "list", "ordered", "formula", "table", "terms", "see", "caveat") if section.get(key)}
+            row = {key: section[key] for key in ("id", "title", "body", "figure", "list", "ordered", "formula", "table", "terms", "see", "caveat") if section.get(key)}
             row["basis"] = []
             for one in section.get("basis", []):
                 if one.get("source"):

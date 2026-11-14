@@ -6,6 +6,20 @@ function read(site, name, fallback) {
   try { return JSON.parse(readFileSync(join(site, "data", name), "utf8")); } catch (error) { return fallback; }
 }
 
+// 해설서의 그림: 그림의 종류마다 한 번은 화면에서 보이게, 아직 못 본 종류를 가장 많이 가진 장부터 고른다.
+export function figureChapters(book) {
+  const kinds = (chapter) => new Set((chapter.sections || []).map((one) => one.figure && one.figure.kind).filter(Boolean));
+  const left = new Set(book.flatMap((chapter) => [...kinds(chapter)]));
+  const picked = [];
+  while (left.size) {
+    const news = (chapter) => [...kinds(chapter)].filter((kind) => left.has(kind)).length;
+    const best = book.reduce((found, chapter) => (news(chapter) > news(found) ? chapter : found), book[0]);
+    picked.push(best);
+    for (const kind of kinds(best)) left.delete(kind);
+  }
+  return picked;
+}
+
 export function plan(site) {
   const items = (read(site, "items.json", { items: [] }).items || []).filter((item) => !item.withdrawn);
   const rules = read(site, "regulations.json", { groups: [], regulations: [] });
@@ -18,6 +32,10 @@ export function plan(site) {
   const linked = Object.keys(read(site, "refs.json", { items: {} }).items || {}).map((id) => items.find((one) => one.id === id)).find((one) => one && !one.brief);
   const itemWithRefs = linked && (!newest || linked.id !== newest.id) ? `#item-${linked.id}` : null;
   const good = (calc.goods || []).some((row) => row[0] === "72081000") ? "#calc-72081000" : null;
+  // 품목 한 장 보기: 품목 하나(값과 비용의 어림), 세부 품목이 여럿인 품목, 값의 표가 없는 부문(전력)의 품목. 코드 아래의 여러 품목은 #cn-7208이 본다
+  const twoRows = (calc.goods || []).find((row) => row[5].length > 1);
+  const unpriced = (read(site, "cn.json", { current: [] }).current || []).find((row) => row.sector === "electricity");
+  const sheets = [good ? "#cn-72081000" : null, twoRows ? `#cn-${twoRows[0]}` : null, unpriced ? `#cn-${unpriced.codes[0]}` : null];
   const withFigure = (rules.regulations || []).find((rule) => rule.figure);
   const withTable = (rules.regulations || []).find((rule) => rule.positions);
   const withAnalysis = (rules.regulations || []).find((rule) => rule.analysis);
@@ -42,13 +60,15 @@ export function plan(site) {
   const longest = [...book].sort((a, b) => b.sections.length - a.sections.length)[0];
   const tabled = book.find((chapter) => chapter.sections.some((one) => one.table) && (!longest || chapter.id !== longest.id));
   const handbook = book.length ? ["#handbook", longest ? `#handbook-${longest.id}` : null, tabled ? `#handbook-${tabled.id}.${tabled.sections.find((one) => one.table).id}` : null, "#handbook-none"] : [];
+  // 그림이 있는 장: 그림의 종류를 모두 한 번씩 본다(위에서 이미 보는 장은 뺀다)
+  const drawn = figureChapters(book).map((chapter) => `#handbook-${chapter.id}`).filter((view) => !handbook.includes(view));
   // 사이트 검색: 빈 화면, 여러 갈래에서 찾는 말, 품목 코드, 찾지 못하는 말
   const search = ["#search", `#search-${encodeURIComponent("기본값")}`, "#search-7208", "#search-zzzzqq"];
   return {
     // 가로 넘침과 화면 오류: 모든 화면을 일곱 너비로(폰 둘, 패드, 노트북 둘, 넓은 모니터 둘: 본문 폭이 넓어지는 1,560과 1,800의 단계)
     widths: [360, 390, 768, 1024, 1440, 1920, 2400],
     views: ["#home", "#news", topics[0] ? `#news-${topics[0].code}` : null, "#news-notices", "#news-recent", item, itemWithRefs, "#rules", ...(rules.groups || []).map((group) => `#rules-${group.code}`),
-      "#price", "#calc", good, "#calendar", "#calendar-2027", "#calendar-2027.role-verifier", "#calendar-2028", "#cn", "#cn-7208", "#sector", "#sector-aluminium", "#sector-electricity", ...handbook, "#docs", ...laws, "#terms", "#about", "#design", ...search].filter(Boolean),
+      "#price", "#calc", good, "#calendar", "#calendar-2027", "#calendar-2027.role-verifier", "#calendar-2028", "#cn", "#cn-7208", ...sheets, "#sector", "#sector-aluminium", "#sector-electricity", ...handbook, ...drawn, "#docs", ...laws, "#terms", "#about", "#design", ...search].filter(Boolean),
     // 규제 화면: 규제마다 네 너비로
     ruleWidths: [360, 768, 1440, 1920],
     rules: (rules.regulations || []).map(rule),
@@ -56,7 +76,7 @@ export function plan(site) {
     axeWidths: [1280, 390],
     themes: ["", "?theme=white", "?theme=midnight"],
     axeViews: [...new Set(["#home", "#news", item, itemWithRefs, "#rules", rule(withAnalysis), rule(withFigure), rule(withTable), "#price", "#calc", good,
-      "#calendar", "#calendar-2027.role-verifier", "#cn-7208", "#sector", "#sector-electricity", handbook[0], handbook[1], "#docs", "#laws", law, revised ? `#changes-${revised.id}` : null, "#news-notices", "#news-recent", "#terms", "#about", search[1]].filter(Boolean))],
+      "#calendar", "#calendar-2027.role-verifier", "#cn-7208", sheets[0], "#sector", "#sector-electricity", handbook[0], handbook[1], ...drawn, "#docs", "#laws", law, revised ? `#changes-${revised.id}` : null, "#news-notices", "#news-recent", "#terms", "#about", search[1]].filter(Boolean))],
     good,
   };
 }

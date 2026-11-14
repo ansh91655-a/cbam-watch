@@ -55,7 +55,7 @@ ol.hb-list { list-style: decimal; }
 .hb-formula-parts dd { margin: 0; }
 .hb-main .table-wrap { max-width: 86ch; box-shadow: none; }
 /* 줄의 머리 칸은 표 머리처럼 칠하지 않고 굵게만 한다(줄을 바꿔도 된다) */
-.hb-main tbody th { background: none; font-size: inherit; font-weight: 600; color: var(--ink); white-space: normal; }
+.hb-main tbody th { min-width: 5.4em; background: none; font-size: inherit; font-weight: 600; color: var(--ink); white-space: normal; }
 .hb-main tbody tr:last-child th { border-bottom: 0; }
 @media (max-width: 560px) { .hb-main th, .hb-main td { padding: 10px 12px; } }
 /* 곁들이는 것: 용어 풀이, 알아 둘 점, 근거 조문, 관련 화면 */

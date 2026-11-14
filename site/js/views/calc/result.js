@@ -1,12 +1,8 @@
 // 추정 결과: 인증서 수와 비용, 제품 1톤의 배출량이 어떻게 나뉘는지, 계산 내역, 연도별 추정.
 import { estimate, series } from "../../calc/compute.js";
+import { euros, fixed, percent, pieces, tonnes } from "../../calc/numbers.js";
 import { h, pill, table } from "../../ui/dom.js";
-
-const fixed = (value, digits) => Number(value).toLocaleString("ko-KR", { minimumFractionDigits: digits, maximumFractionDigits: digits });
-const tonnes = (value) => fixed(value, 3);                                   // 톤당 배출량(tCO2e)
-const pieces = (value) => fixed(value, value >= 100 || value === 0 ? 0 : value >= 10 ? 1 : 2); // 인증서 수
-const euros = (value) => fixed(value, value >= 1000 || value === 0 ? 0 : 2);  // 유로
-const percent = (value) => `${fixed(value, Number.isInteger(value) ? 0 : 1)}%`;
+import { splitBar } from "../../ui/splitbar.js";
 
 function stats(now, state) {
   return h("div", { class: "stats calc-stats" }, [
@@ -32,16 +28,13 @@ function stats(now, state) {
 function split(now) {
   const whole = now.embedded || 1;
   const covered = (now.covered / whole) * 100;
-  return h("div", { class: "calc-split" }, [
-    h("div", { class: "calc-bar", role: "img", "aria-label": `제품 1톤의 내재배출량 ${tonnes(now.embedded)}톤 가운데 무상할당 조정 ${tonnes(now.covered)}톤, 인증서 대상 ${tonnes(now.perTonne)}톤` }, [
-      covered > 0 ? h("span", { class: "calc-seg calc-seg-free", style: `flex-grow:${covered.toFixed(3)}` }) : null,
-      covered < 100 ? h("span", { class: "calc-seg calc-seg-pay", style: `flex-grow:${(100 - covered).toFixed(3)}` }) : null,
-    ]),
-    h("ul", { class: "chart-legend" }, [
-      h("li", {}, [h("span", { class: "key key-2" }), h("span", { text: "무상할당 조정" }), h("small", { text: `${tonnes(now.covered)} tCO2e` })]),
-      h("li", {}, [h("span", { class: "key" }), h("span", { text: "인증서 대상" }), h("small", { text: `${tonnes(now.perTonne)} tCO2e` })]),
-    ]),
-  ]);
+  return splitBar({
+    label: `제품 1톤의 내재배출량 ${tonnes(now.embedded)}톤 가운데 무상할당 조정 ${tonnes(now.covered)}톤, 인증서 대상 ${tonnes(now.perTonne)}톤`,
+    parts: [
+      { name: "무상할당 조정", share: covered, note: `${tonnes(now.covered)} tCO2e`, tone: "free" },
+      { name: "인증서 대상", share: 100 - covered, note: `${tonnes(now.perTonne)} tCO2e`, tone: "pay" },
+    ],
+  });
 }
 
 // 벤치마크를 어느 생산경로의 값으로 골랐는지. 경로를 가르지 않는 품목이면 빈 글.

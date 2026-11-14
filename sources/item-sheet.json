@@ -1,0 +1,23 @@
+{
+ "note": "품목 한 장 보기(#cn-<코드>)가 품목마다 잇는 곳을 정한다. basis는 근거 조문(규정 원문의 문서 id와 조각 id), read는 해설서의 절(장.절)이다. about은 그 줄이 무엇의 근거인지를 적는 이름이고, when은 그 줄을 보여 줄 품목을 가린다(없으면 모든 품목, direct: 직접배출량만 넣는 품목, both: 간접배출량도 넣는 품목, priced: 기본값과 CBAM 벤치마크의 표가 있는 품목, unpriced: 그런 표가 없는 부문의 품목). 조문과 절의 이름은 사이트의 자료에서 붙인다(tools/publish/item_sheet.py). 사실을 적는 글은 여기에 두지 않는다.",
+ "basis": [
+  {"about": "대상 품목과 온실가스", "act": "32023R0956", "part": "annex-i"},
+  {"about": "직접배출량만 넣는 품목", "act": "32023R0956", "part": "annex-ii", "when": "direct"},
+  {"about": "소량 면제", "act": "32023R0956", "part": "art-2a"},
+  {"about": "기본값과 마크업", "act": "32026R1740", "part": "annex-i-2", "when": "priced"},
+  {"about": "CBAM 벤치마크", "act": "32025R2620", "part": "annex-0", "when": "priced"},
+  {"about": "부문 간 보정계수", "act": "32026D1862", "part": "art-1", "when": "priced"},
+  {"about": "전력의 기본값", "act": "32025R2621", "part": "annex-iii", "when": "unpriced"}
+ ],
+ "read": [
+  {"section": "scope.goods-cn"},
+  {"section": "scope.de-minimis"},
+  {"section": "scope.direct-only", "when": "direct"},
+  {"section": "embedded.indirect-goods", "when": "both"},
+  {"section": "defaults.tables", "when": "priced"},
+  {"section": "defaults.markup", "when": "priced"},
+  {"section": "certificates.sum", "when": "priced"},
+  {"section": "certificates.example", "when": "priced"},
+  {"section": "defaults.indirect", "when": "unpriced"}
+ ]
+}
