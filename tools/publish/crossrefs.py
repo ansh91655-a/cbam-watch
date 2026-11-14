@@ -175,7 +175,7 @@ def _handbook(body, place, handbook, rule_ids):
                 listed = place(basis["act"], basis.get("part", "")).setdefault("handbook", [])
                 if here not in listed:
                     listed.append(here)
-            for term in section.get("terms") or []:
+            for term in [] if chapter.get("scope") else section.get("terms") or []:   # 다른 제도를 다루는 장(scope)의 풀이는 용어집의 용어와 잇지 않는다
                 if term.get("en"):
                     read["terms"].setdefault(term["en"].lower(), here)   # 영문 표기의 대소문자는 가리지 않는다
             for link in section.get("see") or []:

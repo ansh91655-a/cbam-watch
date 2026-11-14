@@ -104,6 +104,7 @@ export async function render(main, id) {
       h("div", { class: "cards-2" }, related.map(card)),
     ]) : null,
   );
-  gloss(main, ".item-summary:not(.withdrawn), .item-impact > span");   // 요약과 실무 영향의 글에 나온 용어에 풀이를 단다
+  // 요약과 실무 영향의 글에 나온 용어에 풀이를 단다(영국 CBAM의 출처에서 온 소식에는 그 범위의 풀이를 단다)
+  gloss(main, ".item-summary:not(.withdrawn), .item-impact > span", { item: item.id });
   return item.title || "소식";
 }

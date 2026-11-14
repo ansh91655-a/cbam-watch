@@ -62,7 +62,7 @@ export function chapterPage(book, at) {
     sideList(book, at),
     h("div", { class: "stack-l hb-body" }, [
       notice(book),
-      ...chapter.sections.map((section) => sectionNode(chapter.id, section)),
+      ...chapter.sections.map((section) => sectionNode(chapter.id, section, false, chapter.scope)),
       pager(book, at),
     ]),
   ]);

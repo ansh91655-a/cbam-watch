@@ -154,6 +154,17 @@ class FigureTest(unittest.TestCase):
         self.assertIn("parts의 합이 whole과 다름", changed("split", parts=[{"label": "무상할당량", "value": 1.3}, {"label": "제출할 인증서", "value": 0.994}]))
         self.assertIn("path에 data/factor.json의 경로 이름을 적음", changed("factor", path=""))
 
+    def test_a_figure_can_be_placed_before_the_last_paragraphs(self):
+        # after: 그림 앞에 오는 문단의 수. 목록을 가리키는 마지막 문단이 목록과 떨어지지 않게 그림을 앞으로 올릴 때 쓴다
+        wrong = "after는 그림 앞에 오는 문단의 수로, 1부터 문단 수보다 하나 적은 수까지 적음"
+        three = ["첫 문단입니다.", "둘째 문단입니다.", "셋째 문단입니다."]
+        placed = lambda after: [what for _, what in handbook.problems(book(section(body=three, figure={**FIGURES["tiles"], "after": after})))]
+        self.assertEqual(placed(1), [])
+        self.assertEqual(placed(2), [])
+        for after in (0, 3, 4, "1", True, 1.5):
+            self.assertIn(wrong, placed(after), after)
+        self.assertEqual(handbook.public(book(section(body=three, figure={**FIGURES["tiles"], "after": 2})))["chapters"][0]["sections"][0]["figure"]["after"], 2)
+
     def test_the_words_and_links_of_a_figure_are_checked_like_the_text(self):
         # 그림의 글도 용어집이 쓰지 말라는 표기를 쓰지 않고, 그림에서 가는 주소도 실제로 있는 곳이어야 한다
         terms = term_check.load()
@@ -221,12 +232,38 @@ class EvidenceTest(unittest.TestCase):
         shown = public["chapters"][0]["sections"][0]
         self.assertEqual(shown["basis"][0]["act"], "32023R0956")
         self.assertIn("제7조", shown["basis"][0]["label"])
-        self.assertEqual(shown["basis"][1], {"label": "EU 배출권거래제 지침 2003/87/EC 제16조(3)", "url": "https://eur-lex.example/ets"})
+        self.assertEqual(shown["basis"][1], {"label": "EU 배출권거래제 지침 2003/87/EC", "url": "https://eur-lex.example/ets", "parts": ["제16조(3)"]})
         self.assertTrue(shown["ordered"])
         self.assertEqual(public["terms"], [{"ko": "기본값", "en": "default value", "text": "2차 데이터로 정한 값입니다.", "chapter": "overview", "section": "purpose"}])
         text = json.dumps(public, ensure_ascii=False)
         for hidden in ("contains", "sources", str(self.stored), "Embedded emissions in goods"):
             self.assertNotIn(hidden, text)
+
+
+    def test_bases_on_one_outside_document_share_a_line(self):
+        # 바깥 문서는 주소가 하나다: 조마다 링크를 두지 않고 문서마다 한 줄에 모은다. 짧은 이름(short)이 있으면 그것을 이름으로, 온전한 이름은 name으로 싣는다
+        sources = {**self.sources, "ets-directive": {**self.sources["ets-directive"], "short": "배출권거래제 지침"}}
+        body = book(section(basis=[{"source": "ets-directive", "label": "제16조(3)", "contains": ["The excess emissions penalty shall be EUR 100"]},
+                                   {"act": "32023R0956", "part": "art-7", "contains": ["Embedded emissions in goods shall be calculated"]},
+                                   {"source": "ets-directive", "label": "제16조(4)", "contains": ["for each tonne of carbon dioxide equivalent emitted"]}]), sources=sources)
+        self.assertEqual(handbook.problems(body), [])
+        shown = handbook.public(body, handbook.known_laws(read_json(self.laws / "index.json", None)))["chapters"][0]["sections"][0]["basis"]
+        self.assertEqual(shown[0], {"label": "배출권거래제 지침", "name": "EU 배출권거래제 지침 2003/87/EC", "url": "https://eur-lex.example/ets", "parts": ["제16조(3)", "제16조(4)"]})
+        self.assertEqual([row.get("act") for row in shown], [None, "32023R0956"])
+        long = {**sources, "ets-directive": {**sources["ets-directive"], "short": "가" * 41}}
+        self.assertIn("ets-directive: short는 40자까지의 짧은 이름이어야 함", blocking(book(sources=long)))
+
+    def test_a_scoped_chapter_marks_itself_and_its_terms(self):
+        # 다른 제도를 다루는 장(scope): 장과 그 장의 용어 풀이에 범위가 실린다(글 속 용어 풀이가 범위를 가린다)
+        body = book(section(terms=[{"ko": "회계기간", "en": "accounting period", "text": "세액을 계산하는 단위 기간입니다."}]))
+        body["chapters"][0]["scope"] = "uk"
+        self.assertEqual(handbook.problems(body), [])
+        public = handbook.public(body)
+        self.assertEqual(public["chapters"][0]["scope"], "uk")
+        self.assertEqual(public["terms"][0]["scope"], "uk")
+        self.assertNotIn("scope", handbook.public(book())["chapters"][0])
+        body["chapters"][0]["scope"] = "United Kingdom"
+        self.assertTrue(any(what.startswith("scope는") for what in blocking(body)))
 
 
 class StoredBookTest(unittest.TestCase):
@@ -246,7 +283,27 @@ class StoredBookTest(unittest.TestCase):
         rules = {rule["id"] for rule in read_json("data/regulations.json", {}).get("regulations", [])}
         # 사이트의 규정 원문에 댄 근거는 사이트를 만들 때 본다(여기에서는 꼴과, 받아 둔 글에 댄 근거)
         self.assertEqual(handbook.problems(self.book, term_check.load(), rules=rules), [])
-        self.assertEqual(len(self.book["chapters"]), 12)
+        self.assertEqual(len(self.book["chapters"]), 13)
+
+    def test_the_united_kingdom_chapter_stands_on_stored_british_law(self):
+        # 영국 CBAM의 장: 근거는 모두 받아 둔 영국 법령의 글이고(사이트의 규정 원문에 없는 문서), 용어 풀이는 그 장의 범위에서만 쓴다
+        chapter = self.book["chapters"][-1]
+        self.assertEqual((chapter["id"], chapter.get("scope")), ("uk", "uk"))
+        self.assertEqual([one.get("scope") for one in self.book["chapters"][:-1]], [None] * 12)
+        used = {basis.get("source") for one in chapter["sections"] for basis in one["basis"]}
+        self.assertNotIn(None, used)
+        for name in used:
+            source = self.book["sources"][name]
+            self.assertTrue(source["path"].startswith("collected/archive/pages/uk-legislation/") and source["url"].startswith("https://www.legislation.gov.uk/"), name)
+            self.assertTrue(source.get("short"), name)
+        # 날짜가 일정 화면의 영국 의무와 같다: 2027년에 등록 의무가 생긴 사람의 등록 기한, 첫 세 회계기간의 신고와 납부 기한
+        duties = {duty["id"]: duty["date"] for duty in read_json("data/duties.json", {})["duties"] if duty.get("scheme") == "uk"}
+        self.assertIn("2028년 1월 31일까지", self.text("uk.registration"))
+        self.assertEqual(duties["uk-registration-deadline"], "2028-01-31")
+        rows = dict(self.sections["uk.returns"]["table"]["rows"])
+        for period, duty in (("2027년 1월 1일~2027년 12월 31일", "uk-first-return"), ("2028년 1월 1일~2028년 3월 31일", "uk-return-2028-q1"), ("2028년 4월 1일~2028년 6월 30일", "uk-return-2028-q2")):
+            year, month, day = (int(part) for part in duties[duty].split("-"))
+            self.assertEqual(rows[period], f"{year}년 {month}월 {day}일이 끝날 때까지", period)
 
     def test_every_basis_points_at_a_law_part_or_a_declared_source(self):
         for key, one in self.sections.items():
@@ -311,7 +368,7 @@ class StoredFiguresTest(unittest.TestCase):
         return " ".join(pieces)
 
     def test_the_book_has_figures_of_several_kinds(self):
-        self.assertGreaterEqual(len(self.figures), 14)
+        self.assertGreaterEqual(len(self.figures), 23)
         self.assertGreaterEqual(len({figure["kind"] for figure in self.figures.values()}), 7)
 
     def test_a_figure_shows_no_number_the_section_does_not_state(self):

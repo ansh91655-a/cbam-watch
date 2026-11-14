@@ -37,6 +37,24 @@ class SitecheckTest(unittest.TestCase):
         self.assertIn("#rules-c", plan["axeViews"])
         self.assertEqual(plan["themes"], ["", "?theme=white", "?theme=midnight"])
 
+    def test_a_chapter_on_another_scheme_is_looked_at_on_its_own(self):
+        # 다른 제도를 다루는 장(scope가 있는 장)은 절이 가장 많아도 '절이 가장 많은 장'의 자리를 차지하지 않고 따로 본다.
+        # 그 범위의 용어가 있으면 글 속 용어 풀이도 그 장에서 다뤄 보고, 풀이 칸의 링크가 그 장 안으로만 가는지 본다
+        sections = lambda count, **extra: [{"id": f"s{at}", "title": "절", **extra} for at in range(count)]
+        self.write("handbook.json", {"chapters": [{"id": "overview", "title": "한눈에 보기", "sections": sections(2)}, {"id": "certificates", "title": "인증서 수", "sections": sections(3)},
+                                                  {"id": "uk", "title": "영국 CBAM", "scope": "uk", "sections": sections(5, figure={"kind": "flow"})}]})
+        self.write("gloss.json", {"terms": [{"forms": ["내재배출량"], "ko": "내재배출량"}, {"forms": ["회계기간"], "ko": "회계기간", "scope": "uk"}], "scopes": {"uk": []}})
+        plan = self.node("import { plan } from './tools/sitecheck/plan.mjs'; console.log(JSON.stringify(plan(process.argv[1])));", str(self.site))
+        self.assertIn("#handbook-certificates", plan["views"])
+        self.assertEqual(plan["views"].count("#handbook-uk"), 1)
+        self.assertIn("#handbook-uk", plan["axeViews"])
+        self.assertEqual(plan["glossViews"], ["#handbook-certificates", "#handbook-uk"])
+        self.assertEqual(plan["glossScoped"], {"#handbook-uk": "#handbook-uk."})
+        # 그 범위의 용어가 없으면 그 장에서는 용어 풀이를 다뤄 보지 않는다(표시할 것이 없다)
+        self.write("gloss.json", {"terms": [{"forms": ["내재배출량"], "ko": "내재배출량"}]})
+        plan = self.node("import { plan } from './tools/sitecheck/plan.mjs'; console.log(JSON.stringify(plan(process.argv[1])));", str(self.site))
+        self.assertEqual((plan["glossViews"], plan["glossScoped"]), (["#handbook-certificates"], {}))
+
     def test_the_plan_survives_a_site_without_data(self):
         plan = self.node("import { plan } from './tools/sitecheck/plan.mjs'; console.log(JSON.stringify(plan(process.argv[1])));", str(self.site))
         self.assertIn("#home", plan["views"])

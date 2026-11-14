@@ -3,6 +3,7 @@
 // 자료는 data/gloss.json(tools/publish/gloss.py), 찾는 셈은 js/gloss/match.js, 풀이 칸은 ui/glosstip.js, 모양은 css/gloss.css다.
 import * as data from "../data.js";
 import { compile, find } from "../gloss/match.js";
+import { scopeOf, termsOf } from "../gloss/scope.js";
 import { h } from "./dom.js";
 import { closeTip, isOpenFor, openTip, tipHovered } from "./glosstip.js";
 
@@ -11,10 +12,12 @@ const SKIP = "a, button, h1, h2, h3, h4, code, [lang='en'], [data-nogloss]";
 const HOVER_OPEN = 350;   // 마우스를 올리고 이만큼 머물러야 연다(글 위를 지나가는 마우스에 열리지 않게)
 const HOVER_CLOSE = 220;  // 마우스가 떠난 뒤 이만큼 기다렸다 닫는다(용어에서 풀이 칸으로 옮겨 갈 틈)
 
-let ready = null;
-function book() {
-  if (!ready) ready = data.gloss().then((body) => compile(body.terms || []));
-  return ready;
+const books = new Map();   // 범위 → 그 범위의 용어로 만든 찾는 틀(범위가 없는 글의 것은 "")
+async function book(where) {
+  const body = await data.gloss();
+  const scope = scopeOf(body, where);
+  if (!books.has(scope)) books.set(scope, compile(termsOf(body, scope)));
+  return books.get(scope);
 }
 
 // 마우스로 가리키는 기기에서만 올려서 연다(손가락으로 누르는 기기에서는 누를 때만 연다)
@@ -70,9 +73,11 @@ function decorate(block, found, seen, skip) {
 
 // root 안에서 selector에 맞는 요소들의 글에 표시한다. 한 번 부를 때마다 용어 하나는 처음 나온 곳에만 표시한다(글 한 편에 한 번).
 // options.skip(용어): 참이면 그 용어를 표시하지 않는다(해설서의 절은 그 절이 스스로 풀이한 용어를 건너뛴다).
+// options.scope, options.item: 글의 범위를 가리는 데 쓴다(해설서 장의 범위나 규제 묶음의 이름, 소식의 id. js/gloss/scope.js).
+//   범위가 있는 글(영국 CBAM)에는 그 범위의 용어만, 그 밖의 글에는 범위가 없는 용어만 표시한다.
 // 자료를 받지 못했거나 그사이에 화면이 바뀌었으면 아무것도 하지 않는다.
 export async function gloss(root, selector, options = {}) {
-  const found = await book();
+  const found = await book({ scope: options.scope, item: options.item });
   if (!found.regex || !root) return;
   const seen = new Set();
   for (const block of root.querySelectorAll(selector)) decorate(block, found, seen, options.skip || null);

@@ -64,7 +64,8 @@ export function openTip(button, term, focus) {
     h("p", { class: "gloss-tip-text", text: term.text }),
     h("p", { class: "gloss-tip-links" }, [
       term.read ? h("a", { href: term.read }, [icon("guide", 14), h("span", { text: "해설서에서 읽기" })]) : null,
-      h("a", { href: termHref(term) }, [icon("terms", 14), h("span", { text: "용어집에서 보기" })]),
+      // 용어집은 EU CBAM의 용어를 싣는다. 다른 제도의 용어(범위가 있는 용어)는 해설서의 그 장으로만 잇는다
+      term.scope ? null : h("a", { href: termHref(term) }, [icon("terms", 14), h("span", { text: "용어집에서 보기" })]),
     ]),
     h("button", { type: "button", class: "gloss-tip-close", "aria-label": "풀이 닫기", onclick: () => close() }, icon("close", 14)),
   );

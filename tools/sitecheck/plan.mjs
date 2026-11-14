@@ -57,22 +57,28 @@ export function plan(site) {
     manual ? `#law-${manual.id}` : null, single ? `#law-${single.id}` : null, small ? `#pdf-${small}.p2` : null, "#pdf-none",
     // 문단 하나를 가리키는 주소와, 앞선 판과 달라진 곳 보기(앞선 판을 받아 둔 문서가 있을 때)
     acts[0] ? `#law-${acts[0].id}.art-2.1` : null, revised ? `#changes-${revised.id}` : null, "#changes-none"] : [];
-  // 해설서: 차례, 절이 가장 많은 장(식과 표가 있는 장), 절 하나를 가리키는 주소, 없는 장
+  // 해설서: 차례, 절이 가장 많은 장(식과 표가 있는 장), 절 하나를 가리키는 주소, 없는 장.
+  // 다른 제도를 다루는 장(scope가 있는 장: 영국 CBAM)은 따로 본다(글 속 용어 풀이가 그 장에서는 그 범위의 용어만 쓴다)
   const book = read(site, "handbook.json", { chapters: [] }).chapters || [];
-  const longest = [...book].sort((a, b) => b.sections.length - a.sections.length)[0];
-  const tabled = book.find((chapter) => chapter.sections.some((one) => one.table) && (!longest || chapter.id !== longest.id));
+  const own = book.filter((chapter) => !chapter.scope);
+  const longest = [...own].sort((a, b) => b.sections.length - a.sections.length)[0];
+  const tabled = own.find((chapter) => chapter.sections.some((one) => one.table) && (!longest || chapter.id !== longest.id));
   const handbook = book.length ? ["#handbook", longest ? `#handbook-${longest.id}` : null, tabled ? `#handbook-${tabled.id}.${tabled.sections.find((one) => one.table).id}` : null, "#handbook-none"] : [];
+  const glossBody = read(site, "gloss.json", { terms: [] });
+  const scoped = book.filter((chapter) => chapter.scope).map((chapter) => `#handbook-${chapter.id}`);
+  // 그 범위의 용어가 실제로 있는 장: 풀이 칸이 그 장으로만 이어지는지 다뤄 본다
+  const scopedGloss = book.filter((chapter) => chapter.scope && (glossBody.terms || []).some((term) => term.scope === chapter.scope));
   // 해설서 전체를 한 화면에 놓는 화면(인쇄용): 가로 넘침과 화면 오류만 본다(접근성은 장 화면에서 본다)
   const whole = book.length ? "#handbook-all" : null;
   // 그림이 있는 장: 그림의 종류를 모두 한 번씩 본다(위에서 이미 보는 장은 뺀다)
-  const drawn = figureChapters(book).map((chapter) => `#handbook-${chapter.id}`).filter((view) => !handbook.includes(view));
+  const drawn = figureChapters(book).map((chapter) => `#handbook-${chapter.id}`).filter((view) => !handbook.includes(view) && !scoped.includes(view));
   // 사이트 검색: 빈 화면, 여러 갈래에서 찾는 말, 품목 코드, 찾지 못하는 말
   const search = ["#search", `#search-${encodeURIComponent("기본값")}`, "#search-7208", "#search-zzzzqq"];
   return {
     // 가로 넘침과 화면 오류: 모든 화면을 일곱 너비로(폰 둘, 패드, 노트북 둘, 넓은 모니터 둘: 본문 폭이 넓어지는 1,560과 1,800의 단계)
     widths: [360, 390, 768, 1024, 1440, 1920, 2400],
     views: ["#home", "#news", topics[0] ? `#news-${topics[0].code}` : null, "#news-notices", "#news-recent", item, itemWithRefs, "#rules", ...(rules.groups || []).map((group) => `#rules-${group.code}`),
-      "#price", "#calc", good, "#calendar", "#calendar-2027", "#calendar-2027.role-verifier", "#calendar-2028", "#cn", "#cn-7208", ...sheets, "#sector", "#sector-aluminium", "#sector-electricity", ...handbook, ...drawn, whole, "#docs", ...laws, "#terms", "#about", "#design", ...search].filter(Boolean),
+      "#price", "#calc", good, "#calendar", "#calendar-2027", "#calendar-2027.role-verifier", "#calendar-2028", "#cn", "#cn-7208", ...sheets, "#sector", "#sector-aluminium", "#sector-electricity", ...handbook, ...drawn, ...scoped, whole, "#docs", ...laws, "#terms", "#about", "#design", ...search].filter(Boolean),
     // 규제 화면: 규제마다 네 너비로
     ruleWidths: [360, 768, 1440, 1920],
     rules: (rules.regulations || []).map(rule),
@@ -80,9 +86,11 @@ export function plan(site) {
     axeWidths: [1280, 390],
     themes: ["", "?theme=white", "?theme=midnight"],
     axeViews: [...new Set(["#home", "#news", item, itemWithRefs, "#rules", rule(withAnalysis), rule(withFigure), rule(withTable), "#price", "#calc", good,
-      "#calendar", "#calendar-2027.role-verifier", "#cn-7208", sheets[0], "#sector", "#sector-electricity", handbook[0], handbook[1], ...drawn, "#docs", "#laws", law, revised ? `#changes-${revised.id}` : null, "#news-notices", "#news-recent", "#terms", "#about", search[1]].filter(Boolean))],
+      "#calendar", "#calendar-2027.role-verifier", "#cn-7208", sheets[0], "#sector", "#sector-electricity", handbook[0], handbook[1], ...drawn, ...scoped, "#docs", "#laws", law, revised ? `#changes-${revised.id}` : null, "#news-notices", "#news-recent", "#terms", "#about", search[1]].filter(Boolean))],
     good,
-    // 글 속 용어 풀이를 다뤄 보는 화면: 해설서의 장 하나와, 요약에 용어가 나오는 소식 하나(용어의 자료가 있을 때)
-    glossViews: (read(site, "gloss.json", { terms: [] }).terms || []).length ? [handbook[1], glossed ? `#item-${glossed.id}` : null].filter(Boolean) : [],
+    // 글 속 용어 풀이를 다뤄 보는 화면: 해설서의 장 하나와, 요약에 용어가 나오는 소식 하나(용어의 자료가 있을 때), 범위가 있는 장
+    glossViews: (glossBody.terms || []).length ? [handbook[1], glossed ? `#item-${glossed.id}` : null, ...scopedGloss.map((chapter) => `#handbook-${chapter.id}`)].filter(Boolean) : [],
+    // 범위가 있는 장의 화면 → 그 장의 주소(풀이 칸의 링크는 이 주소로 시작해야 한다: 용어집은 EU CBAM의 용어라 잇지 않는다)
+    glossScoped: Object.fromEntries(scopedGloss.map((chapter) => [`#handbook-${chapter.id}`, `#handbook-${chapter.id}.`])),
   };
 }

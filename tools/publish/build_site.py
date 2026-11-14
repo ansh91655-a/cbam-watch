@@ -117,7 +117,7 @@ def main(argv):
     counts["sectors"], sector_problems = sectors.write(data_out, bodies["items"]["items"])
     problems += [f"부문별 모아 보기: {where}: {what}" for where, what in sector_problems]
     # 글 속 용어 풀이: 소식, 규제, 해설서의 글에서 표시할 용어와 풀이(해설서가 풀이한 용어와 용어집의 약어. 무엇을 빼는지는 sources/gloss.json)
-    counts["gloss"], gloss_problems = gloss.write(data_out, bodies["terms"], read_json(data_out / "handbook.json", {}))
+    counts["gloss"], gloss_problems = gloss.write(data_out, bodies["terms"], read_json(data_out / "handbook.json", {}), rules, bodies["items"]["items"])
     problems += [f"글 속 용어 풀이: {where}: {what}" for where, what in gloss_problems]
     # 품목 한 장 보기가 품목마다 잇는 근거 조문과 해설서의 절(무엇을 이을지는 sources/item-sheet.json)
     counts["sheet"], sheet_problems = item_sheet.write(data_out)

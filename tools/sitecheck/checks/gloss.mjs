@@ -17,7 +17,8 @@ const tipState = (page) => page.evaluate(() => {
   };
 });
 
-async function walk(browser, base, view, width, failures) {
+// scopedTo: 범위가 있는 장의 화면이면 그 장의 주소(풀이 칸의 링크가 모두 그 주소로 시작해야 한다). 그 밖의 화면에서는 용어집으로 가는 링크가 있어야 한다.
+async function walk(browser, base, view, width, failures, scopedTo = "") {
   const { page, took } = await open(browser, base, width);
   const fail = (step, why) => failures.push({ check: "gloss", where: `${view} (너비 ${width}) ${step}`, why });
   await go(page, view);
@@ -34,7 +35,9 @@ async function walk(browser, base, view, width, failures) {
   else {
     if (!seen.inside) fail("누르기", "풀이 칸이 화면의 좌우를 넘어감");
     if (!seen.name || seen.text.length < 8) fail("누르기", "풀이 칸에 용어의 이름이나 풀이가 없음");
-    if (!seen.links.some((href) => String(href).startsWith("#terms-"))) fail("누르기", "용어집으로 가는 링크가 없음");
+    if (scopedTo) {
+      if (!seen.links.length || !seen.links.every((href) => String(href).startsWith(scopedTo))) fail("누르기", `범위가 있는 장의 풀이 칸이 그 장(${scopedTo}) 밖으로 이어짐: ${seen.links.join(", ")}`);
+    } else if (!seen.links.some((href) => String(href).startsWith("#terms-"))) fail("누르기", "용어집으로 가는 링크가 없음");
     if (seen.expanded !== 1) fail("누르기", "펼친 용어의 표시(aria-expanded)가 하나가 아님");
     for (const one of await violations(page)) fail("접근성", `${one.id}(${one.impact}) ${one.count}곳: ${one.at}`);
   }
@@ -67,7 +70,7 @@ export async function gloss(browser, base, plan) {
   const failures = [];
   let checked = 0;
   for (const view of plan.glossViews || []) {
-    for (const width of [390, 1280]) checked += await walk(browser, base, view, width, failures);
+    for (const width of [390, 1280]) checked += await walk(browser, base, view, width, failures, (plan.glossScoped || {})[view] || "");
   }
   return { name: "글 속 용어 풀이 다뤄 보기", checked, failures };
 }

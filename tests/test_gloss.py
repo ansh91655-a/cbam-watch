@@ -28,6 +28,27 @@ BOOK = {"terms": [
 ]}
 
 
+# 다른 제도를 다루는 장(scope가 "uk")의 용어: 그 범위의 글에만 쓴다
+UK_BOOK = {"terms": BOOK["terms"] + [
+    {"ko": "회계기간", "en": "accounting period", "text": "영국 CBAM의 세액을 계산하는 단위 기간입니다.", "chapter": "uk", "section": "returns", "scope": "uk"},
+    {"ko": "관할당국", "en": "competent authority", "abbr": "CA", "text": "영국에서는 국세청입니다.", "chapter": "uk", "section": "overview", "scope": "uk"},
+]}
+REGULATIONS = {"regulations": [
+    {"id": "uk-cbam", "group": "uk", "related": {"sources": ["hmrc-cbam", "uk-legislation"], "words": ["영국 CBAM"]}},
+    {"id": "linking", "group": "eu-external", "related": {"sources": ["uk-legislation", "eur-lex"]}},
+    {"id": "base", "group": "eu-law", "related": {"sources": ["eur-lex"]}},
+    {"id": "plain", "group": "eu-acts"},
+]}
+ITEMS = [
+    {"id": "b-hmrc", "sourceCode": "hmrc-cbam", "title": "영국 국세청 안내"},
+    {"id": "a-hmrc", "sourceCode": "hmrc-cbam", "title": "영국 CBAM 고시"},
+    {"id": "gone", "sourceCode": "hmrc-cbam", "title": "내린 소식", "withdrawn": True},
+    {"id": "act", "sourceCode": "uk-legislation", "title": "영국 법령"},
+    {"id": "press", "sourceCode": "press", "title": "영국 CBAM을 다룬 국내 보도"},
+    {"id": "eu", "sourceCode": "eur-lex", "title": "관보"},
+]
+
+
 class AbbreviationsTest(unittest.TestCase):
     def test_the_forms_to_look_for_are_read_from_the_abbreviation_cell(self):
         self.assertEqual(gloss.abbreviations("CSCF"), ["CSCF"])
@@ -79,12 +100,53 @@ class BuildTest(unittest.TestCase):
             self.assertFalse((pathlib.Path(folder) / "gloss.json").exists())
 
 
+class ScopeTest(unittest.TestCase):
+    """범위가 있는 용어(영국 CBAM의 장): 같은 낱말이라도 제도마다 뜻이 달라, 그 범위의 글에만 쓰고 그 범위의 글에는 다른 용어를 쓰지 않는다."""
+
+    def setUp(self):
+        self.body, self.problems = gloss.build(RULES, GLOSSARY, UK_BOOK, REGULATIONS, ITEMS)
+        self.scoped = [term for term in self.body["terms"] if term.get("scope")]
+        self.plain = [term for term in self.body["terms"] if not term.get("scope")]
+
+    def test_scoped_terms_are_kept_apart_from_the_others(self):
+        self.assertEqual(self.problems, [])
+        self.assertEqual([(term["ko"], term["scope"], term["read"]) for term in self.scoped],
+                         [("회계기간", "uk", "#handbook-uk.returns"), ("관할당국", "uk", "#handbook-uk.overview")])
+        # 범위가 없는 용어는 범위가 있는 용어가 더해져도 그대로다(같은 영문 표기의 용어가 두 범위에 따로 있다)
+        alone, _ = gloss.build(RULES, GLOSSARY, BOOK)
+        self.assertEqual(self.plain, alone["terms"])
+        self.assertNotIn("scopes", alone)
+
+    def test_a_form_is_owned_within_its_scope_and_glossary_abbreviations_stay_outside(self):
+        by_ko = {term["ko"]: term for term in self.scoped}
+        self.assertEqual(by_ko["관할당국"]["forms"], ["관할당국"])   # 범위가 없는 '관할당국'이 이미 가진 표기지만, 범위마다 임자를 따로 가린다. 빼기로 한 약어(CA)는 여기서도 뺀다
+        self.assertEqual(by_ko["관할당국"]["text"], "영국에서는 국세청입니다.")
+        self.assertFalse([term for term in self.scoped if term["ko"] in ("과불화탄소", "탄소 포집·저장")])   # 용어집의 약어는 범위가 없는 글에만 쓴다
+
+    def test_the_items_of_a_scope_come_from_the_sources_of_its_rule_group(self):
+        # 그 이름의 규제 묶음에 속한 규제의 출처에서 온 소식. 다른 묶음의 규제도 출처로 삼는 곳(uk-legislation)과 낱말로만 이어진 소식(press), 내린 소식은 뺀다
+        self.assertEqual(self.body["scopes"], {"uk": ["a-hmrc", "b-hmrc"]})
+        self.assertEqual(gloss.scope_items(["uk", "kr"], REGULATIONS, ITEMS), {"uk": ["a-hmrc", "b-hmrc"], "kr": []})
+        self.assertEqual(gloss.scope_items(["uk"], None, None), {"uk": []})
+        without, _ = gloss.build(RULES, GLOSSARY, UK_BOOK)   # 규제 자료가 없으면 범위는 있고 소식은 없다
+        self.assertEqual(without["scopes"], {"uk": []})
+
+
 class RepositoryTest(unittest.TestCase):
     def test_the_stored_rules_fit_the_stored_glossary_and_handbook(self):
         book = handbook.public(read_json(handbook.SOURCE, {}))
-        body, found = gloss.build(read_json(gloss.SOURCE, {}), read_json("data/terms.json", {}), book)
+        body, found = gloss.build(read_json(gloss.SOURCE, {}), read_json("data/terms.json", {}), book,
+                                  read_json("data/regulations.json", {}), read_json("data/items.json", {}).get("items", []))
         self.assertEqual(found, [])
-        terms = body["terms"]
+        scoped = [term for term in body["terms"] if term.get("scope")]
+        terms = [term for term in body["terms"] if not term.get("scope")]
+        # 영국 CBAM의 장이 풀이한 용어는 그 범위에만 있고, 그 범위의 소식은 영국의 출처에서 온 것들이다(일정 화면의 첫 소식 '영국 CBAM, 2027년 1월 1일 시행'도 그 하나다)
+        self.assertEqual({term["scope"] for term in scoped}, {"uk"})
+        self.assertGreaterEqual(len(scoped), 12)
+        self.assertTrue(all(term["read"].startswith("#handbook-uk.") for term in scoped))
+        self.assertEqual(sorted(body["scopes"]), ["uk"])
+        self.assertIn("seed-uk-cbam", body["scopes"]["uk"])
+        self.assertGreaterEqual(len(body["scopes"]["uk"]), 10)
         self.assertGreaterEqual(len(terms), 80)
         forms = [form.replace(" ", "") for term in terms for form in term["forms"]]
         self.assertEqual(len(forms), len(set(forms)))                       # 표기 하나는 한 용어의 것이다

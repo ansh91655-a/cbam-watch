@@ -2,7 +2,7 @@
 문단 인용의 글(js/laws/cite.js), 낱말 단위로 달라진 곳 찾기(js/laws/worddiff.js), 의무를 역할로 고르기(js/calendar/roles.js),
 규정 원문과 그것을 적은 글을 잇는 주소(js/laws/refs.js), 부문별 모아 보기의 글(js/sector/facts.js), 최근 소식 가리기(js/news/recent.js),
 해설서 그림의 글(식 한 줄을 칸과 기호로 나누기 js/views/handbook/figures/equation.js, 날짜 적기 js/views/handbook/figures/timeline.js),
-품목 한 장 보기의 셈(js/cn/sheet.js), 글 속 용어 풀이의 찾기(js/gloss/match.js)."""
+품목 한 장 보기의 셈(js/cn/sheet.js), 글 속 용어 풀이의 찾기(js/gloss/match.js)와 범위 가리기(js/gloss/scope.js)."""
 import json
 import shutil
 import subprocess
@@ -18,6 +18,7 @@ import { translation, waitLabel } from './site/js/laws/ready.js';
 import { dutyHref, lawHref, linkedTo, readRule, readTerm, tally as linkedTally, termHref } from './site/js/laws/refs.js';
 import { wordDiff } from './site/js/laws/worddiff.js';
 import { compile, find } from './site/js/gloss/match.js';
+import { scopeOf as glossScope, termsOf } from './site/js/gloss/scope.js';
 import { isNotice, NOTICES, split } from './site/js/news/notices.js';
 import { PERIODS, RECENT, RECENT_DAYS, within } from './site/js/news/recent.js';
 import { gasText, markupText, proposedText, scopeOf, scopeText, upcoming } from './site/js/sector/facts.js';
@@ -79,6 +80,11 @@ const glossTerms = [{ forms: ['부문 간 보정계수', 'CSCF'], ko: '부문 �
   { forms: ['탄소가격'], ko: '탄소가격' }, { forms: ['기본 탄소가격'], ko: '기본 탄소가격' }, { forms: ['SEE'], ko: '고유 내재배출량' }, { forms: ['EUA'], ko: 'EU 배출권' },
   { forms: ['CCS', 'CCU', 'CCUS'], ko: '탄소 포집·저장' }, { forms: ['RED II'], ko: '재생에너지 지침' }];
 const glossBook = compile(glossTerms);
+// 범위가 있는 용어(영국 CBAM의 장)와 그 범위의 풀이를 쓰는 소식
+const scopedGloss = { terms: [{ forms: ['관할당국'], ko: '관할당국', text: 'EU의 풀이' }, { forms: ['회계기간'], ko: '회계기간', scope: 'uk' }, { forms: ['관할당국'], ko: '관할당국', text: '영국의 풀이', scope: 'uk' }],
+  scopes: { uk: ['hmrc-1', 'hmrc-2'] } };
+const scopedBook = (scope) => compile(termsOf(scopedGloss, scope));
+const scopedMarks = (text, scope) => find(text, scopedBook(scope)).map((hit) => [text.slice(hit.start, hit.end), scopedBook(scope).terms[hit.at].text || scopedBook(scope).terms[hit.at].ko]);
 const marked = (text, seen, skip) => find(text, glossBook, seen, skip).map((hit) => [text.slice(hit.start, hit.end), glossTerms[hit.at].ko]);
 
 // 해설서에 실린 식: 풀이가 달린 말은 식 한 줄에서 칸 하나로 나뉘어야 한다(그래야 그 말이 칸으로 그려진다)
@@ -153,6 +159,9 @@ console.log(JSON.stringify({
     once: (() => { const seen = new Set(); return [marked('탄소가격을 냅니다.', seen), marked('탄소가격을 또 냅니다. CSCF도 있습니다.', seen)]; })(),
     skipped: marked('CSCF와 탄소가격', new Set(), (term) => term.ko === '탄소가격'),
     empty: [find('CSCF', compile([])), find('', glossBook), find('CSCF', null), compile(null).rows],
+    scope: [{ scope: 'uk' }, { scope: 'eu-law' }, { item: 'hmrc-2' }, { item: 'press-1' }, { scope: 'eu-law', item: 'hmrc-1' }, {}, undefined].map((where) => glossScope(scopedGloss, where)),
+    noScopes: [glossScope({ terms: [] }, { scope: 'uk' }), glossScope(null, { item: 'hmrc-1' }), termsOf(null, 'uk'), termsOf({ terms: [{ ko: '가' }] }).length],
+    scoped: [scopedMarks('회계기간마다 관할당국에 냅니다.', 'uk'), scopedMarks('회계기간마다 관할당국에 냅니다.', '')],
   },
   figures: {
     tokens: tokens('인증서 수 = (내재배출량 − 무상할당량) × 수입량'), plain: tokens('CO2e 1톤'), none: tokens(''),
@@ -235,6 +244,14 @@ class SiteModulesTest(unittest.TestCase):
         self.assertEqual(gloss["once"], [[["탄소가격", "탄소가격"]], [["CSCF", "부문 간 보정계수"]]])                                # 글 한 편에서 용어마다 한 번만
         self.assertEqual(gloss["skipped"], [["CSCF", "부문 간 보정계수"]])
         self.assertEqual(gloss["empty"], [[], [], [], []])
+
+    def test_scoped_terms_are_used_only_on_the_text_of_their_scope(self):
+        gloss = self.seen["gloss"]
+        # 글의 범위: 장의 범위나 규제 묶음의 이름이 자료에 있는 범위이면 그것, 소식은 그 범위에 적힌 소식이면 그것, 그 밖에는 범위가 없다
+        self.assertEqual(gloss["scope"], ["uk", "", "uk", "", "uk", "", ""])
+        self.assertEqual(gloss["noScopes"], ["", "", [], 1])
+        # 범위가 있는 글에는 그 범위의 용어만(같은 낱말이면 그 범위의 풀이), 그 밖의 글에는 범위가 없는 용어만 표시한다
+        self.assertEqual(gloss["scoped"], [[["회계기간", "회계기간"], ["관할당국", "영국의 풀이"]], [["관할당국", "EU의 풀이"]]])
 
     def test_a_formula_line_is_cut_into_boxes_and_signs(self):
         figures = self.seen["figures"]

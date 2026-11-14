@@ -3,7 +3,9 @@
 그림은 절의 글을 한눈에 보이게 한 것이다. 글에 없는 사실을 그림에만 적지 않는다(근거는 절의 basis가 맡는다).
 수가 들어가는 그림(bars, split)과 날짜가 들어가는 그림(timeline)은 시험(tests/test_handbook.py)이 다른 참고 자료와 견준다.
 
-그림의 종류와 꼴(모든 그림에 "kind", "title"(그림의 이름), 선택으로 "note"(그림 아래의 한 줄)가 있다)
+그림의 종류와 꼴(모든 그림에 "kind", "title"(그림의 이름), 선택으로 "note"(그림 아래의 한 줄)와 "after"가 있다)
+  after     그림을 놓는 자리: 그림 앞에 오는 문단의 수. 적지 않으면 문단을 모두 놓은 뒤에 그림을 놓는다.
+            마지막 문단이 목록을 가리키는데('아래와 같은 …') 그림이 그 목록의 그림이 아닐 때, 그림을 그 문단 앞으로 올리는 데 쓴다.
   flow      차례나 흐름. {"numbered": true, "steps": [{"title", "text"?, "tag"?}], "links": ["화살표에 적는 말", …]?}
   timeline  때의 흐름. {"bands": [{"label", "text"?, "marks": [{"date": "2027-02-01" 또는 "when": "2027년 각 분기 말", "edge": "부터"|"까지"?, "label", "text"?}]}]}
   tiles     칸의 묶음. {"items": [{"icon"?, "title", "text"?, "href"?}]}
@@ -189,8 +191,8 @@ CHECKS = {"flow": _flow, "timeline": _timeline, "tiles": _tiles, "matrix": _matr
           "equation": _equation, "bars": _bars, "split": _split, "factor": _factor}
 
 
-def problems(figure):
-    """그림 하나의 꼴 문제들(글). 문제가 없으면 빈 목록."""
+def problems(figure, paragraphs=None):
+    """그림 하나의 꼴 문제들(글). 문제가 없으면 빈 목록. paragraphs: 그 절의 문단 수(주면 after가 그 안의 자리인지 본다)."""
     if not isinstance(figure, dict):
         return ["그림의 꼴이 다름"]
     found = []
@@ -198,6 +200,9 @@ def problems(figure):
         return [f"그림의 종류를 모름: {figure.get('kind')!r}"]
     _text(figure.get("title"), LIMITS["title"], "title", found)
     _text(figure.get("note"), LIMITS["note"], "note", found, needed=False)
+    after = figure.get("after")
+    if after is not None and (isinstance(after, bool) or not isinstance(after, int) or after < 1 or (paragraphs is not None and after >= paragraphs)):
+        found.append("after는 그림 앞에 오는 문단의 수로, 1부터 문단 수보다 하나 적은 수까지 적음")
     CHECKS[figure["kind"]](figure, found)
     return found
 

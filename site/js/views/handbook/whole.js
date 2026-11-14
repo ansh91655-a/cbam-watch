@@ -42,7 +42,7 @@ export function wholeBook(book) {
         h("h2", { id: `h-hbw-${chapter.id}` }, [h("span", { class: "hb-whole-no", text: `${at + 1}장` }), h("span", { text: chapter.title })]),
         h("p", { class: "sec-lead", text: chapter.lead }),
       ]),
-      ...chapter.sections.map((section) => sectionNode(chapter.id, section, true)),
+      ...chapter.sections.map((section) => sectionNode(chapter.id, section, true, chapter.scope)),
     ])),
   ]);
 }

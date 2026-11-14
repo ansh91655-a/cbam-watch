@@ -172,6 +172,16 @@ class HandbookTest(unittest.TestCase):
         self.assertEqual({rule: [one["href"] for one in rows] for rule, rows in read["rules"].items()},
                          {"ir-declarations": ["#handbook-cycle.declaration", "#handbook-cycle.surrender"]})
 
+    def test_a_chapter_on_another_scheme_does_not_answer_for_glossary_terms(self):
+        # 다른 제도를 다루는 장(scope)의 용어 풀이는 용어집의 용어와 잇지 않는다(용어집은 EU CBAM의 용어다). 근거 조각과 규제로 돌아가는 길은 그대로 싣는다
+        other = {"id": "uk", "title": "영국 CBAM", "scope": "uk", "sections": [
+            {"id": "returns", "title": "회계기간, 신고, 납부", "terms": [{"ko": "기본값", "en": "default value", "text": "영국의 풀이입니다."}, {"ko": "회계기간", "en": "accounting period", "text": "풀이입니다."}],
+             "basis": [{"label": "2026년 재정법 부칙 17", "url": "https://example.org/sch17", "parts": ["제6항"]}], "see": [{"href": "#rules-ir-declarations", "text": "규제"}]}]}
+        body, _ = crossrefs.build(INDEX, [], [], [], "2026-11-13", {"chapters": [other] + self.BOOK["chapters"]}, {"ir-declarations"})
+        self.assertEqual(sorted(body["read"]["terms"]), ["cbam declaration", "default value"])
+        self.assertEqual(body["read"]["terms"]["default value"]["href"], "#handbook-defaults.tables")
+        self.assertEqual(body["read"]["rules"]["ir-declarations"][0]["href"], "#handbook-uk.returns")
+
     def test_without_the_rule_list_every_rule_address_is_kept(self):
         body, _ = crossrefs.build(INDEX, [], [], [], "2026-11-13", self.BOOK)
         self.assertEqual(sorted(body["read"]["rules"]), ["eu-law", "ir-declarations"])

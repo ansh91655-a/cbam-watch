@@ -15,6 +15,8 @@
 .hb-card p { font-size: var(--fs-s); color: var(--ink-2); }
 .hb-term-chips .chip small { font-size: 0.76rem; color: var(--ink-3); }
 .hb-term-chips .chip:hover small { color: inherit; }
+/* 다른 제도를 다루는 장의 용어 묶음 앞에 놓는 작은 이름 */
+.hb-term-group { margin: 4px 0 -4px; font-size: var(--fs-s); font-weight: 700; color: var(--ink-2); }
 
 /* ── 장 하나 ── 옆 목록 */
 .hb-side { display: grid; gap: 18px; align-content: start; }
@@ -58,6 +60,13 @@ ol.hb-list { list-style: decimal; }
 .hb-main tbody th { min-width: 5.4em; background: none; font-size: inherit; font-weight: 600; color: var(--ink); white-space: normal; }
 .hb-main tbody tr:last-child th { border-bottom: 0; }
 @media (max-width: 560px) { .hb-main th, .hb-main td { padding: 10px 12px; } }
+/* 좁은 화면에서 줄마다 쌓는 표(칸이 셋 이상이고 글이 긴 표. views/handbook/section.js가 고른다): 줄의 머리 칸이 이름이 되고, 나머지 칸은 열의 이름을 달고 한 줄씩 차지한다 */
+@media (max-width: 640px) {
+  .hb-main .table-stack tr { grid-template-columns: minmax(0, 1fr); gap: 10px; padding: 14px 16px; box-shadow: none; }
+  .hb-main .table-stack tr:last-child { margin-bottom: 0; }
+  .hb-main .table-stack tbody th, .hb-main .table-stack td { display: block; min-width: 0; padding: 0; border: 0; }
+  .hb-main .table-stack tbody th { font-size: 1.02rem; font-weight: 700; }
+}
 /* 곁들이는 것: 용어 풀이, 알아 둘 점, 근거 조문, 관련 화면 */
 .hb-aside { display: grid; gap: 14px; align-content: start; padding-top: 16px; border-top: 1px solid var(--line-2); }
 .hb-terms { display: grid; gap: 2px; margin: 0; }
@@ -69,6 +78,9 @@ ol.hb-list { list-style: decimal; }
 .hb-caveat .icon { margin-top: 3px; color: var(--warn); }
 .hb-refs { align-items: baseline; }
 .hb-refs a .icon { margin-left: 3px; vertical-align: -1px; }
+/* 바깥 문서의 근거: 문서의 링크 뒤에 그 문서에 댄 조와 항을 글로 적는다 */
+.hb-ref-doc { display: inline; }
+.hb-ref-parts { margin-left: 6px; color: var(--ink-2); }
 
 /* ── 앞 장과 다음 장 ── */
 .hb-pager { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }

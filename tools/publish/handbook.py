@@ -4,8 +4,8 @@
 
 꼴
   {"asOf": "2026-11-14", "lead": "해설서를 소개하는 한두 문장",
-   "sources": {"ets-directive": {"text": "EU 배출권거래제 지침 …", "url": "https://…", "path": "받아 둔 글의 저장소 안 경로"}},   선택
-   "chapters": [{"id", "title", "lead", "sections": [{
+   "sources": {"ets-directive": {"text": "EU 배출권거래제 지침 …", "url": "https://…", "path": "받아 둔 글의 저장소 안 경로", "short"?: "짧은 이름"}},   선택
+   "chapters": [{"id", "title", "lead", "scope"?, "sections": [{
        "id", "title",
        "body": ["문단", …],                                   꼭. 높임말로 쓴 문단 1~5개
        "list": ["항목", …], "ordered": true,                   선택. 글머리표 목록(ordered가 참이면 차례가 있는 목록)
@@ -28,7 +28,13 @@
   source로 적은 근거는 받아 둔 글(sources의 path)에 그 대목이 있는지 본다.
   어긋나면 '근거 어긋남'으로 알리기만 한다(원문이 개정되어 달라진 것일 수 있다. 글은 그대로 실리고 상태 점검이 알린다).
 
-싣는 모양(public): contains를 빼고 basis마다 이름(label)을 붙인다(source로 적은 근거는 이름과 주소). 절마다의 용어 풀이는 terms로도 한데 모아 싣는다.
+장의 scope(선택): 그 장이 CBAM 규정이 아닌 다른 제도를 다룰 때 적는 이름이다(영국 CBAM의 장은 "uk"). 그 장의 용어 풀이는 그 범위의 글
+(그 장, 같은 이름의 규제 묶음, 그 묶음의 출처에서 온 소식)에서만 글 속 용어 풀이로 쓰이고, 그 범위의 글에는 다른 장의 풀이를 달지 않는다
+(같은 낱말이라도 제도마다 뜻이 다르다: tools/publish/gloss.py). 용어집에서 해설서로 돌아오는 길에도 싣지 않는다(tools/publish/crossrefs.py).
+
+싣는 모양(public): contains를 빼고 basis마다 이름(label)을 붙인다. 절마다의 용어 풀이는 terms로도 한데 모아 싣는다.
+source로 적은 근거는 문서마다 한 줄로 모은다(문서의 주소가 하나라서 조마다 링크를 두면 같은 링크가 되풀이된다):
+  {"label": 문서의 이름(short가 있으면 그것), "name": 온전한 이름(short가 있을 때), "url", "parts": [그 문서에 댄 근거의 label들]}
 
 검사: python -m tools.publish.handbook [--laws <사이트의 data/laws 폴더>] [--file <글 파일>]
       --laws가 없으면 꼴과, 받아 둔 글(sources)에 댄 근거만 본다. 문제가 있으면 0이 아닌 값으로 끝난다(근거 어긋남뿐이면 0).
@@ -186,7 +192,7 @@ def section_problems(where, section, term_index=None, known=None, laws_dir=None,
                 found.append((where, "표는 머리와 같은 칸 수의 줄들이어야 함"))
         figure = section.get("figure")
         if figure is not None:
-            found += [(f"{where} 그림", what) for what in handbook_figures.problems(figure)]
+            found += [(f"{where} 그림", what) for what in handbook_figures.problems(figure, len(section.get("body") or []))]
             for text in handbook_figures.texts(figure):   # 그림의 글도 표기 규칙과 용어집을 지킨다(짧은 구라서 문장의 꼴은 보지 않는다)
                 found += [(f"{where} 그림", what) for _, what in _wording("그림", text, 10 ** 6, term_index, False)]
             for href in handbook_figures.hrefs(figure):
@@ -272,6 +278,8 @@ def problems(body, term_index=None, laws_dir=None, kinds=("format", "evidence"),
             if not ID.match(str(key)) or not isinstance(one, dict) or not all(str(one.get(name, "")).strip() for name in ("text", "url", "path")) \
                     or not str(one.get("url", "")).startswith("https://"):
                 found.append(("근거 문서", f"{key}: text, url(https), path가 있어야 함"))
+            elif one.get("short") is not None and not (isinstance(one["short"], str) and one["short"].strip() == one["short"] and 0 < len(one["short"]) <= LIMITS["title"]):
+                found.append(("근거 문서", f"{key}: short는 {LIMITS['title']}자까지의 짧은 이름이어야 함"))
     seen = set()
     explained = {}
     for chapter in body["chapters"]:
@@ -282,6 +290,8 @@ def problems(body, term_index=None, laws_dir=None, kinds=("format", "evidence"),
             if chapter.get("id") == WHOLE:
                 found.append((name, f"장의 id로 '{WHOLE}'은 쓰지 않음(해설서 전체를 한 화면에 놓는 주소다)"))
             seen.add(chapter.get("id"))
+            if chapter.get("scope") is not None and not ID.match(str(chapter.get("scope"))):
+                found.append((name, "scope는 영문 소문자로 시작하는 짧은 이름이어야 함(이 장의 용어 풀이를 쓰는 글의 범위)"))
             found += [(f"{name} {where}", what) for where, what in _wording("제목", chapter.get("title", ""), LIMITS["title"], term_index, False)]
             found += [(f"{name} {where}", what) for where, what in _wording("요약", chapter.get("lead", ""), LIMITS["lead"], term_index, True)]
             if not isinstance(chapter.get("sections"), list) or not chapter["sections"]:
@@ -314,20 +324,28 @@ def public(body, known=None):
     sources = body.get("sources") if isinstance(body.get("sources"), dict) else {}
     for chapter in body.get("chapters", []):
         sections = []
+        scope = {"scope": chapter["scope"]} if chapter.get("scope") else {}   # 이 장의 용어 풀이를 쓰는 글의 범위(머리 설명)
         for section in chapter.get("sections", []):
             row = {key: section[key] for key in ("id", "title", "body", "figure", "list", "ordered", "formula", "table", "terms", "see", "caveat") if section.get(key)}
             row["basis"] = []
+            documents = {}   # 근거 문서의 이름 → 그 문서에 댄 근거 한 줄(같은 문서의 조각은 한 줄에 모은다)
             for one in section.get("basis", []):
                 if one.get("source"):
                     source = sources.get(one["source"]) or {}
-                    if source.get("url"):
-                        row["basis"].append({"label": " ".join(part for part in (source.get("text", ""), one.get("label", "")) if part), "url": source["url"]})
+                    if not source.get("url"):
+                        continue
+                    if one["source"] not in documents:
+                        documents[one["source"]] = {"label": source.get("short") or source.get("text", ""), **({"name": source["text"]} if source.get("short") else {}),
+                                                    "url": source["url"], "parts": []}
+                        row["basis"].append(documents[one["source"]])
+                    if one.get("label"):
+                        documents[one["source"]]["parts"].append(one["label"])
                 elif not known or one["act"] in known["acts"]:
                     row["basis"].append({"act": one["act"], "part": one.get("part", ""),
                                          "label": crossrefs.label(known, one["act"], one.get("part", "")) if known and one["act"] in known["acts"] else one["act"]})
             sections.append(row)
-            terms += [{**term, "chapter": chapter["id"], "section": section["id"]} for term in section.get("terms") or []]
-        chapters.append({"id": chapter["id"], "title": chapter["title"], "lead": chapter.get("lead", ""), "sections": sections})
+            terms += [{**term, "chapter": chapter["id"], "section": section["id"], **scope} for term in section.get("terms") or []]
+        chapters.append({"id": chapter["id"], "title": chapter["title"], "lead": chapter.get("lead", ""), **scope, "sections": sections})
     return {"asOf": body.get("asOf", ""), "lead": body.get("lead", ""), "chapters": chapters, "terms": terms}
 
 

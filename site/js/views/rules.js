@@ -146,8 +146,9 @@ function detail(main, rule, group, items, drawing, acts, read) {
       ]) : null,
     ]), aside(rule, acts, read)]),
   );
-  // 현재 상황, 요약, 분석의 글에 나온 용어에 풀이를 단다(근거 자료의 목록과 연혁에는 달지 않는다)
-  gloss(main, ".rule-now .rule-status, .rule-summary, .rule-analysis .an-sec:not(.an-src) p");
+  // 현재 상황, 요약, 분석의 글에 나온 용어에 풀이를 단다(근거 자료의 목록과 연혁에는 달지 않는다).
+  // 묶음의 이름이 용어의 범위와 같은 규제(영국 CBAM)에는 그 범위의 풀이를 단다
+  gloss(main, ".rule-now .rule-status, .rule-summary, .rule-analysis .an-sec:not(.an-src) p", { scope: rule.group });
 }
 
 export async function render(main, arg) {

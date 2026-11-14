@@ -22,16 +22,22 @@ function chapterCard(chapter, at) {
   ]));
 }
 
+const termChips = (terms) => h("div", { class: "chips hb-term-chips" }, [...terms].sort((a, b) => a.ko.localeCompare(b.ko, "ko")).map((term) =>
+  h("a", { class: "chip", href: `#handbook-${term.chapter}.${term.section}` }, [h("span", { text: term.ko }), term.abbr ? h("small", { lang: "en", text: term.abbr }) : null])));
+
 // 용어로 찾기: 해설서가 풀이한 용어를 누르면 그 용어를 풀이한 절로 간다.
-function termIndex(terms) {
+// 다른 제도를 다루는 장(scope가 있는 장: 영국 CBAM)의 용어는 그 장의 이름 아래에 따로 모은다(같은 낱말이라도 제도마다 뜻이 다르다).
+function termIndex(book) {
+  const terms = book.terms || [];
   if (!terms.length) return null;
-  const sorted = [...terms].sort((a, b) => a.ko.localeCompare(b.ko, "ko"));
+  const own = terms.filter((term) => !term.scope);
+  const others = book.chapters.filter((chapter) => chapter.scope)
+    .map((chapter) => ({ chapter, terms: terms.filter((term) => term.scope === chapter.scope) })).filter((group) => group.terms.length);
   return h("section", { class: "stack", "aria-labelledby": "h-hb-terms" }, [
     h("div", { class: "sec-head" }, [h("h2", { id: "h-hb-terms", text: "용어로 찾기" }), h("a", { href: "#terms", text: "용어집 전체 보기" })]),
     h("p", { class: "sec-lead", text: "용어를 누르면 그 용어를 풀이한 절로 갑니다." }),
-    h("div", { class: "chips hb-term-chips" }, sorted.map((term) => h("a", { class: "chip", href: `#handbook-${term.chapter}.${term.section}` }, [
-      h("span", { text: term.ko }), term.abbr ? h("small", { lang: "en", text: term.abbr }) : null,
-    ]))),
+    own.length ? termChips(own) : null,
+    ...others.flatMap((group) => [h("h3", { class: "hb-term-group", text: `${group.chapter.title}의 용어` }), termChips(group.terms)]),
   ]);
 }
 
@@ -45,6 +51,6 @@ export function contents(book, missing) {
         h("a", { href: "#handbook-all", text: "전체를 한 화면에 보기(인쇄용)" })]),
       h("ol", { class: "hb-chapters" }, book.chapters.map(chapterCard)),
     ]),
-    termIndex(book.terms || []),
+    termIndex(book),
   ];
 }
