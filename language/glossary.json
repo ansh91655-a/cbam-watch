@@ -439,10 +439,10 @@
 "abbr": [
 "CJEU"
 ],
-"preferred": "유럽사법재판소",
+"preferred": "EU 사법재판소",
 "allowed": [
-"유럽연합 사법재판소",
-"EU 사법재판소"
+"유럽사법재판소",
+"유럽연합 사법재판소"
 ],
 "avoid": [
 {
@@ -1788,9 +1788,9 @@
 "quarterly holding requirement"
 ],
 "abbr": [],
-"preferred": "분기별 인증서 예치의무",
+"preferred": "분기말 인증서 보유의무",
 "allowed": [
-"분기말 인증서 보유의무"
+"분기별 인증서 예치의무"
 ],
 "avoid": [],
 "status": "confirmed"

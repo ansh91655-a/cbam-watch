@@ -46,7 +46,7 @@ function routeNote(book, now) {
 }
 
 function steps(book, now, state, row) {
-  const origin = row.origin === "kr" ? "대한민국 기본값" : "'그 밖의 나라와 지역' 기본값";
+  const origin = row.origin === "kr" ? "대한민국 기본값" : "'그 밖의 나라와 영역' 기본값";
   const embedded = now.mode === "actual"
     ? "넣으신 실제 배출량입니다."
     : `${origin} ${tonnes(row.total)}에 ${now.year}년 마크업 ${percent(now.markup)}를 더한 값입니다.`;
@@ -88,7 +88,7 @@ function yearly(book, path, state) {
   return table(["수입 연도", { text: "비용(톤당, 유로)", num: true }, { text: "인증서(톤당)", num: true }, { text: "내재배출량", num: true }, { text: "CBAM 계수", num: true }, { text: "무상할당 조정", num: true }],
     rows.map((row) => h("tr", { class: row.year === state.year ? "calc-now" : null }, [
       h("td", {}, [h("span", { text: `${row.year}년` }), row.assumed.benchmark || row.assumed.cscf ? pill("가정 포함", "warn") : null]),
-      h("td", { class: "num calc-cost" }, [h("span", { class: "calc-mini", "aria-hidden": "true", style: `width:${((row.costPerTonne / top) * 100).toFixed(1)}%` }), h("b", { text: euros(row.costPerTonne) })]),
+      h("td", { class: "num calc-cost" }, [h("span", { class: "calc-mini", "aria-hidden": "true", style: `--share:${(row.costPerTonne / top).toFixed(3)}` }), h("b", { text: euros(row.costPerTonne) })]),
       h("td", { class: "num", text: tonnes(row.perTonne) }),
       h("td", { class: "num", text: tonnes(row.embedded) }),
       h("td", { class: "num", text: percent(row.factor) }),

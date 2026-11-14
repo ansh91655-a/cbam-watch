@@ -2,7 +2,7 @@
 // 문단마다 근거 자료의 번호를 달고 끝에 자료 목록을 둔다. 번호를 누르면 그 자료로 내려가 잠깐 표시한다.
 // 규제의 단계나 연혁이 분석을 쓴 뒤에 달라졌으면(stale) 그렇다고 먼저 밝힌다.
 // 절의 이름을 적은 줄(an-nav)은 글을 읽는 동안 머리글 아래에 붙어 있고, 지금 읽는 절의 이름이 강조된다.
-import { h, safeLink } from "../../ui/dom.js";
+import { h, moreHint, safeLink } from "../../ui/dom.js";
 import { koreanDate } from "../../ui/format.js";
 import { icon } from "../../ui/icons.js";
 
@@ -87,9 +87,9 @@ export function analysis(rule) {
   const root = () => holder;
   holder = h("div", { class: "rule-analysis" }, [
     book.stale ? h("p", { class: "an-stale" }, [icon("clock", 16), h("span", { text: "이 분석을 쓴 뒤에 이 규제의 단계나 연혁이 달라졌습니다. 가장 새로운 내용은 위의 '현재 상황'과 아래의 연혁에 있습니다." })]) : null,
-    h("div", { class: "an-nav", role: "group", "aria-label": "분석의 절" }, book.sections.map((part) => h("button", {
+    moreHint(h("div", { class: "an-nav", role: "group", "aria-label": "분석의 절" }, book.sections.map((part) => h("button", {
       type: "button", text: part.title, "data-to": part.key, onclick: () => goTo(holder.querySelector(`[data-part="${part.key}"] h3`), "start"),
-    }))),
+    })))),
     ...book.sections.map((part) => section(part, numbers, root)),
     (book.sources || []).length ? sources(book.sources) : null,
     h("p", { class: "an-foot", text: `${koreanDate(book.asOf)} 기준으로 쓴 분석입니다. 원문을 바탕으로 정리한 참고 자료이므로, 정확한 내용은 근거 자료의 원문에서 확인해 주세요.` }),

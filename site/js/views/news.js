@@ -105,6 +105,12 @@ export async function render(main, arg) {
     const found = items.filter(matches);
     const filtered = Boolean(state.text || state.kind || state.importance || state.when);
     count.textContent = `${found.length}건`;
+    // 조건(검색어, 기간, 종류, 중요도)을 건 동안에는 주제로 나누지 않고 최신순으로 보여 준다. 보는 방법의 단추도 그 모습을 따른다
+    // (눌린 단추와 목록이 어긋나지 않게). 조건을 풀면 고른 방법으로 돌아간다.
+    byTopic.disabled = filtered;
+    byTopic.title = filtered ? "조건을 건 동안에는 최신순으로 보여 줍니다" : "";
+    byTopic.setAttribute("aria-pressed", String(!state.latest && !filtered));
+    byDate.setAttribute("aria-pressed", String(state.latest || filtered));
     if (!found.length) {
       fill(body, empty("조건에 맞는 소식이 없습니다. 검색어나 조건을 바꿔 보세요."));
       more.hidden = true;
@@ -133,7 +139,7 @@ export async function render(main, arg) {
   const reset = (key) => (event) => { state[key] = event.target.value; state.shown = PAGE; draw(); };
   const byTopic = h("button", { type: "button", text: "주제별", "aria-pressed": "true" });
   const byDate = h("button", { type: "button", text: "최신순", "aria-pressed": "false" });
-  const setMode = (latest) => () => { state.latest = latest; state.shown = PAGE; byTopic.setAttribute("aria-pressed", String(!latest)); byDate.setAttribute("aria-pressed", String(latest)); draw(); };
+  const setMode = (latest) => () => { state.latest = latest; state.shown = PAGE; draw(); };
   byTopic.addEventListener("click", setMode(false));
   byDate.addEventListener("click", setMode(true));
   const filters = h("div", { class: "filters" }, [

@@ -6,6 +6,7 @@ import { band } from "../ui/band.js";
 import { empty, fill, h, safeLink, table } from "../ui/dom.js";
 import { countdown, koreanDate, price, signed, today } from "../ui/format.js";
 import { lawRefs } from "../ui/lawrefs.js";
+import { stackable } from "../ui/stack.js";
 import { groupTabs } from "../ui/tabs.js";
 
 const RANGES = [["all", "전체", null], ["year", "최근 1년", 365], ["quarter", "최근 3개월", 92]];
@@ -53,7 +54,7 @@ function stats(book) {
 
 function priceTable(rows, unit) {
   const newest = [...rows].reverse();
-  return table(["적용 기간", { text: "게시일", num: true }, { text: `가격(${unit})`, num: true }, { text: "직전보다", num: true }], newest.map((row, index) => {
+  return stackable(table(["적용 기간", { text: "게시일", num: true }, { text: `가격(${unit})`, num: true }, { text: "직전보다", num: true }], newest.map((row, index) => {
     const before = newest[index + 1];
     return h("tr", {}, [
       h("td", {}, [h("span", { text: row.label }), row.assumed ? h("span", { class: "count", text: "기간은 표의 날짜에서 추정했습니다." }) : null]),
@@ -61,7 +62,7 @@ function priceTable(rows, unit) {
       h("td", { class: "num" }, h("strong", { text: price(row.value) })),
       h("td", { class: "num", text: before ? signed(row.value - before.value) : "" }),
     ]);
-  }), "기간별 CBAM 인증서 가격");
+  }), "기간별 CBAM 인증서 가격"));
 }
 
 export async function render(main) {

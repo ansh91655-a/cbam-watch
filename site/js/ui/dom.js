@@ -65,6 +65,15 @@ function focusWhenScrollable(node) {
   } else node.tabIndex = 0;
 }
 
+// 옆으로 밀어 보는 줄(일정선, 분석 글의 절 이름 줄): 오른쪽에 아직 가려진 것이 있는 동안 data-more를 단다.
+// 그 표시가 있으면 CSS가 오른쪽 끝을 흐리게 해 더 있음을 알린다(표는 위의 focusWhenScrollable이 같은 표시를 단다).
+export function moreHint(node) {
+  const set = () => node.toggleAttribute("data-more", node.scrollLeft + node.clientWidth < node.scrollWidth - 1);
+  if (typeof ResizeObserver === "function") new ResizeObserver(set).observe(node);
+  node.addEventListener("scroll", set, { passive: true });
+  return node;
+}
+
 export function table(headers, rows, name) {
   const head = h("thead", {}, h("tr", {}, headers.map((header) =>
     h("th", { scope: "col", class: header.num ? "num" : null, text: header.text || header }))));

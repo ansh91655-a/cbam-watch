@@ -24,7 +24,7 @@ export async function render(main, arg) {
   const input = h("input", { id: "missing-q", type: "search", placeholder: "찾는 말을 적어 주세요. 예: 기본값, 검증기관 인정, 7208", autocomplete: "off", spellcheck: "false", enterkeyhint: "search" });
   fill(main,
     band(TITLE, "주소가 바뀌었거나 잘못 적힌 주소입니다. 아래에서 다시 찾아 주세요."),
-    guessed.length ? h("section", { class: "stack", "aria-labelledby": "h-guess" }, [h("h2", { id: "h-guess", text: "혹시 이 화면을 찾으셨나요?" }), tiles(guessed, true)]) : null,
+    guessed.length ? h("section", { class: "stack", "aria-labelledby": "h-guess" }, [h("h2", { id: "h-guess", text: "이 주소와 비슷한 화면" }), tiles(guessed, true)]) : null,
     h("section", { class: "stack", "aria-labelledby": "h-missing-search" }, [
       h("h2", { id: "h-missing-search", text: "사이트에서 찾기" }),
       h("form", { class: "law-search", role: "search", "aria-label": "사이트에서 찾기", onsubmit: (event) => { event.preventDefault(); if (input.value.trim()) visit(target(input.value)); } }, [

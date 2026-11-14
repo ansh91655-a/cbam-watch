@@ -91,7 +91,7 @@ export async function render(main, arg) {
         h("p", { class: "calc-label", text: "신고 방법" }),
         seg("mode", "신고 방법", MODES, state.mode, (mode) => { state.mode = mode; draw(mode === "actual" ? "#calc-see" : `[data-seg="mode:${mode}"]`); }),
         state.mode === "default"
-          ? h("p", { class: "count", text: row.origin === "kr" ? "법령이 정한 대한민국의 기본값에 마크업을 더해 계산합니다." : "이 품목은 대한민국의 기본값이 없어, 법령이 정한 대로 '그 밖의 나라와 지역'의 기본값에 마크업을 더해 계산합니다." })
+          ? h("p", { class: "count", text: row.origin === "kr" ? "법령이 정한 대한민국의 기본값에 마크업을 더해 계산합니다." : "이 품목은 대한민국의 기본값이 없어, 법령이 정한 대로 '그 밖의 나라와 영역'의 기본값에 마크업을 더해 계산합니다." })
           : null,
       ]),
       state.mode === "actual" ? h("div", { class: "calc-grid" }, [

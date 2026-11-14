@@ -42,13 +42,14 @@
    "who": "승인된 CBAM 신고인",
    "text": "2027년부터 분기 말마다, 그해 들어 수입한 제품의 내재배출량의 50% 이상에 해당하는 CBAM 인증서를 CBAM 등록부 계정에 두어야 합니다. 단일 중량 임계값을 넘은 신고인은 넘은 분기의 다음 분기 말까지 이 의무를 지키면 됩니다.",
    "supplier": "수입자는 이 수를 기본값이나 지난해에 제출한 인증서 수로 계산합니다. 생산자가 따로 낼 자료는 없습니다.",
-   "basis": "CBAM 규정 제22조(2), 제36조",
+   "basis": "CBAM 규정 제22조(2), 제22조(2a), 제36조",
    "link": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020",
    "evidence": {
     "path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt",
     "contains": [
      "Article 22(2) shall apply from 1 January 2027",
-     "at the end of each quarter corresponds to at least 50 % of the embedded emissions"
+     "at the end of each quarter corresponds to at least 50 % of the embedded emissions",
+     "by the end of the quarter following that in which the single mass-based threshold is exceeded"
     ]
    },
    "roles": [
@@ -91,7 +92,7 @@
    "title": "첫 CBAM 신고서 제출과 인증서 제출",
    "who": "승인된 CBAM 신고인",
    "text": "2026년 수입분에 대한 CBAM 신고서를 CBAM 등록부로 내고, 신고한 내재배출량에 해당하는 인증서를 제출합니다. 그 뒤로도 해마다 9월 30일이 기한입니다.",
-   "supplier": "신고서에는 실제배출량으로 정한 내재배출량의 검증보고서 사본이 붙습니다. 한국 생산자가 2026년 생산분의 배출량 자료와 검증을 그 전에 마쳐 EU 수입자에게 넘겨야 실제배출량으로 신고할 수 있습니다.",
+   "supplier": "신고서에는 실제배출량으로 정한 내재배출량의 검증보고서 사본이 붙습니다. 한국 생산자가 2026년 보고기간의 배출량 자료와 검증을 그 전에 마쳐 EU 수입자에게 넘겨야 실제배출량으로 신고할 수 있습니다.",
    "basis": "CBAM 규정 제6조(1), 제22조(1)",
    "link": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02023R0956-20251020",
    "evidence": {
@@ -116,7 +117,7 @@
    "yearly": {
     "title": "{prev}년분 CBAM 신고서 제출과 인증서 제출",
     "text": "{prev}년 수입분에 대한 CBAM 신고서를 CBAM 등록부로 내고, 신고한 내재배출량에 해당하는 인증서를 제출합니다.",
-    "supplier": "신고서에는 실제배출량으로 정한 내재배출량의 검증보고서 사본이 붙습니다. 생산자가 {prev}년 생산분의 배출량 자료와 검증을 그 전에 마쳐 EU 수입자에게 넘겨야 실제배출량으로 신고할 수 있습니다.",
+    "supplier": "신고서에는 실제배출량으로 정한 내재배출량의 검증보고서 사본이 붙습니다. 생산자가 {prev}년 수입분의 보고기간에 해당하는 배출량 자료와 검증을 그 전에 마쳐 EU 수입자에게 넘겨야 실제배출량으로 신고할 수 있습니다.",
     "verifier": "실제배출량으로 정한 내재배출량은 인정받은 검증기관이 검증해야 하고, 신고서에는 그 검증보고서의 사본이 붙습니다. {prev}년분의 검증보고서는 이 기한 전에 나와야 합니다."
    },
    "verifier": "실제배출량으로 정한 내재배출량은 인정받은 검증기관이 검증해야 하고, 신고서에는 그 검증보고서의 사본이 붙습니다. 2026년분의 검증보고서는 이 기한 전에 나와야 합니다."
@@ -174,7 +175,7 @@
    "title": "영국 CBAM 적용 시작",
    "who": "영국 수입자",
    "text": "이날 이후 영국으로 수입되는 CBAM 대상 제품(알루미늄, 시멘트, 비료, 수소, 철강)의 내재배출량에 영국 CBAM이 부과됩니다.",
-   "supplier": "2027년 1월 1일 이후 영국으로 수입되는 제품부터 내재배출량 자료가 필요합니다. 영국 수입자와 기본값을 쓸지 실제 자료를 쓸지 먼저 정해 두어야 합니다.",
+   "supplier": "2027년 1월 1일 이후 영국으로 수입되는 제품부터 내재배출량 자료가 필요합니다. 내재배출량은 기본값이나 실제 자료로 정하며, 기본값으로 신고한 값은 나중에 실제 자료로 바꿔 신고할 수 없습니다.",
    "basis": "Finance Act 2026 제143조, 제158조",
    "link": "https://www.legislation.gov.uk/ukpga/2026/11/part/5",
    "evidence": {
@@ -427,7 +428,7 @@
     "declarant"
    ],
    "text": "2027년 1월 1일부터 집행위원회는 CBAM 인증서 가격을 달력 주마다, EU 배출권 경매 낙찰가를 경매 물량으로 가중한 평균으로 계산합니다. 2026년 수입분에는 분기마다 계산한 가격을 씁니다.",
-   "basis": "CBAM 인증서 가격 산정·공개 이행규정 (EU) 2025/2548 제4조, 제5조",
+   "basis": "CBAM 인증서 가격 산정·공개 이행규정 (EU) 2025/2548 제1조, 제5조",
    "link": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2548",
    "evidence": {
     "path": "collected/archive/pages/eu-acts/32025R2548.txt",
@@ -448,8 +449,8 @@
    "roles": [
     "declarant"
    ],
-   "text": "승인의 취소가 2026년 안에 효력을 가지면, 취소에 따라 내는 신고서로 계산한 CBAM 인증서를 2027년 2월 15일까지 모두 제출해야 합니다.",
-   "basis": "승인된 CBAM 신고인 지위 이행규정 (EU) 2025/486 제21조(10)(이행규정 (EU) 2025/2549로 추가)",
+   "text": "승인의 취소가 2026년 안에 효력을 가지면, 취소에 따라 내는 신고서로 계산한 CBAM 인증서를 2027년 2월 15일까지 모두 제출해야 합니다. 신고인이 요청한 취소와 관할당국이 결정한 취소에 모두 적용됩니다.",
+   "basis": "승인된 CBAM 신고인 지위 이행규정 (EU) 2025/486 제21조(10), 제23조(8)(이행규정 (EU) 2025/2549로 추가)",
    "link": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2549",
    "evidence": {
     "path": "collected/archive/pages/eu-acts/32025R2549.txt",

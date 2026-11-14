@@ -2,13 +2,13 @@
 // 이름표는 선 위에 겹치지 않게 단을 나눠 놓는다. 자리가 없는 일정은 점만 찍고 아래 달력에서 보게 한다.
 // 자리가 모자랄 때는 기한과 다가오는 일정에 이름표를 먼저 준다.
 import { caveatMark, splitCaveat } from "./caveat.js";
-import { fill, h } from "./dom.js";
+import { fill, h, moreHint } from "./dom.js";
 import { koreanDate } from "./format.js";
 
 const LABEL_WIDTH = 164;
 const LABEL_GAP = 14;
 const LANE_HEIGHT = 62;
-const MAX_LANES = 4;
+const MAX_LANES = 5;   // 연말처럼 일정이 몰린 곳에서 다가오는 일정이 이름 없이 남지 않게 다섯 단까지 쌓는다(쓰는 만큼만 높아진다)
 const WEIGHT = { "기한": 3, "시행": 2, "행사": 1, "가격": 0 };   // 같은 날의 일정 가운데 이름표에 적을 것을 고르는 무게
 
 function place(year, value) {
@@ -24,7 +24,7 @@ export function yearLine(events, year, todayIso, onPick) {
   const months = h("div", { class: "yl-months", "aria-hidden": "true" }, Array.from({ length: 12 }, (_, index) => h("span", { text: `${index + 1}월` })));
   const root = h("div", { class: "yearline" }, [labels, track, months]);
   const hidden = h("p", { class: "count", hidden: true });
-  const wrap = h("div", { class: "yearline-wrap" });
+  const wrap = moreHint(h("div", { class: "yearline-wrap" }));  // 좁은 화면에서 옆으로 밀 때, 가려진 쪽 끝을 흐리게 한다
   let centered = false;
 
   // 좁은 화면에서는 한 해가 다 보이지 않아 옆으로 민다. 처음에 오늘이 가운데에 오게 밀어 둔다(한 번만).

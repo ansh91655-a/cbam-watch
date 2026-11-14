@@ -4,7 +4,7 @@ import { benchmarks, LIST_LIMIT, markedUp, splitByPeriod } from "../../../cn/she
 import { spaced } from "../../../cn/names.js";
 import { h, pill, table } from "../../../ui/dom.js";
 
-const ORIGIN = { kr: "대한민국", other: "그 밖의 나라와 지역" };
+const ORIGIN = { kr: "대한민국", other: "그 밖의 나라와 영역" };
 const num = (value) => (value === null || value === undefined ? h("td", { class: "num" }, [h("span", { "aria-hidden": "true", text: "–" }), h("span", { class: "sr", text: "값 없음" })]) : h("td", { class: "num", text: tonnes(value) }));
 
 const cell = (name, value, strong) => h("div", { class: strong ? "sheet-cell-strong" : null }, [h("dt", { text: name }),
@@ -58,7 +58,7 @@ export function valuesSection(book, good, now) {
         h("p", { class: "sheet-label" }, [h("span", { text: "내재배출량의 기본값" }), h("small", { text: "제품 1톤당 tCO2e" })]),
         ...good.defaults.map((pair) => defaultBlock(book, good, pair)),
         h("p", { class: "count", text: [
-          origins.includes("other") ? "대한민국의 기본값이 없는 줄은 법령이 정한 대로 '그 밖의 나라와 지역'의 값입니다." : "법령이 대한민국에 정한 기본값입니다.",
+          origins.includes("other") ? "대한민국의 기본값이 없는 줄은 법령이 정한 대로 '그 밖의 나라와 영역'의 값입니다." : "법령이 대한민국에 정한 기본값입니다.",
           "기본값으로 신고할 때에는 총배출량에 그해의 마크업을 더한 값을 씁니다.",
           directOnly ? "이 품목은 직접배출량만 넣으므로 간접배출량의 값이 없습니다." : "",
         ].filter(Boolean).join(" ") }),

@@ -74,7 +74,8 @@ function body(item, refs) {
     !item.withdrawn && item.excerpt ? excerpt(item) : null,
     item.withdrawn ? null : lawRefs(refs, "이 소식에 나온 법령과 조문"),
     source ? h("div", { class: "item-actions" }, [source, host ? h("span", { class: "count", text: `${host}에서 열립니다` }) : null]) : null,
-    h("p", { class: "item-note", text: "이 요약은 원문을 바탕으로 정리한 참고 자료입니다. 정확한 내용은 원문에서 확인해 주세요." }),
+    // 제목만 옮겨 실은 소식(brief)에는 요약이 없으므로 요약이라고 부르지 않는다
+    h("p", { class: "item-note", text: item.brief ? "제목만 옮겨 실은 소식입니다. 내용은 원문에서 확인해 주세요." : "이 요약은 원문을 바탕으로 정리한 참고 자료입니다. 정확한 내용은 원문에서 확인해 주세요." }),
   ]);
 }
 

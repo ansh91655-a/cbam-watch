@@ -6,7 +6,7 @@ import { icon } from "../../../ui/icons.js";
 import { splitBar } from "../../../ui/splitbar.js";
 
 function how(now) {
-  const origin = now.row.origin === "kr" ? "대한민국 기본값" : "'그 밖의 나라와 지역' 기본값";
+  const origin = now.row.origin === "kr" ? "대한민국 기본값" : "'그 밖의 나라와 영역' 기본값";
   const tail = now.allocation > now.embedded ? "무상할당 조정이 내재배출량보다 커서 인증서를 0으로 보았습니다." : "내재배출량에서 무상할당 조정을 뺀 값이 인증서 대상입니다.";
   return `${origin} ${tonnes(now.value)}에 ${now.year}년 마크업 ${percent(now.markup)}를 더한 내재배출량은 ${tonnes(now.embedded)} tCO2e입니다. 무상할당 조정은 ${tonnes(now.allocation)} tCO2e입니다`
     + `(CBAM 벤치마크 ${tonnes(now.benchmark)} × CBAM 계수 ${percent(now.factor)} × 부문 간 보정계수 ${percent(now.cscf)}). ${tail}`;

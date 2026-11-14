@@ -62,7 +62,7 @@ class DutiesTest(unittest.TestCase):
         again = made["eu-first-declaration-2028"]
         self.assertEqual((again["date"], again["title"], again["repeat"]), ("2028-09-30", "2027년분 CBAM 신고서 제출과 인증서 제출", True))
         self.assertIn("2027년 수입분", again["text"])
-        self.assertIn("2027년 생산분", again["supplier"])
+        self.assertIn("2027년 수입분의 보고기간", again["supplier"])  # 그해에 맞춘 글: 보고기간은 기본으로 수입한 해다(산정 방법 이행규정 제7조)
         self.assertNotIn("covers", again)                           # 게시 데이터의 일정과 겹치는지는 첫 일정으로만 본다
         self.assertTrue(made["eu-first-declaration"]["repeat"])      # 원래 의무에도 해마다 돌아온다는 표시를 한다
         self.assertEqual(made["eu-verifier-plan-2027"]["text"], made["eu-verifier-plan"]["text"])   # 달리 적지 않은 글은 그대로 되풀이한다

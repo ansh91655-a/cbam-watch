@@ -37,7 +37,9 @@ tr.calc-now td { background: var(--brand-soft); }
 tr.calc-now td:first-child { box-shadow: inset 3px 0 0 var(--brand-bright); font-weight: 700; }
 .calc-out td .pill { margin-left: 8px; font-size: 0.72rem; }
 .calc-cost { position: relative; min-width: 150px; }
-.calc-mini { position: absolute; left: 18px; top: 50%; height: 6px; max-width: calc(100% - 100px); margin-top: -3px; border-radius: 0 3px 3px 0; background: var(--chart-line); opacity: 0.85; }
+/* 막대의 길이는 가장 큰 값에 대한 몫(--share)이다. 막대가 설 자리는 칸에서 왼쪽 여백(18px)과 수가 설 자리(100px)를 뺀 너비다.
+   (칸 전체의 몫으로 그리고 길이에 한도를 두면, 한도를 넘는 해의 막대가 모두 같은 길이가 된다.) */
+.calc-mini { position: absolute; left: 18px; top: 50%; width: calc((100% - 118px) * var(--share, 0)); height: 6px; margin-top: -3px; border-radius: 0 3px 3px 0; background: var(--chart-line); opacity: 0.85; }
 .calc-cost b { position: relative; }
 
 /* 근거와 가정 */
