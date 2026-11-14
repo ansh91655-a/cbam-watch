@@ -159,17 +159,29 @@ class RulesWatchTest(unittest.TestCase):
 
 
 class RulesHealthTest(unittest.TestCase):
-    def test_reports_nothing_on_a_clean_day_and_flags_a_passed_date(self):
+    def test_reports_nothing_on_a_clean_day(self):
+        # 실린 자료로 본다. 자료는 날마다의 갱신으로 바뀌므로(이 시험은 자료가 바뀔 때에도 돈다) 그날의 값을 못박지 않는다
         import json
         import pathlib
         from tools.run import rules_health
         found, counts = rules_health.problems("2026-11-10", False)
         self.assertEqual([what for what in found if "다음 일정" in what or "꼴" in what], [])
         self.assertGreaterEqual(counts["regulations"], 20)
-        # 다음 일정이 사흘 넘게 지난 날에는 알린다
-        late, _ = rules_health.problems("2026-12-05", False)
-        self.assertTrue(any("다음 일정(2026-11-30)이 지났는데 그대로임" in what for what in late))
         self.assertTrue(json.loads(pathlib.Path("data/rules-seen.json").read_text(encoding="utf-8"))["seen"])
+
+    def test_a_passed_date_is_flagged_after_three_days(self):
+        # 다음 일정이 사흘 넘게 지나도록 그대로면 알린다. 규제의 다음 일정은 날마다 바뀌므로 만든 자료로 본다
+        from unittest import mock
+        from tools.run import rules_health
+        real = rules_health.read_json
+        made = {"asOf": "2026-11-10", "groups": [], "regulations": [{"id": "r", "name": "가 규제", "nextDate": "2026-11-30"}, {"id": "s", "name": "나 규제"}]}
+        with mock.patch.object(rules_health, "read_json", side_effect=lambda path, *rest: made if path == regulations.SOURCE else real(path, *rest)), \
+                mock.patch.object(rules_health.regulations, "problems", return_value=[]):
+            early, _ = rules_health.problems("2026-12-02", False)
+            late, counts = rules_health.problems("2026-12-03", False)
+        self.assertEqual([what for what in early if "다음 일정" in what], [])
+        self.assertEqual([what for what in late if "다음 일정" in what], ["규제 '가 규제': 다음 일정(2026-11-30)이 지났는데 그대로임"])
+        self.assertEqual(counts["regulations"], 2)
 
 
 if __name__ == "__main__":
