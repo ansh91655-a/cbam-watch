@@ -153,7 +153,8 @@ class ReadTest(unittest.TestCase):
                                               [("f", 1, 3, 1)], [("g", 1, 1, 1), ("h", 2, 1, 1), ("i", 3, 1, 1)]])
         self.assertEqual(units._grid([[("a", None)], [("b", (5, 9)), ("c", (50, 60))]]), [[("a", 1, 2, 1)], [("b", 1, 1, 1), ("c", 2, 1, 1)]])
 
-    def test_untagged_pdf_has_no_units(self):
+    def test_an_untagged_pdf_is_read_by_its_boxes(self):
+        # 꼬리표가 없는 PDF는 쪽에 놓인 글 상자대로 읽은 단위를 적어 둔다(tools.pdfko.boxes). 쓸지는 문서마다 정한다(tests/test_boxes.py)
         from tools.pdfko import units
 
         with tempfile.TemporaryDirectory() as folder:
@@ -161,7 +162,26 @@ class ReadTest(unittest.TestCase):
             pdf = pikepdf.new()
             pdf.add_blank_page(page_size=(200, 200))
             pdf.save(path)
-            self.assertEqual(units.read(path), {"pages": 1, "tagged": False, "units": []})
+            self.assertEqual(units.read(path), {"pages": 1, "tagged": False, "layout": True, "units": []})
+
+    def test_words_are_joined_without_layout_marks_and_sideways_text_keeps_its_spaces(self):
+        from tools.pdfko import units
+
+        def word(text, x0, x1, order, row=0, box=None, size=10):
+            return (0, (order, 0), row, x0, x1, size, text, False, 0, box or (x0, 100, x1, 110))
+
+        # 조판 프로그램의 제어 글자(여기까지 들여쓰기 U+0007)는 글이 아니다. 낱말 한가운데에 찍혀 갈라진 낱말은 글머리 표시 바로 뒤에서만 다시 붙인다
+        split = [word("*", 10, 15, 1), word("N", 20, 27, 2), word("\x07", 27, 27, 3), word("o", 40, 46, 4), word("quarterly", 50, 95, 5)]
+        self.assertEqual(units._join(split), "* No quarterly")
+        self.assertEqual(units._join([word("**", 10, 20, 1), word("\x072026", 30, 50, 2), word("certificates", 54, 110, 3)]), "** 2026 certificates")
+        article = [word("A", 10, 17, 1), word("\x07", 17, 17, 2), word("list", 30, 50, 3)]      # 글머리 표시가 앞에 없으면 붙이지 않는다
+        self.assertEqual(units._join(article), "A list")
+        # 세로로 누운 글(쪽 가장자리의 발간 번호): 낱말의 왼쪽·오른쪽 자리가 같아도 낱말마다 띄운다
+        side = [word("Catalogue", 580, 587, 1, box=(580, 700, 587, 745)), word("number:", 580, 587, 2, box=(580, 660, 587, 698)),
+                word("KP-01-26-043-EN-N", 580, 587, 3, box=(580, 570, 587, 658)), word("–", 580, 587, 4, box=(580, 564, 587, 567)), word("ISBN:", 580, 587, 5, box=(580, 540, 587, 562))]
+        self.assertEqual(units._join(side), "Catalogue number: KP-01-26-043-EN-N – ISBN:")
+        # 바로 놓인 글에서 틈 없이 붙은 낱말은 전과 같이 붙인다(글자 크기가 달라 갈라진 낱말)
+        self.assertEqual(units._join([word("CO", 10, 22, 1), word("2", 22, 26, 2, size=6), word("emissions", 30, 70, 3)]), "CO2 emissions")
 
 
 if __name__ == "__main__":

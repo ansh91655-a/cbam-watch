@@ -1,0 +1,102 @@
+#CBAM
+
+CARBON BORDER ADJUSTMENT MECHANISM:
+ACTUAL VS DEFAULT VALUES IN YOUR DECLARATION
+CBAM requires EU importers of certain goods to become
+authorised CBAM declarants, report the embedded
+carbon emissions in these goods, and meet related
+financial obligations. By 30 September 2027, importers
+of CBAM goods must submit their first CBAM
+declaration - covering embedded emissions from
+2026 imports - and surrender the corresponding
+CBAM certificates.
+
+Importers can report emissions using default values
+provided by the Commission or actual values. If an
+importer chooses to report actual values, the producer
+in the third country must provide verified emissions
+data on the total embedded emissions.
+The decision tree below can help importers follow the
+correct steps.
+
+Access the CBAM Registry to draft your declaration
+
+Importer using
+default values
+
+Importer using
+actual values*
+
+Complete the information
+related to the goods
+imported in your declaration
+
+Use the default values to
+automatically calculate total
+embedded emissions
+
+If producer is in the
+CBAM Registry
+
+If producer is not in the
+CBAM Registry
+
+Retrieve and use producer’s
+verification report (only
+high-level summary of
+emissions data provided)
+
+Upload and use verification
+report obtained from
+producer (detailed emissions
+data provided)
+
+Use the actual values from the verification report to
+automatically calculate the total embedded emissions
+
+Submit your annual declaration through the CBAM Registry
+
+Surrender the corresponding number of CBAM certificates
+*Only possible if the producer in a third country monitors, calculates, and verifies embedded emissions and shares the relevant
+information.
+
+PREPARE FOR ACTUAL VERIFIED
+CBAM EMISSIONS
+Join the CBAM Registry.
+
+© European Union, 2026
+
+Work with your third
+country producers to
+obtain reliable emissions
+data for imported goods.
+If actual values are used,
+these must be supported
+by a verification report on
+embedded emissions.
+
+Producers in
+a third country
+Monitor your CBAM emissions
+and verify your calculations
+with an accredited
+CBAM verifier.
+
+Verifiers
+Contact EU-based
+National Accreditation
+Bodies (NABs) to apply for
+CBAM accreditation. Once
+accredited, you can verify
+embedded emissions and
+issue verification reports
+directly in the CBAM Registry.
+
+For more CBAM resources,
+visit the CBAM Communication and FAQs page.
+
+Catalogue number: KP-01-26-017-EN-N – ISBN: 978-92-68-39346-8 – doi:10.2778/2605039
+
+EU importers
+
+

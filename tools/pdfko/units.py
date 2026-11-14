@@ -14,7 +14,7 @@ import sys
 
 import pikepdf
 
-from tools.pdfko import geometry, glyphs, tags
+from tools.pdfko import boxes, geometry, glyphs, tags
 
 INLINE = frozenset({"Span", "Link", "Reference", "Quote", "Annot", "Code", "Ruby", "Warichu", "NonStruct", "Private", "Form"})
 HEADINGS = {"H": 1, "H1": 1, "H2": 2, "H3": 3, "H4": 4, "H5": 5, "H6": 6, "Title": 0}
@@ -26,6 +26,8 @@ OPEN, CLOSE = "\ue000", "\ue001"                       # 위첨자의 앞뒤에 
 MARKED = re.compile(f"([^\\s{OPEN}{CLOSE}]*){OPEN}([^{CLOSE}]*){CLOSE}(?=(\\w)?)")
 MEASURES = {"m", "Nm", "cm", "mm", "km", "dm"}        # 뒤에 2나 3이 올라붙으면 넓이·부피의 단위인 낱말
 RAISED = re.compile(r"^[0-9a-zA-Z*†‡]{1,3}$")          # 위첨자로 붙은 각주 번호의 꼴
+CONTROL = boxes.CONTROL                                # 글이 아닌 제어 글자
+LEAD = re.compile(r"^(?:[*•◦▪■●○➢►✓–—-]+|\(?\w{1,2}[.)])$")   # 문단 머리의 표시: 별표, 글머리표, "1.", "(a)"
 
 
 def _words(pages, sheets, tree):
@@ -61,15 +63,34 @@ def _words(pages, sheets, tree):
     return held
 
 
+def _upright(word):
+    """낱말이 바로 놓였는가. 석 자가 넘는 낱말의 상자가 너비보다 높이가 한참 크면 세로로 누운 것이다(False). 자리를 모르거나 짧은 낱말이면 None."""
+    if len(word) < 10 or len(word[6]) < 3:
+        return None
+    x0, y0, x1, y1 = word[9]
+    return not (y1 - y0 > boxes.TALL * (x1 - x0))
+
+
 def _join(words):
     """낱말들을 글로 잇는다. 같은 줄에서 틈 없이 붙은 것(글자 크기가 달라 갈라진 낱말)과 줄 끝의 붙임표 뒤는 띄우지 않는다."""
-    out, last = [], None
+    out, last, cut = [], None, False
     for word in sorted(words, key=lambda word: (word[0], word[1])):
         page, _, row, x0, x1, size, text, raised = word[:8]
+        clean = CONTROL.sub("", text)   # 조판 프로그램의 제어 글자(여기까지 들여쓰기 표시 U+0007 따위)는 글이 아니다
+        cut, text = cut or clean != text, clean
+        if not text:
+            continue
+        word = word[:6] + (text,) + word[7:]
         glued = False
         if last is not None:
             same = last[0] == page and last[2] == row
             glued = (same and x0 - last[4] < 0.1 * max(size, last[5])) or (not same and last[6].endswith("-") and len(last[6]) > 1)
+            if _upright(word) is False or _upright(last) is False:
+                glued = False           # 세로로 누운 글(쪽 가장자리의 발간 번호)은 낱말의 왼쪽·오른쪽 자리가 같아 틈을 잴 수 없다: 낱말마다 띄운다
+            # 들여쓰기 표시가 낱말 한가운데에 찍혀 갈라진 낱말("* N␇o quarterly" → "* No quarterly"): 글머리 표시 바로 뒤의 대문자 한 자에 소문자가 이어질 때만 붙인다
+            if cut and len(out) >= 2 and len(last[6]) == 1 and last[6].isupper() and text[:1].islower() and LEAD.match(out[-2]) and out[-1] == last[6]:
+                glued = True
+        cut = False
         if raised:      # 위첨자는 앞 낱말에 붙이고 표시해 둔다. 각주 번호인지는 문서를 다 읽은 뒤에 가린다(_settle)
             text, glued = f"{OPEN}{text}{CLOSE}", True
         if out and glued:
@@ -321,8 +342,8 @@ def read(path):
     sheets = glyphs.read(path)
     with pikepdf.open(path) as pdf:
         tree = tags.read(pdf)
-    if not tree.elements:
-        return {"pages": len(pages), "tagged": False, "units": []}
+    if not tree.elements:   # 꼬리표가 없는 PDF: 쪽에 놓인 글 상자대로 읽어 둔다(쓸지는 문서마다 정한다: sources/guides.json의 "units": "layout")
+        return {"pages": len(pages), "tagged": False, "layout": True, "units": boxes.units(pages)}
     held = _words(pages, sheets, tree)
     reader = _Reader(tree, held)
     for root in reader.kids[None]:

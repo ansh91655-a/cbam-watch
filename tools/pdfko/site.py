@@ -43,7 +43,7 @@ def _made(document, parts, memory, code):
     source = build.source(document)
     if source is None:
         return None, None
-    units = corpus.units(document)
+    units = corpus.marked(document)   # 꼬리표로 읽은 단위만(글자의 자리가 적혀 있다)
     wanted = build.items(parts, units, memory) if units else build.paragraphs(parts, memory)
     if not wanted:
         return None, None

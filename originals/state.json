@@ -988,6 +988,258 @@
     }
    ],
    "replaces": ""
+  },
+  "5eb1f852-7c81-4d99-ae04-5593303076c1": {
+   "id": "5eb1f852-7c81-4d99-ae04-5593303076c1",
+   "filename": "carbon_border_adjustment_mechanism-KP0126043ENN.pdf",
+   "label": "How CBAM certificates work",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/5eb1f852-7c81-4d99-ae04-5593303076c1_en",
+   "lang": "en",
+   "page": "ec-news",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-14",
+   "lastChecked": "2026-11-14T16:17:20+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "debcf824d4515822325f20c3810a3f37535f84c26aa594771f9a1495ec77a7ff",
+     "date": "2026-11-14",
+     "bytes": 3112941,
+     "pages": 2,
+     "file": "originals/files/5eb1f852-7c81-4d99-ae04-5593303076c1/debcf824d451/carbon_border_adjustment_mechanism-KP0126043ENN.pdf",
+     "text": "originals/text/5eb1f852-7c81-4d99-ae04-5593303076c1/debcf824d451.txt",
+     "chars": 2945
+    }
+   ],
+   "replaces": "",
+   "supplied": "2026-11-14"
+  },
+  "d255e5a1-9f16-4613-85bd-0f126a5f87de": {
+   "id": "d255e5a1-9f16-4613-85bd-0f126a5f87de",
+   "filename": "carbon_border_adjustment_mechanism-KP0126017ENN.pdf",
+   "label": "CBAM - Actual vs default values in your declaration",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/d255e5a1-9f16-4613-85bd-0f126a5f87de_en",
+   "lang": "en",
+   "page": "ec-news",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-14",
+   "lastChecked": "2026-11-14T16:17:20+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "74cc047851c4da6be64616e1cae615e6c1f2bbf23cc06c1262c97eca7f7f6e98",
+     "date": "2026-11-14",
+     "bytes": 125699,
+     "pages": 2,
+     "file": "originals/files/d255e5a1-9f16-4613-85bd-0f126a5f87de/74cc047851c4/carbon_border_adjustment_mechanism-KP0126017ENN.pdf",
+     "text": "originals/text/d255e5a1-9f16-4613-85bd-0f126a5f87de/74cc047851c4.txt",
+     "chars": 2463
+    }
+   ],
+   "replaces": "",
+   "supplied": "2026-11-14"
+  },
+  "37c2855b-8913-455a-a7da-c2258b932e54": {
+   "id": "37c2855b-8913-455a-a7da-c2258b932e54",
+   "filename": "carbon_border_adjustment_mechanism-KP0125128ENN.pdf",
+   "label": "CBAM - Do you import any of these products into the EU?",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/37c2855b-8913-455a-a7da-c2258b932e54_en",
+   "lang": "en",
+   "page": "ec-news",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-14",
+   "lastChecked": "2026-11-14T16:17:20+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "ea9685bec0fb0bd6e83af278347e0c19e64f2743249947b08a2cea0c34a1ac7f",
+     "date": "2026-11-14",
+     "bytes": 394981,
+     "pages": 1,
+     "file": "",
+     "text": "originals/text/37c2855b-8913-455a-a7da-c2258b932e54/ea9685bec0fb.txt",
+     "chars": 1417,
+     "kept": false,
+     "withheld": "문서에 EU의 것이 아닌 그림이 있다고 적혀 있음(Image Source: stock.adobe.com)"
+    }
+   ],
+   "replaces": "",
+   "supplied": "2026-11-14"
+  },
+  "c5e2f28e-e9d7-411d-b2d6-560d094d30c2": {
+   "id": "c5e2f28e-e9d7-411d-b2d6-560d094d30c2",
+   "filename": "carbon_border_adjustment_mechanism-KP0923538ENN.pdf",
+   "label": "Information for importers of cement",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/c5e2f28e-e9d7-411d-b2d6-560d094d30c2_en",
+   "lang": "en",
+   "page": "ec-sectors",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-14",
+   "lastChecked": "2026-11-14T16:17:20+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "9756cb551acf02cb548410ca518ce59c08f919d024efefed9014c4ab7ee6b39f",
+     "date": "2026-11-14",
+     "bytes": 452708,
+     "pages": 2,
+     "file": "originals/files/c5e2f28e-e9d7-411d-b2d6-560d094d30c2/9756cb551acf/carbon_border_adjustment_mechanism-KP0923538ENN.pdf",
+     "text": "originals/text/c5e2f28e-e9d7-411d-b2d6-560d094d30c2/9756cb551acf.txt",
+     "chars": 3189
+    }
+   ],
+   "replaces": "",
+   "supplied": "2026-11-14"
+  },
+  "fa3c6d9a-4884-46d6-9729-d12bd4be80bd": {
+   "id": "fa3c6d9a-4884-46d6-9729-d12bd4be80bd",
+   "filename": "carbon_border_adjustment_mechanism-KP0923540ENN.pdf",
+   "label": "Information for importers of aluminium",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/fa3c6d9a-4884-46d6-9729-d12bd4be80bd_en",
+   "lang": "en",
+   "page": "ec-sectors",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-14",
+   "lastChecked": "2026-11-14T16:17:20+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "2f0e0a10c01519ba82fb078a59cc68d8ed3f6301915fcebf221dcf3950ac244b",
+     "date": "2026-11-14",
+     "bytes": 520298,
+     "pages": 2,
+     "file": "originals/files/fa3c6d9a-4884-46d6-9729-d12bd4be80bd/2f0e0a10c015/carbon_border_adjustment_mechanism-KP0923540ENN.pdf",
+     "text": "originals/text/fa3c6d9a-4884-46d6-9729-d12bd4be80bd/2f0e0a10c015.txt",
+     "chars": 3341
+    }
+   ],
+   "replaces": "",
+   "supplied": "2026-11-14"
+  },
+  "c86ff3a8-9e5b-4b4c-9042-21622760a489": {
+   "id": "c86ff3a8-9e5b-4b4c-9042-21622760a489",
+   "filename": "carbon_border_adjustment_mechanism-KP0923539ENN.pdf",
+   "label": "Information for importers of fertilisers",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/c86ff3a8-9e5b-4b4c-9042-21622760a489_en",
+   "lang": "en",
+   "page": "ec-sectors",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-14",
+   "lastChecked": "2026-11-14T16:17:20+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "1f907cba52857eeeea0baf9c9286c461ba7ec93e89c361a3a6c379955a7a732a",
+     "date": "2026-11-14",
+     "bytes": 528236,
+     "pages": 2,
+     "file": "originals/files/c86ff3a8-9e5b-4b4c-9042-21622760a489/1f907cba5285/carbon_border_adjustment_mechanism-KP0923539ENN.pdf",
+     "text": "originals/text/c86ff3a8-9e5b-4b4c-9042-21622760a489/1f907cba5285.txt",
+     "chars": 3336
+    }
+   ],
+   "replaces": "",
+   "supplied": "2026-11-14"
+  },
+  "781ea8fa-6611-451f-9a2d-a546342bed9c": {
+   "id": "781ea8fa-6611-451f-9a2d-a546342bed9c",
+   "filename": "carbon_border_adjustment_mechanism-KP0923536ENN.pdf",
+   "label": "Information for importers of iron and steel",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/781ea8fa-6611-451f-9a2d-a546342bed9c_en",
+   "lang": "en",
+   "page": "ec-sectors",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-14",
+   "lastChecked": "2026-11-14T16:17:20+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "d8e5d5a237420030e8e793840afc6a805d5d2c98c04c5f7afa956448ad295dfe",
+     "date": "2026-11-14",
+     "bytes": 596208,
+     "pages": 2,
+     "file": "originals/files/781ea8fa-6611-451f-9a2d-a546342bed9c/d8e5d5a23742/carbon_border_adjustment_mechanism-KP0923536ENN.pdf",
+     "text": "originals/text/781ea8fa-6611-451f-9a2d-a546342bed9c/d8e5d5a23742.txt",
+     "chars": 3194
+    }
+   ],
+   "replaces": "",
+   "supplied": "2026-11-14"
+  },
+  "e8793d8c-2334-4d8a-98ac-1675857f1c2f": {
+   "id": "e8793d8c-2334-4d8a-98ac-1675857f1c2f",
+   "filename": "carbon_border_adjustment_mechanism-KP0224760ENN.pdf",
+   "label": "Information for non-EU producers of iron and steel",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/e8793d8c-2334-4d8a-98ac-1675857f1c2f_en",
+   "lang": "en",
+   "page": "ec-sectors",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-14",
+   "lastChecked": "2026-11-14T16:17:20+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "0480f66ded373816657d6485b03b0b05d104ae498631ccdac7a19556c98fcf63",
+     "date": "2026-11-14",
+     "bytes": 1170460,
+     "pages": 2,
+     "file": "originals/files/e8793d8c-2334-4d8a-98ac-1675857f1c2f/0480f66ded37/carbon_border_adjustment_mechanism-KP0224760ENN.pdf",
+     "text": "originals/text/e8793d8c-2334-4d8a-98ac-1675857f1c2f/0480f66ded37.txt",
+     "chars": 5569
+    }
+   ],
+   "replaces": "",
+   "supplied": "2026-11-14"
+  },
+  "872865bc-9961-493d-ac2e-c3c69c91b9ea": {
+   "id": "872865bc-9961-493d-ac2e-c3c69c91b9ea",
+   "filename": "carbon_border_adjustment_mechanism-KP0923537ENN.pdf",
+   "label": "Information for importers of hydrogen",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/872865bc-9961-493d-ac2e-c3c69c91b9ea_en",
+   "lang": "en",
+   "page": "ec-sectors",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-14",
+   "lastChecked": "2026-11-14T16:17:21+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "e93f0e59886c19783b2dbfbd64a49681dc423de0ff5930772f43b16049b06d46",
+     "date": "2026-11-14",
+     "bytes": 439357,
+     "pages": 2,
+     "file": "originals/files/872865bc-9961-493d-ac2e-c3c69c91b9ea/e93f0e59886c/carbon_border_adjustment_mechanism-KP0923537ENN.pdf",
+     "text": "originals/text/872865bc-9961-493d-ac2e-c3c69c91b9ea/e93f0e59886c.txt",
+     "chars": 3257
+    }
+   ],
+   "replaces": "",
+   "supplied": "2026-11-14"
+  },
+  "52a9eac1-f855-47e0-b51f-94b270b0a0ba": {
+   "id": "52a9eac1-f855-47e0-b51f-94b270b0a0ba",
+   "filename": "carbon_border_adjustment_mechanism-KP0923541ENN.pdf",
+   "label": "Information for importers of electricity",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/52a9eac1-f855-47e0-b51f-94b270b0a0ba_en",
+   "lang": "en",
+   "page": "ec-sectors",
+   "firstSeen": "2026-11-10",
+   "lastSeen": "2026-11-14",
+   "lastChecked": "2026-11-14T16:17:21+09:00",
+   "linked": true,
+   "versions": [
+    {
+     "sha256": "2ab70d31b54c7fbd5e5fd390c52947efe1c7e401947527bb1eaa824d29d749ac",
+     "date": "2026-11-14",
+     "bytes": 448933,
+     "pages": 2,
+     "file": "originals/files/52a9eac1-f855-47e0-b51f-94b270b0a0ba/2ab70d31b54c/carbon_border_adjustment_mechanism-KP0923541ENN.pdf",
+     "text": "originals/text/52a9eac1-f855-47e0-b51f-94b270b0a0ba/2ab70d31b54c.txt",
+     "chars": 3116
+    }
+   ],
+   "replaces": "",
+   "supplied": "2026-11-14"
   }
  },
  "baseline": "2026-11-10",
@@ -996,7 +1248,7 @@
  "notes": [
   "전에 받았던 문서를 2번 이어서 받지 못해 이번 실행에서는 그만 받음(남은 3건은 다음 실행에서)"
  ],
- "docCount": 41,
+ "docCount": 51,
  "pages": {
   "ec-verification": "2026-11-10",
   "ec-news": "2026-11-10",
@@ -1014,122 +1266,12 @@
    "name": "",
    "lastError": "202",
    "lastTried": "2026-11-10T20:06:26+09:00"
-  },
-  "5eb1f852-7c81-4d99-ae04-5593303076c1": {
-   "firstSeen": "2026-11-10",
-   "quiet": true,
-   "tries": 3,
-   "page": "ec-news",
-   "name": "",
-   "lastError": "403 HTTP Error 403: Forbidden",
-   "lastTried": "2026-11-10T20:06:26+09:00",
-   "label": "How CBAM certificates work"
-  },
-  "37c2855b-8913-455a-a7da-c2258b932e54": {
-   "firstSeen": "2026-11-10",
-   "quiet": true,
-   "tries": 3,
-   "page": "ec-news",
-   "name": "",
-   "lastError": "403 HTTP Error 403: Forbidden",
-   "lastTried": "2026-11-10T20:06:26+09:00",
-   "label": "CBAM - Do you import any of these products into the EU?"
-  },
-  "d255e5a1-9f16-4613-85bd-0f126a5f87de": {
-   "firstSeen": "2026-11-10",
-   "quiet": true,
-   "tries": 3,
-   "page": "ec-news",
-   "name": "",
-   "lastError": "403 HTTP Error 403: Forbidden",
-   "lastTried": "2026-11-10T20:11:18+09:00",
-   "label": "CBAM - Actual vs default values in your declaration"
-  },
-  "c5e2f28e-e9d7-411d-b2d6-560d094d30c2": {
-   "firstSeen": "2026-11-10",
-   "quiet": true,
-   "tries": 3,
-   "page": "ec-sectors",
-   "name": "",
-   "lastError": "403 HTTP Error 403: Forbidden",
-   "lastTried": "2026-11-10T20:11:18+09:00",
-   "label": "Information for importers of cement"
-  },
-  "fa3c6d9a-4884-46d6-9729-d12bd4be80bd": {
-   "firstSeen": "2026-11-10",
-   "quiet": true,
-   "tries": 3,
-   "page": "ec-sectors",
-   "name": "",
-   "lastError": "403 HTTP Error 403: Forbidden",
-   "lastTried": "2026-11-10T20:11:18+09:00",
-   "label": "Information for importers of aluminium"
-  },
-  "c86ff3a8-9e5b-4b4c-9042-21622760a489": {
-   "firstSeen": "2026-11-10",
-   "quiet": true,
-   "tries": 3,
-   "page": "ec-sectors",
-   "name": "",
-   "lastError": "403 HTTP Error 403: Forbidden",
-   "lastTried": "2026-11-10T20:11:18+09:00",
-   "label": "Information for importers of fertilisers"
-  },
-  "781ea8fa-6611-451f-9a2d-a546342bed9c": {
-   "firstSeen": "2026-11-10",
-   "quiet": true,
-   "tries": 3,
-   "page": "ec-sectors",
-   "name": "",
-   "lastError": "403 HTTP Error 403: Forbidden",
-   "lastTried": "2026-11-10T21:26:13+09:00",
-   "label": "Information for importers of iron and steel"
-  },
-  "e8793d8c-2334-4d8a-98ac-1675857f1c2f": {
-   "firstSeen": "2026-11-10",
-   "quiet": true,
-   "tries": 3,
-   "page": "ec-sectors",
-   "name": "",
-   "lastError": "403 HTTP Error 403: Forbidden",
-   "lastTried": "2026-11-10T21:26:13+09:00",
-   "label": "Information for non-EU producers of iron and steel"
-  },
-  "872865bc-9961-493d-ac2e-c3c69c91b9ea": {
-   "firstSeen": "2026-11-10",
-   "quiet": true,
-   "tries": 3,
-   "page": "ec-sectors",
-   "name": "",
-   "lastError": "403 HTTP Error 403: Forbidden",
-   "lastTried": "2026-11-10T21:26:13+09:00",
-   "label": "Information for importers of hydrogen"
-  },
-  "52a9eac1-f855-47e0-b51f-94b270b0a0ba": {
-   "firstSeen": "2026-11-10",
-   "quiet": true,
-   "tries": 3,
-   "page": "ec-sectors",
-   "name": "",
-   "lastError": "403 HTTP Error 403: Forbidden",
-   "lastTried": "2026-11-10T21:26:13+09:00",
-   "label": "Information for importers of electricity"
   }
  },
- "pendingCount": 11,
+ "pendingCount": 1,
  "checkedThisRun": 20,
- "unreachableCount": 11,
+ "unreachableCount": 1,
  "unreachableNames": [
-  "How CBAM certificates work",
-  "CBAM - Do you import any of these products into the EU?",
-  "CBAM - Actual vs default values in your declaration",
-  "Information for importers of cement",
-  "Information for importers of aluminium",
-  "Information for importers of fertilisers",
-  "Information for importers of iron and steel",
-  "Information for non-EU producers of iron and steel",
-  "Information for importers of hydrogen",
-  "Information for importers of electricity",
   "이름을 모르는 문서(ec-guidance)"
  ]
 }

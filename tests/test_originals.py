@@ -201,6 +201,121 @@ class OriginalsFlowTest(unittest.TestCase):
         self.assertEqual(len(state["docs"][ID1]["versions"][0]["sameTextHashes"]), 1)
         self.assertEqual(len(list(pathlib.Path(f"originals/files/{ID1}").iterdir())), 1)
 
+    def test_a_blocked_document_can_be_supplied_by_hand(self):
+        # 자동으로 받지 못하는 문서를 사람이 받아 넣는다: 대장에 오르고, 받지 못한 문서에서 빠지고, 다음부터는 다시 받으려 하지 않는다
+        from tools.originals import supply
+        urls = [self._doc(doc_id, "en", "", f"본문 {index}") for index, doc_id in enumerate((ID1, ID2, ID3))]
+        self.web.pages[PAGE_A] = ({"Content-Type": "text/html"}, _page(*urls))
+        self.web.blocked = {urls[0], urls[1]}
+        for _ in range(3):
+            run.main([])
+        state = self._state()
+        self.assertEqual((set(state["docs"]), state["unreachableCount"]), ({ID3}, 2))
+        self.assertEqual([row[0] for row in supply.listing()], [ID1, ID2])
+
+        self.assertEqual(supply.add(ID1, "손으로 받은 본문".encode(), "leaflet-KP1.txt")[0], "added")
+        state = self._state()
+        doc = state["docs"][ID1]
+        self.assertEqual((doc["filename"], doc["page"], doc["url"], bool(doc["supplied"])),
+                         ("leaflet-KP1.txt", "page-a", f"https://taxation-customs.ec.europa.eu/document/download/{ID1}_en", True))
+        self.assertTrue(pathlib.Path(doc["versions"][-1]["file"]).is_file() and pathlib.Path(doc["versions"][-1]["text"]).is_file())
+        self.assertEqual((set(state["pending"]), state["unreachableCount"], state["docCount"], state["pendingCount"]), ({ID2}, 1, 2, 1))
+        self.assertEqual(self._feed(), [])   # 처음 본 날부터 있던 문서는 소식이 아니다
+
+        # 모르는 번호는 넣지 않는다. 같은 파일을 다시 넣어도 판이 늘지 않는다
+        self.assertEqual(supply.add(ID4, b"x", "x.txt")[0], "unknown")
+        self.assertEqual(supply.add(ID1, "손으로 받은 본문".encode(), "leaflet-KP1.txt")[0], "same")
+        self.assertEqual(len(self._state()["docs"][ID1]["versions"]), 1)
+
+        # 다음 실행: 넣은 문서는 다시 받으려 하지 않는다(여전히 받아 주지 않는 주소다). 다른 문서는 전과 같이 확인한다
+        asked = []
+        real = self.web.fetch
+        with mock.patch.object(run, "fetch", lambda url, **more: asked.append(url) or real(url, **more)):
+            run.main(["--full"])
+        self.assertNotIn(urls[0], asked)
+        self.assertIn(urls[2], asked)
+        state = self._state()
+        self.assertNotIn("lastError", state["docs"][ID1])
+        self.assertFalse(any("그만 받음" in note for note in state["notes"]))
+
+        # 본문이 달라진 파일을 다시 넣으면 새 판이 된다
+        self.assertEqual(supply.add(ID1, "손으로 받은 본문\n\n더해진 문단".encode(), "leaflet-KP1.txt")[0], "version")
+        self.assertEqual(len(self._state()["docs"][ID1]["versions"]), 2)
+
+        # 화면에서 링크가 빠지면 넣은 문서도 사라졌다고 알린다
+        self.web.pages[PAGE_A] = ({"Content-Type": "text/html"}, _page(urls[1], urls[2]))
+        run.main([])
+        self.assertEqual([item["change"] for item in self._feed()], ["unlinked"])
+        self.assertFalse(self._state()["docs"][ID1]["linked"])
+
+    def test_a_supplied_document_can_be_kept_as_text_only(self):
+        # 문서 안에 EU의 것이 아닌 그림이 있다고 적혀 있으면 사본을 싣지 않고 본문만 받아 둔다. 원문 대장은 원래 올라온 곳으로 잇는다
+        from tools.originals import supply
+        from tools.publish import derive
+        urls = [self._doc(ID1, "en", "", "본문"), self._doc(ID2, "en", "", "본문 둘")]
+        self.web.pages[PAGE_A] = ({"Content-Type": "text/html"}, _page(*urls))
+        self.web.blocked = set(urls)
+        run.main([])
+        why = "문서에 EU의 것이 아닌 그림이 있다고 적혀 있음"
+        outcome, said = supply.add(ID1, "그림이 든 문서의 본문".encode(), "leaflet.txt", no_copy=why)
+        version = self._state()["docs"][ID1]["versions"][-1]
+        self.assertEqual((outcome, version["file"], version["kept"], version["withheld"]), ("added", "", False, why))
+        self.assertIn("사본 없음", said)
+        self.assertEqual(pathlib.Path(version["text"]).read_text(encoding="utf-8"), "그림이 든 문서의 본문")
+        self.assertEqual([path for path in pathlib.Path("originals/files").rglob("*") if path.is_file()] if pathlib.Path("originals/files").exists() else [], [])
+        body, _ = derive.documents()
+        row = next(row for row in body["documents"] if row["id"] == ID1)
+        self.assertEqual((row["stored"], row["download"]), (False, f"https://taxation-customs.ec.europa.eu/document/download/{ID1}_en"))
+        self.assertEqual(derive.stored_files(), [])
+        # 본문을 뽑지 못하는 파일은 사본 없이 넣을 수 없다(남는 것이 없다)
+        self.assertEqual(supply.add(ID2, b"PK\x03\x04", "bundle.zip", no_copy=why)[0], "unreadable")
+        self.assertIn(ID2, self._state()["pending"])
+
+    def test_a_pdf_kept_as_text_only_has_its_units_read_before_the_copy_goes(self):
+        # 사본을 두지 않는 PDF는 지우기 전에 뜻 단위를 읽어 둔다(사본이 없으면 나중에 읽을 수 없다)
+        import shutil
+        try:
+            import pikepdf
+        except ImportError:
+            self.skipTest("pikepdf가 있어야 한다")
+        if not shutil.which("pdftotext"):
+            self.skipTest("pdftotext가 있어야 한다")
+        from tools.originals import supply
+        url = self._doc(ID1, "en", "", "본문")
+        self.web.pages[PAGE_A] = ({"Content-Type": "text/html"}, _page(url))
+        self.web.blocked = {url}
+        run.main([])
+        pdf = pikepdf.new()
+        pdf.add_blank_page(page_size=(200, 200))
+        pdf.save("leaflet.pdf")
+        self.assertEqual(supply.add(ID1, pathlib.Path("leaflet.pdf").read_bytes(), "leaflet-KP3.pdf", no_copy="남의 그림이 든 문서")[0], "added")
+        version = self._state()["docs"][ID1]["versions"][-1]
+        self.assertEqual((version["file"], version["pages"]), ("", 1))
+        units = pathlib.Path("originals/units") / ID1 / (pathlib.Path(version["text"]).stem + ".json")
+        self.assertEqual(json.loads(units.read_text(encoding="utf-8")), {"pages": 1, "tagged": False, "layout": True, "units": []})
+        self.assertFalse(pathlib.Path("originals/files").exists() and any(path.is_file() for path in pathlib.Path("originals/files").rglob("*")))
+
+    def test_the_supply_command_lists_and_adds(self):
+        import contextlib
+        import io
+        from tools.originals import supply
+        url = self._doc(ID1, "en", "", "본문")
+        self.web.pages[PAGE_A] = ({"Content-Type": "text/html"}, _page(url))
+        self.web.blocked = {url}
+        run.main([])
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            self.assertEqual(supply.main(["--list"]), 0)
+            pathlib.Path("got.txt").write_text("받은 본문", encoding="utf-8")
+            self.assertEqual(supply.main([ID1.upper(), "got.txt", "--name", "leaflet-KP2.txt"]), 0)
+            self.assertEqual(supply.main([ID4, "got.txt"]), 2)       # 모르는 번호
+            self.assertEqual(supply.main([ID1, "none.txt"]), 2)      # 없는 파일
+        said = out.getvalue()
+        self.assertIn(f"{ID1}  page-a", said)
+        self.assertIn("받지 못한 문서 1건", said)
+        self.assertIn("넣음: ", said)
+        self.assertEqual(self._state()["docs"][ID1]["filename"], "leaflet-KP2.txt")
+
 
 if __name__ == "__main__":
     unittest.main()

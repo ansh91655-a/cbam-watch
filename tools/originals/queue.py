@@ -5,6 +5,8 @@
 2. 남는 몫으로 이미 아는 문서 가운데 가장 오래 확인하지 않은 것부터 다시 받아 바뀌었는지 본다.
 3. 전에 받지 못했던 문서는 맨 뒤에서 몇 건만 다시 시도한다. GIVE_UP번 실패한 문서는 월요일에만 다시 시도한다.
 아직 받지 못한 문서는 pending에 적어 두고 다음 실행에서 이어 받는다.
+사람이 받아 넣은 문서(supplied: tools/originals/supply.py)는 다시 받으려 하지 않는다. 자동 실행의 요청을 받아 주지 않는 주소라서
+넣은 것이므로, 날마다 두드리지 않고 이어진 실패를 접속 제한으로 잘못 보지 않게 한다. 화면의 링크가 그대로 있는지는 전과 같이 본다.
 """
 
 BUDGET = 20       # 한 번 실행에 받는 문서 수
@@ -34,7 +36,7 @@ def build(found, docs, pending, full, monday):
     fresh = [doc_id for doc_id in found if doc_id in pending and pending[doc_id]["tries"] == 0]
     retry = [doc_id for doc_id in found if doc_id in pending and pending[doc_id]["tries"] > 0 and (pending[doc_id]["tries"] < GIVE_UP or monday or full)]
     retry.sort(key=lambda doc_id: pending[doc_id]["tries"])
-    known = [doc_id for doc_id in found if doc_id in docs]
+    known = [doc_id for doc_id in found if doc_id in docs and not docs[doc_id].get("supplied")]
     known.sort(key=lambda doc_id: docs[doc_id].get("lastChecked", ""))
     if full:
         return fresh + known + retry

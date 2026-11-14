@@ -11,6 +11,7 @@ from tools.laws import catalog, check, guide_segment, guides, segment, store, un
 
 GUIDE_KINDS = ("cover", "section", "appendix")
 UNITS = "originals/units"   # PDF의 꼬리표에서 읽어 둔 뜻 단위(tools.pdfko.units가 만든다)
+LAYOUT = "layout"           # sources/guides.json의 units에 적는 값: 꼬리표가 없는 PDF를 쪽에 놓인 글 상자대로 읽는다
 
 
 def units_path(text_path):
@@ -20,22 +21,34 @@ def units_path(text_path):
 
 
 def units(act):
-    """문서의 단위들. 단위 파일이 없거나 꼬리표가 없는 PDF이거나 쓰지 않기로 한 문서(sources/guides.json의 units: false)면 빈 목록."""
+    """문서의 단위들. 단위 파일이 없거나 쓰지 않기로 한 문서(sources/guides.json의 units: false)면 빈 목록.
+
+    꼬리표가 없는 PDF의 단위(쪽에 놓인 글 상자대로 읽은 것: tools.pdfko.boxes)는 그렇게 읽기로 한 문서("units": "layout")에서만 쓴다.
+    그렇게 적지 않은 문서는 전과 같이 뽑아 낸 글을 줄 단위로 나눈다(나누는 방식이 바뀌면 이미 옮긴 번역이 떨어지므로 문서마다 정한다).
+    """
     if act.get("format") != "pdf" or act.get("units") is False:
         return []
     path = units_path(act["path"])
     if not path.is_file():
         return []
     found = json.loads(path.read_text(encoding="utf-8"))
-    return found["units"] if found.get("tagged") else []
+    if found.get("tagged") or (act.get("units") == LAYOUT and found.get("layout")):
+        return found["units"]
+    return []
+
+
+def marked(act):
+    """국문 PDF를 만들 때 쓰는 단위: 꼬리표로 읽은 것만 돌려준다(낱말마다 내용 조각 번호가 적혀 있어 글자의 자리를 찾을 수 있다).
+    글 상자대로 읽은 단위에는 그 번호가 없으므로, 그런 문서는 글에서 자리를 찾는 방식으로 만든다."""
+    return [] if act.get("units") == LAYOUT else units(act)
 
 
 @functools.lru_cache(maxsize=128)
-def _parts(path, form, outline, stamp, tagged):
+def _parts(path, form, outline, stamp, mode):
     text = pathlib.Path(path).read_text(encoding="utf-8")
     if form != "pdf":
         return segment.parts(text)
-    found = units({"format": form, "path": path}) if tagged else []
+    found = units({"format": form, "path": path, "units": mode}) if mode is not False else []
     if found:   # PDF에 적힌 짜임(제목, 문단, 목록, 표, 각주)을 그대로 쓴다. 제목 꼬리표가 없는 문서는 글에서 찾은 제목을 빌린다
         return unit_segment.parts(found, outline, lambda: guide_segment.parts(text, outline))
     return guide_segment.parts(text, outline)
@@ -47,9 +60,9 @@ def read(act):
     if not path.is_file():
         return []
     side = units_path(path)
-    tagged = act.get("units") is not False and side.is_file()
-    stamp = (path.stat().st_mtime_ns, side.stat().st_mtime_ns if tagged else 0)
-    return _parts(str(path), act.get("format", "act"), act.get("outline", "auto"), stamp, tagged)
+    mode = act.get("units", True) if side.is_file() else False     # True(꼬리표로 읽은 단위), "layout"(글 상자대로 읽은 단위), False(쓰지 않음)
+    stamp = (path.stat().st_mtime_ns, side.stat().st_mtime_ns if mode is not False else 0)
+    return _parts(str(path), act.get("format", "act"), act.get("outline", "auto"), stamp, mode)
 
 
 def label_ko(part):

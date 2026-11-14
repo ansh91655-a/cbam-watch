@@ -1,0 +1,96 @@
+CARBON BORDER ADJUSTMENT MECHANISM:
+HOW CBAM CERTIFICATES WORK
+#CBAM
+Starting in 2027, CBAM importers must submit
+their annual CBAM declaration by 30 September
+for imports of CBAM goods during the preceding
+year.
+The CBAM declaration reports the quantity of goods
+imported, their embedded emissions, and the
+corresponding number of certificates.
+
+Following declaration submission, the final step in
+the CBAM compliance process is to surrender CBAM
+certificates by the same deadline.
+Managing your CBAM certificates is a cycle that starts
+well before this annual obligation. The flowchart below
+summarises the key steps of the certificate process
+carried out through the CBAM Registry.
+
+STEP 1. Quarterly purchases*
+Buy and hold CBAM certificates to comply with your quarterly obligation: At the end of each quarter,
+you must hold certificates corresponding to at least 50% of embedded emissions in all CBAM goods you have
+imported since the start of the year.
+
+STEP 2. Annual surrender
+By 30 September of the following year, submit your annual CBAM declaration and surrender the required
+CBAM certificates.
+
+STEP 3. Excess certificates (optional)
+If you have excess CBAM certificates on your CBAM account after the annual surrender...
+
+3a. Repurchase**
+
+3b. Cancellation
+
+Until 31 October, you can request a buy-back
+up to the number of CBAM certificates you had to
+buy to meet your quarterly obligation (see Step 1).
+
+On 1 November, two years after their purchase, the
+Commission cancels excess CBAM certificates
+that have not been repurchased and have expired.
+The buy-back option is no longer possible.
+
+* N
+ o quarterly obligation in 2026. CBAM certificates are scheduled to go on sale on 1 February 2027. For 2026 embedded
+emissions, declarants must purchase all CBAM certificates required between 1 February and 30 September 2027.
+** 2026 certificates can only be repurchased in 2027. On 1 November 2027, the Commission will cancel excess CBAM certificates
+purchased for 2026 embedded emissions.
+
+CERTIFICATES CALCULATION
+1 tonne of CO₂ equivalent
+= 1 certificate*
+
+CBAM Registry
+
+Pricing
+
+Purchase, hold, and surrender
+certificates through the CBAM
+Registry as of 1 February 2027.
+
+The quarterly (for 2026) and weekly (for 2027 onwards) price is
+available on the official CBAM Certificate Price page and in
+the CBAM Registry.
+
+Purchase by
+
+Surrender by
+
+Repurchase by
+
+the end of each quarter
+every year.
+
+30 September of the following
+year, after annual declaration
+submission.
+
+31 October, after declaration
+submission and certificate
+surrender.
+
+FOR MORE CBAM RESOURCES,
+VISIT THE CBAM COMMUNICATION AND FAQS PAGE.
+* N
+ ote: To determine the final number of certificates to purchase, deduct — where applicable — the free allocation adjustment and
+the carbon price paid in a third country.
+
+Catalogue number: KP-01-26-043-EN-N – ISBN: 978-92-68-43553-3 – doi:10.2778/9101451
+
+© European Union, 2026
+
+CBAM CERTIFICATES AT A GLANCE
+
+

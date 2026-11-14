@@ -310,7 +310,7 @@ def main(arguments):
         print("원문 PDF가 없습니다:", wanted)
         return 1
     target = arguments[1] if len(arguments) > 1 else f"{wanted}-ko.pdf"
-    units = corpus.units(document)
+    units = corpus.marked(document)   # 꼬리표로 읽은 단위만(글자의 자리가 적혀 있다)
     wanted = items(parts, units, memory) if units else paragraphs(parts, memory)
     report = build(path, wanted, target, document.get("name", ""), document.get("official", ""), units)
     notes = report.pop("notes")
