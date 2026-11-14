@@ -10,7 +10,7 @@ import { empty, fill, h, safeLink, table, unsplit } from "../ui/dom.js";
 import { countdown, day, koreanDate, today } from "../ui/format.js";
 import { gloss } from "../ui/gloss.js";
 import { icon } from "../ui/icons.js";
-import { changes, periodOf, RECENT } from "../rules/changes.js";
+import { changes, periodOf, RECENT, sidePeriod } from "../rules/changes.js";
 import { findPanel } from "../ui/lawfind.js";
 import { stackable } from "../ui/stack.js";
 import { stepper } from "../ui/stepper.js";
@@ -168,18 +168,19 @@ export async function render(main, arg) {
     detail(main, one, groups.find((group) => group.code === one.group) || { code: "", name: "" }, items, await figure(one), await data.laws(), readRule(await data.refs(), one.id));
     return;
   }
-  const recent = changes(rules, today()).length;   // 왼쪽의 '최근 변화'에 적는 건수(기본 날수)
   const days = periodOf(arg);
+  const sideDays = sidePeriod(arg);                          // 왼쪽의 '최근 변화'가 가리키는 날수(변화 기록을 보고 있으면 보고 있는 날수)
+  const recent = changes(rules, today(), sideDays).length;   // 거기에 적는 건수
   if (days) {
     fill(main,
       band("규제: 최근 변화", `규제 ${rules.length}건의 연혁에서 최근 ${days}일 동안 달라진 것만 날짜순으로 모았습니다.`),
-      h("div", { class: "with-side" }, [h("aside", { class: "side" }, sideNav(rules, groups, RECENT, recent)), h("div", { class: "stack-l" }, recentPage(rules, days))]),
+      h("div", { class: "with-side" }, [h("aside", { class: "side" }, sideNav(rules, groups, RECENT, recent, sideDays)), h("div", { class: "stack-l" }, recentPage(rules, days))]),
     );
     return "규제: 최근 변화";
   }
   const picked = groups.some((group) => group.code === arg) ? arg : "";
   const shown = groups.filter((group) => !picked || group.code === picked);
-  const side = sideNav(rules, groups, picked, recent);
+  const side = sideNav(rules, groups, picked, recent, sideDays);
   const upcoming = rules.filter((rule) => rule.nextDate && rule.nextDate >= today())
     .sort((a, b) => a.nextDate.localeCompare(b.nextDate)).slice(0, 4);
   const soon = !picked && upcoming.length ? h("section", { class: "rule-soon", "aria-labelledby": "h-soon" }, [

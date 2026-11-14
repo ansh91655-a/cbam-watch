@@ -183,6 +183,10 @@ class ViewTest(unittest.TestCase):
         self.assertIn("if (partId) setTimeout(() => reach(partId), 0);", changes)
         self.assertIn('href: `#law-${actId}.${part.id}`, text: "지금의 글 보기"', changes)        # 돌아가는 길
         self.assertIn("href: partHref(actId, which, part.id)", changes)                         # 차례의 링크도 온전한 주소다(새 탭으로 열어도 그 조각으로 간다)
+        # 차례에서 조각을 고르면 다시 그리지 않고 주소만 그 조각의 것으로 바꿔 둔다(규정 원문의 조, 해설서의 절과 같다).
+        # 길잡이가 아는 방법으로 바꿔야 떠날 때의 자리도 바뀐 주소로 기억한다
+        self.assertIn('import { rename } from "../router.js";', changes)
+        self.assertIn("rename(partHref(actId, which, part.id));", changes)
 
 
 if __name__ == "__main__":

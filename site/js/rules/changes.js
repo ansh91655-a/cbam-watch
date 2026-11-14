@@ -17,6 +17,12 @@ export function hrefOf(days = PERIODS[0]) {
   return days === PERIODS[0] ? `#rules-${RECENT}` : `#rules-${RECENT}-${days}`;
 }
 
+// 왼쪽 고르기의 '최근 변화'가 가리키는 날수: 변화 기록을 보고 있으면 보고 있는 날수, 다른 화면이면 기본 날수.
+// 고른 표시가 붙은 칸의 건수와 주소가 보고 있는 화면과 같게 하려는 것이다(90일을 보는데 30일의 건수를 적지 않는다).
+export function sidePeriod(arg) {
+  return periodOf(arg) || PERIODS[0];
+}
+
 // 최근 days일 안의 연혁: [{ date, text, source, link, press, rule }]. rule은 그 연혁이 든 규제다.
 // 날짜가 늦은 것부터, 같은 날이면 규제의 차례대로, 한 규제 안에서는 나중에 적힌 것부터 놓는다. 앞날의 날짜와 날짜가 아닌 것은 뺀다.
 export function changes(rules, today, days = PERIODS[0]) {

@@ -2,19 +2,21 @@
 import { readFileSync } from "node:fs";
 import { createRequire } from "node:module";
 import { go, open } from "../browser.mjs";
-import { kept } from "./axe_rules.mjs";
+import { kept, PLACES } from "./axe_rules.mjs";
 
 const source = readFileSync(createRequire(import.meta.url).resolve("axe-core/axe.min.js"), "utf8");
 const TAGS = ["wcag2a", "wcag2aa", "wcag21aa", "best-practice"];
 
 // 지금 화면에 검사를 돌려 위반을 [{ id, impact, count, at }]로 돌려준다.
+// 위반이 난 요소가 어느 자리 안에 있는지는 요소로 본다(elementRef로 요소를 함께 받는다). 이 사이트에서는 위반이 아닌 것을 그 자리로 가려낸다(axe_rules.mjs).
 export async function violations(page) {
   await page.evaluate(source);
-  const found = await page.evaluate(async (tags) => {
-    const seen = await window.axe.run(document, { runOnly: { type: "tag", values: tags } });
-    return seen.violations.map((one) => ({ id: one.id, impact: one.impact || "", nodes: one.nodes.map((node) => node.target.join(" ")) }));
-  }, TAGS);
-  return kept(found).map((one) => ({ id: one.id, impact: one.impact, count: one.nodes.length, at: one.nodes.slice(0, 2).join(" | ").slice(0, 160) }));
+  const found = await page.evaluate(async ({ tags, places }) => {
+    const seen = await window.axe.run(document, { runOnly: { type: "tag", values: tags }, elementRef: true });
+    const placeOf = (element) => (element instanceof Element && places.find((place) => element.closest(place))) || "";
+    return seen.violations.map((one) => ({ id: one.id, impact: one.impact || "", nodes: one.nodes.map((node) => ({ at: node.target.join(" "), place: placeOf(node.element) })) }));
+  }, { tags: TAGS, places: PLACES });
+  return kept(found).map((one) => ({ id: one.id, impact: one.impact, count: one.nodes.length, at: one.nodes.slice(0, 2).map((node) => node.at).join(" | ").slice(0, 160) }));
 }
 
 export async function axe(browser, base, plan) {

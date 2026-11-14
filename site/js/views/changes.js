@@ -6,6 +6,7 @@
 // 자료는 사이트를 만들 때 받아 둔 두 판의 글을 문단마다 견줘 만든 것이다(tools/laws/revisions.py).
 import * as data from "../data.js";
 import { wordDiff } from "../laws/worddiff.js";
+import { rename } from "../router.js";
 import { band } from "../ui/band.js";
 import { empty, fill, h, safeLink } from "../ui/dom.js";
 import { count } from "../ui/format.js";
@@ -95,13 +96,16 @@ function reach(partId) {
   setTimeout(() => { delete node.dataset.flash; }, FLASH_MS);
 }
 
-// 차례의 링크는 새 탭으로 열어도 그 조각으로 가도록 온전한 주소로 적고, 이 화면 안에서 누르면 다시 그리지 않고 옮겨 가기만 한다
+// 차례의 링크는 새 탭으로 열어도 그 조각으로 가도록 온전한 주소로 적는다. 이 화면 안에서 누르면 다시 그리지 않고 옮겨 가고,
+// 주소만 그 조각의 것으로 바꿔 둔다(규정 원문의 조, 해설서의 절과 같다: 그 주소를 남에게 줄 수 있고, 다른 화면에 갔다가 돌아오면 그 조각에서 시작한다).
 function toc(revision, actId, which) {
   return h("nav", { class: "law-toc", "aria-label": "달라진 부분의 차례" }, h("ul", {}, revision.parts.map((part) =>
     h("li", { "data-kind": part.kind, "data-part": part.id }, h("a", { href: partHref(actId, which, part.id), onclick: (event) => {
       event.preventDefault();
       const node = document.getElementById(`c-${part.id}`);
-      if (node) node.scrollIntoView({ block: "start" });
+      if (!node) return;
+      node.scrollIntoView({ block: "start" });
+      rename(partHref(actId, which, part.id));
     } }, [h("span", { text: partName(part) }), h("span", { class: "law-toc-en", text: `${count(part.rows.length)}곳` })])))));
 }
 

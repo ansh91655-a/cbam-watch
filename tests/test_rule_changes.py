@@ -6,7 +6,7 @@ import subprocess
 import unittest
 
 SCRIPT = r"""
-import { changes, hrefOf, periodOf, PERIODS, RECENT } from './site/js/rules/changes.js';
+import { changes, hrefOf, periodOf, PERIODS, RECENT, sidePeriod } from './site/js/rules/changes.js';
 const rules = [
   { id: 'a', name: '가 규제', timeline: [
     { date: '2026-05-01', text: '오래된 일' }, { date: '2026-10-20', text: '가의 첫 일' }, { date: '2026-11-12', text: '가의 둘째 일' },
@@ -23,6 +23,7 @@ console.log(JSON.stringify({
   kept: changes(rules, '2026-11-14')[0],
   period: Object.fromEntries(['recent', 'recent-90', 'recent-30', 'recent-7', 'recent-x', 'eu-law', '', 'recently'].map((arg) => [arg, periodOf(arg)])),
   href: [hrefOf(), hrefOf(30), hrefOf(90)],
+  side: Object.fromEntries(['recent', 'recent-90', 'recent-7', 'eu-law', ''].map((arg) => [arg, [sidePeriod(arg), hrefOf(sidePeriod(arg)), changes(rules, '2026-11-14', sidePeriod(arg)).length]])),
 }));
 """
 
@@ -52,6 +53,13 @@ class ChangesTest(unittest.TestCase):
         self.assertEqual(self.seen["period"], {"recent": 30, "recent-90": 90, "recent-30": 30, "recent-7": 30, "recent-x": 30, "eu-law": 0, "": 0, "recently": 0})
         self.assertEqual(self.seen["href"], ["#rules-recent", "#rules-recent", "#rules-recent-90"])
 
+    def test_the_side_entry_follows_the_period_on_screen(self):
+        # 왼쪽 고르기의 '최근 변화'는 변화 기록을 보고 있으면 보고 있는 날수의 건수와 주소를, 다른 화면에서는 기본 날수의 것을 적는다.
+        # 90일을 보는데 고른 표시가 붙은 칸에 30일의 건수가 적히면 본문의 건수와 어긋난다
+        self.assertEqual(self.seen["side"], {
+            "recent": [30, "#rules-recent", 4], "recent-90": [90, "#rules-recent-90", 6], "recent-7": [30, "#rules-recent", 4],
+            "eu-law": [30, "#rules-recent", 4], "": [30, "#rules-recent", 4]})
+
 
 class RepositoryTest(unittest.TestCase):
     def test_no_rule_or_group_is_named_like_the_change_log(self):
@@ -70,8 +78,11 @@ class RepositoryTest(unittest.TestCase):
         view = pathlib.Path("site/js/views/rules.js").read_text(encoding="utf-8")
         self.assertIn("const days = periodOf(arg);", view)
         self.assertIn("recentBlock(rules)", view)
+        self.assertIn("const sideDays = sidePeriod(arg);", view)                                   # 왼쪽의 '최근 변화'가 가리키는 날수
+        self.assertIn("const recent = changes(rules, today(), sideDays).length;", view)            # 건수도 그 날수로 센다
+        self.assertEqual(view.count("recent, sideDays)"), 2)                                       # 변화 기록 화면과 목록 화면 모두 그 날수를 넘긴다
         side = pathlib.Path("site/js/views/rules/side.js").read_text(encoding="utf-8")
-        self.assertIn('link(hrefOf(), picked === RECENT, "clock", "최근 변화", recent, true)', side)
+        self.assertIn('link(hrefOf(days), picked === RECENT, "clock", "최근 변화", recent, true)', side)
 
     def test_the_picked_entry_is_brought_into_view_on_narrow_screens(self):
         """좁은 화면에서는 왼쪽의 고르기가 가로로 넘겨 보는 줄이 된다. 줄의 끝에 있는 '최근 변화'를 골랐을 때 그것이 보여야 한다."""

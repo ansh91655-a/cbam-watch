@@ -61,12 +61,21 @@ class SitecheckTest(unittest.TestCase):
 
     def test_links_in_a_scrolled_chip_row_are_not_taken_for_skip_links(self):
         # 좁은 화면에서 가로로 넘겨 보는 고르기 줄(.side-nav)의 링크가 화면 왼쪽 밖에 놓이면 axe는 건너뛰기 링크로 본다. 그 줄 안의 것만 세지 않는다
-        found = [{"id": "skip-link", "impact": "moderate", "nodes": ['.side-nav > a[href$="#rules"]', '.side-nav > a[href$="#rules-eu-law"]']},
-                 {"id": "skip-link", "impact": "moderate", "nodes": ['.side-nav > a[href$="#news"]', ".skip"]},
-                 {"id": "color-contrast", "impact": "serious", "nodes": [".side-nav > a"]}]
-        kept = self.node("import { kept } from './tools/sitecheck/checks/axe_rules.mjs'; console.log(JSON.stringify(kept(JSON.parse(process.argv[1]))));", json.dumps(found))
-        self.assertEqual(kept, [{"id": "skip-link", "impact": "moderate", "nodes": [".skip"]},            # 진짜 건너뛰기 링크는 남는다
-                                {"id": "color-contrast", "impact": "serious", "nodes": [".side-nav > a"]}])  # 다른 위반은 그 줄 안의 것도 그대로 센다
+        # 어느 자리 안의 요소인지는 화면에서 요소로 가려 place에 적어 온다. 고르는 말(at)에는 윗자리가 적히지 않을 수 있어 글자로 가리지 않는다
+        inside, real = {"at": 'a[href$="eu-law"]', "place": ".side-nav"}, {"at": ".skip", "place": ""}
+        named = {"at": '.side-nav-like > a[href$="#news"]', "place": ""}   # 고르는 말에 비슷한 글자가 있어도 그 줄 안의 요소가 아니면 센다
+        found = [{"id": "skip-link", "impact": "moderate", "nodes": [{"at": '.side-nav > a[href$="#rules"]', "place": ".side-nav"}, inside]},
+                 {"id": "skip-link", "impact": "moderate", "nodes": [inside, real, named]},
+                 {"id": "color-contrast", "impact": "serious", "nodes": [inside]}]
+        script = ("import { kept, PLACES } from './tools/sitecheck/checks/axe_rules.mjs';"
+                  " console.log(JSON.stringify({ kept: kept(JSON.parse(process.argv[1])), places: PLACES }));")
+        seen = self.node(script, json.dumps(found))
+        self.assertEqual(seen["kept"], [{"id": "skip-link", "impact": "moderate", "nodes": [real, named]},   # 진짜 건너뛰기 링크와 그 줄 밖의 것은 남는다
+                                        {"id": "color-contrast", "impact": "serious", "nodes": [inside]}])   # 다른 위반은 그 줄 안의 것도 그대로 센다
+        self.assertEqual(seen["places"], [".side-nav"])
+        check = pathlib.Path("tools/sitecheck/checks/axe.mjs").read_text(encoding="utf-8")
+        self.assertIn("elementRef: true", check)                                    # 요소를 함께 받아
+        self.assertIn("places.find((place) => element.closest(place))", check)      # 요소의 윗자리로 가린다
 
     def test_the_plan_survives_a_site_without_data(self):
         plan = self.node("import { plan } from './tools/sitecheck/plan.mjs'; console.log(JSON.stringify(plan(process.argv[1])));", str(self.site))

@@ -6,33 +6,25 @@ on:
       - "tools/**"
       - "tests/**"
       - "requirements.txt"
-      - ".github/workflows/tests.yml"
-      # 시험이 직접 읽는 화면의 셈, 운영 콘솔(상태 규칙과, 콘솔이 복사해 쓰는 사이트의 화면 도우미), 법령에서 옮겨 온 참고 자료
-      - "site/js/calc/**"
-      - "site/js/cn/**"
+      # 시험은 도구만이 아니라 저장소의 여러 파일을 직접 읽는다. 시험이 읽는 것이 바뀌면 시험이 돈다(무엇을 넣고 뺐는지는 tests/test_triggers.py가 본다).
+      # 워크플로(어느 경로에서 도는지를 시험이 본다), 화면의 코드(node로 돌리거나 글로 읽는다), 운영 콘솔, 설정과 대장, 용어집, 받아 둔 원문의 글과 단위
+      - ".github/workflows/**"
+      - "site/js/**"
+      - "site/*.html"
+      - "site/site.config.json"
       - "console/**"
-      - "site/js/ui/dom.js"
-      - "site/js/ui/format.js"
-      - "data/calc.json"
-      - "data/calc-goods.json"
-      - "data/factor.json"
-      - "data/duties.json"
-      # 규정 원문: 화면의 찾기, 번역 자료와 그 검사가 따르는 용어집.
-      # 번역(data/laws-ko)은 실행 하나가 묶음마다 올리므로 그 커밋마다 돌지 않는다(넣을 때 이미 검사를 거친다: tools/laws/apply.py, verify.py).
-      # 번역이나 검수 실행이 끝나며 표(stamps/translated.json)를 고칠 때 한 번 돈다. 사이트 배포와 화면 점검도 같은 표를 본다.
-      - "site/js/laws/**"
-      - "sources/guides.json"
-      - "sources/translation.json"
-      - "stamps/**"
+      - "sources/**"
+      - "deploy.json"
       - "language/glossary.json"
-      # 화면에 적는 이름과 주소를 다루는 화면 모듈, 출처의 화면용 이름
-      - "site/js/nav/**"
-      - "site/js/news/**"
-      - "site/js/rules/**"
-      - "site/js/router.js"
-      - "site/404.html"
-      - "sources/labels.json"
-      - "data/regulations.json"
+      - "originals/text/**"
+      - "originals/units/**"
+      # 사이트에 싣는 자료는 사이트 배포와 같은 경로를 본다. 번역(data/laws-ko)은 실행 하나가 묶음마다 올리므로 그 커밋마다 돌지 않는다
+      # (넣을 때 이미 검사를 거친다: tools/laws/apply.py, verify.py). 번역이나 검수 실행이 끝나며 표(stamps/translated.json)를 고칠 때 한 번 돈다.
+      - "data/**"
+      - "!data/laws-ko/**"
+      - "stamps/**"
+      # 넣지 않은 것: 화면의 모양과 그림(site/css, site/assets)은 시험이 읽지 않는다(화면 점검이 본다). 수집해 둔 자료(collected),
+      # 원문 대장의 상태(originals/state.json), 번역 실행들이 적는 파일(language/translation-*.json)은 자동 실행이 돌 때마다 바뀌고 그 실행이 스스로 검사한다.
   workflow_dispatch:
 
 permissions:

@@ -7,8 +7,13 @@
 // 진짜 건너뛰기 링크(.skip)와 그 밖의 자리는 그대로 검사한다.
 const NOT_SKIP_LINKS = [".side-nav"];
 
-// axe가 돌려준 위반들에서 위의 자리를 뺀다: [{ id, impact, nodes: [고르는 말] }] → 같은 꼴. 남은 자리가 없는 위반은 뺀다.
+// 위반이 난 요소가 그 안에 있는지 가려야 하는 자리들. 화면에서 요소로 직접 가린다(axe.mjs가 요소의 윗자리를 본다).
+// axe가 적어 주는 고르는 말로는 가릴 수 없다: 그 요소만으로 하나로 가려지면 윗자리를 적지 않는다(a[href$="eu-law"]처럼).
+export const PLACES = [...NOT_SKIP_LINKS];
+
+// axe가 돌려준 위반들에서 위의 자리를 뺀다: [{ id, impact, nodes: [{ at: 고르는 말, place: 요소가 든 자리(PLACES의 하나, 없으면 "") }] }] → 같은 꼴.
+// 남은 자리가 없는 위반은 뺀다.
 export function kept(found) {
-  return found.map((one) => (one.id === "skip-link" ? { ...one, nodes: one.nodes.filter((target) => !NOT_SKIP_LINKS.some((place) => target.includes(place))) } : one))
+  return found.map((one) => (one.id === "skip-link" ? { ...one, nodes: one.nodes.filter((node) => !NOT_SKIP_LINKS.includes(node.place)) } : one))
     .filter((one) => one.nodes.length);
 }
