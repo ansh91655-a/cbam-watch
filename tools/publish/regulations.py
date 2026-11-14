@@ -120,8 +120,6 @@ def next_source_problems(rule):
         return ["보도에 기댄 다음 일정에는 그 날짜를 알려 준 출처(nextSource)가 있어야 함(rule_edit set --next-source \"<매체 이름> 보도\" --next-link \"<그 보도의 주소>\")"] if press else []
     if not isinstance(source, dict) or not str(source.get("text", "")).strip() or not str(source.get("url", "")).startswith("https://"):
         return ["다음 일정의 출처(nextSource)는 이름(text)과 주소(url, https)를 가져야 함"]
-    if not rule.get("nextDate"):
-        return ["다음 일정의 날짜(nextDate)가 없는데 그 출처(nextSource)가 남아 있음"]
     if press and "보도" not in source["text"]:
         return ["보도에 기댄 다음 일정의 출처 이름(nextSource.text)에는 '보도'가 있어야 함"]
     return []

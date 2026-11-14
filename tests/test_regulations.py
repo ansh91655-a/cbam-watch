@@ -66,9 +66,10 @@ class RegulationsTest(unittest.TestCase):
         self.assertEqual(self.whats(body(**press, nextSource={"text": "어느 신문 보도", "url": "https://example.com/n"})), [])
         self.assertTrue(any("'보도'가 있어야 함" in what for what in self.whats(body(**press, nextSource={"text": "어느 신문", "url": "https://example.com/n"}))))
         self.assertTrue(any("이름(text)과 주소(url, https)" in what for what in self.whats(body(**press, nextSource={"text": "어느 신문 보도", "url": "example.com"}))))
-        # 공식 기록에 적힌 날짜는 출처를 따로 적지 않아도 된다(첫 링크가 출처로 보인다). 날짜가 없는데 출처만 남으면 알린다
+        # 공식 기록에 적힌 날짜는 출처를 따로 적지 않아도 된다(첫 링크가 출처로 보인다)
         self.assertEqual(self.whats(body(next="표결이 잠정적으로 잡혀 있습니다.", nextDate="2026-12-14")), [])
-        self.assertTrue(any("출처(nextSource)가 남아 있음" in what for what in self.whats(body(next="다음입니다.", nextSource={"text": "어느 신문 보도", "url": "https://example.com/n"}))))
+        # 날짜가 없으면 출처는 어디에도 보이지 않는다. 남아 있어도 문제로 치지 않는다(사이트 만들기를 멈출 일이 아니다)
+        self.assertEqual(self.whats(body(next="다음입니다.", nextSource={"text": "어느 신문 보도", "url": "https://example.com/n"})), [])
 
     def test_evidence_file_must_be_collected_material(self):
         self.assertIn("모아 둔 자료가 아님", regulations.evidence_problem({"path": "README.md", "contains": ["CBAM"]}, ""))
