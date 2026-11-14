@@ -143,7 +143,7 @@ class HandbookTest(unittest.TestCase):
              "basis": [{"act": BASE, "part": "art-6", "label": "CBAM 규정 제6조 CBAM 신고서"}, {"act": BASE, "part": "art-6", "label": "CBAM 규정 제6조 CBAM 신고서"},
                        {"label": "EU 배출권거래제 지침", "url": "https://example.org/ets"}],
              "see": [{"href": "#calendar", "text": "일정"}, {"href": "#rules-ir-declarations", "text": "신고서 이행규정(안)"}]},
-            {"id": "surrender", "title": "인증서 제출과 분기 말 보유 의무", "basis": [{"act": BASE, "part": "art-22", "label": "CBAM 규정 제22조"}, {"act": BASE, "part": "art-6", "label": "CBAM 규정 제6조"}],
+            {"id": "surrender", "title": "인증서 제출과 분기말 인증서 보유의무", "basis": [{"act": BASE, "part": "art-22", "label": "CBAM 규정 제22조"}, {"act": BASE, "part": "art-6", "label": "CBAM 규정 제6조"}],
              "see": [{"href": "#rules-ir-declarations", "text": "신고서 이행규정(안)"}, {"href": "#rules-eu-law", "text": "규제 묶음"}]}]},
         {"id": "defaults", "title": "기본값과 마크업", "sections": [
             {"id": "tables", "title": "기본값을 찾는 표", "terms": [{"ko": "기본값", "en": "Default Value", "text": "풀이입니다."}],
@@ -156,7 +156,7 @@ class HandbookTest(unittest.TestCase):
     def test_a_part_lists_the_sections_that_rest_on_it(self):
         laws = self.body["laws"]
         here = {"href": "#handbook-cycle.declaration", "title": "CBAM 신고서의 기한과 내용", "chapter": "한 해의 일정"}
-        there = {"href": "#handbook-cycle.surrender", "title": "인증서 제출과 분기 말 보유 의무", "chapter": "한 해의 일정"}
+        there = {"href": "#handbook-cycle.surrender", "title": "인증서 제출과 분기말 인증서 보유의무", "chapter": "한 해의 일정"}
         self.assertEqual(laws[BASE]["art-6"]["handbook"], [here, there])        # 한 절이 같은 조를 두 번 들어도 한 번만. 책의 차례대로
         self.assertEqual(laws[BASE]["art-6"]["terms"], [{"en": "CBAM declaration", "ko": "CBAM 신고서"}])   # 다른 것(용어)과 함께 실린다
         self.assertEqual(laws[BASE]["art-22"], {"items": [], "duties": [], "terms": [], "handbook": [there], "more": 0})
