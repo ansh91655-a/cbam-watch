@@ -114,6 +114,12 @@
    "key": "05c21699e535",
    "act": "32025R2547",
    "why": "amounts from invoices는 송장에 적힌 연료·물질의 양인데 '송장의 금액'으로 옮겨 대상이 바뀜('송장에 적힌 양'이 맞음)"
+  },
+  {
+   "day": "2026-11-15",
+   "key": "c3f2d021a59b",
+   "act": "guide-verif",
+   "why": "원문 조각에 없는 내용('에 따라 수행한 통제와 검사의 관련 보고서, 발견 사항 또는 결론', '포함될 수 있다')이 더해짐. 원문은 'carbon pricing mechanism, if applicable, or findings of previous verifiers or independent persons …'뿐임"
   }
  ]
 }

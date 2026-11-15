@@ -20,8 +20,41 @@
    "caught": 645,
    "discarded": 0,
    "held": 0
+  },
+  {
+   "day": "2026-11-15",
+   "batches": 4,
+   "checked": 412,
+   "dropped": 1,
+   "canaries": 22,
+   "caught": 22,
+   "discarded": 0,
+   "held": 0
   }
  ],
  "disputed": [],
- "canaried": []
+ "canaried": [
+  "2533d1366045",
+  "3e73798aa241",
+  "798e8dcdbdf0",
+  "dcb53ed660e5",
+  "152d3bb62f04",
+  "22649c1dcc34",
+  "2a88e2b3bca6",
+  "93a1356a986b",
+  "1c8abf72cc23",
+  "8852a7655a59",
+  "9cb3e3958a09",
+  "a9b2a0c8765e",
+  "bfdb348d76e3",
+  "de6a2a76cba1",
+  "2250c60879a0",
+  "2b5b3f299c00",
+  "2df111252cba",
+  "4c1afd01b739",
+  "4e8aa42ec3bb",
+  "c395e08b0f3f",
+  "d7549be2072a",
+  "fffe9d7ccf21"
+ ]
 }

@@ -517,6 +517,7 @@
   "284fd782cac0",
   "29b1c790e8a2",
   "29bbe07e1eb6",
+  "2a15e9355da4",
   "2a18b758ffab",
   "2b209bfd7632",
   "2bcf8cbc2b7b",
@@ -819,6 +820,7 @@
   "e35be70ca67f",
   "e360b0cb3427",
   "e3d461cb7584",
+  "e45caffc0720",
   "e6cf633988f3",
   "e720e89abf07",
   "e75e6c3bf189",
@@ -862,9 +864,5 @@
   "fe60d391ecd9",
   "ff7daaa035f5",
   "ff969d4ec04f"
- ],
- "passed": [
-  "2a15e9355da4",
-  "e45caffc0720"
  ]
 }
