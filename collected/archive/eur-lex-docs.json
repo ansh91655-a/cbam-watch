@@ -1,17 +1,13 @@
 {
  "source": "eur-lex-docs",
- "fetchedAt": "2026-11-13T14:07:41+09:00",
+ "fetchedAt": "2026-11-16T05:58:41+09:00",
  "since": "2025-01-01",
  "report": {
   "targets": 25,
-  "stored": 3,
-  "kept": 22,
+  "stored": 0,
+  "kept": 25,
   "failures": [],
-  "notes": [
-   "62023CJ0512: 끝부분을 채움",
-   "62024CC0519: 끝부분을 채움",
-   "62023CN0512: 끝부분을 채움"
-  ]
+  "notes": []
  },
  "entries": [
   {

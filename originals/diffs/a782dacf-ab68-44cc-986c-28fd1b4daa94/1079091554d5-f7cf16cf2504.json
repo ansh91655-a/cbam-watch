@@ -1,0 +1,36 @@
+{
+ "stats": {
+  "added": 2,
+  "removed": 2,
+  "changed": 0,
+  "same": 125
+ },
+ "blocks": [
+  {
+   "op": "removed",
+   "old": "Total",
+   "new": ""
+  },
+  {
+   "op": "added",
+   "old": "",
+   "new": "Yes + Agreement with UA’s NAAU , UK UKAS & IN NABCB"
+  },
+  {
+   "op": "removed",
+   "old": "Yes + Agreement with UA’s NAAU & UK UKAS",
+   "new": ""
+  },
+  {
+   "op": "added",
+   "old": "",
+   "new": "Total"
+  }
+ ],
+ "truncated": false,
+ "doc": "a782dacf-ab68-44cc-986c-28fd1b4daa94",
+ "from": "1079091554d5",
+ "to": "f7cf16cf2504",
+ "fromDate": "2026-11-10",
+ "toDate": "2026-11-16"
+}

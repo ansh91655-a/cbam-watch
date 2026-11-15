@@ -117,9 +117,9 @@ National accreditation bodies (NABs) located in an EU country (or an EEA country
 As a general rule, verification companies established in an EU or EEA country must seek CBAM accreditation in the NAB of their country of establishment. Only if this country does not offer the relevant accreditation services can applicants apply with another NAB. Verification companies that are established outside the EU may apply in any national accreditation body offering this service.
 Building on the information provided by the European cooperation for Accreditation (EA), Commission services maintain a list of NABs that provide CBAM accreditation services.
 State-of-play CBAM accreditation
-9 November 2026
+13 November 2026
 English
-Download (293.71 KB - PDF)
+Download (294.47 KB - PDF)
 Verification of non-EU installation operators
 CBAM verification applies at the level of the installation where CBAM goods are produced.
 National Accreditation Bodies

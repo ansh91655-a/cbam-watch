@@ -1,6 +1,6 @@
 {
  "source": "eur-lex-related",
- "fetchedAt": "2026-11-13T14:07:32+09:00",
+ "fetchedAt": "2026-11-16T05:58:41+09:00",
  "since": "2025-01-01",
  "report": {
   "links": {
@@ -498,7 +498,7 @@
   {
    "celex": "62024CC0519",
    "date": "2025-10-09",
-   "title": "Opinion of Advocate General Ćapeta delivered on 9 October 2025.#Nitrogénművek Vegyipari Zrt. v Nemzeti Adó- és Vámhivatal Fellebbviteli Igazgatósága.#Request for a preliminary ruling from the Veszprémi Törvényszék.#Reference for a preliminary ruling – Environment – Air pollution – System for greenhouse gas emission allowance trading – Directive 2003/87/EC – Transitional rules for harmonised free allocation – Article 10a – National legislation imposing a tax on carbon dioxide (CO2) emissions on operators receiving a significant quantity of allowances allocated free of charge.#Case C-519/24.",
+   "title": "Opinion of Advocate General Ćapeta delivered on 9 October 2025.###",
    "relations": [
     "work_cites_work:32023R0956"
    ],
