@@ -5142,6 +5142,18 @@
    "ko": "위성항법시스템",
    "from": "32025R2210",
    "added": "2026-11-13"
+  },
+  {
+   "en": "CBAM application reference number",
+   "ko": "CBAM 신청 참조 번호",
+   "from": "info-scope",
+   "added": "2026-11-15"
+  },
+  {
+   "en": "transitional phase",
+   "ko": "전환 단계",
+   "from": "info-scope",
+   "added": "2026-11-15"
   }
  ]
 }
