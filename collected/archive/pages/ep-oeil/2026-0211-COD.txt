@@ -124,6 +124,12 @@ Summary
 Results of vote in Parliament
 22/10/2026
 Matter referred back to the committee responsible for interinstitutional negotiations
+Forecasts
+Forecasts
+Date
+Subject
+14/12/2026
+Indicative plenary sitting date, 1st reading
 Technical information
 Technical information
 Procedure reference
@@ -304,6 +310,9 @@ confindustria ceramica
 HANSEN Niels Flemming
 04/11/2026
 Dansk Fjernvarme
+NIINISTÖ Ville
+04/11/2026
+Finnish Forest Industries Federation (Metsäteollisuus ry)
 HANSEN Niels Flemming
 29/09/2026
 Ørsted A/S
@@ -317,6 +326,7 @@ Procedure file
 Basic information
 Key players
 Key events
+Forecasts
 Technical information
 Documentation gateway
 Additional information
@@ -362,6 +372,8 @@ Date | Event | Reference | Summary
 22/10/2026 | Decision by Parliament, 1st reading | T10-0363/2026 | Summary
 22/10/2026 | Results of vote in Parliament |  | 
 22/10/2026 | Matter referred back to the committee responsible for interinstitutional negotiations |  | 
+Date | Subject
+14/12/2026 | Indicative plenary sitting date, 1st reading
 Procedure reference | 2026/0211(COD)
 Procedure type | COD - Ordinary legislative procedure (ex-codecision procedure)
 Procedure subtype | Legislation
@@ -395,6 +407,7 @@ BLOSS Michael | Shadow rapporteur | ENVI | 22/07/2026 | Wirtschaftsvereinigung d
 Name | Date | Interest representatives
 CAVEDAGNA Stefano | 10/11/2026 | confindustria ceramica
 HANSEN Niels Flemming | 04/11/2026 | Dansk Fjernvarme
+NIINISTÖ Ville | 04/11/2026 | Finnish Forest Industries Federation (Metsäteollisuus ry)
 HANSEN Niels Flemming | 29/09/2026 | Ørsted A/S
 TOSI Flavio | 03/06/2026 | European Container Glass Federation
 HANSEN Niels Flemming | 20/05/2026 | Confederation of European Paper Industries

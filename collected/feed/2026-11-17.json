@@ -1,0 +1,116 @@
+{
+ "date": "2026-11-17",
+ "items": [
+  {
+   "id": "a7e8a5e71627",
+   "source": "ec-guidance",
+   "kind": "link",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202602498",
+   "text": "Commission Implementing Regulation (EU) 2026/2498",
+   "seenAt": "2026-11-17T06:08:33+09:00",
+   "textPath": "collected/pages/items/a7e8a5e71627.txt"
+  },
+  {
+   "id": "fa1c66954a0a",
+   "source": "ec-guidance",
+   "kind": "line",
+   "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-legislation-and-guidance_en",
+   "text": "Commission Implementing Regulation (EU) 2026/2498 on the conversion of the carbon price paid in third countries",
+   "seenAt": "2026-11-17T06:08:33+09:00",
+   "textPath": "collected/pages/ec-guidance.txt"
+  },
+  {
+   "id": "16a775336387",
+   "source": "carbon-pulse",
+   "kind": "link",
+   "url": "https://carbon-pulse.com/571342/?site=cpp",
+   "text": "BRIEFING: US industry pans EU CBAM, pushes intervention",
+   "seenAt": "2026-11-17T06:08:33+09:00"
+  },
+  {
+   "id": "f5988eca0798",
+   "source": "carbon-pulse",
+   "kind": "link",
+   "url": "https://carbon-pulse.com/author/sharlene_1/",
+   "text": "Sharlene Gandhi",
+   "seenAt": "2026-11-17T06:08:33+09:00"
+  },
+  {
+   "id": "09e3ecb030f2",
+   "source": "carbon-pulse",
+   "kind": "link",
+   "url": "https://carbon-pulse.com/572033/?site=cpp",
+   "text": "Article 6 credits can be legally deducted from importers’ EU CBAM fees, published rules confirm",
+   "seenAt": "2026-11-17T06:08:33+09:00"
+  },
+  {
+   "id": "69fb0d110d1b",
+   "source": "carbon-pulse",
+   "kind": "link",
+   "url": "https://carbon-pulse.com/571738/?site=cpp",
+   "text": "COP31: FEATURE – Countries keep raising CBAM issues at UN climate talks, but are busy adapting at home",
+   "seenAt": "2026-11-17T06:08:33+09:00"
+  },
+  {
+   "id": "422f54f8afad",
+   "source": "carbon-pulse",
+   "kind": "link",
+   "url": "https://carbon-pulse.com/author/alejandra/",
+   "text": "Alejandra Padin-Dujon",
+   "seenAt": "2026-11-17T06:08:33+09:00"
+  },
+  {
+   "id": "cfa60c86864e",
+   "source": "carbon-pulse",
+   "kind": "link",
+   "url": "https://carbon-pulse.com/author/ilana/",
+   "text": "Ilana Cardial",
+   "seenAt": "2026-11-17T06:08:33+09:00"
+  },
+  {
+   "id": "965598df8335",
+   "source": "carbon-pulse",
+   "kind": "link",
+   "url": "https://carbon-pulse.com/author/cameron_2/",
+   "text": "Cameron Murdoch",
+   "seenAt": "2026-11-17T06:08:33+09:00"
+  },
+  {
+   "id": "e2fc91ecf344",
+   "source": "ep-oeil-2026-0211",
+   "kind": "row",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0211(COD)",
+   "text": "Date | Subject",
+   "seenAt": "2026-11-17T06:08:33+09:00",
+   "cells": [
+    "Date",
+    "Subject"
+   ],
+   "textPath": "collected/pages/ep-oeil-2026-0211.txt"
+  },
+  {
+   "id": "fb16042ea728",
+   "source": "ep-oeil-2026-0211",
+   "kind": "row",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0211(COD)",
+   "text": "14/12/2026 | Indicative plenary sitting date, 1st reading",
+   "seenAt": "2026-11-17T06:08:33+09:00",
+   "cells": [
+    "14/12/2026",
+    "Indicative plenary sitting date, 1st reading"
+   ],
+   "textPath": "collected/pages/ep-oeil-2026-0211.txt"
+  },
+  {
+   "id": "45beb6c1f058",
+   "source": "eur-lex-related",
+   "kind": "link",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32026R2498",
+   "text": "2026-11-05 | Commission Implementing Regulation (EU) 2026/2498 of 5 November 2026 laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and of the Council as regards the conversion of the carbon price paid in a third country into a corresponding reduction in the number of CBAM certificates to be surrendered, the evidence of payment of that carbon price, the q",
+   "textPath": "collected/archive/pages/eur-lex-docs/32026R2498.txt",
+   "seenAt": "2026-11-17T06:13:42+09:00"
+  }
+ ],
+ "generatedAt": "2026-11-17T06:13:42+09:00",
+ "count": 12
+}

@@ -1,7 +1,7 @@
 {
  "code": "ec-guidance",
  "baseline": "2026-11-10",
- "checkedAt": "2026-11-16T05:57:30+09:00",
+ "checkedAt": "2026-11-17T06:08:33+09:00",
  "seen": {
   "u:https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-legislation-and-guidance_en": "2026-11-10",
   "u:https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-legislation-and-guidance_es": "2026-11-10",
@@ -198,6 +198,8 @@
   "l:2d3a6a6380b5abb5": "2026-11-10",
   "l:6ac7af0fe55f45a1": "2026-11-10",
   "l:6b3068348a4d20b8": "2026-11-10",
-  "l:0388338e09ee2901": "2026-11-10"
+  "l:0388338e09ee2901": "2026-11-10",
+  "u:https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202602498": "2026-11-17",
+  "l:0d4abcd215bb3646": "2026-11-17"
  }
 }

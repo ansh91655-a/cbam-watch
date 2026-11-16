@@ -1,6 +1,6 @@
 {
  "source": "ep-oeil",
- "fetchedAt": "2026-11-16T05:59:00+09:00",
+ "fetchedAt": "2026-11-17T06:12:34+09:00",
  "since": "2025-01-01",
  "report": {
   "procedures": {
@@ -48,7 +48,12 @@
     "title": "EU Emissions Trading System: heat and fuel benchmark values for 2026–2030",
     "events": 8,
     "status": "Awaiting Parliament's position in 1st reading",
-    "forecasts": [],
+    "forecasts": [
+     {
+      "date": "2026-12-14",
+      "subject": "Indicative plenary sitting date, 1st reading"
+     }
+    ],
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0211(COD)"
    }
   },

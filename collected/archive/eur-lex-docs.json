@@ -1,10 +1,10 @@
 {
  "source": "eur-lex-docs",
- "fetchedAt": "2026-11-16T05:58:41+09:00",
+ "fetchedAt": "2026-11-17T06:12:16+09:00",
  "since": "2025-01-01",
  "report": {
-  "targets": 25,
-  "stored": 0,
+  "targets": 26,
+  "stored": 1,
   "kept": 25,
   "failures": [],
   "notes": []
@@ -326,6 +326,20 @@
    "lines": 269,
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32026D2256",
    "textPath": "collected/archive/pages/eur-lex-docs/32026D2256.txt"
+  },
+  {
+   "date": "2026-11-05",
+   "celex": "32026R2498",
+   "title": "Commission Implementing Regulation (EU) 2026/2498 of 5 November 2026 laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and of the Council as regards the conversion of the carbon price paid in a third country into a corresponding reduction in the number of CBAM certificates to be surrendered, the evidence of payment of that carbon price, the qualifications of the independent person and conditions to ascertain its independence and qualifications",
+   "relations": [
+    "resource_legal_based_on_resource_legal:32023R0956",
+    "work_cites_work:32025R2083",
+    "title-match"
+   ],
+   "procedures": [],
+   "lines": 1538,
+   "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32026R2498",
+   "textPath": "collected/archive/pages/eur-lex-docs/32026R2498.txt"
   },
   {
    "date": "2026-11-09",

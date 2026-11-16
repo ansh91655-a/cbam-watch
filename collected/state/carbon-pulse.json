@@ -1,7 +1,7 @@
 {
  "code": "carbon-pulse",
  "baseline": "2026-11-10",
- "checkedAt": "2026-11-16T05:57:30+09:00",
+ "checkedAt": "2026-11-17T06:08:33+09:00",
  "seen": {
   "u:https://carbon-pulse.com/": "2026-11-10",
   "u:https://carbon-pulse.com/nzp": "2026-11-10",
@@ -151,6 +151,13 @@
   "u:https://carbon-pulse.com/570419/?site=cpp": "2026-11-16",
   "u:https://carbon-pulse.com/author/fredsimon74/": "2026-11-16",
   "u:https://carbon-pulse.com/category/nature-biodiversity/": "2026-11-16",
-  "u:https://carbon-pulse.com/category/nature-biodiversity/policy/": "2026-11-16"
+  "u:https://carbon-pulse.com/category/nature-biodiversity/policy/": "2026-11-16",
+  "u:https://carbon-pulse.com/571342/?site=cpp": "2026-11-17",
+  "u:https://carbon-pulse.com/author/sharlene_1/": "2026-11-17",
+  "u:https://carbon-pulse.com/572033/?site=cpp": "2026-11-17",
+  "u:https://carbon-pulse.com/571738/?site=cpp": "2026-11-17",
+  "u:https://carbon-pulse.com/author/alejandra/": "2026-11-17",
+  "u:https://carbon-pulse.com/author/ilana/": "2026-11-17",
+  "u:https://carbon-pulse.com/author/cameron_2/": "2026-11-17"
  }
 }
