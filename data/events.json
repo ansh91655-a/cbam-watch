@@ -34,6 +34,22 @@
    "sourceName": "EC CBAM Communication and News",
    "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_en",
    "basis": "the first compliance deadline of 30 September 2027"
+  },
+  {
+   "date": "2026-12-14",
+   "title": "유럽의회 본회의 예정일: EU 배출권거래제 열·연료 벤치마크 값(제1독회)",
+   "note": "유럽의회 절차 기록 2026/0211(COD)에 제1독회 본회의 예정일로 올라온 날짜입니다.",
+   "sourceName": "EP Legislative Observatory 2026/0211(COD)",
+   "link": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0211(COD)",
+   "kind": "행사"
+  },
+  {
+   "date": "2026-12",
+   "title": "제3국 탄소가격 증빙에 관한 가이던스 공개 시기",
+   "note": "이행규정(EU) 2026/2498의 전문은 EU 집행위원회가 2026년 말 전에 가이던스를 공개하는 것이 바람직하다고 적었습니다.",
+   "sourceName": "EU 법령 데이터베이스(CELLAR)의 CBAM 연관 문서",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32026R2498",
+   "kind": "기한"
   }
  ]
 }
