@@ -1,6 +1,6 @@
 {
  "source": "uk-govuk",
- "fetchedAt": "2026-11-17T06:13:04+09:00",
+ "fetchedAt": "2026-11-18T06:18:27+09:00",
  "since": "2025-01-01",
  "report": {
   "documents": 19,
@@ -8,11 +8,22 @@
   "changes": 247,
   "failures": [],
   "recent": {
-   "reread": 2,
+   "reread": 3,
    "failures": []
   }
  },
  "entries": [
+  {
+   "date": "2026-11-17",
+   "title": "HMRC email updates, videos and webinars for tax agents and advisers",
+   "note": "Recorded webinars have been added for ‘general Carbon Border Adjustment Mechanism (CBAM) overview’, ‘Carbon Border Adjustment (CBAM) — Monitoring, Reporting and Verification (MRV) overview’ and ‘Carbon Border Adjustment (CBAM) — Carbon Price Relief (CPR)’. Recorded webinars have been updated for ‘The merged scheme for R&D expenditure credit (RDEC)’ and ‘Compliance Professional Standards’. The YouTube video has been removed for ‘Get help with basis period reform (moving to the new tax year basis)’.",
+   "url": "https://www.gov.uk/guidance/help-and-support-for-agents",
+   "type": "detailed_guide",
+   "firstPublished": "2017-11-30",
+   "via": "collection",
+   "key": "/guidance/help-and-support-for-agents@2026-11-17",
+   "textPath": "collected/archive/pages/uk-govuk/changes.txt"
+  },
   {
    "date": "2026-11-10",
    "title": "Check if you’ll need to register for Carbon Border Adjustment Mechanism (CBAM)",

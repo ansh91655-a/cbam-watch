@@ -2,7 +2,7 @@
  "sources": {
   "ec-cbam": {
    "code": "ec-cbam",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
@@ -16,14 +16,14 @@
    },
    "entries": 101,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "ec-guidance": {
    "code": "ec-guidance",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
-   "new": 2,
+   "new": 0,
    "note": "",
    "bytes": 157843,
    "pageHash": "b074251253f3e973",
@@ -34,11 +34,11 @@
    },
    "entries": 157,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "ec-news": {
    "code": "ec-news",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
@@ -52,11 +52,11 @@
    },
    "entries": 119,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "ec-price": {
    "code": "ec-price",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
@@ -70,11 +70,11 @@
    },
    "entries": 5,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "ec-verification": {
    "code": "ec-verification",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
@@ -88,17 +88,17 @@
    },
    "entries": 132,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "ep-oeil-2025-0419": {
    "code": "ep-oeil-2025-0419",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
    "note": "",
    "bytes": 150492,
-   "pageHash": "299d18d871cc5b9c",
+   "pageHash": "4424b8c8d1fe0005",
    "counts": {
     "links": 126,
     "lines": 393,
@@ -106,17 +106,17 @@
    },
    "entries": 56,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "ep-oeil-2026-0212": {
    "code": "ep-oeil-2026-0212",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
    "note": "",
    "bytes": 146026,
-   "pageHash": "c63c81a2833bc4a0",
+   "pageHash": "e5bb0cf5aa5abb37",
    "counts": {
     "links": 126,
     "lines": 388,
@@ -124,17 +124,17 @@
    },
    "entries": 52,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "keco-cbam": {
    "code": "keco-cbam",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
    "note": "",
    "bytes": 187325,
-   "pageHash": "d001dd9c0e1a2f38",
+   "pageHash": "7a88201892515d4a",
    "counts": {
     "links": 643,
     "lines": 1030,
@@ -142,17 +142,17 @@
    },
    "entries": 489,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "motir": {
    "code": "motir",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
    "note": "",
-   "bytes": 124725,
-   "pageHash": "a8edc96e5ff54793",
+   "bytes": 124332,
+   "pageHash": "abc5e07b079570fa",
    "counts": {
     "links": 240,
     "lines": 394,
@@ -160,17 +160,17 @@
    },
    "entries": 0,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "kba-europe": {
    "code": "kba-europe",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
    "note": "",
-   "bytes": 110983,
-   "pageHash": "f3f3813e23137e59",
+   "bytes": 111032,
+   "pageHash": "238e86470566caa9",
    "counts": {
     "links": 34,
     "lines": 107,
@@ -178,17 +178,17 @@
    },
    "entries": 1,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "gokea": {
    "code": "gokea",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
    "note": "",
    "bytes": 55109,
-   "pageHash": "14cb109ee9334381",
+   "pageHash": "5b39f8caeab2ccf8",
    "counts": {
     "links": 68,
     "lines": 283,
@@ -196,17 +196,17 @@
    },
    "entries": 0,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "moj": {
    "code": "moj",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
    "note": "",
    "bytes": 40188,
-   "pageHash": "444563b53b22824e",
+   "pageHash": "080dd18b5807cd95",
    "counts": {
     "links": 10,
     "lines": 91,
@@ -214,17 +214,17 @@
    },
    "entries": 0,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "kosmes-esg": {
    "code": "kosmes-esg",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
    "note": "",
    "bytes": 47741,
-   "pageHash": "0faa47363cf16c15",
+   "pageHash": "36af7831daa4ec1a",
    "counts": {
     "links": 35,
     "lines": 99,
@@ -232,11 +232,11 @@
    },
    "entries": 8,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "carbontrust": {
    "code": "carbontrust",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
@@ -250,11 +250,11 @@
    },
    "entries": 30,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "carbonchain": {
    "code": "carbonchain",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
@@ -268,11 +268,11 @@
    },
    "entries": 15,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "epa-ie": {
    "code": "epa-ie",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
@@ -286,17 +286,17 @@
    },
    "entries": 165,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "dehst": {
    "code": "dehst",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
    "note": "",
-   "bytes": 103050,
-   "pageHash": "bfa0f0edda70d7a7",
+   "bytes": 103052,
+   "pageHash": "1b0af60424e310e1",
    "counts": {
     "links": 48,
     "lines": 208,
@@ -304,17 +304,17 @@
    },
    "entries": 48,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "nea": {
    "code": "nea",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
    "note": "",
-   "bytes": 275400,
-   "pageHash": "ccd2a7da9f07c5bf",
+   "bytes": 275418,
+   "pageHash": "470e1383d8f0d50a",
    "counts": {
     "links": 33,
     "lines": 60,
@@ -322,17 +322,17 @@
    },
    "entries": 32,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "kpmg": {
    "code": "kpmg",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
    "note": "",
    "bytes": 712007,
-   "pageHash": "fdb787cb77067b7c",
+   "pageHash": "2b73a4a4b3c96a4a",
    "counts": {
     "links": 106,
     "lines": 651,
@@ -340,17 +340,17 @@
    },
    "entries": 54,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "hmrc-cbam": {
    "code": "hmrc-cbam",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
    "note": "",
-   "bytes": 95004,
-   "pageHash": "e1536159288e4c33",
+   "bytes": 95005,
+   "pageHash": "a37796bf043f26e2",
    "counts": {
     "links": 68,
     "lines": 221,
@@ -358,35 +358,35 @@
    },
    "entries": 105,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "icap-news": {
    "code": "icap-news",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
-   "new": 0,
+   "new": 1,
    "note": "",
-   "bytes": 122099,
-   "pageHash": "8ccb1c628bcfefee",
+   "bytes": 122077,
+   "pageHash": "4d14529c15aa90b2",
    "counts": {
     "links": 64,
     "lines": 229,
     "rows": 0
    },
-   "entries": 13,
+   "entries": 14,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "ea-news": {
    "code": "ea-news",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
    "note": "",
-   "bytes": 481963,
-   "pageHash": "009ebde844c19c55",
+   "bytes": 481962,
+   "pageHash": "d0310dc202842236",
    "counts": {
     "links": 57,
     "lines": 336,
@@ -394,29 +394,29 @@
    },
    "entries": 1,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "carbon-pulse": {
    "code": "carbon-pulse",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
-   "new": 7,
+   "new": 5,
    "note": "",
-   "bytes": 338473,
-   "pageHash": "6ac2e87f3188c70c",
+   "bytes": 339239,
+   "pageHash": "9664ac2e0f7dfca6",
    "counts": {
-    "links": 134,
+    "links": 131,
     "lines": 161,
     "rows": 0
    },
-   "entries": 124,
+   "entries": 121,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "ec-definitive": {
    "code": "ec-definitive",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
@@ -430,11 +430,11 @@
    },
    "entries": 123,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "ec-registry": {
    "code": "ec-registry",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
@@ -448,11 +448,11 @@
    },
    "entries": 225,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "ec-sectors": {
    "code": "ec-sectors",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
@@ -466,11 +466,11 @@
    },
    "entries": 157,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "ec-haveyoursay": {
    "code": "ec-haveyoursay",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
@@ -484,17 +484,17 @@
    },
    "entries": 15,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "ec-newsletter": {
    "code": "ec-newsletter",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
    "note": "",
    "bytes": 79285,
-   "pageHash": "a35955540fefb54f",
+   "pageHash": "3b5bfc428c5d8a28",
    "counts": {
     "links": 20,
     "lines": 109,
@@ -502,17 +502,17 @@
    },
    "entries": 10,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "ep-oeil-2025-0418": {
    "code": "ep-oeil-2025-0418",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
    "note": "",
    "bytes": 131158,
-   "pageHash": "2a0c3350082acf37",
+   "pageHash": "19f7a5bcb8d86305",
    "counts": {
     "links": 112,
     "lines": 332,
@@ -520,35 +520,35 @@
    },
    "entries": 48,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "ep-oeil-2026-0211": {
    "code": "ep-oeil-2026-0211",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
-   "new": 2,
+   "new": 0,
    "note": "",
-   "bytes": 133088,
-   "pageHash": "1f8f6ad4bb51bc98",
+   "bytes": 133271,
+   "pageHash": "9faf718404911bcd",
    "counts": {
     "links": 107,
-    "lines": 354,
+    "lines": 355,
     "rows": 55
    },
    "entries": 40,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "ep-oeil-2025-0574": {
    "code": "ep-oeil-2025-0574",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
    "note": "",
    "bytes": 102029,
-   "pageHash": "1a418ab5397e0d83",
+   "pageHash": "446699c0e1bc6088",
    "counts": {
     "links": 99,
     "lines": 244,
@@ -556,11 +556,11 @@
    },
    "entries": 34,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "uk-legislation": {
    "code": "uk-legislation",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
@@ -574,17 +574,17 @@
    },
    "entries": 32,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "motir-policy": {
    "code": "motir-policy",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
    "note": "",
-   "bytes": 135374,
-   "pageHash": "93068c189de9bc1e",
+   "bytes": 135375,
+   "pageHash": "bd3b9e04b937da6f",
    "counts": {
     "links": 240,
     "lines": 409,
@@ -592,27 +592,27 @@
    },
    "entries": 0,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   },
   "mcee": {
    "code": "mcee",
-   "checkedAt": "2026-11-17T06:08:33+09:00",
+   "checkedAt": "2026-11-18T06:12:41+09:00",
    "ok": true,
    "status": 200,
    "new": 0,
    "note": "",
-   "bytes": 369709,
-   "pageHash": "57fae8d5b7964469",
+   "bytes": 369772,
+   "pageHash": "d2baa4153d62c918",
    "counts": {
     "links": 279,
-    "lines": 435,
+    "lines": 438,
     "rows": 11
    },
    "entries": 0,
    "failCount": 0,
-   "lastOk": "2026-11-17T06:08:33+09:00"
+   "lastOk": "2026-11-18T06:12:41+09:00"
   }
  },
- "checkedAt": "2026-11-17T06:08:33+09:00",
- "newItems": 11
+ "checkedAt": "2026-11-18T06:12:41+09:00",
+ "newItems": 6
 }
