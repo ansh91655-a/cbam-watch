@@ -1,0 +1,17 @@
+{
+ "kind": "daily",
+ "date": "2026-11-17",
+ "writtenAt": "2026-11-17T10:06:20+09:00",
+ "status": "문제",
+ "problems": [],
+ "runProblems": 2,
+ "holds": [],
+ "counts": {
+  "published": 5,
+  "total": 247,
+  "retryHolds": 0
+ },
+ "handbookToReview": [
+  "해설서: 규제 '제3국에서 지불한 탄소가격 이행규정(안)'이(가) 해설서를 맞춰 본 뒤에 달라짐(단계가 '채택 보도(공식 확인 전)'에서 '채택·관보 게재'(으)로 바뀜). 이 규제를 가리키는 절을 다시 볼 것: carbon-price.rules-to-come, ahead.to-come"
+ ]
+}
