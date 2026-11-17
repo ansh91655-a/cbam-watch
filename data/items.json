@@ -1,5 +1,5 @@
 {
- "builtAt": "2026-11-17T08:22:04+09:00",
+ "builtAt": "2026-11-18T08:21:34+09:00",
  "note": "seed-로 시작하는 항목은 2026-11-10에 원문을 두 번 읽고 자동 검증까지 통과시킨 초기 등록분이다.",
  "items": [
   {
@@ -5286,6 +5286,86 @@
    "excerpt": "2026/2498\n16.11.2026\nCOMMISSION IMPLEMENTING REGULATION (EU) 2026/2498\nof 5 November 2026\nlaying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and of the Council as regards the conversion of the carbon price paid in a third country into a corresponding reduction in the number of CBAM certificates to be surrendered, the evidence of payment of that carbon price, the qualifications of the independent person and conditions to ascertain its independence and qualifications\nTo support the assessment carried out by the independent person of the type of eligible evidence, the Commission should publish guidance before the end of the year 2026, and update it regularly thereafter to indicate on a country-by-country basis the documentary evidence that could be considered to meet the evidence requirements set in this Regulation.\nThe provisions of this Regulation relate to the yearly average carbon price effectively paid on greenhouse gas emissions released from 1 January 2026. This Regulation should therefore apply from 1 January 2026.",
    "listed": "2026-11-17",
    "checkedAt": "2026-11-17T08:21:06+09:00",
+   "authoring": "자동"
+  },
+  {
+   "id": "20261118-carbon-pulse-09e0c4",
+   "title": "EU, CBAM 탄소 크레딧 적격성을 유엔 기술 검토와 연계 보도",
+   "summary": "Carbon Pulse는 COP31의 감독 논란 속에 EU가 CBAM의 탄소 크레딧 적격성을 유엔 기술 검토와 연계했다고 보도했습니다.",
+   "kind": "소식",
+   "topic": "price",
+   "importance": "낮음",
+   "topics": [
+    "탄소 크레딧",
+    "COP31"
+   ],
+   "sourceCode": "carbon-pulse",
+   "sourceName": "Carbon Pulse CBAM & Tariffs",
+   "link": "https://carbon-pulse.com/572299/?site=cpp",
+   "published": "",
+   "impact": "",
+   "listed": "2026-11-18",
+   "checkedAt": "2026-11-18T08:20:45+09:00",
+   "authoring": "자동"
+  },
+  {
+   "id": "20261118-carbon-pulse-24e6fd",
+   "title": "CBAM 시작 뒤 영국의 EU 밖 시멘트 수입 증가를 다룬 산업 단체 조사 보도",
+   "summary": "Carbon Pulse는 CBAM이 시작된 뒤 영국이 EU 밖에서 시멘트를 더 많이 수입하고 있다는 산업 단체의 조사 결과를 보도했습니다.",
+   "kind": "해외",
+   "topic": "abroad",
+   "importance": "낮음",
+   "topics": [
+    "영국",
+    "시멘트"
+   ],
+   "sourceCode": "carbon-pulse",
+   "sourceName": "Carbon Pulse CBAM & Tariffs",
+   "link": "https://carbon-pulse.com/572318/?site=cpp",
+   "published": "",
+   "impact": "",
+   "listed": "2026-11-18",
+   "checkedAt": "2026-11-18T08:20:45+09:00",
+   "authoring": "자동"
+  },
+  {
+   "id": "20261118-carbon-pulse-b5004b",
+   "title": "일본 '녹색' 철강의 EU 규제·그린워싱 위험을 짚은 법률 분석 보도",
+   "summary": "Carbon Pulse는 일본의 '녹색' 철강이 EU의 규제와 그린워싱 위험에 직면해 있다는 법률 분석 결과를 보도했습니다.",
+   "kind": "해외",
+   "topic": "abroad",
+   "importance": "낮음",
+   "topics": [
+    "일본",
+    "철강"
+   ],
+   "sourceCode": "carbon-pulse",
+   "sourceName": "Carbon Pulse CBAM & Tariffs",
+   "link": "https://carbon-pulse.com/572438/?site=cpp",
+   "published": "",
+   "impact": "",
+   "listed": "2026-11-18",
+   "checkedAt": "2026-11-18T08:20:45+09:00",
+   "authoring": "자동"
+  },
+  {
+   "id": "20261118-uk-govuk-a93b9f",
+   "published": "2026-11-17",
+   "title": "영국 국세청, CBAM 개요·MRV·탄소가격 경감 녹화 웨비나 추가",
+   "summary": "영국 국세청(HMRC)은 2026년 11월 17일에 세무 대리인과 자문가를 위한 영상·웨비나 안내에 CBAM 녹화 웨비나를 더했습니다. 더해진 웨비나는 CBAM 일반 개요, 모니터링·보고·검증(MRV) 개요, 탄소가격 경감(Carbon Price Relief, CPR)을 다룹니다.",
+   "kind": "해외",
+   "topic": "abroad",
+   "importance": "낮음",
+   "topics": [
+    "영국 CBAM",
+    "웨비나"
+   ],
+   "sourceCode": "uk-govuk",
+   "sourceName": "UK GOV.UK (CBAM 문서 전체)",
+   "link": "https://www.gov.uk/guidance/help-and-support-for-agents",
+   "impact": "",
+   "listed": "2026-11-18",
+   "checkedAt": "2026-11-18T08:20:45+09:00",
    "authoring": "자동"
   }
  ]
