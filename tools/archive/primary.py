@@ -32,24 +32,26 @@ TARGETS = [
     ("tfeu-291", "12016E291", "EU 기능조약 제291조(이행규정)", "implementing"),
     ("tfeu-294", "12016E294", "EU 기능조약 제294조(통상입법절차)", "first reading"),
     ("tfeu-297", "12016E297", "EU 기능조약 제297조(서명, 게재, 발효)", "Official Journal"),
-    ("tfeu-304", "12016E304", "EU 기능조약 제304조(유럽경제사회위원회의 자문)", "Economic and Social Committee"),
+    ("tfeu-304", "12016E304", "EU 기능조약 제304조(유럽경제사회위원회의 자문)", "shall be consulted"),
     ("tfeu-311", "12016E311", "EU 기능조약 제311조(자체 재원)", "own resources"),
     ("tfeu-322", "12016E322", "EU 기능조약 제322조(재정 규칙)", "Court of Auditors"),
+    ("protocol-2", "12016E/PRO/02", "보충성과 비례성 원칙의 적용에 관한 의정서(제2호)", "national Parliaments"),
+    ("protocol-3", "12016E/PRO/03", "EU 사법재판소 규정에 관한 의정서(제3호)", "Advocate-General"),
     ("comitology", "32011R0182", "규정 (EU) No 182/2011(이행 권한 행사의 통제)", "examination procedure"),
     ("better-law-making", "32016Q0512(01)", "더 나은 법 제정에 관한 기관 간 합의(2016년)", "delegated acts"),
     ("eea-agreement", "21994A0103(01)", "EEA 협정 제7부(기관과 결정 절차)", "EEA Joint Committee"),
 ]
-# 긴 문서에서 남길 곳: 이름 → (이 줄부터, 이 줄 앞까지). 줄의 앞뒤 빈칸을 떼고 견준다.
-PART = {"eea-agreement": ("PART VII", "PART VIII")}
+# 긴 문서에서 남길 곳: 이름 → (이 말로 시작하는 줄부터, 이 말로 시작하는 줄 앞까지). 차례의 줄에 걸리지 않게 본문의 제목 줄에만 있는 말을 적는다.
+PART = {"eea-agreement": ("PART VII INSTITUTIONAL PROVISIONS CHAPTER", "PART VIII FINANCIAL MECHANISM")}
 LINE_LIMIT = 6000   # 남길 곳을 찾지 못한 긴 문서는 이만큼만 둔다
 
 
 def cut(lines, start, end):
-    """start로 시작하는 첫 줄부터 그 뒤에 end와 같은 첫 줄 앞까지. 찾지 못하면 빈 목록."""
-    first = next((index for index, line in enumerate(lines) if line.strip() == start), None)
+    """start로 시작하는 첫 줄부터 그 뒤에 end로 시작하는 첫 줄 앞까지. 찾지 못하면 빈 목록."""
+    first = next((index for index, line in enumerate(lines) if line.strip().startswith(start)), None)
     if first is None:
         return []
-    last = next((index for index in range(first + 1, len(lines)) if lines[index].strip() == end), len(lines))
+    last = next((index for index in range(first + 1, len(lines)) if lines[index].strip().startswith(end)), len(lines))
     return lines[first:last]
 
 

@@ -7,9 +7,11 @@ from tools.archive import crawl, primary
 
 class PrimaryTest(unittest.TestCase):
     def test_a_long_document_keeps_only_the_named_part(self):
-        lines = ["PART VI", "a", "PART VII", "INSTITUTIONAL PROVISIONS", "Article 92", "PART VIII", "b"]
-        self.assertEqual(primary.cut(lines, "PART VII", "PART VIII"), ["PART VII", "INSTITUTIONAL PROVISIONS", "Article 92"])
-        self.assertEqual(primary.cut(lines, "PART VIII", "PART IX"), ["PART VIII", "b"])   # 끝을 알리는 줄이 없으면 글의 끝까지
+        lines = ["PART VII INSTITUTIONAL PROVISIONS .......... 22", "PART VIII FINANCIAL MECHANISM .......... 28", "PART VI COOPERATION", "a",
+                 "PART VII INSTITUTIONAL PROVISIONS CHAPTER 1 THE STRUCTURE", "Article 92", "PART VIII FINANCIAL MECHANISM", "b"]
+        start, end = primary.PART["eea-agreement"]
+        self.assertEqual(primary.cut(lines, start, end), ["PART VII INSTITUTIONAL PROVISIONS CHAPTER 1 THE STRUCTURE", "Article 92"])   # 차례의 줄은 건너뛴다
+        self.assertEqual(primary.cut(lines, "PART VIII FINANCIAL MECHANISM", "PART IX"), lines[1:])   # 끝을 알리는 줄이 없으면 글의 끝까지
         self.assertEqual(primary.cut(lines, "PART X", "PART XI"), [])
 
     def test_a_number_with_brackets_is_also_asked_in_its_escaped_form(self):
