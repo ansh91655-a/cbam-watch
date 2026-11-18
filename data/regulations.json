@@ -5106,8 +5106,22 @@
    "next": "2026년 11월 19일에 발효합니다. 관보에 실린 2026년 11월 16일의 사흘 뒤입니다.",
    "timeline": [
     {
+     "date": "2025-08-28",
+     "text": "제3국에서 지불한 탄소가격에 관한 근거 수집이 시작되었습니다(2025년 9월 25일 마감).",
+     "source": "이행규정 (EU) 2026/2498 전문 (3)(EUR-Lex)",
+     "link": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R2498",
+     "basis": "stored",
+     "evidence": {
+      "path": "collected/archive/pages/eu-acts/32026R2498.txt",
+      "contains": [
+       "the Commission conducted a call for evidence between 28 August and 25 September 2025"
+      ]
+     },
+     "step": "plan"
+    },
+    {
      "date": "2025-08-29",
-     "text": "확정기간의 산정 방법론, 무상할당 조정, 제3국에서 지불한 탄소가격에 관한 근거 수집이 시작되었습니다.",
+     "text": "EU 집행위원회가 확정기간의 산정 방법론, 무상할당 조정, 제3국에서 지불한 탄소가격에 관한 근거 수집을 알렸습니다.",
      "source": "EU 집행위원회 CBAM 소식",
      "link": "https://taxation-customs.ec.europa.eu/news/cbam-call-evidence-emission-methodology-free-allocation-adjustment-and-carbon-price-paid-third-2025-08-29_en",
      "basis": "stored",
@@ -5117,8 +5131,7 @@
        "url": "https://taxation-customs.ec.europa.eu/news/cbam-call-evidence-emission-methodology-free-allocation-adjustment-and-carbon-price-paid-third-2025-08-29_en",
        "date": "2025-08-29"
       }
-     },
-     "step": "plan"
+     }
     },
     {
      "date": "2026-05-13",
@@ -5202,7 +5215,7 @@
     "asOf": "2026-11-18",
     "basedOn": {
      "stage": "발효 대기",
-     "events": 5
+     "events": 6
     },
     "sections": [
      {
@@ -5264,6 +5277,13 @@
        {
         "label": "탄소가격제도의 목록",
         "text": "부속서 II는 요건을 갖춘 것으로 보는 탄소가격제도를 나라별로 들고 있습니다. 대한민국의 배출권거래제(K-ETS)가 배출권거래제로 올라 있고, 주된 환급·보상의 형태로 무상할당이 적혀 있습니다. 부속서는 이 목록이 전부가 아니며 독립적인 사람이 다른 제도를 평가할 수 있다고 적고 있습니다.",
+        "refs": [
+         "act"
+        ]
+       },
+       {
+        "label": "차감이 인정되는 조건",
+        "text": "전문은 탄소가격제도가 구속력이 있고 그 제도가 다루는 부문의 모든 사업자에게 이행 의무를 지워야 한다고 적고 있습니다. 또 제품이 어디로 가든 사업장의 모든 제품을 만드는 데 나온 배출량에 같은 가격 의무를 지워야 하며, 수출하는 제품의 내재배출량에만 치른 탄소가격은 차감의 대상이 되지 않습니다.",
         "refs": [
          "act"
         ]
@@ -5368,8 +5388,22 @@
         ]
        },
        {
+        "label": "증거를 내지 못한 환급",
+        "text": "사업자가 환급이나 보상을 받을 자격이 있는데 그 금액의 증거를 내지 못하면 실질적으로 지불된 탄소가격을 정할 수 없습니다. 아직 받지 않았더라도 당국이 공식으로 정한 금액이나 받을 수 있는 최대 금액을 반영하고, 당국의 서면 확인으로 신청하지 않았거나 거절되었음을 증명하면 반영하지 않습니다.",
+        "refs": [
+         "act"
+        ]
+       },
+       {
         "label": "탄소가격 보고서",
         "text": "사업자는 EU 집행위원회가 CBAM 등록부로 제공하는 전자 양식으로 탄소가격 보고서를 영어로 작성하고, 독립적인 사람이 그 보고서를 인증합니다. 인증보고서는 탄소가격 보고서에 중요한 오류이 없고 탄소가격이 실질적으로 지불되었는지에 대한 의견을 담습니다.",
+        "refs": [
+         "act"
+        ]
+       },
+       {
+        "label": "인증의 기준",
+        "text": "독립적인 사람은 합리적 보증의 수준으로 평가하며, 중요성 기준은 제품마다 그 제품에 귀속된 실질 지불 탄소가격 합계의 5%입니다. 인증보고서의 의견은 만족스러운 것으로 인증됨, 또는 만족스럽지 않은 것으로 인증됨이고, 같은 사업장의 같은 보고기간에는 인증보고서를 하나만 냅니다.",
         "refs": [
          "act"
         ]

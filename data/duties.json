@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-14",
+ "asOf": "2026-11-18",
  "note": "법령에 날짜가 적힌 의무만 실었습니다. 심의 중인 개정안의 일정은 넣지 않았습니다. 해마다 돌아오는 의무는 법령이 정한 날짜로 이듬해와 그다음 해까지 적었습니다. 날짜는 법령이 바뀌면 달라질 수 있으니 근거 조문에서 다시 확인해 주세요.",
  "schemes": [
   {
@@ -456,6 +456,88 @@
     "path": "collected/archive/pages/eu-acts/32025R2549.txt",
     "contains": [
      "Where a revocation takes effect in accordance with Article 24 of this Regulation, within the calendar year 2026, the total number of CBAM certificates as referred to in paragraph 7 of this Article shall be surrendered by 15 February 2027"
+    ]
+   }
+  },
+  {
+   "id": "eu-certification-report-registry",
+   "scheme": "eu",
+   "date": "2027-02-01",
+   "kind": "시행",
+   "title": "탄소가격 인증보고서의 CBAM 등록부 발행 시작",
+   "who": "탄소가격 서류를 인증하는 독립적인 사람",
+   "roles": [
+    "declarant",
+    "operator",
+    "verifier"
+   ],
+   "text": "독립적인 사람은 2027년 2월 1일부터 인증보고서를 CBAM 등록부에서 발행합니다. 사업자가 CBAM 등록부에 등록되어 있으면 등록부로 전달하고, 등록되어 있지 않으면 등록부에서 내보낸 인증보고서를 다른 방법으로 전달합니다.",
+   "supplier": "제3국에서 낸 탄소가격으로 차감을 청구하려면 사업자가 쓴 탄소가격 보고서와, 독립적인 사람이 그 보고서를 인증해 낸 인증보고서가 필요합니다.",
+   "verifier": "2026년과 2027년의 보고기간에는 내재배출량의 검증기관으로 인정받은 검증기관이 CBAM 등록부로 관할당국에 신청해 독립적인 사람의 역할을 맡을 수 있습니다.",
+   "basis": "제3국 탄소가격 차감 이행규정 (EU) 2026/2498 제19조(2)~(4), 제11조(1)",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R2498",
+   "evidence": {
+    "path": "collected/archive/pages/eu-acts/32026R2498.txt",
+    "contains": [
+     "From 1 February 2027, the independent person shall issue the certification report in the CBAM registry.",
+     "the certification report shall be transmitted to the operator via the CBAM registry",
+     "the independent person shall export from the CBAM registry and transmit the certification report in its original standard software format to the operator via other means",
+     "for the purpose of carrying out the certification of the carbon price reports for the reporting periods 2026 and 2027, a verifier accredited pursuant to Delegated Regulation (EU) 2025/2551 for the relevant group of activities listed in Annex I to that Regulation may also opt to become an independent person",
+     "the verifier shall submit a request to the competent authority via the CBAM registry to be assigned the requested role of independent person"
+    ]
+   }
+  },
+  {
+   "id": "eu-independent-person-plan",
+   "scheme": "eu",
+   "date": "2027-11-15",
+   "kind": "기한",
+   "title": "독립적인 사람의 다음 해 인증 계획 통지",
+   "who": "탄소가격 서류를 인증하는 독립적인 사람",
+   "roles": [
+    "verifier",
+    "operator"
+   ],
+   "text": "인정받은 독립적인 사람은 해마다 11월 15일까지 다음 해의 인증 계획을 자신을 인정한 국가인정기구에 보내야 합니다. 계획에는 인증의 때와 곳(현장검증을 직접 하는지 원격으로 하는지 포함), 탄소가격 보고서를 인증받을 사업자와 그 사업장, 인증팀의 구성원과 해당 인정 범위를 적습니다. 이행규정이 2026년 11월 19일에 발효하므로 처음 돌아오는 기한은 2027년 11월 15일입니다.",
+   "supplier": "이 계획에는 다음 해에 탄소가격 보고서를 인증받을 사업자와 사업장이 들어갑니다.",
+   "basis": "제3국 탄소가격 차감 이행규정 (EU) 2026/2498 제35조(1), 제36조",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R2498",
+   "yearly": {
+    "text": "인정받은 독립적인 사람은 해마다 11월 15일까지 다음 해의 인증 계획을 자신을 인정한 국가인정기구에 보내야 합니다. 계획에는 인증의 때와 곳(현장검증을 직접 하는지 원격으로 하는지 포함), 탄소가격 보고서를 인증받을 사업자와 그 사업장, 인증팀의 구성원과 해당 인정 범위를 적습니다."
+   },
+   "evidence": {
+    "path": "collected/archive/pages/eu-acts/32026R2498.txt",
+    "contains": [
+     "By 15 November of each year, independent persons shall submit to the national accreditation body that has accredited them the following information for the next calendar year",
+     "the planned time and place of the certifications they are to carry out, indicating whether a physical or virtual site visit will be conducted",
+     "the name and identification details of each operator whose carbon price reports are subject to their certification, and the identification details of the installations concerned",
+     "the names of the members of the certification team and the scope of the accreditation covering the operator’s activities",
+     "This Regulation shall enter into force on the third day following that of its publication in the Official Journal of the European Union.",
+     "From 1 February 2027, the independent person shall issue the certification report in the CBAM registry."
+    ]
+   }
+  },
+  {
+   "id": "eu-temporary-independent-person-end",
+   "scheme": "eu",
+   "date": "2028-09-30",
+   "kind": "기한",
+   "title": "검증기관이 맡은 독립적인 사람 임시 역할의 종료",
+   "who": "독립적인 사람의 역할을 맡은 검증기관",
+   "roles": [
+    "verifier",
+    "operator"
+   ],
+   "text": "2026년과 2027년의 보고기간에 대해 독립적인 사람의 역할을 맡은 검증기관은, 이행규정 부속서 IV의 범위(실질적으로 지불된 탄소가격의 인증)로 인정을 받지 않으면 2028년 9월 30일까지 그 역할이 끝나고 CBAM 등록부에서 자동으로 지워집니다.",
+   "supplier": "그 뒤의 보고기간에 대한 탄소가격 보고서는 부속서 IV의 범위로 인정받은 독립적인 사람에게 인증을 맡겨야 합니다.",
+   "basis": "제3국 탄소가격 차감 이행규정 (EU) 2026/2498 제11조(3), 제10조(1)",
+   "link": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R2498",
+   "evidence": {
+    "path": "collected/archive/pages/eu-acts/32026R2498.txt",
+    "contains": [
+     "shall cease to be an independent person by 30 September 2028, and its role shall be automatically removed in the CBAM Registry, unless it has been granted accreditation for the activity group set out in Annex IV to this Regulation",
+     "the independent person shall be accredited for the scope of accreditation relating to the certification of the carbon price effectively paid set out in Annex IV to this Regulation",
+     "By derogation from Article 10, paragraph 1, for the purpose of carrying out the certification of the carbon price reports for the reporting periods 2026 and 2027"
     ]
    }
   }

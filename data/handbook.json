@@ -54,6 +54,12 @@
    "short": "배출량·검증 규정(SI 2026/995)",
    "url": "https://www.legislation.gov.uk/uksi/2026/995/made",
    "path": "collected/archive/pages/uk-legislation/uksi-2026-995-full.txt"
+  },
+  "ir-2498-oj": {
+   "text": "이행규정 (EU) 2026/2498(유럽연합 관보 L, 2026년 11월 16일자)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R2498",
+   "path": "collected/archive/pages/eu-acts/32026R2498.txt",
+   "short": "이행규정 (EU) 2026/2498의 관보 게재"
   }
  },
  "chapters": [
@@ -2385,7 +2391,7 @@
        ],
        [
         "탄소가격 차감분",
-        "제3국에서 낸 탄소가격(환급과 보상을 뺀 값)을 제품 1톤당으로 나타내 CBAM 인증서의 기준가격으로 나눈 값입니다. 가이던스 1은 기준가격을 제21조에 따라 정한 가격의 연평균이라고 설명합니다. 내재배출량을 기본값으로 정했으면 연간 기본 탄소가격을 참조해서만 차감을 청구할 수 있습니다."
+        "제3국에서 낸 탄소가격(환급과 보상을 뺀 값)을 제품 1톤당 유로로 나타내 CBAM 인증서의 기준가격으로 나눈 값입니다. 이행규정 (EU) 2026/2498은 기준가격을 수입한 해에 공표된 CBAM 인증서 가격의 평균으로 정합니다. 내재배출량을 기본값으로 정했으면 연간 기본 탄소가격을 참조해서만 차감을 청구할 수 있습니다."
        ],
        [
         "수입량",
@@ -2447,12 +2453,23 @@
        "contains": [
         "Where the embedded emissions are determined on the basis of default values, a reduction may be claimed only by a reference to yearly default carbon prices."
        ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "art-7",
+       "contains": [
+        "the Commission shall calculate the yearly reference price of CBAM certificates as the average of the price of CBAM certificates published pursuant to Implementing Regulation (EU) 2025/2548 for a given year of import"
+       ]
       }
      ],
      "see": [
       {
        "href": "#handbook-carbon-price",
        "text": "제3국에서 낸 탄소가격"
+      },
+      {
+       "href": "#handbook-carbon-price.rules-to-come",
+       "text": "차감하는 인증서 수의 식"
       },
       {
        "href": "#handbook-embedded",
@@ -3257,7 +3274,7 @@
   {
    "id": "carbon-price",
    "title": "제3국에서 낸 탄소가격",
-   "lead": "제품을 만든 제3국에서 이미 낸 탄소가격만큼 제출할 인증서 수를 줄이는 규칙과, 그에 필요한 증빙을 설명합니다.",
+   "lead": "제품을 만든 제3국에서 이미 낸 탄소가격만큼 제출할 인증서 수를 줄이는 규칙과 그에 필요한 증빙을, 이행규정 (EU) 2026/2498에 따라 설명합니다.",
    "sections": [
     {
      "id": "deduction",
@@ -3330,10 +3347,479 @@
      ],
      "see": [
       {
+       "href": "#handbook-carbon-price.rules-to-come",
+       "text": "차감하는 인증서 수의 식"
+      },
+      {
        "href": "#handbook-carbon-price.default-carbon-price",
        "text": "기본 탄소가격"
       }
      ]
+    },
+    {
+     "id": "rules-to-come",
+     "title": "세부 규칙: 제3국 탄소가격 차감 이행규정",
+     "body": [
+      "제9조(5)에 따른 세부 규칙은 이행규정 (EU) 2026/2498로 정해졌습니다. 2026년 11월 16일자 유럽연합 관보에 실렸고, 발효일은 관보에 실린 날의 사흘 뒤인 2026년 11월 19일입니다. 적용은 2026년 1월 1일부터입니다. 2026년 1월 1일부터 배출된 온실가스에 치른 탄소가격을 다루기 때문입니다.",
+      "실질적으로 지불된 탄소가격으로 청구할 때 줄어드는 인증서 수는 아래 식으로 구합니다. 제품 1톤당 실질 지불 탄소가격은 독립적인 사람의 인증보고서에 적힌 값입니다.",
+      "기준가격은 집행위원회가 수입한 해의 CBAM 인증서 가격을 평균해 정하고 CBAM 등록부에 공개합니다. 그해의 분기별 가격이나 주간 가격이 아직 다 공표되지 않았으면 그해에 공표된 가격의 평균으로 정합니다. 이행규정은 이 밖에 다음을 정합니다."
+     ],
+     "formula": {
+      "text": "줄어드는 인증서 수 = 제품 1톤당 실질 지불 탄소가격 ÷ 기준가격 × 수입량",
+      "parts": [
+       [
+        "제품 1톤당 실질 지불 탄소가격",
+        "독립적인 사람의 인증보고서에 적힌 값입니다. 유로로 나타냅니다. 법령은 이 값을 실효 탄소가격(effective carbon price)이라고 부릅니다."
+       ],
+       [
+        "기준가격",
+        "수입한 해의 CBAM 인증서 가격을 평균해 센트 단위로 반올림한 값입니다. 집행위원회가 CBAM 등록부에 공개합니다."
+       ],
+       [
+        "수입량",
+        "신고한 그 제품의 양입니다. 톤으로 세고 전력은 MWh로 셉니다."
+       ]
+      ]
+     },
+     "list": [
+      "차감에 쓸 수 있는 탄소가격제도의 종류와, 요건을 갖춘 것으로 보는 제도의 나라별 목록(제4조, 부속서 II)",
+      "제품마다 실질적으로 지불된 탄소가격을 정하는 방법과 환급·보상을 반영하는 방법(제3조, 제9조, 부속서 I)",
+      "외화로 낸 탄소가격을 유로로 바꾸는 연평균 환율(제6조)",
+      "사업자가 작성하는 탄소가격 보고서와, 독립적인 사람이 내는 인증보고서(제8조, 제12조~제20조, 부속서 III, 부속서 V)",
+      "독립적인 사람의 자격과 독립성, 인정과 감독(제10조, 제11조, 제21조~제35조, 부속서 IV)"
+     ],
+     "terms": [
+      {
+       "ko": "기준가격",
+       "en": "yearly reference price of CBAM certificates",
+       "abbr": "",
+       "text": "탄소가격 차감을 인증서 수로 바꿀 때 나누는 값입니다. 수입한 해의 CBAM 인증서 가격을 평균해 센트 단위로 반올림한 값이며, 집행위원회가 CBAM 등록부에 공개합니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-9",
+       "contains": [
+        "concerning the conversion of the yearly average carbon price effectively paid"
+       ]
+      },
+      {
+       "source": "ir-2498-oj",
+       "label": "관보 게재일",
+       "contains": [
+        "2026/2498 16.11.2026 COMMISSION IMPLEMENTING REGULATION (EU) 2026/2498"
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "art-36",
+       "contains": [
+        "This Regulation shall enter into force on the third day following that of its publication in the Official Journal of the European Union.",
+        "This Regulation shall apply from 1 January 2026.",
+        "It shall be revised in 2027 at the latest."
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "recitals",
+       "contains": [
+        "The provisions of this Regulation relate to the yearly average carbon price effectively paid on greenhouse gas emissions released from 1 January 2026.",
+        "the Commission should publish guidance before the end of the year 2026"
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "art-7",
+       "contains": [
+        "ReductionActualCarbonPriceg is the reduction in the number of certificates to be surrendered to account for the carbon price effectively paid",
+        "€EFF_CPg means the effective carbon price, expressed in euro per tonne of good or per MWh, as included in the certification report pursuant to Article 19",
+        "Ref Price CBAM means the yearly reference price of CBAM certificates, expressed in euro per tonne of CO2e for the year of import",
+        "Qg means the quantity of good g declared, expressed in tonnes or MWh.",
+        "the Commission shall calculate the yearly reference price of CBAM certificates as the average of the price of CBAM certificates published pursuant to Implementing Regulation (EU) 2025/2548 for a given year of import",
+        "That average shall be rounded to the nearest cent.",
+        "The Commission shall publish the yearly reference price in the CBAM registry.",
+        "Where the yearly reference price cannot yet be established based on all the quarterly or weekly prices of CBAM certificates published for a given year of import"
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "art-1",
+       "contains": [
+        "the determination of the carbon price effectively paid for the embedded emissions of each good, and the use of yearly default carbon prices for precursors and indirect emissions",
+        "the qualifications of the independent person referred to in Article 9(2) of Regulation (EU) 2023/956 who certifies the evidence"
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#rules-ir-carbon-price",
+       "text": "제3국 탄소가격 차감 이행규정의 진행 상황"
+      },
+      {
+       "href": "#calc",
+       "text": "인증서 비용 추정"
+      }
+     ],
+     "caveat": "차감의 식은 관보의 원문에 그림으로 실려 있어, 이 사이트의 규정 원문에는 식의 번호만 보입니다. 위의 식은 관보의 PDF에서 확인한 것입니다. 이 이행규정은 늦어도 2027년에 개정하도록 정해져 있습니다."
+    },
+    {
+     "id": "mechanisms",
+     "title": "탄소가격제도의 종류와 목록",
+     "body": [
+      "이행규정은 탄소가격이 지불되는 제도를 탄소가격제도(carbon price mechanism)라고 부르고 두 갈래로 나눕니다. 하나는 배출권거래제이고, 기준선-크레딧 방식 배출권거래제도 여기에 듭니다. 다른 하나는 탄소에 대한 세금, 부과금, 수수료이며, 연료에 매기는 것과 배출원에 매기는 것이 있습니다.",
+      "부속서 II는 이 요건을 갖춘 것으로 보는 제도를 나라별로 싣고, 제도마다 종류와 주된 환급·보상의 형태를 적었습니다. 대한민국은 배출권거래제(K-ETS)가 배출권거래제로 올라 있고, 주된 환급·보상의 형태는 무상 배출권입니다. 아래 표는 부속서 II에 실린 제도를 종류별로 모은 것입니다.",
+      "부속서 II의 목록이 전부는 아닙니다. 목록에 없는 제도는 독립적인 사람이 요건을 갖췄는지 평가할 수 있습니다. 집행위원회도 그 제도가 요건을 갖췄는지 평가하고, 해당하면 이 규정을 개정할 때 목록에 넣을지 검토합니다.",
+      "전문은 차감을 인정하는 조건을 설명합니다. 그 제도는 구속력이 있어야 하고, 그 제도가 다루는 부문에서 활동하는 모든 사업자에게 이행 의무를 지워야 합니다. 또 제품이 어디로 가든 사업장의 모든 제품을 만드는 데 나온 배출량에 같은 가격 의무를 지워야 합니다. 수출하는 제품의 내재배출량에만 치른 탄소가격은 차감의 대상이 되지 않습니다."
+     ],
+     "table": {
+      "head": [
+       "종류",
+       "부속서 II에 실린 제도가 있는 곳",
+       "부속서 II가 적은 주된 환급·보상"
+      ],
+      "rows": [
+       [
+        "배출권거래제",
+        "대한민국, 중국, 일본(GX-ETS), 영국, 튀르키예, 뉴질랜드, 카자흐스탄, 인도네시아, 몬테네그로, 캐나다 퀘벡, 미국의 캘리포니아·오리건·워싱턴",
+        "무상 배출권(중국은 부담 상한도 적혀 있음)"
+       ],
+       [
+        "기준선-크레딧 방식 배출권거래제",
+        "호주, 인도, 캐나다의 여러 주와 연방의 산출량 기반 가격제",
+        "기준선 아래의 배출량"
+       ],
+       [
+        "연료 기반 탄소세",
+        "알바니아, 아르헨티나, 콜롬비아, 이스라엘, 일본, 멕시코, 영국(Carbon Price Support), 대만(탄소 수수료)",
+        "이스라엘은 면제된 배출량, 대만은 감면 세율과 면제된 배출량"
+       ],
+       [
+        "배출원 기반 탄소세",
+        "칠레, 세르비아, 싱가포르, 남아프리카공화국, 우크라이나",
+        "세르비아·싱가포르·남아프리카공화국은 면제된 배출량"
+       ]
+      ]
+     },
+     "terms": [
+      {
+       "ko": "탄소가격제도",
+       "en": "carbon price mechanism",
+       "abbr": "",
+       "text": "제3국에서 탄소가격을 내게 하는 제도입니다. 탄소에 대한 세금·부과금·수수료나 배출권거래제를 말합니다. 이행규정 부속서 II에 요건을 갖춘 것으로 보는 제도가 나라별로 실려 있습니다."
+      },
+      {
+       "ko": "기준선-크레딧 방식 배출권거래제",
+       "en": "baseline-and-credit emission trading system",
+       "abbr": "",
+       "text": "배출 한도인 기준선 아래의 배출량에는 탄소가격을 물리지 않는 배출권거래제입니다. 기준선보다 적게 배출한 곳은 거래할 수 있는 크레딧을 받고, 기준선을 넘긴 곳은 크레딧을 사야 합니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32026R2498",
+       "part": "art-2",
+       "contains": [
+        "‘carbon price mechanism’ means carbon tax, carbon fee or carbon levy, or an emissions trading system",
+        "‘baseline-and-credit emission trading system’ means the form of emission trading system where a baseline is established as an emission limit under which no carbon price is due and tradable emission credits are issued to entities that emit less than the baseline, and where emissions credits must be purchased by entities emitting more than the baseline"
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "art-4",
+       "contains": [
+        "an emissions trading system, including baseline-and-credit system; or",
+        "a fuel-based carbon tax, levy or fee; or",
+        "a point-source carbon tax, levy or fee.",
+        "The carbon price mechanisms listed in Annex II shall be considered as meeting the definition set under paragraph 1.",
+        "the Commission shall assess whether that mechanism meets the definition under paragraph 1 and, where applicable, consider the inclusion of that mechanism in Annex II through a revision of this Regulation"
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "annex-ii",
+       "contains": [
+        "The list of types of carbon price mechanisms mentioned under this Annex is not exhaustive, and does not prejudge the possibility for the independent person to assess additional types of carbon price mechanisms.",
+        "South Korea Korea Emissions Trading System (K-ETS) Emissions Trading System Free allowances",
+        "China China National Emissions Trading System Emissions trading system Free allowances Liability cap",
+        "Japan Japan GX-ETS Emissions Trading System Free allowances",
+        "UK UK Emission Trading Scheme Emissions Trading System Free allowances UK Carbon Price Support Fuel-based carbon tax",
+        "Türkiye Türkiye Emission Trading System Emissions Trading System Free allowances",
+        "New Zealand New Zealand Emissions Trading System Emissions Trading System Free allowances",
+        "Kazakhstan Kazakhstan Emissions Trading System Emissions Trading System Free allowances",
+        "Indonesia Indonesian Economic Value of Carbon Trading Scheme Emissions trading system Free allowances",
+        "Montenegro Montenegro Emissions Trading System Emissions Trading System Free Allowances",
+        "Quebec cap-and-trade system Emissions trading system Free allowances",
+        "California Cap-and-Invest Program Oregon Climate Protection Program Washington Cap-and-Invest Program Emissions Trading System Free allowances",
+        "Australia Australia Safeguard Mechanism Baseline-and-credit emission trading system Emissions under baseline",
+        "India India Carbon Credit Trading Scheme Baseline-and-credit emission trading system Emissions under baseline",
+        "The Federal backstop Output-Based Pricing System (OBPS). Baseline-and-credit emission trading system Emissions under baseline",
+        "Albania Albania Carbon tax Fuel-based carbon tax",
+        "Argentina Argentina Carbon tax (Tax on Liquid Fuels and on Carbon Dioxide) Fuel-based carbon tax",
+        "Colombia Colombia Carbon Tax Fuel-based carbon tax",
+        "Israel Israel Carbon tax Fuel-based carbon tax Exempted emissions",
+        "Japan Japan carbon tax (Tax for Climate Change Mitigation) Fuel-based carbon tax",
+        "Mexico Mexico Carbon Tax Fuel-based carbon tax",
+        "Taiwan Taiwan Carbon fee Fuel-based carbon fee Reduced rate Exempted emissions",
+        "Chile Chile Carbon Tax Point source carbon tax",
+        "Serbia Serbia carbon tax Point source carbon tax Exempted emissions",
+        "Singapore Singapore carbon tax Point source carbon tax Exempted emissions",
+        "South Africa South Africa carbon tax Point source carbon tax Exempted emissions",
+        "Ukraine Ukraine carbon tax Point source carbon tax"
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "recitals",
+       "contains": [
+        "that is binding in nature and imposes compliance obligations on all operators active in the relevant sectors covered by that mechanism",
+        "should set the same pricing obligation on the emissions released for producing all goods of an installation, irrespective of the destination of the goods",
+        "a carbon price paid only on embedded emissions of exported goods would not be eligible for a reduction of the CBAM liability"
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#law-32026R2498.annex-ii",
+       "text": "이행규정 부속서 II의 목록"
+      }
+     ],
+     "caveat": "표의 나라 이름과 묶음은 부속서 II의 줄을 종류별로 모아 옮긴 것입니다. 제도의 정식 이름과 지방 단위의 제도는 부속서 II에서 확인해 주세요. 집행위원회는 이 목록을 해마다 검토해 필요하면 갱신하는 것이 바람직하다고 전문에 적혀 있습니다."
+    },
+    {
+     "id": "method",
+     "title": "탄소가격을 정하는 방법",
+     "body": [
+      "제품마다 실질적으로 지불된 탄소가격은 사업자가 부속서 I의 방법으로 정합니다. 보고기간은 내재배출량의 검증보고서가 다루는 보고기간과 같습니다. 방법은 다섯 단계이며 그림과 같습니다.",
+      "배출권거래제에서는 그 제도를 맡은 당국이 공개한, 보고기간의 이행 단위 가중평균 경매가격을 탄소가격으로 삼습니다. 그 값이 없으면 공인된 유통시장의 평균 거래가격을 씁니다. 사업자가 이행 단위를 산 값의 평균으로 정할 수도 있는데, 그때는 보고기간 끝에 그 제도의 등록부 계정에 있는 이행 단위만 셉니다.",
+      "값을 치르지 않은 배출량은 뺍니다. 무상으로 받은 배출권에 해당하는 배출량, 기준선-크레딧 방식에서 기준선에 못 미치는 배출량, 탄소가격을 내지 않아도 되는 임계값에 못 미치는 배출량, 그 밖에 면제된 배출량입니다. 돈으로 돌려받는 환급은 배출량 1톤당 탄소가격에서 뺍니다. 제품 1톤당 실질 지불 탄소가격은 아래 식으로 구합니다.",
+      "다른 사업장에서 만든 전구물질에 치러진 탄소가격은 그 사업장의 인증보고서에 적힌 값을 씁니다. 인증보고서를 쓸 수 없으면 그 전구물질에 해당하는 기본 탄소가격을 쓸 수 있습니다. 현지 통화로 구한 값은 집행위원회가 공개하는 연평균 환율로 유로로 바꾸고, 배출량에 여러 탄소가격제도가 적용되면 제도마다 구한 값을 더합니다. 부속서 I은 이 밖에 다음을 정합니다."
+     ],
+     "figure": {
+      "kind": "flow",
+      "title": "실질적으로 지불된 탄소가격을 정하는 다섯 단계",
+      "numbered": true,
+      "after": 1,
+      "steps": [
+       {
+        "title": "배출량 1톤당 탄소가격",
+        "text": "탄소가격제도마다 정합니다. 직접배출량과 간접배출량을 따로 봅니다"
+       },
+       {
+        "title": "CPM 배출량을 제품에 배분",
+        "text": "그 제도에서 보고되고 확인된 배출량을 내재배출량과 같은 방식으로 제품에 나눕니다"
+       },
+       {
+        "title": "환급·보상을 제품에 배분",
+        "text": "무상 배출권처럼 값을 치르지 않은 배출량을 제품에 나눕니다"
+       },
+       {
+        "title": "제품 1톤당 실질 지불 탄소가격",
+        "text": "제품에 나눈 배출량에서 값을 치르지 않은 몫을 빼고 탄소가격을 곱합니다"
+       },
+       {
+        "title": "유로로 환산하고 합산",
+        "text": "연평균 환율로 바꾸고, 전구물질의 몫과 다른 제도의 몫을 더합니다"
+       }
+      ]
+     },
+     "formula": {
+      "text": "제품 1톤당 실질 지불 탄소가격 = (제품 1톤에 배분한 배출량 − 값을 치르지 않은 배출량) × 배출량 1톤당 실효 탄소가격",
+      "parts": [
+       [
+        "제품 1톤에 배분한 배출량",
+        "탄소가격제도에서 보고되고 확인된 배출량(CPM 배출량) 가운데 보고기간에 그 제품 1톤을 만드는 데 든 몫입니다. 내재배출량을 제품에 나누는 것과 같은 방식으로 나눕니다."
+       ],
+       [
+        "값을 치르지 않은 배출량",
+        "환급이나 보상에 해당하는 배출량 가운데 그 제품 1톤의 몫입니다. 무상으로 받은 배출권에 해당하는 배출량이 여기에 듭니다."
+       ],
+       [
+        "배출량 1톤당 실효 탄소가격",
+        "배출량 1톤당 탄소가격에서 돈으로 돌려받은 환급의 몫을 뺀 값입니다. 직접배출량과 간접배출량에 따로 셈합니다."
+       ]
+      ]
+     },
+     "list": [
+      "배출원 기반 탄소세는 적용된 세율이 탄소가격입니다. 감면 세율을 냈으면 그 세율을 쓰고, 보고기간에 세율이 바뀌었으면 적용된 기간에 따라 가중평균합니다.",
+      "연료 기반 탄소세는 세금이 매겨진 연료마다의 세율, 소비량, 기본 배출계수로 가중평균한 값을 씁니다.",
+      "탄소크레딧으로 의무를 이행한 몫에는 그 크레딧의 값을 쓰되, 그 제도의 다른 이행 방식에서 정한 탄소가격을 넘을 수 없습니다. 사업자가 사지 않은 크레딧은 시장가격의 증거가 없으면 0으로 봅니다.",
+      "파리협정 제6조의 국제 탄소크레딧은 그 제도에서 보고되고 확인된 배출량의 10%까지만 탄소가격으로 인정합니다. 넘는 몫의 가격은 0으로 봅니다.",
+      "탄소가격제도의 수입으로 주는 감축 보조금은 여섯 가지 요건을 모두 갖추면 환급이나 보상으로 보지 않습니다.",
+      "환급이나 보상을 받을 자격이 있는데 그 금액의 증거를 내지 못하면, 전문에 따르면 실질적으로 지불된 탄소가격을 확정할 수 없어 인증받지 못합니다."
+     ],
+     "terms": [
+      {
+       "ko": "CPM 배출량",
+       "en": "CPM emissions",
+       "abbr": "",
+       "text": "탄소가격제도(carbon price mechanism, CPM)에서 보고되고 확인된 배출량입니다. 탄소가격을 제품에 나누어 붙이는 계산의 출발점입니다."
+      },
+      {
+       "ko": "이행 단위",
+       "en": "compliance unit",
+       "abbr": "",
+       "text": "규제되는 배출권거래제에서 발행되어 그 제도의 의무를 이행하는 데 쓰는 배출권이나 크레딧입니다."
+      },
+      {
+       "ko": "국제 탄소크레딧",
+       "en": "international carbon credit",
+       "abbr": "",
+       "text": "제품을 만든 나라가 아닌 나라에서 한 감축활동에서 나온 탄소크레딧입니다. 파리협정 제6조(2)나 제6조(4)에 따른 것만 탄소가격으로 인정됩니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32026R2498",
+       "part": "art-3",
+       "contains": [
+        "The operator shall determine the carbon price effectively paid for the embedded emissions attributed to each good produced by the installation in accordance with the methodology set out in Annex I.",
+        "The reporting period for the determination of the carbon price effectively paid shall be the same as the reporting period referred to in the verification report",
+        "the carbon prices effectively paid under those mechanisms shall be aggregated for each good produced by the installation"
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "annex-i",
+       "contains": [
+        "determine the carbon price paid per tonne of CPM emissions, expressed in euro per tCO2e, in accordance with section 3",
+        "attribute the CPM emissions to each good, in accordance with section 4",
+        "attribute the rebate or other forms of compensation on emissions to each good, in accordance with section 5",
+        "attribute the carbon price effectively paid to specific embedded emissions and determine data points that are necessary for the CBAM declarant, in accordance with section 6",
+        "convert the carbon price effectively paid to euro and aggregate the total carbon price effectively paid on specific embedded emissions, in accordance with section 7",
+        "‘CPM emissions’ means emissions reported and confirmed under the carbon price mechanism",
+        "shall be established separately by the weighted average auctioning price of the compliance unit over the reporting period, expressed in price per tonne of CO2e, made available by the relevant authorities responsible for the emissions trading system",
+        "the average exchange price of the compliance unit on the recognised secondary market as published by the public authority responsible for the management of the secondary market shall be applied",
+        "may be established based on the average of the cost price of the operator’s compliance units at the time of purchase",
+        "the operator shall only take into account those compliance units that are in the account of the emissions trading system’s registry at the end of the reporting period",
+        "emissions associated with free allowances that are received by the operator and for which no carbon price has been paid",
+        "emissions that are below an emission intensity baseline that are exempted from payment of a carbon price under a baseline-and-credit emission trading system",
+        "emissions that are below a threshold under which no carbon price is due",
+        "The rebate or other form of compensation rate per tonne of emissions associated with the refund in monetary value shall be subtracted from the carbon price rate per tonne of CPM emissions",
+        "EFF_CPDIRg is the total carbon price effectively paid on specific embedded emissions (direct emissions), expressed in price per tonne of good",
+        "EMDIRg is the total direct emissions within the reporting period attributed to the quantity of production of each tonne of good per CN code",
+        "Rebated_EMDIRg is the rebate or other forms of compensation on direct emissions within the reporting period attributed to the quantity of production of each tonne of good per CN code",
+        "EFF_CPDIR is the effective carbon price paid per tonne of CPM emissions covered by direct emissions, as determined in accordance with section 3.4",
+        "the operator producing the goods shall use the certified carbon price effectively paid for each precursor included in this certified operator’s carbon price report",
+        "the operator may use the relevant default carbon price for the specific embedded emissions of the precursor produced outside the installation",
+        "shall be converted to euro at the annual average exchange rate in accordance with Article 6",
+        "shall be established separately by the applicable carbon tax rate, expressed in carbon price paid per tonne of CO2e",
+        "the carbon price rate shall be that reduced carbon tax rate",
+        "a time weighted average carbon price rate shall be established",
+        "shall be established separately on the basis of the weighted average carbon tax rate for the fuels that are subject to the carbon tax",
+        "The reported price paid for carbon credits (CPCOi ) shall not exceed the carbon price of other compliance options under the emission trading system or carbon tax",
+        "a price of zero shall be assigned to CPM emissions covered by those carbon credits unless the operator can provide evidence of their market price",
+        "may only be claimed to a maximum of 10 % of the reported and confirmed CPM emissions covered by that specific third-country carbon price mechanism",
+        "a price of zero shall be assigned to CPM emissions covered by international carbon credits in excess of this 10 % threshold",
+        "‘international carbon credit’ means a carbon credit related to a mitigation activity implemented in a country other than the country of production of a good"
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "art-9",
+       "contains": [
+        "the value of the subsidy shall not be taken into account as a rebate or other form of compensation to establish the carbon price effectively paid, provided that all of the following conditions are fulfilled",
+        "a refund in monetary value that partially or totally compensates the carbon price paid"
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "recitals",
+       "contains": [
+        "the carbon price effectively paid cannot be established and should not be certified"
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#law-32026R2498.annex-i",
+       "text": "이행규정 부속서 I"
+      },
+      {
+       "href": "#calc",
+       "text": "인증서 비용 추정"
+      }
+     ],
+     "caveat": "부속서 I의 식은 관보의 원문에 그림으로 실려 있습니다. 위의 식은 관보의 PDF에서 확인한 식 12a를 풀어 쓴 것이고, 간접배출량에는 같은 꼴의 식 12b를 씁니다. 연료 기반 탄소세의 배출량과 보고기간이 서로 다를 때의 배분은 부속서 I을 봐 주세요."
+    },
+    {
+     "id": "default-carbon-price",
+     "title": "기본 탄소가격",
+     "body": [
+      "신고인은 실제로 지불한 금액 대신 연간 기본 탄소가격(default carbon price)을 참조해 차감을 청구할 수도 있습니다. 이때도 그 나라에서 받을 수 있는 환급이나 보상은 반영합니다.",
+      "이 방법은 제3국의 규칙이 탄소가격을 정하고 있고, 그 나라의 연간 기본 탄소가격을 보수적으로라도 정할 수 있을 때만 쓸 수 있습니다. 내재배출량을 기본값으로 정한 경우에는 기본 탄소가격을 참조하는 방법으로만 차감을 청구할 수 있습니다.",
+      "집행위원회는 2027년부터 탄소가격 규칙이 있는 제3국의 기본 탄소가격을 정해 CBAM 등록부에 올리고 계산 방법을 공개할 수 있습니다. 믿을 만한 공개 정보와 제3국이 제공한 정보 가운데 가장 좋은 자료를 근거로 합니다.",
+      "기본 탄소가격으로 청구할 때 줄어드는 인증서 수는 아래 식으로 구합니다. 내재배출량을 실제배출량으로 신고했으면 직접배출량, 간접배출량, 전구물질의 배출량에 저마다 이 식을 적용해 더합니다.",
+      "이행규정은 사업자가 탄소가격 보고서를 쓸 때에도 기본 탄소가격을 쓸 수 있는 경우를 둘 정했습니다. 다른 사업장에서 만든 전구물질의 탄소가격을 정할 때와, CBAM 규정 부속서 II에 들지 않은 제품의 간접배출량에 대한 탄소가격을 정할 때입니다."
+     ],
+     "formula": {
+      "text": "줄어드는 인증서 수 = 기본 탄소가격 × 신고한 내재배출량 ÷ 기준가격 × 수입량",
+      "parts": [
+       [
+        "기본 탄소가격",
+        "집행위원회가 CBAM 등록부에 올린, 그 제품에 해당하는 값입니다. tCO2e당 유로로 나타냅니다."
+       ],
+       [
+        "신고한 내재배출량",
+        "제품 1톤(전력은 MWh)당 내재배출량입니다. 실제배출량으로 신고했으면 그 값이고, 기본값으로 신고했으면 쓴 기본값입니다."
+       ],
+       [
+        "기준가격",
+        "수입한 해의 CBAM 인증서 가격을 평균한 값입니다."
+       ],
+       [
+        "수입량",
+        "신고한 그 제품의 양입니다."
+       ]
+      ]
+     },
+     "terms": [
+      {
+       "ko": "기본 탄소가격",
+       "en": "default carbon price",
+       "abbr": "",
+       "text": "집행위원회가 제3국마다 정해 CBAM 등록부에 올릴 수 있는 연간 탄소가격입니다. 실제 지불액을 증명하는 대신 이 값을 참조해 차감을 청구할 수 있습니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32023R0956",
+       "part": "art-9",
+       "contains": [
+        "by reference to yearly default carbon prices",
+        "any rebate or other form of compensation available in that country that would have resulted in a reduction of that default carbon price shall be taken into account",
+        "The reduction may be claimed only where a carbon price was set by the rules applicable in the third country and a yearly default carbon price can be determined, including on a conservative basis",
+        "Where the embedded emissions are determined on the basis of default values, a reduction may be claimed only by a reference to yearly default carbon prices.",
+        "As from 2027, the Commission may, for third countries where carbon pricing rules are in place, determine and make available, in the CBAM registry",
+        "on the basis of the best available data from reliable, publicly available information and information provided by those third countries"
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "art-7",
+       "contains": [
+        "ReductionDefaultCarbonPriceg is the reduction in the number of certificates to be surrendered to account for the carbon price effectively paid on good g reported based on a default carbon price",
+        "€DCP means the applicable default carbon price made available by the Commission pursuant to Article 9(5) of Regulation (EU) 2023/956, relevant for the good, expressed in euro per tonne of CO2e",
+        "SEEg means the declared embedded emissions of the good, corresponding either to the actual specific embedded emissions, distinguishing between direct, indirect and precursors emissions where relevant, or to the default value used for the good",
+        "the total reduction in the number of CBAM certificates per good shall be the sum of the reductions per direct emissions, indirect emissions and emissions of precursors"
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "art-5",
+       "contains": [
+        "For the purposes of determining the carbon price effectively paid for the embedded emissions of a precursor produced outside the installation, the operator may, in accordance with point 6.2 of Annex I, use the applicable default carbon price",
+        "For the purposes of determining the carbon price effectively paid for the indirect emissions of a good that is not listed in Annex II to Regulation (EU) 2023/956, the operator may, in accordance with point 3.2 of Annex I to this Regulation, use the applicable default carbon price"
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#rules-ir-carbon-price",
+       "text": "제3국 탄소가격 차감 이행규정의 진행 상황"
+      }
+     ],
+     "caveat": "제9조(4)는 집행위원회가 기본 탄소가격을 정할 수 있다고 적었습니다. 어느 나라의 값을 언제 정할지는 법에 적혀 있지 않습니다. 이 식도 관보의 원문에 그림으로 실려 있어 관보의 PDF에서 확인했습니다."
     },
     {
      "id": "evidence",
@@ -3342,7 +3828,7 @@
       "신고인은 신고한 내재배출량에 제3국의 탄소가격이 매겨졌고 실제로 지불되었음을 보여 주는 서류를 기록으로 보관해야 합니다. 특히 환급이나 보상에 관한 증거와 그 나라의 관련 법령에 대한 참조를 보관해야 합니다. 탄소가격을 실제로 냈다는 증거도 보관해야 합니다.",
       "서류의 정보는 신고인과도, 제3국 당국과도 독립적인 사람(independent person)이 인증해야 합니다. 그 사람의 이름과 연락처가 서류에 나타나야 합니다. 신고인은 이 기록을 CBAM 신고서를 냈거나 냈어야 할 해가 지난 뒤 네 번째 해가 끝날 때까지 보관합니다.",
       "CBAM 등록부에 등록한 제3국의 사업자는 해당하는 경우 제9조에 따라 탄소가격을 정하고 서류와 증거를 올립니다. 사업자는 그 정보를 승인된 CBAM 신고인에게 공개할 수 있습니다.",
-      "이행규정 (EU) 2026/2498은 사업자가 탄소가격 보고서를 작성하고 독립적인 사람이 그 보고서를 인증하도록 정했습니다. 독립적인 사람은 이 이행규정이 정한 범위로 인정을 받아야 합니다. 2026년과 2027년의 보고 기간에 대해서는 내재배출량의 검증기관으로 인정받은 검증기관도 독립적인 사람의 역할을 맡을 수 있습니다."
+      "이행규정 (EU) 2026/2498은 이 증빙의 꼴을 정했습니다. 사업자가 탄소가격 보고서를 작성하고, 독립적인 사람이 그 보고서를 인증해 인증보고서를 냅니다. 신고인이 보관하는 것은 독립적인 사람이 인증한 탄소가격 보고서입니다."
      ],
      "terms": [
       {
@@ -3382,166 +3868,349 @@
       },
       {
        "act": "32026R2498",
+       "part": "recitals",
+       "contains": [
+        "The declarant should keep the evidence of the actual payment in the form of a carbon price report prepared by the operator and certified by the independent person"
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#handbook-carbon-price.report-certification",
+       "text": "탄소가격 보고서와 인증"
+      },
+      {
+       "href": "#handbook-carbon-price.independent-person",
+       "text": "독립적인 사람의 자격과 인정"
+      }
+     ]
+    },
+    {
+     "id": "report-certification",
+     "title": "탄소가격 보고서와 인증",
+     "body": [
+      "사업자는 부속서 I의 방법으로 계산한 내용을 탄소가격 보고서(operator's carbon price report)에 적습니다. 집행위원회가 CBAM 등록부로 제공하는 전자 양식을 쓰고 영어로 작성합니다. CBAM 등록부에 등록한 사업자는 등록부로, 등록하지 않은 사업자는 다른 적절한 방법으로 독립적인 사람에게 보냅니다.",
+      "독립적인 사람은 보고서가 빠짐없이 작성되었는지, 검증받은 사업자 배출량 보고서의 고유 내재배출량에 탄소가격이 실질적으로 지불되었는지, 환급이나 보상을 받았는지, 보고서에 중요한 오류가 없는지를 합리적 보증의 수준으로 평가합니다. 자료를 원자료까지 거슬러 올라가 대조하고 다시 계산해 봅니다.",
+      "탄소가격을 제품에 나눈 것이 맞는지는 내재배출량의 검증보고서에 기대어 확인합니다. 그 검증보고서는 유효한 인정을 받은 검증기관이 낸 것이어야 하고, 사업자 배출량 보고서가 만족스러운 것으로 검증되었어야 하며, 같은 보고기간을 다루어야 합니다. 이를 확인할 수 없으면 탄소가격 보고서를 인증하지 않습니다.",
+      "중요성 기준은 CN 코드로 가린 제품마다, 그 제품에 귀속된 실질 지불 탄소가격 합계의 5%입니다. 독립적인 사람은 분석 결과 필요하면 탄소가격을 제품에 배분하는 곳과 증거를 보관하는 곳을 직접 찾아가 볼 수 있습니다.",
+      "결과는 인증보고서(certification report)로 냅니다. 의견은 만족스러운 것으로 인증됨, 또는 만족스럽지 않은 것으로 인증됨입니다. 중요한 오류가 없고 검증된 내재배출량에 탄소가격이 실질적으로 지불되었을 때만 만족스러운 것으로 인증됩니다. 인증보고서는 영어로 작성하고, 2027년 2월 1일부터 CBAM 등록부에서 발행합니다. 같은 사업장의 같은 보고기간에 인증보고서가 이미 있으면 새로 내지 않습니다."
+     ],
+     "figure": {
+      "kind": "lanes",
+      "title": "탄소가격 보고서가 인증보고서가 되기까지",
+      "handover": "탄소가격 보고서와 증거",
+      "lanes": [
+       {
+        "title": "제3국의 사업자",
+        "items": [
+         "부속서 I의 방법으로 제품마다 탄소가격을 계산",
+         "전자 양식으로 탄소가격 보고서를 영어로 작성",
+         "지불과 환급·보상의 증거, 검증보고서를 제공"
+        ]
+       },
+       {
+        "title": "독립적인 사람",
+        "items": [
+         "자료를 원자료와 대조하고 다시 계산",
+         "제품마다 5%의 중요성 기준을 적용",
+         "인증보고서를 CBAM 등록부에서 발행"
+        ]
+       }
+      ]
+     },
+     "terms": [
+      {
+       "ko": "탄소가격 보고서",
+       "en": "operator's carbon price report",
+       "abbr": "",
+       "text": "제3국의 사업자가 제품마다 실질적으로 지불된 탄소가격을 계산해 적는 보고서입니다. 집행위원회가 CBAM 등록부로 제공하는 전자 양식으로 영어로 작성합니다."
+      },
+      {
+       "ko": "인증보고서",
+       "en": "certification report",
+       "abbr": "",
+       "text": "독립적인 사람이 탄소가격 보고서를 인증해 내는 보고서입니다. 제품 1톤당 실질 지불 탄소가격과 인증 의견이 적힙니다. CBAM 인증서와는 다른 것입니다."
+      }
+     ],
+     "basis": [
+      {
+       "act": "32026R2498",
+       "part": "art-8",
+       "contains": [
+        "The operator shall draw up an operator’s carbon price report on the basis of the methodology set out in Annex I, using the electronic template made available by the Commission via the CBAM registry and containing at least the information set out in Annex III.",
+        "it shall transmit the operator’s carbon price report to the independent person via that registry",
+        "it shall transmit the operator’s carbon price report to the independent person by other appropriate means",
+        "The operator shall draw up the operator’s carbon price report in English."
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "art-12",
+       "contains": [
+        "the independent person shall assess with reasonable assurance whether",
+        "the operator’s carbon price report is complete and meets the requirements laid down in Annex III",
+        "a carbon price has effectively been paid on the specific embedded emissions laid down in the verified operator’s emissions report",
+        "any rebates or other forms of compensation have been received in relation to specific embedded emissions",
+        "the operator’s carbon price report is free from material misstatements"
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "art-14",
+       "contains": [
+        "including by tracing the data back to the primary data source, cross-checking data with external data sources, performing reconciliations, checking thresholds regarding appropriate data and carrying out recalculations"
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "art-15",
+       "contains": [
+        "the entity carrying out the verification activities was a verifier with a valid accreditation certificate",
+        "the opinion statement contained in the verification report indicates that the operator’s emissions report is verified as satisfactory",
+        "the verification report covers the reporting period during which the goods subject to the certification of the carbon price were produced",
+        "the independent person shall not certify the operator’s carbon price report"
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "art-18",
+       "contains": [
+        "the independent person shall apply a materiality level for each tonne of the relevant good, or in the case of imported electricity for each MWh, identified by its Combined Nomenclature (CN) code. That materiality level shall be 5 % of the total carbon price effectively paid attributed to that good."
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "art-16",
+       "contains": [
+        "the independent person may decide to conduct a physical site visit of the location or locations where the process of attribution of carbon price data to specific embedded emissions is defined and where the evidence of carbon price effectively paid is stored"
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "art-19",
+       "contains": [
+        "the operator’s carbon price report is certified as satisfactory where it is free from material misstatements and the carbon price on the verified embedded emissions has been effectively paid",
+        "the operator’s carbon price report is certified as unsatisfactory where at least one of the following applies",
+        "From 1 February 2027, the independent person shall issue the certification report in the CBAM registry.",
+        "The independent person shall not issue the certification report where there is already a certification report covering the same reporting period for the same installation.",
+        "The independent person shall draw up the certification report in English."
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#handbook-verification.report",
+       "text": "검증보고서"
+      },
+      {
+       "href": "#law-32026R2498.annex-iii",
+       "text": "탄소가격 보고서에 적는 것(부속서 III)"
+      }
+     ],
+     "caveat": "전자 양식은 집행위원회가 CBAM 등록부로 제공하도록 정해져 있습니다. 양식이 공개되었는지는 이 글에서 확인하지 못했습니다."
+    },
+    {
+     "id": "independent-person",
+     "title": "독립적인 사람의 자격과 인정",
+     "body": [
+      "탄소가격 보고서를 인증하는 독립적인 사람은 법인입니다. 이행규정 부속서 IV가 정한 범위(실질적으로 지불된 탄소가격의 인증)로 인정을 받아야 하고, 이 이행규정과 조화 표준 EN ISO/IEC 17029:2019의 요건을 지켜야 합니다.",
+      "독립적인 사람은 넷으로부터 독립되어 있어야 합니다. 인증을 받는 사업자, 회원국의 관할당국, 집행위원회, 그리고 그 탄소가격제도를 규제하거나 감독하는 제3국의 당국입니다.",
+      "2026년과 2027년의 보고기간에는 예외가 있습니다. 내재배출량의 검증기관으로 인정받은 검증기관은 CBAM 등록부로 관할당국에 신청해 독립적인 사람의 역할을 맡을 수 있습니다. 이 역할은 부속서 IV의 범위로 인정을 받지 않으면 2028년 9월 30일까지 끝나고 등록부에서 자동으로 지워집니다.",
+      "인정은 회원국의 국가인정기구가 합니다. 회원국의 법에 따라 설립되지 않은 신청인은 이 범위의 인정을 하는 어느 회원국의 국가인정기구에든 신청할 수 있습니다. CBAM이나 EU 배출권거래제의 검증기관으로 인정받은 곳은 인정 범위의 확대를 신청할 수 있습니다. 인정서의 유효기간은 발급일부터 5년을 넘지 않습니다.",
+      "인정받은 독립적인 사람은 인정받은 날부터 두 달 안에 CBAM 등록부 등록을 신청하며, 신청은 2026년 12월 1일부터 할 수 있습니다. 인증보고서는 2027년 2월 1일부터 CBAM 등록부에서 발행합니다. 해마다 11월 15일까지는 다음 해에 할 인증의 때와 곳, 대상 사업자와 사업장, 인증팀을 자신을 인정한 국가인정기구에 알립니다."
+     ],
+     "figure": {
+      "kind": "timeline",
+      "title": "독립적인 사람에 관한 날짜",
+      "note": "칸의 간격은 기간의 길이와 비례하지 않습니다.",
+      "bands": [
+       {
+        "label": "독립적인 사람",
+        "marks": [
+         {
+          "date": "2026-12-01",
+          "edge": "부터",
+          "label": "CBAM 등록부 등록 신청"
+         },
+         {
+          "date": "2027-02-01",
+          "edge": "부터",
+          "label": "인증보고서를 등록부에서 발행"
+         },
+         {
+          "date": "2028-09-30",
+          "edge": "까지",
+          "label": "검증기관이 맡은 임시 역할의 끝"
+         }
+        ]
+       }
+      ]
+     },
+     "basis": [
+      {
+       "act": "32026R2498",
+       "part": "art-2",
+       "contains": [
+        "‘independent person’ means a legal person that is certifying the carbon price report"
+       ]
+      },
+      {
+       "act": "32026R2498",
        "part": "art-10",
        "contains": [
-        "the independent person shall be accredited for the scope of accreditation relating to the certification of the carbon price effectively paid set out in Annex IV to this Regulation"
+        "the independent person shall be accredited for the scope of accreditation relating to the certification of the carbon price effectively paid set out in Annex IV to this Regulation",
+        "The independent person shall comply with the requirements laid down in this Regulation and in the harmonised standard EN ISO/IEC 17029:2019",
+        "the operator subject to the certification",
+        "the competent authority referred to in Article 11(1) of Regulation (EU) 2023/956",
+        "any competent authority of the third country, that is responsible for the regulation or supervision of a carbon price mechanism on which the determination of the carbon price effectively paid is based"
        ]
       },
       {
        "act": "32026R2498",
        "part": "art-11",
        "contains": [
-        "for the purpose of carrying out the certification of the carbon price reports for the reporting periods 2026 and 2027, a verifier accredited pursuant to Delegated Regulation (EU) 2025/2551 for the relevant group of activities listed in Annex I to that Regulation may also opt to become an independent person"
+        "for the purpose of carrying out the certification of the carbon price reports for the reporting periods 2026 and 2027, a verifier accredited pursuant to Delegated Regulation (EU) 2025/2551 for the relevant group of activities listed in Annex I to that Regulation may also opt to become an independent person",
+        "the verifier shall submit a request to the competent authority via the CBAM registry to be assigned the requested role of independent person",
+        "shall cease to be an independent person by 30 September 2028, and its role shall be automatically removed in the CBAM Registry, unless it has been granted accreditation for the activity group set out in Annex IV to this Regulation"
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "art-21",
+       "contains": [
+        "An applicant that is not established under the national law of a Member State shall submit an application for accreditation to a national accreditation body of any Member State that provides accreditation for the scope of accreditation set out in Annex IV."
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "art-24",
+       "contains": [
+        "may apply for an extension of the scope of its accreditation to the group of activity set out in Annex IV to this Regulation"
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "art-23",
+       "contains": [
+        "The accreditation certificate shall be valid for a period not exceeding five years from the date of its issue."
+       ]
+      },
+      {
+       "act": "32025R2550",
+       "part": "art-1",
+       "contains": [
+        "The independent person shall submit the request for registration within two months of the date on which the accreditation was granted, but not before 1 December 2026"
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "art-19",
+       "contains": [
+        "From 1 February 2027, the independent person shall issue the certification report in the CBAM registry."
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "art-35",
+       "contains": [
+        "By 15 November of each year, independent persons shall submit to the national accreditation body that has accredited them the following information for the next calendar year",
+        "the planned time and place of the certifications they are to carry out",
+        "the names of the members of the certification team and the scope of the accreditation covering the operator’s activities"
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "annex-iv",
+       "contains": [
+        "Certification of the carbon price effectively paid"
        ]
       }
      ],
      "see": [
       {
-       "href": "#handbook-carbon-price.rules-to-come",
-       "text": "세부 규칙: 제3국 탄소가격 차감 이행규정"
+       "href": "#handbook-verification.accreditation",
+       "text": "검증기관의 인정"
+      },
+      {
+       "href": "#calendar",
+       "text": "일정"
       }
-     ]
+     ],
+     "caveat": "전문은 집행위원회가 2027년 말에 독립적인 사람의 인정이 어디까지 왔는지, 인증의 수요를 채울 만큼 있는지를 살피는 것이 바람직하다고 적고 있습니다."
     },
     {
-     "id": "default-carbon-price",
-     "title": "기본 탄소가격",
+     "id": "kets",
+     "title": "한국 배출권거래제에서 낸 탄소가격",
      "body": [
-      "신고인은 실제로 지불한 금액 대신 연간 기본 탄소가격(default carbon price)을 참조해 차감을 청구할 수도 있습니다. 이때도 그 나라에서 받을 수 있는 환급이나 보상은 반영합니다.",
-      "이 방법은 제3국의 규칙이 탄소가격을 정하고 있고, 그 나라의 연간 기본 탄소가격을 보수적으로라도 정할 수 있을 때만 쓸 수 있습니다. 내재배출량을 기본값으로 정한 경우에는 기본 탄소가격을 참조하는 방법으로만 차감을 청구할 수 있습니다.",
-      "집행위원회는 2027년부터 탄소가격 규칙이 있는 제3국의 기본 탄소가격을 정해 CBAM 등록부에 올리고 계산 방법을 공개할 수 있습니다. 믿을 만한 공개 정보와 제3국이 제공한 정보 가운데 가장 좋은 자료를 근거로 합니다."
+      "대한민국의 배출권거래제(K-ETS)는 이행규정 부속서 II에 배출권거래제로 올라 있습니다. 부속서 II에 실린 제도는 차감에 쓸 수 있는 탄소가격제도의 요건을 갖춘 것으로 봅니다.",
+      "계산은 배출권거래제의 규칙을 따릅니다. 탄소가격은 보고기간의 가중평균 경매가격입니다. 부속서 II가 K-ETS의 주된 환급·보상으로 적은 무상 배출권에 해당하는 배출량은 값을 치르지 않은 몫으로 뺍니다. 원화로 구한 값은 집행위원회가 공개하는 연평균 환율로 유로로 바꿉니다.",
+      "증거로는 당국이 공개한 가중평균 경매가격, 그 제도에서 보고되고 확인된 배출량, 그 배출량에 대해 제출한 이행 단위의 공식 기록이 필요합니다. 무상 배출권에 대해서는 신청서와 당국의 결정, 받은 양과 발행일을 보여 주는 문서를 독립적인 사람에게 냅니다.",
+      "실질적으로 지불된 탄소가격으로 차감을 청구하려면 내재배출량도 실제배출량으로 신고해 검증을 받아야 합니다. 내재배출량을 기본값으로 신고하면 집행위원회가 정해 올린 기본 탄소가격으로만 청구할 수 있습니다.",
+      "아래는 계산의 차례를 보이려고 값을 가정한 예입니다. 경매가격, 환율, 무상 배출권의 비율, 기준가격은 실제 값이 아닙니다."
      ],
-     "terms": [
-      {
-       "ko": "기본 탄소가격",
-       "en": "default carbon price",
-       "abbr": "",
-       "text": "집행위원회가 제3국마다 정해 CBAM 등록부에 올릴 수 있는 연간 탄소가격입니다. 실제 지불액을 증명하는 대신 이 값을 참조해 차감을 청구할 수 있습니다."
-      }
-     ],
-     "basis": [
-      {
-       "act": "32023R0956",
-       "part": "art-9",
-       "contains": [
-        "by reference to yearly default carbon prices",
-        "any rebate or other form of compensation available in that country that would have resulted in a reduction of that default carbon price shall be taken into account",
-        "The reduction may be claimed only where a carbon price was set by the rules applicable in the third country and a yearly default carbon price can be determined, including on a conservative basis",
-        "Where the embedded emissions are determined on the basis of default values, a reduction may be claimed only by a reference to yearly default carbon prices.",
-        "As from 2027, the Commission may, for third countries where carbon pricing rules are in place, determine and make available, in the CBAM registry",
-        "on the basis of the best available data from reliable, publicly available information and information provided by those third countries"
-       ]
-      }
-     ],
-     "caveat": "제9조(4)는 집행위원회가 기본 탄소가격을 정할 수 있다고 적었습니다. 어느 나라의 값을 언제 정할지는 법에 적혀 있지 않습니다."
-    },
-    {
-     "id": "rules-to-come",
-     "title": "세부 규칙: 제3국 탄소가격 차감 이행규정",
-     "body": [
-      "제9조(5)에 따른 세부 규칙은 이행규정 (EU) 2026/2498로 정해졌습니다. 이 규정은 2026년 1월 1일부터 적용됩니다.",
-      "실질적으로 지불된 탄소가격으로 청구할 때 줄어드는 인증서 수는 아래 식으로 구합니다. 기본 탄소가격으로 청구할 때에는 기본 탄소가격에 신고한 내재배출량을 곱한 값을 기준가격으로 나누고 수입량을 곱합니다.",
-      "외화로 낸 탄소가격은 집행위원회가 공개하는 연평균 환율로 유로로 바꿉니다. 이행규정은 이 밖에 다음을 정합니다."
-     ],
-     "formula": {
-      "text": "줄어드는 인증서 수 = 제품 1톤당 실질 지불 탄소가격 ÷ 기준가격 × 수입량",
-      "parts": [
-       [
-        "제품 1톤당 실질 지불 탄소가격",
-        "독립적인 사람의 인증보고서에 적힌 값입니다. 유로로 나타냅니다. 법령은 이 값을 실효 탄소가격(effective carbon price)이라고 부릅니다."
-       ],
-       [
-        "기준가격",
-        "수입한 해의 CBAM 인증서 가격을 평균해 센트 단위로 반올림한 값입니다. 집행위원회가 CBAM 등록부에 공개합니다."
-       ],
-       [
-        "수입량",
-        "신고한 그 제품의 양입니다. 톤으로 세고 전력은 MWh로 셉니다."
-       ]
-      ]
-     },
      "list": [
-      "제품마다 실질적으로 지불된 탄소가격을 정하는 방법(부속서 I)",
-      "요건을 갖춘 것으로 보는 탄소가격제도의 목록(부속서 II). 대한민국의 배출권거래제(K-ETS)가 들어 있습니다.",
-      "사업자가 작성하는 탄소가격 보고서와 증빙",
-      "환급과 다른 형태의 보상을 반영하는 방법",
-      "독립적인 사람의 자격과 인정, 인증보고서"
+      "가정: 제품 1톤에 배분한 직접배출량 2.0 tCO2e, 그 가운데 무상 배출권에 해당하는 몫 90%, 가중평균 경매가격 10,000원, 연평균 환율 1유로에 1,500원, 기준가격 80유로",
+      "값을 치른 배출량: 2.0 × (100% − 90%) = 0.2 tCO2e",
+      "제품 1톤당 실질 지불 탄소가격: 0.2 × 10,000원 ÷ 1,500 = 약 1.33유로",
+      "줄어드는 인증서 수: 1.33 ÷ 80 = 제품 1톤당 약 0.017개. 100톤을 수입하면 약 1.7개"
      ],
-     "terms": [
-      {
-       "ko": "기준가격",
-       "en": "yearly reference price of CBAM certificates",
-       "abbr": "",
-       "text": "탄소가격 차감을 인증서 수로 바꿀 때 나누는 값입니다. 수입한 해의 CBAM 인증서 가격을 평균해 센트 단위로 반올림한 값이며, 집행위원회가 CBAM 등록부에 공개합니다."
-      }
-     ],
+     "ordered": true,
      "basis": [
       {
-       "act": "32023R0956",
-       "part": "art-9",
+       "act": "32026R2498",
+       "part": "annex-ii",
        "contains": [
-        "concerning the conversion of the yearly average carbon price effectively paid"
+        "South Korea Korea Emissions Trading System (K-ETS) Emissions Trading System Free allowances"
        ]
       },
       {
        "act": "32026R2498",
-       "part": "art-7",
+       "part": "art-4",
        "contains": [
-        "ReductionActualCarbonPriceg is the reduction in the number of certificates to be surrendered to account for the carbon price effectively paid",
-        "€EFF_CPg means the effective carbon price, expressed in euro per tonne of good or per MWh, as included in the certification report pursuant to Article 19",
-        "Ref Price CBAM means the yearly reference price of CBAM certificates, expressed in euro per tonne of CO2e for the year of import",
-        "Qg means the quantity of good g declared, expressed in tonnes or MWh.",
-        "€DCP means the applicable default carbon price made available by the Commission",
-        "the Commission shall calculate the yearly reference price of CBAM certificates as the average of the price of CBAM certificates published pursuant to Implementing Regulation (EU) 2025/2548 for a given year of import"
+        "The carbon price mechanisms listed in Annex II shall be considered as meeting the definition set under paragraph 1."
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "annex-i",
+       "contains": [
+        "shall be established separately by the weighted average auctioning price of the compliance unit over the reporting period",
+        "emissions associated with free allowances that are received by the operator and for which no carbon price has been paid",
+        "evidence of the weighted average auctioning price, made available by the relevant authorities responsible for administering the emissions trading system",
+        "the total CPM emissions as reported and confirmed under the emissions trading system",
+        "official records of compliance units surrendered in the registry or other relevant records from authorities responsible for managing the emissions trading system showing the number of compliance units surrendered to cover the reported and confirmed CPM emissions",
+        "the applications for free allowances submitted by the operator to the authority responsible for issuing allowances and official decisions of those authorities approving the issuance of free allowances to the operator",
+        "documents showing the amount of free allowances granted by the regulator to the installation within a given period",
+        "evidence of the date of issuance of free allowances"
        ]
       },
       {
        "act": "32026R2498",
        "part": "art-6",
        "contains": [
-        "using the yearly average exchange rate for the year of the reporting period"
+        "the operator shall use the yearly average exchange rates published by the Commission"
        ]
       },
       {
-       "act": "32026R2498",
-       "part": "art-1",
+       "act": "32023R0956",
+       "part": "art-9",
        "contains": [
-        "the qualifications of the independent person referred to in Article 9(2) of Regulation (EU) 2023/956 who certifies the evidence"
-       ]
-      },
-      {
-       "act": "32026R2498",
-       "part": "annex-ii",
-       "contains": [
-        "Korea Emissions Trading System (K-ETS)"
-       ]
-      },
-      {
-       "act": "32026R2498",
-       "part": "art-36",
-       "contains": [
-        "This Regulation shall apply from 1 January 2026.",
-        "It shall be revised in 2027 at the latest."
-       ]
-      },
-      {
-       "act": "32026R2498",
-       "part": "recitals",
-       "contains": [
-        "the Commission should publish guidance before the end of the year 2026"
+        "Where the embedded emissions are determined on the basis of actual emissions, an authorised CBAM declarant may claim in the CBAM declaration a reduction in the number of CBAM certificates to be surrendered",
+        "Where the embedded emissions are determined on the basis of default values, a reduction may be claimed only by a reference to yearly default carbon prices."
        ]
       }
      ],
      "see": [
       {
-       "href": "#rules-ir-carbon-price",
-       "text": "제3국 탄소가격 차감 이행규정의 진행 상황"
+       "href": "#calc",
+       "text": "인증서 비용 추정에서 계산해 보기"
       },
       {
-       "href": "#calc",
-       "text": "인증서 비용 추정"
+       "href": "#handbook-carbon-price.method",
+       "text": "탄소가격을 정하는 방법"
       }
      ],
-     "caveat": "이 이행규정은 늦어도 2027년에 개정하도록 정해져 있습니다. 전문은 집행위원회가 증빙으로 인정될 수 있는 서류를 나라별로 알려 주는 가이던스를 2026년 말 전에 공개하는 것이 바람직하다고 적고 있습니다."
+     "caveat": "K-ETS의 경매가격과 무상 배출권의 실제 값은 이 사이트가 받아 둔 자료에 없어 싣지 않았습니다. 전문은 집행위원회가 어떤 서류가 증거로 인정될 수 있는지를 나라별로 알려 주는 가이던스를 2026년 말 전에 공개하는 것이 바람직하다고 적고 있습니다."
     }
    ]
   },
@@ -5602,7 +6271,7 @@
   },
   "ir-carbon-price": {
    "stage": "발효 대기",
-   "events": 5
+   "events": 6
   },
   "ir-declarations": {
    "stage": "준비 단계",
