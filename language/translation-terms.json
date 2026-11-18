@@ -5154,6 +5154,60 @@
    "ko": "전환 단계",
    "from": "info-scope",
    "added": "2026-11-15"
+  },
+  {
+   "en": "carbon price mechanism",
+   "ko": "탄소가격 메커니즘",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "baseline-and-credit",
+   "ko": "기준선-크레딧 방식",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "carbon credits",
+   "ko": "탄소크레딧",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "internationally transferred mitigation outcomes",
+   "ko": "국제적으로 이전된 감축결과",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "default emission values",
+   "ko": "기본 배출값",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "compliance options",
+   "ko": "이행 방식",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "carbon emissions reduction scheme",
+   "ko": "탄소배출 감축제도",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "mitigation activities",
+   "ko": "감축활동",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "sub-national schemes",
+   "ko": "하위국가 단위의 제도",
+   "from": "32026R2498",
+   "added": "2026-11-18"
   }
  ]
 }
