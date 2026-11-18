@@ -5448,6 +5448,54 @@
    "ko": "배출집약도 기준선 아래",
    "from": "32026R2498",
    "added": "2026-11-18"
+  },
+  {
+   "en": "weighted average effective carbon price",
+   "ko": "가중평균 실효 탄소가격",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "Emissions under baseline",
+   "ko": "기준선 아래의 배출량",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "Exempted emissions",
+   "ko": "면제된 배출량",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "Liability cap",
+   "ko": "부담 상한",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "Fuel-based carbon fee",
+   "ko": "연료 기반 탄소 수수료",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "Output-Based Pricing System",
+   "ko": "산출량 기반 가격제도",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "cap-and-trade system",
+   "ko": "총량제한 배출권거래제",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "Cap-and-Invest Program",
+   "ko": "총량제한·투자 프로그램",
+   "from": "32026R2498",
+   "added": "2026-11-18"
   }
  ]
 }
