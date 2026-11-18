@@ -1,0 +1,14 @@
+[문서] EU 기능조약 제289조(입법 절차)
+[주소] http://publications.europa.eu/resource/celex/12016E289
+[원문] https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016E289
+
+C_2016202EN.01017201.xml
+7.6.2016
+EN
+Official Journal of the European Union
+C 202/172
+Article 289
+1. The ordinary legislative procedure shall consist in the joint adoption by the European Parliament and the Council of a regulation, directive or decision on a proposal from the Commission. This procedure is defined in Article 294.
+2. In the specific cases provided for by the Treaties, the adoption of a regulation, directive or decision by the European Parliament with the participation of the Council, or by the latter with the participation of the European Parliament, shall constitute a special legislative procedure.
+3. Legal acts adopted by legislative procedure shall constitute legislative acts.
+4. In the specific cases provided for by the Treaties, legislative acts may be adopted on the initiative of a group of Member States or of the European Parliament, on a recommendation from the European Central Bank or at the request of the Court of Justice or the European Investment Bank.

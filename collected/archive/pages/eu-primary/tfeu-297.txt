@@ -1,0 +1,17 @@
+[문서] EU 기능조약 제297조(서명, 게재, 발효)
+[주소] http://publications.europa.eu/resource/celex/12016E297
+[원문] https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016E297
+
+C_2016202EN.01017601.xml
+7.6.2016
+EN
+Official Journal of the European Union
+C 202/176
+Article 297
+(ex Article 254 TEC)
+1. Legislative acts adopted under the ordinary legislative procedure shall be signed by the President of the European Parliament and by the President of the Council.
+Legislative acts adopted under a special legislative procedure shall be signed by the President of the institution which adopted them.
+Legislative acts shall be published in the Official Journal of the European Union. They shall enter into force on the date specified in them or, in the absence thereof, on the twentieth day following that of their publication.
+2. Non-legislative acts adopted in the form of regulations, directives or decisions, when the latter do not specify to whom they are addressed, shall be signed by the President of the institution which adopted them.
+Regulations and directives which are addressed to all Member States, as well as decisions which do not specify to whom they are addressed, shall be published in the Official Journal of the European Union. They shall enter into force on the date specified in them or, in the absence thereof, on the twentieth day following that of their publication.
+Other directives, and decisions which specify to whom they are addressed, shall be notified to those to whom they are addressed and shall take effect upon such notification.

@@ -1,0 +1,16 @@
+[문서] EU 기능조약 제288조(법령의 종류)
+[주소] http://publications.europa.eu/resource/celex/12016E288
+[원문] https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016E288
+
+C_2016202EN.01017101.xml
+7.6.2016
+EN
+Official Journal of the European Union
+C 202/171
+Article 288
+(ex Article 249 TEC)
+To exercise the Union's competences, the institutions shall adopt regulations, directives, decisions, recommendations and opinions.
+A regulation shall have general application. It shall be binding in its entirety and directly applicable in all Member States.
+A directive shall be binding, as to the result to be achieved, upon each Member State to which it is addressed, but shall leave to the national authorities the choice of form and methods.
+A decision shall be binding in its entirety. A decision which specifies those to whom it is addressed shall be binding only on them.
+Recommendations and opinions shall have no binding force.

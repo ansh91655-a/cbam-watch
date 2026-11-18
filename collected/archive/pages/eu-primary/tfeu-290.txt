@@ -1,0 +1,19 @@
+[문서] EU 기능조약 제290조(위임규정)
+[주소] http://publications.europa.eu/resource/celex/12016E290
+[원문] https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016E290
+
+C_2016202EN.01017201.xml
+7.6.2016
+EN
+Official Journal of the European Union
+C 202/172
+Article 290
+1. A legislative act may delegate to the Commission the power to adopt non-legislative acts of general application to supplement or amend certain non-essential elements of the legislative act.
+The objectives, content, scope and duration of the delegation of power shall be explicitly defined in the legislative acts. The essential elements of an area shall be reserved for the legislative act and accordingly shall not be the subject of a delegation of power.
+2. Legislative acts shall explicitly lay down the conditions to which the delegation is subject; these conditions may be as follows:
+(a)
+the European Parliament or the Council may decide to revoke the delegation;
+(b)
+the delegated act may enter into force only if no objection has been expressed by the European Parliament or the Council within a period set by the legislative act.
+For the purposes of (a) and (b), the European Parliament shall act by a majority of its component members, and the Council by a qualified majority.
+3. The adjective ‘delegated’ shall be inserted in the title of delegated acts.

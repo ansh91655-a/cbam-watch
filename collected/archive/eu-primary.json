@@ -1,0 +1,189 @@
+{
+ "source": "eu-primary",
+ "fetchedAt": "2026-11-18T15:00:28+09:00",
+ "since": "2025-01-01",
+ "report": {
+  "targets": 23,
+  "failures": [
+   "tfeu-304 12016E304: 받은 글에 'Economic and Social Committee'가 없음(다른 문서일 수 있음)"
+  ]
+ },
+ "entries": [
+  {
+   "name": "teu-13",
+   "celex": "12016M013",
+   "title": "EU 조약 제13조(기관의 틀)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016M013",
+   "lines": 25,
+   "textPath": "collected/archive/pages/eu-primary/teu-13.txt"
+  },
+  {
+   "name": "teu-14",
+   "celex": "12016M014",
+   "title": "EU 조약 제14조(유럽의회)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016M014",
+   "lines": 11,
+   "textPath": "collected/archive/pages/eu-primary/teu-14.txt"
+  },
+  {
+   "name": "teu-15",
+   "celex": "12016M015",
+   "title": "EU 조약 제15조(유럽이사회)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016M015",
+   "lines": 22,
+   "textPath": "collected/archive/pages/eu-primary/teu-15.txt"
+  },
+  {
+   "name": "teu-16",
+   "celex": "12016M016",
+   "title": "EU 조약 제16조(이사회)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016M016",
+   "lines": 19,
+   "textPath": "collected/archive/pages/eu-primary/teu-16.txt"
+  },
+  {
+   "name": "teu-17",
+   "celex": "12016M017",
+   "title": "EU 조약 제17조(집행위원회)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016M017",
+   "lines": 26,
+   "textPath": "collected/archive/pages/eu-primary/teu-17.txt"
+  },
+  {
+   "name": "teu-19",
+   "celex": "12016M019",
+   "title": "EU 조약 제19조(EU 사법재판소)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016M019",
+   "lines": 18,
+   "textPath": "collected/archive/pages/eu-primary/teu-19.txt"
+  },
+  {
+   "name": "tfeu-192",
+   "celex": "12016E192",
+   "title": "EU 기능조약 제192조(환경 정책의 입법 절차)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016E192",
+   "lines": 30,
+   "textPath": "collected/archive/pages/eu-primary/tfeu-192.txt"
+  },
+  {
+   "name": "tfeu-218",
+   "celex": "12016E218",
+   "title": "EU 기능조약 제218조(국제 협정)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016E218",
+   "lines": 35,
+   "textPath": "collected/archive/pages/eu-primary/tfeu-218.txt"
+  },
+  {
+   "name": "tfeu-238",
+   "celex": "12016E238",
+   "title": "EU 기능조약 제238조(이사회의 표결)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016E238",
+   "lines": 16,
+   "textPath": "collected/archive/pages/eu-primary/tfeu-238.txt"
+  },
+  {
+   "name": "tfeu-263",
+   "celex": "12016E263",
+   "title": "EU 기능조약 제263조(취소 소송)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016E263",
+   "lines": 13,
+   "textPath": "collected/archive/pages/eu-primary/tfeu-263.txt"
+  },
+  {
+   "name": "tfeu-287",
+   "celex": "12016E287",
+   "title": "EU 기능조약 제287조(유럽감사원)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016E287",
+   "lines": 21,
+   "textPath": "collected/archive/pages/eu-primary/tfeu-287.txt"
+  },
+  {
+   "name": "tfeu-288",
+   "celex": "12016E288",
+   "title": "EU 기능조약 제288조(법령의 종류)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016E288",
+   "lines": 12,
+   "textPath": "collected/archive/pages/eu-primary/tfeu-288.txt"
+  },
+  {
+   "name": "tfeu-289",
+   "celex": "12016E289",
+   "title": "EU 기능조약 제289조(입법 절차)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016E289",
+   "lines": 10,
+   "textPath": "collected/archive/pages/eu-primary/tfeu-289.txt"
+  },
+  {
+   "name": "tfeu-290",
+   "celex": "12016E290",
+   "title": "EU 기능조약 제290조(위임규정)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016E290",
+   "lines": 15,
+   "textPath": "collected/archive/pages/eu-primary/tfeu-290.txt"
+  },
+  {
+   "name": "tfeu-291",
+   "celex": "12016E291",
+   "title": "EU 기능조약 제291조(이행규정)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016E291",
+   "lines": 10,
+   "textPath": "collected/archive/pages/eu-primary/tfeu-291.txt"
+  },
+  {
+   "name": "tfeu-294",
+   "celex": "12016E294",
+   "title": "EU 기능조약 제294조(통상입법절차)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016E294",
+   "lines": 33,
+   "textPath": "collected/archive/pages/eu-primary/tfeu-294.txt"
+  },
+  {
+   "name": "tfeu-297",
+   "celex": "12016E297",
+   "title": "EU 기능조약 제297조(서명, 게재, 발효)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016E297",
+   "lines": 13,
+   "textPath": "collected/archive/pages/eu-primary/tfeu-297.txt"
+  },
+  {
+   "name": "tfeu-311",
+   "celex": "12016E311",
+   "title": "EU 기능조약 제311조(자체 재원)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016E311",
+   "lines": 11,
+   "textPath": "collected/archive/pages/eu-primary/tfeu-311.txt"
+  },
+  {
+   "name": "tfeu-322",
+   "celex": "12016E322",
+   "title": "EU 기능조약 제322조(재정 규칙)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016E322",
+   "lines": 13,
+   "textPath": "collected/archive/pages/eu-primary/tfeu-322.txt"
+  },
+  {
+   "name": "comitology",
+   "celex": "32011R0182",
+   "title": "규정 (EU) No 182/2011(이행 권한 행사의 통제)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011R0182",
+   "lines": 226,
+   "textPath": "collected/archive/pages/eu-primary/comitology.txt"
+  },
+  {
+   "name": "better-law-making",
+   "celex": "32016Q0512(01)",
+   "title": "더 나은 법 제정에 관한 기관 간 합의(2016년)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016Q0512(01)",
+   "lines": 412,
+   "textPath": "collected/archive/pages/eu-primary/better-law-making.txt"
+  },
+  {
+   "name": "eea-agreement",
+   "celex": "21994A0103(01)",
+   "title": "EEA 협정 제7부(기관과 결정 절차)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:21994A0103(01)",
+   "lines": 1402,
+   "textPath": "collected/archive/pages/eu-primary/eea-agreement.txt"
+  }
+ ]
+}
