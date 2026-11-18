@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-11",
+ "asOf": "2026-11-18",
  "years": {
   "from": 2026,
   "to": 2034
@@ -157,13 +157,14 @@
  "notes": [
   {
    "key": "certificate",
-   "text": "CBAM 인증서 한 개는 내재배출량 1톤(tCO2e)에 해당합니다. 제출할 인증서 수는 신고한 내재배출량에서 무상할당 조정을 뺀 값이며, 0보다 작아지면 0으로 보았습니다.",
+   "text": "CBAM 인증서 한 개는 내재배출량 1톤(tCO2e)에 해당합니다. 제출할 인증서 수는 신고한 내재배출량에서 무상할당 조정과 탄소가격 차감분을 뺀 값이며, 0보다 작아지면 0으로 보았습니다.",
    "evidence": [
     {
      "path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt",
      "contains": [
       "‘CBAM certificate’ means a certificate in electronic format corresponding to one tonne of CO2e of embedded emissions in goods",
-      "The CBAM certificates to be surrendered in accordance with Article 22 of this Regulation shall be adjusted to reflect the extent to which EU ETS allowances are allocated free of charge"
+      "The CBAM certificates to be surrendered in accordance with Article 22 of this Regulation shall be adjusted to reflect the extent to which EU ETS allowances are allocated free of charge",
+      "after the reduction that is due on the account of the carbon price paid in a third country in accordance with Article 9 and the adjustment necessary to reflect the extent to which EU ETS allowances are allocated free of charge"
      ]
     },
     {
@@ -239,37 +240,182 @@
   },
   {
    "key": "actual",
-   "text": "실제 배출량으로 신고할 때의 무상할당 조정은 그 제품을 만드는 공정의 벤치마크(A열)에 전구물질에 내재된 무상할당을 더해 구합니다. 이 추정은 전구물질 자료 없이 어림할 수 있도록, 전구물질의 몫까지 넣어 둔 기본 벤치마크(B열)를 고른 생산경로의 값으로 대신 썼으므로 실제 신고 값과 다를 수 있습니다.",
+   "text": "실제 배출량으로 신고할 때의 무상할당 조정은 '공정 벤치마크(A열) × CBAM 계수 × 부문 간 보정계수'에, 전구물질마다 '제품 1톤에 들어간 양 × 그 전구물질의 고유 내재무상할당량'을 더해 구합니다. 전구물질의 값을 생산자에게 받지 못했으면 그 전구물질의 기본 벤치마크(B열)로 구합니다. 전구물질을 따로 넣지 않고 어림할 때에는 전구물질의 몫까지 넣어 둔 기본 벤치마크(B열)를 고른 생산경로의 값으로 대신 쓰므로 실제 신고 값과 다를 수 있습니다.",
    "evidence": [
     {
      "path": "collected/archive/pages/eu-acts/32025R2620.txt",
      "contains": [
       "is the process-related CBAM benchmark for the production process which yields good g",
-      "For a complex good, the calculation of the SEFA shall take into account the production process as well as the SEFA of each precursor"
+      "For a complex good, the calculation of the SEFA shall take into account the production process as well as the SEFA of each precursor",
+      "is the specific mass of precursor i consumed for the production of one tonne of good g",
+      "value for the precursor i is not provided by the producer",
+      "is determined by selecting the appropriate BM g value from point 5, Column B, of this Annex"
      ]
     },
     {
      "path": "originals/text/3aa2c730-4f1b-4524-8f71-d9cfe4880ac7/6854641617e7.txt",
      "contains": [
-      "CBAM benchmarks provided in column B cover the entire production chain of the respective good (i.e. precursors are already taken into account)"
+      "𝑆𝐹𝐴𝑃𝑟𝑜𝑐 𝑔,𝑦 = 𝐶𝐵𝐴𝑀𝑦 ∙ 𝐶𝑆𝐶𝐹𝑦 ∙ 𝐵𝑀𝑔∗",
+      "𝑆𝐸𝐹𝐴𝑔,𝑦 = 𝑆𝐹𝐴𝑃𝑟𝑜𝑐𝑔,𝑦 + ∑ 𝑚𝑖,𝑦 · 𝑆𝐸𝐹𝐴𝑖,𝑦𝑖 ′",
+      "CBAM benchmarks provided in column B cover the entire production chain of the respective good (i.e. precursors are already taken into account)",
+      "for simple goods, column A and column B contain the same values, as no precursors are relevant"
      ]
     }
    ],
    "sources": [
     "faa",
     "guidance4"
+   ],
+   "note": "식 2~4는 법령의 받아 둔 글에 그림이라 빠져 있어, EU 집행위원회 가이던스 4의 글과 대조했다."
+  },
+  {
+   "key": "precursors",
+   "text": "전구물질의 내재배출량을 생산자에게 받지 못했으면 그 전구물질의 기본값에 마크업을 더해 씁니다. 이 추정에는 대한민국의 기본값이 들어 있으므로, 다른 나라에서 만든 전구물질은 그 나라의 기본값을 넣어 주세요. EU나 CBAM이 면제되는 나라와 지역에서 만든 전구물질은 내재배출량과 고유 내재무상할당량을 모두 0으로 봅니다.",
+   "evidence": [
+    {
+     "path": "collected/archive/pages/eu-acts/32025R2621.txt",
+     "contains": [
+      "the default values laid down in Annex I shall be used for those precursors"
+     ]
+    },
+    {
+     "path": "originals/text/013fa763-5dce-4726-a204-69fec04d5ce2/0d86eac8f750.txt",
+     "contains": [
+      "should use the default values of Annex I to Implementing Regulation (EU) 2025/2621 (increased by the relevant mark-up)"
+     ]
+    },
+    {
+     "path": "collected/archive/pages/eu-acts/32025R2547.txt",
+     "contains": [
+      "The specific embedded emissions for complex goods may be calculated by determining actual emissions for the production processes within the installation producing the complex goods, and default values for one or more precursors of the complex goods.",
+      "the specific direct or indirect embedded emissions of that precursor shall be counted as zero"
+     ]
+    },
+    {
+     "path": "originals/text/3aa2c730-4f1b-4524-8f71-d9cfe4880ac7/6854641617e7.txt",
+     "contains": [
+      "the specific free allocation of any precursor originating in the customs territory of the European Union shall be zero"
+     ]
+    }
+   ],
+   "sources": [
+    "defaults",
+    "method",
+    "qa",
+    "guidance4"
+   ]
+  },
+  {
+   "key": "indirect",
+   "text": "철강, 알루미늄, 수소처럼 직접배출량만 세는 품목에는 간접배출량을 넣지 않습니다. 간접배출량을 세는 품목(시멘트, 비료)은 생산공정에서 쓴 전력량에 전력의 배출계수를 곱해 구하며, 법령이 정한 조건을 갖추어 실제 값을 쓸 수 있는 경우가 아니면 배출계수는 기본값을 씁니다.",
+   "evidence": [
+    {
+     "path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt",
+     "contains": [
+      "List of goods for which only direct emissions are to be taken into account"
+     ]
+    },
+    {
+     "path": "collected/archive/pages/eu-acts/32025R2547.txt",
+     "contains": [
+      "For the determination of specific indirect emissions, default values laid down in accordance with Annex IV to Regulation (EU) 2023/956 shall be used, except where actual values can be used in accordance with Article 8.",
+      "Indirect emissions shall be determined by monitoring the consumption of electricity in the relevant production process"
+     ]
+    }
+   ],
+   "sources": [
+    "cbam",
+    "method"
    ]
   },
   {
    "key": "carbon-price",
-   "text": "원산지에서 실제로 낸 탄소 가격이 있으면 제출할 인증서 수를 더 줄일 수 있습니다(CBAM 규정 제9조). 이 추정에는 그 공제를 넣지 않았습니다.",
-   "source": "cbam",
-   "evidence": {
-    "path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt",
-    "contains": [
-     "an authorised CBAM declarant may claim in the CBAM declaration a reduction in the number of CBAM certificates to be surrendered in order to take into account the carbon price paid in a third country for the declared embedded emissions"
-    ]
-   }
+   "text": "탄소가격 차감은 제품을 만든 나라에서 낸 탄소가격만큼 제출할 인증서 수를 줄이는 것입니다. 실질적으로 지불된 탄소가격으로 청구할 때에는 '제품 1톤당 실질 지불 탄소가격(유로) ÷ 기준가격 × 물량'만큼, 기본 탄소가격으로 청구할 때에는 '기본 탄소가격 × 신고한 내재배출량 ÷ 기준가격 × 물량'만큼 줄어듭니다. 내재배출량을 기본값으로 신고하면 기본 탄소가격으로만 청구할 수 있습니다.",
+   "evidence": [
+    {
+     "path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt",
+     "contains": [
+      "an authorised CBAM declarant may claim in the CBAM declaration a reduction in the number of CBAM certificates to be surrendered in order to take into account the carbon price paid in a third country for the declared embedded emissions"
+     ]
+    },
+    {
+     "path": "collected/archive/pages/eu-acts/32026R2498.txt",
+     "contains": [
+      "ReductionActualCarbonPriceg is the reduction in the number of certificates to be surrendered to account for the carbon price effectively paid",
+      "€EFF_CPg means the effective carbon price, expressed in euro per tonne of good or per MWh, as included in the certification report pursuant to Article 19",
+      "€DCP means the applicable default carbon price made available by the Commission",
+      "SEEg means the declared embedded emissions of the good",
+      "Ref Price CBAM means the yearly reference price of CBAM certificates, expressed in euro per tonne of CO2e for the year of import",
+      "Where embedded emissions are determined based on default emission values, the deduction may only be claimed on the basis of the relevant default carbon price made available by the Commission."
+     ]
+    }
+   ],
+   "note": "제7조의 두 식은 법령의 받아 둔 글에 그림이라 빠져 있다. 유럽연합 관보의 PDF에서 확인했다(2026-11-18): ReductionActualCarbonPrice_g = (€EFF_CP_g / Ref Price CBAM) × Q_g, ReductionDefaultCarbonPrice_g = (€DCP × SEE_g / Ref Price CBAM) × Q_g.",
+   "sources": [
+    "cbam",
+    "carbon"
+   ]
+  },
+  {
+   "key": "carbon-built",
+   "text": "'계산해 보기'는 법령의 방법을 줄여, 탄소가격이 매겨진 직접배출량에서 무상으로 받은 배출권처럼 값을 치르지 않은 몫을 뺀 뒤 탄소가격을 곱하고 연평균 환율로 유로로 바꿉니다. 실제로 청구하려면 독립적인 사람이 인증한 보고서의 값이 있어야 합니다. 대한민국의 배출권거래제(K-ETS)는 이 이행규정의 부속서 II에 탄소가격 제도로 올라 있고, 주된 환급·보상의 형태로 무상할당이 적혀 있습니다.",
+   "note": "식 12a, 15a, 16은 유럽연합 관보의 PDF에서 확인했다(2026-11-18): EFF_CP_DIRg = (EM_DIRg − Rebated_EM_DIRg) × EFF_CP_DIR, €EFF_CP_DIRg = EFF_CP_DIRg × €XR, €EFF_CP_g = €EFF_CP_DIRg + €EFF_CP_INDg + €EFF_CP_PREg.",
+   "evidence": [
+    {
+     "path": "collected/archive/pages/eu-acts/32026R2498.txt",
+     "contains": [
+      "EFF_CPDIRg is the total carbon price effectively paid on specific embedded emissions (direct emissions), expressed in price per tonne of good",
+      "Rebated_EMDIRg is the rebate or other forms of compensation on direct emissions within the reporting period attributed to the quantity of production of each tonne of good per CN code",
+      "emissions associated with free allowances that are received by the operator and for which no carbon price has been paid",
+      "shall be established separately by the weighted average auctioning price of the compliance unit over the reporting period",
+      "€XR means the yearly average exchange rate to be used to convert the local currency into euro, expressed as euro per local currency unit",
+      "€EFF_CPPREg is the total carbon price effectively paid on the specific embedded emissions, covering both the direct and indirect emissions related to the precursor consumed in the production of each tonne of good",
+      "Korea Emissions Trading System (K-ETS) Emissions Trading System Free allowances"
+     ]
+    }
+   ],
+   "sources": [
+    "carbon"
+   ]
+  },
+  {
+   "key": "default-carbon",
+   "text": "기본 탄소가격은 EU 집행위원회가 탄소가격 규칙이 있는 나라마다 정해 CBAM 등록부에 올리는 값이며, 법령은 2027년부터 정해 올릴 수 있다고 적고 있습니다. 이 추정에는 그 값이 들어 있지 않으므로 직접 넣어 주세요. 법령은 기본 탄소가격을 '신고한 내재배출량'에 곱한다고 적고 있어, 기본값으로 신고할 때에는 마크업을 더한 값에 곱했습니다.",
+   "evidence": [
+    {
+     "path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt",
+     "contains": [
+      "As from 2027, the Commission may, for third countries where carbon pricing rules are in place, determine and make available, in the CBAM registry referred to in Article 14, the default carbon prices for those third countries"
+     ]
+    },
+    {
+     "path": "collected/archive/pages/eu-acts/32026R2498.txt",
+     "contains": [
+      "SEEg means the declared embedded emissions of the good, corresponding either to the actual specific embedded emissions, distinguishing between direct, indirect and precursors emissions where relevant, or to the default value used for the good"
+     ]
+    }
+   ],
+   "sources": [
+    "cbam",
+    "carbon"
+   ]
+  },
+  {
+   "key": "reference",
+   "text": "기준가격은 수입한 해의 CBAM 인증서 가격을 평균해 센트까지 반올림한 값으로, EU 집행위원회가 CBAM 등록부에 공개합니다. 그해의 가격이 다 공개되기 전에는 그때까지 공개된 가격의 평균을 씁니다. 이 추정은 사이트에 실린 인증서 가격으로 그 평균을 구하고, 그해의 가격이 하나도 공개되지 않았으면 넣으신 인증서 가격을 그대로 씁니다.",
+   "evidence": [
+    {
+     "path": "collected/archive/pages/eu-acts/32026R2498.txt",
+     "contains": [
+      "the Commission shall calculate the yearly reference price of CBAM certificates as the average of the price of CBAM certificates published pursuant to Implementing Regulation (EU) 2025/2548 for a given year of import. That average shall be rounded to the nearest cent.",
+      "The Commission shall publish the yearly reference price in the CBAM registry.",
+      "the Commission shall calculate the yearly reference price as the average of the prices of CBAM certificates published during that year"
+     ]
+    }
+   ],
+   "sources": [
+    "carbon"
+   ]
   },
   {
    "key": "who",
@@ -315,6 +461,21 @@
    "key": "ets",
    "text": "EU 배출권거래제 지침 2003/87/EC 통합본(2024년 3월 1일자) 제10a조",
    "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:02003L0087-20240301"
+  },
+  {
+   "key": "method",
+   "text": "내재배출량 산정 방법 이행규정 (EU) 2025/2547",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2547"
+  },
+  {
+   "key": "carbon",
+   "text": "제3국 탄소가격 차감 이행규정 (EU) 2026/2498",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R2498"
+  },
+  {
+   "key": "qa",
+   "text": "EU 집행위원회 CBAM 질의응답(2026년 10월 15일)",
+   "url": "https://taxation-customs.ec.europa.eu/document/download/013fa763-5dce-4726-a204-69fec04d5ce2_en?filename=CBAM_Questions%20and%20Answers.pdf"
   }
  ],
  "watch": {
@@ -322,13 +483,17 @@
   "mentions": [
    "2025/2620",
    "2025/2621",
-   "2026/1862"
+   "2026/1862",
+   "2025/2547",
+   "2026/2498"
   ],
   "known": [
    "32025R2620",
    "32025R2621",
    "32026R1740",
-   "32026D1862"
+   "32026D1862",
+   "32025R2547",
+   "32026R2498"
   ]
  },
  "glossary": [
@@ -387,6 +552,31 @@
    ]
   },
   {
+   "key": "precursor",
+   "ko": "전구물질",
+   "en": "precursor",
+   "text": "다른 CBAM 대상 제품을 만드는 생산공정에 들어가는 CBAM 대상 제품입니다. 전구물질이 들어간 제품은 전구물질의 내재배출량을 더해 내재배출량을 구하고, 무상할당 조정에도 전구물질의 몫을 더합니다.",
+   "evidence": [
+    {
+     "path": "collected/archive/pages/eu-acts/32025R2620.txt",
+     "contains": [
+      "‘precursor’ means any input material into a production process included in the list of goods set out in Annex I to Regulation (EU) 2023/956",
+      "For a complex good, the calculation of the SEFA shall take into account the production process as well as the SEFA of each precursor"
+     ]
+    },
+    {
+     "path": "collected/archive/pages/eu-acts/32025R2547.txt",
+     "contains": [
+      "Direct embedded emissions furthermore include the direct embedded emissions of precursors"
+     ]
+    }
+   ],
+   "sources": [
+    "faa",
+    "method"
+   ]
+  },
+  {
    "key": "faa",
    "ko": "무상할당 조정",
    "en": "free allocation adjustment",
@@ -407,6 +597,25 @@
    ],
    "sources": [
     "cbam",
+    "faa"
+   ]
+  },
+  {
+   "key": "sefa",
+   "ko": "고유 내재무상할당량",
+   "en": "specific embedded free allocation",
+   "abbr": "SEFA",
+   "text": "제품 1톤에 대한 무상할당 조정입니다. 이 값에 수입 물량을 곱하면 그 제품의 무상할당 조정이 됩니다.",
+   "evidence": [
+    {
+     "path": "collected/archive/pages/eu-acts/32025R2620.txt",
+     "contains": [
+      "is the specific embedded free allocation of good g in year y expressed as t CO2e / tonne of good g",
+      "is the mass of good g imported during the year to which the CBAM declaration applies"
+     ]
+    }
+   ],
+   "sources": [
     "faa"
    ]
   },
@@ -483,6 +692,87 @@
     "ets",
     "cscf",
     "faa"
+   ]
+  },
+  {
+   "key": "carbon",
+   "ko": "탄소가격 차감",
+   "en": "reduction for the carbon price paid in a third country",
+   "text": "제품을 만든 제3국에서 낸 탄소가격만큼 제출할 인증서 수를 줄이는 것입니다. 그 나라에서 받을 수 있는 환급이나 보상으로 탄소가격이 줄어드는 몫은 빼고 계산합니다.",
+   "evidence": [
+    {
+     "path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt",
+     "contains": [
+      "an authorised CBAM declarant may claim in the CBAM declaration a reduction in the number of CBAM certificates to be surrendered in order to take into account the carbon price paid in a third country for the declared embedded emissions",
+      "any rebate or other form of compensation available in that country that would have resulted in a reduction of that carbon price shall be taken into account"
+     ]
+    }
+   ],
+   "sources": [
+    "cbam",
+    "carbon"
+   ]
+  },
+  {
+   "key": "paid",
+   "ko": "실질적으로 지불된 탄소가격",
+   "en": "carbon price effectively paid",
+   "text": "환급이나 보상을 반영한 뒤에 실제로 낸 탄소가격입니다. 독립적인 사람이 인증한 증빙으로 청구하며, 내재배출량을 실제 배출량으로 신고할 때에만 쓸 수 있습니다. 이 값을 제품 1톤당 유로로 나타낸 것을 법령은 실효 탄소가격(effective carbon price)이라고 부릅니다.",
+   "evidence": [
+    {
+     "path": "collected/archive/pages/eu-acts/32026R2498.txt",
+     "contains": [
+      "an authorised CBAM declarant may only claim the deduction of the carbon price effectively paid, based on evidence certified by an independent person, where the embedded emissions are determined based on actual values",
+      "€EFF_CPg means the effective carbon price, expressed in euro per tonne of good or per MWh, as included in the certification report pursuant to Article 19"
+     ]
+    },
+    {
+     "path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt",
+     "contains": [
+      "The reduction may be claimed only if the carbon price has been effectively paid in a third country."
+     ]
+    }
+   ],
+   "sources": [
+    "cbam",
+    "carbon"
+   ]
+  },
+  {
+   "key": "dcp",
+   "ko": "기본 탄소가격",
+   "en": "default carbon price",
+   "text": "EU 집행위원회가 탄소가격 규칙이 있는 제3국마다 정해 CBAM 등록부에 올릴 수 있는 연간 탄소가격입니다. 실제로 낸 금액을 증명하는 대신 이 값으로 차감을 청구할 수 있고, 내재배출량을 기본값으로 신고할 때에는 이 방법만 쓸 수 있습니다.",
+   "evidence": [
+    {
+     "path": "collected/archive/pages/eu-fulltext/cbam-consolidated.txt",
+     "contains": [
+      "by reference to yearly default carbon prices",
+      "Where the embedded emissions are determined on the basis of default values, a reduction may be claimed only by a reference to yearly default carbon prices."
+     ]
+    }
+   ],
+   "sources": [
+    "cbam",
+    "carbon"
+   ]
+  },
+  {
+   "key": "reference",
+   "ko": "기준가격",
+   "en": "yearly reference price of CBAM certificates",
+   "text": "탄소가격 차감을 인증서 수로 바꿀 때 나누는 값입니다. 수입한 해의 CBAM 인증서 가격을 평균해 센트까지 반올림한 값이며, EU 집행위원회가 CBAM 등록부에 공개합니다.",
+   "evidence": [
+    {
+     "path": "collected/archive/pages/eu-acts/32026R2498.txt",
+     "contains": [
+      "the Commission shall calculate the yearly reference price of CBAM certificates as the average of the price of CBAM certificates published pursuant to Implementing Regulation (EU) 2025/2548 for a given year of import. That average shall be rounded to the nearest cent.",
+      "The Commission shall publish the yearly reference price in the CBAM registry."
+     ]
+    }
+   ],
+   "sources": [
+    "carbon"
    ]
   },
   {

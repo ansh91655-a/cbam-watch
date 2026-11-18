@@ -33,6 +33,7 @@
 .chart-legend small { color: var(--ink-3); font-size: 0.8rem; }
 .key { flex: none; display: inline-block; width: 18px; height: 3px; border-radius: 2px; background: var(--chart-line); }
 .key-2 { background: var(--chart-line-2); }
+.key-3 { background: var(--chart-line-3); }
 .tip-rows { display: grid; gap: 3px; text-align: left; }
 .tip-rows .tip-head { font-weight: 700; opacity: 0.85; }
 .tip-rows .tip-row { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
@@ -46,11 +47,13 @@
 .chart-sources strong { color: var(--ink-2); font-weight: 700; }
 .chart-sources a { display: inline-flex; align-items: center; gap: 4px; }
 
-/* 전체를 몫으로 나눈 막대(js/ui/splitbar.js). 몫 사이는 바탕색으로 2px 띄운다. 색은 선이 둘인 그림과 같은 짝(색 검사로 확인한 것)을 쓴다. */
+/* 전체를 몫으로 나눈 막대(js/ui/splitbar.js). 몫 사이는 바탕색으로 2px 띄운다. 색은 선이 둘인 그림과 같은 짝(색 검사로 확인한 것)을 쓰고,
+   몫이 셋이면 셋째 색(--chart-line-3)을 가운데에 둔다. */
 .splitbar { display: grid; gap: 10px; }
 .splitbar-track { display: flex; gap: 2px; height: 22px; }
 .splitbar-seg { min-width: 3px; flex: 0 0 0; background: var(--chart-line); }
 .splitbar-seg[data-tone="free"] { background: var(--chart-line-2); }
+.splitbar-seg[data-tone="cut"] { background: var(--chart-line-3); }
 .splitbar-seg:first-child { border-radius: 4px 0 0 4px; }
 .splitbar-seg:last-child { border-radius: 0 4px 4px 0; }
 .splitbar-seg:only-child { border-radius: 4px; }

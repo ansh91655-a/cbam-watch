@@ -60,7 +60,7 @@ export function costSection(good, now, rows, priceText, pathName) {
       priced ? `인증서 가격은 모든 해에 ${priceText}를 썼고, CBAM 계수는 '${pathName}'의 값입니다.` : `공개된 인증서 가격이 없어 비용은 싣지 않았습니다. CBAM 계수는 '${pathName}'의 값입니다.`,
       "2027년 수입분부터는 갱신된 CBAM 벤치마크가 적용될 예정입니다.",
       late ? "2031년 이후의 CBAM 벤치마크와 부문 간 보정계수는 아직 정해지지 않아 2028~2030년의 벤치마크와 보정계수 100%를 그대로 썼습니다." : "",
-      "제3국에서 낸 탄소가격의 공제는 넣지 않았습니다.",
+      "제3국에서 낸 탄소가격의 차감은 넣지 않았습니다.",
     ].filter(Boolean).join(" ") }),
   ]);
 }

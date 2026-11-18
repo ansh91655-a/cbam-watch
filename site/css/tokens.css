@@ -111,6 +111,7 @@
 
   --chart-line: #2a5bd7;
   --chart-line-2: #cf6327;  /* 선이 둘인 그림의 둘째 선. 첫째 선과의 짝을 색 검사로 확인했다(밝은 바탕) */
+  --chart-line-3: #1a9b8a;  /* 몫이 셋인 막대의 셋째 색. 앞의 두 색과 어느 짝으로도 색각 이상에서 갈리는지 색 검사로 확인했다(밝은 바탕) */
   --chart-fill: color-mix(in srgb, var(--chart-line) 12%, transparent);
   --chart-grid: var(--line-2);
 }

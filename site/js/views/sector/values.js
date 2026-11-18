@@ -8,6 +8,7 @@ import { csv, filterRows, PAGE, routeRows, summary, valueRows } from "../../sect
 import { h, pill, table } from "../../ui/dom.js";
 import { count } from "../../ui/format.js";
 import { icon } from "../../ui/icons.js";
+import { saveCsv } from "../../ui/save.js";
 import { stackable } from "../../ui/stack.js";
 
 const ORIGIN = { kr: "대한민국", other: "그 밖의 나라와 영역" };
@@ -77,12 +78,7 @@ function line(book, row, index, columns, spans) {
 }
 
 function download(book, sector) {
-  const blob = new Blob([`﻿${csv(book, sector.key)}`], { type: "text/csv;charset=utf-8" });
-  const link = h("a", { href: URL.createObjectURL(blob), download: `cbam-default-values-benchmarks-${sector.key}-${book.asOf || ""}.csv` });
-  document.body.append(link);
-  link.click();
-  link.remove();
-  setTimeout(() => URL.revokeObjectURL(link.href), 2000);
+  saveCsv(`cbam-default-values-benchmarks-${sector.key}-${book.asOf || ""}.csv`, csv(book, sector.key));
 }
 
 // 값의 표가 없는 부문(전력): 기본값이 품목이 아니라 나라마다 정해져 있다

@@ -3,7 +3,7 @@ import { h } from "../../ui/dom.js";
 import { icon } from "../../ui/icons.js";
 
 const TOOLS = {
-  calc: { href: "#calc", name: "인증서 비용 추정", text: "이 규정의 값으로 품목별 인증서 수와 비용을 어림해 볼 수 있습니다." },
+  calc: { href: "#calc", name: "인증서 비용 추정", text: "이 규정이 정한 값과 식으로 품목별 인증서 수와 비용을 어림해 볼 수 있습니다." },
 };
 
 export function tool(rule) {

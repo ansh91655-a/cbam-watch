@@ -20,6 +20,21 @@
 .calc-row { display: grid; gap: 6px; justify-items: start; }
 .calc-label { font-size: 0.8rem; font-weight: 600; color: var(--ink-3); }
 .calc-row .seg button { white-space: normal; text-align: left; }
+/* 칸들의 묶음(내재배출량, 무상할당 조정, 탄소가격 차감): 옅은 테두리 안에 제목과 칸들. 칸은 줄을 다 채우지 않고 제 너비를 지킨다. */
+.calc-group { display: grid; gap: 12px; padding: 16px 18px 18px; border: 1px solid var(--line-2); border-radius: 14px; background: var(--pane-2); }
+.calc-group > h3 { font-size: var(--fs-m); }
+.calc-group .calc-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, max(200px, 22%)), 1fr)); }  /* 넓어도 네 칸까지 */
+.calc-group > .seg { justify-self: start; max-width: 100%; }
+/* 전구물질의 줄: 품목과 지우기 단추, 그 아래에 넣는 칸들 */
+.calc-pre-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.calc-pre { display: grid; gap: 10px; padding: 12px 14px 14px; border-radius: 12px; background: var(--surface-2); }
+.calc-pre-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.calc-pre-head p { display: grid; gap: 2px; min-width: 0; }
+.calc-pre-drop { flex: none; gap: 5px; padding: 5px 12px; font-size: 0.8rem; }
+.calc-pre-add { display: grid; gap: 8px; }
+.calc-pre-add .calc-search input { min-width: 0; font-size: var(--fs-m); font-weight: 400; }  /* 묶음 안은 좁아, 찾는 칸의 최소 너비(72vw)를 두지 않는다 */
+.calc-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; }
+.calc-reset { padding: 7px 16px; }
 
 /* 결과 */
 .calc-stats .stat-value { font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
@@ -30,9 +45,27 @@
 .calc-steps dd { display: grid; gap: 1px; margin: 0; }
 .calc-steps dd b { font-size: var(--fs-l); font-variant-numeric: tabular-nums; }
 .calc-steps dd span { font-size: var(--fs-s); color: var(--ink-2); }
-.calc-compare { display: grid; gap: 2px; max-width: 70em; padding: 12px 16px; border-radius: 12px; background: var(--brand-soft); font-size: var(--fs-s); color: var(--ink-2); }
-.calc-compare b { color: var(--brand); }
+/* 값 하나를 이루는 여러 줄(전구물질마다의 몫, 탄소가격을 구한 차례) */
+.calc-lines { display: grid; gap: 2px; margin: 4px 0 0; padding-left: 18px; list-style: disc; font-size: var(--fs-s); color: var(--ink-2); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+/* 기본값으로 신고할 때와 견주기: 한 줄의 결론과 두 방법을 나란히 적은 표 */
+.calc-compare { display: grid; gap: 10px; padding: 16px 18px 18px; border-radius: 14px; background: var(--brand-soft); }
+.calc-compare h3 { font-size: var(--fs-m); }
+.calc-compare > p:not(.count) { font-weight: 600; color: var(--ink); }
+.calc-compare .table-wrap { border-radius: 12px; box-shadow: none; background: var(--surface); }
+.calc-compare th, .calc-compare td { padding: 9px 16px; }
+.calc-compare tbody th { background: none; font-size: var(--fs-s); font-weight: 600; color: var(--ink-2); white-space: normal; }
+.calc-compare tbody tr:last-child th, .calc-compare tbody tr:last-child td { border-bottom: 0; font-weight: 700; color: var(--ink); }
+.calc-compare > p.calc-even { font-size: var(--fs-s); font-weight: 400; color: var(--ink-2); }
 .calc-sub { max-width: 70em; font-size: var(--fs-s); color: var(--ink-3); }
+.calc-out .sec-head { align-items: center; }
+.calc-out .sec-head .btn { padding: 7px 16px; }
+/* 여러 품목 모아 보기: 담아 둔 추정의 표와 합계 */
+.calc-basket .table-wrap { box-shadow: none; }
+.calc-basket-good { display: grid; gap: 2px; min-width: 150px; max-width: 30em; }
+.calc-basket-good .calc-good-text { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+.calc-basket-acts { display: flex; gap: 6px; justify-content: flex-end; }
+.calc-basket-acts .btn { padding: 5px 12px; font-size: 0.8rem; white-space: nowrap; }
+.calc-basket-sum th, .calc-basket-sum td { background: var(--surface-2); font-size: var(--fs-m); font-weight: 700; color: var(--ink); }
 tr.calc-now td { background: var(--brand-soft); }
 tr.calc-now td:first-child { box-shadow: inset 3px 0 0 var(--brand-bright); font-weight: 700; }
 .calc-out td .pill { margin-left: 8px; font-size: 0.72rem; }
@@ -58,7 +91,6 @@ tr.calc-now td:first-child { box-shadow: inset 3px 0 0 var(--brand-bright); font
 .calc-notes li a, .calc-formula a { margin-left: 8px; font-size: var(--fs-s); overflow-wrap: anywhere; }
 .calc-notes li a .icon, .calc-formula a .icon { margin-left: 3px; vertical-align: -1px; }
 .calc-formula { max-width: 78ch; padding: 12px 16px; border-radius: 12px; background: var(--surface-2); font-weight: 600; color: var(--ink); }
-html[data-theme="midnight"] .calc-compare b { color: var(--link); }
 
 @media (max-width: 640px) {
   .calc-hit { grid-template-columns: minmax(0, 1fr) auto; }
@@ -71,6 +103,9 @@ html[data-theme="midnight"] .calc-compare b { color: var(--link); }
   .calc-term-list dt { padding-bottom: 4px; }
   .calc-term-list dt:first-of-type + dd { padding-top: 0; }
   .calc-steps dd { margin-bottom: 10px; }
+  .calc-group { padding: 14px 14px 16px; }
+  .calc-compare { padding: 14px 12px 14px; }
+  .calc-compare th, .calc-compare td { padding: 8px 10px; }
   .calc-cost { min-width: 110px; }
   .calc-mini { display: none; }
 }

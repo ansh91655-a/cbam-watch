@@ -6,13 +6,13 @@ import { icon } from "../../ui/icons.js";
 export const SECTOR = { cement: "시멘트", fertilisers: "비료", steel: "철강", aluminium: "알루미늄", hydrogen: "수소" };
 const SECTOR_ICON = { cement: "cement", fertilisers: "fertilisers", steel: "steel", aluminium: "aluminium", hydrogen: "hydrogen" };
 const EXAMPLES = ["72081000", "72104900", "73063077", "76061292", "25232900", "31021019"];
-const LIMIT = 8;
+const LIMIT = 8;  // 찾은 품목을 한 번에 보여 주는 줄 수
 
 export function spaced(code) {
   return String(code).replace(/^(\d{4})(\d{2})(\d{2})$/, "$1 $2 $3");
 }
 
-function goodLine(good) {
+export function goodLine(good) {
   return [
     h("span", { class: "cn-code", text: spaced(good.code) }),
     h("span", { class: "calc-good-text", lang: "en", text: good.text }),
@@ -34,12 +34,12 @@ function chosenCard(good, onPick) {
   ]);
 }
 
-// goods: 품목 목록, chosen: 고른 품목(없으면 찾는 칸을 보여 준다), onPick(품목 또는 null), typed: 찾는 칸에 미리 넣어 둘 글
-export function picker(goods, chosen, onPick, typed = "") {
-  if (chosen) return chosenCard(chosen, onPick);
+// 찾는 칸과 찾은 품목의 줄들. 품목을 누르면 onPick(품목)을 부른다. 품목 고르기와 전구물질 더하기가 함께 쓴다.
+// options: { id(찾는 칸의 id), label(칸의 이름), placeholder, typed(찾는 칸에 미리 넣어 둘 글) }. 돌려주는 것: [찾는 칸, 알림 글, 찾은 줄들]
+export function finder(goods, onPick, { id, label, placeholder, typed = "" }) {
   const list = h("ul", { class: "calc-hits" });
   const status = h("p", { class: "count", "aria-live": "polite" });
-  const input = h("input", { id: "calc-q", type: "search", autocomplete: "off", placeholder: "예: 7208 10 00 또는 hot-rolled", value: typed || null });
+  const input = h("input", { id, type: "search", autocomplete: "off", placeholder, value: typed || null });
   const show = () => {
     const hits = search(goods, input.value, LIMIT + 1);
     const asked = input.value.trim();
@@ -48,11 +48,19 @@ export function picker(goods, chosen, onPick, typed = "") {
   };
   input.addEventListener("input", show);
   if (typed) show();
+  const form = h("form", { class: "calc-search", role: "search", onsubmit: (event) => { event.preventDefault(); const first = search(goods, input.value, 1)[0]; if (first) onPick(first); } }, [
+    h("label", { class: "field", for: id }, [h("span", { text: label }), input]),
+  ]);
+  return [form, status, list];
+}
+
+// goods: 품목 목록, chosen: 고른 품목(없으면 찾는 칸을 보여 준다), onPick(품목 또는 null), typed: 찾는 칸에 미리 넣어 둘 글
+export function picker(goods, chosen, onPick, typed = "") {
+  if (chosen) return chosenCard(chosen, onPick);
+  const [form, status, list] = finder(goods, onPick, { id: "calc-q", label: "품목(CN 코드 8자리나 영문 품목 이름)", placeholder: "예: 7208 10 00 또는 hot-rolled", typed });
   const known = EXAMPLES.map((code) => goods.find((good) => good.code === code)).filter(Boolean);
   return h("div", { class: "calc-picker" }, [
-    h("form", { class: "calc-search", role: "search", onsubmit: (event) => { event.preventDefault(); const first = search(goods, input.value, 1)[0]; if (first) onPick(first); } }, [
-      h("label", { class: "field", for: "calc-q" }, [h("span", { text: "품목(CN 코드 8자리나 영문 품목 이름)" }), input]),
-    ]),
+    form,
     h("p", { class: "cn-examples" }, [h("span", { text: "예시" }), ...known.map((good) => h("button", { type: "button", class: "pill", text: spaced(good.code), title: good.text, onclick: () => onPick(good) }))]),
     status,
     list,

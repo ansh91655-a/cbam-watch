@@ -18,7 +18,7 @@ export const SCREENS = {
   price: { name: "인증서 가격", title: "CBAM 인증서 가격", icon: "price", about: "EU 집행위원회가 게시한 인증서 가격과 추세", words: ["가격", "price"],
     detail: "EU 집행위원회가 게시하는 CBAM 인증서 가격과 추세를 보여 줍니다." },
   calc: { name: "비용 추정", title: "인증서 비용 추정", icon: "emissions", about: "품목과 물량으로 어림하는 인증서 수와 비용", words: ["비용", "추정", "계산", "계산기", "calculator", "cost"],
-    detail: "품목과 물량, 연도를 넣으면 제출할 CBAM 인증서 수와 비용을 어림해 볼 수 있습니다. 법령의 기본값과 벤치마크로 계산한 참고용 추정입니다." },
+    detail: "품목과 물량, 연도를 넣으면 제출할 CBAM 인증서 수와 비용을 어림해 볼 수 있습니다. 법령의 기본값과 벤치마크로 계산하고, 실제 배출량과 전구물질, 제3국에서 낸 탄소가격을 넣어 견주어 볼 수도 있는 참고용 추정입니다." },
   handbook: { name: "해설서", title: "CBAM 해설서", icon: "guide", about: "제도가 돌아가는 차례를 조문과 함께 풀이", words: ["해설", "입문", "제도 설명", "handbook"],
     detail: "CBAM이 무엇이고 누가 언제 무엇을 해야 하는지를 차례로 풀어 썼습니다. 절마다 근거가 된 조문으로 이어집니다." },
   terms: { name: "용어집", icon: "terms", about: "국문 정리에 쓰는 용어의 표기 기준", words: ["용어", "표기", "glossary"],

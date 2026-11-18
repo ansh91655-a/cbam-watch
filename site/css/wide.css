@@ -44,10 +44,12 @@
   main:has(> .chart-card) > .chart-card { grid-column: 1; }
   main:has(> .chart-card) > .chart-card + .stack { grid-column: 2; align-self: start; }
 
-  /* 비용 추정: 왼쪽에 넣는 칸(따라 내려온다), 오른쪽에 결과 */
-  main:has(> .calc-out) { grid-template-columns: 500px minmax(0, 1fr); column-gap: var(--gap-5); }
+  /* 비용 추정: 왼쪽에 넣는 칸(따라 내려온다), 오른쪽에 결과.
+     넣는 칸이 화면보다 길어질 수 있어(실제 배출량, 전구물질, 탄소가격) 화면 높이까지만 차지하고 그 안에서 밀어 본다. 값을 고치는 동안 결과가 옆에 보인다. */
+  main:has(> .calc-out) { grid-template-columns: 540px minmax(0, 1fr); column-gap: var(--gap-5); }
   main:has(> .calc-out) > * { grid-column: 1 / -1; }
-  main:has(> .calc-out) > .calc-box { grid-column: 1; align-self: start; position: sticky; top: calc(var(--head-h, 64px) + 20px); }
+  main:has(> .calc-out) > .calc-box { grid-column: 1; align-self: start; position: sticky; top: calc(var(--head-h, 64px) + 20px);
+    max-height: calc(100vh - var(--head-h, 64px) - 40px); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
   main:has(> .calc-out) > .calc-out, main:has(> .calc-out) > .calc-terms { grid-column: 2; }
   main:has(> .calc-out) > .calc-box .calc-chosen { grid-template-columns: auto minmax(0, 1fr); }
 }

@@ -3,6 +3,7 @@
 // 화면 요소를 다루지 않으므로 node로 시험한다(tests/test_sitejs.py).
 import { defaultRoutes } from "../calc/compute.js";
 import { benchmarks, markedUp } from "../cn/sheet.js";
+import { csvText } from "../ui/csv.js";
 
 export const PAGE = 40;   // 표에 한 번에 보여 주는 줄 수
 
@@ -61,12 +62,6 @@ export function summary(book, sector) {
   };
 }
 
-const cell = (value) => {
-  if (value === null || value === undefined) return "";
-  const text = String(value);
-  return /[",\n]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
-};
-
 // 표를 내려받는 파일(CSV)의 글. 품목과 생산경로마다 한 줄이고, 수는 법령의 값 그대로(소수점은 마침표)다.
 export function csv(book, sector) {
   const spans = (book.periods || []).map((one) => `${one.from}-${one.to}`);
@@ -75,7 +70,7 @@ export function csv(book, sector) {
   const head = ["cn_code", "goods", "default_row_code", "default_row", "default_origin", "direct_tco2e_per_t", "indirect_tco2e_per_t", "total_tco2e_per_t",
     ...years.map((year) => `total_with_markup_${year}`), "route", "route_name", "used_for_default_reporting",
     ...spans.map((span) => `benchmark_b_${span}`), ...spans.map((span) => `benchmark_a_${span}`)];
-  const lines = [head.join(",")];
+  const lines = [head];
   for (const good of book.goods || []) {
     if (good.sector !== sector) continue;
     for (const pair of good.defaults) {
@@ -83,9 +78,9 @@ export function csv(book, sector) {
       for (const route of routeRows(book, good, pair)) {
         lines.push([good.code, good.text, String(pair.row.shown).replace(/\s/g, ""), pair.row.text, pair.row.origin === "kr" ? "Korea, Republic of" : "Other countries and territories",
           pair.row.direct, pair.row.indirect, pair.row.total, ...years.map((year) => { const hit = marked.find((one) => String(one.year) === year); return hit ? Number(hit.value.toFixed(4)) : ""; }),
-          route.route, route.name, route.route ? (route.used ? "yes" : "no") : "yes", ...route.b, ...route.a].map(cell).join(","));
+          route.route, route.name, route.route ? (route.used ? "yes" : "no") : "yes", ...route.b, ...route.a]);
       }
     }
   }
-  return `${lines.join("\r\n")}\r\n`;
+  return csvText(lines);
 }

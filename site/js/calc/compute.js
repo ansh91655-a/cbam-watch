@@ -1,137 +1,116 @@
 // 인증서 비용 추정의 셈. 화면과 떨어져 있어 시험할 수 있다(tests/test_calc.py가 node로 돌린다).
-// 자료(data/calc.json)는 법령의 표에서 만든 것이고, 여기에서는 법령의 식을 그대로 따른다.
-//   내재배출량(톤당) = 기본값의 총배출량 × (1 + 마크업)      기본값으로 신고할 때
-//                    = 넣은 값                                실제 배출량으로 신고할 때
-//   무상할당 조정(톤당) = CBAM 벤치마크 × CBAM 계수 × 부문 간 보정계수
-//   인증서(톤당) = 내재배출량 − 무상할당 조정 (0보다 작으면 0)
+// 자료(data/calc.json)는 법령의 표에서 만든 것이고, 여기에서는 법령의 식을 그대로 따른다. 제품 1톤에 대해:
+//   내재배출량    = 기본값의 총배출량 × (1 + 마크업)                                 기본값으로 신고할 때
+//                 = 넣은 직접배출량 + 간접배출량 (+ 전구물질의 몫)                   실제 배출량으로 신고할 때
+//   무상할당 조정 = B열 벤치마크 × CBAM 계수 × 부문 간 보정계수                      기본값으로 신고할 때, 전구물질을 따로 넣지 않고 어림할 때
+//                 = A열 벤치마크 × CBAM 계수 × 부문 간 보정계수 + Σ(전구물질의 양 × 그 전구물질의 고유 내재무상할당량)   전구물질을 따로 넣을 때
+//   탄소가격 차감 = 제품 1톤당 실질 지불 탄소가격 ÷ 기준가격, 또는 기본 탄소가격 × 내재배출량 ÷ 기준가격
+//   인증서        = 내재배출량 − 무상할당 조정 − 탄소가격 차감 (0보다 작으면 0)
+// 표에서 값을 고르는 일은 tables.js, 전구물질 한 줄은 precursor.js, 탄소가격 차감은 carbon.js가 한다.
+import { deduction, referencePrice } from "./carbon.js";
+import { amount } from "./numbers.js";
+import { precursorLines } from "./precursor.js";
+import { benchmarkAt, cscf, defaultRoutes, factorAt, markup, period, processBenchmarkAt, routesOf } from "./tables.js";
 
-// 사이트에 실린 짧은 꼴(자리로 읽는 배열)을 이름이 붙은 꼴로 편다.
-export function unpack(book) {
-  const rows = (book.rows || []).map(([shown, text, origin, direct, indirect, total]) => ({ shown, text, origin, direct, indirect, total }));
-  const variant = ([value, route, period]) => ({ value, route, period });
-  const goods = (book.goods || []).map(([code, text, sector, a, b, defaults]) => ({
-    code, text, sector, a: a.map(variant), b: b.map(variant),
-    defaults: defaults.map(([row, route, ...benchmark]) => ({ row: rows[row], route, benchmark })),
-  }));
-  return { ...book, rows, goods };
-}
+export * from "./tables.js";
 
-// 해마다의 값 가운데 그해에 쓰는 값: 그해의 값이 없으면 그보다 앞선 가장 가까운 해의 값(법령이 '몇 년부터'라고 적은 값).
-function standing(values, year) {
-  const years = Object.keys(values || {}).map(Number).filter((one) => one <= year).sort((a, b) => a - b);
-  return years.length ? values[String(years[years.length - 1])] : null;
-}
+const sum = (lines, key) => lines.reduce((total, line) => total + line[key], 0);
+const listed = (input) => input.mode === "actual" && input.pre === "listed";  // 전구물질을 따로 넣어 셈하는지
 
-// 기본값에 더하는 마크업(%).
-export function markup(book, sector, year) {
-  const group = (book.markups || []).find((one) => one.sectors.includes(sector));
-  return group ? standing(group.values, year) : null;
-}
-
-// 벤치마크의 연도 구간: { index: benchmark 배열의 자리, key: 표의 표시 (1)·(2), assumed: 정해진 구간을 지난 해인지 }.
-export function period(book, year) {
-  const periods = book.periods || [];
-  const index = periods.findIndex((one) => year >= one.from && year <= one.to);
-  if (index >= 0) return { index, key: periods[index].key, assumed: false };
-  const last = periods.length - 1;
-  return { index: year < periods[0].from ? 0 : last, key: periods[year < periods[0].from ? 0 : last].key, assumed: true };
-}
-
-// 부문 간 보정계수(%): 정해진 해는 그 값, 정해지지 않은 해는 100으로 가정한다.
-export function cscf(book, year) {
-  const value = (book.cscf || {})[String(year)];
-  return typeof value === "number" ? { value, assumed: false } : { value: 100, assumed: true };
-}
-
-// CBAM 계수(%): 경로에 그해의 값이 있으면 그 값, 경로의 마지막 해를 지났으면 0(무상할당이 끝난 뒤).
-export function factorAt(path, year) {
-  const values = (path && path.values) || {};
-  if (typeof values[String(year)] === "number") return values[String(year)];
-  const years = Object.keys(values).map(Number);
-  if (!years.length) return null;
-  return year > Math.max(...years) ? 0 : null;
-}
-
-// 합금강의 높은 등급(고합금강)의 경로. 기본값으로 신고할 때에는 기본값 행의 경로와 이 경로의 벤치마크 가운데 큰 값을 쓴다(tools/calc/build.py와 같은 규칙).
-const ALLOY_HIGH = "J";
-
-// 실제 배출량으로 신고할 때 고를 수 있는 생산경로(벤치마크 B열에 경로 표시가 있는 품목만).
-export function routesOf(good) {
-  return [...new Set(good.b.map((one) => one.route).filter(Boolean))];
-}
-
-// 기본값으로 신고할 때 벤치마크를 고르는 생산경로(들): 기본값 행의 경로와, 합금강이면 함께 견주는 고합금강의 경로(둘 가운데 큰 값을 쓴다).
-// 경로를 가르지 않는 품목은 빈 배열이다.
-export function defaultRoutes(good, pair) {
-  const route = (pair && pair.route) || "";
-  const alt = route && route !== ALLOY_HIGH && routesOf(good).includes(ALLOY_HIGH) ? ALLOY_HIGH : "";
-  return [route, alt].filter(Boolean);
-}
-
-// 벤치마크 표의 한 열(A열이나 B열)에서 경로와 연도 구간에 맞는 값. 표시가 없는 값 하나뿐이면 그 값이다.
-export function valueAt(column, route, key) {
-  for (const [wantRoute, wantKey] of [[route, key], [route, 0], ["", key], ["", 0]]) {
-    const hit = (column || []).find((one) => one.route === wantRoute && one.period === wantKey);
-    if (hit) return hit.value;
+// 신고하는 내재배출량과 그 몫. 실제 배출량인데 직접배출량을 넣기 전이면 null
+function declared(book, input, pair, lines) {
+  if (input.mode !== "actual") {
+    const rate = markup(book, input.good.sector, input.year);
+    return { value: pair.row.total * (1 + rate / 100), markup: rate, direct: null, indirect: null, inputs: 0 };
   }
-  return null;
+  const direct = amount(input.direct === undefined ? input.see : input.direct);  // 옛 이름 see(내재배출량 하나)도 받는다
+  if (direct === null) return null;
+  const indirect = pair.row.indirect === null ? 0 : amount(input.indirect) || 0;  // 직접배출량만 세는 품목은 간접배출량이 없다
+  const inputs = listed(input) && input.scope === "process" ? sum(lines, "embedded") : 0;
+  return { value: direct + indirect + inputs, markup: null, direct, indirect, inputs };
 }
 
-// B열에서 경로와 연도 구간에 맞는 값.
-export function benchmarkAt(good, route, key) {
-  return valueAt(good.b, route, key);
+// 무상할당 조정과 그 몫. share: 그해의 CBAM 계수 × 부문 간 보정계수(0~1)
+function allocated(input, pair, span, share, lines) {
+  const good = input.good;
+  let route = pair.route;   // 벤치마크를 고른 생산경로(경로를 가르지 않는 품목은 "")
+  let routeAlt = "";        // 기본값으로 신고할 때 함께 견준 경로(합금강: 두 등급 가운데 큰 값을 쓴다)
+  let column = "B";
+  let benchmark;
+  if (input.mode !== "actual") {
+    benchmark = pair.benchmark[span.index];
+    routeAlt = defaultRoutes(good, pair)[1] || "";
+  } else {
+    if (routesOf(good).includes(input.route)) route = input.route;
+    column = listed(input) ? "A" : "B";
+    benchmark = column === "A" ? processBenchmarkAt(good, route, span.key) : benchmarkAt(good, route, span.key);
+  }
+  if (benchmark === null) return null;
+  const inputs = column === "A" ? sum(lines, "allocation") : 0;
+  // 전구물질을 따로 넣지 않은 실제 배출량: 전구물질의 몫까지 넣어 둔 B열로 대신한 어림인지(A열과 B열이 같은 품목은 어림이 아니다)
+  const rough = input.mode === "actual" && column === "B" && processBenchmarkAt(good, route, span.key) !== benchmark;
+  return { value: benchmark * share + inputs, benchmark, column, route, routeAlt, process: benchmark * share, inputs, rough };
 }
 
-// 한 해의 추정. input: { good, choice(기본값 짝의 자리), mode("default" | "actual"), see(실제 배출량), route(실제일 때의 경로), year, tonnes, price }
+// 기준가격: 넣은 값, 없으면 그해에 공개된 인증서 가격의 평균, 그것도 없으면 넣은 인증서 가격
+function reference(input, year) {
+  const given = amount(input.carbon.ref);
+  if (given) return { value: given, from: "given" };
+  const known = referencePrice(input.prices, year);
+  if (known) return { value: known.value, from: known.partial ? "partial" : "year", count: known.count };
+  return { value: Number(input.price) || 0, from: "price" };
+}
+
+// 탄소가격 차감(제품 1톤당 인증서 수). 넣지 않았거나 셈할 수 없으면 null
+function relief(input, own) {
+  const carbon = input.carbon;
+  if (!carbon || !carbon.how || carbon.how === "none") return null;
+  if (input.mode !== "actual" && carbon.how === "paid") return null;  // 기본값으로 신고하면 기본 탄소가격으로만 청구할 수 있다
+  const ref = reference(input, input.year);
+  const found = deduction(carbon, own.value, ref.value, own.direct);
+  return found ? { ...found, refFrom: ref.from, refCount: ref.count || 0 } : null;
+}
+
+// 한 해의 추정.
+// input: { good, choice(기본값 짝의 자리), mode("default" | "actual"), year, tonnes, price(인증서 가격),
+//   실제 배출량일 때: direct(제품 1톤당 직접배출량), indirect(간접배출량), route(생산경로),
+//     pre("none" | "listed": 전구물질을 따로 넣는지), scope("whole" | "process": 넣은 배출량이 전구물질의 몫을 담고 있는지), precursors([{ good, choice, route, mass, see, sefa }]),
+//   탄소가격 차감: carbon({ how("none" | "paid" | "default"), entry("report" | "build"), perTonne, price, covered, free, rate, other, dcp, ref }), prices(data/prices.json),
+//   base(넣은 값이 가리키는 해. 연도별 추정이 넣는다) }
 // 돌려주는 값의 단위: 톤당 값은 tCO2e/t, certificates는 tCO2e(= 인증서 수), cost는 유로.
 export function estimate(book, path, input) {
   const { good, mode, year } = input;
-  const choice = good.defaults[input.choice || 0] || good.defaults[0];
+  const pair = good.defaults[input.choice || 0] || good.defaults[0];
   const span = period(book, year);
   const factor = factorAt(path, year);
   const correction = cscf(book, year);
-  let embedded;
-  let benchmark;
-  let rate = null;
-  let route = choice.route;   // 벤치마크를 고른 생산경로(경로를 가르지 않는 품목은 "")
-  let routeAlt = "";          // 기본값으로 신고할 때 함께 견준 경로(합금강: 두 등급 가운데 큰 값을 쓴다)
-  if (mode === "actual") {
-    if (input.see === "" || input.see === null || input.see === undefined) return null; // 값을 넣기 전에는 추정하지 않는다
-    embedded = Number(input.see);
-    if (routesOf(good).includes(input.route)) route = input.route;
-    benchmark = benchmarkAt(good, route, span.key);
-  } else {
-    rate = markup(book, good.sector, year);
-    embedded = choice.row.total * (1 + rate / 100);
-    benchmark = choice.benchmark[span.index];
-    routeAlt = defaultRoutes(good, choice)[1] || "";
-  }
-  if (!Number.isFinite(embedded) || embedded < 0 || benchmark === null || factor === null) return null;
-  const allocation = benchmark * (factor / 100) * (correction.value / 100);
-  const perTonne = Math.max(0, embedded - allocation);
+  if (factor === null) return null;
+  const lines = listed(input) ? precursorLines(book, path, input.precursors, year, input.base === undefined ? year : input.base) : [];
+  const own = declared(book, input, pair, lines);
+  const free = allocated(input, pair, span, (factor / 100) * (correction.value / 100), lines);
+  if (!own || !free) return null;
+  const embedded = own.value;
+  const allocation = free.value;
+  const left = Math.max(0, embedded - allocation);
+  const cut = relief(input, own);
+  const relieved = cut ? Math.min(left, cut.certificates) : 0;   // 차감은 남은 인증서까지만 줄인다
+  const perTonne = left - relieved;
   const tonnes = Number(input.tonnes) || 0;
   const price = Number(input.price) || 0;
   return {
-    year, mode, embedded, markup: rate, benchmark, route, routeAlt, factor, cscf: correction.value, allocation, perTonne,
+    year, mode, embedded, markup: own.markup, parts: { direct: own.direct, indirect: own.indirect, inputs: own.inputs },
+    benchmark: free.benchmark, column: free.column, route: free.route, routeAlt: free.routeAlt, factor, cscf: correction.value,
+    allocation, process: free.process, inputAllocation: free.inputs, lines, rough: free.rough, perTonne,
     covered: Math.min(embedded, allocation),            // 무상할당 조정으로 덜어지는 몫(톤당)
+    deduction: cut, relieved,                           // 탄소가격 차감과, 그 가운데 실제로 덜어진 몫(톤당)
     certificates: perTonne * tonnes, cost: perTonne * tonnes * price, costPerTonne: perTonne * price,
     assumed: { benchmark: span.assumed, cscf: correction.assumed, updated: year >= 2027 },
   };
 }
 
-// 여러 해의 추정(물량과 가격은 그대로 두고 해만 바꾼다).
+// 여러 해의 추정(물량과 가격, 넣은 값은 그대로 두고 해만 바꾼다). 넣은 값은 고른 해(input.year)의 것으로 본다.
 export function series(book, path, input) {
   const rows = [];
-  for (let year = book.years.from; year <= book.years.to; year += 1) rows.push(estimate(book, path, { ...input, year }));
+  for (let year = book.years.from; year <= book.years.to; year += 1) rows.push(estimate(book, path, { ...input, year, base: input.year }));
   return rows.filter(Boolean);
-}
-
-// 품목 찾기: 코드의 앞자리나 이름의 낱말로 찾는다. 숫자만 넣으면 코드로 본다.
-export function search(goods, text, limit = 8) {
-  const query = String(text || "").trim().toLowerCase();
-  if (!query) return [];
-  const code = query.replace(/[\s.]/g, "");
-  if (/^\d+$/.test(code)) return goods.filter((good) => good.code.startsWith(code.slice(0, 8))).slice(0, limit);
-  const words = query.split(/\s+/);
-  return goods.filter((good) => words.every((word) => good.text.toLowerCase().includes(word))).slice(0, limit);
 }
