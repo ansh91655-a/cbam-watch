@@ -5274,6 +5274,30 @@
    "ko": "인증 리스크",
    "from": "32026R2498",
    "added": "2026-11-18"
+  },
+  {
+   "en": "operator's carbon price report",
+   "ko": "사업자 탄소가격 보고서",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "reduced rate",
+   "ko": "감면 세율",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "yearly reference price",
+   "ko": "연간 기준가격",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "emission intensity baseline",
+   "ko": "배출 집약도 기준선",
+   "from": "32026R2498",
+   "added": "2026-11-18"
   }
  ]
 }
