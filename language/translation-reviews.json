@@ -132,6 +132,12 @@
    "key": "a0893fd077d5",
    "act": "32026R2498",
    "why": "원문의 Regulation (EU) No 765/2008을 '규정 (EC) No 765/2008'로 옮겨 문서 번호 표기가 원문과 다름"
+  },
+  {
+   "day": "2026-11-18",
+   "key": "084ba23554da",
+   "act": "report-carbon-price",
+   "why": "둘째 문장의 including proof of payment, currency conversion, and eligibility of third-party certifiers를 '즉 …'으로 옮겨 예시 열거가 한정 열거로 바뀜('지불 증명, 통화 환산 및 제3자 인증자의 자격을 포함하여'로 옮겨야 함)"
   }
  ]
 }
