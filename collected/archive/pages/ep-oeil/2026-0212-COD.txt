@@ -324,6 +324,10 @@ Other Members
 Name
 Date
 Interest representatives
+HADJIPANTELA Michalis
+18/11/2026
+NOVE
+ESMECA - European SME Cement Association
 FERENC Viktória
 16/11/2026
 Magyar Cement-, Beton- és Mészipari Szövetség
@@ -352,9 +356,6 @@ ExxonMobil Petroleum & Chemical
 POLFJÄRD Jessica
 09/11/2026
 Jernkontoret
-POLFJÄRD Jessica
-05/11/2026
-Confederation of Swedish Enterprise
 Load more
 Procedure file
 Basic information
@@ -455,6 +456,7 @@ BLOSS Michael | Shadow rapporteur | ENVI | 28/10/2026 | Bund für Umwelt und Nat
 BLOSS Michael | Shadow rapporteur | ENVI | 26/10/2026 | Federated Hermes Limited Institutional Investors Group on Climate Change M&G plc Robeco
 MARAN Pierfrancesco | Committee chair | ENVI | 22/10/2026 | Climate Strategy
 Name | Date | Interest representatives
+HADJIPANTELA Michalis | 18/11/2026 | NOVE ESMECA - European SME Cement Association
 FERENC Viktória | 16/11/2026 | Magyar Cement-, Beton- és Mészipari Szövetség
 KNOTEK Ondřej | 16/11/2026 | A2A MUST & Partners
 NAGYOVÁ Jana | 12/11/2026 | A2A
@@ -464,4 +466,3 @@ HAIDER Roman | 11/11/2026 | Vereinigung der österreichischen Industrie - Indust
 NAGYOVÁ Jana | 10/11/2026 | The European SME Cement Association
 KANEV Radan | 10/11/2026 | ExxonMobil Petroleum & Chemical
 POLFJÄRD Jessica | 09/11/2026 | Jernkontoret
-POLFJÄRD Jessica | 05/11/2026 | Confederation of Swedish Enterprise

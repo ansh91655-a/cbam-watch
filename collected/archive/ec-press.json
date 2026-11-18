@@ -1,15 +1,15 @@
 {
  "source": "ec-press",
- "fetchedAt": "2026-11-18T11:11:14+09:00",
+ "fetchedAt": "2026-11-19T06:15:05+09:00",
  "since": "2025-01-01",
  "report": {
   "pages": 8,
   "listed": 400,
-  "opened": 0,
-  "kept": 0,
+  "opened": 8,
+  "kept": 1,
   "failures": [],
   "oldest": "2025-02-18",
-  "total": 51,
+  "total": 52,
   "seen": [
    "AC/25/1280",
    "AC/25/612",
@@ -50,7 +50,9 @@
    "IP/26/2343",
    "IP/26/2363",
    "IP/26/2373",
+   "IP/26/2450",
    "IP/26/2456",
+   "IP/26/2499",
    "JP/26/2465",
    "MEX/25/1333",
    "MEX/25/646",
@@ -94,6 +96,7 @@
    "MEX/26/2434",
    "MEX/26/2449",
    "MEX/26/2471",
+   "MEX/26/2497",
    "MEX/26/462",
    "QANDA/25/1268",
    "QANDA/25/1688",
@@ -148,6 +151,11 @@
    "SPEECH/26/2443",
    "SPEECH/26/2458",
    "SPEECH/26/2460",
+   "SPEECH/26/2485",
+   "SPEECH/26/2489",
+   "SPEECH/26/2490",
+   "SPEECH/26/2501",
+   "SPEECH/26/2506",
    "SPEECH/26/986",
    "STATEMENT/25/1267",
    "STATEMENT/25/1704",
@@ -177,6 +185,15 @@
   ]
  },
  "entries": [
+  {
+   "date": "2026-11-18",
+   "reference": "MEX/26/2497",
+   "kind": "MEX",
+   "title": "Daily News 18 / 11 / 2026",
+   "mentions": 9,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2497",
+   "textPath": "collected/archive/pages/ec-press/mex_26_2497.txt"
+  },
   {
    "date": "2026-10-14",
    "reference": "MEX/26/2159",
