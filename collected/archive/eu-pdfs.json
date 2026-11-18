@@ -1,0 +1,40 @@
+{
+ "source": "eu-pdfs",
+ "fetchedAt": "2026-11-18T10:08:08+09:00",
+ "since": "2025-01-01",
+ "report": {
+  "targets": 18,
+  "failures": [
+   "02023R0956-20251020: 응답 404 HTTP Error 404:",
+   "32025R2083: 응답 404 HTTP Error 404:",
+   "32025R2547: 응답 404 HTTP Error 404:",
+   "32025R2546: 응답 404 HTTP Error 404:",
+   "32025R2551: 응답 404 HTTP Error 404:",
+   "32025R2548: 응답 404 HTTP Error 404:",
+   "32025R2620: 응답 404 HTTP Error 404:",
+   "32025R2621: 응답 404 HTTP Error 404:",
+   "32026R1740: 응답 404 HTTP Error 404:",
+   "32026R2498: 응답 404 HTTP Error 404:",
+   "32025R0486: 응답 404 HTTP Error 404:",
+   "32025R2549: 응답 404 HTTP Error 404:",
+   "32024R3210: 응답 404 HTTP Error 404:",
+   "32025R2550: 응답 404 HTTP Error 404:",
+   "32025R2619: 응답 404 HTTP Error 404:",
+   "32025R2210: 응답 404 HTTP Error 404:",
+   "32026D1862: 응답 404 HTTP Error 404:"
+  ]
+ },
+ "entries": [
+  {
+   "celex": "32023R1773",
+   "title": "전환기간 보고 의무 이행규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1773",
+   "from": "http://publications.europa.eu/resource/celex/32023R1773",
+   "file": "collected/archive/pdfs/32023R1773.pdf",
+   "bytes": 2510305,
+   "pages": 102,
+   "parts": 1,
+   "sha256": "82219e89e668d66d26c8cca5b8d174269f0633ea35b0aa11e766fdc3165b7859"
+  }
+ ]
+}
