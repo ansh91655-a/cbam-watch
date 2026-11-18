@@ -17,7 +17,8 @@ from tools.common.htmltext import decode, parse
 from tools.common.jsonio import read_json
 from tools.common.net import fetch, header
 
-ACCEPT = {"Accept": "application/pdf", "Accept-Language": "eng"}
+# 자료 창구는 PDF의 꼴(type)까지 맞아야 내준다. 관보의 꼴은 해마다 달랐으므로 차례대로 청해 본다.
+KINDS = ("application/pdf;type=pdfa2a", "application/pdf;type=pdfa1a", "application/pdf;type=pdfa1b", "application/pdf;type=pdfx", "application/pdf")
 FOLDER = ROOT / "pdfs"
 LIMIT = 45 * 1024 * 1024   # 파일 하나의 크기 한도. 넘으면 받지 않고 알린다
 MOST = 12                  # 한 법령에서 받는 파일 수의 한도
@@ -30,16 +31,22 @@ def targets():
     return [(used or versions.FIRST, "CBAM 규정 통합본")] + list(acts.ACTS)
 
 
-def _pdf(address):
-    status, headers, body, error = fetch(address, timeout=300, retries=1, headers=ACCEPT)
-    time.sleep(PAUSE)
-    return status, headers, body, error
+def _pdf(address, kinds=KINDS):
+    """주소에 PDF를 청한다. 받았거나 여럿 가운데 고르라는 답이 올 때까지 꼴을 바꿔 가며 청한다. 마지막 답과 그때의 꼴을 돌려준다."""
+    answer = (0, {}, b"", "청해 보지 않음")
+    for kind in kinds:
+        answer = fetch(address, timeout=300, retries=1, headers={"Accept": kind, "Accept-Language": "eng"})
+        time.sleep(PAUSE)
+        status, _, body, _ = answer
+        if (status == 200 and body.startswith(b"%PDF")) or status == 300:
+            return answer + (kind,)
+    return answer + ("",)
 
 
 def files(celex):
     """법령 하나의 PDF 파일들(차례대로)과 사유. 파일이 하나면 그대로, 여럿을 고르라는 답이면 모두 받는다."""
     address = CELLAR.format(celex=celex)
-    status, headers, body, error = _pdf(address)
+    status, headers, body, error, kind = _pdf(address)
     if status == 200 and body.startswith(b"%PDF"):
         return [body], ""
     if status != 300 or not body:
@@ -48,7 +55,7 @@ def files(celex):
     choices = sorted({url for url, _ in links if CHOICE.search(url)}, key=lambda url: int(CHOICE.search(url).group(1)))
     found = []
     for choice in choices[:MOST]:
-        status, headers, body, error = _pdf(choice)
+        status, headers, body, error, _ = _pdf(choice, (kind,))
         if status == 200 and body.startswith(b"%PDF"):
             found.append(body)
         else:
@@ -75,7 +82,12 @@ def join(parts):
 def crawl():
     entries, failures = [], []
     FOLDER.mkdir(parents=True, exist_ok=True)
+    before = {entry["celex"]: entry for entry in read_json(ROOT / "eu-pdfs.json", {}).get("entries", [])}
     for celex, what in targets():
+        kept = before.get(celex)
+        if kept and (FOLDER / f"{celex}.pdf").exists():   # 이미 받아 둔 법령은 다시 받지 않는다(관보의 글은 바뀌지 않는다)
+            entries.append(kept)
+            continue
         try:
             parts, why = files(celex)
             data, pages = join(parts) if parts else (b"", 0)
