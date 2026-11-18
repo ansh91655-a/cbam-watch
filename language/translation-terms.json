@@ -5238,6 +5238,42 @@
    "ko": "차감하여",
    "from": "glossary",
    "added": "2026-11-18"
+  },
+  {
+   "en": "carbon price data",
+   "ko": "탄소가격 데이터",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "detailed testing of the data",
+   "ko": "데이터에 대한 상세 시험",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "internal certification documentation",
+   "ko": "내부 인증 문서",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "uncorrected non-compliance",
+   "ko": "정정되지 않은 미준수",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "certification lead auditor",
+   "ko": "인증팀장",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "CPM reporting period",
+   "ko": "CPM 보고기간",
+   "from": "32026R2498",
+   "added": "2026-11-18"
   }
  ]
 }
