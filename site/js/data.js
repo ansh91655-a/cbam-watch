@@ -25,6 +25,8 @@ export const terms = () => load("terms", { terms: [] }).then((body) => body.term
 export const digests = () => load("digests", { digests: [] }).then((body) => body.digests || []);
 // 규제별 진행 상황: 묶음, 규제마다의 단계와 연혁
 export const regulations = () => load("regulations", { groups: [], regulations: [] });
+// 입법 절차: EU 기관의 역할, 법령의 종류, 절차마다의 단계와 근거 자료(tools/publish/procedures.py). 없으면 빈 것으로 본다(세부 절차만 보이지 않는다)
+export const procedures = () => load("procedures", {}).then((body) => ({ institutions: [], acts: [], codes: [], kinds: [], sources: {}, ...body }));
 // 품목 코드 조회에 쓰는 목록: 현행 부속서(current)와 확대 개정안의 부속서(proposed)
 export const cn = () => load("cn", { current: [], proposed: [], council: { added: [], removed: [] } });
 export const events = () => load("events", { events: [] }).then((body) => body.events || []);

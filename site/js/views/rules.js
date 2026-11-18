@@ -1,6 +1,7 @@
 // 규제. 규제마다 지금 어느 단계에 있는지, 그동안 무슨 일이 있었는지, 다음에 무엇이 남았는지를 보여 준다.
 // #rules는 전체 목록, #rules-<묶음>은 한 묶음, #rules-<규제>는 한 규제의 자세한 화면이다.
 // #rules-recent(와 #rules-recent-90)는 연혁을 합쳐 최근에 달라진 것만 보는 화면이다(rules/recent.js).
+// 규제가 따르는 절차의 단계마다 어디까지 왔는지는 '세부 절차'가 보여 준다(rules/steps.js). 절차와 기관의 풀이는 입법 절차 화면(views/procedure.js)에 있다.
 import { adopted } from "../cn/stage.js";
 import * as data from "../data.js";
 import { readRule } from "../laws/refs.js";
@@ -14,10 +15,12 @@ import { changes, periodOf, RECENT, sidePeriod } from "../rules/changes.js";
 import { findPanel } from "../ui/lawfind.js";
 import { stackable } from "../ui/stack.js";
 import { stepper } from "../ui/stepper.js";
+import { groupTabs } from "../ui/tabs.js";
 import { analysis } from "./rules/analysis.js";
 import { figure } from "./rules/figure.js";
 import { recentBlock, recentPage } from "./rules/recent.js";
 import { sideNav } from "./rules/side.js";
+import { stepLine, steps } from "./rules/steps.js";
 import { tool } from "./rules/tool.js";
 
 function stageChip(rule) {
@@ -33,13 +36,15 @@ function nextLine(rule) {
     from ? h("span", { class: "rule-next-from" }, [h("span", { text: "날짜의 출처 " }), from]) : null]);
 }
 
-function ruleCard(rule) {
+// book: 입법 절차의 자료(카드에 따르는 절차와 지금 서 있는 세부 단계를 한 줄로 적는다)
+function ruleCard(rule, book) {
   const last = rule.timeline[rule.timeline.length - 1];
   return h("article", { class: "rule-card", "data-tone": rule.tone || "progress" }, [
     h("div", { class: "rule-top" }, [stageChip(rule), h("span", { class: "rule-kind", text: rule.kind })]),
     h("h3", {}, h("a", { href: `#rules-${rule.id}` }, unsplit(rule.name))),
     h("p", { class: "rule-official", text: rule.official }),
     rule.path && rule.path.length ? stepper(rule.path, rule.at, true) : null,
+    stepLine(rule, book),
     h("p", { class: "rule-status", text: rule.status }),
     nextLine(rule),
     h("p", { class: "rule-foot" }, [
@@ -116,7 +121,7 @@ function aside(rule, acts, read) {
   ]);
 }
 
-function detail(main, rule, group, items, drawing, acts, read) {
+function detail(main, rule, group, items, drawing, acts, read, book) {
   const related = (rule.relatedItems || []).map((id) => items.find((item) => item.id === id)).filter(Boolean);
   const links = (rule.links || []).map((link) => {
     const node = safeLink(link.url, link.text);
@@ -124,7 +129,7 @@ function detail(main, rule, group, items, drawing, acts, read) {
     return node ? h("li", {}, node) : null;
   });
   fill(main,
-    band(rule.name, rule.official),
+    band(rule.name, rule.official, groupTabs("rules")),
     h("div", { class: "rule-page" }, [h("div", { class: "stack-l rule-detail", "data-reading": "" }, [  // 긴 글 화면: 머리글에 읽는 자리 표시가 보인다(ui/scrollcue.js)
       h("p", { class: "crumbs" }, [h("a", { href: "#rules", text: "규제" }), h("span", { text: "›" }), h("a", { href: `#rules-${group.code}`, text: group.name })]),
       h("section", { class: "rule-now", "data-tone": rule.tone || "progress", "aria-labelledby": "h-now" }, [
@@ -134,6 +139,7 @@ function detail(main, rule, group, items, drawing, acts, read) {
         h("p", { class: "rule-status", text: rule.status }),
         nextLine(rule),
       ]),
+      steps(rule, book),  // 따르는 절차의 단계마다 어디까지 왔는지(절차가 적힌 규제만)
       h("section", { class: "stack", "aria-labelledby": "h-what" }, [
         h("h2", { id: "h-what", text: "개요" }),
         h("p", { class: "rule-summary", text: rule.summary }),
@@ -153,22 +159,22 @@ function detail(main, rule, group, items, drawing, acts, read) {
       ]) : null,
     ]), aside(rule, acts, read)]),
   );
-  // 현재 상황, 요약, 분석의 글에 나온 용어에 풀이를 단다(근거 자료의 목록과 연혁에는 달지 않는다).
+  // 현재 상황, 요약, 분석, 연혁의 글에 나온 용어에 풀이를 단다(근거 자료의 목록과 세부 절차에는 달지 않는다: 세부 절차는 단계마다 풀이가 붙어 있다).
   // 묶음의 이름이 용어의 범위와 같은 규제(영국 CBAM)에는 그 범위의 풀이를 단다
-  gloss(main, ".rule-now .rule-status, .rule-summary, .rule-analysis .an-sec:not(.an-src) p", { scope: rule.group });
+  gloss(main, ".rule-now .rule-status, .rule-now .rule-next > span, .rule-summary, .rule-analysis .an-sec:not(.an-src) p, .tl > li > p:not(.tl-src)", { scope: rule.group });
 }
 
 export async function render(main, arg) {
-  const [body, items] = await Promise.all([data.regulations(), data.items()]);
+  const [body, items, book] = await Promise.all([data.regulations(), data.items(), data.procedures()]);
   const rules = body.regulations || [];
   const groups = (body.groups || []).filter((group) => rules.some((rule) => rule.group === group.code));
   if (!rules.length) {
-    fill(main, band("규제", "규제마다 지금 어느 단계에 있는지 보여 줍니다."), empty("규제 자료를 읽지 못했습니다. 잠시 뒤에 다시 열어 주세요."));
+    fill(main, band("규제", "규제마다 지금 어느 단계에 있는지 보여 줍니다.", groupTabs("rules")), empty("규제 자료를 읽지 못했습니다. 잠시 뒤에 다시 열어 주세요."));
     return;
   }
   const one = rules.find((rule) => rule.id === arg);
   if (one) {
-    detail(main, one, groups.find((group) => group.code === one.group) || { code: "", name: "" }, items, await figure(one), await data.laws(), readRule(await data.refs(), one.id));
+    detail(main, one, groups.find((group) => group.code === one.group) || { code: "", name: "" }, items, await figure(one), await data.laws(), readRule(await data.refs(), one.id), book);
     return;
   }
   const days = periodOf(arg);
@@ -176,7 +182,7 @@ export async function render(main, arg) {
   const recent = changes(rules, today(), sideDays).length;   // 거기에 적는 건수
   if (days) {
     fill(main,
-      band("규제: 최근 변화", `규제 ${rules.length}건의 연혁에서 최근 ${days}일 동안 달라진 것만 날짜순으로 모았습니다.`),
+      band("규제: 최근 변화", `규제 ${rules.length}건의 연혁에서 최근 ${days}일 동안 달라진 것만 날짜순으로 모았습니다.`, groupTabs("rules")),
       h("div", { class: "with-side" }, [h("aside", { class: "side" }, sideNav(rules, groups, RECENT, recent, sideDays)), h("div", { class: "stack-l" }, recentPage(rules, days))]),
     );
     return "규제: 최근 변화";
@@ -195,7 +201,7 @@ export async function render(main, arg) {
     ]))),
   ]) : null;
   fill(main,
-    band(picked ? `규제: ${shown[0].name}` : "규제", picked ? shown[0].about : `규제마다 지금 어느 단계에 있는지, 다음에 무엇이 남았는지 정리했습니다. ${koreanDate(body.asOf)} 기준입니다.`),
+    band(picked ? `규제: ${shown[0].name}` : "규제", picked ? shown[0].about : `규제마다 지금 어느 단계에 있는지, 다음에 무엇이 남았는지 정리했습니다. ${koreanDate(body.asOf)} 기준입니다.`, groupTabs("rules")),
     h("div", { class: "with-side" }, [
       h("aside", { class: "side" }, side),
       h("div", { class: "stack-l" }, [
@@ -203,9 +209,12 @@ export async function render(main, arg) {
         ...shown.map((group) => h("section", { class: "stack", "aria-labelledby": `h-g-${group.code}` }, [
           h("div", { class: "sec-head" }, [h("h2", { id: `h-g-${group.code}`, text: group.name }), h("span", { class: "count", text: `${rules.filter((rule) => rule.group === group.code).length}건` })]),
           picked ? null : h("p", { class: "sec-lead", text: group.about }),
-          h("div", { class: "rule-grid" }, rules.filter((rule) => rule.group === group.code).map(ruleCard)),
+          h("div", { class: "rule-grid" }, rules.filter((rule) => rule.group === group.code).map((rule) => ruleCard(rule, book))),
         ])),
-        h("p", { class: "rule-note", text: "연혁의 각 줄에는 원문 링크를 달았습니다. 공식 발표 없이 언론 보도로만 알려진 일은 '언론 보도'로 표시했습니다. 최종 판단은 원문으로 해 주세요." }),
+        h("p", { class: "rule-note" }, [
+          h("span", { text: "연혁의 각 줄에는 원문 링크를 달았습니다. 공식 발표 없이 언론 보도로만 알려진 일은 '언론 보도'로 표시했습니다. 최종 판단은 원문으로 해 주세요. " }),
+          h("a", { href: "#procedure", text: "단계의 뜻과 기관의 역할은 입법 절차 화면에서 볼 수 있습니다." }),
+        ]),
       ]),
     ]),
   );

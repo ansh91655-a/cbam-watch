@@ -15,6 +15,7 @@ import { render as home } from "./views/home.js";
 import { render as news } from "./views/news.js";
 import { render as item } from "./views/item.js";
 import { render as rules } from "./views/rules.js";
+import { render as procedure } from "./views/procedure.js";
 import { render as price } from "./views/price.js";
 import { render as calendar } from "./views/calendar.js";
 import { render as calc } from "./views/calc.js";
@@ -32,9 +33,9 @@ import { render as design } from "./views/design.js";
 import { render as search } from "./views/search.js";
 import { render as missing } from "./views/missing.js";
 
-const VIEWS = { home, news, item, rules, price, calc, calendar, docs, laws, law, changes, pdf, terms, cn, sector, handbook, about, design, search, missing };
+const VIEWS = { home, news, item, rules, procedure, price, calc, calendar, docs, laws, law, changes, pdf, terms, cn, sector, handbook, about, design, search, missing };
 // 브라우저 탭에 적는 화면 이름. 화면이 이름을 돌려주면(소식 하나의 제목 등) 그것을 쓴다.
-const NAMES = { news: "소식", item: "소식", rules: "규제", price: "인증서 가격", calc: "인증서 비용 추정", calendar: "일정", docs: "원문 대장", laws: "규정 원문", pdf: "PDF 나란히 보기", law: "규정 원문", changes: "달라진 곳", terms: "용어집", cn: "품목 코드 조회", sector: "부문별 보기", handbook: "CBAM 해설서", about: "안내", design: "색 변형", search: "검색" };
+const NAMES = { news: "소식", item: "소식", rules: "규제", procedure: "입법 절차", price: "인증서 가격", calc: "인증서 비용 추정", calendar: "일정", docs: "원문 대장", laws: "규정 원문", pdf: "PDF 나란히 보기", law: "규정 원문", changes: "달라진 곳", terms: "용어집", cn: "품목 코드 조회", sector: "부문별 보기", handbook: "CBAM 해설서", about: "안내", design: "색 변형", search: "검색" };
 const SITE_NAME = "CBAM 규제동향";
 const STALE_DAYS = 5; // 이보다 오래 갱신되지 않으면 알린다.
 const fresh = { text: "데이터를 읽는 중", state: "ok" };

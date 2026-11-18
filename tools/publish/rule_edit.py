@@ -6,6 +6,8 @@
   (모아 둔 글에서 근거를 찾을 때는 --path collected/archive/pages/… --contains "1 December 2026")
   (공식 화면을 읽고 확인했으면 --basis web, 언론 보도면 --basis press. 이때는 근거 대신 확인한 날이 오늘로 적힌다)
 연혁에서 한 줄 빼기:   python -m tools.publish.rule_edit drop-event --id <규제> --date <날짜> --starts "<글의 앞부분>"
+연혁의 글만 고치기:    python -m tools.publish.rule_edit reword --id <규제> --date <날짜> --starts "<글의 앞부분>" --text "<새 글>"
+                      (날짜, 출처, 근거, 세부 단계는 그대로 둔다. 표현을 바로잡을 때 쓴다. 사실이 달라졌으면 빼고 새로 더한다)
 단계와 설명 고치기:    python -m tools.publish.rule_edit set --id <규제> [--name "…"] [--stage "…"] [--at 2] [--tone progress] [--status "…"] [--summary "…"] [--figure cbam-factor] [--tool calc] [--next "…"] [--next-date 2026-12-14] [--next-title "…"]
                       (--next "", --next-date "", --next-title ""는 그 값을 지운다. --next-title은 일정 화면에 보일 이름으로, 그 날 있을 일을 적은 짧은 구다)
                       (--next-source "<출처 이름>" --next-link "<주소>": 다음 일정의 날짜를 알려 준 출처. 일정 화면과 규제 화면이 그 날짜의 출처로 보여 준다.
@@ -17,6 +19,16 @@
 분석 글 넣기와 바꾸기: python -m tools.publish.rule_edit analysis --id <규제> --file analysis.json
                       (analysis.json은 sections와 sources를 담은 JSON. 꼴은 tools/publish/analysis.py의 머리글에 있다. 쓴 날과 그때의 규제 모습은 스스로 적힌다)
 분석 글 꺼내 보기:     python -m tools.publish.rule_edit analysis-show --id <규제> [--out analysis.json]   (고칠 때는 꺼내서 고친 뒤 다시 넣는다)
+세부 절차(규제가 따르는 절차와 그 단계. 뜻은 tools/publish/rule_steps.py의 머리글에 있다):
+  단계의 이름과 지금 상태 보기: python -m tools.publish.rule_steps --id <규제>   (절차의 단계만 볼 때는 --kind <절차>. 고치기 전에 본다)
+  연혁에 더할 때 단계 적기:  add-event … --step council-adoption
+  있는 줄에 단계 적기:       python -m tools.publish.rule_edit step --id <규제> --date <날짜> --starts "<글의 앞부분>" --step <단계>   (--step ""는 지운다)
+  진행 중인 단계 고치기:     python -m tools.publish.rule_edit set --id <규제> --step-now trilogue   (쉼표로 여럿. 진행 중인 일이 없이 날짜를 기다리면 --step-now "")
+  절차 정하기와 덧붙임:      set --id <규제> --procedure cod [--procedure-note "…"]   (--procedure ""는 세부 절차를 모두 지운다)
+  날짜 없이 확인되는 사실:   python -m tools.publish.rule_edit step-note --id <규제> --step committee --text "…했습니다." --path collected/archive/pages/… --contains "…"
+                           (--text ""는 지운다. 목록의 줄로 근거를 댈 때는 --index … --where …)
+  이 값들은 연혁이나 단계를 바꾸는 것이 아니어서 고친 날(changedOn)을 적지 않는다.
+  큰 단계(at)와 세부 단계가 서로 맞지 않으면 "단계 어긋남"으로 알리기만 한다. 다 고친 뒤에 python -m tools.publish.regulations로 남은 것이 없는지 본다.
 연혁이나 단계를 고치면 그 규제에 고친 날(changedOn)이 적힌다. 분석 글이 그 뒤로 그대로이면 사이트가 그렇다고 밝히고, 상태 점검이 알린다.
 고칠 때마다 기준일(asOf)이 오늘로 바뀌고, 연혁은 날짜순으로 다시 놓인다. 끝에 자료 전체를 검사해 문제를 찍는다(문제가 있으면 1로 끝난다).
 다른 규제의 근거가 공식 기록과 달라진 것은 알리기만 하고 막지 않는다(blocking 참조).
@@ -26,7 +38,7 @@ import json
 import sys
 
 from tools.common.jsonio import read_json, today, write_json
-from tools.publish import analysis, regulations
+from tools.publish import analysis, regulations, rule_steps
 from tools.publish.rule_enact import KINDS, enact
 
 TONES = ["live", "progress", "planned", "adopted", "dispute", "ended"]
@@ -49,6 +61,8 @@ def add_event(body, args):
             event["evidence"] = {"path": args.path, "contains": args.contains}
     else:
         event["checkedOn"] = today()
+    if getattr(args, "step", ""):   # 절차의 어느 단계에서 일어난 일인지
+        event["step"] = args.step
     if any(old["date"] == event["date"] and old["text"] == event["text"] for old in rule["timeline"]):
         raise SystemExit("같은 줄이 이미 있음")
     rule["timeline"] = sorted(rule["timeline"] + [event], key=lambda row: row["date"])
@@ -61,6 +75,20 @@ def drop_event(body, args):
     if len(kept) != len(rule["timeline"]) - 1:
         raise SystemExit(f"뺄 줄이 하나로 정해지지 않음(맞는 줄 {len(rule['timeline']) - len(kept)}개)")
     rule["timeline"] = kept
+    rule["changedOn"] = today()
+
+
+def reword_event(body, args):
+    """연혁의 한 줄에서 글만 바꾼다. 날짜와 출처, 근거, 세부 단계는 그대로다."""
+    rule = find(body, args.id)
+    rows = [row for row in rule["timeline"] if row["date"] == args.date and row["text"].startswith(args.starts)]
+    if len(rows) != 1:
+        raise SystemExit(f"고칠 줄이 하나로 정해지지 않음(맞는 줄 {len(rows)}개)")
+    if not args.text.strip():
+        raise SystemExit("새 글이 비어 있음")
+    if any(row is not rows[0] and row["date"] == args.date and row["text"] == args.text for row in rule["timeline"]):
+        raise SystemExit("같은 줄이 이미 있음")
+    rows[0]["text"] = args.text
     rule["changedOn"] = today()
 
 
@@ -95,6 +123,7 @@ def set_fields(body, args):
         rule.pop("figure", None)
     elif figure is not None:
         rule["figure"] = figure
+    rule_steps.set_fields(rule, args)       # 따르는 절차와 진행 중인 세부 단계. 큰 단계나 연혁을 바꾸는 것이 아니다
     tool = getattr(args, "tool", None)      # 규제 화면에서 이어 주는 도구(인증서 비용 추정). 이것도 규제가 바뀐 것이 아니다
     if tool == "":
         rule.pop("tool", None)
@@ -102,6 +131,14 @@ def set_fields(body, args):
         rule["tool"] = tool
     if any(value is not None for value in (name, args.stage, args.tone, args.status, getattr(args, "summary", None), args.at, args.next, args.next_date, args.next_title)):
         rule["changedOn"] = today()
+
+
+def tag_step(body, args):
+    rule_steps.tag(find(body, args.id), args)
+
+
+def note_step(body, args):
+    rule_steps.note(find(body, args.id), args)
 
 
 def add_rule(body, args):
@@ -154,8 +191,9 @@ def blocking(found, edited):
     그런 어긋남은 상태 점검(tools.run.rules_health)이 따로 알린다.
     """
     mine = f"규제 {edited}"
+    # 큰 단계와 세부 단계의 어긋남은 막지 않는다: 연혁에 줄을 더하는 명령과 큰 단계를 고치는 명령 사이에 잠깐 생긴다(끝에 검사로 확인한다)
     return [(where, what) for where, what in found
-            if not what.startswith("근거 어긋남") or where == mine or where.startswith(mine + " ")]
+            if not what.startswith(rule_steps.GAP) and (not what.startswith("근거 어긋남") or where == mine or where.startswith(mine + " "))]
 
 
 def main(argv):
@@ -169,9 +207,23 @@ def main(argv):
     event.add_argument("--where", action="append", default=[])
     event.add_argument("--path", default="")
     event.add_argument("--contains", action="append", default=[])
+    event.add_argument("--step", default="")   # 절차의 단계(data/procedures.json의 kinds). 절차의 단계가 아닌 사건에는 주지 않는다
+    tagging = commands.add_parser("step")
+    for name in ("--id", "--date", "--starts", "--step"):
+        tagging.add_argument(name, required=True)
+    noting = commands.add_parser("step-note")
+    for name in ("--id", "--step", "--text"):
+        noting.add_argument(name, required=True)
+    noting.add_argument("--index", default="")
+    noting.add_argument("--where", action="append", default=[])
+    noting.add_argument("--path", default="")
+    noting.add_argument("--contains", action="append", default=[])
     drop = commands.add_parser("drop-event")
     for name in ("--id", "--date", "--starts"):
         drop.add_argument(name, required=True)
+    reword = commands.add_parser("reword")
+    for name in ("--id", "--date", "--starts", "--text"):
+        reword.add_argument(name, required=True)
     change = commands.add_parser("set")
     change.add_argument("--id", required=True)
     change.add_argument("--name")
@@ -187,6 +239,9 @@ def main(argv):
     change.add_argument("--next-title")
     change.add_argument("--next-source")   # 다음 일정의 날짜를 알려 준 출처의 이름(예: "Euronews 보도"). --next-link와 함께 준다
     change.add_argument("--next-link")     # 그 출처의 주소(https)
+    change.add_argument("--procedure")     # 따르는 절차의 이름(""는 세부 절차를 모두 지운다)
+    change.add_argument("--step-now")      # 진행 중인 세부 단계(쉼표로 여럿, ""는 비운다)
+    change.add_argument("--procedure-note")  # 세부 절차 위에 적는 한두 문장(""는 지운다)
     new = commands.add_parser("add-rule")
     new.add_argument("--file", required=True)
     out = commands.add_parser("enact")
@@ -213,7 +268,8 @@ def main(argv):
     if args.command == "analysis-show":
         show_analysis(body, args)
         return 0
-    {"add-event": add_event, "drop-event": drop_event, "set": set_fields, "add-rule": add_rule, "enact": enact, "positions": set_positions, "analysis": set_analysis}[args.command](body, args)
+    {"add-event": add_event, "drop-event": drop_event, "reword": reword_event, "set": set_fields, "add-rule": add_rule, "enact": enact, "positions": set_positions, "analysis": set_analysis,
+     "step": tag_step, "step-note": note_step}[args.command](body, args)
     body["asOf"] = today()
     found = regulations.problems(body)
     stop = blocking(found, getattr(args, "id", ""))

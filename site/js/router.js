@@ -7,7 +7,7 @@
 
 import { groupOf } from "./nav/map.js";
 
-const VIEWS = ["home", "news", "item", "rules", "price", "calc", "calendar", "docs", "laws", "law", "changes", "pdf", "terms", "cn", "sector", "handbook", "about", "design", "search"];
+const VIEWS = ["home", "news", "item", "rules", "procedure", "price", "calc", "calendar", "docs", "laws", "law", "changes", "pdf", "terms", "cn", "sector", "handbook", "about", "design", "search"];
 export const MISSING = "missing";  // 없는 주소로 왔을 때 보여 주는 화면의 이름(주소로는 쓰지 않는다)
 const CLICK_MS = 800; // 링크를 누른 뒤 이 시간 안에 주소가 바뀌면 그 누름 때문에 바뀐 것으로 본다
 let clickedAt = -Infinity;

@@ -1,5 +1,5 @@
 {
-"version": "v0.6 (2026-11-14 용어 통일 3차: 정부의 법률 번역서와 국가법령정보센터에서 확인한 표기로 맞춤)",
+"version": "v0.7 (2026-11-18 EU 기관과 입법 절차의 용어를 더함: 외교부와 한국법제연구원의 자료에서 확인한 표기)",
 "note": "국문 표기 기준. status가 confirmed인 것은 정부·공공기관 자료에서 확인된 표기, partial은 일부 확인, candidate는 확인이 더 필요한 후보다. avoid는 쓰지 않는 표기다.",
 "terms": [
 {
@@ -7215,6 +7215,274 @@
 "avoid": [],
 "status": "candidate",
 "note": "carbon pricing(탄소가격제)에 맞춰 정한 표기(2026-11-14). 정부의 법률 번역서는 이행규정 (EU) 2023/1773 제7조에서 '탄소가격 기구'로 옮긴다"
+},
+{
+"no": 398,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"European Council"
+],
+"abbr": [],
+"preferred": "EU 정상회의",
+"allowed": [
+"유럽이사회"
+],
+"avoid": [],
+"status": "confirmed",
+"note": "외교부(주벨기에·유럽연합 대한민국 대사관)의 EU 기구 안내에서 확인(2026-11-18). 영문 이름을 그대로 옮긴 '유럽이사회'도 쓴다(대외경제정책연구원의 보고서와 법제처 지식창고의 글에서 확인, 2026-11-18). EU 이사회(Council of the European Union)와 다른 기관이다"
+},
+{
+"no": 399,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"ordinary legislative procedure"
+],
+"abbr": [],
+"preferred": "일반입법절차",
+"allowed": [
+"통상입법절차"
+],
+"avoid": [],
+"status": "confirmed",
+"note": "한국법제연구원의 「EU의 입법절차와 현황」 소개 자료에서 확인(2026-11-18)"
+},
+{
+"no": 400,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"special legislative procedure"
+],
+"abbr": [],
+"preferred": "특별입법절차",
+"allowed": [],
+"avoid": [],
+"status": "confirmed",
+"note": "한국법제연구원의 「EU의 입법절차와 현황」 소개 자료에서 확인(2026-11-18)"
+},
+{
+"no": 401,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"qualified majority"
+],
+"abbr": [],
+"preferred": "가중다수결",
+"allowed": [],
+"avoid": [],
+"status": "confirmed",
+"note": "한국법제연구원의 「EU의 입법절차와 현황」 소개 자료에서 확인(2026-11-18)"
+},
+{
+"no": 402,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"European Economic and Social Committee"
+],
+"abbr": [
+"EESC"
+],
+"preferred": "유럽경제사회위원회",
+"allowed": [],
+"avoid": [],
+"status": "confirmed",
+"note": "외교부(주벨기에·유럽연합 대한민국 대사관)의 EU 기구 안내에서 확인(2026-11-18)"
+},
+{
+"no": 403,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"Committee of the Regions"
+],
+"abbr": [
+"CoR"
+],
+"preferred": "지역위원회",
+"allowed": [],
+"avoid": [],
+"status": "confirmed",
+"note": "외교부(주벨기에·유럽연합 대한민국 대사관)의 EU 기구 안내에서 확인(2026-11-18)"
+},
+{
+"no": 404,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"European Court of Auditors"
+],
+"abbr": [
+"ECA"
+],
+"preferred": "유럽회계감사원",
+"allowed": [
+"유럽감사원"
+],
+"avoid": [],
+"status": "confirmed",
+"note": "외교부(주벨기에·유럽연합 대한민국 대사관)의 EU 기구 안내에서 확인(2026-11-18). '유럽감사원'은 법제처 세계법령정보센터의 번역문에 나오는 표기다(2026-11-18 확인)"
+},
+{
+"no": 405,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"rotating presidency of the Council"
+],
+"abbr": [],
+"preferred": "순회의장국",
+"allowed": [],
+"avoid": [],
+"status": "confirmed",
+"note": "외교부(주벨기에·유럽연합 대한민국 대사관)의 EU 기구 안내에서 확인(2026-11-18)"
+},
+{
+"no": 406,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"Committee of Permanent Representatives"
+],
+"abbr": [
+"Coreper"
+],
+"preferred": "상주대표위원회",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "입법 절차 안내(2026-11-18)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 407,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"first reading"
+],
+"abbr": [],
+"preferred": "제1독회",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "규제 연혁에서 써 온 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 408,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"interinstitutional negotiations"
+],
+"abbr": [],
+"preferred": "기관 간 협상",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "규제 연혁에서 써 온 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 409,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"rapporteur"
+],
+"abbr": [],
+"preferred": "보고자",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "입법 절차 안내(2026-11-18)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 410,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"objection period (delegated act)"
+],
+"abbr": [],
+"preferred": "이의 제기 기간",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "입법 절차 안내(2026-11-18)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 411,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"legislative act"
+],
+"abbr": [],
+"preferred": "입법행위",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "입법 절차 안내(2026-11-18)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 412,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"Advocate General"
+],
+"abbr": [
+"AG"
+],
+"preferred": "법무관",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "입법 절차 안내(2026-11-18)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 413,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"action for annulment"
+],
+"abbr": [],
+"preferred": "취소 소송",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "규제 화면에서 써 온 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 414,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"Conciliation Committee"
+],
+"abbr": [],
+"preferred": "조정위원회",
+"allowed": [],
+"avoid": [],
+"status": "confirmed",
+"note": "한국법제연구원의 「EU의 입법절차와 현황」 소개 자료에서 확인(2026-11-18)"
+},
+{
+"no": 415,
+"category": "01 제도·법령",
+"core": false,
+"en": [
+"comitology"
+],
+"abbr": [],
+"preferred": "코미톨로지",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "입법 절차 안내(2026-11-18)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
 }
 ]
 }

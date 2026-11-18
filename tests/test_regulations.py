@@ -187,6 +187,19 @@ class RuleEditTest(unittest.TestCase):
         self.edit.drop_event(self.body, self.args(id="sample-rule", date="2025-12-17", starts="제안이"))
         self.assertEqual(self.body["regulations"][0]["timeline"], [])
 
+    def test_reword_changes_only_the_text_of_one_line(self):
+        rule = self.body["regulations"][0]
+        rule["timeline"][0]["step"] = "proposal"
+        kept = {key: value for key, value in rule["timeline"][0].items() if key != "text"}
+        with self.assertRaises(SystemExit):   # 맞는 줄이 없으면 고치지 않는다
+            self.edit.reword_event(self.body, self.args(id="sample-rule", date="2025-12-17", starts="없는 글", text="새 글입니다."))
+        with self.assertRaises(SystemExit):   # 빈 글로는 바꾸지 않는다
+            self.edit.reword_event(self.body, self.args(id="sample-rule", date="2025-12-17", starts="제안이", text=" "))
+        self.assertNotIn("changedOn", rule)
+        self.edit.reword_event(self.body, self.args(id="sample-rule", date="2025-12-17", starts="제안이", text="제안서가 나왔습니다."))
+        self.assertEqual(rule["timeline"][0], {**kept, "text": "제안서가 나왔습니다."})   # 날짜, 출처, 근거, 세부 단계는 그대로다
+        self.assertTrue(rule["changedOn"])
+
 
 class RulesWatchTest(unittest.TestCase):
     def test_new_changed_and_gone_entries(self):
@@ -232,6 +245,18 @@ class RulesHealthTest(unittest.TestCase):
         self.assertEqual([what for what in early if "다음 일정" in what], [])
         self.assertEqual([what for what in late if "다음 일정" in what], ["규제 '가 규제': 다음 일정(2026-11-30)이 지났는데 그대로임"])
         self.assertEqual(counts["regulations"], 2)
+
+    def test_the_guide_is_watched_for_a_broken_shape_and_for_drifted_evidence(self):
+        from unittest import mock
+        from tools.run import rules_health
+        drift = rules_health.procedures.DRIFT
+        with mock.patch.object(rules_health.procedures, "problems", return_value=[("절차 cod trilogue", "글(text)이 비어 있음"), ("기관 court", drift + ": 받아 둔 글에 없는 글")]):
+            found = rules_health.guide_problems()
+        self.assertEqual(found, ["입법 절차 자료: 꼴이나 표기 문제 1건(절차 cod trilogue: 글(text)이 비어 있음)", "입법 절차 자료: 근거가 받아 둔 글과 달라짐 1건(기관 court)"])
+        with mock.patch.object(rules_health.procedures, "problems", return_value=[]):
+            self.assertEqual(rules_health.guide_problems(), [])
+        with mock.patch.object(rules_health, "read_json", return_value=None):
+            self.assertEqual(rules_health.guide_problems(), ["입법 절차 자료(data/procedures.json)를 읽지 못함"])
 
 
 if __name__ == "__main__":

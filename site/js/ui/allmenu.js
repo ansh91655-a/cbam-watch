@@ -28,12 +28,11 @@ function sub(items, kind = "") {
 function block(group, lists, chapters) {
   const screens = screensOf(group);
   const single = screens.length === 1;
-  // 화면이 하나인 묶음에는 그 화면 안에서 고르는 것을 붙인다(목록 첫 줄의 '전체 …'는 화면 자체와 같으므로 뺀다)
-  const inner = single ? ((lists[group.key] || {}).items || []).filter((item) => item.href !== screens[0].href) : [];
+  // 첫 화면 안에서 고르는 것(소식의 주제, 규제의 묶음, 일정의 해)을 그 화면 바로 아래에 붙인다. 목록에 든 화면 자체의 주소('전체 …', 함께 묶인 화면)는 뺀다
+  const inner = ((lists[group.key] || {}).items || []).filter((item) => !screens.some((one) => one.href === item.href));
   return h("section", { class: "am-group", "aria-label": group.name }, [
     single ? null : h("h3", {}, [h("span", { text: group.name }), group.about ? h("small", { text: group.about }) : null]),
-    ...screens.flatMap((one) => [row(one), one.view === "handbook" ? sub(chapters, "list") : null]),
-    sub(inner),
+    ...screens.flatMap((one, index) => [row(one), one.view === "handbook" ? sub(chapters, "list") : null, index === 0 ? sub(inner) : null]),
   ]);
 }
 

@@ -75,6 +75,11 @@ export function plan(site) {
   const whole = book.length ? "#handbook-all" : null;
   // 그림이 있는 장: 그림의 종류를 모두 한 번씩 본다(위에서 이미 보는 장은 뺀다)
   const drawn = figureChapters(book).map((chapter) => `#handbook-${chapter.id}`).filter((view) => !handbook.includes(view) && !scoped.includes(view));
+  // 입법 절차: 처음 화면, 기관 하나와 법령의 종류 하나를 가리키는 주소, 마지막 절차, 단계 하나를 가리키는 주소, 없는 절차
+  const kinds = read(site, "procedures.json", { kinds: [] }).kinds || [];
+  const stepped = kinds.find((kind) => kind.steps.length > 2);
+  const procedure = kinds.length ? ["#procedure", "#procedure-who.council", "#procedure-acts.delegated", `#procedure-${kinds[kinds.length - 1].key}`,
+    stepped ? `#procedure-${stepped.key}.${stepped.steps[stepped.steps.length - 1].key}` : null, "#procedure-none"] : [];
   // 사이트 검색: 빈 화면, 여러 갈래에서 찾는 말, 품목 코드, 찾지 못하는 말
   const search = ["#search", `#search-${encodeURIComponent("기본값")}`, "#search-7208", "#search-zzzzqq"];
   // 없는 주소의 안내 화면: 찾으려던 화면을 어림할 수 있는 주소와 그럴 수 없는 주소
@@ -83,7 +88,7 @@ export function plan(site) {
     // 가로 넘침과 화면 오류: 모든 화면을 일곱 너비로(폰 둘, 패드, 노트북 둘, 넓은 모니터 둘: 본문 폭이 넓어지는 1,560과 1,800의 단계)
     widths: [360, 390, 768, 1024, 1440, 1920, 2400],
     views: ["#home", "#news", topics[0] ? `#news-${topics[0].code}` : null, "#news-notices", "#news-recent", item, itemWithRefs, "#rules", ...(rules.groups || []).map((group) => `#rules-${group.code}`),
-      "#rules-recent", "#rules-recent-90", ...missing,
+      "#rules-recent", "#rules-recent-90", ...procedure, ...missing,
       "#price", "#calc", good, "#calendar", "#calendar-2027", "#calendar-2027.role-verifier", "#calendar-2028", "#cn", "#cn-7208", ...sheets, "#sector", "#sector-aluminium", "#sector-electricity", "#sector-steel.values", "#sector-cement.values", "#sector-electricity.values", ...handbook, ...drawn, ...scoped, whole, "#docs", ...laws, "#terms", "#about", "#design", ...search].filter(Boolean),
     // 규제 화면: 규제마다 네 너비로
     ruleWidths: [360, 768, 1440, 1920],
@@ -91,7 +96,7 @@ export function plan(site) {
     // 접근성: 주요 화면을 두 너비, 세 가지 색으로
     axeWidths: [1280, 390],
     themes: ["", "?theme=white", "?theme=midnight"],
-    axeViews: [...new Set(["#home", "#news", item, itemWithRefs, "#rules", "#rules-recent", missing[0], rule(withAnalysis), rule(withFigure), rule(withTable), "#price", "#calc", good,
+    axeViews: [...new Set(["#home", "#news", item, itemWithRefs, "#rules", "#rules-recent", procedure[0], procedure[3], missing[0], rule(withAnalysis), rule(withFigure), rule(withTable), "#price", "#calc", good,
       "#calendar", "#calendar-2027.role-verifier", "#cn-7208", sheets[0], "#sector", "#sector-electricity", "#sector-cement.values", handbook[0], handbook[1], ...drawn, ...scoped, "#docs", "#laws", law, small ? `#pdf-${small}.p2` : null, actPdf ? `#pdf-${actPdf}.p2` : null, revised ? `#changes-${revised.id}` : null, "#news-notices", "#news-recent", "#terms", "#about", search[1]].filter(Boolean))],
     good,
     // 글 속 용어 풀이를 다뤄 보는 화면: 해설서의 장 하나와, 요약에 용어가 나오는 소식 하나(용어의 자료가 있을 때), 범위가 있는 장

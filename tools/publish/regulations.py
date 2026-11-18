@@ -7,6 +7,8 @@
    글 파일(path)은 모아 둔 공식 기록(collected/archive), 게시 데이터(data), 원문 대장이 받아 둔 문서의 글(originals/text) 가운데 하나여야 한다.
  - basis "web":    공식 화면을 읽고 확인한 것(자동으로 받을 수 없는 화면). checkedOn에 확인한 날을 적는다.
  - basis "press":  공식 발표가 없어 언론 보도로만 아는 것. 글에 '보도'라는 말이 있어야 하고, 사이트에서도 따로 표시한다.
+규제가 어느 절차를 따르고 지금 그 절차의 어느 단계인지(procedure, 연혁의 step, stepNow, stepNotes, procedureNote)는 tools/publish/rule_steps.py가 검사하고,
+사이트에 실을 때 단계마다의 상태를 셈해 붙인다(progress). 절차의 단계는 data/procedures.json에 있다.
 """
 import pathlib
 import re
@@ -14,7 +16,7 @@ import sys
 
 from tools.check import style_check, term_check
 from tools.common.jsonio import read_json
-from tools.publish import analysis
+from tools.publish import analysis, rule_steps
 
 SOURCE = "data/regulations.json"
 ARCHIVE = pathlib.Path("collected/archive")
@@ -136,6 +138,7 @@ def problems(body, term_index=None, kinds=("format", "evidence")):
     if not DATE.match(str(body.get("asOf", ""))):
         found.append(("머리", "기준일(asOf)이 날짜가 아님"))
     groups = [group.get("code") for group in body.get("groups", [])]
+    procedures = rule_steps.load_kinds()   # 절차의 이름 → 절차(data/procedures.json)
     for group in body.get("groups", []):
         for field in ("name", "about"):
             found += [(f"묶음 {group.get('code')}", problem) for problem in text_problems(str(group.get(field, "")), term_index)]
@@ -190,6 +193,7 @@ def problems(body, term_index=None, kinds=("format", "evidence")):
         if rule.get("tool") and rule["tool"] not in TOOLS:
             found.append((where, f"모르는 도구 이름: {rule['tool']}"))
         found += position_problems(rule, term_index, kinds)
+        found += rule_steps.problems(rule, procedures, lambda text: text_problems(text, term_index), evidence_problem, kinds)
         found += analysis.problems(rule, lambda text: text_problems(text, term_index), kinds)
     return found if "format" in kinds else [row for row in found if row[1].startswith("근거 어긋남")]
 
@@ -210,10 +214,15 @@ def related_items(rule, items):
 def public(body, items):
     """사이트에 실을 모양. 안에서만 쓰는 값(근거, 확인한 날, 소식 고르는 조건)은 뺀다."""
     rules = []
+    procedures = rule_steps.load_kinds()
     for rule in body.get("regulations", []):
-        row = {key: value for key, value in rule.items() if key not in ("related", "timeline", "analysis", "changedOn")}
+        row = {key: value for key, value in rule.items() if key not in ("related", "timeline", "analysis", "changedOn") + rule_steps.FIELDS}
         row["timeline"] = [{"date": event["date"], "text": event["text"], "source": event["source"], "link": event["link"],
                             **({"press": True} if event.get("basis") == "press" else {})} for event in rule.get("timeline", [])]
+        if rule.get("procedure") in procedures:  # 세부 절차: 단계마다의 상태와 그 단계의 사건(연혁에서의 차례 번호)
+            row["progress"] = rule_steps.progress(rule, procedures[rule["procedure"]])
+        else:
+            row.pop("procedure", None)
         if rule.get("positions"):  # 비교표: 칸의 근거는 빼고 글만 싣는다
             keys = [party.get("key") for party in rule["positions"].get("parties", [])]
             row["positions"] = {**rule["positions"], "rows": [{"topic": line.get("topic", ""), **{key: {"text": (line.get(key) or {}).get("text", "")} for key in keys}}

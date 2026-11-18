@@ -9,6 +9,8 @@ export const SCREENS = {
     detail: "CBAM 소식을 주제별로 정리했습니다. 제목을 누르면 국문 요약을 먼저 보여 주고, 거기에서 원문으로 갈 수 있습니다." },
   rules: { name: "규제", icon: "legis", about: "규제마다의 지금 단계와 남은 절차", words: ["진행 상황", "진행 단계", "입법"],
     detail: "규제마다 지금 어느 단계에 있는지와 그동안의 연혁, 다음 단계를 정리했습니다." },
+  procedure: { name: "입법 절차", title: "EU 입법 절차와 기관", icon: "procedure", about: "EU 기관의 역할과 법이 만들어지는 차례", words: ["기관", "절차", "집행위원회", "이사회", "유럽의회", "3자 협상", "일반입법절차", "통상입법절차", "위임규정", "이행규정", "procedure"],
+    detail: "EU 집행위원회, 유럽의회, EU 이사회가 무엇을 하는 기관인지와 법이 만들어지는 절차를 단계별로 풀이했습니다. 진행 중인 규제가 지금 어느 단계에 있는지도 한곳에서 볼 수 있습니다." },
   calendar: { name: "일정", icon: "calendar", about: "출처에 날짜가 적힌 일정과 법령의 의무 기한", words: ["달력", "기한", "마감", "calendar", "deadline"],
     detail: "신고 기한과 시행일처럼 날짜가 정해진 일정을 모았습니다. 역할을 고르면 그 역할이 챙길 의무 일정만 볼 수 있습니다." },
   cn: { name: "품목 코드 조회", icon: "search", about: "CN 코드가 CBAM 대상 품목인지 확인", words: ["품목", "대상 품목", "cn", "hs"],
@@ -34,7 +36,7 @@ export const SCREENS = {
 export const GROUPS = [
   { key: "home", name: "최신 동향", views: ["home"] },
   { key: "news", name: "소식", views: ["news"] },
-  { key: "rules", name: "규제", views: ["rules"] },
+  { key: "rules", name: "규제", about: "규제마다의 단계와, 그 단계를 읽는 법", views: ["rules", "procedure"] },
   { key: "calendar", name: "일정", views: ["calendar"] },
   { key: "goods", name: "품목·비용", about: "내 품목이 대상인지, 인증서가 얼마나 드는지", views: ["cn", "sector", "price", "calc"] },
   { key: "handbook", name: "해설서", about: "제도를 처음부터 차례로", views: ["handbook", "terms", "about"] },

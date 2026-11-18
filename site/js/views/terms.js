@@ -13,10 +13,14 @@ import { groupTabs } from "../ui/tabs.js";
 
 const PAGE = 60;
 
-// 그 용어를 풀어 쓴 해설서의 절로 가는 줄(해설서가 풀이한 용어에만)
+// 그 용어를 풀어 쓴 곳으로 가는 줄: 해설서의 절, 또는 입법 절차 화면의 그 자리(read.label이 있다). 풀이가 있는 용어에만 붙는다
 function readLine(read) {
   if (!read) return null;
-  return h("p", { class: "ref-links" }, [h("span", { class: "ref-name" }, [icon("guide", 14), h("span", { text: "해설서" })]), h("a", { href: read.href, text: `${read.chapter}: ${read.title}` })]);
+  const guide = Boolean(read.label);
+  return h("p", { class: "ref-links" }, [
+    h("span", { class: "ref-name" }, [icon(guide ? "procedure" : "guide", 14), h("span", { text: read.label || "해설서" })]),
+    h("a", { href: read.href, text: guide ? `${read.title} 풀이` : `${read.chapter}: ${read.title}` }),
+  ]);
 }
 
 const LONG = 24;   // 이보다 긴 국문 표기(표준의 이름 등)는 그대로 찾아도 나오지 않으므로 영문 표기로 찾는다

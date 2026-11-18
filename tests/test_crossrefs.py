@@ -182,6 +182,19 @@ class HandbookTest(unittest.TestCase):
         self.assertEqual(body["read"]["terms"]["default value"]["href"], "#handbook-defaults.tables")
         self.assertEqual(body["read"]["rules"]["ir-declarations"][0]["href"], "#handbook-uk.returns")
 
+    def test_glossary_terms_the_procedure_guide_explains_lead_to_that_guide(self):
+        # 입법 절차 화면이 풀이한 용어는 용어집의 같은 국문 표기(다른 이름도 본다)를 그 화면의 그 자리로 잇는다. 해설서가 이미 풀이한 용어는 해설서로 간다
+        glossary = [{"en": "trilogue", "ko": "3자 협상"}, {"en": "European Council", "ko": "유럽이사회"}, {"en": "default value", "ko": "기본값"}, {"en": "CN code", "ko": "CN 코드"}]
+        guide = [{"ko": "3자 협상", "en": "trilogue", "also": [], "read": "#procedure-cod.trilogue"}, {"ko": "EU 정상회의", "en": "European Council", "also": ["유럽이사회"], "read": "#procedure-who.summit"},
+                 {"ko": "기본값", "en": "default value", "also": [], "read": "#procedure-cod"}]
+        body, _ = crossrefs.build(INDEX, [], [], glossary, "2026-11-18", self.BOOK, None, guide)
+        read = body["read"]["terms"]
+        self.assertEqual(read["trilogue"], {"href": "#procedure-cod.trilogue", "title": "3자 협상", "chapter": "입법 절차", "label": "입법 절차"})
+        self.assertEqual(read["european council"]["href"], "#procedure-who.summit")                   # 용어집이 다른 이름으로 적은 용어도 잇는다
+        self.assertEqual(read["default value"]["href"], "#handbook-defaults.tables")                  # 해설서의 풀이가 앞선다
+        self.assertNotIn("cn code", read)
+        self.assertEqual(crossrefs.build(INDEX, [], [], glossary, "2026-11-18", self.BOOK)[0]["read"]["terms"].get("trilogue"), None)   # 안내 자료가 없으면 잇지 않는다
+
     def test_without_the_rule_list_every_rule_address_is_kept(self):
         body, _ = crossrefs.build(INDEX, [], [], [], "2026-11-13", self.BOOK)
         self.assertEqual(sorted(body["read"]["rules"]), ["eu-law", "ir-declarations"])

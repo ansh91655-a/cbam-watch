@@ -11,7 +11,7 @@ from tools.check import term_check
 from tools.common.jsonio import read_json, today, write_json
 from tools.laws import build as laws
 from tools.pdfko import site as pdf_site
-from tools.publish import calc, crossrefs, derive, duties, factor, feed, gloss, handbook, item_sheet, merge, preload, regulations, sectors, source_names, thumbs
+from tools.publish import calc, crossrefs, derive, duties, factor, feed, gloss, handbook, item_sheet, merge, preload, procedures, regulations, rule_steps, sectors, source_names, thumbs
 
 DATA_FILES = ["items", "events", "digests", "terms", "topics", "prices"]
 LIST_KEY = {"items": "items", "events": "events", "digests": "digests", "terms": "terms", "topics": "topics", "prices": "prices"}
@@ -46,7 +46,11 @@ def main(argv):
     if rules is None:
         problems.append("data/regulations.json 을 읽지 못함")
         rules = {"groups": [], "regulations": []}
-    problems += [f"규제 자료: {where}: {what}" for where, what in regulations.problems(rules, kinds=("format",))]
+    rule_found = regulations.problems(rules, kinds=("format",))
+    problems += [f"규제 자료: {where}: {what}" for where, what in rule_found if not what.startswith(rule_steps.GAP)]
+    for where, what in rule_found:  # 큰 단계와 세부 단계가 어긋난 것은 알리기만 한다(상태 점검이 따로 알린다)
+        if what.startswith(rule_steps.GAP):
+            print(f"알림: 규제 자료: {where}: {what}")
     for where, what in regulations.problems(rules, kinds=("evidence",)):  # 근거가 달라진 것은 알리기만 한다
         print(f"규제 자료 점검: {where}: {what}")
     write_json(data_out / "regulations.json", regulations.public(rules, bodies["items"]["items"]))
@@ -117,14 +121,26 @@ def main(argv):
     if guide and not handbook.blocking(guide_found):
         write_json(data_out / "handbook.json", handbook.public(guide, handbook.known_laws(read_json(data_out / "laws" / "index.json", None))))
         counts["handbook"] = sum(len(chapter.get("sections", [])) for chapter in guide.get("chapters", []))
+    # 입법 절차: EU 기관의 역할과 법이 만들어지는 절차의 단계. 꼴이 깨졌으면 멈추고, 근거로 적은 말이 받아 둔 글과 달라진 것은 알리기만 한다.
+    # 규제마다 지금 어느 단계인지는 위에서 규제 자료를 실을 때 함께 셈해 실었다(regulations.public의 progress)
+    steps_book = read_json(procedures.SOURCE, None)
+    steps_found = procedures.problems(steps_book, term_check.load())
+    problems += [f"입법 절차: {where}: {what}" for where, what in procedures.blocking(steps_found)]
+    for where, what in steps_found:
+        if what.startswith(procedures.DRIFT):
+            print(f"알림: 입법 절차: {where}: {what}")
+    if isinstance(steps_book, dict) and not procedures.blocking(steps_found):
+        write_json(data_out / "procedures.json", procedures.public(steps_book))
+        counts["procedures"] = len(steps_book.get("kinds", []))
     # 소식, 의무 일정, 용어집에 적힌 법령과 조문을 규정 원문으로 잇는다(글에 또렷이 적힌 곳만). 근거 칸에 적힌 조각이 글에 없으면 알리기만 한다
+    guide_terms = procedures.gloss_terms(steps_book) if counts.get("procedures") else []   # 입법 절차 화면이 풀이한 용어(용어집과 글 속 용어 풀이가 그 화면으로 잇는다)
     linked, unlinked = crossrefs.write(data_out, bodies["items"]["items"], read_json(data_out / "duties.json", {}).get("duties", []),
-                                       bodies["terms"].get("terms", []), today(), {rule.get("id") for rule in rules.get("regulations", [])})
+                                       bodies["terms"].get("terms", []), today(), {rule.get("id") for rule in rules.get("regulations", [])}, guide_terms)
     # 부문별 모아 보기: 부문마다 대상 품목, 안내 문서, 기본값·벤치마크, 소식을 모은다(무엇을 모을지는 sources/sectors.json)
     counts["sectors"], sector_problems = sectors.write(data_out, bodies["items"]["items"])
     problems += [f"부문별 모아 보기: {where}: {what}" for where, what in sector_problems]
-    # 글 속 용어 풀이: 소식, 규제, 해설서의 글에서 표시할 용어와 풀이(해설서가 풀이한 용어와 용어집의 약어. 무엇을 빼는지는 sources/gloss.json)
-    counts["gloss"], gloss_problems = gloss.write(data_out, bodies["terms"], read_json(data_out / "handbook.json", {}), rules, bodies["items"]["items"])
+    # 글 속 용어 풀이: 소식, 규제, 해설서의 글에서 표시할 용어와 풀이(해설서가 풀이한 용어, 입법 절차의 용어, 용어집의 약어. 무엇을 빼는지는 sources/gloss.json)
+    counts["gloss"], gloss_problems = gloss.write(data_out, bodies["terms"], read_json(data_out / "handbook.json", {}), rules, bodies["items"]["items"], guide_terms)
     problems += [f"글 속 용어 풀이: {where}: {what}" for where, what in gloss_problems]
     # 품목 한 장 보기가 품목마다 잇는 근거 조문과 해설서의 절(무엇을 이을지는 sources/item-sheet.json)
     counts["sheet"], sheet_problems = item_sheet.write(data_out)

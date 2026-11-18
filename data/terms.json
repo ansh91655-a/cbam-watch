@@ -1,5 +1,5 @@
 {
-"version": "v0.3",
+"version": "v0.4",
 "terms": [
 {
 "en": "Carbon Border Adjustment Mechanism",
@@ -150,7 +150,7 @@
 "abbr": "CJEU",
 "ko": "EU 사법재판소",
 "alt": "유럽사법재판소, 유럽연합 사법재판소",
-"note": "EU 법의 유권해석 권한을 가진 법원",
+"note": "EU 법의 유권해석 권한을 가진 법원. 지금은 사법재판소와 일반재판소 두 법원으로 이루어져 있음",
 "article": "G1 p.1",
 "category": "제도·법령"
 },
@@ -177,7 +177,7 @@
 "abbr": "EP",
 "ko": "유럽의회",
 "alt": "",
-"note": "이사회와 함께 규정을 채택하는 공동입법기관",
+"note": "EU 시민이 직접 뽑은 의원으로 구성되고, EU 이사회와 함께 법을 채택하는 공동입법기관",
 "article": "",
 "category": "제도·법령"
 },
@@ -186,7 +186,7 @@
 "abbr": "",
 "ko": "EU 이사회",
 "alt": "이사회",
-"note": "회원국 각료로 구성된 공동입법기관. 정상회의인 '유럽이사회(European Council)'와 다른 기관",
+"note": "회원국 각료로 구성된 공동입법기관(각료이사회라고도 함). 정상들이 모이는 EU 정상회의(European Council, 유럽이사회)와 다른 기관",
 "article": "",
 "category": "제도·법령"
 },
@@ -204,7 +204,7 @@
 "abbr": "",
 "ko": "3자 협상",
 "alt": "3자 협의",
-"note": "집행위원회·유럽의회·이사회가 법안 최종 문안을 조율하는 비공식 협상",
+"note": "유럽의회·EU 이사회·EU 집행위원회의 대표가 모여 유럽의회와 이사회의 입장 차이를 좁히는 비공식 협상",
 "article": "",
 "category": "제도·법령"
 },
@@ -213,7 +213,7 @@
 "abbr": "",
 "ko": "일반적 접근",
 "alt": "이사회 입장",
-"note": "이사회가 3자 협상 전에 정하는 협상 입장",
+"note": "EU 이사회가 정치적 방향을 정해 협상이 나아가도록 돕는 합의. 대개 유럽의회가 제1독회 입장을 채택하기 전에 정하며, 이사회의 공식 제1독회 입장을 대신하지는 않음",
 "article": "",
 "category": "제도·법령"
 },
@@ -231,7 +231,7 @@
 "abbr": "",
 "ko": "잠정 합의",
 "alt": "",
-"note": "3자 협상에서 이사회·유럽의회 협상단이 타결한 합의안. 이후 두 기관이 각각 공식 채택",
+"note": "3자 협상에서 유럽의회와 EU 이사회의 협상단이 타결한 합의안. 이후 두 기관이 각각 공식 절차로 승인해야 법이 됨",
 "article": "",
 "category": "제도·법령"
 },
@@ -251,6 +251,195 @@
 "alt": "역내 시장",
 "note": "회원국 사이에 제품, 사람, 서비스, 자본이 자유롭게 오가는 EU 안의 시장. 정부의 법률 번역서는 '역내 시장'으로 띄어 적음",
 "article": "CBAM 규정 제2조 · 제30조",
+"category": "제도·법령"
+},
+{
+"en": "European Council",
+"abbr": "",
+"ko": "EU 정상회의",
+"alt": "유럽이사회",
+"note": "회원국 정상이 모여 EU의 일반적인 정치 방향과 우선순위를 정하는 기관. 입법 기능은 없음. EU 이사회와 다른 기관",
+"article": "EU 조약 제15조",
+"category": "제도·법령"
+},
+{
+"en": "ordinary legislative procedure",
+"abbr": "",
+"ko": "일반입법절차",
+"alt": "통상입법절차",
+"note": "유럽의회와 EU 이사회가 EU 집행위원회의 제안을 함께 채택하는 입법 절차. CBAM 규정과 그 개정이 이 절차를 따름",
+"article": "EU 기능조약 제289조·제294조",
+"category": "제도·법령"
+},
+{
+"en": "special legislative procedure",
+"abbr": "",
+"ko": "특별입법절차",
+"alt": "",
+"note": "조약이 따로 정한 경우에 유럽의회와 EU 이사회 가운데 한 기관이 다른 기관의 참여를 얻어 법을 채택하는 절차. 예: EU 이사회가 만장일치로 정하는 자체 재원 결정",
+"article": "EU 기능조약 제289조(2)·제311조",
+"category": "제도·법령"
+},
+{
+"en": "first reading",
+"abbr": "",
+"ko": "제1독회",
+"alt": "",
+"note": "일반입법절차에서 유럽의회와 EU 이사회가 법안을 처음 심의하는 단계. 기한이 없음",
+"article": "EU 기능조약 제294조",
+"category": "제도·법령"
+},
+{
+"en": "interinstitutional negotiations",
+"abbr": "",
+"ko": "기관 간 협상",
+"alt": "",
+"note": "유럽의회와 EU 이사회가 법안의 문안을 맞추려고 여는 협상. EU 집행위원회도 참여하는 3자 협상으로 열림",
+"article": "",
+"category": "제도·법령"
+},
+{
+"en": "rapporteur",
+"abbr": "",
+"ko": "보고자",
+"alt": "",
+"note": "유럽의회의 위원회에서 법안을 맡아 보고서를 준비하고, 3자 협상에서 유럽의회 쪽의 협상을 이끄는 의원",
+"article": "",
+"category": "제도·법령"
+},
+{
+"en": "Committee of Permanent Representatives",
+"abbr": "Coreper",
+"ko": "상주대표위원회",
+"alt": "",
+"note": "회원국 정부의 상주대표로 구성되어 EU 이사회의 일을 준비하는 위원회",
+"article": "EU 조약 제16조(7)",
+"category": "제도·법령"
+},
+{
+"en": "qualified majority",
+"abbr": "",
+"ko": "가중다수결",
+"alt": "",
+"note": "EU 이사회의 기본 표결 방식. 회원국의 55% 이상(15개국 이상)이 찬성하고 찬성국의 인구가 EU 인구의 65% 이상이어야 함",
+"article": "EU 조약 제16조(3)·(4)",
+"category": "제도·법령"
+},
+{
+"en": "rotating presidency of the Council",
+"abbr": "",
+"ko": "순회의장국",
+"alt": "",
+"note": "회원국이 차례로 돌아가며 맡는 EU 이사회의 의장국. 3자 협상에서 이사회 쪽을 이끎",
+"article": "EU 조약 제16조(9)",
+"category": "제도·법령"
+},
+{
+"en": "legislative act",
+"abbr": "",
+"ko": "입법행위",
+"alt": "",
+"note": "입법 절차로 채택한 규정, 지침, 결정. 집행위원회가 채택하는 위임법·이행법과 구분됨",
+"article": "EU 기능조약 제289조(3)",
+"category": "제도·법령"
+},
+{
+"en": "objection period (delegated act)",
+"abbr": "",
+"ko": "이의 제기 기간",
+"alt": "",
+"note": "EU 집행위원회가 채택한 위임규정을 유럽의회와 EU 이사회가 살펴보는 기간. CBAM 규정은 두 달로 정했고 두 달 연장할 수 있음. 한 기관이라도 이의를 제기하면 발효하지 못함",
+"article": "CBAM 규정 제28조(7)",
+"category": "제도·법령"
+},
+{
+"en": "CBAM Committee",
+"abbr": "",
+"ko": "CBAM 위원회",
+"alt": "",
+"note": "CBAM 이행규정의 초안에 의견을 내는, 회원국 대표로 구성된 위원회",
+"article": "CBAM 규정 제29조",
+"category": "제도·법령"
+},
+{
+"en": "examination procedure",
+"abbr": "",
+"ko": "심사 절차",
+"alt": "",
+"note": "이행규정의 초안에 회원국 대표의 위원회가 가중다수결로 의견을 내는 절차. 위원회가 반대 의견을 내면 집행위원회는 초안을 채택할 수 없음",
+"article": "규정 (EU) No 182/2011 제5조",
+"category": "제도·법령"
+},
+{
+"en": "comitology",
+"abbr": "",
+"ko": "코미톨로지",
+"alt": "",
+"note": "회원국 대표로 구성된 위원회가 집행위원회의 이행 권한 행사를 살피는 절차를 이르는 말",
+"article": "규정 (EU) No 182/2011",
+"category": "제도·법령"
+},
+{
+"en": "Conciliation Committee",
+"abbr": "",
+"ko": "조정위원회",
+"alt": "",
+"note": "일반입법절차의 제2독회에서도 합의하지 못했을 때 유럽의회와 EU 이사회의 대표가 모여 공동 문안을 찾는 위원회",
+"article": "EU 기능조약 제294조(10)",
+"category": "제도·법령"
+},
+{
+"en": "European Economic and Social Committee",
+"abbr": "EESC",
+"ko": "유럽경제사회위원회",
+"alt": "",
+"note": "유럽의회·EU 이사회·EU 집행위원회를 자문 역할로 돕는 위원회. 법안에 대한 의견을 냄",
+"article": "EU 조약 제13조(4)",
+"category": "제도·법령"
+},
+{
+"en": "Committee of the Regions",
+"abbr": "CoR",
+"ko": "지역위원회",
+"alt": "",
+"note": "유럽의회·EU 이사회·EU 집행위원회를 자문 역할로 돕는 위원회",
+"article": "EU 조약 제13조(4)",
+"category": "제도·법령"
+},
+{
+"en": "European Court of Auditors",
+"abbr": "ECA",
+"ko": "유럽회계감사원",
+"alt": "유럽감사원",
+"note": "EU의 수입과 지출을 감사하는 기관. 다른 기관의 요청을 받아 법안에 대한 의견을 낼 수 있음",
+"article": "EU 기능조약 제287조",
+"category": "제도·법령"
+},
+{
+"en": "Advocate General",
+"abbr": "AG",
+"ko": "법무관",
+"alt": "",
+"note": "EU 사법재판소를 돕는 사람. 재판소가 의견을 듣기로 한 사건에서 판결에 앞서 의견을 냄",
+"article": "EU 조약 제19조(2)",
+"category": "제도·법령"
+},
+{
+"en": "action for annulment",
+"abbr": "",
+"ko": "취소 소송",
+"alt": "",
+"note": "EU 법령의 적법성을 다투는 소송. 조약은 법령이 공포된 날부터 두 달 안에 내도록 정함. 사법재판소 절차규칙에 따라 관보에 실린 법령은 실린 날의 14일 뒤부터 기한을 세고, 거리를 고려해 10일을 더함",
+"article": "EU 기능조약 제263조, 사법재판소 절차규칙 제50조·제51조",
+"category": "제도·법령"
+},
+{
+"en": "own resources (of the EU budget)",
+"abbr": "",
+"ko": "자체 재원",
+"alt": "",
+"note": "EU 예산의 수입원. EU 이사회가 만장일치로 정하고 모든 회원국이 승인해야 발효함",
+"article": "EU 기능조약 제311조",
 "category": "제도·법령"
 },
 {
