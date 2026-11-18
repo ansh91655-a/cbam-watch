@@ -5496,6 +5496,24 @@
    "ko": "총량제한·투자 프로그램",
    "from": "32026R2498",
    "added": "2026-11-18"
+  },
+  {
+   "en": "certification opinion statement",
+   "ko": "인증의견 표명",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "yearly exchange rate",
+   "ko": "연간 환율",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "precursor installation",
+   "ko": "전구물질 사업장",
+   "from": "32026R2498",
+   "added": "2026-11-18"
   }
  ]
 }
