@@ -1,0 +1,237 @@
+{
+ "source": "eu-pdfs",
+ "fetchedAt": "2026-11-18T10:19:34+09:00",
+ "since": "2025-01-01",
+ "report": {
+  "targets": 18,
+  "failures": []
+ },
+ "entries": [
+  {
+   "celex": "02023R0956-20251020",
+   "title": "CBAM 규정 통합본",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:02023R0956-20251020",
+   "from": "http://publications.europa.eu/resource/celex/02023R0956-20251020",
+   "file": "collected/archive/pdfs/02023R0956-20251020.pdf",
+   "bytes": 658277,
+   "pages": 61,
+   "parts": 1,
+   "sha256": "faf0a3293c14106daf87b2a8fcb2e208542b7d7643c9d1f645cf685c3ab449a9"
+  },
+  {
+   "celex": "32025R2083",
+   "title": "CBAM 간소화·강화 개정 규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32025R2083",
+   "from": "http://publications.europa.eu/resource/celex/32025R2083",
+   "file": "collected/archive/pdfs/32025R2083.pdf",
+   "bytes": 1348539,
+   "pages": 24,
+   "parts": 1,
+   "sha256": "c0808f3b753d380273e36ff5e2d299fdfa4ee61172e684b38df5d5e0dc9aae48"
+  },
+  {
+   "celex": "32025R2547",
+   "title": "내재배출량 산정 방법 이행규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32025R2547",
+   "from": "http://publications.europa.eu/resource/celex/32025R2547",
+   "file": "collected/archive/pdfs/32025R2547.pdf",
+   "bytes": 2114365,
+   "pages": 86,
+   "parts": 1,
+   "sha256": "6ca80e3ed665e47aaef801e59e0791c50287ca46db20aad046e861134608ccf7"
+  },
+  {
+   "celex": "32025R2546",
+   "title": "내재배출량 검증 원칙 이행규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32025R2546",
+   "from": "http://publications.europa.eu/resource/celex/32025R2546",
+   "file": "collected/archive/pdfs/32025R2546.pdf",
+   "bytes": 819781,
+   "pages": 9,
+   "parts": 1,
+   "sha256": "8d9d64756bfa55b13e81e667f455c3459f55b31312d3419dc9a461d29d836d77"
+  },
+  {
+   "celex": "32025R2551",
+   "title": "검증기관 인정 조건 위임규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32025R2551",
+   "from": "http://publications.europa.eu/resource/celex/32025R2551",
+   "file": "collected/archive/pdfs/32025R2551.pdf",
+   "bytes": 1002633,
+   "pages": 31,
+   "parts": 1,
+   "sha256": "709e3bf1a3dc9b1694eb0e2e83503d0c775b005b632397386333182ee02cbd8d"
+  },
+  {
+   "celex": "32025R2548",
+   "title": "CBAM 인증서 가격 산정·공개 이행규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32025R2548",
+   "from": "http://publications.europa.eu/resource/celex/32025R2548",
+   "file": "collected/archive/pdfs/32025R2548.pdf",
+   "bytes": 491486,
+   "pages": 5,
+   "parts": 1,
+   "sha256": "76b20256a70381a7d3a4df6bf32de66b73d92cae9e5ac849f4f7ffdf91ec2a5e"
+  },
+  {
+   "celex": "32025R2620",
+   "title": "무상할당 조정 이행규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32025R2620",
+   "from": "http://publications.europa.eu/resource/celex/32025R2620",
+   "file": "collected/archive/pdfs/32025R2620.pdf",
+   "bytes": 1906674,
+   "pages": 65,
+   "parts": 1,
+   "sha256": "8bbba79e7f33f0e4943140c28e91a8810612f2fa770bd6dcad33fdb7045e4c05"
+  },
+  {
+   "celex": "32025R2621",
+   "title": "기본값 이행규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32025R2621",
+   "from": "http://publications.europa.eu/resource/celex/32025R2621",
+   "file": "collected/archive/pdfs/32025R2621.pdf",
+   "bytes": 478547,
+   "pages": 9,
+   "parts": 1,
+   "sha256": "e99f151f72d0f3ea48400c7c1386a5561a837ffc0b2fa007b9630882b10b9619",
+   "fullPages": 2400,
+   "kept": [
+    [
+     1,
+     4
+    ],
+    [
+     2350,
+     2354
+    ]
+   ],
+   "about": "조문과 부속서 I의 머리말, 부속서 II와 III(간접배출과 전력의 기본값)"
+  },
+  {
+   "celex": "32026R1740",
+   "title": "기본값 이행규정의 정정 규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32026R1740",
+   "from": "http://publications.europa.eu/resource/celex/32026R1740",
+   "file": "collected/archive/pdfs/32026R1740.pdf",
+   "bytes": 1364489,
+   "pages": 120,
+   "parts": 1,
+   "sha256": "018af73c42af4a57b259badd87784788d9d61eb6da9927ff18f2ca68a15a4934",
+   "fullPages": 1913,
+   "kept": [
+    [
+     1,
+     4
+    ],
+    [
+     821,
+     862
+    ],
+    [
+     1840,
+     1913
+    ]
+   ],
+   "about": "조문과 새 부속서 I의 머리말, 대한민국의 표, '그 밖의 나라와 영역'의 표, 새 부속서 IV"
+  },
+  {
+   "celex": "32026R2498",
+   "title": "제3국 탄소가격 공제 이행규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32026R2498",
+   "from": "http://publications.europa.eu/resource/celex/32026R2498",
+   "file": "collected/archive/pdfs/32026R2498.pdf",
+   "bytes": 1293124,
+   "pages": 56,
+   "parts": 1,
+   "sha256": "2f7c95bfd566cd6bc6ea2f0244f7dd2d45c8c42f1d42786d7f15da2c768856be"
+  },
+  {
+   "celex": "32025R0486",
+   "title": "승인된 CBAM 신고인 지위 이행규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32025R0486",
+   "from": "http://publications.europa.eu/resource/celex/32025R0486",
+   "file": "collected/archive/pdfs/32025R0486.pdf",
+   "bytes": 642760,
+   "pages": 16,
+   "parts": 1,
+   "sha256": "1352d640bf2c3718beb3a442732fa4d6dcadd4c845574246477da8bc95b31173"
+  },
+  {
+   "celex": "32025R2549",
+   "title": "승인된 CBAM 신고인 지위 이행규정의 개정·정정 규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32025R2549",
+   "from": "http://publications.europa.eu/resource/celex/32025R2549",
+   "file": "collected/archive/pdfs/32025R2549.pdf",
+   "bytes": 488068,
+   "pages": 4,
+   "parts": 1,
+   "sha256": "1d471c572dbd569553dd2f1ab0195ac6e8376037c45aa02dbe4a41bbaa8114ca"
+  },
+  {
+   "celex": "32024R3210",
+   "title": "CBAM 등록부 이행규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32024R3210",
+   "from": "http://publications.europa.eu/resource/celex/32024R3210",
+   "file": "collected/archive/pdfs/32024R3210.pdf",
+   "bytes": 737956,
+   "pages": 13,
+   "parts": 1,
+   "sha256": "e6f7e6fbdaa6a92af753589a1e03d89569da09b201bf14d823f74c9e52b36034"
+  },
+  {
+   "celex": "32025R2550",
+   "title": "CBAM 등록부 이행규정의 개정·정정 규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32025R2550",
+   "from": "http://publications.europa.eu/resource/celex/32025R2550",
+   "file": "collected/archive/pdfs/32025R2550.pdf",
+   "bytes": 523247,
+   "pages": 6,
+   "parts": 1,
+   "sha256": "d41b2f13df6fe310c23a455eb7d9f03111dcac4fddb901a289cd729446d57969"
+  },
+  {
+   "celex": "32025R2619",
+   "title": "세관당국 정보 전달 이행규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32025R2619",
+   "from": "http://publications.europa.eu/resource/celex/32025R2619",
+   "file": "collected/archive/pdfs/32025R2619.pdf",
+   "bytes": 521006,
+   "pages": 6,
+   "parts": 1,
+   "sha256": "9bed8e95a93955de96418c5fcf65589fa4ecc255a25b42355e8f38ec2820418a"
+  },
+  {
+   "celex": "32025R2210",
+   "title": "대륙붕·배타적 경제수역 반입 제품 이행규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32025R2210",
+   "from": "http://publications.europa.eu/resource/celex/32025R2210",
+   "file": "collected/archive/pdfs/32025R2210.pdf",
+   "bytes": 716600,
+   "pages": 16,
+   "parts": 1,
+   "sha256": "a94efee0b2216c57c0b19f8223900c3355ac7b7c60ea7afb1797042445e41310"
+  },
+  {
+   "celex": "32023R1773",
+   "title": "전환기간 보고 의무 이행규정",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1773",
+   "from": "http://publications.europa.eu/resource/celex/32023R1773",
+   "file": "collected/archive/pdfs/32023R1773.pdf",
+   "bytes": 2510305,
+   "pages": 102,
+   "parts": 1,
+   "sha256": "82219e89e668d66d26c8cca5b8d174269f0633ea35b0aa11e766fdc3165b7859"
+  },
+  {
+   "celex": "32026D1862",
+   "title": "부문 간 보정계수 이행결정(2026~2030년)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32026D1862",
+   "from": "http://publications.europa.eu/resource/celex/32026D1862",
+   "file": "collected/archive/pdfs/32026D1862.pdf",
+   "bytes": 474347,
+   "pages": 3,
+   "parts": 1,
+   "sha256": "fb41852fec4ddf327e927778741eacf350ad1278d8ab1179d6924555818cf45e"
+  }
+ ]
+}

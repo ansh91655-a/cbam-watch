@@ -6,11 +6,13 @@
   한 번도 옮기지 않은 갈래는 알리지 않는다(아직 시작하지 않은 것).
 - 검사에 거듭 걸려 끝내 싣지 못한 문단이 있으면 알린다(검사 프로그램이 잘못 막고 있거나 원문이 깨진 것이다. 사람이 봐야 한다).
 - 검수(tools.laws.verify)가 여러 날 늘지 않거나, 일부러 바꿔 섞은 번역을 놓치거나, 묶음을 반영하지 못했거나, 번역과 검수가 맞선 문단이 생기면 알린다.
+- 싣는 법령 가운데 관보 PDF를 받아 두지 못한 것이 있으면 알린다(그 법령은 PDF 나란히 보기가 열리지 않는다).
 """
 import datetime
 import os
 import pathlib
 
+from tools.archive import actpdf
 from tools.common.jsonio import read_json, today as today_kst
 from tools.laws import corpus, guide_segment, guides, pdf_pages, plan, status, store, verify
 
@@ -21,6 +23,7 @@ UNCHECKED = 3    # 검수할 문단이 남아 있는데 이만큼의 날 동안 
 CAUGHT = 0.6     # 일부러 바꾼 번역을 잡아낸 비율(최근 기록)이 이보다 낮으면 알린다
 REPORTS = "reports/daily"   # 일일 보고 파일(<날짜>.json). 지난 보고의 날을 여기서 안다
 CANARIES_MIN = 10  # 바꾼 번역이 이만큼은 쌓여야 비율을 본다
+ACT_PDF_REPORT = "collected/archive/report/eu-pdfs.json"   # 법령의 관보 PDF를 받은 기록(받지 못한 사유가 적힌다)
 
 
 def _outline_problems():
@@ -101,6 +104,16 @@ def _held_problems():
     return [f"번역: 검사에 거듭 걸려 싣지 못한 문단 {len(given_up)}개: {shown}"]
 
 
+def _act_pdf_problems():
+    """싣는 법령 가운데 관보 PDF를 받아 두지 못한 것. 그 법령은 PDF 나란히 보기가 열리지 않는다(글 나란히 보기는 그대로다)."""
+    missing = [celex for celex, _ in actpdf.targets() if not (actpdf.FOLDER / f"{celex}.pdf").is_file()]
+    if not missing:
+        return []
+    result = (read_json(ACT_PDF_REPORT, {}) or {}).get("result") or {}
+    why = str(result.get("error") or "; ".join(line for line in result.get("failures", []) if line.split(":")[0] in missing))
+    return [f"법령의 관보 PDF를 받아 두지 못함 {len(missing)}건({', '.join(missing[:3])})" + (f": {why[:120]}" if why else "")]
+
+
 def problems(today=None):
     day = today or today_kst()
-    return _outline_problems() + _units_problems() + _stalled_problems(day) + _held_problems() + _check_problems(day)
+    return _outline_problems() + _units_problems() + _act_pdf_problems() + _stalled_problems(day) + _held_problems() + _check_problems(day)

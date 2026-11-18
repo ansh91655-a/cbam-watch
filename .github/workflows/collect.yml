@@ -69,6 +69,15 @@ jobs:
         run: |
           pip install -q -r requirements.txt
           python -m tools.pdfko.units --missing
+      - name: 법령의 관보 PDF 받기
+        # 사이트가 싣는 법령 가운데 관보 PDF를 받아 두지 않은 것만 받는다(CBAM 규정의 새 통합본, 새로 싣는 법령). 규정 원문 화면의 PDF 나란히 보기가 쓴다.
+        # 이미 받은 것은 다시 청하지 않으므로 평소에는 아무것도 받지 않는다. 실패해도 나머지는 올리고, 실행 확인(tools.run.laws_health)이 알린다.
+        if: ${{ !cancelled() }}
+        continue-on-error: true
+        timeout-minutes: 8
+        run: |
+          pip install -q -r requirements.txt
+          python -m tools.archive.crawl eu-pdfs
       - name: 결과 올리기
         if: ${{ !cancelled() }}
         run: |
