@@ -1,5 +1,5 @@
 /* 가격 그림. 선 2px, 끝점은 바탕색 고리를 두른 점, 눈금선은 가는 실선. 글은 모두 글자색 이름을 쓴다. */
-.chart-card { display: grid; gap: 10px; padding: 26px 28px 20px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); }
+.chart-card { display: grid; gap: 10px; padding: 26px 28px 20px; border: 1px solid var(--pane-line); border-radius: var(--radius-l); background: var(--pane); box-shadow: var(--shadow-1); }
 .chart-card h2 { font-size: var(--fs-l); }
 .chart-card .sub { font-size: var(--fs-s); color: var(--ink-3); }
 .chart { position: relative; }

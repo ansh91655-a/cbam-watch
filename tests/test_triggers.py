@@ -66,6 +66,7 @@ class TriggersTest(unittest.TestCase):
     def test_the_tools_and_the_tests_themselves_are_watched(self):
         for name in ("tools/publish/build_site.py", "tools/sitecheck/checks/axe_rules.mjs", "tests/test_triggers.py", "requirements.txt", WORKFLOW):
             self.assertTrue(runs_on(name, self.rules), name)
+        self.assertTrue(runs_on("site/css/any.css", self.rules))   # 꾸밈의 빛깔 값으로 글자의 대비를 셈하는 시험이 있다(tests/test_glass.py)
 
     def test_data_is_watched_like_the_site_deploy_but_not_at_every_translation_batch(self):
         """사이트에 싣는 자료가 바뀌면 돈다(날마다의 게시도). 번역은 묶음마다가 아니라 실행이 끝났다는 표가 바뀔 때 한 번 돈다."""
@@ -79,8 +80,8 @@ class TriggersTest(unittest.TestCase):
 
     def test_what_is_left_out_is_left_out_on_purpose(self):
         """시험이 읽지 않는 것과, 자동 실행이 돌 때마다 바뀌고 그 실행이 스스로 검사하는 것에는 돌지 않는다."""
-        # (화면 쪽의 두 이름은 있는 파일의 이름이 아니다: 있는 파일을 적으면 위의 시험이 '시험이 읽는 파일'로 센다)
-        for name in ("site/css/any.css", "site/assets/thumbs/any.webp", "collected/archive/ec-news.json", "originals/state.json",
+        # (화면 쪽의 이름은 있는 파일의 이름이 아니다: 있는 파일을 적으면 위의 시험이 '시험이 읽는 파일'로 센다)
+        for name in ("site/assets/thumbs/any.webp", "collected/archive/ec-news.json", "originals/state.json",
                      "language/translation-terms.json", "language/translation-reviews.json", "locks/translating.json", "README.md"):
             self.assertFalse(runs_on(name, self.rules), name)
 

@@ -1,0 +1,24 @@
+/* 유리 면(글래스모피즘)의 바탕과 함께 쓰는 꾸밈. 값은 tokens.css와 themes.css의 --field, --pane, --frost 들이다.
+   판과 카드가 반투명한 면(--pane)을 쓰는 것은 저마다의 꾸밈 파일에 있고, 여기에는 화면 전체에 걸친 것만 둔다.
+   1. 본문 뒤의 빛: 화면에 붙박인 바탕. 반투명한 판이 그 위를 지나가며 빛깔이 비친다.
+   2. 뒤를 흐리게 하는 면: 뒤로 내용이 지나가는 것들(붙어 있는 도구 줄, 펼침 목록, 작은 창, 떠 있는 단추). 머리글의 유리 면은 layout.css에 있다.
+   3. 어두운 면 위의 유리판(첫 화면의 수치 칸, 새 소식 한 줄, 머리 띠의 탭): 위쪽 가장자리의 빛. */
+
+/* 1. 빛의 바탕. 화면에 붙박아 두고 맨 아래에 깐다(본문의 바탕색은 html에 둔다) */
+html { background: var(--bg); }
+body { background: none; }
+body::before { content: ""; position: fixed; inset: 0; z-index: -1; background: var(--field); pointer-events: none; }
+
+/* 2. 뒤를 흐리게 하는 면. 흐리게 하지 못하는 브라우저에서는 불투명한 면으로 둔다(글이 비쳐 겹치지 않게) */
+.nav-drop, .sheet, .sheet-head, .pdf-bar, .an-nav, .to-top, .edge-tab, .gloss-tip { background: var(--surface); }
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .nav-drop, .sheet, .sheet-head, .pdf-bar, .an-nav, .to-top, .edge-tab, .gloss-tip { background: var(--frost-bg); -webkit-backdrop-filter: var(--frost); backdrop-filter: var(--frost); }
+}
+.nav-drop, .pdf-bar, .to-top, .edge-tab, .gloss-tip { border-color: var(--pane-line); }
+
+/* 3. 어두운 면 위의 유리판 */
+.fact, .ticker { box-shadow: var(--glass-shine); }
+.fact { -webkit-backdrop-filter: saturate(160%) blur(16px); backdrop-filter: saturate(160%) blur(16px); }
+.ticker { -webkit-backdrop-filter: saturate(160%) blur(14px); backdrop-filter: saturate(160%) blur(14px); }
+
+@media print { body::before { display: none; } }

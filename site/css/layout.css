@@ -7,7 +7,11 @@
 @media (min-width: 2200px) { :root { --maxw: 1800px; } }
 
 /* 머리글: 어느 화면에서나 위에 붙어 있는 짙은 띠 */
-.site-head { position: sticky; top: 0; z-index: 30; background: var(--head-bg); color: var(--on-deep); border-bottom: 1px solid var(--head-line); -webkit-backdrop-filter: saturate(160%) blur(14px); backdrop-filter: saturate(160%) blur(14px); }
+.site-head { position: sticky; top: 0; z-index: 30; color: var(--on-deep); border-bottom: 1px solid var(--head-line); }
+/* 머리글의 유리 면은 뒤에 깐 한 겹에 둔다. 머리글 자체가 뒤를 흐리게 하면, 그 안에서 펼쳐지는 목록은 본문을 흐리게 하지 못한다(브라우저가 안쪽의 흐림을 바깥 것 안에 가둔다).
+   화면 맨 위에 있을 때는 제 빛깔 그대로 두고(뒤가 본문의 밝은 바탕이라 비치면 빛깔이 바랜다), 내려가기 시작하면 유리가 된다 */
+.site-head::before { content: ""; position: absolute; inset: 0 0 -1px; z-index: -1; background: var(--head-bg); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); }
+html:not([data-scrolled]) .site-head::before { background: var(--head-rest, var(--head-bg)); }
 .head-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0 28px; min-height: 64px; }
 .brand { display: inline-flex; align-items: center; gap: 12px; color: var(--on-deep); text-decoration: none; }
 /* 이름표: 'CBAM' 글자, 노란 세로선(국경), '규제동향' */
@@ -68,55 +72,31 @@ main:has(> .showcase:last-child) { padding-bottom: 0; }
 .hero h1 { font-size: var(--fs-hero); font-weight: 800; letter-spacing: -0.035em; line-height: 1.16; }
 .hero h1 .hl { background: linear-gradient(90deg, var(--hl-from), var(--hl-to)); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
-.hero-map { position: absolute; z-index: 1; top: 34px; right: -84px; width: min(62%, 720px); aspect-ratio: 1117 / 488; pointer-events: none; -webkit-mask-image: linear-gradient(90deg, transparent, #000 14%, #000 88%, transparent); mask-image: linear-gradient(90deg, transparent, #000 14%, #000 88%, transparent); }
-.hero-map .map { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+/* 지도는 오른쪽에 놓고 화면 끝으로 조금 내보낸다. 가장자리는 사방으로 흐리게 지운다(네모난 그림으로 보이지 않게). 그림 안의 것은 map.css */
+.hero-map { position: absolute; z-index: 1; top: 8px; right: -64px; width: min(66%, 708px); aspect-ratio: 1120 / 605; pointer-events: none;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 91%, transparent), linear-gradient(180deg, transparent, #000 8%, #000 93%, transparent); -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 91%, transparent), linear-gradient(180deg, transparent, #000 8%, #000 93%, transparent); mask-composite: intersect; }
 /* 수치 칸 위의 한 줄: 새 소식 한 줄(home.css의 ticker) */
 .hero-strip { position: relative; z-index: 2; display: flex; margin-top: -4px; }
 .hero-stats { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 @media (max-width: 900px) {
   .hero-inner { padding-block: 36px 32px; }
   .hero-copy { order: 1; }
-  .hero-map { order: 2; position: relative; top: auto; right: auto; width: auto; margin: -6px -20px -10px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 95%, transparent); mask-image: linear-gradient(90deg, transparent, #000 7%, #000 95%, transparent); }
+  .hero-map { order: 2; position: relative; top: auto; right: auto; width: auto; max-width: 640px; margin: -10px -20px -14px; justify-self: center; inline-size: calc(100% + 40px);
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent), linear-gradient(180deg, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent), linear-gradient(180deg, transparent, #000 8%, #000 92%, transparent); }
   .hero-strip { order: 3; margin-top: 0; }
   .hero-stats { order: 4; }
   .hero-stats { grid-template-columns: 1fr; }
 }
 
-/* 지도 그림 */
-.map-land, .map-eu, .map-kr { fill: none; stroke-linecap: round; }
-.map-land { stroke: var(--map-land); stroke-width: 4.6; }
-.map-eu { stroke: var(--map-eu); stroke-width: 5.6; }
-.map-kr { stroke: var(--map-kr); stroke-width: 6.4; }
-.map-glow-in { stop-color: var(--map-glow); stop-opacity: 1; }
-.map-glow-out { stop-color: var(--map-glow); stop-opacity: 0; }
-.map-arc-from { stop-color: var(--map-arc-from); }
-.map-arc-to { stop-color: var(--map-arc-to); }
-/* 흐름선: 화면이 열릴 때 한국에서 EU 쪽으로 한 번 그려지고, 그 뒤로는 작은 빛이 같은 쪽으로 천천히 지나간다 */
-.map-arc { fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-dasharray: 100; stroke-dashoffset: 100; animation: arc-draw 1.9s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
-.map-arc:nth-child(2) { animation-delay: 0.12s; }
-.map-arc:nth-child(3) { animation-delay: 0.24s; }
-.map-arc:nth-child(4) { animation-delay: 0.36s; }
-.map-arc:nth-child(5) { animation-delay: 0.48s; }
-@keyframes arc-draw { to { stroke-dashoffset: 0; } }
-.map-light { fill: none; stroke: var(--map-light); stroke-width: 2.8; stroke-linecap: round; stroke-dasharray: 2.4 97.6; stroke-dashoffset: 2.4; opacity: 0; animation: arc-light 7.5s linear 2.6s infinite; }
-.map-light:nth-child(2) { animation-delay: 4.1s; }
-.map-light:nth-child(3) { animation-delay: 5.6s; }
-.map-light:nth-child(4) { animation-delay: 7.1s; }
-.map-light:nth-child(5) { animation-delay: 8.6s; }
-@keyframes arc-light { 0% { stroke-dashoffset: 2.4; opacity: 0; } 3% { opacity: 1; } 38% { opacity: 1; } 42%, 100% { stroke-dashoffset: -97.6; opacity: 0; } }
-.map-port { fill: var(--map-port); stroke: var(--map-arc-to); stroke-width: 1.6; }
-.map-home { fill: var(--map-kr); }
-.map-home-ring { fill: none; stroke: var(--map-kr); stroke-width: 1.5; opacity: 0.5; }
-.map-home-pulse { fill: none; stroke: var(--map-kr); stroke-width: 1.5; transform-box: fill-box; transform-origin: center; opacity: 0; animation: home-pulse 3.2s ease-out 2s infinite; }
-@keyframes home-pulse { 0% { transform: scale(0.45); opacity: 0.85; } 75%, 100% { transform: scale(2.1); opacity: 0; } }
-@media (prefers-reduced-motion: reduce) { .map-arc { stroke-dashoffset: 0; } .map-light, .map-home-pulse { display: none; } }
-
 /* 화면 머리 띠(첫 화면이 아닌 화면). 오른쪽에 점 지도를 옅게 깐다. */
 .view-head { position: relative; background: var(--band-bg); color: var(--on-deep); overflow: clip; }
 .band-inner { position: relative; display: grid; gap: 8px; padding-block: 46px 42px; }
 .band-inner > :not(.band-map) { position: relative; z-index: 1; }
-.band-map { position: absolute; top: 50%; right: -150px; width: 640px; aspect-ratio: 1117 / 488; transform: translateY(-60%); opacity: 0.75; pointer-events: none; -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 62%, transparent 96%); mask-image: linear-gradient(90deg, transparent, #000 12%, #000 62%, transparent 96%); }
-.band-map .map { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+/* 첫 화면의 지도에서 유럽 언저리만 크게 깐다. 뱃길과 한국의 점은 감춘다(머리 띠는 조용해야 한다) */
+.band-map { position: absolute; top: -58px; right: -500px; width: 900px; aspect-ratio: 1120 / 605; opacity: 0.8; pointer-events: none;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 30%, transparent 62%); mask-image: linear-gradient(90deg, transparent, #000 9%, #000 30%, transparent 62%); }
 .band-map .map-over, .band-map .map-kr { display: none; }
 @media (max-width: 900px) { .band-map { display: none; } .band-inner { padding-block: 30px 28px; } }
 /* 주 메뉴 하나에 묶인 화면들을 고르는 탭(머리 띠 안) */

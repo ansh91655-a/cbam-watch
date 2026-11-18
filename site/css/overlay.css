@@ -13,7 +13,7 @@
 .sheet-note > p:first-child { font-weight: 700; color: var(--ink); }
 .sheet-note ul { display: grid; gap: 4px; padding-left: 16px; list-style: disc; }
 .sheet-note code { padding: 1px 6px; border-radius: 4px; background: var(--surface); font-size: 0.92em; }
-.sheet .field textarea { box-sizing: border-box; width: 100%; padding: 10px 14px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); font: inherit; font-size: var(--fs-m); font-weight: 400; line-height: 1.6; color: var(--ink); resize: vertical; }
+.sheet .field textarea { box-sizing: border-box; width: 100%; padding: 10px 14px; border: 1px solid var(--line); border-radius: 8px; background: var(--pane-2); font: inherit; font-size: var(--fs-m); font-weight: 400; line-height: 1.6; color: var(--ink); resize: vertical; }
 .sheet .field textarea:focus { border-color: var(--brand-bright); }
 
 /* 전체 메뉴(js/ui/allmenu.js): 넓은 창에 묶음마다 한 칸. 넓은 창에서는 세 단, 좁은 창에서는 한 단이다. */
@@ -46,7 +46,7 @@
 .feed-text { display: grid; gap: 1px; }
 .feed-text span { font-size: var(--fs-s); color: var(--ink-3); }
 .feed-url { display: flex; gap: 8px; }
-.feed-url input { flex: 1; min-width: 0; height: 40px; padding: 0 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); font-size: var(--fs-s); color: var(--ink-2); }
+.feed-url input { flex: 1; min-width: 0; height: 40px; padding: 0 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--pane-2); font-size: var(--fs-s); color: var(--ink-2); }
 .btn-small { height: 40px; padding: 0 14px; white-space: nowrap; }
 .btn-small[data-state="done"] { border-color: var(--ok); color: var(--ok); }
 .seg-wrap { flex-wrap: wrap; height: auto; }

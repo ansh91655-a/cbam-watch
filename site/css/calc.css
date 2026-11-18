@@ -5,7 +5,7 @@
 .calc-search .field { display: grid; }
 .calc-search input { width: 100%; font-size: 1.05rem; font-weight: 600; }
 .calc-hits { display: grid; gap: 6px; margin: 0; padding: 0; list-style: none; }
-.calc-hit { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 4px 14px; width: 100%; padding: 10px 14px; border: 1px solid var(--line-2); border-radius: 12px; background: var(--surface); color: var(--ink); font: inherit; text-align: left; cursor: pointer; }
+.calc-hit { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 4px 14px; width: 100%; padding: 10px 14px; border: 1px solid var(--line-2); border-radius: 12px; background: var(--pane-2); color: var(--ink); font: inherit; text-align: left; cursor: pointer; }
 .calc-hit:hover { border-color: var(--brand-bright); background: var(--brand-soft); }
 .calc-good-text { min-width: 0; font-size: var(--fs-s); color: var(--ink-2); overflow-wrap: anywhere; }
 .calc-chosen { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 8px 16px; padding: 14px 16px; border-radius: 14px; background: var(--surface-2); }

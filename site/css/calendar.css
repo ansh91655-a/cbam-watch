@@ -4,7 +4,8 @@
 .year-nav .year { font-weight: 800; font-size: var(--fs-2xl); line-height: inherit; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
 
 /* 칸 안에서만 옆으로 밀어 본다. min-width가 없으면 본문 폭이 일정선의 너비만큼 늘어난다 */
-.yearline-card { min-width: 0; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); }
+/* 이름표가 선을 가리며 겹쳐 놓이는 그림이라 이 판은 비치지 않게 둔다(이름표의 바탕과 같은 면) */
+.yearline-card { min-width: 0; border: 1px solid var(--pane-line); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); }
 .yearline-wrap { overflow-x: auto; padding-bottom: 4px; }
 /* 옆으로 밀어야 다 보일 때: 가려진 일정이 남아 있는 동안 오른쪽 끝을 흐리게 한다(ui/dom.js의 moreHint가 data-more를 단다) */
 .yearline-wrap[data-more] { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); }
@@ -33,7 +34,7 @@
 .yl-legend i { display: inline-block; position: static; margin: 0 6px -2px 0; }
 
 .cal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(256px, 1fr)); gap: 16px; }
-.cal-month { display: grid; align-content: start; gap: 10px; padding: 18px 18px 20px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); }
+.cal-month { display: grid; align-content: start; gap: 10px; padding: 18px 18px 20px; border: 1px solid var(--pane-line); border-radius: var(--radius-l); background: var(--pane); }
 .cal-month[data-has="true"] { box-shadow: var(--shadow-1); }
 .cal-month h3 { display: flex; align-items: baseline; justify-content: space-between; font-size: var(--fs-l); }
 .cal-month h3 small { font-size: var(--fs-s); font-weight: 500; color: var(--ink-3); }
@@ -66,7 +67,7 @@
 .duty-roles .chip[aria-pressed="true"] .n { color: inherit; opacity: 0.85; }
 .duty-role-about { max-width: 60em; padding-left: 12px; border-left: 3px solid var(--brand-bright); font-size: var(--fs-s); color: var(--ink-2); }
 .duty-list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
-.duty { display: grid; grid-template-columns: 58px minmax(0, 1fr); align-items: start; gap: 0 18px; padding: 18px 22px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); }
+.duty { display: grid; grid-template-columns: 58px minmax(0, 1fr); align-items: start; gap: 0 18px; padding: 18px 22px; border: 1px solid var(--pane-line); border-radius: var(--radius-l); background: var(--pane); box-shadow: var(--shadow-1); }
 .duty .date-box { grid-row: auto; }
 .duty[data-kind="기한"] .date-box { background: var(--accent-soft); color: var(--on-accent); }
 .duty[data-past="true"] { box-shadow: none; background: var(--surface-2); }

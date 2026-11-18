@@ -55,7 +55,7 @@
 .search-all { display: inline-flex; align-items: center; gap: 3px; margin-left: auto; padding: 4px 0; border: 0; background: none; color: var(--link); font-size: var(--fs-s); font-weight: 600; }
 .search-all:hover { text-decoration: underline; text-underline-offset: 3px; }
 .search-sub { margin-top: 6px; font-size: var(--fs-s); font-weight: 600; color: var(--ink-3); }
-.search-list { display: grid; margin: 0; padding: 0; list-style: none; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); overflow: hidden; }
+.search-list { display: grid; margin: 0; padding: 0; list-style: none; border: 1px solid var(--pane-line); border-radius: var(--radius-l); background: var(--pane); overflow: hidden; }
 .search-list > li + li { border-top: 1px solid var(--line-2); }
 .search-hit { display: grid; gap: 3px; padding: 14px 18px; color: var(--ink); text-decoration: none; }
 a.search-hit:hover { background: var(--surface-2); }
@@ -71,7 +71,7 @@ a.search-hit:focus-visible, .search-code:focus-visible { outline-offset: -3px; b
 .search-more { font-size: var(--fs-s); font-weight: 600; }
 .search-more a { display: inline-flex; align-items: center; gap: 4px; }
 /* 찾는 말이 품목 코드일 때의 판정 */
-.search-code { display: grid; gap: 6px; padding: 16px 18px; border: 1px solid var(--line-2); border-left: 4px solid var(--brand); border-radius: var(--radius-l); background: var(--surface); color: var(--ink); text-decoration: none; }
+.search-code { display: grid; gap: 6px; padding: 16px 18px; border: 1px solid var(--pane-line); border-left: 4px solid var(--brand); border-radius: var(--radius-l); background: var(--pane); color: var(--ink); text-decoration: none; }
 .search-code:hover { border-color: var(--brand-bright); }
 .search-code-top { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
 .search-code-top .cn-code { font-size: var(--fs-xl); letter-spacing: 0.01em; font-variant-numeric: tabular-nums; }

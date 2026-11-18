@@ -7,7 +7,7 @@
 
 /* ── 차례 ── 장마다 카드 하나. 번호는 장의 차례다. */
 .hb-chapters { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); margin: 0; padding: 0; list-style: none; }
-.hb-card { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 16px; height: 100%; padding: 20px 22px 22px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); color: inherit; text-decoration: none; transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s; }
+.hb-card { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 16px; height: 100%; padding: 20px 22px 22px; border: 1px solid var(--pane-line); border-radius: var(--radius-l); background: var(--pane); box-shadow: var(--shadow-1); color: inherit; text-decoration: none; transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s; }
 .hb-card:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--brand-bright) 40%, var(--line-2)); box-shadow: var(--shadow-2); }
 .hb-no { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; background: var(--feat-bg); color: var(--accent); font-size: 1.05rem; font-weight: 800; font-variant-numeric: tabular-nums; }
 .hb-card-text { display: grid; gap: 4px; align-content: start; }
@@ -26,15 +26,15 @@
 .hb-toc h2 { margin-bottom: 6px; padding-left: 10px; font-size: 0.82rem; font-weight: 700; color: var(--ink-3); }
 .hb-toc ol { display: grid; gap: 1px; margin: 0; padding: 0; list-style: none; font-size: var(--fs-s); }
 .hb-toc a { display: flex; gap: 8px; padding: 6px 10px; border-radius: 8px; color: var(--ink-2); line-height: 1.45; text-decoration: none; }
-.hb-toc a:hover { background: var(--surface); color: var(--ink); }
-.hb-toc a[aria-current="page"] { background: var(--surface); color: var(--ink); font-weight: 700; box-shadow: var(--shadow-1); }
+.hb-toc a:hover { background: var(--pane-2); color: var(--ink); }
+.hb-toc a[aria-current="page"] { background: var(--pane-2); color: var(--ink); font-weight: 700; box-shadow: var(--shadow-1); }
 .hb-toc-no { flex: none; min-width: 1.5em; color: var(--ink-3); font-variant-numeric: tabular-nums; text-align: right; }
 /* 좁은 화면: 다른 장의 목록은 접고(차례와 앞·다음 장으로 간다), 이 장의 절은 알약 단추로 늘어놓는다 */
 @media (max-width: 959px) {
   .hb-others { display: none; }
   .hb-toc h2 { padding-left: 0; }
   .hb-toc ol { display: flex; flex-wrap: wrap; gap: 6px; }
-  .hb-toc a { padding: 5px 13px; border: 1px solid var(--line); border-radius: var(--radius-pill); background: var(--surface); }
+  .hb-toc a { padding: 5px 13px; border: 1px solid var(--line); border-radius: var(--radius-pill); background: var(--pane-2); }
 }
 
 /* ── 절 하나 ── */
@@ -84,7 +84,7 @@ ol.hb-list { list-style: decimal; }
 
 /* ── 앞 장과 다음 장 ── */
 .hb-pager { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
-.hb-turn { display: grid; gap: 2px; padding: 16px 20px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); color: inherit; text-decoration: none; transition: border-color 0.18s, box-shadow 0.18s; }
+.hb-turn { display: grid; gap: 2px; padding: 16px 20px; border: 1px solid var(--pane-line); border-radius: var(--radius-l); background: var(--pane); box-shadow: var(--shadow-1); color: inherit; text-decoration: none; transition: border-color 0.18s, box-shadow 0.18s; }
 .hb-turn:hover { border-color: color-mix(in srgb, var(--brand-bright) 40%, var(--line-2)); box-shadow: var(--shadow-2); }
 .hb-turn[data-way="next"] { text-align: right; }
 .hb-turn small { font-size: var(--fs-s); color: var(--ink-3); }

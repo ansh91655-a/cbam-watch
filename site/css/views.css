@@ -4,7 +4,7 @@
 .doc-list { display: grid; gap: 8px; }
 .doc-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; align-items: stretch; }
 .doc-row > :only-child { grid-column: 1 / -1; }
-.doc-save { display: grid; place-items: center; width: 52px; border: 1px solid var(--line-2); border-radius: 14px; background: var(--surface); color: var(--ink-3); transition: border-color 0.15s, color 0.15s, transform 0.15s; }
+.doc-save { display: grid; place-items: center; width: 52px; border: 1px solid var(--pane-line); border-radius: 14px; background: var(--pane); color: var(--ink-3); transition: border-color 0.15s, color 0.15s, transform 0.15s; }
 .doc-save:hover { border-color: var(--brand-bright); color: var(--link); transform: translateY(-1px); }
 /* 문서를 화면에서 바로 보는 창 */
 .viewer { width: min(1120px, 96vw); height: 92vh; max-width: none; max-height: none; padding: 0; border: 0; border-radius: 16px; overflow: hidden; background: #525659; box-shadow: 0 40px 120px -20px rgb(2 6 23 / 0.6); }
@@ -21,7 +21,7 @@
 .viewer-close:hover { background: #e7ecfb; }
 .viewer-frame { width: 100%; height: 100%; border: 0; background: #525659; }
 .doc { display: grid; gap: 6px; }
-.doc-main { display: grid; grid-template-columns: 54px minmax(0, 1fr) auto; align-items: center; gap: 0 16px; padding: 13px 18px 13px 14px; border: 1px solid var(--line-2); border-radius: 14px; background: var(--surface); color: inherit; text-decoration: none; transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s; }
+.doc-main { display: grid; grid-template-columns: 54px minmax(0, 1fr) auto; align-items: center; gap: 0 16px; padding: 13px 18px 13px 14px; border: 1px solid var(--pane-line); border-radius: 14px; background: var(--pane); color: inherit; text-decoration: none; transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s; }
 .doc-main:hover { border-color: var(--brand-bright); box-shadow: var(--shadow-1); transform: translateY(-1px); }
 .doc-type { grid-row: 1 / span 2; padding: 5px 0; border-radius: 9px; background: var(--brand-soft); color: var(--brand); font-size: 0.72rem; font-weight: 800; text-align: center; letter-spacing: 0.02em; }
 .doc-type[data-type="XLSX"] { background: color-mix(in srgb, var(--t-verify) 13%, var(--surface)); color: color-mix(in srgb, var(--t-verify) 80%, var(--ink)); }
@@ -49,7 +49,7 @@
 
 /* 수치(가격 화면) */
 .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
-.stat { display: grid; align-content: start; gap: 3px; padding: 22px 26px 24px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); }
+.stat { display: grid; align-content: start; gap: 3px; padding: 22px 26px 24px; border: 1px solid var(--pane-line); border-radius: var(--radius-l); background: var(--pane); box-shadow: var(--shadow-1); }
 .stat-label { font-size: var(--fs-s); font-weight: 600; color: var(--ink-3); }
 .stat-value { font-size: 2rem; font-weight: 800; line-height: 1.2; letter-spacing: -0.03em; }
 .stat-value small { margin-left: 5px; font-size: 1rem; font-weight: 600; color: var(--ink-2); letter-spacing: 0; }
@@ -60,7 +60,7 @@
 
 /* 안내: 화면마다 무엇을 볼 수 있는지 알려 주는 칸. 누르면 그 화면으로 간다. */
 .steps { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-.step { display: grid; gap: 4px; align-content: start; padding: 22px 22px 24px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); color: inherit; text-decoration: none; transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s; }
+.step { display: grid; gap: 4px; align-content: start; padding: 22px 22px 24px; border: 1px solid var(--pane-line); border-radius: var(--radius-l); background: var(--pane); box-shadow: var(--shadow-1); color: inherit; text-decoration: none; transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s; }
 .steps-few { grid-template-columns: repeat(auto-fit, minmax(240px, 380px)); }   /* 칸이 한둘일 때 화면 끝까지 늘어나지 않게(없는 주소의 안내에서 어림한 화면) */
 .step:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--brand-bright) 40%, var(--line-2)); box-shadow: var(--shadow-2); }
 .step .chipicon { margin-bottom: 10px; background: var(--feat-bg); color: var(--accent); }
@@ -82,7 +82,7 @@
 
 /* 색 변형 고르기 */
 .proposals { display: grid; gap: var(--gap-4); grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-.proposal { display: grid; gap: 12px; align-content: start; padding: 24px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-1); }
+.proposal { display: grid; gap: 12px; align-content: start; padding: 24px; border: 1px solid var(--pane-line); border-radius: var(--radius-l); background: var(--pane); box-shadow: var(--shadow-1); }
 .proposal[data-current="true"] { border: 2px solid var(--brand-bright); }
 .proposal p { color: var(--ink-2); }
 .swatches { display: flex; gap: 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); }

@@ -1,6 +1,6 @@
 /* 달라진 곳 보기(views/changes.js): 문서의 앞선 판과 뒤의 판에서 달라진 문단을 옛 글과 새 글로 나란히 보여 준다 */
 .chg-body { display: grid; gap: 22px; min-width: 0; }
-.chg-part { display: grid; gap: 0; padding: 20px 22px 14px; border: 1px solid var(--line-2); border-radius: var(--radius-l); background: var(--surface); scroll-margin-top: 84px; }
+.chg-part { display: grid; gap: 0; padding: 20px 22px 14px; border: 1px solid var(--pane-line); border-radius: var(--radius-l); background: var(--pane); scroll-margin-top: 84px; }
 .chg-part[data-gone] { border-style: dashed; border-color: var(--line); }
 /* 주소가 가리킨 조각(규정 원문 화면의 '달라진 곳' 링크로 왔을 때)을 잠깐 표시한다 */
 .chg-part[data-flash="true"] { border-color: var(--accent-strong); box-shadow: 0 0 0 3px var(--accent-soft); }

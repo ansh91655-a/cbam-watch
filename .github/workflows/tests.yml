@@ -7,9 +7,11 @@ on:
       - "tests/**"
       - "requirements.txt"
       # 시험은 도구만이 아니라 저장소의 여러 파일을 직접 읽는다. 시험이 읽는 것이 바뀌면 시험이 돈다(무엇을 넣고 뺐는지는 tests/test_triggers.py가 본다).
-      # 워크플로(어느 경로에서 도는지를 시험이 본다), 화면의 코드(node로 돌리거나 글로 읽는다), 운영 콘솔, 설정과 대장, 용어집, 받아 둔 원문의 글과 단위
+      # 워크플로(어느 경로에서 도는지를 시험이 본다), 화면의 코드(node로 돌리거나 글로 읽는다), 화면의 꾸밈(빛깔 값으로 글자의 대비를 셈한다),
+      # 운영 콘솔, 설정과 대장, 용어집, 받아 둔 원문의 글과 단위
       - ".github/workflows/**"
       - "site/js/**"
+      - "site/css/**"
       - "site/*.html"
       - "site/site.config.json"
       - "console/**"
@@ -23,7 +25,7 @@ on:
       - "data/**"
       - "!data/laws-ko/**"
       - "stamps/**"
-      # 넣지 않은 것: 화면의 모양과 그림(site/css, site/assets)은 시험이 읽지 않는다(화면 점검이 본다). 수집해 둔 자료(collected),
+      # 넣지 않은 것: 화면의 그림(site/assets)은 시험이 읽지 않는다(화면 점검이 본다). 수집해 둔 자료(collected),
       # 원문 대장의 상태(originals/state.json), 번역 실행들이 적는 파일(language/translation-*.json)은 자동 실행이 돌 때마다 바뀌고 그 실행이 스스로 검사한다.
   workflow_dispatch:
 
