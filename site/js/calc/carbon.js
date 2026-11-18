@@ -3,16 +3,13 @@
 //   기본 탄소가격으로:              차감(인증서) = 기본 탄소가격(유로/tCO2e) × 신고한 내재배출량 ÷ 기준가격 × 물량
 // 기준가격은 수입한 해의 CBAM 인증서 가격을 평균한 값이다. 화면 요소를 다루지 않는다(tests/test_calc.py가 node로 돌린다).
 import { amount } from "./numbers.js";
-
-const inYear = (one, year) => String(one.from || "").startsWith(`${year}-`);
+import { yearMean } from "./prices.js";
 
 // 수입한 해의 기준가격: 그해의 것으로 공개된 인증서 가격의 평균(센트까지). 그해의 가격이 하나도 없으면 null.
-// book: data/prices.json({ prices: [{ from, value }], upcoming: [{ from }] }). partial: 그해에 아직 공개되지 않은 가격이 남아 있는지
+// book: data/prices.json({ prices: [{ from, to, value }], upcoming: [{ from }] }). partial: 그해의 가격이 더 남아 있는지(셈은 calc/prices.js의 yearMean)
 export function referencePrice(book, year) {
-  const values = ((book && book.prices) || []).filter((one) => inYear(one, year) && typeof one.value === "number").map((one) => one.value);
-  if (!values.length) return null;
-  const mean = values.reduce((sum, value) => sum + value, 0) / values.length;
-  return { value: Math.round(mean * 100) / 100, count: values.length, partial: ((book && book.upcoming) || []).some((one) => inYear(one, year)) };
+  const found = yearMean(book, year);
+  return found ? { value: found.value, count: found.count, partial: found.partial } : null;
 }
 
 // 제품 1톤당 실질적으로 지불된 탄소가격(유로).

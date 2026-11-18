@@ -189,7 +189,7 @@ class DetailTest(unittest.TestCase):
         first, missing, weekly, nothing = self.got["reference"]
         self.assertEqual(first, {"value": 77.65, "count": 3, "partial": True})
         self.assertIsNone(missing)
-        self.assertEqual(weekly, {"value": 80.5, "count": 2, "partial": False})
+        self.assertEqual(weekly, {"value": 80.5, "count": 2, "partial": True})   # 1월의 주간 가격 둘뿐이다: 그해의 가격이 더 남아 있다
         self.assertIsNone(nothing)
 
     def test_a_certified_carbon_price_is_divided_by_the_reference_price(self):

@@ -1,5 +1,6 @@
 // 인증서 가격. EU 집행위원회의 가격표를 프로그램이 그대로 읽어 그림과 표로 보여 준다.
 // 2026년은 분기 가격, 2027년부터는 주간 가격이다. 가격이 늘어나면 기간을 골라 볼 수 있다.
+// 해마다의 평균(탄소가격 차감의 기준가격을 정하는 값)은 price/means.js가 짓는다.
 import * as data from "../data.js";
 import { priceChart } from "../ui/chart.js";
 import { band } from "../ui/band.js";
@@ -8,14 +9,18 @@ import { countdown, koreanDate, price, signed, today } from "../ui/format.js";
 import { lawRefs } from "../ui/lawrefs.js";
 import { stackable } from "../ui/stack.js";
 import { groupTabs } from "../ui/tabs.js";
+import { meansSection } from "./price/means.js";
 
 const RANGES = [["all", "전체", null], ["year", "최근 1년", 365], ["quarter", "최근 3개월", 92]];
 const RANGE_FROM = 9; // 가격이 이만큼 쌓이면 기간 고르기를 보여 준다.
+const TABLE_FOLD = 16; // 가격표의 줄이 이보다 많으면(주간 가격이 쌓이면) 최근 것만 보이고 나머지는 접어 둔다.
+const TABLE_SHOWN = 12;
 // 가격을 정하는 방법의 근거. 규정은 '종가의 평균'이라 적고 이행규정이 그 계산법을 정해, 사이트의 다른 화면(규제 요약)과 말이 달라 보이지 않게 둘을 잇는다.
 const METHOD_REFS = [
   { act: "32023R0956", part: "art-21", label: "CBAM 규정 제21조" },
   { act: "32025R2548", part: "art-1", label: "이행규정 (EU) 2025/2548 제1조(2026년 분기 가격)" },
   { act: "32025R2548", part: "art-5", label: "제5조(2027년부터의 주간 가격)" },
+  { act: "32025R2548", part: "art-8", label: "제8조(주간 가격의 게시)" },
 ];
 const METHOD_NOTE = "CBAM 규정 제21조는 이 가격을 EU 배출권 '종가의 평균'으로 적습니다. 이행규정 (EU) 2025/2548은 경매의 최종 가격을 경매 낙찰가격으로 보고(전문 4), 경매마다 그 가격을 경매 물량으로 가중해 평균하도록 정했습니다(제1조(4), 제5조(3)).";
 
@@ -52,9 +57,25 @@ function stats(book) {
   ]);
 }
 
+// 가격표. 줄이 많으면 최근 것만 놓고 '이전 가격 더 보기'로 나머지를 편다.
 function priceTable(rows, unit) {
+  if (rows.length <= TABLE_FOLD) return priceRows(rows, rows.length, unit);
+  const holder = h("div", { class: "stack" });
+  const button = h("button", { type: "button", class: "btn", "aria-expanded": "false" });
+  const draw = (open) => {
+    button.setAttribute("aria-expanded", String(open));
+    button.textContent = open ? "최근 가격만 보기" : `이전 가격 ${rows.length - TABLE_SHOWN}건 더 보기`;
+    holder.replaceChildren(priceRows(rows, open ? rows.length : TABLE_SHOWN, unit), h("p", {}, button));
+  };
+  button.addEventListener("click", () => { draw(button.getAttribute("aria-expanded") !== "true"); button.focus(); });
+  draw(false);
+  return holder;
+}
+
+// 최근 것부터 shown개의 줄. '직전보다'는 접힌 줄과도 견준다.
+function priceRows(rows, shown, unit) {
   const newest = [...rows].reverse();
-  return stackable(table(["적용 기간", { text: "게시일", num: true }, { text: `가격(${unit})`, num: true }, { text: "직전보다", num: true }], newest.map((row, index) => {
+  return stackable(table(["적용 기간", { text: "게시일", num: true }, { text: `가격(${unit})`, num: true }, { text: "직전보다", num: true }], newest.slice(0, shown).map((row, index) => {
     const before = newest[index + 1];
     return h("tr", {}, [
       h("td", {}, [h("span", { text: row.label }), row.assumed ? h("span", { class: "count", text: "기간은 표의 날짜에서 추정했습니다." }) : null]),
@@ -98,12 +119,14 @@ export async function render(main) {
       priceTable(rows, unit),
       upcoming.length ? h("p", { class: "count", text: `게시 예정: ${upcoming.map((row) => `${row.label} 가격 ${koreanDate(row.published)}`).join(", ")}` }) : null,
     ]),
+    meansSection(book, unit),
     h("section", { class: "stack", "aria-labelledby": "h-method" }, [
       h("h2", { id: "h-method", text: "가격을 정하는 방법" }),
       h("ul", { class: "note-list" }, [
         h("li", { text: "가격은 경매에 나온 EU 배출권의 경매 낙찰가격을 가중평균한 값입니다." }),
         h("li", { text: "2026년에는 분기 가격을 네 번 계산해 게시하고, 2027년부터는 주간 가격을 계산해 게시합니다." }),
         h("li", { text: "2026년의 분기 가격은 그 분기가 끝난 다음 첫 주에 계산하며, 그 분기에 EU로 수입된 CBAM 대상 품목의 배출량에 해당하는 CBAM 인증서 판매에 적용됩니다." }),
+        h("li", { text: "2027년부터의 주간 가격은 경매가 있었던 주의 다음 주 첫 근무일에 게시되고, 게시된 다음 근무일부터 그다음 주의 첫 근무일까지 적용됩니다. 그 기간에 판매되는 CBAM 인증서의 가격입니다." }),
         h("li", { text: "2027년 2월부터 모든 CBAM 인증서는 공통 중앙 플랫폼에서 구매합니다." }),
       ]),
       h("p", { class: "count" }, [h("span", { text: "2026년 11월 10일에 확인한 원문을 옮긴 것입니다. 바뀌었을 수 있으니 원문에서 확인하세요. " }), safeLink(source.url, source.name || "가격 원문")]),

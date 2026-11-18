@@ -1,8 +1,8 @@
 // 인증서 비용 추정. 품목과 물량을 넣으면 제출할 CBAM 인증서 수와 비용을 어림해 보여 준다.
 // 셈은 js/calc/compute.js가 하고, 값은 법령의 표에서 만든 data/calc.json과 CBAM 계수(data/factor.json), 인증서 가격(data/prices.json)에서 온다.
 // 넣는 칸은 품목이나 고르는 것(신고 방법, 연도, 전구물질을 넣는지 등)이 바뀔 때에만 다시 그리고, 값을 고칠 때에는 결과만 다시 그린다(글자를 넣는 동안 초점을 잃지 않게).
-// 실제 배출량으로 신고할 때의 칸은 calc/actual.js와 calc/precursors.js, 탄소가격 차감의 칸은 calc/carbon.js, 여러 품목을 모아 보는 목록은 calc/basket.js,
-// 넣은 값과 담아 둔 추정을 남겨 두는 일은 calc/memory.js가 한다.
+// 수입 연도와 인증서 가격의 칸은 calc/price.js, 실제 배출량으로 신고할 때의 칸은 calc/actual.js와 calc/precursors.js, 탄소가격 차감의 칸은 calc/carbon.js,
+// 여러 품목을 모아 보는 목록은 calc/basket.js, 넣은 값과 담아 둔 추정을 남겨 두는 일은 calc/memory.js가 한다.
 import * as data from "../data.js";
 import { unpack } from "../calc/compute.js";
 import { band } from "../ui/band.js";
@@ -11,10 +11,11 @@ import { groupTabs } from "../ui/tabs.js";
 import { actualFields } from "./calc/actual.js";
 import { basketPanel } from "./calc/basket.js";
 import { carbonFields } from "./calc/carbon.js";
-import { field, numberInput, row, seg, selectInput } from "./calc/fields.js";
+import { field, numberInput, row, seg } from "./calc/fields.js";
 import { pack, recall, remember, restore } from "./calc/memory.js";
 import { notes } from "./calc/notes.js";
 import { picker } from "./calc/picker.js";
+import { priceFields, startPrice } from "./calc/price.js";
 import { result } from "./calc/result.js";
 import { termsPanel } from "./calc/terms.js";
 
@@ -29,12 +30,12 @@ export async function render(main, arg) {
   }
   const book = unpack(raw);
   const asked = String(arg || "").replace(/\D/g, "");  // 주소로 받은 코드(#calc-7208). 품목 하나에 꼭 맞으면 그 품목을 고르고, 아니면 찾는 칸에 넣어 둔다
-  const latest = (prices.prices || [])[prices.prices.length - 1];
-  // 처음의 조건. 넣는 값은 빈 칸("")이거나 수다.
+  const thisYear = Math.min(Math.max(new Date().getFullYear(), book.years.from), book.years.to);
+  // 처음의 조건. 넣는 값은 빈 칸("")이거나 수다. 인증서 가격은 수입 연도에 맞는 것을 넣어 둔다(period: 고른 분기. "custom"이면 손으로 넣은 가격)
   const fresh = () => ({
     good: null, choice: 0, mode: "default",
-    year: Math.min(Math.max(new Date().getFullYear(), book.years.from), book.years.to),
-    tonnes: 100, price: latest ? latest.value : 0, path: factorBook.paths[0].key,
+    year: thisYear, ...startPrice(prices, thisYear),
+    tonnes: 100, path: factorBook.paths[0].key,
     direct: "", indirect: "", route: "", pre: "none", scope: "whole", precursors: [],
     carbon: { how: "none", entry: "report", perTonne: "", price: "", covered: "", free: "", rate: "", other: "", dcp: "", ref: "" },
     prices,  // 기준가격을 정하는 데 쓰는 인증서 가격
@@ -90,19 +91,14 @@ export async function render(main, arg) {
   function conditions() {
     const good = state.good;
     const origin = pair().row.origin;
-    const years = [];
-    for (let year = book.years.from; year <= book.years.to; year += 1) years.push([year, `${year}년`]);
-    const ctx = { book, state, path, show, draw };
+    const ctx = { book, state, path, prices, show, draw };
     const set = (key) => (value) => { state[key] = value; show(); };
     return [
       good.defaults.length > 1 ? row("세부 품목",
         seg("choice", "세부 품목", good.defaults.map((one, index) => [index, one.row.text]), state.choice, (index) => { state.choice = index; state.route = ""; draw(`[data-seg="choice:${index}"]`); })) : null,
       h("div", { class: "calc-grid" }, [
         field("calc-tonnes", "수입 물량(톤)", numberInput("calc-tonnes", state.tonnes, set("tonnes"))),
-        // 연도가 바뀌면 칸에 적어 둔 기본값(마크업, 벤치마크, 기준가격)도 달라지므로 칸들을 다시 그린다
-        field("calc-year", "수입 연도", selectInput("calc-year", years, state.year, (value) => { state.year = Number(value); draw("#calc-year"); })),
-        field("calc-price", "인증서 가격(유로)", numberInput("calc-price", state.price, set("price")),
-          latest ? `${latest.label} 가격 ${latest.value.toFixed(2)}유로를 넣어 두었습니다.` : null),
+        ...priceFields(ctx),
       ]),
       row("신고 방법", [
         seg("mode", "신고 방법", MODES, state.mode, (mode) => {

@@ -5,6 +5,7 @@ import { newPrecursor } from "./precursors.js";
 const KEY = "cbam-calc";
 const VERSION = 2;
 const CARBON = ["perTonne", "price", "covered", "free", "rate", "other", "dcp", "ref"];
+const PERIOD = /^(custom|\d{4}-Q[1-4]|\d{4}-\d\d-\d\d)?$/;  // 고른 가격의 기간: 손으로 넣음, 분기, 주(시작일), 또는 빈 글(넣어 둔 가격 그대로)
 
 // 수를 넣는 칸의 값: 0 이상의 수이거나 빈 칸("")
 const number = (value) => (typeof value === "number" && Number.isFinite(value) && value >= 0 ? value : "");
@@ -13,7 +14,7 @@ const oneOf = (value, allowed, fallback) => (allowed.includes(value) ? value : f
 // 조건을 남길 수 있는 꼴로 줄인다: 품목은 코드로 적고, 가격 자료처럼 화면이 붙이는 것은 뺀다.
 export function pack(state) {
   return {
-    code: state.good ? state.good.code : "", choice: state.choice, mode: state.mode, year: state.year, tonnes: state.tonnes, price: state.price, path: state.path,
+    code: state.good ? state.good.code : "", choice: state.choice, mode: state.mode, year: state.year, tonnes: state.tonnes, price: state.price, period: state.period, path: state.path,
     direct: state.direct, indirect: state.indirect, route: state.route, pre: state.pre, scope: state.scope,
     precursors: state.precursors.map((item) => ({ code: item.good.code, choice: item.choice, route: item.route, mass: item.mass, see: item.see, sefa: item.sefa })),
     carbon: { how: state.carbon.how, entry: state.carbon.entry, ...Object.fromEntries(CARBON.map((key) => [key, state.carbon[key]])) },
@@ -33,6 +34,8 @@ export function restore(saved, book, paths) {
     good, choice: within(saved.choice, good.defaults.length), mode: oneOf(saved.mode, ["default", "actual"], "default"),
     year: Number.isInteger(saved.year) && saved.year >= book.years.from && saved.year <= book.years.to ? saved.year : book.years.from,
     tonnes: number(saved.tonnes), price: number(saved.price), path: oneOf(saved.path, paths.map((one) => one.key), paths[0].key),
+    // 기간을 적어 두지 않은 옛 기록의 가격은 손으로 넣은 것으로 본다(연도를 바꿔도 덮어쓰지 않게)
+    period: typeof saved.period === "string" && PERIOD.test(saved.period) ? saved.period : "custom",
     direct: number(saved.direct), indirect: number(saved.indirect), route: oneOf(saved.route, routes, ""),
     pre: oneOf(saved.pre, ["none", "listed"], "none"), scope: oneOf(saved.scope, ["whole", "process"], "whole"),
     precursors: (Array.isArray(saved.precursors) ? saved.precursors : []).map((item) => {
