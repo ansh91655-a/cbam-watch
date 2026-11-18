@@ -5274,6 +5274,36 @@
    "ko": "CPM 보고기간",
    "from": "32026R2498",
    "added": "2026-11-18"
+  },
+  {
+   "en": "certification plan",
+   "ko": "인증 계획",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "on-site or virtual office assessment",
+   "ko": "현장 또는 원격 사무소 평가",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "standardised electronic format",
+   "ko": "표준화된 전자 형식",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "certified as satisfactory",
+   "ko": "만족스러운 것으로 인증",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "certified as unsatisfactory",
+   "ko": "만족스럽지 않은 것으로 인증",
+   "from": "32026R2498",
+   "added": "2026-11-18"
   }
  ]
 }
