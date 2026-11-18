@@ -4836,7 +4836,11 @@
 "category": "09 탄소가격·무상할당",
 "core": true,
 "en": [
-"reduction (deduction) of CBAM certificates"
+"reduction (deduction) of CBAM certificates",
+"reduction in the number of CBAM certificates",
+"reduction of the number of CBAM certificates",
+"deduction of the carbon price",
+"deduction of a carbon price"
 ],
 "abbr": [],
 "preferred": "차감",

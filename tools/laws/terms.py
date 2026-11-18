@@ -16,8 +16,8 @@ def _forms(text):
 
 
 def _bare(form):
-    """괄호 안의 풀이를 뗀 표기: "전문(前文)" → "전문"."""
-    return re.sub(r"\([^)]*\)", "", form).strip()
+    """괄호 안의 풀이를 뗀 표기: "전문(前文)" → "전문". 괄호가 낱말 사이에 있었으면 남는 빈칸을 하나로 줄인다("reduction (deduction) of …" → "reduction of …")."""
+    return re.sub(r"\s+", " ", re.sub(r"\([^)]*\)", "", form)).strip()
 
 
 def entries(path=GLOSSARY):

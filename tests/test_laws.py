@@ -140,6 +140,17 @@ class CheckTest(unittest.TestCase):
         # 더 긴 낱말에 든 낱말은 따로 요구하지 않는다(economic operator의 operator)
         self.assertEqual([entry["show"] for entry in terms.found("an economic operator") if entry["show"] == "operator"], [])
 
+    def test_the_reduction_of_certificates_is_the_glossary_word_in_every_wording_of_the_source(self):
+        # 용어집의 표제어("reduction (deduction) of CBAM certificates")는 법령에 그대로 나오지 않는다. 법령이 쓰는 표기들도 같은 낱말로 잡는다
+        for source in ("may claim a reduction in the number of CBAM certificates to be surrendered",
+                       "into a corresponding reduction of the number of CBAM certificates",
+                       "may only claim the deduction of the carbon price effectively paid"):
+            self.assertEqual(check.problems(source, "CBAM 인증서 수의 차감을 청구할 수 있다")["hard"], [], source)
+            self.assertTrue(any(why.startswith("용어집의 표기가 없음") for why in check.problems(source, "CBAM 인증서 수의 감축을 청구할 수 있다")["hard"]), source)
+        # 표제어의 괄호를 떼고 남는 빈칸은 하나로 줄인다(화면에 병기하는 영문에 빈칸이 둘 들어가지 않게)
+        shown = [entry["show"] for entry in terms.found("a reduction in the number of CBAM certificates")]
+        self.assertIn("reduction of CBAM certificates", shown)
+
     def test_words_inside_web_addresses_are_not_text_to_translate(self):
         # 주소만 적은 각주는 옮기지 않고 그대로 싣는다. 주소 밖에 글이 있으면 옮긴다
         self.assertFalse(check.needs("[13] https://european-accreditation.org/national-accreditation-bodies-for-eu-cbam/"))
