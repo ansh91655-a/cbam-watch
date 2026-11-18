@@ -5334,6 +5334,54 @@
    "ko": "연간 업무 계획",
    "from": "32026R2498",
    "added": "2026-11-18"
+  },
+  {
+   "en": "average exchange price",
+   "ko": "평균 거래가격",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "carbon price rate",
+   "ko": "탄소가격 세율",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "time-weighted average carbon price rate",
+   "ko": "시간가중평균 탄소가격 세율",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "weighted average carbon price rate",
+   "ko": "가중평균 탄소가격 세율",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "reduced carbon tax rate",
+   "ko": "감면된 탄소세율",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "default emissions factor",
+   "ko": "기본 배출계수",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "refund in monetary value",
+   "ko": "금전적 가치의 반환",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "compliance obligation",
+   "ko": "이행 의무",
+   "from": "32026R2498",
+   "added": "2026-11-18"
   }
  ]
 }
