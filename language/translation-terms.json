@@ -5232,6 +5232,48 @@
    "ko": "탄소가격의 인증",
    "from": "32026R2498",
    "added": "2026-11-18"
+  },
+  {
+   "en": "CBAM certification lead auditor",
+   "ko": "CBAM 인증팀장",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "CBAM certification auditor",
+   "ko": "CBAM 인증심사원",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "compliance unit",
+   "ko": "이행 단위",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "point-source carbon tax, levy or fee",
+   "ko": "점오염원 기반의 탄소에 대한 세금, 부과금 또는 수수료",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "fuel-based carbon tax, levy or fee",
+   "ko": "연료 기반의 탄소에 대한 세금, 부과금 또는 수수료",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "observation activities",
+   "ko": "참관 활동",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "certification risk",
+   "ko": "인증 리스크",
+   "from": "32026R2498",
+   "added": "2026-11-18"
   }
  ]
 }
