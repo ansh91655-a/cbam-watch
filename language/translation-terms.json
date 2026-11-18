@@ -5208,6 +5208,30 @@
    "ko": "하위국가 단위의 제도",
    "from": "32026R2498",
    "added": "2026-11-18"
+  },
+  {
+   "en": "compliance units",
+   "ko": "이행 단위",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "primary evidence",
+   "ko": "일차 증거",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "secondary market price",
+   "ko": "유통시장 가격",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "certification of the carbon price",
+   "ko": "탄소가격의 인증",
+   "from": "32026R2498",
+   "added": "2026-11-18"
   }
  ]
 }
