@@ -50,6 +50,14 @@
    "sourceName": "EU 법령 데이터베이스(CELLAR)의 CBAM 연관 문서",
    "link": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32026R2498",
    "kind": "기한"
+  },
+  {
+   "date": "2027-01-01",
+   "title": "아이슬란드와 노르웨이에 CBAM 적용 시작",
+   "note": "아이슬란드와 노르웨이의 관세영역으로 수입되는 제품에 CBAM이 전면 적용됩니다.",
+   "sourceName": "European Commission Press corner",
+   "link": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2497",
+   "kind": "시행"
   }
  ]
 }
