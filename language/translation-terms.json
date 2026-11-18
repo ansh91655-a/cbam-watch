@@ -5430,6 +5430,24 @@
    "ko": "평균 원가",
    "from": "32026R2498",
    "added": "2026-11-18"
+  },
+  {
+   "en": "functional unit factor",
+   "ko": "기능단위 계수",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "free allocation table",
+   "ko": "무상할당 표",
+   "from": "32026R2498",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "below an emission intensity baseline",
+   "ko": "배출집약도 기준선 아래",
+   "from": "32026R2498",
+   "added": "2026-11-18"
   }
  ]
 }
