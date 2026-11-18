@@ -1,0 +1,47 @@
+[문서] 보충성과 비례성 원칙의 적용에 관한 의정서(제2호)
+[주소] http://publications.europa.eu/resource/celex/12016E%2FPRO%2F02
+[원문] https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016E/PRO/02
+
+C_2016202EN.01020601.xml
+EN
+Official Journal of the European Union
+C 202/206
+PROTOCOL (No 2)
+ON THE APPLICATION OF THE PRINCIPLES OF SUBSIDIARITY AND PROPORTIONALITY
+THE HIGH CONTRACTING PARTIES,
+WISHING to ensure that decisions are taken as closely as possible to the citizens of the Union,
+RESOLVED to establish the conditions for the application of the principles of subsidiarity and proportionality, as laid down in Article 5 of the Treaty on European Union, and to establish a system for monitoring the application of those principles,
+HAVE AGREED UPON the following provisions, which shall be annexed to the Treaty on European Union and to the Treaty on the Functioning of the European Union:
+Article 1
+Each institution shall ensure constant respect for the principles of subsidiarity and proportionality, as laid down in Article 5 of the Treaty on European Union.
+Article 2
+Before proposing legislative acts, the Commission shall consult widely. Such consultations shall, where appropriate, take into account the regional and local dimension of the action envisaged. In cases of exceptional urgency, the Commission shall not conduct such consultations. It shall give reasons for its decision in its proposal.
+Article 3
+For the purposes of this Protocol, "draft legislative acts" shall mean proposals from the Commission, initiatives from a group of Member States, initiatives from the European Parliament, requests from the Court of Justice, recommendations from the European Central Bank and requests from the European Investment Bank, for the adoption of a legislative act.
+Article 4
+The Commission shall forward its draft legislative acts and its amended drafts to national Parliaments at the same time as to the Union legislator.
+The European Parliament shall forward its draft legislative acts and its amended drafts to national Parliaments.
+The Council shall forward draft legislative acts originating from a group of Member States, the Court of Justice, the European Central Bank or the European Investment Bank and amended drafts to national Parliaments.
+Upon adoption, legislative resolutions of the European Parliament and positions of the Council shall be forwarded by them to national Parliaments.
+Article 5
+Draft legislative acts shall be justified with regard to the principles of subsidiarity and proportionality. Any draft legislative act should contain a detailed statement making it possible to appraise compliance with the principles of subsidiarity and proportionality. This statement should contain some assessment of the proposal's financial impact and, in the case of a directive, of its implications for the rules to be put in place by Member States, including, where necessary, the regional legislation. The reasons for concluding that a Union objective can be better achieved at Union level shall be substantiated by qualitative and, wherever possible, quantitative indicators. Draft legislative acts shall take account of the need for any burden, whether financial or administrative, falling upon the Union, national governments, regional or local authorities, economic operators and citizens, to be minimised and commensurate with the objective to be achieved.
+Article 6
+Any national Parliament or any chamber of a national Parliament may, within eight weeks from the date of transmission of a draft legislative act, in the official languages of the Union, send to the Presidents of the European Parliament, the Council and the Commission a reasoned opinion stating why it considers that the draft in question does not comply with the principle of subsidiarity. It will be for each national Parliament or each chamber of a national Parliament to consult, where appropriate, regional parliaments with legislative powers.
+If the draft legislative act originates from a group of Member States, the President of the Council shall forward the opinion to the governments of those Member States.
+If the draft legislative act originates from the Court of Justice, the European Central Bank or the European Investment Bank, the President of the Council shall forward the opinion to the institution or body concerned.
+Article 7
+1. The European Parliament, the Council and the Commission, and, where appropriate, the group of Member States, the Court of Justice, the European Central Bank or the European Investment Bank, if the draft legislative act originates from them, shall take account of the reasoned opinions issued by national Parliaments or by a chamber of a national Parliament.
+Each national Parliament shall have two votes, shared out on the basis of the national Parliamentary system. In the case of a bicameral Parliamentary system, each of the two chambers shall have one vote.
+2. Where reasoned opinions on a draft legislative act's non-compliance with the principle of subsidiarity represent at least one third of all the votes allocated to the national Parliaments in accordance with the second subparagraph of paragraph 1, the draft must be reviewed. This threshold shall be a quarter in the case of a draft legislative act submitted on the basis of Article 76 of the Treaty on the Functioning of the European Union on the area of freedom, security and justice.
+After such review, the Commission or, where appropriate, the group of Member States, the European Parliament, the Court of Justice, the European Central Bank or the European Investment Bank, if the draft legislative act originates from them, may decide to maintain, amend or withdraw the draft. Reasons must be given for this decision.
+3. Furthermore, under the ordinary legislative procedure, where reasoned opinions on the non-compliance of a proposal for a legislative act with the principle of subsidiarity represent at least a simple majority of the votes allocated to the national Parliaments in accordance with the second subparagraph of paragraph 1, the proposal must be reviewed. After such review, the Commission may decide to maintain, amend or withdraw the proposal.
+If it chooses to maintain the proposal, the Commission will have, in a reasoned opinion, to justify why it considers that the proposal complies with the principle of subsidiarity. This reasoned opinion, as well as the reasoned opinions of the national Parliaments, will have to be submitted to the Union legislator, for consideration in the procedure:
+(a)
+before concluding the first reading, the legislator (the European Parliament and the Council) shall consider whether the legislative proposal is compatible with the principle of subsidiarity, taking particular account of the reasons expressed and shared by the majority of national Parliaments as well as the reasoned opinion of the Commission;
+(b)
+if, by a majority of 55 % of the members of the Council or a majority of the votes cast in the European Parliament, the legislator is of the opinion that the proposal is not compatible with the principle of subsidiarity, the legislative proposal shall not be given further consideration.
+Article 8
+The Court of Justice of the European Union shall have jurisdiction in actions on grounds of infringement of the principle of subsidiarity by a legislative act, brought in accordance with the rules laid down in Article 263 of the Treaty on the Functioning of the European Union by Member States, or notified by them in accordance with their legal order on behalf of their national Parliament or a chamber thereof.
+In accordance with the rules laid down in the said Article, the Committee of the Regions may also bring such actions against legislative acts for the adoption of which the Treaty on the Functioning of the European Union provides that it be consulted.
+Article 9
+The Commission shall submit each year to the European Council, the European Parliament, the Council and national Parliaments a report on the application of Article 5 of the Treaty on European Union. This annual report shall also be forwarded to the Economic and Social Committee and the Committee of the Regions.

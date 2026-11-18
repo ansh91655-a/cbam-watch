@@ -1,12 +1,10 @@
 {
  "source": "eu-primary",
- "fetchedAt": "2026-11-18T15:00:28+09:00",
+ "fetchedAt": "2026-11-18T15:04:19+09:00",
  "since": "2025-01-01",
  "report": {
-  "targets": 23,
-  "failures": [
-   "tfeu-304 12016E304: 받은 글에 'Economic and Social Committee'가 없음(다른 문서일 수 있음)"
-  ]
+  "targets": 25,
+  "failures": []
  },
  "entries": [
   {
@@ -146,6 +144,14 @@
    "textPath": "collected/archive/pages/eu-primary/tfeu-297.txt"
   },
   {
+   "name": "tfeu-304",
+   "celex": "12016E304",
+   "title": "EU 기능조약 제304조(유럽경제사회위원회의 자문)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016E304",
+   "lines": 10,
+   "textPath": "collected/archive/pages/eu-primary/tfeu-304.txt"
+  },
+  {
    "name": "tfeu-311",
    "celex": "12016E311",
    "title": "EU 기능조약 제311조(자체 재원)",
@@ -160,6 +166,22 @@
    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016E322",
    "lines": 13,
    "textPath": "collected/archive/pages/eu-primary/tfeu-322.txt"
+  },
+  {
+   "name": "protocol-2",
+   "celex": "12016E/PRO/02",
+   "title": "보충성과 비례성 원칙의 적용에 관한 의정서(제2호)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016E/PRO/02",
+   "lines": 43,
+   "textPath": "collected/archive/pages/eu-primary/protocol-2.txt"
+  },
+  {
+   "name": "protocol-3",
+   "celex": "12016E/PRO/03",
+   "title": "EU 사법재판소 규정에 관한 의정서(제3호)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016E/PRO/03",
+   "lines": 310,
+   "textPath": "collected/archive/pages/eu-primary/protocol-3.txt"
   },
   {
    "name": "comitology",
@@ -182,7 +204,7 @@
    "celex": "21994A0103(01)",
    "title": "EEA 협정 제7부(기관과 결정 절차)",
    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:21994A0103(01)",
-   "lines": 1402,
+   "lines": 130,
    "textPath": "collected/archive/pages/eu-primary/eea-agreement.txt"
   }
  ]

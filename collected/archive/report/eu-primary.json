@@ -1,10 +1,8 @@
 {
- "ranAt": "2026-11-18T15:00:28+09:00",
+ "ranAt": "2026-11-18T15:04:19+09:00",
  "since": "2025-01-01",
  "result": {
-  "stored": 22,
-  "failures": [
-   "tfeu-304 12016E304: 받은 글에 'Economic and Social Committee'가 없음(다른 문서일 수 있음)"
-  ]
+  "stored": 25,
+  "failures": []
  }
 }
