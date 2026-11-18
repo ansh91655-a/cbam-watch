@@ -4,6 +4,7 @@
 - 집행위원회의 이행 권한 행사를 회원국이 통제하는 규칙을 정한 규정 (EU) No 182/2011.
 - 더 나은 법 제정에 관한 기관 간 합의(2016년): 위임규정과 이행규정을 준비할 때의 협의, 기관 간 협상의 원칙.
 - EEA 협정: 길어서 기관과 결정 절차를 다룬 제7부만 남긴다(다른 법령을 협정에 넣는 EEA 공동위원회 결정이 어떻게 발효하는지).
+- 사법재판소 절차규칙(2012년): 길어서 기한을 정한 제49조부터 제52조까지만 남긴다(취소 소송을 낼 기한을 어떻게 세는지).
 받는 곳은 EU 출판국 자료 창구이고, EU 법령은 출처를 밝히고 다시 쓸 수 있다.
 손으로 돌린다: 워크플로 '소급 수집'에서 mode = crawl, steps = eu-primary. 조약은 거의 바뀌지 않으므로 평소의 수집은 이 단계를 돌리지 않는다.
 """
@@ -25,7 +26,7 @@ TARGETS = [
     ("tfeu-218", "12016E218", "EU 기능조약 제218조(국제 협정)", "negotiations"),
     ("tfeu-238", "12016E238", "EU 기능조약 제238조(이사회의 표결)", "qualified majority"),
     ("tfeu-263", "12016E263", "EU 기능조약 제263조(취소 소송)", "legality"),
-    ("tfeu-287", "12016E287", "EU 기능조약 제287조(유럽감사원)", "Court of Auditors"),
+    ("tfeu-287", "12016E287", "EU 기능조약 제287조(유럽회계감사원)", "Court of Auditors"),
     ("tfeu-288", "12016E288", "EU 기능조약 제288조(법령의 종류)", "directive"),
     ("tfeu-289", "12016E289", "EU 기능조약 제289조(입법 절차)", "ordinary legislative procedure"),
     ("tfeu-290", "12016E290", "EU 기능조약 제290조(위임규정)", "delegated"),
@@ -40,17 +41,21 @@ TARGETS = [
     ("comitology", "32011R0182", "규정 (EU) No 182/2011(이행 권한 행사의 통제)", "examination procedure"),
     ("better-law-making", "32016Q0512(01)", "더 나은 법 제정에 관한 기관 간 합의(2016년)", "delegated acts"),
     ("eea-agreement", "21994A0103(01)", "EEA 협정 제7부(기관과 결정 절차)", "EEA Joint Committee"),
+    ("cjeu-rules", "32012Q0929(01)", "사법재판소 절차규칙(2012년) 제49조~제52조(기한)", "single period of 10 days"),
 ]
-# 긴 문서에서 남길 곳: 이름 → (이 말로 시작하는 줄부터, 이 말로 시작하는 줄 앞까지). 차례의 줄에 걸리지 않게 본문의 제목 줄에만 있는 말을 적는다.
-PART = {"eea-agreement": ("PART VII INSTITUTIONAL PROVISIONS CHAPTER", "PART VIII FINANCIAL MECHANISM")}
+# 긴 문서에서 남길 곳: 이름 → (이 말로 시작하는 줄부터, 이 말로 시작하는 줄 앞까지[, "last"]).
+# 차례의 줄에 걸리지 않게 본문의 제목 줄에만 있는 말을 적는다. 그런 말이 없으면(차례와 본문의 제목이 같으면) "last"를 붙여 마지막으로 나온 줄에서 시작한다.
+PART = {"eea-agreement": ("PART VII INSTITUTIONAL PROVISIONS CHAPTER", "PART VIII FINANCIAL MECHANISM"),
+        "cjeu-rules": ("Article 49", "Article 53", "last")}
 LINE_LIMIT = 6000   # 남길 곳을 찾지 못한 긴 문서는 이만큼만 둔다
 
 
-def cut(lines, start, end):
-    """start로 시작하는 첫 줄부터 그 뒤에 end로 시작하는 첫 줄 앞까지. 찾지 못하면 빈 목록."""
-    first = next((index for index, line in enumerate(lines) if line.strip().startswith(start)), None)
-    if first is None:
+def cut(lines, start, end, which="first"):
+    """start로 시작하는 줄(which가 "last"이면 마지막 줄, 아니면 첫 줄)부터 그 뒤에 end로 시작하는 첫 줄 앞까지. 찾지 못하면 빈 목록."""
+    found = [index for index, line in enumerate(lines) if line.strip().startswith(start)]
+    if not found:
         return []
+    first = found[-1] if which == "last" else found[0]
     last = next((index for index in range(first + 1, len(lines)) if lines[index].strip().startswith(end)), len(lines))
     return lines[first:last]
 
@@ -81,6 +86,8 @@ def crawl():
         note = []
         if name in PART:
             kept = cut(lines, *PART[name])
+            if kept and not any(must in line for line in kept):   # 남긴 곳에 꼭 있어야 하는 말이 없으면 잘못 자른 것이다
+                kept = []
             if kept:
                 note = [f"[남긴 곳] {PART[name][0]}부터 {PART[name][1]} 앞까지 {len(kept)}줄(문서 전체 {len(lines)}줄)"]
                 lines = kept

@@ -14,6 +14,24 @@ class PrimaryTest(unittest.TestCase):
         self.assertEqual(primary.cut(lines, "PART VIII FINANCIAL MECHANISM", "PART IX"), lines[1:])   # 끝을 알리는 줄이 없으면 글의 끝까지
         self.assertEqual(primary.cut(lines, "PART X", "PART XI"), [])
 
+    def test_a_part_whose_heading_also_stands_in_the_contents_starts_at_the_last_one(self):
+        lines = ["Article 49 Calculation of time-limits", "Article 53 Procedures", "TITLE II", "Article 49", "Calculation of time-limits", "Article 51",
+                 "extended on account of distance by a single period of 10 days", "Article 53", "Procedures"]
+        start, end, which = primary.PART["cjeu-rules"]
+        self.assertEqual(primary.cut(lines, start, end, which), lines[3:7])
+        self.assertEqual(primary.cut(lines, start, end), lines[:1])   # 첫 줄에서 시작하면 차례의 한 줄만 남는다
+
+    def test_a_cut_without_the_expected_words_falls_back_to_the_whole_text(self):
+        saved = {}
+        body = ["Article 49 Calculation of time-limits", "Article 53 Procedures", "single period of 10 days"]   # 본문의 제목 줄이 없는 글
+        with mock.patch.object(primary, "TARGETS", [("cjeu-rules", "32012Q0929(01)", "절차규칙", "single period of 10 days")]), \
+                mock.patch.object(primary, "read", side_effect=lambda celex: (body, "https://example.org/rules", "")), \
+                mock.patch.object(primary, "save_text", side_effect=lambda name, kept: saved.update({name: kept}) or name), \
+                mock.patch.object(primary, "save_index"):
+            self.assertEqual(primary.crawl()["stored"], 1)
+        self.assertEqual(saved["eu-primary/cjeu-rules.txt"][-3:], body)
+        self.assertFalse(any(line.startswith("[남긴 곳]") for line in saved["eu-primary/cjeu-rules.txt"]))
+
     def test_a_number_with_brackets_is_also_asked_in_its_escaped_form(self):
         asked = []
 
