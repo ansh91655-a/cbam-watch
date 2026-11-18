@@ -286,18 +286,31 @@ class StoredBookTest(unittest.TestCase):
         self.assertEqual(len(self.book["chapters"]), 13)
 
     def test_the_united_kingdom_chapter_stands_on_stored_british_law(self):
-        # 영국 CBAM의 장: 근거는 모두 받아 둔 영국 법령의 글이고(사이트의 규정 원문에 없는 문서), 용어 풀이는 그 장의 범위에서만 쓴다
+        # 영국 CBAM의 장: 근거는 받아 둔 영국 법령의 글이고(사이트의 규정 원문에 없는 문서), 용어 풀이는 그 장의 범위에서만 쓴다.
+        # 법령에 없는 날짜(등록이 열리는 날)와 게시된 안내 문서는 받아 둔 영국 국세청 안내의 갱신 기록에 대고, 그 절의 글이 안내에 기댄 것임을 밝힌다
         chapter = self.book["chapters"][-1]
         self.assertEqual((chapter["id"], chapter.get("scope")), ("uk", "uk"))
         self.assertEqual([one.get("scope") for one in self.book["chapters"][:-1]], [None] * 12)
         used = {basis.get("source") for one in chapter["sections"] for basis in one["basis"]}
         self.assertNotIn(None, used)
-        for name in used:
+        guidance = "uk-govuk-changes"
+        for name in used - {guidance}:
             source = self.book["sources"][name]
             self.assertTrue(source["path"].startswith("collected/archive/pages/uk-legislation/") and source["url"].startswith("https://www.legislation.gov.uk/"), name)
             self.assertTrue(source.get("short"), name)
-        # 날짜가 일정 화면의 영국 의무와 같다: 2027년에 등록 의무가 생긴 사람의 등록 기한, 첫 세 회계기간의 신고와 납부 기한
+        record = self.book["sources"][guidance]
+        self.assertEqual(record["path"], "collected/archive/pages/uk-govuk/changes.txt")
+        self.assertTrue(record["url"].startswith("https://www.gov.uk/") and record.get("short"))
+        leaning = {f"uk.{one['id']}" for one in chapter["sections"] if any(basis.get("source") == guidance for basis in one["basis"])}
+        self.assertEqual(leaning, {"uk.registration", "uk.records", "uk.pending"})
+        for key in leaning:
+            self.assertRegex(self.text(key), "영국 국세청[^.]*안내", key)   # 한 문장 안에서 영국 국세청의 안내라고 밝힌다
+        # 날짜가 일정 화면의 영국 의무와 같다: 기록 보관의 시작, 등록이 열리는 날, 2027년에 등록 의무가 생긴 사람의 등록 기한, 첫 세 회계기간의 신고와 납부 기한
         duties = {duty["id"]: duty["date"] for duty in read_json("data/duties.json", {})["duties"] if duty.get("scheme") == "uk"}
+        self.assertIn("2027년 1월 1일부터", self.text("uk.records"))
+        self.assertEqual((duties["uk-start"], duties["uk-records"]), ("2027-01-01", "2027-01-01"))
+        self.assertIn("등록은 2028년 1월 1일에 열립니다", self.text("uk.registration"))
+        self.assertEqual(duties["uk-registration-opens"], "2028-01-01")
         self.assertIn("2028년 1월 31일까지", self.text("uk.registration"))
         self.assertEqual(duties["uk-registration-deadline"], "2028-01-31")
         rows = dict(self.sections["uk.returns"]["table"]["rows"])

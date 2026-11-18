@@ -60,6 +60,18 @@
    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R2498",
    "path": "collected/archive/pages/eu-acts/32026R2498.txt",
    "short": "이행규정 (EU) 2026/2498의 관보 게재"
+  },
+  "uk-fa-sch19": {
+   "text": "2026년 재정법 부칙 19: CBAM에 따른 다른 법률의 보완 개정(Finance Act 2026, Schedule 19: Supplementary amendments relating to CBAM)",
+   "short": "2026년 재정법 부칙 19",
+   "url": "https://www.legislation.gov.uk/ukpga/2026/11/schedule/19",
+   "path": "collected/archive/pages/uk-legislation/ukpga-2026-11-schedule-19.txt"
+  },
+  "uk-govuk-changes": {
+   "text": "영국 국세청 CBAM 안내의 바뀐 내용 기록(GOV.UK)",
+   "short": "영국 국세청 안내의 갱신 기록",
+   "url": "https://www.gov.uk/government/collections/carbon-border-adjustment-mechanism",
+   "path": "collected/archive/pages/uk-govuk/changes.txt"
   }
  },
  "chapters": [
@@ -4983,7 +4995,7 @@
   {
    "id": "uk",
    "title": "영국 CBAM",
-   "lead": "영국이 2027년 1월 1일부터 수입품에 매기는 CBAM을 영국 법령에 따라 설명합니다. 대상 품목, 납세의무자와 등록, 세액과 탄소가격 경감, 신고와 납부, 배출량의 산정과 검증, 제재를 차례로 보고 EU CBAM과 견줍니다.",
+   "lead": "영국이 2027년 1월 1일부터 수입품에 매기는 CBAM을 영국 법령에 따라 설명합니다. 대상 품목, 납세의무자와 등록, 세액과 탄소가격 경감, 신고와 납부, 배출량의 산정과 검증, 기록 보관, 제재를 차례로 보고 EU CBAM과 견줍니다.",
    "scope": "uk",
    "sections": [
     {
@@ -4993,7 +5005,7 @@
       "영국 CBAM은 영국으로 수입되는 CBAM 대상 품목에 내재된 배출량에 매기는 세금입니다. 2026년 재정법(Finance Act 2026) 제5편은 탄소국경조정제도(carbon border adjustment mechanism, CBAM)라는 세금을 부과한다고 정하고, CBAM 대상 품목이 영국으로 수입될 때 그 품목의 내재배출량에 과세합니다.",
       "제5편은 2027년 1월 1일 이후 영국으로 수입되는 제품에 적용됩니다. CBAM의 징수와 관리는 영국 국세청(HMRC)이 맡습니다.",
       "제5편은 과세(제143조~제150조와 부칙(Schedule) 16), 행정과 집행(제151조와 부칙 17), 범죄(제152조와 부칙 18), 일반 규정(제153조~제158조와 부칙 19)으로 이루어집니다. 세부 사항은 재무부와 국세청이 만드는 규정과 고시(notice)에 맡겼습니다.",
-      "2026년에 만들어진 하위 법령은 아래 표와 같습니다. 네 규정은 모두 2027년 1월 1일에 시행됩니다. 이자 시행일 명령은 2009년 재정법의 이자 규정이 CBAM에 적용되기 시작하는 날을 2027년 1월 1일로 정합니다."
+      "2026년에 만들어진 하위 법령은 아래 표와 같습니다. 네 규정의 시행일은 모두 2027년 1월 1일입니다. 이자 시행일 명령은 2009년 재정법의 이자 규정이 CBAM에 적용되기 시작하는 날을 2027년 1월 1일로 정합니다."
      ],
      "table": {
       "head": [
@@ -5024,7 +5036,7 @@
        ],
        [
         "배출량·검증 규정(SI 2026/995)",
-        "내재배출량의 산정, 모니터링 기간, 검증기관과 인정기구, 검증보고서, 기록",
+        "내재배출량의 산정, 모니터링 기간, 검증기관과 인정기구, 검증보고서, 기록, 행정 규정의 기록과 신고서 기재 사항의 보완",
         "2026년 9월 8일"
        ]
       ]
@@ -5115,7 +5127,8 @@
        "label": "머리와 제1조(2)",
        "contains": [
         "Made 8th September 2026 Laid before the House of Commons 9th September 2026",
-        "These Regulations come into force on 1st January 2027."
+        "These Regulations come into force on 1st January 2027.",
+        "This Statutory Instrument has been made partly in consequence of a defect in S.I. 2026/802"
        ]
       }
      ],
@@ -5225,8 +5238,8 @@
      "body": [
       "CBAM을 낼 사람은 수입자(importer)입니다. 세관 절차의 신고를 받아들일 때나 그 절차의 요건을 어긴 때에 수입관세의 납세의무가 생기는 경우에는 그 신고를 한 사람이 수입자이고, 다른 사람을 대신해 신고했으면 그 다른 사람이 수입자입니다. 그 밖의 경우에는 자신을 위해 제품이 수입되는 사람이 수입자입니다.",
       "사업 과정에서 수입한 CBAM 대상 품목의 가액이 문턱에 이르면 영국 국세청에 등록해야 합니다. 매월 1일에 직전 12개월의 수입 가액 합계가 5만 파운드 이상이거나, 앞으로 30일 안에 5만 파운드 이상을 수입할 것으로 예상되면 등록 의무가 생깁니다. 가액은 행정 규정 제3조에 따라 관세 목적의 가액을 정하는 규칙으로 정하고, 원산지가 영국인 제품과 재수입 물품 등은 셈에서 뺍니다.",
-      "등록 의무가 처음 생긴 날부터 30일 안에 등록해야 합니다. 2027년에 등록 의무가 생긴 사람은 경과 규정에 따라 2028년 1월 31일까지 등록하면 됩니다. 기한까지 등록하지 않으면 국세청 공무원이 직권으로 등록할 수 있습니다. 등록 의무가 생겼으나 스스로 등록하지도 않았고 직권으로 등록되지도 않은 사람은 등록 대상자(registrable person)로서 등록자와 같이 신고와 납부의 의무를 집니다.",
-      "등록한 정보가 바뀌었거나 틀린 것을 알게 되면 30일 안에 국세청에 알려야 합니다. 여러 사람이 사업 활동을 인위적으로 나누었고, 그 활동을 모두 합치면 한 사람이 등록해야 하는 사업이 된다고 판단하면, 국세청 공무원은 그들을 하나의 납세자로 보는 지시를 할 수 있습니다. 지시에 이름이 오른 사람은 연대하여 세금을 낼 책임을 집니다.",
+      "등록 의무가 처음 생긴 날부터 30일 안에 등록해야 합니다. 2027년에 등록 의무가 생긴 사람은 경과 규정에 따라 2028년 1월 31일까지 등록하면 됩니다. 영국 국세청의 안내에 따르면 등록은 2028년 1월 1일에 열립니다. 기한까지 등록하지 않으면 국세청 공무원이 직권으로 등록할 수 있습니다. 등록 의무가 생겼으나 스스로 등록하지도 않았고 직권으로 등록되지도 않은 사람은 등록 대상자(registrable person)로서 등록자와 같이 신고와 납부의 의무를 집니다.",
+      "등록한 정보가 바뀌었거나 틀린 것을 알게 되면 30일 안에 국세청에 알려야 합니다. 여러 사람이 사업 활동을 인위적으로 나누었고, 그 활동을 모두 합치면 한 사람이 등록해야 하는 사업이 된다고 판단하면, 국세청 공무원은 그들을 하나의 납세자로 보는 지시를 할 수 있습니다. 지시에 이름이 오른 사람은 연대하여 세금을 낼 책임을 집니다. 등록 의무가 없는 등록자가 등록 취소를 요청했거나 지난 12개월 동안 등록 의무가 없었으면 국세청 공무원은 그 등록을 취소해야 합니다. 내지 않은 세액이나 내지 않은 신고서가 남아 있으면 취소하지 않기로 할 수 있습니다.",
       "등록할 때에는 아래와 같은 정보를 냅니다."
      ],
      "list": [
@@ -5324,6 +5337,24 @@
         "the date on which the person triggered registration under paragraph 2(2) of Schedule 17",
         "the estimated weight of the CBAM goods in each CBAM sector(13) which the person expects to import into the United Kingdom in the period of 12 months beginning with the date on which the person triggered registration"
        ]
+      },
+      {
+       "source": "uk-govuk-changes",
+       "label": "2026년 11월 10일의 갱신",
+       "contains": [
+        "ahead of registration opening on 1 January 2028"
+       ]
+      },
+      {
+       "source": "uk-fa-sch17",
+       "label": "제3항",
+       "contains": [
+        "An officer of Revenue and Customs must deregister a registered person if the officer is satisfied that",
+        "the person has requested that they be deregistered",
+        "the person has not been required to be registered at any time in the period of 12 months ending with the day on which the officer of Revenue and Customs deregisters the person",
+        "An officer of Revenue and Customs may decide not to deregister a person if",
+        "there are one or more outstanding returns under Part 3 of this Schedule due from the person"
+       ]
       }
      ],
      "see": [
@@ -5383,7 +5414,7 @@
        "ko": "기준 무상할당 비율",
        "en": "baseline free allocation percentage",
        "abbr": "",
-       "text": "그 CBAM 부문의 품목을 생산하는 영국 하위사업장의 배출량 가운데 2019년, 2022년, 2023년 의무이행연도에 무상 배출권으로 덮인 비율의 평균입니다."
+       "text": "그 CBAM 부문의 품목을 생산하는 영국 하위사업장의 배출량 가운데 무상 배출권으로 덮인 비율의 평균입니다. 2019년 의무이행연도는 EU 배출권거래제의 무상 배출권으로, 2022년과 2023년 의무이행연도는 영국 배출권거래제의 무상 배출권으로 셉니다."
       },
       {
        "ko": "탄소가격 경감",
@@ -5416,7 +5447,8 @@
         "in the 2019 scheme year, by free EU ETS allowances, and",
         "in the 2022 and 2023 scheme years, by free UK ETS allowances",
         "ignore any scheme year in which there were no sectoral emissions",
-        "for the CBAM sector for the year in which quarter Q falls"
+        "for the CBAM sector for the year in which quarter Q falls",
+        "in the 2019 scheme year, by free EU ETS allowances"
        ]
       },
       {
@@ -5544,7 +5576,7 @@
      "title": "회계기간, 신고, 납부",
      "body": [
       "등록자와 등록 대상자는 회계기간(accounting period)마다 CBAM을 계산해 납부하고 국세청에 세액 신고서(return)를 냅니다. 회계기간은 3월, 6월, 9월, 12월 말에 끝나는 3개월이고, 신고와 납부의 기한은 회계기간이 끝난 뒤 둘째 달의 마지막 근무일이 끝날 때까지입니다. 납부는 국세청 고시가 정한 방법으로 합니다. 국세청은 고시로 신고서를 내는 방법을 정할 수 있고, 세액 계산에 국세청의 디지털 도구를 쓰도록 할 수 있습니다.",
-      "신고서에는 회계기간에 수입한 품목마다 8자리 품목 코드, 무게, 탄소가격 경감액, 원산지를 적습니다. 기본값을 썼으면 그 값을, 실제 배출량 자료를 썼으면 검증기관의 검증을 받아야 하는 배출집약도를 적고, 영국을 원산지로 하는 다른 CBAM 대상 품목을 써서 만들었는지도 적습니다. 신고 내용이 아는 한 사실이고 정확하다는 선언도 넣습니다. 무게는 포장을 뺀 수입 때의 무게(킬로그램)입니다.",
+      "신고서에는 회계기간에 수입한 품목 가운데 CBAM이 부과되는 품목마다 8자리 품목 코드, 무게, 탄소가격 경감액, 원산지를 적습니다. 기본값을 썼으면 그 값을, 실제 배출량 자료를 썼으면 검증기관의 검증을 받아야 하는 배출집약도를 적고, 영국을 원산지로 하는 다른 CBAM 대상 품목을 써서 만들었는지도 적습니다. 신고 내용이 아는 한 사실이고 정확하다는 선언도 넣습니다. 무게는 포장을 뺀 수입 때의 무게(킬로그램)입니다.",
       "낸 신고서는 오류를 바로잡을 때에만 고칠 수 있습니다. 기본값으로 정한 내재배출량을 실제배출량 산정 방식으로 정한 값으로 바꾸는 수정은 할 수 없습니다.",
       "2027년 1월 1일부터 2009년 재정법의 연체 이자와 환급 이자 규정이 CBAM과 그에 관한 과징금에 적용됩니다. 세금이 아닌 금액을 냈으면 청구해 돌려받을 수 있지만, 청구하기 3년보다 앞서 낸 금액은 돌려주지 않습니다. 돌려주면 청구인이 부당하게 이득을 보게 되는 경우에는 그것을 이유로 돌려주기를 거부할 수 있습니다.",
       "경과 규정은 2028년 6월 30일까지의 회계기간과 기한을 아래 표의 앞 세 줄과 같이 바꿉니다. 2028년 7월 1일부터는 표의 마지막 줄과 같이 부칙 17의 원칙이 적용됩니다."
@@ -5632,7 +5664,8 @@
         "the 8 digit commodity code;",
         "the amount of carbon price(18) relief;",
         "the place of origin of the good.",
-        "A return must include a declaration by the person making it that the return is, to the best of their knowledge, true and accurate."
+        "A return must include a declaration by the person making it that the return is, to the best of their knowledge, true and accurate.",
+        "for each CBAM good imported during the accounting period in respect of which CBAM is charged"
        ]
       },
       {
@@ -5727,7 +5760,7 @@
      "title": "내재배출량의 산정과 검증",
      "body": [
       "내재배출량은 CBAM 대상 품목의 생산에 귀속되는 배출량이며, 이산화탄소 환산톤으로 정합니다. 어떤 배출량과 생산공정을 넣는지, 무엇이 전구물질인지, 무게를 어떻게 정하는지는 시스템 경계 문서(2026년 7월 10일자 1.00판)가 정합니다. 아산화질소 1톤은 265톤, 테트라플루오로메탄(CF4) 1톤은 6,630톤, 헥사플루오로에탄(C2F6) 1톤은 11,100톤의 이산화탄소 환산량으로 칩니다.",
-      "기본값을 쓰면 내재배출량은 품목의 무게에 기본값을 곱한 값입니다. 기본값은 재무부가 고시로 정합니다. 배출된 곳에 따라 다르게 정할 수 있고, 기본값을 쓰는 편이 실제 산정보다 유리하지 않은 수준으로 정할 수 있습니다.",
+      "기본값을 쓰면 내재배출량은 품목의 무게에 기본값을 곱한 값입니다. 기본값은 재무부가 고시로 정합니다. 배출된 곳에 따라 다르게 정할 수 있고, 기본값을 쓰는 편이 실제 산정보다 유리하지 않은 수준으로 정할 수 있습니다. 이 규정의 계산에서 무게는 톤으로 나타냅니다. 신고서와 기록에 적는 무게는 행정 규정에 따라 킬로그램으로 나타냅니다.",
       "기본값을 쓰지 않으면 모니터링 기간의 검증된 배출량 자료로 계산합니다. 사업장이 그 기간에 그 종류의 품목을 생산하며 낸 관련 배출량에 (전구물질을 썼으면) 전구물질의 배출량을 더하고, 그 기간에 생산한 그 종류 품목의 무게로 나누어 배출집약도를 구합니다(소수점 다섯째 자리까지 반올림). 여기에 수입한 품목의 무게를 곱합니다. 시멘트와 비료는 배출집약도를 구할 때 재무부 고시의 환산식을 함께 씁니다.",
       "모니터링 기간은 역년입니다. 2028년 1월 1일 전에 수입한 품목은 수입한 해와 그 전해 가운데 검증된 자료가 있는 가장 최근 해나, 품목을 생산한 해를 씁니다. 2028년 1월 1일 이후 수입한 품목은 수입한 해 앞의 두 해 가운데 검증된 자료가 있는 가장 최근 해나, 품목을 생산한 해를 씁니다.",
       "검증된 배출량 자료는 국세청 고시의 요건을 갖추고, 검증기관이 충분히 정확하다는 검증의견서를 낸 자료입니다. 검증기관은 수입자, 생산 사업장과 그 사업자, 전구물질을 만든 사업장과 그 사업자에게서 독립되어 있어야 하고, 그 종류 품목의 배출량 검증에 대해 인정기구의 인정을 받아야 합니다. 인정기구는 Global Accreditation Cooperation Incorporated의 정회원이어야 합니다. 검증기관은 모니터링 기간마다 사업자에게 검증보고서를 줍니다."
@@ -5787,20 +5820,16 @@
        "contains": [
         "“Carbon Border Adjustment Mechanism: System Boundaries Document”, version 1.00 dated 10th July 2026",
         "which goods are precursor goods for a CBAM good;",
-        "emissions that are attributable to the production of a CBAM good means an amount, in tonnes of carbon dioxide equivalent"
+        "emissions that are attributable to the production of a CBAM good means an amount, in tonnes of carbon dioxide equivalent",
+        "in all other cases means the weight of a CBAM good",
+        "means the weight, in tonnes, determined in accordance with the system boundaries document"
        ]
       },
       {
        "source": "uk-si-995",
-       "label": "제4조",
+       "label": "제4조, 제5조",
        "contains": [
-        "Where a default value is being used to determine emissions for the CBAM good, the emissions are the weight of the good multiplied by the default value."
-       ]
-      },
-      {
-       "source": "uk-si-995",
-       "label": "제5조",
-       "contains": [
+        "Where a default value is being used to determine emissions for the CBAM good, the emissions are the weight of the good multiplied by the default value.",
         "use verified emissions data from that monitoring period to identify the amount, in tonnes, of relevant emissions emitted by the installation that produced the imported CBAM good in the production of that type of CBAM good during the monitoring period",
         "Where precursor goods were used in the production of the imported CBAM good, add all precursor emissions",
         "rounded to five decimal places",
@@ -5854,6 +5883,13 @@
         "be a full member of the Global Accreditation Cooperation Incorporated",
         "meet the requirements specified in a notice published by the Commissioners"
        ]
+      },
+      {
+       "source": "uk-si-802",
+       "label": "제4조",
+       "contains": [
+        "references to the weight of a CBAM good are to the weight of that good"
+       ]
       }
      ],
      "caveat": "기본값, 시스템 경계 문서, 시멘트와 비료의 환산식, 배출량 자료와 검증의 세부 요건은 재무부와 국세청의 고시나 문서로 정하며, 이 장의 근거로 받아 둔 글에는 그 내용이 들어 있지 않습니다.",
@@ -5893,19 +5929,43 @@
      }
     },
     {
-     "id": "records-penalties",
-     "title": "기록 보관과 제재",
+     "id": "records",
+     "title": "기록 보관",
      "body": [
-      "사업 과정에서 CBAM 대상 품목을 수입하는 사람은 품목마다 8자리 품목 코드와 품명, 수입일, 가액, 무게, 해당하면 제147조(2)의 과세 제외에 든다는 사실을 증명하는 기록을 남깁니다. 신고서를 내는 사람은 원산지를 증명하는 기록과, 실제 자료를 쓴 품목이면 신고한 배출집약도의 검증보고서나 품목별 검증 요약을 남깁니다. 탄소가격 경감을 받는 사람은 탄소가격 검증 양식과 계산의 근거를 남깁니다. 기록은 6년간 보관합니다. 기간은 회계기간에 관한 기록이면 그 회계기간이 끝난 다음 날부터, 그 밖의 기록이면 만든 날부터 셉니다. 행정 규정에 따른 기록과 탄소가격 경감의 근거 기록은 서면으로 남겨야 합니다.",
-      "부칙 17은 다른 법률의 과징금 규정을 CBAM에도 적용합니다. 등록 의무를 어긴 경우(2008년 재정법 부칙 41), 신고서를 내지 않은 경우(2021년 재정법 부칙 24), 신고서 등에 오류가 있는 경우(2007년 재정법 부칙 24), 납부가 늦은 경우(2021년 재정법 부칙 26)입니다.",
-      "부칙 17이 직접 정한 과징금도 있습니다. 등록 정보의 변경이나 오류를 알리지 않거나, 개인인 등록자가 사망하거나 무능력해진 뒤 그 사업을 이어서 하는 사람이 21일 안에 그 사실을 알리지 않으면 500파운드에 더해 기한이 지난 날마다 40파운드를 냅니다. 기록을 남기거나 보관하지 않으면 500파운드입니다. 국세청 공무원이나 불복 단계의 심판소(tribunal)가 합리적인 사유가 있다고 인정하면 내지 않습니다. 같은 행위로 이미 유죄 판결을 받았거나 제38항과 제39항이 아닌 다른 과징금이 결정된 경우에도 내지 않습니다. 자금 부족은 합리적인 사유가 아닙니다. 재무부는 물가를 반영해 금액을 바꿀 수 있습니다.",
-      "국세청 공무원은 신고서를 내지 않거나 틀린 신고서를 낸 경우 등에 세액을 결정(assessment)할 수 있습니다. 결정은 회계기간이 끝난 뒤 4년과, 결정할 만한 사실을 국세청 공무원이 안 날부터 1년 가운데 이른 때까지 할 수 있습니다. 고의로 세금을 줄였거나 등록과 등록 정보의 의무를 어겨 세금이 줄었으면 20년까지입니다. 부칙 17 제48항이 정한 결정(신고서를 낸 회계기간의 납세의무와 세액, 등록과 등록 취소, 환급, 제38항과 제39항의 과징금 등)과 지시에는 심판소에 불복할 수 있습니다. 국세청은 그런 결정을 알릴 때 검토(review)를 제안해야 하고, 통지받은 사람은 결정을 알리는 문서의 날짜부터 30일 안에 그 제안을 받아들일 수 있습니다.",
-      "CBAM을 부정하게 포탈하는 데 알면서 관여하는 것은 범죄입니다. 정식 기소로 유죄가 되면 14년 이하의 징역이나 벌금에 처하거나 둘 다를 과합니다. 잉글랜드와 웨일스의 약식 재판에서 벌금의 상한은 2만 파운드와 포탈액의 3배 가운데 큰 금액입니다. CBAM에 관해 속일 의도로 중요한 점에서 거짓인 서류를 쓰거나, 정보를 내면서 거짓임을 알거나 무모하게 거짓 진술을 하는 것도 범죄입니다."
+      "행정 규정의 시행일인 2027년 1월 1일부터, 사업 과정에서 CBAM 대상 품목을 수입하는 사람은 품목마다 8자리 품목 코드와 품명, 수입일, 가액, 무게, 해당하면 제147조(2)의 과세 제외에 든다는 사실을 증명하는 기록을 남깁니다. 규정은 이 의무에 등록 여부를 조건으로 두지 않았습니다. 영국 국세청도 등록이 열리기 전인 2027년 1월 1일부터 기록을 보관해야 한다고 안내합니다.",
+      "등록자는 등록할 때 내는 정보를 증명하는 기록을 남깁니다. 신고서를 내는 사람은 원산지를 증명하는 기록과, 실제 자료를 쓴 품목이면 신고한 배출집약도의 검증보고서나 품목별 검증 요약을 남깁니다. 탄소가격 경감을 받는 사람은 탄소가격 검증 양식과 계산의 근거를 남깁니다.",
+      "기록은 6년간 보관합니다. 기간은 회계기간에 관한 기록이면 그 회계기간이 끝난 다음 날부터, 그 밖의 기록이면 만든 날부터 셉니다. 행정 규정에 따른 기록과 탄소가격 경감의 근거 기록은 서면으로 남겨야 합니다.",
+      "신고서에 적은 무게가 틀렸거나 무게 기록을 남기지 않은 것으로 보이면 국세청 공무원이 그 품목의 무게를 정할 수 있습니다. 이때 추정이나 가정을 하거나 성질이 비슷한 제품과 견줄 수 있습니다.",
+      "부칙 19는 2008년 재정법 부칙 36(정보와 조사 권한)의 '관여한 제3자' 정의에, CBAM 대상 품목의 생산이나 영국으로의 수입, 영국에서의 수출, 그와 이어진 활동에 어떤 자격으로든 관여한 사람을 더합니다. 대상 문서는 그 사람이 관여한 사항에 관한 문서입니다."
      ],
+     "figure": {
+      "kind": "tiles",
+      "title": "누가 어떤 기록을 남기는가",
+      "after": 2,
+      "items": [
+       {
+        "title": "사업 과정에서 수입하는 사람",
+        "text": "8자리 품목 코드와 품명, 수입일, 가액, 무게"
+       },
+       {
+        "title": "등록자",
+        "text": "등록할 때 내는 정보를 증명하는 기록"
+       },
+       {
+        "title": "신고서를 내는 사람",
+        "text": "원산지의 증명, 실제 자료를 쓴 품목의 검증보고서나 품목별 검증 요약"
+       },
+       {
+        "title": "탄소가격 경감을 받는 사람",
+        "text": "탄소가격 검증 양식과 계산의 근거"
+       }
+      ],
+      "note": "기록은 6년간 보관합니다."
+     },
      "basis": [
       {
        "source": "uk-si-802",
-       "label": "제5조, 제6조, 제11조",
+       "label": "제1조(2), 제5조, 제6조, 제8조, 제11조, 제12조",
        "contains": [
         "A person who imports a CBAM good in the course of a business must keep a record evidencing the following for that good",
         "the 8 digit commodity code(8) and description for the good;",
@@ -5915,7 +5975,12 @@
         "that record must be preserved for a period of 6 years beginning with the day after the end of the accounting period",
         "All records must be kept and preserved in writing.",
         "A person who makes a return for a CBAM good must keep records evidencing the place of origin of that good.",
-        "the record must be preserved for a period of 6 years beginning with the day on which the record is created"
+        "the record must be preserved for a period of 6 years beginning with the day on which the record is created",
+        "These Regulations come into force on 1st January 2027.",
+        "A registered person must keep records evidencing the information required to be provided under regulation 7.",
+        "failed to give the correct weight of a CBAM good to the Commissioners in a return",
+        "The officer may determine the weight of a CBAM good for the purposes of CBAM.",
+        "make comparisons between the CBAM good in question and products or materials that are similar in nature"
        ]
       },
       {
@@ -5938,6 +6003,42 @@
         "written records of any evidence which they rely on to show"
        ]
       },
+      {
+       "source": "uk-govuk-changes",
+       "label": "2026년 11월 10일의 갱신",
+       "contains": [
+        "from 1 January 2027 you'll need to keep records for the Carbon Border Adjustment Mechanism (CBAM), ahead of registration opening on 1 January 2028"
+       ]
+      },
+      {
+       "source": "uk-fa-sch19",
+       "label": "제2항",
+       "contains": [
+        "definition of involved third parties",
+        "A person involved (in any capacity) in the production, or importation to or exportation from the United Kingdom, of CBAM goods",
+        "Documents relating to matters in which the person is or has been involved"
+       ]
+      }
+     ],
+     "caveat": "2008년 재정법 부칙 36이 정하는 정보와 조사 권한의 내용은 그 법률이 정하며, 이 장의 근거로 받아 둔 글에는 들어 있지 않습니다.",
+     "see": [
+      {
+       "href": "#calendar-2027.duty-uk-records",
+       "text": "기록 보관 시작 일정"
+      }
+     ]
+    },
+    {
+     "id": "penalties",
+     "title": "제재와 불복",
+     "body": [
+      "부칙 17은 다른 법률의 과징금 규정을 CBAM에도 적용합니다. 등록 의무를 어긴 경우(2008년 재정법 부칙 41), 신고서를 내지 않은 경우(2021년 재정법 부칙 24), 신고서 등에 오류가 있는 경우(2007년 재정법 부칙 24), 납부가 늦은 경우(2021년 재정법 부칙 26)입니다.",
+      "부칙 17이 직접 정한 과징금도 있습니다. 등록 정보의 변경이나 오류를 알리지 않거나, 개인인 등록자가 사망하거나 무능력해진 뒤 그 사업을 이어서 하는 사람이 21일 안에 그 사실을 알리지 않으면 500파운드에 더해 기한이 지난 날마다 40파운드를 냅니다. 기록을 남기거나 보관하지 않으면 500파운드입니다. 국세청 공무원이나 불복 단계의 심판소(tribunal)가 합리적인 사유가 있다고 인정하면 내지 않습니다. 같은 행위로 이미 유죄 판결을 받았거나 제38항과 제39항이 아닌 다른 과징금이 결정된 경우에도 내지 않습니다. 자금 부족은 합리적인 사유가 아닙니다. 재무부는 물가를 반영해 금액을 바꿀 수 있습니다.",
+      "국세청 공무원은 신고서를 내지 않거나 틀린 신고서를 낸 경우 등에 세액을 결정(assessment)할 수 있습니다. 결정은 회계기간이 끝난 뒤 4년과, 결정할 만한 사실을 국세청 공무원이 안 날부터 1년 가운데 이른 때까지 할 수 있습니다. 고의로 세금을 줄였거나 등록과 등록 정보의 의무를 어겨 세금이 줄었으면 20년까지입니다. 부칙 17 제48항이 정한 결정(신고서를 낸 회계기간의 납세의무와 세액, 등록과 등록 취소, 환급, 제38항과 제39항의 과징금 등)과 지시에는 심판소에 불복할 수 있습니다. 국세청은 그런 결정을 알릴 때 검토(review)를 제안해야 하고, 통지받은 사람은 결정을 알리는 문서의 날짜부터 30일 안에 그 제안을 받아들일 수 있습니다.",
+      "불복은 결정을 알리는 문서의 날짜부터 30일 안에 심판소에 해야 하며, 검토를 받아들이거나 요구할 수 있는 기간이 더 늦게 끝나면 그때까지 할 수 있습니다. 내야 할 금액에 관한 결정에 불복하려면 국세청이 정한 금액을 먼저 내거나 맡겨야 합니다. 그 요건이 곤란을 일으킨다고 국세청이나 심판소가 인정하고 담보를 내면 그러지 않아도 됩니다.",
+      "CBAM을 부정하게 포탈하는 데 알면서 관여하는 것은 범죄입니다. 정식 기소로 유죄가 되면 14년 이하의 징역이나 벌금에 처하거나 둘 다를 과합니다. 잉글랜드와 웨일스의 약식 재판에서 벌금의 상한은 2만 파운드와 포탈액의 3배 가운데 큰 금액입니다. CBAM에 관해 속일 의도로 중요한 점에서 거짓인 서류를 쓰거나, 정보를 내면서 거짓임을 알거나 무모하게 거짓 진술을 하는 것도 범죄입니다."
+     ],
+     "basis": [
       {
        "source": "uk-fa-sch17",
        "label": "제17항, 제38항~제40항, 제47항",
@@ -5983,7 +6084,7 @@
       },
       {
        "source": "uk-fa-sch17",
-       "label": "제48항, 제49항, 제57항",
+       "label": "제48항, 제49항, 제57항, 제58항",
        "contains": [
         "A person may appeal against a decision of the Commissioners or an officer of Revenue and Customs in respect of any of the following matters",
         "HMRC must offer a person (P) who has been notified of a decision that they may appeal against a review of the decision.",
@@ -5992,7 +6093,11 @@
         "the registration, or de-registration, of a person under Part 2 of this Schedule",
         "whether a person is liable to a penalty under paragraph 38 or 39 or the amount of such a penalty",
         "A person may also appeal against the following directions",
-        "P has a period of 30 days, beginning with the date of the document notifying P of the decision, to accept the offer"
+        "P has a period of 30 days, beginning with the date of the document notifying P of the decision, to accept the offer",
+        "the date of the document notifying P of the decision to which the appeal relates",
+        "if later, the end of the period in which the appellant may accept or require a review",
+        "may not be entertained by the tribunal unless the amount which HMRC have determined to be due has been paid to or deposited with the Commissioners",
+        "the requirement to pay or deposit the amount would cause the appellant to suffer hardship"
        ]
       },
       {
@@ -6172,7 +6277,9 @@
      "id": "pending",
      "title": "고시와 앞으로의 규정에 맡긴 것",
      "body": [
-      "영국 CBAM의 여러 세부 사항은 재무부와 국세청의 고시나 앞으로 만들 규정에 맡겨져 있습니다. 이 장은 그 고시의 내용을 다루지 않습니다. 법령이 그렇게 맡긴 주요 사항은 아래와 같습니다."
+      "영국 CBAM의 여러 세부 사항은 재무부와 국세청의 고시나 앞으로 만들 규정에 맡겨져 있습니다. 이 장은 그 고시의 내용을 다루지 않습니다.",
+      "영국 국세청 안내의 갱신 기록에 따르면 '법적 효력이 있는 고시와 참조 문서' 화면은 2026년 7월 13일에 처음 게시되어 2026년 10월 16일에 새 고시가 더해졌습니다. 기본값을 확인하는 화면과 CBAM 요율 안내는 2026년 10월 16일에, 현재의 적격 탄소가격제도 목록은 2026년 8월 27일에 처음 게시되었습니다. 대상 부문을 정유 제품으로 넓히는 방안에 대한 협의도 2026년 10월 28일에 시작되었습니다. 영국 정부 누리집에서 확인한 요지는 영국 CBAM 규제 현황에 적었습니다.",
+      "법령이 고시와 앞으로의 규정에 맡긴 주요 사항은 아래와 같습니다."
      ],
      "list": [
       "기본값: 재무부가 고시로 정하는 값입니다(부칙 17 제11항).",
@@ -6243,6 +6350,18 @@
        "contains": [
         "The Commissioners may publish a notice specifying additional information which is to be included in a return."
        ]
+      },
+      {
+       "source": "uk-govuk-changes",
+       "label": "2026년 7월~10월의 갱신",
+       "contains": [
+        "2026-07-13 | Carbon Border Adjustment Mechanism: force of law notices and reference document | First published.",
+        "2026-10-16 | Carbon Border Adjustment Mechanism: force of law notices and reference document | Page updated to include new 'force of law' notices.",
+        "2026-10-16 | Check the default values for the Carbon Border Adjustment Mechanism (CBAM) | First published.",
+        "2026-10-16 | Rates for the Carbon Border Adjustment Mechanism (CBAM) | First published.",
+        "2026-08-27 | UK CBAM: Current qualifying carbon pricing schemes | First published.",
+        "2026-10-28 | Carbon Border Adjustment Mechanism (CBAM): a consultation on sectoral scope expansion to include refinery products | First published."
+       ]
       }
      ],
      "caveat": "고시는 다른 고시로 고치거나 거둘 수 있으므로, 고시로 정한 내용은 바뀔 수 있습니다.",
@@ -6287,7 +6406,7 @@
   },
   "uk-cbam": {
    "stage": "2027년 1월 1일 시행 예정",
-   "events": 7
+   "events": 9
   }
  }
 }

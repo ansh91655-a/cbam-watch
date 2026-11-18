@@ -10,6 +10,7 @@
 - 근거: evidence의 대목이 받아 둔 법령 글에 있는지, 그리고 의무의 날짜(날과 달, 해)가 그 대목 안에 적혀 있는지.
   법령은 "By 30 September of each year, and for the first time in 2027"처럼 날과 해를 떨어뜨려 적기도 하므로,
   날과 달이 든 대목과 해가 든 대목이 각각 있으면 된다.
+  글이 날짜가 적힌 글 밖의 다른 글에도 기대면(다른 법령의 조문, 공식 안내) evidence의 also에 그 글의 근거를 더 적는다(꼴은 evidence와 같다).
 검사: python -m tools.publish.duties   (문제가 있으면 0이 아닌 값으로 끝난다)
 """
 import re
@@ -113,6 +114,11 @@ def duty_problems(duty, schemes, term_index, kinds, roles=frozenset()):
             found.append((where, "근거 어긋남: " + problem))
         elif not date_in_phrases(duty.get("date"), evidence.get("contains", [])):
             found.append((where, f"근거 어긋남: 근거 대목에 날짜 {duty.get('date')}(날과 달, 해)가 적혀 있지 않음"))
+        more = evidence.get("also", []) if isinstance(evidence, dict) else []
+        for extra in more if isinstance(more, list) else [None]:
+            problem = regulations.evidence_problem(extra, duty.get("date"))
+            if problem:
+                found.append((where, "근거 어긋남: 더한 근거(also): " + problem))
     return found
 
 

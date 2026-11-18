@@ -1,6 +1,6 @@
 {
  "asOf": "2026-11-18",
- "note": "법령에 날짜가 적힌 의무만 실었습니다. 심의 중인 개정안의 일정은 넣지 않았습니다. 해마다 돌아오는 의무는 법령이 정한 날짜로 이듬해와 그다음 해까지 적었습니다. 날짜는 법령이 바뀌면 달라질 수 있으니 근거 조문에서 다시 확인해 주세요.",
+ "note": "법령에 날짜가 적힌 의무를 실었습니다. 법령이 아니라 공식 안내에만 적힌 날짜는 그렇다고 밝혔습니다. 심의 중인 개정안의 일정은 넣지 않았습니다. 해마다 돌아오는 의무는 법령이 정한 날짜로 이듬해와 그다음 해까지 적었습니다. 날짜는 법령이 바뀌면 달라질 수 있으니 근거 조문에서 다시 확인해 주세요.",
  "schemes": [
   {
    "key": "eu",
@@ -174,9 +174,9 @@
    "kind": "시행",
    "title": "영국 CBAM 적용 시작",
    "who": "영국 수입자",
-   "text": "이날 이후 영국으로 수입되는 CBAM 대상 제품(알루미늄, 시멘트, 비료, 수소, 철강)의 내재배출량에 영국 CBAM이 부과됩니다.",
+   "text": "이날 이후 영국으로 수입되는 CBAM 대상 제품(알루미늄, 시멘트, 비료, 수소, 철강)의 내재배출량에 영국 CBAM이 부과됩니다. 사업 과정이 아닌 수입, 수입 때 등록 대상자도 등록자도 아닌 수입자의 수입, 원산지가 영국인 제품에는 부과하지 않습니다.",
    "supplier": "2027년 1월 1일 이후 영국으로 수입되는 제품부터 내재배출량 자료가 필요합니다. 내재배출량은 기본값이나 실제 자료로 정하며, 기본값으로 신고한 값은 나중에 실제 자료로 바꿔 신고할 수 없습니다.",
-   "basis": "Finance Act 2026 제143조, 제158조",
+   "basis": "Finance Act 2026 제143조, 제147조, 제158조, 부칙 17 제8항",
    "link": "https://www.legislation.gov.uk/ukpga/2026/11/part/5",
    "evidence": {
     "path": "collected/archive/pages/uk-legislation/ukpga-2026-11-part-5.txt",
@@ -184,7 +184,18 @@
      "This Part has effect in relation to goods imported into the United Kingdom on or after 1 January 2027",
      "Schedule 16 specifies the following kinds of goods",
      "(a)aluminium goods;",
-     "(e)iron and steel goods."
+     "(e)iron and steel goods.",
+     "neither registrable nor registered",
+     "otherwise than in the course of a business",
+     "the place of origin of the good is the United Kingdom"
+    ],
+    "also": [
+     {
+      "path": "collected/archive/pages/uk-legislation/ukpga-2026-11-schedule-17.txt",
+      "contains": [
+       "No amendment may be made to replace information on the emissions embodied in CBAM goods determined using default values"
+      ]
+     }
     ]
    },
    "covers": {
@@ -198,19 +209,58 @@
    ]
   },
   {
+   "id": "uk-records",
+   "scheme": "uk",
+   "date": "2027-01-01",
+   "kind": "시행",
+   "title": "영국 CBAM 기록 보관 시작",
+   "who": "영국 수입자",
+   "text": "행정 규정이 이날 시행됩니다. 사업 과정에서 CBAM 대상 제품을 수입하는 사람은 제품마다 8자리 품목 코드와 품명, 수입일, 가액, 무게를 증명하는 기록을 남기고 6년간 보관해야 합니다. 기록은 서면으로 남깁니다. 영국 국세청은 등록이 열리기 전인 2027년 1월 1일부터 기록을 보관해야 한다고 안내합니다.",
+   "supplier": "수입자가 남기는 무게는 포장을 뺀 수입 때의 무게입니다. 실제 자료로 신고하는 제품이면 수입자는 신고한 배출집약도의 검증보고서나 품목별 검증 요약도 보관해야 합니다.",
+   "basis": "행정 규정(SI 2026/802) 제1조, 제4조~제6조, 배출량·검증 규정(SI 2026/995) 제16조",
+   "link": "https://www.legislation.gov.uk/uksi/2026/802/made",
+   "evidence": {
+    "path": "collected/archive/pages/uk-legislation/uksi-2026-802-full.txt",
+    "contains": [
+     "These Regulations come into force on 1st January 2027",
+     "A person who imports a CBAM good in the course of a business must keep a record evidencing the following for that good",
+     "that record must be preserved for a period of 6 years",
+     "All records must be kept and preserved in writing.",
+     "without packing materials and packing containers of any kind"
+    ],
+    "also": [
+     {
+      "path": "collected/archive/pages/uk-govuk/changes.txt",
+      "contains": [
+       "from 1 January 2027 you'll need to keep records",
+       "ahead of registration opening on 1 January 2028"
+      ]
+     },
+     {
+      "path": "collected/archive/pages/uk-legislation/uksi-2026-995-full.txt",
+      "contains": [
+       "must keep the verification report or good-specific verification summary for the emissions intensity submitted on the return"
+      ]
+     }
+    ]
+   },
+   "roles": [
+    "uk"
+   ]
+  },
+  {
    "id": "uk-registration-opens",
    "scheme": "uk",
    "date": "2028-01-01",
    "kind": "시행",
    "title": "영국 CBAM 등록 개시",
    "who": "영국 수입자",
-   "text": "영국 국세청의 안내에 따르면 2027년 1월 1일부터 기록을 보관해야 하고, 등록은 2028년 1월 1일에 열립니다.",
+   "text": "영국 국세청의 안내에 따르면 CBAM 등록은 2028년 1월 1일에 열립니다. 이 날짜는 법령이 아니라 영국 국세청의 안내에 적힌 것입니다.",
    "basis": "영국 국세청 CBAM 안내",
    "link": "https://www.gov.uk/government/collections/carbon-border-adjustment-mechanism",
    "evidence": {
     "path": "collected/archive/pages/uk-govuk/changes.txt",
     "contains": [
-     "from 1 January 2027 you'll need to keep records",
      "ahead of registration opening on 1 January 2028"
     ]
    },
@@ -225,7 +275,7 @@
    "kind": "기한",
    "title": "2027년에 등록 요건에 해당한 영국 수입자의 등록",
    "who": "영국 수입자",
-   "text": "2027년에 등록 의무가 생긴 수입자는 이날까지 영국 국세청에 등록하면 됩니다. 등록 의무는 매월 1일에 직전 12개월 동안 수입한 CBAM 대상 제품의 가액이 5만 파운드 이상이거나, 앞으로 30일 안에 5만 파운드 이상을 수입할 것으로 예상될 때 생깁니다.",
+   "text": "2027년에 등록 의무가 생긴 수입자는 이날까지 영국 국세청에 등록하면 됩니다. 등록 의무는 매월 1일에 직전 12개월 동안 사업 과정에서 수입한 CBAM 대상 제품의 가액이 5만 파운드 이상이거나, 앞으로 30일 안에 5만 파운드 이상을 수입할 것으로 예상될 때 생깁니다. 원산지가 영국인 제품과 재수입 물품 등은 셈에서 뺍니다.",
    "basis": "경과 규정(SI 2026/830) 제2조, Finance Act 2026 부칙 17 제2항",
    "link": "https://www.legislation.gov.uk/uksi/2026/830/made",
    "evidence": {
@@ -233,6 +283,15 @@
     "contains": [
      "“31st January 2028” is treated as substituted",
      "any person who triggers registration"
+    ],
+    "also": [
+     {
+      "path": "collected/archive/pages/uk-legislation/ukpga-2026-11-schedule-17.txt",
+      "contains": [
+       "it is the first day of the month and, during the preceding 12 months, the person imported into the United Kingdom CBAM goods with an aggregate value of £50,000 or more in the course of a business",
+       "in respect of which section 147(2) applies (goods originating in the United Kingdom and returned goods)"
+      ]
+     }
     ]
    },
    "roles": [

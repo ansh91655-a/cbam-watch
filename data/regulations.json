@@ -7456,7 +7456,7 @@
     },
     {
      "date": "2026-07-13",
-     "text": "행정 규정(SI 2026/802)과 요율·탄소가격 경감 규정(SI 2026/809)이 제정되었습니다. 2027년 1월 1일에 시행됩니다.",
+     "text": "행정 규정(SI 2026/802)이 제정되었습니다. 시행일은 2027년 1월 1일입니다.",
      "source": "영국 법령 누리집",
      "link": "https://www.legislation.gov.uk/uksi/2026/802/made",
      "basis": "stored",
@@ -7470,8 +7470,23 @@
      "step": "made"
     },
     {
+     "date": "2026-07-13",
+     "text": "요율·탄소가격 경감 규정(SI 2026/809)이 제정되었습니다. 시행일은 2027년 1월 1일입니다.",
+     "source": "영국 법령 누리집",
+     "link": "https://www.legislation.gov.uk/uksi/2026/809/made",
+     "basis": "stored",
+     "evidence": {
+      "path": "collected/archive/pages/uk-legislation/uksi-2026-809.txt",
+      "contains": [
+       "13th July 2026",
+       "1st January 2027"
+      ]
+     },
+     "step": "made"
+    },
+    {
      "date": "2026-07-14",
-     "text": "경과 규정(SI 2026/830)이 제정되었습니다. 2027년 1월 1일에 시행됩니다.",
+     "text": "경과 규정(SI 2026/830)이 제정되었습니다. 시행일은 2027년 1월 1일입니다.",
      "source": "영국 법령 누리집",
      "link": "https://www.legislation.gov.uk/uksi/2026/830/made",
      "basis": "stored",
@@ -7486,12 +7501,27 @@
     },
     {
      "date": "2026-09-08",
-     "text": "배출량·검증 규정(SI 2026/995)과 이자 규정의 시행일을 정하는 명령(SI 2026/994)이 제정되었습니다.",
+     "text": "배출량·검증 규정(SI 2026/995)이 제정되었습니다. 시행일은 2027년 1월 1일입니다.",
      "source": "영국 법령 누리집",
      "link": "https://www.legislation.gov.uk/uksi/2026/995/made",
      "basis": "stored",
      "evidence": {
       "path": "collected/archive/pages/uk-legislation/uksi-2026-995.txt",
+      "contains": [
+       "8th September 2026",
+       "1st January 2027"
+      ]
+     },
+     "step": "made"
+    },
+    {
+     "date": "2026-09-08",
+     "text": "이자 규정의 시행일을 정하는 명령(SI 2026/994)이 제정되었습니다. 2009년 재정법의 이자 규정을 CBAM에 적용하기 시작하는 날을 2027년 1월 1일로 정합니다.",
+     "source": "영국 법령 누리집",
+     "link": "https://www.legislation.gov.uk/uksi/2026/994/made",
+     "basis": "stored",
+     "evidence": {
+      "path": "collected/archive/pages/uk-legislation/uksi-2026-994.txt",
       "contains": [
        "8th September 2026",
        "1st January 2027"
@@ -7535,10 +7565,10 @@
     ]
    },
    "analysis": {
-    "asOf": "2026-11-14",
+    "asOf": "2026-11-18",
     "basedOn": {
      "stage": "2027년 1월 1일 시행 예정",
-     "events": 7
+     "events": 9
     },
     "sections": [
      {
@@ -7624,7 +7654,7 @@
       "items": [
        {
         "label": "시행 일정",
-        "text": "제5편은 2027년 1월 1일 이후 영국으로 수입되는 제품에 적용됩니다. 행정 절차, 요율과 탄소가격 경감, 경과 조치, 배출량 산정과 검증을 다루는 하위 법령이 2026년 7월과 9월에 제정되었고, 모두 2027년 1월 1일에 시행됩니다.",
+        "text": "제5편은 2027년 1월 1일 이후 영국으로 수입되는 제품에 적용됩니다. 행정 절차, 요율과 탄소가격 경감, 경과 조치, 배출량 산정과 검증을 다루는 하위 법령이 2026년 7월과 9월에 제정되었고, 시행일은 모두 2027년 1월 1일입니다.",
         "refs": [
          "act",
          "si-admin",
@@ -7648,6 +7678,21 @@
         ]
        },
        {
+        "label": "고시와 참조 문서",
+        "text": "영국 정부 누리집에는 법적 효력이 있는 고시의 초안 셋(행정 규정과 탄소가격 경감, 배출량과 검증, 기본값)과 시스템 경계 문서(2026년 7월 10일자 1.00판), 탄소가격 검증 양식이 게시되어 있습니다. 그 화면은 고시가 아직 시행되지 않았고 지금은 법적 효력이 없다고 적고 있습니다. 부문별 기본값을 보여 주는 화면은 2026년 10월 16일에 게시되었고, 수소의 기본값 화면은 그 값이 고시의 값을 옮긴 것이며 원산지와 관계없이 적용된다고 적고 있습니다.",
+        "refs": [
+         "govuk-notices",
+         "govuk-defaults"
+        ]
+       },
+       {
+        "label": "요율의 공표",
+        "text": "영국 국세청의 안내는 CBAM 요율을 2027년 1월 1일부터 분기가 시작될 때까지 공표하겠다고 적고 있습니다. 적용되는 요율은 제품이 속한 부문과 수입한 분기로 정해집니다. 2026년 11월 18일에 확인한 안내 화면에는 실제 요율이 실려 있지 않고, 예시 요율은 다른 문서로 게시되어 있습니다.",
+        "refs": [
+         "govuk-rates"
+        ]
+       },
+       {
         "label": "대상 확대 논의",
         "text": "영국 정부는 2026년 10월 28일에 대상 부문을 정유 제품으로 넓히는 방안에 대한 협의를 시작했고, 2027년 1월 20일까지 의견을 받습니다.",
         "refs": [
@@ -7656,7 +7701,7 @@
        },
        {
         "label": "EU와의 연계",
-        "text": "재정법 제156조는 영국 배출권거래제와 연계된 배출권거래제를 가진 나라의 제품을 CBAM 과세에서 빼도록 영국 재무부가 규정을 고칠 수 있게 했습니다. EU와 영국은 배출권거래제 연계 협정을 협상하고 있습니다.",
+        "text": "재정법 제156조는 영국 배출권거래제와 연계된 배출권거래제를 가진 나라의 제품을 CBAM 과세에서 빼도록 영국 재무부가 규정을 고칠 수 있게 했습니다. EU 이사회는 2025년 11월 13일에 영국과 배출권거래제를 연계하는 협정의 협상을 시작하도록 승인했습니다.",
         "refs": [
          "act",
          "eu-decision"
@@ -7693,9 +7738,10 @@
        },
        {
         "label": "한국에서 낸 탄소가격",
-        "text": "탄소가격 경감은 규정이 정한 요건을 갖춘 탄소가격제도에서 낸 금액에 주어집니다. 한국 배출권거래제에서 부담한 금액이 여기에 해당하는지는 그 요건에 달려 있으며, 이 글에서는 판단하지 않았습니다.",
+        "text": "탄소가격 경감은 규정이 정한 요건을 갖춘 탄소가격제도에서 낸 금액에 주어집니다. 영국 정부가 2026년 8월 27일에 게시한 '현재의 적격 탄소가격제도 목록'에는 한국 배출권거래제(Korea Emissions Trading System, K-ETS)가 들어 있습니다. 이 목록은 2026년 6월 19일까지의 정보로 만든 초안이고 모든 제도를 담은 것은 아니라고 밝히고 있습니다. 무상할당으로 덮인 배출량은 경감을 받지 못한다고 적고 있으며, 요건에 맞는지 판단하고 경감을 청구하고 기록을 남길 책임은 납세의무자에게 있다고 적고 있습니다.",
         "refs": [
-         "si-rate"
+         "si-rate",
+         "govuk-qcps"
         ]
        }
       ]
@@ -7771,6 +7817,34 @@
       "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32025D2468",
       "basis": "stored",
       "path": "collected/archive/pages/eur-lex-docs/32025D2468.txt"
+     },
+     {
+      "key": "govuk-qcps",
+      "text": "영국 정부: 현재의 적격 탄소가격제도 목록(GOV.UK, 2026년 8월 27일 게시)",
+      "url": "https://www.gov.uk/government/publications/uk-cbam-current-qualifying-carbon-pricing-schemes",
+      "basis": "web",
+      "checkedOn": "2026-11-18"
+     },
+     {
+      "key": "govuk-notices",
+      "text": "영국 정부: CBAM의 법적 효력이 있는 고시와 참조 문서(GOV.UK)",
+      "url": "https://www.gov.uk/government/publications/carbon-border-adjustment-mechanism-force-of-law-notice-and-reference-document",
+      "basis": "web",
+      "checkedOn": "2026-11-18"
+     },
+     {
+      "key": "govuk-defaults",
+      "text": "영국 정부: CBAM 기본값 확인의 수소 기본값 화면(GOV.UK, 2026년 10월 16일 게시)",
+      "url": "https://www.gov.uk/government/publications/check-the-default-values-for-the-carbon-border-adjustment-mechanism-cbam/hydrogen-default-values",
+      "basis": "web",
+      "checkedOn": "2026-11-18"
+     },
+     {
+      "key": "govuk-rates",
+      "text": "영국 국세청: CBAM 요율 안내(GOV.UK, 2026년 10월 16일 게시)",
+      "url": "https://www.gov.uk/guidance/rates-for-the-carbon-border-adjustment-mechanism-cbam",
+      "basis": "web",
+      "checkedOn": "2026-11-18"
      }
     ]
    },
@@ -7786,7 +7860,8 @@
       ]
      }
     }
-   }
+   },
+   "changedOn": "2026-11-18"
   },
   {
    "id": "wto-ds639",

@@ -30,6 +30,19 @@ class DutiesTest(unittest.TestCase):
         self.assertTrue(found[0][1].startswith("근거 어긋남"))
         self.assertEqual(duties.problems(body, kinds=("format",)), [])
 
+    def test_extra_evidence_is_checked_against_its_own_text(self):
+        body = copy.deepcopy(self.body)
+        duty = next(row for row in body["duties"] if row["id"] == "uk-records")
+        self.assertTrue(duty["evidence"]["also"])                       # 날짜가 적힌 글 밖의 글(공식 안내, 다른 규정)에도 기댄다
+        self.assertEqual(duties.problems(body, kinds=("evidence",)), [])
+        duty["evidence"]["also"][0]["contains"] = ["a sentence the guidance never had"]
+        found = duties.problems(body, kinds=("evidence",))
+        self.assertEqual([where for where, _ in found], ["의무 uk-records"])
+        self.assertIn("더한 근거(also)", found[0][1])
+        duty["evidence"]["also"] = "글이 아님"
+        self.assertTrue(duties.problems(body, kinds=("evidence",)))
+        self.assertTrue(all("also" not in str(row) for row in duties.public(self.body)["duties"]))   # 근거 대목은 사이트에 싣지 않는다
+
     def test_shape_and_wording_are_checked(self):
         body = copy.deepcopy(self.body)
         body["duties"][0]["text"] = "이날까지 신청한다."
