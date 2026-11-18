@@ -99,7 +99,7 @@ console.log(JSON.stringify({
     plain: names(rank(book.news, parse('인증서 가격', index))),
     oneBook: names(keep(one.found, 1).book), markup: names(keep(ask('마크업').found, 1).book), cscf: names(keep(ask('CSCF').found, 1).book), revise: names(keep(ask('2027년 개정').found, 2).book),
   },
-  pages: Object.fromEntries(['가격', '인증서 가격 추이', '탄소가격 공제', 'three months', 'hs', '규제', '규정', '신고 기한', '기본값', '가', '해설서', '비용 추정', '안내서'].map((query) => [query, findPages(query).map((page) => page.href)])),
+  pages: Object.fromEntries(['가격', '인증서 가격 추이', '탄소가격 차감', 'three months', 'hs', '규제', '규정', '신고 기한', '기본값', '가', '해설서', '비용 추정', '안내서'].map((query) => [query, findPages(query).map((page) => page.href)])),
   codes: {
     read: ['7208', '7318 15 00', 'CN 7208', 'HS코드 7208.10', '720', 'abc 7208', '2026년'].map(codeIn),
     verdicts: Object.fromEntries(['7208', '2026', 'cn 9999', '999999', '7202 21 00', '8544 49', '8708 10', '2507 00 80'].map((query) => { const found = codeVerdict(query, cn); return [query, found ? [found.state, found.later, found.council, found.rows.length] : null]; })),
@@ -190,7 +190,7 @@ class SearchTest(unittest.TestCase):
         pages = self.seen["pages"]
         self.assertEqual(pages["가격"], ["#price"])
         self.assertEqual(pages["인증서 가격 추이"][0], "#price")
-        self.assertEqual(pages["탄소가격 공제"], [])                               # 다른 낱말 속의 '가격'은 화면을 부르는 말이 아니다
+        self.assertEqual(pages["탄소가격 차감"], [])                               # 다른 낱말 속의 '가격'은 화면을 부르는 말이 아니다
         self.assertEqual(pages["three months"], [])                              # months의 hs
         self.assertEqual(pages["hs"], ["#cn"])
         self.assertEqual(pages["규제"], ["#rules"])

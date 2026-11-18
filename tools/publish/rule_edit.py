@@ -6,11 +6,14 @@
   (모아 둔 글에서 근거를 찾을 때는 --path collected/archive/pages/… --contains "1 December 2026")
   (공식 화면을 읽고 확인했으면 --basis web, 언론 보도면 --basis press. 이때는 근거 대신 확인한 날이 오늘로 적힌다)
 연혁에서 한 줄 빼기:   python -m tools.publish.rule_edit drop-event --id <규제> --date <날짜> --starts "<글의 앞부분>"
-단계와 설명 고치기:    python -m tools.publish.rule_edit set --id <규제> [--stage "…"] [--at 2] [--tone progress] [--status "…"] [--summary "…"] [--figure cbam-factor] [--tool calc] [--next "…"] [--next-date 2026-12-14] [--next-title "…"]
+단계와 설명 고치기:    python -m tools.publish.rule_edit set --id <규제> [--name "…"] [--stage "…"] [--at 2] [--tone progress] [--status "…"] [--summary "…"] [--figure cbam-factor] [--tool calc] [--next "…"] [--next-date 2026-12-14] [--next-title "…"]
                       (--next "", --next-date "", --next-title ""는 그 값을 지운다. --next-title은 일정 화면에 보일 이름으로, 그 날 있을 일을 적은 짧은 구다)
                       (--next-source "<출처 이름>" --next-link "<주소>": 다음 일정의 날짜를 알려 준 출처. 일정 화면과 규제 화면이 그 날짜의 출처로 보여 준다.
                        주지 않으면 규제의 첫 링크가 출처로 보이므로, 그 날짜가 첫 링크의 문서에 없을 때(언론 보도로만 아는 날짜)에는 꼭 준다. 보도이면 이름에 '보도'를 넣는다)
 새 규제 더하기:        python -m tools.publish.rule_edit add-rule --file rule.json   (rule.json은 규제 하나의 JSON)
+준비 중이던 법령이 나옴: python -m tools.publish.rule_edit enact --id <규제> --celex 32026R2498 [--name "…"] [--kind 이행규정] [--after <규제 id>]
+                      (묶음, 이름과 종류의 '(안)'·'(계획)', 공식 이름, 원문 링크, 관련 낱말, 목록에서의 자리를 한 번에 바꾼다. 무엇을 어떻게 바꾸는지는 tools/publish/rule_enact.py의 머리글에 있다.
+                       단계, 설명, 연혁, 다음 일정은 바꾸지 않으므로 이어서 set, add-event, drop-event로 고친다)
 분석 글 넣기와 바꾸기: python -m tools.publish.rule_edit analysis --id <규제> --file analysis.json
                       (analysis.json은 sections와 sources를 담은 JSON. 꼴은 tools/publish/analysis.py의 머리글에 있다. 쓴 날과 그때의 규제 모습은 스스로 적힌다)
 분석 글 꺼내 보기:     python -m tools.publish.rule_edit analysis-show --id <규제> [--out analysis.json]   (고칠 때는 꺼내서 고친 뒤 다시 넣는다)
@@ -24,6 +27,7 @@ import sys
 
 from tools.common.jsonio import read_json, today, write_json
 from tools.publish import analysis, regulations
+from tools.publish.rule_enact import KINDS, enact
 
 TONES = ["live", "progress", "planned", "adopted", "dispute", "ended"]
 
@@ -62,7 +66,10 @@ def drop_event(body, args):
 
 def set_fields(body, args):
     rule = find(body, args.id)
-    for field, value in (("stage", args.stage), ("tone", args.tone), ("status", args.status), ("summary", getattr(args, "summary", None))):
+    name = getattr(args, "name", None)   # 국문 이름. 빈 이름으로는 바꾸지 않는다
+    if name is not None and not name.strip():
+        raise SystemExit("이름이 비어 있음")
+    for field, value in (("name", name), ("stage", args.stage), ("tone", args.tone), ("status", args.status), ("summary", getattr(args, "summary", None))):
         if value is not None:
             rule[field] = value
     if args.at is not None:
@@ -93,7 +100,7 @@ def set_fields(body, args):
         rule.pop("tool", None)
     elif tool is not None:
         rule["tool"] = tool
-    if any(value is not None for value in (args.stage, args.tone, args.status, getattr(args, "summary", None), args.at, args.next, args.next_date, args.next_title)):
+    if any(value is not None for value in (name, args.stage, args.tone, args.status, getattr(args, "summary", None), args.at, args.next, args.next_date, args.next_title)):
         rule["changedOn"] = today()
 
 
@@ -167,6 +174,7 @@ def main(argv):
         drop.add_argument(name, required=True)
     change = commands.add_parser("set")
     change.add_argument("--id", required=True)
+    change.add_argument("--name")
     change.add_argument("--stage")
     change.add_argument("--at", type=int)
     change.add_argument("--tone", choices=TONES)
@@ -181,6 +189,12 @@ def main(argv):
     change.add_argument("--next-link")     # 그 출처의 주소(https)
     new = commands.add_parser("add-rule")
     new.add_argument("--file", required=True)
+    out = commands.add_parser("enact")
+    out.add_argument("--id", required=True)
+    out.add_argument("--celex", required=True)   # 관보에 실린 법령의 CELEX 번호(예: 32026R2498)
+    out.add_argument("--name")                   # 주지 않으면 지금 이름에서 '(안)', '(계획)'을 뗀다
+    out.add_argument("--kind", choices=sorted(KINDS))
+    out.add_argument("--after")                  # 이 규제의 바로 뒤에 놓는다. 주지 않으면 그 묶음의 끝난 법령 앞에 놓는다
     table = commands.add_parser("positions")
     table.add_argument("--id", required=True)
     table.add_argument("--file", required=True)
@@ -199,7 +213,7 @@ def main(argv):
     if args.command == "analysis-show":
         show_analysis(body, args)
         return 0
-    {"add-event": add_event, "drop-event": drop_event, "set": set_fields, "add-rule": add_rule, "positions": set_positions, "analysis": set_analysis}[args.command](body, args)
+    {"add-event": add_event, "drop-event": drop_event, "set": set_fields, "add-rule": add_rule, "enact": enact, "positions": set_positions, "analysis": set_analysis}[args.command](body, args)
     body["asOf"] = today()
     found = regulations.problems(body)
     stop = blocking(found, getattr(args, "id", ""))

@@ -171,6 +171,16 @@ class RuleEditTest(unittest.TestCase):
         self.edit.set_fields(self.body, self.args(**blank, tool=""))
         self.assertNotIn("tool", rule)
 
+    def test_set_renames_a_rule_and_refuses_an_empty_name(self):
+        blank = dict(id="sample-rule", stage=None, tone=None, status=None, at=None, next=None, next_date=None, next_title=None)
+        rule = self.body["regulations"][0]
+        self.edit.set_fields(self.body, self.args(**blank, name="표본 이행규정"))
+        self.assertEqual(rule["name"], "표본 이행규정")
+        self.assertTrue(rule["changedOn"])
+        with self.assertRaises(SystemExit):
+            self.edit.set_fields(self.body, self.args(**blank, name=" "))
+        self.assertEqual(rule["name"], "표본 이행규정")
+
     def test_drop_event_needs_exactly_one_match(self):
         with self.assertRaises(SystemExit):
             self.edit.drop_event(self.body, self.args(id="sample-rule", date="2025-12-17", starts="없는 글"))

@@ -44,7 +44,7 @@ const parts = split(items);
 const roles = [{ key: 'declarant', name: '신고인·수입자' }, { key: 'verifier', name: '검증기관' }, { key: 'uk', name: '영국 수입자' }];
 const duties = [{ id: 'one', roles: ['declarant'] }, { id: 'two', roles: ['declarant', 'verifier'] }, { id: 'three' }];
 
-const backRefs = { laws: { '32023R0956': { 'art-9': { items: [], duties: [], terms: [], more: 0, handbook: [{ href: '#handbook-carbon-price.deduction', title: '탄소가격 공제의 뜻', chapter: '제3국에서 낸 탄소가격' }] } } },
+const backRefs = { laws: { '32023R0956': { 'art-9': { items: [], duties: [], terms: [], more: 0, handbook: [{ href: '#handbook-carbon-price.deduction', title: '탄소가격 차감의 뜻', chapter: '제3국에서 낸 탄소가격' }] } } },
   read: { terms: { 'cbam declaration': { href: '#handbook-cycle.declaration', title: 'CBAM 신고서의 기한과 내용', chapter: '한 해의 일정' } },
     rules: { 'ir-carbon-price': [{ href: '#handbook-carbon-price.rules-to-come', title: '집행위원회가 정할 세부 규칙', chapter: '제3국에서 낸 탄소가격' }] } } };
 const linkedRefs = { laws: { '32023R0956': {
@@ -303,7 +303,7 @@ class SiteModulesTest(unittest.TestCase):
     def test_law_parts_terms_and_rules_lead_back_to_the_handbook(self):
         back = self.seen["refs"]["back"]
         # 해설서의 절만 이어진 조도 '이어진 내용'이 있는 조다
-        self.assertEqual(back["part"]["handbook"], [{"href": "#handbook-carbon-price.deduction", "title": "탄소가격 공제의 뜻", "chapter": "제3국에서 낸 탄소가격"}])
+        self.assertEqual(back["part"]["handbook"], [{"href": "#handbook-carbon-price.deduction", "title": "탄소가격 차감의 뜻", "chapter": "제3국에서 낸 탄소가격"}])
         self.assertEqual(back["tally"], "해설서 1곳")
         self.assertEqual(back["terms"], [{"href": "#handbook-cycle.declaration", "title": "CBAM 신고서의 기한과 내용", "chapter": "한 해의 일정"}, None, None, None])   # 영문 표기의 대소문자는 가리지 않는다
         self.assertEqual(back["rules"], [["#handbook-carbon-price.rules-to-come"], [], []])
