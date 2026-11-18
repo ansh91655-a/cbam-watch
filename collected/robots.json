@@ -97,7 +97,7 @@
   },
   "https://european-accreditation.org": {
    "status": 200,
-   "fetchedAt": "2026-11-17T06:11:04+09:00",
+   "fetchedAt": "2026-11-18T11:10:11+09:00",
    "text": "# START YOAST BLOCK\n# ---------------------------\nUser-agent: *\nDisallow:\n\nSitemap: https://european-accreditation.org/sitemap_index.xml\n# ---------------------------\n# END YOAST BLOCK"
   },
   "https://carbon-pulse.com": {

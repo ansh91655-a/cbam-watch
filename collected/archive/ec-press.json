@@ -1,11 +1,11 @@
 {
  "source": "ec-press",
- "fetchedAt": "2026-11-18T06:18:21+09:00",
+ "fetchedAt": "2026-11-18T11:11:14+09:00",
  "since": "2025-01-01",
  "report": {
   "pages": 8,
   "listed": 400,
-  "opened": 4,
+  "opened": 0,
   "kept": 0,
   "failures": [],
   "oldest": "2025-02-18",
