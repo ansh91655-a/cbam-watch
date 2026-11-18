@@ -51,7 +51,7 @@ from tools.publish import crossrefs
 
 SOURCE = "data/handbook.json"
 DRIFT = "근거 어긋남"
-VIEWS = ("home", "news", "rules", "price", "calc", "calendar", "sector", "cn", "laws", "law", "changes", "docs", "terms", "about", "handbook", "search")
+VIEWS = ("home", "news", "rules", "price", "calc", "calendar", "prepare", "sector", "cn", "laws", "law", "changes", "docs", "terms", "about", "handbook", "search")
 ID = re.compile(r"^[a-z][a-z0-9-]{1,39}$")
 WHOLE = "all"     # #handbook-all은 해설서 전체를 한 화면에 놓는 주소다(site/js/views/handbook.js). 장의 id로 쓰지 않는다
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -142,7 +142,7 @@ def _wording(where, text, limit, term_index, sentence):
 
 
 def _href_problem(href, known, places=None):
-    """사이트 안의 주소가 실제로 있는 곳인지. places: {"handbook": {장: {절}}, "rules": {규제 id}} 가운데 아는 것만 본다."""
+    """사이트 안의 주소가 실제로 있는 곳인지. places: {"handbook": {장: {절}}, "rules": {규제 id}, "prepare": {역할: {항목 id}}} 가운데 아는 것만 본다."""
     hit = re.match(r"^#([a-z]+)(?:-(.+))?$", str(href or ""))
     if not hit or hit.group(1) not in VIEWS:
         return f"사이트에 없는 주소: {href}"
@@ -158,6 +158,10 @@ def _href_problem(href, known, places=None):
             return f"해설서에 없는 곳: {href}"
     if view == "rules" and rest and places.get("rules") is not None and rest not in places["rules"]:
         return f"규제 화면에 없는 곳: {href}"
+    if view == "prepare" and rest and places.get("prepare") is not None:
+        role, _, item = rest.partition(".")
+        if role not in places["prepare"] or (item and item not in places["prepare"][role]):
+            return f"준비 목록에 없는 곳: {href}"
     return ""
 
 
@@ -249,9 +253,10 @@ def section_problems(where, section, term_index=None, known=None, laws_dir=None,
     return found
 
 
-def problems(body, term_index=None, laws_dir=None, kinds=("format", "evidence"), rules=None, texts=None):
+def problems(body, term_index=None, laws_dir=None, kinds=("format", "evidence"), rules=None, texts=None, prepared=None):
     """[(어디, 무엇)]. '근거 어긋남'으로 시작하는 것은 알리기만 하고, 나머지는 사이트 만들기를 멈춘다.
     rules: 규제 화면의 id 묶음(주면 #rules-<id> 링크가 실제로 있는 규제인지 본다).
+    prepared: 역할별 준비 목록의 {역할: {항목 id}}(주면 #prepare-<역할>[.<항목>] 링크가 실제로 있는 곳인지 본다. prepare.listed가 만든다).
     texts: 사이트의 규정 원문(laws_dir) 대신 근거를 대조할 글({ 문서: { 조각: 영문 } }. corpus_texts가 만든다)."""
     if not isinstance(body, dict) or not isinstance(body.get("chapters"), list) or not body["chapters"]:
         return [("해설서", "chapters가 없음")]
@@ -267,7 +272,8 @@ def problems(body, term_index=None, laws_dir=None, kinds=("format", "evidence"),
     sources = body.get("sources") if isinstance(body.get("sources"), dict) else {}
     places = {"handbook": {chapter.get("id"): {section.get("id") for section in chapter.get("sections") or [] if isinstance(section, dict)}
                            for chapter in body["chapters"] if isinstance(chapter, dict)},
-              "rules": set(rules) if rules is not None else None}
+              "rules": set(rules) if rules is not None else None,
+              "prepare": prepared if isinstance(prepared, dict) else None}
     if "format" in kinds:
         if not DATE.match(str(body.get("asOf", ""))):
             found.append(("기준일", "asOf가 날짜가 아님"))
@@ -360,7 +366,9 @@ def main(argv=None):
         return 1
     rules = read_json("data/regulations.json", None)
     rule_ids = {one.get("id") for one in (rules.get("regulations", []) if isinstance(rules, dict) else rules or [])} if rules else None
-    found = problems(body, term_check.load(), args.laws or None, rules=rule_ids)
+    from tools.publish import prepare   # 준비 목록은 해설서를 읽어 검사하므로, 여기서는 쓸 때 불러온다
+    plan = read_json(prepare.SOURCE, None)
+    found = problems(body, term_check.load(), args.laws or None, rules=rule_ids, prepared=prepare.listed(plan) if plan else None)
     for where, what in found:
         print(f"{where}: {what}")
     chapters = body.get("chapters", []) if isinstance(body, dict) else []

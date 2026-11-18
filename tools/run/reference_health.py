@@ -4,6 +4,7 @@
 - 해설서는 절마다 근거로 적은 영문 대목이 받아 둔 법령과 안내 문서의 글에 그대로 있는지 본다. 원문이 개정되어 대목이 사라지면 그 절을 다시 봐야 한다.
   절이 관련 화면으로 가리킨 규제의 단계나 연혁이 해설서를 맞춰 본 뒤에 달라진 것은 따로 알린다(handbook_rule_lines, tools.publish.handbook_rules).
   규제는 자주 움직이므로 문제로 세지 않고 '다시 볼 절'로 보고에 싣는다. 그 절을 다시 보고 기록을 고치면 사라진다.
+  절이 역할별 준비 목록의 역할이나 항목을 가리키면(#prepare-<역할>.<항목>) 그곳이 목록(data/prepare.json)에 있는지도 본다.
 - 의무 일정과 용어집의 근거에 적힌 조나 부속서가 사이트의 규정 원문에 없는 것도 알린다(tools.publish.crossrefs: 근거를 잘못 적었거나 받아 둔 글이 제대로 갈리지 않은 것).
 - 받아 둔 법령 글과 어긋난 것('근거 어긋남')을 알린다. 사이트는 앞의 값으로 계속 돌지만, 글이 바뀐 것인지 자료가 틀린 것인지 사람이 봐야 한다.
 - 꼴이 깨진 것도 알린다(이때는 사이트 만들기가 멈춘다).
@@ -12,7 +13,7 @@
 """
 from tools.check import term_check
 from tools.common.jsonio import read_json
-from tools.publish import calc, crossrefs, duties, factor, handbook, handbook_rules
+from tools.publish import calc, crossrefs, duties, factor, handbook, handbook_rules, prepare
 
 RELATED = "collected/archive/eur-lex-related.json"
 LIMIT = 4  # 한 자료에서 알리는 줄 수(같은 까닭의 줄이 길게 이어지지 않게)
@@ -31,7 +32,8 @@ def handbook_lines(body=None):
     if body is None:
         return [f"해설서: {handbook.SOURCE} 을 읽지 못함"]
     rules = {rule.get("id") for rule in (read_json("data/regulations.json", {}) or {}).get("regulations", [])}
-    return _lines("해설서", handbook.problems(body, term_check.load(), rules=rules, texts=handbook.corpus_texts()))
+    plan = read_json(prepare.SOURCE, None)
+    return _lines("해설서", handbook.problems(body, term_check.load(), rules=rules, texts=handbook.corpus_texts(), prepared=prepare.listed(plan) if plan else None))
 
 
 def handbook_rule_lines(body=None, rules=None):

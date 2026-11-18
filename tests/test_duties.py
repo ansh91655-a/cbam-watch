@@ -40,7 +40,10 @@ class DutiesTest(unittest.TestCase):
         self.assertEqual([where for where, _ in found], ["의무 uk-records"])
         self.assertIn("더한 근거(also)", found[0][1])
         duty["evidence"]["also"] = "글이 아님"
-        self.assertTrue(duties.problems(body, kinds=("evidence",)))
+        self.assertEqual([what for _, what in duties.problems(body, kinds=("evidence",))], ["근거 어긋남: 더한 근거(also)는 근거의 목록이어야 함"])
+        duty["evidence"]["also"] = []
+        duty["evidence"]["contains"] = duty["evidence"]["contains"][0]   # 글 하나를 목록 없이 적은 것(글자마다 찾으면 무엇이든 맞게 된다)
+        self.assertEqual([what for _, what in duties.problems(body, kinds=("evidence",))], ["근거 어긋남: 근거의 contains는 글의 목록이어야 함"])
         self.assertTrue(all("also" not in str(row) for row in duties.public(self.body)["duties"]))   # 근거 대목은 사이트에 싣지 않는다
 
     def test_shape_and_wording_are_checked(self):

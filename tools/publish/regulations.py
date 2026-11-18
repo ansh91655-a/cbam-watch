@@ -48,6 +48,13 @@ def evidence_problem(evidence, date):
             return "근거 파일이 모아 둔 자료가 아님"
         if not path.exists():
             return f"근거 파일이 없음: {path}"
+        # 찾을 글은 목록으로 적는다(글 하나를 그냥 적으면 글자 하나하나를 찾게 되어 무엇이든 맞는 것으로 나온다)
+        for key in ("contains", "lacks"):
+            if key in evidence and not (isinstance(evidence[key], list) and all(isinstance(phrase, str) and phrase for phrase in evidence[key])):
+                return f"근거의 {key}는 글의 목록이어야 함"
+        if "lines" in evidence and not (isinstance(evidence["lines"], list) and all(
+                isinstance(group, list) and group and all(isinstance(phrase, str) and phrase for phrase in group) for group in evidence["lines"])):
+            return "근거의 lines는 글 묶음의 목록이어야 함"
         text = path.read_text(encoding="utf-8")
         missing = [phrase for phrase in evidence.get("contains", []) if phrase not in text]
         present = [phrase for phrase in evidence.get("lacks", []) if phrase.lower() in text.lower()]  # '그런 조항이 없음'의 근거

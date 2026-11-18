@@ -32,6 +32,8 @@ export const cn = () => load("cn", { current: [], proposed: [], council: { added
 export const events = () => load("events", { events: [] }).then((body) => body.events || []);
 // 실무 달력: 법령에 날짜가 적힌 의무 일정
 export const duties = () => load("duties", { duties: [] }).then((body) => ({ duties: [], ...body }));
+// 역할별 준비 목록: 역할마다 챙길 일과, 항목마다 이어지는 해설서의 절·근거 조문·의무 일정(tools/publish/prepare.py)
+export const prepare = () => load("prepare", { roles: [] }).then((body) => ({ roles: [], ...body }));
 // CBAM 계수(무상할당을 줄여 가는 비율)의 현행 값과 개정안 값
 export const factor = () => load("factor", { paths: [] }).then((body) => ({ paths: [], ...body }));
 // 인증서 비용 추정의 자료(법령의 표에서 만든 품목별 CBAM 벤치마크와 기본값, 마크업 등). 품목이 많아 짧은 꼴로 실려 있다(js/calc/compute.js의 unpack이 편다).

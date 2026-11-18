@@ -15,8 +15,8 @@ const WIDE = "(min-width: 1001px)";
 const EDGE = 16;       // 목록과 화면 오른쪽 끝 사이에 남기는 거리
 
 // 메뉴마다의 목록: { 묶음의 이름(key): { cols, items: [{ href, name, icon, topic, about }] } }
-// 화면이 여럿인 묶음은 그 화면들이 목록이고, 화면이 하나인 묶음(소식, 일정)은 그 화면 안에서 고르는 것(주제, 해)이 목록이다.
-// 규제는 둘 다다: 규제 화면 안에서 고르는 것(규제 묶음, 최근 변화)을 먼저 싣고, 그 뒤에 함께 묶인 화면(입법 절차)을 싣는다.
+// 화면이 여럿인 묶음은 그 화면들이 목록이고, 화면이 하나인 묶음(소식)은 그 화면 안에서 고르는 것(주제)이 목록이다.
+// 규제와 일정은 둘 다다: 첫 화면 안에서 고르는 것(규제 묶음과 최근 변화, 일정이 있는 해)을 먼저 싣고, 그 뒤에 함께 묶인 화면(입법 절차, 준비 목록)을 싣는다.
 export function menuLists(site, topics) {
   const menu = (site && site.menu) || {};
   const live = Array.isArray(menu.topics) ? new Set(menu.topics) : null;  // 소식이 하나도 없는 주제는 싣지 않는다
@@ -32,7 +32,7 @@ export function menuLists(site, topics) {
   for (const group of GROUPS) {
     if (group.views.length < 2) continue;
     const screens = screensOf(group).map((one) => ({ href: one.href, name: one.name, icon: one.icon, about: one.about }));
-    // 화면 안에서 고르는 목록이 이미 있는 묶음(규제)은 첫 화면이 그 목록에 들어 있으므로 나머지 화면만 뒤에 붙인다
+    // 화면 안에서 고르는 목록이 이미 있는 묶음(규제, 일정)은 첫 화면이 그 목록에 들어 있으므로 나머지 화면만 뒤에 붙인다
     lists[group.key] = lists[group.key] ? { ...lists[group.key], items: [...lists[group.key].items, ...screens.slice(1).map(({ about, ...rest }) => rest)] } : { items: screens };
   }
   return lists;

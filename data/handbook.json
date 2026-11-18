@@ -576,6 +576,10 @@
       {
        "href": "#cn",
        "text": "품목 코드 조회"
+      },
+      {
+       "href": "#rules-cbam-downstream",
+       "text": "하류제품 확대 개정안의 진행 상황"
       }
      ]
     },
@@ -869,6 +873,10 @@
       {
        "href": "#handbook-penalties",
        "text": "위반과 제재"
+      },
+      {
+       "href": "#prepare",
+       "text": "신고인·수입자의 준비 목록"
       }
      ]
     },
@@ -877,7 +885,7 @@
      "title": "제3국의 사업자와 사업장 등록",
      "body": [
       "사업자(operator)는 제3국에서 사업장(installation)을 운영하거나 관리하는 사람입니다. 사업장을 관리하는 모회사도 포함됩니다. 사업자가 요청하면 집행위원회가 사업자와 사업장의 정보를 CBAM 등록부에 등록합니다. 등록은 통지일부터 5년간 유효합니다.",
-      "등록한 사업자에 대해 제10조(5)는 할 일을 정합니다. 부속서 IV의 방법으로 제품별 내재배출량을 정하고, 인정받은 검증기관의 검증을 받고, 검증보고서와 기록을 검증 후 4년간 보관하는 일입니다. 사업자는 검증된 정보를 신고인에게 알려 줄 수 있고, 신고인은 그것으로 검증 의무를 채울 수 있습니다.",
+      "등록한 사업자에 대해 제10조(5)는 할 일을 정합니다. 부속서 IV의 방법으로 제품별 내재배출량을 정하고, 인정받은 검증기관의 검증을 받고, 검증보고서와 기록을 검증 후 4년간 보관하는 일입니다. 해당하면 제3국에서 낸 탄소가격을 제9조에 따라 정해 서류와 증거를 올리고, 탄소가격이 실질적으로 지불되었음을 보여 주는 서류의 사본을 독립적인 사람이 인증한 해가 지난 뒤 네 번째 해가 끝날 때까지 보관합니다. 등록한 뒤에 등록 정보가 바뀌면 지체 없이 집행위원회에 알려야 합니다. 사업자는 검증된 정보를 신고인에게 알려 줄 수 있고, 신고인은 그것으로 검증 의무를 채울 수 있습니다.",
       "실제배출량으로 내재배출량을 산정하면 사업자는 사업자 배출량 보고서(operator's emissions report)를 작성합니다. 보고서는 영어로 냅니다. 등록한 사업자는 이를 CBAM 등록부로, 등록하지 않은 사업자는 다른 방법으로 검증기관에 보냅니다."
      ],
      "terms": [
@@ -910,7 +918,10 @@
         "The registration shall be valid for a period of five years",
         "ensure that the embedded emissions referred to in point (a) of this paragraph are verified",
         "for a period of four years after the verification has been performed",
-        "The authorised CBAM declarant shall be entitled to use that disclosed information in order to fulfil the obligation referred to in Article 8."
+        "The authorised CBAM declarant shall be entitled to use that disclosed information in order to fulfil the obligation referred to in Article 8.",
+        "The operator shall inform the Commission without delay of any changes in the information referred to in paragraph 2 arising after the registration",
+        "until the end of the fourth year after the year during which the independent person has certified the information contained in that documentation",
+        "determine, where applicable, the carbon price paid in a third country in accordance with Article 9, and upload accompanying documentation and evidence"
        ]
       },
       {
@@ -973,6 +984,10 @@
       {
        "href": "#handbook-verification",
        "text": "검증"
+      },
+      {
+       "href": "#prepare-verifier",
+       "text": "검증기관의 준비 목록"
       }
      ]
     },
@@ -1174,6 +1189,12 @@
        "contains": [
         "the operators shall prepare an emissions report"
        ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#prepare-operator",
+       "text": "제3국 사업자의 준비 목록"
       }
      ]
     }
@@ -1476,6 +1497,10 @@
       {
        "href": "#handbook-price",
        "text": "인증서 가격과 구매"
+      },
+      {
+       "href": "#rules-dr-sale-repurchase",
+       "text": "인증서 판매·환매 위임규정(안)의 진행 상황"
       }
      ]
     },
@@ -2038,6 +2063,10 @@
       {
        "href": "#law-32026R1740.annex-i-2",
        "text": "정정 규정이 바꾼 부속서 I"
+      },
+      {
+       "href": "#rules-ir-default-values",
+       "text": "기본값 이행규정의 진행 상황"
       }
      ]
     },
@@ -2152,6 +2181,10 @@
       {
        "href": "#handbook-cycle",
        "text": "한 해의 일정(분기말 인증서 보유의무)"
+      },
+      {
+       "href": "#rules-ir-default-values",
+       "text": "기본값 이행규정의 진행 상황"
       }
      ]
     },
@@ -3054,6 +3087,10 @@
       {
        "href": "#calc-72081000",
        "text": "이 품목으로 인증서 비용 추정해 보기"
+      },
+      {
+       "href": "#rules-ir-free-allocation",
+       "text": "무상할당 조정 이행규정의 진행 상황"
       }
      ]
     }
@@ -3327,7 +3364,7 @@
        "ko": "환급",
        "en": "rebate",
        "abbr": "",
-       "text": "낸 탄소가격의 일부를 돌려받는 것입니다. 받을 수 있는 환급이나 보상은 차감할 탄소가격에서 뺍니다."
+       "text": "탄소가격의 부담을 줄여 주는 것입니다. 이행규정은 감면 세율, 무상 배출권처럼 탄소가격이 매겨지지 않는 배출량, 돈으로 돌려받는 금액 등을 환급이나 그 밖의 형태의 보상으로 듭니다. 받을 수 있는 환급이나 보상은 차감할 탄소가격에 반영합니다."
       }
      ],
      "basis": [
@@ -3354,6 +3391,15 @@
        "part": "art-6",
        "contains": [
         "after the reduction that is due on the account of the carbon price paid in a third country in accordance with Article 9 and the adjustment necessary to reflect the extent to which EU ETS allowances are allocated free of charge"
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "art-9",
+       "contains": [
+        "a reduced rate under a carbon tax, levy or fee",
+        "emissions associated with free allowances received by the operator",
+        "a refund in monetary value that partially or totally compensates the carbon price paid"
        ]
       }
      ],
@@ -3586,7 +3632,8 @@
        "contains": [
         "that is binding in nature and imposes compliance obligations on all operators active in the relevant sectors covered by that mechanism",
         "should set the same pricing obligation on the emissions released for producing all goods of an installation, irrespective of the destination of the goods",
-        "a carbon price paid only on embedded emissions of exported goods would not be eligible for a reduction of the CBAM liability"
+        "a carbon price paid only on embedded emissions of exported goods would not be eligible for a reduction of the CBAM liability",
+        "The Commission should review and update where necessary the list of carbon price mechanisms on a yearly basis"
        ]
       }
      ],
@@ -3618,11 +3665,11 @@
         "text": "탄소가격제도마다 정합니다. 직접배출량과 간접배출량을 따로 봅니다"
        },
        {
-        "title": "CPM 배출량을 제품에 배분",
+        "title": "CPM 배출량을 제품에 귀속",
         "text": "그 제도에서 보고되고 확인된 배출량을 내재배출량과 같은 방식으로 제품에 나눕니다"
        },
        {
-        "title": "환급·보상을 제품에 배분",
+        "title": "환급·보상을 제품에 귀속",
         "text": "무상 배출권처럼 값을 치르지 않은 배출량을 제품에 나눕니다"
        },
        {
@@ -3636,10 +3683,10 @@
       ]
      },
      "formula": {
-      "text": "제품 1톤당 실질 지불 탄소가격 = (제품 1톤에 배분한 배출량 − 값을 치르지 않은 배출량) × 배출량 1톤당 실효 탄소가격",
+      "text": "제품 1톤당 실질 지불 탄소가격 = (제품 1톤에 귀속된 배출량 − 값을 치르지 않은 배출량) × 배출량 1톤당 실효 탄소가격",
       "parts": [
        [
-        "제품 1톤에 배분한 배출량",
+        "제품 1톤에 귀속된 배출량",
         "탄소가격제도에서 보고되고 확인된 배출량(CPM 배출량) 가운데 보고기간에 그 제품 1톤을 만드는 데 든 몫입니다. 내재배출량을 제품에 나누는 것과 같은 방식으로 나눕니다."
        ],
        [
@@ -3658,7 +3705,10 @@
       "탄소크레딧으로 의무를 이행한 몫에는 그 크레딧의 값을 쓰되, 그 제도의 다른 이행 방식에서 정한 탄소가격을 넘을 수 없습니다. 사업자가 사지 않은 크레딧은 시장가격의 증거가 없으면 0으로 봅니다.",
       "파리협정 제6조의 국제 탄소크레딧은 그 제도에서 보고되고 확인된 배출량의 10%까지만 탄소가격으로 인정합니다. 넘는 몫의 가격은 0으로 봅니다.",
       "탄소가격제도의 수입으로 주는 감축 보조금은 여섯 가지 요건을 모두 갖추면 환급이나 보상으로 보지 않습니다.",
-      "환급이나 보상을 받을 자격이 있는데 그 금액의 증거를 내지 못하면, 전문에 따르면 실질적으로 지불된 탄소가격을 확정할 수 없어 인증받지 못합니다."
+      "환급이나 보상을 받을 자격이 있는데 그 금액의 증거를 내지 못하면 사업자는 실질적으로 지불된 탄소가격에 따른 어떤 차감도 받을 자격이 없습니다. 전문은 이 경우 실질적으로 지불된 탄소가격을 확정할 수 없어 인증하지 않는 것이 바람직하다고 설명합니다.",
+      "다만 당국이 금액을 공식적으로 확정했거나 독립적인 사람이 최대 금액을 확인할 수 있는데 아직 받지 않은 환급이나 보상은, 그 확정된 금액이나 최대 금액을 반영해 탄소가격을 정합니다.",
+      "받을 자격이 있어도 요청하지 않았거나 요청이 거부되었음을 당국의 공식 서면 확인으로 증명하면, 그 환급이나 보상은 반영하지 않습니다.",
+      "탄소가격제도의 보고기간이 내재배출량의 보고기간과 다르면, 잇닿은 두 보고기간의 CPM 배출량 자료를 적어도 달마다의 모니터링에 근거해 내재배출량의 보고기간에 나누어 붙입니다. 환급이나 보상에 해당하는 배출량도 같은 비율로 나눕니다."
      ],
      "terms": [
       {
@@ -3723,7 +3773,10 @@
         "a price of zero shall be assigned to CPM emissions covered by those carbon credits unless the operator can provide evidence of their market price",
         "may only be claimed to a maximum of 10 % of the reported and confirmed CPM emissions covered by that specific third-country carbon price mechanism",
         "a price of zero shall be assigned to CPM emissions covered by international carbon credits in excess of this 10 % threshold",
-        "‘international carbon credit’ means a carbon credit related to a mitigation activity implemented in a country other than the country of production of a good"
+        "‘international carbon credit’ means a carbon credit related to a mitigation activity implemented in a country other than the country of production of a good",
+        "the operator shall use the relevant data on CPM emission from two consecutive CPM reporting periods and attribute these data to the reporting period that is used for reporting embedded emissions",
+        "based on at least monthly monitoring",
+        "The operator shall attribute emissions associated with rebates and other forms of compensation from two consecutive CPM reporting periods in the same proportions as emissions are attributed under section 4.1"
        ]
       },
       {
@@ -3731,7 +3784,11 @@
        "part": "art-9",
        "contains": [
         "the value of the subsidy shall not be taken into account as a rebate or other form of compensation to establish the carbon price effectively paid, provided that all of the following conditions are fulfilled",
-        "a refund in monetary value that partially or totally compensates the carbon price paid"
+        "a refund in monetary value that partially or totally compensates the carbon price paid",
+        "the operator shall not be entitled to any deduction from the carbon price effectively paid",
+        "the officially established amount or the maximum amount of the rebate or other form of compensation that is due shall be taken into account in order to establish the carbon price effectively paid",
+        "can prove, based on formal written confirmation from the relevant authorities, that it has not requested it, or the request has been rejected",
+        "(f) the subsidy granted to the installation has led to a reduction of the emissions of the beneficiary installation"
        ]
       },
       {
@@ -3752,7 +3809,7 @@
        "text": "인증서 비용 추정"
       }
      ],
-     "caveat": "부속서 I의 식은 관보의 원문에 그림으로 실려 있습니다. 위의 식은 관보의 PDF에서 확인한 식 12a를 풀어 쓴 것이고, 간접배출량에는 같은 꼴의 식 12b를 씁니다. 연료 기반 탄소세의 배출량과 보고기간이 서로 다를 때의 배분은 부속서 I을 봐 주세요."
+     "caveat": "부속서 I의 식은 관보의 원문에 그림으로 실려 있습니다. 위의 식은 관보의 PDF에서 확인한 식 12a를 풀어 쓴 것이고, 간접배출량에는 같은 꼴의 식 12b를 씁니다. 연료 기반 탄소세의 탄소가격과 CPM 배출량을 구하는 식은 부속서 I을 봐 주세요."
     },
     {
      "id": "default-carbon-price",
@@ -3837,10 +3894,10 @@
      "id": "evidence",
      "title": "증빙과 기록",
      "body": [
-      "신고인은 신고한 내재배출량에 제3국의 탄소가격이 매겨졌고 실제로 지불되었음을 보여 주는 서류를 기록으로 보관해야 합니다. 특히 환급이나 보상에 관한 증거와 그 나라의 관련 법령에 대한 참조를 보관해야 합니다. 탄소가격을 실제로 냈다는 증거도 보관해야 합니다.",
+      "신고인은 신고한 내재배출량에 제3국의 탄소가격이 매겨졌고 실질적으로 지불되었음을 보여 주는 서류를 기록으로 보관해야 합니다. 특히 환급이나 보상에 관한 증거와 그 나라의 관련 법령에 대한 참조를 보관해야 합니다. 탄소가격을 실제로 지불했다는 증거도 보관해야 합니다.",
       "서류의 정보는 신고인과도, 제3국 당국과도 독립적인 사람(independent person)이 인증해야 합니다. 그 사람의 이름과 연락처가 서류에 나타나야 합니다. 신고인은 이 기록을 CBAM 신고서를 냈거나 냈어야 할 해가 지난 뒤 네 번째 해가 끝날 때까지 보관합니다.",
-      "CBAM 등록부에 등록한 제3국의 사업자는 해당하는 경우 제9조에 따라 탄소가격을 정하고 서류와 증거를 올립니다. 사업자는 그 정보를 승인된 CBAM 신고인에게 공개할 수 있습니다.",
-      "이행규정 (EU) 2026/2498은 이 증빙의 꼴을 정했습니다. 사업자가 탄소가격 보고서를 작성하고, 독립적인 사람이 그 보고서를 인증해 인증보고서를 냅니다. 신고인이 보관하는 것은 독립적인 사람이 인증한 탄소가격 보고서입니다."
+      "CBAM 등록부에 등록한 제3국의 사업자는 해당하는 경우 제9조에 따라 탄소가격을 정하고 서류와 증거를 올립니다. 탄소가격이 실질적으로 지불되었음을 보여 주는 서류의 사본은 독립적인 사람이 그 정보를 인증한 해가 지난 뒤 네 번째 해가 끝날 때까지 보관합니다. 사업자는 그 정보를 승인된 CBAM 신고인에게 공개할 수 있습니다.",
+      "이행규정 (EU) 2026/2498은 이 증빙의 꼴을 정했습니다. 사업자가 탄소가격 보고서를 작성하고, 독립적인 사람이 그 보고서를 인증해 인증보고서를 냅니다. 전문은 신고인이 실제 지불의 증거를, 사업자가 작성하고 독립적인 사람이 인증한 탄소가격 보고서의 꼴로 보관하는 것이 바람직하다고 설명합니다."
      ],
      "terms": [
       {
@@ -3860,7 +3917,8 @@
         "shall be certified by a person that is independent from the authorised CBAM declarant and from the authorities of the third country",
         "The name and contact information of that independent person shall appear on the documentation.",
         "The authorised CBAM declarant shall also keep evidence of the actual payment of the carbon price.",
-        "until the end of the fourth year after the year during which the CBAM declaration has been or should have been submitted"
+        "until the end of the fourth year after the year during which the CBAM declaration has been or should have been submitted",
+        "that has been effectively paid as referred to in paragraph 1"
        ]
       },
       {
@@ -3868,7 +3926,9 @@
        "part": "art-10",
        "contains": [
         "determine, where applicable, the carbon price paid in a third country in accordance with Article 9, and upload accompanying documentation and evidence",
-        "An operator may disclose the information on the verification of embedded emissions and the carbon price paid in a third country"
+        "An operator may disclose the information on the verification of embedded emissions and the carbon price paid in a third country",
+        "a copy of the documentation required to demonstrate that the declared embedded emissions were subject to a carbon price in a third country that has been effectively paid",
+        "until the end of the fourth year after the year during which the independent person has certified the information contained in that documentation"
        ]
       },
       {
@@ -3903,9 +3963,9 @@
      "body": [
       "사업자는 부속서 I의 방법으로 계산한 내용을 탄소가격 보고서(operator's carbon price report)에 적습니다. 집행위원회가 CBAM 등록부로 제공하는 전자 양식을 쓰고 영어로 작성합니다. CBAM 등록부에 등록한 사업자는 등록부로, 등록하지 않은 사업자는 다른 적절한 방법으로 독립적인 사람에게 보냅니다.",
       "독립적인 사람은 보고서가 빠짐없이 작성되었는지, 검증받은 사업자 배출량 보고서의 고유 내재배출량에 탄소가격이 실질적으로 지불되었는지, 환급이나 보상을 받았는지, 보고서에 중요한 오류가 없는지를 합리적 보증의 수준으로 평가합니다. 자료를 원자료까지 거슬러 올라가 대조하고 다시 계산해 봅니다.",
-      "탄소가격을 제품에 나눈 것이 맞는지는 내재배출량의 검증보고서에 기대어 확인합니다. 그 검증보고서는 유효한 인정을 받은 검증기관이 낸 것이어야 하고, 사업자 배출량 보고서가 만족스러운 것으로 검증되었어야 하며, 같은 보고기간을 다루어야 합니다. 이를 확인할 수 없으면 탄소가격 보고서를 인증하지 않습니다.",
-      "중요성 기준은 CN 코드로 가린 제품마다, 그 제품에 귀속된 실질 지불 탄소가격 합계의 5%입니다. 독립적인 사람은 분석 결과 필요하면 탄소가격을 제품에 배분하는 곳과 증거를 보관하는 곳을 직접 찾아가 볼 수 있습니다.",
-      "결과는 인증보고서(certification report)로 냅니다. 의견은 만족스러운 것으로 인증됨, 또는 만족스럽지 않은 것으로 인증됨입니다. 중요한 오류가 없고 검증된 내재배출량에 탄소가격이 실질적으로 지불되었을 때만 만족스러운 것으로 인증됩니다. 인증보고서는 영어로 작성하고, 2027년 2월 1일부터 CBAM 등록부에서 발행합니다. 같은 사업장의 같은 보고기간에 인증보고서가 이미 있으면 새로 내지 않습니다."
+      "탄소가격을 제품에 나눈 것이 맞는지는 내재배출량의 검증보고서에 기대어 확인합니다. 그 검증보고서는 유효한 인정을 받은 검증기관이 낸 것이어야 하고, 사업자 배출량 보고서가 만족스러운 것으로 검증되었어야 하며, 같은 보고기간을 다루어야 합니다. 이를 확인할 수 없으면 탄소가격 보고서를 인증하지 않습니다. 탄소가격제도에서 보고되고 확인된 배출량 자료와 탄소가격 자료에는 조건이 맞을 때 기댑니다. 그 제도가 제3자의 평가를 요구하면 승인이나 인정이 유효한 독립 기관이 배출량 자료를 만족스러운 것으로 평가했어야 하고, 당국의 확인을 요구하면 당국의 공식 수락 통지가 있어야 합니다. 배출량 자료에 기댈 수 없으면 탄소가격 보고서를 만족스럽지 않은 것으로 인증합니다.",
+      "중요성 기준은 CN 코드로 가린 제품 1톤(수입 전력은 MWh)마다 적용하며, 그 제품에 귀속된 실질 지불 탄소가격 합계의 5%입니다. 독립적인 사람은 분석 결과 필요하면 탄소가격을 제품에 귀속하는 곳과 증거를 보관하는 곳을 직접 찾아가 볼 수 있습니다.",
+      "결과는 인증보고서(certification report)로 냅니다. 의견은 만족스러운 것으로 인증됨, 또는 만족스럽지 않은 것으로 인증됨입니다. 중요한 오류가 없고 검증된 내재배출량에 탄소가격이 실질적으로 지불되었을 때만 만족스러운 것으로 인증됩니다. 인증보고서는 영어로 작성하고, 2027년 2월 1일부터 CBAM 등록부에서 발행합니다. 같은 사업장의 같은 보고기간에 인증보고서가 이미 있으면 새로 내지 않습니다. 사업자가 요청하면 독립적인 사람은 오류를 바로잡거나 발행한 뒤에 알게 된 새 증거나 정보를 반영해, 앞의 것을 대신하는 고친 인증보고서를 낼 수 있습니다."
      ],
      "figure": {
       "kind": "lanes",
@@ -3924,7 +3984,7 @@
         "title": "독립적인 사람",
         "items": [
          "자료를 원자료와 대조하고 다시 계산",
-         "제품마다 5%의 중요성 기준을 적용",
+         "제품 1톤마다 5%의 중요성 기준을 적용",
          "인증보고서를 CBAM 등록부에서 발행"
         ]
        }
@@ -3980,7 +4040,13 @@
         "the entity carrying out the verification activities was a verifier with a valid accreditation certificate",
         "the opinion statement contained in the verification report indicates that the operator’s emissions report is verified as satisfactory",
         "the verification report covers the reporting period during which the goods subject to the certification of the carbon price were produced",
-        "the independent person shall not certify the operator’s carbon price report"
+        "the independent person shall not certify the operator’s carbon price report",
+        "the independent person shall rely on the emissions data and carbon price data as reported and confirmed under the relevant carbon price mechanism",
+        "the reported emissions data are verified by an independent entity authorised by the regulator or accredited by a third-country accreditation body",
+        "the operator provides a formal acceptance communication from the competent authority confirming that such a check was carried out and the emissions report was accepted",
+        "the independent person shall certify the operator’s carbon price report as unsatisfactory in accordance with Article 19, paragraph 1, point (b)",
+        "the person or entity that has independently evaluated the reported emissions data has a valid authorisation or accreditation certificate",
+        "the reported emissions data are evaluated as satisfactory and the corresponding evaluation confirms that the scope of the evaluation covers all relevant data streams"
        ]
       },
       {
@@ -4005,7 +4071,8 @@
         "the operator’s carbon price report is certified as unsatisfactory where at least one of the following applies",
         "From 1 February 2027, the independent person shall issue the certification report in the CBAM registry.",
         "The independent person shall not issue the certification report where there is already a certification report covering the same reporting period for the same installation.",
-        "The independent person shall draw up the certification report in English."
+        "The independent person shall draw up the certification report in English.",
+        "the independent person may issue a revised version of a certification report, superseding the previous version, to correct an error or to account for new evidence or information discovered after its issuance"
        ]
       }
      ],
@@ -4027,7 +4094,7 @@
      "body": [
       "탄소가격 보고서를 인증하는 독립적인 사람은 법인입니다. 이행규정 부속서 IV가 정한 범위(실질적으로 지불된 탄소가격의 인증)로 인정을 받아야 하고, 이 이행규정과 조화 표준 EN ISO/IEC 17029:2019의 요건을 지켜야 합니다.",
       "독립적인 사람은 넷으로부터 독립되어 있어야 합니다. 인증을 받는 사업자, 회원국의 관할당국, 집행위원회, 그리고 그 탄소가격제도를 규제하거나 감독하는 제3국의 당국입니다.",
-      "2026년과 2027년의 보고기간에는 예외가 있습니다. 내재배출량의 검증기관으로 인정받은 검증기관은 CBAM 등록부로 관할당국에 신청해 독립적인 사람의 역할을 맡을 수 있습니다. 이 역할은 부속서 IV의 범위로 인정을 받지 않으면 2028년 9월 30일까지 끝나고 등록부에서 자동으로 지워집니다.",
+      "2026년과 2027년의 보고기간에는 예외가 있습니다. 내재배출량의 검증기관으로 인정받은 검증기관이 부속서 IV의 범위로 인정을 받지 않고도 독립적인 사람의 역할을 임시로 맡을 수 있습니다. 이 역할은 부속서 IV의 범위로 인정을 받지 않으면 2028년 9월 30일까지 끝납니다. 조건과 취소는 다음 절에 적었습니다.",
       "인정은 회원국의 국가인정기구가 합니다. 회원국의 법에 따라 설립되지 않은 신청인은 이 범위의 인정을 하는 어느 회원국의 국가인정기구에든 신청할 수 있습니다. CBAM이나 EU 배출권거래제의 검증기관으로 인정받은 곳은 인정 범위의 확대를 신청할 수 있습니다. 인정서의 유효기간은 발급일부터 5년을 넘지 않습니다.",
       "인정받은 독립적인 사람은 인정받은 날부터 두 달 안에 CBAM 등록부 등록을 신청하며, 신청은 2026년 12월 1일부터 할 수 있습니다. 인증보고서는 2027년 2월 1일부터 CBAM 등록부에서 발행합니다. 해마다 11월 15일까지는 다음 해에 할 인증의 때와 곳, 대상 사업자와 사업장, 인증팀을 자신을 인정한 국가인정기구에 알립니다."
      ],
@@ -4082,7 +4149,6 @@
        "part": "art-11",
        "contains": [
         "for the purpose of carrying out the certification of the carbon price reports for the reporting periods 2026 and 2027, a verifier accredited pursuant to Delegated Regulation (EU) 2025/2551 for the relevant group of activities listed in Annex I to that Regulation may also opt to become an independent person",
-        "the verifier shall submit a request to the competent authority via the CBAM registry to be assigned the requested role of independent person",
         "shall cease to be an independent person by 30 September 2028, and its role shall be automatically removed in the CBAM Registry, unless it has been granted accreditation for the activity group set out in Annex IV to this Regulation"
        ]
       },
@@ -4140,12 +4206,78 @@
      ],
      "see": [
       {
+       "href": "#handbook-carbon-price.temporary-role",
+       "text": "검증기관이 맡는 임시 역할"
+      },
+      {
        "href": "#handbook-verification.accreditation",
        "text": "검증기관의 인정"
       },
       {
        "href": "#calendar",
        "text": "일정"
+      }
+     ]
+    },
+    {
+     "id": "temporary-role",
+     "title": "검증기관이 맡는 독립적인 사람의 임시 역할",
+     "body": [
+      "2026년과 2027년의 보고기간에 대한 탄소가격 보고서의 인증에는 예외가 있습니다. 위임규정 (EU) 2025/2551에 따라 해당 활동군의 검증기관으로 인정받은 검증기관은 부속서 IV의 범위로 인정을 받지 않고도 독립적인 사람의 역할을 맡을 수 있습니다. 전문은 첫 두 해에 독립적인 사람을 확보하고 국가인정기구가 기술적 인정 요건을 평가해 인정을 내줄 시간을 충분히 두려는 임시 조치라고 설명합니다.",
+      "역할을 맡으려는 검증기관은 CBAM 등록부로 관할당국에 신청합니다. 신청할 때 이 이행규정의 요건을 지킨다는 것을 확인해야 하고, 신청이 받아들여지면 위임규정 (EU) 2025/2551에 따라 자신을 인정한 국가인정기구에 알려야 합니다. 역할을 맡은 뒤에도 독립성과 지속적인 적격성의 요건을 포함해 이 이행규정과 조화 표준 EN ISO/IEC 17029:2019의 요건을 지켜야 합니다.",
+      "전문에 따르면 검증기관이 이 역할로 한 인증은 집행위원회와 관할당국이 CBAM 신고서를 검토하면서 함께 살펴보는 것이 바람직합니다.",
+      "이 역할은 부속서 IV의 범위로 인정을 받지 않으면 2028년 9월 30일까지 끝나고 CBAM 등록부에서 자동으로 지워집니다. 관할당국은 아래의 경우에 이 역할을 취소합니다."
+     ],
+     "list": [
+      "독립적인 사람이 2028년 9월 30일 전에 CBAM 등록부로 관할당국에 역할의 취소를 요청한 경우. 이 취소는 위임규정 (EU) 2025/2551이나 이 이행규정에 따른 인정에 영향을 주지 않습니다.",
+      "국가인정기구가 위임규정 (EU) 2025/2551에 따른 인정을 정지하거나 철회한 경우.",
+      "CBAM 신고서와 독립적인 사람의 업무를 검토한 관할당국이나 집행위원회가 인증보고서의 정확성에 정당한 의심이 있다고 통지한 경우. 전문은 이때에도 검증기관이 국가인정기구에 인정을 신청할 수 있다고 적고 있습니다."
+     ],
+     "basis": [
+      {
+       "act": "32026R2498",
+       "part": "art-11",
+       "contains": [
+        "for the purpose of carrying out the certification of the carbon price reports for the reporting periods 2026 and 2027, a verifier accredited pursuant to Delegated Regulation (EU) 2025/2551 for the relevant group of activities listed in Annex I to that Regulation may also opt to become an independent person",
+        "the verifier shall submit a request to the competent authority via the CBAM registry to be assigned the requested role of independent person",
+        "As part of their request, the verifier shall confirm that they comply with the requirements laid down in this Regulation.",
+        "Upon validation of its request, the verifier shall notify the national accreditation body which granted the accreditation pursuant to Delegated Regulation (EU) 2025/2551.",
+        "shall comply with the requirements laid down in this Regulation and with the harmonised standard referred to in Article 10, paragraph 1, including the requirements of independence and of continued competence",
+        "shall cease to be an independent person by 30 September 2028, and its role shall be automatically removed in the CBAM Registry, unless it has been granted accreditation for the activity group set out in Annex IV to this Regulation",
+        "Before 30 September 2028, the independent person that was assigned this role pursuant to paragraph 1 may submit a request to the competent authority, via the CBAM registry, to revoke the role granted under the first paragraph.",
+        "The competent authority shall revoke the role granted under the first paragraph in the following cases",
+        "the national accreditation body suspended or withdrew the accreditation pursuant to Delegated Regulation (EU) 2025/2551",
+        "there are legitimate doubts in the correctness of the certification report issued by the independent person",
+        "shall be without prejudice to the accreditation pursuant to Delegated Regulation (EU) 2025/2551 or to this Regulation"
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "art-10",
+       "contains": [
+        "in the harmonised standard EN ISO/IEC 17029:2019"
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "recitals",
+       "contains": [
+        "to ensure the availability of independent persons during the first two years subject to the certification of the carbon price effectively paid, and that national accreditation bodies have sufficient time to assess the technical accreditation requirements and to grant accreditation",
+        "CBAM verifiers should be granted on a temporary basis the possibility to carry out the certification without being required to obtain accreditation",
+        "should be scrutinised by the Commission and competent authorities as part of the review of CBAM declarations referred to in Article 19 of Regulation (EU) 2023/956",
+        "without prejudice to the possibility for the CBAM verifier to apply for accreditation with a national accreditation body",
+        "The Commission should take stock, at the end of the year 2027, of the accreditation process of independent persons and of the availability of independent persons to match the demand for certification."
+       ]
+      }
+     ],
+     "see": [
+      {
+       "href": "#handbook-carbon-price.independent-person",
+       "text": "독립적인 사람의 자격과 인정"
+      },
+      {
+       "href": "#prepare-verifier.v-ip-role",
+       "text": "검증기관의 준비 목록"
       }
      ],
      "caveat": "전문은 집행위원회가 2027년 말에 독립적인 사람의 인정이 어디까지 왔는지, 인증의 수요를 채울 만큼 있는지를 살피는 것이 바람직하다고 적고 있습니다."
@@ -4155,13 +4287,13 @@
      "title": "한국 배출권거래제에서 낸 탄소가격",
      "body": [
       "대한민국의 배출권거래제(K-ETS)는 이행규정 부속서 II에 배출권거래제로 올라 있습니다. 부속서 II에 실린 제도는 차감에 쓸 수 있는 탄소가격제도의 요건을 갖춘 것으로 봅니다.",
-      "계산은 배출권거래제의 규칙을 따릅니다. 탄소가격은 보고기간의 가중평균 경매가격입니다. 부속서 II가 K-ETS의 주된 환급·보상으로 적은 무상 배출권에 해당하는 배출량은 값을 치르지 않은 몫으로 뺍니다. 원화로 구한 값은 집행위원회가 공개하는 연평균 환율로 유로로 바꿉니다.",
-      "증거로는 당국이 공개한 가중평균 경매가격, 그 제도에서 보고되고 확인된 배출량, 그 배출량에 대해 제출한 이행 단위의 공식 기록이 필요합니다. 무상 배출권에 대해서는 신청서와 당국의 결정, 받은 양과 발행일을 보여 주는 문서를 독립적인 사람에게 냅니다.",
-      "실질적으로 지불된 탄소가격으로 차감을 청구하려면 내재배출량도 실제배출량으로 신고해 검증을 받아야 합니다. 내재배출량을 기본값으로 신고하면 집행위원회가 정해 올린 기본 탄소가격으로만 청구할 수 있습니다.",
+      "계산은 배출권거래제의 규칙을 따릅니다. 탄소가격은 당국이 공개한 보고기간의 가중평균 경매가격이고, 그 값이 없으면 공인된 유통시장의 평균 거래가격을 씁니다. 사업자가 이행 단위를 산 값의 평균으로 정할 수도 있습니다. 부속서 II가 K-ETS의 주된 환급·보상으로 적은 무상 배출권에 해당하는 배출량은 값을 치르지 않은 몫으로 뺍니다. 원화로 구한 값은 집행위원회가 공개하는 연평균 환율로 유로로 바꿉니다.",
+      "가중평균 경매가격을 쓸 때의 증거로는 당국이 공개한 그 가격, 그 제도에서 보고되고 확인된 배출량, 그 배출량에 대해 제출한 이행 단위의 공식 기록이 필요합니다. 무상 배출권에 대해서는 신청서와 당국의 결정, 받은 양과 발행일을 보여 주는 문서를 독립적인 사람에게 냅니다.",
+      "차감은 승인된 CBAM 신고인이 청구합니다. 실질적으로 지불된 탄소가격으로 청구하려면 내재배출량도 실제배출량으로 신고해 검증을 받아야 합니다. 내재배출량을 기본값으로 신고하면 기본 탄소가격을 참조하는 방법으로만 청구할 수 있습니다. 이행규정의 식은 집행위원회가 CBAM 등록부에 올린 기본 탄소가격을 씁니다.",
       "아래는 계산의 차례를 보이려고 값을 가정한 예입니다. 경매가격, 환율, 무상 배출권의 비율, 기준가격은 실제 값이 아닙니다."
      ],
      "list": [
-      "가정: 제품 1톤에 배분한 직접배출량 2.0 tCO2e, 그 가운데 무상 배출권에 해당하는 몫 90%, 가중평균 경매가격 10,000원, 연평균 환율 1유로에 1,500원, 기준가격 80유로",
+      "가정: 제품 1톤에 귀속된 직접배출량 2.0 tCO2e, 그 가운데 무상 배출권에 해당하는 몫 90%, 가중평균 경매가격 tCO2e당 10,000원, 연평균 환율 1유로에 1,500원, 기준가격 tCO2e당 80유로",
       "값을 치른 배출량: 2.0 × (100% − 90%) = 0.2 tCO2e",
       "제품 1톤당 실질 지불 탄소가격: 0.2 × 10,000원 ÷ 1,500 = 약 1.33유로",
       "줄어드는 인증서 수: 1.33 ÷ 80 = 제품 1톤당 약 0.017개. 100톤을 수입하면 약 1.7개"
@@ -4193,7 +4325,10 @@
         "official records of compliance units surrendered in the registry or other relevant records from authorities responsible for managing the emissions trading system showing the number of compliance units surrendered to cover the reported and confirmed CPM emissions",
         "the applications for free allowances submitted by the operator to the authority responsible for issuing allowances and official decisions of those authorities approving the issuance of free allowances to the operator",
         "documents showing the amount of free allowances granted by the regulator to the installation within a given period",
-        "evidence of the date of issuance of free allowances"
+        "evidence of the date of issuance of free allowances",
+        "the average exchange price of the compliance unit on the recognised secondary market as published by the public authority responsible for the management of the secondary market shall be applied",
+        "may be established based on the average of the cost price of the operator’s compliance units at the time of purchase",
+        "Where the weighted average auctioning price of the allowance is used to determine the total carbon price paid by the operator in an emissions trading system"
        ]
       },
       {
@@ -4209,6 +4344,21 @@
        "contains": [
         "Where the embedded emissions are determined on the basis of actual emissions, an authorised CBAM declarant may claim in the CBAM declaration a reduction in the number of CBAM certificates to be surrendered",
         "Where the embedded emissions are determined on the basis of default values, a reduction may be claimed only by a reference to yearly default carbon prices."
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "art-7",
+       "contains": [
+        "€DCP means the applicable default carbon price made available by the Commission pursuant to Article 9(5) of Regulation (EU) 2023/956"
+       ]
+      },
+      {
+       "act": "32026R2498",
+       "part": "recitals",
+       "contains": [
+        "the Commission should publish guidance before the end of the year 2026",
+        "to indicate on a country-by-country basis the documentary evidence that could be considered to meet the evidence requirements set in this Regulation"
        ]
       }
      ],
@@ -5140,6 +5290,10 @@
       {
        "href": "#calendar",
        "text": "CBAM 일정"
+      },
+      {
+       "href": "#prepare-uk",
+       "text": "영국 수입자의 준비 목록"
       }
      ]
     },
@@ -5239,7 +5393,7 @@
       "CBAM을 낼 사람은 수입자(importer)입니다. 세관 절차의 신고를 받아들일 때나 그 절차의 요건을 어긴 때에 수입관세의 납세의무가 생기는 경우에는 그 신고를 한 사람이 수입자이고, 다른 사람을 대신해 신고했으면 그 다른 사람이 수입자입니다. 그 밖의 경우에는 자신을 위해 제품이 수입되는 사람이 수입자입니다.",
       "사업 과정에서 수입한 CBAM 대상 품목의 가액이 문턱에 이르면 영국 국세청에 등록해야 합니다. 매월 1일에 직전 12개월의 수입 가액 합계가 5만 파운드 이상이거나, 앞으로 30일 안에 5만 파운드 이상을 수입할 것으로 예상되면 등록 의무가 생깁니다. 가액은 행정 규정 제3조에 따라 관세 목적의 가액을 정하는 규칙으로 정하고, 원산지가 영국인 제품과 재수입 물품 등은 셈에서 뺍니다.",
       "등록 의무가 처음 생긴 날부터 30일 안에 등록해야 합니다. 2027년에 등록 의무가 생긴 사람은 경과 규정에 따라 2028년 1월 31일까지 등록하면 됩니다. 영국 국세청의 안내에 따르면 등록은 2028년 1월 1일에 열립니다. 기한까지 등록하지 않으면 국세청 공무원이 직권으로 등록할 수 있습니다. 등록 의무가 생겼으나 스스로 등록하지도 않았고 직권으로 등록되지도 않은 사람은 등록 대상자(registrable person)로서 등록자와 같이 신고와 납부의 의무를 집니다.",
-      "등록한 정보가 바뀌었거나 틀린 것을 알게 되면 30일 안에 국세청에 알려야 합니다. 여러 사람이 사업 활동을 인위적으로 나누었고, 그 활동을 모두 합치면 한 사람이 등록해야 하는 사업이 된다고 판단하면, 국세청 공무원은 그들을 하나의 납세자로 보는 지시를 할 수 있습니다. 지시에 이름이 오른 사람은 연대하여 세금을 낼 책임을 집니다. 등록 의무가 없는 등록자가 등록 취소를 요청했거나 지난 12개월 동안 등록 의무가 없었으면 국세청 공무원은 그 등록을 취소해야 합니다. 내지 않은 세액이나 내지 않은 신고서가 남아 있으면 취소하지 않기로 할 수 있습니다.",
+      "등록한 정보가 바뀌었거나 틀린 것을 알게 되면 30일 안에 국세청에 알려야 합니다. 여러 사람이 사업 활동을 인위적으로 나누었고, 그 활동을 모두 합치면 한 사람이 등록해야 하는 사업이 된다고 판단하면, 국세청 공무원은 그들을 하나의 납세자로 보는 지시를 할 수 있습니다. 지시에 이름이 오른 사람은 연대하여 세금을 낼 책임을 집니다. 등록 의무가 없는 등록자가 등록 취소를 요청했거나 지난 12개월 동안 등록 의무가 없었으면, 또는 등록한 날에도 그 뒤에도 등록 의무가 없었으면 국세청 공무원은 그 등록을 취소해야 합니다. 내지 않은 세액이나 내지 않은 신고서가 남아 있거나 앞으로 12개월 안에 등록 의무가 생길 것으로 보면 취소하지 않기로 할 수 있습니다.",
       "등록할 때에는 아래와 같은 정보를 냅니다."
      ],
      "list": [
@@ -5353,7 +5507,10 @@
         "the person has requested that they be deregistered",
         "the person has not been required to be registered at any time in the period of 12 months ending with the day on which the officer of Revenue and Customs deregisters the person",
         "An officer of Revenue and Customs may decide not to deregister a person if",
-        "there are one or more outstanding returns under Part 3 of this Schedule due from the person"
+        "there are one or more outstanding returns under Part 3 of this Schedule due from the person",
+        "the person was not required to be registered on the day on which they registered and has not been required to be registered since",
+        "there are outstanding amounts of CBAM, or amounts recoverable on the basis that they are amounts of CBAM, due from the person",
+        "the officer considers that the person will be required to be registered before the end of the period of 12 months beginning with the day on which the person would otherwise be deregistered"
        ]
       }
      ],

@@ -8,6 +8,7 @@ import { band } from "../ui/band.js";
 import { fill, h } from "../ui/dom.js";
 import { koreanDate, today } from "../ui/format.js";
 import { eventId, monthGrid } from "../ui/monthgrid.js";
+import { groupTabs } from "../ui/tabs.js";
 import { yearLine } from "../ui/yearline.js";
 import { dutyList } from "./calendar/duties.js";
 
@@ -40,7 +41,7 @@ export async function render(main, arg) {
   const nextYear = next ? Number(String(next.date).slice(0, 4)) : null;
 
   fill(main,
-    band("일정", "출처에 날짜가 적혀 있는 일정만 싣습니다. 언론 보도로만 알려진 날짜에는 '보도 기준'이라고 적었습니다. 날짜는 바뀔 수 있으니 원문에서 다시 확인하세요."),
+    band("일정", "출처에 날짜가 적혀 있는 일정만 싣습니다. 언론 보도로만 알려진 날짜에는 '보도 기준'이라고 적었습니다. 날짜는 바뀔 수 있으니 원문에서 다시 확인하세요.", groupTabs("calendar")),
     h("div", { class: "year-nav" }, [
       h("h2", { class: "year", text: `${year}년` }),
       h("nav", { class: "chips", "aria-label": "연도" }, years.map((value) => h("a", { class: "chip", href: `#calendar-${value}`, "aria-current": value === year ? "true" : null, text: `${value}년` }))),

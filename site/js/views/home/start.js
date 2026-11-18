@@ -8,7 +8,7 @@ const WAYS = [
   { href: "#handbook", icon: "guide", title: "CBAM이 무엇인지", text: "제도가 돌아가는 차례를 해설서로 익힙니다." },
   { href: "#cn", icon: "search", title: "내 품목이 대상인지", text: "CN 코드로 대상 여부와 근거를 확인합니다." },
   { href: "#calc", icon: "emissions", title: "인증서가 얼마나 드는지", text: "품목과 물량으로 인증서 수와 비용을 어림합니다." },
-  { href: "#calendar", icon: "calendar", title: "언제까지 무엇을 하는지", text: "신고 기한과 의무 일정을 달력으로 봅니다." },
+  { href: "#prepare", icon: "checklist", title: "언제까지 무엇을 하는지", text: "역할마다 챙길 일과 기한을 차례로 봅니다." },
 ];
 
 function closed() {

@@ -1,5 +1,5 @@
 {
-"version": "v0.8 (2026-11-18 제3국 탄소가격 차감 이행규정 (EU) 2026/2498의 용어를 더함: 탄소가격제도, 탄소가격 보고서, 인증보고서 등. 모두 확인 전의 후보)",
+"version": "v0.9 (2026-11-18 영국 CBAM의 용어 다섯을 후보로 더하고, '실질적으로 지불된 탄소가격'을 짧게 적는 표기를 허용 표기에 더함)",
 "note": "국문 표기 기준. status가 confirmed인 것은 정부·공공기관 자료에서 확인된 표기, partial은 일부 확인, candidate는 확인이 더 필요한 후보다. avoid는 쓰지 않는 표기다.",
 "terms": [
 {
@@ -4818,7 +4818,8 @@
 "abbr": [],
 "preferred": "실질적으로 지불된 탄소가격",
 "allowed": [
-"기지불 탄소가격"
+"기지불 탄소가격",
+"실질 지불 탄소가격"
 ],
 "avoid": [
 {
@@ -4829,7 +4830,8 @@
 "form": "기납부 탄소가격"
 }
 ],
-"status": "confirmed"
+"status": "confirmed",
+"note": "식의 이름처럼 짧게 적어야 하는 곳에는 '실질 지불 탄소가격'으로 줄여 적는다(2026-11-18)"
 },
 {
 "no": 256,
@@ -7791,6 +7793,76 @@
 "avoid": [],
 "status": "candidate",
 "note": "제3국의 배출권거래제에서 값을 치르지 않고 받은 배출권. EU 배출권거래제의 무상할당(free allocation, 261번)과 가려 적는다. 이행규정 (EU) 2026/2498의 용어. 이 이행규정을 다룬 정부·공공기관의 국문 자료에서는 확인하기 전(2026-11-18)"
+},
+{
+"no": 436,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"sectoral domestic price"
+],
+"abbr": [],
+"preferred": "부문별 국내 가격",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "Finance Act 2026 제149조: 영국 CBAM의 세액을 정하는 이산화탄소 환산톤당 가격. 재무부가 CBAM 부문마다, 분기마다 계산해 공표한다. 영국 CBAM(Finance Act 2026 제5편과 그 하위 규정)의 용어. EU CBAM의 용어가 아니다. 국내 정부·공공기관의 국문 자료에서는 확인하기 전(2026-11-18)"
+},
+{
+"no": 437,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"baseline free allocation percentage"
+],
+"abbr": [],
+"preferred": "기준 무상할당 비율",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "Finance Act 2026 제149조(4): 그 CBAM 부문의 품목을 생산하는 영국 하위사업장의 배출량 가운데 무상 배출권으로 덮인 비율의 평균(2019년, 2022년, 2023년 의무이행연도). 부문별 국내 가격을 낮추는 비율의 바탕이다. EU의 무상할당 조정(free allocation adjustment)과 가려 적는다. 영국 CBAM(Finance Act 2026 제5편과 그 하위 규정)의 용어. EU CBAM의 용어가 아니다. 국내 정부·공공기관의 국문 자료에서는 확인하기 전(2026-11-18)"
+},
+{
+"no": 438,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"carbon price relief"
+],
+"abbr": [],
+"preferred": "탄소가격 경감",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "Finance Act 2026 제150조, 요율·탄소가격 경감 규정(SI 2026/809): 같은 배출량에 다른 금전 부담이 있을 때 영국 CBAM 세액을 줄여 주는 것. EU CBAM의 '제3국에서 낸 탄소가격의 차감'과 가려 적는다. 영국 CBAM(Finance Act 2026 제5편과 그 하위 규정)의 용어. EU CBAM의 용어가 아니다. 국내 정부·공공기관의 국문 자료에서는 확인하기 전(2026-11-18)"
+},
+{
+"no": 439,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"qualifying carbon pricing scheme"
+],
+"abbr": [],
+"preferred": "적격 탄소가격제도",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "요율·탄소가격 경감 규정(SI 2026/809) 제6조: 탄소가격 경감을 받을 수 있는 제도. EU 이행규정 (EU) 2026/2498의 탄소가격제도(carbon price mechanism)와 가려 적는다. 영국 CBAM(Finance Act 2026 제5편과 그 하위 규정)의 용어. EU CBAM의 용어가 아니다. 국내 정부·공공기관의 국문 자료에서는 확인하기 전(2026-11-18)"
+},
+{
+"no": 440,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"registrable person"
+],
+"abbr": [],
+"preferred": "등록 대상자",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "Finance Act 2026 부칙 17 제2항: 등록 의무가 생겼으나 스스로 등록하지도, 직권으로 등록되지도 않은 사람. 등록자(registered person)와 같이 신고와 납부의 의무를 진다. 영국 CBAM(Finance Act 2026 제5편과 그 하위 규정)의 용어. EU CBAM의 용어가 아니다. 국내 정부·공공기관의 국문 자료에서는 확인하기 전(2026-11-18)"
 }
 ]
 }

@@ -25,6 +25,8 @@ ICONS = {
     "home": "house", "guide": "book-marked", "menu": "menu", "start": "compass",
     # 입법 절차 화면
     "procedure": "route",
+    # 역할별 준비 목록
+    "checklist": "list-checks",
 }
 
 

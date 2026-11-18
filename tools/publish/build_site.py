@@ -11,7 +11,7 @@ from tools.check import term_check
 from tools.common.jsonio import read_json, today, write_json
 from tools.laws import build as laws
 from tools.pdfko import site as pdf_site
-from tools.publish import calc, crossrefs, derive, duties, factor, feed, gloss, handbook, item_sheet, merge, preload, procedures, regulations, rule_steps, sectors, source_names, thumbs
+from tools.publish import calc, crossrefs, derive, duties, factor, feed, gloss, handbook, item_sheet, merge, preload, prepare, procedures, regulations, rule_steps, sectors, source_names, thumbs
 
 DATA_FILES = ["items", "events", "digests", "terms", "topics", "prices"]
 LIST_KEY = {"items": "items", "events": "events", "digests": "digests", "terms": "terms", "topics": "topics", "prices": "prices"}
@@ -113,7 +113,9 @@ def main(argv):
     counts["pdfs"] = pdf_site.write(out)  # 원문과 같은 자리에 번역을 앉힌 국문 PDF(도구가 없는 환경에서는 싣지 않는다)
     # CBAM 해설서: 꼴이 깨졌으면 멈추고, 근거로 적은 대목이 규정 원문이나 받아 둔 글과 달라진 것은 알리기만 한다
     guide = read_json(handbook.SOURCE, None)
-    guide_found = handbook.problems(guide, term_check.load(), data_out / "laws", rules={rule.get("id") for rule in rules.get("regulations", [])}) if guide else [("해설서", "data/handbook.json 을 읽지 못함")]
+    plan = read_json(prepare.SOURCE, None)   # 역할별 준비 목록(해설서의 '함께 보기'가 가리키는 곳이 있는지 보는 데 쓴다)
+    guide_found = handbook.problems(guide, term_check.load(), data_out / "laws", rules={rule.get("id") for rule in rules.get("regulations", [])},
+                                    prepared=prepare.listed(plan) if plan else None) if guide else [("해설서", "data/handbook.json 을 읽지 못함")]
     problems += [f"해설서: {where}: {what}" for where, what in handbook.blocking(guide_found)]
     for where, what in guide_found:
         if what.startswith(handbook.DRIFT):
@@ -145,6 +147,9 @@ def main(argv):
     # 품목 한 장 보기가 품목마다 잇는 근거 조문과 해설서의 절(무엇을 이을지는 sources/item-sheet.json)
     counts["sheet"], sheet_problems = item_sheet.write(data_out)
     problems += [f"품목 한 장 보기: {where}: {what}" for where, what in sheet_problems]
+    # 역할별 준비 목록: 역할마다 챙길 일을 해설서의 절과 의무 일정에서 골라 놓은 것(data/prepare.json). 글의 날짜와 수가 기대는 글에 있는지도 본다
+    counts["prepare"], prepare_problems = prepare.write(data_out, {rule.get("id") for rule in rules.get("regulations", [])})
+    problems += [f"준비 목록: {where}: {what}" for where, what in prepare_problems]
     print("규정 원문으로 이은 것:", linked)
     for where, what in unlinked:
         print(f"알림: 조문 잇기: {where}: {what}")

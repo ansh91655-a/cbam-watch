@@ -115,7 +115,10 @@ def duty_problems(duty, schemes, term_index, kinds, roles=frozenset()):
         elif not date_in_phrases(duty.get("date"), evidence.get("contains", [])):
             found.append((where, f"근거 어긋남: 근거 대목에 날짜 {duty.get('date')}(날과 달, 해)가 적혀 있지 않음"))
         more = evidence.get("also", []) if isinstance(evidence, dict) else []
-        for extra in more if isinstance(more, list) else [None]:
+        if not isinstance(more, list):
+            found.append((where, "근거 어긋남: 더한 근거(also)는 근거의 목록이어야 함"))
+            more = []
+        for extra in more:
             problem = regulations.evidence_problem(extra, duty.get("date"))
             if problem:
                 found.append((where, "근거 어긋남: 더한 근거(also): " + problem))

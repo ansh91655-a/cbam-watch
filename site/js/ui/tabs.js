@@ -3,7 +3,7 @@ import { groupOf, screensOf, UNDER } from "../nav/map.js";
 import { h } from "./dom.js";
 import { icon } from "./icons.js";
 
-// 그 화면이 든 묶음의 탭. 화면이 하나뿐인 묶음(소식, 일정)과 메뉴에 없는 화면에는 탭이 없다(null).
+// 그 화면이 든 묶음의 탭. 화면이 하나뿐인 묶음(소식)과 메뉴에 없는 화면에는 탭이 없다(null).
 export function groupTabs(view) {
   const group = groupOf(view);
   if (!group || group.views.length < 2) return null;

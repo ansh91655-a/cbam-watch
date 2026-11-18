@@ -64,7 +64,7 @@ export function dutyList(book, year, todayIso, role = "", onRole = () => {}, ref
   draw();
   return h("section", { class: "stack duty-sec", "aria-labelledby": "h-duty", id: "duties" }, [
     h("div", { class: "sec-head" }, [h("h3", { id: "h-duty", text: "의무 일정" }), size]),
-    h("p", { class: "duty-note", text: book.note || "" }),
+    h("p", { class: "duty-note" }, [h("span", { text: `${book.note || ""} ` }), h("a", { href: "#prepare", text: "역할마다 챙길 일은 준비 목록에서 차례로 볼 수 있습니다." })]),
     roles.length > 1 ? h("div", { class: "chips duty-roles", role: "group", "aria-label": "역할로 골라 보기" }, buttons.map(([, button]) => button)) : null,
     about,
     list,

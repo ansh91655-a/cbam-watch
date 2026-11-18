@@ -215,9 +215,9 @@
    "kind": "시행",
    "title": "영국 CBAM 기록 보관 시작",
    "who": "영국 수입자",
-   "text": "행정 규정이 이날 시행됩니다. 사업 과정에서 CBAM 대상 제품을 수입하는 사람은 제품마다 8자리 품목 코드와 품명, 수입일, 가액, 무게를 증명하는 기록을 남기고 6년간 보관해야 합니다. 기록은 서면으로 남깁니다. 영국 국세청은 등록이 열리기 전인 2027년 1월 1일부터 기록을 보관해야 한다고 안내합니다.",
+   "text": "행정 규정이 이날 시행됩니다. 사업 과정에서 CBAM 대상 제품을 수입하는 사람은 제품마다 8자리 품목 코드와 품명, 수입일, 가액, 무게와, 해당하면 과세 제외(원산지가 영국인 제품과 재수입 물품 등)에 든다는 사실을 증명하는 기록을 남기고 6년간 보관해야 합니다. 기록은 서면으로 남깁니다. 영국 국세청은 등록이 열리기 전인 2027년 1월 1일부터 기록을 보관해야 한다고 안내합니다.",
    "supplier": "수입자가 남기는 무게는 포장을 뺀 수입 때의 무게입니다. 실제 자료로 신고하는 제품이면 수입자는 신고한 배출집약도의 검증보고서나 품목별 검증 요약도 보관해야 합니다.",
-   "basis": "행정 규정(SI 2026/802) 제1조, 제4조~제6조, 배출량·검증 규정(SI 2026/995) 제16조",
+   "basis": "행정 규정(SI 2026/802) 제1조, 제4조~제6조, 배출량·검증 규정(SI 2026/995) 제16조, 제17조(2)",
    "link": "https://www.legislation.gov.uk/uksi/2026/802/made",
    "evidence": {
     "path": "collected/archive/pages/uk-legislation/uksi-2026-802-full.txt",
@@ -239,7 +239,8 @@
      {
       "path": "collected/archive/pages/uk-legislation/uksi-2026-995-full.txt",
       "contains": [
-       "must keep the verification report or good-specific verification summary for the emissions intensity submitted on the return"
+       "must keep the verification report or good-specific verification summary for the emissions intensity submitted on the return",
+       "where applicable, that section 147(2) applies to the good"
       ]
      }
     ]
@@ -440,7 +441,7 @@
     "operator"
    ],
    "text": "검증기관은 해마다 11월 15일까지 다음 해의 검증 계획을 자신을 인정한 국가인정기구에 보내야 합니다. 계획에는 검증의 일정과 장소(현장검증을 직접 하는지 가상으로 하는지 포함), 배출량 보고서를 검증할 사업자와 그 사업장, 검증팀의 구성원과 해당 인정 범위를 적습니다.",
-   "supplier": "이 계획에는 다음 해에 검증받을 사업자와 사업장이 들어갑니다. 계획에 들어가려면 그 전에 검증을 맡길 검증기관이 정해져 있어야 합니다.",
+   "supplier": "이 계획에는 다음 해에 배출량 보고서를 검증받을 사업자와 사업장이 들어갑니다.",
    "basis": "검증기관 인정 조건 위임규정 (EU) 2025/2551 제22조(1)",
    "link": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2551",
    "yearly": {},
