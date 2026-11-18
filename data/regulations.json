@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-18",
+ "asOf": "2026-11-19",
  "groups": [
   {
    "code": "eu-law",
@@ -6762,12 +6762,12 @@
     "발효",
     "적용"
    ],
-   "at": 1,
-   "stage": "발효 대기",
-   "tone": "progress",
+   "at": 2,
+   "stage": "적용 대기",
+   "tone": "adopted",
    "summary": "CBAM 규정과 간소화 개정 규정을 EEA 협정(부속서 XX)에 넣는 절차입니다. 편입되면 EEA에 속한 EFTA 국가가 제3국에서 들여오는 제품에 같은 제도를 적용하게 됩니다. 이 나라들이 CBAM 정보시스템 비용을 나눠 내는 결정(의정서 10·31 개정)도 함께 진행되었습니다.",
-   "status": "EU 이사회가 2026년 9월 24일에 EU의 입장을 정했고, EEA 공동위원회가 9월 25일에 결정을 채택했습니다. 노르웨이 정부 문서에 따르면 이 결정은 아이슬란드가 헌법상 유보를 풀어야 발효됩니다. 노르웨이는 2027년 1월 1일부터 CBAM을 전면 적용하는 것을 목표로 한다는 보도가 있습니다.",
-   "next": "아이슬란드의 승인 절차가 끝나면 결정이 발효됩니다.",
+   "status": "EEA 공동위원회의 결정이 2026년 11월 18일에 발효했습니다. EU 집행위원회는 같은 날 아이슬란드와 노르웨이가 CBAM에 포함된다고 밝혔습니다. 2027년 1월 1일부터 두 나라의 관세영역으로 수입되는 제품에 CBAM이 EU 관세영역으로 들어오는 제품과 같은 방식으로 전면 적용됩니다.",
+   "next": "2027년 1월 1일부터 아이슬란드와 노르웨이의 관세영역으로 수입되는 제품에 CBAM이 전면 적용됩니다.",
    "timeline": [
     {
      "date": "2026-06-08",
@@ -6840,6 +6840,21 @@
        "6.10.2026"
       ]
      }
+    },
+    {
+     "date": "2026-11-18",
+     "text": "EEA 공동위원회의 결정이 발효했습니다. EU 집행위원회는 2027년 1월 1일부터 아이슬란드와 노르웨이의 관세영역으로 수입되는 제품에 CBAM이 전면 적용된다고 밝혔습니다.",
+     "source": "EU 집행위원회 Daily News",
+     "link": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2497",
+     "basis": "stored",
+     "evidence": {
+      "path": "collected/archive/pages/ec-press/mex_26_2497.txt",
+      "contains": [
+       "[날짜] 2026-11-18",
+       "entered into force on 18 November"
+      ]
+     },
+     "step": "entry"
     }
    ],
    "links": [
@@ -7084,9 +7099,13 @@
     ]
    },
    "procedure": "eea",
-   "stepNow": [
-    "constitutional"
-   ]
+   "changedOn": "2026-11-19",
+   "nextSource": {
+    "text": "EU 집행위원회 Daily News(2026년 11월 18일)",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2497"
+   },
+   "nextDate": "2027-01-01",
+   "nextTitle": "아이슬란드·노르웨이에 CBAM 적용 시작"
   },
   {
    "id": "eu-uk-link",
