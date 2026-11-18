@@ -84,7 +84,7 @@ export function plan(site) {
     widths: [360, 390, 768, 1024, 1440, 1920, 2400],
     views: ["#home", "#news", topics[0] ? `#news-${topics[0].code}` : null, "#news-notices", "#news-recent", item, itemWithRefs, "#rules", ...(rules.groups || []).map((group) => `#rules-${group.code}`),
       "#rules-recent", "#rules-recent-90", ...missing,
-      "#price", "#calc", good, "#calendar", "#calendar-2027", "#calendar-2027.role-verifier", "#calendar-2028", "#cn", "#cn-7208", ...sheets, "#sector", "#sector-aluminium", "#sector-electricity", ...handbook, ...drawn, ...scoped, whole, "#docs", ...laws, "#terms", "#about", "#design", ...search].filter(Boolean),
+      "#price", "#calc", good, "#calendar", "#calendar-2027", "#calendar-2027.role-verifier", "#calendar-2028", "#cn", "#cn-7208", ...sheets, "#sector", "#sector-aluminium", "#sector-electricity", "#sector-steel.values", "#sector-cement.values", "#sector-electricity.values", ...handbook, ...drawn, ...scoped, whole, "#docs", ...laws, "#terms", "#about", "#design", ...search].filter(Boolean),
     // 규제 화면: 규제마다 네 너비로
     ruleWidths: [360, 768, 1440, 1920],
     rules: (rules.regulations || []).map(rule),
@@ -92,7 +92,7 @@ export function plan(site) {
     axeWidths: [1280, 390],
     themes: ["", "?theme=white", "?theme=midnight"],
     axeViews: [...new Set(["#home", "#news", item, itemWithRefs, "#rules", "#rules-recent", missing[0], rule(withAnalysis), rule(withFigure), rule(withTable), "#price", "#calc", good,
-      "#calendar", "#calendar-2027.role-verifier", "#cn-7208", sheets[0], "#sector", "#sector-electricity", handbook[0], handbook[1], ...drawn, ...scoped, "#docs", "#laws", law, small ? `#pdf-${small}.p2` : null, actPdf ? `#pdf-${actPdf}.p2` : null, revised ? `#changes-${revised.id}` : null, "#news-notices", "#news-recent", "#terms", "#about", search[1]].filter(Boolean))],
+      "#calendar", "#calendar-2027.role-verifier", "#cn-7208", sheets[0], "#sector", "#sector-electricity", "#sector-cement.values", handbook[0], handbook[1], ...drawn, ...scoped, "#docs", "#laws", law, small ? `#pdf-${small}.p2` : null, actPdf ? `#pdf-${actPdf}.p2` : null, revised ? `#changes-${revised.id}` : null, "#news-notices", "#news-recent", "#terms", "#about", search[1]].filter(Boolean))],
     good,
     // 글 속 용어 풀이를 다뤄 보는 화면: 해설서의 장 하나와, 요약에 용어가 나오는 소식 하나(용어의 자료가 있을 때), 범위가 있는 장
     glossViews: (glossBody.terms || []).length ? [handbook[1], glossed ? `#item-${glossed.id}` : null, ...scopedGloss.map((chapter) => `#handbook-${chapter.id}`)].filter(Boolean) : [],

@@ -190,7 +190,8 @@ td > .ref-links { margin-top: 6px; }
 .notice-hint { display: flex; flex-wrap: wrap; gap: 4px 12px; padding: 12px 16px; border: 1px dashed var(--line); border-radius: var(--radius); color: var(--ink-3); font-size: var(--fs-s); }
 
 /* 표 */
-.table-wrap { overflow-x: auto; border: 1px solid var(--pane-line); border-radius: var(--radius-l); background: var(--pane); box-shadow: var(--shadow-1); }
+/* 자리를 잡아 둔다: 칸 안의 '화면 낭독기에만 읽히는 글'(.sr)이 옆으로 밀린 칸과 함께 가려지고, 문서의 너비를 늘리지 않는다 */
+.table-wrap { position: relative; overflow-x: auto; border: 1px solid var(--pane-line); border-radius: var(--radius-l); background: var(--pane); box-shadow: var(--shadow-1); }
 /* 옆으로 밀어야 다 보이는 표: 가려진 칸이 남아 있는 동안 오른쪽 끝을 흐리게 해 더 있음을 알린다(ui/dom.js가 data-more를 단다) */
 .table-wrap[data-more] { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); }
 table { width: 100%; border-collapse: collapse; }

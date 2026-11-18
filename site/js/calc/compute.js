@@ -60,6 +60,14 @@ export function routesOf(good) {
   return [...new Set(good.b.map((one) => one.route).filter(Boolean))];
 }
 
+// 기본값으로 신고할 때 벤치마크를 고르는 생산경로(들): 기본값 행의 경로와, 합금강이면 함께 견주는 고합금강의 경로(둘 가운데 큰 값을 쓴다).
+// 경로를 가르지 않는 품목은 빈 배열이다.
+export function defaultRoutes(good, pair) {
+  const route = (pair && pair.route) || "";
+  const alt = route && route !== ALLOY_HIGH && routesOf(good).includes(ALLOY_HIGH) ? ALLOY_HIGH : "";
+  return [route, alt].filter(Boolean);
+}
+
 // 벤치마크 표의 한 열(A열이나 B열)에서 경로와 연도 구간에 맞는 값. 표시가 없는 값 하나뿐이면 그 값이다.
 export function valueAt(column, route, key) {
   for (const [wantRoute, wantKey] of [[route, key], [route, 0], ["", key], ["", 0]]) {
@@ -96,7 +104,7 @@ export function estimate(book, path, input) {
     rate = markup(book, good.sector, year);
     embedded = choice.row.total * (1 + rate / 100);
     benchmark = choice.benchmark[span.index];
-    if (route && route !== ALLOY_HIGH && routesOf(good).includes(ALLOY_HIGH)) routeAlt = ALLOY_HIGH;
+    routeAlt = defaultRoutes(good, choice)[1] || "";
   }
   if (!Number.isFinite(embedded) || embedded < 0 || benchmark === null || factor === null) return null;
   const allocation = benchmark * (factor / 100) * (correction.value / 100);

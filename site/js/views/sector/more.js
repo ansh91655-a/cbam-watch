@@ -12,6 +12,7 @@ export function calcSection(sector) {
     return h("section", { class: "panel sector-side", "aria-labelledby": "h-sector-calc" }, [
       h("h2", { id: "h-sector-calc", text: "기본값과 비용 추정" }),
       h("p", { text: "이 부문은 인증서 비용 추정에 싣지 않았습니다. 기본값과 산정 방법은 위의 안내 문서에서 확인하세요." }),
+      h("p", {}, h("a", { href: `#sector-${sector.key}.values`, text: "이 부문의 기본값이 정해진 방식 보기" })),
     ]);
   }
   const markups = markupText(calc.markups);
@@ -19,7 +20,10 @@ export function calcSection(sector) {
     h("h2", { id: "h-sector-calc", text: "기본값과 비용 추정" }),
     h("p", { text: `${sector.name} 품목 ${count(calc.goods)}개(8자리 CN 코드)에 대한민국의 기본값과 CBAM 벤치마크가 정해져 있습니다.` }),
     markups ? h("p", { class: "sector-markup" }, [h("b", { text: "기본값에 더하는 마크업" }), h("span", { text: markups })]) : null,
-    h("p", {}, h("a", { class: "btn btn-main", href: calc.first ? `#calc-${calc.first}` : "#calc" }, [icon("emissions", 15), h("span", { text: "품목을 골라 비용 추정하기" })])),
+    h("p", { class: "sector-side-links" }, [
+      h("a", { class: "btn", href: `#sector-${sector.key}.values` }, [icon("sources", 15), h("span", { text: "품목마다의 값 보기" })]),
+      h("a", { class: "btn btn-main", href: calc.first ? `#calc-${calc.first}` : "#calc" }, [icon("emissions", 15), h("span", { text: "품목을 골라 비용 추정하기" })]),
+    ]),
     h("p", { class: "count" }, [h("span", { text: "근거: " }), h("a", { href: "#law-32025R2621", text: "기본값 이행규정" }), h("span", { text: ", " }), h("a", { href: "#law-32025R2620", text: "무상할당 조정 이행규정" })]),
   ]);
 }

@@ -56,3 +56,74 @@ html[data-theme="midnight"] .sector-remark { background: var(--surface-2); color
   .sector-news li { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .sector-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+/* 보는 내용을 고르는 줄(한눈에 보기, 기본값과 벤치마크) */
+.sector-pages { width: fit-content; }
+.sector-pages a { padding: 7px 16px; border-radius: 10px; color: var(--ink-2); font-size: var(--fs-s); font-weight: 600; text-decoration: none; white-space: nowrap; }
+.sector-pages a:hover { color: var(--ink); }
+.sector-pages a[aria-current="page"] { background: var(--pane-2); color: var(--ink); font-weight: 700; box-shadow: var(--shadow-1); }
+.sector-facts dd a { color: inherit; text-decoration-color: color-mix(in srgb, var(--brand-bright) 60%, transparent); }
+.sector-side-links { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* 기본값과 벤치마크의 표(#sector-<부문>.values) */
+.sv-facts { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.sv-facts dd { font-size: var(--fs-m); }
+.sv-tools { display: flex; flex-wrap: wrap; align-items: end; gap: 10px 16px; }
+.sv-find { flex: 1 1 260px; max-width: 420px; }
+.sv-find input { width: 100%; }
+.sv-tally { flex: 1 1 200px; margin: 0 0 10px; }
+.sv-save { margin-bottom: 2px; }
+/* 바깥 표의 칸만 고른다(펼친 줄 안에도 표가 있다). 좁은 화면에서는 줄마다 카드로 쌓이므로 넓은 화면에서만 건다 */
+@media (min-width: 641px) {
+  .sv-table > table > tbody > tr > td { vertical-align: middle; padding-inline: 12px; }
+  .sv .sv-table > table > thead > tr > th { padding-inline: 12px; white-space: normal; line-height: 1.35; vertical-align: bottom; }   /* 위의 '줄을 바꾸지 않는다'는 규칙보다 앞선다 */
+  .sv .sv-table > table > thead > tr > th.num { min-width: 6.4em; }
+  .sv .sv-table > table > thead > tr > th:nth-last-child(2) { min-width: 6.5em; }
+  .sv .sv-table > table > tbody > tr > td:nth-child(n+3):not(.num) { white-space: normal; }
+  .sv-table > table > tbody > tr > td:first-child, .sv-table > table > thead > tr > th:first-child { padding-left: 18px; }
+  .sv-table > table > tbody > tr > td:nth-child(2) { min-width: 200px; }
+  .sv-table > table > thead > tr > th:last-child { width: 1%; color: transparent; user-select: none; }   /* 펼치는 단추의 칸: 이름은 화면 낭독기에만 읽힌다 */
+}
+.sv-table > table > tbody > tr > td:nth-child(2) .pill { margin-left: 8px; }
+.sv-table .cn-code { font-variant-numeric: tabular-nums; font-weight: 700; white-space: nowrap; }
+/* 긴 품목 이름은 두 줄까지만 보인다(온 이름은 줄을 펼치면 나온다) */
+.sv-name { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+.sv-fullname { font-weight: 600; }
+.sv-table > table > thead > tr > th:last-child { width: 1%; color: transparent; user-select: none; }   /* 펼치는 단추의 칸: 이름은 화면 낭독기에만 읽힌다 */
+.sv-more { display: inline-flex; align-items: center; gap: 4px; padding: 5px 10px 5px 12px; border: 1px solid var(--line); border-radius: var(--radius-pill); background: var(--pane-2); color: var(--ink-2); font-size: 0.82rem; font-weight: 600; white-space: nowrap; }
+.sv-more:hover { border-color: var(--brand-bright); color: var(--brand-bright); }
+.sv-more .icon { transform: rotate(90deg); transition: transform 0.15s; }
+.sv-more[aria-expanded="true"] .icon { transform: rotate(-90deg); }
+.sv-extra > td { padding: 0; background: color-mix(in srgb, var(--brand-bright) 4%, transparent); }
+/* 펼친 줄의 내용은 표의 너비를 넓히지 않는다(안쪽 표가 넓으면 그 안에서 옆으로 민다) */
+.sv-detail { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 16px 28px; box-sizing: border-box; width: 0; min-width: 100%; padding: 18px 20px 20px; }
+.sv-block { display: grid; gap: 8px; align-content: start; min-width: 0; }
+.sv-label { font-size: 0.8rem; font-weight: 700; color: var(--ink-3); }
+.sv-origin { margin-left: 10px; font-size: var(--fs-s); color: var(--ink-3); }
+.sv-rowtext { font-size: var(--fs-s); color: var(--ink-2); }
+.sv-marked { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; margin: 0; }
+.sv-marked > div { display: grid; gap: 2px; padding: 9px 12px; border: 1px solid var(--line-2); border-radius: 12px; background: var(--pane-2); }
+.sv-marked dt { font-size: 0.78rem; color: var(--ink-3); font-weight: 600; }
+.sv-marked dd { margin: 0; font-weight: 750; font-variant-numeric: tabular-nums; }
+.sv-detail .table-wrap { box-shadow: none; background: var(--pane-2); }
+.sv-detail th[scope="row"] { background: none; font-size: var(--fs-s); color: var(--ink); white-space: normal; }
+.sv-detail tbody tr:last-child th { border-bottom: 0; }
+.sv-detail th[scope="row"] .pill { margin-left: 8px; }
+.sv-links { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px; }
+.sv-pager { display: flex; flex-wrap: wrap; gap: 8px; }
+.sv-notes { display: grid; gap: 6px; max-width: 78em; font-size: var(--fs-s); color: var(--ink-3); }
+.sv-none { max-width: 62em; }
+@media (max-width: 900px) { .sv-detail { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 640px) {
+  .sv-name { display: block; }
+  .sv-table > table > tbody > tr > td:nth-child(2) { grid-column: 1 / -1; }
+  .sv-table > table > tbody > tr > td:nth-child(2) .pill { margin: 6px 0 0; }
+  .sv-table > table > tbody > tr:has(+ .sv-extra:not([hidden])) { margin-bottom: 0; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+  .sv-table tr.sv-extra { border-top-left-radius: 0; border-top-right-radius: 0; border-top: 0; }
+  .sv-table tr.sv-extra { display: block; padding: 0; overflow: hidden; }
+  .sv-table tr.sv-extra[hidden] { display: none; }
+  .sv-table tr.sv-extra > td::before { display: none; }
+  .sv-table tr.sv-extra > td { font-size: inherit; font-weight: 400; }
+  .sv-detail { padding: 14px 14px 16px; }
+  .sv-table td.sv-open::before { display: none; }
+}
