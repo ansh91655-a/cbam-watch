@@ -1,9 +1,9 @@
 {
  "source": "eu-primary",
- "fetchedAt": "2026-11-18T15:04:19+09:00",
+ "fetchedAt": "2026-11-18T16:12:50+09:00",
  "since": "2025-01-01",
  "report": {
-  "targets": 25,
+  "targets": 26,
   "failures": []
  },
  "entries": [
@@ -206,6 +206,14 @@
    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:21994A0103(01)",
    "lines": 130,
    "textPath": "collected/archive/pages/eu-primary/eea-agreement.txt"
+  },
+  {
+   "name": "cjeu-rules",
+   "celex": "32012Q0929(01)",
+   "title": "사법재판소 절차규칙(2012년) 제49조~제52조(기한)",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012Q0929(01)",
+   "lines": 26,
+   "textPath": "collected/archive/pages/eu-primary/cjeu-rules.txt"
   }
  ]
 }

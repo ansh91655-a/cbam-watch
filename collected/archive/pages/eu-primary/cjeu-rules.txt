@@ -1,0 +1,31 @@
+[문서] 사법재판소 절차규칙(2012년) 제49조~제52조(기한)
+[주소] http://publications.europa.eu/resource/celex/32012Q0929%2801%29
+[원문] https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012Q0929(01)
+[남긴 곳] Article 49부터 Article 53 앞까지 26줄(문서 전체 2147줄)
+
+Article 49
+Calculation of time-limits
+1. Any procedural time-limit prescribed by the Treaties, the Statute or these Rules shall be calculated as follows:
+(a)
+where a time-limit expressed in days, weeks, months or years is to be calculated from the moment at which an event occurs or an action takes place, the day during which that event occurs or that action takes place shall not be counted as falling within the time-limit in question;
+(b)
+a time-limit expressed in weeks, months or years shall end with the expiry of whichever day in the last week, month or year is the same day of the week, or falls on the same date, as the day during which the event or action from which the time-limit is to be calculated occurred or took place. If, in a time-limit expressed in months or years, the day on which it should expire does not occur in the last month, the time-limit shall end with the expiry of the last day of that month;
+(c)
+where a time-limit is expressed in months and days, it shall first be calculated in whole months, then in days;
+(d)
+time-limits shall include Saturdays, Sundays and the official holidays referred to in Article 24(6) of these Rules;
+(e)
+time-limits shall not be suspended during the judicial vacations.
+2. If the time-limit would otherwise end on a Saturday, Sunday or an official holiday, it shall be extended until the end of the first subsequent working day.
+Article 50
+Proceedings against a measure adopted by an institution
+Where the time-limit allowed for initiating proceedings against a measure adopted by an institution runs from the publication of that measure, that time-limit shall be calculated, for the purposes of Article 49(1)(a), from the end of the 14th day after publication of the measure in the Official Journal of the European Union.
+Article 51
+Extension on account of distance
+The procedural time-limits shall be extended on account of distance by a single period of 10 days.
+Article 52
+Setting and extension of time-limits
+1. Any time-limit prescribed by the Court pursuant to these Rules may be extended.
+2. The President and the Presidents of Chambers may delegate to the Registrar power of signature for the purposes of setting certain time-limits which, pursuant to these Rules, it falls to them to prescribe, or of extending such time-limits.
+Chapter 4
+DIFFERENT PROCEDURES FOR DEALING WITH CASES
