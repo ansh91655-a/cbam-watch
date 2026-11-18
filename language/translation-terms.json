@@ -3657,7 +3657,7 @@
   },
   {
    "en": "undercrediting",
-   "ko": "과소 공제",
+   "ko": "과소 차감",
    "from": "report-carbon-price",
    "added": "2026-11-13"
   },
@@ -4617,13 +4617,13 @@
   },
   {
    "en": "credit rate",
-   "ko": "공제율",
+   "ko": "차감률",
    "from": "report-carbon-price",
    "added": "2026-11-13"
   },
   {
    "en": "under-crediting",
-   "ko": "과소 공제",
+   "ko": "과소 차감",
    "from": "report-carbon-price",
    "added": "2026-11-13"
   },
