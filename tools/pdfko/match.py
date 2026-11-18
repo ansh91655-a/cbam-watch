@@ -13,6 +13,7 @@ SKIP = 30      # 문단 하나를 잇는 동안 건너뛸 수 있는 줄 수(쪽
 LOOK = 500     # 제자리에서 찾을 때 앞으로 살피는 줄 수
 NEAR = 14      # 차례 없이 맞출 때 살피는 앞뒤 줄 수
 ANCHOR = 10    # 차례 없이 맞출 때 기준으로 삼는 줄의 가장 짧은 길이(글자와 숫자)
+JOIN = 0.75    # 낱말 사이가 글자 높이의 이 배보다 좁으면 이어 적힌 낱말로 본다
 
 
 def squash(text):
@@ -46,6 +47,14 @@ def _eat(line, rest, begin=0):
     return (at, rest) if ate else None
 
 
+def _joined(words, end):
+    """words[end]가 앞 낱말에 바로 이어 적힌 낱말인가(같은 문장). 표의 다음 칸처럼 떨어져 있으면 아니다."""
+    if end <= 0 or end >= len(words) or not words[end]["squash"]:
+        return False
+    before, after = words[end - 1]["box"], words[end]["box"]
+    return after[0] - before[2] < JOIN * (before[3] - before[1])
+
+
 def _whole(line, rest):
     """줄을 처음부터 끝까지 쓸 수 있으면 남은 글, 아니면 None(문단의 마지막 줄은 가운데에서 끝나도 된다)."""
     eaten = _eat(line, rest)
@@ -66,6 +75,8 @@ def _run(lines, target, start, used, begin=0):
     end, rest = eaten
     if rest and any(word["squash"] for word in lines[start]["words"][end:]):
         return None  # 첫 줄을 다 쓰지 못했는데 글이 남았다
+    if not rest and _joined(lines[start]["words"], end):
+        return None  # 글이 줄의 가운데에서 끝나는데 다음 낱말이 바로 붙어 있다: 다른 문장의 앞머리와 글자만 같은 것이다("where:"와 "Where objectively …")
     spans, at, skipped = [(start, begin, end)], start + 1, 0
     while rest:
         if at >= len(lines) or skipped > SKIP:

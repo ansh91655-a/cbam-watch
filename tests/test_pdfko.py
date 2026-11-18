@@ -143,9 +143,135 @@ class MaskTest(unittest.TestCase):
         tree.elements = [{"type": "Figure", "parent": None, "marks": [(0, 7)], "alt": "Logo of the European Commission, 12 yellow stars"},
                          {"type": "Figure", "parent": None, "marks": [(0, 8)], "alt": "A chart"}]
         sheet = type("Sheet", (), {"ink": {7: (50, 40, 120, 90), 8: (200, 300, 400, 500)}, "images": [(10, 10, 60, 40)], "width": 595, "height": 842})()
-        self.assertEqual(build._masks([sheet], tree), {0: [(49, 39, 121, 91)]})
+        white = {"fill": (1.0, 1.0, 1.0), "label": True, "round": False}
+        self.assertEqual(build._masks([sheet], tree), {0: [{"box": (49, 39, 121, 91), **white}]})
         tree.elements = tree.elements[1:]       # 그런 글이 없으면 첫 쪽 위쪽의 작은 그림
-        self.assertEqual(build._masks([sheet], tree), {0: [(9, 9, 61, 41)]})
+        self.assertEqual(build._masks([sheet], tree), {0: [{"box": (9, 9, 61, 41), **white}]})
+
+    def test_places_written_down_for_a_document_are_covered(self):
+        pages = [{"lines": [{"text": "CARBON BORDER", "box": (40, 100, 200, 120), "words": []}, {"text": "Carbon  border!", "box": (40, 300, 180, 312), "words": []},
+                            {"text": "Something else", "box": (40, 400, 180, 412), "words": []}]}, {"lines": []}]
+        covers = [{"page": 1, "box": [228, 26, 392, 107.5], "label": True},
+                  {"page": 1, "over": "Carbon Border", "pad": [12, 5], "fill": "#98c448", "round": True},
+                  {"page": 2, "box": [18, 762, 130, 830]},
+                  {"page": 3, "box": [0, 0, 10, 10]}, {"page": 1, "over": "not on the page"}, {"page": 1}]      # 없는 쪽, 없는 글, 빈 것은 넘긴다
+        found = build._covered(pages, covers)
+        self.assertEqual(sorted(found), [0, 1])
+        self.assertEqual(found[0][0], {"box": (228.0, 26.0, 392.0, 107.5), "fill": (1.0, 1.0, 1.0), "label": True, "round": False})
+        green = (0x98 / 255, 0xc4 / 255, 0x48 / 255)
+        self.assertEqual(found[0][1:], [{"box": (28, 95, 212, 125), "fill": green, "label": False, "round": True},       # 글자와 숫자만 견주어 같은 줄을 모두
+                                        {"box": (28, 295, 192, 317), "fill": green, "label": False, "round": True}])
+        self.assertEqual(found[1], [{"box": (18.0, 762.0, 130.0, 830.0), "fill": (1.0, 1.0, 1.0), "label": False, "round": False}])
+        self.assertEqual((build._covered(pages, None), build._covered(pages, [])), ({}, {}))
+
+    @unittest.skipUnless(shutil.which("pdftotext"), "pdftotext가 있어야 한다")
+    def test_the_covered_place_says_it_is_unofficial_only_where_it_can_be_read(self):
+        from tools.pdfko import typeset
+
+        def marks(box, label=True):
+            made = typeset.overlay([(300, 200), (300, 200)], {}, {1: [{"box": box, "fill": (1.0, 1.0, 1.0), "label": label, "round": False}]})
+            with tempfile.TemporaryDirectory() as folder:
+                target = pathlib.Path(folder) / "made.pdf"
+                target.write_bytes(made)
+                second = subprocess.run(["pdftotext", "-f", "2", "-l", "2", str(target), "-"], capture_output=True, check=True).stdout.decode("utf-8")
+            return second.count(typeset.MARK)
+
+        self.assertEqual(marks((20, 40, 220, 100)), 1)                 # 넉넉한 자리
+        self.assertEqual(marks((20, 40, 80, 100)), 1)                  # 좁으면 글자를 줄여 적는다
+        self.assertEqual(marks((20, 40, 44, 100)), 0)                  # 읽을 수 없게 작아지면 적지 않는다
+        self.assertEqual(marks((20, 40, 220, 45)), 0)                  # 낮은 자리도 마찬가지
+        self.assertEqual(marks((20, 40, 220, 100), label=False), 0)    # 적지 말라고 한 자리
+
+
+class MatchTest(unittest.TestCase):
+    """문단이 원문 PDF의 어느 낱말들인지 찾기(꾸러미 없이 도는 부분)."""
+
+    @staticmethod
+    def _line(text, top, gaps=None):
+        """낱말을 왼쪽부터 놓은 줄 하나. gaps는 {낱말의 차례: 앞 낱말과의 틈}(적지 않으면 3pt)."""
+        words, at = [], 20.0
+        for index, word in enumerate(text.split(" ")):
+            at += (gaps or {}).get(index, 3.0) if index else 0
+            words.append({"text": word, "box": (at, top, at + 5.0 * len(word), top + 10.0)})
+            at += 5.0 * len(word)
+        return {"text": text, "box": (20.0, top, at, top + 10.0), "words": words}
+
+    def test_a_short_paragraph_is_not_taken_from_the_start_of_another_sentence(self):
+        from tools.pdfko import match
+
+        pages = [{"lines": [self._line("Where objectively justified the period is extended", 100), self._line("where:", 120), self._line("Em is the emissions", 140)]}]
+        found, lost = match.locate(pages, [("a", "Where objectively justified the period is extended", ""), ("b", "where:", ""), ("c", "Em is the emissions", "")])
+        self.assertEqual(lost, [])
+        self.assertEqual([found[name][0][0]["line"] for name in "abc"], [0, 1, 2])
+        # 차례가 뒤바뀌어도 긴 문장의 첫 낱말을 짧은 문단으로 삼지 않는다
+        found, lost = match.locate(pages, [("b", "where:", ""), ("a", "Where objectively justified the period is extended", "")])
+        self.assertEqual((found["b"][0][0]["line"], found["a"][0][0]["line"], lost), (1, 0, []))
+
+    def test_a_cell_followed_by_another_cell_is_still_found(self):
+        from tools.pdfko import match
+
+        pages = [{"lines": [self._line("Steel 1.5 2.5", 100, gaps={1: 60.0, 2: 60.0})]}]      # 표의 한 줄: 칸 사이가 넓다
+        found, lost = match.locate(pages, [("name", "Steel", "")])
+        self.assertEqual((lost, found["name"][0][0]["whole"], found["name"][0][0]["box"]), ([], False, (20.0, 100, 45.0, 110.0)))
+        self.assertFalse(match._joined(match.flatten(pages)[0]["words"], 1))
+        close = match.flatten([{"lines": [self._line("where the", 100)]}])[0]["words"]
+        self.assertEqual([match._joined(close, end) for end in (0, 1, 2)], [False, True, False])       # 줄의 처음과 끝에는 이어진 낱말이 없다
+
+
+class ActSourceTest(unittest.TestCase):
+    """법령의 원문 PDF는 받아 둔 관보 PDF다(tools/archive/actpdf.py의 목록에서 찾는다)."""
+
+    def _stored(self, folder, *numbers):
+        import json
+
+        folder = pathlib.Path(folder)
+        entries = []
+        for celex in numbers:
+            (folder / f"{celex}.pdf").write_bytes(b"%PDF-1.7")
+            entries.append({"celex": celex, "file": str(folder / f"{celex}.pdf"), "url": f"https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:{celex}"})
+        listing = folder / "eu-pdfs.json"
+        listing.write_text(json.dumps({"entries": entries}), encoding="utf-8")
+        return listing
+
+    @unittest.skipUnless(pikepdf, "pikepdf와 reportlab이 있어야 한다")
+    def test_an_act_uses_the_stored_gazette_pdf(self):
+        from unittest import mock
+
+        with tempfile.TemporaryDirectory() as folder:
+            listing = self._stored(folder, "32025R2548", "02023R0956-20251020")
+            with mock.patch.object(build, "ACT_PDFS", str(listing)):
+                act = {"id": "32025R2548", "celex": "32025R2548", "format": "act", "consolidated": ""}
+                self.assertEqual(build.act_pdf(act)["celex"], "32025R2548")
+                self.assertEqual(build.source(act), pathlib.Path(folder) / "32025R2548.pdf")
+                self.assertIsNone(build.source({"id": "32025R9999", "celex": "32025R9999", "format": "act"}))       # 받아 두지 않은 법령
+                # CBAM 규정은 사이트가 싣는 통합본과 같은 판의 PDF만 쓴다
+                shown = {"id": "32023R0956", "celex": "32023R0956", "format": "act", "consolidated": "2025-10-20"}
+                self.assertEqual(build.act_pdf(shown)["celex"], "02023R0956-20251020")
+                self.assertIsNone(build.act_pdf({**shown, "consolidated": "2027-01-01"}))
+                (pathlib.Path(folder) / "32025R2548.pdf").unlink()
+                self.assertIsNone(build.source(act))                                                                   # 목록에는 있는데 파일이 없다
+
+    @unittest.skipUnless(pikepdf, "pikepdf와 reportlab이 있어야 한다")
+    def test_the_site_lists_acts_beside_the_commission_documents(self):
+        from unittest import mock
+
+        from tools.pdfko import site
+
+        derive = type("Derive", (), {"STORE": "originals/files/", "PUBLIC_FILES": "files/"})
+        with tempfile.TemporaryDirectory() as folder:
+            listing = self._stored(folder, "32026R1740")
+            entries = [{"celex": "32026R1740", "file": str(pathlib.Path(folder) / "32026R1740.pdf"), "url": "https://example.org/whole", "fullPages": 1913, "kept": [[1, 4], [821, 862]], "about": "조문과 대한민국의 표"}]
+            listing.write_text(__import__("json").dumps({"entries": entries}), encoding="utf-8")
+            with mock.patch.object(build, "ACT_PDFS", str(listing)):
+                act = {"id": "32026R1740", "celex": "32026R1740", "format": "act"}
+                self.assertTrue(site._sided(act) and site._sided({"id": "guide-1", "format": "pdf"}))
+                self.assertFalse(site._sided({"id": "32025R9999", "celex": "32025R9999", "format": "act"}))             # 관보 PDF가 없는 법령
+                self.assertEqual(site._whole(act, build), {"origin": "https://example.org/whole", "part": {"of": 1913, "kept": [[1, 4], [821, 862]], "about": "조문과 대한민국의 표"}})
+                self.assertEqual(site._whole({"id": "guide-1", "format": "pdf"}, build), {})
+                out = pathlib.Path(folder) / "site"
+                self.assertEqual(site._original(out, "originals/files/guide/a/b.pdf", derive), "files/guide/a/b.pdf")    # 원문 대장의 파일은 이미 실려 있다
+                self.assertEqual(site._original(out, str(pathlib.Path(folder) / "32026R1740.pdf"), derive), "files/acts/32026R1740.pdf")
+                self.assertEqual((out / "files/acts/32026R1740.pdf").read_bytes(), b"%PDF-1.7")
 
 
 class KeepTest(unittest.TestCase):
@@ -190,6 +316,35 @@ class KeepTest(unittest.TestCase):
             self.assertEqual(((out / "pdf/a-ko.pdf").read_text(encoding="utf-8"), (out / "pdf/b-ko.pdf").read_text(encoding="utf-8")), ("new a", "old b"))
             self.assertFalse((out / "pdf/c-ko.pdf").exists())
             self.assertEqual(site.keep(out), [])     # 다 찼으면 더 하지 않는다
+
+    def test_the_gazette_pdf_of_an_act_is_kept_with_its_translation(self):
+        import json
+
+        from tools.pdfko import site
+
+        with tempfile.TemporaryDirectory() as folder:
+            last, out = pathlib.Path(folder) / "last", pathlib.Path(folder) / "site"
+            entries = {"act": {"pages": 1, "ko": "pdf/act-ko.pdf", "en": "files/acts/32025R2548.pdf"}, "gone": {"pages": 1, "ko": "pdf/gone-ko.pdf", "en": "files/gone.pdf"}}
+            for name, body in (("pdf/act-ko.pdf", "old act"), ("files/acts/32025R2548.pdf", "gazette"), ("pdf/gone-ko.pdf", "old gone"), ("files/gone.pdf", "original")):
+                (last / name).parent.mkdir(parents=True, exist_ok=True)
+                (last / name).write_text(body, encoding="utf-8")
+            (last / "data/laws").mkdir(parents=True)
+            (last / "data/laws/pdf.json").write_text(json.dumps({"docs": entries}), encoding="utf-8")
+            self._git(last, "init", "-q", "-b", "gh-pages")
+            self._git(last, "add", "-A")
+            self._git(last, "commit", "-q", "-m", "last")
+
+            # 이번에는 법령의 국문 PDF를 만들지 못했다. 관보 PDF는 만들 때 옮겨 싣는 것이라 사이트 폴더에 없다
+            (out / "data/laws").mkdir(parents=True)
+            listing = out / "data/laws/pdf.json"
+            listing.write_text(json.dumps({"docs": {}, "wanted": 1, "failed": ["act"], "tools": True}), encoding="utf-8")
+            self._git(out, "init", "-q", "-b", "gh-pages")
+            self._git(out, "remote", "add", "origin", str(last))
+            self._git(out, "fetch", "-q", "origin", "gh-pages")
+
+            self.assertEqual(site.keep(out), ["act"])        # 원문 대장의 파일이 없어진 문서(gone)는 가져오지 않는다
+            self.assertEqual(((out / "pdf/act-ko.pdf").read_text(encoding="utf-8"), (out / "files/acts/32025R2548.pdf").read_text(encoding="utf-8")), ("old act", "gazette"))
+            self.assertFalse((out / "pdf/gone-ko.pdf").exists() or (out / "files/gone.pdf").exists())
 
     def test_nothing_is_kept_when_there_is_no_last_deployment(self):
         import json

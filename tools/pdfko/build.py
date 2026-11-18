@@ -35,8 +35,28 @@ def paragraphs(parts, memory):
     return out
 
 
+ACT_PDFS = "collected/archive/eu-pdfs.json"   # 법령의 관보 PDF 목록(tools/archive/actpdf.py가 받아 둔다)
+
+
+def act_pdf(document):
+    """법령의 관보 PDF 기록(목록의 한 줄). 받아 둔 것이 없으면 None.
+
+    CBAM 규정은 사이트가 싣는 통합본과 같은 판의 PDF만 쓴다(글이 새 통합본으로 바뀌었는데 PDF가 옛 판이면 쓰지 않는다).
+    """
+    from tools.common.jsonio import read_json
+
+    celex = document.get("celex") or document["id"]
+    if document.get("consolidated"):
+        celex = f"0{celex[1:]}-{document['consolidated'].replace('-', '')}"
+    return next((entry for entry in read_json(ACT_PDFS, {}).get("entries", []) if entry.get("celex") == celex), None)
+
+
 def source(document):
-    """문서의 원문 PDF 파일. 없으면 None."""
+    """문서의 원문 PDF 파일. 없으면 None. 법령은 받아 둔 관보 PDF, EU 집행위원회 문서는 원문 대장의 파일이다."""
+    if document.get("format") == "act":
+        entry = act_pdf(document)
+        path = pathlib.Path(entry["file"]) if entry else None
+        return path if path and path.is_file() else None
     text = pathlib.Path(document["path"])
     folder = pathlib.Path("originals/files") / text.parent.name / text.stem
     files = sorted(folder.glob("*.pdf"))
@@ -210,10 +230,11 @@ def _arrange(pages, sheets, sound, wanted):
     return tally.jobs, tally.claimed, tally.report(len(wanted))
 
 
-def build(path, wanted, target, title="", original="", units=None):
+def build(path, wanted, target, title="", original="", units=None, covers=None):
     """원문 PDF(path)에 번역을 앉혀 target에 쓴다. 보고를 돌려준다.
 
     units(단위들)를 주면 wanted는 items()가 만든 것이고, 없으면 paragraphs()가 만든 것이다.
+    covers는 문서마다 따로 적어 둔 가릴 자리다(_covered).
     """
     pages = geometry.read(path)
     sheets = glyphs.read(path)
@@ -224,6 +245,8 @@ def build(path, wanted, target, title="", original="", units=None):
         tree = tags.read(pdf)
         _classify(sheets, tree)
         masks = _masks(sheets, tree)
+        for number, boxes in _covered(pages, covers).items():
+            masks.setdefault(number, []).extend(boxes)
         sound = [sheet.plain and erase.sound(page, sheet) for page, sheet in zip(pdf.pages, sheets)]
         jobs, claimed, report = _arrange_units(pages, sheets, sound, wanted, units) if units else _arrange(pages, sheets, sound, wanted)
         removed, failed = 0, 0
@@ -264,7 +287,7 @@ LOGO = ("logo", "emblem")
 
 
 def _masks(sheets, tree):
-    """기관의 표장이 놓인 자리: {쪽: [(x0, 위, x1, 아래)]}. 번역본이 기관의 공식 문서로 보이지 않게 가린다.
+    """기관의 표장이 놓인 자리: {쪽: [{"box": (x0, 위, x1, 아래), "fill", "label", "round"}]}. 번역본이 기관의 공식 문서로 보이지 않게 가린다.
 
     꼬리표에 그림을 대신하는 글이 "Logo of the European Commission …"으로 적힌 그림을 찾는다.
     그런 글이 없는 문서는 첫 쪽 위쪽의 작은 그림(표장이 놓이는 자리)을 가린다.
@@ -275,12 +298,47 @@ def _masks(sheets, tree):
             for number, mark in element["marks"]:
                 box = sheets[number].ink.get(mark) if number < len(sheets) else None
                 if box and box[2] - box[0] > 4 and box[3] - box[1] > 4:
-                    found.setdefault(number, []).append((box[0] - 1, box[1] - 1, box[2] + 1, box[3] + 1))
+                    found.setdefault(number, []).append(_mask(box))
     if not found and sheets:
         first = sheets[0]
         small = [box for box in first.images if box[1] < 0.2 * first.height and 20 < box[2] - box[0] <= 0.3 * first.width and 12 < box[3] - box[1] <= 0.12 * first.height]
         if small:
-            found[0] = [(box[0] - 1, box[1] - 1, box[2] + 1, box[3] + 1) for box in small]
+            found[0] = [_mask(box) for box in small]
+    return found
+
+
+def _mask(box):
+    """표장을 가리는 흰 네모(조금 넉넉하게). 가린 자리에 비공식 번역본임을 적는다."""
+    return {"box": (box[0] - 1, box[1] - 1, box[2] + 1, box[3] + 1), "fill": (1.0, 1.0, 1.0), "label": True, "round": False}
+
+
+def _covered(pages, covers):
+    """문서마다 따로 적어 둔 가릴 자리(sources/guides.json의 cover)를 쪽마다의 네모로: {쪽: [{"box", "fill", "label", "round"}]}.
+
+    적는 꼴은 둘이다.
+    - {"page": 1, "box": [x0, 위, x1, 아래]}: 그 네모(pt, 왼쪽 위가 원점). 도안으로 그려진 기관의 표장처럼 꼬리표로는 찾을 수 없는 것을 가린다.
+    - {"page": 1, "over": "글"}: 그 글이 놓인 줄(글자와 숫자만 견준다)을 pad만큼 넓힌 네모. 그림으로 박힌 제목의 그림자처럼 글의 자리에 남는 것을 가린다.
+    fill은 칠할 빛깔(#rrggbb, 없으면 흰색), label이 참이면 가린 자리에 비공식 번역본임을 적고, round가 참이면 양 끝을 둥글린다.
+    """
+    found = {}
+    for cover in covers or []:
+        number = int(cover.get("page", 1)) - 1
+        if not 0 <= number < len(pages):
+            continue
+        tint = str(cover.get("fill", "#ffffff")).lstrip("#")
+        fill = tuple(int(tint[at:at + 2], 16) / 255 for at in (0, 2, 4)) if len(tint) == 6 else (1.0, 1.0, 1.0)
+        boxes = []
+        if cover.get("box"):
+            boxes.append(tuple(float(value) for value in cover["box"]))
+        elif cover.get("over"):
+            wanted = match.squash(cover["over"])
+            wide, tall = cover.get("pad", [0, 0])
+            for line in pages[number]["lines"]:
+                if wanted and match.squash(line["text"]) == wanted:
+                    x0, top, x1, bottom = line["box"]
+                    boxes.append((x0 - wide, top - tall, x1 + wide, bottom + tall))
+        for box in boxes:
+            found.setdefault(number, []).append({"box": box, "fill": fill, "label": bool(cover.get("label")), "round": bool(cover.get("round"))})
     return found
 
 
@@ -312,7 +370,7 @@ def main(arguments):
     target = arguments[1] if len(arguments) > 1 else f"{wanted}-ko.pdf"
     units = corpus.marked(document)   # 꼬리표로 읽은 단위만(글자의 자리가 적혀 있다)
     wanted = items(parts, units, memory) if units else paragraphs(parts, memory)
-    report = build(path, wanted, target, document.get("name", ""), document.get("official", ""), units)
+    report = build(path, wanted, target, document.get("name", ""), document.get("official", ""), units, document.get("cover"))
     notes = report.pop("notes")
     print(json.dumps(report, ensure_ascii=False))
     for why, page, text in notes:

@@ -47,18 +47,50 @@ def _made(document, parts, memory, code):
     wanted = build.items(parts, units, memory) if units else build.paragraphs(parts, memory)
     if not wanted:
         return None, None
-    name = f"{document['id']}.{_digest(code, source, wanted)}"
+    cover = document.get("cover") or []
+    name = f"{document['id']}.{_digest(code, source, [wanted, cover])}"
     made, noted = CACHE / f"{name}.pdf", CACHE / f"{name}.json"
     if not (made.is_file() and noted.is_file()):
         CACHE.mkdir(parents=True, exist_ok=True)
         for old in CACHE.glob(f"{document['id']}.*"):
             old.unlink()
         half = CACHE / f"{name}.part"
-        report = build.build(source, wanted, half, document.get("name", ""), document.get("official", ""), units)
+        report = build.build(source, wanted, half, document.get("name", ""), document.get("official", ""), units, cover)
         report.pop("notes", None)
         half.replace(made)
         noted.write_text(json.dumps(report, ensure_ascii=False), encoding="utf-8")
     return made, {**json.loads(noted.read_text(encoding="utf-8")), "source": str(source)}
+
+
+ACTS = "files/acts"   # 법령의 관보 PDF를 사이트에 두는 곳
+
+
+def _sided(document):
+    """원문과 번역 PDF를 나란히 싣는 문서인가: EU 집행위원회의 PDF 문서와, 관보 PDF를 받아 둔 법령."""
+    from tools.pdfko import build
+
+    return document.get("format") == "pdf" or (document.get("format") == "act" and build.source(document) is not None)
+
+
+def _original(out, source, derive):
+    """원문 PDF의 사이트 안 경로. 원문 대장의 파일은 사이트가 이미 싣고 있고, 법령의 관보 PDF는 여기에서 옮겨 싣는다."""
+    if source.startswith(derive.STORE):
+        return derive.PUBLIC_FILES + source[len(derive.STORE):]
+    target = out / ACTS / pathlib.Path(source).name
+    target.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(source, target)
+    return f"{ACTS}/{target.name}"
+
+
+def _whole(document, build):
+    """법령의 원문 PDF에 관해 화면이 알릴 것: 온 파일의 주소(origin)와, 일부 쪽만 실었으면 온 쪽 수와 실은 쪽, 그 쪽에 있는 것(part)."""
+    if document.get("format") != "act":
+        return {}
+    entry = build.act_pdf(document) or {}
+    found = {"origin": entry["url"]} if entry.get("url") else {}
+    if entry.get("kept"):
+        found["part"] = {"of": entry["fullPages"], "kept": entry["kept"], "about": entry.get("about", "")}
+    return found
 
 
 def write(out):
@@ -69,10 +101,10 @@ def write(out):
     docs, failed = {}, []
     from tools.laws import corpus
     documents, memory = corpus.published()   # 검수를 거친 번역만 앉힌다
-    # 도안으로 된 자료(sources/guides.json에 "side": false로 적은 문서)는 싣지 않는다: 그림으로 박힌 제목 위에 번역이 겹치고
-    # 기관의 표지가 그대로 남아, 공식 문서처럼 보이지 않게 해야 하는 번역본의 조건을 채우지 못한다. 글로 보기에는 그대로 실린다.
+    # sources/guides.json에 "side": false로 적은 문서는 싣지 않는다(저장소에 사본을 두지 않아 원문 PDF를 보여 줄 수 없는 문서). 글로 보기에는 그대로 실린다.
+    # 도안으로 된 자료는 기관의 표장과 제목의 그림자를 가릴 자리(cover)를 적어 두고 싣는다: 번역본이 공식 문서처럼 보이지 않아야 한다.
     documents = [(document, parts) for document, parts in documents if document.get("side", True)]
-    wanted = [document["id"] for document, parts in documents if document.get("format") == "pdf" and parts]
+    wanted = [document["id"] for document, parts in documents if parts and _sided(document)]
     try:
         from tools.pdfko import build  # noqa: F401 — 꾸러미가 있는지 여기에서 안다
         from tools.publish import derive
@@ -82,7 +114,7 @@ def write(out):
     if ready:
         code = _code()
         for document, parts in documents:
-            if document.get("format") != "pdf" or not parts:
+            if not parts or not _sided(document):
                 continue
             state = corpus.progress(parts, memory)
             if state["done"] < state["blocks"]:
@@ -105,10 +137,11 @@ def write(out):
             usual = max(set(sizes), key=sizes.count)
             docs[document["id"]] = {
                 "pages": report["pages"], "ko": f"{FOLDER}/{target.name}", "koBytes": target.stat().st_size,
-                "en": derive.PUBLIC_FILES + source[len(derive.STORE):], "enBytes": pathlib.Path(source).stat().st_size,
+                "en": _original(out, source, derive), "enBytes": pathlib.Path(source).stat().st_size,
                 "paragraphs": report["paragraphs"], "placed": report["placed"],
                 # 쪽의 크기(pt): 거의 모든 쪽의 크기와, 그와 다른 쪽들(쪽 번호: 크기). 화면이 그리기 전에 자리를 잡는 데 쓴다
                 "size": list(usual), "odd": {str(number + 1): list(size) for number, size in enumerate(sizes) if size != usual},
+                **_whole(document, build),
             }
     else:
         print("::warning::국문 PDF를 만드는 도구(pikepdf, reportlab, pdftotext)가 없어 이번에는 국문 PDF를 만들지 못했습니다.")
@@ -138,7 +171,11 @@ def keep(out, ref="origin/gh-pages"):
         before = {}
     kept = []
     for name, entry in sorted(before.items()):
-        if name in now["docs"] or not (out / entry.get("en", "")).is_file():
+        if name in now["docs"]:
+            continue
+        original = str(entry.get("en", ""))
+        # 법령의 관보 PDF는 국문 PDF를 만들 때 사이트 폴더로 옮겨 실으므로, 만들지 못한 문서의 것은 지난 배포에서 함께 가져온다
+        if not (out / original).is_file() and not (original.startswith(ACTS + "/") and _git(out, "checkout", ref, "--", original)[0] and (out / original).is_file()):
             continue
         if _git(out, "checkout", ref, "--", entry["ko"])[0] and (out / entry["ko"]).is_file():
             now["docs"][name] = entry

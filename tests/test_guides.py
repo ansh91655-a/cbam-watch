@@ -569,6 +569,36 @@ class RepositoryTest(unittest.TestCase):
         self.assertEqual(len({document["id"] for document in guides.documents()}), len(guides.documents()))
         self.assertEqual(laws_health._outline_problems(), [])  # 검사에 걸려 남은 문단 같은 운영의 일은 여기서 보지 않는다(실행 확인과 보고가 알린다)
 
+    def test_places_to_cover_are_named_and_only_a_document_without_a_copy_has_no_pdf_view(self):
+        body = json.loads(pathlib.Path(guides.SOURCE).read_text(encoding="utf-8"))
+        known = body.get("covers", {})
+        self.assertTrue(known)
+        for name, places in known.items():
+            self.assertTrue(places, name)
+            for place in places:
+                self.assertGreaterEqual(place.get("page", 0), 1, name)
+                self.assertTrue((len(place.get("box", [])) == 4) != bool(place.get("over")), name)          # 네모이거나 글의 자리이거나, 둘 가운데 하나
+                if "box" in place:
+                    self.assertTrue(place["box"][0] < place["box"][2] and place["box"][1] < place["box"][3], name)
+                self.assertRegex(place.get("fill", "#ffffff"), r"^#[0-9a-f]{6}$", name)
+        used = set()
+        for entry in body["documents"]:
+            if isinstance(entry.get("cover"), str):
+                self.assertIn(entry["cover"], known, entry["id"])
+                used.add(entry["cover"])
+            self.assertEqual(guides.covers(entry), known.get(entry.get("cover"), []) if isinstance(entry.get("cover", ""), str) else entry["cover"], entry["id"])
+        self.assertEqual(used, set(known))                                                                    # 쓰지 않는 묶음을 남겨 두지 않는다
+        self.assertEqual(guides.covers({"cover": [{"page": 2, "box": [0, 0, 1, 1]}]}), [{"page": 2, "box": [0, 0, 1, 1]}])
+        self.assertEqual((guides.covers({}), guides.covers({"cover": "no-such-name"})), ([], []))
+        try:
+            from tools.pdfko import build as pdf_build
+        except ImportError:   # PDF를 다루는 꾸러미가 없는 환경에서는 여기까지만 본다
+            return
+        # PDF 나란히 보기에서 빼는 문서("side": false)는 저장소에 원문 PDF의 사본을 두지 않은 문서뿐이다
+        hidden = [document for document in guides.documents() if not document["side"]]
+        self.assertTrue(all(pdf_build.source(document) is None for document in hidden), [document["id"] for document in hidden])
+        self.assertTrue(all(pdf_build.source(document) is not None for document in guides.documents() if document["side"]))
+
     def test_each_runner_takes_only_its_own_documents(self):
         # 앞선 판에만 있는 문단을 담은 숨은 문서(…-was-…)도 본디 문서의 갈래를 따라 그 실행이 옮긴다
         groups = {document["id"]: document["group"] for document, _ in corpus.everything(history=True)[0]}

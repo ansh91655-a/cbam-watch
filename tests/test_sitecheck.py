@@ -41,6 +41,22 @@ class SitecheckTest(unittest.TestCase):
         self.assertIn("#rule", plan["axeViews"])
         self.assertEqual(plan["themes"], ["", "?theme=white", "?theme=midnight"])
 
+    def test_pdf_screens_of_a_document_and_of_an_act_are_looked_at(self):
+        (self.site / "data" / "laws").mkdir()
+        acts = [{"id": "32025R2548", "group": "act", "toc": [{"id": "art-1", "kind": "article"}]}, {"id": "32023R0956", "group": "act", "toc": []},
+                {"id": "guide-1", "group": "guide", "toc": [{"id": "sec-1", "kind": "section"}]}, {"id": "fact-steel", "group": "paper", "toc": [{"id": "body", "kind": "body"}]}]
+        self.write("laws/index.json", {"acts": acts})
+        self.write("laws/pdf.json", {"docs": {"guide-1": {"pages": 30}, "fact-steel": {"pages": 2}, "32023R0956": {"pages": 61}, "32025R2548": {"pages": 5}}})
+        plan = self.node("import { plan } from './tools/sitecheck/plan.mjs'; console.log(JSON.stringify(plan(process.argv[1])));", str(self.site))
+        for view in ("#pdf-fact-steel.p2", "#pdf-32025R2548.p2", "#pdf-none"):    # 쪽이 가장 적은 문서, 쪽이 가장 적은 법령, 없는 문서
+            self.assertIn(view, plan["views"])
+            self.assertEqual(view in plan["axeViews"], view != "#pdf-none")          # 글자 층과 찾기 칸이 있는 화면은 접근성 검사에도 든다
+        self.assertNotIn("#pdf-32023R0956.p2", plan["views"])
+        # 법령의 PDF가 없으면 문서의 화면만 본다
+        self.write("laws/pdf.json", {"docs": {"guide-1": {"pages": 30}}})
+        plan = self.node("import { plan } from './tools/sitecheck/plan.mjs'; console.log(JSON.stringify(plan(process.argv[1])));", str(self.site))
+        self.assertEqual([view for view in plan["views"] if view.startswith("#pdf-")], ["#pdf-guide-1.p2", "#pdf-none"])
+
     def test_a_chapter_on_another_scheme_is_looked_at_on_its_own(self):
         # 다른 제도를 다루는 장(scope가 있는 장)은 절이 가장 많아도 '절이 가장 많은 장'의 자리를 차지하지 않고 따로 본다.
         # 그 범위의 용어가 있으면 글 속 용어 풀이도 그 장에서 다뤄 보고, 풀이 칸의 링크가 그 장 안으로만 가는지 본다

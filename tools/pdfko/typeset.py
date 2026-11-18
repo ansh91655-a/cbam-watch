@@ -18,6 +18,7 @@ BAND_HEIGHT, BAND_SIZE = 22.0, 8.5
 BAND_FILL, BAND_INK = (0.93, 0.93, 0.93), (0.15, 0.15, 0.15)
 MARK = "비공식 국문 번역본"      # 기관 표장을 가린 자리에 적는 글
 MARK_SIZE = 10.5
+MARK_SMALLEST = 5.5     # 이보다 작아지면 적지 않는다
 
 
 def _line(sheet, x, y, text, heavy, size, color):
@@ -32,17 +33,24 @@ def overlay(sizes, jobs, masks=None):
     """겹칠 쪽들을 PDF 바이트로 돌려준다.
 
     sizes는 쪽마다의 (너비, 높이), jobs는 {쪽: [그릴 줄, …]}(layout.place가 주는 꼴, 좌표는 왼쪽 위가 원점),
-    masks는 {쪽: [(x0, 위, x1, 아래), …]} — 흰 네모로 가리고 비공식 번역본임을 적을 자리(기관의 표장).
+    masks는 {쪽: [{"box": (x0, 위, x1, 아래), "fill": (r, g, b), "label": 글을 적을지, "round": 양 끝을 둥글릴지}, …]} — 번역보다 먼저 칠해 가리는 자리(기관의 표장, 제목의 그림자).
     """
     buffer = io.BytesIO()
-    notice, banner = fonts.tidy(NOTICE), fonts.tidy(BANNER, True)
+    notice, banner, mark = fonts.tidy(NOTICE), fonts.tidy(BANNER, True), fonts.tidy(MARK, True)
     sheet = canvas.Canvas(buffer, pagesize=sizes[0], invariant=1, pageCompression=1, initialFontName=fonts.face(False))
     for number, (width, height) in enumerate(sizes):
         sheet.setPageSize((width, height))
-        for x0, top, x1, bottom in (masks or {}).get(number, []):
-            sheet.setFillColorRGB(1, 1, 1)
-            sheet.rect(x0, height - bottom, x1 - x0, bottom - top, stroke=0, fill=1)
-            _line(sheet, x0, height - (top + bottom) / 2 - MARK_SIZE * 0.35, MARK, True, MARK_SIZE, NOTICE_INK)
+        for mask in (masks or {}).get(number, []):
+            x0, top, x1, bottom = mask["box"]
+            sheet.setFillColorRGB(*mask.get("fill", (1, 1, 1)))
+            if mask.get("round"):
+                sheet.roundRect(x0, height - bottom, x1 - x0, bottom - top, (bottom - top) / 2, stroke=0, fill=1)
+            else:
+                sheet.rect(x0, height - bottom, x1 - x0, bottom - top, stroke=0, fill=1)
+            # 가린 자리에 비공식 번역본임을 적는다. 자리가 좁으면 글자를 줄이고, 읽을 수 없게 작아지면 적지 않는다(쪽 맨 위의 알림이 따로 있다)
+            size = min(MARK_SIZE, MARK_SIZE * (x1 - x0 - 4) / max(fonts.width(mark, True, MARK_SIZE), 1), (bottom - top) * 0.8)
+            if mask.get("label", True) and size >= MARK_SMALLEST:
+                _line(sheet, x0 + (x1 - x0 - fonts.width(mark, True, size)) / 2, height - (top + bottom) / 2 - size * 0.35, mark, True, size, NOTICE_INK)
         for job in jobs.get(number, []):
             _line(sheet, job["x"], height - job["base"], job["text"], job["heavy"], job["size"], job["color"])
         if number == 0:     # 첫 쪽에는 띠를 두르고 굵게 적는다(표지가 기관의 공식 문서로 보이지 않게)

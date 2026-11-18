@@ -49,12 +49,15 @@ export function plan(site) {
   const manual = acts.find((act) => act.group === "manual");  // 등록부 이용 안내서
   const single = acts.find((act) => act.group !== "act" && act.toc.length === 1);  // 조각이 하나뿐인 짧은 문서(알림이 붙는 것이 많다)
   const revised = acts.find((act) => act.changes);  // 앞선 판을 받아 두어 달라진 곳을 볼 수 있는 문서
-  // 원문과 번역 PDF를 나란히 보는 화면: 쪽이 적은 문서 하나(없는 문서의 화면도 본다)
+  // 원문과 번역 PDF를 나란히 보는 화면: 쪽이 적은 문서 하나와, 쪽이 적은 법령 하나(없는 문서의 화면도 본다).
+  // 법령은 관보 PDF를 따로 받아 싣는 것이라(tools/archive/actpdf.py) 원문 대장의 문서와 나란히 본다
   const pdfs = read(site, "laws/pdf.json", { docs: {} }).docs || {};
-  const small = Object.keys(pdfs).sort((a, b) => pdfs[a].pages - pdfs[b].pages)[0];
+  const byPages = Object.keys(pdfs).sort((a, b) => pdfs[a].pages - pdfs[b].pages || a.localeCompare(b));
+  const small = byPages[0];
+  const actPdf = byPages.find((id) => id !== small && acts.some((act) => act.id === id && act.group === "act"));
   const laws = acts.length ? ["#laws", `#laws-${encodeURIComponent("내재배출량 검증")}`, law, acts[1] ? `#law-${acts[1].id}.art-1` : null,
     guide ? `#law-${guide.id}.${(guide.toc.find((part) => part.kind === "section") || {}).id || "cover"}` : null,
-    manual ? `#law-${manual.id}` : null, single ? `#law-${single.id}` : null, small ? `#pdf-${small}.p2` : null, "#pdf-none",
+    manual ? `#law-${manual.id}` : null, single ? `#law-${single.id}` : null, small ? `#pdf-${small}.p2` : null, actPdf ? `#pdf-${actPdf}.p2` : null, "#pdf-none",
     // 문단 하나를 가리키는 주소와, 앞선 판과 달라진 곳 보기(앞선 판을 받아 둔 문서가 있을 때)
     acts[0] ? `#law-${acts[0].id}.art-2.1` : null, revised ? `#changes-${revised.id}` : null, "#changes-none"] : [];
   // 해설서: 차례, 절이 가장 많은 장(식과 표가 있는 장), 절 하나를 가리키는 주소, 없는 장.
@@ -89,7 +92,7 @@ export function plan(site) {
     axeWidths: [1280, 390],
     themes: ["", "?theme=white", "?theme=midnight"],
     axeViews: [...new Set(["#home", "#news", item, itemWithRefs, "#rules", "#rules-recent", missing[0], rule(withAnalysis), rule(withFigure), rule(withTable), "#price", "#calc", good,
-      "#calendar", "#calendar-2027.role-verifier", "#cn-7208", sheets[0], "#sector", "#sector-electricity", handbook[0], handbook[1], ...drawn, ...scoped, "#docs", "#laws", law, revised ? `#changes-${revised.id}` : null, "#news-notices", "#news-recent", "#terms", "#about", search[1]].filter(Boolean))],
+      "#calendar", "#calendar-2027.role-verifier", "#cn-7208", sheets[0], "#sector", "#sector-electricity", handbook[0], handbook[1], ...drawn, ...scoped, "#docs", "#laws", law, small ? `#pdf-${small}.p2` : null, actPdf ? `#pdf-${actPdf}.p2` : null, revised ? `#changes-${revised.id}` : null, "#news-notices", "#news-recent", "#terms", "#about", search[1]].filter(Boolean))],
     good,
     // 글 속 용어 풀이를 다뤄 보는 화면: 해설서의 장 하나와, 요약에 용어가 나오는 소식 하나(용어의 자료가 있을 때), 범위가 있는 장
     glossViews: (glossBody.terms || []).length ? [handbook[1], glossed ? `#item-${glossed.id}` : null, ...scopedGloss.map((chapter) => `#handbook-${chapter.id}`)].filter(Boolean) : [],

@@ -1,6 +1,7 @@
 // 문서 하나의 원문 PDF와 번역 PDF를 쪽마다 나란히 보는 화면. #pdf-<문서 id>.p<쪽> 꼴의 주소로 쪽을 바로 가리킬 수 있다.
 // 번역 PDF는 원문과 같은 쪽, 같은 자리에 번역을 앉힌 것이라 한 번의 스크롤로 두 쪽을 함께 본다.
 import * as data from "../data.js";
+import { findBar } from "../pdf/findbar.js";
 import { address, sheets } from "../pdf/sheets.js";
 import { band } from "../ui/band.js";
 import { empty, fill, h } from "../ui/dom.js";
@@ -11,12 +12,23 @@ import { groupTabs } from "../ui/tabs.js";
 const MODES = [["both", "나란히"], ["en", "원문"], ["ko", "번역"]];
 const ZOOMS = [0.75, 1, 1.25, 1.5, 2];
 const NARROW = "(max-width: 760px)";
-const NOTE = "번역 PDF는 이 사이트가 원문과 같은 자리에 번역을 앉혀 만든 비공식 자료입니다. 자리를 잡지 못한 일부 문단과 그림 안의 글자, 머리말·꼬리말은 원문 그대로입니다.";
+const NOTE = "번역 PDF는 이 사이트가 원문과 같은 자리에 번역을 앉혀 만든 비공식 자료입니다. 자리를 잡지 못한 일부 문단과 그림 안의 글자, 머리말·꼬리말, 가로로 놓인 쪽은 원문 그대로입니다.";
+const USE = "쪽의 글자는 끌어서 고르고 복사할 수 있습니다. 문서 전체에서 낱말을 찾으려면 도구 줄의 찾기 칸을 써 주세요.";
 const TITLE = "PDF 나란히 보기";
 let open = null;  // 지금 열어 둔 것. 화면을 떠나면 닫는다
 
+// 일부 쪽만 실은 법령(나라별 표가 수천 쪽인 것)의 알림: 온 쪽 수와 실은 쪽
+function partNote(entry) {
+  if (!entry.part) return null;
+  const spans = entry.part.kept.map(([first, last]) => (first === last ? `${count(first)}` : `${count(first)}~${count(last)}`)).join(", ");
+  const what = entry.part.about ? `${entry.part.about}만 골라 ` : "";
+  return h("p", { text: `이 법령의 관보 PDF는 모두 ${count(entry.part.of)}쪽입니다. 나라별 기본값의 표가 대부분이어서 ${what}${count(entry.pages)}쪽을 실었습니다(관보의 ${spans}쪽). 나머지 쪽은 EUR-Lex의 원문 PDF에서 보실 수 있습니다.` });
+}
+
 function close() {
   if (!open) return;
+  open.find.close();
+  window.removeEventListener("keydown", open.onKey);
   open.pages.close();
   window.removeEventListener("scroll", open.onScroll);
   window.removeEventListener("resize", open.onResize);
@@ -55,6 +67,7 @@ export async function render(main, arg) {
     modes.forEach((button, index) => button.setAttribute("aria-pressed", String(MODES[index][0] === key)));
     pages.go(number);
     pages.refresh();
+    find.again();   // 찾는 쪽(원문, 번역)이 달라졌다
   } }));
   const zoomText = h("span", { class: "pdf-zoom", "aria-live": "polite", text: "100%" });
   const zoom = (step) => {
@@ -73,12 +86,22 @@ export async function render(main, arg) {
     pick.value = String(page);
     pages.go(page);
   };
+  // 찾기는 지금 보이는 쪽(나란히면 원문과 번역 둘 다)에서 한다
+  const find = findBar(pages, entry.pages, () => (state.mode === "both" ? ["en", "ko"] : [state.mode]), () => bar.getBoundingClientRect().bottom);
   const bar = h("div", { class: "pdf-bar" }, [
     h("div", { class: "field" }, [h("span", { text: "보는 방식" }), h("div", { class: "seg", role: "group", "aria-label": "보는 방식" }, modes)]),
     h("div", { class: "field" }, [h("span", { text: "크기" }), h("div", { class: "pdf-zooms" }, [
       h("button", { type: "button", class: "btn", "aria-label": "작게", text: "−", onclick: () => zoom(-1) }), zoomText,
       h("button", { type: "button", class: "btn", "aria-label": "크게", text: "+", onclick: () => zoom(1) })])]),
     h("label", { class: "field", for: "pdf-page" }, [h("span", { text: "쪽" }), h("span", { class: "pdf-pick" }, [pick, h("span", { text: `/ ${count(entry.pages)}` })])]),
+    // 좁은 화면에서는 이 단추로 찾기 칸을 펼친다
+    h("button", { type: "button", class: "btn pdf-find-toggle", "aria-label": "문서 안에서 찾기", "aria-expanded": "false", onclick: (event) => {
+      const opened = bar.toggleAttribute("data-find");
+      event.currentTarget.setAttribute("aria-expanded", String(opened));
+      place();
+      if (opened) find.focus();
+    } }, icon("search", 18)),
+    find.node,
   ]);
 
   fill(main,
@@ -86,10 +109,13 @@ export async function render(main, arg) {
     h("p", { class: "crumbs" }, [h("a", { href: "#laws", text: "규정 원문" }), h("span", { text: "›" }), h("a", { href: `#law-${id}`, text: act.name }), h("span", { text: "›" }), h("span", { text: TITLE })]),
     h("div", { class: "law-note" }, [
       h("p", { text: NOTE }),
+      partNote(entry),
+      h("p", { text: USE }),
       h("p", { class: "law-note-links" }, [
         h("a", { href: `#law-${id}`, text: "글로 보기(문단마다 원문과 번역)" }),
         h("a", { href: address(entry.en), target: "_blank", rel: "noopener nofollow", text: `원문 PDF 열기(${bytes(entry.enBytes)})` }),
         h("a", { href: address(entry.ko), target: "_blank", rel: "noopener nofollow", text: `번역 PDF 열기(${bytes(entry.koBytes)})` }),
+        entry.origin ? h("a", { href: entry.origin, target: "_blank", rel: "noopener nofollow", text: "EUR-Lex의 원문 PDF" }) : null,
       ]),
     ]),
     bar, failed, frame,
@@ -115,10 +141,19 @@ export async function render(main, arg) {
   let resized = 0;
   const onResize = () => { clearTimeout(resized); resized = setTimeout(() => { place(); pages.refresh(); }, 200); };
   const onLeave = () => { if (!location.hash.startsWith(`#pdf-${id}`)) close(); };
+  // Ctrl+F(맥은 ⌘F)는 이 화면의 찾기 칸으로 간다. 찾기 칸에서 한 번 더 누르면 브라우저의 찾기가 열린다.
+  const onKey = (event) => {
+    if ((event.ctrlKey || event.metaKey) && !event.altKey && event.key.toLowerCase() === "f" && document.activeElement !== bar.querySelector("#pdf-find")) {
+      event.preventDefault();
+      if (!bar.hasAttribute("data-find")) { bar.setAttribute("data-find", ""); place(); }
+      find.focus();
+    }
+  };
   window.addEventListener("scroll", onScroll, { passive: true });
   window.addEventListener("resize", onResize);
   window.addEventListener("hashchange", onLeave);
-  open = { pages, onScroll, onResize, onLeave };
+  window.addEventListener("keydown", onKey);
+  open = { pages, find, onScroll, onResize, onLeave, onKey };
 
   const first = /^p(\d+)$/.exec(at);
   if (first) {

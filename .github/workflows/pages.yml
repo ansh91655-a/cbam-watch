@@ -54,7 +54,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: .cache/pdfko
-          key: pdfko-${{ hashFiles('data/laws-ko/**', 'originals/units/**', 'originals/state.json', 'sources/guides.json', 'tools/pdfko/**', 'assets/fonts/**') }}
+          key: pdfko-${{ hashFiles('data/laws-ko/**', 'originals/units/**', 'originals/state.json', 'collected/archive/eu-pdfs.json', 'sources/guides.json', 'tools/pdfko/**', 'assets/fonts/**') }}
           restore-keys: pdfko-
       - name: 사이트 폴더 만들기
         run: python -m tools.publish.build_site _site
