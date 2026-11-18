@@ -16,7 +16,7 @@ export function referencePrice(book, year) {
 }
 
 // 제품 1톤당 실질적으로 지불된 탄소가격(유로).
-//   entry "report": 인증 보고서에 적힌 값(perTonne)
+//   entry "report": 인증보고서에 적힌 값(perTonne)
 //   entry "build":  (가격이 매겨진 배출량 − 값을 치르지 않은 몫) × 탄소가격 ÷ 환율 + 그 밖의 몫(간접배출량이나 전구물질에 치러진 값)
 // carbon: { entry, perTonne, price(현지 통화/tCO2e), covered(tCO2e/t), free(%), rate(1유로당 현지 통화), other(유로/t) }
 // fallback: covered를 비워 두었을 때 쓰는 배출량(넣은 직접배출량). 값이 모자라면 null

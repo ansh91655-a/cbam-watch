@@ -5103,15 +5103,15 @@
   },
   {
    "id": "20261116-carbon-pulse-e1f15b",
-   "title": "아일랜드 EU 이사회 의장국, EU 배출권거래제 벤치마크와 국제 탄소 크레딧 사용의 변경 제안 보도",
-   "summary": "Carbon Pulse는 EU 이사회 의장국인 아일랜드가 EU 배출권거래제(EU ETS) 벤치마크와 국제 탄소 크레딧 사용에 관한 변경을 제안했다고 보도했습니다.",
+   "title": "아일랜드 EU 이사회 의장국, EU 배출권거래제 벤치마크와 국제 탄소크레딧 사용의 변경 제안 보도",
+   "summary": "Carbon Pulse는 EU 이사회 의장국인 아일랜드가 EU 배출권거래제(EU ETS) 벤치마크와 국제 탄소크레딧 사용에 관한 변경을 제안했다고 보도했습니다.",
    "kind": "입법",
    "topic": "legis",
    "importance": "낮음",
    "topics": [
     "배출권거래제",
     "벤치마크",
-    "탄소 크레딧"
+    "탄소크레딧"
    ],
    "sourceCode": "carbon-pulse",
    "sourceName": "Carbon Pulse CBAM & Tariffs",
@@ -5291,13 +5291,13 @@
   },
   {
    "id": "20261118-carbon-pulse-09e0c4",
-   "title": "EU, CBAM 탄소 크레딧 적격성을 유엔 기술 검토와 연계 보도",
-   "summary": "Carbon Pulse는 COP31의 감독 논란 속에 EU가 CBAM의 탄소 크레딧 적격성을 유엔 기술 검토와 연계했다고 보도했습니다.",
+   "title": "EU, CBAM 탄소크레딧 적격성을 유엔 기술 검토와 연계 보도",
+   "summary": "Carbon Pulse는 COP31의 감독 논란 속에 EU가 CBAM의 탄소크레딧 적격성을 유엔 기술 검토와 연계했다고 보도했습니다.",
    "kind": "소식",
    "topic": "price",
    "importance": "낮음",
    "topics": [
-    "탄소 크레딧",
+    "탄소크레딧",
     "COP31"
    ],
    "sourceCode": "carbon-pulse",

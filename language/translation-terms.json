@@ -302,12 +302,6 @@
    "added": "2026-11-12"
   },
   {
-   "en": "effective carbon price",
-   "ko": "실효 탄소가격",
-   "from": "guide-2",
-   "added": "2026-11-12"
-  },
-  {
    "en": "operator’s emissions report",
    "ko": "사업자 배출량 보고서",
    "from": "guide-2",
@@ -317,12 +311,6 @@
    "en": "cross-sectoral rules",
    "ko": "부문 공통 규칙",
    "from": "guide-2",
-   "added": "2026-11-12"
-  },
-  {
-   "en": "carbon price report",
-   "ko": "탄소가격 보고서",
-   "from": "guide-1",
    "added": "2026-11-12"
   },
   {
@@ -382,12 +370,6 @@
   {
    "en": "cap and trade",
    "ko": "총량제한 배출권거래",
-   "from": "qa",
-   "added": "2026-11-12"
-  },
-  {
-   "en": "free allowances",
-   "ko": "무상 배출권",
    "from": "qa",
    "added": "2026-11-12"
   },
@@ -3020,12 +3002,6 @@
    "added": "2026-11-13"
   },
   {
-   "en": "certification report",
-   "ko": "인증 보고서",
-   "from": "32025R2550",
-   "added": "2026-11-13"
-  },
-  {
    "en": "Customs Customer Information",
    "ko": "세관 고객 정보",
    "from": "32025R2550",
@@ -5156,26 +5132,8 @@
    "added": "2026-11-15"
   },
   {
-   "en": "carbon price mechanism",
-   "ko": "탄소가격 메커니즘",
-   "from": "32026R2498",
-   "added": "2026-11-18"
-  },
-  {
    "en": "baseline-and-credit",
    "ko": "기준선-크레딧 방식",
-   "from": "32026R2498",
-   "added": "2026-11-18"
-  },
-  {
-   "en": "carbon credits",
-   "ko": "탄소크레딧",
-   "from": "32026R2498",
-   "added": "2026-11-18"
-  },
-  {
-   "en": "internationally transferred mitigation outcomes",
-   "ko": "국제적으로 이전된 감축결과",
    "from": "32026R2498",
    "added": "2026-11-18"
   },
@@ -5210,12 +5168,6 @@
    "added": "2026-11-18"
   },
   {
-   "en": "compliance units",
-   "ko": "이행 단위",
-   "from": "32026R2498",
-   "added": "2026-11-18"
-  },
-  {
    "en": "primary evidence",
    "ko": "일차 증거",
    "from": "32026R2498",
@@ -5228,32 +5180,8 @@
    "added": "2026-11-18"
   },
   {
-   "en": "certification of the carbon price",
-   "ko": "탄소가격의 인증",
-   "from": "32026R2498",
-   "added": "2026-11-18"
-  },
-  {
-   "en": "CBAM certification lead auditor",
-   "ko": "CBAM 인증팀장",
-   "from": "32026R2498",
-   "added": "2026-11-18"
-  },
-  {
-   "en": "CBAM certification auditor",
-   "ko": "CBAM 인증심사원",
-   "from": "32026R2498",
-   "added": "2026-11-18"
-  },
-  {
-   "en": "compliance unit",
-   "ko": "이행 단위",
-   "from": "32026R2498",
-   "added": "2026-11-18"
-  },
-  {
    "en": "point-source carbon tax, levy or fee",
-   "ko": "점오염원 기반의 탄소에 대한 세금, 부과금 또는 수수료",
+   "ko": "배출원 기반의 탄소에 대한 세금, 부과금 또는 수수료",
    "from": "32026R2498",
    "added": "2026-11-18"
   },
@@ -5276,20 +5204,8 @@
    "added": "2026-11-18"
   },
   {
-   "en": "operator's carbon price report",
-   "ko": "사업자 탄소가격 보고서",
-   "from": "32026R2498",
-   "added": "2026-11-18"
-  },
-  {
    "en": "reduced rate",
    "ko": "감면 세율",
-   "from": "32026R2498",
-   "added": "2026-11-18"
-  },
-  {
-   "en": "yearly reference price",
-   "ko": "연간 기준가격",
    "from": "32026R2498",
    "added": "2026-11-18"
   },

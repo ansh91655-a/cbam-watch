@@ -1,12 +1,12 @@
 // 탄소가격 차감을 넣는 칸. 제품을 만든 나라에서 낸 탄소가격만큼 제출할 인증서 수를 줄인다(셈은 calc/carbon.js).
-// 실제 배출량으로 신고하면 실질적으로 지불된 탄소가격(인증 보고서의 값이나 넣은 값으로 계산한 값)이나 기본 탄소가격으로,
+// 실제 배출량으로 신고하면 실질적으로 지불된 탄소가격(인증보고서의 값이나 넣은 값으로 계산한 값)이나 기본 탄소가격으로,
 // 기본값으로 신고하면 기본 탄소가격으로만 청구할 수 있다.
 import { referencePrice } from "../../calc/carbon.js";
 import { fixed } from "../../calc/numbers.js";
 import { h } from "../../ui/dom.js";
 import { field, group, numberInput, row, seg } from "./fields.js";
 
-const ENTRY = [["report", "인증 보고서의 값"], ["build", "계산해 보기"]];
+const ENTRY = [["report", "인증보고서의 값"], ["build", "계산해 보기"]];
 
 // 기준가격 칸의 도움말: 비워 두면 어떤 값을 쓰는지
 function referenceHint(state) {

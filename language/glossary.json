@@ -1,5 +1,5 @@
 {
-"version": "v0.7 (2026-11-18 EU 기관과 입법 절차의 용어를 더함: 외교부와 한국법제연구원의 자료에서 확인한 표기)",
+"version": "v0.8 (2026-11-18 제3국 탄소가격 차감 이행규정 (EU) 2026/2498의 용어를 더함: 탄소가격제도, 탄소가격 보고서, 인증보고서 등. 모두 확인 전의 후보)",
 "note": "국문 표기 기준. status가 confirmed인 것은 정부·공공기관 자료에서 확인된 표기, partial은 일부 확인, candidate는 확인이 더 필요한 후보다. avoid는 쓰지 않는 표기다.",
 "terms": [
 {
@@ -5056,13 +5056,16 @@
 "category": "09 탄소가격·무상할당",
 "core": false,
 "en": [
-"reference price (RP_CBAM)"
+"reference price (RP_CBAM)",
+"yearly reference price",
+"yearly reference price of CBAM certificates"
 ],
 "abbr": [],
 "preferred": "기준가격",
 "allowed": [],
 "avoid": [],
-"status": "candidate"
+"status": "candidate",
+"note": "이행규정 (EU) 2026/2498 제7조(3)은 '연간 기준가격'(yearly reference price of CBAM certificates)을 수입한 해에 공표된 CBAM 인증서 가격의 평균(센트 단위로 반올림)으로 정한다. '연간 기준가격'으로 적어도 된다. 정부·공공기관 자료의 표기는 확인하기 전(2026-11-18)"
 },
 {
 "no": 268,
@@ -7483,6 +7486,311 @@
 "avoid": [],
 "status": "candidate",
 "note": "입법 절차 안내(2026-11-18)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 416,
+"category": "09 탄소가격·무상할당",
+"core": true,
+"en": [
+"carbon price mechanism"
+],
+"abbr": [],
+"preferred": "탄소가격제도",
+"allowed": [],
+"avoid": [
+{
+"form": "탄소가격 메커니즘"
+},
+{
+"form": "탄소가격메커니즘"
+}
+],
+"status": "candidate",
+"note": "이행규정 (EU) 2026/2498 제2조(3)이 뜻을 정한 말(탄소에 대한 세금·부과금·수수료 또는 배출권거래제). carbon pricing system의 확인된 표기(탄소가격제도, 259번)와 mechanism을 '제도'로 적는 CBAM의 표기(1번)에 맞췄다. 이 이행규정을 다룬 정부·공공기관의 국문 자료에서는 확인하기 전(2026-11-18)"
+},
+{
+"no": 417,
+"category": "09 탄소가격·무상할당",
+"core": true,
+"en": [
+"carbon price report",
+"operator's carbon price report",
+"operator’s carbon price report"
+],
+"abbr": [],
+"preferred": "탄소가격 보고서",
+"allowed": [
+"사업자 탄소가격 보고서"
+],
+"avoid": [],
+"status": "candidate",
+"note": "이행규정 (EU) 2026/2498 제8조: 사업자가 제품마다 실질적으로 지불된 탄소가격을 적는 보고서. '사업자 배출량 보고서'(102번)와 같은 꼴로 적는다. 이행규정 (EU) 2026/2498의 용어. 이 이행규정을 다룬 정부·공공기관의 국문 자료에서는 확인하기 전(2026-11-18)"
+},
+{
+"no": 418,
+"category": "08 검증·인정",
+"core": true,
+"en": [
+"certification report"
+],
+"abbr": [],
+"preferred": "인증보고서",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "이행규정 (EU) 2026/2498 제19조: 독립적인 사람이 탄소가격 보고서를 인증해 내는 보고서. '검증보고서'(220번)와 같은 꼴로 붙여 적는다. CBAM 인증서(certificate), 인정서(accreditation certificate)와 다른 것이다. 이행규정 (EU) 2026/2498의 용어. 이 이행규정을 다룬 정부·공공기관의 국문 자료에서는 확인하기 전(2026-11-18)"
+},
+{
+"no": 419,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"certification of the carbon price"
+],
+"abbr": [],
+"preferred": "탄소가격의 인증",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "이행규정 (EU) 2026/2498 제2조(2): 독립적인 사람이 인증보고서를 내려고 하는 활동. 인정(accreditation), 검증(verification)과 가려 적는다. 이행규정 (EU) 2026/2498의 용어. 이 이행규정을 다룬 정부·공공기관의 국문 자료에서는 확인하기 전(2026-11-18)"
+},
+{
+"no": 420,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"effective carbon price"
+],
+"abbr": [],
+"preferred": "실효 탄소가격",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "이행규정 (EU) 2026/2498 제7조와 부속서 I: 환급과 보상을 반영한 뒤 제품 1톤(전력은 MWh)당 유로로 나타낸 탄소가격(€EFF_CP). 이행규정 (EU) 2026/2498의 용어. 이 이행규정을 다룬 정부·공공기관의 국문 자료에서는 확인하기 전(2026-11-18)"
+},
+{
+"no": 421,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"compliance unit"
+],
+"abbr": [],
+"preferred": "이행 단위",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "이행규정 (EU) 2026/2498 제2조(13): 배출권거래제에서 의무를 이행하는 데 쓰는 배출권이나 크레딧. 이행규정 (EU) 2026/2498의 용어. 이 이행규정을 다룬 정부·공공기관의 국문 자료에서는 확인하기 전(2026-11-18)"
+},
+{
+"no": 422,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"baseline-and-credit emission trading system",
+"baseline-and-credit emissions trading system",
+"baseline-and-credit system",
+"baseline-and-credit scheme"
+],
+"abbr": [],
+"preferred": "기준선-크레딧 방식 배출권거래제",
+"allowed": [
+"기준선-크레딧 방식"
+],
+"avoid": [],
+"status": "candidate",
+"note": "이행규정 (EU) 2026/2498 제2조(5): 기준선 아래의 배출량에는 탄소가격을 물리지 않고, 기준선보다 적게 배출한 곳에 크레딧을 내주는 배출권거래제. 이행규정 (EU) 2026/2498의 용어. 이 이행규정을 다룬 정부·공공기관의 국문 자료에서는 확인하기 전(2026-11-18)"
+},
+{
+"no": 423,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"carbon credit"
+],
+"abbr": [],
+"preferred": "탄소크레딧",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "이행규정 (EU) 2026/2498 부속서 I 제1절(7): 탄소가격제도가 다루지 않는 곳의 감축활동에서 나온 크레딧. 붙여 적는다. 이행규정 (EU) 2026/2498의 용어. 이 이행규정을 다룬 정부·공공기관의 국문 자료에서는 확인하기 전(2026-11-18)"
+},
+{
+"no": 424,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"international carbon credit"
+],
+"abbr": [],
+"preferred": "국제 탄소크레딧",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "이행규정 (EU) 2026/2498 부속서 I 제1절(8): 제품을 생산한 나라가 아닌 나라에서 한 감축활동의 탄소크레딧. 이행규정 (EU) 2026/2498의 용어. 이 이행규정을 다룬 정부·공공기관의 국문 자료에서는 확인하기 전(2026-11-18)"
+},
+{
+"no": 425,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"internationally transferred mitigation outcomes",
+"internationally transferred mitigation outcome"
+],
+"abbr": [
+"ITMO"
+],
+"preferred": "국제적으로 이전된 감축결과",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "파리협정 제6조(2)의 말. 이행규정 (EU) 2026/2498 전문 (18)과 부속서 I 제3.5.4절에 나온다. 정부·공공기관 자료의 표기는 확인하기 전(2026-11-18)"
+},
+{
+"no": 426,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"point source carbon tax",
+"point-source carbon tax"
+],
+"abbr": [],
+"preferred": "배출원 기반 탄소세",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "이행규정 (EU) 2026/2498 부속서 I 제1절(4): 가려낼 수 있는 특정한 배출원에서 나오는 온실가스 배출량에 직접 매기는 세금·부과금·수수료. 'point-source carbon tax, levy or fee'는 '배출원 기반의 탄소에 대한 세금, 부과금 또는 수수료'로 적는다. 이행규정 (EU) 2026/2498의 용어. 이 이행규정을 다룬 정부·공공기관의 국문 자료에서는 확인하기 전(2026-11-18)"
+},
+{
+"no": 427,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"fuel-based carbon tax"
+],
+"abbr": [],
+"preferred": "연료 기반 탄소세",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "이행규정 (EU) 2026/2498 부속서 I 제1절(5): 제품 생산 중에 배출되는 화석연료의 탄소함량에 매기는 세금·부과금·수수료. 이행규정 (EU) 2026/2498의 용어. 이 이행규정을 다룬 정부·공공기관의 국문 자료에서는 확인하기 전(2026-11-18)"
+},
+{
+"no": 428,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"CPM emissions"
+],
+"abbr": [],
+"preferred": "CPM 배출량",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "이행규정 (EU) 2026/2498 부속서 I 제1절(1): 탄소가격제도(carbon price mechanism, CPM)에서 보고되고 확인된 배출량. 식의 기호(EM_CPM)와 맞도록 약어를 그대로 둔다. CPM reporting period는 'CPM 보고기간'으로 적는다. 이행규정 (EU) 2026/2498의 용어. 이 이행규정을 다룬 정부·공공기관의 국문 자료에서는 확인하기 전(2026-11-18)"
+},
+{
+"no": 429,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"CBAM certification lead auditor"
+],
+"abbr": [],
+"preferred": "CBAM 인증팀장",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "이행규정 (EU) 2026/2498 제2조(11). 검증팀장(238번)과 같은 꼴로 적는다. 이행규정 (EU) 2026/2498의 용어. 이 이행규정을 다룬 정부·공공기관의 국문 자료에서는 확인하기 전(2026-11-18)"
+},
+{
+"no": 430,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"CBAM certification auditor"
+],
+"abbr": [],
+"preferred": "CBAM 인증심사원",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "이행규정 (EU) 2026/2498 제2조(12). CBAM 검증심사원(394번)과 같은 꼴로 적는다. 이행규정 (EU) 2026/2498의 용어. 이 이행규정을 다룬 정부·공공기관의 국문 자료에서는 확인하기 전(2026-11-18)"
+},
+{
+"no": 431,
+"category": "08 검증·인정",
+"core": false,
+"en": [
+"certification team"
+],
+"abbr": [],
+"preferred": "인증팀",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "이행규정 (EU) 2026/2498의 용어. 이 이행규정을 다룬 정부·공공기관의 국문 자료에서는 확인하기 전(2026-11-18)"
+},
+{
+"no": 432,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"secondary market"
+],
+"abbr": [],
+"preferred": "유통시장",
+"allowed": [
+"2차 시장"
+],
+"avoid": [],
+"status": "candidate",
+"note": "이행 단위(배출권)가 경매 뒤에 사고팔리는 시장. 이행규정 (EU) 2026/2498 부속서 I 제3.3.1절. 가이던스의 번역에는 '2차 시장'도 쓰였다. 정부·공공기관 자료의 표기는 확인하기 전(2026-11-18)"
+},
+{
+"no": 433,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"weighted average auction price",
+"weighted average auctioning price"
+],
+"abbr": [],
+"preferred": "가중평균 경매가격",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "이행규정 (EU) 2026/2498 부속서 I 제3.3.1절: 배출권거래제의 탄소가격을 정하는 값. 이행규정 (EU) 2026/2498의 용어. 이 이행규정을 다룬 정부·공공기관의 국문 자료에서는 확인하기 전(2026-11-18)"
+},
+{
+"no": 434,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"yearly average exchange rate"
+],
+"abbr": [],
+"preferred": "연평균 환율",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "이행규정 (EU) 2026/2498 제6조: 외화로 낸 탄소가격을 유로로 바꾸는 데 쓰는, 집행위원회가 공개하는 환율. 이행규정 (EU) 2026/2498의 용어. 이 이행규정을 다룬 정부·공공기관의 국문 자료에서는 확인하기 전(2026-11-18)"
+},
+{
+"no": 435,
+"category": "09 탄소가격·무상할당",
+"core": false,
+"en": [
+"free allowance"
+],
+"abbr": [],
+"preferred": "무상 배출권",
+"allowed": [
+"무상할당 배출권"
+],
+"avoid": [],
+"status": "candidate",
+"note": "제3국의 배출권거래제에서 값을 치르지 않고 받은 배출권. EU 배출권거래제의 무상할당(free allocation, 261번)과 가려 적는다. 이행규정 (EU) 2026/2498의 용어. 이 이행규정을 다룬 정부·공공기관의 국문 자료에서는 확인하기 전(2026-11-18)"
 }
 ]
 }
