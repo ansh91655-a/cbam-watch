@@ -5304,6 +5304,24 @@
    "ko": "차감",
    "from": "glossary",
    "added": "2026-11-18"
+  },
+  {
+   "en": "deduct",
+   "ko": "차감하다",
+   "from": "glossary",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "deducted",
+   "ko": "차감한",
+   "from": "glossary",
+   "added": "2026-11-18"
+  },
+  {
+   "en": "deducting",
+   "ko": "차감하여",
+   "from": "glossary",
+   "added": "2026-11-18"
   }
  ]
 }
