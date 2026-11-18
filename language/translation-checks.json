@@ -43,11 +43,11 @@
   },
   {
    "day": "2026-11-18",
-   "batches": 3,
-   "checked": 180,
+   "batches": 4,
+   "checked": 227,
    "dropped": 2,
-   "canaries": 10,
-   "caught": 10,
+   "canaries": 13,
+   "caught": 13,
    "discarded": 0,
    "held": 0
   }
@@ -85,6 +85,9 @@
   "a316d8441351",
   "a96653ceac32",
   "e14df4f699c4",
-  "e72922f929b3"
+  "e72922f929b3",
+  "316988e80e6f",
+  "daee2b9c820a",
+  "dbe76c853d1f"
  ]
 }
