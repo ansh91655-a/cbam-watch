@@ -1,0 +1,100 @@
+{
+ "date": "2026-11-20",
+ "items": [
+  {
+   "id": "2744937cef7a",
+   "source": "ec-news",
+   "kind": "link",
+   "url": "https://taxation-customs.ec.europa.eu/news/extension-cbam-iceland-and-norway-2026-11-18_en",
+   "text": "Extension of CBAM to Iceland and Norway",
+   "seenAt": "2026-11-20T06:10:19+09:00",
+   "textPath": "collected/pages/items/2744937cef7a.txt"
+  },
+  {
+   "id": "f6466cfe9e88",
+   "source": "ec-news",
+   "kind": "dated",
+   "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_en",
+   "text": "18Nov2026 | Extension of CBAM to Iceland and Norway | EEA Joint Committee Decision No 283/2026, which extends CBAM to Iceland and Norway, entered into force on 18 November 2026. From 1 January 2027, the same CBAM rules will apply to imports of covered goods into Iceland and Norway as to imports into the EU.",
+   "seenAt": "2026-11-20T06:10:19+09:00",
+   "textPath": "collected/pages/ec-news.txt"
+  },
+  {
+   "id": "17e5929a6cf7",
+   "source": "ec-haveyoursay",
+   "kind": "record",
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives_en?text=CBAM",
+   "text": "CBAM declarations | Ares(2026)1634728 | REG_IMPL | ISC_WORKFLOW | OPEN | 2026/11/19 16:34:00 | 2026/12/17 23:59:59",
+   "seenAt": "2026-11-20T06:10:19+09:00",
+   "textPath": "collected/pages/items/17e5929a6cf7.txt"
+  },
+  {
+   "id": "10acf8c4e68e",
+   "source": "dehst",
+   "kind": "link",
+   "url": "https://www.dehst.de/SharedDocs/news/DE/cbam-neue-vo-anrechnung-co2-preis-drittstaaten.html",
+   "text": "Die Europäische Kommission hat am 16.11.2026 die Durchführungsverordnung (EU) 2026/2498 veröffentlicht, welche am 19.11.2026 in …",
+   "seenAt": "2026-11-20T06:10:19+09:00"
+  },
+  {
+   "id": "ff66da0e33fc",
+   "source": "icap-news",
+   "kind": "link",
+   "url": "https://icapcarbonaction.com/en/news/brazil-defines-ets-scope-and-timeline-and-sets-article-6-engagement-rules-further-steps-until",
+   "text": "Brazil defines ETS scope and timeline and sets Article 6 engagement rules, with further steps until December 2026",
+   "seenAt": "2026-11-20T06:10:19+09:00"
+  },
+  {
+   "id": "5923788dd44f",
+   "source": "carbon-pulse",
+   "kind": "link",
+   "url": "https://carbon-pulse.com/573715/?site=cpp",
+   "text": "UK CBAM policy is separate to EU ETS linking talks, says British govt",
+   "seenAt": "2026-11-20T06:10:19+09:00"
+  },
+  {
+   "id": "ba39dc44cc7b",
+   "source": "carbon-pulse",
+   "kind": "link",
+   "url": "https://carbon-pulse.com/572503/?site=cpp",
+   "text": "COP31: ANALYSIS – All eyes on Beijing, but China hesitates on leading climate action",
+   "seenAt": "2026-11-20T06:10:19+09:00"
+  },
+  {
+   "id": "a86a711e9106",
+   "source": "carbon-pulse",
+   "kind": "link",
+   "url": "https://carbon-pulse.com/category/insights/analysis/",
+   "text": "Analysis",
+   "seenAt": "2026-11-20T06:10:19+09:00"
+  },
+  {
+   "id": "fc4534d62939",
+   "source": "carbon-pulse",
+   "kind": "link",
+   "url": "https://carbon-pulse.com/573410/?site=cpp",
+   "text": "EU, UK will aim to link their carbon markets from 2028 -sources",
+   "seenAt": "2026-11-20T06:10:19+09:00"
+  },
+  {
+   "id": "b9554ad1fe23",
+   "source": "uk-govuk",
+   "kind": "link",
+   "url": "https://www.gov.uk/guidance/getting-the-emissions-intensity-when-importing-carbon-border-adjustment-mechanism-cbam-goods",
+   "text": "2026-11-19 | Getting the emissions intensity when importing Carbon Border Adjustment Mechanism (CBAM) goods | Information about using a verifier to create a verification report has been added, including confirmation that accreditation bodies are responsible for publishing an annual list of accredited verifiers for UK CBAM.",
+   "textPath": "collected/archive/pages/uk-govuk/changes.txt",
+   "seenAt": "2026-11-20T06:13:27+09:00"
+  },
+  {
+   "id": "8c5efdcad325",
+   "source": "uk-govuk",
+   "kind": "link",
+   "url": "https://www.gov.uk/government/publications/check-the-default-values-for-the-carbon-border-adjustment-mechanism-cbam",
+   "text": "2026-11-19 | Check the default values for the Carbon Border Adjustment Mechanism (CBAM) | The 'Description' for 'Iron and steel default values' at '(CN) code 72172030' has been updated.",
+   "textPath": "collected/archive/pages/uk-govuk/changes.txt",
+   "seenAt": "2026-11-20T06:13:27+09:00"
+  }
+ ],
+ "generatedAt": "2026-11-20T06:13:27+09:00",
+ "count": 11
+}

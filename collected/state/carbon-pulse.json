@@ -1,7 +1,7 @@
 {
  "code": "carbon-pulse",
  "baseline": "2026-11-10",
- "checkedAt": "2026-11-19T06:13:19+09:00",
+ "checkedAt": "2026-11-20T06:10:19+09:00",
  "seen": {
   "u:https://carbon-pulse.com/": "2026-11-10",
   "u:https://carbon-pulse.com/nzp": "2026-11-10",
@@ -168,6 +168,10 @@
   "u:https://carbon-pulse.com/573119/?site=cpp": "2026-11-19",
   "u:https://carbon-pulse.com/572946/?site=cpp": "2026-11-19",
   "u:https://carbon-pulse.com/572601/?site=cpp": "2026-11-19",
-  "u:https://carbon-pulse.com/572291/?site=cpp": "2026-11-19"
+  "u:https://carbon-pulse.com/572291/?site=cpp": "2026-11-19",
+  "u:https://carbon-pulse.com/573715/?site=cpp": "2026-11-20",
+  "u:https://carbon-pulse.com/572503/?site=cpp": "2026-11-20",
+  "u:https://carbon-pulse.com/category/insights/analysis/": "2026-11-20",
+  "u:https://carbon-pulse.com/573410/?site=cpp": "2026-11-20"
  }
 }

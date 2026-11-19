@@ -4,7 +4,7 @@
 제목: CBAM declarations
 문서 번호: Ares(2026)1634728
 예정 법령 유형: REG_IMPL
-단계: INIT_PLANNED | 의견수렴 상태: DISABLED | 시작: 2026/02/19 11:08:31 | 마감: 
+단계: ISC_WORKFLOW | 의견수렴 상태: OPEN | 시작: 2026/11/19 16:34:00 | 마감: 2026/12/17 23:59:59
 
 번호: 16933
 제목: Rules on the adjustment of CBAM certificates to reflect the EU ETS free allocation

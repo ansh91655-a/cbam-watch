@@ -1,7 +1,7 @@
 {
  "code": "icap-news",
  "baseline": "2026-11-10",
- "checkedAt": "2026-11-19T06:13:19+09:00",
+ "checkedAt": "2026-11-20T06:10:19+09:00",
  "seen": {
   "u:https://icapcarbonaction.com/en/ets": "2026-11-10",
   "u:https://icapcarbonaction.com/en/compare": "2026-11-10",
@@ -17,6 +17,7 @@
   "u:https://icapcarbonaction.com/en/news/ukraine-releases-draft-ets-law-consultations": "2026-11-10",
   "u:https://icapcarbonaction.com/ets": "2026-11-10",
   "u:https://icapcarbonaction.com/ets-prices": "2026-11-10",
-  "u:https://icapcarbonaction.com/en/news/eu-sets-method-crediting-carbon-prices-paid-abroad-under-cbam": "2026-11-18"
+  "u:https://icapcarbonaction.com/en/news/eu-sets-method-crediting-carbon-prices-paid-abroad-under-cbam": "2026-11-18",
+  "u:https://icapcarbonaction.com/en/news/brazil-defines-ets-scope-and-timeline-and-sets-article-6-engagement-rules-further-steps-until": "2026-11-20"
  }
 }

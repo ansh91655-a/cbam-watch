@@ -259,6 +259,21 @@ Role
 Committee
 Date
 Interest representatives
+MARAN Pierfrancesco
+Committee chair
+ENVI
+16/11/2026
+Federazione Imprese Siderurgiche Italiane
+MARAN Pierfrancesco
+Committee chair
+ENVI
+16/11/2026
+European Aluminium AISBL
+MARAN Pierfrancesco
+Committee chair
+ENVI
+13/11/2026
+A2A
 RATAS Jüri
 Rapporteur for opinion
 ITRE
@@ -269,6 +284,21 @@ Shadow rapporteur for opinion
 ITRE
 12/11/2026
 CEFIC - European Chemical Industry Council
+MARAN Pierfrancesco
+Committee chair
+ENVI
+12/11/2026
+Fondazione Patto per la Decarbonizzazione del Trasporto Aereo
+MARAN Pierfrancesco
+Committee chair
+ENVI
+10/11/2026
+European Shipowners | ECSA
+MARAN Pierfrancesco
+Committee chair
+ENVI
+09/11/2026
+European Suppliers of Waste-to-Energy Technology
 RATAS Jüri
 Rapporteur for opinion
 ITRE
@@ -279,46 +309,6 @@ Shadow rapporteur for opinion
 ITRE
 05/11/2026
 BUSINESSEUROPE
-RATAS Jüri
-Rapporteur for opinion
-ITRE
-04/11/2026
-American Chamber of Commerce to the European Union
-RATAS Jüri
-Rapporteur for opinion
-ITRE
-04/11/2026
-Hydro
-BLOSS Michael
-Shadow rapporteur
-ENVI
-03/11/2026
-SHS - Stahl-Holding-Saar
-BLOSS Michael
-Shadow rapporteur
-ENVI
-28/10/2026
-Bund für Umwelt und Naturschutz Deutschland e. V.
-Citizens' Climate Europe
-Deutsche Umwelthilfe e.V.
-Deutscher Naturschutzring, Dachverband der deutschen Natur-, Tier- und Umweltschutzverbände (DNR) e.V.
-Germanwatch
-Naturschutzbund Deutschland e.V.
-Umweltinstitut München e.V.
-WWF Deutschland
-BLOSS Michael
-Shadow rapporteur
-ENVI
-26/10/2026
-Federated Hermes Limited
-Institutional Investors Group on Climate Change
-M&G plc
-Robeco
-MARAN Pierfrancesco
-Committee chair
-ENVI
-22/10/2026
-Climate Strategy
 Load more
 Other Members
 Name
@@ -328,6 +318,14 @@ HADJIPANTELA Michalis
 18/11/2026
 NOVE
 ESMECA - European SME Cement Association
+MONTSERRAT Dolors
+18/11/2026
+FOMENT DEL TREBALL NACIONAL
+International Airlines Group IAG
+Vueling
+ZŁOTOWSKI Kosma
+17/11/2026
+International Air Transport Association
 FERENC Viktória
 16/11/2026
 Magyar Cement-, Beton- és Mészipari Szövetség
@@ -350,12 +348,6 @@ Vereinigung der österreichischen Industrie - Industriellenvereinigung
 NAGYOVÁ Jana
 10/11/2026
 The European SME Cement Association
-KANEV Radan
-10/11/2026
-ExxonMobil Petroleum & Chemical
-POLFJÄRD Jessica
-09/11/2026
-Jernkontoret
 Load more
 Procedure file
 Basic information
@@ -445,18 +437,20 @@ Contribution | PT_PARLIAMENT | COM(2026)0616 | 09/11/2026 |
 Source | Document | Date
 European Commission | EUR-Lex | 
 Name | Role | Committee | Date | Interest representatives
+MARAN Pierfrancesco | Committee chair | ENVI | 16/11/2026 | Federazione Imprese Siderurgiche Italiane
+MARAN Pierfrancesco | Committee chair | ENVI | 16/11/2026 | European Aluminium AISBL
+MARAN Pierfrancesco | Committee chair | ENVI | 13/11/2026 | A2A
 RATAS Jüri | Rapporteur for opinion | ITRE | 12/11/2026 | IBERDROLA
 GYÜRK András | Shadow rapporteur for opinion | ITRE | 12/11/2026 | CEFIC - European Chemical Industry Council
+MARAN Pierfrancesco | Committee chair | ENVI | 12/11/2026 | Fondazione Patto per la Decarbonizzazione del Trasporto Aereo
+MARAN Pierfrancesco | Committee chair | ENVI | 10/11/2026 | European Shipowners | ECSA
+MARAN Pierfrancesco | Committee chair | ENVI | 09/11/2026 | European Suppliers of Waste-to-Energy Technology
 RATAS Jüri | Rapporteur for opinion | ITRE | 05/11/2026 | EUROCHAMBRES – Association of European Chambers of Commerce and Industry
 GYÜRK András | Shadow rapporteur for opinion | ITRE | 05/11/2026 | BUSINESSEUROPE
-RATAS Jüri | Rapporteur for opinion | ITRE | 04/11/2026 | American Chamber of Commerce to the European Union
-RATAS Jüri | Rapporteur for opinion | ITRE | 04/11/2026 | Hydro
-BLOSS Michael | Shadow rapporteur | ENVI | 03/11/2026 | SHS - Stahl-Holding-Saar
-BLOSS Michael | Shadow rapporteur | ENVI | 28/10/2026 | Bund für Umwelt und Naturschutz Deutschland e. V. Citizens' Climate Europe Deutsche Umwelthilfe e.V. Deutscher Naturschutzring, Dachverband der deutschen Natur-, Tier- und Umweltschutzverbände (DNR) e.V. Germanwatch Naturschutzbund Deutschland e.V. Umweltinstitut München e.V. WWF Deutschland
-BLOSS Michael | Shadow rapporteur | ENVI | 26/10/2026 | Federated Hermes Limited Institutional Investors Group on Climate Change M&G plc Robeco
-MARAN Pierfrancesco | Committee chair | ENVI | 22/10/2026 | Climate Strategy
 Name | Date | Interest representatives
 HADJIPANTELA Michalis | 18/11/2026 | NOVE ESMECA - European SME Cement Association
+MONTSERRAT Dolors | 18/11/2026 | FOMENT DEL TREBALL NACIONAL International Airlines Group IAG Vueling
+ZŁOTOWSKI Kosma | 17/11/2026 | International Air Transport Association
 FERENC Viktória | 16/11/2026 | Magyar Cement-, Beton- és Mészipari Szövetség
 KNOTEK Ondřej | 16/11/2026 | A2A MUST & Partners
 NAGYOVÁ Jana | 12/11/2026 | A2A
@@ -464,5 +458,3 @@ GYÜRK András | 12/11/2026 | Bioenergy Europe
 POLFJÄRD Jessica | 12/11/2026 | Stegra III (formerly Stegra and H2GS AB)
 HAIDER Roman | 11/11/2026 | Vereinigung der österreichischen Industrie - Industriellenvereinigung
 NAGYOVÁ Jana | 10/11/2026 | The European SME Cement Association
-KANEV Radan | 10/11/2026 | ExxonMobil Petroleum & Chemical
-POLFJÄRD Jessica | 09/11/2026 | Jernkontoret

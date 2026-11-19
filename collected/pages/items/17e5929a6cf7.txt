@@ -1,0 +1,9 @@
+[주소] https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives_en?text=CBAM
+번호: 16932
+제목: CBAM declarations
+문서 번호: Ares(2026)1634728
+예정 법령 유형: REG_IMPL (이행규정)
+단계: ISC_WORKFLOW (법령 초안(Draft act) 의견수렴 단계)
+의견수렴 상태: OPEN (의견 받는 중)
+의견수렴 시작: 2026/11/19 16:34:00
+의견수렴 마감: 2026/12/17 23:59:59

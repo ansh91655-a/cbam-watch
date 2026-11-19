@@ -1,12 +1,12 @@
 {
  "source": "ec-press",
- "fetchedAt": "2026-11-19T06:15:05+09:00",
+ "fetchedAt": "2026-11-20T06:12:41+09:00",
  "since": "2025-01-01",
  "report": {
   "pages": 8,
   "listed": 400,
-  "opened": 8,
-  "kept": 1,
+  "opened": 3,
+  "kept": 0,
   "failures": [],
   "oldest": "2025-02-18",
   "total": 52,
@@ -97,6 +97,7 @@
    "MEX/26/2449",
    "MEX/26/2471",
    "MEX/26/2497",
+   "MEX/26/2516",
    "MEX/26/462",
    "QANDA/25/1268",
    "QANDA/25/1688",
@@ -156,6 +157,7 @@
    "SPEECH/26/2490",
    "SPEECH/26/2501",
    "SPEECH/26/2506",
+   "SPEECH/26/2517",
    "SPEECH/26/986",
    "STATEMENT/25/1267",
    "STATEMENT/25/1704",
@@ -181,6 +183,7 @@
    "STATEMENT/26/2317",
    "STATEMENT/26/2390",
    "STATEMENT/26/2425",
+   "STATEMENT/26/2528",
    "STATEMENT/26/53"
   ]
  },

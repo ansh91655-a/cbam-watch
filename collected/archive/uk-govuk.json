@@ -1,6 +1,6 @@
 {
  "source": "uk-govuk",
- "fetchedAt": "2026-11-19T06:15:10+09:00",
+ "fetchedAt": "2026-11-20T06:12:51+09:00",
  "since": "2025-01-01",
  "report": {
   "documents": 19,
@@ -8,11 +8,33 @@
   "changes": 247,
   "failures": [],
   "recent": {
-   "reread": 2,
+   "reread": 4,
    "failures": []
   }
  },
  "entries": [
+  {
+   "date": "2026-11-19",
+   "title": "Getting the emissions intensity when importing Carbon Border Adjustment Mechanism (CBAM) goods",
+   "note": "Information about using a verifier to create a verification report has been added, including confirmation that accreditation bodies are responsible for publishing an annual list of accredited verifiers for UK CBAM.",
+   "url": "https://www.gov.uk/guidance/getting-the-emissions-intensity-when-importing-carbon-border-adjustment-mechanism-cbam-goods",
+   "type": "detailed_guide",
+   "firstPublished": "2026-10-16",
+   "via": "collection",
+   "key": "/guidance/getting-the-emissions-intensity-when-importing-carbon-border-adjustment-mechanism-cbam-goods@2026-11-19",
+   "textPath": "collected/archive/pages/uk-govuk/changes.txt"
+  },
+  {
+   "date": "2026-11-19",
+   "title": "Check the default values for the Carbon Border Adjustment Mechanism (CBAM)",
+   "note": "The 'Description' for 'Iron and steel default values' at '(CN) code 72172030' has been updated.",
+   "url": "https://www.gov.uk/government/publications/check-the-default-values-for-the-carbon-border-adjustment-mechanism-cbam",
+   "type": "guidance",
+   "firstPublished": "2026-10-16",
+   "via": "collection",
+   "key": "/government/publications/check-the-default-values-for-the-carbon-border-adjustment-mechanism-cbam@2026-11-19",
+   "textPath": "collected/archive/pages/uk-govuk/changes.txt"
+  },
   {
    "date": "2026-11-17",
    "title": "HMRC email updates, videos and webinars for tax agents and advisers",
