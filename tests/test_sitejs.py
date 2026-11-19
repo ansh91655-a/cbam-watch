@@ -78,7 +78,7 @@ const round = (value) => Math.round(value * 1000) / 1000;
 // 글 속 용어 풀이: 찾은 자리를 [찾은 글, 용어의 국문 표기]로 적는다
 const glossTerms = [{ forms: ['부문 간 보정계수', 'CSCF'], ko: '부문 간 보정계수' }, { forms: ['EU 배출권거래제', 'EU ETS'], ko: 'EU 배출권거래제' }, { forms: ['ETS'], ko: '배출권거래제' },
   { forms: ['탄소가격'], ko: '탄소가격' }, { forms: ['기본 탄소가격'], ko: '기본 탄소가격' }, { forms: ['SEE'], ko: '고유 내재배출량' }, { forms: ['EUA'], ko: 'EU 배출권' },
-  { forms: ['CCS', 'CCU', 'CCUS'], ko: '탄소 포집·저장' }, { forms: ['RED II'], ko: '재생에너지 지침' }];
+  { forms: ['CCS', 'CCU', 'CCUS'], ko: '탄소 포집·저장' }, { forms: ['RED II'], ko: '재생에너지 지침' }, { forms: ['독립된 자'], ko: '독립된 자' }];
 const glossBook = compile(glossTerms);
 // 범위가 있는 용어(영국 CBAM의 장)와 그 범위의 풀이를 쓰는 소식
 const scopedGloss = { terms: [{ forms: ['관할당국'], ko: '관할당국', text: 'EU의 풀이' }, { forms: ['회계기간'], ko: '회계기간', scope: 'uk' }, { forms: ['관할당국'], ko: '관할당국', text: '영국의 풀이', scope: 'uk' }],
@@ -158,6 +158,8 @@ console.log(JSON.stringify({
     plural: marked('EUAs를 삽니다. CCUS와 CCS는 다릅니다. RED II와 RED III'),
     once: (() => { const seen = new Set(); return [marked('탄소가격을 냅니다.', seen), marked('탄소가격을 또 냅니다. CSCF도 있습니다.', seen)]; })(),
     skipped: marked('CSCF와 탄소가격', new Set(), (term) => term.ko === '탄소가격'),
+    shortEnd: ['독립된 자가 인증합니다.', '‘독립된 자’란 법인입니다.', '독립된 자(independent person)의 자격', '인정받은 독립된자는 등록합니다.', '그 독립된 자에게는 알립니다.', '독립된 자였을 것', '독립된 자',
+      '독립된 자문기구가 낸 독립된 자료입니다.', '독립된 자회사의 독립된 자격', '독립된 자문기구가 아니라 독립된 자가 인증합니다.'].map((text) => marked(text).map(([word]) => word)),
     empty: [find('CSCF', compile([])), find('', glossBook), find('CSCF', null), compile(null).rows],
     scope: [{ scope: 'uk' }, { scope: 'eu-law' }, { item: 'hmrc-2' }, { item: 'press-1' }, { scope: 'eu-law', item: 'hmrc-1' }, {}, undefined].map((where) => glossScope(scopedGloss, where)),
     noScopes: [glossScope({ terms: [] }, { scope: 'uk' }), glossScope(null, { item: 'hmrc-1' }), termsOf(null, 'uk'), termsOf({ terms: [{ ko: '가' }] }).length],
@@ -243,6 +245,8 @@ class SiteModulesTest(unittest.TestCase):
         self.assertEqual(gloss["plural"], [["EUAs", "EU 배출권"], ["CCUS", "탄소 포집·저장"], ["RED II", "재생에너지 지침"]])   # 복수형의 s는 받아 준다. 같은 용어의 다른 표기(CCS)는 다시 표시하지 않는다
         self.assertEqual(gloss["once"], [[["탄소가격", "탄소가격"]], [["CSCF", "부문 간 보정계수"]]])                                # 글 한 편에서 용어마다 한 번만
         self.assertEqual(gloss["skipped"], [["CSCF", "부문 간 보정계수"]])
+        # 한 글자 낱말로 끝나는 표기는 뒤가 조사이거나 글자가 끝난 자리에서만 찾는다(독립된 자료, 독립된 자문기구는 다른 낱말이다)
+        self.assertEqual(gloss["shortEnd"], [["독립된 자"], ["독립된 자"], ["독립된 자"], ["독립된자"], ["독립된 자"], ["독립된 자"], ["독립된 자"], [], [], ["독립된 자"]])
         self.assertEqual(gloss["empty"], [[], [], [], []])
 
     def test_scoped_terms_are_used_only_on_the_text_of_their_scope(self):
