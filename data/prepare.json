@@ -1,0 +1,1246 @@
+{
+ "asOf": "2026-11-18",
+ "lead": "역할마다 법령과 공식 안내가 정한 일을 해설서와 의무 일정에서 골라 차례로 놓았습니다. 항목마다 해설서의 절과 근거 조문, 일정으로 이어집니다.",
+ "note": "새로 적은 사실은 없습니다. 글은 해설서와 의무 일정의 글을 줄인 것이며, 조건과 예외는 이어진 절과 조문에서 확인해 주세요. 법률 자문이 아닙니다.",
+ "roles": [
+  {
+   "key": "declarant",
+   "name": "신고인·수입자",
+   "about": "승인된 CBAM 신고인과 EU의 수입자, 간접 세관 대리인이 챙길 일입니다.",
+   "groups": [
+    {
+     "name": "먼저 확인할 것",
+     "items": [
+      {
+       "id": "d-scope",
+       "title": "수입 제품의 CBAM 대상 여부",
+       "text": "CBAM 규정은 부속서 I의 제품이 제3국을 원산지로 하여 EU 관세영역으로 수입될 때 적용됩니다. 수입하는 제품의 CN 코드가 부속서 I에 있는지가 대상 여부를 가릅니다.",
+       "tool": {
+        "href": "#cn",
+        "text": "품목 코드 조회"
+       },
+       "sections": [
+        {
+         "href": "#handbook-scope.goods-cn",
+         "chapter": "대상 품목과 적용 제외",
+         "title": "부속서 I의 품목과 CN 코드"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32023R0956",
+         "part": "art-2",
+         "label": "CBAM 규정 제2조 적용 범위"
+        },
+        {
+         "act": "32023R0956",
+         "part": "annex-i",
+         "label": "CBAM 규정 부속서 I 제품과 온실가스의 목록"
+        }
+       ]
+      },
+      {
+       "id": "d-threshold",
+       "title": "소량 면제 해당 여부",
+       "text": "수입자가 한 해에 수입한 제품의 순중량이 단일 중량 임계값인 순중량 50톤을 넘지 않으면 CBAM 규정의 의무를 면제받습니다. 모든 CN 코드의 순중량을 수입자별, 역년별로 합쳐 따지며, 전력과 수소의 수입에는 적용되지 않습니다. 면제받는 수입자는 세관신고서에 면제를 신고해야 합니다. 한 해 동안 임계값을 넘으면 넘기 전에 수입한 물량까지 모든 의무를 지며, 넘을 것으로 예상하는 수입자는 승인된 CBAM 신고인 지위를 신청해야 합니다.",
+       "sections": [
+        {
+         "href": "#handbook-scope.de-minimis",
+         "chapter": "대상 품목과 적용 제외",
+         "title": "소량 면제"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32023R0956",
+         "part": "art-2a",
+         "label": "CBAM 규정 제2a조 소량 면제"
+        }
+       ]
+      },
+      {
+       "id": "d-status",
+       "title": "승인된 CBAM 신고인 지위",
+       "text": "CBAM 제품은 승인된 CBAM 신고인만 EU로 수입할 수 있습니다. 회원국에 설립된 수입자는 수입하기 전에 CBAM 등록부를 통해 지위를 신청해야 하고, 수입자가 회원국에 설립되어 있지 않으면 간접 세관 대리인이 지위를 받아야 합니다. 2026년 3월 31일까지 신청한 수입자나 간접 세관 대리인은 관할당국이 결정할 때까지 잠정적으로 수입을 이어 갈 수 있습니다.",
+       "duty": "eu-authorisation-interim",
+       "sections": [
+        {
+         "href": "#handbook-roles.declarant",
+         "chapter": "누가 무엇을 하는지",
+         "title": "승인된 CBAM 신고인과 간접 세관 대리인"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32023R0956",
+         "part": "art-4",
+         "label": "CBAM 규정 제4조 제품의 수입"
+        },
+        {
+         "act": "32023R0956",
+         "part": "art-5",
+         "label": "CBAM 규정 제5조 승인 신청"
+        },
+        {
+         "act": "32023R0956",
+         "part": "art-17",
+         "label": "CBAM 규정 제17조 승인"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "내재배출량과 탄소가격의 자료",
+     "items": [
+      {
+       "id": "d-actual-default",
+       "title": "실제배출량과 기본값",
+       "text": "전력이 아닌 제품의 내재배출량은 실제배출량으로 정하거나 기본값을 참조해 정합니다. 실제배출량을 쓰면 신고한 내재배출량은 인정받은 검증기관의 검증을 받아야 합니다. 기본값을 쓰면 인증서 수를 계산할 때 마크업이 더해집니다. 시멘트, 철강, 알루미늄, 수소 부문은 2026년 10%, 2027년 20%, 2028년부터 30%이고 비료 부문은 2026년부터 1%입니다.",
+       "tool": {
+        "href": "#calc",
+        "text": "인증서 비용 추정"
+       },
+       "sections": [
+        {
+         "href": "#handbook-embedded.actual-default",
+         "chapter": "내재배출량",
+         "title": "실제배출량과 기본값"
+        },
+        {
+         "href": "#handbook-defaults.markup",
+         "chapter": "기본값과 마크업",
+         "title": "마크업"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32023R0956",
+         "part": "art-7",
+         "label": "CBAM 규정 제7조 내재배출량의 산정"
+        },
+        {
+         "act": "32023R0956",
+         "part": "art-8",
+         "label": "CBAM 규정 제8조 내재배출량의 검증"
+        }
+       ]
+      },
+      {
+       "id": "d-default-evidence",
+       "duty": "eu-default-values-evidence",
+       "sections": [
+        {
+         "href": "#handbook-defaults.revision",
+         "chapter": "기본값과 마크업",
+         "title": "기본값의 조정과 개정"
+        }
+       ],
+       "fallback": {
+        "title": "기본값의 지역별 조정을 위한 대체 자료 제출",
+        "text": "그해에 수입하는 제품에 법령의 기본값보다 낮은 지역별 조정값을 쓰려면, 승인된 CBAM 신고인이 그해 6월 30일까지 국가 통계 같은 믿을 만한 대체 공식 자료(한 해치)로 그 값이 더 낮다는 것을 집행위원회에 보여야 합니다. 그 뒤에 낸 자료는 낸 해의 다음 해 수입분부터 반영됩니다."
+       }
+      },
+      {
+       "id": "d-verified-data",
+       "title": "사업자의 검증된 자료",
+       "text": "검증받을 배출량 자료는 제3국의 사업자에게서 나옵니다. 신고인은 CBAM 등록부에 등록한 사업자가 공개한 검증된 정보를 써서 제8조의 검증 의무를 채울 수 있습니다. CBAM 신고서에는 해당하는 경우 인정받은 검증기관이 발행한 검증보고서의 사본을 넣습니다.",
+       "sections": [
+        {
+         "href": "#handbook-verification.roles",
+         "chapter": "검증",
+         "title": "사업자와 신고인이 할 일"
+        },
+        {
+         "href": "#handbook-verification.scope",
+         "chapter": "검증",
+         "title": "검증을 받아야 하는 것"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32023R0956",
+         "part": "art-8",
+         "label": "CBAM 규정 제8조 내재배출량의 검증"
+        },
+        {
+         "act": "32023R0956",
+         "part": "art-10",
+         "label": "CBAM 규정 제10조 제3국의 사업자와 사업장의 등록"
+        }
+       ]
+      },
+      {
+       "id": "d-carbon-price",
+       "title": "제3국에서 낸 탄소가격의 차감과 증빙",
+       "text": "내재배출량을 실제배출량으로 정한 경우, 제3국에서 실질적으로 지불된 탄소가격만큼 제출할 인증서 수를 줄여 달라고 청구할 수 있습니다. 내재배출량을 기본값으로 정한 경우에는 기본 탄소가격을 참조하는 방법으로만 청구할 수 있습니다. 기본 탄소가격은 집행위원회가 2027년부터 정해 CBAM 등록부에 올릴 수 있는 값입니다. 신고인은 탄소가격이 실질적으로 지불되었음을 보여 주는 서류를 보관해야 하고, 서류의 정보는 독립된 자가 인증해야 합니다. 전문은 그 증거를 독립된 자가 인증한 탄소가격 보고서의 꼴로 보관하는 것이 바람직하다고 설명합니다.",
+       "sections": [
+        {
+         "href": "#handbook-carbon-price.deduction",
+         "chapter": "제3국에서 낸 탄소가격",
+         "title": "탄소가격 차감의 뜻"
+        },
+        {
+         "href": "#handbook-carbon-price.evidence",
+         "chapter": "제3국에서 낸 탄소가격",
+         "title": "증빙과 기록"
+        },
+        {
+         "href": "#handbook-carbon-price.default-carbon-price",
+         "chapter": "제3국에서 낸 탄소가격",
+         "title": "기본 탄소가격"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32023R0956",
+         "part": "art-9",
+         "label": "CBAM 규정 제9조 제3국에서 지불한 탄소가격"
+        },
+        {
+         "act": "32026R2498",
+         "part": "art-8",
+         "label": "제3국 탄소가격 차감 이행규정 제8조 탄소가격 보고서"
+        }
+       ]
+      },
+      {
+       "id": "d-independent",
+       "duty": "eu-independent-person-registration",
+       "sections": [
+        {
+         "href": "#handbook-carbon-price.independent-person",
+         "chapter": "제3국에서 낸 탄소가격",
+         "title": "독립된 자의 자격과 인정"
+        }
+       ],
+       "fallback": {
+        "title": "탄소가격 서류를 인증하는 독립된 자의 CBAM 등록부 등록 신청 개시",
+        "text": "제3국에서 낸 탄소가격의 서류는 신고인과 그 나라 당국에서 독립된 자가 인증해야 합니다. 그 독립된 자는 인정받은 날부터 두 달 안에 관할당국에 CBAM 등록부 등록을 신청해야 하고, 신청은 2026년 12월 1일부터 할 수 있습니다."
+       }
+      }
+     ]
+    },
+    {
+     "name": "2027년에 시작되는 것",
+     "items": [
+      {
+       "id": "d-weekly-price",
+       "duty": "eu-weekly-price",
+       "tool": {
+        "href": "#price",
+        "text": "인증서 가격"
+       },
+       "sections": [
+        {
+         "href": "#handbook-price.publish",
+         "chapter": "인증서 가격과 구매",
+         "title": "가격을 공개하는 때와 곳"
+        }
+       ],
+       "fallback": {
+        "title": "CBAM 인증서 가격의 주간 산정 시작",
+        "text": "2027년 1월 1일부터 집행위원회는 CBAM 인증서 가격을 달력 주마다, EU 배출권 경매 낙찰가를 경매 물량으로 가중한 평균으로 계산합니다. 2026년 수입분에는 분기마다 계산한 가격을 씁니다."
+       }
+      },
+      {
+       "id": "d-holding",
+       "text": "2027년부터 각 분기 말 계정에 있는 인증서 수가 그해 초부터 수입한 모든 제품의 내재배출량의 50% 이상이 되도록 해야 합니다. 내재배출량은 마크업을 더하지 않은 기본값으로 정하거나 전년에 제출한 인증서 수로 정하며, 어느 쪽이든 무상할당 조정을 반영합니다. 전년에 제출한 인증서 수는 전년에 신고한 것과 같은 CN 코드와 원산지의 제품을 수입할 때 쓸 수 있습니다. 단일 중량 임계값을 넘긴 신고인은 넘긴 분기의 다음 분기 말까지 이 의무를 지킵니다. 보유량이 모자란다는 통지를 받으면 통지일부터 1개월 안에 인증서를 채워야 합니다.",
+       "duty": "eu-quarterly-holding",
+       "sections": [
+        {
+         "href": "#handbook-cycle.surrender",
+         "chapter": "한 해의 일정",
+         "title": "인증서 제출과 분기말 인증서 보유의무"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32023R0956",
+         "part": "art-22",
+         "label": "CBAM 규정 제22조 CBAM 인증서의 제출"
+        }
+       ],
+       "fallback": {
+        "title": "분기말 인증서 보유의무 적용 시작",
+        "text": "2027년부터 분기 말마다, 그해 들어 수입한 제품의 내재배출량의 50% 이상에 해당하는 CBAM 인증서를 CBAM 등록부 계정에 두어야 합니다. 단일 중량 임계값을 넘은 신고인은 넘은 분기의 다음 분기 말까지 이 의무를 지키면 됩니다."
+       }
+      },
+      {
+       "id": "d-sale",
+       "duty": "eu-certificate-sale",
+       "sections": [
+        {
+         "href": "#handbook-price.purchase",
+         "chapter": "인증서 가격과 구매",
+         "title": "인증서를 사는 곳"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32023R0956",
+         "part": "art-20",
+         "label": "CBAM 규정 제20조 CBAM 인증서의 판매"
+        }
+       ],
+       "fallback": {
+        "title": "CBAM 인증서 판매 시작",
+        "text": "회원국이 공통 중앙 플랫폼에서 자기 나라에 설립된 승인된 CBAM 신고인에게 인증서를 팔기 시작합니다. 2026년 수입분의 인증서도 이때부터 삽니다."
+       }
+      },
+      {
+       "id": "d-cert-report",
+       "duty": "eu-certification-report-registry",
+       "sections": [
+        {
+         "href": "#handbook-carbon-price.report-certification",
+         "chapter": "제3국에서 낸 탄소가격",
+         "title": "탄소가격 보고서와 인증"
+        }
+       ],
+       "fallback": {
+        "title": "탄소가격 인증보고서의 CBAM 등록부 발행 시작",
+        "text": "독립된 자는 2027년 2월 1일부터 인증보고서를 CBAM 등록부에서 발행합니다. 사업자가 CBAM 등록부에 등록되어 있으면 등록부로 전달하고, 등록되어 있지 않으면 등록부에서 내보낸 인증보고서를 다른 방법으로 전달합니다."
+       }
+      }
+     ]
+    },
+    {
+     "name": "첫 신고와 그 뒤",
+     "items": [
+      {
+       "id": "d-first-declaration",
+       "text": "2026년에 수입한 제품은 2027년 9월 30일까지 처음으로 신고하고, 같은 날까지 그 신고서에 적은 수의 인증서도 처음으로 제출합니다. 신고서에는 지난해 수입한 제품의 종류별 총량, 그 제품의 총 내재배출량, 제출할 CBAM 인증서의 총수와, 해당하면 검증보고서의 사본이 들어갑니다.",
+       "duty": "eu-first-declaration",
+       "tool": {
+        "href": "#calc",
+        "text": "인증서 비용 추정"
+       },
+       "sections": [
+        {
+         "href": "#handbook-cycle.first-year",
+         "chapter": "한 해의 일정",
+         "title": "2026년 수입분의 첫 신고"
+        },
+        {
+         "href": "#handbook-cycle.declaration",
+         "chapter": "한 해의 일정",
+         "title": "CBAM 신고서의 기한과 내용"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32023R0956",
+         "part": "art-6",
+         "label": "CBAM 규정 제6조 CBAM 신고서"
+        },
+        {
+         "act": "32023R0956",
+         "part": "art-22",
+         "label": "CBAM 규정 제22조 CBAM 인증서의 제출"
+        }
+       ],
+       "fallback": {
+        "title": "첫 CBAM 신고서 제출과 인증서 제출",
+        "text": "2026년 수입분에 대한 CBAM 신고서를 CBAM 등록부로 내고, 신고한 내재배출량에 해당하는 인증서를 제출합니다. 그 뒤로도 해마다 9월 30일이 기한입니다."
+       }
+      },
+      {
+       "id": "d-records",
+       "title": "기록 보관",
+       "text": "신고인은 산정에 쓴 정보의 기록을 부속서 V의 요건대로 남겨야 합니다. 기록은 신고서를 냈거나 냈어야 할 해가 지난 뒤 네 번째 해가 끝날 때까지 보관합니다(2027년에 낸 신고서의 기록이면 2031년 말까지). 제3국의 탄소가격이 실질적으로 지불되었음을 보여 주는 서류도 같은 기간 보관합니다.",
+       "sections": [
+        {
+         "href": "#handbook-cycle.declaration",
+         "chapter": "한 해의 일정",
+         "title": "CBAM 신고서의 기한과 내용"
+        },
+        {
+         "href": "#handbook-carbon-price.evidence",
+         "chapter": "제3국에서 낸 탄소가격",
+         "title": "증빙과 기록"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32023R0956",
+         "part": "art-7",
+         "label": "CBAM 규정 제7조 내재배출량의 산정"
+        },
+        {
+         "act": "32023R0956",
+         "part": "art-9",
+         "label": "CBAM 규정 제9조 제3국에서 지불한 탄소가격"
+        }
+       ]
+      },
+      {
+       "id": "d-repurchase",
+       "text": "제출하고 남은 인증서는 신고인이 요청하면 환매됩니다. 요청은 인증서를 제출한 해의 10월 31일까지 합니다. 환매할 수 있는 수는 인증서를 산 해에 제22조(2)에 따라 사야 했던 수까지이고, 환매 가격은 산 때의 가격입니다. 임계값을 넘을 것으로 보고 인증서를 샀으나 넘지 않았다면 산 인증서를 모두 환매할 수 있습니다. 2026년분으로 산 인증서는 2027년에만 환매할 수 있습니다.",
+       "duty": "eu-repurchase-request",
+       "sections": [
+        {
+         "href": "#handbook-cycle.repurchase",
+         "chapter": "한 해의 일정",
+         "title": "남은 인증서의 환매"
+        },
+        {
+         "href": "#handbook-cycle.first-year",
+         "chapter": "한 해의 일정",
+         "title": "2026년 수입분의 첫 신고"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32023R0956",
+         "part": "art-23",
+         "label": "CBAM 규정 제23조 CBAM 인증서의 환매"
+        }
+       ],
+       "fallback": {
+        "title": "남은 인증서의 환매 요청",
+        "text": "제출하고 남은 인증서를 환매받으려면 인증서를 제출한 해의 10월 31일까지 요청해야 합니다. 첫 제출이 2027년이므로 첫 기한도 2027년입니다. 환매 가격은 그 인증서를 산 값입니다."
+       }
+      },
+      {
+       "id": "d-cancellation",
+       "duty": "eu-cancellation-2026",
+       "sections": [
+        {
+         "href": "#handbook-cycle.cancellation",
+         "chapter": "한 해의 일정",
+         "title": "인증서의 말소"
+        },
+        {
+         "href": "#handbook-cycle.first-year",
+         "chapter": "한 해의 일정",
+         "title": "2026년 수입분의 첫 신고"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32023R0956",
+         "part": "art-24",
+         "label": "CBAM 규정 제24조 CBAM 인증서의 말소"
+        }
+       ],
+       "fallback": {
+        "title": "2026년분 CBAM 인증서 말소",
+        "text": "2026년 내재배출량에 대해 산 인증서 가운데 계정에 남아 있는 것은 이날 보상 없이 말소됩니다."
+       }
+      }
+     ]
+    },
+    {
+     "name": "과징금과 승인의 취소",
+     "items": [
+      {
+       "id": "d-late-surrender",
+       "title": "인증서를 제출하지 않았을 때의 과징금",
+       "text": "매년 9월 30일까지 전년도 수입품의 내재배출량에 해당하는 수의 인증서를 제출하지 않으면 제출하지 않은 인증서 한 개마다 과징금을 냅니다. 과징금을 내도 아직 제출하지 않은 인증서를 제출할 의무는 남습니다.",
+       "sections": [
+        {
+         "href": "#handbook-penalties.late-surrender",
+         "chapter": "위반과 제재",
+         "title": "인증서를 제출하지 않았을 때"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32023R0956",
+         "part": "art-26",
+         "label": "CBAM 규정 제26조 과징금"
+        }
+       ]
+      },
+      {
+       "id": "d-unauthorised",
+       "title": "승인 없이 수입했을 때의 과징금",
+       "text": "승인된 CBAM 신고인이 아닌 사람이 CBAM 규정의 의무를 지키지 않고 제품을 EU 관세영역에 들여오면 과징금을 냅니다. 금액은 제출하지 않은 인증서 한 개마다 제26조(1) 과징금의 3배에서 5배입니다. 승인된 CBAM 신고인이 아닌 수입자가 단일 중량 임계값을 넘은 때에도 같습니다.",
+       "sections": [
+        {
+         "href": "#handbook-penalties.unauthorised",
+         "chapter": "위반과 제재",
+         "title": "승인 없이 수입했을 때"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32023R0956",
+         "part": "art-26",
+         "label": "CBAM 규정 제26조 과징금"
+        }
+       ]
+      },
+      {
+       "id": "d-revocation",
+       "duty": "eu-revocation-surrender-2026",
+       "sections": [
+        {
+         "href": "#handbook-penalties.revocation",
+         "chapter": "위반과 제재",
+         "title": "승인의 취소"
+        }
+       ],
+       "fallback": {
+        "title": "2026년에 승인이 취소된 신고인의 인증서 제출",
+        "text": "승인의 취소가 2026년 안에 효력을 가지면, 취소에 따라 내는 신고서로 계산한 CBAM 인증서를 2027년 2월 15일까지 모두 제출해야 합니다. 신고인이 요청한 취소와 관할당국이 결정한 취소에 모두 적용됩니다."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "operator",
+   "name": "제3국 사업자",
+   "about": "EU 밖에서 대상 제품을 만드는 사업자(생산자)가 준비할 것입니다. 한국의 생산자가 여기에 해당합니다.",
+   "groups": [
+    {
+     "name": "먼저 확인할 것",
+     "items": [
+      {
+       "id": "o-who",
+       "title": "의무를 지는 사람과 사업자의 자리",
+       "text": "CBAM 규정이 정한 신고와 인증서 제출의 의무는 승인된 CBAM 신고인이 집니다. 한국의 생산자는 EU 밖의 사업자로서 등록을 요청할지를 스스로 정하며, 등록한 뒤에는 제10조(5)의 일을 해야 합니다. 실제배출량을 쓰려면 사업자의 자료가 필요합니다.",
+       "sections": [
+        {
+         "href": "#handbook-roles.korea-eu",
+         "chapter": "누가 무엇을 하는지",
+         "title": "한국의 생산자와 EU의 수입자"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32023R0956",
+         "part": "art-10",
+         "label": "CBAM 규정 제10조 제3국의 사업자와 사업장의 등록"
+        }
+       ]
+      },
+      {
+       "id": "o-registration",
+       "title": "CBAM 등록부의 사업자와 사업장 등록",
+       "text": "사업자가 요청하면 집행위원회가 사업자와 사업장의 정보를 CBAM 등록부에 등록합니다. 등록은 통지일부터 5년간 유효합니다. 등록한 사업자는 부속서 IV의 방법으로 제품별 내재배출량을 정하고, 인정받은 검증기관의 검증을 받고, 검증보고서와 기록을 검증 후 4년간 보관합니다. 해당하면 제3국에서 낸 탄소가격을 정해 서류와 증거를 올리고, 등록 정보가 바뀌면 지체 없이 집행위원회에 알려야 합니다.",
+       "sections": [
+        {
+         "href": "#handbook-roles.operators",
+         "chapter": "누가 무엇을 하는지",
+         "title": "제3국의 사업자와 사업장 등록"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32023R0956",
+         "part": "art-10",
+         "label": "CBAM 규정 제10조 제3국의 사업자와 사업장의 등록"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "배출량 자료와 검증",
+     "items": [
+      {
+       "id": "o-report",
+       "title": "사업자 배출량 보고서",
+       "text": "실제배출량으로 내재배출량을 산정하면 사업자는 사업자 배출량 보고서를 작성합니다. 보고서는 영어로 냅니다. 등록한 사업자는 이를 CBAM 등록부로, 등록하지 않은 사업자는 다른 방법으로 검증기관에 보냅니다.",
+       "sections": [
+        {
+         "href": "#handbook-roles.operators",
+         "chapter": "누가 무엇을 하는지",
+         "title": "제3국의 사업자와 사업장 등록"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32025R2547",
+         "part": "art-10",
+         "label": "내재배출량 산정 방법 이행규정 제10조 사업자의 배출량 보고서"
+        }
+       ]
+      },
+      {
+       "id": "o-period",
+       "title": "보고기간",
+       "text": "2026년에 수입한 제품의 보고기간은 2026년입니다. 2026년이 아닌 해에 수입한 제품은 수입한 역년이 기본 보고기간이고, 실제 생산 시기를 밝힐 충분한 증거가 있으면 생산한 기간이 보고기간이 됩니다.",
+       "sections": [
+        {
+         "href": "#handbook-embedded.reporting-period",
+         "chapter": "내재배출량",
+         "title": "보고기간"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32025R2547",
+         "part": "art-7",
+         "label": "내재배출량 산정 방법 이행규정 제7조 보고기간의 결정"
+        }
+       ]
+      },
+      {
+       "id": "o-verification",
+       "title": "검증과 현장검증",
+       "text": "검증기관의 사업장 방문은 의무이고, 검증기관은 사업자가 현장 출입을 허용하도록 해야 합니다. 이행규정 (EU) 2025/2546의 조건을 모두 채우면 대면 현장검증을 원격 현장검증으로 바꾸거나 면제할 수 있습니다. 검증보고서는 사업자에게 전달됩니다.",
+       "sections": [
+        {
+         "href": "#handbook-verification.principles",
+         "chapter": "검증",
+         "title": "검증의 원칙"
+        },
+        {
+         "href": "#handbook-verification.roles",
+         "chapter": "검증",
+         "title": "사업자와 신고인이 할 일"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32023R0956",
+         "part": "annex-vi",
+         "label": "CBAM 규정 부속서 VI 제8조의 목적을 위한 검증 원칙과 검증보고서의 내용"
+        },
+        {
+         "act": "32025R2546",
+         "part": "art-2",
+         "label": "내재배출량 검증 원칙 이행규정 제2조 대면 현장검증과, 원격 현장검증으로의 대체 또는 면제"
+        }
+       ]
+      },
+      {
+       "id": "o-verifier-plan",
+       "duty": "eu-verifier-plan",
+       "note": "supplier",
+       "sections": [
+        {
+         "href": "#handbook-verification.accreditation",
+         "chapter": "검증",
+         "title": "검증기관의 인정"
+        }
+       ],
+       "fallback": {
+        "title": "검증기관의 다음 해 검증 계획 통지",
+        "text": "이 계획에는 다음 해에 배출량 보고서를 검증받을 사업자와 사업장이 들어갑니다."
+       }
+      },
+      {
+       "id": "o-first-declaration",
+       "duty": "eu-first-declaration",
+       "note": "supplier",
+       "sections": [
+        {
+         "href": "#handbook-cycle.first-year",
+         "chapter": "한 해의 일정",
+         "title": "2026년 수입분의 첫 신고"
+        },
+        {
+         "href": "#handbook-verification.scope",
+         "chapter": "검증",
+         "title": "검증을 받아야 하는 것"
+        }
+       ],
+       "fallback": {
+        "title": "첫 CBAM 신고서 제출과 인증서 제출",
+        "text": "신고서에는 실제배출량으로 정한 내재배출량의 검증보고서 사본이 붙습니다. 한국 생산자가 2026년 보고기간의 배출량 자료와 검증을 그 전에 마쳐 EU 수입자에게 넘겨야 실제배출량으로 신고할 수 있습니다."
+       }
+      },
+      {
+       "id": "o-markup",
+       "title": "기본값으로 신고될 때의 마크업",
+       "text": "마크업은 기본값을 쓸 때 평균 배출집약도에 더하는 비율입니다. 시멘트, 철강, 알루미늄, 수소 부문은 2026년 10%, 2027년 20%, 2028년부터 30%이고 비료 부문은 2026년부터 1%입니다.",
+       "tool": {
+        "href": "#sector",
+        "text": "부문별 기본값과 벤치마크"
+       },
+       "sections": [
+        {
+         "href": "#handbook-defaults.markup",
+         "chapter": "기본값과 마크업",
+         "title": "마크업"
+        }
+       ]
+      },
+      {
+       "id": "o-default-evidence",
+       "duty": "eu-default-values-evidence",
+       "note": "supplier",
+       "sections": [
+        {
+         "href": "#handbook-defaults.revision",
+         "chapter": "기본값과 마크업",
+         "title": "기본값의 조정과 개정"
+        }
+       ],
+       "fallback": {
+        "title": "기본값의 지역별 조정을 위한 대체 자료 제출",
+        "text": "자료를 내는 쪽은 승인된 CBAM 신고인입니다. 근거가 되는 것은 생산국의 국가 통계 같은 공식 자료입니다."
+       }
+      }
+     ]
+    },
+    {
+     "name": "제3국에서 낸 탄소가격",
+     "items": [
+      {
+       "id": "o-cp-report",
+       "title": "탄소가격 보고서와 인증",
+       "text": "사업자는 부속서 I의 방법으로 계산한 내용을 탄소가격 보고서에 적습니다. 집행위원회가 CBAM 등록부로 제공하는 전자 양식을 쓰고 영어로 작성합니다. 독립된 자가 그 보고서를 평가해 결과를 인증보고서로 냅니다. 중요한 오류가 없고 검증된 내재배출량에 탄소가격이 실질적으로 지불되었을 때만 만족스러운 것으로 인증됩니다.",
+       "sections": [
+        {
+         "href": "#handbook-carbon-price.report-certification",
+         "chapter": "제3국에서 낸 탄소가격",
+         "title": "탄소가격 보고서와 인증"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32026R2498",
+         "part": "art-8",
+         "label": "제3국 탄소가격 차감 이행규정 제8조 탄소가격 보고서"
+        },
+        {
+         "act": "32026R2498",
+         "part": "art-12",
+         "label": "제3국 탄소가격 차감 이행규정 제12조 탄소가격 보고서에 대한 독립된 자의 평가 범위"
+        }
+       ]
+      },
+      {
+       "id": "o-kets",
+       "title": "한국 배출권거래제에서 낸 탄소가격",
+       "text": "대한민국의 배출권거래제(K-ETS)는 이행규정 부속서 II에 배출권거래제로 올라 있습니다. 탄소가격은 당국이 공개한 보고기간의 가중평균 경매가격이고, 그 값이 없으면 공인된 유통시장의 평균 거래가격을 쓰며, 이행 단위를 산 값의 평균으로 정할 수도 있습니다. 무상 배출권에 해당하는 배출량은 값을 치르지 않은 몫으로 뺍니다. 가중평균 경매가격을 쓸 때의 증거는 당국이 공개한 그 가격, 그 제도에서 보고되고 확인된 배출량, 제출한 이행 단위의 공식 기록입니다. 승인된 CBAM 신고인이 실질적으로 지불된 탄소가격으로 차감을 청구하려면 내재배출량도 실제배출량으로 신고해 검증을 받아야 합니다.",
+       "tool": {
+        "href": "#calc",
+        "text": "인증서 비용 추정"
+       },
+       "sections": [
+        {
+         "href": "#handbook-carbon-price.kets",
+         "chapter": "제3국에서 낸 탄소가격",
+         "title": "한국 배출권거래제에서 낸 탄소가격"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32026R2498",
+         "part": "annex-ii",
+         "label": "제3국 탄소가격 차감 이행규정 부속서 II 탄소가격제도의 유형"
+        },
+        {
+         "act": "32026R2498",
+         "part": "annex-i",
+         "label": "제3국 탄소가격 차감 이행규정 부속서 I 내재배출량에 대하여 실질적으로 지불된 탄소가격의 계산 방법론"
+        }
+       ]
+      },
+      {
+       "id": "o-independent",
+       "duty": "eu-independent-person-registration",
+       "note": "supplier",
+       "sections": [
+        {
+         "href": "#handbook-carbon-price.independent-person",
+         "chapter": "제3국에서 낸 탄소가격",
+         "title": "독립된 자의 자격과 인정"
+        }
+       ],
+       "fallback": {
+        "title": "탄소가격 서류를 인증하는 독립된 자의 CBAM 등록부 등록 신청 개시",
+        "text": "제3국에서 낸 탄소가격을 인증서 수에서 줄이려면 이 인증을 거친 서류가 필요합니다."
+       }
+      },
+      {
+       "id": "o-cert-report",
+       "duty": "eu-certification-report-registry",
+       "note": "supplier",
+       "sections": [
+        {
+         "href": "#handbook-carbon-price.report-certification",
+         "chapter": "제3국에서 낸 탄소가격",
+         "title": "탄소가격 보고서와 인증"
+        }
+       ],
+       "fallback": {
+        "title": "탄소가격 인증보고서의 CBAM 등록부 발행 시작",
+        "text": "제3국에서 낸 탄소가격으로 차감을 청구하려면 사업자가 쓴 탄소가격 보고서와, 독립된 자가 그 보고서를 인증해 낸 인증보고서가 필요합니다."
+       }
+      },
+      {
+       "id": "o-ip-plan",
+       "duty": "eu-independent-person-plan",
+       "note": "supplier",
+       "sections": [
+        {
+         "href": "#handbook-carbon-price.independent-person",
+         "chapter": "제3국에서 낸 탄소가격",
+         "title": "독립된 자의 자격과 인정"
+        }
+       ],
+       "fallback": {
+        "title": "독립된 자의 다음 해 인증 계획 통지",
+        "text": "이 계획에는 다음 해에 탄소가격 보고서를 인증받을 사업자와 사업장이 들어갑니다."
+       }
+      },
+      {
+       "id": "o-temp-end",
+       "duty": "eu-temporary-independent-person-end",
+       "note": "supplier",
+       "sections": [
+        {
+         "href": "#handbook-carbon-price.temporary-role",
+         "chapter": "제3국에서 낸 탄소가격",
+         "title": "검증기관이 맡는 독립된 자의 임시 역할"
+        }
+       ],
+       "fallback": {
+        "title": "검증기관이 맡은 독립된 자 임시 역할의 종료",
+        "text": "그 뒤의 보고기간에 대한 탄소가격 보고서는 부속서 IV의 범위로 인정받은 독립된 자에게 인증을 맡겨야 합니다."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "verifier",
+   "name": "검증기관",
+   "about": "내재배출량을 검증하는 검증기관이 챙길 일과, 탄소가격 보고서의 인증에 관해 알아 둘 일입니다.",
+   "groups": [
+    {
+     "name": "인정과 등록",
+     "items": [
+      {
+       "id": "v-accreditation",
+       "title": "CBAM 활동군의 인정",
+       "text": "검증기관은 국가인정기구의 인정을 받은 법인입니다. 회원국 법에 따라 설립되지 않은 신청인은 이 규정에 따라 인정을 하는 회원국의 국가인정기구 가운데 한 곳에 신청합니다. 인정서는 발급일부터 5년을 넘지 않는 기간 동안 유효하고, 검증기관은 인정받은 활동군에 대해서만 검증보고서를 발행할 수 있습니다.",
+       "sections": [
+        {
+         "href": "#handbook-verification.accreditation",
+         "chapter": "검증",
+         "title": "검증기관의 인정"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32023R0956",
+         "part": "art-18",
+         "label": "CBAM 규정 제18조 검증기관의 인정"
+        },
+        {
+         "act": "32025R2551",
+         "part": "art-4",
+         "label": "검증기관 인정 조건 위임규정 제4조 이행규정 (EU) 2018/2067에 따라 인정받은 신청인의 인정 신청"
+        }
+       ]
+      },
+      {
+       "id": "v-registration",
+       "duty": "eu-verifier-registration",
+       "sections": [
+        {
+         "href": "#handbook-roles.verifiers",
+         "chapter": "누가 무엇을 하는지",
+         "title": "검증기관"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32023R0956",
+         "part": "art-10a",
+         "label": "CBAM 규정 제10a조 인정받은 검증기관의 등록"
+        }
+       ],
+       "fallback": {
+        "title": "인정받은 검증기관의 CBAM 등록부 등록 신청 개시",
+        "text": "인정을 받은 검증기관은 인정받은 날부터 두 달 안에, 자신을 인정한 국가인정기구가 있는 회원국의 관할당국에 CBAM 등록부 등록을 신청해야 합니다. 신청은 2026년 9월 1일부터 할 수 있고, 관할당국이 검증기관의 정보를 CBAM 등록부에 올립니다."
+       }
+      }
+     ]
+    },
+    {
+     "name": "내재배출량의 검증",
+     "items": [
+      {
+       "id": "v-principles",
+       "title": "검증의 원칙과 현장검증",
+       "text": "신고할 총 내재배출량은 검증기관이 중요한 오류와 중요한 부적합이 없다는 것을 합리적 보증으로 확인한 경우에만 검증된 것으로 봅니다. 사업장 방문은 의무이며, 조건을 모두 채우면 대면 현장검증을 원격 현장검증으로 바꾸거나 면제할 수 있습니다. 중요성 기준은 CN 코드로 구분한 제품 1톤마다 총 고유 내재배출량의 5%와 총 고유 내재무상할당량의 5%입니다.",
+       "sections": [
+        {
+         "href": "#handbook-verification.principles",
+         "chapter": "검증",
+         "title": "검증의 원칙"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32023R0956",
+         "part": "annex-vi",
+         "label": "CBAM 규정 부속서 VI 제8조의 목적을 위한 검증 원칙과 검증보고서의 내용"
+        },
+        {
+         "act": "32025R2546",
+         "part": "art-5",
+         "label": "내재배출량 검증 원칙 이행규정 제5조 중요성 기준과 그 밖의 매개변수"
+        }
+       ]
+      },
+      {
+       "id": "v-report",
+       "title": "검증보고서",
+       "text": "검증보고서는 집행위원회가 CBAM 등록부로 제공하는 전자 템플릿으로 작성합니다. 검증기관은 2027년 1월 1일부터 CBAM 등록부에서 보고서를 발행하며, 보고서는 영어로 작성합니다. 사업자 배출량 보고서에 중요한 오류가 없을 때만 만족스러운 것으로 검증될 수 있습니다.",
+       "sections": [
+        {
+         "href": "#handbook-verification.report",
+         "chapter": "검증",
+         "title": "검증보고서"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32025R2546",
+         "part": "art-6",
+         "label": "내재배출량 검증 원칙 이행규정 제6조 검증보고서의 형식"
+        }
+       ]
+      },
+      {
+       "id": "v-plan",
+       "duty": "eu-verifier-plan",
+       "sections": [
+        {
+         "href": "#handbook-verification.accreditation",
+         "chapter": "검증",
+         "title": "검증기관의 인정"
+        }
+       ],
+       "fallback": {
+        "title": "검증기관의 다음 해 검증 계획 통지",
+        "text": "검증기관은 해마다 11월 15일까지 다음 해의 검증 계획을 자신을 인정한 국가인정기구에 보내야 합니다. 계획에는 검증의 일정과 장소(현장검증을 직접 하는지 가상으로 하는지 포함), 배출량 보고서를 검증할 사업자와 그 사업장, 검증팀의 구성원과 해당 인정 범위를 적습니다."
+       }
+      },
+      {
+       "id": "v-first-declaration",
+       "duty": "eu-first-declaration",
+       "note": "verifier",
+       "sections": [
+        {
+         "href": "#handbook-verification.scope",
+         "chapter": "검증",
+         "title": "검증을 받아야 하는 것"
+        }
+       ],
+       "fallback": {
+        "title": "첫 CBAM 신고서 제출과 인증서 제출",
+        "text": "실제배출량으로 정한 내재배출량은 인정받은 검증기관이 검증해야 하고, 신고서에는 그 검증보고서의 사본이 붙습니다. 2026년분의 검증보고서는 이 기한 전에 나와야 합니다."
+       }
+      }
+     ]
+    },
+    {
+     "name": "탄소가격의 인증",
+     "items": [
+      {
+       "id": "v-ip-role",
+       "title": "검증기관이 맡을 수 있는 독립된 자의 역할",
+       "text": "2026년과 2027년의 보고기간에는 위임규정 (EU) 2025/2551에 따라 해당 활동군의 검증기관으로 인정받은 검증기관이 CBAM 등록부로 관할당국에 신청해 독립된 자의 역할을 맡을 수 있습니다. 신청할 때 이행규정의 요건을 지킨다는 것을 확인하고, 신청이 받아들여지면 자신을 인정한 국가인정기구에 알립니다. 인증보고서의 정확성에 정당한 의심이 있다는 통지가 있으면 관할당국이 이 역할을 취소합니다. 부속서 IV의 범위로 인정을 받지 않으면 이 역할은 2028년 9월 30일까지 끝납니다.",
+       "duty": "eu-temporary-independent-person-end",
+       "sections": [
+        {
+         "href": "#handbook-carbon-price.temporary-role",
+         "chapter": "제3국에서 낸 탄소가격",
+         "title": "검증기관이 맡는 독립된 자의 임시 역할"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32026R2498",
+         "part": "art-11",
+         "label": "제3국 탄소가격 차감 이행규정 제11조 2026년 및 2027년 보고기간에 대한 한시적 자격"
+        }
+       ]
+      },
+      {
+       "id": "v-ip-accreditation",
+       "title": "부속서 IV 범위의 인정과 등록",
+       "text": "탄소가격 보고서를 인증하는 독립된 자는 이행규정 부속서 IV가 정한 범위로 인정을 받아야 합니다. CBAM이나 EU 배출권거래제의 검증기관으로 인정받은 곳은 인정 범위의 확대를 신청할 수 있습니다. 인정받은 독립된 자는 인정받은 날부터 두 달 안에 CBAM 등록부 등록을 신청하며, 신청은 2026년 12월 1일부터 할 수 있습니다.",
+       "duty": "eu-independent-person-registration",
+       "sections": [
+        {
+         "href": "#handbook-carbon-price.independent-person",
+         "chapter": "제3국에서 낸 탄소가격",
+         "title": "독립된 자의 자격과 인정"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32026R2498",
+         "part": "art-10",
+         "label": "제3국 탄소가격 차감 이행규정 제10조 독립된 자의 자격"
+        },
+        {
+         "act": "32026R2498",
+         "part": "annex-iv",
+         "label": "제3국 탄소가격 차감 이행규정 부속서 IV 독립된 자의 인정 범위"
+        }
+       ]
+      },
+      {
+       "id": "v-cert-method",
+       "title": "인증의 기준",
+       "text": "독립된 자는 탄소가격 보고서에 중요한 오류가 없는지 등을 합리적 보증의 수준으로 평가합니다. 중요성 기준은 CN 코드로 가린 제품 1톤(수입 전력은 MWh)마다 적용하며, 그 제품에 귀속된 실질 지불 탄소가격 합계의 5%입니다. 내재배출량의 검증보고서가 유효한 인정을 받은 검증기관이 낸 것인지, 같은 보고기간을 다루는지 등을 확인할 수 없으면 탄소가격 보고서를 인증하지 않습니다.",
+       "sections": [
+        {
+         "href": "#handbook-carbon-price.report-certification",
+         "chapter": "제3국에서 낸 탄소가격",
+         "title": "탄소가격 보고서와 인증"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32026R2498",
+         "part": "art-15",
+         "label": "제3국 탄소가격 차감 이행규정 제15조 탄소가격 데이터의 귀속을 위하여 독립된 자가 외부 검증 및 인증에 의존하기 위한 조건"
+        },
+        {
+         "act": "32026R2498",
+         "part": "art-18",
+         "label": "제3국 탄소가격 차감 이행규정 제18조 중요성 기준"
+        }
+       ]
+      },
+      {
+       "id": "v-cert-report",
+       "duty": "eu-certification-report-registry",
+       "sections": [
+        {
+         "href": "#handbook-carbon-price.report-certification",
+         "chapter": "제3국에서 낸 탄소가격",
+         "title": "탄소가격 보고서와 인증"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32026R2498",
+         "part": "art-19",
+         "label": "제3국 탄소가격 차감 이행규정 제19조 인증보고서"
+        }
+       ],
+       "fallback": {
+        "title": "탄소가격 인증보고서의 CBAM 등록부 발행 시작",
+        "text": "독립된 자는 2027년 2월 1일부터 인증보고서를 CBAM 등록부에서 발행합니다. 사업자가 CBAM 등록부에 등록되어 있으면 등록부로 전달하고, 등록되어 있지 않으면 등록부에서 내보낸 인증보고서를 다른 방법으로 전달합니다."
+       }
+      },
+      {
+       "id": "v-ip-plan",
+       "duty": "eu-independent-person-plan",
+       "sections": [
+        {
+         "href": "#handbook-carbon-price.independent-person",
+         "chapter": "제3국에서 낸 탄소가격",
+         "title": "독립된 자의 자격과 인정"
+        }
+       ],
+       "refs": [
+        {
+         "act": "32026R2498",
+         "part": "art-35",
+         "label": "제3국 탄소가격 차감 이행규정 제35조 독립된 자의 통지"
+        }
+       ],
+       "fallback": {
+        "title": "독립된 자의 다음 해 인증 계획 통지",
+        "text": "인정받은 독립된 자는 해마다 11월 15일까지 다음 해의 인증 계획을 자신을 인정한 국가인정기구에 보내야 합니다. 계획에는 인증의 때와 곳(현장검증을 직접 하는지 원격으로 하는지 포함), 탄소가격 보고서를 인증받을 사업자와 그 사업장, 인증팀의 구성원과 해당 인정 범위를 적습니다. 이행규정이 2026년 11월 19일에 발효하므로 처음 돌아오는 기한은 2027년 11월 15일입니다."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "uk",
+   "name": "영국 수입자",
+   "about": "영국으로 CBAM 대상 제품을 수입하는 사람이 영국 CBAM에 따라 챙길 일입니다. 영국 CBAM은 EU CBAM과 별개의 제도입니다.",
+   "groups": [
+    {
+     "name": "먼저 확인할 것",
+     "items": [
+      {
+       "id": "u-goods",
+       "duty": "uk-start",
+       "sections": [
+        {
+         "href": "#handbook-uk.goods",
+         "chapter": "영국 CBAM",
+         "title": "대상 품목과 과세하지 않는 경우"
+        }
+       ],
+       "fallback": {
+        "title": "영국 CBAM 적용 시작",
+        "text": "이날 이후 영국으로 수입되는 CBAM 대상 제품(알루미늄, 시멘트, 비료, 수소, 철강)의 내재배출량에 영국 CBAM이 부과됩니다. 사업 과정이 아닌 수입, 수입 때 등록 대상자도 등록자도 아닌 수입자의 수입, 원산지가 영국인 제품에는 부과하지 않습니다."
+       }
+      },
+      {
+       "id": "u-threshold",
+       "title": "등록 의무가 생기는 문턱",
+       "text": "매월 1일에 직전 12개월 동안 사업 과정에서 수입한 CBAM 대상 품목의 가액 합계가 5만 파운드 이상이거나, 앞으로 30일 안에 5만 파운드 이상을 수입할 것으로 예상되면 등록 의무가 생깁니다. 등록 의무가 처음 생긴 날부터 30일 안에 등록해야 합니다. 2027년에 등록 의무가 생긴 사람은 2028년 1월 31일까지 등록하면 됩니다. 원산지가 영국인 제품과 재수입 물품 등은 셈에서 뺍니다.",
+       "sections": [
+        {
+         "href": "#handbook-uk.registration",
+         "chapter": "영국 CBAM",
+         "title": "납세의무자와 등록"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "2027년 1월 1일부터",
+     "items": [
+      {
+       "id": "u-records",
+       "duty": "uk-records",
+       "sections": [
+        {
+         "href": "#handbook-uk.records",
+         "chapter": "영국 CBAM",
+         "title": "기록 보관"
+        }
+       ],
+       "fallback": {
+        "title": "영국 CBAM 기록 보관 시작",
+        "text": "행정 규정이 이날 시행됩니다. 사업 과정에서 CBAM 대상 제품을 수입하는 사람은 제품마다 8자리 품목 코드와 품명, 수입일, 가액, 무게와, 해당하면 과세 제외(원산지가 영국인 제품과 재수입 물품 등)에 든다는 사실을 증명하는 기록을 남기고 6년간 보관해야 합니다. 기록은 서면으로 남깁니다. 영국 국세청은 등록이 열리기 전인 2027년 1월 1일부터 기록을 보관해야 한다고 안내합니다."
+       }
+      },
+      {
+       "id": "u-emissions",
+       "title": "내재배출량의 자료",
+       "text": "기본값을 쓰면 내재배출량은 품목의 무게에 기본값을 곱한 값입니다. 기본값을 쓰지 않으면 모니터링 기간의 검증된 배출량 자료로 계산합니다. 2028년 1월 1일 전에 수입한 품목은 수입한 해와 그 전해 가운데 검증된 자료가 있는 가장 최근 해나, 품목을 생산한 해를 씁니다. 기본값으로 정한 내재배출량을 실제배출량 산정 방식으로 정한 값으로 바꾸는 수정은 할 수 없습니다.",
+       "sections": [
+        {
+         "href": "#handbook-uk.emissions",
+         "chapter": "영국 CBAM",
+         "title": "내재배출량의 산정과 검증"
+        },
+        {
+         "href": "#handbook-uk.returns",
+         "chapter": "영국 CBAM",
+         "title": "회계기간, 신고, 납부"
+        }
+       ]
+      },
+      {
+       "id": "u-relief",
+       "title": "탄소가격 경감",
+       "text": "같은 배출량에 대해 다른 금전 부담이 있으면 세액을 줄일 수 있습니다. 규정은 요건으로, 제품을 제조하거나 가공한 사업장이 적격 탄소가격제도에 참여하고 있을 것과 검증 요건을 갖출 것을 정합니다. 경감을 받으려는 수입자는 검증기관이 작성해 사업장에 준 탄소가격 검증 양식을 얻고, 그 자료로 실효 탄소가격과 경감액을 직접 계산합니다.",
+       "tool": {
+        "href": "#rules-uk-cbam",
+        "text": "영국 CBAM 규제 현황"
+       },
+       "sections": [
+        {
+         "href": "#handbook-uk.rate-relief",
+         "chapter": "영국 CBAM",
+         "title": "세액의 계산과 탄소가격 경감"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "등록, 신고, 납부",
+     "items": [
+      {
+       "id": "u-opens",
+       "duty": "uk-registration-opens",
+       "sections": [
+        {
+         "href": "#handbook-uk.registration",
+         "chapter": "영국 CBAM",
+         "title": "납세의무자와 등록"
+        }
+       ],
+       "fallback": {
+        "title": "영국 CBAM 등록 개시",
+        "text": "영국 국세청의 안내에 따르면 CBAM 등록은 2028년 1월 1일에 열립니다. 이 날짜는 법령이 아니라 영국 국세청의 안내에 적힌 것입니다."
+       }
+      },
+      {
+       "id": "u-deadline",
+       "duty": "uk-registration-deadline",
+       "sections": [
+        {
+         "href": "#handbook-uk.registration",
+         "chapter": "영국 CBAM",
+         "title": "납세의무자와 등록"
+        }
+       ],
+       "fallback": {
+        "title": "2027년에 등록 요건에 해당한 영국 수입자의 등록",
+        "text": "2027년에 등록 의무가 생긴 수입자는 이날까지 영국 국세청에 등록하면 됩니다. 등록 의무는 매월 1일에 직전 12개월 동안 사업 과정에서 수입한 CBAM 대상 제품의 가액이 5만 파운드 이상이거나, 앞으로 30일 안에 5만 파운드 이상을 수입할 것으로 예상될 때 생깁니다. 원산지가 영국인 제품과 재수입 물품 등은 셈에서 뺍니다."
+       }
+      },
+      {
+       "id": "u-first-return",
+       "duty": "uk-first-return",
+       "sections": [
+        {
+         "href": "#handbook-uk.returns",
+         "chapter": "영국 CBAM",
+         "title": "회계기간, 신고, 납부"
+        }
+       ],
+       "fallback": {
+        "title": "2027년분 영국 CBAM 신고와 납부",
+        "text": "2027년 한 해를 하나의 회계기간으로 보고, 그 기간의 신고와 납부를 이날까지 합니다."
+       }
+      },
+      {
+       "id": "u-return-q1",
+       "duty": "uk-return-2028-q1",
+       "sections": [
+        {
+         "href": "#handbook-uk.returns",
+         "chapter": "영국 CBAM",
+         "title": "회계기간, 신고, 납부"
+        }
+       ],
+       "fallback": {
+        "title": "2028년 1~3월분 영국 CBAM 신고와 납부",
+        "text": "2028년 1월 1일부터 3월 31일까지의 회계기간에 대한 신고와 납부 기한입니다."
+       }
+      },
+      {
+       "id": "u-return-q2",
+       "duty": "uk-return-2028-q2",
+       "sections": [
+        {
+         "href": "#handbook-uk.returns",
+         "chapter": "영국 CBAM",
+         "title": "회계기간, 신고, 납부"
+        }
+       ],
+       "fallback": {
+        "title": "2028년 4~6월분 영국 CBAM 신고와 납부",
+        "text": "2028년 4월 1일부터 6월 30일까지의 회계기간에 대한 신고와 납부 기한입니다."
+       }
+      },
+      {
+       "id": "u-penalties",
+       "title": "기록과 등록 정보를 어겼을 때의 과징금",
+       "text": "기록을 남기거나 보관하지 않으면 500파운드입니다. 등록 정보의 변경이나 오류를 알리지 않으면 500파운드에 더해 기한이 지난 날마다 40파운드를 냅니다. 국세청 공무원이나 심판소가 합리적인 사유가 있다고 인정하면 내지 않습니다.",
+       "sections": [
+        {
+         "href": "#handbook-uk.penalties",
+         "chapter": "영국 CBAM",
+         "title": "제재와 불복"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

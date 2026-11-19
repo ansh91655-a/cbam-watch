@@ -1,0 +1,125 @@
+/* 움직임. 무엇이 언제 움직이는지를 이 파일 한곳에 모은다.
+   1) 들어올 때 한 번: 덩어리가 올라오고(data-rv), 선이 그려지고(data-draw), 수치가 올라간다. 표시를 붙이고 떼는 것은 js/ui/motion.js가 한다.
+   2) 지금 살아 있다는 표시: 갱신 시각의 점, 진행 중인 규제의 점, 지금 가격의 점, 일정선의 오늘이 천천히 번진다.
+   3) 손에 답하는 것: 가리킬 때와 누를 때의 반응, 메뉴 밑줄의 이동, 읽는 자리 표시, 맨 위로 가는 단추.
+   4) 바탕의 느린 움직임: 큰 머리의 빛, 가장 중요한 소식 칸의 빛과 그림.
+   모두 opacity와 transform(선은 stroke-dashoffset)만 바꾼다. 움직임 줄이기를 켠 사람에게는 base.css가 모두 끄고,
+   숨겼다가 보여 주는 것은 움직임을 허용한 사람에게만 건다(끈 사람에게는 처음부터 다 보인다). */
+
+/* ── 1) 들어올 때 한 번 ── */
+@media (prefers-reduced-motion: no-preference) {
+  [data-rv] { opacity: 0; transform: translateY(14px); }
+  li[data-rv], .tile[data-rv] { transform: translateY(8px); }
+  [data-rv][data-in] { opacity: 1; transform: none; transition: opacity 0.5s ease var(--rv-d, 0ms), transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) var(--rv-d, 0ms); }
+
+  /* 화면 머리 띠의 글: 화면을 옮길 때마다 차례로 올라온다 */
+  .band-inner > :not(.band-map) { animation: rise 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  .band-inner > h1 { animation-delay: 0.05s; }
+  .band-inner > .lead, .band-inner > .item-meta { animation-delay: 0.11s; }
+  .band-inner > .fresh { animation-delay: 0.17s; }
+  .hero-strip { animation: rise 0.55s cubic-bezier(0.2, 0.7, 0.2, 1) 0.2s both; }
+
+  /* 가격 그림: 선이 왼쪽에서 그려지고, 면이 차오르고, 마지막 점과 값이 나타난다 */
+  .chart[data-draw] .line, .spark[data-draw] .line { stroke-dasharray: 1; stroke-dashoffset: 1; opacity: 0; }
+  .chart[data-draw] .area, .chart[data-draw] .dot, .chart[data-draw] .label, .spark[data-draw] .dot { opacity: 0; }
+  .chart[data-draw] .halo, .spark[data-draw] .halo { animation: none; }
+  .chart[data-draw][data-in] .line, .spark[data-draw][data-in] .line { opacity: 1; animation: line-draw 1.25s cubic-bezier(0.4, 0, 0.2, 1) var(--rv-d, 0ms) both; }
+  .chart[data-draw][data-in] .area { animation: fade-in 0.7s ease calc(var(--rv-d, 0ms) + 0.75s) both; }
+  .chart[data-draw][data-in] .label { animation: fade-in 0.45s ease calc(var(--rv-d, 0ms) + 1s) both; }
+  .chart[data-draw][data-in] .dot, .spark[data-draw][data-in] .dot { transform-box: fill-box; transform-origin: center; animation: dot-pop 0.36s cubic-bezier(0.3, 1.6, 0.5, 1) calc(var(--rv-d, 0ms) + 1.15s) both; }
+  .spark[data-draw][data-in] .line { animation-delay: calc(var(--rv-d, 0ms) + 0.5s); }
+  .spark[data-draw][data-in] .dot { animation-delay: calc(var(--rv-d, 0ms) + 1.6s); }
+
+  /* 단계 표시: 지나온 단계의 선이 왼쪽에서 차례로 차오르고, 선이 닿을 때 그 단계의 점이 찍힌다 */
+  .stepper li:nth-child(3) { --k: 1; }
+  .stepper li:nth-child(4) { --k: 2; }
+  .stepper li:nth-child(5) { --k: 3; }
+  .stepper li:nth-child(6) { --k: 4; }
+  .stepper li:nth-child(7) { --k: 5; }
+  .stepper[data-draw] li::after { transform: scaleX(0); }
+  .stepper[data-draw] li:not(:first-child):not([data-state="todo"]) .dot { opacity: 0; }
+  .stepper[data-draw][data-in] li::after { animation: grow-x 0.3s ease-out calc(var(--rv-d, 0ms) + var(--k, 0) * 0.2s + 0.15s) both; }
+  .stepper[data-draw][data-in] li:not(:first-child):not([data-state="todo"]) .dot { animation: dot-pop 0.32s cubic-bezier(0.3, 1.6, 0.5, 1) calc(var(--rv-d, 0ms) + var(--k, 0) * 0.2s + 0.38s) both; }
+
+  /* 일정선: 올해의 지나온 구간이 왼쪽에서 차오르고 일정의 점이 뒤따라 나타난다 */
+  .yl-track[data-draw] .yl-done { transform: scaleX(0); }
+  .yl-track[data-draw] .yl-dot, .yl-track[data-draw] .yl-today { opacity: 0; }
+  .yl-track[data-draw][data-in] .yl-done { animation: grow-x 1s cubic-bezier(0.4, 0, 0.2, 1) var(--rv-d, 0ms) both; }
+  .yl-track[data-draw][data-in] .yl-dot { animation: fade-in 0.4s ease calc(var(--rv-d, 0ms) + 0.55s) both; }
+  .yl-track[data-draw][data-in] .yl-today { animation: fade-in 0.4s ease calc(var(--rv-d, 0ms) + 0.95s) both; }
+
+  /* 접어 둔 글을 펼칠 때 */
+  .quote-rest[open] > :not(summary), .excerpt[open] > :not(summary) { animation: rise 0.34s ease both; }
+  .tip { animation: tip-in 0.14s ease-out; }
+}
+.yl-done { transform-origin: left center; }
+@media print { [data-rv] { opacity: 1 !important; transform: none !important; } }
+@keyframes line-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes dot-pop { from { opacity: 0; transform: scale(0.3); } to { opacity: 1; transform: scale(1); } }
+@keyframes grow-x { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes tip-in { from { opacity: 0; transform: translate(-50%, calc(-100% + 6px)); } }
+/* 올라가는 수치는 숫자마다 폭이 같아야 흔들리지 않는다 */
+[data-count] { font-variant-numeric: tabular-nums; }
+
+/* ── 2) 지금 살아 있다는 표시 ── */
+@keyframes ping { 0% { transform: scale(1); opacity: 0.65; } 70%, 100% { transform: scale(2.7); opacity: 0; } }
+@keyframes halo { 0% { transform: scale(1); opacity: 0.42; } 75%, 100% { transform: scale(3.2); opacity: 0; } }
+.hero-fresh, .stage-chip { position: relative; }
+@media (prefers-reduced-motion: no-preference) {
+  /* 마지막 갱신: 제때 갱신되고 있을 때만 점이 번진다 */
+  .hero-fresh[data-state="ok"]::after { content: ""; position: absolute; left: 10px; top: 50%; width: 7px; height: 7px; margin-top: -3.5px; border-radius: 50%; background: #4ade80; animation: ping 2.4s cubic-bezier(0, 0, 0.2, 1) infinite; }
+  html[data-theme="white"] .hero-fresh[data-state="ok"]::after { background: #16a34a; }
+  .ticker-tag i::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: currentColor; animation: ping 2.4s cubic-bezier(0, 0, 0.2, 1) 0.6s infinite; }
+  /* 아직 진행 중인 규제(협상, 예정, 분쟁)의 단계 표시 */
+  .stage-chip:is([data-tone="progress"], [data-tone="planned"], [data-tone="dispute"])::after { content: ""; position: absolute; left: 11px; top: 50%; width: 7px; height: 7px; margin-top: -3.5px; border-radius: 50%; background: currentColor; animation: ping 2.6s cubic-bezier(0, 0, 0.2, 1) infinite; }
+  :is([data-tone="progress"], [data-tone="planned"], [data-tone="dispute"]) .stepper li[data-state="now"] .dot::after { content: ""; position: absolute; inset: -2px; border-radius: 50%; border: 2px solid var(--rule-tone, var(--brand-bright)); animation: ping 2.6s cubic-bezier(0, 0, 0.2, 1) 1.4s infinite; }
+  /* 지금 가격의 점 */
+  .chart .halo, .spark .halo { transform-box: fill-box; transform-origin: center; animation: halo 2.8s ease-out 1.6s infinite; }
+  /* 일정선의 오늘 */
+  .yl-today::after { content: ""; position: absolute; left: 50%; top: 10px; width: 10px; height: 10px; margin-left: -5px; border-radius: 50%; background: var(--ink); animation: ping 2.8s cubic-bezier(0, 0, 0.2, 1) 1.5s infinite; }
+}
+
+/* ── 3) 손에 답하는 것 ── */
+.rule-card { transition: transform 0.18s, box-shadow 0.18s; }
+.rule-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-2); }
+.btn:active, .chip:active, .seg button:active, .an-nav button:active { transform: scale(0.97); }
+.fact:active, .tile:active, .sector:active, .step:active { transform: scale(0.985); }
+.chipicon { transition: transform 0.2s cubic-bezier(0.3, 1.4, 0.5, 1); }
+.tile:hover .chipicon, .side-nav a:hover .chipicon, .step:hover .chipicon { transform: scale(1.08) rotate(-4deg); }
+.date-box { transition: transform 0.2s cubic-bezier(0.3, 1.4, 0.5, 1); }
+.date-list li:hover .date-box { transform: scale(1.06); }
+/* 바깥으로 나가는 링크의 화살표가 나가는 쪽으로 조금 움직인다 */
+a[target="_blank"] > svg.icon { transition: transform 0.18s; }
+a[target="_blank"]:hover > svg.icon { transform: translate(2px, -2px); }
+
+/* 주 메뉴의 밑줄: 메뉴 사이를 미끄러져 옮겨 간다(js/ui/navink.js) */
+.site-nav { position: relative; }
+.nav-ink { position: absolute; left: 0; bottom: 0; width: 0; height: 3px; border-radius: 3px 3px 0 0; background: var(--accent); opacity: 0; pointer-events: none; }
+.nav-ink[data-live] { transition: transform 0.36s cubic-bezier(0.3, 0.8, 0.2, 1), width 0.36s cubic-bezier(0.3, 0.8, 0.2, 1), opacity 0.2s; }
+.site-nav.has-ink > a[aria-current="page"]::after { display: none; }
+html[data-theme="white"] .nav-ink { background: var(--brand-bright); }
+
+/* 머리글: 조금이라도 내려오면 그림자가 생기고, 긴 글 화면에서는 읽은 만큼 아래 선이 찬다(js/ui/scrollcue.js) */
+.site-head { transition: box-shadow 0.25s; }
+html[data-scrolled] .site-head { box-shadow: 0 14px 34px -22px rgb(2 6 23 / 0.75); }
+.read-bar { position: absolute; left: 0; right: 0; bottom: -3px; height: 3px; background: linear-gradient(90deg, var(--accent), var(--hl-to)); transform: scaleX(0); transform-origin: left center; pointer-events: none; }
+html[data-theme="white"] .read-bar { background: linear-gradient(90deg, var(--brand), var(--brand-bright)); }
+/* 맨 위로 가는 단추: 한참 내려왔을 때만 보인다 */
+.to-top { position: fixed; right: 20px; bottom: 22px; z-index: 24; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: var(--surface); color: var(--ink-2); box-shadow: var(--shadow-2); opacity: 0; visibility: hidden; transform: translateY(12px); transition: opacity 0.25s, transform 0.25s, color 0.15s, border-color 0.15s, visibility 0s 0.25s; }
+.to-top[data-show] { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+.to-top svg { transform: rotate(-90deg); }
+.to-top:hover { border-color: var(--brand-bright); color: var(--brand-bright); }
+@media (max-width: 640px) { .to-top { right: 10px; bottom: 14px; width: 38px; height: 38px; } }
+@media print { .to-top, .read-bar, .nav-ink { display: none; } }
+
+/* ── 4) 바탕의 느린 움직임 ── */
+.hero::before { content: ""; position: absolute; left: 36%; top: -34%; width: 62%; height: 130%; background: radial-gradient(closest-side, var(--map-glow), transparent 72%); opacity: 0.38; pointer-events: none; }
+@keyframes drift { from { transform: translate3d(-7%, 5%, 0) scale(1); } to { transform: translate3d(8%, -6%, 0) scale(1.16); } }
+@keyframes float { from { transform: translate3d(0, 0, 0) rotate(0deg); } to { transform: translate3d(-6px, -10px, 0) rotate(-2.5deg); } }
+@keyframes glow { from { transform: translate3d(0, 0, 0) scale(1); opacity: 1; } to { transform: translate3d(-9%, 7%, 0) scale(1.22); opacity: 0.72; } }
+@media (prefers-reduced-motion: no-preference) {
+  .hero::before { animation: drift 24s ease-in-out infinite alternate; }
+  .feature::after { animation: glow 15s ease-in-out infinite alternate; }
+  .feature-art { animation: float 9s ease-in-out infinite alternate; }
+}

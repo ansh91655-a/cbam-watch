@@ -1,0 +1,57 @@
+/* 지도 그림: 첫 화면의 큰 머리와 화면 머리 띠가 함께 쓴다. 그림은 tools/art/dotmap.py가 만든다(js/ui/heromap.js).
+   놓는 자리는 layout.css에 있고, 여기에는 그림 안의 것(점, 뱃길, 빛, 항구)만 둔다. 색은 tokens.css와 themes.css의 --map-* 값이다. */
+.hero-map .map, .band-map .map { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+
+/* 점: 줄마다 이어진 선을 점선으로 그린다. 선 끝을 둥글려, 길이 0.01의 토막이 동그란 점이 된다.
+   토막과 틈을 더한 값(8.6)은 점 사이의 거리이고 dotmap.py의 STEP과 같아야 한다. */
+.map-dots { fill: none; stroke-linecap: round; stroke-dasharray: 0.01 8.59; }
+.map-land { stroke: var(--map-land); stroke-width: 3.4; }
+.map-eu { stroke: var(--map-eu); stroke-width: 4.2; }
+.map-kr { stroke: var(--map-kr); stroke-width: 4.8; }
+.map-glow-in { stop-color: var(--map-glow); stop-opacity: 1; }
+.map-glow-out { stop-color: var(--map-glow); stop-opacity: 0; }
+.map-glow-kr-in { stop-color: var(--map-kr); stop-opacity: 0.2; }
+.map-glow-kr-out { stop-color: var(--map-kr); stop-opacity: 0; }
+
+/* 뱃길: 화면이 열릴 때 부산에서 EU 쪽으로 한 번 그려진다. 가지는 줄기가 갈라지는 곳에 닿을 때 그려지기 시작한다(--at은 줄기에서 그곳까지의 비율) */
+.map-lane-from { stop-color: var(--map-arc-from); }
+.map-lane-mid { stop-color: var(--map-lane-mid); }
+.map-lane-to { stop-color: var(--map-arc-to); }
+.map-lane, .map-lane-glow { fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 100; stroke-dashoffset: 100; animation: lane-draw 2.6s linear 0.25s forwards; }
+.map-lane { stroke-width: 2; }
+.map-lane-glow { stroke-width: 8; opacity: 0.2; }
+.map-branch { stroke-width: 1.6; animation-duration: 0.55s; animation-delay: calc(0.25s + var(--at, 1) * 2.6s); }
+@keyframes lane-draw { to { stroke-dashoffset: 0; } }
+
+/* 그 뒤로는 작은 빛이 같은 쪽으로 천천히 지나간다: 항구마다 하나씩, 차례를 두고 떠난다 */
+.map-light { fill: none; stroke: var(--map-light); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 0.9 99.1; stroke-dashoffset: 0.9; opacity: 0; animation: lane-light 15s linear 3.4s infinite; }
+.map-light:nth-child(2) { animation-delay: 6.4s; }
+.map-light:nth-child(3) { animation-delay: 9.4s; }
+.map-light:nth-child(4) { animation-delay: 12.4s; }
+.map-light:nth-child(5) { animation-delay: 15.4s; }
+@keyframes lane-light { 0% { stroke-dashoffset: 0.9; opacity: 0; } 2% { opacity: 1; } 56% { opacity: 1; } 60%, 100% { stroke-dashoffset: -99.1; opacity: 0; } }
+
+/* 항구와 떠나는 곳 */
+.map-port-ring { fill: none; stroke: var(--map-arc-to); stroke-width: 1.4; opacity: 0.55; }
+.map-port-dot { fill: var(--map-port); stroke: var(--map-arc-to); stroke-width: 1.2; }
+.map-port { opacity: 0; animation: port-in 0.5s ease-out 2.9s forwards; }
+@keyframes port-in { to { opacity: 1; } }
+.map-home { fill: var(--map-kr); }
+.map-home-ring { fill: none; stroke: var(--map-kr); stroke-width: 1.4; opacity: 0.55; }
+.map-home-pulse { fill: none; stroke: var(--map-kr); stroke-width: 1.4; transform-box: fill-box; transform-origin: center; opacity: 0; animation: home-pulse 3.2s ease-out 1s infinite; }
+@keyframes home-pulse { 0% { transform: scale(0.5); opacity: 0.85; } 75%, 100% { transform: scale(2.2); opacity: 0; } }
+/* 좁은 화면에서는 그림이 절반쯤으로 줄어든다. 선과 빛이 너무 가늘어지지 않게 굵기를 올린다 */
+@media (max-width: 900px) {
+  .map-lane { stroke-width: 3; }
+  .map-branch { stroke-width: 2.4; }
+  .map-lane-glow { stroke-width: 11; }
+  .map-light { stroke-width: 4.6; }
+  .map-land { stroke-width: 3.8; }
+  .map-eu { stroke-width: 4.6; }
+  .map-kr { stroke-width: 5.4; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .map-lane, .map-lane-glow { stroke-dashoffset: 0; animation: none; }
+  .map-port { opacity: 1; animation: none; }
+  .map-light, .map-home-pulse { display: none; }
+}
