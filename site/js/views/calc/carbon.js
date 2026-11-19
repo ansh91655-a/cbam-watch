@@ -35,7 +35,7 @@ export function carbonFields(ctx) {
     paid ? row("넣는 방법", seg("entry", "실질적으로 지불된 탄소가격을 넣는 방법", ENTRY, carbon.entry, (entry) => { carbon.entry = entry; draw(`[data-seg="entry:${entry}"]`); })) : null,
     paid && carbon.entry === "report" ? h("div", { class: "calc-grid" }, [
       field("calc-cp-euros", "제품 1톤당 실질 지불 탄소가격(유로)", numberInput("calc-cp-euros", carbon.perTonne, set("perTonne")),
-        "독립적인 사람이 인증한 보고서에 적힌 값입니다. 무상으로 받은 배출권이나 환급처럼 값을 치르지 않은 몫은 빠져 있어야 합니다."),
+        "독립된 자가 인증한 보고서에 적힌 값입니다. 무상으로 받은 배출권이나 환급처럼 값을 치르지 않은 몫은 빠져 있어야 합니다."),
     ]) : null,
     paid && carbon.entry === "build" ? h("div", { class: "calc-grid" }, [
       field("calc-cp-price", "탄소가격(원, tCO2e당)", numberInput("calc-cp-price", carbon.price, set("price")),
