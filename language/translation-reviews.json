@@ -138,6 +138,18 @@
    "key": "084ba23554da",
    "act": "report-carbon-price",
    "why": "둘째 문장의 including proof of payment, currency conversion, and eligibility of third-party certifiers를 '즉 …'으로 옮겨 예시 열거가 한정 열거로 바뀜('지불 증명, 통화 환산 및 제3자 인증자의 자격을 포함하여'로 옮겨야 함)"
+  },
+  {
+   "day": "2026-11-19",
+   "key": "8852a7655a59",
+   "act": "32025R2550",
+   "why": "둘째 문장의 should be granted를 '부여하여야 한다'로 옮겨 권고가 의무로 바뀜(…부여하는 것이 바람직하다)"
+  },
+  {
+   "day": "2026-11-19",
+   "key": "1c9cec60101c",
+   "act": "32025R2550",
+   "why": "should be aligned와 should apply를 '맞추어야 한다', '적용하여야 한다'로 옮겨 권고가 의무로 바뀜(…하는 것이 바람직하다)"
   }
  ]
 }
