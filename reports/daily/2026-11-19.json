@@ -1,0 +1,15 @@
+{
+ "kind": "daily",
+ "date": "2026-11-19",
+ "writtenAt": "2026-11-19T10:05:55+09:00",
+ "status": "정상",
+ "problems": [],
+ "runProblems": 0,
+ "holds": [],
+ "counts": {
+  "published": 4,
+  "total": 255,
+  "retryHolds": 0
+ },
+ "handbookToReview": []
+}
