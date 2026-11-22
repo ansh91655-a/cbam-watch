@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-20T06:13:27+09:00",
+ "updatedAt": "2026-11-23T06:04:36+09:00",
  "seen": {
   "ec-press": [
    "AC/25/1280",
@@ -31,6 +31,7 @@
    "QANDA/25/806",
    "QANDA/26/1100",
    "QANDA/26/1598",
+   "QANDA/26/2511",
    "READ/25/998",
    "SPEECH/25/1140",
    "SPEECH/25/1323",
@@ -53,6 +54,7 @@
    "STATEMENT/25/630",
    "STATEMENT/25/643",
    "STATEMENT/25/830",
+   "STATEMENT/26/2512",
    "STATEMENT/26/53"
   ],
   "eur-lex-docs": [

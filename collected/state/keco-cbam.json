@@ -1,7 +1,7 @@
 {
  "code": "keco-cbam",
  "baseline": "2026-11-10",
- "checkedAt": "2026-11-20T06:10:19+09:00",
+ "checkedAt": "2026-11-23T06:01:42+09:00",
  "seen": {
   "u:https://www.keco.or.kr/web/lay1/S1T6C1348/contents.do": "2026-11-10",
   "u:https://www.keco.or.kr/web/lay1/S1T163C164/sublink.do": "2026-11-10",
@@ -491,6 +491,10 @@
   "l:22e7324ba698cc93": "2026-11-10",
   "l:db45ceaedd3197a0": "2026-11-10",
   "l:fdc9954ef97433cd": "2026-11-10",
-  "l:7dbfcb1bcf0e56d6": "2026-11-10"
+  "l:7dbfcb1bcf0e56d6": "2026-11-10",
+  "u:https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=100945&cpage=1&rows=10&condition=&keyword=": "2026-11-23",
+  "l:85cc6bac125f1a9b": "2026-11-23",
+  "l:0b6941338c4e7934": "2026-11-23",
+  "l:05962829f488686c": "2026-11-23"
  }
 }

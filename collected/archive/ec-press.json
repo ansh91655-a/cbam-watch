@@ -1,15 +1,15 @@
 {
  "source": "ec-press",
- "fetchedAt": "2026-11-20T06:12:41+09:00",
+ "fetchedAt": "2026-11-23T06:03:55+09:00",
  "since": "2025-01-01",
  "report": {
   "pages": 8,
   "listed": 400,
-  "opened": 3,
-  "kept": 0,
+  "opened": 9,
+  "kept": 2,
   "failures": [],
   "oldest": "2025-02-18",
-  "total": 52,
+  "total": 54,
   "seen": [
    "AC/25/1280",
    "AC/25/612",
@@ -17,6 +17,7 @@
    "AC/26/2197",
    "AC/26/2318",
    "AC/26/2477",
+   "AC/26/2555",
    "FS/26/2201",
    "FS/26/2246",
    "FS/26/2305",
@@ -53,6 +54,7 @@
    "IP/26/2450",
    "IP/26/2456",
    "IP/26/2499",
+   "IP/26/2532",
    "JP/26/2465",
    "MEX/25/1333",
    "MEX/25/646",
@@ -98,6 +100,7 @@
    "MEX/26/2471",
    "MEX/26/2497",
    "MEX/26/2516",
+   "MEX/26/2543",
    "MEX/26/462",
    "QANDA/25/1268",
    "QANDA/25/1688",
@@ -112,6 +115,7 @@
    "QANDA/26/2199",
    "QANDA/26/2245",
    "QANDA/26/2331",
+   "QANDA/26/2511",
    "READ/25/998",
    "SPEECH/25/1140",
    "SPEECH/25/1323",
@@ -158,6 +162,8 @@
    "SPEECH/26/2501",
    "SPEECH/26/2506",
    "SPEECH/26/2517",
+   "SPEECH/26/2541",
+   "SPEECH/26/2542",
    "SPEECH/26/986",
    "STATEMENT/25/1267",
    "STATEMENT/25/1704",
@@ -183,11 +189,32 @@
    "STATEMENT/26/2317",
    "STATEMENT/26/2390",
    "STATEMENT/26/2425",
+   "STATEMENT/26/2512",
    "STATEMENT/26/2528",
+   "STATEMENT/26/2529",
+   "STATEMENT/26/2556",
    "STATEMENT/26/53"
   ]
  },
  "entries": [
+  {
+   "date": "2026-11-20",
+   "reference": "STATEMENT/26/2512",
+   "kind": "STATEMENT",
+   "title": "Joint Statement of the European Union and the United Kingdom Summit, 20 November 2026",
+   "mentions": 1,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2512",
+   "textPath": "collected/archive/pages/ec-press/statement_26_2512.txt"
+  },
+  {
+   "date": "2026-11-20",
+   "reference": "QANDA/26/2511",
+   "kind": "QANDA",
+   "title": "Questions and answers on the outcomes of the 2026 EU-UK Summit",
+   "mentions": 1,
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_2511",
+   "textPath": "collected/archive/pages/ec-press/qanda_26_2511.txt"
+  },
   {
    "date": "2026-11-18",
    "reference": "MEX/26/2497",

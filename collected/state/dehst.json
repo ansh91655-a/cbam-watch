@@ -1,7 +1,7 @@
 {
  "code": "dehst",
  "baseline": "2026-11-10",
- "checkedAt": "2026-11-20T06:10:19+09:00",
+ "checkedAt": "2026-11-23T06:01:42+09:00",
  "seen": {
   "u:https://www.dehst.de/DE/Themen/CBAM/cbam_node.html": "2026-11-10",
   "u:https://www.dehst.de/DE/Service/Datenschutz/datenschutz_node.html": "2026-11-10",
@@ -51,6 +51,10 @@
   "u:https://www.dehst.de/DE/Service/Sitemap/sitemap_node.html": "2026-11-10",
   "u:https://www.dehst.de/DE/Service/Impressum/impressum_node.html": "2026-11-10",
   "u:https://www.dehst.de/DE/Service/Barrierefreiheit/barrierefreiheit_node.html": "2026-11-10",
-  "u:https://www.dehst.de/SharedDocs/news/DE/cbam-neue-vo-anrechnung-co2-preis-drittstaaten.html": "2026-11-20"
+  "u:https://www.dehst.de/SharedDocs/news/DE/cbam-neue-vo-anrechnung-co2-preis-drittstaaten.html": "2026-11-20",
+  "u:https://www.dehst.de/SharedDocs/news/DE/Erfahrungsaustausch-Pruefstellen.html": "2026-11-23",
+  "u:https://www.dehst.de/SharedDocs/downloads/DE/praesentationen/16_ErfA2026_verico.html": "2026-11-23",
+  "u:https://www.dehst.de/SharedDocs/downloads/DE/praesentationen/13_ErfA2026_DAkkS-CBAM.html": "2026-11-23",
+  "u:https://www.dehst.de/SharedDocs/downloads/DE/praesentationen/15_ErfA2026_Pavelka_Sahl.html": "2026-11-23"
  }
 }
