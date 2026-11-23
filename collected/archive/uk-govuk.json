@@ -1,6 +1,6 @@
 {
  "source": "uk-govuk",
- "fetchedAt": "2026-11-23T06:04:00+09:00",
+ "fetchedAt": "2026-11-24T06:13:24+09:00",
  "since": "2025-01-01",
  "report": {
   "documents": 19,
@@ -8,11 +8,66 @@
   "changes": 247,
   "failures": [],
   "recent": {
-   "reread": 2,
+   "reread": 6,
    "failures": []
   }
  },
  "entries": [
+  {
+   "date": "2026-11-23",
+   "title": "Keeping records for Carbon Border Adjustment Mechanism (CBAM)",
+   "note": "Information about goods originating in the European Union (EU), European Economic Area (EEA) and Switzerland being exempt from the Carbon Border Adjustment Mechanism (CBAM) has been added. You still need to keep records to demonstrate their origin, as the exemption is based on where the goods originate, not where they are imported from.",
+   "url": "https://www.gov.uk/guidance/keeping-records-for-carbon-border-adjustment-mechanism-cbam",
+   "type": "detailed_guide",
+   "firstPublished": "2026-07-16",
+   "via": "collection",
+   "key": "/guidance/keeping-records-for-carbon-border-adjustment-mechanism-cbam@2026-11-23",
+   "textPath": "collected/archive/pages/uk-govuk/changes.txt"
+  },
+  {
+   "date": "2026-11-23",
+   "title": "Imported Carbon Border Adjustment (CBAM) goods that may not contribute towards the registration threshold",
+   "note": "Information has been added to confirm that from 1 January 2027, goods originating in the European Union (EU), European Economic Area (EEA) and Switzerland and being imported to the UK do not count towards your £50,000 Carbon Border Adjustment Mechanism (CBAM) threshold.",
+   "url": "https://www.gov.uk/guidance/imported-carbon-border-adjustment-cbam-goods-that-may-not-contribute-towards-the-registration-threshold",
+   "type": "detailed_guide",
+   "firstPublished": "2026-07-16",
+   "via": "search",
+   "key": "/guidance/imported-carbon-border-adjustment-cbam-goods-that-may-not-contribute-towards-the-registration-threshold@2026-11-23",
+   "textPath": "collected/archive/pages/uk-govuk/changes.txt"
+  },
+  {
+   "date": "2026-11-23",
+   "title": "Draft legislation: exemption for EU, EEA and Swiss-origin goods from CBAM",
+   "note": "First published.",
+   "url": "https://www.gov.uk/government/publications/draft-legislation-exemption-for-eu-eea-and-swiss-origin-goods-from-cbam",
+   "type": "policy_paper",
+   "firstPublished": "2026-11-23",
+   "via": "collection",
+   "key": "/government/publications/draft-legislation-exemption-for-eu-eea-and-swiss-origin-goods-from-cbam@2026-11-23",
+   "textPath": "collected/archive/pages/uk-govuk/changes.txt"
+  },
+  {
+   "date": "2026-11-23",
+   "title": "Carbon border adjustment mechanism (CBAM): Policy summary",
+   "note": "Page updated to include new information about the 'draft legislation: exemption for EU, EEA and Swiss-origin goods from CBAM' which has been added to the 'legislation, policy and consultations'.",
+   "url": "https://www.gov.uk/government/publications/carbon-border-adjustment-mechanism-cbam-policy-summary",
+   "type": "policy_paper",
+   "firstPublished": "2026-02-10",
+   "via": "collection",
+   "key": "/government/publications/carbon-border-adjustment-mechanism-cbam-policy-summary@2026-11-23",
+   "textPath": "collected/archive/pages/uk-govuk/changes.txt"
+  },
+  {
+   "date": "2026-11-23",
+   "title": "Prepare for the Carbon Border Adjustment Mechanism (CBAM)",
+   "note": "'Legislation, policy and consultations' section has been updated to include 'Draft legislation: exemption for EU, EEA and Swiss-origin goods from CBAM '.",
+   "url": "https://www.gov.uk/government/collections/carbon-border-adjustment-mechanism",
+   "type": "document_collection",
+   "firstPublished": "2026-02-10",
+   "via": "collection",
+   "key": "/government/collections/carbon-border-adjustment-mechanism@2026-11-23",
+   "textPath": "collected/archive/pages/uk-govuk/changes.txt"
+  },
   {
    "date": "2026-11-19",
    "title": "Getting the emissions intensity when importing Carbon Border Adjustment Mechanism (CBAM) goods",

@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-23T06:04:36+09:00",
+ "updatedAt": "2026-11-24T06:14:00+09:00",
  "seen": {
   "ec-press": [
    "AC/25/1280",
@@ -95,6 +95,7 @@
    "/government/collections/carbon-border-adjustment-mechanism@2026-07-16",
    "/government/collections/carbon-border-adjustment-mechanism@2026-09-09",
    "/government/collections/carbon-border-adjustment-mechanism@2026-11-10",
+   "/government/collections/carbon-border-adjustment-mechanism@2026-11-23",
    "/government/collections/check-if-youll-need-to-register-for-carbon-border-adjustment-mechanism-cbam@2026-07-16",
    "/government/collections/check-if-youll-need-to-register-for-carbon-border-adjustment-mechanism-cbam@2026-11-10",
    "/government/collections/claiming-carbon-price-relief-for-carbon-border-adjustment-mechanism-cbam@2026-07-16",
@@ -108,6 +109,7 @@
    "/government/publications/carbon-border-adjustment-mechanism-cbam-policy-summary@2026-09-09",
    "/government/publications/carbon-border-adjustment-mechanism-cbam-policy-summary@2026-10-16",
    "/government/publications/carbon-border-adjustment-mechanism-cbam-policy-summary@2026-11-02",
+   "/government/publications/carbon-border-adjustment-mechanism-cbam-policy-summary@2026-11-23",
    "/government/publications/carbon-border-adjustment-mechanism-cbam-technical-guidance-for-monitoring-verifying-and-reporting-emissions@2026-10-16",
    "/government/publications/carbon-border-adjustment-mechanism-force-of-law-notice-and-reference-document@2026-07-13",
    "/government/publications/carbon-border-adjustment-mechanism-force-of-law-notice-and-reference-document@2026-10-09",
@@ -115,6 +117,7 @@
    "/government/publications/check-the-default-values-for-the-carbon-border-adjustment-mechanism-cbam@2026-10-16",
    "/government/publications/check-the-default-values-for-the-carbon-border-adjustment-mechanism-cbam@2026-11-19",
    "/government/publications/check-which-goods-are-in-scope-of-carbon-border-adjustment-mechanism-cbam@2026-07-16",
+   "/government/publications/draft-legislation-exemption-for-eu-eea-and-swiss-origin-goods-from-cbam@2026-11-23",
    "/government/publications/factsheet-carbon-border-adjustment-mechanism-cbam@2025-04-23",
    "/government/publications/factsheet-carbon-border-adjustment-mechanism-cbam@2025-04-24",
    "/government/publications/factsheet-carbon-border-adjustment-mechanism-cbam@2025-11-28",
@@ -159,9 +162,11 @@
    "/guidance/help-and-support-for-agents@2026-10-29",
    "/guidance/help-and-support-for-agents@2026-11-17",
    "/guidance/imported-carbon-border-adjustment-cbam-goods-that-may-not-contribute-towards-the-registration-threshold@2026-07-16",
+   "/guidance/imported-carbon-border-adjustment-cbam-goods-that-may-not-contribute-towards-the-registration-threshold@2026-11-23",
    "/guidance/keeping-records-for-carbon-border-adjustment-mechanism-cbam@2026-07-16",
    "/guidance/keeping-records-for-carbon-border-adjustment-mechanism-cbam@2026-10-16",
    "/guidance/keeping-records-for-carbon-border-adjustment-mechanism-cbam@2026-11-03",
+   "/guidance/keeping-records-for-carbon-border-adjustment-mechanism-cbam@2026-11-23",
    "/guidance/monitoring-emissions-asan-overseas-installation-producing-carbon-border-adjustment-mechanism-cbam-goods-exported-to-the-uk@2026-10-16",
    "/guidance/rates-for-the-carbon-border-adjustment-mechanism-cbam@2026-10-16",
    "/guidance/responsibilities-if-you-accredit-verifiers-for-carbon-border-adjustment-mechanism-cbam-goods@2026-10-16",

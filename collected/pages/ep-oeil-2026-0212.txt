@@ -229,10 +229,6 @@ Contribution
 CZ_SENATE
 COM(2026)0616
 22/10/2026
-Reasoned opinion
-IT_SENATE
-PE797.532
-03/11/2026
 Contribution
 DE_BUNDESRAT
 COM(2026)0616
@@ -241,6 +237,14 @@ Contribution
 PT_PARLIAMENT
 COM(2026)0616
 09/11/2026
+Contribution
+RO_SENATE
+COM(2026)0616
+19/11/2026
+Reasoned opinion
+IT_SENATE
+PE797.532
+23/11/2026
 Additional information
 Additional information
 Source
@@ -429,9 +433,10 @@ Document attached to the procedure | SWD(2026)0617 | 17/07/2026 |
 Document attached to the procedure | SWD(2026)0618 | 17/07/2026 | 
 Document type | Parliament/Chamber | Reference | Date | Summary
 Contribution | CZ_SENATE | COM(2026)0616 | 22/10/2026 | 
-Reasoned opinion | IT_SENATE | PE797.532 | 03/11/2026 | 
 Contribution | DE_BUNDESRAT | COM(2026)0616 | 05/11/2026 | 
 Contribution | PT_PARLIAMENT | COM(2026)0616 | 09/11/2026 | 
+Contribution | RO_SENATE | COM(2026)0616 | 19/11/2026 | 
+Reasoned opinion | IT_SENATE | PE797.532 | 23/11/2026 | 
 Source | Document | Date
 European Commission | EUR-Lex | 
 Name | Role | Committee | Date | Interest representatives

@@ -1,7 +1,7 @@
 {
  "code": "hmrc-cbam",
  "baseline": "2026-11-10",
- "checkedAt": "2026-11-23T06:01:42+09:00",
+ "checkedAt": "2026-11-24T06:10:44+09:00",
  "seen": {
   "u:https://www.gov.uk/help/cookies": "2026-11-10",
   "u:https://www.gov.uk/browse/benefits": "2026-11-10",
@@ -110,6 +110,9 @@
   "l:f392ee64e1988cb5": "2026-11-10",
   "l:272927873a3a53d6": "2026-11-10",
   "l:1a63b26f78e70cd5": "2026-11-10",
-  "l:8c279a7c20a09f57": "2026-11-10"
+  "l:8c279a7c20a09f57": "2026-11-10",
+  "u:https://www.gov.uk/government/publications/draft-legislation-exemption-for-eu-eea-and-swiss-origin-goods-from-cbam": "2026-11-24",
+  "l:37006de51929e9df": "2026-11-24",
+  "l:e1cb275c64d13797": "2026-11-24"
  }
 }

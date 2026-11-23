@@ -1,0 +1,26 @@
+[주소] https://www.gov.uk/government/publications/draft-legislation-exemption-for-eu-eea-and-swiss-origin-goods-from-cbam
+[출처] UK HMRC CBAM 자료 모음
+[이용 조건] All content is available under the Open Government Licence v3.0, except where otherwise stated
+[받은 때] 2026-11-24T06:12:31+09:00
+
+Draft legislation: exemption for EU, EEA and Swiss-origin goods from CBAM
+This draft legislation sets out the proposed treatment under the UK Carbon Border Adjustment Mechanism (CBAM) of goods originating in countries whose emissions trading schemes are linked to the UK Emissions Trading Scheme (UK ETS).
+From:
+HM Revenue & Customs
+Published:
+23 November 2026
+Get emails about this page
+Documents
+Draft legislation
+PDF, 105 KB, 2 pages
+This file may not be suitable for users of assistive technology.
+Request an accessible format
+If you use assistive technology (such as a screen reader) and need a version of this document in a more accessible format, please email different.format@hmrc.gov.uk. Please tell us what format you need. It will help us if you say what assistive technology you use.
+Draft legislation (accessible version)
+HTML
+Details
+The draft legislation provides for CBAM goods originating in the EU, European Economic Area and Switzerland to be exempt from the UK CBAM from 1 January 2027. This means that UK CBAM will not be charged on the emissions embodied in these goods. These goods will not count towards the £50,000 CBAM registration threshold and will not need to be reported on a UK CBAM return, regardless of whether the importer exceeds the registration threshold.
+The draft legislation also provides a framework that would allow exemptions to be provided for relevant CBAM goods originating in other countries or territories where the relevant emissions trading schemes are linked to the UK ETS, or linked through an eligible linked scheme, and the legislative conditions are met.
+The exemption for EU, EEA and Swiss goods is intended to apply to eligible goods imported into the UK from 1 January 2027. As the legislation providing for the exemption is expected to receive Royal Assent after this date, it will take effect retrospectively once enacted.
+Until the legislation is enacted, liable persons must continue to meet the requirements of the legislation in force, including keeping the records required for UK CBAM. Businesses importing goods that are expected to benefit from the exemption should therefore continue to keep appropriate records, including evidence demonstrating the origin of those goods.
+The draft legislation is subject to the Parliamentary process and may change before it is enacted. Further information about what businesses need to do before it takes effect will be provided through GOV.UK guidance and the CBAM Policy Summary.
