@@ -1,13 +1,13 @@
 {
- "checkedAt": "2026-11-19T07:07:22+09:00",
+ "checkedAt": "2026-11-25T07:09:20+09:00",
  "sources": {
   "council-cbam": {
    "code": "council-cbam",
-   "checkedAt": "2026-11-19T07:07:22+09:00",
-   "ok": false,
-   "note": "검색 결과에 주소가 없음",
-   "failCount": 2,
-   "lastOk": "2026-11-17T07:08:20+09:00"
+   "checkedAt": "2026-11-25T07:09:20+09:00",
+   "ok": true,
+   "note": "",
+   "failCount": 0,
+   "lastOk": "2026-11-25T07:09:20+09:00"
   }
  }
 }
