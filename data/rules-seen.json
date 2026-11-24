@@ -1,5 +1,5 @@
 {
- "acceptedAt": "2026-11-19T08:27:12+09:00",
+ "acceptedAt": "2026-11-25T08:29:11+09:00",
  "seen": {
   "의회 절차의 사건": {
    "2025/0039(COD) 2025-02-26 Legislative proposal published": "COM(2025)0087",
@@ -63,7 +63,7 @@
    "2026/0211(COD)": "2026-12-14 Indicative plenary sitting date, 1st reading"
   },
   "집행위 의견수렴": {
-   "16932 CBAM declarations": "INIT_PLANNED/DISABLED/2026/02/19~",
+   "16932 CBAM declarations": "ISC_WORKFLOW/OPEN/2026/11/19~2026/12/17",
    "16933 Rules on the adjustment of CBAM certificates to reflect the EU ETS free allocation": "INIT_PLANNED/DISABLED/2026/02/19~",
    "14123 Qualifications for accreditation of verifiers and verification principles for CBAM purposes": "INIT_PLANNED/DISABLED/2024/01/18~",
    "15132 Amendment of the Implementing Act on the CBAM Registry": "INIT_PLANNED/DISABLED/2025/10/09~",
@@ -80,6 +80,7 @@
    "14759 Commission Implementing Regulation for goods brought to the exclusive economic zone of Member States": "ADOPTION_WORKFLOW/DISABLED/2025/11/30~"
   },
   "법령 데이터베이스의 연관 문서": {
+   "52026SC0348": "2026-11-19 COMMISSION STAFF WORKING DOCUMENT Second Biennial Transparency Report and Ninth National Communication Accompanying the ",
    "62023CJ0512": "2026-11-12 Judgment of the Court (Second Chamber) of 12 November 2026.#Republic of Poland v European Parliament and Council of the ",
    "52026DC0596": "2026-11-09 REPORT FROM THE COMMISSION TO THE EUROPEAN PARLIAMENT AND THE COUNCIL on the functioning of the European carbon market i",
    "32026R2498": "2026-11-05 Commission Implementing Regulation (EU) 2026/2498 of 5 November 2026 laying down rules for the application of Regulation",
@@ -130,7 +131,7 @@
    "52025SC0334": "2025-10-27 COMMISSION STAFF WORKING DOCUMENT Accompanying the document Report from the Commission to the European Parliament and th",
    "52025DC0871": "2025-10-21 REPORT FROM THE COMMISSION TO THE EUROPEAN PARLIAMENT, THE COUNCIL, THE EUROPEAN ECONOMIC AND SOCIAL COMMITTEE AND THE C",
    "02023R0956-20251020": "2025-10-20 Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023 establishing a carbon border adjus",
-   "62024CC0519": "2025-10-09 Opinion of Advocate General Ćapeta delivered on 9 October 2025.###",
+   "62024CC0519": "2025-10-09 Opinion of Advocate General Ćapeta delivered on 9 October 2025.#Nitrogénművek Vegyipari Zrt. v Nemzeti Adó- és Vámhivata",
    "32025R2083": "2025-10-08 Regulation (EU) 2025/2083 of the European Parliament and of the Council of 8 October 2025 amending Regulation (EU) 2023/",
    "C/2026/04971": "2025-10-06 Minutes of the sitting of 6 October 2025",
    "32025R1919": "2025-09-25 Commission Implementing Regulation (EU) 2025/1919 of 25 September 2025 imposing a definitive anti-dumping duty and defin",
@@ -199,6 +200,8 @@
    "62024CO0519": "없음"
   },
   "집행위 보도자료": {
+   "STATEMENT/26/2512": "2026-11-20 Joint Statement of the European Union and the United Kingdom Summit, 20 November 2026",
+   "QANDA/26/2511": "2026-11-20 Questions and answers on the outcomes of the 2026 EU-UK Summit",
    "MEX/26/2497": "2026-11-18 Daily News 18 / 11 / 2026",
    "MEX/26/2159": "2026-10-14 Daily News 14 / 10 / 2026",
    "QANDA/26/1598": "2026-07-17 Questions and answers on the EU Emissions Trading System (EU ETS) review ",
@@ -261,6 +264,13 @@
    "2026 c. 11": "Finance Act 2026"
   },
   "영국 정부 자료": {
+   "/guidance/keeping-records-for-carbon-border-adjustment-mechanism-cbam@2026-11-23": "Keeping records for Carbon Border Adjustment Mechanism (CBAM) | Information about goods originating in the European Union (EU), European Economi",
+   "/guidance/imported-carbon-border-adjustment-cbam-goods-that-may-not-contribute-towards-the-registration-threshold@2026-11-23": "Imported Carbon Border Adjustment (CBAM) goods that may not contribute towards the registration thre | Information has been added to confirm that from 1 January 2027, goods originatin",
+   "/government/publications/draft-legislation-exemption-for-eu-eea-and-swiss-origin-goods-from-cbam@2026-11-23": "Draft legislation: exemption for EU, EEA and Swiss-origin goods from CBAM | First published.",
+   "/government/publications/carbon-border-adjustment-mechanism-cbam-policy-summary@2026-11-23": "Carbon border adjustment mechanism (CBAM): Policy summary | Page updated to include new information about the 'draft legislation: exemption ",
+   "/government/collections/carbon-border-adjustment-mechanism@2026-11-23": "Prepare for the Carbon Border Adjustment Mechanism (CBAM) | 'Legislation, policy and consultations' section has been updated to include 'Dra",
+   "/guidance/getting-the-emissions-intensity-when-importing-carbon-border-adjustment-mechanism-cbam-goods@2026-11-19": "Getting the emissions intensity when importing Carbon Border Adjustment Mechanism (CBAM) goods | Information about using a verifier to create a verification report has been adde",
+   "/government/publications/check-the-default-values-for-the-carbon-border-adjustment-mechanism-cbam@2026-11-19": "Check the default values for the Carbon Border Adjustment Mechanism (CBAM) | The 'Description' for 'Iron and steel default values' at '(CN) code 72172030' ha",
    "/guidance/help-and-support-for-agents@2026-11-17": "HMRC email updates, videos and webinars for tax agents and advisers | Recorded webinars have been added for ‘general Carbon Border Adjustment Mechanis",
    "/government/collections/check-if-youll-need-to-register-for-carbon-border-adjustment-mechanism-cbam@2026-11-10": "Check if you’ll need to register for Carbon Border Adjustment Mechanism (CBAM) | Information has been updated to confirm that from 1 January 2027 you'll need to ",
    "/government/collections/carbon-border-adjustment-mechanism@2026-11-10": "Prepare for the Carbon Border Adjustment Mechanism (CBAM) | Information has been updated to confirm that from 1 January 2027 you'll need to ",

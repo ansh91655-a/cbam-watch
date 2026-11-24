@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-19",
+ "asOf": "2026-11-25",
  "groups": [
   {
    "code": "eu-law",
@@ -3271,11 +3271,11 @@
     "채택·공포",
     "시행"
    ],
-   "at": 0,
-   "stage": "준비 단계",
-   "tone": "planned",
-   "summary": "CBAM 신고서에 관한 세부 규칙을 정할 이행규정입니다. EU 집행위원회의 의견수렴 목록에 계획으로 올라 있고 초안은 아직 공개되지 않았습니다.",
-   "status": "2026년 2월 19일에 계획이 등록되었습니다. 의견수렴 일정은 아직 나오지 않았습니다.",
+   "at": 1,
+   "stage": "초안 의견수렴 중",
+   "tone": "progress",
+   "summary": "CBAM 신고서에 관한 세부 규칙을 정할 이행규정입니다. EU 집행위원회의 의견수렴 목록에 올라 있고, 초안에 대한 의견수렴이 진행 중입니다.",
+   "status": "초안 의견수렴이 진행 중입니다. 의견수렴은 2026년 11월 19일에 시작되어 2026년 12월 17일에 마감됩니다.",
    "timeline": [
     {
      "date": "2026-02-19",
@@ -3292,6 +3292,22 @@
       ]
      },
      "step": "plan"
+    },
+    {
+     "date": "2026-11-19",
+     "text": "이행규정 초안이 공개되어 의견수렴이 시작되었습니다(2026년 12월 17일 마감).",
+     "source": "EU 집행위원회 의견수렴 목록",
+     "link": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/16932_en",
+     "basis": "stored",
+     "evidence": {
+      "path": "collected/archive/pages/ec-hys/initiatives.txt",
+      "contains": [
+       "번호: 16932",
+       "시작: 2026/11/19",
+       "마감: 2026/12/17"
+      ]
+     },
+     "step": "feedback"
     }
    ],
    "links": [
@@ -3457,9 +3473,10 @@
     ]
    },
    "procedure": "implementing",
-   "stepNow": [
-    "draft"
-   ]
+   "changedOn": "2026-11-25",
+   "next": "초안 의견수렴이 마감됩니다.",
+   "nextDate": "2026-12-17",
+   "nextTitle": "CBAM 신고서 이행규정 초안 의견수렴 마감"
   },
   {
    "id": "ir-methodology",
@@ -7105,17 +7122,11 @@
     "발효"
    ],
    "at": 1,
-   "stage": "협상 중",
+   "stage": "협상 타결",
    "tone": "progress",
    "summary": "EU와 영국의 배출권거래제를 잇는 협정을 맺기 위한 협상입니다. CBAM 규정은 EU와 배출권거래제를 완전히 연계한 나라의 제품에는 CBAM을 적용하지 않도록 하고 있어, 협정이 발효되고 조건이 갖춰지면 영국산 제품이 EU CBAM의 대상에서 빠질 수 있습니다.",
-   "status": "EU 이사회가 2025년 11월 13일에 협상 개시를 승인했습니다. 2026년 11월 20일의 EU·영국 정상회의에서 협상 타결이 발표될 것이라는 보도가 있으나, 공식 발표는 아직 확인되지 않았습니다(2026년 11월 10일 기준). 보도에 따르면 타결되더라도 CBAM 적용 제외는 자동으로 이루어지지 않고, 연계가 완전히 이루어지는 등의 조건이 충족된 뒤 EU가 위임규정으로 영국을 적용 제외 국가 목록에 넣어야 합니다.",
-   "next": "EU·영국 정상회의가 열릴 예정이라는 보도가 있습니다. 타결되더라도 서명과 비준, 발효를 거쳐야 CBAM 적용 제외로 이어집니다.",
-   "nextDate": "2026-11-20",
-   "nextTitle": "EU·영국 정상회의(배출권거래제 연계 협상 타결 발표 예상, 보도 기준)",
-   "nextSource": {
-    "text": "Euronews 보도(2026년 11월 6일)",
-    "url": "https://www.euronews.com/2026/11/06/eu-and-uk-set-to-link-carbon-markets-in-major-post-brexit-deal"
-   },
+   "status": "협상이 타결되었습니다. EU와 영국은 2026년 11월 20일 정상회의 공동성명에서 배출권거래제 연계 협정의 협상 타결을 환영하고, 이 협정을 2028년부터 적용하는 것을 목표로 한다고 밝혔습니다. 공동성명은 이 협정이 EU와 영국 배출권의 상호 인정과, 각자의 법과 절차에 따라 EU와 영국 제품을 서로의 탄소국경조정제도에서 면제하는 일의 안정된 기반이 된다고 적었습니다. 협정의 서명일과 발효일은 아직 확인되지 않았습니다.",
+   "next": "공동성명은 각자의 법적 틀에 따른 협정의 체결과 발효를 기대한다고 밝혔습니다. 날짜는 아직 확인되지 않았습니다.",
    "timeline": [
     {
      "date": "2025-05-19",
@@ -7184,6 +7195,21 @@
      "link": "https://www.business-standard.com/world-news/eu-close-to-deal-to-link-uk-carbon-market-nearly-six-years-after-brexit-126110800338_1.html",
      "basis": "press",
      "checkedOn": "2026-11-10"
+    },
+    {
+     "date": "2026-11-20",
+     "text": "EU와 영국이 정상회의 공동성명에서 배출권거래제 연계 협정의 협상 타결을 환영했습니다. 공동성명은 이 협정을 2028년부터 적용하는 것을 목표로 한다고 밝혔습니다.",
+     "source": "EU 집행위원회 보도자료",
+     "link": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2512",
+     "basis": "stored",
+     "evidence": {
+      "path": "collected/archive/pages/ec-press/statement_26_2512.txt",
+      "contains": [
+       "[날짜] 2026-11-20",
+       "We welcome the conclusion of the negotiations on linking the EU and the UK Emissions Trading Systems",
+       "We aim to apply this agreement from 2028"
+      ]
+     }
     }
    ],
    "links": [
@@ -7390,6 +7416,7 @@
     ]
    },
    "procedure": "agreement",
+   "changedOn": "2026-11-25",
    "stepNow": [
     "negotiation"
    ]
@@ -7409,7 +7436,7 @@
    "stage": "2027년 1월 1일 시행 예정",
    "tone": "adopted",
    "summary": "영국으로 수입되는 CBAM 대상 제품의 내재배출량에 매기는 세금입니다. 근거는 2026년 재정법(Finance Act 2026) 제5편이고, 행정 절차, 요율과 탄소가격 경감, 경과 조치, 배출량 산정과 검증을 다루는 하위 법령이 만들어졌습니다. EU CBAM과는 별개의 제도입니다.",
-   "status": "근거 법률이 2026년 3월 18일에 제정되었고, 하위 법령이 2026년 7월과 9월에 제정되어 2027년 1월 1일에 시행됩니다. 영국 국세청 안내에 따르면 2027년 1월 1일부터 기록을 보관해야 하고, 등록은 2028년 1월 1일에 열립니다. 2026년 10월 28일에는 대상 부문을 정유 제품으로 넓히는 방안에 대한 협의가 시작되어 2027년 1월 20일까지 의견을 받습니다.",
+   "status": "근거 법률이 2026년 3월 18일에 제정되었고, 하위 법령이 2026년 7월과 9월에 제정되어 2027년 1월 1일에 시행됩니다. 영국 국세청 안내에 따르면 2027년 1월 1일부터 기록을 보관해야 하고, 등록은 2028년 1월 1일에 열립니다. 2026년 10월 28일에는 대상 부문을 정유 제품으로 넓히는 방안에 대한 협의가 시작되어 2027년 1월 20일까지 의견을 받습니다. 2026년 11월 23일에는 EU, 유럽경제지역(EEA), 스위스 원산지 제품을 영국 CBAM에서 면제하는 법안 초안이 게시되었습니다.",
    "next": "영국 CBAM이 시행됩니다.",
    "nextDate": "2027-01-01",
    "calendar": false,
@@ -7545,6 +7572,19 @@
       "where": {
        "date": "2026-10-28",
        "closes": "2027-01-20"
+      }
+     }
+    },
+    {
+     "date": "2026-11-23",
+     "text": "영국 정부가 EU, 유럽경제지역(EEA), 스위스 원산지 제품을 영국 CBAM에서 면제하는 법안 초안을 게시했습니다.",
+     "source": "영국 정부(GOV.UK)",
+     "link": "https://www.gov.uk/government/publications/draft-legislation-exemption-for-eu-eea-and-swiss-origin-goods-from-cbam",
+     "basis": "stored",
+     "evidence": {
+      "index": "uk-govuk",
+      "where": {
+       "key": "/government/publications/draft-legislation-exemption-for-eu-eea-and-swiss-origin-goods-from-cbam@2026-11-23"
       }
      }
     }
@@ -7866,7 +7906,7 @@
      }
     }
    },
-   "changedOn": "2026-11-18"
+   "changedOn": "2026-11-25"
   },
   {
    "id": "wto-ds639",
