@@ -1,7 +1,7 @@
 {
  "code": "ec-news",
  "baseline": "2026-11-10",
- "checkedAt": "2026-11-24T06:10:44+09:00",
+ "checkedAt": "2026-11-25T06:14:42+09:00",
  "seen": {
   "u:https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_en": "2026-11-10",
   "u:https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_es": "2026-11-10",
@@ -147,6 +147,9 @@
   "d:d34da6b4b501c414": "2026-11-10",
   "d:e3a1323a5a743946": "2026-11-10",
   "u:https://taxation-customs.ec.europa.eu/news/extension-cbam-iceland-and-norway-2026-11-18_en": "2026-11-20",
-  "d:c8c802d950864568": "2026-11-20"
+  "d:c8c802d950864568": "2026-11-20",
+  "u:https://taxation-customs.ec.europa.eu/customs/national-customs-administrations_en": "2026-11-25",
+  "u:https://www.efta.int/sites/default/files/documents/legal-texts/eea/other-legal-documents/adopted-joint-committee-decisions/2026%20-%20English/283-2026.pdf": "2026-11-25",
+  "d:0e34163fb58ae79a": "2026-11-25"
  }
 }

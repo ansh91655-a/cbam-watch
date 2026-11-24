@@ -1,7 +1,7 @@
 {
  "code": "ec-verification",
  "baseline": "2026-11-10",
- "checkedAt": "2026-11-24T06:10:44+09:00",
+ "checkedAt": "2026-11-25T06:14:42+09:00",
  "seen": {
   "u:https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_en": "2026-11-10",
   "u:https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_es": "2026-11-10",
@@ -136,6 +136,8 @@
   "l:653be2616db793d6": "2026-11-10",
   "l:2e4b6b32348debc4": "2026-11-10",
   "l:8f3312d4291b99ff": "2026-11-10",
-  "l:eabed9326c6df712": "2026-11-10"
+  "l:eabed9326c6df712": "2026-11-10",
+  "u:https://taxation-customs.ec.europa.eu/customs/national-customs-administrations_en": "2026-11-25",
+  "l:63cf56b46f7b91c8": "2026-11-25"
  }
 }

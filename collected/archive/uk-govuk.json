@@ -1,6 +1,6 @@
 {
  "source": "uk-govuk",
- "fetchedAt": "2026-11-24T06:13:24+09:00",
+ "fetchedAt": "2026-11-25T06:16:38+09:00",
  "since": "2025-01-01",
  "report": {
   "documents": 19,
@@ -8,7 +8,7 @@
   "changes": 247,
   "failures": [],
   "recent": {
-   "reread": 6,
+   "reread": 2,
    "failures": []
   }
  },

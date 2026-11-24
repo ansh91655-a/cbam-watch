@@ -311,6 +311,9 @@ Interest representatives
 CAVEDAGNA Stefano
 10/11/2026
 confindustria ceramica
+GORI Giorgio
+10/11/2026
+confindustria ceramica
 HANSEN Niels Flemming
 04/11/2026
 Dansk Fjernvarme
@@ -411,6 +414,7 @@ MARAN Pierfrancesco | Committee chair | ENVI | 08/09/2026 | confindustria cerami
 BLOSS Michael | Shadow rapporteur | ENVI | 22/07/2026 | Wirtschaftsvereinigung der Grünen e.V.
 Name | Date | Interest representatives
 CAVEDAGNA Stefano | 10/11/2026 | confindustria ceramica
+GORI Giorgio | 10/11/2026 | confindustria ceramica
 HANSEN Niels Flemming | 04/11/2026 | Dansk Fjernvarme
 NIINISTÖ Ville | 04/11/2026 | Finnish Forest Industries Federation (Metsäteollisuus ry)
 HANSEN Niels Flemming | 29/09/2026 | Ørsted A/S

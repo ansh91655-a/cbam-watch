@@ -317,6 +317,12 @@ Name
 Date
 Interest representatives
 HADJIPANTELA Michalis
+24/11/2026
+ExxonMobil Petroleum & Chemical
+HADJIPANTELA Michalis
+24/11/2026
+TotalEnergies SE
+HADJIPANTELA Michalis
 18/11/2026
 NOVE
 ESMECA - European SME Cement Association
@@ -325,6 +331,9 @@ MONTSERRAT Dolors
 FOMENT DEL TREBALL NACIONAL
 International Airlines Group IAG
 Vueling
+GORI Giorgio
+18/11/2026
+EUTurbines
 ZŁOTOWSKI Kosma
 17/11/2026
 International Air Transport Association
@@ -341,15 +350,6 @@ A2A
 GYÜRK András
 12/11/2026
 Bioenergy Europe
-POLFJÄRD Jessica
-12/11/2026
-Stegra III (formerly Stegra and H2GS AB)
-HAIDER Roman
-11/11/2026
-Vereinigung der österreichischen Industrie - Industriellenvereinigung
-NAGYOVÁ Jana
-10/11/2026
-The European SME Cement Association
 Load more
 Procedure file
 Basic information
@@ -451,13 +451,13 @@ MARAN Pierfrancesco | Committee chair | ENVI | 09/11/2026 | European Suppliers o
 RATAS Jüri | Rapporteur for opinion | ITRE | 05/11/2026 | EUROCHAMBRES – Association of European Chambers of Commerce and Industry
 GYÜRK András | Shadow rapporteur for opinion | ITRE | 05/11/2026 | BUSINESSEUROPE
 Name | Date | Interest representatives
+HADJIPANTELA Michalis | 24/11/2026 | ExxonMobil Petroleum & Chemical
+HADJIPANTELA Michalis | 24/11/2026 | TotalEnergies SE
 HADJIPANTELA Michalis | 18/11/2026 | NOVE ESMECA - European SME Cement Association
 MONTSERRAT Dolors | 18/11/2026 | FOMENT DEL TREBALL NACIONAL International Airlines Group IAG Vueling
+GORI Giorgio | 18/11/2026 | EUTurbines
 ZŁOTOWSKI Kosma | 17/11/2026 | International Air Transport Association
 FERENC Viktória | 16/11/2026 | Magyar Cement-, Beton- és Mészipari Szövetség
 KNOTEK Ondřej | 16/11/2026 | A2A MUST & Partners
 NAGYOVÁ Jana | 12/11/2026 | A2A
 GYÜRK András | 12/11/2026 | Bioenergy Europe
-POLFJÄRD Jessica | 12/11/2026 | Stegra III (formerly Stegra and H2GS AB)
-HAIDER Roman | 11/11/2026 | Vereinigung der österreichischen Industrie - Industriellenvereinigung
-NAGYOVÁ Jana | 10/11/2026 | The European SME Cement Association

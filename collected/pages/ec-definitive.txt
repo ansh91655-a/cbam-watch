@@ -92,6 +92,9 @@ CBAM
 CBAM definitive regime
 CBAM definitive regime
 Rules and obligations applicable under the CBAM definitive regime
+CBAM extends to Norway and Iceland. Find more information in this section
+Previous news itemPlay news tickerPause news tickerNext news item
+1 of 1
 PlayPause
 This section contains information on the CBAM definitive regime applicable from 1 January 2026, including its functioning, governance, and main obligations for economic operators.
 Page contents
@@ -111,11 +114,18 @@ the carbon price of imports is equivalent to the carbon price of domestic produc
 the EU's climate objectives are not undermined.
 CBAM is designed to be compatible with WTO rules.
 National Competent Authorities
-Access to the CBAM Registry can be requested through the National Competent Authority (NCA) of the EU country in which the importer is established.
+Access to the CBAM Registry can be requested through the National Competent Authority (NCA) of the CBAM country in which the importer is established
 List of National Competent Authorities for CBAM
 20 November 2026
 English
 Download (341.52 KB - PDF)
+CBAM in Norway and Iceland
+The European Commission welcomes the adoption of the EEA Joint Committee Decision incorporating the CBAM Regulation into the European Economic Area (EEA) Agreement. The Decision extends CBAM to Norway and Iceland, creating a single CBAM area covering the EU, Norway and Iceland and reinforcing their shared commitment to decarbonisation. CBAM helps address the risk of carbon leakage and encourages cleaner industrial production by ensuring that the price of certain imports reflects their embedded carbon emissions.
+The Information notice on the application of CBAM following incorporation of CBAM in the EEA Agreement is available below. It outlines the practical implications of extending CBAM to the EEA EFTA States for all stakeholders involved.
+Notice CBAM implementation following EEA agreement
+24 November 2026
+English
+Download (175.78 KB - PDF)
 Sectoral information
 CBAM applies to imports of selected goods in the following sectors:
 Cement

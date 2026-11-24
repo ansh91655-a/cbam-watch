@@ -92,10 +92,16 @@ CBAM
 CBAM communication and news
 CBAM communication and news
 News and resources to support CBAM implementation: communication materials, frequently asked questions (FAQs) and recent webinars related to the Carbon Border Adjustment Mechanism (CBAM).
+CBAM extends to Norway and Iceland. Find more information in this section
+Previous news itemPlay news tickerPause news tickerNext news item
+1 of 1
 PlayPause
 Page contents
 Page contents
 Latest developments
+24Nov2026
+Do you import any of these products into the EU?
+The new factsheet is available in the “Factsheets” section of the CBAM communication and news webpage.
 18Nov2026
 Extension of CBAM to Iceland and Norway
 EEA Joint Committee Decision No 283/2026, which extends CBAM to Iceland and Norway, entered into force on 18 November 2026. From 1 January 2027, the same CBAM rules will apply to imports of covered goods into Iceland and Norway as to imports into the EU.
@@ -108,23 +114,6 @@ Each 2026 quarterly price is calculated by the Commission in the first calendar 
 30Sep2026
 Webinar follow-up: “CBAM from policy to practice – emissions calculation, declarations, and certificates”
 The European Commission held the fourth in a series of webinars on the implementation of the EU’s Carbon Border Adjustment Mechanism (CBAM). The webinar covers the policy context and practical steps for the first compliance deadline of 30 September 2027, when the first CBAM declarations and corresponding certificates are due.
-30Sep2026
-How do CBAM certificates work?
-Download the latest factsheet
-30Sep2026
-CBAM De Minimis Threshold Assessment
-Under Article 2a(3) of the CBAM Regulation, the Commission shall assess whether the single mass-based threshold (currently 50 tonnes) applies to no more than 1% of the emissions embedded in the imported goods and processed products. In addition, the Commission shall adopt delegated acts in accordance with Article 28 of the CBAM Regulation to amend the single mass-based threshold by using the methodology set out in point 2 of Annex VII of the CBAM Regulation, where the value of the resulting threshold deviates from the applicable threshold by more than 15 tonnes.
-For the period 1 April 2025 to 31 March 2026, the assessment indicates that the 50-tonne single mass-based threshold would exempt 0.87% of embedded emissions, remaining below the 1% limit.
-28Sep2026
-New resources available for CBAM verifiers
-The Commission has published an overview of the latest resources available to support CBAM verifiers. It brings together guidance on verification and accreditation, information on access to the CBAM Registry, operational documents for Accredited Verifiers and training videos on the use of the CBAM Registry - O3CI portal. Consult the overview and access all the available resources.
-28Sep2026
-New training videos for accredited verifiers
-The videos provide guidance on applying to become a registered verifier, submitting requests for change, and managing collaboration requests with operators of Third Country Installations in the CBAM Registry.
-28Aug2026
-New procedure for CBAM verifiers to access the CBAM Registry
-The Commission has published a procedure setting out how CBAM verifiers can obtain access to the CBAM Registry as from 1 September 2026 and describes relevant roles and responsibilities of verifiers, accreditation bodies, EC and NCAs.
-For further information, please visit the CBAM Registry webpage and consult the access procedure.
 Read more news
 Webinars and e-learning
 Links to e-learning courses and recordings of recent webinars are listed below. These sessions provide practical guidance and address common questions from various stakeholders. The sessions are led by policy experts from the European Commission who provide an overview of CBAM, covering its overall framework and key implementation steps.
@@ -151,6 +140,12 @@ Webinar for NCAs on CBAM-related legal and policy matters
 e-learning module for National Competent Authorities
 Factsheets
 CBAM factsheets are available in German, English, Spanish, French, Italian, Dutch and Polish.
+CBAM - Do you import any of these products into the EU? (updated)
+From 1 January 2026, EU importers - or their indirect customs representatives - importing more than the single mass-based threshold of 50 tonnes of CBAM goods into the EU need a CBAM account number or application reference number under the EU Carbon Border Adjustment Mechanism (CBAM). The EU Carbon Border Adjustment Mechanism (CBAM) will be extended to Iceland and Norway following the entry into force of the European Economic Area (EEA) Joint Committee Decision No 283/2026 on 18 November 2026. As of 1 January 2027, CBAM will apply in Norway and Iceland to goods imported into their customs territories, in the same way that it applies to goods entering the EU customs territory
+General publications
+24 November 2026
+English
+Download (534.28 KB - PDF)
 How CBAM certificates work
 Starting in 2027, CBAM importers must submit their annual CBAM declaration by 30 September for imports of CBAM goods during the preceding year.
 The CBAM declaration reports the quantity of goods imported, their embedded emissions, and the corresponding number of certificates.
@@ -176,12 +171,6 @@ Download
 polski
 (430.75 KB - HTML)
 Download
-CBAM - Do you import any of these products into the EU?
-From 1 January 2026, EU importers - or their indirect customs representatives - importing more than the single mass-based threshold of 50 tonnes of CBAM goods into the EU need a CBAM account number or application reference number under the EU Carbon Border Adjustment Mechanism (CBAM)
-General publications
-20 March 2026
-English
-Download (408.17 KB - HTML)
 CBAM - Actual vs default values in your declaration
 CBAM requires EU importers of certain goods to become authorised CBAM declarants, report the embedded carbon emissions in these goods, and meet related financial obligations. By 30 September 2027, importers of CBAM goods must submit their first CBAM declaration - covering embedded emissions from 2026 imports - and surrender the corresponding CBAM certificates. Importers can report emissions using default values provided by the Commission or actual values. If an importer chooses to report actual values, the producer in the third country must provide verified emissions data on the total embedded emissions.
 General publications

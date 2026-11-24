@@ -1,14 +1,12 @@
 {
- "ranAt": "2026-11-24T06:13:12+09:00",
+ "ranAt": "2026-11-25T06:16:34+09:00",
  "since": "2025-01-01",
  "result": {
-  "pages": 0,
-  "listed": 0,
-  "opened": 0,
+  "pages": 8,
+  "listed": 400,
+  "opened": 5,
   "kept": 0,
-  "failures": [
-   "목록 1쪽: 목록을 풀지 못함: Expecting value: line 1 column 1 (char 0)"
-  ],
+  "failures": [],
   "oldest": "2025-02-18",
   "total": 54
  }

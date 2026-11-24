@@ -1,15 +1,13 @@
 {
  "source": "ec-press",
- "fetchedAt": "2026-11-24T06:13:12+09:00",
+ "fetchedAt": "2026-11-25T06:16:34+09:00",
  "since": "2025-01-01",
  "report": {
-  "pages": 0,
-  "listed": 0,
-  "opened": 0,
+  "pages": 8,
+  "listed": 400,
+  "opened": 5,
   "kept": 0,
-  "failures": [
-   "목록 1쪽: 목록을 풀지 못함: Expecting value: line 1 column 1 (char 0)"
-  ],
+  "failures": [],
   "oldest": "2025-02-18",
   "total": 54,
   "seen": [
@@ -56,8 +54,10 @@
    "IP/26/2450",
    "IP/26/2456",
    "IP/26/2499",
+   "IP/26/2530",
    "IP/26/2532",
    "JP/26/2465",
+   "JP/26/2538",
    "MEX/25/1333",
    "MEX/25/646",
    "MEX/26/1549",
@@ -103,6 +103,8 @@
    "MEX/26/2497",
    "MEX/26/2516",
    "MEX/26/2543",
+   "MEX/26/2561",
+   "MEX/26/2578",
    "MEX/26/462",
    "QANDA/25/1268",
    "QANDA/25/1688",
@@ -195,6 +197,7 @@
    "STATEMENT/26/2528",
    "STATEMENT/26/2529",
    "STATEMENT/26/2556",
+   "STATEMENT/26/2577",
    "STATEMENT/26/53"
   ]
  },
