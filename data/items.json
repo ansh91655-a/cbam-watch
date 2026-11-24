@@ -1,5 +1,5 @@
 {
- "builtAt": "2026-11-19T08:21:20+09:00",
+ "builtAt": "2026-11-25T08:22:22+09:00",
  "note": "seed-로 시작하는 항목은 2026-11-10에 원문을 두 번 읽고 자동 검증까지 통과시킨 초기 등록분이다.",
  "items": [
   {
@@ -5448,6 +5448,154 @@
    "excerpt": "[제목] Daily News 18 / 11 / 2026\nCarbon Border Adjustment Mechanism area extended to Iceland and Norway\nIceland and Norway will become part of the Carbon Border Adjustment Mechanism (CBAM), following decision by the EEA Joint Committee, which entered into force on 18 November. This means that as of 1 January 2027, the mechanism will fully apply in Iceland and Norway goods imported into their customs territories, in the same way that it applies to goods entering the EU customs territory.\nFor businesses, this means that goods imported from outside the enlarged CBAM area will face CBAM rules, regardless of whether they enter through the EU, Iceland or Norway. By contrast, EU goods exported to Iceland or Norway, as well as Icelandic and Norwegian goods imported into the EU, already do not incur additional CBAM charges.\nThe mechanism continues to cover the sectors already included in CBAM, such as iron and steel, aluminium, cement, fertilisers, electricity and hydrogen.",
    "listed": "2026-11-19",
    "checkedAt": "2026-11-19T08:20:43+09:00",
+   "authoring": "자동"
+  },
+  {
+   "id": "20261125-carbon-pulse-7d936b",
+   "title": "폴란드 산업계, EU 배출권거래제 상한 경로 완화와 무상할당 유지 요구 보도",
+   "summary": "Carbon Pulse는 폴란드 산업계가 EU 배출권거래제 상한(cap)의 경로를 더 느리게 하고 무상할당을 유지할 것을 요구했다고 보도했습니다.",
+   "kind": "입법",
+   "topic": "legis",
+   "importance": "낮음",
+   "topics": [
+    "EU 배출권거래제",
+    "무상할당"
+   ],
+   "sourceCode": "carbon-pulse",
+   "sourceName": "Carbon Pulse CBAM & Tariffs",
+   "link": "https://carbon-pulse.com/573892/?site=cpp",
+   "published": "",
+   "impact": "",
+   "listed": "2026-11-25",
+   "checkedAt": "2026-11-25T08:21:24+09:00",
+   "authoring": "자동"
+  },
+  {
+   "id": "20261125-carbon-pulse-b3d1bf",
+   "title": "브뤼셀, EU CBAM 신고서 규칙 초안 공개 보도",
+   "summary": "Carbon Pulse는 브뤼셀(Brussels)이 EU CBAM 신고서에 관한 규칙 초안을 공개했다고 보도했습니다.",
+   "kind": "입법",
+   "topic": "declare",
+   "importance": "낮음",
+   "topics": [
+    "CBAM 신고서",
+    "규칙 초안"
+   ],
+   "sourceCode": "carbon-pulse",
+   "sourceName": "Carbon Pulse CBAM & Tariffs",
+   "link": "https://carbon-pulse.com/574118/?site=cpp",
+   "published": "",
+   "impact": "",
+   "listed": "2026-11-25",
+   "checkedAt": "2026-11-25T08:21:24+09:00",
+   "authoring": "자동"
+  },
+  {
+   "id": "20261125-dehst-f26f5c",
+   "title": "독일 DEHSt, CBAM 인정 현황과 검증에 관한 발표 자료 게시",
+   "summary": "독일 DEHSt의 CBAM 화면에 'Themenblock 6' 발표 자료가 올라왔습니다. 자료의 제목은 DAkkS의 CBAM 인정 현황과 경험, CBAM 검증의 보고·검증 의무 전망, verico SCE의 첫 수임 건 피드백입니다.",
+   "kind": "해외",
+   "topic": "verify",
+   "importance": "낮음",
+   "topics": [
+    "검증",
+    "인정",
+    "독일"
+   ],
+   "sourceCode": "dehst",
+   "sourceName": "DEHSt (독일)",
+   "link": "https://www.dehst.de/SharedDocs/downloads/DE/praesentationen/13_ErfA2026_DAkkS-CBAM.html",
+   "published": "",
+   "impact": "",
+   "brief": true,
+   "listed": "2026-11-25",
+   "checkedAt": "2026-11-25T08:21:24+09:00",
+   "authoring": "자동"
+  },
+  {
+   "id": "20261125-ec-documents-d675cf",
+   "title": "CBAM 국가 관할당국 목록 새 판: 아이슬란드와 노르웨이 추가",
+   "summary": "EU 집행위원회의 CBAM 국가 관할당국(National Competent Authority) 목록이 새 판으로 바뀌었습니다. 아이슬란드(IS)의 Umhverfis- og orkustofnun(Icelandic Environment and Energy Agency)과 노르웨이(NO)의 Miljødirektoratet(Norwegian Environment Agency)가 연락처와 함께 더해졌습니다. 표의 첫 칸 머리글은 'CBAM country'로 적혀 있습니다.",
+   "kind": "원문 변경",
+   "topic": "declare",
+   "importance": "보통",
+   "topics": [
+    "국가 관할당국",
+    "아이슬란드",
+    "노르웨이"
+   ],
+   "sourceCode": "ec-documents",
+   "sourceName": "EC CBAM 문서(원문 대장)",
+   "link": "https://taxation-customs.ec.europa.eu/document/download/5595ce5b-9fd2-42f6-9908-ed6325338ffa_en?filename=20251208-Updated-list-of-NCAs-for-CBAM.pdf",
+   "published": "",
+   "impact": "",
+   "excerpt": "CBAM\ncountry\nNational Competent Authority\nIS\n(Iceland)\nUmhverfis- og orkustofnun\nIcelandic Environment and Energy Agency\nContact point\nEmail: cbam@uos.is\nTel: +354 569 6000\nAddress\nSuðurlandsbraut 24, 108 Reykjavík\nWebsite\nhttps://uos.is/cbam\nNO\n(Norway)\nMiljødirektoratet\nNorwegian Environment Agency\nContact point\nE-mail: cbam@miljodir.no\nAddress\nGrensesvingen 7, 0661 Oslo\nPostboks 5672 Torgarden, 7485 Trondheim\nWebsite\nhttps://www.miljodirektoratet.no/ansvarsomrader/internasjonalt/eu\n-regelverk/cbam/",
+   "listed": "2026-11-25",
+   "checkedAt": "2026-11-25T08:21:24+09:00",
+   "authoring": "자동"
+  },
+  {
+   "id": "20261125-ec-press-e2d11a",
+   "published": "2026-11-20",
+   "title": "EU·영국, 배출권거래제 연계 협상 타결 환영, 2028년부터 적용 목표",
+   "summary": "EU와 영국의 정상은 2026년 11월 20일 정상회의 공동성명에서 양쪽의 배출권거래제를 연계하는 협정(ETS agreement)의 협상 타결을 환영했습니다. 공동성명은 이 협정이 EU와 영국 배출권의 상호 인정과, 각자의 법과 절차에 따라 EU와 영국 제품을 서로의 탄소국경조정제도에서 면제하는 일의 안정된 기반이 된다고 밝혔습니다. 양쪽은 이 협정을 2028년부터 적용하는 것을 목표로 합니다.",
+   "kind": "해외",
+   "topic": "abroad",
+   "importance": "높음",
+   "topics": [
+    "EU 배출권거래제",
+    "영국",
+    "면제"
+   ],
+   "sourceCode": "ec-press",
+   "sourceName": "European Commission Press corner",
+   "link": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2512",
+   "impact": "",
+   "excerpt": "[날짜] 2026-11-20\n[제목] Joint Statement of the European Union and the United Kingdom Summit, 20 November 2026\nWe welcome the conclusion of the negotiations on linking the EU and the UK Emissions Trading Systems (ETS agreement). This would provide a stable basis for allowing mutual recognition of EU and UK allowances and for exempting EU and UK goods from respective Carbon Border Adjustment Mechanisms subject to respective laws and procedures that we plan to launch without delays. We aim to apply this agreement from 2028.\nThe SPS and ETS agreements will strengthen bilateral trade, while ensuring a level playing field and sustainable development. We look forward to the conclusion of these agreements, together with the Youth Experience Scheme, in accordance with our respective legal frameworks, and their joint and timely entry into force.",
+   "listed": "2026-11-25",
+   "checkedAt": "2026-11-25T08:21:24+09:00",
+   "authoring": "자동"
+  },
+  {
+   "id": "20261125-hmrc-cbam-45017b",
+   "published": "2026-11-23",
+   "title": "영국, EU·EEA·스위스 원산지 제품의 영국 CBAM 면제 법안 초안 공개",
+   "summary": "영국 국세청(HMRC)은 2026년 11월 23일에 EU, 유럽경제지역(EEA), 스위스 원산지 CBAM 대상 제품을 2027년 1월 1일부터 영국 CBAM에서 면제하는 법안 초안을 게시했습니다. 초안에 따르면 이 제품은 50,000파운드 CBAM 등록 임계값에 산입되지 않고 영국 CBAM 신고서에 보고하지 않아도 됩니다. 법안이 제정될 때까지 납부 의무자는 영국 CBAM에 필요한 기록 보관을 포함해 현행 법령의 요건을 계속 지켜야 합니다.",
+   "kind": "해외",
+   "topic": "abroad",
+   "importance": "보통",
+   "topics": [
+    "영국 CBAM",
+    "면제",
+    "임계값"
+   ],
+   "sourceCode": "hmrc-cbam",
+   "sourceName": "UK HMRC CBAM 자료 모음",
+   "link": "https://www.gov.uk/government/publications/draft-legislation-exemption-for-eu-eea-and-swiss-origin-goods-from-cbam",
+   "impact": "",
+   "listed": "2026-11-25",
+   "checkedAt": "2026-11-25T08:21:24+09:00",
+   "authoring": "자동"
+  },
+  {
+   "id": "20261125-keco-cbam-c385c7",
+   "published": "2026-11-20",
+   "title": "2026년 제4차 EU CBAM 대응 정부합동 설명회 안내",
+   "summary": "한국환경공단 CBAM 헬프데스크에 2026년 제4차 EU CBAM 대응 정부합동 설명회 안내가 올라왔습니다.",
+   "kind": "국내",
+   "topic": "korea",
+   "importance": "보통",
+   "topics": [
+    "설명회",
+    "정부합동"
+   ],
+   "sourceCode": "keco-cbam",
+   "sourceName": "한국환경공단 CBAM 헬프데스크",
+   "link": "https://www.keco.or.kr/web/lay1/bbs/S1T165C1421/A/279/view.do?article_seq=100945&cpage=1&rows=10&condition=&keyword=",
+   "impact": "",
+   "brief": true,
+   "listed": "2026-11-25",
+   "checkedAt": "2026-11-25T08:21:24+09:00",
    "authoring": "자동"
   }
  ]

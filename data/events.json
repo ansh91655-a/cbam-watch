@@ -58,6 +58,14 @@
    "sourceName": "European Commission Press corner",
    "link": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2497",
    "kind": "시행"
+  },
+  {
+   "date": "2027-01-01",
+   "title": "영국 CBAM의 EU·EEA·스위스 원산지 제품 면제 적용 예정일",
+   "note": "영국 국세청이 게시한 법안 초안에 적힌 날짜입니다.",
+   "sourceName": "UK HMRC CBAM 자료 모음",
+   "link": "https://www.gov.uk/government/publications/draft-legislation-exemption-for-eu-eea-and-swiss-origin-goods-from-cbam",
+   "kind": "시행"
   }
  ]
 }
