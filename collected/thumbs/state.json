@@ -11,7 +11,13 @@
    "tries": 3,
    "why": "제목을 찾지 못함",
    "at": "2026-11-18T08:23:55+09:00"
+  },
+  "d675cf0637db820f": {
+   "url": "https://taxation-customs.ec.europa.eu/document/download/5595ce5b-9fd2-42f6-9908-ed6325338ffa_en?filename=20251208-Updated-list-of-NCAs-for-CBAM.pdf",
+   "tries": 1,
+   "why": "제목을 찾지 못함",
+   "at": "2026-11-25T08:27:30+09:00"
   }
  },
- "updatedAt": "2026-11-19T08:26:57+09:00"
+ "updatedAt": "2026-11-25T08:27:30+09:00"
 }
