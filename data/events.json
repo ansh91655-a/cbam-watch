@@ -66,6 +66,22 @@
    "sourceName": "UK HMRC CBAM 자료 모음",
    "link": "https://www.gov.uk/government/publications/draft-legislation-exemption-for-eu-eea-and-swiss-origin-goods-from-cbam",
    "kind": "시행"
+  },
+  {
+   "date": "2026-12-17",
+   "title": "CBAM 신고서 이행규정 초안 의견수렴 마감",
+   "note": "EU 집행위원회 의견수렴 목록에 적힌 마감일입니다.",
+   "sourceName": "EC Have Your Say (CBAM 검색)",
+   "link": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives_en?text=CBAM",
+   "kind": "기한"
+  },
+  {
+   "date": "2027-01-01",
+   "title": "노르웨이와 아이슬란드에 CBAM 적용 시작",
+   "note": "팩트시트에 적힌 날짜입니다.",
+   "sourceName": "EC CBAM Communication and News",
+   "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_en",
+   "kind": "시행"
   }
  ]
 }
