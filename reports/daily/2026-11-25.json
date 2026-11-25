@@ -1,0 +1,15 @@
+{
+ "kind": "daily",
+ "date": "2026-11-25",
+ "writtenAt": "2026-11-25T10:06:13+09:00",
+ "status": "문제",
+ "problems": [],
+ "runProblems": 1,
+ "holds": [],
+ "counts": {
+  "published": 16,
+  "total": 271,
+  "retryHolds": 1
+ },
+ "handbookToReview": []
+}
