@@ -276,6 +276,16 @@ Role
 Committee
 Date
 Interest representatives
+CHAHIM Mohammed
+Rapporteur
+ENVI
+12/11/2026
+Bruegel
+CHAHIM Mohammed
+Rapporteur
+ENVI
+12/11/2026
+U.S. Permanent Representation to the European Union
 KARLSBRO Karin
 Shadow rapporteur for opinion
 INTA
@@ -316,16 +326,6 @@ Rapporteur
 ENVI
 04/09/2026
 YARA BELGIUM S.A.
-CHAHIM Mohammed
-Rapporteur
-ENVI
-04/09/2026
-Bellona Europa
-KARLSBRO Karin
-Shadow rapporteur for opinion
-INTA
-27/08/2026
-European Aluminium AISBL
 Load more
 Other Members
 Name
@@ -358,9 +358,9 @@ Vitrinor
 KANEV Radan
 17/06/2026
 GROUPE SEB
-GORI Giorgio
+BERNHUBER Alexander
 09/06/2026
-European Association Automotive Suppliers
+YARA BELGIUM S.A.
 Load more
 Procedure file
 Basic information
@@ -453,6 +453,8 @@ EESC | Economic and Social Committee: opinion, report | CES4390/2025 | 19/03/202
 Source | Document | Date
 European Commission | EUR-Lex | 
 Name | Role | Committee | Date | Interest representatives
+CHAHIM Mohammed | Rapporteur | ENVI | 12/11/2026 | Bruegel
+CHAHIM Mohammed | Rapporteur | ENVI | 12/11/2026 | U.S. Permanent Representation to the European Union
 KARLSBRO Karin | Shadow rapporteur for opinion | INTA | 16/10/2026 | SQM Europe N.V.
 BOYLAN Lynn | Shadow rapporteur | ENVI | 14/10/2026 | Miele & Cie. KG
 BOYLAN Lynn | Shadow rapporteur | ENVI | 28/09/2026 | Mission of Norway to the EU
@@ -461,8 +463,6 @@ KARLSBRO Karin | Shadow rapporteur for opinion | INTA | 07/09/2026 | Methanol In
 MARAN Pierfrancesco | Committee chair | ENVI | 07/09/2026 | ORI MARTIN SPA
 SARDONE Silvia | Shadow rapporteur | ENVI | 04/09/2026 | CLEPA European Association of Automotive Suppliers
 CHAHIM Mohammed | Rapporteur | ENVI | 04/09/2026 | YARA BELGIUM S.A.
-CHAHIM Mohammed | Rapporteur | ENVI | 04/09/2026 | Bellona Europa
-KARLSBRO Karin | Shadow rapporteur for opinion | INTA | 27/08/2026 | European Aluminium AISBL
 Name | Date | Interest representatives
 BERNHUBER Alexander | 16/09/2026 | METRO AG
 FERENC Viktória | 11/09/2026 | LAT Nitrogen AT
@@ -473,4 +473,4 @@ CHAHIM Mohammed | 01/07/2026 | European Alliance for the Inclusion of the Fire E
 LUENA César | 29/06/2026 | UNEXPO S.L
 LUENA César | 23/06/2026 | Vitrinor
 KANEV Radan | 17/06/2026 | GROUPE SEB
-GORI Giorgio | 09/06/2026 | European Association Automotive Suppliers
+BERNHUBER Alexander | 09/06/2026 | YARA BELGIUM S.A.

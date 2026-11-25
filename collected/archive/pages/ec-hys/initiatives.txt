@@ -42,12 +42,6 @@
 예정 법령 유형: PROP_REG
 단계: OPC_LAUNCHED | 의견수렴 상태: CLOSED | 시작: 2025/07/01 11:34:05 | 마감: 2025/08/26 23:59:59
 
-번호: 14132
-제목: Sale and repurchase of CBAM certificates
-문서 번호: Ares(2024)546926
-예정 법령 유형: REG_DEL
-단계: ISC_WORKFLOW | 의견수렴 상태: CLOSED | 시작: 2026/07/09 11:08:21 | 마감: 2026/08/06 23:59:59
-
 번호: 14828
 제목: Carbon border adjustment mechanism (CBAM) methodology for the definitive period
 문서 번호: Ares(2025)6809916
@@ -77,6 +71,12 @@
 문서 번호: Ares(2024)184676
 예정 법령 유형: REG_IMPL
 단계: ADOPTION_WORKFLOW | 의견수렴 상태: DISABLED | 시작: 2025/03/28 08:24:00 | 마감: 
+
+번호: 14132
+제목: Sale and repurchase of CBAM certificates
+문서 번호: Ares(2024)546926
+예정 법령 유형: REG_DEL
+단계: ADOPTION_WORKFLOW | 의견수렴 상태: DISABLED | 시작: 2026/11/25 11:51:00 | 마감: 
 
 번호: 14133
 제목: Conditions for granting accreditation for CBAM purposes

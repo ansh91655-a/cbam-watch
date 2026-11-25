@@ -1,6 +1,6 @@
 {
  "source": "ec-hys",
- "fetchedAt": "2026-11-25T06:16:14+09:00",
+ "fetchedAt": "2026-11-26T06:18:51+09:00",
  "since": "2025-01-01",
  "report": {
   "rows": 15,
@@ -133,22 +133,6 @@
    "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
   },
   {
-   "id": "14132",
-   "title": "Sale and repurchase of CBAM certificates",
-   "reference": "Ares(2024)546926",
-   "actType": "REG_DEL",
-   "statuses": [
-    {
-     "stage": "ISC_WORKFLOW",
-     "feedback": "CLOSED",
-     "start": "2026/07/09 11:08:21",
-     "end": "2026/08/06 23:59:59"
-    }
-   ],
-   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14132_en",
-   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
-  },
-  {
    "id": "14828",
    "title": "Carbon border adjustment mechanism (CBAM) methodology for the definitive period",
    "reference": "Ares(2025)6809916",
@@ -226,6 +210,22 @@
     }
    ],
    "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14116_en",
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
+  },
+  {
+   "id": "14132",
+   "title": "Sale and repurchase of CBAM certificates",
+   "reference": "Ares(2024)546926",
+   "actType": "REG_DEL",
+   "statuses": [
+    {
+     "stage": "ADOPTION_WORKFLOW",
+     "feedback": "DISABLED",
+     "start": "2026/11/25 11:51:00",
+     "end": ""
+    }
+   ],
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14132_en",
    "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
   },
   {

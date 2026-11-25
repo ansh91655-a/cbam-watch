@@ -245,6 +245,10 @@ Reasoned opinion
 IT_SENATE
 PE797.532
 23/11/2026
+Reasoned opinion
+IT_CHAMBER
+PE798.596
+23/11/2026
 Additional information
 Additional information
 Source
@@ -261,6 +265,31 @@ Role
 Committee
 Date
 Interest representatives
+CHAHIM Mohammed
+Shadow rapporteur
+ENVI
+02/12/2026
+Climeworks
+Drax Group plc
+E.ON SE
+Negative Emissions Platform
+Ørsted A/S
+Carbon Engineering
+Skytree
+Heirloom
+Deepsky
+CarboCulture
+Biochar Europe
+Vaulted Deep
+Carbony
+Terradot
+Neustark
+Supercritical
+RATAS Jüri
+Rapporteur for opinion
+ITRE
+24/11/2026
+Viking Line
 MARAN Pierfrancesco
 Committee chair
 ENVI
@@ -301,27 +330,36 @@ Committee chair
 ENVI
 09/11/2026
 European Suppliers of Waste-to-Energy Technology
-RATAS Jüri
-Rapporteur for opinion
-ITRE
-05/11/2026
-EUROCHAMBRES – Association of European Chambers of Commerce and Industry
-GYÜRK András
-Shadow rapporteur for opinion
-ITRE
-05/11/2026
-BUSINESSEUROPE
 Load more
 Other Members
 Name
 Date
 Interest representatives
+POLFJÄRD Jessica
+25/11/2026
+Viking Line
+KNOTEK Ondřej
+25/11/2026
+thyssenkrupp AG
+ZIJLSTRA Auke
+25/11/2026
+The European Steel Association
+ARIMONT Pascal
+25/11/2026
+BASF SE
+CEFIC - European Chemical Industry Council
+ARIMONT Pascal
+25/11/2026
+The European Steel Association
 HADJIPANTELA Michalis
 24/11/2026
 ExxonMobil Petroleum & Chemical
 HADJIPANTELA Michalis
 24/11/2026
 TotalEnergies SE
+ARIMONT Pascal
+23/11/2026
+European Metals
 HADJIPANTELA Michalis
 18/11/2026
 NOVE
@@ -331,25 +369,6 @@ MONTSERRAT Dolors
 FOMENT DEL TREBALL NACIONAL
 International Airlines Group IAG
 Vueling
-GORI Giorgio
-18/11/2026
-EUTurbines
-ZŁOTOWSKI Kosma
-17/11/2026
-International Air Transport Association
-FERENC Viktória
-16/11/2026
-Magyar Cement-, Beton- és Mészipari Szövetség
-KNOTEK Ondřej
-16/11/2026
-A2A
-MUST & Partners
-NAGYOVÁ Jana
-12/11/2026
-A2A
-GYÜRK András
-12/11/2026
-Bioenergy Europe
 Load more
 Procedure file
 Basic information
@@ -437,9 +456,12 @@ Contribution | DE_BUNDESRAT | COM(2026)0616 | 05/11/2026 |
 Contribution | PT_PARLIAMENT | COM(2026)0616 | 09/11/2026 | 
 Contribution | RO_SENATE | COM(2026)0616 | 19/11/2026 | 
 Reasoned opinion | IT_SENATE | PE797.532 | 23/11/2026 | 
+Reasoned opinion | IT_CHAMBER | PE798.596 | 23/11/2026 | 
 Source | Document | Date
 European Commission | EUR-Lex | 
 Name | Role | Committee | Date | Interest representatives
+CHAHIM Mohammed | Shadow rapporteur | ENVI | 02/12/2026 | Climeworks Drax Group plc E.ON SE Negative Emissions Platform Ørsted A/S Carbon Engineering Skytree Heirloom Deepsky CarboCulture Biochar Europe Vaulted Deep Carbony Terradot Neustark Supercritical
+RATAS Jüri | Rapporteur for opinion | ITRE | 24/11/2026 | Viking Line
 MARAN Pierfrancesco | Committee chair | ENVI | 16/11/2026 | Federazione Imprese Siderurgiche Italiane
 MARAN Pierfrancesco | Committee chair | ENVI | 16/11/2026 | European Aluminium AISBL
 MARAN Pierfrancesco | Committee chair | ENVI | 13/11/2026 | A2A
@@ -448,16 +470,14 @@ GYÜRK András | Shadow rapporteur for opinion | ITRE | 12/11/2026 | CEFIC - Eur
 MARAN Pierfrancesco | Committee chair | ENVI | 12/11/2026 | Fondazione Patto per la Decarbonizzazione del Trasporto Aereo
 MARAN Pierfrancesco | Committee chair | ENVI | 10/11/2026 | European Shipowners | ECSA
 MARAN Pierfrancesco | Committee chair | ENVI | 09/11/2026 | European Suppliers of Waste-to-Energy Technology
-RATAS Jüri | Rapporteur for opinion | ITRE | 05/11/2026 | EUROCHAMBRES – Association of European Chambers of Commerce and Industry
-GYÜRK András | Shadow rapporteur for opinion | ITRE | 05/11/2026 | BUSINESSEUROPE
 Name | Date | Interest representatives
+POLFJÄRD Jessica | 25/11/2026 | Viking Line
+KNOTEK Ondřej | 25/11/2026 | thyssenkrupp AG
+ZIJLSTRA Auke | 25/11/2026 | The European Steel Association
+ARIMONT Pascal | 25/11/2026 | BASF SE CEFIC - European Chemical Industry Council
+ARIMONT Pascal | 25/11/2026 | The European Steel Association
 HADJIPANTELA Michalis | 24/11/2026 | ExxonMobil Petroleum & Chemical
 HADJIPANTELA Michalis | 24/11/2026 | TotalEnergies SE
+ARIMONT Pascal | 23/11/2026 | European Metals
 HADJIPANTELA Michalis | 18/11/2026 | NOVE ESMECA - European SME Cement Association
 MONTSERRAT Dolors | 18/11/2026 | FOMENT DEL TREBALL NACIONAL International Airlines Group IAG Vueling
-GORI Giorgio | 18/11/2026 | EUTurbines
-ZŁOTOWSKI Kosma | 17/11/2026 | International Air Transport Association
-FERENC Viktória | 16/11/2026 | Magyar Cement-, Beton- és Mészipari Szövetség
-KNOTEK Ondřej | 16/11/2026 | A2A MUST & Partners
-NAGYOVÁ Jana | 12/11/2026 | A2A
-GYÜRK András | 12/11/2026 | Bioenergy Europe

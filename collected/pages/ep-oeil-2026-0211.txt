@@ -185,14 +185,14 @@ Contribution
 CZ_SENATE
 COM(2026)0619
 22/10/2026
-Reasoned opinion
-IT_CHAMBER
-PE797.533
-03/11/2026
 Contribution
 RO_SENATE
 COM(2026)0619
 13/11/2026
+Reasoned opinion
+IT_CHAMBER
+PE797.533
+25/11/2026
 Other institutions and bodies
 Institution/body
 Document type
@@ -398,8 +398,8 @@ Document type | Reference | Date | Summary
 Legislative proposal | COM(2026)0619 | 17/07/2026 | Summary
 Document type | Parliament/Chamber | Reference | Date | Summary
 Contribution | CZ_SENATE | COM(2026)0619 | 22/10/2026 | 
-Reasoned opinion | IT_CHAMBER | PE797.533 | 03/11/2026 | 
 Contribution | RO_SENATE | COM(2026)0619 | 13/11/2026 | 
+Reasoned opinion | IT_CHAMBER | PE797.533 | 25/11/2026 | 
 Institution/body | Document type | Reference | Date | Summary
 EESC | Economic and Social Committee: opinion, report | CES2439/2026 | 23/09/2026 | 
 Source | Document | Date

@@ -64,7 +64,6 @@ Customs Controls
 EU Training
 EU Customs Reform
 Authorised Economic Operator (AEO)
-Prohibitions and Restrictions
 Customs Procedures for import and export
 EU Customs Union: facts and figures
 Union Customs code
@@ -105,6 +104,9 @@ The new factsheet is available in the “Factsheets” section of the CBAM commu
 18Nov2026
 Extension of CBAM to Iceland and Norway
 EEA Joint Committee Decision No 283/2026, which extends CBAM to Iceland and Norway, entered into force on 18 November 2026. From 1 January 2027, the same CBAM rules will apply to imports of covered goods into Iceland and Norway as to imports into the EU.
+16Nov2026
+Commission adopts rules on the recognition of carbon prices paid in non-EU countries
+On 16 November 2026, the Commission published Implementing Regulation 2026/2498 setting out detailed rules under the Carbon Border Adjustment Mechanism (CBAM) for the deduction of carbon prices effectively paid in non-EU countries.
 22Oct2026
 New guidance on electricity imports under Centralised Clearance for Import
 The European Commission has published a Guidance for import of Electricity under the Centralised Clearance for Import (CCI) framework to support a harmonised approach across the EU. It covers authorisation, declaration and supervision measures under CCI and Entry in the Declarant’s Records (EIDR), as well as CBAM requirements and compliance obligations for electricity imports.

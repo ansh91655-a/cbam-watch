@@ -1,0 +1,74 @@
+{
+ "date": "2026-11-26",
+ "items": [
+  {
+   "id": "9068b855a8ce",
+   "source": "ec-news",
+   "kind": "link",
+   "url": "https://taxation-customs.ec.europa.eu/news/cbam-commission-adopts-rules-recognition-carbon-prices-paid-non-eu-countries-2026-11-16_en",
+   "text": "Commission adopts rules on the recognition of carbon prices paid in non-EU countries",
+   "seenAt": "2026-11-26T06:17:15+09:00",
+   "textPath": "collected/pages/items/9068b855a8ce.txt"
+  },
+  {
+   "id": "b7c6d23ab893",
+   "source": "ec-news",
+   "kind": "dated",
+   "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_en",
+   "text": "16Nov2026 | Commission adopts rules on the recognition of carbon prices paid in non-EU countries | On 16 November 2026, the Commission published Implementing Regulation 2026/2498 setting out detailed rules under the Carbon Border Adjustment Mechanism (CBAM) for the deduction of carbon prices effectively paid in non-EU countries.",
+   "seenAt": "2026-11-26T06:17:15+09:00",
+   "textPath": "collected/pages/ec-news.txt"
+  },
+  {
+   "id": "3398beafbf5d",
+   "source": "ec-haveyoursay",
+   "kind": "record",
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives_en?text=CBAM",
+   "text": "Sale and repurchase of CBAM certificates | Ares(2024)546926 | REG_DEL | ADOPTION_WORKFLOW | DISABLED | 2026/11/25 11:51:00",
+   "seenAt": "2026-11-26T06:17:15+09:00",
+   "textPath": "collected/pages/items/3398beafbf5d.txt"
+  },
+  {
+   "id": "a99daa9a9261",
+   "source": "ep-oeil-2026-0212",
+   "kind": "row",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0212(COD)",
+   "text": "Reasoned opinion | IT_CHAMBER | PE798.596 | 23/11/2026 |",
+   "seenAt": "2026-11-26T06:17:15+09:00",
+   "cells": [
+    "Reasoned opinion",
+    "IT_CHAMBER",
+    "PE798.596",
+    "23/11/2026",
+    ""
+   ],
+   "textPath": "collected/pages/ep-oeil-2026-0212.txt"
+  },
+  {
+   "id": "3ddddb538de2",
+   "source": "carbon-pulse",
+   "kind": "link",
+   "url": "https://carbon-pulse.com/575308/?site=cpp",
+   "text": "INTERVIEW: Ukraine prepares first Article 6 authorisations under Switzerland, Japan partnerships",
+   "seenAt": "2026-11-26T06:17:15+09:00"
+  },
+  {
+   "id": "7ce0882d6ce1",
+   "source": "ep-oeil-2026-0211",
+   "kind": "row",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0211(COD)",
+   "text": "Reasoned opinion | IT_CHAMBER | PE797.533 | 25/11/2026 |",
+   "seenAt": "2026-11-26T06:17:15+09:00",
+   "cells": [
+    "Reasoned opinion",
+    "IT_CHAMBER",
+    "PE797.533",
+    "25/11/2026",
+    ""
+   ],
+   "textPath": "collected/pages/ep-oeil-2026-0211.txt"
+  }
+ ],
+ "generatedAt": "2026-11-26T06:17:15+09:00",
+ "count": 6
+}
