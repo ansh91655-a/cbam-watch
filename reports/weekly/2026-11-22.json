@@ -1,0 +1,22 @@
+{
+ "kind": "weekly",
+ "from": "2026-11-16",
+ "to": "2026-11-22",
+ "date": "2026-11-25",
+ "writtenAt": "2026-11-25T09:59:14+09:00",
+ "status": "정상",
+ "counts": {
+  "items": 20,
+  "digest": 1,
+  "audited": 15,
+  "match": 2,
+  "mismatch": 0,
+  "unknown": 13,
+  "withdrawn": 0
+ },
+ "withdrawnIds": [],
+ "runProblems": 0,
+ "unreachableDocs": 0,
+ "publishedTotal": 271,
+ "withdrawnTotal": 0
+}
