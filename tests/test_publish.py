@@ -329,6 +329,21 @@ class PublishTest(unittest.TestCase):
         self.assertEqual([(row["code"], row["url"], row["find"]) for row in book["claudeSources"]], [("council-cbam", "https://example.org/council/", "Council CBAM policy")])
         self.assertEqual([(row["id"], row["tier"], row["sourceUrl"]) for row in book["candidates"]], [("bbbbbbbbbbbb", "B", "https://example.org/list.do")])
 
+    def test_candidates_survive_days_without_a_run(self):
+        # 예약 실행이 며칠 돌지 못해도 그 사이에 모인 항목이 후보에서 빠지지 않는다(이미 다룬 것은 기록으로 거른다)
+        import datetime
+        from tools.run import prepare_collect
+        today = now_kst().date()
+        _write("sources/registry.json", {"sources": [{"code": "ec-news", "name": "EC", "url": "https://example.org/news", "tier": "A", "collector": "github"}]})
+        for back, item_id in ((9, "aaaaaaaaaaa9"), (8, "aaaaaaaaaaa8"), (20, "aaaaaaaaaa20")):
+            day = (today - datetime.timedelta(days=back)).isoformat()
+            _write(f"collected/feed/{day}.json", {"date": day, "items": [{"id": item_id, "source": "ec-news", "kind": "link", "url": f"https://example.org/{item_id}", "text": "News"}]})
+        _write("db/candidates/aaaaaaaaaaa8.json", {"id": "aaaaaaaaaaa8", "result": "제외"})
+        with contextlib.redirect_stdout(io.StringIO()):
+            prepare_collect.main(["--db-dir", "db", "--out", "candidates.json"])
+        self.assertEqual([row["id"] for row in _read("candidates.json")["candidates"]], ["aaaaaaaaaaa9"])
+        self.assertGreaterEqual(prepare_collect.DAYS, 10)
+
     def test_one_line_items_keep_their_mark_when_published(self):
         self._draft("20261112-keco-cbam-brief1", brief=True, tier="B", summary="한국환경공단이 월간 동향 37호를 게시판에 올렸습니다.", events=[])
         self._draft("20261112-keco-cbam-full01", brief=False, tier="B", events=[])

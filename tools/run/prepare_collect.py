@@ -1,7 +1,11 @@
 """수집·작성 실행이 다룰 후보를 고른다.
 
 저장소의 collected/feed 에서 최근 며칠의 새 항목을 읽고, 데이터베이스에 이미 기록된 후보(candidates)를 뺀다.
-쓰는 법: python -m tools.run.prepare_collect --db-dir /tmp/run/db --out /tmp/run/candidates.json [--days 5] [--limit 25]
+쓰는 법: python -m tools.run.prepare_collect --db-dir /tmp/run/db --out /tmp/run/candidates.json [--days 14] [--limit 25]
+
+며칠을 볼지(DAYS): 수집은 저장소의 워크플로가 날마다 하지만 후보를 다루는 예약 실행은 며칠씩 돌지 못할 수 있다
+(2026-11-20~24에 사용량 한도로 닷새 동안 돌지 못했다). 닷새만 보던 때에는 그 사이에 모인 항목이 창 밖으로 나가 다시는 후보가 되지 못했다.
+이미 다룬 후보는 기록으로 걸러지므로 길게 봐도 다시 다루지 않는다.
 """
 import argparse
 import datetime
@@ -10,12 +14,14 @@ import sys
 from tools.common.jsonio import now_kst, read_json, write_json
 from tools.run import dbdump
 
+DAYS = 14
+
 
 def main(argv):
     parser = argparse.ArgumentParser()
     parser.add_argument("--db-dir", required=True)
     parser.add_argument("--out", required=True)
-    parser.add_argument("--days", type=int, default=5)
+    parser.add_argument("--days", type=int, default=DAYS)
     parser.add_argument("--limit", type=int, default=25)
     args = parser.parse_args(argv)
 
