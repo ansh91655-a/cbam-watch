@@ -60,6 +60,16 @@
    "caught": 12,
    "discarded": 0,
    "held": 0
+  },
+  {
+   "day": "2026-11-25",
+   "batches": 3,
+   "checked": 79,
+   "dropped": 0,
+   "canaries": 6,
+   "caught": 6,
+   "discarded": 0,
+   "held": 0
   }
  ],
  "disputed": [],
@@ -152,6 +162,12 @@
   "f2d0397a89fe",
   "246e2a00efe8",
   "b19e7daebc28",
-  "ff089cba9425"
+  "ff089cba9425",
+  "0de51844ac26",
+  "4e79549fe7cc",
+  "bba42e2e4a5e",
+  "3899b8f94955",
+  "4dda3415d44b",
+  "ab92f02f15b0"
  ]
 }
