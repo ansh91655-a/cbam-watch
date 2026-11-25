@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-18",
+ "asOf": "2026-11-25",
  "lead": "CBAM을 처음 맡은 담당자를 위해 제도가 어떻게 돌아가는지를 차례로 풀어 쓴 해설서입니다. 절마다 근거가 된 CBAM 규정과 이행규정의 조문으로 이어집니다. 마지막 장은 영국 CBAM을 영국 법령에 따라 설명합니다.",
  "sources": {
   "ets-directive": {
@@ -5128,7 +5128,7 @@
       },
       {
        "href": "#rules-ir-declarations",
-       "text": "CBAM 신고서 이행규정(계획)"
+       "text": "CBAM 신고서 이행규정(안)"
       },
       {
        "href": "#rules-ir-free-allocation",
@@ -6435,7 +6435,8 @@
      "title": "고시와 앞으로의 규정에 맡긴 것",
      "body": [
       "영국 CBAM의 여러 세부 사항은 재무부와 국세청의 고시나 앞으로 만들 규정에 맡겨져 있습니다. 이 장은 그 고시의 내용을 다루지 않습니다.",
-      "영국 국세청 안내의 갱신 기록에 따르면 '법적 효력이 있는 고시와 참조 문서' 화면은 2026년 7월 13일에 처음 게시되어 2026년 10월 16일에 새 고시가 더해졌습니다. 기본값을 확인하는 화면과 CBAM 요율 안내는 2026년 10월 16일에, 현재의 적격 탄소가격제도 목록은 2026년 8월 27일에 처음 게시되었습니다. 대상 부문을 정유 제품으로 넓히는 방안에 대한 협의도 2026년 10월 28일에 시작되었습니다. 영국 정부 누리집에서 확인한 요지는 영국 CBAM 규제 현황에 적었습니다.",
+      "영국 국세청 안내의 갱신 기록에 따르면 '법적 효력이 있는 고시와 참조 문서' 화면은 2026년 7월 13일에 처음 게시되어 2026년 10월 16일에 새 고시가 더해졌습니다. 기본값을 확인하는 화면과 CBAM 요율 안내는 2026년 10월 16일에, 현재의 적격 탄소가격제도 목록은 2026년 8월 27일에 처음 게시되었습니다. 대상 부문을 정유 제품으로 넓히는 방안에 대한 협의도 2026년 10월 28일에 시작되었습니다.",
+      "2026년 11월 23일에는 EU, 유럽경제지역(EEA), 스위스 원산지 제품을 영국 CBAM에서 면제하는 법안 초안이 처음 게시되었습니다. 같은 날 기록 보관 안내에는 이 면제가 제품을 들여온 곳이 아니라 원산지를 기준으로 하므로 원산지를 보여 줄 기록을 계속 보관해야 한다는 내용이 더해졌습니다. 영국 정부 누리집에서 확인한 요지는 영국 CBAM 규제 현황에 적었습니다.",
       "법령이 고시와 앞으로의 규정에 맡긴 주요 사항은 아래와 같습니다."
      ],
      "list": [
@@ -6510,14 +6511,16 @@
       },
       {
        "source": "uk-govuk-changes",
-       "label": "2026년 7월~10월의 갱신",
+       "label": "2026년 7월~11월의 갱신",
        "contains": [
         "2026-07-13 | Carbon Border Adjustment Mechanism: force of law notices and reference document | First published.",
         "2026-10-16 | Carbon Border Adjustment Mechanism: force of law notices and reference document | Page updated to include new 'force of law' notices.",
         "2026-10-16 | Check the default values for the Carbon Border Adjustment Mechanism (CBAM) | First published.",
         "2026-10-16 | Rates for the Carbon Border Adjustment Mechanism (CBAM) | First published.",
         "2026-08-27 | UK CBAM: Current qualifying carbon pricing schemes | First published.",
-        "2026-10-28 | Carbon Border Adjustment Mechanism (CBAM): a consultation on sectoral scope expansion to include refinery products | First published."
+        "2026-10-28 | Carbon Border Adjustment Mechanism (CBAM): a consultation on sectoral scope expansion to include refinery products | First published.",
+        "2026-11-23 | Draft legislation: exemption for EU, EEA and Swiss-origin goods from CBAM | First published.",
+        "You still need to keep records to demonstrate their origin, as the exemption is based on where the goods originate, not where they are imported from."
        ]
       }
      ],
@@ -6550,8 +6553,8 @@
    "events": 6
   },
   "ir-declarations": {
-   "stage": "준비 단계",
-   "events": 1
+   "stage": "초안 의견수렴 중",
+   "events": 2
   },
   "ir-default-values": {
    "stage": "시행 중",
@@ -6563,7 +6566,7 @@
   },
   "uk-cbam": {
    "stage": "2027년 1월 1일 시행 예정",
-   "events": 9
+   "events": 10
   }
  }
 }

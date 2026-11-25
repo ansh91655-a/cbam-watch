@@ -3262,9 +3262,9 @@
   {
    "id": "ir-declarations",
    "group": "eu-upcoming",
-   "name": "CBAM 신고서 이행규정(계획)",
+   "name": "CBAM 신고서 이행규정(안)",
    "official": "의견수렴 16932 · Ares(2026)1634728",
-   "kind": "이행규정(계획)",
+   "kind": "이행규정(안)",
    "path": [
     "준비",
     "초안 의견수렴",
@@ -3332,7 +3332,7 @@
       "key": "background",
       "items": [
        {
-        "text": "CBAM 신고서는 확정기간의 중심이 되는 문서입니다. 승인된 CBAM 신고인은 해마다 9월 30일까지 CBAM 등록부로 지난해 수입분의 신고서를 내며, 첫 신고는 2027년에 2026년 수입분에 대해 합니다. CBAM 규정은 신고서의 표준 양식, 등록부로 내는 절차, 인증서를 제출하는 방식을 이행규정으로 정하도록 EU 집행위원회에 맡겼습니다. 이 이행규정(계획)이 그것입니다.",
+        "text": "CBAM 신고서는 확정기간의 중심이 되는 문서입니다. 승인된 CBAM 신고인은 해마다 9월 30일까지 CBAM 등록부로 지난해 수입분의 신고서를 내며, 첫 신고는 2027년에 2026년 수입분에 대해 합니다. CBAM 규정은 신고서의 표준 양식, 등록부로 내는 절차, 인증서를 제출하는 방식을 이행규정으로 정하도록 EU 집행위원회에 맡겼습니다. 이 이행규정(안)이 그것입니다.",
         "refs": [
          "law"
         ]
@@ -7209,7 +7209,8 @@
        "We welcome the conclusion of the negotiations on linking the EU and the UK Emissions Trading Systems",
        "We aim to apply this agreement from 2028"
       ]
-     }
+     },
+     "step": "negotiation"
     }
    ],
    "links": [
@@ -7416,10 +7417,7 @@
     ]
    },
    "procedure": "agreement",
-   "changedOn": "2026-11-25",
-   "stepNow": [
-    "negotiation"
-   ]
+   "changedOn": "2026-11-25"
   },
   {
    "id": "uk-cbam",

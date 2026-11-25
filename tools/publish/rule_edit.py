@@ -8,7 +8,8 @@
 연혁에서 한 줄 빼기:   python -m tools.publish.rule_edit drop-event --id <규제> --date <날짜> --starts "<글의 앞부분>"
 연혁의 글만 고치기:    python -m tools.publish.rule_edit reword --id <규제> --date <날짜> --starts "<글의 앞부분>" --text "<새 글>"
                       (날짜, 출처, 근거, 세부 단계는 그대로 둔다. 표현을 바로잡을 때 쓴다. 사실이 달라졌으면 빼고 새로 더한다)
-단계와 설명 고치기:    python -m tools.publish.rule_edit set --id <규제> [--name "…"] [--stage "…"] [--at 2] [--tone progress] [--status "…"] [--summary "…"] [--figure cbam-factor] [--tool calc] [--next "…"] [--next-date 2026-12-14] [--next-title "…"]
+단계와 설명 고치기:    python -m tools.publish.rule_edit set --id <규제> [--name "…"] [--kind "…"] [--stage "…"] [--at 2] [--tone progress] [--status "…"] [--summary "…"] [--figure cbam-factor] [--tool calc] [--next "…"] [--next-date 2026-12-14] [--next-title "…"]
+                      (--name과 --kind: 계획이던 것의 초안이 나오면 이름과 종류의 '(계획)'을 '(안)'으로 함께 바꾼다. 예: --name "CBAM 신고서 이행규정(안)" --kind "이행규정(안)")
                       (--next "", --next-date "", --next-title ""는 그 값을 지운다. --next-title은 일정 화면에 보일 이름으로, 그 날 있을 일을 적은 짧은 구다)
                       (--next-source "<출처 이름>" --next-link "<주소>": 다음 일정의 날짜를 알려 준 출처. 일정 화면과 규제 화면이 그 날짜의 출처로 보여 준다.
                        주지 않으면 규제의 첫 링크가 출처로 보이므로, 그 날짜가 첫 링크의 문서에 없을 때(언론 보도로만 아는 날짜)에는 꼭 준다. 보도이면 이름에 '보도'를 넣는다)
@@ -97,7 +98,10 @@ def set_fields(body, args):
     name = getattr(args, "name", None)   # 국문 이름. 빈 이름으로는 바꾸지 않는다
     if name is not None and not name.strip():
         raise SystemExit("이름이 비어 있음")
-    for field, value in (("name", name), ("stage", args.stage), ("tone", args.tone), ("status", args.status), ("summary", getattr(args, "summary", None))):
+    kind = getattr(args, "kind", None)   # 종류(예: '이행규정(계획)'에서 '이행규정(안)'으로). 빈 종류로는 바꾸지 않는다
+    if kind is not None and not kind.strip():
+        raise SystemExit("종류가 비어 있음")
+    for field, value in (("name", name), ("kind", kind), ("stage", args.stage), ("tone", args.tone), ("status", args.status), ("summary", getattr(args, "summary", None))):
         if value is not None:
             rule[field] = value
     if args.at is not None:
@@ -129,7 +133,7 @@ def set_fields(body, args):
         rule.pop("tool", None)
     elif tool is not None:
         rule["tool"] = tool
-    if any(value is not None for value in (name, args.stage, args.tone, args.status, getattr(args, "summary", None), args.at, args.next, args.next_date, args.next_title)):
+    if any(value is not None for value in (name, kind, args.stage, args.tone, args.status, getattr(args, "summary", None), args.at, args.next, args.next_date, args.next_title)):
         rule["changedOn"] = today()
 
 
@@ -227,6 +231,7 @@ def main(argv):
     change = commands.add_parser("set")
     change.add_argument("--id", required=True)
     change.add_argument("--name")
+    change.add_argument("--kind")          # 규제의 종류(계획이 초안이 되면 이름과 함께 '(계획)'을 '(안)'으로 바꾼다. 법령이 나오면 enact가 뗀다)
     change.add_argument("--stage")
     change.add_argument("--at", type=int)
     change.add_argument("--tone", choices=TONES)

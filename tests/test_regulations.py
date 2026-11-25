@@ -181,6 +181,17 @@ class RuleEditTest(unittest.TestCase):
             self.edit.set_fields(self.body, self.args(**blank, name=" "))
         self.assertEqual(rule["name"], "표본 이행규정")
 
+    def test_set_changes_the_kind_and_refuses_an_empty_kind(self):
+        blank = dict(id="sample-rule", stage=None, tone=None, status=None, at=None, next=None, next_date=None, next_title=None)
+        rule = self.body["regulations"][0]
+        before = rule["name"]
+        self.edit.set_fields(self.body, self.args(**blank, kind="이행규정(안)"))
+        self.assertEqual(rule["kind"], "이행규정(안)")
+        self.assertEqual(rule["name"], before)   # 종류만 바꾸면 이름은 그대로다
+        with self.assertRaises(SystemExit):
+            self.edit.set_fields(self.body, self.args(**blank, kind=""))
+        self.assertEqual(rule["kind"], "이행규정(안)")
+
     def test_drop_event_needs_exactly_one_match(self):
         with self.assertRaises(SystemExit):
             self.edit.drop_event(self.body, self.args(id="sample-rule", date="2025-12-17", starts="없는 글"))
