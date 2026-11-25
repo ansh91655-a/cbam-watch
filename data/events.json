@@ -82,6 +82,22 @@
    "sourceName": "EC CBAM Communication and News",
    "link": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_en",
    "kind": "시행"
+  },
+  {
+   "date": "2027-01-01",
+   "title": "노르웨이와 아이슬란드의 CBAM 전면 적용",
+   "note": "노르웨이와 아이슬란드가 2027년 1월 1일부터 CBAM을 전면 적용합니다.",
+   "sourceName": "EC CBAM 문서(원문 대장)",
+   "link": "https://taxation-customs.ec.europa.eu/document/download/8d8c0277-4fcb-4148-a919-7e0ed5a18b68_en?filename=Notice%20CBAM%20implementation%20following%20EEA%20agreement.pdf",
+   "kind": "시행"
+  },
+  {
+   "date": "2027-03-31",
+   "title": "노르웨이·아이슬란드 경제운영자의 CBAM 신청서 제출 기한",
+   "note": "노르웨이나 아이슬란드에 설립된 경제운영자는 늦어도 2027년 3월 31일까지 CBAM 신청서를 제출해야 합니다.",
+   "sourceName": "EC CBAM 문서(원문 대장)",
+   "link": "https://taxation-customs.ec.europa.eu/document/download/8d8c0277-4fcb-4148-a919-7e0ed5a18b68_en?filename=Notice%20CBAM%20implementation%20following%20EEA%20agreement.pdf",
+   "kind": "기한"
   }
  ]
 }
