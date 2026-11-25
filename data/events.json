@@ -98,6 +98,14 @@
    "sourceName": "EC CBAM 문서(원문 대장)",
    "link": "https://taxation-customs.ec.europa.eu/document/download/8d8c0277-4fcb-4148-a919-7e0ed5a18b68_en?filename=Notice%20CBAM%20implementation%20following%20EEA%20agreement.pdf",
    "kind": "기한"
+  },
+  {
+   "date": "2027-09-30",
+   "title": "첫 CBAM 신고서 제출 기한",
+   "note": "EU 집행위원회는 기본 탄소가격을 이 기한의 첫 CBAM 신고서에 쓸 수 있게 제공하겠다고 밝혔습니다.",
+   "sourceName": "EC CBAM Communication and News",
+   "link": "https://taxation-customs.ec.europa.eu/news/cbam-commission-adopts-rules-recognition-carbon-prices-paid-non-eu-countries-2026-11-16_en",
+   "kind": "기한"
   }
  ]
 }
