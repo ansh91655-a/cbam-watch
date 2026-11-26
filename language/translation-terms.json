@@ -5622,6 +5622,30 @@
    "ko": "업무 연속성",
    "from": "sale-repurchase-adopted",
    "added": "2026-11-26"
+  },
+  {
+   "en": "compliance action",
+   "ko": "준수 조치",
+   "from": "declarations-draft",
+   "added": "2026-11-26"
+  },
+  {
+   "en": "right to remedies",
+   "ko": "구제를 받을 권리",
+   "from": "declarations-draft",
+   "added": "2026-11-26"
+  },
+  {
+   "en": "review clause",
+   "ko": "검토 조항",
+   "from": "declarations-draft",
+   "added": "2026-11-26"
+  },
+  {
+   "en": "standard format",
+   "ko": "표준 서식",
+   "from": "declarations-draft",
+   "added": "2026-11-26"
   }
  ]
 }
