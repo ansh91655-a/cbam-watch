@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-25",
+ "asOf": "2026-11-26",
  "groups": [
   {
    "code": "eu-law",
@@ -3012,21 +3012,21 @@
   {
    "id": "dr-sale-repurchase",
    "group": "eu-upcoming",
-   "name": "CBAM 인증서 판매·환매 위임규정(안)",
-   "official": "의견수렴 14132 · Ares(2024)546926",
-   "kind": "위임규정(안)",
+   "name": "CBAM 인증서 판매·환매 위임규정",
+   "official": "C(2026) 8367 final · 의견수렴 14132 · Ares(2024)546926",
+   "kind": "위임규정(채택)",
    "path": [
     "준비",
     "초안 의견수렴",
     "채택·공포",
     "시행"
    ],
-   "at": 1,
-   "stage": "채택 대기",
+   "at": 2,
+   "stage": "채택(이의 제기 기간)",
    "tone": "progress",
-   "summary": "공통 중앙 플랫폼에서 CBAM 인증서를 팔고 되사는 절차와 시기, 수수료를 정할 위임규정입니다.",
-   "status": "법령 초안에 대한 의견수렴이 2026년 8월 6일에 끝났습니다. CBAM 인증서 판매는 2027년 2월 1일에 시작됩니다.",
-   "next": "EU 집행위원회가 채택한 뒤 유럽의회와 EU 이사회의 이의 제기 기간을 거칩니다.",
+   "summary": "공통 중앙 플랫폼에서 CBAM 인증서를 팔고 되사는 절차와 시기, 수수료를 정한 위임규정입니다. EU 집행위원회가 채택했고, 아직 유럽연합 관보에 실리지 않았습니다.",
+   "status": "EU 집행위원회가 2026년 11월 25일에 이 위임규정을 채택했습니다. 유럽의회와 EU 이사회의 이의 제기 기간이 지나야 유럽연합 관보에 실리고 발효합니다. CBAM 인증서 판매는 2027년 2월 1일에 시작됩니다.",
+   "next": "유럽의회와 EU 이사회가 이의 제기 기간 안에 이의를 제기하지 않으면 유럽연합 관보에 실립니다.",
    "timeline": [
     {
      "date": "2025-12-16",
@@ -3070,9 +3070,29 @@
       ]
      },
      "step": "feedback"
+    },
+    {
+     "date": "2026-11-25",
+     "text": "EU 집행위원회가 CBAM 인증서 판매·환매 위임규정을 채택했습니다.",
+     "source": "EU 집행위원회 의견수렴 목록",
+     "link": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14132_en",
+     "basis": "stored",
+     "evidence": {
+      "path": "collected/archive/pages/ec-hys/initiatives.txt",
+      "contains": [
+       "번호: 14132",
+       "단계: ADOPTION_WORKFLOW",
+       "시작: 2026/11/25"
+      ]
+     },
+     "step": "adoption"
     }
    ],
    "links": [
+    {
+     "text": "채택된 위임규정(EUR-Lex, 관보 게재 전)",
+     "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=PI_COM:C(2026)8367"
+    },
     {
      "text": "EU 집행위원회 의견수렴 14132",
      "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14132_en"
@@ -3090,17 +3110,17 @@
     ]
    },
    "analysis": {
-    "asOf": "2026-11-11",
+    "asOf": "2026-11-26",
     "basedOn": {
-     "stage": "채택 대기",
-     "events": 3
+     "stage": "채택(이의 제기 기간)",
+     "events": 4
     },
     "sections": [
      {
       "key": "background",
       "items": [
        {
-        "text": "CBAM 인증서는 시장에서 거래되는 것이 아니라 회원국이 정해진 가격에 팔고, 남으면 환매해 주는 증서입니다. CBAM 규정은 회원국이 2027년 2월 1일부터 공통 중앙 플랫폼에서 인증서를 팔도록 했고, 판매와 환매를 관리하는 시기, 운영, 수수료의 구조와 수준은 위임규정으로 정하도록 EU 집행위원회에 맡겼습니다. 이 위임규정(안)이 그것입니다.",
+        "text": "CBAM 인증서는 시장에서 거래되는 것이 아니라 회원국이 정해진 가격에 팔고, 남으면 환매해 주는 증서입니다. CBAM 규정은 회원국이 2027년 2월 1일부터 공통 중앙 플랫폼에서 인증서를 팔도록 했고, 판매와 환매를 관리하는 시기, 운영, 수수료의 구조와 수준은 위임규정으로 정하도록 EU 집행위원회에 맡겼습니다. 이 위임규정이 그것입니다.",
         "refs": [
          "law"
         ]
@@ -3171,7 +3191,7 @@
         ]
        },
        {
-        "text": "위임규정은 아직 채택되지 않았습니다. 초안의 의견수렴은 2026년 7월 9일부터 8월 6일까지 이루어졌습니다. 인증서 판매는 2027년 2월 1일에 시작됩니다.",
+        "text": "EU 집행위원회는 2026년 11월 25일에 위임규정을 채택했습니다. 초안의 의견수렴은 2026년 7월 9일에 시작되어 2026년 8월 6일에 끝났습니다. 위임규정은 유럽의회와 EU 이사회가 이의 제기 기간 안에 이의를 제기하지 않아야 발효합니다. 인증서 판매는 2027년 2월 1일에 시작됩니다.",
         "refs": [
          "consult",
          "law"
@@ -3257,7 +3277,11 @@
      }
     ]
    },
-   "procedure": "delegated"
+   "procedure": "delegated",
+   "changedOn": "2026-11-26",
+   "stepNow": [
+    "scrutiny"
+   ]
   },
   {
    "id": "ir-declarations",

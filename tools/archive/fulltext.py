@@ -63,7 +63,14 @@ def _lines(body, headers, address):
 
 def celex_pages(celex):
     """[(파일 이름 꼬리, 주소, HTML 글)]과 사유. 파일이 여럿이면(본문과 부속서) 차례대로 모두 받는다."""
-    address = CELLAR.format(celex=celex)
+    return resource_pages(CELLAR.format(celex=celex))
+
+
+def resource_pages(address):
+    """EU 출판국 자료 창구의 문서 주소 하나에서 [(파일 이름 꼬리, 주소, HTML 글)]과 사유를 받는다.
+
+    CELEX 번호가 없는 문서(관보에 실리기 전의 법령 글)는 다른 번호의 주소로 받으므로(tools/archive/pending.py) 주소를 그대로 받는다.
+    """
     status, headers, body, error = fetch(address, timeout=240, retries=1, headers=ACCEPT)
     time.sleep(1)
     if status == 200 and body:

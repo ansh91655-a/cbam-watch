@@ -17,6 +17,9 @@
 준비 중이던 법령이 나옴: python -m tools.publish.rule_edit enact --id <규제> --celex 32026R2498 [--name "…"] [--kind 이행규정] [--after <규제 id>]
                       (묶음, 이름과 종류의 '(안)'·'(계획)', 공식 이름, 원문 링크, 관련 낱말, 목록에서의 자리를 한 번에 바꾼다. 무엇을 어떻게 바꾸는지는 tools/publish/rule_enact.py의 머리글에 있다.
                        단계, 설명, 연혁, 다음 일정은 바꾸지 않으므로 이어서 set, add-event, drop-event로 고친다)
+집행위원회가 채택함(관보 게재 전): python -m tools.publish.rule_edit adopt --id <규제> --reference "C(2026) 8367 final" --link "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=PI_COM:C(2026)8367"
+                      (이름의 '(안)'을 떼고 종류를 '위임규정(채택)'으로 바꾸며, 채택 문서의 번호를 공식 이름 앞에, 채택된 글의 링크를 맨 앞에 놓는다. tools/publish/rule_adopt.py의 머리글 참조.
+                       묶음, 단계, 연혁은 바꾸지 않으므로 이어서 add-event --step adoption, set --at 2 --step-now scrutiny로 고친다. 관보에 실리면 enact가 '(채택)'을 뗀다)
 분석 글 넣기와 바꾸기: python -m tools.publish.rule_edit analysis --id <규제> --file analysis.json
                       (analysis.json은 sections와 sources를 담은 JSON. 꼴은 tools/publish/analysis.py의 머리글에 있다. 쓴 날과 그때의 규제 모습은 스스로 적힌다)
 분석 글 꺼내 보기:     python -m tools.publish.rule_edit analysis-show --id <규제> [--out analysis.json]   (고칠 때는 꺼내서 고친 뒤 다시 넣는다)
@@ -40,6 +43,7 @@ import sys
 
 from tools.common.jsonio import read_json, today, write_json
 from tools.publish import analysis, regulations, rule_steps
+from tools.publish.rule_adopt import adopt
 from tools.publish.rule_enact import KINDS, enact
 
 TONES = ["live", "progress", "planned", "adopted", "dispute", "ended"]
@@ -255,6 +259,12 @@ def main(argv):
     out.add_argument("--name")                   # 주지 않으면 지금 이름에서 '(안)', '(계획)'을 뗀다
     out.add_argument("--kind", choices=sorted(KINDS))
     out.add_argument("--after")                  # 이 규제의 바로 뒤에 놓는다. 주지 않으면 그 묶음의 끝난 법령 앞에 놓는다
+    adopted = commands.add_parser("adopt")
+    adopted.add_argument("--id", required=True)
+    adopted.add_argument("--reference", required=True)   # 채택 문서의 번호(예: "C(2026) 8367 final")
+    adopted.add_argument("--link", required=True)        # 채택된 글의 주소(EUR-Lex의 문서 번호 주소)
+    adopted.add_argument("--name")                       # 주지 않으면 지금 이름에서 '(안)', '(계획)'을 뗀다
+    adopted.add_argument("--kind", choices=sorted(KINDS))
     table = commands.add_parser("positions")
     table.add_argument("--id", required=True)
     table.add_argument("--file", required=True)
@@ -273,7 +283,7 @@ def main(argv):
     if args.command == "analysis-show":
         show_analysis(body, args)
         return 0
-    {"add-event": add_event, "drop-event": drop_event, "reword": reword_event, "set": set_fields, "add-rule": add_rule, "enact": enact, "positions": set_positions, "analysis": set_analysis,
+    {"add-event": add_event, "drop-event": drop_event, "reword": reword_event, "set": set_fields, "add-rule": add_rule, "enact": enact, "adopt": adopt, "positions": set_positions, "analysis": set_analysis,
      "step": tag_step, "step-note": note_step}[args.command](body, args)
     body["asOf"] = today()
     found = regulations.problems(body)

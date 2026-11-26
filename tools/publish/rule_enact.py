@@ -4,7 +4,7 @@
 
 바꾸는 것
   - 묶음: 시행 중인 하위 법령(eu-acts)으로 옮긴다. 자리는 그 묶음에서 끝난 법령(tone이 ended)보다 앞, 나머지의 맨 뒤다(--after로 고를 수 있다).
-  - 이름과 종류: 끝에 붙은 '(안)', '(계획)'을 뗀다(--name, --kind로 따로 줄 수 있다).
+  - 이름과 종류: 끝에 붙은 '(안)', '(계획)', '(채택)'을 뗀다(--name, --kind로 따로 줄 수 있다).
   - 공식 이름(official): "Implementing Regulation (EU) 2026/2498"처럼 법령 번호로 바꾼다. 법령 전문 화면은 이 번호로 규제와 이어진다.
   - 링크: 법령 원문(EUR-Lex)을 맨 앞에 놓는다. 의견수렴 같은 옛 링크는 뒤에 남는다.
   - 관련 낱말: 법령 번호(2026/2498)를 더한다. 모은 글에서 이 규제의 소식을 찾을 때 쓴다.
@@ -16,7 +16,7 @@ from tools.common.jsonio import today
 
 GROUP = "eu-acts"
 CELEX = re.compile(r"^3(\d{4})R(\d{4})$")
-DRAFT = re.compile(r"\s*\((?:안|계획)\)\s*$")
+DRAFT = re.compile(r"\s*\((?:안|계획|채택)\)\s*$")
 KINDS = {"이행규정": ("Implementing Regulation (EU)", "이행규정 원문(EUR-Lex)"),
          "위임규정": ("Delegated Regulation (EU)", "위임규정 원문(EUR-Lex)")}
 EURLEX = "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:{celex}"
@@ -31,7 +31,7 @@ def number(celex):
 
 
 def finished(text):
-    """이름이나 종류의 끝에 붙은 '(안)', '(계획)'을 뗀다."""
+    """이름이나 종류의 끝에 붙은 '(안)', '(계획)', '(채택)'을 뗀다. '(채택)'은 집행위원회가 채택한 뒤 관보에 실리기 전의 종류에 붙는다(rule_adopt)."""
     return DRAFT.sub("", str(text or ""))
 
 
