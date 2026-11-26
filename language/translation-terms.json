@@ -5646,6 +5646,48 @@
    "ko": "표준 서식",
    "from": "declarations-draft",
    "added": "2026-11-26"
+  },
+  {
+   "en": "Cross Sectoral Correction factor",
+   "ko": "교차 부문 보정계수",
+   "from": "declarations-draft",
+   "added": "2026-11-26"
+  },
+  {
+   "en": "Declaration Year",
+   "ko": "신고 연도",
+   "from": "declarations-draft",
+   "added": "2026-11-26"
+  },
+  {
+   "en": "Goods Sequence number",
+   "ko": "제품 일련번호",
+   "from": "declarations-draft",
+   "added": "2026-11-26"
+  },
+  {
+   "en": "Special references for goods",
+   "ko": "제품에 대한 특별 참조",
+   "from": "declarations-draft",
+   "added": "2026-11-26"
+  },
+  {
+   "en": "Requested procedure",
+   "ko": "요청 절차",
+   "from": "declarations-draft",
+   "added": "2026-11-26"
+  },
+  {
+   "en": "Previous procedure",
+   "ko": "이전 절차",
+   "from": "declarations-draft",
+   "added": "2026-11-26"
+  },
+  {
+   "en": "authenticated verification report",
+   "ko": "인증된 검증보고서",
+   "from": "declarations-draft",
+   "added": "2026-11-26"
   }
  ]
 }
