@@ -5598,6 +5598,30 @@
    "ko": "사전 시장 협의",
    "from": "sale-repurchase-adopted",
    "added": "2026-11-26"
+  },
+  {
+   "en": "liquidated damages",
+   "ko": "손해배상액의 예정",
+   "from": "sale-repurchase-adopted",
+   "added": "2026-11-26"
+  },
+  {
+   "en": "payment confirmation",
+   "ko": "결제 확인",
+   "from": "sale-repurchase-adopted",
+   "added": "2026-11-26"
+  },
+  {
+   "en": "payment order",
+   "ko": "지급 지시",
+   "from": "sale-repurchase-adopted",
+   "added": "2026-11-26"
+  },
+  {
+   "en": "business continuity",
+   "ko": "업무 연속성",
+   "from": "sale-repurchase-adopted",
+   "added": "2026-11-26"
   }
  ]
 }
