@@ -2,6 +2,8 @@
 
 CBAM 규정은 통합본(collected/archive/eu-fulltext.json의 cbam-consolidated)을, 하위 법령은 collected/archive/eu-acts.json에 적힌 차례대로 싣는다.
 이 차례가 화면에 보이는 차례이자 번역하는 차례다(ORDER_LAST에 적은 것은 맨 뒤로 보낸다).
+관보에 실리기 전의 법령 글(EU 집행위원회가 채택한 위임규정, 의견수렴 중인 초안. collected/archive/eu-pending.json)은 시행 중인 법령 다음에 싣고,
+화면이 관보에 실린 글이 아님을 알리도록 remark를 붙인다. 이 문서들에는 CELEX 번호가 없다(celex가 빈 글이다).
 법령마다 규제 자료(data/regulations.json)의 어느 규제에 해당하는지를 법령 번호로 찾아 적는다.
 """
 import re
@@ -10,6 +12,7 @@ from tools.common.jsonio import read_json
 
 ACTS = "collected/archive/eu-acts.json"
 FULLTEXT = "collected/archive/eu-fulltext.json"
+PENDING = "collected/archive/eu-pending.json"
 RULES = "data/regulations.json"
 BASE_NAME = "cbam-consolidated"
 BASE_CELEX = "32023R0956"
@@ -43,6 +46,34 @@ def rule_ids(rules):
     return found
 
 
+# 관보에 실리기 전의 글에 붙이는 알림(화면의 문서 머리에 보인다)과 영문 이름의 끝. {date}는 문서의 날짜다.
+PENDING_STATES = {
+    "adopted": ("EU 집행위원회가 {date}에 채택한 글입니다. 아직 유럽연합 관보에 실리지 않아 법령 번호가 없고, 유럽의회와 EU 이사회의 이의 제기 기간이 지나야 발효합니다.", "adopted by the Commission, not yet published in the Official Journal"),
+    "draft": ("의견수렴 중인 초안입니다({date} 공개). 채택되는 법령은 이 글과 다를 수 있습니다.", "draft for feedback"),
+}
+
+
+def _long_date(day):
+    """2026-11-25 → 2026년 11월 25일."""
+    year, month, date = (int(piece) for piece in day.split("-"))
+    return f"{year}년 {month}월 {date}일"
+
+
+def pending():
+    """관보에 실리기 전의 법령 글의 목록(tools/archive/pending.py가 받아 둔 것). 받아 둔 글이 없는 것은 뺀다. 꼴은 acts와 같다."""
+    found = []
+    for entry in (read_json(PENDING, {}) or {}).get("entries", []):
+        state = PENDING_STATES.get(entry.get("state"))
+        if not state or not entry.get("name") or not entry.get("textPath"):
+            continue
+        remark, tail = state
+        kind = "Delegated" if "위임규정" in entry.get("title", "") else "Implementing"
+        found.append({"id": entry["name"], "celex": "", "name": entry.get("title", entry["name"]), "url": entry.get("url", ""), "path": entry["textPath"], "consolidated": "",
+                      "rule": entry.get("rule", ""), "official": f"Commission {kind} Regulation (EU) …/… · {entry.get('reference', '')} ({tail})",
+                      "remark": remark.format(date=_long_date(entry["date"])) if entry.get("date") else remark.replace("{date}에 ", "").replace("({date} 공개)", "")})
+    return found
+
+
 def acts():
     """싣는 법령의 목록: {"id", "celex", "name", "url", "path", "consolidated", "rule", "group": "act", "format": "act"}. 받아 둔 글이 없는 것은 뺀다."""
     rules = rule_ids(read_json(RULES, {}))
@@ -57,4 +88,5 @@ def acts():
              "path": entry.get("textPath", ""), "consolidated": "", "rule": rules.get(entry["celex"], "")}
             for entry in (read_json(ACTS, {}) or {}).get("entries", []) if entry.get("celex") and entry.get("textPath")]
     rest.sort(key=lambda act: act["id"] in ORDER_LAST)  # 차례는 그대로 두고 지난 법령만 뒤로
-    return [{**act, "group": "act", "format": "act"} for act in found + rest]
+    going = [act for act in rest if act["id"] not in ORDER_LAST]
+    return [{**act, "group": "act", "format": "act"} for act in found + going + pending() + rest[len(going):]]

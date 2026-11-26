@@ -1,5 +1,5 @@
 {
-"version": "v0.10 (2026-11-19 independent person의 표기를 '독립적인 사람'에서 '독립된 자'로 바꿈)",
+"version": "v0.11 (2026-11-26 판매·환매 위임규정 채택본과 CBAM 신고서 이행규정(안)의 용어 15개를 후보로 더함)",
 "note": "국문 표기 기준. status가 confirmed인 것은 정부·공공기관 자료에서 확인된 표기, partial은 일부 확인, candidate는 확인이 더 필요한 후보다. avoid는 쓰지 않는 표기다.",
 "terms": [
 {
@@ -7867,6 +7867,217 @@
 "avoid": [],
 "status": "candidate",
 "note": "Finance Act 2026 부칙 17 제2항: 등록 의무가 생겼으나 스스로 등록하지도, 직권으로 등록되지도 않은 사람. 등록자(registered person)와 같이 신고와 납부의 의무를 진다. 영국 CBAM(Finance Act 2026 제5편과 그 하위 규정)의 용어. EU CBAM의 용어가 아니다. 국내 정부·공공기관의 국문 자료에서는 확인하기 전(2026-11-18)"
+},
+{
+"no": 441,
+"category": "04 인증서·신고·등록부",
+"core": false,
+"en": [
+"purchase request"
+],
+"abbr": [],
+"preferred": "구매 요청",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "판매·환매 위임규정(채택본 C(2026) 8367)과 CBAM 신고서 이행규정(안)의 번역(2026-11-26)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 442,
+"category": "04 인증서·신고·등록부",
+"core": false,
+"en": [
+"repurchase request"
+],
+"abbr": [],
+"preferred": "환매 요청",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "판매·환매 위임규정(채택본 C(2026) 8367)과 CBAM 신고서 이행규정(안)의 번역(2026-11-26)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 443,
+"category": "04 인증서·신고·등록부",
+"core": false,
+"en": [
+"joint procurement procedure"
+],
+"abbr": [],
+"preferred": "공동 조달 절차",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "판매·환매 위임규정(채택본 C(2026) 8367)과 CBAM 신고서 이행규정(안)의 번역(2026-11-26)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전. 공동조달협정(joint procurement agreement)과 구별한다"
+},
+{
+"no": 444,
+"category": "04 인증서·신고·등록부",
+"core": false,
+"en": [
+"contracting authority",
+"contracting authorities"
+],
+"abbr": [],
+"preferred": "계약 당국",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "판매·환매 위임규정(채택본 C(2026) 8367)과 CBAM 신고서 이행규정(안)의 번역(2026-11-26)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 445,
+"category": "04 인증서·신고·등록부",
+"core": false,
+"en": [
+"user (common central platform)"
+],
+"abbr": [],
+"preferred": "이용자",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "판매·환매 위임규정(채택본 C(2026) 8367)과 CBAM 신고서 이행규정(안)의 번역(2026-11-26)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전. 위임규정 제1조가 정의한 용어(승인된 CBAM 신고인이나 그 위임을 받은 사람). 등록부 안내서의 화면 이름(User Access Management)은 '사용자'로 옮겼다"
+},
+{
+"no": 446,
+"category": "04 인증서·신고·등록부",
+"core": false,
+"en": [
+"cleared funds"
+],
+"abbr": [],
+"preferred": "결제 완료된 자금",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "판매·환매 위임규정(채택본 C(2026) 8367)과 CBAM 신고서 이행규정(안)의 번역(2026-11-26)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 447,
+"category": "04 인증서·신고·등록부",
+"core": false,
+"en": [
+"designated bank account"
+],
+"abbr": [],
+"preferred": "지정 은행 계좌",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "판매·환매 위임규정(채택본 C(2026) 8367)과 CBAM 신고서 이행규정(안)의 번역(2026-11-26)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전. nominated bank account(지명 은행 계좌)와 구별한다"
+},
+{
+"no": 448,
+"category": "04 인증서·신고·등록부",
+"core": false,
+"en": [
+"nominated bank account"
+],
+"abbr": [],
+"preferred": "지명 은행 계좌",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "판매·환매 위임규정(채택본 C(2026) 8367)과 CBAM 신고서 이행규정(안)의 번역(2026-11-26)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 449,
+"category": "04 인증서·신고·등록부",
+"core": false,
+"en": [
+"data reconciliation"
+],
+"abbr": [],
+"preferred": "데이터 대사",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "판매·환매 위임규정(채택본 C(2026) 8367)과 CBAM 신고서 이행규정(안)의 번역(2026-11-26)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전. 탄소가격의 reconciliation factor(조정계수)와 다른 말이다"
+},
+{
+"no": 450,
+"category": "04 인증서·신고·등록부",
+"core": false,
+"en": [
+"reconciliation report"
+],
+"abbr": [],
+"preferred": "대사 보고서",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "판매·환매 위임규정(채택본 C(2026) 8367)과 CBAM 신고서 이행규정(안)의 번역(2026-11-26)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 451,
+"category": "04 인증서·신고·등록부",
+"core": false,
+"en": [
+"transaction log"
+],
+"abbr": [],
+"preferred": "거래 로그",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "판매·환매 위임규정(채택본 C(2026) 8367)과 CBAM 신고서 이행규정(안)의 번역(2026-11-26)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 452,
+"category": "04 인증서·신고·등록부",
+"core": false,
+"en": [
+"importation year"
+],
+"abbr": [],
+"preferred": "수입 연도",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "판매·환매 위임규정(채택본 C(2026) 8367)과 CBAM 신고서 이행규정(안)의 번역(2026-11-26)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 453,
+"category": "13 기관·일반 약어",
+"core": false,
+"en": [
+"processor (personal data)"
+],
+"abbr": [],
+"preferred": "수탁자",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "판매·환매 위임규정(채택본 C(2026) 8367)과 CBAM 신고서 이행규정(안)의 번역(2026-11-26)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전. controller(개인정보처리자)와 짝을 맞춘 개인정보 보호법의 말이다. 개인정보 분야의 국문 자료는 '프로세서'로도 적는다"
+},
+{
+"no": 454,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"unique identifier"
+],
+"abbr": [],
+"preferred": "고유 식별자",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "판매·환매 위임규정(채택본 C(2026) 8367)과 CBAM 신고서 이행규정(안)의 번역(2026-11-26)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
+},
+{
+"no": 455,
+"category": "03 신고인·통관",
+"core": false,
+"en": [
+"goods measure"
+],
+"abbr": [],
+"preferred": "제품 계량값",
+"allowed": [],
+"avoid": [],
+"status": "candidate",
+"note": "판매·환매 위임규정(채택본 C(2026) 8367)과 CBAM 신고서 이행규정(안)의 번역(2026-11-26)에서 쓴 표기. 정부·공공기관의 국문 자료에서 확인하기 전"
 }
 ]
 }

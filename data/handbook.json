@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-25",
+ "asOf": "2026-11-26",
  "lead": "CBAM을 처음 맡은 담당자를 위해 제도가 어떻게 돌아가는지를 차례로 풀어 쓴 해설서입니다. 절마다 근거가 된 CBAM 규정과 이행규정의 조문으로 이어집니다. 마지막 장은 영국 CBAM을 영국 법령에 따라 설명합니다.",
  "sources": {
   "ets-directive": {
@@ -1470,7 +1470,9 @@
      "title": "남은 인증서의 환매",
      "body": [
       "제출하고 남은 인증서는 신고인이 요청하면 그 신고인이 설립된 회원국이 다시 삽니다. 이를 환매(repurchase)라고 합니다. 집행위원회가 회원국을 대신해 공통 중앙 플랫폼에서 환매합니다. 요청은 인증서를 제출한 해의 10월 31일까지 합니다.",
-      "환매할 수 있는 수는 인증서를 산 해에 제22조(2)에 따라 사야 했던 수까지입니다. 임계값을 넘을 것으로 보고 인증서를 샀으나 넘지 않았다면 산 인증서를 모두 환매할 수 있습니다. 환매 가격은 산 때의 가격입니다."
+      "환매할 수 있는 수는 인증서를 산 해에 제22조(2)에 따라 사야 했던 수까지입니다. 임계값을 넘을 것으로 보고 인증서를 샀으나 넘지 않았다면 산 인증서를 모두 환매할 수 있습니다. 환매 가격은 산 때의 가격입니다.",
+      "집행위원회가 2026년 11월 25일에 채택한 판매·환매 위임규정(아직 관보에 실리지 않았습니다)은 절차를 더 정했습니다. 환매 요청은 CBAM 등록부에 입력하고, 수입 연도마다 한 번 할 수 있습니다. 4월 1일, 7월 1일, 11월 1일 전에 입력한 요청은 그날부터 고치거나 거둘 수 없습니다.",
+      "집행위원회는 그렇게 입력된 요청의 인증서를 각각 5월 15일, 8월 15일, 12월 15일까지 환매합니다. 요청에 든 인증서는 4월 1일, 7월 1일, 11월 1일에 '환매 예정' 상태가 되어 신고인의 CBAM 계정에서 더는 쓸 수 없습니다."
      ],
      "terms": [
       {
@@ -1491,6 +1493,30 @@
         "all those CBAM certificates shall be repurchased upon request",
         "The repurchase price for each CBAM certificate shall be the price paid by the authorised CBAM declarant for that certificate at the time of purchase."
        ]
+      },
+      {
+       "act": "sale-repurchase-adopted",
+       "part": "art-4",
+       "contains": [
+        "A user may enter a repurchase request into the CBAM registry once per importation year.",
+        "a user shall not amend or withdraw it on or after the relevant date",
+        "every year by 15 May, 15 August and 15 December",
+        "before 1 April, 1 July and 1 November, respectively"
+       ]
+      },
+      {
+       "act": "sale-repurchase-adopted",
+       "part": "art-5",
+       "contains": [
+        "shall be assigned a ‘to be repurchased’ status and no longer be available in the CBAM account of the authorised CBAM declarant"
+       ]
+      },
+      {
+       "act": "sale-repurchase-adopted",
+       "part": "closing",
+       "contains": [
+        "Done at Brussels, 25.11.2026"
+       ]
       }
      ],
      "see": [
@@ -1500,7 +1526,11 @@
       },
       {
        "href": "#rules-dr-sale-repurchase",
-       "text": "인증서 판매·환매 위임규정(안)의 진행 상황"
+       "text": "인증서 판매·환매 위임규정의 진행 상황"
+      },
+      {
+       "href": "#law-sale-repurchase-adopted.art-4",
+       "text": "판매·환매 위임규정(채택본) 제4조"
       }
      ]
     },
@@ -3263,7 +3293,9 @@
      "body": [
       "인증서는 2027년 2월 1일부터 판매됩니다. 판매하는 쪽은 회원국이며, 그 회원국에 설립된 승인된 CBAM 신고인에게 공통 중앙 플랫폼(common central platform)에서 팝니다. 판매 가격은 제21조에 따라 계산한 가격입니다.",
       "공통 중앙 플랫폼은 집행위원회가 회원국과의 공동 조달 절차를 거쳐 만들고 관리합니다. 플랫폼에서 이루어진 판매와 환매의 정보는 영업일이 끝날 때마다 CBAM 등록부로 옮겨집니다.",
-      "플랫폼을 만들고 운영하는 비용은 승인된 CBAM 신고인이 내는 수수료로 충당합니다. 첫 공동 조달 계약 기간에는 그 비용을 먼저 EU 일반예산이 부담합니다. 수수료의 시기, 구조, 수준 같은 세부는 집행위원회가 위임법으로 정할 수 있습니다."
+      "플랫폼을 만들고 운영하는 비용은 승인된 CBAM 신고인이 내는 수수료로 충당합니다. 첫 공동 조달 계약 기간에는 그 비용을 먼저 EU 일반예산이 부담합니다. 집행위원회가 2026년 11월 25일에 채택한 판매·환매 위임규정(아직 관보에 실리지 않았습니다)은 수수료를 판매되는 인증서 1개당 0.05유로로 정했고, 그 밖의 수수료나 요금은 붙지 않게 했습니다.",
+      "같은 위임규정에 따르면 구매 요청은 CBAM 등록부에 입력합니다. 한 번에 1개에서 99,999개까지 정수로 요청하고, 입력한 뒤에는 고칠 수 없으며 대금을 내기 전에만 거둘 수 있습니다.",
+      "대금은 인증서 가격이 바뀌기 전에 공통 중앙 플랫폼에서 유로로 냅니다. 구매일이 가격이 바뀌는 날이거나 그 뒤이면 구매 요청은 취소되고 낸 돈은 수수료와 함께 돌려받습니다. 지급이 확인되면 인증서가 신고인의 CBAM 계정에 생깁니다."
      ],
      "figure": {
       "kind": "flow",
@@ -3305,6 +3337,47 @@
         "those costs shall initially be borne by the general budget of the Union",
         "further specifying the timing, administration, structure and level of fees"
        ]
+      },
+      {
+       "act": "sale-repurchase-adopted",
+       "part": "art-15",
+       "contains": [
+        "The fee shall be set at 0.05 euro per CBAM certificate sold.",
+        "No fees or charges of any kind other than the fee referred to in paragraph 1 shall be applied to the sale of CBAM certificates on the common central platform."
+       ]
+      },
+      {
+       "act": "sale-repurchase-adopted",
+       "part": "art-2",
+       "contains": [
+        "A user shall enter a purchase request (‘purchase request’) into the CBAM registry",
+        "shall be a round number that is equal or superior to 1 and less than or equal to 99 999",
+        "A user shall not amend a purchase request after a purchase request has been entered into the CBAM registry by the user. A user may withdraw such purchase request only before the payment has been made on the common central platform"
+       ]
+      },
+      {
+       "act": "sale-repurchase-adopted",
+       "part": "art-13",
+       "contains": [
+        "before the applicable price of CBAM certificate changes",
+        "the purchase request shall be cancelled",
+        "reimburse the user by transferring that total sum, including the fee, if any",
+        "shall be made exclusively in euro"
+       ]
+      },
+      {
+       "act": "sale-repurchase-adopted",
+       "part": "art-3",
+       "contains": [
+        "Upon confirmation by the common central platform of the payment completion, the CBAM certificates shall be created in the CBAM account"
+       ]
+      },
+      {
+       "act": "sale-repurchase-adopted",
+       "part": "closing",
+       "contains": [
+        "Done at Brussels, 25.11.2026"
+       ]
       }
      ],
      "see": [
@@ -3314,7 +3387,11 @@
       },
       {
        "href": "#rules-dr-sale-repurchase",
-       "text": "인증서 판매·환매 위임규정(안)의 진행 상황"
+       "text": "인증서 판매·환매 위임규정의 진행 상황"
+      },
+      {
+       "href": "#law-sale-repurchase-adopted",
+       "text": "판매·환매 위임규정(채택본)의 원문과 국문 번역"
       }
      ]
     }
@@ -5060,7 +5137,7 @@
      ],
      "list": [
       "늦어도 2027년에 개정할 제3국 탄소가격 차감 이행규정과, 집행위원회가 2027년부터 정해 올릴 수 있는 나라별 기본 탄소가격",
-      "CBAM 인증서 판매와 환매의 시기, 운영, 수수료(제20조(6)의 위임법)",
+      "CBAM 인증서 판매·환매 위임규정(제20조(6)의 위임법)의 관보 게재와 발효. 집행위원회가 2026년 11월 25일에 채택했고 2027년 2월 1일부터 적용하도록 정했습니다",
       "CBAM 신고서의 표준 양식과 제출 절차(제6조(6)의 이행법)",
       "2027년 1월 1일부터 수입되는 제품에 적용할 갱신된 CBAM 벤치마크",
       "늦어도 2027년에 개정할 기본값과 마크업",
@@ -5115,6 +5192,21 @@
        "contains": [
         "For each year in the allocation period 2026 to 2030, the uniform cross-sectoral correction factor for the adjustment of free allocations of emission allowances in accordance with Article 10a(5) and (5a) of Directive 2003/87/EC shall be 100 %."
        ]
+      },
+      {
+       "act": "sale-repurchase-adopted",
+       "part": "art-27",
+       "contains": [
+        "This Regulation shall enter into force on the day of its publication in the Official Journal of the European Union.",
+        "It shall apply from 1 February 2027."
+       ]
+      },
+      {
+       "act": "sale-repurchase-adopted",
+       "part": "closing",
+       "contains": [
+        "Done at Brussels, 25.11.2026"
+       ]
       }
      ],
      "see": [
@@ -5124,7 +5216,7 @@
       },
       {
        "href": "#rules-dr-sale-repurchase",
-       "text": "인증서 판매·환매 위임규정(안)"
+       "text": "인증서 판매·환매 위임규정"
       },
       {
        "href": "#rules-ir-declarations",
@@ -6541,8 +6633,8 @@
    "events": 13
   },
   "dr-sale-repurchase": {
-   "stage": "채택 대기",
-   "events": 3
+   "stage": "채택(이의 제기 기간)",
+   "events": 4
   },
   "ets-review": {
    "stage": "제안 심의 중",
