@@ -5538,6 +5538,54 @@
    "ko": "담보",
    "from": "sale-repurchase-adopted",
    "added": "2026-11-26"
+  },
+  {
+   "en": "date of purchase",
+   "ko": "구매일",
+   "from": "sale-repurchase-adopted",
+   "added": "2026-11-26"
+  },
+  {
+   "en": "date of credit",
+   "ko": "적립일",
+   "from": "sale-repurchase-adopted",
+   "added": "2026-11-26"
+  },
+  {
+   "en": "available CBAM certificate",
+   "ko": "이용 가능한 CBAM 인증서",
+   "from": "sale-repurchase-adopted",
+   "added": "2026-11-26"
+  },
+  {
+   "en": "status of a CBAM certificate",
+   "ko": "CBAM 인증서의 상태",
+   "from": "sale-repurchase-adopted",
+   "added": "2026-11-26"
+  },
+  {
+   "en": "appointment of the common central platform",
+   "ko": "공통 중앙 플랫폼의 선정",
+   "from": "sale-repurchase-adopted",
+   "added": "2026-11-26"
+  },
+  {
+   "en": "payer",
+   "ko": "지급인",
+   "from": "sale-repurchase-adopted",
+   "added": "2026-11-26"
+  },
+  {
+   "en": "payee",
+   "ko": "수취인",
+   "from": "sale-repurchase-adopted",
+   "added": "2026-11-26"
+  },
+  {
+   "en": "helpline service",
+   "ko": "상담 전화 서비스",
+   "from": "sale-repurchase-adopted",
+   "added": "2026-11-26"
   }
  ]
 }
