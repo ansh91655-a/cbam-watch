@@ -5514,6 +5514,30 @@
    "ko": "전구물질 사업장",
    "from": "32026R2498",
    "added": "2026-11-18"
+  },
+  {
+   "en": "banking operations",
+   "ko": "은행 업무",
+   "from": "sale-repurchase-adopted",
+   "added": "2026-11-26"
+  },
+  {
+   "en": "repurchase approval process",
+   "ko": "환매 승인 절차",
+   "from": "sale-repurchase-adopted",
+   "added": "2026-11-26"
+  },
+  {
+   "en": "excess CBAM certificates",
+   "ko": "초과 CBAM 인증서",
+   "from": "sale-repurchase-adopted",
+   "added": "2026-11-26"
+  },
+  {
+   "en": "collaterals",
+   "ko": "담보",
+   "from": "sale-repurchase-adopted",
+   "added": "2026-11-26"
   }
  ]
 }
