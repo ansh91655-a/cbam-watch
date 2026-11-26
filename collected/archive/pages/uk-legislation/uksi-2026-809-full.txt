@@ -287,7 +287,6 @@ XML alternative version
 Akoma Ntoso alternative version
 HTML RDFa alternative version
 RDF/XML alternative version
-New site design
 Help
 About us
 Site map

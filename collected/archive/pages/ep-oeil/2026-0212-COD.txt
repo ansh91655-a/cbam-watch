@@ -200,6 +200,10 @@ PE796.497
 Amendments tabled in committee
 PE796.499
 21/10/2026
+Committee opinion
+BUDG
+PE796.539
+20/11/2026
 European Commission
 Document type
 Reference
@@ -446,6 +450,7 @@ Amendments tabled in committee |  | PE796.250 | 21/10/2026 |
 Amendments tabled in committee |  | PE796.486 | 21/10/2026 | 
 Amendments tabled in committee |  | PE796.497 | 21/10/2026 | 
 Amendments tabled in committee |  | PE796.499 | 21/10/2026 | 
+Committee opinion | BUDG | PE796.539 | 20/11/2026 | 
 Document type | Reference | Date | Summary
 Legislative proposal | COM(2026)0616 | 17/07/2026 | Summary
 Document attached to the procedure | SEC(2026)0616 | 17/07/2026 | 

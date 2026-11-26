@@ -13,13 +13,17 @@ Taxation and Customs Union
 Archives
 "CBAM Newsletter" Newsletter Issues
 Date:
-All 15/10/2026 31/08/2026 06/08/2026 20/07/2026 16/07/2026 14/07/2026 29/06/2026 25/06/2026 08/05/2026 07/05/2026 06/05/2026 23/04/2026 25/03/2026 18/03/2026 11/03/2026
+All 26/11/2026 15/10/2026 31/08/2026 06/08/2026 20/07/2026 16/07/2026 14/07/2026 29/06/2026 25/06/2026 08/05/2026 07/05/2026 06/05/2026 23/04/2026 25/03/2026 18/03/2026 11/03/2026
 Items Per Page:
 10 15 20 25 50
 Reset
 Date
 Subject
 Language
+26/11/2026
+CBAM Newsletter #5: Latest updates
+Dear CBAM Insiders (10/03/2026)
+Dear CBAM Insiders
 15/10/2026
 CBAM Newsletter #4: New webinar and explainer video series
 Dear CBAM Insiders (10/03/2026)
@@ -91,10 +95,6 @@ CBAM Insider: The latest on CBAM
 CBAM Newsletter #2: The latest updates and become a CBAM Insider
 CBAM Newsletter #2: The latest updates and become a CBAM Insider (10/03/2026)
 CBAM Newsletter #2: The latest updates and become a CBAM Insider
-08/05/2026
-Thank you for attending, share your feedback - CBAM webinar on 7 May.
-Thank you for attending, share your feedback – CBAM webinar on 7 May. (10/03/2026)
-Thank you for attending, share your feedback – CBAM webinar on 7 May.
 1Page 1
 2
 Next »
@@ -110,6 +110,8 @@ Directorate-General CONNECT
 
 [표의 행]
  | Date | Subject | Language
+ | 26/11/2026 | CBAM Newsletter #5: Latest updates | 
+Dear CBAM Insiders (10/03/2026) Dear CBAM Insiders
  | 15/10/2026 | CBAM Newsletter #4: New webinar and explainer video series | 
 Dear CBAM Insiders (10/03/2026) Dear CBAM Insiders
 From policy to practice: new CBAM webinar available (10/03/2026) From policy to practice: new CBAM webinar available
@@ -142,5 +144,3 @@ Invitation – “Become a CBAM verifier” Webinar (16 July) (10/03/2026) Invit
 CBAM Insider: The latest on CBAM (10/03/2026) CBAM Insider: The latest on CBAM
  | 25/06/2026 | CBAM Newsletter #2: The latest updates and become a CBAM Insider | 
 CBAM Newsletter #2: The latest updates and become a CBAM Insider (10/03/2026) CBAM Newsletter #2: The latest updates and become a CBAM Insider
- | 08/05/2026 | Thank you for attending, share your feedback - CBAM webinar on 7 May. | 
-Thank you for attending, share your feedback – CBAM webinar on 7 May. (10/03/2026) Thank you for attending, share your feedback – CBAM webinar on 7 May.

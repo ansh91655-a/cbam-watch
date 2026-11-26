@@ -356,9 +356,9 @@ Vitrinor
 KANEV Radan
 17/06/2026
 GROUPE SEB
-BERNHUBER Alexander
+GORI Giorgio
 09/06/2026
-YARA BELGIUM S.A.
+European Association Automotive Suppliers
 Load more
 Procedure file
 Basic information
@@ -471,4 +471,4 @@ CHAHIM Mohammed | 01/07/2026 | European Alliance for the Inclusion of the Fire E
 LUENA César | 29/06/2026 | UNEXPO S.L
 LUENA César | 23/06/2026 | Vitrinor
 KANEV Radan | 17/06/2026 | GROUPE SEB
-BERNHUBER Alexander | 09/06/2026 | YARA BELGIUM S.A.
+GORI Giorgio | 09/06/2026 | European Association Automotive Suppliers

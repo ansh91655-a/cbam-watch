@@ -1,0 +1,80 @@
+{
+ "date": "2026-11-27",
+ "items": [
+  {
+   "id": "801d042ce277",
+   "source": "ep-oeil-2026-0212",
+   "kind": "row",
+   "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0212(COD)",
+   "text": "Committee opinion | BUDG | PE796.539 | 20/11/2026 |",
+   "seenAt": "2026-11-27T06:13:20+09:00",
+   "cells": [
+    "Committee opinion",
+    "BUDG",
+    "PE796.539",
+    "20/11/2026",
+    ""
+   ],
+   "textPath": "collected/pages/ep-oeil-2026-0212.txt"
+  },
+  {
+   "id": "9ae718b05494",
+   "source": "carbon-pulse",
+   "kind": "link",
+   "url": "https://carbon-pulse.com/575962/?site=cpp",
+   "text": "France’s solution for EU CBAM industry exports gains support as pressure for a solution grows",
+   "seenAt": "2026-11-27T06:13:20+09:00"
+  },
+  {
+   "id": "8839cca756a9",
+   "source": "carbon-pulse",
+   "kind": "link",
+   "url": "https://carbon-pulse.com/573431/?site=cpp",
+   "text": "Greens see window for December EU ETS deal in European Parliament",
+   "seenAt": "2026-11-27T06:13:20+09:00"
+  },
+  {
+   "id": "6e688858cc7e",
+   "source": "carbon-pulse",
+   "kind": "link",
+   "url": "https://carbon-pulse.com/575852/?site=cpp",
+   "text": "Draft EU-UK ETS legal text gives Brussels say over future links, hedges removals question",
+   "seenAt": "2026-11-27T06:13:20+09:00"
+  },
+  {
+   "id": "a89ebb9d8b01",
+   "source": "carbon-pulse",
+   "kind": "link",
+   "url": "https://carbon-pulse.com/575854/?site=cpp",
+   "text": "Serbia’s state aid rules put industry at disadvantage under EU CBAM -report",
+   "seenAt": "2026-11-27T06:13:20+09:00"
+  },
+  {
+   "id": "5d7e84f9d7e0",
+   "source": "carbon-pulse",
+   "kind": "link",
+   "url": "https://carbon-pulse.com/575819/?site=cpp",
+   "text": "Brussels adopts CBAM certificate sale, repurchase rules",
+   "seenAt": "2026-11-27T06:13:20+09:00"
+  },
+  {
+   "id": "20d387ef440a",
+   "source": "carbon-pulse",
+   "kind": "link",
+   "url": "https://carbon-pulse.com/575734/?site=cpp",
+   "text": "France, Netherlands call for EU target to cut imported emissions",
+   "seenAt": "2026-11-27T06:13:20+09:00"
+  },
+  {
+   "id": "1d9f2e5f5bb3",
+   "source": "ec-newsletter",
+   "kind": "dated",
+   "url": "https://ec.europa.eu/newsroom/taxud/newsletter-archives/view/service/9510",
+   "text": "26/11/2026 | CBAM Newsletter #5: Latest updates | Dear CBAM Insiders (10/03/2026) Dear CBAM Insiders",
+   "seenAt": "2026-11-27T06:13:20+09:00",
+   "textPath": "collected/pages/ec-newsletter.txt"
+  }
+ ],
+ "generatedAt": "2026-11-27T06:13:20+09:00",
+ "count": 8
+}

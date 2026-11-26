@@ -1,6 +1,6 @@
 {
  "source": "ec-hys",
- "fetchedAt": "2026-11-26T06:18:51+09:00",
+ "fetchedAt": "2026-11-27T06:14:57+09:00",
  "since": "2025-01-01",
  "report": {
   "rows": 15,
@@ -35,8 +35,8 @@
     }
    ],
    "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/16932_en",
-   "textPath": "collected/archive/pages/ec-hys/initiatives.txt",
-   "earlier": []
+   "earlier": [],
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
   },
   {
    "id": "16933",
@@ -52,8 +52,8 @@
     }
    ],
    "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/16933_en",
-   "textPath": "collected/archive/pages/ec-hys/initiatives.txt",
-   "earlier": []
+   "earlier": [],
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
   },
   {
    "id": "14123",
@@ -69,8 +69,8 @@
     }
    ],
    "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14123_en",
-   "textPath": "collected/archive/pages/ec-hys/initiatives.txt",
-   "earlier": []
+   "earlier": [],
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
   },
   {
    "id": "15132",
@@ -86,8 +86,8 @@
     }
    ],
    "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/15132_en",
-   "textPath": "collected/archive/pages/ec-hys/initiatives.txt",
-   "earlier": []
+   "earlier": [],
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
   },
   {
    "id": "14115",
@@ -103,8 +103,8 @@
     }
    ],
    "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14115_en",
-   "textPath": "collected/archive/pages/ec-hys/initiatives.txt",
-   "earlier": []
+   "earlier": [],
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
   },
   {
    "id": "14829",
@@ -120,8 +120,8 @@
     }
    ],
    "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14829_en",
-   "textPath": "collected/archive/pages/ec-hys/initiatives.txt",
-   "earlier": []
+   "earlier": [],
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
   },
   {
    "id": "14748",
@@ -137,8 +137,8 @@
     }
    ],
    "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14748_en",
-   "textPath": "collected/archive/pages/ec-hys/initiatives.txt",
-   "earlier": []
+   "earlier": [],
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
   },
   {
    "id": "14828",
@@ -154,8 +154,8 @@
     }
    ],
    "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14828_en",
-   "textPath": "collected/archive/pages/ec-hys/initiatives.txt",
-   "earlier": []
+   "earlier": [],
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
   },
   {
    "id": "14830",
@@ -171,8 +171,8 @@
     }
    ],
    "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14830_en",
-   "textPath": "collected/archive/pages/ec-hys/initiatives.txt",
-   "earlier": []
+   "earlier": [],
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
   },
   {
    "id": "12228",
@@ -188,8 +188,8 @@
     }
    ],
    "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/12228_en",
-   "textPath": "collected/archive/pages/ec-hys/initiatives.txt",
-   "earlier": []
+   "earlier": [],
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
   },
   {
    "id": "14117",
@@ -205,8 +205,8 @@
     }
    ],
    "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14117_en",
-   "textPath": "collected/archive/pages/ec-hys/initiatives.txt",
-   "earlier": []
+   "earlier": [],
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
   },
   {
    "id": "14116",
@@ -222,8 +222,8 @@
     }
    ],
    "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14116_en",
-   "textPath": "collected/archive/pages/ec-hys/initiatives.txt",
-   "earlier": []
+   "earlier": [],
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
   },
   {
    "id": "14132",
@@ -239,7 +239,6 @@
     }
    ],
    "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14132_en",
-   "textPath": "collected/archive/pages/ec-hys/initiatives.txt",
    "earlier": [
     {
      "stage": "ISC_WORKFLOW",
@@ -247,7 +246,8 @@
      "start": "2026/07/09 11:08:21",
      "end": "2026/08/06 23:59:59"
     }
-   ]
+   ],
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
   },
   {
    "id": "14133",
@@ -263,8 +263,8 @@
     }
    ],
    "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14133_en",
-   "textPath": "collected/archive/pages/ec-hys/initiatives.txt",
-   "earlier": []
+   "earlier": [],
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
   },
   {
    "id": "14759",
@@ -280,8 +280,8 @@
     }
    ],
    "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14759_en",
-   "textPath": "collected/archive/pages/ec-hys/initiatives.txt",
-   "earlier": []
+   "earlier": [],
+   "textPath": "collected/archive/pages/ec-hys/initiatives.txt"
   }
  ]
 }
