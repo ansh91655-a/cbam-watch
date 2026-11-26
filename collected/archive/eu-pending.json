@@ -1,6 +1,6 @@
 {
  "source": "eu-pending",
- "fetchedAt": "2026-11-26T16:47:15+09:00",
+ "fetchedAt": "2026-11-26T16:49:59+09:00",
  "since": "2025-01-01",
  "report": {
   "targets": 2,
@@ -16,7 +16,7 @@
    "rule": "dr-sale-repurchase",
    "date": "2026-11-25",
    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=PI_COM:C(2026)8367",
-   "lines": 353,
+   "lines": 341,
    "textPath": "collected/archive/pages/eu-pending/sale-repurchase-adopted.txt"
   },
   {
@@ -28,7 +28,7 @@
    "rule": "ir-declarations",
    "date": "2026-11-19",
    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=PI_COM:Ares(2026)10806938",
-   "lines": 322,
+   "lines": 320,
    "textPath": "collected/archive/pages/eu-pending/declarations-draft.txt"
   }
  ]

@@ -5,7 +5,6 @@
 [상태] 의견수렴 중인 초안
 [문서의 날짜] 2026-11-19
 
-IMMC.Ares%282026%2910806938.ENG.xhtml.PART-2026-1062657V2.docx
 COMMISSION IMPLEMENTING REGULATION (EU) …/...
 of XXX
 on CBAM declarations
@@ -14,135 +13,135 @@ THE EUROPEAN COMMISSION,
 Having regard to the Treaty on the Functioning of the European Union,
 Having regard to Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023 establishing a carbon border adjustment mechanism 1 , and in particular Articles 6(6) and 14(6) thereof,
 Whereas:
-(1)Regulation (EU) 2023/956 of the European Parliament and of the Council 2 lays down the obligations for the submission of Carbon Border Adjustment Mechanism (CBAM) declarations during the so-called definitive period, in accordance with Article 6 of that Regulation, requiring authorised CBAM declarants to submit an annual CBAM declaration in respect of goods imported during the preceding calendar year.
-(2)The first annual CBAM declaration should be submitted by 30 September 2027 in respect of goods imported during the preceding calendar year.
-(3)To facilitate the preparation of the CBAM declaration, ensure the accuracy of the data elements that derive from Commission Implementing Regulation (EU) 2025/2621 3 , Commission Implementing Regulation (EU) 2025/2620, 4 and Commission Implementing Decision on Default Carbon Price adopted pursuant to Article 9(5) of Regulation (EU) 2023/956 for the year concerned, the CBAM registry should make available, in the CBAM declaration, the default values, free allocation benchmarks and default carbon prices in accordance with information provided and selections made by the authorised CBAM declarant.
-(4)Where an authorised CBAM declarant has failed to submit a CBAM declaration in accordance with Article 6 of Regulation (EU) 2023/956, within the deadline, the competent authority should be able to require the submission of such declaration and all the relevant information related to it. This would enable the competent authority to have all the necessary information to determine the declarant's CBAM liability and to assess and calculate any penalties arising from the failure to comply with the declaration obligation.
-(5)To ensure uniform and precise calculations of financial liability in the CBAM registry, the total number of CBAM certificates to be surrendered should be calculated using the same formula as the one employed for the surrendering of CBAM certificates in the CBAM registry in all cases, and without intermediate rounding. Since one CBAM certificate corresponds to one tonne of CO2 equivalent of embedded emissions, the final number of CBAM certificates to be surrendered should be rounded up or down to the nearest whole number. Where the decimal fraction of that number is below 0.5, it should be rounded down to the nearest whole number, and where that decimal fraction is equal to or above 0.5, it should be rounded up to the nearest whole number.
-(6)To allow authorised CBAM declarants flexibility and autonomy in managing their financial liability while ensuring CBAM’s operational efficiency, in line with the principles of proportionality and administrative simplicity, authorised CBAM declarants should be able, in the CBAM registry, to select which certificates they request to be surrendered. To safeguard the integrity of the CBAM system, prevent potential circumvention practices or any other unintended consequences that could undermine the environmental effectiveness or give rise to undue administrative burden of CBAM, the Commission will closely monitor that flexibility and introduce additional measures or specific rules restricting that flexibility in the selection of CBAM certificates for surrender where necessary, such as surrendering the certificates in chronological order of purchase, based on the evidence of such circumvention practices or unintended consequences.
-(7)The processing of personal data in the context of this Regulation should comply with Regulation (EU) 2016/679 of the European Parliament and of the Council 5 and Regulation (EU) 2018/1725 of the European Parliament and of the Council 6 . Personal data should be kept in a form which permits the identification of data subjects for no longer than necessary for the purposes for which personal data are processed. In this regard, the retention period for personal data in the CBAM registry should be limited to seven years from the registration in the CBAM registry. By way of derogation from the general seven-year data retention rule, where an appeal has been lodged or where there are court proceedings involving data covered by this Regulation, any affected relevant personal data should be retained until the appeal procedure or court proceedings are terminated; in this regard, such data should only be used for the purpose of such appeal procedure or court proceedings.
-(8)The European Data Protection Supervisor was consulted in accordance with Article 42(1) of Regulation (EU) 2018/1725 (*) and delivered an opinion on [*].
-(9)In order to allow for its timely application, this Regulation should enter into force on the day following that of its publication in the Official Journal of the European Union.
-(10)The measures provided for in this Regulation are in accordance with the opinion of the […] Committee,
+(1) Regulation (EU) 2023/956 of the European Parliament and of the Council 2 lays down the obligations for the submission of Carbon Border Adjustment Mechanism (CBAM) declarations during the so-called definitive period, in accordance with Article 6 of that Regulation, requiring authorised CBAM declarants to submit an annual CBAM declaration in respect of goods imported during the preceding calendar year.
+(2) The first annual CBAM declaration should be submitted by 30 September 2027 in respect of goods imported during the preceding calendar year.
+(3) To facilitate the preparation of the CBAM declaration, ensure the accuracy of the data elements that derive from Commission Implementing Regulation (EU) 2025/2621 3 , Commission Implementing Regulation (EU) 2025/2620, 4 and Commission Implementing Decision on Default Carbon Price adopted pursuant to Article 9(5) of Regulation (EU) 2023/956 for the year concerned, the CBAM registry should make available, in the CBAM declaration, the default values, free allocation benchmarks and default carbon prices in accordance with information provided and selections made by the authorised CBAM declarant.
+(4) Where an authorised CBAM declarant has failed to submit a CBAM declaration in accordance with Article 6 of Regulation (EU) 2023/956, within the deadline, the competent authority should be able to require the submission of such declaration and all the relevant information related to it. This would enable the competent authority to have all the necessary information to determine the declarant's CBAM liability and to assess and calculate any penalties arising from the failure to comply with the declaration obligation.
+(5) To ensure uniform and precise calculations of financial liability in the CBAM registry, the total number of CBAM certificates to be surrendered should be calculated using the same formula as the one employed for the surrendering of CBAM certificates in the CBAM registry in all cases, and without intermediate rounding. Since one CBAM certificate corresponds to one tonne of CO2 equivalent of embedded emissions, the final number of CBAM certificates to be surrendered should be rounded up or down to the nearest whole number. Where the decimal fraction of that number is below 0.5, it should be rounded down to the nearest whole number, and where that decimal fraction is equal to or above 0.5, it should be rounded up to the nearest whole number.
+(6) To allow authorised CBAM declarants flexibility and autonomy in managing their financial liability while ensuring CBAM’s operational efficiency, in line with the principles of proportionality and administrative simplicity, authorised CBAM declarants should be able, in the CBAM registry, to select which certificates they request to be surrendered. To safeguard the integrity of the CBAM system, prevent potential circumvention practices or any other unintended consequences that could undermine the environmental effectiveness or give rise to undue administrative burden of CBAM, the Commission will closely monitor that flexibility and introduce additional measures or specific rules restricting that flexibility in the selection of CBAM certificates for surrender where necessary, such as surrendering the certificates in chronological order of purchase, based on the evidence of such circumvention practices or unintended consequences.
+(7) The processing of personal data in the context of this Regulation should comply with Regulation (EU) 2016/679 of the European Parliament and of the Council 5 and Regulation (EU) 2018/1725 of the European Parliament and of the Council 6 . Personal data should be kept in a form which permits the identification of data subjects for no longer than necessary for the purposes for which personal data are processed. In this regard, the retention period for personal data in the CBAM registry should be limited to seven years from the registration in the CBAM registry. By way of derogation from the general seven-year data retention rule, where an appeal has been lodged or where there are court proceedings involving data covered by this Regulation, any affected relevant personal data should be retained until the appeal procedure or court proceedings are terminated; in this regard, such data should only be used for the purpose of such appeal procedure or court proceedings.
+(8) The European Data Protection Supervisor was consulted in accordance with Article 42(1) of Regulation (EU) 2018/1725 (*) and delivered an opinion on [*].
+(9) In order to allow for its timely application, this Regulation should enter into force on the day following that of its publication in the Official Journal of the European Union.
+(10) The measures provided for in this Regulation are in accordance with the opinion of the […] Committee,
 HAS ADOPTED THIS REGULATION:
 CHAPTER I
 SUBJECT MATTER AND DEFINITIONS
 Article 1
 Subject matter
 This Regulation lays down rules on:
-(a)the standard format of the CBAM declaration, including the detailed information to be reported by an installation, country of origin or other third country, and type of goods in support of the information referred to in Article 6(2) of Regulation (EU) 2023/956;
-(b)the procedure for submitting the CBAM declaration via the CBAM registry;
-(c)the arrangements for surrendering the CBAM certificates referred to in Article 6(2), point (c), of Regulation (EU) 2023/956 in accordance with Article 22(1) thereof, including the process for the selection by the authorised CBAM declarant of the certificates to be surrendered.
+(a) the standard format of the CBAM declaration, including the detailed information to be reported by an installation, country of origin or other third country, and type of goods in support of the information referred to in Article 6(2) of Regulation (EU) 2023/956;
+(b) the procedure for submitting the CBAM declaration via the CBAM registry;
+(c) the arrangements for surrendering the CBAM certificates referred to in Article 6(2), point (c), of Regulation (EU) 2023/956 in accordance with Article 22(1) thereof, including the process for the selection by the authorised CBAM declarant of the certificates to be surrendered.
 (d)
 CHAPTER 2
 SUBMISSION, MANAGEMENT AND REVIEW OF THE CBAM DECLARATION
 Article 2
 Submission of the CBAM declaration
-1.For each calendar year, the authorised CBAM declarant subject to CBAM obligations shall submit the CBAM declaration via the CBAM registry within the deadline laid down in Article 6(1) of Regulation (EU) 2023/956.
-2.When submitting the CBAM declaration, the authorised CBAM declarant shall indicate whether it is acting:
-(a)as an importer, in its own name and on its own behalf;
-(b)as an indirect customs representative, in its own name but on behalf of an importer; or
-(c)as a person acting on behalf and in the name of the authorised CBAM declarant, in accordance with Article 5(7a) of Regulation (EU) 2023/956.
-3.By way of derogation from paragraph (2) of this Article, where the status of an authorised CBAM declarant has been revoked, the CBAM declaration shall be submitted in accordance with Articles 21 and 23 of Commission Implementing Regulation (EU) 2025/486 7 , as applicable.
-4.An authorised CBAM declarant may, at any time until 30 September of the year in which the declaration is to be submitted, revise and resubmit a CBAM declaration previously submitted through the CBAM registry, provided that the CBAM certificates corresponding to that declaration have not yet been surrendered in accordance with Article 22(1) of Regulation (EU) 2023/956. Where a CBAM declaration is resubmitted, the latest submitted version submitted shall replace the previously submitted version and shall constitute the CBAM declaration that is submitted for the purposes of this Regulation.
-5.The CBAM declaration, once submitted in the CBAM registry, shall be allocated a unique identifier and shall be deemed to be received by the Member State concerned. Receipt of the CBAM declaration shall be acknowledged by the registry on behalf of that Member State.
+1. For each calendar year, the authorised CBAM declarant subject to CBAM obligations shall submit the CBAM declaration via the CBAM registry within the deadline laid down in Article 6(1) of Regulation (EU) 2023/956.
+2. When submitting the CBAM declaration, the authorised CBAM declarant shall indicate whether it is acting:
+(a) as an importer, in its own name and on its own behalf;
+(b) as an indirect customs representative, in its own name but on behalf of an importer; or
+(c) as a person acting on behalf and in the name of the authorised CBAM declarant, in accordance with Article 5(7a) of Regulation (EU) 2023/956.
+3. By way of derogation from paragraph (2) of this Article, where the status of an authorised CBAM declarant has been revoked, the CBAM declaration shall be submitted in accordance with Articles 21 and 23 of Commission Implementing Regulation (EU) 2025/486 7 , as applicable.
+4. An authorised CBAM declarant may, at any time until 30 September of the year in which the declaration is to be submitted, revise and resubmit a CBAM declaration previously submitted through the CBAM registry, provided that the CBAM certificates corresponding to that declaration have not yet been surrendered in accordance with Article 22(1) of Regulation (EU) 2023/956. Where a CBAM declaration is resubmitted, the latest submitted version submitted shall replace the previously submitted version and shall constitute the CBAM declaration that is submitted for the purposes of this Regulation.
+5. The CBAM declaration, once submitted in the CBAM registry, shall be allocated a unique identifier and shall be deemed to be received by the Member State concerned. Receipt of the CBAM declaration shall be acknowledged by the registry on behalf of that Member State.
 Article 3
 Compliance actions during the submission procedure
-1.The competent authority may where possible and appropriate inform the CBAM declarant about any apparent errors, inconsistencies, omissions or other relevant elements included in the submitted CBAM declaration before the surrendering of the CBAM certificates corresponding to such declaration.
-2.Compliance actions shall be without prejudice to any review procedure carried out pursuant to Article 19 of Regulation (EU) 2023/956. Such actions shall not constitute, or be construed as, a decision, approval, acceptance or validation of the declaration or of any information contained therein.
-3.Any recommendation made in the context of a compliance action shall be non-binding. However, the authorised CBAM declarant may decide to modify the declaration in light of such recommendation. The authorised CBAM declarant shall remain responsible for the completeness, accuracy and correctness of the CBAM declaration.
-4.Compliance actions, including any communication relating thereto, may be carried out via the CBAM registry.
+1. The competent authority may where possible and appropriate inform the CBAM declarant about any apparent errors, inconsistencies, omissions or other relevant elements included in the submitted CBAM declaration before the surrendering of the CBAM certificates corresponding to such declaration.
+2. Compliance actions shall be without prejudice to any review procedure carried out pursuant to Article 19 of Regulation (EU) 2023/956. Such actions shall not constitute, or be construed as, a decision, approval, acceptance or validation of the declaration or of any information contained therein.
+3. Any recommendation made in the context of a compliance action shall be non-binding. However, the authorised CBAM declarant may decide to modify the declaration in light of such recommendation. The authorised CBAM declarant shall remain responsible for the completeness, accuracy and correctness of the CBAM declaration.
+4. Compliance actions, including any communication relating thereto, may be carried out via the CBAM registry.
 Article 4
 Failure to submit a CBAM declaration
-1.For the purposes of the determination referred to in Article 19(5) of Regulation (EU) 2023/956 and without prejudice to the application of Article 26 of that Regulation, the competent authority may require the authorised CBAM declarant to provide a CBAM declaration within a period specified by that authority, including all the relevant information or supporting documents necessary for that determination.
-2.Where the authorised CBAM declarant fails to provide the information or supporting documents referred to in paragraph 1 of this Article within the period specified, the competent authority shall determine the number of CBAM certificates which should have been surrendered based on the information available to it and it shall adopt the decision referred to in Article 19(5) of Regulation (EU) 2023/956.
+1. For the purposes of the determination referred to in Article 19(5) of Regulation (EU) 2023/956 and without prejudice to the application of Article 26 of that Regulation, the competent authority may require the authorised CBAM declarant to provide a CBAM declaration within a period specified by that authority, including all the relevant information or supporting documents necessary for that determination.
+2. Where the authorised CBAM declarant fails to provide the information or supporting documents referred to in paragraph 1 of this Article within the period specified, the competent authority shall determine the number of CBAM certificates which should have been surrendered based on the information available to it and it shall adopt the decision referred to in Article 19(5) of Regulation (EU) 2023/956.
 Article 5
 Review of the CBAM declaration
-1.In accordance with Article 12 of Regulation 2023/956, the Commission and the competent authorities shall cooperate in establishing the procedures and practices for the review of CBAM declarations pursuant to Article 19 of that Regulation.
-2.Any review and compliance actions on CBAM declarations may be carried out via the CBAM registry.
+1. In accordance with Article 12 of Regulation 2023/956, the Commission and the competent authorities shall cooperate in establishing the procedures and practices for the review of CBAM declarations pursuant to Article 19 of that Regulation.
+2. Any review and compliance actions on CBAM declarations may be carried out via the CBAM registry.
 CHAPTER 3
 FORMAT AND CONTENT OF THE CBAM DECLARATION
 Article 6
 Standard format and structure of the CBAM declaration
-1.The CBAM declaration shall be submitted through the CBAM registry using the standard format set out in Annex I.
-2.The authorised CBAM declarant shall provide the information required in that standard format and shall indicate whether the relevant elements of the declaration are based on actual values or default values, in accordance with Regulation (EU) 2023/956, to determine the following elements in order to calculate the CBAM certificates to be surrendered:
-(a)the embedded emissions of the imported goods;
-(b)the adjustment to reflect the extent to which European Union Emissions Trading System (EU ETS) allowances are allocated free of charge;
-(c)where applicable, the data elements specified in Annex I to this Regulation necessary to determine the reduction corresponding to a carbon price paid in a third country, in accordance with Commission Implementing Regulation 2026/2498 8 .
-3.Where the authorised CBAM declarant uses default values for embedded emissions, the following information shall be automatically made available in the CBAM registry, upon declaration by the authorised CBAM declarant of a given CN code and country of origin,
-(a)the applicable default values in accordance with Implementing Regulation (EU) 2025/2621,
-(b)the free allocation benchmarks in accordance with Implementing Regulations (EU) 2025/2620,
-(c)the default carbon prices established or determined in accordance with Implementing Decision on Default Carbon Price adopted pursuant to Article 9(5) of Regulation (EU) 2023/956 for the year concerned.
-4.Where the authorised CBAM declarant uses actual values for embedded emissions and claims a reduction corresponding to a carbon price paid in a third country, the declarant may use either the applicable default carbon prices or the actual carbon price effectively paid, as follows:
-(a)Where the authorised CBAM declarant opts to use the applicable default carbon prices, these shall be automatically applied in the CBAM registry in accordance with the structure laid down in Article 7(2) of Implementing Regulation 2026/2498. The resulting reduction that may be claimed by the authorised CBAM declarant shall be displayed in the CBAM registry.
-(b)Where the authorised CBAM declarant opts to use the actual carbon price effectively paid in a third country, the declarant shall claim that reduction in accordance with the requirements concerning supporting evidence laid down in Articles 7 and 8 of this Regulation.
+1. The CBAM declaration shall be submitted through the CBAM registry using the standard format set out in Annex I.
+2. The authorised CBAM declarant shall provide the information required in that standard format and shall indicate whether the relevant elements of the declaration are based on actual values or default values, in accordance with Regulation (EU) 2023/956, to determine the following elements in order to calculate the CBAM certificates to be surrendered:
+(a) the embedded emissions of the imported goods;
+(b) the adjustment to reflect the extent to which European Union Emissions Trading System (EU ETS) allowances are allocated free of charge;
+(c) where applicable, the data elements specified in Annex I to this Regulation necessary to determine the reduction corresponding to a carbon price paid in a third country, in accordance with Commission Implementing Regulation 2026/2498 8 .
+3. Where the authorised CBAM declarant uses default values for embedded emissions, the following information shall be automatically made available in the CBAM registry, upon declaration by the authorised CBAM declarant of a given CN code and country of origin,
+(a) the applicable default values in accordance with Implementing Regulation (EU) 2025/2621,
+(b) the free allocation benchmarks in accordance with Implementing Regulations (EU) 2025/2620,
+(c) the default carbon prices established or determined in accordance with Implementing Decision on Default Carbon Price adopted pursuant to Article 9(5) of Regulation (EU) 2023/956 for the year concerned.
+4. Where the authorised CBAM declarant uses actual values for embedded emissions and claims a reduction corresponding to a carbon price paid in a third country, the declarant may use either the applicable default carbon prices or the actual carbon price effectively paid, as follows:
+(a) Where the authorised CBAM declarant opts to use the applicable default carbon prices, these shall be automatically applied in the CBAM registry in accordance with the structure laid down in Article 7(2) of Implementing Regulation 2026/2498. The resulting reduction that may be claimed by the authorised CBAM declarant shall be displayed in the CBAM registry.
+(b) Where the authorised CBAM declarant opts to use the actual carbon price effectively paid in a third country, the declarant shall claim that reduction in accordance with the requirements concerning supporting evidence laid down in Articles 7 and 8 of this Regulation.
 The authorised CBAM declarant shall select the relevant default value, benchmark or default carbon price. The authorised CBAM declarant may amend, before submission of the CBAM declaration, the carbon price that was effectively paid and shall remain responsible for the completeness and accuracy of the CBAM declaration.
 Article 7
 Documents accompanying the declaration
 The declaration referred to in Article 8 shall include, where applicable:
-(1)supporting evidence for the determination of the reporting period pursuant to Article 7(1) of Commission Implementing Regulation (EU) 2025/2547 9 ;
-(2)authenticated verification report issued in the CBAM registry pursuant to point 2.15.2 of Annex II to Commission Delegated Regulation (EU) 2025/2551 10 and operator’s emission report based on the electronic template provided in the CBAM registry.
-(3)authenticated certification report issued in the CBAM registry, pursuant to Article XX [IA on carbon price] and operator’s carbon price report based on the electronic template provided in the CBAM registry.
-(4)for electricity, any addendum to the emissions report and to the verification report required under [Article/Annex X] for the determination of the applicable emission level.
+(1) supporting evidence for the determination of the reporting period pursuant to Article 7(1) of Commission Implementing Regulation (EU) 2025/2547 9 ;
+(2) authenticated verification report issued in the CBAM registry pursuant to point 2.15.2 of Annex II to Commission Delegated Regulation (EU) 2025/2551 10 and operator’s emission report based on the electronic template provided in the CBAM registry.
+(3) authenticated certification report issued in the CBAM registry, pursuant to Article XX [IA on carbon price] and operator’s carbon price report based on the electronic template provided in the CBAM registry.
+(4) for electricity, any addendum to the emissions report and to the verification report required under [Article/Annex X] for the determination of the applicable emission level.
 The authorised CBAM declarant may include any additional document or supporting information which it considers relevant for the purposes of substantiating, clarifying or supplementing the information provided in the CBAM declaration. The submission of such additional documentation shall be without prejudice to the requirements laid down in the first paragraph.
 The authorised CBAM declarant shall provide any additional information or supporting documents that the competent authority may request the declarant to provide to verify the completeness or accuracy of the declaration.
 Article 8
 Information relating to verification and certification
-1.Where the authorised CBAM declarant determines embedded emissions based on actual emissions in accordance with Article 7 of Regulation (EU) 2023/956, it shall provide the information relating to verification set out in Annex I to this Regulation.
-2.Where the goods were produced in an installation registered in the CBAM registry in accordance with Article 10 of Regulation (EU) 2023/956 and the authorised CBAM declarant uses verified information disclosed to that declarant pursuant to Article 10(7) of that Regulation, the authorised CBAM declarant shall associate the relevant verification report with the CBAM declaration through the CBAM registry.
-3.Where the goods were produced in an installation that is not registered in the CBAM registry in accordance with Article 10 of Regulation (EU) 2023/956, the authorised CBAM declarant shall provide, via the CBAM registry:
-(a)the verification report referred to in Article 8 of Regulation (EU) 2023/956; and
-(b)the operator’s emissions report corresponding to that verification report.
-4.Where the authorised CBAM declarant claims a reduction in the number of CBAM certificates to be surrendered based on a carbon price effectively paid in a third country in accordance with Article 9(1) of Regulation (EU) 2023/956, it the authorised CBAM declarant shall:
-(a)where the relevant certification report is available in the CBAM registry, associate that certification report with the CBAM declaration,
-(b)where the relevant certification report is not available in the CBAM registry, provide that certification report via the CBAM registry.
+1. Where the authorised CBAM declarant determines embedded emissions based on actual emissions in accordance with Article 7 of Regulation (EU) 2023/956, it shall provide the information relating to verification set out in Annex I to this Regulation.
+2. Where the goods were produced in an installation registered in the CBAM registry in accordance with Article 10 of Regulation (EU) 2023/956 and the authorised CBAM declarant uses verified information disclosed to that declarant pursuant to Article 10(7) of that Regulation, the authorised CBAM declarant shall associate the relevant verification report with the CBAM declaration through the CBAM registry.
+3. Where the goods were produced in an installation that is not registered in the CBAM registry in accordance with Article 10 of Regulation (EU) 2023/956, the authorised CBAM declarant shall provide, via the CBAM registry:
+(a) the verification report referred to in Article 8 of Regulation (EU) 2023/956; and
+(b) the operator’s emissions report corresponding to that verification report.
+4. Where the authorised CBAM declarant claims a reduction in the number of CBAM certificates to be surrendered based on a carbon price effectively paid in a third country in accordance with Article 9(1) of Regulation (EU) 2023/956, it the authorised CBAM declarant shall:
+(a) where the relevant certification report is available in the CBAM registry, associate that certification report with the CBAM declaration,
+(b) where the relevant certification report is not available in the CBAM registry, provide that certification report via the CBAM registry.
 Article 9
 Inward processing
-1.Where goods listed in Annex I to Regulation (EU) 2023/956 have been placed under the inward processing procedure referred to in Article 256 of Regulation (EU) No 952/2013, and processed products resulting from such goods have subsequently been released for free circulation brought to the exclusive economic zone or brought to the continental shelf of a Member State in accordance with Article 11 of this Regulation, the authorised CBAM declarant shall report in the CBAM declaration the goods placed under inward processing that resulted in such processed products, in accordance with Article 6(3) of Regulation (EU) 2023/956.
+1. Where goods listed in Annex I to Regulation (EU) 2023/956 have been placed under the inward processing procedure referred to in Article 256 of Regulation (EU) No 952/2013, and processed products resulting from such goods have subsequently been released for free circulation brought to the exclusive economic zone or brought to the continental shelf of a Member State in accordance with Article 11 of this Regulation, the authorised CBAM declarant shall report in the CBAM declaration the goods placed under inward processing that resulted in such processed products, in accordance with Article 6(3) of Regulation (EU) 2023/956.
 For the purposes of subparagraph 1, the authorised CBAM declarant shall associate the relevant bill of discharge or receipt declaration to the CBAM declaration.
-2.Where processed products are brought to the exclusive economic zone or the continental shelf of a Member State, Article 11(3) of this Regulation shall apply.
+2. Where processed products are brought to the exclusive economic zone or the continental shelf of a Member State, Article 11(3) of this Regulation shall apply.
 Article 10
 Returned goods
-1.Where imported goods qualify as returned goods in accordance with Article 203 of Regulation (EU) No 952/2013, the authorised CBAM declarant shall identify such goods separately in the CBAM declaration and shall indicate zero as the total embedded emissions corresponding to such goods, in accordance with Article 6(5) of Regulation (EU) 2023/956.
-2.The CBAM declaration shall contain, in respect of such goods, the information referred to in Annex I.
+1. Where imported goods qualify as returned goods in accordance with Article 203 of Regulation (EU) No 952/2013, the authorised CBAM declarant shall identify such goods separately in the CBAM declaration and shall indicate zero as the total embedded emissions corresponding to such goods, in accordance with Article 6(5) of Regulation (EU) 2023/956.
+2. The CBAM declaration shall contain, in respect of such goods, the information referred to in Annex I.
 Article 11
 Goods brought to the exclusive economic zone or the continental shelf
-1.Where goods or processed products referred to in Article 2(2), first subparagraph, of Regulation (EU) 2023/956 are brought to the exclusive economic zone or the continental shelf of a Member State adjacent to the customs territory of the Union, the authorised CBAM declarant shall report those goods or processed products separately in the CBAM declaration and shall provide the information referred to in Annex I to this Regulation.
-2.For the purposes of paragraph 1, the authorised CBAM declarant shall associate a copy of the relevant receipt declaration to the CBAM declaration.
-3.The CBAM declaration shall be accompanied by a copy of the receipt declaration for goods, in accordance with Article 10(1) of Commission Implementing Regulation (EU) 2025/2210 11 , or by a copy of the bill of discharge for processed products, where the conditions laid down in Article 10(2) of that Regulation are met.
+1. Where goods or processed products referred to in Article 2(2), first subparagraph, of Regulation (EU) 2023/956 are brought to the exclusive economic zone or the continental shelf of a Member State adjacent to the customs territory of the Union, the authorised CBAM declarant shall report those goods or processed products separately in the CBAM declaration and shall provide the information referred to in Annex I to this Regulation.
+2. For the purposes of paragraph 1, the authorised CBAM declarant shall associate a copy of the relevant receipt declaration to the CBAM declaration.
+3. The CBAM declaration shall be accompanied by a copy of the receipt declaration for goods, in accordance with Article 10(1) of Commission Implementing Regulation (EU) 2025/2210 11 , or by a copy of the bill of discharge for processed products, where the conditions laid down in Article 10(2) of that Regulation are met.
 CHAPTER IV
 SURRENDER OF CBAM CERTIFICATES
 Article 12
 Calculation of the number of CBAM certificates to be surrendered
-1.The CBAM declaration shall be deemed to be accepted by the national competent authorities of the Member State concerned, without prejudice to a review under Article 19 of Regulation (EU) 2023/956. The CBAM declarant shall automatically receive a notification of the number of CBAM certificates to be surrendered on the basis of the information contained in the CBAM declaration.
-2.For goods other than electricity, the number of CBAM certificates to be surrendered shall correspond to the quantity of imported goods multiplied by the specific embedded emissions of those goods, reduced by:
-(a)the specific embedded free allocation; and
-(b)where applicable, the specific embedded carbon price paid.
-3.For the purposes of paragraph 2:
-(a)the specific embedded emissions shall be those determined in accordance with Regulation (EU) 2023/956, Implementing Regulation (EU) 2025/2547 and, where default values are used, Implementing Regulation (EU) 2025/2621;
-(b)the specific embedded free allocation shall be that determined in accordance with Implementing Regulation (EU) 2025/2620;
-(c)the reduction corresponding to a carbon price paid in a third country shall be determined in accordance with Article 9 of Regulation (EU) 2023/956 and Article 7 of Implementing Regulation 2026/2498 using, where applicable, the default carbon prices established by the Commission Implementing Decision adopted pursuant to Article 9(5) of Regulation (EU) 2023/956 for the year concerned;
-4.The calculation of the number of CBAM certificates to be surrendered shall be performed using the values entered or where applicable, confirmed by the authorised CBAM declarant in accordance with Article 6.
+1. The CBAM declaration shall be deemed to be accepted by the national competent authorities of the Member State concerned, without prejudice to a review under Article 19 of Regulation (EU) 2023/956. The CBAM declarant shall automatically receive a notification of the number of CBAM certificates to be surrendered on the basis of the information contained in the CBAM declaration.
+2. For goods other than electricity, the number of CBAM certificates to be surrendered shall correspond to the quantity of imported goods multiplied by the specific embedded emissions of those goods, reduced by:
+(a) the specific embedded free allocation; and
+(b) where applicable, the specific embedded carbon price paid.
+3. For the purposes of paragraph 2:
+(a) the specific embedded emissions shall be those determined in accordance with Regulation (EU) 2023/956, Implementing Regulation (EU) 2025/2547 and, where default values are used, Implementing Regulation (EU) 2025/2621;
+(b) the specific embedded free allocation shall be that determined in accordance with Implementing Regulation (EU) 2025/2620;
+(c) the reduction corresponding to a carbon price paid in a third country shall be determined in accordance with Article 9 of Regulation (EU) 2023/956 and Article 7 of Implementing Regulation 2026/2498 using, where applicable, the default carbon prices established by the Commission Implementing Decision adopted pursuant to Article 9(5) of Regulation (EU) 2023/956 for the year concerned;
+4. The calculation of the number of CBAM certificates to be surrendered shall be performed using the values entered or where applicable, confirmed by the authorised CBAM declarant in accordance with Article 6.
 Article 13
 Rounding of the number of CBAM certificates to be surrendered
-1.The final amount of embedded emissions to be covered by CBAM certificates shall be calculated in tonnes of CO2 equivalent, taking into account all reductions and adjustments applicable pursuant to Regulation (EU) 2023/956.
-2.No rounding shall be applied to intermediate values used for the calculation of the amount referred to in paragraph 1.
-3.For the purpose of determining the number of CBAM certificates to be surrendered, the final result of the calculation referred to in paragraph 1 shall be rounded to the nearest whole number of CBAM certificates.
-4.Where the decimal fraction of the final result is below 0.5, the number of CBAM certificates shall be rounded down. Where the decimal fraction is equal to or above 0.5, the number of CBAM certificates shall be rounded up.
+1. The final amount of embedded emissions to be covered by CBAM certificates shall be calculated in tonnes of CO2 equivalent, taking into account all reductions and adjustments applicable pursuant to Regulation (EU) 2023/956.
+2. No rounding shall be applied to intermediate values used for the calculation of the amount referred to in paragraph 1.
+3. For the purpose of determining the number of CBAM certificates to be surrendered, the final result of the calculation referred to in paragraph 1 shall be rounded to the nearest whole number of CBAM certificates.
+4. Where the decimal fraction of the final result is below 0.5, the number of CBAM certificates shall be rounded down. Where the decimal fraction is equal to or above 0.5, the number of CBAM certificates shall be rounded up.
 Article 14
 Surrender of CBAM certificates
-1.The authorised CBAM declarant shall determine the specific CBAM certificates held in their CBAM account to be surrendered via the CBAM registry in accordance with Article 22 of Regulation (EU) 2023/956.
-2.Where the authorised CBAM declarant is an indirect customs representative, the CBAM certificates in their CBAM account may be surrendered independently per importer.
+1. The authorised CBAM declarant shall determine the specific CBAM certificates held in their CBAM account to be surrendered via the CBAM registry in accordance with Article 22 of Regulation (EU) 2023/956.
+2. Where the authorised CBAM declarant is an indirect customs representative, the CBAM certificates in their CBAM account may be surrendered independently per importer.
 Article 15
 Surrender of additional CBAM certificates
-1.An authorised CBAM declarant who fails to surrender, within the time limit set out in Article 22(1) of Regulation (EU) 2023/956, the correct number of CBAM certificates corresponding to the emissions embedded in the goods imported during the preceding calendar year, as stated in the CBAM declaration in accordance with Article 6 of this Regulation, shall surrender any omitted CBAM certificates without delay. The surrendering of any such omitted certificates shall not preclude the application of Article 26 of Regulation (EU) 2023/956.
-2.The competent authority shall request the authorised CBAM declarant to surrender any omitted CBAM certificates via the CBAM registry.
+1. An authorised CBAM declarant who fails to surrender, within the time limit set out in Article 22(1) of Regulation (EU) 2023/956, the correct number of CBAM certificates corresponding to the emissions embedded in the goods imported during the preceding calendar year, as stated in the CBAM declaration in accordance with Article 6 of this Regulation, shall surrender any omitted CBAM certificates without delay. The surrendering of any such omitted certificates shall not preclude the application of Article 26 of Regulation (EU) 2023/956.
+2. The competent authority shall request the authorised CBAM declarant to surrender any omitted CBAM certificates via the CBAM registry.
 CHAPTER V
 DATA PROTECTION
 Article 16
 Data retention period
-1.In order to achieve the objectives pursued under this Regulation and Regulation (EU) 2023/956, in particular Article 6 thereof, the data retention period for the data in the CBAM registry shall be limited to seven years from the registration in the CBAM registry.
-2.By way of derogation from paragraph 1, where an appeal has been lodged or where there are court proceedings involving data covered by this Regulation, any affected relevant personal data should be retained until the appeal procedure or court proceedings are terminated; in this regard, such data should only be used for the purpose of such appeal procedure or court proceedings.
+1. In order to achieve the objectives pursued under this Regulation and Regulation (EU) 2023/956, in particular Article 6 thereof, the data retention period for the data in the CBAM registry shall be limited to seven years from the registration in the CBAM registry.
+2. By way of derogation from paragraph 1, where an appeal has been lodged or where there are court proceedings involving data covered by this Regulation, any affected relevant personal data should be retained until the appeal procedure or court proceedings are terminated; in this regard, such data should only be used for the purpose of such appeal procedure or court proceedings.
 Article […]
 This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.
 This Regulation shall be binding in its entirety and directly applicable in all Member States.
@@ -154,7 +153,6 @@ The President
 On behalf of the President
 […]
 [Position]
-IMMC.Ares%282026%2910806938.ENG.xhtml.PART-2026-1062658V2.docx
 ANNEX
 Data elements to be included in the CBAM declarations
 When submitting the CBAM declaration, the authorised CBAM declarant shall use the CBAM declaration structure containing the data elements required for the declaration. Those data elements shall include at least, those set out in Table 1 of this Annex and provided in the CBAM Registry.
