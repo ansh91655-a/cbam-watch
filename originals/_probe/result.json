@@ -1,61 +1,6 @@
 {
- "checkedAt": "2026-11-26T07:40:23+00:00",
+ "checkedAt": "2026-11-26T07:59:35+00:00",
  "rows": [
-  {
-   "name": "cellar-pi-com-html",
-   "url": "http://publications.europa.eu/resource/pi_com/C(2026)8367",
-   "status": 404,
-   "contentType": "",
-   "bytes": 56,
-   "sha256": "363c331d9fe111a8c96fbcaf84a8e45b0a28d852f84755c9955f23444e5a2f4f",
-   "isPdf": false,
-   "error": "HTTP Error 404: ",
-   "head": "Resource [system 'intcom' - id 'C(2026)8367'] not found."
-  },
-  {
-   "name": "cellar-pi-com-rdf",
-   "url": "http://publications.europa.eu/resource/pi_com/C(2026)8367",
-   "status": 404,
-   "contentType": "",
-   "bytes": 56,
-   "sha256": "363c331d9fe111a8c96fbcaf84a8e45b0a28d852f84755c9955f23444e5a2f4f",
-   "isPdf": false,
-   "error": "HTTP Error 404: ",
-   "head": "Resource [system 'intcom' - id 'C(2026)8367'] not found."
-  },
-  {
-   "name": "cellar-sparql-api-sale",
-   "url": "https://publications.europa.eu/webapi/rdf/sparql?query=PREFIX+cdm%3A+%3Chttp%3A%2F%2Fpublications.europa.eu%2Fontology%2Fcdm%23%3E%0APREFIX+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0ASELECT+DISTINCT+%3Fwork+%3Fid+%3Fdate+%3Ftitle+WHERE+%7B%0A++%3Fexp+cdm%3Aexpression_title+%3Ftitle+.%0A++%3Ftitle+bif%3Acontains+%22%27repurchase+of+CBAM+certificates%27%22+.%0A++%3Fexp+cdm%3Aexpression_uses_language+%3Chttp%3A%2F%2Fpublications.europa.eu%2Fresource%2Fauthority%2Flanguage%2FENG%3E+%3B+cdm%3Aexpression_belongs_to_work+%3Fwork+.%0A++OPTIONAL+%7B+%3Fwork+cdm%3Awork_date_document+%3Fdate+%7D%0A++OPTIONAL+%7B+%3Fwork+owl%3AsameAs+%3Fid+%7D%0A%7D+LIMIT+60&format=application%2Fsparql-results%2Bjson",
-   "status": 200,
-   "contentType": "application/sparql-results+json",
-   "bytes": 5299,
-   "sha256": "8e82cf9d75bdb53dc2461183f43f2b2791b2d29a1997196762472aa065dd376a",
-   "isPdf": false,
-   "error": "",
-   "head": " { \"head\": { \"link\": [], \"vars\": [\"work\", \"id\", \"date\", \"title\"] }, \"results\": { \"distinct\": false, \"ordered\": true, \"bindings\": [ { \"work\": { \"type\": \"uri\", \"value\": \"http://publications.europa.eu/resource/cellar/5da8f8ff-7b79-11f1-bf5e-01aa75ed71a1\" } , \"id\": { \"type\": \"uri\", \"value\": \"http://publications.europa.eu/resource/intcom/Ares%282026%296860249\" } , \"date\": { \"type\": \"literal\", \"datatype\": \"http://www.w3.org/2001/XMLSchema#date\", \"value\": \"2026-07-09\" } , \"title\": { \"type\": \"literal\", \"xml:lang\": \"en\", \"value\": \"COMMISSION DELEGATED REGULATION (EU) \\u2026/... supplementing Regulation"
-  },
-  {
-   "name": "hys-api-14132",
-   "url": "https://ec.europa.eu/info/law/better-regulation/brpapi/groupInitiatives/14132",
-   "status": 200,
-   "contentType": "application/json;charset=UTF-8",
-   "bytes": 41208,
-   "sha256": "a9d2b187e929234b84c4076a7592b8b6e13c464148a5166b9cacbb5dabaf2da6",
-   "isPdf": false,
-   "error": "",
-   "head": "{\"reference\":\"Ares(2024)546926\",\"unit\":\"SECRETARIAT-GENERAL\",\"dossierSummary\":\"This Delegated Act will set out the conditions for the sale and re-purchase of carbon border adjustment mechanism (CBAM) certificates through a common central platform following a joint procurement procedure between Member States and the Commission. \",\"shortTitle\":\"Sale and repurchase of CBAM certificates\",\"publications\":[{\"id\":17874,\"createdDate\":\"2024/01/24 15:24:10\",\"modifiedDate\":\"2026/07/09 11:08:21\",\"publishedDate\":\"2024/01/30 16:24:10\",\"translationEndDate\":\"2024/01/29 16:24:10\",\"decideSendDate\":\"2024/01/24 15"
-  },
-  {
-   "name": "hys-api-16932",
-   "url": "https://ec.europa.eu/info/law/better-regulation/brpapi/groupInitiatives/16932",
-   "status": 200,
-   "contentType": "application/json;charset=UTF-8",
-   "bytes": 25838,
-   "sha256": "7f22e383e376050b259b04ce1c543069922752e4c8ff47971fe2851e2fd39db4",
-   "isPdf": false,
-   "error": "",
-   "head": "{\"reference\":\"Ares(2026)1634728\",\"unit\":\"SECRETARIAT-GENERAL\",\"dossierSummary\":\"Pursuant to Article 6(6) of the CBAM Regulation, the Commission is empowered to adopt implementing acts as regards to the establishment of the CBAM declarations. \\nThis implementing act will set out rules on the standard format of the CBAM declaration, including detailed information, the procedure for submitting the CBAM declaration via the CBAM registry and the arrangements for surrendering the CBAM certificates.\\n\",\"shortTitle\":\"CBAM declarations\",\"publications\":[{\"id\":22308,\"createdDate\":\"2026/02/13 10:08:31\",\"m"
-  },
   {
    "name": "ec-guidance-page",
    "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-legislation-and-guidance_en",
@@ -118,10 +63,10 @@
    "status": 202,
    "contentType": "text/html; charset=UTF-8",
    "bytes": 2035,
-   "sha256": "c27f394906c844584981b0ab07f33e11d25924e742379def673e76ea81e5cd9c",
+   "sha256": "2f425ca8e11c07926c3d02e8a17e4dc1963fd697f4dfc8ffdd5a4dd1bb6bba6e",
    "isPdf": false,
    "error": "",
-   "head": "<!DOCTYPE html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <title></title> <style> body { font-family: \"Arial\"; } </style> <script type=\"text/javascript\"> window.awsWafCookieDomainList = []; window.gokuProps = { \"key\":\"AQIDAHjcYu/GjX+QlghicBgQ/7bFaQZ+m5FKCMDnO+vTbNg96AHc2mMsO5Pk8YeEGjjC2+8HAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMmyDP2k+JPRWd4JlyAgEQgDuwS0rlZTUhjE8N2Cx0foGJ2jv/+rA+3PNJ4ygOthmsguXKCzmbcFXNPMsNnlQLERUPtk8TG/m4narIow==\", \"iv\":\"D57XUAG+3QAAP3bD\", \"context\":\"cfnvkRp1VMENTJYZhYO3c"
+   "head": "<!DOCTYPE html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <title></title> <style> body { font-family: \"Arial\"; } </style> <script type=\"text/javascript\"> window.awsWafCookieDomainList = []; window.gokuProps = { \"key\":\"AQIDAHjcYu/GjX+QlghicBgQ/7bFaQZ+m5FKCMDnO+vTbNg96AHc2mMsO5Pk8YeEGjjC2+8HAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMmyDP2k+JPRWd4JlyAgEQgDuwS0rlZTUhjE8N2Cx0foGJ2jv/+rA+3PNJ4ygOthmsguXKCzmbcFXNPMsNnlQLERUPtk8TG/m4narIow==\", \"iv\":\"D54rkAHQOAAALwjH\", \"context\":\"JDl5mvePyzOGmBh8eGiyh"
   },
   {
    "name": "eurlex-html",
@@ -129,10 +74,10 @@
    "status": 202,
    "contentType": "text/html; charset=UTF-8",
    "bytes": 2035,
-   "sha256": "766a39a13780eb8dd54019e6138a4cde2102b7b486dfd671518e903aa0528909",
+   "sha256": "1e2d517837034e7742ccac31cf3f8fc52971938c39e6295c4644aa0820915b05",
    "isPdf": false,
    "error": "",
-   "head": "<!DOCTYPE html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <title></title> <style> body { font-family: \"Arial\"; } </style> <script type=\"text/javascript\"> window.awsWafCookieDomainList = []; window.gokuProps = { \"key\":\"AQIDAHjcYu/GjX+QlghicBgQ/7bFaQZ+m5FKCMDnO+vTbNg96AHc2mMsO5Pk8YeEGjjC2+8HAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMmyDP2k+JPRWd4JlyAgEQgDuwS0rlZTUhjE8N2Cx0foGJ2jv/+rA+3PNJ4ygOthmsguXKCzmbcFXNPMsNnlQLERUPtk8TG/m4narIow==\", \"iv\":\"D57XTQG8fwAAPYs3\", \"context\":\"I8uE8wTqLIJWzDbZCVsPk"
+   "head": "<!DOCTYPE html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <title></title> <style> body { font-family: \"Arial\"; } </style> <script type=\"text/javascript\"> window.awsWafCookieDomainList = []; window.gokuProps = { \"key\":\"AQIDAHjcYu/GjX+QlghicBgQ/7bFaQZ+m5FKCMDnO+vTbNg96AHc2mMsO5Pk8YeEGjjC2+8HAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMmyDP2k+JPRWd4JlyAgEQgDuwS0rlZTUhjE8N2Cx0foGJ2jv/+rA+3PNJ4ygOthmsguXKCzmbcFXNPMsNnlQLERUPtk8TG/m4narIow==\", \"iv\":\"D54rlgHQRQAALYls\", \"context\":\"qBiQnW33Vc8LiK/HjO3lQ"
   },
   {
    "name": "hys-api",
@@ -140,7 +85,7 @@
    "status": 200,
    "contentType": "application/json;charset=UTF-8",
    "bytes": 49304,
-   "sha256": "ea3fa7ff8d2b3c5a27ed0edbefe1e3ccd8f478de01da78d05237cbd2afac0b16",
+   "sha256": "12780dcb08fa97bcbdc13258e4dd454f6b9738313793adf2cc95a37192534da4",
    "isPdf": false,
    "error": "",
    "head": "{\"exactMatch\":true,\"initiativeResultDtoPage\":{\"content\":[{\"id\":16932.0,\"initiativeStatus\":\"ACTIVE\",\"reference\":\"Ares(2026)1634728\",\"foreseenActType\":\"REG_IMPL\",\"shortTitle\":\"CBAM declarations\",\"snippet\":\"adopt implementing acts as regards to the establishment of the <span class=\\\"highlight\\\">CBAM</span> declarations. This implementing act will set out rules on the standard format of the <span class=\\\"highlight\\\">CBAM</span> declaration, including detailed information, the procedure for submitting the <span class=\\\"highlight\\\">CBAM</span> declaration via the <span class=\\\"highlight\\\">CBAM</span"
@@ -173,10 +118,10 @@
    "status": 200,
    "contentType": "application/json; charset=utf-8",
    "bytes": 2875,
-   "sha256": "a8921f595ddca7b84de18cf66beb03c0c0ca97021820553245565f8480ffcd87",
+   "sha256": "f6dcdd7d71430dffb56612d30ec0e4d7e4f20e9bc0888fbba014a2f2f276f546",
    "isPdf": false,
    "error": "",
-   "head": "{ \"name\": \"CBAM 규제동향\", \"tagline\": \"EU 탄소국경조정제도(CBAM) 규제 동향\", \"stage\": \"\", \"operator\": \"\", \"notice\": \"이 사이트의 요약과 번역은 참고 자료이며 오류가 있을 수 있습니다. 정확한 내용은 반드시 원문에서 확인해 주세요. 법률 자문이 아닙니다.\", \"independent\": \"개인이 운영하는 비공식 사이트입니다. 유럽연합(EU)과 그 기관의 공식 사이트가 아니며, 그 기관들과 관계가 없습니다.\", \"maker\": { \"name\": \"Iahn\", \"user\": \"ansh91655\", \"host\": \"gmail.com\" }, \"features\": { \"subscribe\": false, \"feedback\": false }, \"url\": \"https://ansh91655-a.github.io/cbam-watch/\", \"builtAt\": \"2026-11-26T08:27:26+09:00\", \"lastCollected\": \"2026-11-26T06:17:15+09:00\", \"counts\": { \"items\": 273, \"events\": 48, \"digests\": 3, \"terms\": 301, \"to"
+   "head": "{ \"name\": \"CBAM 규제동향\", \"tagline\": \"EU 탄소국경조정제도(CBAM) 규제 동향\", \"stage\": \"\", \"operator\": \"\", \"notice\": \"이 사이트의 요약과 번역은 참고 자료이며 오류가 있을 수 있습니다. 정확한 내용은 반드시 원문에서 확인해 주세요. 법률 자문이 아닙니다.\", \"independent\": \"개인이 운영하는 비공식 사이트입니다. 유럽연합(EU)과 그 기관의 공식 사이트가 아니며, 그 기관들과 관계가 없습니다.\", \"maker\": { \"name\": \"Iahn\", \"user\": \"ansh91655\", \"host\": \"gmail.com\" }, \"features\": { \"subscribe\": false, \"feedback\": false }, \"url\": \"https://ansh91655-a.github.io/cbam-watch/\", \"builtAt\": \"2026-11-26T16:48:16+09:00\", \"lastCollected\": \"2026-11-26T06:17:15+09:00\", \"counts\": { \"items\": 273, \"events\": 48, \"digests\": 3, \"terms\": 301, \"to"
   },
   {
    "name": "expert-group-meetings",
