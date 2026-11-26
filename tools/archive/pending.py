@@ -6,6 +6,7 @@
 법령이 관보에 실려 CELEX 번호가 붙으면 여기의 대상에서 빼고 acts.ACTS에 올린다(절차서 20의 '준비 중이던 법령이 나온 날').
 손으로 돌린다: 워크플로 '소급 수집'에서 mode = crawl, steps = eu-pending. EU 기관의 문서는 출처를 밝히고 다시 쓸 수 있다.
 """
+import re
 import urllib.parse
 
 from tools.archive import fulltext
@@ -23,6 +24,22 @@ TARGETS = [
     {"name": "declarations-draft", "number": "Ares(2026)10806938", "reference": "Ares(2026)10806938", "state": "draft",
      "what": "CBAM 신고서 이행규정(안)", "rule": "ir-declarations", "dated": "2026-11-19"},
 ]
+
+
+FILE_NAME = re.compile(r"^IMMC\.\S+\.docx$")                                   # 받아 온 파일의 이름이 글에 섞인 줄
+ACT_HEAD = re.compile(r"^COMMISSION (?:DELEGATED|IMPLEMENTING) REGULATION \(EU\)")  # 법령의 머리 제목. 그 앞의 설명 각서는 싣지 않는다
+GLUED = re.compile(r"^(\d+[a-z]?\.|\(\d+[a-z]?\)|\([a-z]{1,3}\)|\([ivxlc]+\))(?=[^\s.,;:)])")  # 번호가 글에 붙은 줄: "2.A user", "(24)Under", "(a)the"
+
+
+def tidy(lines):
+    """받은 줄을 관보에 실린 법령의 글과 같은 꼴로 다듬는다. (다듬은 줄, 싣지 않은 앞부분의 줄 수)를 돌려준다.
+
+    집행위원회 문서는 관보의 글과 달리 문단 번호가 글에 붙어 있고("2.A user"), 채택본에는 법령 앞에 설명 각서가 실려 있다.
+    문단 번호 뒤를 띄어 두면 법령이 관보에 실렸을 때 글자가 같은 문단의 번역이 그대로 이어진다(번역은 문단의 글자에 붙는다).
+    """
+    kept = [line for line in lines if not FILE_NAME.match(line.strip())]
+    start = next((index for index, line in enumerate(kept) if ACT_HEAD.match(line.strip())), 0)
+    return [GLUED.sub(lambda found: found.group(1) + " ", line) for line in kept[start:]], start
 
 
 def address_of(number):
@@ -56,7 +73,9 @@ def crawl():
         if why:
             failures.append(f"{target['name']} {target['number']}: {why}")
             continue
-        path = save_text(f"eu-pending/{target['name']}.txt", head(target, fetched) + lines)
+        lines, skipped = tidy(lines)
+        note = [f"[앞부분] 법령 앞의 설명 각서 {skipped}줄은 싣지 않음", ""] if skipped else []
+        path = save_text(f"eu-pending/{target['name']}.txt", head(target, fetched)[:-1] + note + ([] if note else [""]) + lines)
         entries.append({"name": target["name"], "number": target["number"], "reference": target["reference"], "state": target["state"], "title": target["what"],
                         "rule": target["rule"], "date": target["dated"], "url": PAGE.format(number=target["number"]), "lines": len(lines), "textPath": path})
     save_index("eu-pending", entries, {"targets": len(TARGETS), "failures": failures})
