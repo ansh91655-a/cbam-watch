@@ -1,5 +1,5 @@
 {
- "acceptedAt": "2026-11-25T08:29:11+09:00",
+ "acceptedAt": "2026-11-26T16:47:01+09:00",
  "seen": {
   "의회 절차의 사건": {
    "2025/0039(COD) 2025-02-26 Legislative proposal published": "COM(2025)0087",
@@ -70,12 +70,12 @@
    "14115 Rules for customs procedures for CBAM purposes": "INIT_PLANNED/DISABLED/2024/01/17~",
    "14829 Adjustment of the obligation to surrender CBAM certificates to take account of ETS free allowances phase-out": "PLANNING_WORKFLOW/CLOSED/2025/08/28~2025/09/25",
    "14748 Extension of the scope of the carbon border adjustment mechanism to downstream products and anti-circumvention measures": "OPC_LAUNCHED/CLOSED/2025/07/01~2025/08/26",
-   "14132 Sale and repurchase of CBAM certificates": "ISC_WORKFLOW/CLOSED/2026/07/09~2026/08/06",
    "14828 Carbon border adjustment mechanism (CBAM) methodology for the definitive period": "PLANNING_WORKFLOW/CLOSED/2025/08/28~2025/09/25",
    "14830 Carbon price paid in a third country under the carbon border adjustment mechanism (CBAM)": "ISC_WORKFLOW/CLOSED/2026/05/13~2026/06/10",
    "12228 Carbon Border Adjustment Mechanism": "ADOPTION_WORKFLOW/CLOSED/2021/07/15~2021/11/18",
    "14117 Establishment of the CBAM Registry": "ADOPTION_WORKFLOW/DISABLED/2025/01/03~",
    "14116 Authorisation of CBAM declarants": "ADOPTION_WORKFLOW/DISABLED/2025/03/28~",
+   "14132 Sale and repurchase of CBAM certificates": "ADOPTION_WORKFLOW/DISABLED/2026/11/25~",
    "14133 Conditions for granting accreditation for CBAM purposes": "ADOPTION_WORKFLOW/DISABLED/2025/11/20~",
    "14759 Commission Implementing Regulation for goods brought to the exclusive economic zone of Member States": "ADOPTION_WORKFLOW/DISABLED/2025/11/30~"
   },
