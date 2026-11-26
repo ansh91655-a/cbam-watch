@@ -77,6 +77,7 @@
 문서 번호: Ares(2024)546926
 예정 법령 유형: REG_DEL
 단계: ADOPTION_WORKFLOW | 의견수렴 상태: DISABLED | 시작: 2026/11/25 11:51:00 | 마감: 
+앞선 단계: ISC_WORKFLOW | 의견수렴 상태: CLOSED | 시작: 2026/07/09 11:08:21 | 마감: 2026/08/06 23:59:59
 
 번호: 14133
 제목: Conditions for granting accreditation for CBAM purposes
