@@ -1,0 +1,17 @@
+{
+ "kind": "daily",
+ "date": "2026-11-26",
+ "writtenAt": "2026-11-26T10:06:03+09:00",
+ "status": "문제",
+ "problems": [
+  "규제 자료: 연혁이나 분석의 근거가 공식 기록과 달라짐 2건(규제 dr-sale-repurchase 2026-07-09)"
+ ],
+ "runProblems": 2,
+ "holds": [],
+ "counts": {
+  "published": 2,
+  "total": 273,
+  "retryHolds": 1
+ },
+ "handbookToReview": []
+}
