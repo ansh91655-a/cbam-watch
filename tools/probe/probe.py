@@ -14,6 +14,12 @@ from tools.probe import forms
 
 TARGETS = [
     # (이름, 주소, 더할 머리글). 닿는지 모르는 주소만 둔다. 닿는 것이 확인된 출처는 tools.collect가 맡는다.
+    # 관보에 실리기 전의 법령 글(채택본, 초안)을 자동 실행이 어디서 받을 수 있는지 알아본다(2026-11-26. EUR-Lex의 문서 번호 주소는 202를 돌려주었다)
+    ("cellar-pi-com-html", "http://publications.europa.eu/resource/pi_com/C(2026)8367", {"Accept": "application/xhtml+xml, text/html;q=0.9", "Accept-Language": "eng"}),
+    ("cellar-pi-com-rdf", "http://publications.europa.eu/resource/pi_com/C(2026)8367", {"Accept": "application/rdf+xml"}),
+    ("cellar-sparql-api-sale", "https://publications.europa.eu/webapi/rdf/sparql?query=PREFIX+cdm%3A+%3Chttp%3A%2F%2Fpublications.europa.eu%2Fontology%2Fcdm%23%3E%0APREFIX+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0ASELECT+DISTINCT+%3Fwork+%3Fid+%3Fdate+%3Ftitle+WHERE+%7B%0A++%3Fexp+cdm%3Aexpression_title+%3Ftitle+.%0A++%3Ftitle+bif%3Acontains+%22%27repurchase+of+CBAM+certificates%27%22+.%0A++%3Fexp+cdm%3Aexpression_uses_language+%3Chttp%3A%2F%2Fpublications.europa.eu%2Fresource%2Fauthority%2Flanguage%2FENG%3E+%3B+cdm%3Aexpression_belongs_to_work+%3Fwork+.%0A++OPTIONAL+%7B+%3Fwork+cdm%3Awork_date_document+%3Fdate+%7D%0A++OPTIONAL+%7B+%3Fwork+owl%3AsameAs+%3Fid+%7D%0A%7D+LIMIT+60&format=application%2Fsparql-results%2Bjson", {"Accept": "application/sparql-results+json"}),
+    ("hys-api-14132", "https://ec.europa.eu/info/law/better-regulation/brpapi/groupInitiatives/14132", {"Accept": "application/json"}),
+    ("hys-api-16932", "https://ec.europa.eu/info/law/better-regulation/brpapi/groupInitiatives/16932", {"Accept": "application/json"}),
     ("ec-guidance-page", "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-legislation-and-guidance_en", {}),
     ("cellar-consolidated-html", "http://publications.europa.eu/resource/celex/02023R0956-20251020", {"Accept": "text/html, application/xhtml+xml", "Accept-Language": "eng"}),
     ("cellar-consolidated-pdf", "http://publications.europa.eu/resource/celex/02023R0956-20251020", {"Accept": "application/pdf", "Accept-Language": "eng"}),
