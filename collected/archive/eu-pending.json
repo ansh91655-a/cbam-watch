@@ -1,13 +1,35 @@
 {
  "source": "eu-pending",
- "fetchedAt": "2026-11-26T16:37:54+09:00",
+ "fetchedAt": "2026-11-26T16:47:15+09:00",
  "since": "2025-01-01",
  "report": {
   "targets": 2,
-  "failures": [
-   "sale-repurchase-adopted PI_COM:C(2026)8367: 응답 202",
-   "declarations-draft PI_COM:Ares(2026)10806938: 응답 202"
-  ]
+  "failures": []
  },
- "entries": []
+ "entries": [
+  {
+   "name": "sale-repurchase-adopted",
+   "number": "C(2026)8367",
+   "reference": "C(2026) 8367 final",
+   "state": "adopted",
+   "title": "CBAM 인증서 판매·환매 위임규정(채택본)",
+   "rule": "dr-sale-repurchase",
+   "date": "2026-11-25",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=PI_COM:C(2026)8367",
+   "lines": 353,
+   "textPath": "collected/archive/pages/eu-pending/sale-repurchase-adopted.txt"
+  },
+  {
+   "name": "declarations-draft",
+   "number": "Ares(2026)10806938",
+   "reference": "Ares(2026)10806938",
+   "state": "draft",
+   "title": "CBAM 신고서 이행규정(안)",
+   "rule": "ir-declarations",
+   "date": "2026-11-19",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=PI_COM:Ares(2026)10806938",
+   "lines": 322,
+   "textPath": "collected/archive/pages/eu-pending/declarations-draft.txt"
+  }
+ ]
 }

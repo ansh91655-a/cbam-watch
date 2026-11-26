@@ -1,11 +1,8 @@
 {
- "ranAt": "2026-11-26T16:37:54+09:00",
+ "ranAt": "2026-11-26T16:47:15+09:00",
  "since": "2025-01-01",
  "result": {
-  "stored": 0,
-  "failures": [
-   "sale-repurchase-adopted PI_COM:C(2026)8367: 응답 202",
-   "declarations-draft PI_COM:Ares(2026)10806938: 응답 202"
-  ]
+  "stored": 2,
+  "failures": []
  }
 }

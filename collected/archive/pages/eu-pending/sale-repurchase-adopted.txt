@@ -1,0 +1,360 @@
+[주소] https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=PI_COM:C(2026)8367
+[받은 곳] http://publications.europa.eu/resource/pi_com/C%282026%298367
+[무엇] CBAM 인증서 판매·환매 위임규정(채택본)
+[문서 번호] C(2026) 8367 final
+[상태] EU 집행위원회가 채택함. 관보에 실리기 전의 글
+[문서의 날짜] 2026-11-25
+
+IMMC.C%282026%298367.ENG.xhtml.PART-2026-1191202V1.docx
+EXPLANATORY MEMORANDUM
+1.CONTEXT OF THE DELEGATED ACT
+Regulation (EU) 2023/956 of the European Parliament and of the Council 1 establishes a carbon border adjustment mechanism (CBAM) to address greenhouse gas emissions embedded in certain goods imported into the customs territory of the Union in order to prevent the risk of carbon leakage, and to create incentives for the reduction of global carbon emissions.
+Regulation (EU) 2023/956 was amended by Regulation (EU) 2025/2083 of the European Parliament and of the Council 2 . That Regulation introduced simplifications and cost-efficient improvements to CBAM without affecting the achievement of objectives in this policy area. The amendments have enabled a more efficient CBAM, since the start of the definitive period in 2026, while the key design principles of the mechanism and the environmental objective of CBAM remained unchanged. The amendments both eased the administrative burden to facilitate compliance and strengthened CBAM through reinforced monitoring and anti-abuse measures.
+From February 2027, authorised CBAM declarants will buy CBAM certificates to comply with their CBAM obligations. They will buy CBAM certificates from the Member State where they are established. Article 20 of Regulation (EU) 2023/956 provides for rules on the sale and repurchase of CBAM certificates on the common central platform. This platform is to be established and managed by the European Commission following a joint procurement procedure with the Member States. To that end, a joint procurement agreement was signed by all Member States and the Commission and entered into force on 16 December 2025.
+Article 20 of Regulation (EU) 2023/956 also empowers the European Commission to adopt acts specifying the timing, administration, structure and level of fees and other aspects related to the management of the sale and repurchase of CBAM certificates, as well as the organisation and use of the common central platform, seeking consistency with the procedures laid down in Commission Delegated Regulation (EU) 2023/2830 3 . Such acts are to ensure that the organisation and use of the common central platform are cost-efficient, that the level of fees is set so as to strictly cover the relevant costs and that undue administrative costs are avoided.
+2.CONSULTATIONS PRIOR TO THE ADOPTION OF THE ACT
+The Commission established the Informal Expert Group on CBAM on 27 October 2023. For the preparation of this Delegated Regulation, meetings of the expert group were held on 17 July 2026, 1 September 2026, 8 October 2026 and 22 October 2026.
+The documents relevant to the meetings have been transmitted simultaneously to the European Parliament and the Council of the European Union, as provided for in the Common Understanding on Delegated Acts annexed to the Interinstitutional Agreement on Better Law-Making 4 . The observations made by the expert group were taken into account when preparing the draft delegated regulation.
+3.LEGAL ELEMENTS OF THE DELEGATED ACT
+The delegated regulation will set out the detailed arrangements of the sale and repurchase of CBAM certificates on the common central platform. It will lay down the rules necessary to operate the lifecycle of CBAM certificates across the two systems, the common central platform and the CBAM registry, established by the Commission, where CBAM certificates will be held and surrendered. It will also lay down rules on the fees to be paid by authorised CBAM declarants when buying CBAM certificates on the common central platform.
+COMMISSION DELEGATED REGULATION (EU) …/...
+of 25.11.2026
+supplementing Regulation (EU) 2023/956 of the European Parliament and of the Council by further specifying the timing, administration, structure and level of fees and other aspects related to the management of the sale and repurchase of CBAM certificates, as well as the organisation and use of the common central platform, including the fees to cover the costs of the operation and management of the platform
+(Text with EEA relevance)
+THE EUROPEAN COMMISSION,
+Having regard to the Treaty on the Functioning of the European Union,
+Having regard to Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023 establishing a carbon border adjustment mechanism 5 , and in particular Article 20(5a), third subparagraph, and Article 20(6) thereof,
+Whereas:
+(1)Since 1 January 2026, the Union’s Carbon Border Adjustment Mechanism (’CBAM’) established by Regulation (EU) 2023/956 has entailed a financial adjustment corresponding to the greenhouse gas emissions embedded in goods, falling within the scope of CBAM, that authorised CBAM declarants imported into the customs territory of the Union during the preceding calendar year. That financial adjustment takes the form of CBAM certificates that authorised CBAM declarants will have to surrender.
+(2)CBAM complements the system for greenhouse gas emission allowance trading within the Union (‘EU ETS’) by applying an equivalent set of rules to imports into the customs territory of the Union of the goods covered by this Regulation. CBAM certificates correspond to the same amount of embedded emissions as ETS allowances, that is, one ton of CO2 equivalent. Pursuant to Article 21 of Regulation (EU) 2023/956, the Commission is to calculate the price of CBAM certificates for each calendar week as the average of the prices of EU ETS allowances auctioned in accordance with Commission Delegated Regulation (EU) 2023/2830 6 .
+(3)Pursuant to Article 14(1) of Regulation (EU) 2023/956, the Commission is to establish a CBAM registry (‘the CBAM registry’), which is the system for the filing and management of the CBAM declarations referred to in Article 6 of that Regulation, including checks, indicative assessments, and review procedures. The CBAM registry contains data, inter alia, on the authorised CBAM declarants, applicants and operators and installations in third countries.
+(4)However, pursuant to Article 20 of Regulation (EU) 2023/956, the sale and repurchase of CBAM certificates are to take place on a common central platform that is distinct from the CBAM registry. Unlike the CBAM registry, the common central platform is to be established and managed by the Commission following a joint procurement procedure with the Member States.
+(5)Member States are to sell and repurchase CBAM certificates to and from authorised CBAM declarants established in their territory. The sale and repurchase of CBAM certificates take place by means of a mechanism established by Article 20 of Regulation (EU) 2023/956 to ensure the proper functioning of CBAM and to contribute to the prevention of carbon leakage and the reduction of greenhouse gas emissions. The sale and repurchase is carried out by the Member States. Unlike in the EU ETS, the sale and repurchase of CBAM certificates do not take place in a market in which those Member States participate as economic operators. By carrying out the sale and repurchase of CBAM certificates, Member States act solely for the purpose of implementing Union law and performing the tasks entrusted to them under Regulation (EU) 2023/956.
+(6)As CBAM does not rely on a ’cap and trade’ system, there should not be any limits on the number of CBAM certificates sold by Member States to authorised CBAM declarants. For the same reason, there should not be any procedures that would allow Member States to prevent or delay the sale of CBAM certificates to authorised CBAM declarants.
+(7)In the absence of restrictions on the number of CBAM certificates that Member States sell to authorised CBAM declarants established in their territory, Member States should not be required to take any action to deliver CBAM certificates or to deposit any collaterals. To reduce administrative burden and costs, the overall CBAM system processes should be designed in a way that allows efficient and secure automation of the tasks to the maximum extent possible.
+(8)Pursuant to Article 20 of Regulation (EU) 2023/956, information on CBAM certificates should be electronically processed and stored in authorised CBAM declarants’ accounts held in the CBAM registry. Upon their creation, CBAM certificates should be assigned only to the purchasing authorised CBAM declarant and ownership of such certificates should not be transferrable to any other persons on any market or to another CBAM account in the CBAM registry to prevent any risk of misuse, double-counting, or circumvention of the obligations under Regulation (EU) 2023/956.
+(9)The management of CBAM certificates involves different systems established for different purposes: the CBAM registry established under Article 14 of Regulation (EU) 2023/956, including personal data processing for CBAM certificates management in accordance with Article 19(3), point (c), of Commission Implementing Regulation (EU) 2024/3210 7 , and the common central platform established under Article 20 of Regulation (EU) 2023/956. It also involves the interface between these two systems. To ensure the efficient, secure, and transparent management of CBAM certificates, it is necessary to separate the functions of the CBAM registry and that of the common central platform regarding the sale and repurchase. The CBAM registry is the centralised electronic system for tracking the issuance, holding, surrender, and cancellation of CBAM certificates. The common central platform is responsible for the financial transactions related to the sale and repurchase of certificates, including the payment processing and settlement of transactions.
+(10)The common central platform should only hold information necessary to operate the banking operations related to the sale and repurchase of CBAM certificates, while the CBAM registry should retain all other relevant information relating to the sale and repurchase of CBAM certificates. Such separation would reduce the exposure of data and the risk of unauthorised access thereto.
+(11)Strong digital security is essential to protect sensitive financial data and ensure the reliability of every banking operation, thereby preserving user trust. In order to enhance such strong digital security, it is necessary that the common central platform is independent but connected to the CBAM registry. To ensure that the management of the sale and repurchase of CBAM certificates is safe, IT security measures should be implemented across those two systems. It is also crucial to ensure that every sale or repurchase of CBAM certificates can only take place if the information on that operation received from the CBAM registry is accurate and the security of that operation is not compromised.
+(12)To enhance security and integrity across the two systems, namely, the CBAM registry and the common central platform, the sale and repurchase of CBAM certificates on the common central platform should be based on processes initiated through the CBAM registry. Declarants should enter purchase and repurchase requests into the CBAM registry based on the CBAM certificates held therein, before the common central platform handles the related payments.
+(13)As the common central platform is to only carry out payments corresponding to the sale and repurchase of CBAM certificates, its users should be limited to importers or their representatives that have been granted the status of ‘authorised CBAM declarant’. However, importers or representatives whose authorisations have been revoked and that still have CBAM obligations to fulfil through the CBAM registry should also be able to use the common central platform for the sale and repurchase of CBAM certificates.
+(14)For persons whose status of authorised CBAM declarant has been revoked pursuant to Article 17(8) of Regulation (EU) 2023/956, access should be open as long as it is necessary for them to fulfil their obligations or exercise their rights under Regulation (EU) 2023/956. This may also be the case following a review of CBAM declarations conducted by a competent authority of the Member State pursuant to Article 19 of Regulation (EU) 2023/956, which may take place within the period ending with the fourth year after the year during which the CBAM declarations should have been submitted.
+(15)Pursuant to Article 23(3) of Regulation (EU) 2023/956, CBAM certificates are to be repurchased at the same price as the price paid at the moment of purchase. However, exchange-rate fluctuations occurring between the time of purchase and that of the subsequent repurchase of CBAM certificates could result in financial gains or losses unrelated to the certificate price. In order to eliminate risks arising from currency conversions and exchange-rate fluctuations over time and support uniform application across the Union, the price of CBAM certificates should be registered in the CBAM registry in euro only, and all payments related to the sale and repurchase should be made in euro. This will also ensure identical information between the CBAM registry and the common central platform and data reconciliation.
+(16)Pursuant to Article 23 of Regulation (EU) 2023/956, authorised CBAM declarants may enter a repurchase request into the CBAM registry to have the excess CBAM certificates remaining on their account repurchased after they have surrendered them in accordance with Article 22 of that Regulation. In accordance with the latter provision, CBAM certificates are to be surrendered by 30 September of each year. Therefore, declarants should not be eligible to the repurchase right where they fail to surrender, by 30 September each year, the number of certificates which corresponds to the annual CBAM declaration.
+(17)Furthermore, allowing authorised CBAM declarants to enter multiple repurchase requests into the CBAM registry would increase administrative complexity, hinder effective control and enable optimisation strategies aimed at profiting from price fluctuations over time. To ensure the efficient and verifiable administration of the repurchase process, authorised CBAM declarants should therefore be allowed to submit only one repurchase request per year, except where the repurchase follows a revocation of authorisation. Such a limitation would contribute to legal certainty and sound financial management.
+(18)To ensure the consistent and proper functioning of the repurchase mechanism, the limit applicable to the repurchase of CBAM certificates pursuant to Article 23(2) of Regulation (EU) 2023/956 should apply to all repurchases, including those following a review of the annual CBAM declarations pursuant to Article 19(6) of that Regulation. Applying a single limit to all repurchases is necessary to prevent the risk of circumvention of the repurchase limit, in particular in situations where authorised CBAM declarants overestimate declared emissions and could otherwise seek to repurchase a larger number of certificates than permitted under that repurchase limit.
+(19)To allow authorised CBAM declarants flexibility and autonomy in managing their financial liability while ensuring CBAM’s operational efficiency, in line with the principles of proportionality and administrative simplicity, authorised CBAM declarants should, in the CBAM registry, be able to select which certificates they request to be repurchased. To safeguard the integrity of the CBAM system, prevent any potential abusive practices or any other unintended consequences that could undermine the environmental effectiveness of CBAM, the Commission should closely monitor that flexibility and introduce additional measures or specific rules restricting that flexibility in the selection of CBAM certificates for repurchase where necessary, based on the evidence of such abusive practices or unintended consequences.
+(20)To ensure the integrity and predictability of the CBAM certificate management and streamline the processing of repurchase requests, repurchase requests submitted by authorised CBAM declarants should be irrevocable and non-amendable in the CBAM registry from the start of the repurchase approval process.
+(21)Pursuant to Article 23 of Regulation (EU) 2023/956, Member States are to finance, upon an authorised CBAM declarant’s request, the repurchase of excess CBAM certificates from the authorised CBAM declarants established in their territory. Those excess CBAM certificates are to be repurchased through the common central platform established and managed by the Commission. The repurchase procedure from the CBAM registry to the common central platform is more complex than the purchase procedure, as it requires additional procedural steps.
+(22)To reduce the administrative burden and avoid the need for manual approval by the Member States, the repurchase process should be automated in the CBAM registry. To ensure the timely and consistent processing of repurchase requests pursuant to Article 23 of Regulation (EU) 2023/956, it is appropriate to set a deadline within which repurchase requests should be processed. Establishing such a deadline would enhance legal certainty for authorised CBAM declarants, support administrative efficiency and ensure the uniform application of this Regulation. Upon expiration of this deadline, the Commission should repurchase the CBAM certificates through the common central platform on behalf of the Member State where the authorised CBAM declarant is established. At the same time, that deadline should allow sufficient time for Member States to ensure the availability of the necessary funds. As the role of the Commission is to process the repurchase on behalf of the Member States, any legal redress that could be sought in this context is to be directed against the authorities of the Member State concerned.
+(23)In order to ensure that the proceeds from the repurchase of CBAM certificates accrue to the authorised CBAM declarant, mitigate the risks of fraud, erroneous payments and money laundering, and to limit the administrative burden associated with the verification of bank accounts, the ability of authorised CBAM declarants to designate a bank account for the payments of repurchased certificates on the common central platform should be restricted to certain bank accounts that those declarants have already used to purchase CBAM certificates on that platform.
+(24)Under Article 24 of Regulation (EU) 2023/956, on 1 November of each year the Commission is to cancel, without compensation, any CBAM certificates that were purchased during the year before the previous calendar year and that remained in the account of an authorised CBAM declarant in the CBAM registry. To avoid interference with the repurchase process and avoid double-use of CBAM certificates concerned by a pending repurchase request, it is appropriate to make such CBAM certificates no longer available on the authorised CBAM declarant’s account in the CBAM registry.
+(25)By communicating relevant information via the interface in a nearly real-time continuous manner, the CBAM registry and the common central platform should be able to execute their respective tasks. Such information exchange should ensure that the common central platform carries out payments based on information on purchase and repurchase requests received from the CBAM registry. In turn, the common central platform should communicate the information on transactions it carries out or on incidents to the CBAM registry, before the CBAM certificates are generated accordingly in the CBAM registry. The Commission is to ensure that each CBAM certificate is assigned a unique identification number upon its creation, and to register the unique identification number, as well as the price and date of sale of the CBAM certificate, in the CBAM registry in the account of the authorised CBAM declarant purchasing that certificate.
+(26)To further strengthen the security and integrity of the sale and repurchase processes, there should be data reconciliation across the two systems, whereby the information is compared and verified to ensure its completeness, accuracy and consistency. In addition, CBAM certificates should be made available to authorised CBAM declarants in the CBAM registry only if the corresponding sum has been paid. Therefore, it should be ensured that the status change of purchase requests is made in the CBAM registry only upon confirmation by the common central platform of effective payment.
+(27)For the system to be at its most efficient, it is appropriate that the common central platform sends the information on the sale and repurchase of CBAM certificates to the CBAM registry. In turn, it should be ensured that that information is made available without undue delay to each Member State in the CBAM registry. However, the Member States should only have access to the information on operations relating to authorised CBAM declarants established in the territory of that Member State.
+(28)For the common central platform to carry out the payments related to the sale and repurchase of CBAM certificates, authorised CBAM declarants and Member States should designate the bank accounts they will use to receive the corresponding funds. Member States should be able to designate that bank account outside of the common central platform. Based on banking information it holds, and on the information received from the CBAM registry in relation to sale and repurchase requests that have been entered into the CBAM registry by authorised CBAM declarants, the common central platform should carry out the corresponding payments.
+(29)To provide legal certainty and mitigate the risk of reversal, the common central platform should carry out the payment corresponding to a sale or a repurchase of CBAM certificates by transferring the sum paid from the payer’s designated bank account to that of the payee’s designated bank account in cleared funds, thereby ensuring that the funds have been fully settled and are available on the payee’s bank account. Such transfer of funds should be carried out by the common central platform on the same day of the payment to avoid a time gap between the payment and effective money transfers.
+(30)The common central platform should inform the Commission through the CBAM registry of any scheduled unavailability of operations to ensure operational continuity and allow appropriate coordination. In turn, the Commission should make this information available to users and Member States in the CBAM registry. To safeguard the system’s integrity and reliability, the common central platform should also refrain from executing payments in relation to purchase or repurchase requests where there are indications that the information received from the CBAM registry is inaccurate or that the security of the operation or the common central platform may be compromised.
+(31)To ensure integrity and confidentiality of transactions, and that information is subject to appropriate controls, users should only access the common central platform to make payments from the CBAM registry and during the same operating time as the CBAM registry.
+(32)To ensure effective user support and timely resolution of operational issues, the common central platform should establish and maintain a helpline service accessible to all users. It should also collaborate with Member States and the Commission and share the information necessary for the resolution of any incident, thereby ensuring coordinated incident management.
+(33)To ensure the full integrity of the system, the common central platform should also implement adequate control, risk management and monitoring to make sure that payees receive, in a timely manner, the full sums corresponding to payments with any of the methods used by the common central platform to transfer funds.
+(34)To ensure appropriate monitoring of the management of CBAM certificates, the information stored on the common central platform should be made available to the Member States and to the Commission.
+(35)Pursuant to Article 20(5a) of Regulation (EU) 2023/956, the costs incurred in connection with establishing, operating and managing the common central platform are to be financed by fees payable by authorised CBAM declarants. Such fees should be applied to the sale of CBAM certificates. They should directly finance the costs of the platform, except for the first joint procurement contract, where those costs should initially be borne by the general budget of the Union and reimbursed by means of such fees, which for that purpose are to constitute internal assigned revenues.
+(36)To protect the financial interests of the Union and avoid undue administrative costs, the fee to be applied to the sale of CBAM certificates should be set at a level that ensures that the costs incurred by the establishment, operation, and management of the common central platform during the first joint procurement contract, as initially borne by the general budget of the Union, are covered. However, the fees should not exceed these costs to preserve the integrity and fairness of the CBAM mechanism. The level of the fee should be subject to regular review and adjusted if necessary, to strictly cover the relevant costs.
+(37)To ensure an efficient collection system, the fees should be paid by authorised CBAM declarants upon payment of the CBAM certificates. The common central platform should collect the fees from the payments made by authorised CBAM declarants. The common central platform should transfer the revenue generated by the sale of CBAM certificate to the relevant Member States. For the duration of the first joint public procurement contract, the corresponding fees should be transferred to the Commission. For the subsequent procurement contracts, the fees collected by the common central platform should represent its payment for the services provided. Therefore, the common central platform should operate a payment system which makes a distinction between revenue from the sale of CBAM certificates and the corresponding fees.
+(38)To ensure predictability and simplicity for authorised CBAM declarants, fees should be set at a fixed amount in euro, irrespective of the CBAM certificate price or the selling Member State. The fee to be paid by authorised CBAM declarants should be multiplied by the number of CBAM certificates concerned by the purchase request. This will also align with the structure of fees applied on the auction of EU ETS allowances pursuant to Delegated Regulation (EU) 2023/2830.
+(39)The repurchase of CBAM certificates is a process which allows a certain flexibility as regards how authorised CBAM declarants will manage their CBAM financial liability and mitigate the risk of over-purchase of CBAM certificates without compensation due to possible uncertainties at the time of import with respect to some important parameters, such as the carbon price paid in a third country. To avoid double charges, fees should be applied only to operations carried out by the common central platform in relation to the sale of CBAM certificates.
+(40)Pursuant to Article 19 of Implementing Regulation (EU) 2024/3210, the competent authorities of Member States and the Commission are joint controllers for the personal data processing for the CBAM certificates management in accordance with Regulation (EU) 2023/956. Competent authorities of Member States and the Commission process personal data registered on the CBAM Registry and on the common central platform in line with their tasks as specified in Regulation (EU) 2023/956 and, as such, they act as data controllers in the meaning of Article 26 of Regulation (EU) 2016/679 and Article 28 of Regulation (EU) 2018/1725 for the management of the CBAM certificates purchased or repurchased on the common central platform.
+(41)Personal data should be kept in a form which permits the identification of data subjects for no longer than necessary for the purposes for which personal data are processed. Pursuant to Article 19 of Regulation (EU) 2023/956, the Commission and competent authorities of Member States may review CBAM declarations up to the end of the fourth year after the year during which the CBAM declaration should have been submitted. As reviews may result in further sales or repurchases of CBAM certificates, and as a maximum period of up to seven years may need to be taken into consideration for purposes such as the revision of CBAM declarations, it is appropriate that the data retention period for information on the sale and repurchase of CBAM certificates in the CBAM registry and on the common central platform, as well as the period during which information recorded on the common central platform is kept, is aligned with the period within which CBAM declarations may be reviewed.
+(42)To ensure a good coordination between the common central platform and the CBAM registry, the information recorded every day should be reported from the common central platform to the Commission, via the CBAM registry. That report is crucial to ensure the reliability and security of the information recorded in the common central platform, and to ensure that all parties involved have exactly the same information concerning the sale and repurchase of CBAM certificates, as well as any information related to those activities.
+(43)In accordance with Article 20(2), second subparagraph, of Regulation (EU) 2023/956, the Commission and the competent authorities of the Member States are to have access to the information in the common central platform. Accordingly, all parties involved in the common central platform should have access to the information recorded therein, which falls within each party’s competence. Such access should be free of charge
+(44)While the sale of CBAM certificates on the common central platform is to start on 1 February 2027 pursuant to Article 20(1) of Regulation (EU) 2023/956, Member States and the Commission, as contracting parties, should undertake a joint procurement procedure in order to appoint the common central platform provided for in Article 20(2) of Regulation (EU) 2023/956 before the sale of CBAM certificates on that platform starts. Therefore, while this Regulation should apply from 1 February 2027, the rules it lays down on the procurement and establishment of the common central platform should apply from the day of entry into force of this Regulation. In order to ensure the timely and uninterrupted functioning of the sales of CBAM certificates and avoid a disruption in the application of this Regulation, it should enter into force on the day of its publication in the Official Journal of the European Union.
+(45)The European Data Protection Supervisor was consulted in accordance with Article 42(1) of Regulation (EU) 2018/1725 and delivered an opinion on 8 September 2026,
+HAS ADOPTED THIS REGULATION:
+CHAPTER I
+GENERAL PROVISIONS
+Article 1
+Definitions
+For the purposes of this Regulation, the following definitions apply:
+(1)‘user’ means an authorised CBAM declarant or, in the cases referred to in Article 16(4) of Regulation (EU) 2023/956, an authorised CBAM declarant whose CBAM account has not yet been closed;
+(2)‘available CBAM certificate’ means a CBAM certificate which may be surrendered by a user to fulfil their obligations pursuant to Article 19(5) or 22(1) of Regulation (EU) 2023/956;
+(3)‘price of CBAM certificate’ means the price of a CBAM certificate as calculated by the Commission pursuant to Article 21 of Regulation (EU) 2023/956;
+(4)‘date of purchase’ means the calendar day on which the total sum of a payment corresponding to the purchase of a CBAM certificate is received in cleared funds by the common central platform;
+(5)‘date of credit’ means the calendar day on which a CBAM certificate is made available on the CBAM account of the user;
+(6)‘payment system’ means a payment system as defined in Article 4, point (7), of Directive (EU) 2015/2366 of the European Parliament and of the Council 8 ;
+(7)‘appointment of the common central platform’ means the award of a contract following the procurement procedure referred to in Article 20(2), first subparagraph, of Regulation (EU) 2023/956;
+(8)‘status of a CBAM certificate’ means the state assigned to a CBAM certificate at a given moment in time, as determined by the actions affecting that certificate in the CBAM registry. A CBAM certificate may have one of the following statuses: “credited”, “to be repurchased”, “repurchased”, “suspended for cancellation”, “cancelled” and “surrendered”.
+CHAPTER II
+SALES AND REPURCHASE OF CBAM CERTIFICATES
+Article 2
+Purchase request
+1.A user shall enter a purchase request (‘purchase request’) into the CBAM registry as referred to in Article 14(1) of Regulation (EU) 2023/956 (‘the CBAM registry’).
+The number of CBAM certificates concerned by a purchase request shall be a round number that is equal or superior to 1 and less than or equal to 99 999.
+2.The purchase request entered into the CBAM registry by a user shall be assigned an identification number. It shall be ensured that the following information is registered:
+(a)the identification number of the purchase request;
+(b)the number of CBAM certificates;
+(c)the price of each CBAM certificate as calculated in accordance with Implementing Regulation 2025/2548 9 ;
+(d)the total amount to be paid for the CBAM certificates;
+(e)the fee per CBAM certificate referred to in Article 15;
+(f)the total amount of fees;
+(g)the total amount of the purchase request.
+The price of the CBAM certificate concerned by a purchase request shall be kept up to date in the CBAM registry.
+3.A user shall not amend a purchase request after a purchase request has been entered into the CBAM registry by the user. A user may withdraw such purchase request only before the payment has been made on the common central platform pursuant to Article 13.
+4.The status of a purchase request shall be kept up to date in the CBAM registry.
+Article 3
+Creation of CBAM certificates
+1.Upon confirmation by the common central platform of the payment completion, the CBAM certificates shall be created in the CBAM account referred to in Article 16 of Regulation (EU) 2023/956 (‘the CBAM account’) of the authorised CBAM declarant by means of a standardised electronic format.
+2.Upon creation of a CBAM certificate, the following information shall be registered in the CBAM registry:
+(a)the unique identification number of the CBAM certificate;
+(b)the unique CBAM account number of the user;
+(c)the Member State where the user is established;
+(d)the price of the CBAM certificate;
+(e)the date of credit;
+(f)the status of the CBAM certificate;
+(g)the identification number of the purchase request.
+Article 4
+Repurchase request
+1.Where a user requests the repurchase of CBAM certificates pursuant to Article 23 of Regulation (EU) 2023/956, the user shall enter a repurchase request into the CBAM registry (‘repurchase request’) containing the CBAM certificates they request to be repurchased, if all the following conditions are met:
+(a)the number of CBAM certificates shall be a round number that is equal or superior to 1;
+(b)the number of CBAM certificates does not exceed the limit referred to in Article 23(2) of Regulation (EU) 2023/956;
+(c)the CBAM certificates are available in the CBAM account of the user, in accordance with Article 5, or, in the case of a review of a declaration pursuant to Article 19(5) of Regulation (EU) 2023/956, were surrendered in excess by the declarant following the conclusion by the competent authority of the Member State of the review;
+(d)the user fulfils one of the following conditions:
+–the user has complied with the obligation, pursuant to Article 22 of Regulation (EU) 2023/956, to surrender, by 30 September, the number of CBAM certificates that correspond to the embedded emissions declared in accordance with Article 6 of that Regulation for the year preceding the surrender;
+–the user was exempted from the obligations of Regulation (EU) 2023/956 pursuant to Article 2a(1) of that Regulation for that previous calendar year.
+2.A user may enter a repurchase request into the CBAM registry once per importation year. However, repurchase requests entered into the CBAM registry following the conclusion by the competent authority of the Member State of a review of a CBAM declaration pursuant to Article 19(6) of Regulation (EU) 2023/956 shall not be taken into account. Upon entering a repurchase request in the registry before 1 April, 1 July or 1 November, a user shall not amend or withdraw it on or after the relevant date.
+3.When a user enters a repurchase request into the CBAM registry, the total price of the request shall be calculated and displayed in euro in the CBAM registry.
+4.The repurchase request shall be assigned an identification number. The following information shall be registered:
+(a) the identification number of the repurchase request;
+(b) the number of CBAM certificates;
+(c) the identification numbers of the purchase requests concerned by the repurchase request;
+(d) the total amount of the repurchase request.
+5.The Commission shall repurchase, on behalf of the Member State where the authorised CBAM declarant is established, every year by 15 May, 15 August and 15 December, the CBAM certificates concerned by repurchase requests which meet the conditions set out in this Article and which have been entered into the CBAM registry by users pursuant to this Article before 1 April, 1 July and 1 November, respectively, for which the funds corresponding to the repurchase have been made available by the Member State or its competent authority pursuant to Article 20(2).
+6.The Commission shall digitally sign on behalf of the Member State where the authorised CBAM declarant is established, the repurchase requests referred to in paragraph 5.
+7.The user and the Member States or their competent authorities shall be informed of the status of the repurchase request through the CBAM registry. The Commission shall provide to the Member States or their competent authorities the information corresponding to the total number of repurchase requests referred to in paragraph 4 and the total amount as referred to in Article 20(2).
+Article 5
+Availability of CBAM certificates
+1.The CBAM certificates shall be assigned a ‘credited’ status and made available in the CBAM account of an authorised CBAM declarant upon receipt of the payment confirmation by the common central platform referred to in Article 13(2).
+2.On 1 April, 1 July or 1 November every year, the CBAM certificates contained in a repurchase request which has been entered into the CBAM registry pursuant to Article 4 before 1 April, 1 July and 1 November, respectively, shall be assigned a ‘to be repurchased’ status and no longer be available in the CBAM account of the authorised CBAM declarant.
+Following the repurchase of the requested CBAM certificates in accordance with Articles 4(5) and 4(6), they shall be assigned a ‘repurchased’ status and no longer be available in the CBAM account of the authorised CBAM declarant.
+CHAPTER III
+COMMON CENTRAL PLATFORM
+Article 6
+Establishment and management of the common central platform
+1.For the purpose of establishing and managing the common central platform referred to in Article 20(2) of Regulation (EU) 2023/956, the Member States and the Commission (‘the contracting authorities’) shall sign an agreement to launch a joint procurement procedure.
+2.The joint procurement procedure referred to in paragraph 1 of this Article shall be conducted pursuant to Article 168(2) of Regulation (EU, Euratom) 2024/2509 of the European Parliament and of the Council 10 .
+3.The period of the first joint procurement contract for the common central platform shall be no longer than five years.
+The period referred to in the first subparagraph may be extended by one year upon a decision of the contracting authorities, which is to be notified by the Commission to the common central platform before the end of the year preceding the last year of the contract.
+4.Before the contracting authorities launch a procurement procedure, the Commission may conduct a preliminary market consultation in accordance with Article 169(1) of Regulation (EU, Euratom) 2024/2509 with a view to verifying the market conditions and to preparing the joint procurement procedure.
+5.Without prejudice to this Regulation, the terms and conditions of the contract appointing the common central platform may provide further rules on the governance and administration of the platform, including on the services rendered in accordance with Article 7, the access to the common central platform pursuant to Article 8, the payments pursuant to Article 13 and data management by the common central platform pursuant to Articles 20 to 23. That contract may also provide further details on the procedure to collect the fees referred to in Article 15.
+6.The Commission shall publish the identity and contact details of the common central platform referred to in this Article on its website upon the appointment of the common central platform.
+Article 7
+Services provided by the common central platform
+1.The common central platform shall provide the following services:
+(a)ensuring online, nearly real-time uninterrupted continuous service delivery during operating hours as referred to in Article 8, including following a service change;
+(b)providing users with the access referred to in Article 8, including ensuring the provision, maintenance and compatibility of the necessary systems with the interface between the common central platform and the CBAM registry;
+(c)providing users, the Member States and the Commission, with the access as referred to in Article 23;
+(d)distributing, or ensuring the distribution of, the proceeds of the payments to the Member State concerned or user concerned, pursuant to Article 13;
+(e)notifying the payment statuses to the Commission through the CBAM registry;
+(f)providing, or ensuring the provision of, the collection of fees pursuant to Article 15;
+(g)providing the monitoring reports referred to in Article 17;
+(h)providing the service desk support referred to in Article 12;
+(i)surveying the payment processes, notifying suspicions of money laundering, terrorist financing, criminal activity or any fraud or abuse, administering any required remedial measures or sanctions including the provision of an extra-judicial dispute resolution mechanism.
+2.Prior to the opening of the services run by it, the common central platform shall connect to, and be interoperable with the CBAM registry, via the interface whose specifications are to be laid down by the Commission.
+The common central platform shall ensure that any issues identified pursuant to the first subparagraph prior to the opening of the services run by it are remedied.
+3.Within 12 months from the date of its appointment, the common central platform shall submit to the Commission the documents as determined in accordance with the contract appointing the common central platform, setting out detailed measures that are planned to ensure the following:
+(a)the transfer of all system necessary for the uninterrupted continuation of the services referred to in this Article and the smooth operation of the sale and repurchase processes by any successor to the common central platform;
+(b)the provision of all information related to the sale and repurchase processes that is necessary for the procurement procedure to appoint any successor to the common central platform;
+(c)the provision of technical assistance that enables the contracting authorities, any successor to the common central platform, or any combination thereof, to understand, access or use the relevant system or information provided pursuant to points (a) and (b).
+Article 8
+Access and operating hours
+1.The common central platform shall be accessible only by the Commission, the Member States and users.
+It shall be accessible to make payments related to the sale and repurchase of CBAM certificates during the operating time of the CBAM registry.
+A user shall have access to the common central platform only via the CBAM registry.
+2.The common central platform shall provide its operations in a fully secure, reliable and online, nearly real-time, uninterrupted, and continuous manner.
+3.The common central platform shall inform the Commission through the CBAM registry of any scheduled unavailability of operations sufficiently in advance or, in case of unscheduled unavailability of operations, as soon as possible.
+The Commission shall inform users and Member States through the CBAM registry of the unavailability of operations referred to in the first subparagraph without undue delay.
+Article 9
+Incidents
+1.The common central platform shall not carry out the payment in relation to a purchase request or a repurchase request where it has indications that the information concerning the request that it has received from the CBAM registry is not accurate, or that the security of the operation concerned or of the common central platform may be compromised.
+2.In the cases referred to in paragraph 1, the common central platform shall immediately inform the Commission through the CBAM registry.
+The common central platform and the Commission shall take immediate and effective actions and closely cooperate to remedy the identified issue. The common central platform shall inform the Commission through the CBAM registry when the incident is remedied.
+Article 10
+Record keeping requirements
+1.The common central platform shall assign a unique identification number to each payment that it carries out pursuant to Article 13.
+2.The common central platform shall record the complete and accurate details of each payment it carries out pursuant to Article 13 in a transaction log.
+The log shall include the following information:
+(a)the unique identification number referred to in paragraph 1;
+(b)the purchase request identification number referred to in Article 2(2), point (a), or the repurchase request identification number referred to in Article 4(4), point (a);
+(c)the CBAM account number of the user;
+(d)the nominated bank account of the user;
+(e)the Member State where the user is established;
+(f)the designated bank account of the Member State;
+(g)the date and time of purchase;
+(h)the total sum of the payment, the number and price of the CBAM certificates and the fees.
+3.The common central platform shall record all relevant information concerning incidents referred to in Article 9.
+Article 11
+Monitoring of operations
+1.The common central platform shall closely monitor its operations pursuant to this Regulation at all times.
+2.The Commission, the Member States and the common central platform shall actively cooperate to ensure efficient monitoring by the common central platform pursuant to paragraph 1.
+3.Upon the request of the Commission, the common central platform and Member States shall provide the Commission with any information in their possession that may be relevant to the effective monitoring pursuant to paragraph 1, as well as auditing and security.
+Article 12
+Support
+The common central platform shall set up and manage a helpline service accessible to all users, in English, during service desk hours.
+The common central platform shall collaborate with the service desks of Member States and the Commission, and share information necessary to resolve any incident.
+CHAPTER IV
+PAYMENT ON THE COMMON CENTRAL PLATFORM
+Article 13
+Payment
+1.A user shall pay the total amount of the purchase request referred to in Article 2 of this Regulation on the common central platform before the applicable price of CBAM certificate changes pursuant to Article 21 of Regulation (EU) 2023/956.
+Where the date of purchase corresponding to a purchase request is the same as or later than the day on which the CBAM certificate price changes, the purchase request shall be cancelled. In this case, the common central platform shall, without undue delay, reimburse the user by transferring that total sum, including the fee, if any, to the bank account used for the payment.
+By the end of the calendar day on which the sum corresponding to a purchase request is received in cleared funds by the common central platform, the common central platform shall transfer that sum, minus the fee referred to in Article 15, to the designated bank account of the Member State in cleared funds.
+Upon that transfer, the common central platform shall send a payment confirmation to the CBAM registry.
+2.A user shall confirm the payment order on the common central platform corresponding to a repurchase request signed by the Commission, on behalf of the Member State concerned, in the CBAM registry pursuant to Article 4(6).
+On the common central platform, a user shall designate a bank account for the repurchase, which is to be the bank account from which the user paid CBAM certificates, for a total aggregated sum, including the fees, which is equal or superior to the sum corresponding to the repurchase request.
+By the end of the calendar day on which the user has designated the bank account for the repurchase pursuant to the above subparagraph, the common central platform shall transfer that sum to the bank account of the user.
+Upon the transfer referred to in the first subparagraph, the common central platform shall send a payment confirmation to the CBAM registry.
+3.The payments related to the sale and repurchase of CBAM certificates on the common central platform shall be made exclusively in euro.
+4.The contract appointing the common central platform may provide further details on the management of payments.
+CHAPTER V
+COSTS OF THE COMMON CENTRAL PLATFORM AND FEES
+Article 14
+Costs
+1.The costs of the services referred to in Article 7 shall be financed by fees payable by authorised CBAM declarants.
+2.The contract appointing the common central platform may provide further details on the costs of the services.
+Article 15
+Fees
+1.A fee shall apply to the sale of CBAM certificates on the common central platform. It shall apply at a fixed amount per CBAM certificate sold by Member States.
+The fee shall be set at 0.05 euro per CBAM certificate sold.
+2.The common central platform shall collect the fee referred to in paragraph 1 on payments made by users.
+3.For the duration of the contract appointing the first common central platform, the common central platform shall transfer, on a daily basis, the fees in cleared funds to the Commission.
+4.No fees or charges of any kind other than the fee referred to in paragraph 1 shall be applied to the sale of CBAM certificates on the common central platform.
+CHAPTER VI
+EXCHANGE OF INFORMATION AND REPORTING
+Article 16
+Exchange of information
+1.The following information on a purchase request that was entered into the CBAM registry shall be sent from the CBAM registry to the common central platform:
+(a)the information referred to in Article 2(2);
+(b)the CBAM account number of the user;
+(c)the Member State where the user is established.
+2.The following information on a repurchase request that was entered into the CBAM registry shall be sent to the common central platform:
+(a)the information referred to in Article 4(4);
+(b)the CBAM account number of the user;
+(c)the identification of the Member State where the user is established.
+3.The common central platform shall send the payment statuses through the CBAM registry.
+The common central platform shall be responsible for the completeness, accuracy, integrity, confidentiality and timely submission of the payment statuses. Where the common central platform, the Commission or a Member State identifies errors or omissions, it shall take immediate and effective action, and closely cooperate with each other, to remedy the identified issue.
+4.The common central platform and the Commission may also exchange through the CBAM registry any other information on the sale and repurchase of CBAM certificates that is deemed relevant to ensure data reconciliation and proper monitoring of the operations carried out by the common central platform.
+5.Information exchanges between the CBAM registry and the common central platform regarding the sale and repurchase of CBAM certificates shall take place in a fully secure, reliable and nearly immediate manner by means of the web-based electronic interface referred to in Article 8.
+Article 17
+Reporting
+1.The common central platform shall send a reconciliation report to the Commission through the CBAM registry at the end of each working day during which it has carried out any operations.
+The report shall be sent by the common central platform in electronic format and be digitally signed.
+The reconciliation report shall cover the period since the last report.
+2.The reconciliation report referred to in paragraph 1 of this Article shall include the following information, for each Member State:
+(a)the information on purchase requests referred to in Article 2(2);
+(b)the information on repurchase requests referred to in Article 4(4);
+(c)the status of payments;
+(d)the number of CBAM certificates sold;
+(e)the number of CBAM certificates repurchased;
+(f)the number of users concerned by the sale;
+(g)the number of users concerned by the repurchase;
+(h)the total monetary sum of the sales in euro;
+(i)the total monetary sum of the repurchases in euro;
+(j)the number of incidents referred to in Article 9.
+3.The information on the number of CBAM certificates purchased and repurchased, together with their total amounts, shall immediately be made available in the CBAM registry to a Member State regarding the authorised CBAM declarants established in that territory.
+4.The common central platform shall provide a monthly report to the Commission on the platform’s operations, including its availability, technical evolution and security.
+5.By 31 January of each year, the common central platform shall provide a complete overview and analysis of its activity during the previous year to the Commission.
+6.The common central platform shall provide a monthly report to the Commission on the management of the fee.
+7.The common central platform shall be responsible for the completeness, accuracy and timely submission of the reports referred to in this Article. Where the common central platform, the Commission or a Member State identifies errors or omissions in a report, the common central platform shall immediately correct the information and submit a corrected report to the Commission and the Member State concerned.
+CHAPTER VII
+OBLIGATIONS OF THE CONTRACTING AUTHORITIES AND MEMBER STATES
+Article 18
+Obligations of the contracting authorities
+The contracting authorities shall monitor the implementation of the contract appointing the common central platform.
+Article 19
+Business continuity, liability safeguards and contractual remedies
+1.The establishment and management of the common central platform, including all services necessary for the sale and repurchase of CBAM certificates, shall be governed by the applicable Union legal framework, including Regulation (EU, Euratom) 2024/2509, and by the contract appointing the common central platform concluded following the joint procurement procedure referred to in Article 6.
+2.The contract appointing the common central platform shall contain provisions ensuring the continuity of the services referred to in Article 7, including appropriate business continuity, disaster recovery, operational resilience, incident management, service restoration and transition arrangements necessary to ensure the uninterrupted continuation of the sale and repurchase processes and the orderly transfer of operations to any successor platform.
+3.The contract appointing the common central platform shall also contain appropriate provisions on liability, remedies and protection of the financial interests of the Union and of the Member States, including, where appropriate, contractual performance mechanisms, liquidated damages, corrective measures, audit and control rights, reporting obligations, and termination or replacement measures in the event of non-performance, deficient performance, security failures or breach of contractual obligations. Such provisions shall also address the liability of the operator of the common central platform, including its obligation to indemnify the Union and the Member States against losses, damages, costs and expenses arising from third-party claims, including those related to proceedings under Article 25, insofar as such claims arise from acts or omissions attributable to the operator in the performance of its contractual obligations.
+4.The contracting authorities shall ensure, in the monitoring of the implementation of the contract pursuant to Article 18, that the contractual safeguards referred to in paragraphs 2 and 3 of this Article are effectively maintained and enforceable throughout the duration of the contract.
+5.The contract appointing the common central platform may lay down additional requirements in accordance with this Regulation and the applicable Union financial and procurement rules.
+Article 20
+Obligations of the Member States
+1.Member States or their competent authorities shall designate to the common central platform the bank account on which its Member State is to receive the proceeds from the sale of CBAM certificates (‘designated bank account’).
+The designated bank account shall be either a dedicated bank account held by the Member State or its competent authority or another account designated by the Member State for that purpose.
+2.By 15 May, 15 August or 15 December, as appropriate, whichever date is relevant for the latest date of repurchase by the Commission as referred to in Article 4(6), Member States or their competent authorities shall transfer the total amount corresponding to the repurchase requests referred to in Article 4(6) to the bank account designated by the Commission for the purpose of managing repurchases.
+3.Member States or their competent authorities shall inform the Commission of any failure of the common central platform to comply with the contract appointing it.
+4.When fulfilling its obligations under this Regulation, Member States or their competent authorities shall take into account any professional secrecy considerations to which those authorities are subject under Union and national law.
+CHAPTER VIII
+DATA PROTECTION REQUIREMENTS
+Article 21
+Specific role of the Commission, the competent authorities of Member States and the common central platform
+1.The Commission shall act as sole controller when processing personal data for:
+(a)the supervision of the common central platform through the review of information and reports concerning its operations;
+(b)reconciliation, through the use of reconciliation information to check the validity and consistency of operations;
+(c)auditing, through the use of information provided by the common central platform and the competent authorities of Member States;
+(d)the management of access rights for Commission staff to access the common central platform, through authorisation of its own staff.
+2.The competent authority of the Member State shall act as sole controller when processing personal data for:
+(a)the management of access rights for its staff to access the common central platform, through authorisation of its own staff;
+(b)the sale of CBAM certificates to users established in its Member State, pursuant to Articles 2 and 13, and the fulfilment of its responsibilities concerning the funding of repurchases;
+(c) accessing and using transaction information and logs concerning users established in its Member State for its own tasks, including financial reconciliation;
+(d)cooperation in monitoring operations, including providing information for auditing and cooperating in the correction of errors or omissions, and for cooperation between national and service desks to support users within its responsibilities;
+(e)compliance checks, investigations and enforcement, other legally assigned tasks, and for participation in court proceedings concerning remedies against repurchase decisions.
+3.The common central platform shall act as sole controller when processing personal data for:
+(a)the management of access rights for its own personnel to access the common central platform, through authorisation of its own staff;
+(b)any further processing of personal data connected with the common central platform for its own purposes.
+4. The Commission shall act as a processor, when processing personal data on behalf of the competent authorities of Member States for the purposes of:
+(a)the sale of CBAM certificates to users established in the Member State concerned;
+(b)facilitating purchase requests, exchanges of purchase and payment information, and creation of certificates following payment confirmation;
+(c)repurchasing CBAM certificates on behalf of the competent authority of the Member State concerned, processing the relevant repurchase-request information to carry out repurchases and digitally sign the request on behalf of that competent authority of the Member State;
+(d)cooperation in monitoring, auditing and correcting errors or omissions, providing operational assistance and processing information required for the tasks of the competent authority of the Member State.
+5.The common central platform shall act as a processor when processing personal data under documented instructions for the following operations:
+(a)on behalf of the Commission, for preparing reports and providing information, for the Commission’s supervision, including monitoring and auditing, and operating and maintaining the common central platform for the Commission’s purposes listed in this Article;
+(b)on behalf of the competent authority of the Member State concerned, for supporting that authority and operating and maintaining the common central platform for the purposes listed in this Article;
+(c)on behalf of the Commission, for using the interface between the CBAM Registry and the common central platform for the supervision of the common central platform, with the data provided in anonymised form, for the purposes listed in this Article;
+(d)on behalf of the competent authority of the Member State concerned, for using the interface for the sale of CBAM certificates for the purposes listed in this Article;
+(e)on behalf of the competent authority of the Member State concerned, for using the interface for the repurchase of CBAM certificates for the purposes listed in this Article.
+Article 22
+Information held by the common central platform
+1.The common central platform shall hold the following information that is necessary to operate the sale and the repurchase of CBAM certificates:
+(a)the CBAM account number of each user;
+(b)the nominated bank account details of each user;
+(c)the nominated bank account details of each Member State.
+2.The common central platform shall only manage information referred to in paragraph 1, points (b) and (c).
+3.The common central platform shall ensure that all information is kept confidential, integrous and secured
+Article 23
+Access rights
+1.Users shall have the right to access their personal data held by the common central platform pursuant to this Regulation.
+2.A Member State shall have the right to access all data held by the common central platform pursuant to this Regulation, including the information kept in the transaction log referred to in Article 10(2), regarding the users established in the territory of its Member State.
+3.The Commission shall have the right to access all data held by the common central platform pursuant to this Regulation regarding all users, including the complete transaction log referred to in Article 10(2).
+4.Upon the request of a user, a Member State or the Commission, the common central platform shall provide, in a timely manner, the information referred to in paragraphs 1, 2 and 3, free of charge and in a secured and electronic manner.
+Article 24
+Data retention period
+The common central platform shall keep information for a period of up to seven years following the calendar year during which the information is recorded.
+CHAPTER IX
+FINAL PROVISIONS
+Article 25
+Right to remedies
+Any decisions taken regarding purchase or repurchase requests shall be deemed to be taken by the Member State where the CBAM declarant is established. The Commission shall provide to the Member States any relevant information it has.
+The common central platform shall ensure that it has in place an extra-judicial mechanism to deal with complaints from a user requesting access to the information referred to in Article 22(1), points (a) and (b).
+Article 26
+Review clause
+In the event of the adoption of an own resource based on CBAM, in accordance with Article 311, third paragraph, TFEU, the Commission may review this Regulation in light of any modalities related to the making available of such an own resource. A joint procurement contract shall provide for the possibility of such review.
+Article 27
+Entry into force
+This Regulation shall enter into force on the day of its publication in the Official Journal of the European Union.
+It shall apply from 1 February 2027. However, Article 6 shall apply from [P. O.: please insert the day of the entry into force of this Regulation].
+This Regulation shall be binding in its entirety and directly applicable in the Member States in accordance with the Treaties.
+Done at Brussels, 25.11.2026
+For the Commission
+The President
+Ursula VON DER LEYEN
+(1) Regulation (EU) 2023/956 of the European Parliament and of the Council of 10 May 2023 establishing a carbon border adjustment mechanism (OJ L 130, 16.5.2023, p. 52, ELI: http://data.europa.eu/eli/reg/2023/956/oj ).
+(2) Regulation (EU) 2025/2083 of the European Parliament and of the Council of 8 October 2025 amending Regulation (EU) 2023/956 as regards simplifying and strengthening the carbon border adjustment mechanism (OJ L, 2025/2083, 17.10.2025, ELI: http://data.europa.eu/eli/reg/2025/2083/oj ).
+(3) Commission Delegated Regulation (EU) 2023/2830 of 17 October 2023 supplementing Directive 2003/87/EC of the European Parliament and of the Council by laying down rules on the timing, administration and other aspects of auctioning of greenhouse gas emission allowances (OJ L, 2023/2830, 20.12.2023, ELI: http://data.europa.eu/eli/reg_del/2023/2830/oj ).
+(4) Interinstitutional Agreement between the European Parliament, the Council of the European Union and the European Commission on Better Law-Making (OJ L 123, 12.5.2016, pp. 1–14).
+(5) OJ L 130, 16.5.2023, p. 52, ELI: http://data.europa.eu/eli/reg/2023/956/oj.
+(6) Commission Delegated Regulation (EU) 2023/2830 of 17 October 2023 supplementing Directive 2003/87/EC of the European Parliament and of the Council by laying down rules on the timing, administration and other aspects of auctioning of greenhouse gas emission allowances (OJ L, 2023/2830, 20.12.2023, ELI: http://data.europa.eu/eli/reg_del/2023/2830/oj ).
+(7) Commission Implementing Regulation (EU) 2024/3210 of 18 December 2024 laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and of the Council as regards the CBAM registry (OJ L, 2024/3210, 30.12.2024, ELI: http://data.europa.eu/eli/reg_impl/2024/3210/oj).
+(8) Directive (EU) 2015/2366 of the European Parliament and of the Council of 25 November 2015 on payment services in the internal market, amending Directives 2002/65/EC, 2009/110/EC and 2013/36/EU and Regulation (EU) No 1093/2010, and repealing Directive 2007/64/EC (OJ L 337, 23.12.2015, p. 35, ELI: http://data.europa.eu/eli/dir/2015/2366/oj).
+(9) Commission Implementing Regulation (EU) 2025/2548 of 10 December 2025 laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and of the Council as regards the calculation and publication of the price of CBAM certificates (OJ L, 2025/2548, 22.12.2025, ELI: http://data.europa.eu/eli/reg_impl/2025/2548/oj).
+(10) Regulation (EU, Euratom) 2024/2509 of the European Parliament and of the Council of 23 September 2024 on the financial rules applicable to the general budget of the Union (OJ L, 2024/2509, 26.9.2024, ELI: http://data.europa.eu/eli/reg/2024/2509/oj ).
