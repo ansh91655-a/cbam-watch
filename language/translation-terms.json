@@ -5586,6 +5586,18 @@
    "ko": "상담 전화 서비스",
    "from": "sale-repurchase-adopted",
    "added": "2026-11-26"
+  },
+  {
+   "en": "service desk",
+   "ko": "서비스 데스크",
+   "from": "sale-repurchase-adopted",
+   "added": "2026-11-26"
+  },
+  {
+   "en": "preliminary market consultation",
+   "ko": "사전 시장 협의",
+   "from": "sale-repurchase-adopted",
+   "added": "2026-11-26"
   }
  ]
 }
