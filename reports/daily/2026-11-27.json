@@ -1,0 +1,22 @@
+{
+ "kind": "daily",
+ "date": "2026-11-27",
+ "writtenAt": "2026-11-27T10:05:51+09:00",
+ "status": "문제",
+ "problems": [
+  "출처 dehst: 3회 연속 읽지 못함(HTTP Error 403: Forbidden)"
+ ],
+ "runProblems": 0,
+ "holds": [
+  {
+   "id": "20261125-ec-documents-8fe136-c3",
+   "gate": "확인 불가"
+  }
+ ],
+ "counts": {
+  "published": 5,
+  "total": 278,
+  "retryHolds": 1
+ },
+ "handbookToReview": []
+}
