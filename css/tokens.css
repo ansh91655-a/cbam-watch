@@ -1,0 +1,117 @@
+/* 디자인 값. 화면의 색, 글꼴, 간격, 그림자는 모두 여기의 이름을 거친다. 색 변형은 themes.css가 덮어쓴다.
+   기본은 '네이비': EU 엠블럼의 파랑(#003399)과 노랑(#FFCC00)을 중심에 두고, 머리 쪽은 짙은 남색, 본문은 밝은 바탕. */
+:root {
+  color-scheme: light;
+  --bg: #f4f6fb;
+  --surface: #ffffff;
+  --surface-2: #eef2fa;
+  /* 유리 면(글래스모피즘). 본문 뒤에는 빛의 바탕(--field)을 깔고, 판과 카드는 반투명한 면에 밝은 테두리를 둔다.
+     --pane은 판과 카드, --pane-2는 그 안의 작은 칸과 단추·입력 칸(더 불투명하다), --pane-line은 유리의 밝은 테두리.
+     뒤로 내용이 지나가는 면(붙어 있는 도구 줄, 펼침 목록, 작은 창)은 --frost-bg에 --frost로 뒤를 흐리게 한다(glass.css).
+     불투명해야 하는 것(선을 가리는 점, 빛깔을 섞는 바탕)은 그대로 --surface를 쓴다. */
+  --pane: rgba(255, 255, 255, 0.6);
+  --pane-2: rgba(255, 255, 255, 0.82);
+  --pane-line: rgba(255, 255, 255, 0.92);
+  --frost-bg: rgba(246, 249, 255, 0.86);   /* 뒤로 짙은 남색 면이 지나가도 흐린 글자(--ink-3)가 4.5:1을 넘는 가장 옅은 값 */
+  --frost: saturate(180%) blur(18px);
+  /* 빛의 바탕: 네 귀퉁이에서 번지는 빛(왼쪽 위 파랑, 오른쪽 위 노랑, 오른쪽 아래 하늘빛, 왼쪽 아래 보라). 크기는 화면에 견주어 정한다.
+     빛이 짙을수록 그 위의 글자가 덜 또렷해지므로, 가장 흐린 글자(--ink-3)도 어디서나 4.5:1을 넘는 세기까지만 쓴다 */
+  --field:
+    radial-gradient(64vw 72vh at 3% 0%, rgba(43, 89, 224, 0.16), transparent 70%),
+    radial-gradient(50vw 60vh at 100% 4%, rgba(255, 204, 0, 0.17), transparent 68%),
+    radial-gradient(64vw 74vh at 96% 100%, rgba(40, 140, 255, 0.2), transparent 70%),
+    radial-gradient(52vw 62vh at 4% 100%, rgba(122, 72, 214, 0.11), transparent 68%);
+  --ink: #0b1230;
+  --ink-2: #3f486a;
+  --ink-3: #525c7e;   /* 빛의 바탕(--field)이 가장 짙은 곳에서도 대비 4.5:1을 넘는 값(tests/test_glass.py가 셈한다) */
+  --line: #d8deee;
+  --line-2: #e8ecf6;
+  --brand: #003399;
+  --brand-strong: #00267a;
+  --brand-bright: #2b59e0;
+  --brand-soft: #eaf0ff;
+  --on-brand: #ffffff;
+  --accent: #ffcc00;
+  --accent-strong: #f0b400;
+  --accent-soft: #fff4c4;
+  --on-accent: #0b1230;
+  --link: #1a47c7;
+  --ok: #18794e;
+  --warn: #8a5200;
+  --bad: #c0202d;
+
+  /* 어두운 면: 머리글, 첫 화면의 큰 머리, 화면 머리 띠, 바닥글 */
+  --deep-1: #050b24;
+  --deep-2: #0a1540;
+  --deep-3: #11256f;
+  --on-deep: #ffffff;
+  --on-deep-2: #c9d3f5;
+  --on-deep-3: #9aa9da;
+  --glass: rgba(255, 255, 255, 0.075);
+  --glass-line: rgba(255, 255, 255, 0.17);
+  --glass-shine: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 18px 40px -26px rgba(0, 0, 0, 0.7);   /* 어두운 면 위의 유리판: 위쪽 가장자리의 빛과 그림자 */
+  --head-bg: rgba(7, 14, 52, 0.84);
+  --head-rest: #060c28;   /* 화면 맨 위에 있을 때의 머리글(비치지 않는다) */
+  --head-line: rgba(255, 255, 255, 0.09);
+  --hero-bg: radial-gradient(820px 460px at 14% 92%, rgba(43, 89, 224, 0.5), transparent 64%), radial-gradient(760px 420px at 96% 0%, rgba(0, 51, 153, 0.7), transparent 62%), linear-gradient(180deg, #050b24, #0a1540);
+  --band-bg: radial-gradient(640px 260px at 88% 120%, rgba(43, 89, 224, 0.55), transparent 65%), linear-gradient(120deg, #050b24, #0a1540 60%, #0f1f5c);
+  --foot-bg: #050b24;
+  --feat-bg: linear-gradient(135deg, #0a1540, #11256f);
+  --on-feat: #ffffff;
+  --on-feat-2: #c9d3f5;
+  --on-feat-3: #9aa9da;
+  --tip-bg: #050b24;
+  --on-deep-link: #ffd84d;
+  --hl-from: #ffcc00;
+  --hl-to: #ffe58a;
+  --map-land: rgba(157, 178, 255, 0.36);
+  --map-eu: #b4c9ff;
+  --map-kr: #ffcc00;
+  --map-arc-from: #ffcc00;
+  --map-lane-mid: #ffe394;
+  --map-arc-to: #d6e2ff;
+  --map-glow: rgba(72, 120, 255, 0.5);
+  --map-light: #fff6cf;
+  --map-port: #ffffff;
+
+  /* 주제마다의 색. 아이콘과 그 바탕에만 쓰고 글자에는 쓰지 않는다. */
+  --t-law: #2b59e0;
+  --t-legis: #5a4bd6;
+  --t-declare: #0c86c4;
+  --t-emissions: #0d9488;
+  --t-verify: #178045;
+  --t-price: #a06c00;
+  --t-korea: #cf3f67;
+  --t-abroad: #7a48d6;
+  --t-events: #cf6327;
+  --t-etc: #5d6787;
+
+  --font: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
+  --fs-s: 0.875rem;
+  --fs-m: 1rem;
+  --fs-l: 1.125rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 2rem;
+  --fs-hero: clamp(2.1rem, 4.4vw, 3.1rem);
+
+  --gap-2: 8px;
+  --gap-3: 12px;
+  --gap-4: 16px;
+  --gap-5: 24px;
+  --gap-6: 40px;
+  --gap-7: 64px;
+  --maxw: 1160px;
+  --radius: 10px;
+  --radius-l: 18px;
+  --radius-pill: 999px;
+  --card-pad: 22px 24px;
+  /* 그림자에는 유리의 위쪽 가장자리에 맺히는 빛(안쪽의 밝은 선)이 함께 든다 */
+  --shadow-1: inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 0 0 1px rgba(13, 27, 84, 0.04), 0 1px 2px rgba(13, 27, 84, 0.05), 0 16px 34px -20px rgba(13, 27, 84, 0.26);
+  --shadow-2: inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 0 0 1px rgba(13, 27, 84, 0.05), 0 2px 6px rgba(13, 27, 84, 0.07), 0 30px 62px -26px rgba(13, 27, 84, 0.38);
+
+  --chart-line: #2a5bd7;
+  --chart-line-2: #cf6327;  /* 선이 둘인 그림의 둘째 선. 첫째 선과의 짝을 색 검사로 확인했다(밝은 바탕) */
+  --chart-line-3: #1a9b8a;  /* 몫이 셋인 막대의 셋째 색. 앞의 두 색과 어느 짝으로도 색각 이상에서 갈리는지 색 검사로 확인했다(밝은 바탕) */
+  --chart-fill: color-mix(in srgb, var(--chart-line) 12%, transparent);
+  --chart-grid: var(--line-2);
+}

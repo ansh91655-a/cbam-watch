@@ -1,0 +1,86 @@
+/* 역할별 준비 목록(js/views/prepare.js): 역할을 고르는 줄, 다가오는 날짜, 묶음마다의 목록. 목록은 한 판에 줄을 그어 나눈다(훑어 읽고 인쇄하기 좋게). */
+
+/* 역할 고르기 */
+.prep-roles { gap: 8px; }
+.prep-roles .chip { padding: 8px 16px; font-weight: 600; }
+.prep-roles .chip .n { font-size: 0.8rem; font-variant-numeric: tabular-nums; color: var(--ink-3); }
+.prep-roles .chip[aria-current="true"] .n { color: inherit; opacity: 0.85; }
+.prep-about { max-width: 60em; padding-left: 12px; border-left: 3px solid var(--brand-bright); font-size: var(--fs-s); color: var(--ink-2); }
+
+/* 다가오는 날짜 */
+.prep-soon { display: grid; gap: 10px; }
+.prep-soon h2 { font-size: var(--fs-m); color: var(--ink-2); }
+.prep-soon-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(214px, 1fr)); gap: 10px; margin: 0; padding: 0; list-style: none; }
+.prep-soon-card { display: grid; align-content: start; gap: 5px; height: 100%; padding: 14px 16px 13px; border: 1px solid var(--pane-line); border-radius: var(--radius-l); background: var(--pane); box-shadow: var(--shadow-1); color: var(--ink); text-decoration: none; }
+.prep-soon-card:hover { border-color: var(--brand-bright); }
+.prep-soon-when { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 2px 8px; font-size: var(--fs-s); color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.prep-soon-when b { padding: 0 9px; border-radius: 999px; background: var(--brand-soft); color: var(--brand); font-weight: 750; }
+.prep-soon-card[data-tone="due"] .prep-soon-when b { background: var(--accent-soft); color: var(--on-accent); }
+.prep-soon-title { font-weight: 700; letter-spacing: -0.012em; line-height: 1.4; }
+.prep-soon-kind { font-size: 0.78rem; color: var(--ink-3); }
+
+/* 확인한 수와 단추 */
+.prep-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; }
+.prep-state { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; }
+.prep-state .count:focus { outline: none; }
+.prep-state .count:focus-visible { outline: 3px solid var(--accent-strong); outline-offset: 4px; border-radius: 4px; }
+.prep-state .linklike { font-size: var(--fs-s); color: var(--link); }
+
+/* 묶음과 항목 */
+.prep-group { display: grid; gap: 10px; }
+.prep-group .sec-head h2 { font-size: 1.25rem; }
+.prep-list { margin: 0; padding: 4px 22px; list-style: none; border: 1px solid var(--pane-line); border-radius: var(--radius-l); background: var(--pane); box-shadow: var(--shadow-1); }
+.prep-item { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 0 10px; padding: 17px 0 16px; scroll-margin-top: 96px; }
+.prep-item + .prep-item { border-top: 1px solid var(--line-2); }
+/* 옮겨 온 항목: 마우스로 왔으면 잠깐의 표시로 알리고, 자판으로 왔으면 초점 테두리도 보인다 */
+.prep-item:focus { outline: none; }
+.prep-item:focus-visible { outline: 3px solid var(--accent-strong); outline-offset: 6px; border-radius: 8px; }
+/* 주소나 '다가오는 날짜'에서 넘어온 항목: 잠깐 표시한다 */
+.prep-item[data-flash="true"] { border-radius: 8px; background: var(--accent-soft); box-shadow: 0 0 0 10px var(--accent-soft); }
+/* 표시 칸: 칸보다 넓은 자리(28px)를 눌러도 표시된다 */
+.prep-check { display: grid; place-items: center; width: 28px; height: 28px; margin-top: -1px; cursor: pointer; }
+.prep-box { display: block; width: 20px; height: 20px; margin: 0; accent-color: var(--brand); cursor: pointer; }
+.prep-body { display: grid; gap: 7px; min-width: 0; }
+.prep-head { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+.prep-head strong { font-size: 1.04rem; font-weight: 750; letter-spacing: -0.015em; }
+.prep-date { display: inline-flex; align-items: baseline; gap: 8px; padding: 0 10px; border-radius: 999px; background: var(--brand-soft); color: var(--brand); font-size: 0.82rem; line-height: 1.75; font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.prep-date[data-tone="due"] { background: var(--accent-soft); color: var(--on-accent); }
+.prep-left { font-weight: 750; }
+.prep-text { max-width: 62em; color: var(--ink-2); }
+.prep-noted { display: grid; gap: 2px; }
+.prep-noted b { font-size: var(--fs-s); font-weight: 750; color: var(--brand); }
+.prep-ways { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 28px; }
+.prep-ways > p { margin: 0; }
+.prep-more { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 0; font-size: var(--fs-s); }
+.prep-more a, .prep-links a { display: inline-flex; align-items: center; gap: 5px; font-weight: 550; }
+/* 확인한 항목과 날짜가 지난 항목: 흐리게 하지 않고(대비가 떨어진다) 색을 가라앉힌다 */
+.prep-item[data-done="true"] .prep-head strong, .prep-item[data-done="true"] .prep-text { color: var(--ink-3); }
+.prep-item[data-past="true"] .prep-date { background: var(--surface-2); color: var(--ink-2); }
+.prep-note { max-width: 62em; font-size: var(--fs-s); color: var(--ink-3); }
+.prep-links { display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: var(--fs-s); }
+
+html[data-theme="midnight"] .prep-date[data-tone="due"], html[data-theme="midnight"] .prep-soon-card[data-tone="due"] .prep-soon-when b { color: var(--accent); }
+html[data-theme="midnight"] .prep-item[data-past="true"] .prep-date { background: var(--surface); box-shadow: inset 0 0 0 1px var(--line); }
+
+@media (max-width: 640px) {
+  .prep-list { padding: 2px 14px; }
+  .prep-item { gap: 0 8px; padding: 15px 0 14px; }
+  .prep-bar .btn { display: none; }   /* 좁은 화면에서는 브라우저의 공유·인쇄 메뉴를 쓴다 */
+  .prep-soon-list { gap: 8px; }
+  .prep-soon-list > li:nth-child(n + 4) { display: none; }
+  .prep-soon-card { gap: 3px; padding: 11px 14px 10px; }
+  .prep-soon-kind { display: none; }
+}
+
+/* 인쇄: 고른 역할의 목록만 찍는다. 네모 칸은 손으로 표시할 수 있게 남긴다 */
+@media print {
+  .prep-roles .chip:not([aria-current="true"]), .prep-soon, .prep-bar, .prep-links, .prep-more { display: none !important; }
+  .prep-roles .chip { border: 0; padding: 0; background: none !important; color: #000 !important; font-size: 1.1rem; font-weight: 750; }
+  .prep-list { padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; }
+  .prep-item { break-inside: avoid; }
+  .prep-item + .prep-item { border-top: 1px solid #bbb; }
+  .prep-group .sec-head { break-after: avoid; }
+  .prep-item[data-done="true"] .prep-head strong, .prep-item[data-done="true"] .prep-text { color: inherit; }
+  .prep-date { background: none !important; color: #000 !important; padding: 0; }
+  .prep-body a { color: #000 !important; text-decoration: none !important; }
+}

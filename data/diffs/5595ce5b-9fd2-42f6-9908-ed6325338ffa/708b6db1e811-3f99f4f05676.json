@@ -1,0 +1,91 @@
+{
+ "stats": {
+  "added": 5,
+  "removed": 2,
+  "changed": 8,
+  "same": 53
+ },
+ "blocks": [
+  {
+   "op": "changed",
+   "old": "Member State",
+   "new": "CBAM country"
+  },
+  {
+   "op": "added",
+   "old": "",
+   "new": "IS (Iceland)"
+  },
+  {
+   "op": "added",
+   "old": "",
+   "new": "Umhverfis- og orkustofnun Icelandic Environment and Energy Agency Contact point Email: cbam@uos.is Tel: +354 569 6000 Address Suðurlandsbraut 24, 108 Reykjavík Website https://uos.is/cbam"
+  },
+  {
+   "op": "changed",
+   "old": "Administration de l’environnement Unité de surveillance et évaluation de l’environnement – Registre des quotas d’émissions de gaz à effet de serre Environment Agency Environment surveillance and evaluation unit – Register of greenhouse gas emissions quotas Contact point Email: CBAM@aev.etat.lu",
+   "new": "Administration de l’environnement Unité de surveillance et évaluation de l’environnement – Registre des quotas d’émissions de gaz à effet de serre Environment Agency Environment surveillance and evaluation unit – Register of greenhouse gas emissions quotas Contact point Email: CBAM@aev.etat.lu Tel: (+352) 247 59 – 034 Address 1, Avenue du Rock'n'Roll L-4361 Esch-sur-Alzette"
+  },
+  {
+   "op": "removed",
+   "old": "Tel: (+352) 247 59 – 034 Address 1, Avenue du Rock'n'Roll L-4361 Esch-sur-Alzette",
+   "new": ""
+  },
+  {
+   "op": "changed",
+   "old": "Contact point Email: cbam.caa@climateaction.gov.mt Address Avenue 77 Business Centre, Triq in-Negozju, Central Business District, Birkirkara, CBD 3010, Malta Website https://climateaction.gov.mt NL (The Netherlands)",
+   "new": "Contact point Email: cbam.caa@climateaction.gov.mt Address Avenue 77 Business Centre, Triq in-Negozju, Central Business District, Birkirkara, CBD 3010, Malta Website https://climateaction.gov.mt"
+  },
+  {
+   "op": "added",
+   "old": "",
+   "new": "NL (The Netherlands)"
+  },
+  {
+   "op": "added",
+   "old": "",
+   "new": "NO (Norway)"
+  },
+  {
+   "op": "added",
+   "old": "",
+   "new": "Miljødirektoratet Norwegian Environment Agency Contact point E-mail: cbam@miljodir.no Address Grensesvingen 7, 0661 Oslo Postboks 5672 Torgarden, 7485 Trondheim Website https://www.miljodirektoratet.no/ansvarsomrader/internasjonalt/eu -regelverk/cbam/"
+  },
+  {
+   "op": "changed",
+   "old": "Krajowy Ośrodek Bilansowania i Zarządzania Emisjami Instytut Ochrony Środowiska – Państwowy Instytut Badawczy National Centre for Emissions Management, The Institute of Environmental Protection – National Research Institute",
+   "new": "Krajowy Ośrodek Bilansowania i Zarządzania Emisjami Instytut Ochrony Środowiska – Państwowy Instytut Badawczy National Centre for Emissions Management, The Institute of Environmental Protection – National Research Institute Contact point Email: cbam@kobize.pl Address 02-170 Warszawa, ul. Słowicza 32 Website https://kobize.pl/pl/category/id/96/cbam Izba Administracji Skarbowej w Poznaniu Chamber of Tax Administration in Poznań Contact point Email : cbam.390000@mf.gov.pl Address 61-501 Poznań, ul. Dolna Wilda 80a"
+  },
+  {
+   "op": "changed",
+   "old": "Contact point Email: cbam@kobize.pl Address 02-170 Warszawa, ul. Słowicza 32 Website https://kobize.pl/pl/category/id/96/cbam Izba Administracji Skarbowej w Poznaniu Chamber of Tax Administration in Poznań Contact point Email : cbam.390000@mf.gov.pl Address 61-501 Poznań, ul. Dolna Wilda 80a PT (Portugal)",
+   "new": "PT (Portugal)"
+  },
+  {
+   "op": "changed",
+   "old": "Ministerul Finanțelor Direcția Generală de Legislație Fiscală, Reglementări Vamale și Contabile Direcția CBAM și Taxe Verzi Ministry of Finance General Directorate of Fiscal Legislation, Customs and Accounting Regulations CBAM and Green Taxation Directorate Contact point Email: cbam.unit@mfinante.gov.ro Tel: +40212261043 Address 16, Libertății Blvd, sector 5, Bucharest, 05076",
+   "new": "Ministerul Finanțelor Direcția Generală de Legislație Fiscală, Reglementări Vamale și Contabile Direcția CBAM și Taxe Verzi Ministry of Finance General Directorate of Fiscal Legislation, Customs and Accounting Regulations CBAM and Green Taxation Directorate Contact point Email: cbam.unit@mfinante.gov.ro Tel: +40212261043 Address 16, Libertății Blvd, sector 5, Bucharest, 05076 Website www.mfinante.gov.ro"
+  },
+  {
+   "op": "removed",
+   "old": "Website www.mfinante.gov.ro",
+   "new": ""
+  },
+  {
+   "op": "changed",
+   "old": "Naturvårdsverket Swedish Environment Protection Agency (EPA) Contact point Email: CBAM@naturvardsverket.se Tel: +46106981000 Address Naturvårdsverket, SE-106 48 Stockholm",
+   "new": "Naturvårdsverket Swedish Environment Protection Agency (EPA) Contact point Email: CBAM@naturvardsverket.se Tel: +46106981000 Address Naturvårdsverket, SE-106 48 Stockholm Website https://www.naturvardsverket.se/en/about-us/contact/"
+  },
+  {
+   "op": "changed",
+   "old": "Website https://www.naturvardsverket.se/en/about-us/contact/ Ministerstvo životného prostredia Slovenskej republiky Ministry of Environment of the Slovak Republic Contact point Email: cbam@enviro.gov.sk Address Námestie Ľ. Štúra 1, 812 35 Bratislava Website https://www.minzp.sk/klima/cbam/",
+   "new": "Ministerstvo životného prostredia Slovenskej republiky Ministry of Environment of the Slovak Republic Contact point Email: cbam@enviro.gov.sk Address Námestie Ľ. Štúra 1, 812 35 Bratislava Website https://www.minzp.sk/klima/cbam/"
+  }
+ ],
+ "truncated": false,
+ "doc": "5595ce5b-9fd2-42f6-9908-ed6325338ffa",
+ "from": "708b6db1e811",
+ "to": "3f99f4f05676",
+ "fromDate": "2026-11-10",
+ "toDate": "2026-11-23"
+}

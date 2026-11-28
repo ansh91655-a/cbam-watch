@@ -1,0 +1,22 @@
+/* 글 속 용어 풀이(js/ui/gloss.js): 글에 나온 용어의 표시와, 누르면 그 아래에 뜨는 풀이 칸 */
+.gloss { display: inline; margin: 0; padding: 0 1px; border: 0; border-radius: 4px; background: none; color: inherit; font: inherit; letter-spacing: inherit; text-align: inherit; cursor: help;
+  text-decoration: underline dotted; text-decoration-thickness: 1.5px; text-decoration-color: color-mix(in srgb, var(--brand-bright) 75%, transparent); text-underline-offset: 4px; }
+.gloss:hover, .gloss[aria-expanded="true"] { background: var(--brand-soft); text-decoration-color: var(--brand-bright); }
+.gloss:focus-visible { outline: 2px solid var(--brand-bright); outline-offset: 2px; }
+.gloss-tip { position: absolute; z-index: 40; display: grid; gap: 8px; width: min(344px, calc(100vw - 24px)); padding: 15px 40px 14px 16px; border: 1px solid var(--line); border-radius: 14px;
+  background: var(--surface); color: var(--ink); box-shadow: var(--shadow-2); font-size: var(--fs-s); line-height: 1.6; text-align: left; }
+.gloss-tip[hidden] { display: none; }
+.gloss-tip:focus { outline: none; }
+.gloss-tip:focus-visible { outline: 2px solid var(--brand-bright); outline-offset: 2px; }
+.gloss-tip-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; }
+.gloss-tip-head strong { font-size: 0.98rem; color: var(--ink); }
+.gloss-tip-head span { font-size: 0.78rem; color: var(--ink-3); }
+.gloss-tip-text { color: var(--ink-2); }
+.gloss-tip-links { display: flex; flex-wrap: wrap; gap: 4px 16px; padding-top: 8px; border-top: 1px solid var(--line-2); }
+.gloss-tip-links a { display: inline-flex; align-items: center; gap: 5px; font-weight: 600; }
+.gloss-tip-close { position: absolute; top: 8px; right: 8px; display: grid; place-items: center; width: 28px; height: 28px; border: 0; border-radius: 8px; background: none; color: var(--ink-3); cursor: pointer; }
+.gloss-tip-close:hover { background: var(--surface-2); color: var(--ink); }
+@media print {
+  .gloss { text-decoration: none; }
+  .gloss-tip { display: none; }
+}
